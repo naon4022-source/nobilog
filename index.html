@@ -391,6 +391,29 @@
         <input id="login-pin" type="password" inputmode="numeric" maxlength="4" placeholder="PIN（4桁）">
         <div id="login-err"></div>
         <button class="btn btn-action" style="width:100%;" onclick="tryLogin()">🔓 はじめる</button>
+        <div style="margin-top:16px;font-size:12px;color:#888;">
+            アドレスが変わって記録が見あたらない？
+            <a href="#" onclick="openMigrate();return false;" style="color:var(--main-color);font-weight:bold;">📦 きろくの引っこし</a>
+        </div>
+    </div>
+</div>
+
+<!-- 📦 きろくの引っこし（アドレス／端末が変わっても記録を持っていく） -->
+<div id="migrate-overlay" class="no-print" style="display:none; position:fixed; inset:0; z-index:5500; background:var(--bg-color); overflow-y:auto; padding:20px;">
+    <div style="max-width:560px; margin:0 auto;">
+        <h2 style="text-align:center;">📦 きろくの引っこし</h2>
+        <div class="uh-box"><h3>① 前のアプリでコピー</h3>
+            <p>今まで使っていたほう（前のアドレス）で下のボタンを押して、出てきた<b>引っこしコード</b>をぜんぶコピーしてね。</p>
+            <button class="btn btn-action" style="width:100%;" onclick="migExport()">📤 このデバイスの記録をコピーする</button>
+            <textarea id="mig-out" readonly placeholder="ここに引っこしコードが出るよ（長いよ）" style="width:100%; box-sizing:border-box; height:90px; margin-top:10px; font-size:11px; border:2px solid var(--border-color); border-radius:8px; padding:8px; background:var(--box-bg); color:var(--text-color);"></textarea>
+        </div>
+        <div class="uh-box"><h3>② 新しいアプリで貼りつけ</h3>
+            <p>新しいほう（このアドレス）で、コピーした引っこしコードを下に貼りつけて「取りこむ」を押すと、記録がぜんぶ引きつがれるよ。</p>
+            <textarea id="mig-in" placeholder="ここに引っこしコードを貼りつけてね" style="width:100%; box-sizing:border-box; height:90px; font-size:11px; border:2px solid var(--border-color); border-radius:8px; padding:8px; background:var(--box-bg); color:var(--text-color);"></textarea>
+            <button class="btn btn-test" style="width:100%; margin-top:10px;" onclick="migImport()">📥 貼りつけて取りこむ</button>
+        </div>
+        <div style="font-size:12px; color:#888; text-align:center;">※ 引っこしは1台につき1回でOK。前のアプリの記録は消えません。</div>
+        <button class="btn" style="background:#34495e; color:#fff; width:100%; margin-top:14px;" onclick="closeMigrate()">← もどる</button>
     </div>
 </div>
 
@@ -5675,6 +5698,37 @@
         return text;
     }
     // どの環境でも動くコピー（clipboard APIが無い/失敗する環境では旧方式にフォールバック）
+    // ===== 📦 きろくの引っこし（アドレス／端末が変わっても記録を持っていく） =====
+    function openMigrate() { document.getElementById('migrate-overlay').style.display = 'block'; window.scrollTo(0, 0); }
+    function closeMigrate() { document.getElementById('migrate-overlay').style.display = 'none'; }
+    // localStorage をぜんぶ1つのコードにまとめる（日本語もこわれないようにUTF-8→base64）
+    function migExport() {
+        const data = {};
+        for(let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); data[k] = localStorage.getItem(k); }
+        let code;
+        try { code = 'NOBILOG1|' + btoa(unescape(encodeURIComponent(JSON.stringify(data)))); }
+        catch(e) { alert('コードが作れませんでした'); return; }
+        const out = document.getElementById('mig-out');
+        if(out) { out.value = code; out.focus(); out.select(); }
+        copyTextRobust(code, '📤 引っこしコードをコピーしたよ！\n新しいアプリで貼りつけてね。');
+    }
+    // 引っこしコードを読みこんで、記録をぜんぶ書きもどす
+    function migImport() {
+        const el = document.getElementById('mig-in');
+        const code = (el ? el.value : '').trim();
+        if(!code) { alert('引っこしコードを貼りつけてね'); return; }
+        if(code.indexOf('NOBILOG1|') !== 0) { alert('引っこしコードが正しくないみたい。前のアプリでコピーしたものを、まるごと貼りつけてね。'); return; }
+        let data;
+        try { data = JSON.parse(decodeURIComponent(escape(atob(code.slice(9))))); }
+        catch(e) { alert('コードが読めませんでした。とちゅうで切れていないか確かめてね。'); return; }
+        if(!data || typeof data !== 'object') { alert('引っこしコードが正しくないみたい'); return; }
+        if(!confirm('このデバイスの記録を、引っこしコードの内容で置きかえます。よろしいですか？')) return;
+        let n = 0;
+        Object.entries(data).forEach(([k, v]) => { try { localStorage.setItem(k, String(v)); n++; } catch(e) {} });
+        try { sessionStorage.removeItem('nobilogAbRestored'); } catch(e) {}   // 自動バックアップの復元ループ防止フラグを外す
+        alert('📥 引っこし完了！（' + n + '件）\nページを読み直すね。');
+        location.reload();
+    }
     function copyTextRobust(text, doneMsg) {
         const fallback = () => {
             try {
