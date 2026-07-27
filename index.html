@@ -156,6 +156,11 @@
         .hw-item:first-of-type { border-top: none; }
         .hw-check { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 6px; border: 2px solid var(--border-color); background: var(--bg-color); font-size: 16px; line-height: 22px; text-align: center; padding: 0; color: #27ae60; box-sizing: border-box; }
         .hw-check.auto { cursor: default; } /* 手で押せない＝アプリでやると自動でまるが付く */
+        /* 🌻 8月の「夏休みを楽しむ」だけ、自分でチェックできる */
+        .hw-check.self { cursor: pointer; border-color: #f39c12; border-style: dashed; transition: transform .12s, background .2s; }
+        .hw-check.self:hover { border-color: #e67e22; transform: scale(1.08); }
+        .hw-check.self:active { transform: scale(.9); }
+        .hw-check.self.done { background: #f39c12; border-color: #f39c12; border-style: solid; color: #fff; }
         .hw-check.done { background: #27ae60; border-color: #27ae60; color: #fff; }
         .hw-remind { flex: 0 0 auto; width: 26px; text-align: center; font-size: 16px; line-height: 26px; }
         .hw-body { flex: 1; min-width: 0; }
@@ -278,6 +283,52 @@
         .m-gcard { border:2px dashed var(--border-color); border-radius:10px; padding:10px; margin:8px 0; }
         .m-gbtns { display:flex; flex-wrap:wrap; gap:5px; margin-top:7px; }
         .m-gbtns .m-btn { flex:1; min-width:74px; }
+        /* 週替わりのカウントダウン */
+        .m-week { background:linear-gradient(135deg,#2c3e50,#4b6584); color:#fff; border-radius:12px; padding:12px; text-align:center; margin-bottom:10px; }
+        .m-week .wt { font-size:26px; font-weight:bold; font-variant-numeric:tabular-nums; letter-spacing:1px; }
+        .m-week .wl { font-size:12px; opacity:.9; }
+        .m-locked { opacity:.5; }
+        /* ===== 🎲 ギャンブルの演出（アニメーション） ===== */
+        .gz { text-align:center; padding:6px 0 2px; }
+        .gz-stage { min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+        /* ルーレット */
+        .gz-wheel { width:170px; height:170px; border-radius:50%; border:7px solid #7f5539; position:relative;
+            background:conic-gradient(#27ae60 0 2.7%, #c0392b 2.7% 5.4%, #222 5.4% 8.1%, #c0392b 8.1% 10.8%, #222 10.8% 13.5%,
+            #c0392b 13.5% 16.2%, #222 16.2% 18.9%, #c0392b 18.9% 21.6%, #222 21.6% 24.3%, #c0392b 24.3% 27%, #222 27% 29.7%,
+            #c0392b 29.7% 32.4%, #222 32.4% 35.1%, #c0392b 35.1% 37.8%, #222 37.8% 40.5%, #c0392b 40.5% 43.2%, #222 43.2% 45.9%,
+            #c0392b 45.9% 48.6%, #222 48.6% 51.3%, #c0392b 51.3% 54%, #222 54% 56.7%, #c0392b 56.7% 59.4%, #222 59.4% 62.1%,
+            #c0392b 62.1% 64.8%, #222 64.8% 67.5%, #c0392b 67.5% 70.2%, #222 70.2% 72.9%, #c0392b 72.9% 75.6%, #222 75.6% 78.3%,
+            #c0392b 78.3% 81%, #222 81% 83.7%, #c0392b 83.7% 86.4%, #222 86.4% 89.1%, #c0392b 89.1% 91.8%, #222 91.8% 94.5%,
+            #c0392b 94.5% 97.2%, #222 97.2% 100%);
+            transition:transform 3.4s cubic-bezier(.17,.67,.21,1); }
+        .gz-hub { position:absolute; inset:32%; border-radius:50%; background:var(--box-bg); display:flex; align-items:center; justify-content:center;
+            font-size:26px; font-weight:bold; color:var(--text-color); }
+        .gz-pin { font-size:22px; margin-bottom:-12px; position:relative; z-index:2; }
+        /* スロット */
+        .gz-reels { display:flex; gap:8px; justify-content:center; }
+        .gz-reel { width:66px; height:86px; border-radius:12px; border:3px solid var(--border-color); background:var(--bg-color);
+            display:flex; align-items:center; justify-content:center; font-size:38px; overflow:hidden; }
+        .gz-reel.spin { animation:gzSpin .09s linear infinite; }
+        @keyframes gzSpin { from { transform:translateY(-10px); opacity:.45; } to { transform:translateY(10px); opacity:1; } }
+        .gz-reel.hit { border-color:#f39c12; box-shadow:0 0 0 4px rgba(243,156,18,.28); }
+        /* 競馬 */
+        .gz-track { width:100%; max-width:420px; }
+        .gz-lane { position:relative; height:30px; border-bottom:2px dashed var(--border-color); margin:2px 0; }
+        .gz-horse { position:absolute; left:0; top:0; font-size:22px; transition:left .25s linear; white-space:nowrap; }
+        .gz-goal { position:absolute; right:0; top:0; font-size:15px; opacity:.65; }
+        /* 宝くじ・BIG */
+        .gz-digits { display:flex; gap:5px; justify-content:center; }
+        .gz-dig { width:38px; height:52px; border-radius:8px; border:3px solid var(--border-color); background:var(--bg-color);
+            display:flex; align-items:center; justify-content:center; font-size:26px; font-weight:bold; }
+        .gz-dig.spin { animation:gzSpin .07s linear infinite; }
+        .gz-dig.fix { border-color:#11998e; color:#11998e; }
+        .gz-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:5px; max-width:330px; }
+        .gz-cell { aspect-ratio:1; border-radius:7px; border:2px solid var(--border-color); background:var(--bg-color);
+            display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:bold; }
+        .gz-cell.ok { background:#27ae60; border-color:#27ae60; color:#fff; }
+        .gz-cell.ng { background:#95a5a6; border-color:#95a5a6; color:#fff; }
+        .gz-msg { font-size:17px; font-weight:bold; min-height:26px; }
+        .gz-win { animation:popIn .45s cubic-bezier(.22,.9,.28,1) both; }
 
         /* ===== ✨ なめらかアニメーション（transform と opacity だけ＝軽い） ===== */
         html { scroll-behavior: smooth; }
@@ -463,6 +514,7 @@
     <div class="nav-item" onclick="switchView('calendar')">🗓️ カレンダー（宿題）</div>
     <div class="nav-item" onclick="switchView('game')">🎮 きろく・あそび</div>
     <div class="nav-item" onclick="switchView('money')">🏛️ 政治と経済</div>
+    <div class="nav-item" onclick="switchView('life')">🏠 生活</div>
     <div class="nav-item" onclick="switchView('stats')">📊 成績・グラフ</div>
 </div>
 
@@ -650,6 +702,12 @@
         <div id="money-body"></div>
     </div>
 
+    <!-- ================= 🏠 生活 ================= -->
+    <div id="view-life" class="view">
+        <h1 class="no-print">🏠 生活 <button style="font-size:22px;background:none;border:none;cursor:pointer;opacity:.5;vertical-align:middle;" title="あそび方" onclick="mLifeHelp()">❓</button></h1>
+        <div id="life-body"></div>
+    </div>
+
     <div id="game-modal" class="g-modal no-print">
         <button class="btn uh-back" style="background:#34495e; color:white; max-width:640px; margin:0 auto 12px; display:block; width:100%;" onclick="gCloseModal()">← とじる</button>
         <div id="game-play" class="g-play"></div>
@@ -811,11 +869,22 @@
         document.getElementById('login-overlay').classList.add('on');
         setTimeout(() => document.getElementById('login-pin').focus(), 50);
     }
+    // 🔒 PINを何度もまちがえたら、しばらく入力できないようにする（勝手に開けられないように）
+    let pinFail = 0, pinLockUntil = 0;
     function tryLogin() {
         const err = document.getElementById('login-err');
+        const now = Date.now();
+        if(now < pinLockUntil) { err.innerText = `まちがえすぎたよ🔒 あと${Math.ceil((pinLockUntil - now)/1000)}秒 待ってね`; return; }
         const pin = document.getElementById('login-pin').value.trim();
         const u = APP_USERS.find(x => x.pin === pinHash(pin)); // PINで人を判定
-        if(!u) { err.innerText = 'PINがちがうよ🔒'; document.getElementById('login-pin').value = ''; return; }
+        if(!u) {
+            pinFail++;
+            document.getElementById('login-pin').value = '';
+            if(pinFail >= 5) { pinLockUntil = now + 30000; pinFail = 0; err.innerText = 'まちがえすぎたよ🔒 30秒 待ってね'; return; }
+            err.innerText = `PINがちがうよ🔒（あと${5 - pinFail}回）`;
+            return;
+        }
+        pinFail = 0;
         // ログイン成功
         currentUserId = u.id;
         stopEikenTimer(); ekGraded = false; ekQData = []; testQuestionsData = []; reviewList = [];
@@ -885,7 +954,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🏛️政治と経済に<b>🛡️保険</b>と<b>🎲ギャンブル</b>のタブが増えました！①<b>保険</b>は8しゅるい×3プラン。<b>高いプランほど補償もサービスも良くなる</b>（免責0円・示談交渉・代車・24時間相談…）。まず「くらしの設定」をえらんでね②毎日ちょっとの確率で<b>できごと</b>（けが・スマホがこわれる・事故）が起きるよ。保険に入っていれば保険金が出る🛡️③保険料は毎月5日に給料といっしょに引かれます④<b>🔭保険シミュレーター</b>で「あなたの30年」と「1000人の1年」を早送りできる（いちばん勉強になる！）⑤<b>ギャンブル</b>のタブは日本の主なギャンブルを<b>還元率</b>でくらべる勉強コーナー。使うのは<b>おためしチップ</b>だけで現金とは交換できません。<b>🔬100万回まとめて計算</b>すると、なぜ必ず負けるのかが目で見えるよ⑥クイズ18問・用語31語も追加！';
+    const UPDATE_NOW = '🎉 大アップデート！①<b>💼お仕事</b>タブができました。<b>試験→面接→内定</b>で会社に入って毎月お給料をもらおう（<b>落ちることもある</b>よ）。書類選考は<b>勉強した問題の数</b>で決まるから、勉強するほど良い会社を受けられる📚 出勤しないと警告→クビになるので注意！②<b>🏠生活</b>タブ（メニューの中）で家・ごはん・スマホ・光熱費をそろえよう。そろっていないと<b>健康ときぶんが下がって仕事の評価も下がる</b>③<b>💳借金</b>タブで、<b>いくら借りて・何回で・毎月いくら返すか</b>を全部見てから借りられるように。ちゃんと返すと<b>信用スコア</b>が上がるよ⭐④<b>🎲ギャンブル</b>は<b>自分のお金</b>でやる形になりました。ルーレットや競馬が<b>本当に動く演出</b>つき🎡🐎 遊べるのは<b>毎週えらばれた3つ</b>だけで、<b>毎週月曜0:00</b>に入れかわります（残り時間が出るよ）⑤クイズは<b>会社の筆記試験</b>になりました⑥<b>8月の宿題は「夏休みを楽しむ」だけ！</b>楽しめたら自分でチェックを付けてね🌻⑦データが消えないしくみをさらに強くしました（アップデートしても記録はそのままです）';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -912,6 +981,10 @@
         '2026-7-30': [ { t:'ワーク or 夏休みの宿題をどんどん進めよう！ラストスパート、駆け込みでやりきろう🔥' }, { t:'今日どれだけやったか、なお に報告してね（「今日はここまでやった！」でOK）📣' } ],
         '2026-7-31': [ { t:'ワーク or 夏休みの宿題を終わらせる駆け込みラスト！最後までやりきろう🔥🔥' }, { t:'今日どれだけやったか、なお に報告してね（「今日はここまでやった！」でOK）📣' } ]
     };
+    // 🌻 2026年8月だけの特別ルール：宿題はなし。毎日「夏休みを楽しむ」だけ。
+    //    この月だけ self:true ＝ 自分でチェックを付けられる（楽しめたらタップ）。
+    //    ※ほかの月・ほかの宿題は今までどおり「アプリでやると自動でまるが付く」方式のまま（変えないこと）
+    for(let d = 1; d <= 31; d++) HOMEWORK['2026-8-' + d] = [ { t:'夏休みを楽しむ🌻', self:true } ];
     function calDayNum(key) { const p = String(key).split('-').map(Number); return Math.floor(new Date(p[0], p[1]-1, p[2]).getTime() / 86400000); }
     function calToday() { const n = new Date(); return `${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`; }
     function calLabel(key) {
@@ -937,6 +1010,18 @@
         hwActSave(a);
         if(document.getElementById('view-study').classList.contains('active')) renderTodayHomework();
     }
+    // 🌻 自分でつけるチェック（self:true の宿題だけ。2026年8月の「夏休みを楽しむ」専用）
+    function hwSelfKey() { return currentUserId + ':hwSelf'; }
+    function hwSelfLoad() { try { const v = JSON.parse(localStorage.getItem(hwSelfKey())); return (v && typeof v === 'object') ? v : {}; } catch(e) { return {}; } }
+    function hwSelfIs(dateKey, idx) { return !!hwSelfLoad()[dateKey + '#' + idx]; }
+    function hwSelfToggle(dateKey, idx) {
+        if(!currentUserId) return;
+        const s = hwSelfLoad(), k = dateKey + '#' + idx;
+        if(s[k]) delete s[k]; else { s[k] = 1; playSfx('correct'); celebrate(); }
+        localStorage.setItem(hwSelfKey(), JSON.stringify(s));
+        if(document.getElementById('view-calendar').classList.contains('active')) renderCalendar();
+        if(document.getElementById('view-study').classList.contains('active')) renderTodayHomework();
+    }
     // その宿題がやり終わっているか（自動判定）。mが無い宿題は判定しない（＝まるは付かないリマインダー）
     function hwIsDone(item, dateKey) {
         const m = item.m; if(!m) return null;
@@ -960,10 +1045,13 @@
         const full = String(hw.t);
         const needMore = full.length > 20;
         const short = needMore ? full.slice(0, 20) : full;
-        const body = `<div class="hw-body"><span class="hw-text${hw.m && hwIsDone(hw, dateKey) ? ' done' : ''}">`
+        const selfDone = hw.self && hwSelfIs(dateKey, idx);
+        const body = `<div class="hw-body"><span class="hw-text${(hw.m && hwIsDone(hw, dateKey)) || selfDone ? ' done' : ''}">`
             + `<span class="hw-shown">${esc(short)}${needMore ? '…' : ''}</span>`
             + (needMore ? `<span class="hw-full" style="display:none;">${esc(full)}</span> <span class="hw-more" onclick="hwExpand(this)">つづき▼</span>` : '')
             + `</span></div>`;
+        // 🌻 自分でつけるチェック（8月の「夏休みを楽しむ」だけ）
+        if(hw.self) return `<div class="hw-item"><span class="hw-check self${selfDone ? ' done' : ''}" title="${selfDone ? '楽しめたね！もう一回おすと消えるよ' : '楽しめたらタップしてね'}" onclick="hwSelfToggle('${dateKey}',${idx})">${selfDone ? '✓' : ''}</span>${body}</div>`;
         if(!hw.m) return `<div class="hw-item"><span class="hw-remind">📌</span>${body}</div>`; // おうちでやる系（自動チェック無し）
         const done = hwIsDone(hw, dateKey);
         return `<div class="hw-item"><span class="hw-check auto${done ? ' done' : ''}" title="${done ? 'できたね！' : 'アプリでやると自動でまるが付くよ'}">${done ? '✓' : ''}</span>${body}</div>`;
@@ -987,8 +1075,9 @@
             const key = `${y}-${m+1}-${d}`;
             const dow = new Date(y, m, d).getDay();
             const hws = HOMEWORK[key] || [];
-            const autoItems = hws.filter(h => h.m);
-            const allDone = autoItems.length && autoItems.every(h => hwIsDone(h, key)); // 自動チェック対象が全部できたら緑
+            // 自動チェック対象＋自分でつける宿題が全部できたら緑のドットになる
+            const chkItems = hws.map((h, hi) => ({ h, hi })).filter(x => x.h.m || x.h.self);
+            const allDone = chkItems.length && chkItems.every(x => x.h.self ? hwSelfIs(key, x.hi) : hwIsDone(x.h, key));
             const cls = ['cal-cell', dow===0?'sun':dow===6?'sat':'', key===today?'today':'', key===calSelected?'selected':''].filter(Boolean).join(' ');
             grid += `<div class="${cls}" onclick="calSelect('${key}')">${d}${hws.length ? `<span class="hw-dot${allDone?' alldone':''}"></span>` : ''}</div>`;
         }
@@ -1204,6 +1293,7 @@
         if(gLoop) { clearInterval(gLoop); gLoop=null; }
         if(gState.timer) { clearTimeout(gState.timer); gState.timer=null; }
         if(gState.spin) { clearInterval(gState.spin); gState.spin=null; }
+        mGamStopAnim();   // 🎲 ギャンブルの演出も止める（タイマーが残らないように）
         document.getElementById('game-modal').classList.remove('on');
         if(document.getElementById('view-game').classList.contains('active')) renderGame();
     }
@@ -1234,9 +1324,9 @@
     //   ここに入れるのは「対戦ゲームの点数」だけ。成績・宿題・個人情報は送らない。
     const SYNC_URL = 'https://nobilog-board.naon4022.workers.dev';
     const SYNC_TOKEN = 'nobilog_xyHCdnEL5fDMKD97pa3apnpCRFvT'; // 合言葉（サーバー側と同じ文字列にする。半角の英数字だけで作ること）
-    const VB_HIGHER = { money:true, flash:true, typing:true, kuku:false, memory:true, anagram:true, missing:true, reaction:false, stopClock:false, vocab:true };
-    const VB_NAME = { money:'💰 そう資産', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
-    const VB_UNIT = { money:'円', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
+    const VB_HIGHER = { money:true, salary:true, credit:true, jobday:true, flash:true, typing:true, kuku:false, memory:true, anagram:true, missing:true, reaction:false, stopClock:false, vocab:true };
+    const VB_NAME = { money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
+    const VB_UNIT = { money:'円', salary:'円', credit:'点', jobday:'日', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
     function vbLoad() { try { return JSON.parse(localStorage.getItem('versusBoard')) || {}; } catch(e) { return {}; } }
     function vbSaveLocal(b) { localStorage.setItem('versusBoard', JSON.stringify(b)); }
     // 記録を出したら保存（自己ベストだけ残す）→ ボードに反映＋オンラインなら送信
@@ -2249,7 +2339,15 @@
         { id:'inshelp', e:'🧯', n:'保険に助けられた', ok:m=>(m.insGot||0)>0 },
         { id:'inssim', e:'🔭', n:'1000人の1年を見た', ok:m=>((m.insSim||0)>=1) },
         { id:'gamsim', e:'🔬', n:'大数の法則を体感', ok:m=>(((m.gam||{}).sims)||0)>=1 },
-        { id:'gamknow', e:'🎲', n:'還元率をたしかめた', ok:m=>(((m.gam||{}).plays)||0)>=1 }
+        { id:'gamknow', e:'🎲', n:'還元率をたしかめた', ok:m=>(((m.gam||{}).plays)||0)>=1 },
+        { id:'job1', e:'💼', n:'はじめての内定', ok:m=>!!((m.job||{}).co) || ((m.job||{}).hist||[]).length>=1 },
+        { id:'job30', e:'🏢', n:'30日はたらいた', ok:m=>((m.job||{}).days||0)>=30 },
+        { id:'jobup', e:'📈', n:'昇進した', ok:m=>((m.job||{}).rank||0)>=1 },
+        { id:'jobtop', e:'👔', n:'年収1000万円の会社に入った', ok:m=>{ const c=mJobCo((m.job||{}).co); return !!c && c.pay>=10000000; } },
+        { id:'loan1', e:'💳', n:'計画を立てて借りた', ok:m=>(m.loans||[]).length>=1 || (m.loanPaid||0)>0 },
+        { id:'loanok', e:'⭐', n:'信用スコア700以上', ok:m=>(m.credit||0)>=700 },
+        { id:'life1', e:'🏠', n:'ひとり暮らしを始めた', ok:m=>['apart','mansi','tower'].some(c=>((m.home||{}).own||{})[c]) },
+        { id:'lifeok', e:'💪', n:'健康もきぶんも80以上', ok:m=>((m.home||{}).health||0)>=80 && ((m.home||{}).happy||0)>=80 }
     ];
     const M_PAY_DAY = 5;          // 毎月5日に「給料」と「配当金」がまとめて入る
     const M_PAY_PER_CORRECT = 500; // 給料は勉強しだい：20問正解で1万円（＝1問500円）
@@ -2390,12 +2488,12 @@
         ['スロットマシン', 90.0, '85〜98%とお店や台でばらつく。当たりの見えかたが派手なので、勝っている気になりやすい'],
         ['キノ・くじ系', 75.0, 'カジノの中でいちばん低い']
     ];
-    // チップで「ためせる」ギャンブル。tbl=[[当たる金額(かけ金1口あたり), ○分の1]...]
+    // 実際にお金をかけて「ためせる」ギャンブル。tbl=[[当たる金額(かけ金1口あたり), ○分の1]...]
     const M_GPLAY = [
-        { c:'loto', e:'🎫', n:'宝くじ（ジャンボ風）', unit:300, d:'1枚300チップ。1等は7億チップ！ただし2000万分の1',
+        { c:'loto', e:'🎫', n:'宝くじ（ジャンボ風）', unit:300, d:'1枚300円。1等は7億円！ただし2000万分の1',
           tbl:[[700000000,20000000],[150000000,10000000],[10000000,2000000],[1000000,200000],[100000,50000],[10000,8000],[3000,250],[300,5]],
           note:'「1等が7億」と聞くとすごいけれど、期待値にすると300円のうち35円ぶんしかない。ほとんどは7等300円（10枚に2枚）でできている還元率だよ' },
-        { c:'big',  e:'⚽', n:'サッカーくじ BIG風', unit:300, d:'14試合の勝ち・負け・引き分けをぜんぶ当てる。1口300チップ',
+        { c:'big',  e:'⚽', n:'サッカーくじ BIG風', unit:300, d:'14試合の勝ち・負け・引き分けをぜんぶ当てる。1口300円',
           tbl:[[600000000,4782969],[3000000,170820],[10000,13140],[1500,1642]],
           note:'3の14乗＝478万2969通り。もし1口300円で全通りを買うと14億円かかって、1等は6億円。買えば買うほど損になるのが分かる' },
         { c:'roulR',e:'🎡', n:'ルーレット（赤か黒）', unit:100, d:'37マス（0〜36）のうち赤18・黒18・緑（0）1。当たれば2倍',
@@ -2407,10 +2505,132 @@
         { c:'keiba',e:'🐎', n:'競馬（単勝）', unit:100, d:'5頭から1頭えらぶ。人気の馬はオッズが低い（もどりが少ない）',
           horses:[['①ノビログ号',0.40,2.0],['②サクラミライ',0.25,3.2],['③カゼノコ',0.18,4.4],['④ダークホース',0.12,6.7],['⑤アナウマ',0.05,16.0]],
           note:'どの馬を選んでも還元率は約80%になるようオッズが決まっている。「予想がうまい人」でも、この20%の壁は消えない' },
-        { c:'slot', e:'🎰', n:'スロット風', unit:100, d:'1回100チップ。そろえば20倍・8倍・2倍・1倍',
+        { c:'slot', e:'🎰', n:'スロット風', unit:100, d:'1回100円。そろえば20倍・8倍・2倍・1倍',
           tbl:[[2000,100],[800,25],[200,10],[100,5.5555]],
           note:'当たり自体は3回に1回くらい起こるので「勝っている気」になりやすい。でも平均は90%。1000回まわすと元手はだいたい消える' }
     ];
+    // ===================== 💼 お仕事 =====================
+    // ぜんぶ架空の会社（本物の会社ではないよ）。でも仕事の中身・お給料・入りやすさは本物を参考にしてある
+    //   pay=年収(円) / diff=むずかしさ1〜5 / paper=筆記の合格ライン(%) / need=書類選考に必要な勉強量(問)
+    //   rate=最終倍率（受かる人の割合。難関ほど小さい＝実力があっても落ちることがある）
+    const M_JOBS = [
+        // ── ★★★★★ 超難関（日本でいちばん入りにくいレベル） ──
+        { c:'KEYE', e:'🔬', n:'キー・エレクトロニクス', sec:'電機・センサー', model:'工場の機械を賢くするセンサーの会社', pay:21000000, diff:5, paper:90, need:1200, rate:0.35,
+          d:'工場むけのセンサーを、会社を回って直接売る。日本一お給料が高いと言われる会社', work:'お客さんの工場を回って提案する', want:'ronri',
+          perks:['日本トップクラスの給料','20代で年収1000万も','成果がそのまま給料になる','そのぶん求められるものも日本一きびしい'] },
+        { c:'MIRA', e:'🌏', n:'未来通商', sec:'総合商社', model:'世界中でモノとお金を動かす商社', pay:16000000, diff:5, paper:85, need:1000, rate:0.4,
+          d:'エネルギー・食べもの・鉄・くるま…世界中のものを買って売る。海外で働くことも多い', work:'海外の取引先と交渉する', want:'kokusai',
+          perks:['世界中で働ける','若いうちから大きなお金を動かす','語学の勉強代を会社が出す','転勤・海外赴任が多い'] },
+        { c:'ASAT', e:'📺', n:'あさひテレビ', sec:'放送・メディア', model:'テレビ局', pay:14000000, diff:5, paper:80, need:900, rate:0.3,
+          d:'番組をつくる・ニュースを伝える。入るのがとてもむずかしく、倍率は1000倍をこえることも', work:'番組の企画を出す・取材する', want:'sozo',
+          perks:['自分の企画が全国に流れる','有名人と仕事ができる','夜おそくなる日が多い','倍率が日本トップクラス'] },
+        { c:'NOMS', e:'📈', n:'野村スミレ証券', sec:'証券', model:'株や投資をあつかう会社', pay:13000000, diff:5, paper:85, need:850, rate:0.45,
+          d:'お客さんのお金をふやすお手伝い。数字に強くないとつとまらない', work:'お客さんに投資の提案をする', want:'ronri',
+          perks:['成果が出れば給料がどんどん上がる','お金の知識が一生の武器になる','ノルマがきびしい'] },
+        { c:'DENP', e:'📢', n:'電報堂', sec:'広告', model:'CMや広告をつくる会社', pay:12000000, diff:5, paper:75, need:800, rate:0.3,
+          d:'企業の「伝えたい」を形にする。アイデア勝負の世界', work:'広告のアイデアを考える', want:'sozo',
+          perks:['自分のアイデアが街中に出る','有名企業と仕事','はたらく時間が長くなりがち'] },
+        // ── ★★★★ 難関（だれもが名前を知っている大企業） ──
+        { c:'TOYW', e:'🚗', n:'トヨワ自動車', sec:'自動車', model:'日本一の自動車メーカー', pay:9000000, diff:4, paper:70, need:600, rate:0.5,
+          d:'車をつくって世界中で売る。「ムダをなくす」考え方が世界中の工場のお手本になっている', work:'車づくりの改善を考える', want:'kaizen',
+          perks:['安定度は日本トップ級','世界中に工場がある','会社の家（社宅）が安い','改善の考え方が身につく'] },
+        { c:'SOMI', e:'🎧', n:'ソミー', sec:'電機・エンタメ', model:'テレビ・カメラ・ゲーム・音楽の会社', pay:11000000, diff:4, paper:75, need:700, rate:0.45,
+          d:'カメラ・音楽・ゲーム・映画まで手がける。「人がおどろくもの」をつくる会社', work:'新しい製品のアイデアを形にする', want:'sozo',
+          perks:['好きなことを仕事にしやすい','自分の作ったものが世界で売れる','副業もOK'] },
+        { c:'NINT', e:'🎮', n:'任転堂', sec:'ゲーム', model:'ゲーム機とゲームの会社', pay:10000000, diff:4, paper:75, need:700, rate:0.35,
+          d:'世界中の人を笑顔にするゲームをつくる。人気なので入るのがすごくむずかしい', work:'ゲームのおもしろさを考える', want:'sozo',
+          perks:['世界中の子どもが遊ぶものを作れる','会社をやめる人がとても少ない','京都で働ける','倍率がとても高い'] },
+        { c:'MUFR', e:'🏦', n:'三菱UFR銀行', sec:'銀行', model:'日本最大級の銀行', pay:8000000, diff:4, paper:70, need:550, rate:0.55,
+          d:'お金を預かる・貸す・世の中にお金を回す。社会のインフラそのもの', work:'会社にお金を貸す相談にのる', want:'sekinin',
+          perks:['社会のしくみが分かる','資格をとると手当が出る','転勤が多い','数字に正確でないとダメ'] },
+        { c:'NTPX', e:'📡', n:'NTP東西', sec:'通信', model:'電話とインターネットの会社', pay:8500000, diff:4, paper:65, need:500, rate:0.55,
+          d:'日本中に通信をとどける。災害のときも止められない大事な仕事', work:'通信の設備を守る・つなぐ', want:'sekinin',
+          perks:['とても安定している','休みがとりやすい','社会をささえている実感がある'] },
+        // ── ★★★ 中堅（人気だけど、がんばれば手がとどく） ──
+        { c:'AMZN', e:'📦', n:'アマゾネス・ジャパン', sec:'ネット通販', model:'ネットで何でも売る会社', pay:7000000, diff:3, paper:60, need:350, rate:0.6,
+          d:'注文された商品を、いちばん早く安くとどけるしくみを作る', work:'とどけ方のムダをなくす', want:'kaizen',
+          perks:['数字で考える力がつく','世界の会社','スピードがとても速い'] },
+        { c:'RAKN', e:'🛒', n:'楽園市場', sec:'ネットモール', model:'ネットのお店が集まる市場', pay:6500000, diff:3, paper:60, need:300, rate:0.6,
+          d:'お店の人が売れるようにお手伝いする。社内の会話は英語', work:'お店の売上をふやす作戦を出す', want:'kokusai',
+          perks:['英語が身につく（社内公用語）','若くても大きな仕事ができる','朝が早い'] },
+        { c:'UNIQ', e:'👕', n:'ユニクロン', sec:'アパレル', model:'安くて良い服の会社', pay:6000000, diff:3, paper:55, need:250, rate:0.65,
+          d:'世界中で売れる服をつくって売る。店長は「お店の社長」', work:'お店を回して売上をつくる', want:'sekinin',
+          perks:['早ければ入社1年で店長','世界中に店がある','立ち仕事で体力がいる'] },
+        { c:'YUSN', e:'✉️', n:'にっぽん郵船便', sec:'郵便・物流', model:'手紙と荷物をとどける会社', pay:5500000, diff:3, paper:50, need:200, rate:0.7,
+          d:'日本のすみずみまで手紙と荷物をとどける。町の人と顔なじみになれる', work:'配達コースを回る', want:'sekinin',
+          perks:['とても安定している','地元で働ける','雨の日も雪の日も外に出る'] },
+        { c:'YAMA', e:'🚚', n:'ヤマ運輸', sec:'宅配', model:'宅配便の会社', pay:5000000, diff:3, paper:45, need:150, rate:0.75,
+          d:'荷物を「あした届く」でとどける。日本の当たり前をささえている', work:'荷物を集めてとどける', want:'kaizen',
+          perks:['体をうごかす仕事','ありがとうを直接もらえる','年末はとてもいそがしい'] },
+        // ── ★★ 入りやすい（はじめの一歩） ──
+        { c:'SEVB', e:'🏪', n:'セブンイレボン', sec:'コンビニ', model:'コンビニの会社', pay:4000000, diff:2, paper:40, need:80, rate:0.85,
+          d:'町のコンビニを回して、売れる商品を考える', work:'お店に並べる商品をえらぶ', want:'kaizen',
+          perks:['どこにでもお店がある','商品の流行がわかる','24時間動くお店の管理'] },
+        { c:'DONQ', e:'🐧', n:'ドン・キホーラ', sec:'ディスカウント', model:'なんでも安く売る大きなお店', pay:4200000, diff:2, paper:40, need:80, rate:0.85,
+          d:'お店の売り場を自分で自由につくれるのが特徴', work:'売り場をつくって売上を上げる', want:'sozo',
+          perks:['売り場を自分の好きに作れる','若くても任される','夜おそくまで営業'] },
+        { c:'MCDL', e:'🍔', n:'マクドナルズ', sec:'外食', model:'ハンバーガーのお店', pay:3800000, diff:2, paper:35, need:60, rate:0.9,
+          d:'お店をきりもりする。人を動かすことを学べる', work:'お店をまわす・スタッフを育てる', want:'sekinin',
+          perks:['人を育てる力がつく','世界中に店がある','休日が不規則'] },
+        { c:'SUKI', e:'🍚', n:'すきぼー', sec:'外食', model:'牛丼のお店', pay:3600000, diff:2, paper:30, need:50, rate:0.9,
+          d:'早い・安い・うまいをまもる。とにかくスピードが命', work:'お店をまわす', want:'kaizen',
+          perks:['まかないが食べられる','早く仕事をおぼえられる','立ち仕事'] },
+        { c:'MIDR', e:'🥬', n:'スーパー みどり屋', sec:'小売', model:'地元のスーパー', pay:3500000, diff:1, paper:25, need:30, rate:0.95,
+          d:'地元のお客さんに毎日の食べものをとどける', work:'品出し・売り場づくり', want:'sekinin',
+          perks:['地元で働ける','家から近い','おいしいものが安く買える'] },
+        // ── アルバイト（試験も面接もかんたん。すぐ働ける・時給制） ──
+        { c:'ABCV', e:'🧃', n:'コンビニ バイト', sec:'アルバイト', model:'コンビニの店員', pay:1800000, diff:1, paper:0, need:0, rate:1, arbeit:true, hour:1100,
+          d:'レジ・品出し・そうじ。はじめてのお仕事にぴったり', work:'レジに立つ', want:'sekinin', perks:['すぐ働ける','時給1100円','シフトが自由'] },
+        { c:'ABCF', e:'☕', n:'カフェ バイト', sec:'アルバイト', model:'カフェの店員', pay:1900000, diff:1, paper:0, need:0, rate:1, arbeit:true, hour:1150,
+          d:'コーヒーをいれる・お客さんと話す', work:'ドリンクを作る', want:'sozo', perks:['すぐ働ける','時給1150円','コーヒーにくわしくなる'] },
+        { c:'ABNP', e:'📰', n:'新聞配達 バイト', sec:'アルバイト', model:'朝の新聞配達', pay:2000000, diff:1, paper:0, need:0, rate:1, arbeit:true, hour:1200,
+          d:'朝はやく起きて新聞をとどける。早起きの習慣がつく', work:'自転車で配達する', want:'sekinin', perks:['すぐ働ける','時給1200円','朝が強くなる'] }
+    ];
+    // 役職（評価が上がるとえらくなって、お給料も上がる）
+    const M_RANKS = [
+        { n:'新入社員',   up:1.00, need:0 },
+        { n:'一般社員',   up:1.12, need:120 },
+        { n:'主任',       up:1.28, need:300 },
+        { n:'係長',       up:1.45, need:600 },
+        { n:'課長',       up:1.70, need:1000 },
+        { n:'部長',       up:2.10, need:1600 },
+        { n:'役員',       up:2.80, need:2500 }
+    ];
+    // 面接の質問（会社が「ほしい人」に合う答えをえらべると評価が上がる）
+    // タイプ: ronri=論理・数字 / sozo=創造・アイデア / kokusai=国際・挑戦 / kaizen=改善・工夫 / sekinin=責任・まじめ
+    const M_INTERVIEW = [
+        { q:'あなたの長所を教えてください。', c:[
+            { t:'数字で考えて、筋道を立てて説明できます', k:'ronri' },
+            { t:'だれも思いつかないアイデアを出せます', k:'sozo' },
+            { t:'知らない場所へ飛びこむのが好きです', k:'kokusai' },
+            { t:'まかされたことは最後までやりぬきます', k:'sekinin' } ] },
+        { q:'仕事でうまくいかないとき、どうしますか？', c:[
+            { t:'どこが原因か数字で調べます', k:'ronri' },
+            { t:'やり方そのものを変えてみます', k:'sozo' },
+            { t:'小さなムダを見つけて一つずつ直します', k:'kaizen' },
+            { t:'先ぱいに相談して、まず報告します', k:'sekinin' } ] },
+        { q:'この会社で何をやりたいですか？', c:[
+            { t:'データを使って会社の判断を良くしたいです', k:'ronri' },
+            { t:'世の中がおどろく新しいものを作りたいです', k:'sozo' },
+            { t:'世界にこの会社を広げたいです', k:'kokusai' },
+            { t:'いまのやり方をもっと良くしていきたいです', k:'kaizen' } ] },
+        { q:'チームで意見が分かれたら、どうしますか？', c:[
+            { t:'どちらが得か数字を出してくらべます', k:'ronri' },
+            { t:'両方のいいとこ取りの案を考えます', k:'sozo' },
+            { t:'まず自分がやってみて結果を見せます', k:'kaizen' },
+            { t:'みんなの話を聞いて、決めたことに従います', k:'sekinin' } ] },
+        { q:'学生時代にいちばんがんばったことは？', c:[
+            { t:'苦手な教科を分析して点数を上げたことです', k:'ronri' },
+            { t:'だれもやっていない活動を始めたことです', k:'sozo' },
+            { t:'知らない人と話す機会をつくったことです', k:'kokusai' },
+            { t:'毎日サボらず続けたことです', k:'sekinin' } ] },
+        { q:'10年後、どうなっていたいですか？', c:[
+            { t:'会社の数字を任される人になりたいです', k:'ronri' },
+            { t:'新しい事業を立ち上げていたいです', k:'sozo' },
+            { t:'海外の拠点をまかされていたいです', k:'kokusai' },
+            { t:'後はいから信頼される人になりたいです', k:'sekinin' } ] }
+    ];
+    const M_WANT_NAME = { ronri:'論理的に考える人', sozo:'アイデアを出せる人', kokusai:'世界に出ていく人', kaizen:'工夫して良くする人', sekinin:'責任感がある人' };
     const M_EMPTY = () => ({
         cash:M_START, bank:0, hold:{}, nisa:{}, prices:{}, divRate:{}, day:0, lastDay:null, lastSlot:null,
         ledger:[], histTotal:[], news:[], quizOk:0, quizDone:[], badges:[],
@@ -2422,8 +2642,14 @@
         // 🛡️ 保険（ins={商品コード:プラン番号1〜3} / life=くらしの設定 / debt=払えなかった分の借金）
         ins:{}, insSeen:false, insPaid:0, insGot:0, insCount:0, insHist:[], insNew:[], insSim:0, insLapse:0, debt:0,
         life:{ phone:true, bike:true, work:true, pet:false, house:false, car:false, trip:false },
-        // 🎲 ギャンブル（おためしチップ。現金とは交換できない）
-        gam:{ chips:10000, day:null, bet:0, ret:0, plays:0, sims:0, big:0 }
+        // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
+        gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
+        // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0 },
+        // 💳 借金（計画して借りるローン）
+        loans:[], credit:600, loanPaid:0, loanLate:0,
+        // 🏠 生活（own=持っているもの / health=健康 / happy=きぶん）
+        home:{ own:{}, health:80, happy:70, lastMeal:null, mealDays:0, missed:0, lastFix:null }
     });
     // リセットを反映（同じidは1回だけ。実行するとお金データがまっさら＝1万円スタートに戻る）
     function mApplyResets() {
@@ -2436,7 +2662,11 @@
         M_RESETS.forEach(r => {
             if(!r.users.includes(currentUserId)) return;
             if(done.includes(r.id)) return;
+            // 🔒 安全そうち：中身のあるデータは force:true と書いていない限り絶対に消さない
+            //    （まちがってリセット指定を残したまま公開しても、買ったものが消えないようにするため）
+            if(!r.force && mHasContent(mLoad())) { done.push(r.id); localStorage.setItem(doneKey, JSON.stringify(done)); return; }
             done.push(r.id);
+            try { sessionStorage.setItem('nobilogAllowShrink', '1'); } catch(e) {}   // このときだけバックアップの縮小を許す
             // お金のデータだけ消す（勉強の記録などは消さない）。ひかえも一緒に消さないと、すぐ復活してしまう
             [ 'money', M_BAK1, M_BAK2, 'money.bakDay' ].forEach(k => localStorage.removeItem(ukey(k)));
             mIdbSave(JSON.stringify(M_EMPTY()));
@@ -2481,13 +2711,23 @@
         if(!m || typeof m.cash !== 'number') { m = M_EMPTY(); }
         m = Object.assign(M_EMPTY(), m);
         // 配列であるべき所がこわれていても落ちないように直す（保険）
-        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
+        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
         ['hold','nisa','ins'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
-        // 保険・ギャンブルのデータがこわれていても落ちないように直す（保険）
-        if(!m.life || typeof m.life !== 'object') m.life = M_EMPTY().life;
-        if(!m.gam || typeof m.gam !== 'object') m.gam = M_EMPTY().gam;
-        ['chips','bet','ret','plays','sims','big'].forEach(k => { if(typeof m.gam[k] !== 'number' || !isFinite(m.gam[k])) m.gam[k] = (k === 'chips' ? 10000 : 0); });
-        ['insPaid','insGot','insCount','insSim','insLapse','debt'].forEach(k => { if(typeof m[k] !== 'number' || !isFinite(m[k])) m[k] = 0; });
+        // ★アップデートで新しい項目がふえても、今までのデータは絶対に消さずに「足りない所だけ」うめる
+        const EMP = M_EMPTY();
+        ['life','gam','job','home'].forEach(k => {
+            if(!m[k] || typeof m[k] !== 'object') { m[k] = EMP[k]; return; }
+            Object.keys(EMP[k]).forEach(f => { if(m[k][f] === undefined) m[k][f] = EMP[k][f]; });   // 新項目だけ追加
+        });
+        ['chips','bet','ret','plays','sims','big','dayBet'].forEach(k => { if(typeof m.gam[k] !== 'number' || !isFinite(m.gam[k])) m.gam[k] = 0; });
+        ['rank','ev','days','worked','absent','warn','totalPay','bonus'].forEach(k => { if(typeof m.job[k] !== 'number' || !isFinite(m.job[k])) m.job[k] = (k === 'ev' ? 60 : 0); });
+        if(!Array.isArray(m.job.hist)) m.job.hist = [];
+        if(!m.job.applied || typeof m.job.applied !== 'object') m.job.applied = {};
+        if(m.job.co && !mJobCo(m.job.co)) m.job.co = null;                     // 知らない会社なら退職あつかい
+        if(!m.home.own || typeof m.home.own !== 'object') m.home.own = {};
+        ['health','happy','mealDays','missed'].forEach(k => { if(typeof m.home[k] !== 'number' || !isFinite(m.home[k])) m.home[k] = (k === 'health' ? 80 : k === 'happy' ? 70 : 0); });
+        m.loans = m.loans.filter(l => l && typeof l.left === 'number' && isFinite(l.left) && l.left > 0);
+        ['insPaid','insGot','insCount','insSim','insLapse','debt','credit','loanPaid','loanLate'].forEach(k => { if(typeof m[k] !== 'number' || !isFinite(m[k])) m[k] = (k === 'credit' ? 600 : 0); });
         Object.keys(m.ins).forEach(c => { const p = mInsProd(c); if(!p || !p.plans[m.ins[c] - 1]) delete m.ins[c]; });   // 知らない保険は消す
         // 株価は「今の時間帯」から計算する（保存はしない＝どの端末でも同じ・データがずれない）
         const now = mSlotInfo();
@@ -2635,9 +2875,21 @@
     }
     function mPayMonth(m, y, mo) {
         let did = false;
-        // 💼 給料（勉強でためた正解ぶん・20問で1万円）
+        // 💼 会社のお給料（額面から社会保険料・所得税・住民税を引いた「手取り」が入る）
+        if(mJobCo(m.job && m.job.co)) {
+            const co = mJobCo(m.job.co), gross = mJobGross(m), s = mJobNet(gross);
+            m.cash += s.net;
+            m.job.totalPay = (m.job.totalPay || 0) + s.net;
+            m.salaryTotal = (m.salaryTotal || 0) + s.net;
+            m.taxPaid += s.shotoku + s.jumin;
+            m.job.slip = Object.assign({ ym: y + '年' + mo + '月', co: co.n }, s);
+            mLog(m, `お給料（${co.n}・手取り）`, s.net);
+            mLog(m, `└ 社会保険料・税金`, -(s.gross - s.net));
+            did = true;
+        }
+        // 📚 勉強手当（勉強でためた正解ぶん・20問で1万円）
         const sal = (m.payCorrect || 0) * M_PAY_PER_CORRECT;
-        if(sal > 0) { m.cash += sal; m.salaryTotal = (m.salaryTotal || 0) + sal; mLog(m, `お給料（勉強 ${m.payCorrect}問ぶん）`, sal); m.payCorrect = 0; did = true; }
+        if(sal > 0) { m.cash += sal; m.salaryTotal = (m.salaryTotal || 0) + sal; mLog(m, `勉強手当（${m.payCorrect}問ぶん）`, sal); m.payCorrect = 0; did = true; }
         // 💴 配当金（1か月ぶん。課税口座は20.315%引き・NISAはまるごと）
         let divTax = 0, divNisa = 0;
         Object.entries(m.hold || {}).forEach(([c, h]) => { const r = m.divRate[c] || M_ASSET(c).div || 0; if(r) divTax += mPrice(m, c) * h.qty * r / 12; });
@@ -2675,7 +2927,11 @@
             mLog(m, `保険料（${Object.keys(m.ins).length}つ）`, -prem);
             did = true;
         }
-        // 💳 借金を返す（自己負担が払えなかった分。給料が入ったらまず返す）
+        // 🏠 生活のお金（家賃・スマホ代・光熱費など。持っているものの月額をまとめて払う）
+        if(mHomeFixed(m) > 0 && mHomePayMonth(m)) did = true;
+        // 💳 ローンの返済（計画どおり毎月きちんと返す）
+        if(m.loans.length && mLoanPayMonth(m)) did = true;
+        // 💳 立てかえ分を返す（事故などで払えなかった分。給料が入ったらまず返す）
         if((m.debt || 0) > 0 && m.cash > 0) {
             const pay = Math.min(m.cash, m.debt);
             m.cash -= pay; m.debt -= pay;
@@ -2765,6 +3021,8 @@
                 if(m.autoAmt > 0 && m.cash >= m.autoAmt) { mBuyInner(m, m.autoCode, m.autoAmt, true, m.autoAcct); }
                 // 🛡️ 1日ぶんの「できごと」（保険のありがたみが分かる）
                 mRollRisks(m);
+                mJobDaily(m);      // 💼 出勤したか（サボると警告→クビ）
+                mHomeDaily(m);     // 🏠 ごはん・体調・きぶん
             }
             changed = true;
         }
@@ -2856,6 +3114,16 @@
         m.payCorrect = (m.payCorrect || 0) + count;   // 正解した問題数をためる（20問で1万円）
         mSave(m); mAwardBadges();
     }
+    // オンラインの対戦ボードへ、2人でくらべられる数字をまとめて送る
+    function mVbSend(m) {
+        try {
+            m = m || mLoad();
+            vbRecord('money', Math.round(mTotal(m)));
+            const co = mJobCo((m.job || {}).co);
+            if(co) { vbRecord('salary', mJobNet(mJobGross(m)).net); vbRecord('jobday', m.job.days || 0); }
+            vbRecord('credit', Math.round(m.credit || 0));
+        } catch(e) {}
+    }
     function mAwardBadges() {
         const m = mLoad(); let got = [];
         M_BADGES.forEach(b => { if(!m.badges.includes(b.id) && b.ok(m)) { m.badges.push(b.id); got.push(b); } });
@@ -2871,7 +3139,7 @@
         // いちばん最初だけ、オンラインのニュースを取ってから相場を動かす（記事と値動きをそろえるため）
         if(!mNewsReady) { mNewsSync(true).then(() => renderMoney()); }
         const moved = mNewsReady ? mTick(m) : false;
-        if(moved) { mSave(m); mAwardBadges(); vbRecord('money', Math.round(mTotal(m))); } // 資産をオンライン対戦ボードへ
+        if(moved) { mSave(m); mAwardBadges(); mVbSend(m); } // 資産・給料・信用スコアをオンライン対戦ボードへ
         const total = mTotal(m), hv = mHoldValue(m);
         const prev = m.histTotal.length > 1 ? m.histTotal[m.histTotal.length - 2].v : M_START;
         const diff = total - prev;
@@ -2882,21 +3150,23 @@
             <div class="m-sub">${m.day}日目　目標 ${mYen(m.goal)} まで あと ${mYen(Math.max(0, m.goal - total))}</div>
         </div>`;
         html += `<div class="m-tabs">
-            ${[['home','🏠 ホーム'],['news','📰 ニュース'],['invest','📈 投資'],['ins','🛡️ 保険'],['gam','🎲 ギャンブル'],['pol','🏛️ 政治'],['bank','🏦 銀行'],['quiz','❓ クイズ'],['terms','📖 じてん'],['book','📒 家計簿']]
+            ${[['home','🏠 ホーム'],['job','💼 仕事'],['news','📰 ニュース'],['invest','📈 投資'],['ins','🛡️ 保険'],['loan','💳 借金'],['gam','🎲 ギャンブル'],['pol','🏛️ 政治'],['bank','🏦 銀行'],['terms','📖 じてん'],['book','📒 家計簿']]
               .map(([k, n]) => `<button class="btn ${mTab === k ? 'btn-active' : 'btn-inactive'}" onclick="mSwitchTab('${k}')">${n}</button>`).join('')}
         </div>`;
         if(mTab === 'home') html += mHomeHtml(m, total);
+        if(mTab === 'job') html += mJobHtml(m);
         if(mTab === 'news') html += mNewsHtml(m);
         if(mTab === 'invest') html += mInvestHtml(m);
         if(mTab === 'ins') html += mInsHtml(m);
+        if(mTab === 'loan') html += mLoanHtml(m);
         if(mTab === 'gam') html += mGamHtml(m);
         if(mTab === 'pol') html += mPolHtml(m);
         if(mTab === 'bank') html += mBankHtml(m);
-        if(mTab === 'quiz') html += mQuizHtml(m);
         if(mTab === 'terms') html += mTermsHtml();
         if(mTab === 'book') html += mBookHtml(m);
         document.getElementById('money-body').innerHTML = html;
         if(mTab === 'home') mDrawChart(m);
+        if(mTab === 'gam') mGamStartTimer(); else if(mGamTimer) { clearInterval(mGamTimer); mGamTimer = null; }
         if(mNewsReady) mNewsSync();   // うしろでオンラインの最新ニュースを取りに行く（つながらなくても大丈夫）
     }
     function mHomeHtml(m, total) {
@@ -2915,8 +3185,18 @@
             <div style="font-size:11px;color:#888;">毎日ちょっとずつ動くよ。長い目で見るのが投資のコツ</div></div>`;
         // 給料（毎月5日）
         const salaryPreview = (m.payCorrect || 0) * M_PAY_PER_CORRECT;
-        h += `<div class="m-card"><b>💼 お給料（毎月5日）</b>
-            <div style="font-size:12px;color:#888;margin:4px 0;">給料は勉強しだい。<b>20問 正解すると1万円</b>（1問${M_PAY_PER_CORRECT}円）。ためた分は毎月5日にまとめて入るよ</div>
+        const jco = mJobCo(m.job && m.job.co);
+        h += `<div class="m-card"><b>💼 お給料（毎月5日）</b>`;
+        if(jco) {
+            const s = mJobNet(mJobGross(m));
+            h += `<div class="m-row"><div><div class="m-name">${jco.e} ${esc(jco.n)}</div><div class="m-desc">${esc(mJobRank(m).n)}／評価 ${Math.round(m.job.ev)}／勤続 ${m.job.days}日</div></div>
+                <button class="m-btn m-buy" onclick="mSwitchTab('job')">${m.job.lastWork === calToday() ? '出勤ずみ' : '出勤する'}</button></div>
+                <div class="m-row"><span>手取り（毎月5日）</span><b class="m-up">${mYen(s.net)}</b></div>`;
+        } else {
+            h += `<div class="m-warn">💼 まだ<b>はたらいていない</b>よ。仕事タブで就職しよう！お金は働いて手に入れるもの。
+                <button class="btn" style="background:#11998e;color:#fff;width:100%;margin-top:6px;" onclick="mSwitchTab('job')">💼 仕事をさがす</button></div>`;
+        }
+        h += `<div style="font-size:12px;color:#888;margin:4px 0;">勉強手当もあるよ。<b>20問 正解すると1万円</b>（1問${M_PAY_PER_CORRECT}円）。ためた分は毎月5日にまとめて入る</div>
             <div class="m-row"><span>いまためている（${m.payCorrect || 0}問 正解）</span><b class="m-up">${mYen(salaryPreview)}</b></div>
             <div class="m-row"><span>これまでの給料の合計</span><b>${mYen(m.salaryTotal || 0)}</b></div>
             ${mPremiumTotal(m) > 0 ? `<div class="m-row"><span>🛡️ 5日に引かれる保険料（${Object.keys(m.ins).length}つ）</span><b class="m-down">−${mYen(mPremiumTotal(m)).slice(1)}</b></div>` : ''}
@@ -3290,6 +3570,8 @@
         if(!m.insNew || !m.insNew.length) return '';
         let h = `<div class="m-card" style="border:3px solid #e67e22;"><b>📣 できごとがありました（${m.insNew.length}件）</b>`;
         m.insNew.forEach(ev => {
+            if(ev.job) { h += `<div class="${ev.fire ? 'm-warn' : 'm-ev'}" style="font-size:14px;">${ev.fire ? '🚫' : '⚠️'} <b>${esc(ev.n)}</b><br>${esc(ev.msg || '')}</div>`; return; }
+            if(ev.bill) { h += `<div class="m-warn">🧾 <b>${esc(ev.n)}</b><br>${esc(ev.msg || '')}</div>`; return; }
             if(ev.lapse) { h += `<div class="m-warn">⚠️ お金が足りなくて <b>${esc(ev.n)}</b> が解約になったよ。保険料を払えないと保険は切れてしまう（本物と同じ）</div>`; return; }
             h += `<div class="${ev.pay > 0 ? 'm-ok' : 'm-warn'}">${ev.e} <b>${esc(ev.n)}</b><br>
                 ${esc(ev.dd || '')} <b>${mYen(ev.cost)}</b> かかった。
@@ -3527,6 +3809,728 @@
             <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('ins');">とじる</button></div></div>`;
         gOpenModal(h);
     }
+    // ---------------- 💼 お仕事 ----------------
+    // 筆記試験の採点（テストの採点と同じ考え方。※テスト本体の normAns には手を入れていない）
+    function mAnsEq(user, ans) {
+        const norm = (s) => {
+            let t = String(s || '')
+                .replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0))
+                .replace(/[−ーｰ–]/g, '-').replace(/\s+/g, '').toLowerCase();
+            const noUnit = t.replace(/(g\/cm3|g\/cm³|cm²|cm³|cm2|cm3|m²|m³|m2|m3|km|cm|mm|kg|g|l|℃|度|円|点|人|個|本|枚|冊|分|回転|年前|年後|時間|秒後|秒|%)$/, '');
+            if(noUnit !== '') t = noUnit;
+            return t.replace(/\.0+$/, '');
+        };
+        const ua = norm(user), ca = norm(ans);
+        return ua !== '' && (ua === ca || ua === ca.replace(/^x=/, '') || 'x=' + ua === ca);
+    }
+    function mJobCo(code) { return M_JOBS.find(j => j.c === code); }
+    function mJobRank(m) { return M_RANKS[Math.max(0, Math.min(M_RANKS.length - 1, (m.job || {}).rank || 0))]; }
+    // 月のお給料（額面）＝ 年収÷12 × 役職 ＋ 評価によるボーナス
+    function mJobGross(m) {
+        const co = mJobCo(m.job.co); if(!co) return 0;
+        const base = co.pay / 12 * mJobRank(m).up;
+        const evb = base * ((m.job.ev - 60) / 100 * 0.35);     // 評価60を基準に±
+        return Math.max(0, Math.round(base + evb));
+    }
+    // 給与所得控除（会社ではたらく人の「必要経費」として、国が自動で引いてくれる金額）
+    function mKyuyoKojo(nen) {
+        if(nen <= 1625000) return 550000;
+        if(nen <= 1800000) return nen * 0.40 - 100000;
+        if(nen <= 3600000) return nen * 0.30 + 80000;
+        if(nen <= 6600000) return nen * 0.20 + 440000;
+        if(nen <= 8500000) return nen * 0.10 + 1100000;
+        return 1950000;
+    }
+    // 所得税（本物の累進税率の表。かせぐほど高い税率がかかる）
+    function mShotokuZei(kazei) {
+        const T = [[1950000,0.05,0],[3300000,0.10,97500],[6950000,0.20,427500],[9000000,0.23,636000],
+                   [18000000,0.33,1536000],[40000000,0.40,2796000],[Infinity,0.45,4796000]];
+        for(const [lim, r, d] of T) if(kazei <= lim) return { tax: Math.max(0, kazei * r - d), rate: r };
+        return { tax:0, rate:0 };
+    }
+    // 手取りの計算（本物と同じ順番：額面 → 社会保険料 → 所得税 → 住民税）
+    function mJobNet(gross) {
+        const shaho = Math.min(Math.round(gross * 0.15), 120000);   // 健康保険＋厚生年金＋雇用保険 ≒ 15%（高い人は上限あり）
+        const nen = gross * 12;                                     // 1年ぶんの額面
+        const kyuyo = mKyuyoKojo(nen);                              // 給与所得控除
+        const kazei = Math.max(0, nen - kyuyo - shaho * 12 - 480000); // 課税される所得（基礎控除48万も引く）
+        const st = mShotokuZei(kazei);
+        const shotoku = Math.round(st.tax / 12);                    // 所得税（1か月ぶん）
+        const jumin = Math.round(kazei * 0.10 / 12);                // 住民税（1か月ぶん・だいたい10%）
+        const net = gross - shaho - shotoku - jumin;
+        return { gross, shaho, shotoku, jumin, kyuyo:Math.round(kyuyo), kazei:Math.round(kazei), net: Math.max(0, Math.round(net)), rate: st.rate };
+    }
+    // 書類選考に必要な「勉強してきた量」＝これまでに解いた問題の数
+    function mStudyPower() {
+        try { const g = gameState(); return (g.totalQ || 0); } catch(e) { return 0; }
+    }
+    function mJobHtml(m) {
+        const j = m.job, co = mJobCo(j.co);
+        let h = '';
+        if(co) {
+            // ===== はたらいている人の画面 =====
+            const g = mJobGross(m), slip = mJobNet(g), rank = mJobRank(m);
+            const next = M_RANKS[j.rank + 1];
+            const today = calToday(), workedToday = j.lastWork === today;
+            h += `<div class="m-card" style="border:3px solid #11998e;">
+                <div style="font-size:12px;color:#888;">つとめ先</div>
+                <div style="font-size:20px;font-weight:bold;">${co.e} ${esc(co.n)}</div>
+                <div class="m-desc">${esc(co.sec)}／${esc(co.model)}</div>
+                <div class="m-row"><span>役職</span><b>${esc(rank.n)}</b></div>
+                <div class="m-row"><span>勤続</span><b>${j.days}日</b></div>
+                <div class="m-row"><span>お給料（額面・月）</span><b>${mYen(g)}</b></div>
+                <div class="m-row"><span>手取り（実際にもらえる）</span><b class="m-up">${mYen(slip.net)}</b></div>
+                <div class="m-row"><span>これまでの給料の合計</span><b>${mYen(j.totalPay)}</b></div>
+                <div style="margin-top:8px;"><div style="display:flex;justify-content:space-between;font-size:12px;"><span>会社からの評価</span><b>${Math.round(j.ev)} / 100</b></div>
+                <div class="m-meter"><div style="width:${Math.max(0,Math.min(100,j.ev))}%;background:${j.ev>=70?'#27ae60':j.ev>=45?'#f39c12':'#e74c3c'};"></div></div></div>
+                ${j.warn > 0 ? `<div class="m-warn">⚠️ 警告 ${j.warn}回／3回でクビになるよ。まじめに出勤しよう！</div>` : ''}
+                ${next ? `<div class="m-desc" style="margin-top:6px;">つぎの役職「${esc(next.n)}」まで あと ${Math.max(0, next.need - j.worked * 10 - Math.round((j.ev-60)*2))} ポイント（出勤と評価でたまる）</div>`
+                       : `<div class="m-desc" style="margin-top:6px;">いちばん上の役職だよ！すごい🎉</div>`}
+            </div>`;
+            h += `<div class="m-card"><b>🏢 今日のお仕事</b>
+                <div class="m-desc">${esc(co.work)}</div>
+                <div style="font-size:12px;color:#888;margin:6px 0;">出勤すると評価が上がって、昇進が近づく。<b>3日サボると警告</b>、警告3回でクビ！</div>
+                <button class="btn" style="background:${workedToday?'#95a5a6':'#11998e'};color:#fff;width:100%;" onclick="mJobWork()" ${workedToday?'disabled':''}>
+                    ${workedToday ? '✅ 今日はもう出勤したよ' : '🏃 出勤する'}</button>
+                <div class="m-learn">💡 お給料は「働いた時間」ではなく「会社にどれだけ役に立ったか」で決まる。だから評価が上がると給料も上がるんだ。</div></div>`;
+            if(j.slip) {
+                const s = j.slip;
+                h += `<div class="m-card"><b>📄 きゅうよ明細（${esc(s.ym)}）</b>
+                    <div style="font-size:12px;color:#888;">大人がいちばんびっくりするのが「額面と手取りのちがい」。ここをよく見て！</div>
+                    <div class="m-row"><span>① 額面（会社が払った金額）</span><b>${mYen(s.gross)}</b></div>
+                    <div class="m-row" style="padding-left:12px;"><span style="font-size:12px;color:#888;">− 社会保険料（健康保険・年金・雇用）</span><span class="m-down">−${mYen(s.shaho).slice(1)}</span></div>
+                    <div class="m-row" style="padding-left:12px;"><span style="font-size:12px;color:#888;">− 所得税（税率 ${Math.round((s.rate||0)*100)}%）</span><span class="m-down">−${mYen(s.shotoku).slice(1)}</span></div>
+                    <div class="m-row" style="padding-left:12px;"><span style="font-size:12px;color:#888;">− 住民税（およそ10%）</span><span class="m-down">−${mYen(s.jumin).slice(1)}</span></div>
+                    <div class="m-row"><span>② 手取り（口座に入る金額）</span><b class="m-up">${mYen(s.net)}</b></div>
+                    <div class="m-row"><span>引かれた合計</span><b>${mYen(s.gross - s.net)}（${Math.round((s.gross-s.net)/s.gross*100)}%）</b></div>
+                    ${s.kyuyo ? `<div class="m-desc" style="margin-top:6px;">※ 税金は額面ぜんぶにかかるわけじゃない。1年で <b>${mYen(s.kyuyo)}</b> の「給与所得控除」と、社会保険料・基礎控除48万円を引いた
+                    <b>${mYen(s.kazei)}</b> にだけ かかっているよ。</div>` : ''}
+                    <div class="m-learn">💡 「年収1000万円」でも、実際に使えるのは<b>720万円ぐらい</b>。引かれたお金は、病院・年金・道路・学校になって自分たちに戻ってくるよ。<br>
+                    <b>かせぐほど税率が上がる</b>のが累進課税。だから年収が2倍になっても、手取りは2倍にはならないんだ。</div></div>`;
+            }
+            h += `<div class="m-card"><b>🚪 会社をやめる</b>
+                <div class="m-desc">やめると給料が止まる。次の会社に受かる保証はないよ</div>
+                <button class="m-btn m-info" style="width:100%;margin-top:8px;" onclick="mJobQuit()">退職する</button></div>`;
+        } else {
+            // ===== 就職活動の画面 =====
+            const sp = mStudyPower();
+            h += `<div class="m-card"><b>💼 お仕事をさがそう</b>
+                <div style="font-size:13px;line-height:1.9;">お金は「もらえるもの」じゃなくて「はたらいて手に入れるもの」。<br>
+                会社に入るには <b>①書類選考 → ②筆記試験 → ③面接</b> の3つを通らないといけない。本物と同じだよ。</div>
+                <div class="m-ev">📚 あなたの<b>勉強の実績</b>：<b class="m-ev-big">${sp.toLocaleString('ja-JP')}問</b><br>
+                書類選考はこれで決まる。<b>勉強すればするほど、良い会社を受けられる</b>ようになるよ。（勉強・テストを解くと増える）</div>
+                ${j.hist.length ? `<div class="m-desc" style="margin-top:8px;">職歴：${j.hist.map(x=>esc(x)).join('／')}</div>` : ''}
+                ${m.debt > 0 || m.loans.length ? `<div class="m-warn">💳 借金があるよ。はやく就職しないと返せなくなる！</div>` : ''}</div>`;
+            const tiers = [[5,'★★★★★ 超難関','日本でいちばん入りにくい会社たち'],[4,'★★★★ 難関','だれもが名前を知っている大企業'],[3,'★★★ 中堅','がんばれば手がとどく'],[2,'★★ 入りやすい','はじめの一歩に'],[1,'★ すぐ働ける','アルバイト・地元のお店']];
+            tiers.forEach(([d, label, sub]) => {
+                const list = M_JOBS.filter(x => x.diff === d);
+                if(!list.length) return;
+                h += `<div class="m-card"><b>${label}</b><div class="m-desc">${sub}</div>`;
+                list.forEach(co2 => {
+                    const ap = j.applied[co2.c];
+                    const cool = ap && ap.ng && (calDayNum(calToday()) - calDayNum(ap.day) < 7);
+                    const okPaper = sp >= co2.need;
+                    h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                        <div class="m-name">${co2.e} ${esc(co2.n)} ${co2.arbeit ? '<span class="m-pill">バイト</span>' : ''}</div>
+                        <div class="m-desc">${esc(co2.sec)}／${esc(co2.d)}</div>
+                        <div class="m-desc">求める人：${esc(M_WANT_NAME[co2.want])}／筆記の合格ライン ${co2.paper}%</div>
+                        <div class="m-desc">${co2.perks.map(p=>'・'+esc(p)).join('<br>')}</div>
+                        ${okPaper ? '' : `<div class="m-desc" style="color:#e74c3c;">📕 書類選考に あと ${(co2.need - sp).toLocaleString('ja-JP')}問 の勉強が必要</div>`}
+                        ${cool ? `<div class="m-desc" style="color:#e74c3c;">😢 前回ダメだったので、あと ${7 - (calDayNum(calToday()) - calDayNum(ap.day))}日 は受けられない</div>` : ''}
+                      </div>
+                      <div class="m-price"><div style="font-size:12px;color:#888;">年収</div><div><b>${(co2.pay/10000).toLocaleString('ja-JP')}万</b></div>
+                        <div style="font-size:11px;color:#888;">手取り月 ${mYen(mJobNet(co2.pay/12).net)}</div>
+                        <button class="m-btn ${okPaper && !cool ? 'm-buy' : 'm-info'}" style="margin-top:4px;" onclick="mJobApply('${co2.c}')" ${okPaper && !cool ? '' : 'disabled'}>受ける</button>
+                      </div></div>`;
+                });
+                h += `</div>`;
+            });
+        }
+        return h;
+    }
+    // ===== 選考 =====
+    let mJE = {};    // 選考中のデータ
+    function mJobApply(code) {
+        const co = mJobCo(code), m = mLoad(); if(!co) return;
+        if(mStudyPower() < co.need) { alert('書類選考でおとされたよ…\nもっと勉強してから受けよう📚'); return; }
+        mJE = { co, step:'paper', i:0, qs:[], ok:0, want:0, ans:[] };
+        // 筆記試験の問題をつくる（教科の問題＋政治と経済のクイズ）
+        const seen = new Set();
+        const subjs = ['数学','英語','国語','理科'];
+        const nQ = co.arbeit ? 3 : 5;
+        const lv = Math.min(6, Math.max(1, co.diff + 1));
+        for(let i = 0; i < nQ - (co.arbeit ? 0 : 2); i++) {
+            const s = subjs[Math.floor(Math.random() * subjs.length)];
+            try { const q = genUnique(s, 'すべて', false, lv, seen); mJE.qs.push({ kind:'subj', subj:s, q:q.q, a:q.a }); } catch(e) {}
+        }
+        if(!co.arbeit) {
+            const pool = M_QUIZ.map((q, i) => i).sort(() => Math.random() - 0.5).slice(0, 2);
+            pool.forEach(qi => mJE.qs.push({ kind:'quiz', qi, q:M_QUIZ[qi].q, c:M_QUIZ[qi].c, a:M_QUIZ[qi].a }));
+        }
+        mJE.qs.sort(() => Math.random() - 0.5);
+        mJobExamShow();
+    }
+    function mJobExamShow() {
+        const { co, qs, i } = mJE;
+        if(i >= qs.length) { mJobExamDone(); return; }
+        const q = qs[i];
+        let body;
+        if(q.kind === 'quiz') {
+            const order = q.c.map((c, ci) => ci).sort(() => Math.random() - 0.5);
+            body = `<div style="max-width:520px;margin:0 auto;">${order.map(ci => `<button class="m-quiz-btn" onclick="mJobExamPick(${ci})">${esc(q.c[ci])}</button>`).join('')}</div>`;
+        } else {
+            body = `<div style="max-width:420px;margin:0 auto;">
+                <input class="m-search" id="je-in" type="text" placeholder="答えを入力" autocomplete="off">
+                <button class="btn" style="background:#11998e;color:#fff;width:100%;margin-top:8px;" onclick="mJobExamPick(-1)">答える</button></div>`;
+        }
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">📝 ${co.e} ${esc(co.n)}　筆記試験</h2>
+            <div class="m-desc" style="text-align:center;">${i + 1}問目 / ${qs.length}問　　合格ライン ${co.paper}%　　いま ${mJE.ok}問 正解</div>
+            <div style="font-size:18px;font-weight:bold;margin:16px 0;">${q.kind === 'quiz' ? esc(q.q) : q.q}</div>
+            ${body}</div>`);
+        const inp = document.getElementById('je-in');
+        if(inp) { inp.focus(); inp.addEventListener('keydown', e => { if(e.key === 'Enter') mJobExamPick(-1); }); }
+    }
+    function mJobExamPick(ci) {
+        const q = mJE.qs[mJE.i];
+        let right;
+        if(q.kind === 'quiz') right = (ci === q.a);
+        else { const v = (document.getElementById('je-in') || {}).value || ''; right = mAnsEq(v, q.a); }
+        if(right) {
+            mJE.ok++; playSfx('correct');
+            if(q.kind === 'quiz') {   // 経済クイズに正解したら記録（クイズのバッジはここでもらえる）
+                const m = mLoad();
+                if(!m.quizDone.includes(q.qi)) { m.quizDone.push(q.qi); m.quizOk = (m.quizOk || 0) + 1; mSave(m); mAwardBadges(); }
+            }
+        } else playSfx('wrong');
+        mJE.i++;
+        mJobExamShow();
+    }
+    function mJobExamDone() {
+        const { co, qs, ok } = mJE;
+        const pct = Math.round(ok / qs.length * 100);
+        if(pct < co.paper) {
+            const m = mLoad(); m.job.applied[co.c] = { day:calToday(), ng:true }; mSave(m);
+            playSfx('wrong');
+            gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+                <h2 style="text-align:center;">📨 お祈りメール</h2>
+                <div class="m-warn" style="font-size:14px;line-height:1.9;">${esc(co.n)} 人事部より<br><br>
+                このたびは弊社をご希望いただき、ありがとうございました。<br>
+                慎重に選考させていただきました結果、<b>今回はご希望にそえない</b>という結論になりました。<br>
+                今後のご活やくをお祈り申し上げます。</div>
+                <div class="m-ev">筆記試験：<b>${ok}/${qs.length}問（${pct}%）</b>　合格ラインは ${co.paper}% だったよ。<br>
+                これが「お祈りメール」。大人もみんな何通ももらう。<b>落ちるのがふつう</b>だから、へこまずに次へ行こう！</div>
+                <div class="m-learn">💡 筆記は勉強がそのまま出る。レベルを上げて解けるようになると、受かる会社がふえるよ。</div>
+                <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">とじる</button></div></div>`);
+            return;
+        }
+        mJE.step = 'interview'; mJE.i = 0; mJE.paperPct = pct;
+        mJE.iq = M_INTERVIEW.map((q, i) => i).sort(() => Math.random() - 0.5).slice(0, 3);
+        mJobIntShow();
+    }
+    function mJobIntShow() {
+        const { co, i, iq } = mJE;
+        if(i >= iq.length) { mJobResult(); return; }
+        const q = M_INTERVIEW[iq[i]];
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">🤝 ${co.e} ${esc(co.n)}　面接</h2>
+            <div class="m-desc" style="text-align:center;">${i + 1}問目 / ${iq.length}問　筆記は通過！つぎは面接だよ</div>
+            <div class="m-news" style="margin:14px 0;">👔 面接官：「${esc(q.q)}」</div>
+            <div style="max-width:520px;margin:0 auto;">${q.c.map((c, ci) => `<button class="m-quiz-btn" onclick="mJobIntPick(${ci})">${esc(c.t)}</button>`).join('')}</div>
+            <div class="m-learn">💡 正解はひとつじゃない。<b>その会社が求めている人</b>に近い答えほど評価が高くなるよ。会社の説明をよく読もう！</div></div>`);
+    }
+    function mJobIntPick(ci) {
+        const q = M_INTERVIEW[mJE.iq[mJE.i]];
+        if(q.c[ci].k === mJE.co.want) mJE.want++;
+        playSfx('correct');
+        mJE.i++;
+        mJobIntShow();
+    }
+    function mJobResult() {
+        const { co, paperPct, want, iq } = mJE;
+        const m = mLoad();
+        // 総合判定：筆記の出来 ＋ 面接の合い方 ＋ 最後は倍率（＝運）。難関ほど倍率がきびしい
+        const score = (paperPct / 100) * 0.5 + (want / iq.length) * 0.5;
+        const chance = Math.min(0.97, co.rate * (0.55 + score));
+        const pass = Math.random() < chance;
+        if(!pass) {
+            m.job.applied[co.c] = { day:calToday(), ng:true }; mSave(m); playSfx('wrong');
+            gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+                <h2 style="text-align:center;">📨 お祈りメール（最終）</h2>
+                <div class="m-warn" style="font-size:14px;line-height:1.9;">${esc(co.n)} 人事部より<br><br>
+                最終選考までお進みいただきましたが、<b>今回は採用を見送らせていただきます</b>。<br>
+                ご健とうをお祈りいたします。</div>
+                <div class="m-ev">筆記 <b>${paperPct}%</b>／面接で会社に合った答え <b>${want}/${iq.length}</b>／受かる見こみだった確率 <b>${Math.round(chance*100)}%</b><br>
+                実力があっても<b>落ちることがある</b>。人気の会社は何千人が受けて、入れるのは数十人だけだからだよ。</div>
+                <div class="m-learn">💡 これが社会のきびしさ。でも大事なのは<b>受かるまで受け続けること</b>。1社ダメでも人生は終わらない。7日たてばまた受けられるよ。</div>
+                <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">つぎをさがす</button></div></div>`);
+            return;
+        }
+        // 内定！
+        m.job.co = co.c; m.job.rank = 0; m.job.ev = 60; m.job.days = 0; m.job.worked = 0;
+        m.job.absent = 0; m.job.warn = 0; m.job.lastWork = null;
+        m.job.applied[co.c] = { day:calToday(), ng:false };
+        m.job.hist.push(co.n);
+        mLog(m, `入社：${co.n}`, 0);
+        mSave(m); celebrate('big'); playSfx('finish'); mAwardBadges();
+        const slip = mJobNet(mJobGross(m));
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">🎉 内定！</h2>
+            <div class="m-ok" style="font-size:15px;line-height:1.9;text-align:center;">
+            <b style="font-size:20px;">${co.e} ${esc(co.n)}</b><br>から内定をもらったよ！</div>
+            <div class="m-row"><span>年収（額面）</span><b>${mYen(co.pay)}</b></div>
+            <div class="m-row"><span>月のお給料（額面）</span><b>${mYen(co.pay/12)}</b></div>
+            <div class="m-row"><span>手取り（実際にもらえる）</span><b class="m-up">${mYen(slip.net)}</b></div>
+            <div class="m-row"><span>毎月引かれるお金</span><b class="m-down">${mYen(slip.gross - slip.net)}</b></div>
+            <div class="m-learn">💡 お給料は<b>毎月5日</b>に入るよ。毎日「出勤する」を押して評価を上げると、昇進してお給料が上がる。
+            サボると警告→クビになるから気をつけて！</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#11998e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">はたらきはじめる</button></div></div>`);
+    }
+    // ===== 毎日の仕事 =====
+    function mJobWork() {
+        const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
+        const today = calToday();
+        if(m.job.lastWork === today) { alert('今日はもう出勤したよ。おつかれさま！'); return; }
+        m.job.lastWork = today; m.job.worked++; m.job.absent = 0;
+        // 健康と気分で仕事の出来が変わる（生活タブとつながっている）
+        const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 2;
+        const gain = cond >= 70 ? 4 : cond >= 45 ? 2 : cond >= 25 ? 0.5 : -1;
+        m.job.ev = Math.max(0, Math.min(100, m.job.ev + gain));
+        // 昇進チェック
+        const pt = m.job.worked * 10 + Math.round((m.job.ev - 60) * 2);
+        let up = null;
+        while(M_RANKS[m.job.rank + 1] && pt >= M_RANKS[m.job.rank + 1].need) { m.job.rank++; up = M_RANKS[m.job.rank]; }
+        m.job.ev = Math.max(0, Math.min(100, m.job.ev));
+        mSave(m); playSfx('correct'); mAwardBadges();
+        if(up) { celebrate('big'); alert(`🎊 昇進！「${up.n}」になったよ！\nお給料が ${Math.round((up.up - 1) * 100)}% アップ（新入社員のときとくらべて）`); }
+        const msg = gain >= 4 ? '体調ばっちり！バリバリ働けた✨ 評価 +4'
+                  : gain >= 2 ? 'ふつうに働けた。評価 +2'
+                  : gain >= 0.5 ? '体がだるい…あまり働けなかった。評価 +0.5'
+                  : '体調が悪すぎて仕事にならなかった…評価 −1';
+        gOpenModal(`<div style="text-align:left;max-width:480px;margin:0 auto;">
+            <h2 style="text-align:center;">🏢 出勤 ${m.job.worked}日目</h2>
+            <div style="text-align:center;font-size:15px;margin:10px 0;">${esc(co.work)}</div>
+            <div class="${gain>=2?'m-ok':'m-warn'}">${msg}</div>
+            <div class="m-row"><span>会社からの評価</span><b>${Math.round(m.job.ev)} / 100</b></div>
+            <div class="m-row"><span>役職</span><b>${esc(mJobRank(m).n)}</b></div>
+            <div class="m-row"><span>健康／きぶん</span><b>${Math.round(m.home.health)} ／ ${Math.round(m.home.happy)}</b></div>
+            ${cond < 45 ? '<div class="m-learn">💡 🏠生活のタブで ごはんを食べて休むと、体調がよくなって仕事の評価も上がるよ。</div>' : ''}
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#11998e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">とじる</button></div></div>`);
+    }
+    function mJobQuit() {
+        const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
+        if(!confirm(`本当に ${co.n} をやめる？\n給料が止まって、次の会社に受かる保証はないよ。`)) return;
+        mLog(m, `退職：${co.n}`, 0);
+        m.job.co = null; m.job.slip = null;
+        mSave(m); renderMoney();
+        alert('退職したよ。次の仕事をさがそう！');
+    }
+    // 毎日の判定（サボり・クビ）。mTickの日ごとの処理から呼ばれる
+    function mJobDaily(m) {
+        const co = mJobCo(m.job.co); if(!co) return;
+        m.job.days++;
+        const today = calToday();
+        if(m.job.lastWork !== today) {
+            m.job.absent++;
+            if(m.job.absent >= 3) {                       // 3日続けてサボると警告
+                m.job.absent = 0; m.job.warn++;
+                m.job.ev = Math.max(0, m.job.ev - 12);
+                m.insNew.unshift({ d:Date.now(), day:m.day, job:true, n:`${co.n} から警告（${m.job.warn}回目）`, msg:'3日つづけて出勤しなかったよ。警告3回でクビになる！' });
+                if(m.job.warn >= 3 || m.job.ev < 20) {
+                    m.insNew.unshift({ d:Date.now(), day:m.day, job:true, fire:true, n:`${co.n} をクビになった…`, msg:'サボりすぎ・評価が低すぎたため解雇。給料は止まる。また就職活動をしよう。' });
+                    mLog(m, `解雇：${co.n}`, 0);
+                    m.job.co = null; m.job.slip = null; m.job.warn = 0;
+                    return;
+                }
+            } else m.job.ev = Math.max(0, m.job.ev - 2);
+        }
+    }
+    // ---------------- 🏠 生活（日常生活に必要なもの） ----------------
+    // buy=買うときのお金 / mon=毎月かかるお金 / need=無いとこまる度合い / h=健康 / hp=きぶん への影響
+    const M_LIFE_CATS = [
+        ['home',  '🏠 住むところ', 'どこに住むかで、お金も気分も大きく変わる'],
+        ['food',  '🍚 食べもの',   '毎日たべないと体こわす。安さと健康はトレードオフ'],
+        ['phone', '📱 スマホ・通信', 'いまの生活にはほぼ必須。本体は高いけど分割もできる'],
+        ['util',  '💡 光熱費・水道', '使ったぶんだけ毎月かかる。止まると生活できない'],
+        ['cloth', '👕 服・身だしなみ', '仕事の評価にも少しひびく'],
+        ['move',  '🚃 移動',      '通勤に必要。自転車は安いけど雨の日がつらい'],
+        ['fun',   '🎮 たのしみ',   'なくても死なない。でも無いと気分が下がる'],
+        ['study', '📚 学び',      'すぐには役に立たないけど、いちばん効くとうし']
+    ];
+    const M_GOODS = [
+        // 住むところ（どれか1つ）
+        { c:'jikka', cat:'home', e:'🏡', n:'実家に住む',       buy:0,       mon:0,      one:true, h:2, hp:-2, d:'家賃0円！でも大人になったら少しずつ気まずい' },
+        { c:'apart', cat:'home', e:'🏠', n:'アパート',         buy:200000,  mon:60000,  one:true, h:3, hp:5,  d:'自分だけの部屋。敷金・礼金で最初にお金がかかる' },
+        { c:'mansi', cat:'home', e:'🏢', n:'マンション',       buy:400000,  mon:110000, one:true, h:5, hp:12, d:'きれいで安全。そのぶん家賃が高い' },
+        { c:'tower', cat:'home', e:'🌆', n:'タワーマンション', buy:1000000, mon:280000, one:true, h:6, hp:22, d:'ながめ最高。でも家賃で生活がくるしくなりがち' },
+        // 食べもの（どれか1つ・毎日の食事）
+        { c:'jisui', cat:'food', e:'🍳', n:'自炊する',         buy:15000,  mon:30000, one:true, h:12, hp:2,  d:'いちばん安くて健康。作る手間はかかる' },
+        { c:'konbi', cat:'food', e:'🍙', n:'コンビニ・弁当',   buy:0,      mon:55000, one:true, h:3,  hp:4,  d:'ラクだけど高くて栄養がかたよる' },
+        { c:'gaish', cat:'food', e:'🍜', n:'外食が多い',       buy:0,      mon:90000, one:true, h:-2, hp:12, d:'おいしくて楽しい。でもお金と健康が減る' },
+        // スマホ・通信
+        { c:'sumaho',cat:'phone', e:'📱', n:'スマホ本体',      buy:120000, mon:0,     h:0, hp:8,  d:'いまの生活の必需品。仕事の連絡にも使う', must:true },
+        { c:'kakuya',cat:'phone', e:'🐣', n:'格安SIM（通信）', buy:3000,   mon:2000,  one:'sim', h:0, hp:2, d:'安い！でもお昼どきは少しおそい' },
+        { c:'daite', cat:'phone', e:'📶', n:'大手キャリア（通信）', buy:3000, mon:8000, one:'sim', h:0, hp:5, d:'つながりやすい。でも月8000円は年間9万6千円' },
+        { c:'wifi',  cat:'phone', e:'🛜', n:'家のWi-Fi',       buy:5000,   mon:5000,  h:0, hp:5,  d:'動画やゲームが快適になる' },
+        // 光熱費
+        { c:'denki', cat:'util', e:'⚡', n:'電気',             buy:0, mon:9000, h:2, hp:5, d:'止まると何もできない', must:true },
+        { c:'mizu',  cat:'util', e:'🚿', n:'水道',             buy:0, mon:4000, h:5, hp:3, d:'お風呂に入れないと健康も気分も下がる', must:true },
+        { c:'gas',   cat:'util', e:'🔥', n:'ガス',             buy:0, mon:6000, h:4, hp:3, d:'料理とお風呂に必要', must:true },
+        // 服
+        { c:'fuku1', cat:'cloth', e:'👕', n:'ふつうの服',      buy:20000, mon:5000,  one:'fuku', h:1, hp:3, d:'困らない程度' },
+        { c:'fuku2', cat:'cloth', e:'🧥', n:'きちんとした服',  buy:80000, mon:12000, one:'fuku', h:1, hp:8, d:'仕事の評価が少し上がる', evUp:3 },
+        // 移動
+        { c:'aruki', cat:'move', e:'🚶', n:'歩き・自転車',     buy:15000, mon:500,   one:'move', h:8,  hp:-2, d:'お金がかからず健康にいい。雨の日はつらい' },
+        { c:'teiki', cat:'move', e:'🚃', n:'電車の定期',       buy:0,     mon:12000, one:'move', h:0,  hp:2,  d:'いちばんふつうの通勤' },
+        { c:'kuruma',cat:'move', e:'🚗', n:'車を持つ',         buy:1800000, mon:45000, one:'move', h:-2, hp:15, d:'便利だけどガソリン・駐車場・保険・税金でお金が飛ぶ', car:true },
+        // たのしみ
+        { c:'sabu',  cat:'fun', e:'📺', n:'動画のサブスク',    buy:0,     mon:2000,  h:0, hp:8,  d:'月2000円でも年2万4千円。塵も積もれば' },
+        { c:'game',  cat:'fun', e:'🎮', n:'ゲーム機',          buy:50000, mon:1000,  h:-2, hp:15, d:'楽しい！やりすぎると健康が下がる' },
+        { c:'jimu',  cat:'fun', e:'🏃', n:'ジム',              buy:5000,  mon:8000,  h:12, hp:6, d:'健康が大きく上がる。行かないとムダ金' },
+        { c:'tabi',  cat:'fun', e:'✈️', n:'旅行の積み立て',    buy:0,     mon:15000, h:3, hp:18, d:'月々ためて年に一度パーッと行く' },
+        // 学び
+        { c:'hon',   cat:'study', e:'📖', n:'本を買う',        buy:0,     mon:3000,  h:0, hp:5,  d:'いちばん安い自己投資。給料が上がりやすくなる', evUp:2 },
+        { c:'sikaku',cat:'study', e:'🎓', n:'資格の勉強',      buy:30000, mon:8000,  h:0, hp:-2, d:'いまはつらいけど、あとで効いてくる', evUp:5 },
+        { c:'eikai', cat:'study', e:'🗣️', n:'英会話',          buy:20000, mon:12000, h:0, hp:3,  d:'話せると仕事の選択肢がふえる', evUp:4 }
+    ];
+    function mGood(c) { return M_GOODS.find(g => g.c === c); }
+    function mHomeHas(m, c) { return !!(m.home.own || {})[c]; }
+    // 毎月かかるお金の合計（固定費）
+    function mHomeFixed(m) {
+        let s = 0; Object.keys(m.home.own || {}).forEach(c => { const g = mGood(c); if(g) s += g.mon; });
+        return s;
+    }
+    // 持っているものから、健康・きぶん・仕事の評価への影響を計算
+    function mHomeEffect(m) {
+        let h = 0, hp = 0, ev = 0;
+        Object.keys(m.home.own || {}).forEach(c => { const g = mGood(c); if(!g) return; h += g.h || 0; hp += g.hp || 0; ev += g.evUp || 0; });
+        return { h, hp, ev };
+    }
+    // 生活に絶対いるもの（食べもの・電気・水道）が無いと、どんどん体調がわるくなる
+    function mHomeMissing(m) {
+        const miss = [];
+        if(!['jisui','konbi','gaish'].some(c => mHomeHas(m, c))) miss.push('食べもの');
+        if(!mHomeHas(m, 'denki')) miss.push('電気');
+        if(!mHomeHas(m, 'mizu')) miss.push('水道');
+        if(!['jikka','apart','mansi','tower'].some(c => mHomeHas(m, c))) miss.push('住むところ');
+        return miss;
+    }
+    // 1日ぶんの生活（mTickから呼ばれる）
+    function mHomeDaily(m) {
+        const e = mHomeEffect(m), miss = mHomeMissing(m);
+        // 足りないものがあると、じわじわ下がる
+        let dh = -2 + e.h / 6, dhp = -2 + e.hp / 8;
+        if(miss.length) { dh -= miss.length * 5; dhp -= miss.length * 3; m.home.missed++; }
+        else m.home.missed = 0;
+        m.home.health = Math.max(0, Math.min(100, m.home.health + dh));
+        m.home.happy = Math.max(0, Math.min(100, m.home.happy + dhp));
+        // 体調が悪いと仕事の評価も下がる
+        if(m.home.health < 25 && mJobCo(m.job.co)) m.job.ev = Math.max(0, m.job.ev - 3);
+        if(m.home.missed === 3) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'生活に必要なものが足りない！',
+            msg:'足りないもの：' + miss.join('・') + '。このままだと体調をくずして、仕事の評価も下がるよ。🏠生活のタブでそろえよう。' });
+    }
+    // 毎月の生活費を払う（mPayMonthから）
+    function mHomePayMonth(m) {
+        const fixed = mHomeFixed(m);
+        if(fixed <= 0) return false;
+        if(m.cash >= fixed) { m.cash -= fixed; mLog(m, `生活費（${Object.keys(m.home.own).length}件）`, -fixed); return true; }
+        // 払えない → 立てかえ（借金）になる。ここが「生活がまわらない」体験
+        const left = mPayCost(m, fixed, '生活費（払えず立てかえ）');
+        m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'生活費が払えなかった…',
+            msg:`毎月の生活費 ${mYen(fixed)} を払えず、${mYen(left)} が借金になったよ。固定費を見なおすか、もっと稼ごう。` });
+        return true;
+    }
+    function renderLife() {
+        const box = document.getElementById('life-body'); if(!box) return;
+        if(!currentUserId) { box.innerHTML = ''; return; }
+        const m = mLoad(); mHomeMissing(m);
+        const e = mHomeEffect(m), fixed = mHomeFixed(m), miss = mHomeMissing(m);
+        const inc = mJobCo(m.job.co) ? mJobNet(mJobGross(m)).net : 0;
+        const hc = m.home.health >= 70 ? '#27ae60' : m.home.health >= 40 ? '#f39c12' : '#e74c3c';
+        const pc = m.home.happy >= 70 ? '#27ae60' : m.home.happy >= 40 ? '#f39c12' : '#e74c3c';
+        let h = `<div class="m-top" style="background:linear-gradient(135deg,#e67e22,#f39c12);">
+            <div style="font-size:12px;">毎月かかる生活費（固定費）</div>
+            <div class="m-total">${mYen(fixed)}</div>
+            <div class="m-sub">現金 ${mYen(m.cash)}${inc ? `／手取り ${mYen(inc)}` : '／収入なし'}　1年では ${mYen(fixed * 12)}</div>
+        </div>`;
+        if(miss.length) h += `<div class="m-warn" style="font-size:14px;">⚠️ <b>足りないもの：${miss.join('・')}</b><br>
+            生活に絶対いるものが そろっていないよ。毎日 健康ときぶんが下がっていく！</div>`;
+        h += `<div class="m-card"><b>💪 いまの体調</b>
+            <div style="margin-top:6px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>❤️ 健康</span><b>${Math.round(m.home.health)}</b></div>
+            <div class="m-meter"><div style="width:${m.home.health}%;background:${hc};"></div></div></div>
+            <div style="margin-top:8px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>😊 きぶん</span><b>${Math.round(m.home.happy)}</b></div>
+            <div class="m-meter"><div style="width:${m.home.happy}%;background:${pc};"></div></div></div>
+            <div class="m-desc" style="margin-top:8px;">体調がいいと<b>仕事の評価が上がりやすい</b>。悪いと出勤しても評価が上がらないよ。</div>
+            <div class="m-row" style="margin-top:6px;"><span>持ちものの効果</span><b>健康 ${e.h>=0?'+':''}${e.h}／きぶん ${e.hp>=0?'+':''}${e.hp}${e.ev?`／仕事の評価 +${e.ev}`:''}</b></div></div>`;
+        if(inc > 0) {
+            const rate = fixed / inc * 100;
+            h += `<div class="m-card"><b>⚖️ 手取りと固定費のバランス</b>
+                <div class="m-meter" style="height:18px;"><div style="width:${Math.min(100,rate)}%;background:${rate>70?'#e74c3c':rate>50?'#e67e22':'#27ae60'};"></div></div>
+                <div class="m-row"><span>手取りにしめる固定費</span><b>${rate.toFixed(0)}%</b></div>
+                <div class="m-row"><span>のこるお金（毎月）</span><b class="${inc-fixed>=0?'m-up':'m-down'}">${mYen(inc - fixed)}</b></div>
+                <div class="m-learn">💡 大人が貯金できない一番の理由が<b>固定費</b>。1回の買い物より、毎月かかるお金を見直すほうが何倍も効く。
+                <b>固定費は手取りの50%まで</b>が目安だよ。</div></div>`;
+        }
+        M_LIFE_CATS.forEach(([cat, name, note]) => {
+            const list = M_GOODS.filter(g => g.cat === cat);
+            h += `<div class="m-card"><b>${name}</b><div class="m-desc">${esc(note)}</div>`;
+            list.forEach(g => {
+                const has = mHomeHas(m, g.c);
+                h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name">${g.e} ${esc(g.n)} ${has ? '<span class="m-pill">持っている</span>' : ''} ${g.must && !has ? '<span class="m-pill" style="background:rgba(231,76,60,.18);color:#e74c3c;">必要</span>' : ''}</div>
+                    <div class="m-desc">${esc(g.d)}</div>
+                    <div class="m-desc">健康 ${g.h>=0?'+':''}${g.h}／きぶん ${g.hp>=0?'+':''}${g.hp}${g.evUp?`／仕事の評価 +${g.evUp}`:''}</div>
+                  </div>
+                  <div class="m-price">
+                    ${g.buy ? `<div style="font-size:11px;color:#888;">はじめに</div><div>${mYen(g.buy)}</div>` : ''}
+                    <div style="font-size:11px;color:#888;">毎月</div><div><b>${g.mon ? mYen(g.mon) : '0円'}</b></div>
+                    <button class="m-btn ${has ? 'm-sell' : 'm-buy'}" style="margin-top:4px;" onclick="mLifeToggleGood('${g.c}')">${has ? 'やめる' : '買う'}</button>
+                  </div></div>`;
+            });
+            h += `</div>`;
+        });
+        h += `<div class="m-card"><b>📚 生活のお金でいちばん大事なこと</b>
+            <div style="font-size:13px;line-height:1.95;">
+            ①<b>固定費 ＞ 変動費</b>。月8000円のスマホ代を2000円にすると、それだけで年7万2千円うく<br>
+            ②<b>安い＝トク とは限らない</b>。コンビニ食は楽だけど、健康が下がって病院代がかかる<br>
+            ③<b>家賃は手取りの3分の1まで</b>。ここをまちがえると、一生お金がたまらない<br>
+            ④<b>自分への投資（本・資格・英会話）は、いちばん利回りが高い</b>。仕事の評価が上がって給料が上がるから</div>
+            <div class="m-learn">💡 「なにを持たないか」を決めるのも大事な力。ぜんぶ持つと固定費でつぶれるよ。</div></div>`;
+        box.innerHTML = h;
+    }
+    function mLifeHelp() {
+        gOpenModal(`<div style="text-align:left;max-width:640px;margin:0 auto;">
+            <h2 style="text-align:center;">🏠 生活 の つかい方</h2>
+            <div class="uh-box"><h3>🎯 なにをする場所？</h3><p>大人になると、<b>だまっていても毎月お金が出ていく</b>。家賃・電気・水道・スマホ代…これを「<b>固定費</b>」というよ。
+            ここでは自分のくらしを組み立てて、<b>手取りの中でやりくりできるか</b>をためせる。</p></div>
+            <div class="uh-box"><h3>❤️ 健康と 😊 きぶん</h3><p>食べもの・電気・水道・住むところが<b>そろっていないと毎日下がっていく</b>。
+            体調がわるいと、💼仕事で出勤しても評価が上がらない → 給料が上がらない → もっと苦しくなる、という連鎖が起きるよ。</p></div>
+            <div class="uh-box"><h3>💸 毎月5日</h3><p>お給料が入るのと同じ日に、生活費もまとめて引かれる。
+            足りないと<b>借金（立てかえ）</b>になって、💳借金タブに出てくる。</p></div>
+            <div class="uh-box"><h3>📈 自分への投資</h3><p>本・資格・英会話は、すぐには役に立たないけど<b>仕事の評価が上がる</b>＝給料が上がる。
+            いちばん利回りの高い投資は自分自身、というのはこういう意味だよ。</p></div>
+            <div class="uh-box"><h3>💡 やってみよう</h3><p>・タワマン＋外食＋大手キャリア＋車 にすると、月いくらになる？<br>
+            ・実家＋自炊＋格安SIM にすると、いくら残る？<br>
+            この差が<b>10年で何百万円</b>になる。それが「お金がたまる人」と「たまらない人」のちがいだよ。</p></div>
+            <div style="text-align:center;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`);
+    }
+    function mLifeToggleGood(c) {
+        const g = mGood(c); if(!g) return;
+        const m = mLoad();
+        if(!m.home.own || typeof m.home.own !== 'object') m.home.own = {};
+        if(mHomeHas(m, c)) {
+            if(!confirm(`${g.n} をやめる？\n毎月 ${mYen(g.mon)} がかからなくなるよ。`)) return;
+            delete m.home.own[c];
+            mLog(m, `やめる：${g.n}`, 0);
+        } else {
+            // 「どれか1つ」のグループ（住むところ・食べもの・通信・服・移動）は前のものと入れかえ
+            const grp = g.one === true ? g.cat : g.one;
+            if(grp) M_GOODS.filter(x => (x.one === true ? x.cat : x.one) === grp).forEach(x => { delete m.home.own[x.c]; });
+            if(g.buy > 0) {
+                if(m.cash < g.buy) { alert(`お金が足りないよ。${mYen(g.buy)} 必要（いま ${mYen(m.cash)}）`); return; }
+                if(!confirm(`${g.n} を買う？\nはじめに ${mYen(g.buy)}、そのあと毎月 ${mYen(g.mon)} かかるよ。`)) return;
+                m.cash -= g.buy;
+                mLog(m, `買う：${g.n}`, -g.buy);
+            } else {
+                if(!confirm(`${g.n} にする？\n毎月 ${mYen(g.mon)} かかるよ。`)) return;
+                mLog(m, `契約：${g.n}`, 0);
+            }
+            m.home.own[c] = 1;
+            playSfx('correct');
+        }
+        mSave(m); renderLife();
+    }
+    // ---------------- 💳 借金（ローン） ----------------
+    // 本物と同じで「金利が低い＝借りにくい／金利が高い＝すぐ借りられる」。ここがいちばん大事な学び
+    const M_LOANS = [
+        { c:'BANK', e:'🏦', n:'銀行のローン', rate:0.030, max:3000000, minCredit:700, maxN:60,
+          d:'いちばん金利が安い。でも審査がきびしくて、信用がないと借りられない', who:'銀行' },
+        { c:'CARD', e:'💳', n:'カードローン', rate:0.145, max:1000000, minCredit:550, maxN:36,
+          d:'銀行より借りやすいけれど金利は高め。使いすぎに注意', who:'銀行・信販会社' },
+        { c:'SHOH', e:'🏬', n:'消費者金融', rate:0.180, max:500000, minCredit:400, maxN:24,
+          d:'すぐ借りられるけど<b>年18%</b>。10万円借りて1年で1万8千円の利息がつく', who:'消費者金融' },
+        { c:'GAKU', e:'🎓', n:'奨学金（学ぶためのお金）', rate:0.010, max:2000000, minCredit:300, maxN:120,
+          d:'勉強のために借りるお金。金利がとても低い。でも返すのは自分だから、借りすぎに注意', who:'国・団体' },
+        { c:'YAMI', e:'☠️', n:'ヤミ金（ぜったい借りてはダメ）', rate:1.095, max:100000, minCredit:0, maxN:3,
+          d:'法律を守っていない業者。<b>年109.5%（10日で3割）</b>。これは犯罪で、借りると人生がこわれる', who:'違法業者', illegal:true }
+    ];
+    // 毎月の返済額（元利均等返済）。本物の住宅ローンと同じ計算式
+    function mLoanMonthly(P, yearRate, n) {
+        const r = yearRate / 12;
+        if(r === 0) return Math.ceil(P / n);
+        return Math.ceil(P * r / (1 - Math.pow(1 + r, -n)));
+    }
+    function mLoanTotalDebt(m) { return (m.loans || []).reduce((s, l) => s + l.left, 0) + (m.debt || 0); }
+    function mLoanMonthlyTotal(m) { return (m.loans || []).reduce((s, l) => s + l.pay, 0); }
+    // 信用スコア（返すほど上がる・おくれると下がる）
+    function mCreditLabel(c) {
+        return c >= 800 ? ['とても良い', '#27ae60'] : c >= 700 ? ['良い', '#2ecc71'] : c >= 600 ? ['ふつう', '#f39c12']
+             : c >= 450 ? ['あまり良くない', '#e67e22'] : ['悪い', '#e74c3c'];
+    }
+    function mLoanHtml(m) {
+        const cl = mCreditLabel(m.credit);
+        let h = mEventCardHtml(m);
+        h += `<div class="m-card"><b>💳 借金って、わるいこと？</b>
+            <div style="font-size:13px;line-height:1.9;">じつは<b>わるくない</b>。家や車を買うとき、ほとんどの大人は借金をする。<br>
+            わるいのは<b>「計画なしに借りること」</b>。だからこのアプリでは、借りる前に必ず
+            <b>①いくら借りる ②何回で返す ③毎月いくら ④利息はいくら ⑤いつ返し終わる</b>を全部見せるよ。<br>
+            <b>いきなり大金は借りられない</b>。信用（クレジット）を積み上げた人だけが、安く・たくさん借りられる。</div></div>`;
+        h += `<div class="m-card"><b>⭐ あなたの信用スコア</b>
+            <div style="display:flex;justify-content:space-between;font-size:12px;"><span>0</span><b style="color:${cl[1]};font-size:16px;">${Math.round(m.credit)}（${cl[0]}）</b><span>1000</span></div>
+            <div class="m-meter"><div style="width:${Math.max(0,Math.min(100,m.credit/10))}%;background:${cl[1]};"></div></div>
+            <div class="m-desc" style="margin-top:6px;">きちんと返すと上がる／おくれると大きく下がる。
+            スコアが高いほど<b>安い金利でたくさん</b>借りられるよ（本物のクレジットスコアと同じ）</div>
+            <div class="m-row"><span>これまでに返した回数</span><b>${m.loanPaid}回</b></div>
+            <div class="m-row"><span>返せなかった回数</span><b class="${m.loanLate?'m-down':''}">${m.loanLate}回</b></div></div>`;
+        // いま借りているもの
+        const tot = mLoanTotalDebt(m), mon = mLoanMonthlyTotal(m);
+        h += `<div class="m-card"><b>📋 いま借りているお金</b>`;
+        if(!m.loans.length && !(m.debt > 0)) h += `<div style="color:#888;font-size:13px;padding:8px 0;">借金はないよ。すばらしい👏</div>`;
+        m.loans.forEach((l, i) => {
+            const lo = M_LOANS.find(x => x.c === l.c) || { e:'💳', n:l.c };
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${lo.e} ${esc(lo.n)}</div>
+                <div class="m-desc">借りた額 ${mYen(l.P)}／金利 年${(l.rate*100).toFixed(1)}%／毎月 ${mYen(l.pay)}</div>
+                <div class="m-desc">のこり <b>${l.n - l.paid}回</b>（${l.paid}/${l.n}回 返した）</div>
+                <div class="m-meter" style="margin-top:4px;"><div style="width:${Math.round(l.paid/l.n*100)}%;background:#27ae60;"></div></div>
+              </div>
+              <div class="m-price"><div style="font-size:11px;color:#888;">のこり</div><div><b class="m-down">${mYen(l.left)}</b></div>
+                <button class="m-btn m-sell" style="margin-top:4px;" onclick="mLoanRepay(${i})">まとめて返す</button></div></div>`;
+        });
+        if(m.debt > 0) h += `<div class="m-row"><div><div class="m-name">⚠️ 立てかえ（払えなかったお金）</div>
+            <div class="m-desc">事故や生活費が払えなかった分。給料から自動で返しているよ</div></div><b class="m-down">${mYen(m.debt)}</b></div>`;
+        if(tot > 0) {
+            h += `<div class="m-row"><span>借金の合計</span><b class="m-down">${mYen(tot)}</b></div>
+                <div class="m-row"><span>毎月の返済</span><b>${mYen(mon)}</b></div>`;
+            const inc = mJobCo(m.job.co) ? mJobNet(mJobGross(m)).net : 0;
+            if(inc > 0) {
+                const ratio = mon / inc * 100;
+                h += `<div class="m-row"><span>手取りにしめる返済の割合</span><b style="color:${ratio>35?'#e74c3c':ratio>25?'#e67e22':'#27ae60'}">${ratio.toFixed(0)}%</b></div>
+                    <div class="m-learn">💡 <b>返済は手取りの25%まで</b>が安全ライン。35%をこえると、ふつうの生活ができなくなるよ。</div>`;
+            }
+        }
+        h += `</div>`;
+        // 借りる
+        h += `<div class="m-card"><b>🏧 お金を借りる</b>
+            <div style="font-size:12px;color:#888;">同じ100万円でも、どこで借りるかで返す金額が何十万円も変わる。よく見くらべて！</div>`;
+        M_LOANS.forEach(lo => {
+            const ok = m.credit >= lo.minCredit && !lo.illegal;
+            const ex = mLoanMonthly(100000, lo.rate, 12);
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${lo.e} ${esc(lo.n)} ${lo.illegal ? '<span class="m-pill" style="background:rgba(231,76,60,.2);color:#e74c3c;">違法</span>' : ''}</div>
+                <div class="m-desc">${lo.d}</div>
+                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／必要な信用 ${lo.minCredit}</div>
+                <div class="m-desc">例：10万円を12回で返すと、毎月 ${mYen(ex)}・利息は合計 <b>${mYen(ex*12-100000)}</b></div>
+                ${!ok && !lo.illegal ? `<div class="m-desc" style="color:#e74c3c;">信用スコアが足りない（あと ${lo.minCredit - Math.round(m.credit)}）</div>` : ''}
+              </div>
+              <div class="m-price"><div style="font-size:11px;color:#888;">金利</div><div><b style="color:${lo.rate>=0.15?'#e74c3c':lo.rate>=0.1?'#e67e22':'#27ae60'}">年${(lo.rate*100).toFixed(1)}%</b></div>
+                <button class="m-btn ${ok?'m-buy':'m-info'}" style="margin-top:4px;" onclick="mLoanPlan('${lo.c}')" ${ok?'':'disabled'}>${lo.illegal?'ダメ':'計画を立てる'}</button></div></div>`;
+        });
+        h += `<div class="m-warn">☠️ <b>ヤミ金</b>は法律の上限（年20%）を大きくこえた金利でお金を貸す<b>犯罪</b>。
+            「ブラックでもOK」「すぐ振込」という広告はぜんぶこれ。<b>ぜったいに関わらないこと</b>。もし困ったら大人に相談しよう。</div></div>`;
+        h += `<div class="m-card"><b>📚 借金でいちばん大事な3つのこと</b>
+            <div style="font-size:13px;line-height:1.95;">
+            ①<b>金利のちがいは、時間がたつほど大きくなる</b>。年3%と年18%は、6倍ちがう<br>
+            ②<b>返せる金額から逆算して借りる</b>。「ほしいから借りる」ではなく「毎月○円なら返せるから、○円まで借りる」<br>
+            ③<b>リボ払いは形をかえた借金</b>。毎月の支払いが軽く見えるけど、利息の合計はとても大きい</div>
+            <div class="m-learn">💡 このアプリで <b>借りて→ちゃんと返す</b> を体験しておくと、大人になったとき絶対に役に立つよ。
+            信用スコアを上げると、銀行の安い金利で借りられるようになる。それが「信用」の正体だよ。</div></div>`;
+        return h;
+    }
+    // 借りる前の計画（いくら・何回・毎月いくら・利息の合計・いつ終わるか）
+    let mLP = {};
+    function mLoanPlan(code) {
+        const lo = M_LOANS.find(x => x.c === code); if(!lo) return;
+        const m = mLoad();
+        mLP = { lo, P: Math.min(100000, lo.max), n: Math.min(12, lo.maxN) };
+        mLoanPlanShow();
+    }
+    function mLoanSetP(v) { mLP.P = Math.max(10000, Math.min(mLP.lo.max, Math.round(Number(v) / 10000) * 10000)); mLoanPlanShow(); }
+    function mLoanSetN(v) { mLP.n = Math.max(1, Math.min(mLP.lo.maxN, Math.round(Number(v)))); mLoanPlanShow(); }
+    function mLoanPlanShow() {
+        const { lo, P, n } = mLP;
+        const m = mLoad();
+        const pay = mLoanMonthly(P, lo.rate, n);
+        const total = pay * n, interest = total - P;
+        const inc = mJobCo(m.job.co) ? mJobNet(mJobGross(m)).net : 0;
+        const ratio = inc > 0 ? (mLoanMonthlyTotal(m) + pay) / inc * 100 : null;
+        const end = new Date(); end.setMonth(end.getMonth() + n);
+        const heavy = ratio !== null && ratio > 35;
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">${lo.e} ${esc(lo.n)}　返す計画を立てる</h2>
+            <div class="m-desc">ここを見ないで借りるのが、いちばんあぶない。<b>ぜんぶ見てから決めよう</b></div>
+            <div style="margin:12px 0;">
+              <div style="display:flex;justify-content:space-between;font-size:13px;"><b>① いくら借りる？</b><b>${mYen(P)}</b></div>
+              <input type="range" min="10000" max="${lo.max}" step="10000" value="${P}" style="width:100%;" oninput="mLoanSetP(this.value)">
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:10px;"><b>② 何回で返す？</b><b>${n}回（${(n/12).toFixed(1)}年）</b></div>
+              <input type="range" min="1" max="${lo.maxN}" step="1" value="${n}" style="width:100%;" oninput="mLoanSetN(this.value)">
+            </div>
+            <div class="m-tw"><table class="m-gtab"><tbody>
+              <tr><td>③ 毎月の返済</td><td class="r"><b style="font-size:16px;">${mYen(pay)}</b></td></tr>
+              <tr><td>④ 利息（よけいに払うお金）</td><td class="r"><b class="m-down">${mYen(interest)}</b>（借りた額の ${(interest/P*100).toFixed(1)}%）</td></tr>
+              <tr><td>　返す合計</td><td class="r">${mYen(total)}</td></tr>
+              <tr><td>⑤ 返し終わる日</td><td class="r">${end.getFullYear()}年${end.getMonth()+1}月ごろ</td></tr>
+              ${inc > 0 ? `<tr class="${heavy?'bad':''}"><td>手取りにしめる返済の割合</td><td class="r"><b>${ratio.toFixed(0)}%</b>${heavy?'（危険！）':ratio>25?'（少し重い）':'（大丈夫）'}</td></tr>` : ''}
+            </tbody></table></div>
+            ${inc === 0 ? `<div class="m-warn">⚠️ いま<b>仕事をしていない</b>ので、返すあてがないよ。まず就職してから借りるのが正しい順番。</div>` : ''}
+            ${heavy ? `<div class="m-warn">⚠️ 毎月の返済が手取りの<b>${ratio.toFixed(0)}%</b>。これは生活がくるしくなるライン。金額を減らすか、回数をふやそう。</div>` : ''}
+            <div class="m-learn">💡 <b>回数をふやすと毎月は軽くなるけど、利息の合計はふえる</b>。スライダーを動かして確かめてみて！
+            これが「長く借りるほど損」のしくみだよ。</div>
+            <div style="text-align:center;margin-top:12px;">
+              <button class="btn" style="background:#e74c3c;color:#fff;" onclick="mLoanTake()">この計画で借りる</button>
+              <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('loan');">やめる</button></div></div>`);
+    }
+    function mLoanTake() {
+        const { lo, P, n } = mLP;
+        const m = mLoad();
+        if(m.credit < lo.minCredit) { alert('信用スコアが足りないよ'); return; }
+        if(mLoanTotalDebt(m) + P > lo.max * 2) { alert('もう借りすぎだよ。まず返そう'); return; }
+        const pay = mLoanMonthly(P, lo.rate, n);
+        m.loans.push({ c:lo.c, P, rate:lo.rate, n, pay, paid:0, left:pay * n, day:calToday() });
+        m.cash += P;
+        m.credit = Math.max(0, m.credit - 15);          // 借りると信用は少し下がる
+        mLog(m, `借りる：${lo.n}（${n}回払い）`, P);
+        mSave(m); playSfx('finish'); renderMoney();
+        gCloseModal();
+        setTimeout(() => alert(`💳 ${mYen(P)} を借りたよ。\n毎月5日に ${mYen(pay)} ずつ、${n}回で返していこう。\n利息は合計 ${mYen(pay*n-P)} だよ。`), 150);
+    }
+    function mLoanRepay(i) {
+        const m = mLoad(); const l = m.loans[i]; if(!l) return;
+        if(m.cash < l.left) { alert(`まとめて返すには ${mYen(l.left)} 必要だよ（いま ${mYen(m.cash)}）`); return; }
+        if(!confirm(`のこり ${mYen(l.left)} をまとめて返す？\n先に返すと、これから先の利息を払わなくてよくなるよ。`)) return;
+        m.cash -= l.left;
+        mLog(m, `くり上げ返済：${(M_LOANS.find(x=>x.c===l.c)||{}).n || l.c}`, -l.left);
+        m.credit = Math.min(1000, m.credit + 30);
+        m.loans.splice(i, 1);
+        mSave(m); playSfx('finish'); celebrate(); renderMoney();
+        alert('完済！信用スコアが上がったよ⭐');
+    }
+    // 毎月の返済（mPayMonthから呼ばれる）
+    function mLoanPayMonth(m) {
+        let did = false;
+        for(let i = m.loans.length - 1; i >= 0; i--) {
+            const l = m.loans[i];
+            const pay = Math.min(l.pay, l.left);
+            if(m.cash >= pay) {
+                m.cash -= pay; l.left -= pay; l.paid++;
+                m.loanPaid++; m.credit = Math.min(1000, m.credit + 6);
+                mLog(m, `返済：${(M_LOANS.find(x=>x.c===l.c)||{}).n || l.c}（${l.paid}/${l.n}回）`, -pay);
+                if(l.left <= 0) {
+                    m.loans.splice(i, 1);
+                    m.credit = Math.min(1000, m.credit + 40);
+                    m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'ローンを完済した🎉', msg:'最後まできちんと返せたよ。信用スコアが大きく上がった！これが「信用」の作り方だよ。' });
+                }
+            } else {                                   // 払えない＝延滞（本物では信用が大きく傷つく）
+                const late = Math.round(pay * 0.15);
+                l.left += late;
+                m.loanLate++; m.credit = Math.max(0, m.credit - 60);
+                m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'返済がおくれた（延滞）', msg:`お金が足りず ${mYen(pay)} を返せなかった。おくれた分の手数料 ${mYen(late)} が上のせされ、信用スコアが大きく下がったよ。` });
+                mLog(m, '延滞の手数料', -0);
+            }
+            did = true;
+        }
+        return did;
+    }
     // ---------------- 🎲 ギャンブル（しくみを知るための勉強コーナー） ----------------
     let mGamPick = 0;                                   // 競馬でえらんだ馬
     function mGamG(c) { return M_GPLAY.find(g => g.c === c); }
@@ -3546,7 +4550,7 @@
         for(let i = 0; i < g.tbl.length; i++) { acc += 1 / g.tbl[i][1]; if(u < acc) return i; }
         return -1;
     }
-    // 1回ぶん遊ぶ（もどってきたチップを返す。0＝はずれ）
+    // 1回ぶん遊ぶ（もどってきたお金を返す。0＝はずれ）
     function mGamOnce(g, pick) {
         const i = mGamIdx(g, pick);
         if(i < 0) return 0;
@@ -3564,41 +4568,89 @@
         if(g.c === 'big') return ['1等（14試合ぜんぶ）','2等（13試合）','3等（12試合）','4等（11試合）'][i] || (i + '等');
         return '当たり' + (g.tbl.length > 1 ? '（' + (i + 1) + '）' : '');
     }
+    // ===== 週替わり（毎週月曜0:00に、遊べるギャンブルが入れかわる） =====
+    // どの端末でも同じ結果になるように、週の番号から決める（オンラインで2人とも同じ）
+    function mMonday(dt) {
+        const n = dt || new Date();
+        const d = new Date(n.getFullYear(), n.getMonth(), n.getDate());
+        const dow = (d.getDay() + 6) % 7;              // 月曜=0
+        return new Date(d.getTime() - dow * 86400000);
+    }
+    function mWeekNo() { return Math.floor(mMonday().getTime() / 604800000); }
+    function mNextMonday() { const mo = mMonday(); return new Date(mo.getTime() + 7 * 86400000); }
+    function mWeekGames() {
+        const r = mRng(mHash('nobilog-gamble-week|' + mWeekNo()));
+        const idx = M_GPLAY.map((g, i) => i);
+        for(let i = idx.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); const t = idx[i]; idx[i] = idx[j]; idx[j] = t; }
+        return idx.slice(0, 3).sort((a, b) => a - b).map(i => M_GPLAY[i]);
+    }
+    let mGamTimer = null, mGamAnim = null, mGamTo = [];
+    // くるくる回っているのだけ止める（このあとの「結果を出す」予約は消さない）
+    function mGamStopSpin() { if(mGamAnim) { clearInterval(mGamAnim); mGamAnim = null; } }
+    // 演出をぜんぶ止める（画面をとじたときなど）
+    function mGamStopAnim() { mGamTo.forEach(t => clearTimeout(t)); mGamTo = []; mGamStopSpin(); }
+    function mGamStopAll() { mGamStopAnim(); if(mGamTimer) { clearInterval(mGamTimer); mGamTimer = null; } }
+    function mGamTick() {
+        const el = document.getElementById('gam-timer');
+        if(!el) { if(mGamTimer) { clearInterval(mGamTimer); mGamTimer = null; } return; }
+        let ms = mNextMonday().getTime() - Date.now();
+        if(ms <= 0) { renderMoney(); return; }
+        const d = Math.floor(ms / 86400000); ms -= d * 86400000;
+        const hh = Math.floor(ms / 3600000); ms -= hh * 3600000;
+        const mi = Math.floor(ms / 60000); const se = Math.floor((ms - mi * 60000) / 1000);
+        el.innerText = `${d}日 ${String(hh).padStart(2,'0')}:${String(mi).padStart(2,'0')}:${String(se).padStart(2,'0')}`;
+    }
+    function mGamStartTimer() { if(mGamTimer) clearInterval(mGamTimer); mGamTick(); mGamTimer = setInterval(mGamTick, 1000); }
+    // 1日にかけられる上限（のめりこみ防止。本物のカジノにもある「自己制限」のしくみ）
+    function mGamLimit(m) { return Math.max(1000, Math.round(mTotal(m) * 0.05 / 100) * 100); }
+    function mGamUsed(m) { return m.gam.dayKey === calToday() ? (m.gam.dayBet || 0) : 0; }
     function mGamHtml(m) {
-        const g = m.gam, canGet = g.day !== calToday();
+        const g = m.gam;
         const diff = g.ret - g.bet;
+        const week = mWeekGames(), wcodes = week.map(x => x.c);
+        const limit = mGamLimit(m), used = mGamUsed(m), rest = Math.max(0, limit - used);
+        // ⚠️ この注意カードは いちばん上のまま動かさないこと（ユーザー指定）
         let h = `<div class="m-warn" style="font-size:14px;line-height:1.9;">
             <b>⚠️ ここは「ギャンブルのしくみを勉強する」コーナーです</b><br>
             ・競馬・競輪・競艇・オートレースは<b>20さい未満は買えません</b>（法律）<br>
             ・パチンコ店は<b>18さい未満は入れません</b>／スポーツくじは<b>19さい未満は買えません</b><br>
             ・海外のオンラインカジノに日本から賭けるのは<b>犯罪（賭博罪）</b>です<br>
-            ・ここで使うのは<b>おためしチップ</b>だけ。<b>げんきん（現金）とは絶対に交換できません</b>
+            ・ここで賭けるのは<b>自分のお金</b>です。減ったぶんは本当に減ります
             </div>
-            <div class="m-chips"><div style="font-size:12px;">おためしチップ</div>
-            <div class="cn">🪙 ${g.chips.toLocaleString('ja-JP')}</div>
-            <div style="font-size:11px;opacity:.9;">現金とは交換できないよ／1日1回 1万チップもらえる</div>
-            <button class="btn" style="background:#fff;color:#8e44ad;margin-top:8px;font-weight:bold;" onclick="mGamChips()" ${canGet ? '' : 'disabled'}>${canGet ? '🪙 今日のチップをもらう（+10000）' : '今日はもらったよ'}</button></div>`;
+            <div class="m-week"><div class="wl">🔄 今週あそべるギャンブル（毎週 月曜0:00に入れかわる）</div>
+            <div class="wt" id="gam-timer">--</div>
+            <div class="wl">つぎの入れかえまで／${week.map(x => x.e + x.n.replace(/（.*/,'')).join('・')}</div></div>`;
+        // 所持金と1日の上限
+        h += `<div class="m-card"><b>💰 かけられるお金</b>
+            <div class="m-row"><span>いまの現金</span><b>${mYen(m.cash)}</b></div>
+            <div class="m-row"><span>今日つかった額</span><b>${mYen(used)}</b></div>
+            <div class="m-row"><span>今日あと かけられる額</span><b class="${rest>0?'m-up':'m-down'}">${mYen(rest)}</b></div>
+            <div class="m-learn">💡 1日にかけられるのは<b>そう資産の5%まで</b>にしてあるよ（最低1000円）。
+            本物のカジノにもある「<b>自己制限</b>」というしくみ。決めた額でやめられる人だけが、ギャンブルとつきあえるんだ。</div></div>`;
         // 通算
-        h += `<div class="m-card"><b>📊 あなたの通算成績（チップ）</b>
+        h += `<div class="m-card"><b>📊 あなたの通算成績（本物のお金）</b>
             <div class="m-row"><span>やった回数</span><b>${g.plays.toLocaleString('ja-JP')}回</b></div>
-            <div class="m-row"><span>かけたチップ</span><b>${g.bet.toLocaleString('ja-JP')}</b></div>
-            <div class="m-row"><span>もどってきたチップ</span><b>${g.ret.toLocaleString('ja-JP')}</b></div>
-            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${Math.abs(diff).toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>かけたお金</span><b>${mYen(g.bet)}</b></div>
+            <div class="m-row"><span>もどってきたお金</span><b>${mYen(g.ret)}</b></div>
+            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${mYen(Math.abs(diff)).slice(1)}</b></div>
             ${g.bet > 0 ? `<div class="m-row"><span>あなたの実際の還元率</span><b>${(g.ret / g.bet * 100).toFixed(1)}%</b></div>` : ''}
-            ${g.big > 0 ? `<div class="m-row"><span>いちばん大きな当たり</span><b class="m-up">${g.big.toLocaleString('ja-JP')}</b></div>` : ''}`;
+            ${g.big > 0 ? `<div class="m-row"><span>いちばん大きな当たり</span><b class="m-up">${mYen(g.big)}</b></div>` : ''}`;
         if(diff < 0) {
-            const months = Math.abs(diff) / (20 * M_PAY_PER_CORRECT);
-            h += `<div class="m-warn">💭 もしこれが<b>本物のお金</b>だったら <b>${mYen(Math.abs(diff))}</b> の負け。
-                勉強でかせぐ給料だと <b>${(Math.abs(diff) / M_PAY_PER_CORRECT).toFixed(0)}問</b> 正解ぶん（${months.toFixed(1)}か月ぶん）が消えたことになるよ。</div>`;
+            h += `<div class="m-warn">💭 <b>${mYen(Math.abs(diff))}</b> の負け。
+                勉強の手当だと <b>${(Math.abs(diff) / M_PAY_PER_CORRECT).toFixed(0)}問</b> 正解ぶんが消えたのと同じだよ。
+                ${mJobCo(m.job.co) ? `お給料だと <b>${(Math.abs(diff) / Math.max(1, mJobNet(mJobGross(m)).net)).toFixed(2)}か月ぶん</b>。` : ''}</div>`;
         }
         h += `</div>`;
-        // ためせるゲーム
-        h += `<div class="m-card"><b>🎮 ためしてみよう（チップ）</b>
-            <div style="font-size:12px;color:#888;">「🔬まとめて計算」はチップを使わずに、何回もやったらどうなるかを一気に計算するよ。<b>ここがいちばん勉強になる</b></div>`;
+        // ためせるゲーム（今週の3つだけ遊べる）
+        h += `<div class="m-card"><b>🎮 やってみる（自分のお金）</b>
+            <div style="font-size:12px;color:#888;">今週えらばれた<b>3つ</b>だけ遊べるよ。ほかは来週まで待とう。<br>
+            「🔬まとめて計算」は<b>お金を使わずに</b>、何回もやったらどうなるかを一気に計算する。<b>ここがいちばん勉強になる</b></div>`;
         M_GPLAY.forEach(gp => {
             const theo = mGamRet(gp, mGamPick);
-            h += `<div class="m-gcard"><div class="m-name">${gp.e} ${esc(gp.n)}
-                <span class="m-pill">還元率 ${theo.toFixed(1)}%</span></div>
+            const open = wcodes.includes(gp.c);
+            const can = open && m.cash >= gp.unit && rest >= gp.unit;
+            h += `<div class="m-gcard ${open ? '' : 'm-locked'}"><div class="m-name">${gp.e} ${esc(gp.n)}
+                <span class="m-pill">還元率 ${theo.toFixed(1)}%</span>${open ? '<span class="m-pill" style="background:rgba(231,76,60,.15);color:#e74c3c;">今週あそべる</span>' : '<span class="m-pill" style="background:rgba(127,140,141,.16);color:#7f8c8d;">🔒 今週はお休み</span>'}</div>
                 <div class="m-desc">${esc(gp.d)}</div>`;
             if(gp.horses) {
                 h += `<div class="m-secbar" style="margin:6px 0 2px;">${gp.horses.map((hh, i) =>
@@ -3606,9 +4658,8 @@
                     <div class="m-desc">えらんだ馬：<b>${esc(gp.horses[mGamPick][0])}</b>（当たる確率 ${(gp.horses[mGamPick][1] * 100).toFixed(0)}%・${gp.horses[mGamPick][2].toFixed(1)}倍）</div>`;
             }
             h += `<div class="m-gbtns">
-                <button class="m-btn m-buy" onclick="mGamPlay('${gp.c}',1)">1回（${gp.unit}）</button>
-                <button class="m-btn m-buy" onclick="mGamPlay('${gp.c}',10)">10回（${gp.unit * 10}）</button>
-                <button class="m-btn m-sell" onclick="mGamPlay('${gp.c}',100)">100回（${(gp.unit * 100).toLocaleString('ja-JP')}）</button>
+                <button class="m-btn ${can?'m-buy':'m-info'}" onclick="mGamPlay('${gp.c}',1)" ${can?'':'disabled'}>▶️ 1回 ${mYen(gp.unit)}</button>
+                <button class="m-btn ${open && m.cash >= gp.unit*5 && rest >= gp.unit*5 ?'m-buy':'m-info'}" onclick="mGamPlay('${gp.c}',5)" ${open && m.cash >= gp.unit*5 && rest >= gp.unit*5 ?'':'disabled'}>5回 ${mYen(gp.unit*5)}</button>
                 <button class="m-btn" style="background:#8e44ad;" onclick="mGamSim('${gp.c}')">🔬 まとめて計算</button>
               </div>
               <div class="m-learn">${esc(gp.note)}</div></div>`;
@@ -3693,46 +4744,161 @@
         return h;
     }
     function mGamSetPick(i) { mGamPick = i; renderMoney(); }
-    function mGamChips() {
-        const m = mLoad();
-        if(m.gam.day === calToday()) { alert('チップは1日1回だよ。あしたまた来てね'); return; }
-        m.gam.day = calToday(); m.gam.chips += 10000;
-        mSave(m); playSfx('correct'); renderMoney();
-    }
-    // チップを実際にかけてみる
+    // 自分のお金をかける（結果を先に決めて、そのとおりに演出を見せる）
     function mGamPlay(code, times) {
         const g = mGamG(code); if(!g) return;
         const m = mLoad();
+        if(!mWeekGames().some(x => x.c === code)) { alert('これは今週はお休みだよ。月曜0時に入れかわるまで待ってね'); return; }
         const bet = g.unit * times;
-        if(m.gam.chips < bet) { alert(`チップが足りないよ（${bet.toLocaleString('ja-JP')}ひつよう／いま ${m.gam.chips.toLocaleString('ja-JP')}）\n1日1回もらえるチップをためしてね`); return; }
-        let ret = 0, hits = 0, best = 0;
-        for(let i = 0; i < times; i++) { const r = mGamOnce(g, mGamPick); if(r > 0) { hits++; ret += r; best = Math.max(best, r); } }
-        m.gam.chips += ret - bet;
+        if(m.cash < bet) { alert(`お金が足りないよ（${mYen(bet)} ひつよう／いま ${mYen(m.cash)}）`); return; }
+        const limit = mGamLimit(m), used = mGamUsed(m);
+        if(used + bet > limit) { alert(`今日の上限をこえるよ。\n1日にかけられるのは ${mYen(limit)} まで（今日はあと ${mYen(Math.max(0, limit - used))}）。\n決めた額でやめるのが、いちばん大事なルールだよ。`); return; }
+        // 結果を先に決める
+        const idxs = [], rets = [];
+        for(let i = 0; i < times; i++) { const t = mGamIdx(g, mGamPick); idxs.push(t);
+            rets.push(t < 0 ? 0 : (g.horses ? Math.round(g.unit * g.horses[mGamPick][2]) : g.tbl[t][0])); }
+        const ret = rets.reduce((a, b) => a + b, 0), hits = rets.filter(r => r > 0).length, best = Math.max(0, ...rets);
+        // お金を動かして保存
+        m.cash += ret - bet;
         m.gam.bet += bet; m.gam.ret += ret; m.gam.plays += times;
         m.gam.big = Math.max(m.gam.big || 0, best);
+        m.gam.dayKey = calToday(); m.gam.dayBet = used + bet;
+        mLog(m, `ギャンブル：${g.n}（${times}回）`, ret - bet);
         mSave(m); mAwardBadges();
+        const done = () => mGamResult(g, code, times, bet, ret, hits, best);
+        mGamAnimate(g, idxs, rets, bet, done);
+    }
+    // 🎬 演出（ゲームごとに、実際にやっているところを見せる）
+    function mGamAnimate(g, idxs, rets, bet, done) {
+        mGamStopAnim();
+        const head = `<h2 style="text-align:center;">${g.e} ${esc(g.n)}</h2>`;
+        const wait = (ms, fn) => mGamTo.push(setTimeout(fn, ms));
+        const stage = (inner, msg) => gOpenModal(`<div class="gz">${head}<div class="gz-stage">${inner}</div><div class="gz-msg" id="gz-msg">${msg || ''}</div></div>`);
+        const t0 = idxs[0], win0 = rets[0] > 0;
+        // ── 🎡 ルーレット ──
+        if(g.c === 'roulR' || g.c === 'roulN') {
+            // 出た目を決める（赤黒は「当たり＝奇数」「はずれ＝0か偶数」で見た目をそろえる）
+            let num;
+            if(g.c === 'roulR') num = win0 ? [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35][Math.floor(Math.random()*18)]
+                                           : [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36][Math.floor(Math.random()*19)];
+            else num = win0 ? 7 : (Math.floor(Math.random()*36) + 1 === 7 ? 8 : Math.floor(Math.random()*36) + 1);
+            stage(`<div class="gz-pin">🔻</div><div class="gz-wheel" id="gz-wheel"><div class="gz-hub" id="gz-hub">?</div></div>`, '玉がまわっているよ…');
+            const wheel = document.getElementById('gz-wheel'), hub = document.getElementById('gz-hub');
+            let n = 0;
+            mGamAnim = setInterval(() => { if(hub) hub.innerText = Math.floor(Math.random() * 37); }, 70);
+            wait(60, () => { if(wheel) wheel.style.transform = `rotate(${1440 + (37 - num) * (360/37)}deg)`; });
+            wait(3500, () => { mGamStopSpin(); if(hub) { hub.innerText = num; hub.classList.add('gz-win'); }
+                const msg = document.getElementById('gz-msg');
+                if(msg) msg.innerHTML = num === 0 ? '🟢 <b>0（緑）</b>が出た！親の勝ち…' : `出た目は <b>${num}</b>（${num % 2 ? '赤' : '黒'}）`;
+                playSfx(win0 ? 'correct' : 'wrong'); });
+            wait(4600, done);
+            return;
+        }
+        // ── 🎰 スロット ──
+        if(g.c === 'slot') {
+            const S = ['🍒','🔔','⭐','🍋','7️⃣','🍉'];
+            const win = win0 ? (rets[0] >= g.unit * 20 ? '7️⃣' : rets[0] >= g.unit * 8 ? '⭐' : rets[0] >= g.unit * 2 ? '🔔' : '🍒') : null;
+            stage(`<div class="gz-reels">${[0,1,2].map(i => `<div class="gz-reel spin" id="gz-r${i}">${S[i]}</div>`).join('')}</div>`, 'リールが回っているよ…');
+            mGamAnim = setInterval(() => { [0,1,2].forEach(i => { const el = document.getElementById('gz-r'+i); if(el && el.classList.contains('spin')) el.innerText = S[Math.floor(Math.random()*S.length)]; }); }, 80);
+            [0,1,2].forEach(i => wait(900 + i * 700, () => {
+                const el = document.getElementById('gz-r'+i); if(!el) return;
+                el.classList.remove('spin');
+                el.innerText = win ? win : (i < 2 ? S[Math.floor(Math.random()*S.length)] : S.filter(x => x !== document.getElementById('gz-r0').innerText)[Math.floor(Math.random()*(S.length-1))]);
+                if(win) el.classList.add('hit');
+                playSfx(i === 2 && win ? 'correct' : null);
+            }));
+            wait(2500, () => { mGamStopSpin(); const msg = document.getElementById('gz-msg');
+                if(msg) msg.innerHTML = win ? `🎊 <b>${win}${win}${win}</b> そろった！` : 'そろわなかった…';
+                if(!win) playSfx('wrong'); });
+            wait(3400, done);
+            return;
+        }
+        // ── 🐎 競馬 ──
+        if(g.horses) {
+            const N = g.horses.length;
+            const winner = win0 ? mGamPick : (() => { let k; do { k = Math.floor(Math.random() * N); } while(k === mGamPick); return k; })();
+            stage(`<div class="gz-track">${g.horses.map((hh, i) => `<div class="gz-lane"><span class="gz-horse" id="gz-h${i}" style="left:0;">${i===mGamPick?'🏇':'🐎'}<span style="font-size:11px;">${esc(hh[0])}</span></span><span class="gz-goal">🏁</span></div>`).join('')}</div>`,
+                `${esc(g.horses[mGamPick][0])} を おうえん中！`);
+            const pos = g.horses.map(() => 0);
+            const spd = g.horses.map((hh, i) => (i === winner ? 1.35 : 0.75 + Math.random() * 0.4));
+            let step = 0;
+            mGamAnim = setInterval(() => {
+                step++;
+                g.horses.forEach((hh, i) => {
+                    pos[i] = Math.min(82, pos[i] + spd[i] * (2 + Math.random() * 2.4));
+                    const el = document.getElementById('gz-h'+i); if(el) el.style.left = pos[i] + '%';
+                });
+                if(step > 26) { mGamStopSpin();
+                    const el = document.getElementById('gz-h'+winner); if(el) el.style.left = '86%';
+                    const msg = document.getElementById('gz-msg');
+                    if(msg) msg.innerHTML = `🏁 1着は <b>${esc(g.horses[winner][0])}</b>！${winner === mGamPick ? '　🎊 当たり！' : '　はずれ…'}`;
+                    playSfx(win0 ? 'correct' : 'wrong');
+                    wait(1200, done);
+                }
+            }, 110);
+            return;
+        }
+        // ── ⚽ BIG（14試合を当てる） ──
+        if(g.c === 'big') {
+            const hitN = t0 === 0 ? 14 : t0 === 1 ? 13 : t0 === 2 ? 12 : t0 === 3 ? 11 : Math.floor(Math.random() * 11);
+            const cells = Array.from({length:14}, (_, i) => i < hitN ? 1 : 0).sort(() => Math.random() - 0.5);
+            stage(`<div class="gz-grid">${cells.map((c, i) => `<div class="gz-cell" id="gz-c${i}">?</div>`).join('')}</div>`, '14試合の結果が出るよ…');
+            cells.forEach((c, i) => wait(160 + i * 170, () => {
+                const el = document.getElementById('gz-c'+i); if(!el) return;
+                el.className = 'gz-cell ' + (c ? 'ok' : 'ng'); el.innerText = c ? '○' : '×';
+                if(i === 13) { const msg = document.getElementById('gz-msg');
+                    if(msg) msg.innerHTML = `的中 <b>${hitN} / 14試合</b>${hitN >= 11 ? '　🎊 当たり！' : '　はずれ…'}`;
+                    playSfx(win0 ? 'correct' : 'wrong'); }
+            }));
+            wait(160 + 14 * 170 + 900, done);
+            return;
+        }
+        // ── 🎫 宝くじ（番号が1けたずつ決まっていく） ──
+        const tier = t0;
+        const name = tier < 0 ? 'はずれ' : mGamTierName(g, tier);
+        stage(`<div class="gz-digits">${[0,1,2,3,4,5].map(i => `<div class="gz-dig spin" id="gz-d${i}">0</div>`).join('')}</div>
+               <div style="font-size:13px;color:#888;">当せん番号を発表します…</div>`, '抽選中…');
+        mGamAnim = setInterval(() => { [0,1,2,3,4,5].forEach(i => { const el = document.getElementById('gz-d'+i);
+            if(el && el.classList.contains('spin')) el.innerText = Math.floor(Math.random() * 10); }); }, 70);
+        [0,1,2,3,4,5].forEach(i => wait(700 + i * 420, () => {
+            const el = document.getElementById('gz-d'+i); if(!el) return;
+            el.classList.remove('spin'); el.classList.add('fix');
+            el.innerText = Math.floor(Math.random() * 10);
+            playSfx(null);
+        }));
+        wait(700 + 6 * 420 + 300, () => { mGamStopSpin();
+            const msg = document.getElementById('gz-msg');
+            if(msg) msg.innerHTML = tier < 0 ? '😢 <b>はずれ</b>' : `🎊 <b>${esc(name)}</b> に当せん！`;
+            playSfx(win0 ? 'correct' : 'wrong'); });
+        wait(700 + 6 * 420 + 1400, done);
+    }
+    function mGamResult(g, code, times, bet, ret, hits, best) {
+        mGamStopSpin();
+        const m = mLoad();
+        const diff = ret - bet, all = m.gam.ret - m.gam.bet;
         playSfx(ret > bet ? 'correct' : 'wrong');
         if(ret >= bet * 20) celebrate('big');
-        const diff = ret - bet, all = m.gam.ret - m.gam.bet;
+        const rest = Math.max(0, mGamLimit(m) - mGamUsed(m));
         gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
             <h2 style="text-align:center;">${g.e} ${esc(g.n)}</h2>
             <div style="text-align:center;font-size:15px;margin-bottom:10px;">${times}回 ${g.horses ? `（${esc(g.horses[mGamPick][0])}に）` : ''}かけた</div>
-            <div class="m-row"><span>かけたチップ</span><b>${bet.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>かけたお金</span><b>${mYen(bet)}</b></div>
             <div class="m-row"><span>当たった回数</span><b>${hits}回 / ${times}回</b></div>
-            <div class="m-row"><span>もどってきたチップ</span><b>${ret.toLocaleString('ja-JP')}</b></div>
-            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${Math.abs(diff).toLocaleString('ja-JP')}</b></div>
-            ${best > 0 ? `<div class="m-row"><span>いちばん大きい当たり</span><b class="m-up">${best.toLocaleString('ja-JP')}</b></div>` : ''}
-            <div class="m-row"><span>のこりチップ</span><b>🪙 ${m.gam.chips.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>もどってきたお金</span><b>${mYen(ret)}</b></div>
+            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${mYen(Math.abs(diff)).slice(1)}</b></div>
+            ${best > 0 ? `<div class="m-row"><span>いちばん大きい当たり</span><b class="m-up">${mYen(best)}</b></div>` : ''}
+            <div class="m-row"><span>のこりの現金</span><b>${mYen(m.cash)}</b></div>
+            <div class="m-row"><span>今日あと かけられる額</span><b>${mYen(rest)}</b></div>
             <div class="${diff >= 0 ? 'm-ok' : 'm-warn'}" style="margin-top:10px;">
             ${diff > 0 ? `勝った！でもこれは<b>たまたま</b>。このゲームの還元率は${mGamRet(g, mGamPick).toFixed(1)}%だから、続けるほど平均に近づいて負けていくよ`
                        : diff === 0 ? 'ちょうど同じ。めずらしい！' : `負けたね。これが<b>ふつう</b>。還元率${mGamRet(g, mGamPick).toFixed(1)}%＝1回ごとに平均${(100 - mGamRet(g, mGamPick)).toFixed(1)}%ずつ削られている`}</div>
-            <div class="m-row"><span>通算（${m.gam.plays.toLocaleString('ja-JP')}回）</span><b class="${all >= 0 ? 'm-up' : 'm-down'}">${all >= 0 ? '+' : '−'}${Math.abs(all).toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>通算（${m.gam.plays.toLocaleString('ja-JP')}回）</span><b class="${all >= 0 ? 'm-up' : 'm-down'}">${all >= 0 ? '+' : '−'}${mYen(Math.abs(all)).slice(1)}</b></div>
             <div style="text-align:center;margin-top:12px;">
-            <button class="btn" style="background:#e74c3c;color:#fff;" onclick="mGamPlay('${code}',${times})">もう一回</button>
+            ${rest >= g.unit && m.cash >= g.unit ? `<button class="btn" style="background:#e74c3c;color:#fff;" onclick="mGamPlay('${code}',${times})">もう一回</button>` : ''}
             <button class="btn" style="background:#8e44ad;color:#fff;" onclick="mGamSim('${code}')">🔬 まとめて計算</button>
-            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('gam');">とじる</button></div></div>`);
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('gam');">やめる</button></div></div>`);
     }
-    // 🔬 まとめて計算（チップを使わない。回数をふやすと還元率が理論に近づくのを見る＝大数の法則）
+    // 🔬 まとめて計算（お金を使わない。回数をふやすと還元率が理論に近づくのを見る＝大数の法則）
     function mGamSim(code) {
         const g = mGamG(code); if(!g) return;
         const theo = mGamRet(g, mGamPick);
@@ -3894,7 +5060,7 @@
             err = mBuyInner(m, code, yen, false, acct);
         }
         if(err) { alert(err); return; }
-        mSave(m); playSfx('correct'); mAwardBadges(); vbRecord('money', Math.round(mTotal(m))); renderMoney();
+        mSave(m); playSfx('correct'); mAwardBadges(); mVbSend(m); renderMoney();
     }
     function mSell(code, acct) {
         const m = mLoad(); const a = M_ASSET(code);
@@ -3923,7 +5089,7 @@
             err = mSellInner(m, code, r, acct);
         }
         if(err) { alert(err); return; }
-        mSave(m); playSfx('correct'); mAwardBadges(); vbRecord('money', Math.round(mTotal(m))); renderMoney();
+        mSave(m); playSfx('correct'); mAwardBadges(); mVbSend(m); renderMoney();
     }
     function mDeposit() {
         const m = mLoad();
@@ -4054,6 +5220,21 @@
             <div class="uh-box"><h3>📈 ふやす（投資）</h3><p>オルカン・S&P500などの投資信託、100社の株、債券、金、外貨、不動産、暗号資産が買える。<br>・<b>株は「株数」で買う</b>（1株千円なら100株で10万円）。<b>投信・そのほかは「金額」で買う</b><br>・値段は<b>ニュースと同じタイミング</b>で動く（1日3回）<br>・株の売り買いは<b>手数料0.5%</b>、投信は<b>0円</b>（ノーロード）<br>・投信は<b>信託報酬</b>という見えないコストが毎日かかる</p></div>
             <div class="uh-box"><h3>🎁 NISA（いちばん大事！）</h3><p>国が作った「税金が0円になる」制度。<br>・ふつうの口座 → もうけと配当に<b>20.315%</b>の税金<br>・NISA → <b>0円</b>！<br>・つみたて投資枠は<b>年120万円</b>まで、一生で<b>1800万円</b>まで<br>・買えるのは決められた<b>投資信託</b>だけ<br>投資画面の「🎁NISAで買う」を使うと、どれだけ税金を節約できたか見られるよ。</p></div>
             <div class="uh-box"><h3>💴 配当と税金のしくみ</h3><p>・<b>毎月5日</b>に配当・分配金がもらえる（株や投信を持っていると）<br>・課税口座は受け取る前に<b>20.315%</b>が引かれる（源泉徴収）<br>・NISAなら<b>まるごと</b>もらえる<br>・銀行の利息にも税金がかかる</p></div>
+            <div class="uh-box"><h3>💼 仕事のタブ（いちばん大事）</h3><p>お金は「もらえるもの」ではなく「はたらいて手に入れるもの」。<br>
+            ・会社に入るには <b>①書類選考 → ②筆記試験 → ③面接</b> の3つを通る必要があるよ<br>
+            ・<b>書類選考は「これまでに解いた問題の数」</b>で決まる。勉強するほど良い会社を受けられる📚<br>
+            ・筆記試験は<b>本物の問題</b>（数学・英語・国語・理科＋政治と経済）。会社によって合格ラインがちがう<br>
+            ・面接は「その会社が求める人」に近い答えほど高評価。会社の説明をよく読もう<br>
+            ・<b>実力があっても落ちることがある</b>。人気の会社は何千人が受けるからだよ。7日たてばまた受けられる<br>
+            ・入社したら<b>毎日「出勤する」</b>を押そう。3日サボると警告、警告3回で<b>クビ</b>！<br>
+            ・お給料は<b>毎月5日</b>。額面から社会保険料・所得税・住民税が引かれた<b>手取り</b>が入る（明細も見られるよ）</p></div>
+            <div class="uh-box"><h3>🏠 生活のタブ（メニューの中）</h3><p>家・ごはん・スマホ・電気・水道…毎月かならず出ていくお金を「<b>固定費</b>」というよ。<br>
+            必要なものがそろっていないと<b>健康ときぶんが毎日下がって</b>、仕事の評価まで下がってしまう。<br>
+            タワマン＋外食＋車 と、実家＋自炊＋格安SIM で、いくらちがうか比べてみて！</p></div>
+            <div class="uh-box"><h3>💳 借金のタブ</h3><p>借金は<b>わるいことじゃない</b>。わるいのは「計画なしに借りること」。<br>
+            借りる前に <b>①いくら ②何回で ③毎月いくら ④利息の合計 ⑤いつ返し終わる</b> を全部見せるようにしてあるよ。<br>
+            きちんと返すと<b>信用スコア</b>が上がって、安い金利でたくさん借りられるようになる。おくれると大きく下がる。<br>
+            ☠️ヤミ金（年109.5%）は犯罪。ぜったいに関わらないこと。</p></div>
             <div class="uh-box"><h3>🛡️ 保険のタブ</h3><p>お金がへる原因には「ちょっとずつへる」と「いっきに大きくへる」の2つがあって、保険は<b>後者だけ</b>のためのしくみ。<br>
             ・まず<b>くらしの設定</b>（スマホを持つ／自転車に乗る／車に乗る…）をえらぶ。くらしが変わると必要な保険も変わるよ<br>
             ・保険は<b>8しゅるい</b>。それぞれ<b>ライト🥉／スタンダード🥈／プレミアム🥇</b>の3プランがあって、<b>高いほど補償の割合・上限・サービスが良くなる</b>（免責0円・示談交渉・代車・24時間相談など）<br>
@@ -4062,7 +5243,8 @@
             ・<b>🔭保険シミュレーター</b>で「あなたの30年」と「1000人の1年」を早送りできる。<b>ここがいちばん勉強になる</b>！</p></div>
             <div class="uh-box"><h3>🎲 ギャンブルのタブ</h3><p>これは<b>やるための場所ではなく、しくみを知るための場所</b>。大人になってからだまされないために、いま数字で見ておこう。<br>
             ・日本の主なギャンブル（宝くじ・toto・競馬・競輪・競艇・オート・パチンコ・カジノ）を<b>還元率</b>でくらべられる<br>
-            ・使うのは<b>おためしチップ</b>だけ。<b>現金とは交換できない</b>（1日1回1万チップもらえる）<br>
+            ・かけるのは<b>自分のお金</b>。減ったぶんは本当に減る（1日にかけられるのは<b>そう資産の5%まで</b>）<br>
+            ・遊べるのは<b>毎週えらばれた3つ</b>だけ。<b>毎週月曜0:00</b>に入れかわる（残り時間が表示されるよ）<br>
             ・<b>🔬まとめて計算</b>を押すと、100回・1万回・100万回やった結果が一気に出る。回数がふえるほど<b>還元率どおりに負けていく</b>のが目で見えるよ（大数の法則）<br>
             ・年齢制限（公営ギャンブル20さい・パチンコ18さい・toto19さい）と、<b>オンラインカジノは犯罪</b>ということもここで覚えよう</p></div>
             <div class="uh-box"><h3>⚖️ 3つを混ぜないこと</h3><p>🎲ギャンブル＝期待値マイナス・楽しむためのもの／🛡️保険＝期待値マイナス・大きな損を防ぐもの／📈投資＝期待値プラス・ふやすためのもの。<br>
@@ -4219,6 +5401,7 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb) tb.style.display = 'none'; }
+        if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
         document.getElementById(`view-${id}`).classList.add('active');
         document.getElementById('sidebar').classList.remove('open');
@@ -4228,6 +5411,7 @@
         if(id === 'calendar') renderCalendar();
         if(id === 'game') renderGame();
         if(id === 'money') renderMoney();
+        if(id === 'life') renderLife();
         if(id === 'run') showRunCheer();
     }
 
@@ -7006,6 +8190,16 @@
                     // 日付が変わっていたら、前日までの分を「prev」として1世代残す（万一の上書き事故からの二重保険）
                     if (old && old.date && new Date(old.date).toDateString() !== new Date().toDateString() && abHasUserData(old.keys)) {
                         store.put(Object.assign({}, old, { id: 'prev' }));
+                    }
+                    // 🔒 きろくが「減った」ときは上書きしないで、消えたキーを前のバックアップから戻す。
+                    //    （アップデートや不具合でデータが消えても、バックアップまで一緒に消えないようにするため）
+                    let allowShrink = false;
+                    try { allowShrink = sessionStorage.getItem('nobilogAllowShrink') === '1'; } catch (e) {}
+                    if (old && old.keys && !allowShrink) {
+                        Object.keys(old.keys).forEach(k => {
+                            const isUser = k.indexOf('u1:') === 0 || k.indexOf('u2:') === 0;
+                            if (isUser && snap.keys[k] === undefined && typeof old.keys[k] === 'string') snap.keys[k] = old.keys[k];
+                        });
                     }
                     store.put(snap);
                 };
