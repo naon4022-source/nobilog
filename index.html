@@ -34,6 +34,12 @@
         #sidebar { position: fixed; top: 0; left: -250px; width: 250px; height: 100%; background-color: var(--box-bg); box-shadow: 2px 0 5px var(--box-shadow); transition: left 0.3s ease; z-index: 1000; padding-top: 60px; }
         #sidebar.open { left: 0; }
         .nav-item { padding: 15px 25px; cursor: pointer; border-bottom: 1px solid var(--border-color); font-weight: bold; }
+        /* 🔒 体験版で使えない項目（見えているけど押すと理由が出る） */
+        .nav-item.locked { color: #a4adb8; opacity: .75; }
+        .nav-item.locked::after { content: ' 🔒'; font-size: 13px; }
+        body.dark-mode .nav-item.locked { color: #6c7683; }
+        #nav-trial-note { display: none; margin: 4px 14px 8px; padding: 10px 12px; border-radius: 10px;
+            background: rgba(243,156,18,.14); border-left: 4px solid #f39c12; font-size: 12px; line-height: 1.7; }
         
         .view { display: none; }
         .view.active { display: block; }
@@ -511,6 +517,7 @@
 
 <div id="sidebar">
     <div onclick="toggleMenu()" style="text-align:right; padding:10px; cursor:pointer;">✕</div>
+    <div id="nav-trial-note">🔰 <b>体験版</b>で使っているよ。<br>🔒 がついた灰色の項目は使えません。<br>使ってみたかったら <b>なお</b> に相談してね！</div>
     <div class="nav-item" id="nav-study" onclick="switchView('study')">📖 勉強 (問題作成)</div>
     <div class="nav-item" id="nav-test-setup" onclick="switchView('test-setup')">📝 テスト作成</div>
     <div class="nav-item" id="nav-review" onclick="switchView('review')">🔁 間違い直し</div>
@@ -837,13 +844,20 @@
     };
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／テスト作成はなおだけ）
-    const TRIAL_HIDE = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-otmake', 'nav-otans', 'nav-ottake'];
+    // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake'];
     const OWNER_ONLY = ['nav-otmake', 'nav-otans'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-otmake','nav-otans'];
     function applyUserNav() {
-        const show = (id, on) => { const el = document.getElementById(id); if(el) el.style.display = on ? '' : 'none'; };
-        ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-otmake','nav-otans']
-            .forEach(id => show(id, true));
-        if(isTrial()) TRIAL_HIDE.forEach(id => show(id, false));
+        const el = (id) => document.getElementById(id);
+        const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
+        const lock = (id, on) => { const e = el(id); if(e) e.classList.toggle('locked', !!on); };
+        ALL_NAV.forEach(id => { show(id, true); lock(id, false); });
+        const note = el('nav-trial-note'); if(note) note.style.display = isTrial() ? 'block' : 'none';
+        if(isTrial()) {
+            TRIAL_LOCK.forEach(id => lock(id, true));          // 灰色＋🔒（押すと「なおに相談してね」）
+            OWNER_ONLY.forEach(id => show(id, false));         // なおだけの管理画面は出さない
+        }
         else OWNER_ONLY.forEach(id => show(id, isOwner()));
         // 体験版は「お知らせ」と「今日の宿題」を出さない
         const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
@@ -939,7 +953,7 @@
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
         applyUserNav();
-        document.getElementById('user-chip').innerText = '👤 ' + u.name + (u.trial ? '（体験版）' : '');
+        document.getElementById('user-chip').innerText = (u.trial ? '🔰 ' : '👤 ') + u.name;
         document.getElementById('login-overlay').classList.remove('on');
         showMotivation();
         switchView('study');
@@ -6704,8 +6718,15 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','otmake','otans'].indexOf(id) >= 0) {
-            alert('この機能は体験版では使えないよ。\n体験版では 勉強・テスト作成・間違い直し・百ます計算 がぜんぶ使えるよ！');
+        if(isTrial() && ['calendar','game','money','life','stats','ottake','otmake','otans'].indexOf(id) >= 0) {
+            const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
+                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📩 テスト（オンライン）',
+                         otmake:'📤 テスト作成（オンライン）', otans:'📥 テストの解答' };
+            alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
+                  `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
+                  `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
+                  `　📖 勉強（問題作成）\n　📝 テスト作成\n　🔁 間違い直し\n　🧮 百ます計算`);
+            toggleMenu();
             return;
         }
         if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); return; }
