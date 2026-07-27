@@ -252,6 +252,32 @@
         .m-budget .lab { display:flex; justify-content:space-between; font-size:12px; }
         .m-meter { height:12px; border-radius:999px; background:rgba(127,140,141,.2); overflow:hidden; }
         .m-meter > div { height:100%; border-radius:999px; transition:width .6s cubic-bezier(.22,.9,.28,1); }
+        .m-learn { font-size:12px; background:rgba(243,156,18,.13); border-left:3px solid #f39c12; border-radius:6px; padding:7px 10px; margin-top:8px; line-height:1.7; }
+        /* 保険 */
+        .m-plans { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:8px; }
+        .m-plan { border:2px solid var(--border-color); border-radius:10px; padding:8px 7px; font-size:11px; background:var(--bg-color); }
+        .m-plan.on { border-color:#11998e; box-shadow:0 0 0 3px rgba(17,153,142,.16); }
+        .m-plan .pn { font-weight:bold; font-size:12px; }
+        .m-plan .py { font-weight:bold; color:#11998e; font-size:15px; margin:2px 0 4px; }
+        .m-plan ul { margin:5px 0 0; padding-left:14px; line-height:1.55; }
+        .m-plan .m-btn { width:100%; margin-top:7px; }
+        @media (max-width:430px) { .m-plans { grid-template-columns:1fr; } }
+        .m-ev { background:rgba(155,89,182,.12); border-left:4px solid #9b59b6; border-radius:8px; padding:8px 12px; font-size:13px; margin:6px 0; line-height:1.7; }
+        .m-ok { background:rgba(39,174,96,.12); border-left:4px solid #27ae60; border-radius:8px; padding:8px 12px; font-size:13px; margin:6px 0; line-height:1.7; }
+        .m-ev-big { font-size:15px; font-weight:bold; }
+        /* 表（還元率・シミュレーション） */
+        .m-tw { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+        .m-gtab { width:100%; border-collapse:collapse; font-size:12px; }
+        .m-gtab th, .m-gtab td { border-bottom:1px solid var(--border-color); padding:6px 5px; text-align:left; vertical-align:top; }
+        .m-gtab th { font-size:11px; color:#888; white-space:nowrap; }
+        .m-gtab td.r, .m-gtab th.r { text-align:right; white-space:nowrap; }
+        .m-gtab tr.bad td { background:rgba(231,76,60,.10); }
+        .m-gtab tr.good td { background:rgba(39,174,96,.10); }
+        .m-chips { background:linear-gradient(135deg,#8e44ad,#c39bd3); color:#fff; border-radius:12px; padding:12px; text-align:center; margin-bottom:10px; }
+        .m-chips .cn { font-size:26px; font-weight:bold; }
+        .m-gcard { border:2px dashed var(--border-color); border-radius:10px; padding:10px; margin:8px 0; }
+        .m-gbtns { display:flex; flex-wrap:wrap; gap:5px; margin-top:7px; }
+        .m-gbtns .m-btn { flex:1; min-width:74px; }
 
         /* ===== ✨ なめらかアニメーション（transform と opacity だけ＝軽い） ===== */
         html { scroll-behavior: smooth; }
@@ -795,8 +821,9 @@
         stopEikenTimer(); ekGraded = false; ekQData = []; testQuestionsData = []; reviewList = [];
         runShareData = { title:'', items:[] }; usedMathT = {}; studyAnswersVisible = false;
         loadUserState();
-        mApplyResets();  // 💰 リセット指定があれば1からやり直し（1回だけ）
-        mApplyGrants();  // 🎁 配布があれば受け取る（1回だけ）
+        mApplyResets();       // 💰 リセット指定があれば1からやり直し（1回だけ・ふだんは空）
+        mIdbRestoreIfEmpty(); // 🛟 お金データが消えていたら、IndexedDBのコピーから買ったものを取りもどす
+        mApplyGrants();       // 🎁 配布があれば受け取る（1回だけ）
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
         document.getElementById('user-chip').innerText = '👤 ' + u.name;
@@ -858,7 +885,8 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
+    const UPDATE_NOW = '🏛️政治と経済に<b>🛡️保険</b>と<b>🎲ギャンブル</b>のタブが増えました！①<b>保険</b>は8しゅるい×3プラン。<b>高いプランほど補償もサービスも良くなる</b>（免責0円・示談交渉・代車・24時間相談…）。まず「くらしの設定」をえらんでね②毎日ちょっとの確率で<b>できごと</b>（けが・スマホがこわれる・事故）が起きるよ。保険に入っていれば保険金が出る🛡️③保険料は毎月5日に給料といっしょに引かれます④<b>🔭保険シミュレーター</b>で「あなたの30年」と「1000人の1年」を早送りできる（いちばん勉強になる！）⑤<b>ギャンブル</b>のタブは日本の主なギャンブルを<b>還元率</b>でくらべる勉強コーナー。使うのは<b>おためしチップ</b>だけで現金とは交換できません。<b>🔬100万回まとめて計算</b>すると、なぜ必ず負けるのかが目で見えるよ⑥クイズ18問・用語31語も追加！';
+    const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
         // UPDATE_NOW はこのファイルに書いてある固定の文（ユーザーの入力ではない）ので、
@@ -2079,7 +2107,7 @@
         ['違憲審査権','その法律が憲法に合っているか裁判所が判断できる権限'],
         ['国民審査','最高裁判所の裁判官がふさわしいかを国民が投票で判断する'],
         ['裁判員制度','くじで選ばれた国民が、重い刑事裁判に参加する制度'],
-        ['予算','国が1年間にどこへいくら使うかの計画。国会が決める'],
+        ['国の予算','国が1年間にどこへいくら使うかの計画。国会が決める'],
         ['国債','国の借金。今つかうお金を借りて、将来の世代が返す'],
         ['財政','国や自治体のお金のやりくり全体のこと'],
         ['直接税','はらう人と負担する人が同じ税金（所得税・住民税など）'],
@@ -2091,6 +2119,40 @@
         ['国際連合（国連）','世界の平和と協力のための組織。安全保障理事会などがある']
     ];
     // お金クイズ
+    // 🛡️ 保険とリスク・ギャンブルの用語
+    const M_TERMS_RISK = [
+        ['保険', 'たくさんの人が少しずつお金（保険料）を出し合って、まさかの事が起きた人にまとめて渡すしくみ。ひとりでは払えない大きな損を、みんなで分け合う'],
+        ['保険料', '保険に入っている人が毎月払うお金。起こる確率が高いもの・出るお金が大きいものほど高くなる'],
+        ['保険金（給付金）', '事故や病気が起きたときに保険会社から出るお金'],
+        ['大数（たいすう）の法則', '回数をたくさん集めると、結果が確率どおりに近づくという法則。1人では分からないけど1万人集めれば「1年で何人が入院するか」がほぼ読める。保険が成り立つ理由'],
+        ['免責金額（めんせき）', '事故のとき、自分が必ず払う金額。「免責1万円」なら3万円の修理で保険から出るのは2万円ぶん。安いプランほど免責が大きい'],
+        ['補償の上限', '保険から出るお金の最大。安いプランは上限が低いので、大きな事故だと足りない'],
+        ['特約（とくやく）', '基本の保険に足せるオプション。付けるほど安心だけど保険料は上がる'],
+        ['公的保険', '国のしくみとして全員が入る保険。健康保険・年金・介護・雇用（失業）・労災の5つ。給料から自動で引かれている'],
+        ['健康保険', '病院の窓口で払うのが3割になる制度（小学生〜69歳）。のこり7割はみんなの保険料と税金が払っている'],
+        ['高額療養費制度', '1か月の医療費の自己負担が上限（多くの人は8〜9万円ほど）を超えたら、超えた分が返ってくる国の制度。だから民間の医療保険は「なくても何とかなる」と言われる'],
+        ['国民年金・厚生年金', '年をとったとき・障害を負ったとき・家族を残したときにお金が出る公的保険。「老後のためだけ」ではない'],
+        ['損害保険', '物やお金の損をうめる保険（火災・自動車・自転車・スマホなど）'],
+        ['生命保険', '人にかける保険。亡くなったときや働けなくなったときに、家族の生活を守るお金が出る'],
+        ['個人賠償責任保険', '自分が人にケガをさせたり物をこわしたときの賠償金を払ってくれる保険。自転車事故で数千万円の賠償が命じられた例があるので、いちばんコスパが良い保険といわれる'],
+        ['示談交渉サービス', '事故の相手との話し合いを保険会社が代わりにやってくれるサービス。高いプランに付いていることが多い'],
+        ['再保険', '保険会社がさらに入る保険。大地震のように一度で大量の保険金が必要になる事に備えている'],
+        ['モラルハザード', '保険に入って安心しすぎて、わざと・不注意で事故を起こしやすくなること。だから免責や上限がある'],
+        ['逆選択', '危険が高い人ほど保険に入りたがること。だから保険には健康の告知や条件がある'],
+        ['リスクマネジメント', 'リスク（悪いことが起こる可能性）への向き合い方。①避ける ②小さくする ③保険にうつす ④自分で受け止める、の4つから選ぶ'],
+        ['自己負担（じこふたん）', '保険から出なくて自分で払うぶん。小さい損は自己負担のほうがトク（保険料のほうが高くつくから）'],
+        ['期待値', '1回あたり平均でいくらもどってくるかの計算。300円のくじの期待値が137円なら、買うほど平均で163円ずつ減る'],
+        ['還元率（かんげんりつ）', 'かけたお金のうち、平均でもどってくる割合。宝くじ約45%・競馬約75%・パチンコ約85%・カジノ約95%。のこりは主催者の取り分'],
+        ['胴元（どうもと）', 'ギャンブルを開いて、取り分をもらう人。日本の公営ギャンブルの胴元は国や自治体で、もうけは公共の仕事に使われる'],
+        ['公営ギャンブル', '競馬・競輪・競艇・オートレースなど、法律で特別に認められたギャンブル。20歳未満は買えない'],
+        ['ギャンブル依存症', 'やめたいのに自分で止められなくなる病気。意志が弱いからではなく、脳のはたらきが変わってしまうため。日本には無料の相談窓口（精神保健福祉センターなど）がある'],
+        ['ギャンブラーの誤り', '「10回続けて黒が出たから次は赤」と考えてしまうまちがい。ルーレットに記憶はなく、次の確率はいつも同じ'],
+        ['ビギナーズラック', '最初にたまたま勝つこと。「自分は上手い」と勘ちがいしやすく、依存の入口になりやすい'],
+        ['ゼロサムゲーム', '参加者の勝ちと負けの合計がゼロになる勝負。手数料を取られるので、参加者ぜんたいでは必ずマイナスになる'],
+        ['プラスサム', '投資のように、参加者ぜんたいのもうけが増えていくもの。会社が働いて新しい価値を生むから増える。ギャンブルとの決定的なちがい'],
+        ['違法賭博', '法律で認められていない賭け。海外のオンラインカジノに日本から賭けるのも犯罪（賭博罪）になる。「海外だからOK」はウソ'],
+        ['破産（はさん）', '借金を返せなくなること。ギャンブルは借金と組み合わさると、とても短い時間で生活がこわれる']
+    ];
     const M_QUIZ = [
         { q:'「複利」ってどういう意味？', c:['ふえた利息にもさらに利息がつく','元本にだけ利息がつく','税金のこと'], a:0, e:'複利は利息にも利息がつくので、長い時間ほどすごい差になるよ！' },
         { q:'金利4%のとき、お金が2倍になるのはおよそ何年？（72の法則）', c:['約18年','約4年','約40年'], a:0, e:'72 ÷ 4 = 18。これが「72の法則」！' },
@@ -2144,7 +2206,27 @@
         { q:'証券コードの4けたの数字は何を表す？', c:['会社の業種のグループ','会社の大きさ','株価の高さ'], a:0, e:'2000番台は食品、8000番台は銀行や小売…というふうに決まっているよ。' },
         { q:'「独占」が良くないのはなぜ？', c:['競争がなくなってねだんが高くなる','会社が大きすぎるから','税金が減るから'], a:0, e:'だから独占禁止法がある。競争があるとわたしたちが得をする。' },
         { q:'裁判を3回まで受けられるしくみは？', c:['三審制','三権分立','三原則'], a:0, e:'人が裁くからまちがいもある。だからやり直せるようにしてある。' },
-        { q:'政治に関心をもつことが大事なのはなぜ？', c:['投票しないと、行った人だけで決まるから','有名になれるから','お金がもらえるから'], a:0, e:'税金の使い道も、ねだんも、働き方も、政治が決めている。ぜんぶ自分ごとなんだ。' }
+        { q:'政治に関心をもつことが大事なのはなぜ？', c:['投票しないと、行った人だけで決まるから','有名になれるから','お金がもらえるから'], a:0, e:'税金の使い道も、ねだんも、働き方も、政治が決めている。ぜんぶ自分ごとなんだ。' },
+        // ───── 🛡️ 保険 ─────
+        { q:'保険のしくみを正しく説明しているのは？', c:['みんなで少しずつ出し合って、まさかの人に渡す','お金を預けてふやす','国からお金をもらう'], a:0, e:'ひとりでは払えない大きな損を、たくさんの人で分け合うのが保険。だから「助け合い」なんだ。' },
+        { q:'保険が成り立つ理由になっている法則は？', c:['大数の法則','72の法則','複利の法則'], a:0, e:'1人では読めないけど、1万人集めれば「1年で何人が入院するか」がほぼ分かる。だから保険料を計算できる。' },
+        { q:'保険に入るべきなのは、どんなリスク？', c:['めったに起きないけど、起きたら払えないほど大きい','よく起きて、自分で払える金額','ぜったいに起きないこと'], a:0, e:'小さい損に保険をかけると、保険料のほうが高くつく。「まれ×巨大」だけを保険にうつすのが正解。' },
+        { q:'日本の健康保険で、病院の窓口で払うのは（小学生〜69歳）？', c:['かかった医療費の3割','ぜんぶ','0円'], a:0, e:'のこりの7割はみんなの保険料と税金が払っている。すでに強い保険に入っているということ。' },
+        { q:'1か月の医療費が高くなりすぎたとき、超えた分が返ってくる国の制度は？', c:['高額療養費制度','ふるさと納税','年末調整'], a:0, e:'多くの人は月8〜9万円ほどが上限。これがあるから民間の医療保険は「必須ではない」といわれる。' },
+        { q:'「免責金額 1万円」の保険で、3万円の修理をしたら保険から出るのは？', c:['2万円','3万円','1万円'], a:0, e:'免責は自分が必ず払う分。安いプランほど免責が大きくなる。契約書はここを読む！' },
+        { q:'自転車で人にぶつかってケガをさせたとき、役に立つ保険は？', c:['個人賠償責任保険','火災保険','ペット保険'], a:0, e:'自転車事故で数千万円の賠償を命じられた例がある。月数百円で入れるのでコスパ最強の保険といわれる。' },
+        { q:'保険料が高いプランになるほど、ふつうどうなる？', c:['補償の割合や上限が大きく、サービスも増える','もらえるお金が減る','なにも変わらない'], a:0, e:'高いプランは免責0円・示談交渉つき・24時間相談などサービスが増える。必要な分だけ選ぶのがコツ。' },
+        { q:'民間の保険で、払った保険料のうち保険金として戻ってくるのは平均でおよそ？', c:['6〜8割','10割以上','2割'], a:0, e:'のこりは会社の人件費・広告・利益。つまり平均すると損なのに入るのは「一発で人生がこわれるのを防ぐ」ため。' },
+        // ───── 🎲 ギャンブル ─────
+        { q:'「還元率」とはなに？', c:['かけたお金のうち平均でもどってくる割合','勝てる回数','税金の割合'], a:0, e:'宝くじ約45%・競馬約75%・パチンコ約85%・カジノ約95%。のこりは主催者の取り分だよ。' },
+        { q:'いちばん還元率が低い（＝いちばん損をしやすい）のは？', c:['宝くじ','競馬','カジノのバカラ'], a:0, e:'宝くじは約45%。300円で買っても平均で137円しかもどらない。夢の代金と考えよう。' },
+        { q:'300円の宝くじを100枚買ったとき、平均でもどってくるのは？', c:['約13700円','約30000円','約45000円'], a:0, e:'3万円ぶん買って平均1万3700円。回数をふやすほど、この差はきれいに現実になる（大数の法則）。' },
+        { q:'ルーレットで黒が10回続いた。次に赤が出る確率は？', c:['さっきと同じ（約48.6%）','高くなる','低くなる'], a:0, e:'これを「ギャンブラーの誤り」という。ルーレットに記憶はない。次の1回はいつも同じ確率。' },
+        { q:'ギャンブルと長期の投資の、いちばん大きなちがいは？', c:['投資は会社が働いてもうけを生むので全員のもうけが増えうる','投資は絶対に損しない','ギャンブルは税金がかからない'], a:0, e:'ギャンブルはゼロサム＋胴元の取り分でマイナス。投資はプラスサム。「増やす手段」になるのは投資だけ。' },
+        { q:'海外のオンラインカジノに日本から賭けると？', c:['犯罪（賭博罪）になる','海外だから問題ない','20歳以上ならOK'], a:0, e:'サイトが海外にあっても、賭けている人が日本にいれば日本の法律で罰せられる。ぜったいにやらないこと。' },
+        { q:'競馬・競輪・競艇の馬券などを買えるのは何さいから？', c:['20さい','18さい','16さい'], a:0, e:'公営ギャンブルは20歳未満は買えない。パチンコ店は18歳未満は入れない。法律で決まっているよ。' },
+        { q:'ギャンブル依存症について正しいのは？', c:['意志の強さではなく、脳のはたらきが変わる病気','なまけ者だけがなる','自分だけで必ず治せる'], a:0, e:'誰でもなる可能性がある病気。無料の相談窓口（精神保健福祉センターなど）があるので、ひとりでかかえないこと。' },
+        { q:'ギャンブルで「還元率97%」でも、遊びつづけるとどうなる？', c:['だんだんお金は減っていく','だんだんふえる','変わらない'], a:0, e:'1回ごとに平均3%ずつ削られる。100回まわせば元手の多くが消える。長くやるほど確実に負けるしくみ。' }
     ];
     const M_BADGES = [
         { id:'first', e:'🪙', n:'はじめての投資', ok:m=>new Set([...Object.keys(m.hold||{}),...Object.keys(m.nisa||{})]).size>=1 },
@@ -2161,7 +2243,13 @@
         { id:'quiz10', e:'🎓', n:'クイズ10問正解', ok:m=>(m.quizOk||0)>=10 },
         { id:'quizall', e:'🧠', n:'クイズ全問正解', ok:m=>(m.quizOk||0)>=M_QUIZ.length },
         { id:'divinc', e:'🌴', n:'はじめての不労所得', ok:m=>(m.divTotal||0)>0 },
-        { id:'work', e:'💪', n:'10回はたらいた', ok:m=>(m.workCount||0)>=10 }
+        { id:'work', e:'💪', n:'10回はたらいた', ok:m=>(m.workCount||0)>=10 },
+        { id:'ins1', e:'🛡️', n:'はじめての保険', ok:m=>Object.keys(m.ins||{}).length>=1 },
+        { id:'ins3', e:'🧩', n:'保険を3つえらんだ', ok:m=>Object.keys(m.ins||{}).length>=3 },
+        { id:'inshelp', e:'🧯', n:'保険に助けられた', ok:m=>(m.insGot||0)>0 },
+        { id:'inssim', e:'🔭', n:'1000人の1年を見た', ok:m=>((m.insSim||0)>=1) },
+        { id:'gamsim', e:'🔬', n:'大数の法則を体感', ok:m=>(((m.gam||{}).sims)||0)>=1 },
+        { id:'gamknow', e:'🎲', n:'還元率をたしかめた', ok:m=>(((m.gam||{}).plays)||0)>=1 }
     ];
     const M_PAY_DAY = 5;          // 毎月5日に「給料」と「配当金」がまとめて入る
     const M_PAY_PER_CORRECT = 500; // 給料は勉強しだい：20問正解で1万円（＝1問500円）
@@ -2171,8 +2259,157 @@
         { id:'20260725-owabi-rir', user:'u2', yen:50000, msg:'🙇 リニューアルのお詫びに5万円プレゼント！' }
     ];
     // 【お金データのリセット】ここにidを書くと、次に開いたとき1回だけ まっさら（1万円スタート）に戻る
-    const M_RESETS = [
-        { id:'20260724-reset-all', users:['u1','u2'], msg:'💰 お金・経済がリセットされたよ！\nまた1万円からスタート！' }
+    // ⚠️ここに書いた人は、次に開いたときお金データが消えて1万円からになる。ふだんは【必ず空】にしておくこと
+    //    （2026-07-27：買ったものが消えたという報告を受けて、実行ずみの `20260724-reset-all` を削除しました）
+    const M_RESETS = [];
+    // ===================== 🛡️ 保険 =====================
+    // くらしの設定：どんなくらしをしているかで、必要な保険がかわる（車を持っていない人に自動車保険はいらない）
+    const M_LIFE = [
+        ['body',  '🧑 からだ',          'びょうき・けがは、だれにでも起こる（けせない）', true],
+        ['phone', '📱 スマホを持つ',    'おとす・画面をわる・水にぬらす', false],
+        ['bike',  '🚲 じてんしゃに乗る','人にぶつかると、ばいしょう金がとても高い', false],
+        ['pet',   '🐶 ペットを飼う',    '動物病院は健康保険がきかない＝ぜんぶ自分で払う', false],
+        ['house', '🏠 家（家財）がある','火事・水もれ・台風でこわれる', false],
+        ['car',   '🚗 車に乗る',        '事故のばいしょうは何千万円にもなる', false],
+        ['trip',  '✈️ 旅行に行く',      '旅行先の病院代・持ちものの事故', false],
+        ['work',  '💼 はたらいている',  'はたらけなくなると収入が止まる', false]
+    ];
+    // 保険の商品。プランは3段階で、高いほど「補償」も「サービス」も良くなる
+    //   yen=月の保険料 / r=自己負担のうち何割が出るか / cap=1回に出る上限 / ded=免責（自分が必ず払う分）
+    const M_INS = [
+        { c:'MED', e:'🏥', n:'医療保険', life:'body',
+          d:'入院・手術・けがの自己負担をカバー。日本は健康保険で3割だけど、その3割も安くはない',
+          plans:[
+            { n:'ライト',       yen:3100, r:0.5, cap:200000,  ded:10000, s:['自己負担の50%が出る','免責1万円（自分で1万円）','入院だけ対象'] },
+            { n:'スタンダード', yen:5700, r:0.8, cap:800000,  ded:0,     s:['自己負担の80%が出る','免責なし','通院・けがも対象','24時間 電話で健康相談'] },
+            { n:'プレミアム',   yen:6900, r:1.0, cap:3000000, ded:0,     s:['自己負担の100%（ぜんぶ）','免責なし','通院・けが・先進医療も対象','24時間 電話で健康相談','入院おみまい金つき','セカンドオピニオン手配'] }
+          ] },
+        { c:'MOB', e:'📱', n:'スマホ・持ちもの保険', life:'phone',
+          d:'スマホをわった・なくした・こわれた。金額は小さいので「入らない」も正解のひとつ',
+          plans:[
+            { n:'ライト',       yen:1900, r:0.5, cap:20000,  ded:5000, s:['修理代の50%','免責5000円','年1回まで'] },
+            { n:'スタンダード', yen:3900, r:0.8, cap:50000,  ded:0,    s:['修理代の80%','免責なし','水ぬれもOK'] },
+            { n:'プレミアム',   yen:4700, r:1.0, cap:150000, ded:0,    s:['修理代の100%','免責なし','水ぬれ・盗難・なくしたもOK','新品と交換','イヤホンやタブレットも対象'] }
+          ] },
+        { c:'PET', e:'🐶', n:'ペット保険', life:'pet',
+          d:'動物病院は健康保険がきかないので全額じぶん。手術は10万円をこえることも',
+          plans:[
+            { n:'ライト',       yen:2200, r:0.5, cap:100000,  ded:5000, s:['治療費の50%','免責5000円','手術だけ'] },
+            { n:'スタンダード', yen:3700, r:0.8, cap:400000,  ded:0,    s:['治療費の80%','免責なし','通院・入院・手術'] },
+            { n:'プレミアム',   yen:4500, r:1.0, cap:1000000, ded:0,    s:['治療費の100%','免責なし','通院・入院・手術','24時間 獣医さんに電話相談','しつけ・食事の相談つき'] }
+          ] },
+        { c:'BIKE', e:'🚲', n:'じてんしゃ保険（個人賠償責任）', life:'bike',
+          d:'★いちばんコスパが良い保険。人にケガをさせたときのばいしょうを払ってくれる。安いのに1億円まで出るのは「起きる確率がとても小さい」から。3つのプランの値段がほとんど同じことに注目！上限を1000万→1億に上げても、その差が起きる確率はごくわずかなので値段はあまり上がらない＝上限は大きいほうを選ぶのが正解！',
+          plans:[
+            { n:'ライト',       yen:1600,  r:1.0, cap:10000000,  ded:0, s:['ばいしょう1000万円まで','自分のけがは対象外'] },
+            { n:'スタンダード', yen:1800, r:1.0, cap:30000000,  ded:0, s:['ばいしょう3000万円まで','自分のけがも少し出る','家族も対象'] },
+            { n:'プレミアム',   yen:1900, r:1.0, cap:100000000, ded:0, s:['ばいしょう1億円まで','自分のけがも対象','家族ぜんいん対象','示談交渉サービス（会社が代わりに話し合う）','自転車のロードサービス'] }
+          ] },
+        { c:'FIRE', e:'🏠', n:'火災保険（家財）', life:'house',
+          d:'火事・水もれ・台風で家の中のものがだめになったとき。地震はべつに地震保険が必要',
+          plans:[
+            { n:'ライト',       yen:800,  r:0.5, cap:1000000,  ded:30000, s:['家財の50%','免責3万円','火事だけ'] },
+            { n:'スタンダード', yen:1600, r:0.8, cap:4000000,  ded:0,     s:['家財の80%','免責なし','火事・水もれ・風災'] },
+            { n:'プレミアム',   yen:1900, r:1.0, cap:12000000, ded:0,     s:['家財の100%','免責なし','火事・水もれ・風災・盗難','こわれても新品の値段で出る','かりの住まい代も出る','水まわりの緊急かけつけ'] }
+          ] },
+        { c:'CAR', e:'🚗', n:'自動車保険', life:'car',
+          d:'事故の相手へのばいしょうは何千万円にもなる。だから車に乗る人はほぼ全員入っている',
+          plans:[
+            { n:'ライト',       yen:4300, r:0.6, cap:5000000,   ded:50000, s:['相手への補償5000万円まで','免責5万円','自分の車は対象外'] },
+            { n:'スタンダード', yen:6200, r:0.9, cap:50000000,  ded:0,     s:['相手への補償5000万円→無制限','免責なし','自分の車も対象','ロードサービス'] },
+            { n:'プレミアム',   yen:6800, r:1.0, cap:200000000, ded:0,     s:['ばいしょう無制限','免責なし','自分の車も100%','示談交渉サービス','事故のとき代車が出る','24時間ロードサービス','弁護士費用も出る'] }
+          ] },
+        { c:'TRIP', e:'✈️', n:'旅行保険', life:'trip',
+          d:'海外では健康保険がきかず、盲腸の手術で数百万円になることもある',
+          plans:[
+            { n:'ライト',       yen:650,  r:0.5, cap:200000,   ded:10000, s:['治療費の50%','免責1万円','国内だけ'] },
+            { n:'スタンダード', yen:1100,  r:0.8, cap:2000000,  ded:0,     s:['治療費の80%','免責なし','海外もOK','持ちものの事故もOK'] },
+            { n:'プレミアム',   yen:1300, r:1.0, cap:10000000, ded:0,     s:['治療費の100%','免責なし','海外もOK','持ちもの・飛行機のおくれも対象','日本語で24時間サポート','医療用の飛行機で連れて帰ってくれる'] }
+          ] },
+        { c:'INC', e:'💼', n:'はたらけなくなったときの保険', life:'work',
+          d:'生命保険のなかま（就業不能保険）。長い病気やけがで収入が止まったときに、毎月お金が出る',
+          plans:[
+            { n:'ライト',       yen:1100,  r:0.5, cap:500000,  ded:0, s:['なくなった収入の50%','6か月まで'] },
+            { n:'スタンダード', yen:1800, r:0.8, cap:1500000, ded:0, s:['なくなった収入の80%','1年半まで','こころの病気も対象'] },
+            { n:'プレミアム',   yen:2200, r:1.0, cap:5000000, ded:0, s:['なくなった収入の100%','なおるまでずっと','こころの病気も対象','復職のサポートつき','家族の生活も守る'] }
+          ] }
+    ];
+    // できごと（リスク）。r＝1年に起きる回数 / lo〜hi＝かかるお金 / sk＝大きい金額が出にくくなる度合い
+    const M_RISKS = [
+        { id:'kega',  ins:'MED',  life:'body',  e:'🩹', n:'ほねを折った',                     r:1.0,   lo:15000,   hi:45000,     sk:1,   d:'ちりょう費と通院で' },
+        { id:'byoki', ins:'MED',  life:'body',  e:'🏥', n:'きゅうに入院した',                 r:0.25,  lo:60000,   hi:300000,    sk:1,   d:'手術と入院の自己負担で' },
+        { id:'phone', ins:'MOB',  life:'phone', e:'📱', n:'スマホの画面をわった',             r:2.4,   lo:8000,    hi:35000,     sk:1,   d:'修理代が' },
+        { id:'pet',   ins:'PET',  life:'pet',   e:'🐶', n:'ペットが病気になった',             r:1.0,   lo:15000,   hi:90000,     sk:1,   d:'動物病院は健康保険がきかないので' },
+        { id:'bike',  ins:'BIKE', life:'bike',  e:'🚲', n:'じてんしゃで人にぶつかった',       r:0.004, lo:1000000, hi:30000000,  sk:3,   d:'相手のけがのばいしょうが' },
+        { id:'fire',  ins:'FIRE', life:'house', e:'🔥', n:'水もれ・火事で家財がだめになった', r:0.012, lo:500000,  hi:6000000,   sk:2,   d:'買い直しに' },
+        { id:'car',   ins:'CAR',  life:'car',   e:'🚗', n:'車で事故を起こした',               r:0.08,  lo:100000,  hi:8000000,   sk:3,   d:'相手の車とけがのばいしょうで' },
+        { id:'trip',  ins:'TRIP', life:'trip',  e:'🤒', n:'旅行先で病院に行った',             r:0.12,  lo:20000,   hi:400000,    sk:1.5, d:'海外の医療費は高くて' },
+        { id:'work',  ins:'INC',  life:'work',  e:'😷', n:'長い病気ではたらけなくなった',     r:0.03,  lo:300000,  hi:2000000,   sk:2,   d:'入るはずだった収入が' }
+    ];
+    // 公的保険（日本に住んでいると、もう入っている保険）
+    const M_KOTEKI = [
+        ['健康保険', '病院の窓口は3割だけ。のこり7割はみんなの保険料と税金が払っている。1か月に払いすぎた分は「高額療養費制度」でもどってくる（多くの人は月8〜9万円が上限）'],
+        ['年金保険', '年をとったときだけじゃない。障害を負ったとき（障害年金）、家族を残したとき（遺族年金）にも出る。「一生つづく保険」'],
+        ['介護保険', '40さいから払う。年をとって介護が必要になったとき、1〜2割の負担でサービスが受けられる'],
+        ['雇用保険', '仕事をやめた・やめさせられたときに、しばらくのあいだお金が出る（失業手当）。学び直しの費用も出る'],
+        ['労災保険', '仕事中や通勤中のけが・病気は、こちらで全額みてもらえる。保険料は会社が全部払う']
+    ];
+    // ===================== 🎲 ギャンブル（しくみを知るための勉強コーナー） =====================
+    // 還元率＝かけたお金のうち平均でもどってくる割合。のこりは主催者（胴元）の取り分
+    const M_GAMBLE = [
+        { e:'🎫', n:'宝くじ（ジャンボ・ロト・スクラッチ）', ret:45, who:'都道府県や政令市', age:'法律の年齢制限はなし',
+          d:'1等7億円。当たる確率は2000万分の1で、日本の人口の1.6人に1人が1枚買ってようやく1本当たるくらい。もうけは公共事業や福祉に使われる' },
+        { e:'⚽', n:'スポーツくじ（toto・BIG）', ret:50, who:'日本スポーツ振興センター', age:'19さい未満は買えない',
+          d:'BIGは14試合の勝ち負けをコンピュータがランダムに選ぶ。1等は約478万分の1。もうけはスポーツの施設や選手の育成に使われる' },
+        { e:'🐎', n:'競馬（JRA・地方競馬）', ret:75, who:'国・地方公共団体', age:'20さい未満は買えない',
+          d:'単勝は約80%、3連単は約72.5%。当てにくい買い方ほど還元率は下がる。むずかしい賭け方は当たったときが大きいだけで、平均では損が大きい' },
+        { e:'🚴', n:'競輪', ret:75, who:'地方公共団体', age:'20さい未満は買えない', d:'自転車の競走。売り上げの一部は自転車産業や公共事業へ' },
+        { e:'🚤', n:'競艇（ボートレース）', ret:75, who:'地方公共団体', age:'20さい未満は買えない', d:'6艇で走るのでいちばん当てやすいと言われるが、還元率は競馬と同じくらい' },
+        { e:'🏍️', n:'オートレース', ret:75, who:'地方公共団体', age:'20さい未満は買えない', d:'オートバイの競走。日本には数か所しかない' },
+        { e:'🎰', n:'パチンコ・パチスロ', ret:87, who:'民間のお店', age:'18さい未満は入れない',
+          d:'法律のうえでは「ギャンブル」ではなく「遊技」。お店と台によって80〜95%とばらつく。長い時間やるほど、店の取り分がきいてくる' },
+        { e:'🃏', n:'カジノ（IR・日本でも整備中）', ret:96, who:'民間（国の免許）', age:'20さい未満は入れない',
+          d:'還元率は高いけれど、1回が短くて何百回もできるので、時間あたりの負けは大きい。日本人は入場料6000円・週3回／月10回までという制限つき' },
+        { e:'💻', n:'オンラインカジノ', ret:0, who:'—（違法）', age:'❌ぜったいダメ',
+          d:'日本から賭けると賭博罪＝犯罪になる。「海外のサイトだからOK」はウソ。SNSの広告や友だちのすすめには絶対に乗らないこと', bad:true },
+        { e:'🤝', n:'友だちとお金をかけた勝負', ret:0, who:'—（違法）', age:'❌ぜったいダメ',
+          d:'少しの金額でも賭博罪になることがある。勝負は「おごる」ではなく、勝った人がえらそうにできるだけにしよう', bad:true },
+        { e:'📉', n:'FX・信用取引・暗号資産の短期売買', ret:99, who:'証券会社・取引所（手数料）', age:'20さい未満は口座を作れないものが多い',
+          d:'投資に見えるけど中身はゼロサム＋手数料。プロと同じ土俵で戦うので、初心者はほぼ負ける。「投機（とうき）」といって長期の投資とは別物', bad:true },
+        { e:'📈', n:'【参考】長期のインデックス投資', ret:107, who:'—（胴元がいない）', age:'NISAは18さいから',
+          d:'★これがギャンブルとの決定的なちがい。会社が働いて新しいもうけを生むので、参加者ぜんたいのお金が増える（プラスサム）。だから「増やす手段」になるのは投資だけ', good:true }
+    ];
+    // カジノのゲームごとの還元率
+    const M_CASINO = [
+        ['ブラックジャック', 99.5, '正しい戦略で遊んだとき。いちばん還元率が高い'],
+        ['バカラ', 98.9, 'バンカーに賭けたとき（手数料5%引かれる）'],
+        ['クラップス', 98.6, 'サイコロ2つ。賭け方で大きく変わる'],
+        ['ルーレット（0だけ）', 97.3, 'ヨーロッパ式。37マス'],
+        ['大小（シックボー）', 97.2, 'サイコロ3つの合計を当てる'],
+        ['ルーレット（0と00）', 94.7, 'アメリカ式。マスが1つ増えるだけで還元率が2.6%も下がる'],
+        ['スロットマシン', 90.0, '85〜98%とお店や台でばらつく。当たりの見えかたが派手なので、勝っている気になりやすい'],
+        ['キノ・くじ系', 75.0, 'カジノの中でいちばん低い']
+    ];
+    // チップで「ためせる」ギャンブル。tbl=[[当たる金額(かけ金1口あたり), ○分の1]...]
+    const M_GPLAY = [
+        { c:'loto', e:'🎫', n:'宝くじ（ジャンボ風）', unit:300, d:'1枚300チップ。1等は7億チップ！ただし2000万分の1',
+          tbl:[[700000000,20000000],[150000000,10000000],[10000000,2000000],[1000000,200000],[100000,50000],[10000,8000],[3000,250],[300,5]],
+          note:'「1等が7億」と聞くとすごいけれど、期待値にすると300円のうち35円ぶんしかない。ほとんどは7等300円（10枚に2枚）でできている還元率だよ' },
+        { c:'big',  e:'⚽', n:'サッカーくじ BIG風', unit:300, d:'14試合の勝ち・負け・引き分けをぜんぶ当てる。1口300チップ',
+          tbl:[[600000000,4782969],[3000000,170820],[10000,13140],[1500,1642]],
+          note:'3の14乗＝478万2969通り。もし1口300円で全通りを買うと14億円かかって、1等は6億円。買えば買うほど損になるのが分かる' },
+        { c:'roulR',e:'🎡', n:'ルーレット（赤か黒）', unit:100, d:'37マス（0〜36）のうち赤18・黒18・緑（0）1。当たれば2倍',
+          tbl:[[200,37/18]],
+          note:'ほぼ半分なのに勝てないのは「0」があるから。この1マスだけがカジノの利益。還元率97.3%' },
+        { c:'roulN',e:'🎯', n:'ルーレット（数字1つ）', unit:100, d:'0〜36のどれかを1つ選ぶ。当たれば36倍！',
+          tbl:[[3600,37]],
+          note:'36倍でも還元率は赤黒とまったく同じ97.3%。変わるのは「当たりにくさ」だけ。派手な賭け方は得になっていない' },
+        { c:'keiba',e:'🐎', n:'競馬（単勝）', unit:100, d:'5頭から1頭えらぶ。人気の馬はオッズが低い（もどりが少ない）',
+          horses:[['①ノビログ号',0.40,2.0],['②サクラミライ',0.25,3.2],['③カゼノコ',0.18,4.4],['④ダークホース',0.12,6.7],['⑤アナウマ',0.05,16.0]],
+          note:'どの馬を選んでも還元率は約80%になるようオッズが決まっている。「予想がうまい人」でも、この20%の壁は消えない' },
+        { c:'slot', e:'🎰', n:'スロット風', unit:100, d:'1回100チップ。そろえば20倍・8倍・2倍・1倍',
+          tbl:[[2000,100],[800,25],[200,10],[100,5.5555]],
+          note:'当たり自体は3回に1回くらい起こるので「勝っている気」になりやすい。でも平均は90%。1000回まわすと元手はだいたい消える' }
     ];
     const M_EMPTY = () => ({
         cash:M_START, bank:0, hold:{}, nisa:{}, prices:{}, divRate:{}, day:0, lastDay:null, lastSlot:null,
@@ -2181,7 +2418,12 @@
         feePaid:0, workCount:0, workDay:null, nisaUsed:0, nisaYear:null,
         goal:100000, started:true, autoAmt:0, autoCode:'ALLC', autoAcct:'nisa',
         nisaLife:0, trustFee:0, grants:[],
-        payCorrect:0, salaryTotal:0, lastPaidYM:null   // 給料：正解した問題数をためて毎月5日にまとめて受け取る
+        payCorrect:0, salaryTotal:0, lastPaidYM:null,   // 給料：正解した問題数をためて毎月5日にまとめて受け取る
+        // 🛡️ 保険（ins={商品コード:プラン番号1〜3} / life=くらしの設定 / debt=払えなかった分の借金）
+        ins:{}, insSeen:false, insPaid:0, insGot:0, insCount:0, insHist:[], insNew:[], insSim:0, insLapse:0, debt:0,
+        life:{ phone:true, bike:true, work:true, pet:false, house:false, car:false, trip:false },
+        // 🎲 ギャンブル（おためしチップ。現金とは交換できない）
+        gam:{ chips:10000, day:null, bet:0, ret:0, plays:0, sims:0, big:0 }
     });
     // リセットを反映（同じidは1回だけ。実行するとお金データがまっさら＝1万円スタートに戻る）
     function mApplyResets() {
@@ -2195,7 +2437,9 @@
             if(!r.users.includes(currentUserId)) return;
             if(done.includes(r.id)) return;
             done.push(r.id);
-            localStorage.removeItem(ukey('money'));   // お金のデータだけ消す（勉強の記録などは消さない）
+            // お金のデータだけ消す（勉強の記録などは消さない）。ひかえも一緒に消さないと、すぐ復活してしまう
+            [ 'money', M_BAK1, M_BAK2, 'money.bakDay' ].forEach(k => localStorage.removeItem(ukey(k)));
+            mIdbSave(JSON.stringify(M_EMPTY()));
             msg = r.msg;
         });
         if(msg !== null) {
@@ -2226,12 +2470,25 @@
         return changed;
     }
     function mLoad() {
-        let m; try { m = JSON.parse(localStorage.getItem(ukey('money'))); } catch(e) { m = null; }
+        // 本体・ひかえ・ひかえ2 の中から「いちばん新しい（＝保存番号がいちばん大きい）」ものを使う。
+        // 本体が消えたりこわれたりしても、買ったものは ひかえ から必ず戻ってくる
+        const main = mReadKey('money'), b1 = mReadKey(M_BAK1), b2 = mReadKey(M_BAK2);
+        let m = mNewest([main, b1, b2]);
+        if(m && m !== main) {   // ひかえのほうが新しかった＝本体が消えていた。すぐ本体に書きもどす
+            try { localStorage.setItem(ukey('money'), JSON.stringify(m)); } catch(e) {}
+            mRestored = true;
+        }
         if(!m || typeof m.cash !== 'number') { m = M_EMPTY(); }
         m = Object.assign(M_EMPTY(), m);
         // 配列であるべき所がこわれていても落ちないように直す（保険）
-        ['ledger','histTotal','news','quizDone','badges','divHist','grants'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
-        ['hold','nisa'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
+        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
+        ['hold','nisa','ins'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
+        // 保険・ギャンブルのデータがこわれていても落ちないように直す（保険）
+        if(!m.life || typeof m.life !== 'object') m.life = M_EMPTY().life;
+        if(!m.gam || typeof m.gam !== 'object') m.gam = M_EMPTY().gam;
+        ['chips','bet','ret','plays','sims','big'].forEach(k => { if(typeof m.gam[k] !== 'number' || !isFinite(m.gam[k])) m.gam[k] = (k === 'chips' ? 10000 : 0); });
+        ['insPaid','insGot','insCount','insSim','insLapse','debt'].forEach(k => { if(typeof m[k] !== 'number' || !isFinite(m[k])) m[k] = 0; });
+        Object.keys(m.ins).forEach(c => { const p = mInsProd(c); if(!p || !p.plans[m.ins[c] - 1]) delete m.ins[c]; });   // 知らない保険は消す
         // 株価は「今の時間帯」から計算する（保存はしない＝どの端末でも同じ・データがずれない）
         const now = mSlotInfo();
         m.prices = Object.assign({}, mPricesAt(now.day, now.s));
@@ -2256,7 +2513,75 @@
     }
     // 株かどうか（株は「株数」で、投信・そのほかは「金額」で売り買いする）
     function mIsShareType(a) { return a && a.t === '株'; }
-    function mSave(m) { localStorage.setItem(ukey('money'), JSON.stringify(m)); }
+    // ===== 💾 お金データの永久保存（買ったものが絶対に消えないように・3か所＋IndexedDBに保存する） =====
+    const M_BAK1 = 'money.bak', M_BAK2 = 'money.bak2';
+    let mRestored = false;                         // ひかえから復活させたかどうか（画面でお知らせする）
+    // 「まっさら」ではなく、守るべき中身があるデータかどうか
+    function mHasContent(m) {
+        if(!m || typeof m.cash !== 'number' || !isFinite(m.cash)) return false;
+        const holds = Object.keys(m.hold || {}).length + Object.keys(m.nisa || {}).length;
+        return holds > 0 || (m.bank || 0) > 0 || (m.day || 0) > 1 || (m.ledger || []).length > 0
+            || (m.cash || 0) !== M_START || Object.keys(m.ins || {}).length > 0 || (m.badges || []).length > 0
+            || (m.quizDone || []).length > 0 || (m.salaryTotal || 0) > 0;
+    }
+    function mReadKey(k) {
+        try { const v = JSON.parse(localStorage.getItem(ukey(k))); return (v && typeof v.cash === 'number' && isFinite(v.cash)) ? v : null; } catch(e) { return null; }
+    }
+    // 保存した回数（_sv）がいちばん大きい＝いちばん新しいデータ。本体がこわれても、ひかえから必ず復活できる
+    function mNewest(list) {
+        let best = null;
+        list.forEach(x => {
+            if(!x) return;
+            if(!best) { best = x; return; }
+            const a = (x._sv || 0), b = (best._sv || 0);
+            if(a > b || (a === b && (x._at || 0) > (best._at || 0))) best = x;
+            else if(a === b && (x._at || 0) === (best._at || 0) && mHasContent(x) && !mHasContent(best)) best = x;
+        });
+        return best;
+    }
+    function mIdbSave(str) {                       // IndexedDBにも1人ぶんずつコピー（localStorageが消えても残る場所）
+        try {
+            if(!window.indexedDB || !currentUserId) return;
+            abOpenDb().then(db => {
+                const tx = db.transaction('kv', 'readwrite');
+                tx.objectStore('kv').put({ id:'money:' + currentUserId, date:Date.now(), data:str });
+                tx.oncomplete = () => db.close(); tx.onerror = () => db.close();
+            }).catch(() => {});
+        } catch(e) {}
+    }
+    function mSave(m) {
+        m._sv = (m._sv || 0) + 1; m._at = Date.now();          // 保存のたびに1ふえる番号（どれが最新か必ず分かる）
+        const s = JSON.stringify(m);
+        try { localStorage.setItem(ukey('money'), s); } catch(e) {}
+        if(!mHasContent(m)) return;                            // まっさらなデータで「ひかえ」を上書きしない
+        try {
+            const today = calToday();
+            if(localStorage.getItem(ukey('money.bakDay')) !== today) {   // 1日1回、前の日のぶんを2つめのひかえに残す
+                const prev = localStorage.getItem(ukey(M_BAK1));
+                if(prev) localStorage.setItem(ukey(M_BAK2), prev);
+                localStorage.setItem(ukey('money.bakDay'), today);
+            }
+            localStorage.setItem(ukey(M_BAK1), s);
+        } catch(e) {}
+        mIdbSave(s);
+    }
+    // localStorageが空っぽのとき、IndexedDBのコピーから買ったものを取りもどす
+    function mIdbRestoreIfEmpty() {
+        try {
+            if(!window.indexedDB || !currentUserId) return;
+            if(mHasContent(mNewest([mReadKey('money'), mReadKey(M_BAK1), mReadKey(M_BAK2)]))) return;   // いまのデータに中身があるなら何もしない
+            abLoad('money:' + currentUserId).then(rec => {
+                if(!rec || !rec.data) return;
+                let bk = null; try { bk = JSON.parse(rec.data); } catch(e) { return; }
+                if(!mHasContent(bk)) return;
+                localStorage.setItem(ukey('money'), rec.data);
+                localStorage.setItem(ukey(M_BAK1), rec.data);
+                mApplyGrants();                                 // 配布の受け取り記録もこのデータの中にあるので、二重配布にはならない
+                alert('🛟 政治と経済のデータが見つからなかったので、自動バックアップから元にもどしたよ！\n買ったものも そのまま残っているよ。');
+                if(document.getElementById('view-money').classList.contains('active')) renderMoney();
+            }).catch(() => {});
+        } catch(e) {}
+    }
     const mYen = (n) => '¥' + Math.round(n).toLocaleString('ja-JP');
     const mAcctName = (a) => a === 'nisa' ? 'NISA' : '課税口座';
     function mQtyOf(m, code) { return ((m.hold[code] || {}).qty || 0) + ((m.nisa[code] || {}).qty || 0); }
@@ -2265,7 +2590,7 @@
         ['hold','nisa'].forEach(k => Object.entries(m[k] || {}).forEach(([c, h]) => { s += (m.prices[c] || 0) * h.qty; }));
         return s;
     }
-    function mTotal(m) { return (m.cash||0) + (m.bank||0) + mHoldValue(m); }
+    function mTotal(m) { return (m.cash||0) + (m.bank||0) + mHoldValue(m) - (m.debt||0); }
     function mNisaLeft(m) { return Math.max(0, M_NISA_YEAR - (m.nisaUsed || 0)); }
     function mNisaLifeLeft(m) { return Math.max(0, M_NISA_LIFE - (m.nisaLife || 0)); }
     function mLog(m, t, amt) { m.ledger.unshift({ t, amt, d: Date.now() }); if(m.ledger.length > 60) m.ledger.length = 60; }
@@ -2331,7 +2656,82 @@
         }
         // 🏦 銀行の利息（年0.1%の1か月ぶん・利息にも税金）
         if(m.bank > 0) { const it = m.bank * 0.001 / 12; if(it >= 1) { const t = Math.round(it * M_TAX); m.bank += Math.round(it) - t; m.taxPaid += t; mLog(m, '預金の利息', Math.round(it) - t); did = true; } }
+        // 🛡️ 保険料（入っている保険の合計を毎月払う。払えないと解約されてしまう＝本物と同じ）
+        let prem = mPremiumTotal(m), guard2 = 0;
+        while(prem > 0 && m.cash < prem && guard2 < 12) {           // 足りないときは高い保険から解約していく
+            guard2++;
+            const codes = Object.keys(m.ins).sort((a, b) => mInsPlan(m, b).yen - mInsPlan(m, a).yen);
+            const drop = codes[0]; if(!drop) break;
+            const dn = mInsProd(drop).n;
+            delete m.ins[drop];
+            m.insLapse = (m.insLapse || 0) + 1;
+            mLog(m, `⚠️保険が解約（お金が足りなかった）：${dn}`, 0);
+            m.insNew.unshift({ d:Date.now(), day:m.day, lapse:true, n:dn });
+            prem = mPremiumTotal(m);
+            did = true;
+        }
+        if(prem > 0 && m.cash >= prem) {
+            m.cash -= prem; m.insPaid = (m.insPaid || 0) + prem;
+            mLog(m, `保険料（${Object.keys(m.ins).length}つ）`, -prem);
+            did = true;
+        }
+        // 💳 借金を返す（自己負担が払えなかった分。給料が入ったらまず返す）
+        if((m.debt || 0) > 0 && m.cash > 0) {
+            const pay = Math.min(m.cash, m.debt);
+            m.cash -= pay; m.debt -= pay;
+            mLog(m, '借金の返済', -pay);
+            did = true;
+        }
         return did;
+    }
+    // ===== 🛡️ 保険のしくみ =====
+    function mInsProd(code) { return M_INS.find(p => p.c === code); }
+    function mInsPlan(m, code) {
+        const lv = (m.ins || {})[code]; if(!lv) return null;
+        const p = mInsProd(code); if(!p) return null;
+        return p.plans[lv - 1] || null;
+    }
+    function mPremiumTotal(m) {
+        let s = 0; Object.keys(m.ins || {}).forEach(c => { const pl = mInsPlan(m, c); if(pl) s += pl.yen; });
+        return s;
+    }
+    function mLifeOn(m, k) { if(k === 'body') return true; return !!(m.life || {})[k]; }
+    // かかるお金を決める（大きい金額ほど出にくい＝本物のリスクの形）
+    function mRiskCost(rk, rnd) {
+        const u = (rnd || Math.random)();
+        const t = Math.pow(u, rk.sk || 1);
+        return Math.round(rk.lo * Math.pow(rk.hi / rk.lo, t) / 100) * 100;
+    }
+    // 保険から出るお金（免責をひいて、割合をかけて、上限でおさえる）
+    function mInsPay(pl, cost) { return pl ? Math.round(Math.min(pl.cap, Math.max(0, cost - pl.ded) * pl.r)) : 0; }
+    // 自己負担を払う（現金→貯金→たりない分は借金になる）
+    function mPayCost(m, amt, label) {
+        let left = Math.round(amt);
+        if(left <= 0) return 0;
+        const total = left;
+        const fc = Math.min(Math.max(0, m.cash), left); m.cash -= fc; left -= fc;
+        if(left > 0) { const fb = Math.min(Math.max(0, m.bank), left); m.bank -= fb; left -= fb; }
+        if(left > 0) m.debt = (m.debt || 0) + left;
+        mLog(m, label, -total);
+        return left;
+    }
+    // 1日ぶんの「できごと」をサイコロで決める（保険に入っていれば保険金が出る）
+    function mRollRisks(m) {
+        if(!m.insSeen) return;                                  // 🛡️保険のタブを1回見てから始まる（とつぜん損しないように）
+        M_RISKS.forEach(rk => {
+            if(!mLifeOn(m, rk.life)) return;                    // そのくらしをしていない人には起きない
+            if(Math.random() >= rk.r / 365) return;
+            const cost = mRiskCost(rk);
+            const pl = mInsPlan(m, rk.ins);
+            const pay = mInsPay(pl, cost);
+            // 本物と同じ流れ：かかったお金は全額はらって、保険金を受け取る（さしひきが自己負担）
+            if(pay > 0) { m.cash += pay; m.insGot = (m.insGot || 0) + pay; mLog(m, `🛡️保険金（${rk.n}）`, pay); }
+            const debt = mPayCost(m, cost, `${rk.e} ${rk.n}`);
+            m.insCount = (m.insCount || 0) + 1;
+            const ev = { d:Date.now(), day:m.day, id:rk.id, e:rk.e, n:rk.n, dd:rk.d, cost, pay, mine:Math.max(0, cost - pay), debt, plan:pl ? pl.n : null, ins:rk.ins };
+            m.insHist.unshift(ev); if(m.insHist.length > 30) m.insHist.length = 30;
+            m.insNew.unshift(ev);  if(m.insNew.length > 6) m.insNew.length = 6;
+        });
     }
     // --- 経済をすすめる（株価はニュースから計算・毎月5日に給料と配当・毎日つみたてと信託報酬） ---
     function mTick(m) {
@@ -2363,6 +2763,8 @@
                 if(m._tfAcc >= 1) { const w = Math.floor(m._tfAcc); m.trustFee = (m.trustFee || 0) + w; m._tfAcc -= w; }
                 // 自動つみたて（設定していれば毎日ちょっとずつ買う）
                 if(m.autoAmt > 0 && m.cash >= m.autoAmt) { mBuyInner(m, m.autoCode, m.autoAmt, true, m.autoAcct); }
+                // 🛡️ 1日ぶんの「できごと」（保険のありがたみが分かる）
+                mRollRisks(m);
             }
             changed = true;
         }
@@ -2476,16 +2878,18 @@
         let html = `<div class="m-top">
             <div style="font-size:12px;">そう資産</div>
             <div class="m-total">${mYen(total)}</div>
-            <div class="m-sub">現金 ${mYen(m.cash)}／貯金 ${mYen(m.bank)}／投資 ${mYen(hv)}　${diff !== 0 ? `<b>${diff > 0 ? '▲+' : '▼'}${mYen(Math.abs(diff)).slice(1)}</b>` : ''}</div>
+            <div class="m-sub">現金 ${mYen(m.cash)}／貯金 ${mYen(m.bank)}／投資 ${mYen(hv)}${(m.debt || 0) > 0 ? `／借金 ${mYen(m.debt)}` : ''}　${diff !== 0 ? `<b>${diff > 0 ? '▲+' : '▼'}${mYen(Math.abs(diff)).slice(1)}</b>` : ''}</div>
             <div class="m-sub">${m.day}日目　目標 ${mYen(m.goal)} まで あと ${mYen(Math.max(0, m.goal - total))}</div>
         </div>`;
         html += `<div class="m-tabs">
-            ${[['home','🏠 ホーム'],['news','📰 ニュース'],['invest','📈 投資'],['pol','🏛️ 政治'],['bank','🏦 銀行'],['quiz','❓ クイズ'],['terms','📖 じてん'],['book','📒 家計簿']]
+            ${[['home','🏠 ホーム'],['news','📰 ニュース'],['invest','📈 投資'],['ins','🛡️ 保険'],['gam','🎲 ギャンブル'],['pol','🏛️ 政治'],['bank','🏦 銀行'],['quiz','❓ クイズ'],['terms','📖 じてん'],['book','📒 家計簿']]
               .map(([k, n]) => `<button class="btn ${mTab === k ? 'btn-active' : 'btn-inactive'}" onclick="mSwitchTab('${k}')">${n}</button>`).join('')}
         </div>`;
         if(mTab === 'home') html += mHomeHtml(m, total);
         if(mTab === 'news') html += mNewsHtml(m);
         if(mTab === 'invest') html += mInvestHtml(m);
+        if(mTab === 'ins') html += mInsHtml(m);
+        if(mTab === 'gam') html += mGamHtml(m);
         if(mTab === 'pol') html += mPolHtml(m);
         if(mTab === 'bank') html += mBankHtml(m);
         if(mTab === 'quiz') html += mQuizHtml(m);
@@ -2497,7 +2901,7 @@
     }
     function mHomeHtml(m, total) {
         const rival = gOtherState ? null : null;
-        let h = '';
+        let h = mEventCardHtml(m);
         // ニュース（見出しだけ。くわしくは📰ニュースのタブ）
         const nowSlot = M_SLOTS[mSlotInfo().s];
         h += `<div class="m-card"><b>📰 ${nowSlot.e} ${nowSlot.n}のニュース</b>
@@ -2514,7 +2918,9 @@
         h += `<div class="m-card"><b>💼 お給料（毎月5日）</b>
             <div style="font-size:12px;color:#888;margin:4px 0;">給料は勉強しだい。<b>20問 正解すると1万円</b>（1問${M_PAY_PER_CORRECT}円）。ためた分は毎月5日にまとめて入るよ</div>
             <div class="m-row"><span>いまためている（${m.payCorrect || 0}問 正解）</span><b class="m-up">${mYen(salaryPreview)}</b></div>
-            <div class="m-row"><span>これまでの給料の合計</span><b>${mYen(m.salaryTotal || 0)}</b></div></div>`;
+            <div class="m-row"><span>これまでの給料の合計</span><b>${mYen(m.salaryTotal || 0)}</b></div>
+            ${mPremiumTotal(m) > 0 ? `<div class="m-row"><span>🛡️ 5日に引かれる保険料（${Object.keys(m.ins).length}つ）</span><b class="m-down">−${mYen(mPremiumTotal(m)).slice(1)}</b></div>` : ''}
+            ${(m.debt || 0) > 0 ? `<div class="m-row"><span>💳 借金（給料からまず返す）</span><b class="m-down">${mYen(m.debt)}</b></div>` : ''}</div>`;
         // 稼ぐ
         const canWork = m.workDay !== calToday();
         h += `<div class="m-card"><b>💪 ほかにお金をかせぐ</b>
@@ -2552,6 +2958,16 @@
             <div class="m-row"><span>売買の手数料</span><b>${mYen(m.feePaid)}</b></div>
             <div class="m-row"><span>信託報酬（見えないコスト）</span><b>${mYen(m.trustFee||0)}</b></div>
             <div class="m-row"><span>はたらいた回数</span><b>${m.workCount}回</b></div></div>`;
+        // データのまもり（買ったものが消えないように、いつも3か所＋IndexedDBに保存している）
+        const nHold = Object.keys(m.hold || {}).length + Object.keys(m.nisa || {}).length;
+        h += `<div class="m-card"><b>🛟 データのまもり</b>
+            <div style="font-size:12px;color:#888;">買ったものと お金は、保存のたびに<b>4か所</b>（本体・ひかえ・ひかえ2・IndexedDB）へ同時に記録しているよ。
+            ひとつ消えても、いちばん新しいものが自動で復活する</div>
+            <div class="m-row"><span>持っている商品</span><b>${nHold}しゅるい</b></div>
+            <div class="m-row"><span>保存した回数</span><b>${(m._sv || 0).toLocaleString('ja-JP')}回</b></div>
+            <div class="m-row"><span>さいごに保存した時間</span><b>${m._at ? new Date(m._at).toLocaleString('ja-JP') : 'まだ'}</b></div>
+            ${mRestored ? '<div class="m-ok">🛟 データが消えていたので、<b>ひかえから自動で元にもどした</b>よ！</div>' : ''}
+            <div class="m-learn">💡 きかいを変えるときや、URLが変わったときは、ログイン画面の<b>「📦きろくの引っこし」</b>を使えば、買ったものごと まるごと運べるよ。</div></div>`;
         return h;
     }
     // 商品1つぶんの行（投信・株・そのほか 共通）
@@ -2868,6 +3284,522 @@
         playSfx('correct');
         mPolSimShow();
     }
+    // ---------------- 🛡️ 保険 ----------------
+    // できごとのお知らせ（保険があって助かった／なくて痛かった、をその場で見せる）
+    function mEventCardHtml(m) {
+        if(!m.insNew || !m.insNew.length) return '';
+        let h = `<div class="m-card" style="border:3px solid #e67e22;"><b>📣 できごとがありました（${m.insNew.length}件）</b>`;
+        m.insNew.forEach(ev => {
+            if(ev.lapse) { h += `<div class="m-warn">⚠️ お金が足りなくて <b>${esc(ev.n)}</b> が解約になったよ。保険料を払えないと保険は切れてしまう（本物と同じ）</div>`; return; }
+            h += `<div class="${ev.pay > 0 ? 'm-ok' : 'm-warn'}">${ev.e} <b>${esc(ev.n)}</b><br>
+                ${esc(ev.dd || '')} <b>${mYen(ev.cost)}</b> かかった。
+                ${ev.pay > 0 ? `🛡️「${esc(ev.plan)}」プランの保険から <b class="m-up">${mYen(ev.pay)}</b> 出たので、自分が払ったのは <b>${mYen(ev.mine)}</b> だけ！`
+                             : `保険に入っていなかったので <b>${mYen(ev.mine)}</b> ぜんぶ自分で払った…`}
+                ${ev.debt > 0 ? `<br>💳 払いきれなかった <b>${mYen(ev.debt)}</b> は借金になった。給料から少しずつ返そう` : ''}</div>`;
+        });
+        h += `<button class="btn" style="background:#e67e22;color:#fff;width:100%;margin-top:8px;" onclick="mEventSeen()">わかった</button></div>`;
+        return h;
+    }
+    function mEventSeen() { const m = mLoad(); m.insNew = []; mSave(m); renderMoney(); }
+    function mInsHtml(m) {
+        const first = !m.insSeen;
+        if(first) { m.insSeen = true; mSave(m); }      // ここを1回見てから「できごと」が起こりはじめる
+        const prem = mPremiumTotal(m), cnt = Object.keys(m.ins).length;
+        let h = mEventCardHtml(m);
+        h += `<div class="m-card"><b>🛡️ 保険って、なんのためにあるの？</b>
+            <div style="font-size:13px;line-height:1.9;">お金がへる原因には2しゅるいある。<br>
+            ①<b>ちょっとずつへる</b>（食べもの・服・スマホ代）→ これは自分で払える<br>
+            ②<b>いっきに大きくへる</b>（入院・事故・火事・ばいしょう）→ これは<b>人生がこわれる</b><br>
+            保険は②のためのしくみ。<b>たくさんの人が少しずつお金を出し合って、起きてしまった人にまとめて渡す</b>。
+            自分ひとりでは払えない金額を、みんなで分け合っているんだ。</div>
+            <div class="m-learn">💡 <b>大数（たいすう）の法則</b>：1人が入院するかは分からないけど、1万人集めれば「1年に何人が入院するか」はほぼ読める。
+            だから保険会社は保険料を計算できる。保険は<b>数学でできている</b>んだよ。</div></div>`;
+        if(first) h += `<div class="m-ok" style="font-size:14px;">🔰 いまから、このアプリでも<b>「できごと」</b>が起こるようになったよ（けが・スマホがこわれる…など）。
+            自分のくらしに合わせて保険をえらんでみよう！</div>`;
+        // 公的保険
+        h += `<div class="m-card"><b>🇯🇵 じつは、もう入っている保険（公的保険）</b>
+            <div style="font-size:12px;color:#888;margin-bottom:6px;">日本に住んでいる人はぜんいん、5つの強い保険に入っている。給料から自動で引かれているよ</div>
+            <div class="m-tw"><table class="m-gtab"><tbody>`;
+        M_KOTEKI.forEach(([n, d]) => { h += `<tr><td style="white-space:nowrap;"><b>${esc(n)}</b></td><td>${esc(d)}</td></tr>`; });
+        h += `</tbody></table></div>
+            <div class="m-learn">💡 だから民間の保険は「公的保険で足りないところだけ」でいい。まず<b>公的保険を知る</b>のがいちばんの節約になる。</div></div>`;
+        // くらしの設定
+        h += `<div class="m-card"><b>🏡 くらしの設定</b>
+            <div style="font-size:12px;color:#888;">どんなくらしをしているかで、必要な保険はぜんぜんちがう（車を持っていない人に自動車保険はいらない）。タップで切りかえ</div>
+            <div class="m-secbar" style="margin-top:8px;">`;
+        M_LIFE.forEach(([k, n, d, fix]) => {
+            const on = mLifeOn(m, k);
+            h += `<button class="${on ? 'on' : ''}" ${fix ? 'disabled style="opacity:.85;"' : `onclick="mLifeToggle('${k}')"`}>${n}</button>`;
+        });
+        h += `</div><div style="font-size:11px;color:#888;margin-top:8px;line-height:1.7;">`;
+        M_LIFE.forEach(([k, n, d]) => { if(mLifeOn(m, k)) h += `・${esc(n)}：${esc(d)}<br>`; });
+        h += `</div></div>`;
+        // 契約中のまとめ
+        h += `<div class="m-card"><b>📋 いまの保険</b>
+            <div class="m-row"><span>入っている保険</span><b>${cnt}つ</b></div>
+            <div class="m-row"><span>毎月の保険料（5日にまとめて払う）</span><b class="m-down">${mYen(prem)}</b></div>
+            <div class="m-row"><span>1年分にすると</span><b>${mYen(prem * 12)}</b></div>
+            <div class="m-row"><span>これまでに払った保険料</span><b>${mYen(m.insPaid || 0)}</b></div>
+            <div class="m-row"><span>これまでにもらった保険金</span><b class="m-up">${mYen(m.insGot || 0)}</b></div>
+            ${(m.insPaid || 0) > 0 ? `<div class="m-row"><span>もどってきた割合</span><b>${((m.insGot || 0) / m.insPaid * 100).toFixed(1)}%</b></div>` : ''}
+            ${(m.debt || 0) > 0 ? `<div class="m-row"><span>💳 借金</span><b class="m-down">${mYen(m.debt)}</b></div>` : ''}
+            ${prem * 12 > 0 && mTotal(m) > 0 ? `<div class="m-desc" style="margin-top:6px;">1年の保険料は そう資産の ${(prem * 12 / mTotal(m) * 100).toFixed(1)}% ぶん</div>` : ''}
+            </div>`;
+        // 商品ごとのプラン
+        M_INS.forEach(p => {
+            const need = mLifeOn(m, p.life), lv = m.ins[p.c] || 0;
+            const rks = M_RISKS.filter(r => r.ins === p.c);
+            h += `<div class="m-card" ${need ? '' : 'style="opacity:.62;"'}>
+                <b>${p.e} ${esc(p.n)}</b> ${lv ? `<span class="m-pill">${esc(p.plans[lv-1].n)}に加入中</span>` : ''}
+                ${need ? '' : '<span class="m-pill" style="background:rgba(127,140,141,.18);color:#7f8c8d;">いまは いらない</span>'}
+                <div class="m-desc" style="margin-top:4px;">${esc(p.d)}</div>
+                <div class="m-desc" style="margin-top:5px;">起こりそうなこと：${rks.map(r => `${r.e}${esc(r.n)}（${mYen(r.lo)}〜${mYen(r.hi)}）`).join('／')}</div>
+                <div class="m-plans">`;
+            p.plans.forEach((pl, i) => {
+                h += `<div class="m-plan ${lv === i + 1 ? 'on' : ''}">
+                    <div class="pn">${i === 0 ? '🥉' : i === 1 ? '🥈' : '🥇'} ${esc(pl.n)}</div>
+                    <div class="py">${mYen(pl.yen)}<span style="font-size:10px;color:#888;">/月</span></div>
+                    <div class="m-desc">上限 ${mYen(pl.cap)}${pl.ded ? `／免責 ${mYen(pl.ded)}` : '／免責なし'}</div>
+                    <ul>${pl.s.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
+                    <button class="m-btn ${lv === i + 1 ? 'm-info' : 'm-buy'}" onclick="mInsSet('${p.c}',${lv === i + 1 ? 0 : i + 1})">${lv === i + 1 ? 'やめる' : 'これにする'}</button>
+                  </div>`;
+            });
+            h += `</div></div>`;
+        });
+        // シミュレーター
+        h += `<div class="m-card"><b>🔭 保険シミュレーター（いちばん大事）</b>
+            <div style="font-size:12px;color:#888;">いまの「くらしの設定」と「えらんだプラン」で計算するよ。プランを変えて何回もためしてみて</div>
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="mInsSim('me')">▶️ あなたの30年を早送りする（保険あり vs なし）</button>
+            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="mInsSim('many')">▶️ 1000人の1年を見る（保険が成り立つ理由）</button></div>`;
+        // 履歴
+        h += `<div class="m-card"><b>🗂️ できごとの記録（${m.insCount || 0}回）</b>`;
+        if(!m.insHist.length) h += `<div style="color:#888;font-size:13px;padding:8px 0;">まだ何も起きていないよ。何も起きないのがいちばん幸せ！</div>`;
+        m.insHist.slice(0, 15).forEach(ev => {
+            if(ev.lapse) return;
+            h += `<div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name" style="font-size:13px;">${ev.e} ${esc(ev.n)}</div>
+                <div class="m-desc">${ev.day}日目／かかったお金 ${mYen(ev.cost)}${ev.plan ? `／🛡️${esc(ev.plan)}` : '／保険なし'}</div></div>
+                <div class="m-price"><div class="${ev.pay > 0 ? 'm-up' : 'm-flat'}" style="font-size:12px;">保険 ${mYen(ev.pay)}</div>
+                <div class="m-down" style="font-size:12px;">自分 ${mYen(ev.mine)}</div></div></div>`;
+        });
+        h += `</div>`;
+        // 保険えらびのルール
+        h += `<div class="m-card"><b>📏 保険をえらぶ4つのルール（大人でも間違える）</b>
+            <div style="font-size:13px;line-height:1.95;">
+            ①<b>「まれ × 大きい」だけ保険にする</b>。よく起きて自分で払える損（スマホの修理など）は保険にしないほうがトク<br>
+            ②<b>公的保険とかさねない</b>。健康保険と高額療養費があるので、医療保険は少しでいい<br>
+            ③<b>免責と上限を読む</b>。「入っていたのに出なかった」はここで起きる<br>
+            ④<b>保険で増やそうとしない</b>。ふやすのは投資、まもるのが保険。役わりを混ぜると両方だめになる</div>
+            <div class="m-learn">💡 民間の保険は、払った保険料のうち<b>平均6〜8割</b>しか保険金として戻ってこない（のこりは会社の人件費・広告・利益）。
+            つまり<b>平均すると損</b>。それでも入るのは「<b>1回で人生がこわれるのを防ぐ</b>」ため。ここがギャンブルとの決定的なちがいだよ🎲</div></div>`;
+        return h;
+    }
+    function mLifeToggle(k) {
+        const m = mLoad();
+        if(!m.life || typeof m.life !== 'object') m.life = M_EMPTY().life;
+        m.life[k] = !m.life[k];
+        mSave(m); renderMoney();
+    }
+    function mInsSet(code, lv) {
+        const m = mLoad(); const p = mInsProd(code); if(!p) return;
+        if(!m.ins || typeof m.ins !== 'object') m.ins = {};
+        if(!lv) { delete m.ins[code]; mLog(m, `保険をやめる：${p.n}`, 0); }
+        else {
+            m.ins[code] = lv;
+            mLog(m, `保険に入る：${p.n}（${p.plans[lv-1].n}）`, 0);
+            playSfx('correct');
+        }
+        mSave(m); mAwardBadges(); renderMoney();
+        if(lv) setTimeout(() => alert(`🛡️ ${p.n}「${p.plans[lv-1].n}」に入ったよ！\n保険料 ${mYen(p.plans[lv-1].yen)} は毎月5日にまとめて引かれるよ。\nいまの保険料の合計：${mYen(mPremiumTotal(mLoad()))}／月`), 200);
+    }
+    // ポアソン分布（何回起きるかをサイコロで決める。保険の計算で本当に使われている分布）
+    function mPois(l) {
+        if(l <= 0) return 0;
+        if(l > 60) { let s = 0; for(let i = 0; i < 3; i++) s += mPois(l / 3); return s; }   // 大きいときは分けて計算（けいさんが崩れないように）
+        const L = Math.exp(-l); let k = 0, p = 1;
+        do { k++; p *= Math.random(); } while(p > L);
+        return k - 1;
+    }
+    function mInsSim(mode) {
+        const m = mLoad();
+        m.insSim = (m.insSim || 0) + 1; mSave(m); mAwardBadges();
+        if(mode === 'me') mInsSimMe(m); else mInsSimMany(m);
+    }
+    // ① あなたの30年（まったく同じできごとで「保険あり」と「保険なし」をくらべる）
+    function mInsSimMe(m) {
+        const Y = 30;
+        const evs = [];
+        M_RISKS.forEach(rk => {
+            if(!mLifeOn(m, rk.life)) return;
+            const n = mPois(rk.r * Y);
+            for(let i = 0; i < n; i++) evs.push({ rk, cost: mRiskCost(rk) });
+        });
+        const prem = mPremiumTotal(m) * 12 * Y;
+        let got = 0, mine = 0, all = 0, wIns = 0, wNo = 0;
+        const byId = {};
+        evs.forEach(e => {
+            const pl = mInsPlan(m, e.rk.ins), pay = mInsPay(pl, e.cost);
+            got += pay; mine += e.cost - pay; all += e.cost;
+            wIns = Math.max(wIns, e.cost - pay); wNo = Math.max(wNo, e.cost);
+            const b = byId[e.rk.id] || (byId[e.rk.id] = { rk:e.rk, n:0, cost:0, pay:0 });
+            b.n++; b.cost += e.cost; b.pay += pay;
+        });
+        const outIns = prem + mine;
+        let h = `<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">🔭 あなたの30年（早送り）</h2>
+            <div class="m-desc">30年のあいだに起きたできごと：<b>${evs.length}回</b>／かかったお金の合計 <b>${mYen(all)}</b></div>`;
+        if(evs.length) {
+            h += `<div class="m-tw"><table class="m-gtab"><thead><tr><th>できごと</th><th class="r">回数</th><th class="r">かかった</th><th class="r">保険から</th></tr></thead><tbody>`;
+            Object.values(byId).sort((a, b) => b.cost - a.cost).forEach(b => {
+                h += `<tr><td>${b.rk.e} ${esc(b.rk.n)}</td><td class="r">${b.n}回</td><td class="r">${mYen(b.cost)}</td><td class="r">${b.pay ? mYen(b.pay) : '—'}</td></tr>`;
+            });
+            h += `</tbody></table></div>`;
+        }
+        h += `<div class="m-ok" style="margin-top:10px;">🛡️ <b>保険ありの人生</b><br>
+            払った保険料 <b>${mYen(prem)}</b> ＋ 自己負担 <b>${mYen(mine)}</b> ＝ <span class="m-ev-big">出ていったお金 ${mYen(outIns)}</span><br>
+            もらった保険金 <b class="m-up">${mYen(got)}</b>${prem > 0 ? `（払った保険料の ${(got / prem * 100).toFixed(0)}%）` : ''}<br>
+            いちばん痛かった1回：<b>${mYen(wIns)}</b></div>
+            <div class="m-warn">😰 <b>保険なしの人生</b>（同じできごとが起きたとして）<br>
+            ぜんぶ自分で払う ＝ <span class="m-ev-big">出ていったお金 ${mYen(all)}</span><br>
+            いちばん痛かった1回：<b>${mYen(wNo)}</b>${wNo >= 1000000 ? '　← これは中学生のおこづかいでは絶対に払えない金額' : ''}</div>`;
+        if(prem === 0) {
+            h += `<div class="m-ev">まだ保険をえらんでいないから「保険あり」は計算できていないよ。プランをえらんでから、もう一回ためしてみて！</div>`;
+        } else if(outIns < all) {
+            h += `<div class="m-ev">📊 この30年では <b>保険ありのほうが ${mYen(all - outIns)} 得</b> だった。
+            でもこれは「たまたま大きな事故が起きた人生」。何回もためすと、<b>ほとんどの回は保険なしのほうが安くすむ</b>のが分かるよ。もう一回やってみて！</div>`;
+        } else {
+            h += `<div class="m-ev">📊 この30年では <b>保険なしのほうが ${mYen(outIns - all)} 安かった</b>。
+            じつはこれが<b>ふつう</b>。保険は平均すると損なんだ（会社の経費と利益がのっているから）。<br>
+            それでも入るのは、<b>まれに来る「払えない1回」で人生がこわれるのを防ぐ</b>ため。保険は「もうけるため」ではなく「立ち直れなくなるのを防ぐため」に買うもの。</div>`;
+        }
+        h += `<div class="m-learn">💡 だから正しい保険のえらび方は<b>「自分のちょ金で払える損は保険にしない。払えない損だけ保険にする」</b>。
+        何回もためして、どのプランなら安心して眠れるか考えてみよう。</div>
+        <div style="text-align:center;margin-top:12px;">
+            <button class="btn" style="background:#8e44ad;color:#fff;" onclick="mInsSim('me')">もう一回（30年）</button>
+            <button class="btn" style="background:#2980b9;color:#fff;" onclick="mInsSim('many')">1000人の1年</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('ins');">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
+    // ② 1000人の1年（保険が成り立つ理由＝大数の法則）
+    function mInsSimMany(m) {
+        const N = 1000;
+        let totalCost = 0, totalPay = 0, rows = [];
+        M_RISKS.forEach(rk => {
+            if(!mLifeOn(m, rk.life)) return;
+            const pl = mInsPlan(m, rk.ins);
+            let people = 0, cnt = 0, cost = 0, pay = 0, worst = 0;
+            for(let i = 0; i < N; i++) {
+                const n = mPois(rk.r);
+                if(n > 0) people++;
+                for(let j = 0; j < n; j++) {
+                    const c = mRiskCost(rk);
+                    cnt++; cost += c; pay += mInsPay(pl, c); worst = Math.max(worst, c);
+                }
+            }
+            totalCost += cost; totalPay += pay;
+            rows.push({ rk, people, cnt, cost, pay, worst, plan: pl ? pl.n : null });
+        });
+        const prem = mPremiumTotal(m) * 12 * N;
+        let h = `<div style="text-align:left;max-width:600px;margin:0 auto;">
+            <h2 style="text-align:center;">🔭 1000人の1年</h2>
+            <div class="m-desc">あなたと同じくらし・同じプランの人が1000人いたら、1年でどうなるか。保険会社が見ている世界だよ</div>
+            <div class="m-tw" style="margin-top:8px;"><table class="m-gtab">
+            <thead><tr><th>できごと</th><th class="r">起きた人</th><th class="r">合計でかかったお金</th><th class="r">いちばん大きい1回</th></tr></thead><tbody>`;
+        rows.forEach(r => {
+            h += `<tr><td>${r.rk.e} ${esc(r.rk.n)}</td><td class="r">${r.people}人<br><span style="color:#888;font-size:11px;">1000人中</span></td>
+                <td class="r">${mYen(r.cost)}</td><td class="r">${r.worst ? mYen(r.worst) : '—'}</td></tr>`;
+        });
+        h += `</tbody></table></div>
+            <div class="m-ev" style="margin-top:10px;">📊 1000人ぜんぶで <b>${mYen(totalCost)}</b> の損が起きた。<br>
+            1人あたりにすると <b>${mYen(totalCost / N)}</b>。<br>
+            ${'　'}<b>これが「保険料のもと」</b>。保険会社は「1人あたりいくら損が起きるか」を計算して、そこに経費と利益をのせて保険料を決めているんだ。</div>`;
+        if(prem > 0) {
+            h += `<div class="m-ok">🛡️ 1000人が1年に払う保険料の合計：<b>${mYen(prem)}</b><br>
+                保険金として出ていったお金：<b>${mYen(totalPay)}</b>（保険料の <b>${(totalPay / prem * 100).toFixed(0)}%</b>）<br>
+                差の <b>${mYen(Math.max(0, prem - totalPay))}</b> が、会社の人件費・システム・広告・利益になる</div>
+                <div class="m-learn">💡 つまり保険は<b>「みんなの損を平らにならす機械」</b>。1人にドンと来る損を、1000人で少しずつ分けている。<br>
+                そして<b>ならすための手数料</b>を払っている——それが「平均すると損」の正体だよ。</div>`;
+        } else {
+            h += `<div class="m-ev">プランをえらんでから もう一回ためすと、「1000人ぶんの保険料」と「出ていく保険金」をくらべられるよ。</div>`;
+        }
+        h += `<div style="text-align:center;margin-top:12px;">
+            <button class="btn" style="background:#2980b9;color:#fff;" onclick="mInsSim('many')">もう一回（1000人）</button>
+            <button class="btn" style="background:#8e44ad;color:#fff;" onclick="mInsSim('me')">あなたの30年</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('ins');">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
+    // ---------------- 🎲 ギャンブル（しくみを知るための勉強コーナー） ----------------
+    let mGamPick = 0;                                   // 競馬でえらんだ馬
+    function mGamG(c) { return M_GPLAY.find(g => g.c === c); }
+    // 理論の還元率（％）
+    function mGamRet(g, pick) {
+        if(g.horses) { const hp = g.horses[pick] || g.horses[0]; return hp[1] * hp[2] * 100; }
+        let ev = 0; g.tbl.forEach(([prize, oneIn]) => { ev += prize / oneIn; });
+        return ev / g.unit * 100;
+    }
+    // 当たった段（-1＝はずれ）
+    function mGamIdx(g, pick) {
+        const u = Math.random(); let acc = 0;
+        if(g.horses) {
+            for(let i = 0; i < g.horses.length; i++) { acc += g.horses[i][1]; if(u < acc) return i === pick ? 0 : -1; }
+            return -1;
+        }
+        for(let i = 0; i < g.tbl.length; i++) { acc += 1 / g.tbl[i][1]; if(u < acc) return i; }
+        return -1;
+    }
+    // 1回ぶん遊ぶ（もどってきたチップを返す。0＝はずれ）
+    function mGamOnce(g, pick) {
+        const i = mGamIdx(g, pick);
+        if(i < 0) return 0;
+        return g.horses ? Math.round(g.unit * g.horses[pick][2]) : g.tbl[i][0];
+    }
+    // 「ふつうに遊ぶ回数では出会えない当たり」を外した、現実に体験する還元率（％）
+    function mGamRetReal(g, maxOneIn) {
+        if(g.horses) return mGamRet(g, mGamPick);
+        let ev = 0; g.tbl.forEach(([prize, oneIn]) => { if(oneIn <= maxOneIn) ev += prize / oneIn; });
+        return ev / g.unit * 100;
+    }
+    // 段の名前（宝くじ＝1等・前後賞・2等…／それ以外＝当たり）
+    function mGamTierName(g, i) {
+        if(g.c === 'loto') return ['1等','前後賞','2等','3等','4等','5等','6等','7等'][i] || (i + '等');
+        if(g.c === 'big') return ['1等（14試合ぜんぶ）','2等（13試合）','3等（12試合）','4等（11試合）'][i] || (i + '等');
+        return '当たり' + (g.tbl.length > 1 ? '（' + (i + 1) + '）' : '');
+    }
+    function mGamHtml(m) {
+        const g = m.gam, canGet = g.day !== calToday();
+        const diff = g.ret - g.bet;
+        let h = `<div class="m-warn" style="font-size:14px;line-height:1.9;">
+            <b>⚠️ ここは「ギャンブルのしくみを勉強する」コーナーです</b><br>
+            ・競馬・競輪・競艇・オートレースは<b>20さい未満は買えません</b>（法律）<br>
+            ・パチンコ店は<b>18さい未満は入れません</b>／スポーツくじは<b>19さい未満は買えません</b><br>
+            ・海外のオンラインカジノに日本から賭けるのは<b>犯罪（賭博罪）</b>です<br>
+            ・ここで使うのは<b>おためしチップ</b>だけ。<b>げんきん（現金）とは絶対に交換できません</b>
+            </div>
+            <div class="m-chips"><div style="font-size:12px;">おためしチップ</div>
+            <div class="cn">🪙 ${g.chips.toLocaleString('ja-JP')}</div>
+            <div style="font-size:11px;opacity:.9;">現金とは交換できないよ／1日1回 1万チップもらえる</div>
+            <button class="btn" style="background:#fff;color:#8e44ad;margin-top:8px;font-weight:bold;" onclick="mGamChips()" ${canGet ? '' : 'disabled'}>${canGet ? '🪙 今日のチップをもらう（+10000）' : '今日はもらったよ'}</button></div>`;
+        // 通算
+        h += `<div class="m-card"><b>📊 あなたの通算成績（チップ）</b>
+            <div class="m-row"><span>やった回数</span><b>${g.plays.toLocaleString('ja-JP')}回</b></div>
+            <div class="m-row"><span>かけたチップ</span><b>${g.bet.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>もどってきたチップ</span><b>${g.ret.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${Math.abs(diff).toLocaleString('ja-JP')}</b></div>
+            ${g.bet > 0 ? `<div class="m-row"><span>あなたの実際の還元率</span><b>${(g.ret / g.bet * 100).toFixed(1)}%</b></div>` : ''}
+            ${g.big > 0 ? `<div class="m-row"><span>いちばん大きな当たり</span><b class="m-up">${g.big.toLocaleString('ja-JP')}</b></div>` : ''}`;
+        if(diff < 0) {
+            const months = Math.abs(diff) / (20 * M_PAY_PER_CORRECT);
+            h += `<div class="m-warn">💭 もしこれが<b>本物のお金</b>だったら <b>${mYen(Math.abs(diff))}</b> の負け。
+                勉強でかせぐ給料だと <b>${(Math.abs(diff) / M_PAY_PER_CORRECT).toFixed(0)}問</b> 正解ぶん（${months.toFixed(1)}か月ぶん）が消えたことになるよ。</div>`;
+        }
+        h += `</div>`;
+        // ためせるゲーム
+        h += `<div class="m-card"><b>🎮 ためしてみよう（チップ）</b>
+            <div style="font-size:12px;color:#888;">「🔬まとめて計算」はチップを使わずに、何回もやったらどうなるかを一気に計算するよ。<b>ここがいちばん勉強になる</b></div>`;
+        M_GPLAY.forEach(gp => {
+            const theo = mGamRet(gp, mGamPick);
+            h += `<div class="m-gcard"><div class="m-name">${gp.e} ${esc(gp.n)}
+                <span class="m-pill">還元率 ${theo.toFixed(1)}%</span></div>
+                <div class="m-desc">${esc(gp.d)}</div>`;
+            if(gp.horses) {
+                h += `<div class="m-secbar" style="margin:6px 0 2px;">${gp.horses.map((hh, i) =>
+                    `<button class="${mGamPick === i ? 'on' : ''}" onclick="mGamSetPick(${i})">${esc(hh[0])} ${hh[2].toFixed(1)}倍</button>`).join('')}</div>
+                    <div class="m-desc">えらんだ馬：<b>${esc(gp.horses[mGamPick][0])}</b>（当たる確率 ${(gp.horses[mGamPick][1] * 100).toFixed(0)}%・${gp.horses[mGamPick][2].toFixed(1)}倍）</div>`;
+            }
+            h += `<div class="m-gbtns">
+                <button class="m-btn m-buy" onclick="mGamPlay('${gp.c}',1)">1回（${gp.unit}）</button>
+                <button class="m-btn m-buy" onclick="mGamPlay('${gp.c}',10)">10回（${gp.unit * 10}）</button>
+                <button class="m-btn m-sell" onclick="mGamPlay('${gp.c}',100)">100回（${(gp.unit * 100).toLocaleString('ja-JP')}）</button>
+                <button class="m-btn" style="background:#8e44ad;" onclick="mGamSim('${gp.c}')">🔬 まとめて計算</button>
+              </div>
+              <div class="m-learn">${esc(gp.note)}</div></div>`;
+        });
+        h += `</div>`;
+        // 期待値の話
+        const loto = mGamG('loto'), lotoRet = mGamRet(loto);
+        h += `<div class="m-card"><b>🧮 期待値（きたいち）＝ 平均でいくらもどるか</b>
+            <div style="font-size:13px;line-height:1.9;">当たる金額 × 当たる確率 をぜんぶ足すと、<b>1回あたり平均でもどってくる金額</b>が出る。これが期待値。</div>
+            <div class="m-tw" style="margin-top:8px;"><table class="m-gtab">
+            <thead><tr><th>宝くじの等級</th><th class="r">当たる金額</th><th class="r">確率</th><th class="r">期待値</th></tr></thead><tbody>`;
+        loto.tbl.forEach(([prize, oneIn], i) => {
+            h += `<tr><td>${i === 0 ? '1等' : i === 1 ? '前後賞' : (i) + '等'}</td><td class="r">${mYen(prize).slice(1)}円</td>
+                <td class="r">${Math.round(oneIn).toLocaleString('ja-JP')}分の1</td><td class="r">${(prize / oneIn).toFixed(2)}円</td></tr>`;
+        });
+        h += `<tr class="bad"><td><b>合計</b></td><td class="r">—</td><td class="r">—</td><td class="r"><b>${(lotoRet * loto.unit / 100).toFixed(0)}円</b></td></tr>`;
+        h += `</tbody></table></div>
+            <div class="m-ev">🎫 <b>300円のくじを買うと、平均で ${(lotoRet * loto.unit / 100).toFixed(0)}円 しかもどってこない</b>（還元率 ${lotoRet.toFixed(1)}%）。
+            1枚では運だけど、たくさん買うほどこの計算のとおりになる。<br>
+            ・10枚（3,000円）→ 平均 ${mYen(lotoRet * loto.unit / 100 * 10)}<br>
+            ・100枚（30,000円）→ 平均 ${mYen(lotoRet * loto.unit / 100 * 100)}<br>
+            ・1000枚（300,000円）→ 平均 ${mYen(lotoRet * loto.unit / 100 * 1000)}<br>
+            買うほど「平均どおり」に近づいて、確実に減っていく。これが<b>大数の法則</b>だよ。</div>
+            <div class="m-warn">🤯 しかも表をよく見て。合計${(lotoRet * loto.unit / 100).toFixed(0)}円のうち <b>${((loto.tbl[0][0] / loto.tbl[0][1] + loto.tbl[1][0] / loto.tbl[1][1]) / (lotoRet * loto.unit / 100) * 100).toFixed(0)}%</b> が
+            「1等と前後賞」でできている。でもそれは<b>${Math.round(loto.tbl[0][1]).toLocaleString('ja-JP')}分の1</b>。
+            つまり<b>ふつうの人は一生かかっても“平均”に届かない</b>。1等をのぞいて計算すると、実際に体験する還元率は
+            <b>${mGamRetReal(loto, 1000000).toFixed(1)}%</b> しかないんだ。「🔬まとめて計算」で確かめてみて！</div></div>`;
+        // 主なギャンブルいちらん
+        h += `<div class="m-card"><b>🗂️ 日本の主なギャンブル（還元率でくらべる）</b>
+            <div style="font-size:12px;color:#888;">還元率＝かけたお金のうち平均でもどってくる割合。のこりは<b>胴元（主催者）の取り分</b></div>`;
+        M_GAMBLE.forEach(x => {
+            const col = x.good ? '#27ae60' : x.bad ? '#7f8c8d' : x.ret >= 90 ? '#e67e22' : x.ret >= 70 ? '#f39c12' : '#e74c3c';
+            h += `<div class="m-budget" style="margin:12px 0;">
+                <div class="lab"><span><b>${x.e} ${esc(x.n)}</b></span><b style="color:${col};">${x.ret ? x.ret + '%' : '—'}</b></div>
+                <div class="m-meter"><div style="width:${Math.min(100, x.ret)}%;background:${col};"></div></div>
+                <div class="m-desc" style="margin-top:3px;">${esc(x.d)}</div>
+                <div class="m-desc">胴元：${esc(x.who)}／${esc(x.age)}</div></div>`;
+        });
+        h += `<div class="m-learn">💡 いちばん下の<b>📈長期のインデックス投資</b>だけ100%を超えている。理由は「胴元がいない」から。
+            会社が働いて新しいもうけを生むので、参加した人ぜんたいのお金が増える（<b>プラスサム</b>）。
+            ギャンブルは参加者のお金を分け合うだけで、そこから胴元が取っていく（<b>マイナスサム</b>）。<b>ここが決定的なちがい</b>。</div></div>`;
+        // カジノのゲーム別
+        h += `<div class="m-card"><b>🃏 カジノのゲーム別の還元率</b>
+            <div class="m-tw"><table class="m-gtab"><thead><tr><th>ゲーム</th><th class="r">還元率</th><th>ポイント</th></tr></thead><tbody>`;
+        M_CASINO.forEach(([n, r, d]) => {
+            h += `<tr><td>${esc(n)}</td><td class="r"><b>${r}%</b></td><td>${esc(d)}</td></tr>`;
+        });
+        h += `</tbody></table></div>
+            <div class="m-learn">💡 カジノは還元率が95%以上あって「良さそう」に見える。でも1回が10〜30秒しかないので、1時間で100回以上できてしまう。
+            1回3%ずつ削られるのを100回くり返すと、元手は 0.97の100乗＝<b>約5%</b>まで減る。<b>還元率が高いほど危ない</b>という逆転が起きるんだ。</div></div>`;
+        // なぜ負けるのか
+        h += `<div class="m-card"><b>❓ なぜ「必ず」負けるの？</b>
+            <div style="font-size:13px;line-height:1.95;">
+            ①<b>胴元が先に取る</b>：かけたお金からまず取り分が引かれる。参加者が分け合うのは残りだけ<br>
+            ②<b>回数をやるほど平均に近づく</b>（大数の法則）：1回なら運。でも100回やれば必ず「還元率どおり」に近づく<br>
+            ③<b>やめられない設計</b>：あと少しで当たりそうな演出（ニアミス）、音と光、小さい当たりを何度も出す。ぜんぶ「続けさせる」ための工夫<br>
+            ④<b>負けを取り返そうとする</b>：負けたぶんを取り返そうとして賭け金を増やすと、いちばん早くお金が消える</div>
+            <div class="m-ev">🧠 <b>ギャンブラーの誤り</b>：「黒が10回続いたから次は赤」と考えるのは間違い。ルーレットに記憶はなく、次の確率はいつも同じ。
+            人間の脳は「そろそろ来るはず」と考えるようにできているので、だまされやすいんだ。</div></div>`;
+        // 三すくみ
+        h += `<div class="m-card"><b>⚖️ ギャンブル・保険・投資のちがい（いちばん大事な表）</b>
+            <div class="m-tw"><table class="m-gtab">
+            <thead><tr><th></th><th>🎲 ギャンブル</th><th>🛡️ 保険</th><th>📈 投資</th></tr></thead><tbody>
+            <tr><td>期待値</td><td>マイナス</td><td>マイナス</td><td class="r" style="text-align:left;">プラス</td></tr>
+            <tr><td>目的</td><td>楽しむこと</td><td>大きな損を防ぐ</td><td>お金をふやす</td></tr>
+            <tr><td>リスクの向き</td><td>わざと大きくする</td><td>小さくする</td><td>受け止めて時間を味方にする</td></tr>
+            <tr><td>やる回数</td><td>やるほど負ける</td><td>ずっと入る</td><td>長くやるほど有利</td></tr>
+            <tr class="good"><td>お金をふやす手段になる？</td><td>❌ ならない</td><td>❌ ならない</td><td>⭕️ なる</td></tr>
+            </tbody></table></div>
+            <div class="m-learn">💡 保険とギャンブルは<b>どちらも期待値マイナス</b>で、じつは形がそっくり（お金を出して、まれな出来事にかける）。
+            ちがいは<b>向き</b>。ギャンブルは<b>わざとリスクを作って</b>楽しむもの、保険は<b>もうあるリスクを消す</b>もの。<br>
+            そして「お金をふやす」役をできるのは投資だけ。3つをまちがえないことが、お金でこまらない人の条件だよ。</div></div>`;
+        // 依存症
+        h += `<div class="m-card"><b>💧 ギャンブル依存症のこと</b>
+            <div style="font-size:13px;line-height:1.95;">やめたいのに自分では止められなくなる<b>病気</b>。意志が弱いからではなく、
+            脳の「よろこびを感じるしくみ」が変わってしまうために起こる。だれでもなる可能性があるよ。<br><br>
+            <b>危ないサイン</b>：かくれてやる／借りたお金でやる／負けを取り返そうと金額を上げる／やる時間が長くなる／うそをつく<br><br>
+            <b>大事なこと</b>：ひとりでかかえないこと。日本には<b>無料で相談できる窓口</b>（各都道府県の精神保健福祉センター、依存症の相談拠点）があって、
+            家族だけの相談もできる。まわりの大人に話すのはぜんぜん恥ずかしいことじゃない。</div>
+            <div class="m-warn">🚫 それから、これは絶対に覚えておいて。<b>「かならず勝てる方法」「必勝法」「AI予想」を売る人はぜんぶ詐欺</b>。
+            還元率が決まっているのだから、必勝法があるならその人が黙って使っている。</div></div>`;
+        return h;
+    }
+    function mGamSetPick(i) { mGamPick = i; renderMoney(); }
+    function mGamChips() {
+        const m = mLoad();
+        if(m.gam.day === calToday()) { alert('チップは1日1回だよ。あしたまた来てね'); return; }
+        m.gam.day = calToday(); m.gam.chips += 10000;
+        mSave(m); playSfx('correct'); renderMoney();
+    }
+    // チップを実際にかけてみる
+    function mGamPlay(code, times) {
+        const g = mGamG(code); if(!g) return;
+        const m = mLoad();
+        const bet = g.unit * times;
+        if(m.gam.chips < bet) { alert(`チップが足りないよ（${bet.toLocaleString('ja-JP')}ひつよう／いま ${m.gam.chips.toLocaleString('ja-JP')}）\n1日1回もらえるチップをためしてね`); return; }
+        let ret = 0, hits = 0, best = 0;
+        for(let i = 0; i < times; i++) { const r = mGamOnce(g, mGamPick); if(r > 0) { hits++; ret += r; best = Math.max(best, r); } }
+        m.gam.chips += ret - bet;
+        m.gam.bet += bet; m.gam.ret += ret; m.gam.plays += times;
+        m.gam.big = Math.max(m.gam.big || 0, best);
+        mSave(m); mAwardBadges();
+        playSfx(ret > bet ? 'correct' : 'wrong');
+        if(ret >= bet * 20) celebrate('big');
+        const diff = ret - bet, all = m.gam.ret - m.gam.bet;
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">${g.e} ${esc(g.n)}</h2>
+            <div style="text-align:center;font-size:15px;margin-bottom:10px;">${times}回 ${g.horses ? `（${esc(g.horses[mGamPick][0])}に）` : ''}かけた</div>
+            <div class="m-row"><span>かけたチップ</span><b>${bet.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>当たった回数</span><b>${hits}回 / ${times}回</b></div>
+            <div class="m-row"><span>もどってきたチップ</span><b>${ret.toLocaleString('ja-JP')}</b></div>
+            <div class="m-row"><span>さしひき</span><b class="${diff >= 0 ? 'm-up' : 'm-down'}">${diff >= 0 ? '+' : '−'}${Math.abs(diff).toLocaleString('ja-JP')}</b></div>
+            ${best > 0 ? `<div class="m-row"><span>いちばん大きい当たり</span><b class="m-up">${best.toLocaleString('ja-JP')}</b></div>` : ''}
+            <div class="m-row"><span>のこりチップ</span><b>🪙 ${m.gam.chips.toLocaleString('ja-JP')}</b></div>
+            <div class="${diff >= 0 ? 'm-ok' : 'm-warn'}" style="margin-top:10px;">
+            ${diff > 0 ? `勝った！でもこれは<b>たまたま</b>。このゲームの還元率は${mGamRet(g, mGamPick).toFixed(1)}%だから、続けるほど平均に近づいて負けていくよ`
+                       : diff === 0 ? 'ちょうど同じ。めずらしい！' : `負けたね。これが<b>ふつう</b>。還元率${mGamRet(g, mGamPick).toFixed(1)}%＝1回ごとに平均${(100 - mGamRet(g, mGamPick)).toFixed(1)}%ずつ削られている`}</div>
+            <div class="m-row"><span>通算（${m.gam.plays.toLocaleString('ja-JP')}回）</span><b class="${all >= 0 ? 'm-up' : 'm-down'}">${all >= 0 ? '+' : '−'}${Math.abs(all).toLocaleString('ja-JP')}</b></div>
+            <div style="text-align:center;margin-top:12px;">
+            <button class="btn" style="background:#e74c3c;color:#fff;" onclick="mGamPlay('${code}',${times})">もう一回</button>
+            <button class="btn" style="background:#8e44ad;color:#fff;" onclick="mGamSim('${code}')">🔬 まとめて計算</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('gam');">とじる</button></div></div>`);
+    }
+    // 🔬 まとめて計算（チップを使わない。回数をふやすと還元率が理論に近づくのを見る＝大数の法則）
+    function mGamSim(code) {
+        const g = mGamG(code); if(!g) return;
+        const theo = mGamRet(g, mGamPick);
+        const rows = [], SCALES = [100, 10000, 1000000];
+        let tiers = null;
+        SCALES.forEach(n => {
+            let ret = 0, hits = 0, best = 0;
+            const cnt = g.horses ? null : g.tbl.map(() => 0);
+            for(let i = 0; i < n; i++) {
+                const t = mGamIdx(g, mGamPick);
+                if(t < 0) continue;
+                const r = g.horses ? Math.round(g.unit * g.horses[mGamPick][2]) : g.tbl[t][0];
+                hits++; ret += r; best = Math.max(best, r);
+                if(cnt) cnt[t]++;
+            }
+            rows.push({ n, bet: g.unit * n, ret, hits, best });
+            if(n === 1000000) tiers = cnt;
+        });
+        const m = mLoad(); m.gam.sims = (m.gam.sims || 0) + 1; mSave(m); mAwardBadges();
+        const big = rows[2], bigRet = big.ret / big.bet * 100;
+        const real = mGamRetReal(g, 1000000);      // 100万回で出会える当たりだけの還元率
+        const far = Math.abs(bigRet - theo) >= 4;  // 理論に近づかない＝ものすごくレアな1等が期待値をつくっている
+        let h = `<div style="text-align:left;max-width:580px;margin:0 auto;">
+            <h2 style="text-align:center;">🔬 ${g.e} ${esc(g.n)} をまとめて計算</h2>
+            <div class="m-desc">このゲームの<b>理論の還元率は ${theo.toFixed(1)}%</b>${g.horses ? `（${esc(g.horses[mGamPick][0])}に賭けたとき）` : ''}。回数をふやすと結果はどうなる？</div>
+            <div class="m-tw" style="margin-top:8px;"><table class="m-gtab">
+            <thead><tr><th class="r">回数</th><th class="r">かけたお金</th><th class="r">もどり</th><th class="r">実際の還元率</th><th class="r">さしひき</th></tr></thead><tbody>
+            ${rows.map(r => `<tr class="${Math.abs(r.ret / r.bet * 100 - theo) < 3 ? 'good' : ''}">
+                <td class="r">${r.n.toLocaleString('ja-JP')}回</td>
+                <td class="r">${mYen(r.bet)}</td>
+                <td class="r">${mYen(r.ret)}</td>
+                <td class="r"><b>${(r.ret / r.bet * 100).toFixed(1)}%</b></td>
+                <td class="r" style="color:${r.ret - r.bet >= 0 ? '#e74c3c' : '#3498db'};">${r.ret - r.bet >= 0 ? '+' : '−'}${mYen(Math.abs(r.ret - r.bet)).slice(1)}</td></tr>`).join('')}
+            </tbody></table></div>`;
+        if(tiers) {
+            h += `<div class="m-desc" style="margin-top:10px;"><b>100万回のうち、どの当たりが何回出たか</b></div>
+                <div class="m-tw"><table class="m-gtab"><thead><tr><th>当たり</th><th class="r">確率</th><th class="r">100万回で</th><th class="r">もどり合計</th></tr></thead><tbody>`;
+            g.tbl.forEach(([prize, oneIn], i) => {
+                h += `<tr class="${tiers[i] === 0 ? 'bad' : ''}"><td>${esc(mGamTierName(g, i))}<br><span style="color:#888;font-size:11px;">${mYen(prize)}</span></td>
+                    <td class="r">${Math.round(oneIn).toLocaleString('ja-JP')}<br><span style="color:#888;font-size:11px;">分の1</span></td>
+                    <td class="r"><b>${tiers[i].toLocaleString('ja-JP')}回</b></td>
+                    <td class="r">${mYen(prize * tiers[i])}</td></tr>`;
+            });
+            h += `</tbody></table></div>`;
+        }
+        if(far) {
+            h += `<div class="m-ev">🤔 <b>あれ？100万回やっても ${theo.toFixed(1)}% に近づかない</b>（実際 ${bigRet.toFixed(1)}%）。バグじゃないよ。<br>
+                理由は<b>1等が ${Math.round(g.tbl[0][1]).toLocaleString('ja-JP')}分の1 しかないから</b>。100万回でも1等はほぼ出ないんだ。<br>
+                つまり「還元率${theo.toFixed(1)}%」という数字は、<b>ほとんど当たらない1等をふくめた平均</b>。
+                1等・2等をのぞいて計算すると <b class="m-ev-big">${real.toFixed(1)}%</b> ——
+                これが<b>ふつうに買う人がほんとうに体験する還元率</b>だよ。</div>
+                <div class="m-warn">💡 だから「宝くじの還元率は45%」より現実はもっと厳しい。3万円ぶん買うと、体験としてもどるのは平均 ${mYen(30000 * real / 100)} ぐらい。
+                買うのは「お金をふやすため」ではなく<b>「夢を見る代金」</b>と分かって買うならOK、というのが正しい付き合い方だね。</div>`;
+        } else {
+            h += `<div class="m-ev">📉 100万回やると、理論の <b>${theo.toFixed(1)}%</b> にほぼぴったり一致した（実際 ${bigRet.toFixed(1)}%）。
+                <b>${mYen(big.bet)}</b> かけて <b>${mYen(big.ret)}</b> しかもどらない＝<b class="m-ev-big">${mYen(big.bet - big.ret)}の負け</b>。<br>
+                当たった回数は ${big.hits.toLocaleString('ja-JP')}回（${(big.hits / big.n * 100).toFixed(2)}%）、いちばん大きい当たりは ${mYen(big.best)}。</div>`;
+        }
+        h += `<div class="m-learn">💡 これが<b>大数の法則</b>。「運」は回数が少ないときだけ働く。回数が増えると運は消えて<b>計算だけが残る</b>。<br>
+            1回目の表を見て。<b>100回だけならプラスになることもある</b>——だから人は「自分は勝てる」と思ってしまう。でも回数がふえると必ず理論に飲みこまれる。<br>
+            だから胴元（お店・主催者）は<b>ぜったいにもうかる</b>。何万人ぶんもの回数を相手にしているからね。<br>
+            そして同じ法則を<b>味方につけて</b>使えるのが🛡️保険（みんなで損をならす）と📈長期の投資（プラスの期待値を時間で積む）だよ。</div>
+            <div style="text-align:center;margin-top:12px;">
+            <button class="btn" style="background:#8e44ad;color:#fff;" onclick="mGamSim('${code}')">もう一回</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('gam');">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
     function mBankHtml(m) {
         return `<div class="m-card"><b>🏦 銀行</b>
             <div style="font-size:12px;color:#888;">貯金は年0.1%の利息。安全だけど、ふえ方はとてもゆっくり</div>
@@ -2895,8 +3827,8 @@
             <button class="btn" style="background:#11998e;color:#fff;width:100%;margin-top:10px;" onclick="mStartQuiz()">${done.length >= M_QUIZ.length ? '🔁 もう一度あそぶ（お金なし）' : '▶️ クイズをはじめる'}</button></div>`;
     }
     let mTermCat = 'money', mTermQ = '';
-    const M_TERM_SETS = { money:['💴 お金', () => M_TERMS], econ:['📈 経済', () => M_TERMS_ECON], pol:['🏛️ 政治', () => M_TERMS_POL] };
-    const M_TERM_ALL = () => M_TERMS.concat(M_TERMS_ECON, M_TERMS_POL);
+    const M_TERM_SETS = { money:['💴 お金', () => M_TERMS], econ:['📈 経済', () => M_TERMS_ECON], pol:['🏛️ 政治', () => M_TERMS_POL], risk:['🛡️ 保険とリスク', () => M_TERMS_RISK] };
+    const M_TERM_ALL = () => M_TERMS.concat(M_TERMS_ECON, M_TERMS_POL, M_TERMS_RISK);
     function mTermListHtml() {
         const q = mTermQ.trim().toLowerCase();
         const src = q ? M_TERM_ALL() : M_TERM_SETS[mTermCat][1]();
@@ -3122,6 +4054,19 @@
             <div class="uh-box"><h3>📈 ふやす（投資）</h3><p>オルカン・S&P500などの投資信託、100社の株、債券、金、外貨、不動産、暗号資産が買える。<br>・<b>株は「株数」で買う</b>（1株千円なら100株で10万円）。<b>投信・そのほかは「金額」で買う</b><br>・値段は<b>ニュースと同じタイミング</b>で動く（1日3回）<br>・株の売り買いは<b>手数料0.5%</b>、投信は<b>0円</b>（ノーロード）<br>・投信は<b>信託報酬</b>という見えないコストが毎日かかる</p></div>
             <div class="uh-box"><h3>🎁 NISA（いちばん大事！）</h3><p>国が作った「税金が0円になる」制度。<br>・ふつうの口座 → もうけと配当に<b>20.315%</b>の税金<br>・NISA → <b>0円</b>！<br>・つみたて投資枠は<b>年120万円</b>まで、一生で<b>1800万円</b>まで<br>・買えるのは決められた<b>投資信託</b>だけ<br>投資画面の「🎁NISAで買う」を使うと、どれだけ税金を節約できたか見られるよ。</p></div>
             <div class="uh-box"><h3>💴 配当と税金のしくみ</h3><p>・<b>毎月5日</b>に配当・分配金がもらえる（株や投信を持っていると）<br>・課税口座は受け取る前に<b>20.315%</b>が引かれる（源泉徴収）<br>・NISAなら<b>まるごと</b>もらえる<br>・銀行の利息にも税金がかかる</p></div>
+            <div class="uh-box"><h3>🛡️ 保険のタブ</h3><p>お金がへる原因には「ちょっとずつへる」と「いっきに大きくへる」の2つがあって、保険は<b>後者だけ</b>のためのしくみ。<br>
+            ・まず<b>くらしの設定</b>（スマホを持つ／自転車に乗る／車に乗る…）をえらぶ。くらしが変わると必要な保険も変わるよ<br>
+            ・保険は<b>8しゅるい</b>。それぞれ<b>ライト🥉／スタンダード🥈／プレミアム🥇</b>の3プランがあって、<b>高いほど補償の割合・上限・サービスが良くなる</b>（免責0円・示談交渉・代車・24時間相談など）<br>
+            ・保険料は<b>毎月5日</b>に給料といっしょに引かれる。払えないと<b>解約</b>されてしまう（本物と同じ）<br>
+            ・毎日ちょっとの確率で「できごと」（けが・スマホがこわれる・事故…）が起きる。保険に入っていれば保険金が出て、入っていなければ全額じぶん。払えないぶんは<b>借金</b>になるよ<br>
+            ・<b>🔭保険シミュレーター</b>で「あなたの30年」と「1000人の1年」を早送りできる。<b>ここがいちばん勉強になる</b>！</p></div>
+            <div class="uh-box"><h3>🎲 ギャンブルのタブ</h3><p>これは<b>やるための場所ではなく、しくみを知るための場所</b>。大人になってからだまされないために、いま数字で見ておこう。<br>
+            ・日本の主なギャンブル（宝くじ・toto・競馬・競輪・競艇・オート・パチンコ・カジノ）を<b>還元率</b>でくらべられる<br>
+            ・使うのは<b>おためしチップ</b>だけ。<b>現金とは交換できない</b>（1日1回1万チップもらえる）<br>
+            ・<b>🔬まとめて計算</b>を押すと、100回・1万回・100万回やった結果が一気に出る。回数がふえるほど<b>還元率どおりに負けていく</b>のが目で見えるよ（大数の法則）<br>
+            ・年齢制限（公営ギャンブル20さい・パチンコ18さい・toto19さい）と、<b>オンラインカジノは犯罪</b>ということもここで覚えよう</p></div>
+            <div class="uh-box"><h3>⚖️ 3つを混ぜないこと</h3><p>🎲ギャンブル＝期待値マイナス・楽しむためのもの／🛡️保険＝期待値マイナス・大きな損を防ぐもの／📈投資＝期待値プラス・ふやすためのもの。<br>
+            <b>お金をふやす役ができるのは投資だけ</b>。この3つの役わりを混ぜないのが、お金でこまらない人の条件だよ。</p></div>
             <div class="uh-box"><h3>⚠️ 大事な考え方</h3><p>・<b>分散</b>：ひとつに全部かけない<br>・<b>長期</b>：あわてて売らない<br>・<b>つみたて</b>：毎日おなじ額を買うと安全（ドルコスト平均法）<br>・<b>複利</b>：時間が最強の味方。シミュレーターで試してみて<br>・「かならず儲かる」は<b>詐欺</b>。うまい話には裏がある</p></div>
             <div class="uh-box"><h3>📖 勉強もできる</h3><p>「じてん」には<b>お金・経済・政治</b>あわせて${M_TERM_ALL().length}語、「クイズ」には${M_QUIZ.length}問。ぜんぶ覚えたら大人より詳しくなれるよ！<br>資産は⚔️対戦ボードにも出るので、2人で競争できる。</p></div>
             <div style="text-align:center;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`);
