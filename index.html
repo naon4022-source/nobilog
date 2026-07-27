@@ -948,8 +948,14 @@
         runShareData = { title:'', items:[] }; usedMathT = {}; studyAnswersVisible = false;
         loadUserState();
         mApplyResets();       // 💰 リセット指定があれば1からやり直し（1回だけ・ふだんは空）
-        mIdbRestoreIfEmpty(); // 🛟 お金データが消えていたら、IndexedDBのコピーから買ったものを取りもどす
-        mApplyGrants();       // 🎁 配布があれば受け取る（1回だけ）
+        // ☁️ オンラインの記録を先に取りこんでから、配布を受け取る（順番が大事）
+        //    先に配布してしまうと、取りこみで上書きされて配布が無かったことになるため
+        cloudPull(true).then(() => {
+            mIdbRestoreIfEmpty();   // 🛟 それでも空ならIndexedDBのコピーから
+            mApplyGrants();         // 🎁 配布があれば受け取る（同じidは1回だけ）
+            const a = document.querySelector('.view.active');
+            if(a) switchView(a.id.replace('view-', ''));
+        }).catch(() => { mIdbRestoreIfEmpty(); mApplyGrants(); });
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
         applyUserNav();
@@ -1012,7 +1018,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '📝 <b>オンラインテスト</b>ができました！なおが作ったテストを、その場で2人が受けられるよ。①なおの<b>📤テスト作成（オンライン）</b>で、テスト名・制限時間・問題と答えを入れて出す。プリントを<b>写真にとって</b>つけたり、<b>PDF</b>をつけたりもできるよ📄②2人の<b>📩テスト（オンライン）</b>に届くので、制限時間つきで受ける（時間になったら自動で提出）③なおの<b>📥テストの解答</b>で答えを見て、<b>🤖AI採点</b>ボタンで一気に○△✕がつく（手で直せます）。保存すると本人の画面に点数と答え合わせが出るよ④<b>体験版アカウント（PIN 0001）</b>を作りました。勉強・テスト作成・間違い直し・百ます計算だけが使えます';
+    const UPDATE_NOW = '☁️ <b>きろくがオンライン保存になりました！</b>①保存するたびに<b>ネットの向こう</b>にも記録が送られます。だから<b>どの端末でひらいても同じきろく</b>になるし、スマホを変えても・アプリのデータが消えても、ログインすれば元にもどります②古い記録が新しい記録を上書きしないように、<b>保存番号</b>で新しい方を守るしくみを入れました③電波がないときも この端末に保存されて、つながったら自動で送られます④ホームの「🛟データのまもり」で状態が見られて、<b>☁️いますぐ同期する</b>ボタンも付けました⑤お金が一からになっていたので、<b>スタート資金 35万円</b>をお配りします🎁⑥体験版で使えない項目は、消さずに<b>灰色＋🔒</b>にして、押すと理由が出るようにしました';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -2685,7 +2691,10 @@
         { id:'20260725-owabi-nao', user:'u1', yen:50000, msg:'🙇 リニューアルのお詫びに5万円プレゼント！' },
         { id:'20260725-owabi-rir', user:'u2', yen:50000, msg:'🙇 リニューアルのお詫びに5万円プレゼント！' },
         { id:'20260727-start35-nao', user:'u1', to:350000, msg:'🎁 新しい生活のスタート資金！現金を35万円にしたよ' },
-        { id:'20260727-start35-rir', user:'u2', to:350000, msg:'🎁 新しい生活のスタート資金！現金を35万円にしたよ' }
+        { id:'20260727-start35-rir', user:'u2', to:350000, msg:'🎁 新しい生活のスタート資金！現金を35万円にしたよ' },
+        { id:'20260728-restart35-nao', user:'u1', to:350000, msg:'☁️ オンライン保存になりました！スタート資金の35万円をお配りします' },
+        { id:'20260728-restart35-rir', user:'u2', to:350000, msg:'☁️ オンライン保存になりました！スタート資金の35万円をお配りします' },
+        { id:'20260728-restart35-tri', user:'u3', to:350000, msg:'☁️ 体験版にもスタート資金の35万円をお配りします' }
     ];
     // 【お金データのリセット】ここにidを書くと、次に開いたとき1回だけ まっさら（1万円スタート）に戻る
     // ⚠️ここに書いた人は、次に開いたときお金データが消えて1万円からになる。ふだんは【必ず空】にしておくこと
@@ -3756,6 +3765,7 @@
             <div class="m-row"><span>保存した回数</span><b>${(m._sv || 0).toLocaleString('ja-JP')}回</b></div>
             <div class="m-row"><span>さいごに保存した時間</span><b>${m._at ? new Date(m._at).toLocaleString('ja-JP') : 'まだ'}</b></div>
             ${mRestored ? '<div class="m-ok">🛟 データが消えていたので、<b>ひかえから自動で元にもどした</b>よ！</div>' : ''}
+            ${cloudStatusHtml()}
             <div class="m-learn">💡 きかいを変えるときや、URLが変わったときは、ログイン画面の<b>「📦きろくの引っこし」</b>を使えば、買ったものごと まるごと運べるよ。</div></div>`;
         return h;
     }
@@ -10077,6 +10087,110 @@
         } catch(e) { alert('保存できなかった…（' + e.message + '）'); }
     }
 
+    // ============================================================
+    //  ☁️ きろくのクラウド保存
+    //   ・保存のたびにサーバーへまるごと送る（どの端末でひらいても同じ記録になる）
+    //   ・ログインしたときサーバーの方が新しければ、そっちを取りこむ
+    //   ・「保存番号(v)」で新旧を判断するので、古い記録が新しい記録を上書きしない
+    // ============================================================
+    let cloudTimer = null, cloudApplying = false, cloudState = { on:false, at:0, v:0, err:null, busy:false };
+    const cloudVKey = () => ukey('cloudV');
+    function cloudV() { const v = Number(localStorage.getItem(cloudVKey())); return isFinite(v) ? v : 0; }
+    // いまの人の記録キーをぜんぶ集める（ほかの人のデータは送らない）
+    function cloudCollect() {
+        const keys = {};
+        if(!currentUserId) return keys;
+        const pre = currentUserId + ':';
+        for(let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if(k && k.indexOf(pre) === 0 && k !== cloudVKey()) keys[k] = localStorage.getItem(k);
+        }
+        return keys;
+    }
+    const cloudHasData = (keys) => Object.keys(keys || {}).length > 0;
+    function cloudSchedule() {
+        if(!SYNC_URL || !currentUserId || cloudApplying) return;
+        clearTimeout(cloudTimer);
+        cloudTimer = setTimeout(cloudPush, 2500);       // 2.5秒まとめて送る（連打しない）
+    }
+    async function cloudPush() {
+        if(!SYNC_URL || !currentUserId || cloudApplying) return false;
+        const keys = cloudCollect();
+        if(!cloudHasData(keys)) return false;           // 空っぽを送ってサーバーを消さない
+        const v = cloudV() + 1;
+        cloudState.busy = true;
+        try {
+            const r = await fetch(SYNC_URL + '/save', { method:'POST',
+                headers: vbHeaders({ 'Content-Type':'application/json' }),
+                body: JSON.stringify({ user: currentUserId, v, keys }) });
+            const d = await r.json().catch(() => ({}));
+            if(d && d.stale) {                          // サーバーの方が新しかった → 追いつく
+                localStorage.setItem(cloudVKey(), String(d.v || v));
+                cloudState.err = null; cloudState.busy = false;
+                await cloudPull(true);
+                return false;
+            }
+            localStorage.setItem(cloudVKey(), String(v));
+            cloudState.on = true; cloudState.at = Date.now(); cloudState.v = v; cloudState.err = null;
+            return true;
+        } catch(e) { cloudState.err = e.message; return false; }
+        finally { cloudState.busy = false; }
+    }
+    async function cloudPull(quiet) {
+        if(!SYNC_URL || !currentUserId) return false;
+        cloudState.busy = true;
+        try {
+            const r = await fetch(SYNC_URL + '/save?user=' + encodeURIComponent(currentUserId),
+                                  { headers: vbHeaders(), cache:'no-store' });
+            const d = await r.json();
+            cloudState.on = true; cloudState.err = null;
+            if(!d || !d.keys || !cloudHasData(d.keys)) { if(cloudHasData(cloudCollect())) cloudSchedule(); return false; }
+            const mine = cloudV(), theirs = Number(d.v) || 0;
+            const localEmpty = !cloudHasData(cloudCollect());
+            if(theirs > mine || localEmpty) {
+                cloudApplying = true;
+                try {
+                    Object.keys(d.keys).forEach(k => { if(typeof d.keys[k] === 'string') localStorage.setItem(k, d.keys[k]); });
+                    localStorage.setItem(cloudVKey(), String(theirs));
+                } finally { cloudApplying = false; }
+                cloudState.at = d.at || Date.now(); cloudState.v = theirs;
+                loadUserState();
+                if(!quiet) setTimeout(() => alert('☁️ ほかの端末の記録を取りこんだよ！\nどの端末で開いても同じきろくになるよ。'), 300);
+                const act = document.querySelector('.view.active');
+                if(act) switchView(act.id.replace('view-', ''));
+                return true;
+            }
+            if(mine > theirs) cloudSchedule();           // 手元の方が新しい → 送る
+            cloudState.at = d.at || 0; cloudState.v = theirs;
+            return false;
+        } catch(e) { cloudState.err = e.message; return false; }
+        finally { cloudState.busy = false; }
+    }
+    // 画面をとじる直前にも送る（取りこぼしを減らす）
+    window.addEventListener('pagehide', () => { try { if(!SYNC_URL || !currentUserId) return;
+        const keys = cloudCollect(); if(!cloudHasData(keys)) return;
+        const v = cloudV() + 1; localStorage.setItem(cloudVKey(), String(v));
+        if(navigator.sendBeacon) {
+            // sendBeaconはヘッダーを付けられないので、合言葉はURLに付ける（サーバーは ?t= も見る）
+            navigator.sendBeacon(SYNC_URL + '/save?t=' + encodeURIComponent(SYNC_TOKEN), new Blob([JSON.stringify({ user: currentUserId, v, keys })], { type:'text/plain' }));
+        }
+    } catch(e) {} });
+    function cloudStatusHtml() {
+        if(!SYNC_URL) return '<div class="m-desc">オンライン保存は設定されていないよ</div>';
+        const t = cloudState.at ? new Date(cloudState.at).toLocaleString('ja-JP') : 'まだ';
+        return `<div class="m-row"><span>☁️ オンライン保存</span><b class="${cloudState.err ? 'm-down' : 'm-up'}">${cloudState.err ? 'つながっていない' : 'ON'}</b></div>
+            <div class="m-row"><span>さいごにオンラインへ保存</span><b>${t}</b></div>
+            <div class="m-row"><span>保存番号</span><b>${cloudState.v || cloudV()}</b></div>
+            ${cloudState.err ? `<div class="m-warn">いまオンラインにつながっていないよ（${esc(cloudState.err)}）。<br>この端末には保存されているので、電波のいいところで開けば自動で送られるよ。</div>` : ''}
+            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="cloudSyncNow()">☁️ いますぐ同期する</button>`;
+    }
+    async function cloudSyncNow() {
+        const got = await cloudPull(true);
+        if(!got) await cloudPush();
+        if(document.getElementById('view-money').classList.contains('active')) renderMoney();
+        alert(cloudState.err ? 'オンラインにつながらなかったよ…電波のいいところでもう一度ためしてね' : '☁️ 同期したよ！ほかの端末でも同じきろくになるよ。');
+    }
+
     // ===== 🛟 自動バックアップ（ボタン無し・全自動）。記録が変わるたびにIndexedDBへ裏で丸ごとコピーし、
     //       起動時にlocalStorageが消えていたら自動で復元する。IndexedDBが使えない環境では何もしない（アプリは通常どおり動く） =====
     let abTimer = null;
@@ -10147,8 +10261,8 @@
         try { // どの保存関数から書かれても漏れなくミラーされるよう、保存そのものをフックする
             const oSet = localStorage.setItem.bind(localStorage);
             const oRem = localStorage.removeItem.bind(localStorage);
-            localStorage.setItem = function(k, v) { oSet(k, v); abSchedule(); };
-            localStorage.removeItem = function(k) { oRem(k); abSchedule(); };
+            localStorage.setItem = function(k, v) { oSet(k, v); abSchedule(); cloudSchedule(); };
+            localStorage.removeItem = function(k) { oRem(k); abSchedule(); cloudSchedule(); };
         } catch(e) {}
         setInterval(abSaveNow, 5 * 60 * 1000);            // 保険の定期保存（5分ごと）
         window.addEventListener('pagehide', abSaveNow);    // アプリを閉じる直前にも保存
