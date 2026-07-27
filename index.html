@@ -988,7 +988,9 @@
     for(let d = 1; d <= 31; d++) HOMEWORK['2026-8-' + d] = [ { t:'夏休みを楽しむ🌻', self:true } ];
     // 📝 8月30日は「のびログ定期テスト」（5教科）
     HOMEWORK['2026-8-30'] = [ { t:'夏休みを楽しむ🌻', self:true },
-        { t:'📝 のびログ定期テスト（数学・国語・英語・理科・社会）', m:{ nobitest:true } } ];
+        { t:'📘 のびログ定期テスト 前半（数学・英語・国語／30分）', m:{ nobitest:'前半' } } ];
+    HOMEWORK['2026-8-31'] = [ { t:'夏休みを楽しむ🌻', self:true },
+        { t:'📗 のびログ定期テスト 後半（理科・社会／30分）', m:{ nobitest:'後半' } } ];
     // ===== 📅 毎年・毎月きまっている日（カレンダーに自動で出る）=====
     const CAL_EVENTS = [
         { d:5,  e:'💰', t:'給料日・配当金・つみたて・生活費のひきおとし', c:'#27ae60' },
@@ -996,7 +998,8 @@
         { d:25, e:'🧾', t:'カードの支払い日', c:'#e67e22' }
     ];
     const CAL_ONCE = {
-        '2026-8-30': [{ e:'📝', t:'のびログ定期テスト（5教科）', c:'#8e44ad' }],
+        '2026-8-30': [{ e:'📘', t:'のびログ定期テスト 前半（数学・英語・国語／30分）', c:'#8e44ad' }],
+        '2026-8-31': [{ e:'📗', t:'のびログ定期テスト 後半（理科・社会／30分）', c:'#8e44ad' }],
         '2026-6-5':  [{ e:'🎁', t:'夏のボーナス', c:'#e74c3c' }],
         '2026-12-5': [{ e:'🎁', t:'冬のボーナス', c:'#e74c3c' }],
         '2026-8-1':  [{ e:'🌻', t:'夏休み！ 宿題は「夏休みを楽しむ」だけ', c:'#f39c12' }],
@@ -1055,7 +1058,8 @@
             && (m.level == null || t.level >= m.level)
             && (m.pct == null || t.pct >= m.pct));
         if(m.study) return (day.studies || []).some(s => String(s.unit).includes(m.study));
-        if(m.nobitest) return (day.tests || []).some(t => t.subj === 'のびログ定期テスト');
+        if(m.nobitest) return (day.tests || []).some(t => String(t.subj).indexOf('のびログ定期テスト') >= 0
+            && (m.nobitest === true || String(t.subj).indexOf(m.nobitest) >= 0));
         return false;
     }
     function hwExpand(el) { // 「…つづき」を押すと全文が出る
@@ -1114,8 +1118,10 @@
         selEv.forEach(ev => { detail += `<div class="hw-item"><span class="hw-remind">${ev.e}</span><div class="hw-body"><span class="hw-text" style="color:${ev.c};font-weight:bold;">${esc(ev.t)}</span></div></div>`; });
         if(!selHw.length && !selEv.length) detail += `<div class="cal-empty">この日は宿題も予定もないよ😊</div>`;
         selHw.forEach((hw, i) => { detail += hwItemHtml(hw, sel, i); });
-        if(sel === '2026-8-30') detail += `<div style="text-align:center;margin-top:10px;">
-            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest()">📝 のびログ定期テストを受ける（5教科）</button></div>`;
+        const npi = nobiPartOf(sel);
+        if(npi >= 0) { const np = NOBI_TEST.parts[npi];
+            detail += `<div style="text-align:center;margin-top:10px;">
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest(${npi})">${np.e} のびログ定期テスト ${np.n} を受ける（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）</button></div>`; }
         detail += '</div>';
         document.getElementById('cal-list').innerHTML =
             `<div class="cal-head">${y}年 ${m+1}月</div><div class="cal-grid">${grid}</div>${detail}`;
@@ -1128,6 +1134,11 @@
         box.style.display = '';
         let html = `<div class="cal-date">📌 今日の宿題（${esc(calLabel(key))}）</div>`;
         hws.forEach((hw, i) => { html += hwItemHtml(hw, key, i); });
+        // 📝 のびログ定期テストの日は、ホームからそのまま受けられるようにする
+        const npi = nobiPartOf(key);
+        if(npi >= 0) { const np = NOBI_TEST.parts[npi];
+            html += `<div style="text-align:center;margin-top:8px;">
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest(${npi})">${np.e} のびログ定期テスト ${np.n} を受ける（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）</button></div>`; }
         box.innerHTML = html;
     }
 
@@ -6523,7 +6534,8 @@
 
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
-        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb) tb.style.display = 'none'; }
+        if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
+        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer) tb.style.display = 'none'; }
         if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
         document.getElementById(`view-${id}`).classList.add('active');
@@ -8945,24 +8957,38 @@
 
     // ===== 📝 のびログ定期テスト（5教科まとめて）=====
     //   数学・国語・英語・理科・社会を1回のテストで出す。ふつうのテストと同じ画面・同じ採点を使う。
-    const NOBI_TEST = { subjs:['数学','国語','英語','理科','社会'], each:12, level:4 };
-    function startNobiTest() {
-        if(!confirm('📝 のびログ定期テストを受ける？\n数学・国語・英語・理科・社会を ' + (NOBI_TEST.each * 5) + '問。\nとちゅうでやめると記録に残らないよ。')) return;
+    // 📝 のびログ定期テスト（本物の定期テストと同じで2日に分ける）
+    //   1日ぶんの中身は「20分で終わる量」、制限時間は30分（見直しの時間つき）
+    const NOBI_TEST = {
+        limit: 30,                                    // 制限時間（分）
+        parts: [
+            { day:'2026-8-30', n:'前半', e:'📘', subjs:[['数学',8],['英語',7],['国語',7]] },
+            { day:'2026-8-31', n:'後半', e:'📗', subjs:[['理科',11],['社会',11]] }
+        ]
+    };
+    let nobiPart = null, nobiTimer = null, nobiRemain = 0;
+    function nobiPartOf(day) { return NOBI_TEST.parts.findIndex(p => p.day === day); }
+    function startNobiTest(pi) {
+        const part = NOBI_TEST.parts[pi]; if(!part) return;
+        const total = part.subjs.reduce((a, x) => a + x[1], 0);
+        if(!confirm(`${part.e} のびログ定期テスト ${part.n} を受ける？\n\n${part.subjs.map(x => x[0] + ' ' + x[1] + '問').join('・')}（ぜんぶで${total}問）\n⏰ 制限時間は ${NOBI_TEST.limit}分（${Math.round(NOBI_TEST.limit * 0.67)}分ぐらいで終わる量だよ）\n\n時間になったら自動で答え合わせをします。`)) return;
         closeUnitHelp(); setUnitHelpBtn(false);
         currentRunMode = 'test';
-        pTest = { grade:'中1', subj:'のびログ定期テスト', unit:'5教科', level:NOBI_TEST.level, count:NOBI_TEST.each * 5 };
-        document.getElementById('print-title').innerText = 'のびログ定期テスト（5教科）';
-        document.getElementById('run-title').innerText = '📝 のびログ定期テスト（数学・国語・英語・理科・社会）';
+        nobiPart = pi;
+        pTest = { grade:'中1', subj:'のびログ定期テスト' + part.n, unit:part.subjs.map(x => x[0]).join('・'), level:4, count:total };
+        document.getElementById('print-title').innerText = `のびログ定期テスト ${part.n}`;
+        document.getElementById('run-title').innerText = `${part.e} のびログ定期テスト ${part.n}（${part.subjs.map(x => x[0]).join('・')}）`;
         testQuestionsData = [];
         const seen = new Set();
         usedMathT = {};
         let html = '', qIndex = 1;
-        NOBI_TEST.subjs.forEach((sj, si) => {
-            html += `<div style="margin-top:20px;margin-bottom:10px;font-size:18px;font-weight:bold;border-bottom:2px solid var(--main-color);">大問 ${si + 1}　${sj}</div><div class="grid-3">`;
-            for(let i = 0; i < NOBI_TEST.each; i++) {
-                const isWord = (sj === '数学') ? (i >= NOBI_TEST.each - 4) : (i >= NOBI_TEST.each - 3);
+        part.subjs.forEach((sp, si) => {
+            const sj = sp[0], cnt = sp[1];
+            html += `<div style="margin-top:20px;margin-bottom:10px;font-size:18px;font-weight:bold;border-bottom:2px solid var(--main-color);">大問 ${si + 1}　${sj}（${cnt}問）</div><div class="grid-3">`;
+            for(let i = 0; i < cnt; i++) {
+                const isWord = (sj === '数学') ? (i >= cnt - 3) : (i >= cnt - 2);
                 let q;
-                try { q = genUnique(sj, 'すべて', isWord, NOBI_TEST.level, seen); }
+                try { q = genUnique(sj, 'すべて', isWord, 4, seen); }
                 catch(e) { q = { q:'（問題を作れませんでした）', a:'', type:'text' }; }
                 testQuestionsData.push({ id:qIndex, daimon:si + 1, q:q.q, a:q.a, type:q.type, work:q.work, subj:sj });
                 html += `<div class="q-row ${q.type === 'text' ? 'grid-1' : ''}">
@@ -8978,10 +9004,40 @@
         document.getElementById('study-controls').style.display = 'none';
         const rc = document.getElementById('run-cheer'); if(rc) rc.style.display = 'none';
         switchView('run');
+        startNobiTimer(NOBI_TEST.limit);
         window.scrollTo(0, 0);
     }
-    function submitTest() {
-        if(!confirm("採点して終了しますか？")) return;
+    // ⏰ 30分のカウントダウン（英検のタイマーと同じ見た目・0になったら自動で採点）
+    function startNobiTimer(min) {
+        stopNobiTimer();
+        nobiRemain = min * 60;
+        const box = document.getElementById('timer-box');
+        box.style.display = 'flex';
+        document.getElementById('timer-text').innerText = fmtTime(nobiRemain);
+        nobiTimerColor(box);
+        nobiTimer = setInterval(() => {
+            nobiRemain--;
+            const t = document.getElementById('timer-text');
+            if(!t || !document.getElementById('view-run').classList.contains('active')) { stopNobiTimer(); return; }
+            t.innerText = fmtTime(Math.max(0, nobiRemain));
+            nobiTimerColor(box);
+            if(nobiRemain <= 0) { stopNobiTimer(); alert('⏰ 時間切れです！自動で答え合わせをします。'); submitTest(true); }
+        }, 1000);
+    }
+    function stopNobiTimer() {
+        if(nobiTimer) { clearInterval(nobiTimer); nobiTimer = null; }
+        const box = document.getElementById('timer-box');
+        if(box) { box.style.display = 'none'; box.classList.remove('timer-caution', 'timer-warn', 'timer-danger'); }
+    }
+    function nobiTimerColor(box) {
+        box.classList.remove('timer-caution', 'timer-warn', 'timer-danger');
+        if(nobiRemain <= 60) box.classList.add('timer-danger');
+        else if(nobiRemain <= 300) box.classList.add('timer-warn');
+        else if(nobiRemain <= 600) box.classList.add('timer-caution');
+    }
+    function submitTest(auto) {
+        if(!auto && !confirm("採点して終了しますか？")) return;
+        stopNobiTimer();
 
         let correct = 0;
         let daimonStats = {};
