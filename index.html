@@ -3064,7 +3064,7 @@
         // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
         gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
-        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0 },
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[] },
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
@@ -3141,6 +3141,8 @@
         ['chips','bet','ret','plays','sims','big','dayBet'].forEach(k => { if(typeof m.gam[k] !== 'number' || !isFinite(m.gam[k])) m.gam[k] = 0; });
         ['rank','ev','days','worked','absent','warn','totalPay','bonus'].forEach(k => { if(typeof m.job[k] !== 'number' || !isFinite(m.job[k])) m.job[k] = (k === 'ev' ? 60 : 0); });
         if(!Array.isArray(m.job.hist)) m.job.hist = [];
+        if(!Array.isArray(m.job.wish)) m.job.wish = [];
+        m.job.wish = m.job.wish.filter(c => mJobCo(c)).slice(0, 3);   // 知らない会社は消す・最大3つ
         if(!m.job.applied || typeof m.job.applied !== 'object') m.job.applied = {};
         if(m.job.co && !mJobCo(m.job.co)) m.job.co = null;                     // 知らない会社なら退職あつかい
         if(!m.home.own || typeof m.home.own !== 'object') m.home.own = {};
@@ -4427,6 +4429,7 @@
                     <div class="m-learn">💡 「年収1000万円」でも、実際に使えるのは<b>720万円ぐらい</b>。引かれたお金は、病院・年金・道路・学校になって自分たちに戻ってくるよ。<br>
                     <b>かせぐほど税率が上がる</b>のが累進課税。だから年収が2倍になっても、手取りは2倍にはならないんだ。</div></div>`;
             }
+            h += mWishHtml(m, mStudyPower());
             h += mBizHtml(m);
             h += `<div class="m-card"><b>🚪 会社をやめる</b>
                 <div class="m-desc">やめると給料が止まる。次の会社に受かる保証はないよ</div>
@@ -4440,7 +4443,9 @@
                 会社に入るには <b>①書類選考 → ②筆記試験 → ③面接</b> の3つを通らないといけない。本物と同じだよ。</div>
                 <div class="m-ev">📚 あなたの<b>勉強の実績</b>：<b class="m-ev-big">${sp.toLocaleString('ja-JP')}問</b><br>
                 書類選考はこれで決まる。<b>勉強すればするほど、良い会社を受けられる</b>ようになるよ。</div>
-                ${mStudyGuideHtml(sp)}
+                ${mStudyGuideHtml(sp)}`;
+            h += mWishHtml(m, sp);
+            h += `<div style="display:none;"></div>
                 ${j.hist.length ? `<div class="m-desc" style="margin-top:8px;">職歴：${j.hist.map(x=>esc(x)).join('／')}</div>` : ''}
                 ${m.debt > 0 || m.loans.length ? `<div class="m-warn">💳 借金があるよ。はやく就職しないと返せなくなる！</div>` : ''}</div>`;
             const tiers = [[5,'★★★★★ 超難関','日本でいちばん入りにくい会社たち'],[4,'★★★★ 難関','だれもが名前を知っている大企業'],[3,'★★★ 中堅','がんばれば手がとどく'],[2,'★★ 入りやすい','はじめの一歩に'],[1,'★ すぐ働ける','アルバイト・地元のお店']];
@@ -4453,7 +4458,7 @@
                     const cool = ap && ap.ng && (calDayNum(calToday()) - calDayNum(ap.day) < 7);
                     const okPaper = sp >= co2.need;
                     h += `<div class="m-row"><div style="flex:1;min-width:0;">
-                        <div class="m-name">${co2.e} ${esc(co2.n)} ${co2.arbeit ? '<span class="m-pill">バイト</span>' : ''}</div>
+                        <div class="m-name"><span style="cursor:pointer;font-size:17px;" title="入りたい会社に登録" onclick="mWishToggle('${co2.c}')">${mWishHas(m, co2.c) ? '⭐' : '☆'}</span> ${co2.e} ${esc(co2.n)} ${co2.arbeit ? '<span class="m-pill">バイト</span>' : ''}${mWishHas(m, co2.c) ? `<span class="m-pill" style="background:rgba(230,126,34,.18);color:#e67e22;">${M_WISH_LABEL[(m.job.wish||[]).indexOf(co2.c)]}</span>` : ''}</div>
                         <div class="m-desc">${esc(co2.sec)}／${esc(co2.d)}</div>
                         <div class="m-desc">求める人：${esc(M_WANT_NAME[co2.want])}／筆記の合格ライン ${co2.paper}%</div>
                         <div class="m-desc">${co2.perks.map(p=>'・'+esc(p)).join('<br>')}</div>
@@ -4468,6 +4473,88 @@
                 h += `</div>`;
             });
         }
+        return h;
+    }
+    // ===== 🎯 入りたい会社（第1〜第3志望・最大3つ）=====
+    const M_WISH_MAX = 3;
+    const M_WISH_LABEL = ['🥇 第1志望', '🥈 第2志望', '🥉 第3志望'];
+    function mWishHas(m, c) { return (m.job.wish || []).indexOf(c) >= 0; }
+    function mWishToggle(code) {
+        const co = mJobCo(code); if(!co) return;
+        const m = mLoad();
+        if(!Array.isArray(m.job.wish)) m.job.wish = [];
+        const i = m.job.wish.indexOf(code);
+        if(i >= 0) { m.job.wish.splice(i, 1); mSave(m); renderMoney(); return; }
+        if(m.job.wish.length >= M_WISH_MAX) {
+            alert(`「入りたい会社」は ${M_WISH_MAX}つ までだよ。\nどれかの ⭐ をもう一度おして外してから えらんでね。\n\nいまの3つ：\n` +
+                  m.job.wish.map((c, k) => `${M_WISH_LABEL[k]} ${mJobCo(c).n}`).join('\n'));
+            return;
+        }
+        m.job.wish.push(code);
+        mSave(m); playSfx('correct'); renderMoney();
+    }
+    function mWishUp(i) {   // 志望順を上げる
+        const m = mLoad(); const w = m.job.wish;
+        if(i <= 0 || !w[i]) return;
+        const t = w[i - 1]; w[i - 1] = w[i]; w[i] = t;
+        mSave(m); renderMoney();
+    }
+    // いまの実力に合わせて「いい感じの3社」をえらぶ（今すぐ／もう少し／あこがれ）
+    function mWishSuggest(sp) {
+        const byPay = (a, b) => b.pay - a.pay;
+        const now = M_JOBS.filter(j => sp >= j.need && !j.arbeit).sort(byPay)[0]
+                 || M_JOBS.filter(j => sp >= j.need).sort(byPay)[0];
+        const soon = M_JOBS.filter(j => j.need > sp && j.need <= sp + 400).sort(byPay)[0]
+                  || M_JOBS.filter(j => j.need > sp).sort((a, b) => a.need - b.need)[0];
+        const dream = M_JOBS.filter(j => j.diff === 5).sort(byPay)[0];
+        const out = [];
+        [now, soon, dream].forEach(j => { if(j && out.indexOf(j.c) < 0) out.push(j.c); });
+        // 3つに満たなければ、年収の高い順からうめる
+        M_JOBS.slice().sort(byPay).forEach(j => { if(out.length < 3 && out.indexOf(j.c) < 0) out.push(j.c); });
+        return out.slice(0, 3);
+    }
+    function mWishSetSuggest() {
+        const m = mLoad();
+        m.job.wish = mWishSuggest(mStudyPower());
+        mSave(m); playSfx('correct'); renderMoney();
+    }
+    function mWishHtml(m, sp) {
+        const w = (m.job.wish || []).map(c => mJobCo(c)).filter(Boolean);
+        if(!w.length) {
+            const sug = mWishSuggest(sp).map(c => mJobCo(c)).filter(Boolean);
+            return `<div class="m-card" style="border:3px solid #e67e22;"><b>🎯 入りたい会社（最大3つ）</b>
+                <div style="font-size:12px;color:#888;">目標を決めると、勉強がぐっと続けやすくなるよ。会社の ⭐ をおすと登録できる</div>
+                <div class="m-ev" style="margin-top:8px;">いまのあなたに<b>いい感じの3社</b>をえらんでみたよ：<br>
+                ${sug.map((j, i) => `${M_WISH_LABEL[i]}　${j.e} <b>${esc(j.n)}</b>（年収${(j.pay/10000).toLocaleString('ja-JP')}万・${sp >= j.need ? '<span style="color:#27ae60;">いま受けられる</span>' : 'あと' + (j.need - sp).toLocaleString('ja-JP') + '問'}）`).join('<br>')}</div>
+                <button class="btn" style="background:#e67e22;color:#fff;width:100%;margin-top:8px;" onclick="mWishSetSuggest()">🎯 この3社を目標にする</button>
+                <div class="m-learn">💡 「今すぐ受けられる会社」「もう少しで届く会社」「あこがれの会社」の3つにしてある。
+                <b>手がとどく目標と、遠い目標の両方を持つ</b>のが続けるコツだよ。</div></div>`;
+        }
+        let h = `<div class="m-card" style="border:3px solid #e67e22;"><b>🎯 入りたい会社（${w.length}/${M_WISH_MAX}）</b>
+            <div style="font-size:12px;color:#888;">会社の ⭐ をおすと入れかえられる。「↑」で志望順を上げられるよ</div>`;
+        w.forEach((j, i) => {
+            const ok = sp >= j.need, rest = Math.max(0, j.need - sp);
+            const pct = Math.min(100, Math.round(sp / Math.max(1, j.need) * 100));
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${M_WISH_LABEL[i]}　${j.e} ${esc(j.n)}</div>
+                <div class="m-desc">${esc(j.sec)}／年収 ${(j.pay/10000).toLocaleString('ja-JP')}万円（手取り月 ${mYen(mJobNet(j.pay/12).net)}）</div>
+                <div class="m-desc">${'★'.repeat(j.diff)}${'☆'.repeat(5 - j.diff)}／筆記の合格ライン ${j.paper}%／求める人：${esc(M_WANT_NAME[j.want])}</div>
+                ${ok ? `<div class="m-desc" style="color:#27ae60;font-weight:bold;">✅ 書類選考はクリア！いつでも受けられるよ</div>`
+                     : `<div style="margin-top:4px;"><div style="display:flex;justify-content:space-between;font-size:11px;color:#888;">
+                        <span>あと ${rest.toLocaleString('ja-JP')}問（数学テスト約${Math.max(1, Math.ceil(rest / 65))}回）</span><span>${pct}%</span></div>
+                        <div class="m-meter"><div style="width:${pct}%;background:#e67e22;"></div></div></div>`}
+              </div>
+              <div class="m-price">
+                ${i > 0 ? `<button class="m-btn m-info" style="margin-bottom:4px;" onclick="mWishUp(${i})">↑</button><br>` : ''}
+                <button class="m-btn ${ok ? 'm-buy' : 'm-info'}" onclick="${ok ? `mJobApply('${j.c}')` : `alert('まだ書類選考が通らないよ。あと${rest}問がんばろう！')`}" ${ok ? '' : ''}>受ける</button><br>
+                <button class="m-btn m-sell" style="margin-top:4px;" onclick="mWishToggle('${j.c}')">はずす</button>
+              </div></div>`;
+        });
+        const near = w.filter(j => sp < j.need).sort((a, b) => a.need - b.need)[0];
+        if(near) h += `<div class="m-learn">💡 いちばん近い目標は <b>${esc(near.n)}</b>。あと ${(near.need - sp).toLocaleString('ja-JP')}問。
+            1日1回テストをやれば、${Math.max(1, Math.ceil((near.need - sp) / 65))}日でとどくよ！</div>`;
+        else h += `<div class="m-ok">🎉 3つとも書類選考はクリア済み！あとは筆記と面接しだい。ぶつかっていこう！</div>`;
+        h += `</div>`;
         return h;
     }
     // 📚 「どこで勉強すれば実績がふえるか」を必ず画面に出す（ここが分からないと詰むため）
