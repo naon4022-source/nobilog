@@ -469,7 +469,10 @@
         <input id="login-pin" type="password" inputmode="numeric" maxlength="4" placeholder="PIN（4桁）">
         <div id="login-err"></div>
         <button class="btn btn-action" style="width:100%;" onclick="tryLogin()">🔓 はじめる</button>
-        <div style="margin-top:16px;font-size:12px;color:#888;">
+        <div style="margin-top:14px;font-size:13px;color:#888;border-top:1px dashed var(--border-color);padding-top:12px;">
+            はじめての人は <b style="color:var(--main-color);font-size:15px;">体験版 0001</b> で入れるよ
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:#888;">
             アドレスが変わって記録が見あたらない？
             <a href="#" onclick="openMigrate();return false;" style="color:var(--main-color);font-weight:bold;">📦 きろくの引っこし</a>
         </div>
@@ -508,15 +511,18 @@
 
 <div id="sidebar">
     <div onclick="toggleMenu()" style="text-align:right; padding:10px; cursor:pointer;">✕</div>
-    <div class="nav-item" onclick="switchView('study')">📖 勉強 (問題作成)</div>
-    <div class="nav-item" onclick="switchView('test-setup')">📝 テスト作成</div>
-    <div class="nav-item" onclick="switchView('review')">🔁 間違い直し</div>
-    <div class="nav-item" onclick="switchView('hyakumasu')">🧮 百ます計算</div>
-    <div class="nav-item" onclick="switchView('calendar')">🗓️ カレンダー（宿題）</div>
-    <div class="nav-item" onclick="switchView('game')">🎮 きろく・あそび</div>
-    <div class="nav-item" onclick="switchView('money')">🏛️ 政治と経済</div>
-    <div class="nav-item" onclick="switchView('life')">🏠 生活</div>
-    <div class="nav-item" onclick="switchView('stats')">📊 成績・グラフ</div>
+    <div class="nav-item" id="nav-study" onclick="switchView('study')">📖 勉強 (問題作成)</div>
+    <div class="nav-item" id="nav-test-setup" onclick="switchView('test-setup')">📝 テスト作成</div>
+    <div class="nav-item" id="nav-review" onclick="switchView('review')">🔁 間違い直し</div>
+    <div class="nav-item" id="nav-hyakumasu" onclick="switchView('hyakumasu')">🧮 百ます計算</div>
+    <div class="nav-item" id="nav-ottake" onclick="switchView('ottake')">📩 テスト（オンライン）</div>
+    <div class="nav-item" id="nav-otmake" onclick="switchView('otmake')">📤 テスト作成（オンライン）</div>
+    <div class="nav-item" id="nav-otans" onclick="switchView('otans')">📥 テストの解答</div>
+    <div class="nav-item" id="nav-calendar" onclick="switchView('calendar')">🗓️ カレンダー（宿題）</div>
+    <div class="nav-item" id="nav-game" onclick="switchView('game')">🎮 きろく・あそび</div>
+    <div class="nav-item" id="nav-money" onclick="switchView('money')">🏛️ 政治と経済</div>
+    <div class="nav-item" id="nav-life" onclick="switchView('life')">🏠 生活</div>
+    <div class="nav-item" id="nav-stats" onclick="switchView('stats')">📊 成績・グラフ</div>
 </div>
 
 <div class="container">
@@ -703,6 +709,24 @@
         <div id="money-body"></div>
     </div>
 
+    <!-- ================= 📤 テスト作成（オンライン・なおのみ） ================= -->
+    <div id="view-otmake" class="view">
+        <h1 class="no-print">📤 テスト作成（オンライン）</h1>
+        <div id="otmake-body"></div>
+    </div>
+
+    <!-- ================= 📩 テスト（オンライン・2人） ================= -->
+    <div id="view-ottake" class="view">
+        <h1 class="no-print">📩 テスト（オンライン）</h1>
+        <div id="ottake-body"></div>
+    </div>
+
+    <!-- ================= 📥 テストの解答（なおのみ） ================= -->
+    <div id="view-otans" class="view">
+        <h1 class="no-print">📥 テストの解答</h1>
+        <div id="otans-body"></div>
+    </div>
+
     <!-- ================= 🏠 生活 ================= -->
     <div id="view-life" class="view">
         <h1 class="no-print">🏠 生活 <button style="font-size:22px;background:none;border:none;cursor:pointer;opacity:.5;vertical-align:middle;" title="あそび方" onclick="mLifeHelp()">❓</button></h1>
@@ -812,12 +836,29 @@
         history: [] // { id, timestamp, type, title, score, details }
     };
 
+    // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／テスト作成はなおだけ）
+    const TRIAL_HIDE = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-otmake', 'nav-otans', 'nav-ottake'];
+    const OWNER_ONLY = ['nav-otmake', 'nav-otans'];
+    function applyUserNav() {
+        const show = (id, on) => { const el = document.getElementById(id); if(el) el.style.display = on ? '' : 'none'; };
+        ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-otmake','nav-otans']
+            .forEach(id => show(id, true));
+        if(isTrial()) TRIAL_HIDE.forEach(id => show(id, false));
+        else OWNER_ONLY.forEach(id => show(id, isOwner()));
+        // 体験版は「お知らせ」と「今日の宿題」を出さない
+        const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
+        if(ub) ub.style.display = isTrial() ? 'none' : '';
+        if(th) th.style.display = isTrial() ? 'none' : '';
+    }
     // ===== 👤 ユーザー（PINだけで判定：3258=なお / 8569=りらん）。記録はユーザーごとのキーに分けて保存 =====
     const APP_USERS = [
-        { id:'u1', name:'なお',  pin:'2085949129' },  // PINのハッシュ値
-        { id:'u2', name:'りらん', pin:'2086130119' }
+        { id:'u1', name:'なお',  pin:'2085949129', owner:true },  // PINのハッシュ値。owner=テストを作れる人
+        { id:'u2', name:'りらん', pin:'2086130119' },
+        { id:'u3', name:'体験版', pin:'2085845764', trial:true }   // PIN 0001（お試し用・使える機能を制限）
     ];
-    let currentUserId = null;
+    let currentUserId = null, currentUser = null;
+    const isTrial = () => !!(currentUser && currentUser.trial);      // 体験版か
+    const isOwner = () => !!(currentUser && currentUser.owner);      // テストを出せる人（なお）
     const ukey = k => currentUserId ? currentUserId + ':' + k : k; // ユーザー別の保存キー
     function pinHash(s) { let h = 5381; for(const c of String(s)) h = ((h * 33) ^ c.charCodeAt(0)) >>> 0; return String(h); }
 
@@ -888,6 +929,7 @@
         pinFail = 0;
         // ログイン成功
         currentUserId = u.id;
+        currentUser = u;
         stopEikenTimer(); ekGraded = false; ekQData = []; testQuestionsData = []; reviewList = [];
         runShareData = { title:'', items:[] }; usedMathT = {}; studyAnswersVisible = false;
         loadUserState();
@@ -896,7 +938,8 @@
         mApplyGrants();       // 🎁 配布があれば受け取る（1回だけ）
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
-        document.getElementById('user-chip').innerText = '👤 ' + u.name;
+        applyUserNav();
+        document.getElementById('user-chip').innerText = '👤 ' + u.name + (u.trial ? '（体験版）' : '');
         document.getElementById('login-overlay').classList.remove('on');
         showMotivation();
         switchView('study');
@@ -955,10 +998,11 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🎉 大アップデート！①<b>🏠生活</b>が「生活／娯楽／ショップ」の3つに。保険も生活の固定費になりました。塾・推し活（金額は自分で決める）・ショップ（お菓子〜パソコン）も追加②<b>💼仕事</b>の会社が<b>127社</b>に大増量！バイトも30種類。<b>ボーナス（6月・12月）</b>・<b>残業</b>・<b>有給</b>・<b>資格手当</b>（英検合格で毎月）・<b>起業</b>もできるように🚀③<b>💳借金</b>の会社が14社に。住宅ローン・奨学金・リボ払いも④<b>🎲ギャンブル</b>は16種類、ぜんぶ遊べます。毎週月曜0:00に<b>今週のイチオシ</b>が入れかわるよ⑤<b>📰ニュースが10倍</b>（のびログ版121本・現実版84本）。株価もどんどん動きます📈⑥<b>🏦銀行</b>に 定期預金・ATM手数料のワナ・年金の見える化・ふるさと納税・複利の30年グラフ・<b>詐欺を見わける練習</b>を追加⑦<b>📈投資</b>に 決算はっぴょう・株主優待・配当の再投資・為替を追加⑧<b>🏛️政治</b>に<b>選挙シミュレーター</b>（投票すると税金と生活が変わる🗳️）⑨<b>📝8月30日は のびログ定期テスト</b>（数学・国語・英語・理科・<b>社会</b>の5教科）。カレンダーから受けられるよ⑩8月の宿題は<b>「夏休みを楽しむ」だけ</b>。楽しめたら自分でチェック🌻⑪みんなに<b>35万円</b>をお配りしました🎁';
+    const UPDATE_NOW = '📝 <b>オンラインテスト</b>ができました！なおが作ったテストを、その場で2人が受けられるよ。①なおの<b>📤テスト作成（オンライン）</b>で、テスト名・制限時間・問題と答えを入れて出す。プリントを<b>写真にとって</b>つけたり、<b>PDF</b>をつけたりもできるよ📄②2人の<b>📩テスト（オンライン）</b>に届くので、制限時間つきで受ける（時間になったら自動で提出）③なおの<b>📥テストの解答</b>で答えを見て、<b>🤖AI採点</b>ボタンで一気に○△✕がつく（手で直せます）。保存すると本人の画面に点数と答え合わせが出るよ④<b>体験版アカウント（PIN 0001）</b>を作りました。勉強・テスト作成・間違い直し・百ます計算だけが使えます';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
+        if(isTrial()) { el.style.display = 'none'; el.innerHTML = ''; return; }   // 体験版はお知らせを出さない
         // UPDATE_NOW はこのファイルに書いてある固定の文（ユーザーの入力ではない）ので、
         // <b> などの太字がそのまま効くように esc() は通さない。※ここに人の入力を入れないこと
         el.innerHTML = `<div class="u-now">📢 今回のアップデート：${UPDATE_NOW}</div>`;
@@ -1129,6 +1173,7 @@
     // ホーム（勉強画面）の「今日の宿題」＝お知らせの下。自動チェックのみ
     function renderTodayHomework() {
         const box = document.getElementById('today-hw'); if(!box) return;
+        if(isTrial()) { box.style.display = 'none'; box.innerHTML = ''; return; }
         const key = calToday(), hws = HOMEWORK[key] || [];
         if(!hws.length) { box.style.display = 'none'; box.innerHTML = ''; return; }
         box.style.display = '';
@@ -6658,8 +6703,15 @@
 
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
+        // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
+        if(isTrial() && ['calendar','game','money','life','stats','otmake','otans'].indexOf(id) >= 0) {
+            alert('この機能は体験版では使えないよ。\n体験版では 勉強・テスト作成・間違い直し・百ます計算 がぜんぶ使えるよ！');
+            return;
+        }
+        if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); return; }
+        if(id !== 'ottake') otStopTimer();         // 📩 オンラインテストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
-        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer) tb.style.display = 'none'; }
+        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer && !otTimer) tb.style.display = 'none'; }
         if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
         document.getElementById(`view-${id}`).classList.add('active');
@@ -6671,6 +6723,9 @@
         if(id === 'game') renderGame();
         if(id === 'money') renderMoney();
         if(id === 'life') renderLife();
+        if(id === 'otmake') renderOtMake();
+        if(id === 'ottake') renderOtTake();
+        if(id === 'otans') renderOtAns();
         if(id === 'run') showRunCheer();
     }
 
@@ -9598,6 +9653,407 @@
         btns.forEach(b => b.innerText = '← 成績にもどる');
         const ov = document.getElementById('unit-help-overlay');
         ov.classList.add('on'); ov.scrollTop = 0;
+    }
+
+    // ============================================================
+    //  📝 オンラインテスト（なおが作って出す → 2人が受ける → 解答が集まる → 採点）
+    // ============================================================
+    const OT_MAX_FILE = 6 * 1024 * 1024;   // 1つのテストに付けられる資料の合計（およそ6MB）
+    let otDraft = { title:'', limit:20, items:[], files:[] };
+    let otNow = null, otTimer = null, otRemain = 0;
+    let otCacheTests = [], otCacheAns = [];
+
+    function otHeaders(extra) { return vbHeaders(extra); }
+    async function otGet(path) {
+        if(!SYNC_URL) throw new Error('オンラインの設定がありません');
+        const r = await fetch(SYNC_URL + path, { headers: otHeaders(), cache:'no-store' });
+        if(!r.ok) throw new Error('サーバーエラー ' + r.status);
+        return await r.json();
+    }
+    async function otPost(path, body) {
+        if(!SYNC_URL) throw new Error('オンラインの設定がありません');
+        const r = await fetch(SYNC_URL + path, { method:'POST', headers: otHeaders({ 'Content-Type':'application/json' }), body: JSON.stringify(body) });
+        if(!r.ok) throw new Error('サーバーエラー ' + r.status);
+        return await r.json();
+    }
+    const otFmt = (sec) => { const m2 = Math.floor(sec / 60), s2 = sec % 60; return m2 + ':' + String(s2).padStart(2, '0'); };
+    const otWhen = (ms) => { const d = new Date(ms); return `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; };
+    const otUserName = (uid) => (APP_USERS.find(u => u.id === uid) || {}).name || uid;
+
+    // ---------- 📤 つくる（なおだけ） ----------
+    function renderOtMake() {
+        const box = document.getElementById('otmake-body'); if(!box) return;
+        if(!isOwner()) { box.innerHTML = '<div class="m-warn">この画面は なお のアカウントだけで使えるよ。</div>'; return; }
+        let h = `<div class="m-card"><b>①　テストの名前と時間をきめる</b>
+            <div class="st-grid" style="margin-top:8px;">
+              <div class="st-cell" style="flex:2;">テスト名<input class="st-input" id="ot-title" type="text" placeholder="例：夏休み まとめテスト" value="${esc(otDraft.title)}" oninput="otDraft.title=this.value"></div>
+              <div class="st-cell">制限時間(分)<input class="st-input" id="ot-limit" type="number" min="1" max="180" value="${otDraft.limit}" oninput="otDraft.limit=Math.max(1,Math.min(180,Number(this.value)||20))"></div>
+            </div></div>`;
+        h += `<div class="m-card"><b>②　問題用紙をつける（PDF・写真）</b>
+            <div style="font-size:12px;color:#888;">プリントを写真にとって出せば、それがそのまま問題用紙になるよ。PDFでもOK（合計6MBまで）</div>
+            <input type="file" id="ot-file" accept="image/*,application/pdf" multiple style="margin-top:8px;width:100%;" onchange="otAddFiles(this)">
+            <div id="ot-files" style="margin-top:8px;">${otFilesHtml()}</div></div>`;
+        h += `<div class="m-card"><b>③　問題と答えを入れる</b>
+            <div style="font-size:12px;color:#888;">ここに入れた「答え」で🤖AI採点ができるよ。答えが決まらない問題は、答えを空っぽにしてもOK</div>
+            <div id="ot-items">${otItemsHtml()}</div>
+            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="otAddItem()">＋ 問題をふやす</button>
+            <button class="btn" style="background:#7f8c8d;color:#fff;width:100%;margin-top:6px;" onclick="otBulk()">📋 まとめて入れる（1行に1問）</button></div>`;
+        const total = otDraft.items.length;
+        h += `<div class="m-card"><b>④　オンラインに出す</b>
+            <div class="m-row"><span>テスト名</span><b>${esc(otDraft.title) || '（まだ）'}</b></div>
+            <div class="m-row"><span>問題数</span><b>${total}問</b></div>
+            <div class="m-row"><span>制限時間</span><b>${otDraft.limit}分</b></div>
+            <div class="m-row"><span>問題用紙</span><b>${otDraft.files.length}まい</b></div>
+            <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:17px;" onclick="otPublish()">🚀 2人に出す</button>
+            <div class="m-learn">💡 出すと、なお と りらん の「📩テスト（オンライン）」にすぐ出てくるよ。</div></div>`;
+        h += `<div class="m-card"><b>📚 出したテスト</b><div id="ot-list">よみこみ中…</div></div>`;
+        box.innerHTML = h;
+        otLoadTests().then(() => { const el = document.getElementById('ot-list'); if(el) el.innerHTML = otMadeListHtml(); })
+                     .catch(e => { const el = document.getElementById('ot-list'); if(el) el.innerHTML = '<div class="m-warn">オンラインにつながらなかったよ（' + esc(e.message) + '）</div>'; });
+    }
+    function otItemsHtml() {
+        if(!otDraft.items.length) return '<div style="color:#888;font-size:13px;padding:6px 0;">まだ問題がないよ。「＋問題をふやす」か「まとめて入れる」を使ってね</div>';
+        return otDraft.items.map((it, i) => `<div class="m-row"><div style="flex:1;min-width:0;">
+            <div style="font-size:12px;color:#888;">(${i + 1})</div>
+            <input class="m-search" style="margin-bottom:4px;" type="text" placeholder="問題文" value="${esc(it.q)}" oninput="otDraft.items[${i}].q=this.value">
+            <input class="m-search" type="text" placeholder="答え（AI採点に使う・空でもOK）" value="${esc(it.a)}" oninput="otDraft.items[${i}].a=this.value">
+          </div><button class="m-btn m-sell" onclick="otDelItem(${i})">けす</button></div>`).join('');
+    }
+    function otFilesHtml() {
+        if(!otDraft.files.length) return '<div style="color:#888;font-size:13px;">まだ付けていないよ</div>';
+        return otDraft.files.map((f, i) => `<div class="m-row"><div style="flex:1;min-width:0;">
+            <div class="m-name">${f.type.indexOf('image') === 0 ? '🖼️' : '📄'} ${esc(f.name)}</div>
+            <div class="m-desc">${Math.round(f.data.length / 1400)}KB ぐらい</div>
+            ${f.type.indexOf('image') === 0 ? `<img src="${f.data}" style="max-width:100%;max-height:160px;border-radius:8px;margin-top:6px;">` : ''}
+          </div><button class="m-btn m-sell" onclick="otDelFile(${i})">けす</button></div>`).join('');
+    }
+    function otAddItem() { otDraft.items.push({ q:'', a:'' }); renderOtMake(); }
+    function otDelItem(i) { otDraft.items.splice(i, 1); renderOtMake(); }
+    function otDelFile(i) { otDraft.files.splice(i, 1); renderOtMake(); }
+    function otBulk() {
+        const v = prompt('1行に1問ずつ書いてね。\n「問題 → 答え」の順で、あいだを「｜」か「,」で区切ると答えも入るよ。\n\n例）\n1+1は？｜2\n日本の首都は？｜東京', '');
+        if(v === null) return;
+        String(v).split(/\n+/).forEach(line => {
+            const t = line.trim(); if(!t) return;
+            const m2 = t.split(/[｜|,、\t]/);
+            otDraft.items.push({ q: (m2[0] || '').trim(), a: (m2[1] || '').trim() });
+        });
+        renderOtMake();
+    }
+    // 写真は小さくしてから付ける（大きすぎると送れないため）
+    function otAddFiles(input) {
+        const files = [].slice.call(input.files || []);
+        if(!files.length) return;
+        let done = 0;
+        files.forEach(f => {
+            if(f.type.indexOf('image') === 0) {
+                const rd = new FileReader();
+                rd.onload = () => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const max = 1400, sc = Math.min(1, max / Math.max(img.width, img.height));
+                        const cv = document.createElement('canvas');
+                        cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
+                        cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+                        otDraft.files.push({ name:f.name, type:'image/jpeg', data: cv.toDataURL('image/jpeg', 0.72) });
+                        if(++done === files.length) { input.value = ''; renderOtMake(); }
+                    };
+                    img.onerror = () => { if(++done === files.length) { input.value = ''; renderOtMake(); } };
+                    img.src = rd.result;
+                };
+                rd.readAsDataURL(f);
+            } else {
+                if(f.size > OT_MAX_FILE) { alert(`${f.name} は大きすぎるよ（${Math.round(f.size/1024/1024)}MB）。6MBより小さいPDFにしてね。`); if(++done === files.length) { input.value=''; renderOtMake(); } return; }
+                const rd = new FileReader();
+                rd.onload = () => { otDraft.files.push({ name:f.name, type:f.type || 'application/pdf', data: rd.result });
+                    if(++done === files.length) { input.value = ''; renderOtMake(); } };
+                rd.readAsDataURL(f);
+            }
+        });
+    }
+    async function otPublish() {
+        if(!otDraft.title.trim()) { alert('テストの名前を入れてね'); return; }
+        if(!otDraft.items.length && !otDraft.files.length) { alert('問題か、問題用紙（写真・PDF）のどちらかは入れてね'); return; }
+        const size = JSON.stringify(otDraft).length;
+        if(size > 11000000) { alert('資料が大きすぎるよ。写真を減らすか、小さくしてね。'); return; }
+        if(!confirm(`「${otDraft.title}」を2人に出す？\n問題${otDraft.items.length}問／制限時間${otDraft.limit}分`)) return;
+        try {
+            await otPost('/tests', { title: otDraft.title.trim(), limit: otDraft.limit, by: currentUserId,
+                                     items: otDraft.items.filter(x => (x.q || '').trim() || (x.a || '').trim()), files: otDraft.files });
+            otDraft = { title:'', limit:20, items:[], files:[] };
+            alert('🚀 出したよ！2人の「📩テスト（オンライン）」に出てくるよ。');
+            renderOtMake();
+        } catch(e) { alert('出せなかった…オンラインにつながっているか確認してね\n（' + e.message + '）'); }
+    }
+    async function otLoadTests() { const d = await otGet('/tests'); otCacheTests = (d && d.tests) || []; return otCacheTests; }
+    async function otLoadAnswers() { const d = await otGet('/answers'); otCacheAns = (d && d.answers) || []; return otCacheAns; }
+    function otMadeListHtml() {
+        if(!otCacheTests.length) return '<div style="color:#888;font-size:13px;">まだ出していないよ</div>';
+        return otCacheTests.map(t => `<div class="m-row"><div style="flex:1;min-width:0;">
+            <div class="m-name">${esc(t.title)}</div>
+            <div class="m-desc">${(t.items||[]).length}問／${t.limit}分／${(t.files||[]).length}まい／${otWhen(t.at)}</div>
+          </div><button class="m-btn m-sell" onclick="otDelTest('${t.id}')">消す</button></div>`).join('');
+    }
+    async function otDelTest(id) {
+        if(!confirm('このテストと、提出された解答をぜんぶ消す？')) return;
+        try { await otPost('/tests?del=' + encodeURIComponent(id), {}); await otLoadTests(); renderOtMake(); }
+        catch(e) { alert('消せなかった…（' + e.message + '）'); }
+    }
+
+    // ---------- 📩 うける（2人とも） ----------
+    function renderOtTake() {
+        const box = document.getElementById('ottake-body'); if(!box) return;
+        box.innerHTML = '<div class="m-card">オンラインからテストをさがしています…</div>';
+        Promise.all([otLoadTests(), otLoadAnswers().catch(() => [])]).then(() => {
+            let h = '';
+            if(!otCacheTests.length) h += `<div class="m-card"><b>📭 いまテストは出ていないよ</b>
+                <div style="font-size:13px;color:#888;margin-top:6px;">なおがテストを出すと、ここに出てくるよ。</div></div>`;
+            otCacheTests.forEach(t => {
+                const mine = otCacheAns.find(a => a.testId === t.id && a.user === currentUserId);
+                h += `<div class="m-card"><b>📝 ${esc(t.title)}</b>
+                    <div class="m-row"><span>問題数</span><b>${(t.items||[]).length}問${(t.files||[]).length ? '＋問題用紙' + (t.files||[]).length + 'まい' : ''}</b></div>
+                    <div class="m-row"><span>制限時間</span><b>⏰ ${t.limit}分</b></div>
+                    <div class="m-row"><span>出された日</span><b>${otWhen(t.at)}</b></div>`;
+                if(mine) {
+                    h += `<div class="m-ok">✅ 提出ずみ（${otWhen(mine.at)}）${typeof mine.score === 'number' ? `<br>採点けっか：<b>${mine.score}点</b>` : '<br>採点をまってね'}</div>`;
+                    if(mine.graded) h += `<button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:8px;" onclick="otShowResult('${t.id}')">📊 答え合わせを見る</button>`;
+                    h += `<button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:6px;" onclick="otStart('${t.id}',true)">もう一度うける（上書き）</button>`;
+                } else {
+                    h += `<button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:17px;" onclick="otStart('${t.id}')">▶️ このテストを受ける</button>`;
+                }
+                h += `</div>`;
+            });
+            box.innerHTML = h;
+        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`; });
+    }
+    function otStart(id, again) {
+        const t = otCacheTests.find(x => x.id === id); if(!t) return;
+        if(!confirm(`「${t.title}」を始める？\n⏰ 制限時間 ${t.limit}分（時間になったら自動で提出）\n\n始めたら最後までやりきろう！`)) return;
+        otNow = { t, answers: (t.items || []).map(() => '') };
+        const box = document.getElementById('ottake-body');
+        let h = `<div class="m-card" style="border:3px solid #e74c3c;"><b>📝 ${esc(t.title)}</b>
+            <div class="m-desc">全${(t.items||[]).length}問／制限時間 ${t.limit}分</div></div>`;
+        (t.files || []).forEach((f, i) => {
+            if(f.type.indexOf('image') === 0) h += `<div class="m-card"><b>📄 問題用紙 ${i + 1}</b><img src="${f.data}" style="width:100%;border-radius:8px;margin-top:6px;"></div>`;
+            else h += `<div class="m-card"><b>📄 問題用紙 ${i + 1}（PDF）</b>
+                <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="otOpenFile('${t.id}',${i})">📄 ${esc(f.name)} をひらく</button></div>`;
+        });
+        h += `<div class="m-card"><b>✍️ 答えを入れてね</b>`;
+        (t.items || []).forEach((it, i) => {
+            h += `<div class="q-row grid-1"><div class="q-text">(${i + 1}) ${esc(it.q)}</div>
+                <input type="text" class="q-input" id="ot-a-${i}" placeholder="答え" oninput="otNow.answers[${i}]=this.value"></div>`;
+        });
+        if(!(t.items || []).length) h += `<div style="color:#888;font-size:13px;">問題用紙を見て、下の欄に番号ごとに答えを書いてね</div>`;
+        h += `</div>
+            <div class="m-card"><button class="btn" style="background:#27ae60;color:#fff;width:100%;font-size:17px;" onclick="otSubmit()">✅ 提出する</button>
+            <button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:8px;" onclick="otQuit()">やめる（提出しない）</button></div>`;
+        box.innerHTML = h;
+        otStartTimer(t.limit);
+        window.scrollTo(0, 0);
+    }
+    function otOpenFile(id, i) {
+        const t = otCacheTests.find(x => x.id === id); if(!t) return;
+        const f = (t.files || [])[i]; if(!f) return;
+        try {
+            const b64 = f.data.split(',')[1];
+            const bin = atob(b64), arr = new Uint8Array(bin.length);
+            for(let k = 0; k < bin.length; k++) arr[k] = bin.charCodeAt(k);
+            const url = URL.createObjectURL(new Blob([arr], { type: f.type }));
+            window.open(url, '_blank');
+            setTimeout(() => URL.revokeObjectURL(url), 60000);
+        } catch(e) { alert('ひらけなかったよ'); }
+    }
+    function otStartTimer(min) {
+        otStopTimer();
+        otRemain = min * 60;
+        const box = document.getElementById('timer-box');
+        box.style.display = 'flex';
+        document.getElementById('timer-text').innerText = otFmt(otRemain);
+        otTimer = setInterval(() => {
+            otRemain--;
+            const t = document.getElementById('timer-text');
+            if(!t || !document.getElementById('view-ottake').classList.contains('active')) { otStopTimer(); return; }
+            t.innerText = otFmt(Math.max(0, otRemain));
+            box.classList.remove('timer-caution', 'timer-warn', 'timer-danger');
+            if(otRemain <= 60) box.classList.add('timer-danger');
+            else if(otRemain <= 300) box.classList.add('timer-warn');
+            else if(otRemain <= 600) box.classList.add('timer-caution');
+            if(otRemain <= 0) { otStopTimer(); alert('⏰ 時間切れ！ここまでの答えを提出するね。'); otSubmit(true); }
+        }, 1000);
+    }
+    function otStopTimer() {
+        if(otTimer) { clearInterval(otTimer); otTimer = null; }
+        const box = document.getElementById('timer-box');
+        if(box) { box.style.display = 'none'; box.classList.remove('timer-caution', 'timer-warn', 'timer-danger'); }
+    }
+    function otQuit() { if(!confirm('やめる？答えは保存されないよ')) return; otStopTimer(); otNow = null; renderOtTake(); }
+    async function otSubmit(auto) {
+        if(!otNow) return;
+        if(!auto && !confirm('提出する？あとから見直せないよ')) return;
+        otStopTimer();
+        const body = { testId: otNow.t.id, user: currentUserId, name: otUserName(currentUserId), answers: otNow.answers };
+        try {
+            await otPost('/answers', body);
+            const nq = (otNow.t.items || []).length;
+            otNow = null;
+            alert('✅ 提出したよ！おつかれさま。\nなおが採点したら、ここで点数が見られるよ。');
+            if(nq > 0) { motiAddDone(nq); flowerAddActivity(); gameOnActivity(nq, { correct:0 }); }
+            renderOtTake();
+        } catch(e) { alert('提出できなかった…電波のいいところでもう一度ためしてね\n（' + e.message + '）'); }
+    }
+    function otShowResult(id) {
+        const t = otCacheTests.find(x => x.id === id);
+        const a = otCacheAns.find(x => x.testId === id && x.user === currentUserId);
+        if(!t || !a) return;
+        let h = `<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">📊 ${esc(t.title)} の けっか</h2>
+            <div class="m-ev" style="text-align:center;font-size:18px;"><b>${a.score}点</b>（${(a.marks||[]).filter(m2=>m2==='○').length} / ${(t.items||[]).length}問 正解）</div>`;
+        (t.items || []).forEach((it, i) => {
+            const mk = (a.marks || [])[i] || '';
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-desc">(${i + 1}) ${esc(it.q)}</div>
+                <div style="font-size:13px;">あなたの答え：<b>${esc((a.answers || [])[i] || '（空）')}</b></div>
+                ${it.a ? `<div style="font-size:13px;color:#e74c3c;">正解：<b>${esc(it.a)}</b></div>` : ''}
+              </div><div style="font-size:22px;">${mk === '○' ? '⭕️' : mk === '△' ? '△' : '❌'}</div></div>`;
+        });
+        h += `<div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
+
+    // ---------- 📥 解答を見る・採点する（なおだけ） ----------
+    function renderOtAns() {
+        const box = document.getElementById('otans-body'); if(!box) return;
+        if(!isOwner()) { box.innerHTML = '<div class="m-warn">この画面は なお のアカウントだけで使えるよ。</div>'; return; }
+        box.innerHTML = '<div class="m-card">よみこみ中…</div>';
+        Promise.all([otLoadTests(), otLoadAnswers()]).then(() => {
+            let h = '';
+            if(!otCacheTests.length) h += `<div class="m-card">まだテストを出していないよ</div>`;
+            otCacheTests.forEach(t => {
+                const list = otCacheAns.filter(a => a.testId === t.id);
+                h += `<div class="m-card"><b>📝 ${esc(t.title)}</b>
+                    <div class="m-desc">${(t.items||[]).length}問／${t.limit}分／${otWhen(t.at)}</div>`;
+                if(!list.length) h += `<div style="color:#888;font-size:13px;padding:6px 0;">まだ だれも提出していないよ</div>`;
+                list.forEach(a => {
+                    h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                        <div class="m-name">👤 ${esc(a.name || otUserName(a.user))}</div>
+                        <div class="m-desc">提出 ${otWhen(a.at)}${typeof a.score === 'number' ? `／採点ずみ <b>${a.score}点</b>` : '／まだ採点していない'}</div>
+                      </div><button class="m-btn m-buy" onclick="otOpenAns('${t.id}','${a.user}')">見る</button></div>`;
+                });
+                h += `</div>`;
+            });
+            box.innerHTML = h;
+        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）</div>`; });
+    }
+    function otOpenAns(tid, uid) {
+        const t = otCacheTests.find(x => x.id === tid);
+        const a = otCacheAns.find(x => x.testId === tid && x.user === uid);
+        if(!t || !a) return;
+        const items = t.items || [];
+        let h = `<div style="text-align:left;max-width:600px;margin:0 auto;">
+            <h2 style="text-align:center;">👤 ${esc(a.name || otUserName(uid))} の解答</h2>
+            <div class="m-desc" style="text-align:center;">${esc(t.title)}／提出 ${otWhen(a.at)}</div>
+            <div style="text-align:center;margin:10px 0;">
+              <button class="btn" style="background:#8e44ad;color:#fff;" onclick="otAiGrade('${tid}','${uid}')">🤖 AI採点する</button>
+            </div>`;
+        if(typeof a.score === 'number') h += `<div class="m-ev" style="text-align:center;font-size:18px;">いまの点数：<b>${a.score}点</b></div>`;
+        items.forEach((it, i) => {
+            const mk = (a.marks || [])[i] || '';
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-desc">(${i + 1}) ${esc(it.q)}</div>
+                <div style="font-size:14px;">答え：<b>${esc((a.answers || [])[i] || '（空）')}</b></div>
+                ${it.a ? `<div style="font-size:12px;color:#888;">正解：${esc(it.a)}</div>` : ''}
+              </div>
+              <div style="white-space:nowrap;">
+                ${['○','△','✕'].map(x => `<button class="m-btn ${mk === x ? 'm-buy' : 'm-info'}" style="padding:4px 8px;" onclick="otMark('${tid}','${uid}',${i},'${x}')">${x}</button>`).join('')}
+              </div></div>`;
+        });
+        if(!items.length) h += `<div class="m-desc">この テストは問題用紙だけなので、下の欄に書かれた答えを見て採点してね</div>`
+            + (a.answers || []).map((x, i) => `<div class="m-row"><span>(${i + 1})</span><b>${esc(x)}</b></div>`).join('');
+        h += `<div style="text-align:center;margin-top:12px;">
+            <button class="btn" style="background:#27ae60;color:#fff;" onclick="otSaveGrade('${tid}','${uid}')">💾 採点を保存して知らせる</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
+    // 手で○△✕をつける
+    function otMark(tid, uid, i, mk) {
+        const a = otCacheAns.find(x => x.testId === tid && x.user === uid); if(!a) return;
+        if(!Array.isArray(a.marks)) a.marks = [];
+        a.marks[i] = mk;
+        a.score = otScoreOf(otCacheTests.find(x => x.id === tid), a);
+        otOpenAns(tid, uid);
+    }
+    function otScoreOf(t, a) {
+        const items = (t && t.items) || [];
+        if(!items.length) return 0;
+        let pt = 0;
+        items.forEach((it, i) => { const mk = (a.marks || [])[i]; pt += mk === '○' ? 1 : mk === '△' ? 0.5 : 0; });
+        return Math.round(pt / items.length * 100);
+    }
+    // 🤖 AI採点：正解と見くらべて ○△✕ を自動でつける（表記ゆれ・1文字ちがいも拾う）
+    function otAiGrade(tid, uid) {
+        const t = otCacheTests.find(x => x.id === tid);
+        const a = otCacheAns.find(x => x.testId === tid && x.user === uid);
+        if(!t || !a) return;
+        const items = t.items || [];
+        if(!items.length || !items.some(x => (x.a || '').trim())) { alert('正解が入っていないので自動では採点できないよ。\n○△✕のボタンで手でつけてね。'); return; }
+        a.marks = items.map((it, i) => {
+            const ua = (a.answers || [])[i] || '';
+            if(!(it.a || '').trim()) return '';
+            return otJudge(ua, it.a);
+        });
+        a.score = otScoreOf(t, a);
+        otOpenAns(tid, uid);
+        setTimeout(() => alert(`🤖 AI採点おわり！\n${a.score}点（○ ${a.marks.filter(m2=>m2==='○').length} ／ △ ${a.marks.filter(m2=>m2==='△').length} ／ ✕ ${a.marks.filter(m2=>m2==='✕').length}）\n\nちがうと思ったところは ○△✕ のボタンで直せるよ。\nさいごに「💾採点を保存して知らせる」をおしてね。`), 200);
+    }
+    // 半角カナ→全角カナの対応表（ﾄｳｷｮｳ と トウキョウ を同じあつかいにするため）
+    const OT_KANA = { 'ｱ':'ア','ｲ':'イ','ｳ':'ウ','ｴ':'エ','ｵ':'オ','ｶ':'カ','ｷ':'キ','ｸ':'ク','ｹ':'ケ','ｺ':'コ',
+        'ｻ':'サ','ｼ':'シ','ｽ':'ス','ｾ':'セ','ｿ':'ソ','ﾀ':'タ','ﾁ':'チ','ﾂ':'ツ','ﾃ':'テ','ﾄ':'ト',
+        'ﾅ':'ナ','ﾆ':'ニ','ﾇ':'ヌ','ﾈ':'ネ','ﾉ':'ノ','ﾊ':'ハ','ﾋ':'ヒ','ﾌ':'フ','ﾍ':'ヘ','ﾎ':'ホ',
+        'ﾏ':'マ','ﾐ':'ミ','ﾑ':'ム','ﾒ':'メ','ﾓ':'モ','ﾔ':'ヤ','ﾕ':'ユ','ﾖ':'ヨ',
+        'ﾗ':'ラ','ﾘ':'リ','ﾙ':'ル','ﾚ':'レ','ﾛ':'ロ','ﾜ':'ワ','ｦ':'ヲ','ﾝ':'ン',
+        'ｧ':'ァ','ｨ':'ィ','ｩ':'ゥ','ｪ':'ェ','ｫ':'ォ','ｬ':'ャ','ｭ':'ュ','ｮ':'ョ','ｯ':'ッ' };
+    function otNorm(s2) {
+        let t = String(s2 || '');
+        // 半角カナ（濁点・半濁点つきも）を全角にそろえる
+        t = t.replace(/([ｦ-ﾝ])(ﾞ|ﾟ)?/g, (mm, k, d) => {
+            const base = OT_KANA[k] || k;
+            if(!d) return base;
+            const v = 'カキクケコサシスセソタチツテトハヒフヘホ'.indexOf(base);
+            if(d === 'ﾞ' && v >= 0) return String.fromCharCode(base.charCodeAt(0) + 1);
+            if(d === 'ﾟ' && 'ハヒフヘホ'.indexOf(base) >= 0) return String.fromCharCode(base.charCodeAt(0) + 2);
+            return base;
+        });
+        return t.replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0))
+            .replace(/[−ーｰ–]/g, '-').replace(/\s+/g, '').replace(/[.,!?'’"`。、]/g, '').toLowerCase();
+    }
+    function otDist(x, y) {   // レーベンシュタイン距離（1文字ちがいを見つける）
+        const dp = Array.from({ length: x.length + 1 }, (_, i) => [i].concat(new Array(y.length).fill(0)));
+        for(let j = 0; j <= y.length; j++) dp[0][j] = j;
+        for(let i = 1; i <= x.length; i++) for(let j = 1; j <= y.length; j++)
+            dp[i][j] = Math.min(dp[i-1][j] + 1, dp[i][j-1] + 1, dp[i-1][j-1] + (x[i-1] === y[j-1] ? 0 : 1));
+        return dp[x.length][y.length];
+    }
+    function otJudge(user, correct) {
+        const u = otNorm(user), c = otNorm(correct);
+        if(!u) return '✕';
+        // 「,」「/」で区切って、どれかに合っていれば正解あつかい
+        const alts = String(correct).split(/[\/／,、]|または/).map(otNorm).filter(Boolean);
+        if(alts.some(x => x === u)) return '○';
+        if(u === c) return '○';
+        if(alts.some(x => x.indexOf(u) === 0 && u.length >= Math.max(2, x.length - 1))) return '○';
+        const d = Math.min.apply(null, alts.concat([c]).map(x => otDist(u, x)));
+        if(d === 1 && c.length >= 2) return '△';
+        if(d === 2 && c.length >= 6) return '△';
+        return '✕';
+    }
+    async function otSaveGrade(tid, uid) {
+        const a = otCacheAns.find(x => x.testId === tid && x.user === uid); if(!a) return;
+        try {
+            await otPost('/answers', Object.assign({}, a, { graded:true, gradedAt: Date.now() }));
+            a.graded = true;
+            alert('💾 採点を保存したよ。本人の「📩テスト」に点数が出るようになったよ。');
+            gCloseModal(); renderOtAns();
+        } catch(e) { alert('保存できなかった…（' + e.message + '）'); }
     }
 
     // ===== 🛟 自動バックアップ（ボタン無し・全自動）。記録が変わるたびにIndexedDBへ裏で丸ごとコピーし、
