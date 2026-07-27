@@ -4439,7 +4439,8 @@
                 <div style="font-size:13px;line-height:1.9;">お金は「もらえるもの」じゃなくて「はたらいて手に入れるもの」。<br>
                 会社に入るには <b>①書類選考 → ②筆記試験 → ③面接</b> の3つを通らないといけない。本物と同じだよ。</div>
                 <div class="m-ev">📚 あなたの<b>勉強の実績</b>：<b class="m-ev-big">${sp.toLocaleString('ja-JP')}問</b><br>
-                書類選考はこれで決まる。<b>勉強すればするほど、良い会社を受けられる</b>ようになるよ。（勉強・テストを解くと増える）</div>
+                書類選考はこれで決まる。<b>勉強すればするほど、良い会社を受けられる</b>ようになるよ。</div>
+                ${mStudyGuideHtml(sp)}
                 ${j.hist.length ? `<div class="m-desc" style="margin-top:8px;">職歴：${j.hist.map(x=>esc(x)).join('／')}</div>` : ''}
                 ${m.debt > 0 || m.loans.length ? `<div class="m-warn">💳 借金があるよ。はやく就職しないと返せなくなる！</div>` : ''}</div>`;
             const tiers = [[5,'★★★★★ 超難関','日本でいちばん入りにくい会社たち'],[4,'★★★★ 難関','だれもが名前を知っている大企業'],[3,'★★★ 中堅','がんばれば手がとどく'],[2,'★★ 入りやすい','はじめの一歩に'],[1,'★ すぐ働ける','アルバイト・地元のお店']];
@@ -4456,7 +4457,7 @@
                         <div class="m-desc">${esc(co2.sec)}／${esc(co2.d)}</div>
                         <div class="m-desc">求める人：${esc(M_WANT_NAME[co2.want])}／筆記の合格ライン ${co2.paper}%</div>
                         <div class="m-desc">${co2.perks.map(p=>'・'+esc(p)).join('<br>')}</div>
-                        ${okPaper ? '' : `<div class="m-desc" style="color:#e74c3c;">📕 書類選考に あと ${(co2.need - sp).toLocaleString('ja-JP')}問 の勉強が必要</div>`}
+                        ${okPaper ? '' : `<div class="m-desc" style="color:#e74c3c;">📕 書類選考に あと <b>${(co2.need - sp).toLocaleString('ja-JP')}問</b>（数学テスト約${Math.max(1, Math.ceil((co2.need - sp) / 65))}回ぶん）</div>`}
                         ${cool ? `<div class="m-desc" style="color:#e74c3c;">😢 前回ダメだったので、あと ${7 - (calDayNum(calToday()) - calDayNum(ap.day))}日 は受けられない</div>` : ''}
                       </div>
                       <div class="m-price"><div style="font-size:12px;color:#888;">年収</div><div><b>${(co2.pay/10000).toLocaleString('ja-JP')}万</b></div>
@@ -4467,6 +4468,42 @@
                 h += `</div>`;
             });
         }
+        return h;
+    }
+    // 📚 「どこで勉強すれば実績がふえるか」を必ず画面に出す（ここが分からないと詰むため）
+    function mStudyGuideHtml(sp) {
+        const tiers = [[1,'★ すぐ働ける'],[2,'★★ 入りやすい'],[3,'★★★ 中堅'],[4,'★★★★ 難関'],[5,'★★★★★ 超難関']];
+        // いま受けられる会社の数と、次の目標
+        const canNow = M_JOBS.filter(j => sp >= j.need).length;
+        const next = M_JOBS.filter(j => sp < j.need).sort((a, b) => a.need - b.need)[0];
+        let h = `<div class="m-card" style="border:3px solid #11998e;"><b>📚 実績のふやし方（どこで勉強する？）</b>
+            <div style="font-size:12px;color:#888;">「問題を解いた数」がそのまま実績になるよ。正解でなくても、解けば数えられる</div>
+            <div class="m-tw" style="margin-top:8px;"><table class="m-gtab">
+            <thead><tr><th>どこで</th><th class="r">1回でふえる数</th></tr></thead><tbody>
+            <tr class="good"><td>📝 テスト作成 → <b>数学</b><br><span style="color:#888;font-size:11px;">いちばん効率がいい</span></td><td class="r"><b>約65問</b></td></tr>
+            <tr><td>📝 テスト作成 → 英語</td><td class="r">約45問</td></tr>
+            <tr><td>📝 テスト作成 → 理科</td><td class="r">約40問</td></tr>
+            <tr><td>📝 テスト作成 → 国語</td><td class="r">約30問</td></tr>
+            <tr><td>🔤 テスト作成 → 英検5/4/3級</td><td class="r">30〜35問</td></tr>
+            <tr><td>📖 勉強</td><td class="r">チェックした数</td></tr>
+            <tr><td>🔁 間違い直し</td><td class="r">直した数</td></tr>
+            </tbody></table></div>
+            <div style="display:flex;gap:8px;margin-top:10px;">
+              <button class="btn" style="background:#11998e;color:#fff;flex:1;" onclick="switchView('test-setup')">📝 テストを作る</button>
+              <button class="btn" style="background:#2980b9;color:#fff;flex:1;" onclick="switchView('study')">📖 勉強する</button>
+            </div>
+            <div class="m-row" style="margin-top:10px;"><span>いま受けられる会社</span><b>${canNow} / ${M_JOBS.length}社</b></div>`;
+        if(next) {
+            const rest = next.need - sp;
+            h += `<div class="m-row"><span>つぎに受けられるようになる会社</span><b>${next.e} ${esc(next.n)}</b></div>
+                <div style="margin-top:6px;"><div style="display:flex;justify-content:space-between;font-size:12px;">
+                <span>あと ${rest.toLocaleString('ja-JP')}問（数学テスト約${Math.max(1, Math.ceil(rest / 65))}回）</span><b>${Math.round(sp / next.need * 100)}%</b></div>
+                <div class="m-meter"><div style="width:${Math.min(100, Math.round(sp / next.need * 100))}%;background:#11998e;"></div></div></div>`;
+        } else {
+            h += `<div class="m-ok">🎉 ぜんぶの会社の書類選考を通れるようになったよ！あとは筆記と面接しだい。</div>`;
+        }
+        h += `<div class="m-learn">💡 これは本物の就職でも同じ。<b>勉強してきた量が、選べる会社の数になる</b>。
+        いま勉強しているのは、将来の「えらべる自由」を増やすためなんだ。</div></div>`;
         return h;
     }
     // ===== 選考 =====
