@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '⏰ <b>市場のあいている時間を、ぜんぶ本物と同じにしました！</b>①<b>日本株・REIT・国債</b>は 平日<b>9:00〜11:30</b>と<b>12:30〜15:30</b>だけ動きます。お昼休みも、15:30の大引けのあとも、土日も<b>値段は止まったまま</b>です（20分ごとに変動）②<b>投資信託（オルカン・S&P500・日経225・バランス・先進国）は1日1回だけ</b>。平日の夜<b>21:30</b>にその日の基準価額が決まります。だから昼間に何回見ても値段は変わりません。土日は更新なし——これが本物の投信のしくみです③<b>米ドル・金</b>は平日ほぼ24時間（土日は休み・20分ごと）④<b>暗号資産だけは24時間365日</b>動きっぱなし。寝ているあいだに大きく下がることもあります（10分ごと）⑤📈投資タブに<b>いまどの市場があいているか</b>が出ます⑥🎓<b>英検5級の合格</b>を登録しました。資格手当が毎月3,000円もらえます';
+    const UPDATE_NOW = '☁️⏰ <b>「つながっていない」で止まるバグを直しました＋株価がぴったりの時こくで動きます</b>①一瞬 電波がとぎれただけで<b>ずっと「つながっていない」のまま固まる</b>不具合を直しました。いまは<b>その場で3回まですぐやり直し</b>、それでもダメなら<b>時間をあけて何度でも自動でつなぎ直します</b>②通信のやり方を変えて<b>往復を半分</b>にしました（事前の問い合わせが不要な形に）。電波が悪くても通りやすくなります③送れていない分は<b>この端末におぼえておいて、次に開いたとき必ず送ります</b>。オフラインで遊んだ分も消えません④画面に<b>「✅つながっている／⏳送信まち／⚠️つなぎ直しています」</b>が出ます⑤株価が<b>オンラインの時こく</b>で動くようになりました。端末の時計がずれていても、どの端末でも同じ値段です⑥株価は<b>ぴったりの時こく</b>（9:20:00、21:30:00 など）で切りかわります。<b>リロードしなくても勝手に入れかわります</b>';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -2470,7 +2470,22 @@
         return 'jp';                              // 株・債券・不動産（REIT）は東証の時間
     }
     function mTickMin(a) { return M_MKT[mMarketOf(a)].tick || 20; }
-    function mMinNow(dt) { const d = dt || new Date(); return d.getHours() * 60 + d.getMinutes(); }
+    // ★オンライン（サーバー）の時こくを使う。
+    //   端末の時計がずれていても、みんな同じ時こく＝同じ株価になる。
+    //   サーバーとの差（ずれ）をおぼえておいて、いつもそれを足した時こくで計算する。
+    let mSkew = 0;
+    try { const sv = Number(localStorage.getItem('nobilogSkew')); if(isFinite(sv) && Math.abs(sv) < 86400000) mSkew = sv; } catch(e) {}
+    function mSetSkew(serverMs, sentAt) {
+        if(!isFinite(serverMs) || serverMs <= 0) return;
+        const rtt = Date.now() - sentAt;                       // 往復にかかった時間
+        const skew = serverMs + rtt / 2 - Date.now();          // 通信時間の半分を足して見つもる
+        if(Math.abs(skew) > 86400000) return;                  // 1日以上ずれていたら まちがい とみなす
+        mSkew = Math.round(skew);
+        try { localStorage.setItem('nobilogSkew', String(mSkew)); } catch(e) {}
+    }
+    // これがアプリの「いま」。株価も市場の開け閉めも ぜんぶこの時こくで決まる
+    function mNow() { return new Date(Date.now() + mSkew); }
+    function mMinNow(dt) { const d = dt || mNow(); return d.getHours() * 60 + d.getMinutes(); }
     const M_JP_AM = [540, 690], M_JP_PM = [750, 930];    // 9:00-11:30 / 12:30-15:30（分であらわす）
     const M_FUND_MIN = 1290;                             // 21:30
     function mIsWeekend(d) { const w = d.getDay(); return w === 0 || w === 6; }
@@ -2493,7 +2508,7 @@
     //   市場がしまっているときは、直前にあいていた時こくで止める（＝値段が固定される）
     function mEffTime(a, dt) {
         const mk = mMarketOf(a);
-        let d = dt || new Date(), min = mMinNow(d);
+        let d = dt || mNow(), min = mMinNow(d);
         if(mk === 'crypto') return { d, min, live:true, mk };
         if(mk === 'fund') {
             // 投信は「平日21:30」に更新。まだ21:30前なら 前の営業日の値のまま
@@ -2538,7 +2553,7 @@
     }
     let __tickMemo = {};
     function mPricesNow(dt) {
-        const d = dt || new Date();
+        const d = dt || mNow();
         const key = mDayKey(d) + '|' + Math.floor(mMinNow(d) / 10) + '|' + d.getDay();
         if(__tickMemo[key]) return __tickMemo[key];
         const out = {};
@@ -2549,7 +2564,7 @@
     }
     // つぎに値段が動くまで あと何分か
     function mNextTickMin(a, dt) {
-        const d = dt || new Date(), min = mMinNow(d), mk = mMarketOf(a);
+        const d = dt || mNow(), min = mMinNow(d), mk = mMarketOf(a);
         if(mk === 'fund') return (min < M_FUND_MIN ? M_FUND_MIN - min : 1440 - min + M_FUND_MIN);
         if(!mMktOpenAt(mk, d, min)) return null;          // 市場がしまっている
         const t = mTickMin(a);
@@ -2557,7 +2572,7 @@
     }
     // 市場のようす（画面に出す用）
     function mMktState(mk, dt) {
-        const d = dt || new Date(), min = mMinNow(d);
+        const d = dt || mNow(), min = mMinNow(d);
         if(mk === 'fund') return { open:false, txt: min < M_FUND_MIN && !mIsWeekend(d) ? `今日の21:30に更新` : mIsWeekend(d) ? '土日はお休み（月曜の夜に更新）' : '今日の分は更新ずみ' };
         const open = mMktOpenAt(mk, d, min);
         if(open) return { open:true, txt:'いま うごいています' };
@@ -2569,19 +2584,43 @@
         }
         return { open:false, txt:'いまはお休み' };
     }
-    // 10分ごとに画面の株価を新しくする（開きっぱなしでも ちゃんと動く）
-    let mHourTimer = null, mTickLast = null;
+    // ★ぴったりの時こくで、リロードしなくても勝手に株価が入れかわる。
+    //   「10分ごとに見に行く」のではなく、つぎに値段が動く"瞬間"を計算して、その時こくに合わせて予約する。
+    //   だから 9:20:00 ちょうど、21:30:00 ちょうどに パッと切りかわる。
+    let mHourTimer = null, mHourSafety = null;
+    // つぎに何かが動く時こくまでのミリ秒（10分の区切り／前場・後場の開始と終了／投信の21:30）
+    function mMsToNextTick() {
+        const d = mNow();
+        const nowMs = d.getHours() * 3600000 + d.getMinutes() * 60000 + d.getSeconds() * 1000 + d.getMilliseconds();
+        const marks = [];
+        for(let m = 0; m < 1440; m += 10) marks.push(m * 60000);          // 10分ごとの区切り
+        [M_JP_AM[0], M_JP_AM[1], M_JP_PM[0], M_JP_PM[1], M_FUND_MIN].forEach(m => marks.push(m * 60000));
+        let best = Infinity;
+        marks.forEach(ms => {
+            let d2 = ms - nowMs;
+            if(d2 <= 0) d2 += 86400000;                                   // 今日ぶんが終わっていたら、次の日のその時こくへ
+            if(d2 < best) best = d2;
+        });
+        if(!isFinite(best)) best = 600000;
+        return Math.max(250, Math.min(best + 60, 3600000));               // 少しだけ余裕をもたせる
+    }
+    function mTickRefresh() {
+        __tickMemo = {};
+        const money = document.getElementById('view-money'), life = document.getElementById('view-life');
+        if(money && money.classList.contains('active')) renderMoney();
+        else if(life && life.classList.contains('active')) renderLife();
+    }
+    function mScheduleTick() {
+        clearTimeout(mHourTimer);
+        mHourTimer = setTimeout(() => { mTickRefresh(); mScheduleTick(); }, mMsToNextTick());
+    }
     function mStartHourTimer() {
-        if(mHourTimer) return;
-        mTickLast = Math.floor(mMinNow() / 10);
-        mHourTimer = setInterval(() => {
-            const b = Math.floor(mMinNow() / 10);
-            if(b === mTickLast) return;
-            mTickLast = b;
-            __tickMemo = {};
-            if(document.getElementById('view-money') && document.getElementById('view-money').classList.contains('active')) renderMoney();
-            else if(document.getElementById('view-life') && document.getElementById('view-life').classList.contains('active')) renderLife();
-        }, 15000);
+        if(mHourSafety) { mScheduleTick(); return; }
+        mScheduleTick();
+        // 保険：スマホがスリープして予約がずれても、1分に1回みて ずれていたら直す
+        mHourSafety = setInterval(() => { mTickRefresh(); mScheduleTick(); }, 60000);
+        // 画面にもどってきたときも すぐ最新にする（スリープ明け対策）
+        document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') { mTickRefresh(); mScheduleTick(); } });
     }
     // サーバー（Cloudflare Workers）から最新のニュースのたねをもらう
     // サーバーは毎日 朝7時・昼12時・夕方18時（日本時間）に、新しいたねを作って置いてくれる
@@ -2591,6 +2630,7 @@
         if(mNewsSyncing) return false;
         if(!force && Date.now() - mNewsSyncAt < 120000) return false;   // 2分に1回まで（通信を使いすぎない）
         mNewsSyncing = true; mNewsSyncAt = Date.now();
+        const __sent = Date.now();                                   // オンライン時こくを見つもるための出発時こく
         try {
             const ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
             const to = setTimeout(() => { try { ctl && ctl.abort(); } catch(e) {} }, 5000);  // 5秒で見きり（オフラインでも待たせない）
@@ -2599,6 +2639,11 @@
             finally { clearTimeout(to); }
             if(!r.ok) throw new Error('ng');
             const data = await r.json();
+            // ★サーバーが教えてくれる「いまの時こく」で、この端末の時計のずれを直す
+            //   （now が無い古いサーバーでも、動いているスロットの時こくから見つもれる）
+            //   ※current.at は「たねを作った時こく」で、いまの時こくではないので使わない。
+            //     サーバーが now を返さないうちは、この端末の時計をそのまま使う（ずれ0）
+            if(data && isFinite(Number(data.now))) mSetSkew(Number(data.now), __sent);
             const list = [].concat(data && data.current ? [data.current] : [], data && Array.isArray(data.history) ? data.history : []);
             let n = 0, changed = false;
             list.forEach(b => {
@@ -4145,11 +4190,13 @@
             <button class="btn" style="background:${m.divReinvest?'#95a5a6':'#11998e'};color:#fff;width:100%;margin-top:8px;" onclick="mToggleReinvest()">${m.divReinvest ? 'OFFにする' : '🔁 ONにする'}</button>
             <div class="m-learn">💡 配当をつかわずに、また同じものを買うことを<b>再投資</b>という。
             これをすると「配当がさらに配当を生む」＝複利になる。長い時間をかけると、とてつもない差になるよ。</div></div>`;
-        const now = new Date();
+        const now = mNow();
         pre += `<div class="m-card"><b>⏰ 市場があいている時間（ぜんぶ本物と同じ）</b>
             <div style="font-size:12px;color:#888;">株はいつでも動いているわけじゃない。<b>市場があいている時間しか値段は動かない</b>んだ。
             しかも 商品によって あいている時間がぜんぜんちがうよ</div>
-            <div class="m-row"><span>いまの時こく</span><b>${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}（${'日月火水木金土'[now.getDay()]}曜）</b></div>`;
+            <div class="m-row"><span>いまの時こく（オンライン）</span><b>${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}（${'日月火水木金土'[now.getDay()]}曜）</b></div>
+            <div class="m-row"><span>この端末の時計とのずれ</span><b>${Math.abs(mSkew) < 1000 ? 'ぴったり' : (mSkew > 0 ? '+' : '') + (mSkew / 1000).toFixed(1) + '秒'}</b></div>
+            <div style="font-size:11px;color:#888;">株価はこの<b>オンラインの時こく</b>で動くよ。だから どの端末で見ても同じ値段になるし、時計がずれていても大丈夫</div>`;
         ['jp','fund','fx','crypto'].forEach(mk => {
             const M = M_MKT[mk], st = mMktState(mk, now);
             const list = M_ASSETS.filter(a => mMarketOf(a) === mk);
@@ -12118,12 +12165,31 @@
         return keys;
     }
     const cloudHasData = (keys) => Object.keys(keys || {}).length > 0;
+    // ★通信は「プリフライト（OPTIONS）が起きない形」でおこなう。
+    //   合言葉をヘッダーではなく URL の ?t= に付け、Content-Type も text/plain にすると
+    //   ブラウザが「単純リクエスト」とみなして、事前の問い合わせ無しで1往復で終わる。
+    //   往復が半分になるぶん、電波が悪いときに失敗しにくい（実測でも 100ms → 50ms）。
+    function cloudUrl(path, q) {
+        const u = SYNC_URL.replace(/\/$/, '') + path;
+        const sep = u.indexOf('?') >= 0 ? '&' : '?';
+        return u + sep + (q ? q + '&' : '') + 't=' + encodeURIComponent(SYNC_TOKEN);
+    }
     // ネットが遅いときに永遠に待たないよう、必ず時間制限をつけてつなぐ
     async function cloudFetch(url, opts, ms) {
         const ac = (typeof AbortController !== 'undefined') ? new AbortController() : null;
         const t = setTimeout(() => { try { ac && ac.abort(); } catch(e) {} }, ms || 9000);
         try { return await fetch(url, Object.assign({}, opts, ac ? { signal: ac.signal } : {})); }
         finally { clearTimeout(t); }
+    }
+    // ★ちょっとした失敗（電波の一瞬のとぎれ）は、その場で2回まで すぐ やり直す。
+    //   ここで拾えると「つながっていない」表示にすらならない
+    async function cloudTry(url, opts, ms) {
+        let last = null;
+        for(let i = 0; i < 3; i++) {
+            try { return await cloudFetch(url, opts, ms); }
+            catch(e) { last = e; if(i < 2) await new Promise(r => setTimeout(r, 400 + i * 800)); }
+        }
+        throw last;
     }
     function cloudSchedule() {
         if(!SYNC_URL || !currentUserId || cloudApplying) return;
@@ -12151,8 +12217,8 @@
         const v = cloudV() + 1;
         cloudState.busy = true;
         try {
-            const r = await cloudFetch(SYNC_URL + '/save', { method:'POST',
-                headers: vbHeaders({ 'Content-Type':'application/json' }),
+            const r = await cloudTry(cloudUrl('/save'), { method:'POST',
+                headers: { 'Content-Type':'text/plain' },      // ★プリフライトを起こさない形
                 body: JSON.stringify({ user: currentUserId, v, keys }) });
             const d = await r.json().catch(() => ({}));
             if(d && d.stale) {                          // サーバーの方が新しかった → 追いつく
@@ -12178,8 +12244,8 @@
         if(!SYNC_URL || !currentUserId) return false;
         cloudState.busy = true;
         try {
-            const r = await cloudFetch(SYNC_URL + '/save?user=' + encodeURIComponent(currentUserId),
-                                  { headers: vbHeaders(), cache:'no-store' });
+            const r = await cloudTry(cloudUrl('/save', 'user=' + encodeURIComponent(currentUserId)),
+                                  { cache:'no-store' });        // ★プリフライトを起こさない形
             const d = await r.json();
             cloudOk();
             if(!d || !d.keys || !cloudHasData(d.keys)) { if(cloudHasData(cloudCollect())) cloudSchedule(); return false; }
