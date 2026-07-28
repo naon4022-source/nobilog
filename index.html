@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '☁️🔀 <b>オンライン保存が「勝手につながる」ようになりました＋バイトの掛け持ち！</b>①これまでは1回でも通信に失敗すると<b>「つながっていない」のまま止まっていました</b>。これからは<b>自動で何度でもつなぎ直します</b>（3秒→8秒→20秒→45秒→90秒）②電波がもどったとき・アプリに戻ってきたときも<b>すぐつなぎ直します</b>③送れていない変更は<b>この端末におぼえておいて、次に開いたとき必ず送ります</b>。だからオフラインで遊んだ分も消えません④読みこむときは<b>いつも新しいほうを使う</b>ので、古い記録が新しい記録を上書きしません⑤画面に<b>「つながっている／送信まち／つなぎ直しています」</b>が出るようになりました⑥<b>バイトの掛け持ちが3つまでできます</b>（面接なし・すぐ働ける）。本業と一緒でもOK⑦ただし掛け持ちの給料は<b>ぜんぶ合算してから税金がかかる</b>ので、額面ほど手取りはふえません。そして<b>毎日 体力ときぶんがけずられます</b>——むりをすると体をこわすよ';
+    const UPDATE_NOW = '📋 <b>副業していいかは「会社が決める」ようになりました！</b>①97社ぜんぶに<b>就業規則</b>を入れました。<b>✅副業OK（15業種）／📝許可制（41業種）／🚫副業きんし（18業種）</b>②<b>🚫の会社に入ると、バイトの掛け持ちも起業もできません</b>。銀行・保険・証券・鉄道・航空・病院・報道など、お金や命や大事な情報をあずかる仕事が これにあたります（本物と同じ）③<b>📝許可制の会社は、申請して認められればOK</b>。勤続30日以上から申請できて、<b>評価が高いほど通ります</b>④<b>会社えらびの画面に ✅📝🚫 のマークが出る</b>ので、入る前に見られます⑤副業したいのに🚫の会社だった場合は、<b>やめるか、副業OKの会社に転職する</b>という道を画面で案内します⑥内定した会社が🚫だったら、<b>いまのバイトやお店をたたむか、内定をことわるか</b>を選べます⑦<b>アルバイトが本業のときは、この制限はありません</b>（自由に掛け持ち・起業できます）⑧会社をやめたりクビになると、副業の許可も消えます';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -3242,7 +3242,7 @@
         // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
         gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
-        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[] },
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0 },
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
@@ -4618,6 +4618,148 @@
     //   ★給料は本業とぜんぶ合算してから税金を計算する（本物と同じ。だから掛け持ちは手取りがのびにくい）
     // ==========================================================================================
     const M_SIDE_MAX = 3;                       // 掛け持ちできるバイトの数
+
+    // ==========================================================================================
+    //  📋 就業規則 ―― 副業していいかどうかは「会社が決める」（ユーザー指定）
+    //   ok    = 副業OK（バイトも起業も自由）
+    //   apply = 許可制（会社に申請して認められたらOK。ちゃんと働いている人ほど通りやすい）
+    //   ng    = 禁止（バイトも起業もダメ。どうしてもやりたければ 転職するしかない）
+    //  ★アルバイトが本業のときは、この制限はかからない（ユーザー指定）
+    //  本物の世界と同じ考え方でわけてある：
+    //   ・お金や人の命・情報をあずかる仕事（銀行・保険・鉄道・航空・医りょう・報道など）は禁止が多い
+    //   ・IT・ネット・クリエイティブ系は「副業OK」を売りにしている会社が多い
+    //   ・メーカーや商社など昔からある大きな会社は「許可制」がいちばん多い
+    // ==========================================================================================
+    const M_FUKU_BY_SEC = {
+        // ── 🚫 禁止：お金・命・情報をあずかる仕事、公共性が高い仕事 ──
+        '銀行':'ng', '保険':'ng', '損害保険':'ng', '外資系金融':'ng',
+        '鉄道':'ng', '航空':'ng', '郵便':'ng', '警備':'ng',
+        '医りょう':'ng', '製薬':'ng', '法りつ':'ng', '放送':'ng', '放送・メディア':'ng', '新聞':'ng', '証券':'ng',
+        '保育':'ng', '介護':'ng', '運転':'ng',
+        // ── ✅ 自由：ネット・IT・クリエイティブ系 ──
+        'IT':'ok', 'ゲーム':'ok', 'ネット広告':'ok', 'ネット総合':'ok', 'ネット通販':'ok',
+        'フリマアプリ':'ok', 'メッセージアプリ':'ok', '動画':'ok', 'eスポーツ':'ok',
+        'コンサル':'ok', '人材・情報':'ok', '映画':'ok', '美容':'ok', '農業':'ok', '通信':'ok'
+        // ── 上に無いものは ぜんぶ「許可制(apply)」 ──
+    };
+    function mJobFuku(co) {
+        if(!co) return 'ok';                       // はたらいていない人は自由
+        if(co.arbeit) return 'ok';                 // ★バイトが本業のときは制限なし
+        return M_FUKU_BY_SEC[co.sec] || 'apply';
+    }
+    const M_FUKU_INFO = {
+        ok:    { e:'✅', n:'副業OK',   c:'#27ae60', d:'バイトも起業も自由にできる会社' },
+        apply: { e:'📝', n:'許可制',   c:'#e67e22', d:'会社に申請して認められれば副業できる' },
+        ng:    { e:'🚫', n:'副業きんし', c:'#e74c3c', d:'バイトも起業もできない会社' }
+    };
+    // いま副業していいか（理由つき）
+    function mCanSide(m) {
+        const co = mJobCo(m.job.co);
+        if(!co) return { ok:true, rule:'ok', why:'' };
+        const r = mJobFuku(co);
+        if(r === 'ok') return { ok:true, rule:r, why:'' };
+        if(r === 'apply') {
+            if(m.job.fukuOk) return { ok:true, rule:r, why:'（許可ずみ）' };
+            return { ok:false, rule:r, why:`${co.n} は<b>許可制</b>だよ。まず会社に「副業の申請」をして、認めてもらおう。` };
+        }
+        return { ok:false, rule:r, why:`${co.n} は<b>就業規則で副業が禁止</b>されているよ。バイトも起業もできない。<br>どうしてもやりたいなら、<b>副業OKの会社に転職する</b>しかないんだ。` };
+    }
+    // 📝 副業の申請（許可制の会社だけ）
+    function mFukuApply() {
+        const m = mLoad(); const co = mJobCo(m.job.co);
+        if(!co) { alert('はたらいていないよ'); return; }
+        if(mJobFuku(co) !== 'apply') { alert('この会社は申請のしくみがないよ'); return; }
+        if(m.job.fukuOk) { alert('もう許可をもらっているよ'); return; }
+        if((m.job.days || 0) < 30) { alert(`まだ勤続 ${m.job.days}日だよ。\n入ってすぐの人には許可が出ない（30日から申請できる）。`); return; }
+        if(m.job.fukuDay && (m.job.days - m.job.fukuDay) < 30) { alert(`この前ことわられたばかりだよ。\nあと ${30 - (m.job.days - m.job.fukuDay)}日たったら もう一度 申請できる。`); return; }
+        if(!confirm(`${co.n} に副業の申請をする？\n\n勤続 ${m.job.days}日／評価 ${Math.round(m.job.ev)}\nちゃんと働いている人ほど 認められやすいよ。`)) return;
+        // 評価と勤続で決まる（表には出さない計算）
+        const p = Math.max(0.05, Math.min(0.92, 0.30 + (m.job.ev - 65) / 100 + Math.min(0.25, m.job.days / 800)));
+        m.job.fukuDay = m.job.days;
+        const pass = Math.random() < p;
+        if(pass) {
+            m.job.fukuOk = true;
+            mLog(m, `副業の許可が出た：${co.n}`, 0);
+            mSave(m); playSfx('finish'); celebrate(); renderMoney();
+            gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+                <h2 style="text-align:center;">📝 副業が みとめられた！</h2>
+                <div class="m-ok" style="font-size:15px;line-height:1.9;">${esc(co.n)} から<b>副業の許可</b >が出たよ！
+                これでバイトの掛け持ちも、起業もできる。</div>
+                <div class="m-row"><span>勤続</span><b>${m.job.days}日</b></div>
+                <div class="m-row"><span>会社からの評価</span><b>${Math.round(m.job.ev)}</b></div>
+                <div class="m-learn">💡 許可制の会社は「本業にえいきょうが出ないか」を見ている。
+                だから<b>ちゃんと出勤して評価を上げた人</b>ほど通りやすいんだ。<br>
+                本物の世界でも、副業を始める前に<b>就業規則を読んで、会社に申請する</b>のが正しい順番だよ。</div>
+                <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#11998e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">やった！</button></div></div>`);
+        } else {
+            mSave(m); playSfx('wrong'); renderMoney();
+            gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+                <h2 style="text-align:center;">📝 今回はみとめられなかった…</h2>
+                <div class="m-warn" style="font-size:15px;line-height:1.9;">${esc(co.n)} 人事部より<br><br>
+                「本業に集中してほしい時期なので、今回は見おくらせてください」</div>
+                <div class="m-row"><span>いまの評価</span><b>${Math.round(m.job.ev)}</b></div>
+                <div class="m-desc">評価が高いほど、勤続がながいほど 通りやすくなるよ</div>
+                <div class="m-learn">💡 30日たてば もう一度 申請できる。それまでに<b>毎日きちんと出勤して評価を上げよう</b>。</div>
+                <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">わかった</button></div></div>`);
+        }
+    }
+    // ⛔ 副業できないときの説明（ただ「ダメ」で終わらせず、どうすればいいかまで出す）
+    function mFukuBlocked(m, what) {
+        const co = mJobCo(m.job.co); const r = mJobFuku(co); const I = M_FUKU_INFO[r];
+        const okList = M_JOBS.filter(j => !j.arbeit && mJobFuku(j) === 'ok').sort((a, b) => b.pay - a.pay).slice(0, 5);
+        playSfx('wrong');
+        gOpenModal(`<div style="text-align:left;max-width:540px;margin:0 auto;">
+            <h2 style="text-align:center;color:${I.c};">${I.e} ${esc(what)}はできないよ</h2>
+            <div class="m-warn" style="font-size:15px;line-height:1.9;">
+              <b>${esc(co.n)}</b> の就業規則は <b style="color:${I.c};">${I.n}</b>。<br>${r === 'ng'
+                ? 'この会社ではたらいているあいだは、<b>バイトの掛け持ちも起業もできない</b>んだ。'
+                : 'まず会社に<b>副業の申請</b>をして、認めてもらう必要があるよ。'}</div>
+            ${r === 'apply' ? `<div class="m-ok">📝 いま 勤続${m.job.days}日／評価${Math.round(m.job.ev)}。
+                <b>勤続30日以上</b>で申請できて、評価が高いほど通りやすいよ。
+                <button class="btn" style="background:#e67e22;color:#fff;width:100%;margin-top:8px;" onclick="gCloseModal(); mFukuApply();">📝 いま申請してみる</button></div>`
+              : `<div class="m-card" style="margin:8px 0;"><b>💡 どうしても副業したいなら</b>
+                <div style="font-size:13px;line-height:1.9;">①いまの会社を<b>やめて</b>から始める（給料は止まる）<br>
+                ②<b>${M_FUKU_INFO.ok.e}副業OKの会社に転職する</b>（下がその例）</div>
+                ${okList.map(j => `<div class="m-row"><div><div class="m-name">${j.e} ${esc(j.n)}</div>
+                  <div class="m-desc">${esc(j.sec)}／年収 ${mYen(j.pay)}</div></div>
+                  <b style="color:#27ae60;">✅副業OK</b></div>`).join('')}</div>`}
+            <div class="m-learn">💡 これは意地悪じゃなくて<b>本物の会社のルール</b>。
+            銀行・保険・鉄道・航空・病院みたいに<b>お金や命や大事な情報をあずかる仕事</b>は、
+            「本業に集中してほしい」「情報がもれたら困る」という理由で副業を禁止していることが多いんだ。<br>
+            だから会社を選ぶときは、<b>お給料だけじゃなく就業規則も見る</b>。これ、大人になったとき本当に大事だよ。</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">わかった</button></div></div>`);
+    }
+    // 📋 就業規則カード（仕事タブに出す）
+    function mRuleHtml(m) {
+        const co = mJobCo(m.job.co);
+        if(!co) return `<div class="m-card"><b>📋 就業規則と副業</b>
+            <div style="font-size:13px;line-height:1.9;">いまは はたらいていないので、<b>バイトも起業も自由</b>にできるよ。<br>
+            でも会社に入ると、<b>その会社のルール（就業規則）</b>にしたがうことになる。
+            <b>副業していいかどうかは、会社が決める</b>んだ。</div>
+            <div class="m-learn">💡 会社を選ぶときは、お給料だけじゃなく<b>「副業OKか」</b>も見ておこう。
+            あとから「やりたいのにできない」となることがあるよ。下の会社一覧にも ${M_FUKU_INFO.ok.e}${M_FUKU_INFO.apply.e}${M_FUKU_INFO.ng.e} で出してあるからね。</div></div>`;
+        const r = mJobFuku(co), I = M_FUKU_INFO[r];
+        const can = mCanSide(m);
+        const nSide = (m.job.side || []).length, hasBiz = !!(m.biz && m.biz.c);
+        return `<div class="m-card" style="border:3px solid ${I.c};"><b>📋 ${esc(co.n)} の就業規則</b>
+            <div style="font-size:22px;font-weight:bold;color:${I.c};margin:4px 0;">${I.e} ${I.n}</div>
+            <div class="m-desc">${esc(I.d)}</div>
+            ${co.arbeit ? `<div class="m-ok">バイトが本業のときは、掛け持ちも起業も<b>自由</b>だよ。</div>` : ''}
+            <div class="m-row"><span>いまバイトの掛け持ち</span><b>${nSide}つ</b></div>
+            <div class="m-row"><span>いま自分のお店</span><b>${hasBiz ? 'あり' : 'なし'}</b></div>
+            <div class="m-row"><span>副業できる？</span><b style="color:${can.ok ? '#27ae60' : '#e74c3c'}">${can.ok ? 'できる' : 'できない'}</b></div>
+            ${r === 'apply' ? (m.job.fukuOk
+                ? `<div class="m-ok">📝 <b>副業の許可が出ているよ</b>。バイトも起業もできる。</div>`
+                : `<div class="m-warn">📝 この会社は<b>許可制</b>。申請して認められないと、バイトも起業もできないよ。<br>
+                   条件：<b>勤続30日以上</b>（いま${m.job.days}日）／評価が高いほど通りやすい（いま${Math.round(m.job.ev)}）
+                   <button class="btn" style="background:#e67e22;color:#fff;width:100%;margin-top:8px;" onclick="mFukuApply()">📝 副業の申請をする</button></div>`) : ''}
+            ${r === 'ng' ? `<div class="m-warn">🚫 この会社は<b>副業が禁止</b>されているよ。バイトも起業もできない。<br>
+                お金や人の命・大事な情報をあずかる仕事は、<b>本業に集中してもらうため</b>にこうなっていることが多いんだ。<br>
+                どうしても副業したいなら、<b>${M_FUKU_INFO.ok.e}副業OKの会社に転職する</b>という道があるよ。</div>` : ''}
+            <div class="m-learn">💡 <b>就業規則</b>は、会社ではたらく人が守るルールブック。入る前に読むのが本当は正しい。<br>
+            副業が禁止される理由は主に3つ：<b>①本業がおろそかになる ②大事な情報がもれる ③ライバル会社を手伝ってしまう</b>。<br>
+            ちなみに<b>公務員</b>は法律（国家公務員法・地方公務員法）で原則きんしされているよ。</div></div>`;
+    }
     function mSideList(m) { return ((m.job || {}).side || []).map(c => mJobCo(c)).filter(Boolean); }
     function mSideGross(m) { return mSideList(m).reduce((s, j) => s + Math.round(j.pay / 12), 0); }
     function mSideHours(m) { return mSideList(m).reduce((s, j) => s + Math.round(j.pay / 12 / (j.hour || 1000)), 0); }
@@ -4626,6 +4768,8 @@
     function mSideAdd(code) {
         const j = mJobCo(code); const m = mLoad();
         if(!j || !j.arbeit) { alert('掛け持ちできるのは「バイト」だけだよ'); return; }
+        const can = mCanSide(m);          // 📋 会社の就業規則をまず見る
+        if(!can.ok) { mFukuBlocked(m, 'バイトの掛け持ち'); return; }
         if(!Array.isArray(m.job.side)) m.job.side = [];
         if(m.job.side.indexOf(code) >= 0) { alert('もうやっているよ'); return; }
         if(code === m.job.co) { alert('本業と同じところは掛け持ちできないよ'); return; }
@@ -4701,6 +4845,7 @@
     function mJobHtml(m) {
         const j = m.job, co = mJobCo(j.co);
         let h = '';
+        h += mRuleHtml(m);      // 📋 就業規則（副業していいかは会社が決める）
         h += mSideHtml(m);      // 🔀 バイトの掛け持ち（本業のあるなしに関係なく使える）
         if(co) {
             // ===== はたらいている人の画面 =====
@@ -4778,7 +4923,7 @@
                     const cool = ap && ap.ng && (calDayNum(calToday()) - calDayNum(ap.day) < 7);
                     const okPaper = sp >= co2.need;
                     h += `<div class="m-row"><div style="flex:1;min-width:0;">
-                        <div class="m-name"><span style="cursor:pointer;font-size:17px;" title="入りたい会社に登録" onclick="mWishToggle('${co2.c}')">${mWishHas(m, co2.c) ? '⭐' : '☆'}</span> ${co2.e} ${esc(co2.n)} ${co2.arbeit ? '<span class="m-pill">バイト</span>' : ''}${mWishHas(m, co2.c) ? `<span class="m-pill" style="background:rgba(230,126,34,.18);color:#e67e22;">${M_WISH_LABEL[(m.job.wish||[]).indexOf(co2.c)]}</span>` : ''}</div>
+                        <div class="m-name"><span style="cursor:pointer;font-size:17px;" title="入りたい会社に登録" onclick="mWishToggle('${co2.c}')">${mWishHas(m, co2.c) ? '⭐' : '☆'}</span> ${co2.e} ${esc(co2.n)} ${co2.arbeit ? '<span class="m-pill">バイト</span>' : ''}<span class="m-pill" style="background:${M_FUKU_INFO[mJobFuku(co2)].c}22;color:${M_FUKU_INFO[mJobFuku(co2)].c};">${M_FUKU_INFO[mJobFuku(co2)].e}${M_FUKU_INFO[mJobFuku(co2)].n}</span>${mWishHas(m, co2.c) ? `<span class="m-pill" style="background:rgba(230,126,34,.18);color:#e67e22;">${M_WISH_LABEL[(m.job.wish||[]).indexOf(co2.c)]}</span>` : ''}</div>
                         <div class="m-desc">${esc(co2.sec)}／${esc(co2.d)}</div>
                         <div class="m-desc">求める人：${esc(M_WANT_NAME[co2.want])}／筆記の合格ライン ${co2.paper}%</div>
                         <div class="m-desc">${co2.perks.map(p=>'・'+esc(p)).join('<br>')}</div>
@@ -5031,9 +5176,28 @@
                 <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">つぎをさがす</button></div></div>`);
             return;
         }
+        // 📋 内定した会社が副業きんし／許可制なら、いまやっている副業をたたむ必要がある
+        const rule = mJobFuku(co);
+        const nSide = (m.job.side || []).length, hasBiz = !!(m.biz && m.biz.c);
+        if(rule !== 'ok' && (nSide > 0 || hasBiz)) {
+            const list = [];
+            if(nSide > 0) list.push(`バイト${nSide}つ（${mSideList(m).map(j => j.n).join('・')}）`);
+            if(hasBiz) list.push('自分のお店');
+            const I = M_FUKU_INFO[rule];
+            if(!confirm(`🎉 ${co.n} から内定！\n\n📋 でも この会社の就業規則は「${I.n}」だよ。\n入社するには、いまやっている副業をやめる必要がある：\n・${list.join('\n・')}\n\n${rule === 'apply' ? '※入社後に申請すれば、また始められるよ。' : '※この会社にいるあいだは 副業はできないよ。'}\n\nやめて入社する？`)) {
+                m.job.applied[co.c] = { day:calToday(), ng:false };
+                mSave(m); gCloseModal();
+                setTimeout(() => alert('入社をことわったよ。いまの副業はそのまま続けられる。\n副業OKの会社をさがしてみよう！'), 150);
+                return;
+            }
+            (m.job.side || []).forEach(c => { const j = mJobCo(c); if(j) mLog(m, `入社のためバイトをやめる：${j.n}`, 0); });
+            m.job.side = [];
+            if(hasBiz) { mLog(m, '入社のためお店をたたむ', 0); m.biz = { c:null, days:0, total:0, lastSales:0, lastProfit:0 }; }
+        }
         // 内定！
         m.job.co = co.c; m.job.rank = 0; m.job.ev = 60; m.job.days = 0; m.job.worked = 0;
         m.job.absent = 0; m.job.warn = 0; m.job.lastWork = null;
+        m.job.fukuOk = false; m.job.fukuDay = 0;      // 新しい会社では 副業の許可はゼロから
         m.job.applied[co.c] = { day:calToday(), ng:false };
         m.job.hist.push(co.n);
         mLog(m, `入社：${co.n}`, 0);
@@ -5145,6 +5309,7 @@
         if(!confirm(`本当に ${co.n} をやめる？\n給料が止まって、次の会社に受かる保証はないよ。`)) return;
         mLog(m, `退職：${co.n}`, 0);
         m.job.co = null; m.job.slip = null;
+        m.job.fukuOk = false; m.job.fukuDay = 0;      // 会社が変わると副業の許可も消える
         mSave(m); renderMoney();
         alert('退職したよ。次の仕事をさがそう！');
     }
@@ -5163,6 +5328,7 @@
                     m.insNew.unshift({ d:Date.now(), day:m.day, job:true, fire:true, n:`${co.n} をクビになった…`, msg:'サボりすぎ・評価が低すぎたため解雇。給料は止まる。また就職活動をしよう。' });
                     mLog(m, `解雇：${co.n}`, 0);
                     m.job.co = null; m.job.slip = null; m.job.warn = 0;
+                    m.job.fukuOk = false; m.job.fukuDay = 0;   // 会社が変わると副業の許可も消える
                     return;
                 }
             } else m.job.ev = Math.max(0, m.job.ev - 2);
@@ -7779,6 +7945,8 @@
     function mBizStart(c) {
         const bz = M_BIZ.find(x => x.c === c); if(!bz) return;
         const m = mLoad();
+        const canB = mCanSide(m);         // 📋 会社の就業規則をまず見る（起業も副業のうち）
+        if(!canB.ok) { mFukuBlocked(m, '起業（自分のお店を出すこと）'); return; }
         if(m.cash < bz.cost) { mNoMoney(bz.cost, `${bz.n}の開業資金`, () => mBizStart(c)); return; }
         if(mJobCo(m.job.co) && !confirm('会社をやめて起業する？\n給料は止まって、売上ぜんぶが自分の責任になるよ。')) return;
         if(!confirm(`${bz.n} を ${mYen(bz.cost)} で開く？\n毎月 ${mYen(bz.fix)} の費用がかかって、売上は ${mYen(bz.sales[0])}〜${mYen(bz.sales[1])} の間で変わるよ。`)) return;
