@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '📋 <b>副業していいかは「会社が決める」ようになりました！</b>①97社ぜんぶに<b>就業規則</b>を入れました。<b>✅副業OK（15業種）／📝許可制（41業種）／🚫副業きんし（18業種）</b>②<b>🚫の会社に入ると、バイトの掛け持ちも起業もできません</b>。銀行・保険・証券・鉄道・航空・病院・報道など、お金や命や大事な情報をあずかる仕事が これにあたります（本物と同じ）③<b>📝許可制の会社は、申請して認められればOK</b>。勤続30日以上から申請できて、<b>評価が高いほど通ります</b>④<b>会社えらびの画面に ✅📝🚫 のマークが出る</b>ので、入る前に見られます⑤副業したいのに🚫の会社だった場合は、<b>やめるか、副業OKの会社に転職する</b>という道を画面で案内します⑥内定した会社が🚫だったら、<b>いまのバイトやお店をたたむか、内定をことわるか</b>を選べます⑦<b>アルバイトが本業のときは、この制限はありません</b>（自由に掛け持ち・起業できます）⑧会社をやめたりクビになると、副業の許可も消えます';
+    const UPDATE_NOW = '⏰ <b>市場のあいている時間を、ぜんぶ本物と同じにしました！</b>①<b>日本株・REIT・国債</b>は 平日<b>9:00〜11:30</b>と<b>12:30〜15:30</b>だけ動きます。お昼休みも、15:30の大引けのあとも、土日も<b>値段は止まったまま</b>です（20分ごとに変動）②<b>投資信託（オルカン・S&P500・日経225・バランス・先進国）は1日1回だけ</b>。平日の夜<b>21:30</b>にその日の基準価額が決まります。だから昼間に何回見ても値段は変わりません。土日は更新なし——これが本物の投信のしくみです③<b>米ドル・金</b>は平日ほぼ24時間（土日は休み・20分ごと）④<b>暗号資産だけは24時間365日</b>動きっぱなし。寝ているあいだに大きく下がることもあります（10分ごと）⑤📈投資タブに<b>いまどの市場があいているか</b>が出ます⑥🎓<b>英検5級の合格</b>を登録しました。資格手当が毎月3,000円もらえます';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -2404,7 +2404,7 @@
     M_ASSETS.forEach(a => { M_ASTAT[a.c] = { drift: mDriftPerSlot(a), nscale: Math.min(1, Math.max(0.12, a.v / 0.022)) }; });
     const M_PRICE_W = 90;      // 直近90回（＝30日ぶん）のニュースと値動きが、今の株価を決める
     let __priceMemo = {};
-    function mClearPriceCache() { __priceMemo = {}; }
+    function mClearPriceCache() { __priceMemo = {}; if(typeof __tickMemo !== 'undefined') __tickMemo = {}; }
     // 決まった値の小さな乱数（Math.randomを使わない＝どの端末でも同じ株価になる）
     function mNoise(code, num, seed) { const r = mRng(mHash(code + '#' + num + '#' + ((seed >>> 0) || 0))); return r() * 2 - 1; }
     // 「その時間帯の株価」を計算する。直近90スロットのニュースと値動きを積み上げるだけ（＝経路によらず同じ）
@@ -2445,39 +2445,143 @@
     //   しくみ：ニュースで決まる「その時間帯の株価」を土台にして、1時間ごとの小さなゆれを かけ算する。
     //   ゆれは「日付・時間帯・何時か・銘柄」から計算する決まった値なので、どの端末で見ても同じ株価になる。
     //   積み上げないので、長い目で見た値動き（検証ずみのしくみ）は まったく変わらない。
-    function mHourNow() { return new Date().getHours(); }
-    function mPricesAtHour(day, slot, hr) {
-        const key = day + '|' + slot + '|h' + hr;
-        if(__priceMemo[key]) return __priceMemo[key];
-        const base = mPricesAt(day, slot);
+    // ==========================================================================================
+    //  ⏰ 市場のあいている時間（ぜんぶ本物と同じにしてある）
+    //   ・日本株 / REIT / 国債 … 平日 9:00〜11:30（前場）と 12:30〜15:30（後場）だけ動く。
+    //                            土日は動かない。20分ごとに値が変わる
+    //   ・投資信託（オルカン・S&P500・日経225・バランス・先進国）
+    //                          … ★1日1回だけ。平日の夜 21:30 に その日の基準価額が決まる。
+    //                            土日は更新なし。だから昼間 見ても値段は変わらない（本物とまったく同じ）
+    //   ・米ドル / 金          … 平日はほぼ24時間うごく（世界のどこかの市場が開いているから）。土日は止まる
+    //   ・暗号資産             … 24時間365日 うごく。休みが無い（これも本物と同じ）
+    //  ※日本の祝日までは見ていないので、祝日は平日としてうごくよ
+    // ==========================================================================================
+    const M_MKT = {
+        jp:     { n:'東京証券取引所', e:'🗼', d:'平日 9:00〜11:30／12:30〜15:30', tick:20 },
+        fund:   { n:'投資信託の基準価額', e:'🧺', d:'平日の夜21:30に1日1回だけ決まる', tick:0 },
+        fx:     { n:'為替・金の市場', e:'🌏', d:'平日はほぼ24時間（土日は休み）', tick:20 },
+        crypto: { n:'暗号資産の市場', e:'🪙', d:'24時間365日ずっと動いている', tick:10 }
+    };
+    function mMarketOf(a) {
+        if(!a) return 'jp';
+        if(a.t === '投信') return 'fund';
+        if(a.t === '暗号資産') return 'crypto';
+        if(a.t === '外貨' || a.t === 'コモディティ') return 'fx';
+        return 'jp';                              // 株・債券・不動産（REIT）は東証の時間
+    }
+    function mTickMin(a) { return M_MKT[mMarketOf(a)].tick || 20; }
+    function mMinNow(dt) { const d = dt || new Date(); return d.getHours() * 60 + d.getMinutes(); }
+    const M_JP_AM = [540, 690], M_JP_PM = [750, 930];    // 9:00-11:30 / 12:30-15:30（分であらわす）
+    const M_FUND_MIN = 1290;                             // 21:30
+    function mIsWeekend(d) { const w = d.getDay(); return w === 0 || w === 6; }
+    function mDayKey(d) { return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; }
+    // その日の何分目が「市場のあいている時間」か
+    function mMktOpenAt(mk, d, min) {
+        if(mk === 'crypto') return true;
+        if(mIsWeekend(d)) return false;
+        if(mk === 'fx') return true;                     // 平日はほぼ24時間
+        if(mk === 'jp') return (min >= M_JP_AM[0] && min <= M_JP_AM[1]) || (min >= M_JP_PM[0] && min <= M_JP_PM[1]);
+        return false;                                    // fund はここでは常に false（1日1回の別あつかい）
+    }
+    // 前の日へ（土日をとばしたいときは skipWeekend）
+    function mPrevDay(d, skipWeekend) {
+        let x = new Date(d.getTime() - 86400000);
+        if(skipWeekend) { let g = 0; while(mIsWeekend(x) && g++ < 10) x = new Date(x.getTime() - 86400000); }
+        return x;
+    }
+    // ★その商品が「いま表示している値段は、いつの時点のものか」を返す
+    //   市場がしまっているときは、直前にあいていた時こくで止める（＝値段が固定される）
+    function mEffTime(a, dt) {
+        const mk = mMarketOf(a);
+        let d = dt || new Date(), min = mMinNow(d);
+        if(mk === 'crypto') return { d, min, live:true, mk };
+        if(mk === 'fund') {
+            // 投信は「平日21:30」に更新。まだ21:30前なら 前の営業日の値のまま
+            let ref = new Date(d);
+            if(mIsWeekend(ref) || min < M_FUND_MIN) ref = mPrevDay(ref, true);
+            if(mIsWeekend(ref)) ref = mPrevDay(ref, true);
+            return { d: ref, min: M_FUND_MIN, live:false, mk };
+        }
+        if(mk === 'fx') {
+            if(!mIsWeekend(d)) return { d, min, live:true, mk };
+            const ref = mPrevDay(d, true);                // 土日 → 金曜の終わりで止める
+            return { d: ref, min: 1439, live:false, mk };
+        }
+        // 日本株
+        if(!mIsWeekend(d)) {
+            if(min >= M_JP_AM[0] && min <= M_JP_AM[1]) return { d, min, live:true, mk };
+            if(min > M_JP_AM[1] && min < M_JP_PM[0])   return { d, min: M_JP_AM[1], live:false, mk };  // お昼休み
+            if(min >= M_JP_PM[0] && min <= M_JP_PM[1]) return { d, min, live:true, mk };
+            if(min > M_JP_PM[1])                        return { d, min: M_JP_PM[1], live:false, mk };  // 大引け後
+        }
+        const ref = mPrevDay(d, true);                    // 朝9時前・土日 → 前の営業日の大引け
+        return { d: ref, min: M_JP_PM[1], live:false, mk };
+    }
+    // その時こくが どのニュース時間帯（スロット）にあたるか
+    function mSlotOfMin(min) { return min < M_SLOTS[0].h * 60 ? -1 : min < M_SLOTS[1].h * 60 ? 0 : min < M_SLOTS[2].h * 60 ? 1 : 2; }
+    // 1つの商品の いまの値段
+    function mPriceOf(code, dt) {
+        const a = M_ASSET(code);
+        const e = mEffTime(a, dt);
+        let day = mDayKey(e.d), sl = mSlotOfMin(e.min);
+        if(sl < 0) { const p = mPrevDay(e.d, false); day = mDayKey(p); sl = 2; }   // 朝7時前は前の日の夕刊
+        const base = mPricesAt(day, sl)[code];
+        if(typeof base !== 'number') return M_ASSET(code).p;
+        if(mMarketOf(a) === 'fund') return Math.max(Math.round(base * 100) / 100, a.p * 0.05);   // 投信はゆれ無し＝1日1回
+        const step = Math.floor(e.min / mTickMin(a));
+        const w = mRng(mHash('nobilog-tick|' + day + '|' + step + '|' + code))() * 2 - 1;
+        const amp = Math.min(0.012, Math.max(0.0015, (a.v || 0.02) * 0.35));
+        let p = base * (1 + w * amp);
+        if(a.t === '株') p = Math.max(Math.round(p), Math.round(a.p * 0.1));
+        else p = Math.max(Math.round(p * 100) / 100, a.p * 0.05);
+        return p;
+    }
+    let __tickMemo = {};
+    function mPricesNow(dt) {
+        const d = dt || new Date();
+        const key = mDayKey(d) + '|' + Math.floor(mMinNow(d) / 10) + '|' + d.getDay();
+        if(__tickMemo[key]) return __tickMemo[key];
         const out = {};
-        Object.keys(base).forEach(c => {
-            const a = M_ASSET(c);
-            const w = mRng(mHash('nobilog-hour|' + day + '|' + slot + '|' + hr + '|' + c))() * 2 - 1;   // −1〜+1
-            const amp = Math.min(0.012, Math.max(0.0015, (a && a.v ? a.v : 0.02) * 0.35));
-            let p = base[c] * (1 + w * amp);
-            if(a && a.t === '株') p = Math.max(Math.round(p), Math.round(a.p * 0.1));
-            else p = Math.max(Math.round(p * 100) / 100, (a ? a.p : base[c]) * 0.05);
-            out[c] = p;
-        });
-        if(Object.keys(__priceMemo).length > 400) __priceMemo = {};   // ためこみすぎない
-        __priceMemo[key] = out;
+        M_ALL().forEach(a => { out[a.c] = mPriceOf(a.c, d); });
+        if(Object.keys(__tickMemo).length > 200) __tickMemo = {};
+        __tickMemo[key] = out;
         return out;
     }
-    function mPricesNow() { const now = mSlotInfo(); return mPricesAtHour(now.day, now.s, mHourNow()); }
-    // 1時間ごとに画面の株価を新しくする（開きっぱなしでも ちゃんと動く）
-    let mHourTimer = null, mHourLast = null;
+    // つぎに値段が動くまで あと何分か
+    function mNextTickMin(a, dt) {
+        const d = dt || new Date(), min = mMinNow(d), mk = mMarketOf(a);
+        if(mk === 'fund') return (min < M_FUND_MIN ? M_FUND_MIN - min : 1440 - min + M_FUND_MIN);
+        if(!mMktOpenAt(mk, d, min)) return null;          // 市場がしまっている
+        const t = mTickMin(a);
+        return t - (min % t);
+    }
+    // 市場のようす（画面に出す用）
+    function mMktState(mk, dt) {
+        const d = dt || new Date(), min = mMinNow(d);
+        if(mk === 'fund') return { open:false, txt: min < M_FUND_MIN && !mIsWeekend(d) ? `今日の21:30に更新` : mIsWeekend(d) ? '土日はお休み（月曜の夜に更新）' : '今日の分は更新ずみ' };
+        const open = mMktOpenAt(mk, d, min);
+        if(open) return { open:true, txt:'いま うごいています' };
+        if(mIsWeekend(d)) return { open:false, txt:'土日はお休み（月曜の朝から）' };
+        if(mk === 'jp') {
+            if(min < M_JP_AM[0]) return { open:false, txt:'9:00から（まだ始まっていない）' };
+            if(min < M_JP_PM[0]) return { open:false, txt:'お昼休み（12:30から後場）' };
+            return { open:false, txt:'今日はおわり（15:30で大引け）' };
+        }
+        return { open:false, txt:'いまはお休み' };
+    }
+    // 10分ごとに画面の株価を新しくする（開きっぱなしでも ちゃんと動く）
+    let mHourTimer = null, mTickLast = null;
     function mStartHourTimer() {
         if(mHourTimer) return;
-        mHourLast = mHourNow();
+        mTickLast = Math.floor(mMinNow() / 10);
         mHourTimer = setInterval(() => {
-            const h = mHourNow();
-            if(h === mHourLast) return;
-            mHourLast = h;
-            mClearPriceCache();
+            const b = Math.floor(mMinNow() / 10);
+            if(b === mTickLast) return;
+            mTickLast = b;
+            __tickMemo = {};
             if(document.getElementById('view-money') && document.getElementById('view-money').classList.contains('active')) renderMoney();
             else if(document.getElementById('view-life') && document.getElementById('view-life').classList.contains('active')) renderLife();
-        }, 20000);
+        }, 15000);
     }
     // サーバー（Cloudflare Workers）から最新のニュースのたねをもらう
     // サーバーは毎日 朝7時・昼12時・夕方18時（日本時間）に、新しいたねを作って置いてくれる
@@ -4041,13 +4145,25 @@
             <button class="btn" style="background:${m.divReinvest?'#95a5a6':'#11998e'};color:#fff;width:100%;margin-top:8px;" onclick="mToggleReinvest()">${m.divReinvest ? 'OFFにする' : '🔁 ONにする'}</button>
             <div class="m-learn">💡 配当をつかわずに、また同じものを買うことを<b>再投資</b>という。
             これをすると「配当がさらに配当を生む」＝複利になる。長い時間をかけると、とてつもない差になるよ。</div></div>`;
-        pre += `<div class="m-card"><b>⏰ 株価は「1時間に1回」動くよ</b>
-            <div style="font-size:12px;color:#888;">ニュースは1日3回（朝7時・昼12時・夕方18時）だけど、株価は<b>1時間ごとに</b>少しずつ動く。
-            本物の市場も、ニュースが無い時間でもずっと売り買いされて値段が動いているんだ</div>
-            <div class="m-row"><span>いまの時間</span><b>${mHourNow()}時</b></div>
-            <div class="m-row"><span>つぎに動く時間</span><b>${(mHourNow() + 1) % 24}時</b></div>
-            <div class="m-learn">💡 1時間ごとの動きは小さくても、1日・1か月と積み重なると大きくなる。
-            <b>短い時間の上げ下げに一喜一憂しない</b>のが、投資でいちばん大事なことだよ。</div></div>`;
+        const now = new Date();
+        pre += `<div class="m-card"><b>⏰ 市場があいている時間（ぜんぶ本物と同じ）</b>
+            <div style="font-size:12px;color:#888;">株はいつでも動いているわけじゃない。<b>市場があいている時間しか値段は動かない</b>んだ。
+            しかも 商品によって あいている時間がぜんぜんちがうよ</div>
+            <div class="m-row"><span>いまの時こく</span><b>${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}（${'日月火水木金土'[now.getDay()]}曜）</b></div>`;
+        ['jp','fund','fx','crypto'].forEach(mk => {
+            const M = M_MKT[mk], st = mMktState(mk, now);
+            const list = M_ASSETS.filter(a => mMarketOf(a) === mk);
+            pre += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${M.e} ${esc(M.n)} ${st.open ? '<span class="m-pill" style="background:rgba(39,174,96,.18);color:#27ae60;">あいてる</span>' : '<span class="m-pill" style="background:rgba(127,140,141,.18);color:#7f8c8d;">しまってる</span>'}</div>
+                <div class="m-desc">${esc(M.d)}</div>
+                <div class="m-desc">${list.length}商品（例：${list.slice(0,3).map(a=>esc(a.n)).join('、')}）${M.tick?`／${M.tick}分ごとに値段が変わる`:''}</div></div>
+                <div class="m-price"><div style="font-size:11px;color:#888;">ようす</div><div style="font-size:12px;"><b>${esc(st.txt)}</b></div></div></div>`;
+        });
+        pre += `<div class="m-learn">💡 いちばん おどろくのは<b>投資信託</b>。オルカンやS&P500の投信は
+            <b>1日に1回、平日の夜21:30にしか値段（基準価額）が決まらない</b>。昼間に何回見ても値段は変わらないんだ。<br>
+            理由は、世界中の株のその日の終わりの値段と、朝10時ごろの為替レートを使って<b>あとから計算する</b>から。
+            だから投信は「今すぐ売り買い」ができない——申しこんだ日の夜の値段で買うことになるよ。<br>
+            ぎゃくに<b>暗号資産は24時間365日</b>動きっぱなし。休みがないぶん、寝ているあいだに大きく下がることもある。</div></div>`;
         pre += mLevHtml(m);                      // ⚡ 信用取引（レバレッジ）
         return pre + mInvestHtmlBody(m);
     }
@@ -5247,9 +5363,21 @@
             <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#11998e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">とじる</button></div></div>`);
     }
     // 🎓 資格手当：英検の合格実績で毎月の手当がつく（アプリの勉強と給料が直結する）
+    // 🎓 ほんとうの検定の合格きろく（アプリの外で受かったもの。クロードがここに書く）
+    //   ★2026-07-29 なお：英検5級に合格。ほかは無し
+    const M_REAL_QUAL = { u1: ['英検5級'], u2: [] };
+    function mRealQual() {
+        const list = (M_REAL_QUAL[currentUserId] || []);
+        let best = 0;
+        list.forEach(g => { const t = String(g);
+            if(t.includes('3級')) best = Math.max(best, 3);
+            else if(t.includes('4級')) best = Math.max(best, 2);
+            else if(t.includes('5級')) best = Math.max(best, 1); });
+        return best;
+    }
     function mQualBest() {
         try { const h = (ekStats && ekStats.history) || [];
-            let best = 0;
+            let best = mRealQual();          // ほんとうに受かった級も かぞえる
             h.forEach(x => { if(!x || !x.pass) return;
                 const g = String(x.grade || ''); 
                 if(g.includes('3級')) best = Math.max(best, 3);
