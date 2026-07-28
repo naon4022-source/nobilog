@@ -1052,28 +1052,69 @@
     for(let d = 1; d <= 31; d++) HOMEWORK['2026-8-' + d] = [ { t:'夏休みを楽しむ🌻', self:true } ];
     // 📝 8月30日は「のびログ定期テスト」（5教科）
     HOMEWORK['2026-8-30'] = [ { t:'夏休みを楽しむ🌻', self:true },
-        { t:'📘 のびログ定期テスト 前半（数学・英語・国語／30分）', m:{ nobitest:'前半' } } ];
+        { t:'📘 のびログ夏休み定期テスト 前半（数学・英語・国語／30分）', m:{ nobitest:'前半' } } ];
     HOMEWORK['2026-8-31'] = [ { t:'夏休みを楽しむ🌻', self:true },
-        { t:'📗 のびログ定期テスト 後半（理科・社会／30分）', m:{ nobitest:'後半' } } ];
+        { t:'📗 のびログ夏休み定期テスト 後半（理科・社会／30分）', m:{ nobitest:'後半' } } ];
     // ===== 📅 毎年・毎月きまっている日（カレンダーに自動で出る）=====
+    //  d = 毎月その日 ／ w = 毎週その曜日（0=日 1=月 …）
     const CAL_EVENTS = [
-        { d:5,  e:'💰', t:'給料日・配当金・つみたて・生活費のひきおとし', c:'#27ae60' },
-        { d:10, e:'📊', t:'決算はっぴょう（会社の成績が出る日）', c:'#2980b9' },
-        { d:25, e:'🧾', t:'カードの支払い日', c:'#e67e22' }
+        { d:5,  e:'💰', t:'給料日：お給料・配当金・株主優待・つみたて・生活費・ローンの返済がまとめて動く日', c:'#27ae60' },
+        { d:10, e:'📊', t:'決算はっぴょう（会社の成績が出て、株価が大きく動く日）', c:'#2980b9' },
+        { d:25, e:'🧾', t:'カードの支払い日', c:'#e67e22' },
+        { w:1,  e:'🎲', t:'ギャンブルの「今週のイチオシ」が入れかわる（月曜0:00）', c:'#8e44ad' }
     ];
     const CAL_ONCE = {
-        '2026-8-30': [{ e:'📘', t:'のびログ定期テスト 前半（数学・英語・国語／30分）', c:'#8e44ad' }],
-        '2026-8-31': [{ e:'📗', t:'のびログ定期テスト 後半（理科・社会／30分）', c:'#8e44ad' }],
-        '2026-6-5':  [{ e:'🎁', t:'夏のボーナス', c:'#e74c3c' }],
-        '2026-12-5': [{ e:'🎁', t:'冬のボーナス', c:'#e74c3c' }],
-        '2026-8-1':  [{ e:'🌻', t:'夏休み！ 宿題は「夏休みを楽しむ」だけ', c:'#f39c12' }],
-        '2026-9-1':  [{ e:'🏫', t:'2学期スタート。宿題は自動チェックにもどるよ', c:'#16a085' }]
+        '2026-8-1':  [{ e:'🌻', t:'夏休み！ 8月の宿題は「夏休みを楽しむ」だけ🌻', c:'#f39c12' }],
+        '2026-8-30': [{ e:'📘', t:'のびログ夏休み定期テスト 前半（数学・英語・国語／⏰30分）', c:'#8e44ad' }],
+        '2026-8-31': [{ e:'📗', t:'のびログ夏休み定期テスト 後半（理科・社会／⏰30分）', c:'#8e44ad' },
+                      { e:'🏁', t:'夏休みラスト！ あしたから2学期', c:'#e74c3c' }],
+        '2026-6-5':  [{ e:'🎁', t:'夏のボーナス（給料2か月分×評価）', c:'#e74c3c' }],
+        '2026-12-5': [{ e:'🎁', t:'冬のボーナス（給料2か月分×評価）', c:'#e74c3c' }],
+        '2026-9-1':  [{ e:'🏫', t:'2学期スタート。宿題は「アプリでやると自動でまるが付く」方式にもどるよ', c:'#16a085' }],
+        '2027-1-1':  [{ e:'🎍', t:'NISAの枠が復活・有給休暇がリセット', c:'#27ae60' }]
     };
     function calEventsFor(key) {
         const p = String(key).split('-').map(Number);
+        const dow = new Date(p[0], p[1] - 1, p[2]).getDay();
         let out = (CAL_ONCE[key] || []).slice();
-        CAL_EVENTS.forEach(ev => { if(ev.d === p[2]) out.push(ev); });
+        CAL_EVENTS.forEach(ev => { if((ev.d != null && ev.d === p[2]) || (ev.w != null && ev.w === dow)) out.push(ev); });
         return out;
+    }
+    // 📅 その月ぜんたいの予定をまとめて見せる（1日ずつタップしなくても分かるように）
+    function calMonthPlanHtml(y, mo) {
+        const days = new Date(y, mo, 0).getDate();
+        const rows = [];
+        for(let d = 1; d <= days; d++) { const one = CAL_ONCE[`${y}-${mo}-${d}`]; if(one && one.length) rows.push({ d, list: one }); }
+        const hwKeys = Object.keys(HOMEWORK).filter(k => k.indexOf(`${y}-${mo}-`) === 0);
+        let h = `<div class="m-card" style="border:3px solid #f39c12;"><b>📅 ${mo}月の予定まとめ</b>
+            <div style="font-size:12px;color:#888;">1日ずつタップしなくても、この月にあることがぜんぶ分かるよ</div>`;
+        if(hwKeys.length) {
+            const sample = HOMEWORK[hwKeys[0]] || [];
+            const selfMode = sample[0] && sample[0].self;
+            h += `<div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">📝 宿題</div>
+                <div class="m-desc">${hwKeys.length}日ぶん入っているよ${selfMode ? '／この月は<b>自分でチェックする方式</b>🌻' : '／アプリでやると自動でまるが付くよ'}</div>
+                <div class="m-desc">${esc(String((sample[0] || {}).t || ''))}</div></div></div>`;
+        }
+        if(rows.length) {
+            h += `<div class="m-desc" style="margin-top:10px;"><b>■ この月だけの予定</b></div>`;
+            rows.forEach(r => r.list.forEach(ev => {
+                h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name" style="color:${ev.c};">${ev.e} ${mo}月${r.d}日</div>
+                    <div class="m-desc">${esc(ev.t)}</div></div>
+                  <button class="m-btn m-info" onclick="calSelect('${y}-${mo}-${r.d}')">見る</button></div>`; }));
+        }
+        h += `<div class="m-desc" style="margin-top:10px;"><b>■ 毎月・毎週きまっていること（🏛️政治と経済）</b></div>`;
+        CAL_EVENTS.forEach(ev => {
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name" style="color:${ev.c};">${ev.e} ${ev.d != null ? '毎月' + ev.d + '日' : '毎週' + ['日','月','火','水','木','金','土'][ev.w] + '曜'}</div>
+                <div class="m-desc">${esc(ev.t)}</div></div></div>`;
+        });
+        h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name" style="color:#2980b9;">📰 毎日 3回</div>
+                <div class="m-desc">朝7時・昼12時・夕方18時にニュースが新しくなって、そのたびに株価が動くよ</div></div></div>
+            <div class="m-learn">💡 <b>5日</b>はお金がいちばん大きく動く日。給料が入って、生活費・保険・ローンが引かれる。
+            その日にホームを見ると、1か月ぶんのお金の流れがまるごと分かるよ。</div></div>`;
+        return h;
     }
     function calDayNum(key) { const p = String(key).split('-').map(Number); return Math.floor(new Date(p[0], p[1]-1, p[2]).getTime() / 86400000); }
     function calToday() { const n = new Date(); return `${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`; }
@@ -1188,7 +1229,8 @@
             <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest(${npi})">${np.e} のびログ定期テスト ${np.n} を受ける（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）</button></div>`; }
         detail += '</div>';
         document.getElementById('cal-list').innerHTML =
-            `<div class="cal-head">${y}年 ${m+1}月</div><div class="cal-grid">${grid}</div>${detail}`;
+            `<div class="cal-head">${y}年 ${m+1}月</div><div class="cal-grid">${grid}</div>${detail}`
+            + calMonthPlanHtml(y, m + 1);
     }
     // ホーム（勉強画面）の「今日の宿題」＝お知らせの下。自動チェックのみ
     function renderTodayHomework() {
@@ -9181,13 +9223,13 @@
     function startNobiTest(pi) {
         const part = NOBI_TEST.parts[pi]; if(!part) return;
         const total = part.subjs.reduce((a, x) => a + x[1], 0);
-        if(!confirm(`${part.e} のびログ定期テスト ${part.n} を受ける？\n\n${part.subjs.map(x => x[0] + ' ' + x[1] + '問').join('・')}（ぜんぶで${total}問）\n⏰ 制限時間は ${NOBI_TEST.limit}分（${Math.round(NOBI_TEST.limit * 0.67)}分ぐらいで終わる量だよ）\n\n時間になったら自動で答え合わせをします。`)) return;
+        if(!confirm(`${part.e} のびログ夏休み定期テスト ${part.n} を受ける？\n\n${part.subjs.map(x => x[0] + ' ' + x[1] + '問').join('・')}（ぜんぶで${total}問）\n⏰ 制限時間は ${NOBI_TEST.limit}分（${Math.round(NOBI_TEST.limit * 0.67)}分ぐらいで終わる量だよ）\n\n時間になったら自動で答え合わせをします。`)) return;
         closeUnitHelp(); setUnitHelpBtn(false);
         currentRunMode = 'test';
         nobiPart = pi;
         pTest = { grade:'中1', subj:'のびログ定期テスト' + part.n, unit:part.subjs.map(x => x[0]).join('・'), level:4, count:total };
-        document.getElementById('print-title').innerText = `のびログ定期テスト ${part.n}`;
-        document.getElementById('run-title').innerText = `${part.e} のびログ定期テスト ${part.n}（${part.subjs.map(x => x[0]).join('・')}）`;
+        document.getElementById('print-title').innerText = `のびログ夏休み定期テスト ${part.n}`;
+        document.getElementById('run-title').innerText = `${part.e} のびログ夏休み定期テスト ${part.n}（${part.subjs.map(x => x[0]).join('・')}）`;
         testQuestionsData = [];
         const seen = new Set();
         usedMathT = {};
