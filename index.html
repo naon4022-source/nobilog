@@ -1024,7 +1024,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '☁️ <b>きろくがオンライン保存になりました！</b>①保存するたびに<b>ネットの向こう</b>にも記録が送られます。だから<b>どの端末でひらいても同じきろく</b>になるし、スマホを変えても・アプリのデータが消えても、ログインすれば元にもどります②古い記録が新しい記録を上書きしないように、<b>保存番号</b>で新しい方を守るしくみを入れました③電波がないときも この端末に保存されて、つながったら自動で送られます④ホームの「🛟データのまもり」で状態が見られて、<b>☁️いますぐ同期する</b>ボタンも付けました⑤お金が一からになっていたので、<b>スタート資金 35万円</b>をお配りします🎁⑥体験版で使えない項目は、消さずに<b>灰色＋🔒</b>にして、押すと理由が出るようにしました';
+    const UPDATE_NOW = '🌟 <b>生活と政治経済が、めちゃくちゃ やりこめるようになりました！</b>①🏠生活に<b>毎日の日課</b>（6つ）。ぜんぶやると<b>パーフェクトデー</b>でボーナス。連続でやるほど良いことが起きます②<b>生活レベル</b>と<b>4つのスキル</b>（料理・せいけつ・たいりょく・こころ）。上がると食費や光熱費が安くなったり、病気になりにくくなります③<b>かくれた称号45こ</b>。条件は書いていません。見つけてください④数日に1回<b>今日のできごと</b>。えらんだ答えで結果が変わります⑤レベル3で<b>今日の福袋</b>、レベル5＋αで<b>🌙秘密のお店</b>が見つかります⑥夏は電気代・冬はガス代が上がり、<b>景気</b>が毎週かわって就職やボーナスに効きます⑦<b>お金が足りないと自動で「お金が足りないよ」の画面</b>が出て、💳借金のところへ案内します⑧返せないと<b>借金レベル1〜5</b>が上がって、取り立て・差し押さえ・<b>借金地獄</b>に。ぬけ出す道（おまとめ・債務整理・自己破産）もあります⑨<b>銀行のローンは🏦銀行タブへお引っこし</b>。審査を受けてから借ります⑩🏛️政治で<b>選挙に立候補</b>できます。当選すると議員になって歳費と政策が使え、落ちると供託金300万が没収されることも⑪📈投資に<b>⚡信用取引（レバレッジ）</b>。もうけも損も2〜3倍。強制決済されると借金です⑫<b>株価が1時間に1回うごく</b>ようになりました';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -2440,6 +2440,44 @@
         __priceMemo[key] = out;
         return out;
     }
+    // ⏰ 1時間に1回、株価が動く（ニュースは1日3回のまま。その合間も相場は生きている）
+    //   しくみ：ニュースで決まる「その時間帯の株価」を土台にして、1時間ごとの小さなゆれを かけ算する。
+    //   ゆれは「日付・時間帯・何時か・銘柄」から計算する決まった値なので、どの端末で見ても同じ株価になる。
+    //   積み上げないので、長い目で見た値動き（検証ずみのしくみ）は まったく変わらない。
+    function mHourNow() { return new Date().getHours(); }
+    function mPricesAtHour(day, slot, hr) {
+        const key = day + '|' + slot + '|h' + hr;
+        if(__priceMemo[key]) return __priceMemo[key];
+        const base = mPricesAt(day, slot);
+        const out = {};
+        Object.keys(base).forEach(c => {
+            const a = M_ASSET(c);
+            const w = mRng(mHash('nobilog-hour|' + day + '|' + slot + '|' + hr + '|' + c))() * 2 - 1;   // −1〜+1
+            const amp = Math.min(0.012, Math.max(0.0015, (a && a.v ? a.v : 0.02) * 0.35));
+            let p = base[c] * (1 + w * amp);
+            if(a && a.t === '株') p = Math.max(Math.round(p), Math.round(a.p * 0.1));
+            else p = Math.max(Math.round(p * 100) / 100, (a ? a.p : base[c]) * 0.05);
+            out[c] = p;
+        });
+        if(Object.keys(__priceMemo).length > 400) __priceMemo = {};   // ためこみすぎない
+        __priceMemo[key] = out;
+        return out;
+    }
+    function mPricesNow() { const now = mSlotInfo(); return mPricesAtHour(now.day, now.s, mHourNow()); }
+    // 1時間ごとに画面の株価を新しくする（開きっぱなしでも ちゃんと動く）
+    let mHourTimer = null, mHourLast = null;
+    function mStartHourTimer() {
+        if(mHourTimer) return;
+        mHourLast = mHourNow();
+        mHourTimer = setInterval(() => {
+            const h = mHourNow();
+            if(h === mHourLast) return;
+            mHourLast = h;
+            mClearPriceCache();
+            if(document.getElementById('view-money') && document.getElementById('view-money').classList.contains('active')) renderMoney();
+            else if(document.getElementById('view-life') && document.getElementById('view-life').classList.contains('active')) renderLife();
+        }, 20000);
+    }
     // サーバー（Cloudflare Workers）から最新のニュースのたねをもらう
     // サーバーは毎日 朝7時・昼12時・夕方18時（日本時間）に、新しいたねを作って置いてくれる
     let mNewsOnline = false, mNewsSyncing = false, mNewsSyncAt = 0, mNewsReady = false;
@@ -3207,8 +3245,21 @@
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
-        // 🏠 生活（own=持っているもの / health=健康 / happy=きぶん）
-        home:{ own:{}, shop:{}, health:80, happy:70, lastMeal:null, mealDays:0, missed:0, lastFix:null }
+        // 🏠 生活（own=持っているもの / health=健康 / happy=きぶん / lv・xp・sk＝やりこみの隠しパラメータ）
+        home:{ own:{}, shop:{}, health:80, happy:70, lastMeal:null, mealDays:0, missed:0, lastFix:null,
+               lv:1, xp:0, sk:{ cook:0, clean:0, body:0, mind:0 }, daily:{}, dailyDay:null, lastAct:null,
+               dstreak:0, dbest:0, dtotal:0, perfect:0, fukuDay:null, fukuN:0, fukuIn:0, fukuOut:0, fukuWin:0,
+               secret:false, cold:0, zen:0 },
+        // 🏆 称号（かくれた実績。とる条件は書いていない）
+        titles:[],
+        // 💀 借金地獄（返せなくなると、だんだん取り立てがきびしくなる）
+        hell:{ lv:0, days:0, calls:0, seized:0, seizeYen:0, lateFee:0, seiri:0, bankrupt:0, blockUntil:0, maxLv:0 },
+        // 🗳️ 選挙・議員
+        pol:{ phase:'none', dep:0, sup:0, acts:0, actLog:[], run:0, win:0, lose:0, seatUntil:0, salary:0, policy:null, votes:0, donate:0, day:0 },
+        // ⚡ 信用取引（レバレッジ）
+        lev:{ pos:null, wins:0, loses:0, profit:0, blown:0, seen:false, calledDay:null },
+        // 🎬 生活のできごと
+        evt:{ pend:null, done:0, lastDay:0, hist:[] }
     });
     // リセットを反映（同じidは1回だけ。実行するとお金データがまっさら＝1万円スタートに戻る）
     function mApplyResets() {
@@ -3269,11 +3320,11 @@
         if(!m || typeof m.cash !== 'number') { m = M_EMPTY(); }
         m = Object.assign(M_EMPTY(), m);
         // 配列であるべき所がこわれていても落ちないように直す（保険）
-        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
+        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki','titles'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
         ['hold','nisa','ins'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
         // ★アップデートで新しい項目がふえても、今までのデータは絶対に消さずに「足りない所だけ」うめる
         const EMP = M_EMPTY();
-        ['life','gam','job','home','biz'].forEach(k => {
+        ['life','gam','job','home','biz','hell','pol','lev','evt'].forEach(k => {
             if(!m[k] || typeof m[k] !== 'object') { m[k] = EMP[k]; return; }
             Object.keys(EMP[k]).forEach(f => { if(m[k][f] === undefined) m[k][f] = EMP[k][f]; });   // 新項目だけ追加
         });
@@ -3287,12 +3338,27 @@
         if(!m.home.own || typeof m.home.own !== 'object') m.home.own = {};
         if(!m.home.shop || typeof m.home.shop !== 'object') m.home.shop = {};
         ['health','happy','mealDays','missed'].forEach(k => { if(typeof m.home[k] !== 'number' || !isFinite(m.home[k])) m.home[k] = (k === 'health' ? 80 : k === 'happy' ? 70 : 0); });
+        // 🌟 やりこみの隠しパラメータ（こわれていても落ちないように・古いデータには足すだけ）
+        if(!m.home.sk || typeof m.home.sk !== 'object') m.home.sk = { cook:0, clean:0, body:0, mind:0 };
+        ['cook','clean','body','mind'].forEach(k => { if(typeof m.home.sk[k] !== 'number' || !isFinite(m.home.sk[k])) m.home.sk[k] = 0; else m.home.sk[k] = Math.max(0, Math.min(100, m.home.sk[k])); });
+        if(!m.home.daily || typeof m.home.daily !== 'object') m.home.daily = {};
+        ['lv','xp','dstreak','dbest','dtotal','perfect','fukuN','fukuIn','fukuOut','fukuWin','cold','zen'].forEach(k => { if(typeof m.home[k] !== 'number' || !isFinite(m.home[k])) m.home[k] = (k === 'lv' ? 1 : 0); });
+        m.home.lv = Math.max(1, Math.round(m.home.lv));
+        ['lv','days','calls','seized','seizeYen','lateFee','seiri','bankrupt','blockUntil','maxLv'].forEach(k => { if(typeof m.hell[k] !== 'number' || !isFinite(m.hell[k])) m.hell[k] = 0; });
+        ['dep','sup','acts','run','win','lose','seatUntil','salary','votes','donate','day'].forEach(k => { if(typeof m.pol[k] !== 'number' || !isFinite(m.pol[k])) m.pol[k] = 0; });
+        if(!Array.isArray(m.pol.actLog)) m.pol.actLog = [];
+        if(typeof m.pol.phase !== 'string') m.pol.phase = 'none';
+        ['wins','loses','profit','blown'].forEach(k => { if(typeof m.lev[k] !== 'number' || !isFinite(m.lev[k])) m.lev[k] = 0; });
+        if(m.lev.pos && (typeof m.lev.pos !== 'object' || typeof m.lev.pos.yen !== 'number' || !isFinite(m.lev.pos.yen) || m.lev.pos.yen <= 0)) m.lev.pos = null;
+        if(!Array.isArray(m.evt.hist)) m.evt.hist = [];
+        ['done','lastDay'].forEach(k => { if(typeof m.evt[k] !== 'number' || !isFinite(m.evt[k])) m.evt[k] = 0; });
+        if(m.evt.pend && (typeof m.evt.pend !== 'object' || !M_EVENTS.some(e => e.id === m.evt.pend.id))) m.evt.pend = null;
+        m.titles = m.titles.filter(t => M_TITLES.some(x => x.id === t));
         m.loans = m.loans.filter(l => l && typeof l.left === 'number' && isFinite(l.left) && l.left > 0);
         ['insPaid','insGot','insCount','insSim','insLapse','debt','credit','loanPaid','loanLate'].forEach(k => { if(typeof m[k] !== 'number' || !isFinite(m[k])) m[k] = (k === 'credit' ? 600 : 0); });
         Object.keys(m.ins).forEach(c => { const p = mInsProd(c); if(!p || !p.plans[m.ins[c] - 1]) delete m.ins[c]; });   // 知らない保険は消す
         // 株価は「今の時間帯」から計算する（保存はしない＝どの端末でも同じ・データがずれない）
-        const now = mSlotInfo();
-        m.prices = Object.assign({}, mPricesAt(now.day, now.s));
+        m.prices = Object.assign({}, mPricesNow());
         m.divRate = {};
         M_ALL().forEach(a => { m.divRate[a.c] = a.div; });                  // 配当利回りは固定
         // むかし買ったまま定義が無い商品も、値段が無いと表示できないので用意しておく（データを守る）
@@ -3309,8 +3375,7 @@
     // いまの株価（1株いくら）
     function mPrice(m, code) {
         if(m && typeof m.prices[code] === 'number') return m.prices[code];
-        const now = mSlotInfo();
-        return mPricesAt(now.day, now.s)[code] || M_ASSET(code).p;
+        return mPricesNow()[code] || M_ASSET(code).p;
     }
     // 株かどうか（株は「株数」で、投信・そのほかは「金額」で売り買いする）
     function mIsShareType(a) { return a && a.t === '株'; }
@@ -3454,7 +3519,7 @@
         if(mBizMonth(m)) did = true;
         // 🎁 ボーナス（6月と12月。給料2か月分＋評価で増減）
         if(mJobCo(m.job && m.job.co) && (mo === 6 || mo === 12) && !mJobCo(m.job.co).arbeit) {
-            const bg = Math.round(mJobGross(m) * 2 * (0.7 + m.job.ev / 100 * 0.6));
+            const bg = Math.round(mJobGross(m) * 2 * (0.7 + m.job.ev / 100 * 0.6) * (0.6 + mKeiki().bonus * 0.4));
             const bs = mJobNet(bg);
             m.cash += bs.net; m.job.totalPay += bs.net; m.salaryTotal = (m.salaryTotal || 0) + bs.net;
             m.taxPaid += bs.shotoku + bs.jumin;
@@ -3467,7 +3532,9 @@
         const qa = mQualPay();
         if(qa > 0 && mJobCo(m.job && m.job.co)) { m.cash += qa; mLog(m, `資格手当（${mQualName()}）`, qa); did = true; }
         // 📚 勉強手当（勉強でためた正解ぶん・20問で1万円）
-        const sal = Math.round((m.payCorrect || 0) * M_PAY_PER_CORRECT * (1 + mHomeEffect(m).pay));
+        const polPay = mPolPolicy(m, 'pay');
+        const mindUp = mHomeSk(m).mind >= 90 ? 0.12 : mHomeSk(m).mind >= 60 ? 0.12 : mHomeSk(m).mind >= 30 ? 0.05 : 0;
+        const sal = Math.round((m.payCorrect || 0) * M_PAY_PER_CORRECT * (1 + mHomeEffect(m).pay + mindUp + (polPay ? polPay.pay : 0)));
         if(sal > 0) { m.cash += sal; m.salaryTotal = (m.salaryTotal || 0) + sal; mLog(m, `勉強手当（${m.payCorrect}問ぶん）`, sal); m.payCorrect = 0; did = true; }
         // 💴 配当金（1か月ぶん。課税口座は20.315%引き・NISAはまるごと）
         let divTax = 0, divNisa = 0;
@@ -3517,6 +3584,8 @@
             mLog(m, `保険料（${Object.keys(m.ins).length}つ）`, -prem);
             did = true;
         }
+        // 🗳️ 議員の歳費と、実行中の政策でもらえるお金
+        if(mPolPayMonth(m)) did = true;
         // 🏠 生活のお金（家賃・スマホ代・光熱費など。持っているものの月額をまとめて払う）
         if(mHomeFixed(m) > 0 && mHomePayMonth(m)) did = true;
         // 💳 ローンの返済（計画どおり毎月きちんと返す）
@@ -3582,8 +3651,8 @@
     // --- 経済をすすめる（株価はニュースから計算・毎月5日に給料と配当・毎日つみたてと信託報酬） ---
     function mTick(m) {
         const now = mSlotInfo();
-        // 株価はいつでも「今の時間帯」から計算する（保存しない＝どの端末でも同じ・ニュースと同じタイミングで動く）
-        m.prices = Object.assign({}, mPricesAt(now.day, now.s));
+        // 株価はいつでも「今の時間・今の時間帯」から計算する（保存しない＝どの端末でも同じ・1時間に1回動く）
+        m.prices = Object.assign({}, mPricesNow());
         // 今の時間帯のニュース見出しをホーム用に保存
         const batch = mNewsFor(now.day, now.s);
         m.news = (batch.nobi || []).concat(batch.real || []).map(it => ({ t: it.t, cat: it.cat, day: now.day, slot: now.s }));
@@ -3613,6 +3682,10 @@
                 mRollRisks(m);
                 mJobDaily(m);      // 💼 出勤したか（サボると警告→クビ）
                 mHomeDaily(m);     // 🏠 ごはん・体調・きぶん
+                mBodyRoll(m);      // 🤒 かぜ・✨絶好調
+                mHellDaily(m);     // 💀 借金地獄（取り立て・遅延損害金・差し押さえ）
+                mLevDaily(m);      // ⚡ 信用取引の追証・強制決済
+                mEvtRoll(m);       // 🎬 生活のできごとを抽選
             }
             changed = true;
         }
@@ -3755,6 +3828,8 @@
         if(mTab === 'book') html += mBookHtml(m);
         document.getElementById('money-body').innerHTML = html;
         if(mTab === 'home') mDrawChart(m);
+        mStartHourTimer();                        // ⏰ 1時間ごとに株価を更新する
+        mAwardTitles();                           // 🏆 かくれた称号のチェック
         if(mTab === 'gam') mGamStartTimer(); else if(mGamTimer) { clearInterval(mGamTimer); mGamTimer = null; }
         if(mNewsReady) mNewsSync();   // うしろでオンラインの最新ニュースを取りに行く（つながらなくても大丈夫）
     }
@@ -3958,6 +4033,14 @@
             <button class="btn" style="background:${m.divReinvest?'#95a5a6':'#11998e'};color:#fff;width:100%;margin-top:8px;" onclick="mToggleReinvest()">${m.divReinvest ? 'OFFにする' : '🔁 ONにする'}</button>
             <div class="m-learn">💡 配当をつかわずに、また同じものを買うことを<b>再投資</b>という。
             これをすると「配当がさらに配当を生む」＝複利になる。長い時間をかけると、とてつもない差になるよ。</div></div>`;
+        pre += `<div class="m-card"><b>⏰ 株価は「1時間に1回」動くよ</b>
+            <div style="font-size:12px;color:#888;">ニュースは1日3回（朝7時・昼12時・夕方18時）だけど、株価は<b>1時間ごとに</b>少しずつ動く。
+            本物の市場も、ニュースが無い時間でもずっと売り買いされて値段が動いているんだ</div>
+            <div class="m-row"><span>いまの時間</span><b>${mHourNow()}時</b></div>
+            <div class="m-row"><span>つぎに動く時間</span><b>${(mHourNow() + 1) % 24}時</b></div>
+            <div class="m-learn">💡 1時間ごとの動きは小さくても、1日・1か月と積み重なると大きくなる。
+            <b>短い時間の上げ下げに一喜一憂しない</b>のが、投資でいちばん大事なことだよ。</div></div>`;
+        pre += mLevHtml(m);                      // ⚡ 信用取引（レバレッジ）
         return pre + mInvestHtmlBody(m);
     }
     function mToggleReinvest() {
@@ -4139,6 +4222,8 @@
             <b>②金融政策（中央銀行）</b>…金利を上げ下げする。<br>
             　物価が上がりすぎ → 金利を上げる → お金の流れをゆっくりにする<br>
             💡 ニュースで「利上げ」「補正予算」と聞いたら、このどちらかの話だよ。</div></div>`;
+        h += mElecHtml(m);                       // 🗳️ 立候補・議員・政策
+        h += mSeasonHtml(m);                     // ⛅ 景気と季節
         h += `<div class="m-card"><b>🎮 もし総理大臣になったら</b>
             <div style="font-size:12px;color:#888;">5回、政策をえらんでみよう。景気・物価・借金・支持率がどう動くか体験できるよ</div>
             <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="mPolSim()">▶️ 政策シミュレーターをやる</button></div>`;
@@ -4836,7 +4921,7 @@
         const m = mLoad();
         // 総合判定：筆記の出来 ＋ 面接の合い方 ＋ 最後は倍率（＝運）。難関ほど倍率がきびしい
         const score = (paperPct / 100) * 0.5 + (want / iq.length) * 0.5;
-        const chance = Math.min(0.97, co.rate * (0.55 + score));
+        const chance = Math.min(0.97, co.rate * (0.55 + score) * mKeiki().job);   // 景気がいいと受かりやすい
         const pass = Math.random() < chance;
         if(!pass) {
             m.job.applied[co.c] = { day:calToday(), ng:true }; mSave(m); playSfx('wrong');
@@ -5097,8 +5182,8 @@
     // 毎月かかるお金の合計（固定費）
     function mHomeFixed(m) {
         let s = 0;
-        Object.keys(m.home.own || {}).forEach(c => { const g = mGood(c); if(!g) return; s += g.free ? mHomeAmt(m, c) : g.mon; });
-        return s;
+        Object.keys(m.home.own || {}).forEach(c => { if(mGood(c)) s += mGoodMonth(m, c); });
+        return Math.round(s);
     }
     // 持っているものから、健康・きぶん・仕事の評価・勉強手当への影響を計算
     function mHomeEffect(m) {
@@ -5135,10 +5220,15 @@
     }
     // 1日ぶんの生活（mTickから呼ばれる）
     function mHomeDaily(m) {
-        const e = mHomeEffect(m), miss = mHomeMissing(m);
-        let dh = -2 + e.h / 6, dhp = -2 + e.hp / 8;
+        const e = mHomeEffect(m), miss = mHomeMissing(m), sk = mHomeSk(m);
+        // 💪 スキルが高いと、放っておいても体調がへりにくい（裏で効いている）
+        const baseH = sk.body >= 60 ? -1 : -2, baseHp = sk.mind >= 90 ? -1 : -2;
+        let dh = baseH + e.h / 6 + (sk.cook >= 80 ? 1 : 0) + (sk.body >= 90 ? 2 : 0), dhp = baseHp + e.hp / 8;
         if(miss.length) { dh -= miss.length * 4; dhp -= miss.length * 2.5; m.home.missed++; }
         else m.home.missed = 0;
+        // 🏗️ 公共事業の政策を実行していると、仕事の評価が上がりやすい
+        const pev = mPolPolicy(m, 'ev');
+        if(pev && mJobCo(m.job.co)) m.job.ev = Math.min(100, m.job.ev + pev.ev);
         m.home.health = Math.max(0, Math.min(100, m.home.health + dh));
         m.home.happy = Math.max(0, Math.min(100, m.home.happy + dhp));
         if(m.home.health < 25 && mJobCo(m.job.co)) m.job.ev = Math.max(0, m.job.ev - 3);
@@ -5182,6 +5272,12 @@
             .map(([k, n]) => `<button class="btn ${mLifeTab === k ? 'btn-active' : 'btn-inactive'}" onclick="mLifeSwitch('${k}')">${n}</button>`).join('')}</div>`;
         if(miss.length) h += `<div class="m-warn" style="font-size:14px;">🚨 <b>足りないもの：${miss.map(esc).join('・')}</b><br>
             生活に絶対いるものが そろっていないよ。毎日 健康ときぶんが下がっていく！</div>`;
+        // 💀 借金がふくらんでいたら、生活の画面でもすぐ気づけるようにする
+        const hl = mHellLv(m);
+        if(hl >= 1) h += `<div class="m-warn" style="font-size:14px;border-left:6px solid ${M_HELL[hl].c};">
+            ${M_HELL[hl].e} <b>借金レベル「${M_HELL[hl].n}」（${hl}/5）</b>　借金の合計 ${mYen(mLoanTotalDebt(m))}<br>
+            ${esc(M_HELL[hl].d)}
+            <button class="btn" style="background:#c0392b;color:#fff;width:100%;margin-top:6px;" onclick="switchView('money'); mSwitchTab('loan');">💳 借金のようすを見る</button></div>`;
         // 体調（どのタブでも上に出す）
         h += `<div class="m-card"><b>💪 いまの体調</b>
             <div style="margin-top:6px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>❤️ 健康</span><b>${Math.round(m.home.health)}</b></div>
@@ -5198,7 +5294,10 @@
                 <div class="m-learn">💡 大人が貯金できない一番の理由が<b>固定費</b>。1回の買い物より、毎月かかるお金を見直すほうが何倍も効く。
                 <b>固定費は手取りの50%まで</b>が目安だよ。</div></div>`;
         }
-        if(mLifeTab === 'shop') { h += mShopHtml(m); box.innerHTML = h; return; }
+        h += mEvtHtml(m);                       // 🎬 今日のできごと（あれば いちばん上に近いところへ）
+        if(mLifeTab === 'life') { h += mDailyHtml(m) + mLevelHtml(m) + mSeasonHtml(m); }
+        if(mLifeTab === 'fun')  { h += mFukuHtml(m) + mTitleHtml(m); }
+        if(mLifeTab === 'shop') { h += mSecretHtml(m) + mShopHtml(m); box.innerHTML = h; mStartHourTimer(); mAwardTitles(); return; }
         const cats = mLifeTab === 'fun' ? M_FUN_CATS : M_LIFE_CATS;
         cats.forEach(([cat, name, note]) => {
             const list = M_GOODS.filter(g => g.cat === cat);
@@ -5237,7 +5336,10 @@
                 おすすめは<b>手取りの5〜10%まで</b>。それ以上いくと、生活か将来のどちらかがけずられるよ。<br>
                 ${inc > 0 ? `いまのあなたなら <b>月 ${mYen(Math.round(inc * 0.08))}</b> ぐらいが目安。` : 'まず仕事を見つけて、収入を作ってからにしよう。'}</div></div>`;
         }
+        if(mLifeTab === 'life') h += mTitleHtml(m);
         box.innerHTML = h;
+        mStartHourTimer();
+        mAwardTitles();
     }
     function mLifeHelp() {
         gOpenModal(`<div style="text-align:left;max-width:640px;margin:0 auto;">
@@ -5252,7 +5354,18 @@
             <b>推し活は金額を自分で決められる</b>のがポイント。使った金額のぶんだけ気分が上がるけど、そのぶんお金は減るよ。</p></div>
             <div class="uh-box"><h3>🛒 ショップ</h3><p>お菓子・ジュース・パソコン・家具など、<b>1回だけ買うもの</b>はここ。
             食べものやジュースは買うとその場で気分が上がる。パソコンなどは持っているだけで効果が続くよ。</p></div>
+            <div class="uh-box"><h3>📅 日課（毎日やること）</h3><p>ごはん・そうじ・うんどう・おふろ・読書・早ね の6つ。やると<b>健康・きぶん・スキル・生活レベル</b>が上がるよ。
+            <b>1日で6つぜんぶやるとパーフェクトデー</b>でボーナスのお金がもらえる。<b>連続でやるほど、もらえる経験値がふえる</b>（かくれたボーナス）。</p></div>
+            <div class="uh-box"><h3>📈 生活レベルとスキル</h3><p>レベルが上がると、できることが増えていく（レベル3で福袋・レベル5で？？？）。
+            スキルは4つ（料理・せいけつ・たいりょく・こころ）。上がると<b>食費や光熱費が安くなったり、病気になりにくくなったり</b>する。</p></div>
+            <div class="uh-box"><h3>🎬 今日のできごと</h3><p>数日に1回、いろんなことが起きる。<b>えらんだ答えでお金・健康・きぶん・信用が変わる</b>よ。正かいは1つじゃない。</p></div>
+            <div class="uh-box"><h3>🏆 称号</h3><p>とる条件は<b>どこにも書いていない</b>。いろいろやっていると、とつぜん出てくるのを楽しんでね。</p></div>
+            <div class="uh-box"><h3>☀️ 季節と景気</h3><p>夏は電気代、冬はガス代が上がる。景気は<b>毎週月曜に変わって</b>、就職のしやすさ・ボーナス・物のねだんに効くよ。</p></div>
             <div class="uh-box"><h3>💸 毎月5日</h3><p>お給料が入るのと同じ日に、固定費もまとめて引かれる。足りないと<b>借金</b>になって💳借金タブに出てくる。</p></div>
+            <div class="uh-box"><h3>💀 お金がなくなったら</h3><p>何かを買おうとしてお金が足りないと、<b>「お金が足りないよ」の画面</b>が出て、
+            貯金からおろす／借りる（💳借金タブへジャンプ）／はたらく を選べるよ。<br>
+            借金がふえすぎると<b>借金レベルが1〜5</b>に上がって、取り立ての電話・差し押さえがやってくる。<b>本物の人生と同じできびしい</b>けど、
+            ぬけ出す方法（おまとめ・債務整理・自己破産）もちゃんとあるからね。</p></div>
             <div style="text-align:center;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`);
     }
     function mLifeToggleGood(c) {
@@ -5284,7 +5397,7 @@
                 mLog(m, `はじめる：${g.n}（${mYen(yen)}／月）`, 0);
             } else {
                 if(g.buy > 0) {
-                    if(m.cash < g.buy) { alert(`お金が足りないよ。${mYen(g.buy)} 必要（いま ${mYen(m.cash)}）`); return; }
+                    if(m.cash < g.buy) { mNoMoney(g.buy, g.n, () => mLifeToggleGood(c)); return; }   // 💳借金へ案内
                     if(!confirm(`${g.n} を買う？\nはじめに ${mYen(g.buy)}、そのあと毎月 ${mYen(g.mon)} かかるよ。`)) return;
                     m.cash -= g.buy;
                     mLog(m, `買う：${g.n}`, -g.buy);
@@ -5343,7 +5456,7 @@
                          ['denki','💻 でんきせいひん','持っているとずっと効果がつづく'],
                          ['kagu','🛋️ かぐ・生活用品','くらしそのものが良くなる'],
                          ['mono','👟 みのまわりのもの','小さいけれど毎日つかうもの']];
-    function mShopItem(c) { return M_SHOP.find(x => x.c === c); }
+    function mShopItem(c) { return M_SHOP.find(x => x.c === c) || M_SECRET.find(x => x.c === c); }
     function mShopHtml(m) {
         const own = m.home.shop || {};
         let h = `<div class="m-card"><b>🛒 ショップ</b>
@@ -5376,10 +5489,12 @@
     }
     function mShopBuy(c) {
         const it = mShopItem(c); if(!it) return;
-        const m = mLoad();
-        if(m.cash < it.buy) { alert(`お金が足りないよ（${mYen(it.buy)} ひつよう）`); return; }
+        let m = mLoad();
         if(!it.use && (m.home.shop || {})[c]) { alert('もう持っているよ'); return; }
+        if(!mAfford(it.buy, it.n, () => mShopBuy(c))) return;      // 足りないと「お金が足りない」画面→💳借金へ
         if(!confirm(`${it.n} を ${mYen(it.buy)} で買う？`)) return;
+        m = mLoad();
+        if(m.cash < it.buy) { mNoMoney(it.buy, it.n, () => mShopBuy(c)); return; }
         if(!m.home.shop || typeof m.home.shop !== 'object') m.home.shop = {};
         m.cash -= it.buy;
         m.home.shop[c] = (m.home.shop[c] || 0) + 1;
@@ -5388,10 +5503,1404 @@
         mLog(m, `買う：${it.n}`, -it.buy);
         mSave(m); playSfx('correct'); renderLife();
     }
+    // ==========================================================================================
+    //  🌟 やりこみ系（2026-07-28 追加）
+    //  ここのしくみの大半は「表に出さずに 裏で毎日うごいている」。
+    //  うまくやると できることがどんどん増えて、しくじると 本物の人生と同じで きびしくなる。
+    //  ★ 今まであったものは何も消していない。全部「足しただけ」。
+    // ==========================================================================================
+
+    // ---- 毎月の手取り収入（借金の重さをはかる「ものさし」）----
+    function mMonthIncome(m) {
+        let inc = 0;
+        if(mJobCo(m.job.co)) inc += mJobNet(mJobGross(m)).net;
+        if(m.biz && m.biz.c) inc += Math.max(0, m.biz.lastProfit || 0);
+        if(mPolSeated(m)) inc += M_POL_PAY;
+        return Math.round(inc);
+    }
+    // ---- 季節（夏は電気代、冬はガス代が上がる。本物とおなじ）----
+    function mSeason(mo) {
+        mo = mo || (new Date().getMonth() + 1);
+        if(mo >= 6 && mo <= 8)  return { k:'natsu', e:'☀️', n:'夏', denki:1.55, gas:0.80, d:'エアコンで電気代がはね上がる季節' };
+        if(mo === 12 || mo <= 2) return { k:'fuyu', e:'⛄', n:'冬', denki:1.30, gas:1.55, d:'暖房とお風呂で、ガス代と電気代が上がる季節' };
+        if(mo >= 3 && mo <= 5)  return { k:'haru', e:'🌸', n:'春', denki:0.85, gas:0.95, d:'すごしやすくて、光熱費がいちばん安い季節' };
+        return { k:'aki', e:'🍁', n:'秋', denki:0.85, gas:0.95, d:'すずしくて、光熱費が安い季節' };
+    }
+    // ---- 景気の波（毎週月曜に変わる。どの端末でも同じになるよう、週の番号から決める）----
+    const M_KEIKI = {
+        '-2': { e:'🌧️', n:'不景気',   d:'仕事が見つかりにくく、ボーナスも出にくい。物のねだんは下がる', job:0.70, bonus:0.4, price:0.96, biz:0.78, div:0.9 },
+        '-1': { e:'☁️', n:'よこばい',  d:'よくも悪くもない、ふつうの時期', job:0.88, bonus:0.8, price:0.99, biz:0.92, div:1.0 },
+        '0':  { e:'⛅', n:'ふつう',    d:'いつもどおり。あわてず自分のペースで', job:1.00, bonus:1.0, price:1.00, biz:1.00, div:1.0 },
+        '1':  { e:'🌤️', n:'かいふく',  d:'仕事がふえてきた。就職しやすい時期', job:1.12, bonus:1.25, price:1.02, biz:1.10, div:1.05 },
+        '2':  { e:'☀️', n:'好景気',   d:'みんながお金を使う。就職もボーナスも good！でも物のねだんは上がる', job:1.28, bonus:1.6, price:1.05, biz:1.25, div:1.1 }
+    };
+    function mKeikiLv() {
+        const v = mRng(mHash('nobilog-keiki|' + mWeekNo()))();
+        return v < 0.10 ? -2 : v < 0.28 ? -1 : v < 0.72 ? 0 : v < 0.90 ? 1 : 2;
+    }
+    function mKeiki() { const lv = mKeikiLv(); return Object.assign({ lv }, M_KEIKI[String(lv)]); }
+
+    // ---- 🏠 生活レベル・スキル（ここが「やりこみ」の軸。ぜんぶ裏で積み上がっていく）----
+    function mHomeSk(m) {
+        const s = (m.home && m.home.sk) || {};
+        return { cook:s.cook || 0, clean:s.clean || 0, body:s.body || 0, mind:s.mind || 0 };
+    }
+    function mLifeLv(m) { return Math.max(1, Math.round((m.home && m.home.lv) || 1)); }
+    function mLvNeed(lv) { return 60 + lv * lv * 18; }
+    function mSkUp(m, k, n) { if(!m.home.sk) m.home.sk = { cook:0, clean:0, body:0, mind:0 }; m.home.sk[k] = Math.min(100, (m.home.sk[k] || 0) + n); }
+    // 経験値を足す（連続日数がながいほど、こっそり多くもらえる）
+    function mLifeXp(m, n) {
+        const mult = 1 + Math.min(0.60, (m.home.dstreak || 0) * 0.02) + (mHomeHas2(m, 'sec_lucky') ? 0.05 : 0);
+        m.home.xp = Math.round((m.home.xp || 0) + n * mult);
+        let up = 0, guard = 0;
+        while(m.home.xp >= mLvNeed(mLifeLv(m)) && guard++ < 50) { m.home.xp -= mLvNeed(mLifeLv(m)); m.home.lv = mLifeLv(m) + 1; up++; }
+        return up;
+    }
+    function mHomeHas2(m, c) { return !!((m.home && m.home.shop) || {})[c]; }
+    const M_SKILL_INFO = [
+        ['cook',  '🍳', '料理', [[20, '食費が5%やすくなる'], [50, '食費が12%やすくなる'], [80, '食費が22%やすくなる＋毎日 健康+1']]],
+        ['clean', '🧼', 'せいけつ', [[20, '光熱費が4%やすくなる'], [50, '光熱費が10%やすくなる'], [80, '光熱費が18%やすくなる＋病気になりにくい']]],
+        ['body',  '💪', 'たいりょく', [[30, 'かぜをひきにくくなる'], [60, '健康の自然な下がりが半分になる'], [90, '毎日 健康+2・仕事の評価が下がりにくい']]],
+        ['mind',  '🧠', 'こころ', [[30, '勉強手当が5%ふえる'], [60, '勉強手当が12%ふえる'], [90, 'きぶんの自然な下がりが半分になる']]]
+    ];
+    // スキルで割り引かれた「今月のこの品の値段」（季節・景気・レベルもここでまとめて効く）
+    function mGoodMonth(m, c) {
+        const g = mGood(c); if(!g) return 0;
+        let v = g.free ? mHomeAmt(m, c) : (g.mon || 0);
+        if(g.save) return Math.round(v);                                     // 先どり貯金は値段が変わらない
+        const se = mSeason(), sk = mHomeSk(m);
+        if(c === 'denki') v *= se.denki;
+        if(c === 'gas')   v *= se.gas;
+        if(g.cat === 'need') v *= (1 - Math.min(0.18, sk.clean / 100 * 0.18));
+        if(g.cat === 'food') v *= (1 - Math.min(0.22, sk.cook / 100 * 0.22));
+        v *= mKeiki().price;
+        if(mLifeLv(m) >= 8) v *= 0.97;                                       // レベル8「やりくり上手」
+        return Math.round(v);
+    }
+    // ---- ☀️ 体調（かぜ・絶好調）。健康をほうっておくと、ほんとうに寝こむ ----
+    function mBodyRoll(m) {
+        const sk = mHomeSk(m);
+        if(m.home.cold > 0) {                       // かぜをひいている間
+            m.home.cold--;
+            m.home.health = Math.max(0, m.home.health - 2);
+            if(mJobCo(m.job.co)) m.job.ev = Math.max(0, m.job.ev - 1.5);
+            if(m.home.cold === 0) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'かぜがなおった🌤️', msg:'体調がもどったよ。健康は「なくしてから気づく」もの。日課でこつこつ上げておこう。' });
+            return;
+        }
+        // かぜをひく（健康が低いほど・たいりょくスキルが低いほど起きやすい）
+        let p = m.home.health < 25 ? 0.16 : m.home.health < 40 ? 0.10 : m.home.health < 60 ? 0.04 : 0.012;
+        if(mSeason().k === 'fuyu') p *= 1.4;
+        p *= (sk.body >= 90 ? 0.25 : sk.body >= 60 ? 0.45 : sk.body >= 30 ? 0.65 : 1);
+        if(sk.clean >= 80) p *= 0.8;
+        if(Math.random() < p) {
+            m.home.cold = 3;
+            const base = 1500 + Math.round(Math.random() * 5000);
+            const cost = Math.round(base * (mPolPolicy(m, 'med') ? 0.5 : 1));
+            const cov = mCoverFor(m, 'byoki');
+            const pay = cov ? Math.round(Math.min(cov.cap, cost * cov.r)) : 0;
+            if(pay > 0) { m.cash += pay; m.insGot = (m.insGot || 0) + pay; }
+            mPayCost(m, cost, '🤒 かぜの治療費');
+            m.home.happy = Math.max(0, m.home.happy - 8);
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'🤒 かぜをひいた…（3日）',
+                msg:`治療費 ${mYen(cost)}${pay ? `（保険から ${mYen(pay)}）` : ''}。3日は健康と仕事の評価が下がるよ。「たいりょく」スキルを上げると ひきにくくなる。` });
+            return;
+        }
+        // 絶好調（健康もきぶんも高いと、こっそり良いことが起きる）
+        if(m.home.health >= 88 && m.home.happy >= 80) {
+            if(m.home.zen <= 0) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'✨ 絶好調！', msg:'健康もきぶんも最高。仕事の評価が上がりやすく、勉強手当もふえるよ。この状態をキープしよう！' });
+            m.home.zen = 3;
+        }
+        if(m.home.zen > 0) {
+            m.home.zen--;
+            if(mJobCo(m.job.co)) m.job.ev = Math.min(100, m.job.ev + 1.5);
+        }
+    }
+
+    // ---- 📅 日課（毎日ちょっとずつ。これが やりこみの土台）----
+    const M_DAILY = [
+        { c:'meal',  e:'🍳', n:'ごはんをつくる', h:4, hp:2, sk:'cook',  xp:12, need:'food', d:'自炊はお金にも体にもいい。料理スキルが上がると食費が安くなる' },
+        { c:'clean', e:'🧹', n:'そうじをする',   h:2, hp:4, sk:'clean', xp:10, need:'home', d:'部屋がきれいだと心もととのう。光熱費もすこし下がる' },
+        { c:'move',  e:'🏃', n:'からだを動かす', h:7, hp:3, sk:'body',  xp:14, d:'健康にいちばん効いて、しかもタダ' },
+        { c:'bath',  e:'🛁', n:'おふろに入る',   h:3, hp:5, sk:'clean', xp:8,  need:'mizu', d:'つかれが取れて、ねむりも良くなる' },
+        { c:'read',  e:'📖', n:'本を読む',       h:0, hp:4, sk:'mind',  xp:12, d:'すぐには効かないけど、いちばん利回りが高い投資' },
+        { c:'sleep', e:'😴', n:'早ねする',       h:5, hp:4, sk:'body',  xp:10, d:'ねむりは最強の回復。夜ふかしは体の借金' }
+    ];
+    function mDailyNeedOk(m, d) {
+        if(!d.need) return true;
+        if(d.need === 'food') return M_GOODS.filter(g => g.cat === 'food').some(g => mHomeHas(m, g.c));
+        if(d.need === 'home') return M_GOODS.filter(g => g.cat === 'home').some(g => mHomeHas(m, g.c));
+        return mHomeHas(m, d.need);
+    }
+    function mDailyNeedName(d) { return d.need === 'food' ? '食べもの' : d.need === 'home' ? '住むところ' : (mGood(d.need) || {}).n || ''; }
+    function mDailyReset(m) {
+        const t = calToday();
+        if(m.home.dailyDay !== t) { m.home.daily = {}; m.home.dailyDay = t; return true; }
+        return false;
+    }
+    function mDailyDone(m) { return Object.keys(m.home.daily || {}).length; }
+    function mDailyDo(c) {
+        const d = M_DAILY.find(x => x.c === c); if(!d) return;
+        const m = mLoad();
+        mDailyReset(m);
+        if((m.home.daily || {})[c]) { alert('それは今日もうやったよ。また明日！'); return; }
+        if(!mDailyNeedOk(m, d)) { alert(`「${mDailyNeedName(d)}」がないと できないよ。\n🏠生活タブでそろえよう。`); return; }
+        // 連続日数（きのうもやっていれば のびる。2日あくとリセット）
+        const t = calToday(), tn = calDayNum(t);
+        if(mDailyDone(m) === 0) {
+            const ln = m.home.lastAct ? calDayNum(m.home.lastAct) : null;
+            m.home.dstreak = (ln !== null && tn - ln === 1) ? (m.home.dstreak || 0) + 1 : 1;
+            m.home.dbest = Math.max(m.home.dbest || 0, m.home.dstreak);
+            m.home.lastAct = t;
+        }
+        const sick = m.home.cold > 0 ? 0.5 : 1;               // かぜのときは効果半分
+        m.home.daily[c] = 1;
+        m.home.dtotal = (m.home.dtotal || 0) + 1;
+        m.home.health = Math.max(0, Math.min(100, m.home.health + d.h * sick));
+        m.home.happy  = Math.max(0, Math.min(100, m.home.happy + d.hp * sick));
+        mSkUp(m, d.sk, 1.2);
+        const up = mLifeXp(m, d.xp);
+        let msg = `${d.e} ${d.n} をやった！\n健康 +${Math.round(d.h * sick)}／きぶん +${Math.round(d.hp * sick)}`;
+        // ✨ ぜんぶやると パーフェクトデー
+        if(mDailyDone(m) === M_DAILY.length) {
+            const bonus = Math.min(4000, 600 + (m.home.dstreak || 1) * 120);
+            m.cash += bonus;
+            m.home.perfect = (m.home.perfect || 0) + 1;
+            m.home.happy = Math.min(100, m.home.happy + 8);
+            mLifeXp(m, 45);
+            mSkUp(m, 'mind', 2);
+            mLog(m, `✨パーフェクトデー（${m.home.dstreak}日れんぞく）`, bonus);
+            msg += `\n\n✨✨ パーフェクトデー！ ✨✨\n6つぜんぶやったよ！ がんばりボーナス ${mYen(bonus)}\n連続 ${m.home.dstreak}日（さいこう記録 ${m.home.dbest}日）`;
+            celebrate('big'); playSfx('finish');
+        } else { playSfx('correct'); }
+        if(up > 0) msg += `\n\n🎉 生活レベルが ${mLifeLv(m)} に上がった！`;
+        mSave(m); mAwardTitles(); renderLife();
+        alert(msg);
+    }
+
+    // ---- 🎁 今日の福袋（1日1回・生活レベル3から）。「くじは やるほど減る」を体で覚えるコーナー ----
+    const M_FUKU_COST = 500;
+    const M_FUKU = [
+        [1,   50000, '🎊 大当たり！ 5万円', 'big'],
+        [4,   10000, '✨ 当たり！ 1万円', 'big'],
+        [15,  3000,  '😆 3000円！', ''],
+        [60,  1200,  '🙂 1200円', ''],
+        [140, 600,   '😌 600円', ''],
+        [70,  500,   '😐 500円（ちょうどトントン）', ''],
+        [280, 300,   '😑 300円（すこし損）', ''],
+        [430, 0,     '😢 からっぽ…', 'lose']
+    ];
+    function mFukuEv() { let s = 0, w = 0; M_FUKU.forEach(f => { s += f[0] * f[1]; w += f[0]; }); return s / w; }
+    function mFukuBuy() {
+        const m = mLoad();
+        if(mLifeLv(m) < 3) { alert('生活レベル3から ひけるよ。日課をがんばろう！'); return; }
+        if(m.home.fukuDay === calToday()) { alert('福袋は1日1回だけ。また明日ね！'); return; }
+        if(!mAfford(M_FUKU_COST, '今日の福袋', mFukuBuy)) return;
+        m.cash -= M_FUKU_COST;
+        m.home.fukuDay = calToday();
+        m.home.fukuN = (m.home.fukuN || 0) + 1;
+        m.home.fukuIn = (m.home.fukuIn || 0) + M_FUKU_COST;
+        // 🍀 四つ葉のクローバーを持っていると、はずれを1回だけ ふり直せる（表には書いていない しかけ）
+        let f = mFukuPick();
+        if(f[1] === 0 && mHomeHas2(m, 'sec_lucky') && Math.random() < 0.5) f = mFukuPick();
+        m.cash += f[1];
+        m.home.fukuOut = (m.home.fukuOut || 0) + f[1];
+        if(f[1] >= 10000) m.home.fukuWin = (m.home.fukuWin || 0) + 1;
+        mLog(m, `福袋（${f[2].replace(/[🎊✨😆🙂😌😐😑😢]/g, '').trim()}）`, f[1] - M_FUKU_COST);
+        m.home.happy = Math.max(0, Math.min(100, m.home.happy + (f[1] >= 3000 ? 6 : f[1] === 0 ? -3 : 1)));
+        mLifeXp(m, 4);
+        mSave(m); mAwardTitles();
+        if(f[3] === 'big') { celebrate('big'); playSfx('finish'); } else playSfx(f[3] === 'lose' ? 'wrong' : 'correct');
+        const inY = m.home.fukuIn, outY = m.home.fukuOut;
+        renderLife();
+        setTimeout(() => alert(`🎁 今日の福袋\n\n${f[2]}\n\nこれまで ${m.home.fukuN}回：はらった ${mYen(inY)} → もどってきた ${mYen(outY)}\n（もどり率 ${(outY / inY * 100).toFixed(0)}%）`), 200);
+    }
+    function mFukuPick() {
+        let w = 0; M_FUKU.forEach(f => w += f[0]);
+        let u = Math.random() * w;
+        for(const f of M_FUKU) { u -= f[0]; if(u < 0) return f; }
+        return M_FUKU[M_FUKU.length - 1];
+    }
+
+    // ---- 🌙 秘密のお店（じょうけんを満たすと、ある日とつぜん出てくる）----
+    const M_SECRET = [
+        { c:'sec_coffee',  cat:'secret', e:'☕', n:'まぼろしのコーヒー豆', buy:8000,   keep:true, hp:8,  h:3,  evUp:2, d:'朝がたのしみになる。しゃんとするので仕事の評価も少し上がる' },
+        { c:'sec_book',    cat:'secret', e:'📗', n:'お金の名著セット',     buy:6000,   keep:true, hp:4,  h:0,  evUp:6, d:'★ 読むと お金の見え方が変わる。いちばん安い自己投資' },
+        { c:'sec_lucky',   cat:'secret', e:'🍀', n:'四つ葉のクローバー',   buy:3000,   keep:true, hp:6,  h:0,  d:'なんとなく良いことが起きる気がする…（ほんとうに 少しだけ 起きる）' },
+        { c:'sec_plant',   cat:'secret', e:'🪴', n:'そだてやすい観葉植物', buy:12000,  keep:true, hp:10, h:4,  d:'部屋の空気が変わる。世話をすると愛着がわく' },
+        { c:'sec_futon',   cat:'secret', e:'🛌', n:'雲みたいなふとん',     buy:180000, keep:true, hp:12, h:16, d:'ねむりが変わる＝健康がぐっと上がる。人生の3分の1は ねている' },
+        { c:'sec_massage', cat:'secret', e:'💆', n:'マッサージチェア',     buy:320000, keep:true, hp:18, h:14, d:'ぜいたくの王様。あると毎日がしあわせ' },
+        { c:'sec_studio',  cat:'secret', e:'🎛️', n:'自分だけの作業部屋',   buy:450000, keep:true, hp:22, h:6, evUp:8, d:'集中できる場所は、お金で買える最強の道具' }
+    ];
+    function mSecretOpen(m) { return mLifeLv(m) >= 5 && (m.home.health || 0) >= 75 && (m.titles || []).length >= 6; }
+
+    // ---- 🏆 称号（かくれた実績。条件はどこにも書いていない＝見つける楽しみ）----
+    const M_TITLES = [
+        { id:'ti_start', e:'🌱', n:'はじめの一歩',   d:'日課をはじめてやった',           ok:m => (m.home.dtotal || 0) >= 1 },
+        { id:'ti_d10',   e:'📅', n:'つづける人',     d:'日課を10回やった',               ok:m => (m.home.dtotal || 0) >= 10 },
+        { id:'ti_d100',  e:'🗓️', n:'習慣の主',       d:'日課を100回やった',              ok:m => (m.home.dtotal || 0) >= 100 },
+        { id:'ti_d500',  e:'🏛️', n:'生活の達人',     d:'日課を500回やった',              ok:m => (m.home.dtotal || 0) >= 500 },
+        { id:'ti_pf1',   e:'✨', n:'パーフェクト',   d:'1日で日課を6つぜんぶやった',     ok:m => (m.home.perfect || 0) >= 1 },
+        { id:'ti_pf10',  e:'🌟', n:'完ぺき主義',     d:'パーフェクトデーを10回',         ok:m => (m.home.perfect || 0) >= 10 },
+        { id:'ti_pf50',  e:'💫', n:'ストイック',     d:'パーフェクトデーを50回',         ok:m => (m.home.perfect || 0) >= 50 },
+        { id:'ti_st7',   e:'🔥', n:'1週間つづいた',  d:'7日れんぞくで日課',              ok:m => (m.home.dbest || 0) >= 7 },
+        { id:'ti_st30',  e:'🔥', n:'1か月つづいた',  d:'30日れんぞくで日課',             ok:m => (m.home.dbest || 0) >= 30 },
+        { id:'ti_st100', e:'🐉', n:'100日の伝説',    d:'100日れんぞくで日課',            ok:m => (m.home.dbest || 0) >= 100 },
+        { id:'ti_lv5',   e:'📈', n:'生活レベル5',    d:'生活レベルが5になった',          ok:m => mLifeLv(m) >= 5 },
+        { id:'ti_lv10',  e:'🎓', n:'生活レベル10',   d:'生活レベルが10になった',         ok:m => mLifeLv(m) >= 10 },
+        { id:'ti_lv20',  e:'👑', n:'生活マスター',   d:'生活レベルが20になった',         ok:m => mLifeLv(m) >= 20 },
+        { id:'ti_cook',  e:'🍳', n:'台所の主',       d:'料理スキルを100にした',          ok:m => mHomeSk(m).cook >= 100 },
+        { id:'ti_clean', e:'🧼', n:'ピカピカ',       d:'せいけつスキルを100にした',      ok:m => mHomeSk(m).clean >= 100 },
+        { id:'ti_body',  e:'💪', n:'鉄の体',         d:'たいりょくスキルを100にした',    ok:m => mHomeSk(m).body >= 100 },
+        { id:'ti_mind',  e:'🧠', n:'心のつよさ',     d:'こころスキルを100にした',        ok:m => mHomeSk(m).mind >= 100 },
+        { id:'ti_all4',  e:'🏅', n:'四冠王',         d:'4つのスキルぜんぶ100',           ok:m => { const s = mHomeSk(m); return s.cook >= 100 && s.clean >= 100 && s.body >= 100 && s.mind >= 100; } },
+        { id:'ti_zen',   e:'😇', n:'絶好調',         d:'健康90・きぶん90をどうじに',     ok:m => (m.home.health || 0) >= 90 && (m.home.happy || 0) >= 90 },
+        { id:'ti_shop10',e:'🛍️', n:'買いものじょうず', d:'ショップで10しゅるい買った',    ok:m => Object.keys(m.home.shop || {}).length >= 10 },
+        { id:'ti_shop25',e:'🏰', n:'ものもち',       d:'ショップで25しゅるい買った',     ok:m => Object.keys(m.home.shop || {}).length >= 25 },
+        { id:'ti_fix10', e:'🧾', n:'契約の人',       d:'固定費を10件もった',             ok:m => Object.keys(m.home.own || {}).length >= 10 },
+        { id:'ti_secret',e:'🌙', n:'秘密を見つけた', d:'秘密のお店を見つけた',           ok:m => !!m.home.secret },
+        { id:'ti_secbuy',e:'🗝️', n:'まぼろしを手に', d:'秘密のお店で何か買った',         ok:m => M_SECRET.some(s => mHomeHas2(m, s.c)) },
+        { id:'ti_fuku',  e:'🎁', n:'福袋デビュー',   d:'福袋をはじめてひいた',           ok:m => (m.home.fukuN || 0) >= 1 },
+        { id:'ti_fuku30',e:'🎰', n:'くじの真実',     d:'福袋を30回ひいた（もどり率を見よう）', ok:m => (m.home.fukuN || 0) >= 30 },
+        { id:'ti_fukuw', e:'🎊', n:'大当たり',       d:'福袋で1万円以上を当てた',        ok:m => (m.home.fukuWin || 0) >= 1 },
+        { id:'ti_nodebt',e:'🕊️', n:'借金ゼロ',       d:'借金が1つもない状態で資産50万',  ok:m => mLoanTotalDebt(m) <= 0 && mTotal(m) >= 500000 },
+        { id:'ti_paid',  e:'✅', n:'かんさい',       d:'ローンを最後まで返しきった',     ok:m => (m.loanPaid || 0) >= 12 && !m.loans.length },
+        { id:'ti_cred8', e:'⭐', n:'信用のある人',   d:'信用スコア800',                  ok:m => (m.credit || 0) >= 800 },
+        { id:'ti_hell',  e:'💀', n:'地獄を見た',     d:'借金地獄レベル4に落ちた',        ok:m => (m.hell.maxLv || 0) >= 4 },
+        { id:'ti_esc',   e:'🪜', n:'地獄からの生還', d:'地獄レベル4以上から借金ゼロへ',  ok:m => (m.hell.maxLv || 0) >= 4 && mLoanTotalDebt(m) <= 0 },
+        { id:'ti_bank',  e:'🕳️', n:'どん底の経験',   d:'自己破産をした',                 ok:m => (m.hell.bankrupt || 0) >= 1 },
+        { id:'ti_reborn',e:'🌄', n:'再出発',         d:'自己破産のあと資産30万まで回復',  ok:m => (m.hell.bankrupt || 0) >= 1 && mTotal(m) >= 300000 },
+        { id:'ti_elec',  e:'🗳️', n:'立候補した',     d:'選挙に出た',                     ok:m => (m.pol.run || 0) >= 1 },
+        { id:'ti_win',   e:'🎖️', n:'当選！',         d:'選挙で当選した',                 ok:m => (m.pol.win || 0) >= 1 },
+        { id:'ti_win3',  e:'🏛️', n:'ベテラン議員',   d:'3回当選した',                    ok:m => (m.pol.win || 0) >= 3 },
+        { id:'ti_lose',  e:'📉', n:'落選の痛み',     d:'選挙に落ちた',                   ok:m => (m.pol.lose || 0) >= 1 },
+        { id:'ti_lev',   e:'⚡', n:'レバレッジ入門', d:'信用取引をやってみた',           ok:m => (m.lev.wins || 0) + (m.lev.loses || 0) >= 1 },
+        { id:'ti_levw',  e:'🚀', n:'倍がけ成功',     d:'信用取引で10万円以上もうけた',   ok:m => (m.lev.profit || 0) >= 100000 },
+        { id:'ti_levb',  e:'💥', n:'ロスカット',     d:'信用取引で強制決済された',       ok:m => (m.lev.blown || 0) >= 1 },
+        { id:'ti_biz',   e:'🚀', n:'社長になった',   d:'起業した',                       ok:m => !!(m.biz && m.biz.c) },
+        { id:'ti_rich1', e:'💰', n:'100万円',        d:'そう資産100万円',                ok:m => mTotal(m) >= 1000000 },
+        { id:'ti_rich2', e:'💎', n:'1000万円',       d:'そう資産1000万円',               ok:m => mTotal(m) >= 10000000 },
+        { id:'ti_evt10', e:'🎬', n:'いろんなことがある', d:'できごとを10回えらんだ',     ok:m => (m.evt.done || 0) >= 10 },
+        { id:'ti_evt30', e:'🎞️', n:'人生いろいろ',   d:'できごとを30回えらんだ',         ok:m => (m.evt.done || 0) >= 30 }
+    ];
+    function mAwardTitles() {
+        if(!currentUserId) return;
+        const m = mLoad(); const got = [];
+        if(!Array.isArray(m.titles)) m.titles = [];
+        M_TITLES.forEach(t => { try { if(!m.titles.includes(t.id) && t.ok(m)) { m.titles.push(t.id); got.push(t); } } catch(e) {} });
+        // 秘密のお店を「見つけた」記録（一度出たら ずっと出る）
+        let found = false;
+        if(!m.home.secret && mSecretOpen(m)) { m.home.secret = true; found = true; }
+        if(!got.length && !found) return;                 // 変わっていないときは保存しない（むだな書きこみをしない）
+        mSave(m);
+        if(got.length) {
+            playSfx('badge'); celebrate();
+            setTimeout(() => alert('🏆 称号GET！\n' + got.map(t => `${t.e} ${t.n}（${t.d}）`).join('\n')), 400);
+        } else if(found) {
+            playSfx('finish');
+            setTimeout(() => alert('🌙 なにかを見つけた…！\n\n🏠生活 → 🛒ショップ のいちばん上を見てみて。'), 400);
+        }
+    }
+
+    // ---- 🎬 生活のできごと（数日に一度おきて、えらんだ答えで結果が変わる）----
+    const M_EVENTS = [
+        { id:'ev_wed', e:'💒', n:'友だちの結婚式によばれた', d:'ご祝儀は3万円が相場。でも今月きびしい…',
+          opts:[ { n:'よろこんで行く（3万円）', f:(m) => { mPayCost(m, 30000, 'ご祝儀'); m.home.happy = Math.min(100, m.home.happy + 12); return '大切な日に立ち会えた。お金は減ったけど、思い出は残る。'; } },
+                 { n:'お祝いだけ送る（5千円）', f:(m) => { mPayCost(m, 5000, 'お祝い'); m.home.happy = Math.min(100, m.home.happy + 3); return 'むりをしない選びかたも正解。気持ちは伝わったよ。'; } },
+                 { n:'ことわる（0円）', f:(m) => { m.home.happy = Math.max(0, m.home.happy - 6); return 'お金は減らないけど、少しさみしい気持ちになった。'; } } ] },
+        { id:'ev_break', e:'🧊', n:'れいぞうこがこわれた', d:'夏なので、直さないと食べものがダメになる',
+          opts:[ { n:'新しく買う（9万円）', f:(m) => { mPayCost(m, 90000, 'れいぞうこ買いかえ'); m.home.shop.fridge = 1; m.home.health = Math.min(100, m.home.health + 3); return '高いけど、10年つかうものだから結果的に安い。'; } },
+                 { n:'中古を買う（3万円）', f:(m) => { mPayCost(m, 30000, '中古のれいぞうこ'); m.home.shop.fridge = 1; return '安くすんだ。ただ、何年もつかは分からない。'; } },
+                 { n:'がまんする（0円）', f:(m) => { m.home.health = Math.max(0, m.home.health - 12); m.home.happy = Math.max(0, m.home.happy - 6); return '食べものがいたんで、体調をくずしぎみに…。「安く済ませる」が高くつくこともある。'; } } ] },
+        { id:'ev_wallet', e:'👛', n:'道でさいふをひろった', d:'中に3万円入っている。どうする？',
+          opts:[ { n:'交番にとどける', f:(m) => { m.credit = Math.min(1000, m.credit + 25); m.home.happy = Math.min(100, m.home.happy + 10); const r = Math.random() < 0.6 ? 3000 : 0; if(r) { m.cash += r; mLog(m, 'おれい（さいふを届けた）', r); } return 'ただしいことをした。信用スコアが上がったよ。' + (r ? `おれいに ${mYen(r)} もらった！` : ''); } },
+                 { n:'自分のものにする', f:(m) => { m.cash += 30000; mLog(m, 'ひろったお金', 30000); m.credit = Math.max(0, m.credit - 60); m.home.happy = Math.max(0, m.home.happy - 15); return '…お金は増えたけど、ずっと気持ちがモヤモヤする。じつはこれ、法律では「いはん（占有離脱物横領）」だよ。'; } } ] },
+        { id:'ev_scout', e:'📞', n:'べつの会社からさそわれた', d:'いまより給料がいいらしい。でも本当かな？',
+          cond:m => !!mJobCo(m.job.co),
+          opts:[ { n:'話だけ聞きに行く', f:(m) => { m.job.ev = Math.min(100, m.job.ev + 4); m.home.happy = Math.min(100, m.home.happy + 5); return '外の世界を知ると、自分の値段が分かる。いまの会社のよさも見えた。評価も上がった！'; } },
+                 { n:'きっぱり断る', f:(m) => { m.job.ev = Math.min(100, m.job.ev + 8); return '一つのことを続ける力も、りっぱな強み。会社からの信頼が上がった。'; } } ] },
+        { id:'ev_sale', e:'🏷️', n:'ほしかったものが半額', d:'いま買わないと元にもどるらしい',
+          opts:[ { n:'すぐ買う（2万円）', f:(m) => { if(m.cash < 20000) { m.home.happy = Math.max(0, m.home.happy - 3); return 'お金がなくて買えなかった…。ほしいときにお金があるのが「じゆう」だよ。'; } m.cash -= 20000; mLog(m, 'セールで買いもの', -20000); m.home.happy = Math.min(100, m.home.happy + 10); return 'ワクワクした！ でも「半額だから」は買う理由にならないのも本当。'; } },
+                 { n:'3日待ってみる', f:(m) => { m.home.happy = Math.min(100, m.home.happy + 2); mLifeXp(m, 20); return '3日たったら、そんなにほしくなかった。これが「ほしい」と「いる」のちがい。がまんできたので経験値アップ！'; } } ] },
+        { id:'ev_fri', e:'🍻', n:'友だちに「お金かして」と言われた', d:'1万円。返すと言っている',
+          opts:[ { n:'かす', f:(m) => { if(m.cash < 10000) return 'お金がなくて かせなかった。'; m.cash -= 10000; mLog(m, '友だちにかしたお金', -10000); const back = Math.random() < 0.55; if(back) { m.cash += 10000; mLog(m, '友だちが返してくれた', 10000); m.home.happy = Math.min(100, m.home.happy + 6); return 'ちゃんと返ってきた！ 信頼できる友だちだね。'; } m.home.happy = Math.max(0, m.home.happy - 10); return '…返ってこなかった。お金の貸し借りは、お金と友だちの両方をなくすことがある。'; } },
+                 { n:'ことわる', f:(m) => { m.home.happy = Math.max(0, m.home.happy - 3); mLifeXp(m, 15); return '気まずいけど、これがいちばん friendship を守る方法だと言う大人は多いよ。'; } } ] },
+        { id:'ev_health', e:'🏥', n:'健康しんだんの結果が来た', d:'「すこし気をつけて」と書いてある',
+          opts:[ { n:'ちゃんと病院へ（8千円）', f:(m) => { mPayCost(m, 8000, '病院で検査'); m.home.health = Math.min(100, m.home.health + 12); mSkUp(m, 'body', 5); return '早く見つけると、安く・かるく済む。これを「予防」というよ。'; } },
+                 { n:'あとで行く', f:(m) => { m.home.health = Math.max(0, m.home.health - 8); return '結局いかなかった…。健康は、失ってから買い戻すほうがずっと高くつく。'; } } ] },
+        { id:'ev_scam2', e:'📩', n:'「かならずもうかる」メッセージ', d:'月30%の利回りと書いてある',
+          opts:[ { n:'話を聞く', f:(m) => { const lose = Math.min(m.cash, 50000); if(lose > 0) { m.cash -= lose; mLog(m, '投資さぎでとられたお金', -lose); } m.home.happy = Math.max(0, m.home.happy - 12); mLifeXp(m, 25); return `さぎだった…${mYen(lose)} をとられた。<b>月30%</b>なんて、世界一の投資家でも無理。うまい話は必ずウソ。（今回は勉強代として経験値がついたよ）`; } },
+                 { n:'すぐブロック', f:(m) => { m.credit = Math.min(1000, m.credit + 10); mLifeXp(m, 20); return 'ただしい判断！「急がせる・もうかる・秘密にさせる」の3つが出たら、ぜんぶさぎだよ。'; } } ] },
+        { id:'ev_rent', e:'🏠', n:'大家さんから「家賃を上げたい」', d:'来月から5千円アップと言われた',
+          cond:m => M_GOODS.filter(g => g.cat === 'home').some(g => mHomeHas(m, g.c) && g.mon > 0),
+          opts:[ { n:'交渉してみる', f:(m) => { const ok = Math.random() < 0.5; if(ok) { m.home.happy = Math.min(100, m.home.happy + 8); mSkUp(m, 'mind', 4); return 'ねばって話したら、据えおきになった！ 言ってみるのはタダ。これも大事な力だよ。'; } m.home.happy = Math.max(0, m.home.happy - 3); return 'ダメだった。でも聞いてみないと分からないから、やる価値はあった。'; } },
+                 { n:'引っこしを考える', f:(m) => { m.home.happy = Math.max(0, m.home.happy - 2); mLifeXp(m, 15); return '引っこしには「敷金・礼金・引っこし代」で家賃の4〜5か月分かかる。上がる5千円×12か月＝6万円と、よく比べよう。'; } },
+                 { n:'そのまま受け入れる', f:(m) => { return 'わかった、と伝えた。固定費が上がるぶん、ほかを見直そう。'; } } ] },
+        { id:'ev_bonus', e:'🎊', n:'臨時のお小づかい', d:'おうちの人が「がんばってるね」と',
+          opts:[ { n:'ありがとう！', f:(m) => { const keiki = mKeiki(); const yen = Math.round((3000 + Math.random() * 12000) * keiki.bonus / 1); m.cash += yen; mLog(m, '臨時のお小づかい', yen); m.home.happy = Math.min(100, m.home.happy + 8); return `${mYen(yen)} もらった！ （いまの景気は「${keiki.n}」なので、こういう臨時のお金も景気に左右されるよ）`; } } ] },
+        { id:'ev_lost', e:'📱', n:'スマホを落としてしまった', d:'画面がバキバキ…',
+          opts:[ { n:'修理に出す', f:(m) => { const cost = 32000; const cov = mCoverFor(m, 'phone'); const pay = cov ? Math.round(Math.min(cov.cap, cost * cov.r)) : 0; if(pay) { m.cash += pay; m.insGot = (m.insGot || 0) + pay; } mPayCost(m, cost, 'スマホの修理'); return `修理代 ${mYen(cost)}${pay ? `。スマホ保険から ${mYen(pay)} 出た！ 助かったね` : '。保険に入っていれば8割もどってきたよ…'}`; } },
+                 { n:'そのまま使う', f:(m) => { m.home.happy = Math.max(0, m.home.happy - 8); m.home.health = Math.max(0, m.home.health - 2); return '指を切りそうで こわい。安全にかかわるものは、直したほうがいい。'; } } ] },
+        { id:'ev_kifu', e:'🤝', n:'ぼきん（きふ）のおねがい', d:'災害でこまっている人がいるらしい',
+          opts:[ { n:'3000円きふする', f:(m) => { if(m.cash < 3000) return 'お金がなくて できなかった…。'; m.cash -= 3000; mLog(m, 'きふ', -3000); m.home.happy = Math.min(100, m.home.happy + 10); m.pol.donate = (m.pol.donate || 0) + 3000; m.credit = Math.min(1000, m.credit + 5); return 'ありがとうと言われた。人のために使うお金は、いちばん気分が上がる使い方だと言われているよ。（選挙に出るときの人気も少し上がる）'; } },
+                 { n:'今回はやめておく', f:(m) => { return 'できるときにやればいい。むりのないはん囲でやるのが、続けるコツだよ。'; } } ] },
+        { id:'ev_over', e:'🌙', n:'残業をたのまれた', d:'今日はつかれているけど…',
+          cond:m => !!mJobCo(m.job.co),
+          opts:[ { n:'ひきうける', f:(m) => { m.job.ev = Math.min(100, m.job.ev + 6); m.home.health = Math.max(0, m.home.health - 8); m.home.happy = Math.max(0, m.home.happy - 5); const yen = 8000; m.cash += yen; mLog(m, '残業代', yen); return `残業代 ${mYen(yen)} と評価アップ。でも 健康ときぶんは減った。ここのバランスが大人のむずかしさ。`; } },
+                 { n:'ことわって帰る', f:(m) => { m.job.ev = Math.max(0, m.job.ev - 3); m.home.health = Math.min(100, m.home.health + 4); m.home.happy = Math.min(100, m.home.happy + 6); return '体を守るのもプロの仕事。たまには断る力も必要だよ。'; } } ] },
+        { id:'ev_saifu', e:'💸', n:'サブスクの請求を見た', d:'つかっていないものが混ざっている',
+          cond:m => M_GOODS.filter(g => g.cat === 'sub').some(g => mHomeHas(m, g.c)),
+          opts:[ { n:'見直す', f:(m) => { const subs = M_GOODS.filter(g => g.cat === 'sub' && mHomeHas(m, g.c)); if(!subs.length) return '見直すものはなかった。'; const g = subs[subs.length - 1]; delete m.home.own[g.c]; mLifeXp(m, 25); mSkUp(m, 'mind', 3); return `「${g.n}」（月${mYen(g.mon)}）をやめたよ。年間 ${mYen(g.mon * 12)} のセーブ！ 固定費の見直しは、いちばん強い節約だよ。`; } },
+                 { n:'このままでいい', f:(m) => { return 'いいんだ、使っているなら。「使っていないのに払っている」ものだけが、もったいないお金だよ。'; } } ] },
+        { id:'ev_study', e:'📚', n:'新しいことを勉強するチャンス', d:'3か月で資格が取れるらしい',
+          opts:[ { n:'やってみる（3万円）', f:(m) => { if(m.cash < 30000) return 'お金が足りなくて できなかった…。学ぶお金は、先に用意しておきたいね。'; m.cash -= 30000; mLog(m, '資格の勉強', -30000); m.job.ev = Math.min(100, m.job.ev + 10); mSkUp(m, 'mind', 8); mLifeXp(m, 40); return 'しんどかったけど取れた！ 仕事の評価が上がって、こころスキルも上がったよ。'; } },
+                 { n:'今はやめておく', f:(m) => { return 'タイミングも大事。ただ「いつかやる」は、たいてい来ないから気をつけて。'; } } ] },
+        { id:'ev_park', e:'🌳', n:'何もない休みの日', d:'お金をつかわない過ごし方をしてみる？',
+          opts:[ { n:'公園を散歩する（0円）', f:(m) => { m.home.health = Math.min(100, m.home.health + 6); m.home.happy = Math.min(100, m.home.happy + 8); mSkUp(m, 'body', 3); return 'お金をかけなくても、気分は上がる。これに気づけた人は強いよ。'; } },
+                 { n:'買いものに出かける', f:(m) => { const yen = 3000 + Math.round(Math.random() * 7000); if(m.cash < yen) return 'お金が足りなかった。'; m.cash -= yen; mLog(m, '休日の買いもの', -yen); m.home.happy = Math.min(100, m.home.happy + 11); return `${mYen(yen)} つかって、たのしかった！ たまにはこういう日も必要。`; } } ] },
+        { id:'ev_toshi', e:'📉', n:'持っている株が大きく下がった', d:'ニュースでも話題になっている',
+          cond:m => Object.keys(m.hold || {}).length + Object.keys(m.nisa || {}).length > 0,
+          opts:[ { n:'こわいので全部売る', f:(m) => { m.home.happy = Math.max(0, m.home.happy - 4); mLifeXp(m, 10); return '売るのは自由。でも歴史を見ると「下がったときに売る」がいちばん損しやすい行動だと言われているよ。（今回は実際には売っていない。投資タブで自分で決めよう）'; } },
+                 { n:'なにもしない', f:(m) => { mLifeXp(m, 25); mSkUp(m, 'mind', 4); return 'ほったらかしにできる人がいちばん強い。値段は毎日動くけど、会社の中身は1日では変わらないからね。'; } },
+                 { n:'むしろ買いますチャンス', f:(m) => { mLifeXp(m, 30); mSkUp(m, 'mind', 5); return '安いときに買うのは理にかなっている。ただし「もっと下がる」こともある。余ったお金でだけやろう。'; } } ] },
+        { id:'ev_neko', e:'🐈', n:'すてネコがいた', d:'かわいい。でも飼うにはお金がかかる',
+          opts:[ { n:'家につれて帰る', f:(m) => { m.home.happy = Math.min(100, m.home.happy + 20); m.life = m.life || {}; m.life.pet = true; mPayCost(m, 25000, 'ペットの初期費用'); return 'かぞくがふえた！ きぶんが大きく上がったよ。でもペットは病院代が高い（健康保険がきかない）。🛡️ペット保険を考えよう。'; } },
+                 { n:'交番・保護団体に相談', f:(m) => { m.home.happy = Math.min(100, m.home.happy + 6); m.credit = Math.min(1000, m.credit + 5); return 'いちばん責任のある行動。かわいいだけで飼うと、その子が不幸になることもあるからね。'; } } ] },
+        { id:'ev_tax', e:'🧾', n:'税金の紙がとどいた', d:'なんだかむずかしい書類…',
+          opts:[ { n:'ちゃんと読んで払う', f:(m) => { const yen = 5000 + Math.round(Math.random() * 10000); mPayCost(m, yen, '税金のしはらい'); m.credit = Math.min(1000, m.credit + 8); mLifeXp(m, 20); return `${mYen(yen)} 払った。税金をきちんと払うのは、社会に住む「会費」みたいなもの。信用も上がったよ。`; } },
+                 { n:'あとまわしにする', f:(m) => { const yen = 8000 + Math.round(Math.random() * 12000); mPayCost(m, yen, '税金＋延滞金'); m.credit = Math.max(0, m.credit - 25); return `のちのち延滞金がついて ${mYen(yen)} に…。税金と保険料は、あとまわしにするといちばん高くつくよ。`; } } ] },
+        { id:'ev_furi', e:'☎️', n:'「オレだよ、事故った」と電話', d:'声がいつもとちがう気がする…',
+          opts:[ { n:'すぐお金を送る', f:(m) => { const lose = Math.min(m.cash, 100000); if(lose > 0) { m.cash -= lose; mLog(m, 'オレオレさぎ', -lose); } m.home.happy = Math.max(0, m.home.happy - 15); return `さぎだった。${mYen(lose)} をとられた…。「お金を今すぐ」と言われたら、いったん電話を切って、かけ直すのが正解。`; } },
+                 { n:'いったん切ってかけ直す', f:(m) => { m.home.happy = Math.min(100, m.home.happy + 5); mLifeXp(m, 30); m.credit = Math.min(1000, m.credit + 5); return '正解！ 本人にかけ直したら、ふつうに家にいた。さぎは「かけ直させない」のがてぐち。おぼえておこう。'; } } ] },
+        { id:'ev_rain', e:'☂️', n:'とつぜんの大雨', d:'かさを持っていない',
+          opts:[ { n:'コンビニで買う（800円）', f:(m) => { if(m.cash < 800) return 'お金がなくて ずぶぬれに…。'; m.cash -= 800; mLog(m, 'ビニールがさ', -800); return '助かった。でもビニールがさは年に何本も買いがち。いいかさを1本もつほうが、じつは安い。'; } },
+                 { n:'ぬれて帰る', f:(m) => { m.home.health = Math.max(0, m.home.health - 7); m.home.happy = Math.max(0, m.home.happy - 4); return 'びしょぬれ…。800円をけちって、かぜをひいたら医療費のほうが高い。'; } } ] },
+        { id:'ev_up', e:'📈', n:'給料アップの話', d:'上司が「がんばりを見ている」と言っている',
+          cond:m => !!mJobCo(m.job.co) && (m.job.ev || 0) >= 70,
+          opts:[ { n:'ありがとうございます', f:(m) => { m.job.ev = Math.min(100, m.job.ev + 5); const b = Math.round(mJobGross(m) * 0.3 * mKeiki().bonus); if(b > 0) { m.cash += b; mLog(m, '臨時のボーナス', b); m.job.bonus = (m.job.bonus || 0) + b; } m.home.happy = Math.min(100, m.home.happy + 12); return `臨時ボーナス ${mYen(b)}！ 評価を上げておくと、こういうチャンスが来るよ。（景気「${mKeiki().n}」の分も効いている）`; } } ] }
+    ];
+    function mEvtRoll(m) {
+        if((m.day || 0) - (m.evt.lastDay || 0) < 2) return;         // 2日はあける
+        if(Math.random() >= 0.30) return;
+        const pool = M_EVENTS.filter(e => { try { return !e.cond || e.cond(m); } catch(err) { return false; } });
+        if(!pool.length) return;
+        // 直近に出たものは出しにくくする（かたよらないように）
+        const recent = (m.evt.hist || []).slice(0, 6);
+        const fresh = pool.filter(e => recent.indexOf(e.id) < 0);
+        const use = fresh.length ? fresh : pool;
+        const ev = use[Math.floor(Math.random() * use.length)];
+        m.evt.pend = { id:ev.id, day:m.day };
+        m.evt.lastDay = m.day;
+    }
+    function mEvtPick(i) {
+        const m = mLoad();
+        const p = m.evt.pend; if(!p) { renderLife(); return; }
+        const ev = M_EVENTS.find(x => x.id === p.id); if(!ev) { m.evt.pend = null; mSave(m); renderLife(); return; }
+        const opt = ev.opts[i]; if(!opt) return;
+        let msg = '';
+        try { msg = opt.f(m) || ''; } catch(e) { msg = ''; }
+        m.evt.pend = null;
+        m.evt.done = (m.evt.done || 0) + 1;
+        if(!Array.isArray(m.evt.hist)) m.evt.hist = [];
+        m.evt.hist.unshift(ev.id); if(m.evt.hist.length > 20) m.evt.hist.length = 20;
+        mLifeXp(m, 8);
+        mSave(m); mAwardTitles(); playSfx('correct');
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">${ev.e} ${esc(ev.n)}</h2>
+            <div class="m-ev" style="font-size:15px;line-height:1.9;">えらんだ：<b>${esc(opt.n)}</b></div>
+            <div class="m-learn" style="font-size:14px;line-height:1.95;">${msg}</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); renderLife();">とじる</button></div></div>`);
+    }
+    function mEvtHtml(m) {
+        const p = m.evt.pend; if(!p) return '';
+        const ev = M_EVENTS.find(x => x.id === p.id); if(!ev) return '';
+        return `<div class="m-card" style="border:3px solid #8e44ad;background:linear-gradient(180deg,rgba(142,68,173,.10),transparent);">
+            <div style="font-size:12px;color:#8e44ad;font-weight:bold;">🎬 今日のできごと</div>
+            <div style="font-size:19px;font-weight:bold;margin:4px 0;">${ev.e} ${esc(ev.n)}</div>
+            <div class="m-desc" style="font-size:14px;">${esc(ev.d)}</div>
+            ${ev.opts.map((o, i) => `<button class="m-quiz-btn" onclick="mEvtPick(${i})">${esc(o.n)}</button>`).join('')}
+            <div style="font-size:11px;color:#888;">えらんだ答えで、お金・健康・きぶん・信用が変わるよ。正かいは1つじゃない</div></div>`;
+    }
+    // ==========================================================================================
+    //  💸 「お金が足りない！」の共通しくみ
+    //  何かを買おうとしてお金が足りないと、必ずこの画面が出て、
+    //  「貯金からおろす」「借りる（💳借金のタブへ自動でジャンプ）」「やめる」を選べる。
+    // ==========================================================================================
+    let mNM = null;
+    // 買えるかどうか。買えないときは自動で「お金が足りない」画面を出して false を返す
+    function mAfford(need, what, retry) {
+        const m = mLoad();
+        need = Math.round(need);
+        if(m.cash >= need) return true;
+        mNoMoney(need, what, retry);
+        return false;
+    }
+    function mNoMoney(need, what, retry) {
+        const m = mLoad();
+        need = Math.round(need);
+        const lack = Math.max(0, need - Math.max(0, m.cash));
+        mNM = { need, what, retry: (typeof retry === 'function' ? retry : null) };
+        const bankOk = (m.bank || 0) >= lack && lack > 0;
+        const holdV = mHoldValue(m);
+        const best = mLoanBest(m, lack);
+        const hell = mHellLv(m);
+        playSfx('wrong');
+        gOpenModal(`<div style="text-align:left;max-width:540px;margin:0 auto;">
+            <h2 style="text-align:center;color:#e74c3c;">💸 お金が足りないよ！</h2>
+            <div class="m-ev" style="font-size:15px;">
+              <div class="m-row"><span>買おうとしたもの</span><b>${esc(what || '買いもの')}</b></div>
+              <div class="m-row"><span>ひつような金額</span><b>${mYen(need)}</b></div>
+              <div class="m-row"><span>いまの現金</span><b>${mYen(Math.max(0, m.cash))}</b></div>
+              <div class="m-row"><span>足りない金額</span><b class="m-down" style="font-size:18px;">${mYen(lack)}</b></div>
+            </div>
+            <div style="margin-top:10px;">
+              ${bankOk ? `<button class="m-quiz-btn" onclick="mNmGo('bank')"><b>🏦 貯金から ${mYen(lack)} おろして買う</b><br>
+                  <span style="font-size:12px;color:#888;">いちばん かしこい方法。利息もかからない（貯金 ${mYen(m.bank)}）</span></button>`
+                : `<div class="m-row" style="opacity:.5;"><span>🏦 貯金からおろす</span><b>貯金が足りない（${mYen(m.bank || 0)}）</b></div>`}
+              ${holdV >= lack ? `<button class="m-quiz-btn" onclick="mNmGo('sell')"><b>📈 投資を売ってお金を作る</b><br>
+                  <span style="font-size:12px;color:#888;">売れば ${mYen(holdV)} ぶんある。ただし もうけには税金がかかるよ</span></button>` : ''}
+              ${best ? `<button class="m-quiz-btn" style="border-color:#e74c3c;" onclick="mNmGo('loan')"><b>💳 ${best.e} ${esc(best.n)}で借りる（年${(best.rate * 100).toFixed(1)}%）</b><br>
+                  <span style="font-size:12px;color:#888;">💳借金のタブへ行って、返す計画を立ててから借りるよ。<b>借りたお金は必ず利息をつけて返す</b></span></button>`
+                : `<div class="m-warn" style="margin-top:8px;">💳 いまのあなたは<b>どこからも借りられない</b>よ。${hell >= 4 ? '借金がふくらみすぎているんだ…' : '信用スコアが足りないか、事故の記録が残っているんだ。'}<br>
+                  はたらいてお金を作るか、持ちものを見なおそう。</div>`}
+              <button class="m-quiz-btn" onclick="mNmGo('work')"><b>💼 はたらいてお金を作る</b><br>
+                  <span style="font-size:12px;color:#888;">遠まわりに見えて、いちばん確実で いちばん安い方法</span></button>
+              <button class="m-quiz-btn" onclick="mNmGo('cancel')">やめておく（買わない）</button>
+            </div>
+            <div class="m-learn">💡 <b>お金が足りないときに借りる</b>のは、大人がいちばんよくやる失敗。
+            借りたお金には利息がついて、来月の自分がもっと苦しくなる。<br>
+            正しい順番は <b>①貯金からだす → ②いらないものを見なおす → ③かせぐ → ④どうしても必要なら計画して借りる</b> だよ。</div></div>`);
+    }
+    function mNmGo(w) {
+        const info = mNM;
+        if(w === 'cancel') { gCloseModal(); return; }
+        if(w === 'bank') {
+            const m = mLoad();
+            const lack = Math.max(0, info.need - Math.max(0, m.cash));
+            if((m.bank || 0) < lack) { alert('貯金が足りなくなっていたよ'); return; }
+            m.bank -= lack; m.cash += lack;
+            mLog(m, '貯金からおろす（買いもののため）', 0);
+            mSave(m);
+            gCloseModal();
+            playSfx('correct');
+            if(info.retry) setTimeout(() => info.retry(), 60);
+            else { renderLife(); renderMoney(); }
+            return;
+        }
+        if(w === 'sell') { gCloseModal(); switchView('money'); mSwitchTab('invest'); setTimeout(() => alert('📈 投資タブだよ。売りたいものの「売る」を押してね。\n売ったお金は現金になるから、そのあともう一度 買ってみよう。'), 200); return; }
+        if(w === 'work') { gCloseModal(); switchView('money'); mSwitchTab('job'); setTimeout(() => alert('💼 仕事タブだよ。就職して毎日「出勤する」を押すと、毎月5日にお給料が入るよ。\n勉強で問題を解くのも お給料になる！'), 200); return; }
+        if(w === 'loan') {
+            const m = mLoad();
+            const lack = Math.max(0, info.need - Math.max(0, m.cash));
+            const best = mLoanBest(m, lack);
+            gCloseModal();
+            switchView('money');
+            if(!best) { mSwitchTab('loan'); return; }
+            mSwitchTab(best.bank ? 'bank' : 'loan');
+            setTimeout(() => mLoanPlan(best.c, lack), 220);
+            return;
+        }
+        gCloseModal();
+    }
+    // いま借りられる中で いちばん金利が安いもの（無いなら null）
+    function mLoanBest(m, need) {
+        const list = M_LOANS.filter(lo => !lo.illegal && mLoanCanUse(m, lo).ok && lo.max >= Math.max(10000, need || 0));
+        if(!list.length) return null;
+        return list.slice().sort((a, b) => a.rate - b.rate)[0];
+    }
+    // その商品を借りられるか（理由つき）
+    function mLoanCanUse(m, lo) {
+        if(lo.illegal) return { ok:false, why:'これは違法な業者。ぜったいに借りてはダメ' };
+        if((m.day || 0) < (m.hell.blockUntil || 0)) return { ok:false, why:`事故の記録がのこっているので、あと ${Math.ceil((m.hell.blockUntil - m.day))}日 は借りられない` };
+        if((m.credit || 0) < lo.minCredit) return { ok:false, why:`信用スコアが足りない（あと ${lo.minCredit - Math.round(m.credit || 0)}）` };
+        if(lo.needJob && !mJobCo(m.job.co)) return { ok:false, why:'会社ではたらいている人だけが使えるよ' };
+        if(lo.bank) {
+            const inc = mMonthIncome(m);
+            if(inc <= 0) return { ok:false, why:'銀行は「返せる見こみ（収入）」がない人には貸してくれない' };
+            if(mLoanMonthlyTotal(m) / inc > 0.40) return { ok:false, why:'すでに毎月の返済が手取りの40%をこえている（返済比率オーバー）' };
+        }
+        if(mLoanTotalDebt(m) > lo.max * 2) return { ok:false, why:'もう借りすぎだよ。まず返そう' };
+        return { ok:true, why:'' };
+    }
+
+    // ==========================================================================================
+    //  💀 借金地獄（お金が返せなくなると、だんだん こわいことになる）
+    //  レベルは表に出しているけれど、毎日の取り立て・差し押さえは 裏で しずかに進んでいく。
+    // ==========================================================================================
+    const M_HELL = [
+        { n:'',            e:'',   c:'#27ae60', d:'' },
+        { n:'ちゅうい',    e:'⚠️', c:'#f39c12', d:'借金が手取りの1か月分をこえた。まだ大丈夫、ここで止めよう' },
+        { n:'けいこく',    e:'🚨', c:'#e67e22', d:'手取りの3か月分。取り立ての電話がかかってきて、きぶんが毎日けずられる' },
+        { n:'とくそく',    e:'📕', c:'#d35400', d:'手取りの6か月分。督促状がとどく。健康もきぶんも仕事の評価も下がりつづける' },
+        { n:'さしおさえ',  e:'🔨', c:'#c0392b', d:'手取りの12か月分。貯金→投資→持ちものの順に、じゅんばんに取り上げられていく' },
+        { n:'借金地獄',    e:'☠️', c:'#7b241c', d:'手取りの24か月分。もう自力では返せない。債務整理か自己破産しか道がない' }
+    ];
+    function mHellLv(m) {
+        const debt = mLoanTotalDebt(m);
+        if(debt <= 0) return 0;
+        const inc = Math.max(60000, mMonthIncome(m));      // 無職なら「6万円で暮らす」ときびしめに見る
+        const r = debt / inc;
+        let lv = r >= 24 ? 5 : r >= 12 ? 4 : r >= 6 ? 3 : r >= 3 ? 2 : r >= 1 ? 1 : 0;
+        const late = m.loanLate || 0;
+        if(late >= 8) lv = Math.max(lv, 5);
+        else if(late >= 5) lv = Math.max(lv, 4);
+        else if(late >= 3) lv = Math.max(lv, 3);
+        else if(late >= 1) lv = Math.max(lv, 2);
+        if(mTotal(m) < -inc * 3) lv = Math.max(lv, 4);
+        return lv;
+    }
+    // 1日ぶんの「地獄」の進行（mTickの毎日の処理から呼ばれる）
+    function mHellDaily(m) {
+        // 立てかえ分（払えなかったお金）には、毎日 遅延損害金 年14.6% がつく（本物と同じ利率）
+        if((m.debt || 0) > 0) {
+            m.hell._acc = (m.hell._acc || 0) + m.debt * 0.146 / 365;
+            if(m.hell._acc >= 1) { const w = Math.floor(m.hell._acc); m.debt += w; m.hell.lateFee = (m.hell.lateFee || 0) + w; m.hell._acc -= w; }
+        }
+        const lv = mHellLv(m);
+        const before = m.hell.lv || 0;
+        m.hell.lv = lv;
+        m.hell.maxLv = Math.max(m.hell.maxLv || 0, lv);
+        if(lv <= 0) { m.hell.days = 0; if(before >= 2) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'🕊️ 借金の重さから ぬけ出した！', msg:'よくがんばったね。ここまで来られたら、もう大丈夫。この経験は一生の財産だよ。' }); return; }
+        m.hell.days = (m.hell.days || 0) + 1;
+        if(lv > before) {
+            const H = M_HELL[lv];
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:`${H.e} 借金レベルが「${H.n}」になった`, msg:`${H.d}\nいますぐ 💳借金のタブを見て、返す方法を考えよう。` });
+            playSfx('wrong');
+        }
+        if(lv >= 2) {
+            m.home.happy = Math.max(0, m.home.happy - 3);
+            m.hell.calls = (m.hell.calls || 0) + 1;
+            if(m.hell.days % 3 === 0) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:'☎️ 取り立ての電話',
+                msg:`「お支払いの件でご連絡しました」——${mYen(mLoanTotalDebt(m))} の返済がとどこおっているよ。電話が鳴るだけで、きぶんはどんどん下がっていく。` });
+        }
+        if(lv >= 3) {
+            m.home.happy = Math.max(0, m.home.happy - 4);
+            m.home.health = Math.max(0, m.home.health - 1.5);
+            if(mJobCo(m.job.co)) m.job.ev = Math.max(0, m.job.ev - 1);
+        }
+        if(lv >= 4 && m.hell.days % 5 === 0) mSeize(m);
+        if(lv >= 5) {
+            m.home.happy = Math.max(0, m.home.happy - 5);
+            m.home.health = Math.max(0, m.home.health - 2);
+            if(mJobCo(m.job.co)) m.job.ev = Math.max(0, m.job.ev - 1);
+            if(m.hell.days % 7 === 0) m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:'☠️ もう自力では返せない',
+                msg:'ここまで来たら、はずかしがらずに「制度」を使うのが正解。💳借金タブの<b>債務整理</b>や<b>自己破産</b>は、国が用意した「やり直すためのしくみ」だよ。本物の世界では、まず市役所や法テラスに相談する。' });
+        }
+    }
+    // 🔨 差し押さえ（貯金 → 投資 → 持ちもの の順に取り上げられる）
+    function mSeize(m) {
+        let need = Math.round(Math.min(mLoanTotalDebt(m), Math.max(30000, mLoanTotalDebt(m) * 0.10)));
+        const took = [];
+        if(need > 0 && (m.bank || 0) > 0) {
+            const t = Math.min(m.bank, need); m.bank -= t; need -= t;
+            mHellRepay(m, t); took.push(`貯金 ${mYen(t)}`);
+        }
+        if(need > 0) {
+            const codes = ['hold', 'nisa'];
+            for(const k of codes) {
+                for(const c of Object.keys(m[k] || {})) {
+                    if(need <= 0) break;
+                    const a = M_ASSET(c), price = mPrice(m, c), h = m[k][c];
+                    const val = price * h.qty;
+                    if(val <= 0) { delete m[k][c]; continue; }
+                    const useQty = val <= need ? h.qty : (mIsShareType(a) ? Math.min(h.qty, Math.ceil(need / price)) : h.qty * (need / val));
+                    const got = Math.round(useQty * price * 0.97);              // 手数料をひかれて、たたき売られる
+                    h.qty -= useQty; h.cost -= h.cost * (useQty / (h.qty + useQty || 1));
+                    if(h.qty < (mIsShareType(a) ? 0.5 : 0.0000001)) delete m[k][c];
+                    need -= got; mHellRepay(m, got);
+                    took.push(`${(a || {}).n || c} ${mYen(got)}`);
+                }
+            }
+        }
+        if(need > 0) {
+            const keeps = Object.keys(m.home.shop || {}).filter(c => { const it = mShopItem(c); return it && it.keep; })
+                .sort((a, b) => (mShopItem(b).buy || 0) - (mShopItem(a).buy || 0));
+            for(const c of keeps) {
+                if(need <= 0) break;
+                const it = mShopItem(c);
+                const got = Math.round((it.buy || 0) * 0.30);                  // 中古あつかい＝買った値段の3割
+                if(got <= 0) continue;
+                delete m.home.shop[c];
+                need -= got; mHellRepay(m, got);
+                took.push(`${it.e} ${it.n} ${mYen(got)}`);
+            }
+        }
+        if(!took.length) {
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:'🔨 差し押さえに来たけど、取るものが無かった',
+                msg:'もう差し押さえるものが残っていない…。ここまで来たら 💳借金タブの<b>債務整理</b>や<b>自己破産</b>を考えよう。それは「にげる」ことじゃなくて、やり直すための制度だよ。' });
+            return;
+        }
+        m.hell.seized = (m.hell.seized || 0) + took.length;
+        m.hell.seizeYen = (m.hell.seizeYen || 0) + 0;
+        mLog(m, `🔨 差し押さえ（${took.length}件）`, 0);
+        m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:'🔨 差し押さえられた…',
+            msg:`借金を返せないので、つぎのものが取り上げられて借金にあてられたよ。<br><b>${took.map(esc).join('／')}</b><br>本物の世界でも、返せないと 給料・貯金・車・家 が差し押さえられる。これが借金のいちばんこわいところ。` });
+        playSfx('wrong');
+    }
+    // 差し押さえたお金を借金にあてる（立てかえ分 → ローンの残り の順）
+    function mHellRepay(m, yen) {
+        let left = Math.round(yen);
+        if(left <= 0) return;
+        if((m.debt || 0) > 0) { const t = Math.min(m.debt, left); m.debt -= t; left -= t; }
+        for(let i = m.loans.length - 1; i >= 0 && left > 0; i--) {
+            const l = m.loans[i];
+            const t = Math.min(l.left, left); l.left -= t; left -= t;
+            if(l.left <= 0) m.loans.splice(i, 1);
+        }
+        if(left > 0) m.cash += left;
+    }
+    // ---- 借金地獄のようす（💳借金タブのいちばん上に出る）----
+    function mHellHtml(m) {
+        const lv = mHellLv(m);
+        const debt = mLoanTotalDebt(m);
+        const inc = mMonthIncome(m);
+        const H = M_HELL[lv];
+        if(lv <= 0) {
+            return `<div class="m-card"><b>🌤️ 借金メーター</b>
+                <div class="m-meter" style="height:16px;"><div style="width:${debt > 0 ? 8 : 0}%;background:#27ae60;"></div></div>
+                <div class="m-row"><span>いまの状態</span><b class="m-up">${debt > 0 ? 'かるい借金（大丈夫）' : '借金ゼロ！すばらしい👏'}</b></div>
+                ${inc > 0 ? `<div class="m-row"><span>毎月の手取り</span><b>${mYen(inc)}</b></div>` : ''}
+                <div class="m-learn">💡 借金は「金額」より<b>「毎月の手取りの何か月分か」</b>で重さが決まる。
+                ここが3か月分をこえると、取り立ての電話が鳴りはじめるよ。</div></div>`;
+        }
+        const ratio = debt / Math.max(60000, inc);
+        return `<div class="m-card" style="border:3px solid ${H.c};background:linear-gradient(180deg,${H.c}18,transparent);">
+            <div style="font-size:12px;color:${H.c};font-weight:bold;">借金メーター</div>
+            <div style="font-size:24px;font-weight:bold;color:${H.c};">${H.e} ${H.n}（レベル${lv}／5）</div>
+            <div class="m-meter" style="height:18px;"><div style="width:${Math.min(100, lv / 5 * 100)}%;background:${H.c};"></div></div>
+            <div class="m-desc" style="font-size:14px;margin-top:6px;">${esc(H.d)}</div>
+            <div class="m-row"><span>借金の合計</span><b class="m-down">${mYen(debt)}</b></div>
+            <div class="m-row"><span>毎月の手取り</span><b>${inc > 0 ? mYen(inc) : 'なし（無職）'}</b></div>
+            <div class="m-row"><span>手取りの何か月分か</span><b style="color:${H.c};">${ratio.toFixed(1)}か月分</b></div>
+            <div class="m-row"><span>返せなかった回数</span><b class="${(m.loanLate || 0) ? 'm-down' : ''}">${m.loanLate || 0}回</b></div>
+            ${(m.hell.lateFee || 0) > 0 ? `<div class="m-row"><span>これまでについた遅延損害金（年14.6%）</span><b class="m-down">${mYen(m.hell.lateFee)}</b></div>` : ''}
+            ${(m.hell.calls || 0) > 0 ? `<div class="m-row"><span>取り立ての電話</span><b>${m.hell.calls}回</b></div>` : ''}
+            ${(m.hell.seized || 0) > 0 ? `<div class="m-row"><span>差し押さえられたもの</span><b class="m-down">${m.hell.seized}件</b></div>` : ''}
+            ${lv >= 2 ? `<div class="m-warn" style="margin-top:8px;">${lv >= 4 ? '🔨 <b>5日ごとに差し押さえ</b>がやってくる。貯金→投資→持ちものの順に取り上げられるよ。' : '☎️ 毎日 取り立ての電話が鳴って、きぶんが下がりつづけているよ。'}</div>` : ''}
+            <div class="m-learn">💡 大事なのは<b>「返せない」と分かった時点で、すぐ相談すること</b>。
+            本物の世界では 市役所・法テラス・消費生活センターが無料で相談にのってくれる。
+            だまって放っておくのが いちばん最悪の手だよ。</div></div>` + mHellFixHtml(m, lv);
+    }
+    // 地獄からぬけ出す3つの道
+    function mHellFixHtml(m, lv) {
+        const debt = mLoanTotalDebt(m);
+        const canMatome = m.loans.length >= 2 && (m.credit || 0) >= 450 && debt <= 6000000;
+        const canSeiri = lv >= 3 && m.loans.length >= 1 && !(m.hell.seiri || 0);
+        const canBank = lv >= 5 || (debt > Math.max(600000, mMonthIncome(m) * 20) && m.loans.length >= 1);
+        return `<div class="m-card"><b>🪜 地獄からぬけ出す方法</b>
+            <div style="font-size:12px;color:#888;">お金が返せなくなるのは、あなたが悪い人だからじゃない。だから国は「やり直すしくみ」を用意しているんだ</div>
+            <div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">🧹 まず、固定費を見なおす（0円）</div>
+                <div class="m-desc">やめられるものをやめるのが最初。毎月のお金がへると、返せる金額がふえる</div></div>
+                <button class="m-btn m-buy" onclick="switchView('life')">見なおす</button></div>
+            <div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">🧺 おまとめローン（年9.8%）</div>
+                <div class="m-desc">バラバラのローンを1本にまとめて、毎月の返済を軽くする。手数料3%かかる。金利が下がるので、合計の利息もへることが多い</div>
+                ${!canMatome ? `<div class="m-desc" style="color:#e74c3c;">${m.loans.length < 2 ? 'ローンが2つ以上ないと使えない' : (m.credit || 0) < 450 ? '信用スコアが足りない（450ひつよう）' : '借金が多すぎて まとめられない'}</div>` : ''}</div>
+                <button class="m-btn ${canMatome ? 'm-buy' : 'm-info'}" onclick="mMatome()" ${canMatome ? '' : 'disabled'}>まとめる</button></div>
+            <div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">📝 債務整理（任意整理）</div>
+                <div class="m-desc">弁護士さんに間に入ってもらい、<b>これから先の利息を0にして</b>元本だけを48回で返す約束にすること。
+                そのかわり信用スコアが大きく下がって、<b>2年間 新しく借りられなくなる</b>（＝ブラックリスト）</div>
+                ${!canSeiri ? `<div class="m-desc" style="color:#e74c3c;">${(m.hell.seiri || 0) ? 'もう1回やっている' : lv < 3 ? '借金レベル3（とくそく）から使えるよ' : 'ローンがないと使えない'}</div>` : ''}</div>
+                <button class="m-btn ${canSeiri ? 'm-sell' : 'm-info'}" onclick="mSeiri()" ${canSeiri ? '' : 'disabled'}>相談する</button></div>
+            <div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">🕳️ 自己破産（さいごの手段）</div>
+                <div class="m-desc">裁判所に「もう返せません」と認めてもらって、<b>借金をぜんぶ帳消し</b>にする制度。
+                そのかわり<b>貯金も投資も高い持ちものも ぜんぶ手ばなす</b>ことになって、<b>7年間まったく借りられなくなる</b>。
+                それでも、人生をやり直すために国が用意した大切なしくみだよ</div>
+                ${!canBank ? `<div class="m-desc" style="color:#e74c3c;">借金レベル5（借金地獄）まで行かないと選べないよ</div>` : ''}</div>
+                <button class="m-btn ${canBank ? 'm-sell' : 'm-info'}" onclick="mBankrupt()" ${canBank ? '' : 'disabled'}>考える</button></div>
+            <div class="m-learn">💡 いちばん大事なのは<b>「ここまで来ないようにすること」</b>。
+            借りる前に「毎月いくらなら返せるか」を先に決める。それだけで、この地獄はほとんど防げるよ。</div></div>`;
+    }
+    function mMatome() {
+        const m = mLoad();
+        if(m.loans.length < 2) { alert('ローンが2つ以上ないと まとめられないよ'); return; }
+        const total = m.loans.reduce((s, l) => s + l.left, 0);
+        const fee = Math.round(total * 0.03);
+        const P = total + fee, n = 60, rate = 0.098;
+        const pay = mLoanMonthly(P, rate, n);
+        const beforePay = mLoanMonthlyTotal(m);
+        if(!confirm(`🧺 おまとめローン\n\nいまのローン ${m.loans.length}本 のこり ${mYen(total)}\n手数料3% ${mYen(fee)} をたして ${mYen(P)} を 年9.8%・60回で返す\n\n毎月の返済： ${mYen(beforePay)} → ${mYen(pay)}\n返す合計： ${mYen(pay * n)}\n\nまとめる？`)) return;
+        m.loans = [{ c:'MATO', P, rate, n, pay, paid:0, left:pay * n, day:calToday() }];
+        m.credit = Math.max(0, m.credit - 10);
+        mLog(m, `おまとめローン（${mYen(P)}・60回）`, 0);
+        mSave(m); playSfx('finish'); renderMoney();
+        alert(`🧺 まとめたよ！ 毎月 ${mYen(pay)} を60回。\n毎月は軽くなったけど、回数がふえたぶん 合計の利息はふえることもある。\nお金に余ゆうができたら「まとめて返す」で先に返そう！`);
+    }
+    function mSeiri() {
+        const m = mLoad();
+        if(!m.loans.length) { alert('整理するローンがないよ'); return; }
+        const before = m.loans.reduce((s, l) => s + l.left, 0);
+        // これから先の利息をカット＝元本だけにして48回払いへ
+        const moto = Math.round(m.loans.reduce((s, l) => s + Math.min(l.left, l.P * (1 - l.paid / Math.max(1, l.n)) + l.P * 0.02), 0));
+        const n = 48, pay = Math.ceil(moto / n);
+        if(!confirm(`📝 債務整理（任意整理）\n\nいまの残り ${mYen(before)} → 元本だけの ${mYen(moto)} に\n金利 0% ・48回払い（毎月 ${mYen(pay)}）\n\n【そのかわり】\n・信用スコアが 300以下に下がる\n・2年間 まったく新しく借りられない\n・クレジットカードも作れない\n\n本当にやる？`)) return;
+        m.loans = [{ c:'SEIRI', P:moto, rate:0, n, pay, paid:0, left:moto, day:calToday() }];
+        m.credit = Math.min(m.credit, 280);
+        m.hell.seiri = 1;
+        m.hell.blockUntil = (m.day || 0) + 730;
+        mLog(m, '債務整理（任意整理）', 0);
+        mSave(m); mAwardTitles(); playSfx('finish'); renderMoney();
+        gOpenModal(`<div style="text-align:left;max-width:540px;margin:0 auto;">
+            <h2 style="text-align:center;">📝 債務整理をしたよ</h2>
+            <div class="m-ok" style="font-size:15px;line-height:1.9;">これから先の利息が<b>0円</b>になって、
+            元本 ${mYen(moto)} を毎月 ${mYen(pay)} ずつ48回で返すことになったよ。</div>
+            <div class="m-warn">そのかわり、信用スコアは <b>${Math.round(m.credit)}</b> まで下がって、
+            <b>2年間（アプリの中で730日）は新しく借りられない</b>。これを「ブラックリストにのる」というよ。</div>
+            <div class="m-learn">💡 これは「にげた」んじゃない。<b>返せる形にととのえて、ちゃんと返す</b>という約束だよ。
+            本物の世界では 弁護士や司法書士に相談する。お金がなくても<b>法テラス</b>という国のしくみが使える。<br>
+            大事なのは、こうなる前に「借りる前の計画」をすることだね。</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('loan');">わかった</button></div></div>`);
+    }
+    function mBankrupt() {
+        const m = mLoad();
+        const debt = mLoanTotalDebt(m);
+        if(debt <= 0) { alert('借金がないよ'); return; }
+        const lose = (m.bank || 0) + mHoldValue(m);
+        const keeps = Object.keys(m.home.shop || {}).filter(c => { const it = mShopItem(c); return it && it.keep && (it.buy || 0) >= 20000; });
+        if(!confirm(`🕳️ 自己破産\n\n【なくなるもの】\n・借金 ${mYen(debt)} が ぜんぶ帳消し\n\n【うしなうもの】\n・貯金と投資 ${mYen(lose)} ぜんぶ\n・2万円以上の持ちもの ${keeps.length}こ\n・信用スコアが150に\n・7年間（2555日）まったく借りられない\n\nそれでも国は「やり直していい」と決めている制度だよ。\n本当にやる？`)) return;
+        m.loans = []; m.debt = 0;
+        m.bank = 0;
+        ['hold', 'nisa'].forEach(k => { m[k] = {}; });
+        keeps.forEach(c => { delete m.home.shop[c]; });
+        m.credit = 150;
+        m.hell.bankrupt = (m.hell.bankrupt || 0) + 1;
+        m.hell.blockUntil = (m.day || 0) + 2555;
+        m.hell.days = 0; m.hell.lv = 0;
+        m.cash = Math.max(m.cash, 0) + 50000;                 // 再出発のお金（生活に必要な分は残せる決まり）
+        mLog(m, '自己破産（借金をぜんぶ帳消し・財産を手ばなした）', 0);
+        mSave(m); mAwardTitles(); playSfx('wrong'); renderMoney();
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">🕳️ 自己破産をした</h2>
+            <div class="m-warn" style="font-size:15px;line-height:1.9;">借金 <b>${mYen(debt)}</b> は ぜんぶ無くなった。
+            そのかわり 貯金・投資 ${mYen(lose)} と、高い持ちもの ${keeps.length}こ を手ばなしたよ。
+            信用スコアは <b>150</b>。<b>7年間</b> はどこからも借りられない。</div>
+            <div class="m-ok" style="font-size:14px;line-height:1.9;">それでも <b>${mYen(50000)}</b> は手元に残せる。
+            法律で「生活に必要なお金と道具は取り上げてはいけない」と決まっているからだよ。ここからまた始められる。</div>
+            <div class="m-learn">💡 自己破産は年に7万人ぐらいがしている、めずらしくない制度。<b>人生は終わらない</b>。
+            ただし何年も不便が続くのは本当だから、<b>そうならない借り方</b>を知っておくのがいちばん大事。<br>
+            <b>「毎月いくらなら返せるか」を先に決めてから借りる</b>。これだけで、ほとんどの人はここに来ない。</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#11998e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">また はたらきはじめる</button></div></div>`);
+    }
+
+    // ==========================================================================================
+    //  🏦 銀行のローン窓口（★ユーザー指定：銀行の借金は「銀行」の中に入れる）
+    //  銀行は かんたんには貸してくれない。「審査」があるのがカードローンとのいちばんのちがい。
+    // ==========================================================================================
+    function mBankLoanHtml(m) {
+        const list = M_LOANS.filter(lo => lo.bank);
+        const cl = mCreditLabel(m.credit);
+        let h = `<div class="m-card" style="border:3px solid #2980b9;"><b>🏦 銀行でお金を借りる（ローン窓口）</b>
+            <div style="font-size:12px;color:#888;">銀行の金利は<b>いちばん安い</b>。そのかわり<b>審査</b>があって、だれでも借りられるわけじゃない。
+            これが「銀行で借りる」と「カードローンですぐ借りる」のいちばんのちがいだよ</div>
+            <div class="m-row"><span>あなたの信用スコア</span><b style="color:${cl[1]};">${Math.round(m.credit)}（${cl[0]}）</b></div>
+            <div class="m-row"><span>毎月の手取り</span><b>${mMonthIncome(m) > 0 ? mYen(mMonthIncome(m)) : 'なし（銀行はここを必ず見る）'}</b></div>
+            <div class="m-row"><span>いまの毎月の返済</span><b>${mYen(mLoanMonthlyTotal(m))}</b></div>`;
+        list.forEach(lo => {
+            const can = mLoanCanUse(m, lo);
+            const ex = mLoanMonthly(1000000, lo.rate, 60);
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${lo.e} ${esc(lo.n)}</div>
+                <div class="m-desc">${lo.d}</div>
+                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／必要な信用 ${lo.minCredit}</div>
+                <div class="m-desc">例：100万円を60回で返すと 毎月 ${mYen(ex)}・利息は合計 <b>${mYen(ex * 60 - 1000000)}</b></div>
+                ${!can.ok ? `<div class="m-desc" style="color:#e74c3c;">✕ ${esc(can.why)}</div>` : ''}</div>
+              <div class="m-price"><div style="font-size:11px;color:#888;">金利</div><div><b style="color:#27ae60;">年${(lo.rate * 100).toFixed(1)}%</b></div>
+                <button class="m-btn ${can.ok ? 'm-buy' : 'm-info'}" style="margin-top:4px;" onclick="mLoanShinsa('${lo.c}')" ${can.ok ? '' : 'disabled'}>審査を受ける</button></div></div>`;
+        });
+        h += `<div class="m-learn">💡 銀行が見ているのは<b>①ちゃんと収入があるか ②いくら借りているか ③今まできちんと返してきたか</b>の3つ。
+            これを積み上げた人だけが、いちばん安い金利で借りられる。それが<b>「信用」</b>の正体だよ。<br>
+            すぐ貸してくれるところほど金利が高いのは、<b>返してもらえないリスクの分</b>を上のせしているから。</div></div>`;
+        return h;
+    }
+    // 🔍 審査（3つのチェックが1つずつ出てくる演出つき）
+    let mSH = null;
+    function mLoanShinsa(code) {
+        const lo = M_LOANS.find(x => x.c === code); if(!lo) return;
+        const m = mLoad();
+        const inc = mMonthIncome(m);
+        const checks = [
+            { n:'① 本人かくにん・年れい', ok:true, d:'書類はそろっているね' },
+            { n:'② 収入があるか（返せる見こみ）', ok:inc > 0, d:inc > 0 ? `毎月の手取り ${mYen(inc)} を確認したよ` : 'いま収入がないので、返せる見こみが立たないんだ' },
+            { n:'③ 信用情報（今まできちんと返してきたか）', ok:(m.credit || 0) >= lo.minCredit && (m.day || 0) >= (m.hell.blockUntil || 0),
+              d:(m.day || 0) < (m.hell.blockUntil || 0) ? '事故の記録がのこっているよ' : (m.credit || 0) >= lo.minCredit ? `信用スコア ${Math.round(m.credit)}。だいじょうぶ` : `信用スコアが ${lo.minCredit} に足りないんだ` },
+            { n:'④ 返済ひりつ（手取りの何%を返済にあてるか）', ok:inc > 0 && mLoanMonthlyTotal(m) / inc <= 0.40,
+              d:inc > 0 ? `いま ${(mLoanMonthlyTotal(m) / inc * 100).toFixed(0)}%（40%まで）` : '収入がないので計算できない' }
+        ];
+        mSH = { lo, checks, i:0 };
+        mShinsaStep();
+    }
+    function mShinsaStep() {
+        const { lo, checks, i } = mSH;
+        const shown = checks.slice(0, i);
+        const done = i >= checks.length;
+        const ng = shown.filter(c => !c.ok);
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">🔍 ${lo.e} ${esc(lo.n)}の審査</h2>
+            <div class="m-desc" style="text-align:center;">銀行の人がチェックしています…</div>
+            <div class="m-ev" style="font-size:14px;line-height:2.1;min-height:120px;">
+              ${shown.map(c => `<div>${c.ok ? '<b style="color:#27ae60;">○</b>' : '<b style="color:#e74c3c;">✕</b>'} ${esc(c.n)}<br>
+                  <span style="font-size:12px;color:#888;padding-left:18px;">${esc(c.d)}</span></div>`).join('')}
+              ${!done ? '<div style="color:#888;">…しんさ中…</div>' : ''}
+            </div>
+            ${done ? (ng.length ? `<div class="m-warn" style="font-size:15px;">📨 <b>今回はご希望にそえませんでした</b><br>
+                  ${ng.map(c => esc(c.d)).join('<br>')}<br><br>
+                  銀行はきびしいけれど、それは<b>返せない借金をさせないため</b>でもあるんだ。</div>
+                  <div class="m-learn">💡 銀行に断られたときに、金利18%のところへ行くのがいちばん危ない道。
+                  まずは<b>収入を作る・いまの借金を返す・信用を積む</b>。遠まわりに見えて、これが最短だよ。</div>`
+              : `<div class="m-ok" style="font-size:16px;text-align:center;">🎉 <b>審査 とおりました！</b><br>
+                  <span style="font-size:13px;">つづいて「いくら・何回で返すか」の計画を立てよう</span></div>`) : ''}
+            <div style="text-align:center;margin-top:12px;">
+              ${!done ? `<button class="btn" style="background:#2980b9;color:#fff;" onclick="mShinsaNext()">つぎ ▶</button>`
+                : (ng.length ? `<button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('bank');">とじる</button>`
+                             : `<button class="btn" style="background:#e74c3c;color:#fff;" onclick="mLoanPlan('${lo.c}')">返す計画を立てる ▶</button>
+                                <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('bank');">やめる</button>`)}
+            </div></div>`);
+    }
+    function mShinsaNext() { mSH.i = Math.min(mSH.checks.length, mSH.i + 1); playSfx('correct'); mShinsaStep(); }
+    // ==========================================================================================
+    //  🗳️ 選挙に立候補する（政治タブ）
+    //  うまくやると議員になって毎月お金と「政策を1つ実行する力」が手に入る。
+    //  しくじると供託金300万円がぜんぶ没収されて、そのまま借金地獄コースもある。
+    //  ★ 支持率のもとになる数字は、ぜんぶ ふだんの遊びの中で 裏から積み上がっている。
+    // ==========================================================================================
+    const M_POL_DEP = 3000000;      // 供託金（本物の衆議院・小選挙区と同じ300万円）
+    const M_POL_PAY = 1290000;      // 議員のお給料（歳費）月額のめやす
+    const M_POL_TERM = 120;         // 任期（アプリの中では120日＝約4か月を1期とする）
+    function mPolSeated(m) { return !!(m && m.pol && m.pol.seatUntil && (m.day || 0) < m.pol.seatUntil); }
+    function mPolPolicy(m, key) {
+        if(!mPolSeated(m)) return null;
+        const p = M_POL_ACTS.find(x => x.c === (m.pol || {}).policy);
+        return p && p[key] ? p : null;
+    }
+    const M_POL_ACTS = [
+        { c:'genzei', e:'💴', n:'減税する',           d:'みんなの税金を軽くする', you:'毎月5日に「手取りの8%」が返ってくる', cash:true,
+          nat:'景気は良くなるけど、国の借金はふえる。だれかが未来に返すことになる' },
+        { c:'kyufu',  e:'🎁', n:'給付金を配る',       d:'こまっている人にお金を配る', you:'毎月5日に 3万円もらえる', kyufu:30000,
+          nat:'すぐ効いてありがたい。でも配りつづけることはできない（財源の問題）' },
+        { c:'kyoiku', e:'📚', n:'教育を無償にする',   d:'学費を国が持つ', you:'勉強手当が1.4倍になる', pay:0.4,
+          nat:'効果が出るのは10年後。でもいちばん確実に国を強くする投資と言われている' },
+        { c:'iryo',   e:'🏥', n:'医療費を安くする',   d:'病院代の自己負担を下げる', you:'びょうき・けがのお金が半分になる', med:0.5,
+          nat:'安心して病院に行けるようになる。そのぶん税金がかかる' },
+        { c:'kouji',  e:'🏗️', n:'公共事業をふやす',   d:'道路や橋を直して、仕事を作る', you:'仕事の評価が毎日 上がりやすくなる', ev:1,
+          nat:'すぐ仕事がふえる。でも本当に必要な工事かどうかを見る目も必要' },
+        { c:'kinri',  e:'🏦', n:'金利を下げる',       d:'中央銀行にお願いしてお金を借りやすくする', you:'いま返しているローンの金利が1%下がる', rate:0.01,
+          nat:'借りやすくなって景気は上がるけど、物のねだんも上がりやすくなる' },
+        { c:'kankyo', e:'🌱', n:'環境を守る',         d:'太陽光・風力にお金を出す', you:'毎月5日に 1万円（グリーン手当）＋きぶんが上がる', kyufu:10000, happy:6,
+          nat:'いまはお金がかかる。でも未来の空気と海を守る投資でもある' }
+    ];
+    function mElecPower(m) {
+        const study = Math.min(26, mStudyPower() / 160);                             // これまでに解いた問題の数
+        const money = Math.min(18, Math.max(0, Math.log10(Math.max(1, mTotal(m))) - 4) * 7);
+        const credit = Math.min(16, Math.max(0, ((m.credit || 0) - 400) / 37));
+        const job = Math.min(16, (mJobCo(m.job.co) ? 7 + (m.job.rank || 0) * 1.4 : 0) + (m.biz && m.biz.c ? 9 : 0) + ((m.pol.win || 0) >= 1 ? 4 : 0));
+        const life = Math.min(12, (((m.home.health || 0) + (m.home.happy || 0)) / 200) * 12);
+        const title = Math.min(12, (m.titles || []).length * 0.55);
+        const kifu = Math.min(8, (m.pol.donate || 0) / 5000);
+        const bad = Math.min(20, (m.hell.maxLv || 0) * 2.4 + (m.hell.bankrupt || 0) * 8 + (m.loanLate || 0) * 1.2);
+        const list = [
+            ['📚 勉強してきた量', study, 26, `これまでに解いた問題 ${mStudyPower()}問`],
+            ['💰 経済力', money, 18, `そう資産 ${mYen(mTotal(m))}`],
+            ['⭐ 信用', credit, 16, `信用スコア ${Math.round(m.credit || 0)}`],
+            ['💼 仕事の実績', job, 16, mJobCo(m.job.co) ? `${mJobCo(m.job.co).n}・${mJobRank(m).n}` : (m.biz && m.biz.c ? '会社の社長' : 'はたらいていない')],
+            ['🏠 くらしの安定', life, 12, `健康 ${Math.round(m.home.health)}／きぶん ${Math.round(m.home.happy)}`],
+            ['🏆 これまでの実績', title, 12, `称号 ${(m.titles || []).length}こ`],
+            ['🤝 きふ・地元への貢献', kifu, 8, `これまでのきふ ${mYen(m.pol.donate || 0)}`]
+        ];
+        const base = Math.max(2, list.reduce((s, x) => s + x[1], 0) - bad);
+        return { list, bad, base:Math.min(96, base) };
+    }
+    function mElecSup(m) { return Math.max(0, Math.min(98, mElecPower(m).base + (m.pol.sup || 0))); }
+    const M_ELEC_ACTS = [
+        { c:'speech', e:'📢', n:'街頭えんぜつ', cost:50000,  lo:3,  hi:9,  h:-5, d:'えき前で話す。体力はけずるけど、直接とどく' },
+        { c:'poster', e:'🖼️', n:'ポスターをはる', cost:200000, lo:5, hi:12, h:-1, d:'お金はかかるが、名前をおぼえてもらえる' },
+        { c:'sns',    e:'📱', n:'SNSで発信',    cost:100000, lo:1,  hi:18, h:-2, risk:0.14, d:'当たれば大きい。でも<b>炎上</b>すると支持率がガタ落ち' },
+        { c:'meet',   e:'🤝', n:'支援者まわり', cost:300000, lo:8,  hi:14, h:-3, d:'お金はかかるが、いちばん確実' },
+        { c:'debate', e:'🎤', n:'討論会に出る', cost:0,      lo:0,  hi:0,  h:-4, study:true, d:'お金は0円。<b>これまで勉強してきた量</b>で結果が変わる' }
+    ];
+    function mElecHtml(m) {
+        const p = m.pol;
+        // ── いま議員のとき ──
+        if(mPolSeated(m)) {
+            const act = M_POL_ACTS.find(x => x.c === p.policy);
+            const left = Math.max(0, p.seatUntil - m.day);
+            return `<div class="m-card" style="border:3px solid #8e44ad;background:linear-gradient(180deg,rgba(142,68,173,.12),transparent);">
+                <div style="font-size:12px;color:#8e44ad;font-weight:bold;">いまのあなた</div>
+                <div style="font-size:22px;font-weight:bold;">🎖️ 国会議員</div>
+                <div class="m-row"><span>とうせん回数</span><b>${p.win || 0}回</b></div>
+                <div class="m-row"><span>とった票（前回）</span><b>${(p.votes || 0).toFixed(1)}%</b></div>
+                <div class="m-row"><span>のこりの任期</span><b>${left}日</b></div>
+                <div class="m-row"><span>毎月5日の歳費（お給料）</span><b class="m-up">${mYen(M_POL_PAY)}</b></div>
+                ${act ? `<div class="m-ok" style="margin-top:8px;"><b>実行中の政策：${act.e} ${esc(act.n)}</b><br>
+                    あなたへの効果：${esc(act.you)}<br><span style="font-size:12px;color:#888;">国ぜんたいへの効果：${esc(act.nat)}</span></div>` : ''}
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="mElecPolicyPick()">🔁 実行する政策をかえる</button>
+                <div class="m-learn">💡 議員の仕事は「みんなのお金の使いみちを決めること」。<b>だれかを助ける政策は、だれかの税金でできている</b>。
+                だから政治は「どっちが正しいか」じゃなく「何を大事にするか」の話なんだ。</div></div>`;
+        }
+        const pw = mElecPower(m), sup = mElecSup(m);
+        // ── 選挙運動ちゅう ──
+        if(p.phase === 'run') {
+            const actsLeft = 3 - (p.acts || 0);
+            return `<div class="m-card" style="border:3px solid #e67e22;"><b>🗳️ 選挙運動ちゅう！</b>
+                <div style="font-size:12px;color:#888;">投票日までにできることは<b>あと${actsLeft}回</b>。どれをやるかで結果が変わるよ</div>
+                <div style="margin-top:8px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>いまの支持率</span><b style="font-size:18px;color:${sup >= 40 ? '#27ae60' : sup >= 25 ? '#f39c12' : '#e74c3c'};">${sup.toFixed(1)}%</b></div>
+                <div class="m-meter" style="height:18px;"><div style="width:${sup}%;background:${sup >= 40 ? '#27ae60' : sup >= 25 ? '#f39c12' : '#e74c3c'};"></div></div>
+                <div style="font-size:11px;color:#888;">当選ライン <b>40%</b>／10%を下回ると<b>供託金300万円が没収</b></div></div>
+                <div class="m-row"><span>あずけた供託金</span><b>${mYen(p.dep || 0)}</b></div>
+                ${(p.actLog || []).length ? `<div class="m-desc">やったこと：${(p.actLog || []).map(esc).join('／')}</div>` : ''}
+                ${actsLeft > 0 ? M_ELEC_ACTS.map(a => `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name">${a.e} ${esc(a.n)}</div><div class="m-desc">${a.d}</div>
+                    <div class="m-desc">${a.study ? '支持率アップ：勉強量しだい' : `支持率アップ：+${a.lo}〜+${a.hi}%`}${a.risk ? '／<b style="color:#e74c3c;">炎上リスクあり</b>' : ''}</div></div>
+                    <div class="m-price"><div><b>${a.cost ? mYen(a.cost) : '0円'}</b></div>
+                    <button class="m-btn m-buy" style="margin-top:4px;" onclick="mElecAct('${a.c}')">やる</button></div></div>`).join('')
+                  : `<div class="m-ok" style="margin-top:8px;">できることはぜんぶやった！ いよいよ投票日だよ</div>`}
+                <button class="btn" style="background:#c0392b;color:#fff;width:100%;margin-top:10px;" onclick="mElecVote()">🗳️ 投票日をむかえる（けっか発表）</button>
+                <div class="m-learn">💡 本物の選挙も「お金・組織・知名度」で大きく差がつく。だからこそ<b>ふだんの積み上げ</b>がものを言うんだ。</div></div>`;
+        }
+        // ── 立候補する前 ──
+        const canDep = m.cash >= M_POL_DEP;
+        return `<div class="m-card" style="border:3px solid #8e44ad;"><b>🗳️ 選挙に立候補する</b>
+            <div style="font-size:12px;color:#888;">とうせんすると<b>国会議員</b>になって、毎月 ${mYen(M_POL_PAY)} の歳費と、<b>政策を1つ実行する力</b>が手に入る。
+            でも<b>供託金300万円</b>をあずける必要があって、票が10%に届かないと<b>ぜんぶ没収</b>されるよ</div>
+            <div style="margin-top:10px;"><div style="display:flex;justify-content:space-between;font-size:13px;"><span>いまのあなたの支持率（見こみ）</span><b style="font-size:18px;">${sup.toFixed(1)}%</b></div>
+            <div class="m-meter" style="height:18px;"><div style="width:${sup}%;background:${sup >= 40 ? '#27ae60' : sup >= 25 ? '#f39c12' : '#e74c3c'};"></div></div></div>
+            <div style="font-size:12px;color:#888;margin-top:8px;">支持率のもとになっているもの（ぜんぶ ふだんの遊びから積み上がっているよ）</div>
+            ${pw.list.map(x => `<div class="m-budget"><div class="lab"><span>${x[0]}</span><b>${x[1].toFixed(1)} / ${x[2]}</b></div>
+                <div class="m-meter"><div style="width:${x[1] / x[2] * 100}%;background:#8e44ad;"></div></div>
+                <div class="m-desc">${esc(x[3])}</div></div>`).join('')}
+            ${pw.bad > 0 ? `<div class="m-warn">⚠️ <b>−${pw.bad.toFixed(1)}％</b>：借金の延滞や自己破産の記録があると、有権者からの信用が下がるよ（本物の選挙でも「お金の問題」はいちばん票を落とす）</div>` : ''}
+            <div class="m-row"><span>供託金</span><b>${mYen(M_POL_DEP)}</b></div>
+            <div class="m-row"><span>いまの現金</span><b class="${canDep ? 'm-up' : 'm-down'}">${mYen(m.cash)}</b></div>
+            ${(p.run || 0) > 0 ? `<div class="m-row"><span>これまで</span><b>立候補${p.run}回／当選${p.win || 0}回／落選${p.lose || 0}回</b></div>` : ''}
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="mElecRun()">🗳️ 立候補する（供託金 ${mYen(M_POL_DEP)}）</button>
+            <div class="m-learn">💡 供託金は「ふざけて立候補する人」を防ぐためのしくみ。日本の300万円は世界でもかなり高くて、
+            「お金がない人が立候補しにくい」という問題も言われているよ。<b>制度には必ず良い面と悪い面がある</b>——これを考えるのが政治の勉強だ。</div></div>`;
+    }
+    function mElecRun() {
+        const m = mLoad();
+        if(mPolSeated(m)) { alert('いまは議員だよ'); return; }
+        if(m.pol.phase === 'run') { alert('もう立候補しているよ'); return; }
+        if(!mAfford(M_POL_DEP, '選挙の供託金', mElecRun)) return;
+        const sup = mElecSup(m);
+        if(!confirm(`🗳️ 立候補する？\n\n供託金 ${mYen(M_POL_DEP)} をあずけるよ。\nいまの支持率の見こみは ${sup.toFixed(1)}%。\n\n・40%以上で当選\n・10%未満だと供託金がぜんぶ没収される\n\n立候補する？`)) return;
+        m.cash -= M_POL_DEP;
+        m.pol.phase = 'run'; m.pol.dep = M_POL_DEP; m.pol.sup = 0; m.pol.acts = 0; m.pol.actLog = [];
+        m.pol.run = (m.pol.run || 0) + 1; m.pol.day = m.day;
+        mLog(m, '選挙の供託金をあずける', -M_POL_DEP);
+        mSave(m); mAwardTitles(); playSfx('finish'); renderMoney();
+        alert('🗳️ 立候補したよ！\n投票日までに3回、選挙運動ができる。\nどれをやるかで支持率が変わるよ。');
+    }
+    function mElecAct(c) {
+        const a = M_ELEC_ACTS.find(x => x.c === c); if(!a) return;
+        const m = mLoad();
+        if(m.pol.phase !== 'run') return;
+        if((m.pol.acts || 0) >= 3) { alert('選挙運動は3回まで。投票日をむかえよう！'); return; }
+        if(a.cost > 0 && !mAfford(a.cost, a.n, () => mElecAct(c))) return;
+        if(a.cost > 0) { m.cash -= a.cost; mLog(m, `選挙運動：${a.n}`, -a.cost); }
+        m.pol.acts = (m.pol.acts || 0) + 1;
+        m.home.health = Math.max(0, m.home.health + (a.h || 0));
+        let up = 0, msg = '';
+        if(a.study) {
+            const sp = mStudyPower();
+            up = Math.min(20, 2 + sp / 90);
+            msg = `討論会では、勉強してきた量がそのまま出る。\nこれまでに解いた問題は ${sp}問。\n支持率 +${up.toFixed(1)}%！`;
+        } else if(a.risk && Math.random() < a.risk) {
+            up = -(8 + Math.random() * 10);
+            m.credit = Math.max(0, m.credit - 15);
+            msg = `🔥 <b>炎上</b>してしまった…\n言い方をまちがえて、大きく批判された。\n支持率 ${up.toFixed(1)}%`;
+        } else {
+            up = a.lo + Math.random() * (a.hi - a.lo);
+            msg = `支持率 +${up.toFixed(1)}%！`;
+        }
+        m.pol.sup = (m.pol.sup || 0) + up;
+        if(!Array.isArray(m.pol.actLog)) m.pol.actLog = [];
+        m.pol.actLog.push(a.n + (up >= 0 ? `+${up.toFixed(0)}` : `${up.toFixed(0)}`));
+        mSave(m); playSfx(up >= 0 ? 'correct' : 'wrong'); renderMoney();
+        alert(`${a.e} ${a.n}\n\n${msg.replace(/<[^>]+>/g, '')}\n\nいまの支持率：${mElecSup(m).toFixed(1)}%（あと${3 - m.pol.acts}回できる）`);
+    }
+    function mElecVote() {
+        const m = mLoad();
+        if(m.pol.phase !== 'run') return;
+        const sup = mElecSup(m);
+        const noise = (Math.random() + Math.random() - 1) * 14;      // 当日の風（±14%くらい）
+        const votes = Math.max(0, Math.min(99, sup + noise));
+        const win = votes >= 40;
+        const bosshu = votes < 10;
+        m.pol.phase = 'none'; m.pol.votes = votes;
+        if(win) {
+            m.pol.win = (m.pol.win || 0) + 1;
+            m.pol.seatUntil = (m.day || 0) + M_POL_TERM;
+            m.cash += m.pol.dep;                                     // 当選すると供託金は返ってくる
+            mLog(m, '当選！供託金がもどってきた', m.pol.dep);
+            m.pol.dep = 0;
+            m.home.happy = Math.min(100, m.home.happy + 25);
+            mSave(m); mAwardTitles(); celebrate('big'); playSfx('finish'); renderMoney();
+            gOpenModal(`<div style="text-align:left;max-width:540px;margin:0 auto;">
+                <h2 style="text-align:center;">🎉 当選！</h2>
+                <div class="m-ok" style="text-align:center;font-size:17px;line-height:1.9;">
+                  得票率 <b style="font-size:26px;">${votes.toFixed(1)}%</b><br>あなたは<b>国会議員</b>になった！</div>
+                <div class="m-row"><span>供託金</span><b class="m-up">${mYen(M_POL_DEP)} がもどってきた</b></div>
+                <div class="m-row"><span>毎月5日の歳費</span><b class="m-up">${mYen(M_POL_PAY)}</b></div>
+                <div class="m-row"><span>任期</span><b>${M_POL_TERM}日</b></div>
+                <div class="m-learn">💡 議員になると<b>政策を1つ実行する力</b>が手に入る。何を選ぶかで、あなたの生活も変わるよ。<br>
+                本物の議員も同じで、「みんなのお金をどこに使うか」を決めるのが仕事なんだ。</div>
+                <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#8e44ad;color:#fff;" onclick="gCloseModal(); mElecPolicyPick();">政策をえらぶ ▶</button></div></div>`);
+            return;
+        }
+        m.pol.lose = (m.pol.lose || 0) + 1;
+        let back = 0;
+        if(bosshu) { mLog(m, '供託金が没収された（得票10%未満）', 0); }
+        else { back = m.pol.dep; m.cash += back; mLog(m, '落選。供託金はもどってきた', back); }
+        m.pol.dep = 0;
+        m.home.happy = Math.max(0, m.home.happy - 18);
+        mSave(m); mAwardTitles(); playSfx('wrong'); renderMoney();
+        gOpenModal(`<div style="text-align:left;max-width:540px;margin:0 auto;">
+            <h2 style="text-align:center;">📉 落選…</h2>
+            <div class="m-warn" style="text-align:center;font-size:16px;line-height:1.9;">
+              得票率 <b style="font-size:24px;">${votes.toFixed(1)}%</b>（当選ラインは40%）</div>
+            ${bosshu ? `<div class="m-warn">☠️ 得票が10%に届かなかったので、<b>供託金 ${mYen(M_POL_DEP)} は没収</b>。ぜんぶ国のものになったよ…。
+              これが「気軽に立候補できない」理由なんだ。</div>`
+              : `<div class="m-ok">得票が10%をこえたので、供託金 <b>${mYen(back)}</b> はもどってきたよ。</div>`}
+            <div class="m-learn">💡 落ちても終わりじゃない。本物の政治家も、何回も落ちてから当選する人がたくさんいる。<br>
+            支持率のもとは<b>勉強・資産・信用・仕事・くらし・実績</b>。ふだんの積み上げをふやして、また挑戦しよう！</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('pol');">とじる</button></div></div>`);
+    }
+    function mElecPolicyPick() {
+        const m = mLoad();
+        if(!mPolSeated(m)) { alert('議員のときだけ えらべるよ'); return; }
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">🏛️ 実行する政策をえらぶ</h2>
+            <div class="m-desc" style="text-align:center;">1つだけえらべるよ。任期のあいだ ずっと効きつづける</div>
+            ${M_POL_ACTS.map(a => `<button class="m-quiz-btn" onclick="mElecSetPolicy('${a.c}')">
+                <b>${a.e} ${esc(a.n)}</b>　<span style="font-size:12px;color:#888;">${esc(a.d)}</span><br>
+                <span style="font-size:12px;">あなたへの効果：<b>${esc(a.you)}</b></span><br>
+                <span style="font-size:11px;color:#888;">国ぜんたい：${esc(a.nat)}</span></button>`).join('')}
+            <div class="m-learn">💡 どれもいい政策に見えるけど、お金は<b>むげんにはない</b>。
+            1つを手あつくすると、どこかがうすくなる。それを決めるのが政治の仕事だよ。</div></div>`);
+    }
+    function mElecSetPolicy(c) {
+        const m = mLoad();
+        const a = M_POL_ACTS.find(x => x.c === c); if(!a) return;
+        m.pol.policy = c;
+        mLog(m, `政策を実行：${a.n}`, 0);
+        mSave(m); playSfx('finish'); gCloseModal(); renderMoney();
+        alert(`${a.e} ${a.n} を実行することにしたよ！\n\nあなたへの効果：${a.you}\n国ぜんたい：${a.nat}`);
+    }
+    // 毎月5日：議員の歳費と、政策の効果でもらえるお金
+    function mPolPayMonth(m) {
+        let did = false;
+        if(mPolSeated(m)) {
+            m.cash += M_POL_PAY; m.pol.salary = (m.pol.salary || 0) + M_POL_PAY;
+            mLog(m, '議員の歳費（お給料）', M_POL_PAY);
+            const a = M_POL_ACTS.find(x => x.c === m.pol.policy);
+            if(a) {
+                if(a.cash) { const y = Math.round(mMonthIncome(m) * 0.08); if(y > 0) { m.cash += y; mLog(m, `政策「${a.n}」の効果`, y); } }
+                if(a.kyufu) { m.cash += a.kyufu; mLog(m, `政策「${a.n}」の給付`, a.kyufu); }
+                if(a.happy) m.home.happy = Math.min(100, m.home.happy + a.happy);
+            }
+            did = true;
+        } else if((m.pol.seatUntil || 0) > 0 && (m.day || 0) >= m.pol.seatUntil) {
+            m.pol.seatUntil = 0; m.pol.policy = null;
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'🏛️ 任期がおわった', msg:'議員の任期がおわったよ。歳費と政策の効果はここまで。また立候補することもできる！' });
+            did = true;
+        }
+        return did;
+    }
+
+    // ==========================================================================================
+    //  ⚡ 信用取引（レバレッジ）＝ 借りたお金で投資する、いちばん危ない遊び方
+    //  うまくいけば もうけが2倍3倍。しくじると 元手より大きく減って、そのまま借金になる。
+    // ==========================================================================================
+    const M_LEV_RATE = 0.030;         // 借りたお金の金利（年3%）
+    const M_LEV_CUT = 0.80;           // 元手の80%を失ったら 強制決済（ロスカット）
+    const M_LEV_CALL = 0.55;          // 元手の55%を失ったら 追証の警告
+    function mLevOk(m) { return (m.credit || 0) >= 620 && mTotal(m) >= 200000 && (m.day || 0) >= 5; }
+    function mLevPnl(m) {
+        const p = m.lev.pos; if(!p) return 0;
+        const now = mPrice(m, p.c);
+        const days = Math.max(0, (m.day || 0) - (p.day || 0));
+        const kari = p.yen * (p.x - 1);                                  // 借りている金額
+        const kin = kari * M_LEV_RATE / 365 * days;                      // 借りた分の利息
+        return Math.round((now / p.entry - 1) * p.yen * p.x - kin);
+    }
+    function mLevHtml(m) {
+        if(!mLevOk(m) && !m.lev.pos) {
+            return `<div class="m-card" style="opacity:.75;"><b>🔒 ⚡ 信用取引（レバレッジ）</b>
+                <div style="font-size:12px;color:#888;">じょうけんを満たすと つかえるようになる、いちばん危ない遊び方だよ</div>
+                <div class="m-row"><span>信用スコア 620いじょう</span><b class="${(m.credit || 0) >= 620 ? 'm-up' : 'm-down'}">${Math.round(m.credit || 0)}</b></div>
+                <div class="m-row"><span>そう資産 20万円いじょう</span><b class="${mTotal(m) >= 200000 ? 'm-up' : 'm-down'}">${mYen(mTotal(m))}</b></div>
+                <div class="m-row"><span>5日いじょう つづける</span><b class="${(m.day || 0) >= 5 ? 'm-up' : 'm-down'}">${m.day || 0}日目</b></div>
+                <div class="m-learn">💡 レバレッジは「<b>借りたお金で投資する</b>」こと。もうけも損も何倍にもなる。
+                本物の世界でも、信用スコアと資産がある人しか使わせてもらえないよ。</div></div>`;
+        }
+        const p = m.lev.pos;
+        if(p) {
+            const a = M_ASSET(p.c), now = mPrice(m, p.c), pnl = mLevPnl(m);
+            const rate = pnl / p.yen;
+            const danger = rate <= -M_LEV_CALL;
+            return `<div class="m-card" style="border:3px solid ${pnl >= 0 ? '#27ae60' : '#e74c3c'};"><b>⚡ 信用取引（いま持っているポジション）</b>
+                <div class="m-row"><span>銘柄</span><b>${esc((a || {}).n || p.c)}</b></div>
+                <div class="m-row"><span>倍率</span><b>${p.x}倍</b></div>
+                <div class="m-row"><span>自分のお金（証拠金）</span><b>${mYen(p.yen)}</b></div>
+                <div class="m-row"><span>じっさいに動かしている金額</span><b>${mYen(p.yen * p.x)}</b></div>
+                <div class="m-row"><span>買ったときの株価</span><b>${mYen(p.entry)}</b></div>
+                <div class="m-row"><span>いまの株価</span><b>${mYen(now)}（${((now / p.entry - 1) * 100).toFixed(2)}%）</b></div>
+                <div class="m-row"><span>いまの損益</span><b class="${pnl >= 0 ? 'm-up' : 'm-down'}" style="font-size:19px;">${pnl >= 0 ? '+' : ''}${mYen(pnl)}</b></div>
+                <div class="m-meter" style="height:16px;"><div style="width:${Math.max(0, Math.min(100, (1 + rate) * 100))}%;background:${pnl >= 0 ? '#27ae60' : danger ? '#c0392b' : '#e67e22'};"></div></div>
+                <div style="font-size:11px;color:#888;">元手の${Math.round(M_LEV_CUT * 100)}%を失うと<b>強制決済</b>されるよ（残り ${Math.max(0, Math.round((M_LEV_CUT + rate) * 100))}%）</div>
+                ${danger ? `<div class="m-warn">🚨 <b>追証（おいしょう）の警告</b>！ 株価がもう少し下がると強制決済されるよ。いま決済して逃げるのも作戦。</div>` : ''}
+                <button class="btn" style="background:${pnl >= 0 ? '#27ae60' : '#e74c3c'};color:#fff;width:100%;margin-top:10px;" onclick="mLevClose()">いま決済する（${pnl >= 0 ? 'もうけ' : '損'} ${mYen(Math.abs(pnl))}）</button>
+                <div class="m-learn">💡 ${p.x}倍ということは、株価が<b>${(100 / p.x).toFixed(0)}%下がると 元手がぜんぶ無くなる</b>ということ。
+                「もうけが${p.x}倍」は「損も${p.x}倍」と同じ意味だよ。</div></div>`;
+        }
+        return `<div class="m-card" style="border:3px solid #e67e22;"><b>⚡ 信用取引（レバレッジ）</b>
+            <div style="font-size:12px;color:#888;">証券会社からお金を借りて、<b>自分のお金の2倍・3倍</b>の金額で株を買うしくみ。
+            もうけも損も、そのまま2倍3倍になる</div>
+            <div class="m-row"><span>成功した回数</span><b class="m-up">${m.lev.wins || 0}回</b></div>
+            <div class="m-row"><span>損した回数</span><b class="m-down">${m.lev.loses || 0}回</b></div>
+            <div class="m-row"><span>強制決済（ロスカット）</span><b class="m-down">${m.lev.blown || 0}回</b></div>
+            <div class="m-row"><span>これまでの合計損益</span><b class="${(m.lev.profit || 0) >= 0 ? 'm-up' : 'm-down'}">${(m.lev.profit || 0) >= 0 ? '+' : ''}${mYen(m.lev.profit || 0)}</b></div>
+            <button class="btn" style="background:#e67e22;color:#fff;width:100%;margin-top:10px;" onclick="mLevPick()">⚡ 信用取引をはじめる</button>
+            <div class="m-warn">⚠️ これは<b>ギャンブルにいちばん近い投資</b>。損が元手をこえたら、そのまま<b>借金</b>になるよ。
+            余ったお金の、そのまた一部でだけ ためしてみてね。</div>
+            <div class="m-learn">💡 プロでも失敗する。だからふつうの人は、レバレッジを使わずに<b>コツコツつみたてる</b>のがいちばん強いと言われている。
+            ここで一度「こわさ」を体験しておこう。</div></div>`;
+    }
+    function mLevPick() {
+        const m = mLoad();
+        if(!mLevOk(m)) { alert('じょうけんを満たしていないよ'); return; }
+        const list = M_ASSETS.filter(a => a.t === '株').slice(0, 20);
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">⚡ どの株でやる？</h2>
+            <div class="m-desc" style="text-align:center;">値動きが大きい株ほど、もうけも損も大きくなるよ</div>
+            <div style="max-height:46vh;overflow:auto;">
+            ${list.map(a => `<button class="m-quiz-btn" onclick="mLevOpen('${a.c}')"><b>${esc(a.n)}</b>
+                <span style="font-size:12px;color:#888;">（${esc(a.sec || '')}）</span><br>
+                <span style="font-size:12px;">1株 ${mYen(mPrice(m, a.c))}／値動きの大きさ ${(a.v * 100).toFixed(1)}</span></button>`).join('')}
+            </div>
+            <div style="text-align:center;margin-top:10px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('invest');">やめる</button></div></div>`);
+    }
+    function mLevOpen(code) {
+        const m = mLoad();
+        const a = M_ASSET(code); if(!a) return;
+        if(m.lev.pos) { alert('いま持っているポジションを先に決済してね'); return; }
+        const v = prompt(`⚡ ${a.n}\n\n自分のお金（証拠金）をいくら入れる？\nいまの現金：${mYen(m.cash)}\n※これがぜんぶ無くなることもあるよ`, '50000');
+        if(v === null) return;
+        const yen = Math.floor(Number(v));
+        if(!isFinite(yen) || yen < 10000) { alert('1万円以上の数字を入れてね'); return; }
+        gCloseModal();
+        if(!mAfford(yen, `信用取引（${a.n}）`, () => mLevOpen(code))) return;
+        const w = prompt('倍率は？（2 か 3）\n2倍＝株価が50%下がると元手ゼロ\n3倍＝株価が33%下がると元手ゼロ', '2');
+        if(w === null) return;
+        const x = Math.max(2, Math.min(3, Math.round(Number(w))));
+        if(!isFinite(x)) { alert('2か3を入れてね'); return; }
+        const m2 = mLoad();
+        if(m2.cash < yen) { mNoMoney(yen, `信用取引（${a.n}）`, () => mLevOpen(code)); return; }
+        const entry = mPrice(m2, code);
+        m2.cash -= yen;
+        m2.lev.pos = { c:code, entry, yen, x, day:m2.day || 0, at:Date.now() };
+        m2.lev.seen = true;
+        mLog(m2, `信用取引をはじめる：${a.n}（${x}倍）`, -yen);
+        mSave(m2); playSfx('finish'); renderMoney();
+        alert(`⚡ ${a.n} を ${x}倍で ${mYen(yen * x)} ぶん買ったよ！\n（自分のお金 ${mYen(yen)} ＋ 借りたお金 ${mYen(yen * (x - 1))}）\n\n株価が ${(100 / x).toFixed(0)}% 下がると元手がゼロ。\n${Math.round(M_LEV_CUT * 100)}%減ったところで強制決済されるから気をつけて！`);
+    }
+    function mLevClose(force) {
+        const m = mLoad();
+        const p = m.lev.pos; if(!p) return;
+        const a = M_ASSET(p.c);
+        const pnl = mLevPnl(m);
+        if(!force && !confirm(`いま決済する？\n\n${(a || {}).n || p.c}／${p.x}倍\n損益：${pnl >= 0 ? '+' : ''}${mYen(pnl)}\n\n手元にもどるお金：${mYen(Math.max(0, p.yen + pnl))}`)) return;
+        const back = p.yen + pnl;
+        if(back >= 0) m.cash += Math.round(back);
+        else mPayCost(m, -Math.round(back), `信用取引の損（元手より大きく減った）`);
+        m.lev.profit = (m.lev.profit || 0) + pnl;
+        if(pnl >= 0) m.lev.wins = (m.lev.wins || 0) + 1; else m.lev.loses = (m.lev.loses || 0) + 1;
+        mLog(m, `信用取引を決済：${(a || {}).n || p.c}`, Math.round(back));
+        m.lev.pos = null;
+        mSave(m); mAwardTitles(); playSfx(pnl >= 0 ? 'finish' : 'wrong'); renderMoney();
+        if(pnl >= 0) celebrate();
+        alert(`${pnl >= 0 ? '🎉 もうけた！' : '😢 損した…'}\n\n損益：${pnl >= 0 ? '+' : ''}${mYen(pnl)}\n手元にもどったお金：${mYen(Math.max(0, back))}${back < 0 ? `\n\n⚠️ 元手より ${mYen(-back)} 多く損したので、その分は借金になったよ。これがレバレッジのこわさ。` : ''}`);
+    }
+    // 毎日のチェック（追証の警告と、強制決済）
+    function mLevDaily(m) {
+        const p = m.lev.pos; if(!p) return;
+        const pnl = mLevPnl(m);
+        const rate = pnl / p.yen;
+        if(rate <= -M_LEV_CUT) {
+            const back = p.yen + pnl;
+            if(back >= 0) m.cash += Math.round(back);
+            else mPayCost(m, -Math.round(back), '信用取引の強制決済（元手より大きく減った）');
+            m.lev.profit = (m.lev.profit || 0) + pnl;
+            m.lev.loses = (m.lev.loses || 0) + 1;
+            m.lev.blown = (m.lev.blown || 0) + 1;
+            m.lev.pos = null;
+            m.home.happy = Math.max(0, m.home.happy - 15);
+            mLog(m, '⚡強制決済（ロスカット）', Math.round(Math.max(0, back)));
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, hell:true, n:'⚡ 強制決済された（ロスカット）',
+                msg:`株価が下がりすぎて、証券会社に勝手に売られたよ。損は <b>${mYen(-pnl)}</b>。${back < 0 ? `元手をこえた ${mYen(-back)} は<b>借金</b>になった。` : ''}<br>
+                これがレバレッジのこわさ。「あと少し待てば戻ったのに」が通用しないんだ。` });
+        } else if(rate <= -M_LEV_CALL && m.lev.calledDay !== m.day) {
+            m.lev.calledDay = m.day;
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'🚨 追証（おいしょう）の警告',
+                msg:`信用取引の損が 元手の${Math.round(-rate * 100)}% になったよ。あと少し下がると<b>強制決済</b>される。<br>いま決済して にげるか、覚ごを決めるか——決めるのはあなただよ。` });
+        }
+    }
+    // ==========================================================================================
+    //  🏠 生活の画面に足すパーツ（日課・レベル・スキル・福袋・秘密のお店・称号）
+    // ==========================================================================================
+    function mDailyHtml(m) {
+        mDailyReset(m);
+        const done = mDailyDone(m), all = M_DAILY.length;
+        const perfect = done >= all;
+        let h = `<div class="m-card" style="border:3px solid ${perfect ? '#f1c40f' : '#11998e'};">
+            <b>📅 今日の日課（${done}/${all}）</b> ${perfect ? '<span class="m-pill" style="background:rgba(241,196,15,.25);color:#b7950b;">✨パーフェクト！</span>' : ''}
+            <div style="font-size:12px;color:#888;">毎日ちょっとずつやると、健康・きぶん・スキル・生活レベルが上がる。<b>6つぜんぶやるとボーナス</b>！</div>
+            <div class="m-meter" style="height:14px;margin-top:6px;"><div style="width:${done / all * 100}%;background:${perfect ? '#f1c40f' : '#11998e'};"></div></div>
+            <div class="m-row"><span>🔥 連続でやっている日数</span><b>${m.home.dstreak || 0}日（さいこう ${m.home.dbest || 0}日）</b></div>
+            <div class="m-row"><span>✨ パーフェクトデー</span><b>${m.home.perfect || 0}回</b></div>
+            ${(m.home.cold || 0) > 0 ? `<div class="m-warn">🤒 かぜをひいているので、日課の効果が<b>半分</b>になっているよ（あと${m.home.cold}日）</div>` : ''}
+            ${(m.home.zen || 0) > 0 ? `<div class="m-ok">✨ <b>絶好調！</b> 仕事の評価が上がりやすくなっているよ（あと${m.home.zen}日）</div>` : ''}`;
+        M_DAILY.forEach(d => {
+            const did = !!(m.home.daily || {})[d.c];
+            const ok = mDailyNeedOk(m, d);
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${d.e} ${esc(d.n)} ${did ? '<span class="m-pill">やった！</span>' : ''}</div>
+                <div class="m-desc">${esc(d.d)}</div>
+                <div class="m-desc">健康 +${d.h}／きぶん +${d.hp}／${(M_SKILL_INFO.find(s => s[0] === d.sk) || [])[2] || ''}スキル ＋${!ok ? `<span style="color:#e74c3c;">（${esc(mDailyNeedName(d))}がないとできない）</span>` : ''}</div></div>
+                <button class="m-btn ${did ? 'm-info' : ok ? 'm-buy' : 'm-info'}" onclick="mDailyDo('${d.c}')" ${did || !ok ? 'disabled' : ''}>${did ? '✓' : 'やる'}</button></div>`;
+        });
+        h += `<div class="m-learn">💡 大人になっていちばん差がつくのは、才能じゃなくて<b>毎日つづけたこと</b>。
+            1日にできることは小さいけど、365日つづけると まったく別の場所にいるよ。</div></div>`;
+        return h;
+    }
+    function mLevelHtml(m) {
+        const lv = mLifeLv(m), need = mLvNeed(lv), xp = m.home.xp || 0, sk = mHomeSk(m);
+        const unlocks = [
+            [3,  '🎁 今日の福袋がひけるようになる'],
+            [5,  '🌙 秘密のお店が見つかる（健康75いじょう・称号6こも必要）'],
+            [8,  '🧾 やりくり上手：ぜんぶの固定費が3%やすくなる'],
+            [12, '🏆 生活マスターへの道'],
+            [20, '👑 生活マスターの称号']
+        ];
+        let h = `<div class="m-card" style="border:3px solid #9b59b6;"><b>📈 生活レベル ${lv}</b>
+            <div class="m-meter" style="height:16px;margin-top:6px;"><div style="width:${Math.min(100, xp / need * 100)}%;background:#9b59b6;"></div></div>
+            <div style="font-size:12px;color:#888;">つぎのレベルまで あと ${Math.max(0, need - xp)}（${xp}/${need}）</div>
+            <div style="font-size:12px;color:#888;margin-top:8px;">日課・買いもの・できごとを えらぶたびに、こっそり経験値がたまっているよ。
+            <b>連続日数がながいほど、もらえる経験値がふえる</b>（かくれたボーナス）</div>`;
+        h += `<div style="margin-top:10px;"><b style="font-size:14px;">💪 スキル</b>
+            <div style="font-size:12px;color:#888;">日課をやると上がる。上がると 生活費が安くなったり、病気になりにくくなったりする</div>`;
+        M_SKILL_INFO.forEach(([k, e, n, steps]) => {
+            const v = sk[k];
+            const nextStep = steps.find(s => v < s[0]);
+            const gotSteps = steps.filter(s => v >= s[0]);
+            h += `<div class="m-budget"><div class="lab"><span>${e} ${n}</span><b>${Math.round(v)} / 100</b></div>
+                <div class="m-meter"><div style="width:${v}%;background:#9b59b6;"></div></div>
+                <div class="m-desc">${gotSteps.length ? '✅ ' + gotSteps.map(s => esc(s[1])).join('／') : '<span style="color:#888;">まだ効果なし</span>'}
+                ${nextStep ? `<br><span style="color:#888;">つぎ（${nextStep[0]}）：${v >= nextStep[0] - 12 ? esc(nextStep[1]) : '？？？'}</span>` : ''}</div></div>`;
+        });
+        h += `</div><div style="margin-top:10px;"><b style="font-size:14px;">🔓 レベルで開くもの</b>`;
+        unlocks.forEach(([l, t]) => {
+            h += `<div class="m-row"><span style="${lv >= l ? '' : 'color:#888;'}">${lv >= l ? '🔓' : '🔒'} レベル${l}</span>
+                <b style="font-size:12px;${lv >= l ? '' : 'color:#888;'}">${lv >= l || lv >= l - 2 ? esc(t) : '？？？'}</b></div>`;
+        });
+        h += `</div></div>`;
+        return h;
+    }
+    function mFukuHtml(m) {
+        const lv = mLifeLv(m);
+        if(lv < 3) return `<div class="m-card" style="opacity:.7;"><b>🔒 🎁 今日の福袋</b>
+            <div style="font-size:12px;color:#888;">生活レベル<b>3</b>になると ひけるようになるよ（いまレベル${lv}）。日課をがんばろう！</div></div>`;
+        const done = m.home.fukuDay === calToday();
+        const inY = m.home.fukuIn || 0, outY = m.home.fukuOut || 0;
+        return `<div class="m-card" style="border:3px solid #e91e8c;"><b>🎁 今日の福袋（1日1回・${mYen(M_FUKU_COST)}）</b>
+            <div style="font-size:12px;color:#888;">中身は 0円から5万円まで。★これは「くじ」なので、<b>やればやるほど 平均では減っていく</b>ようにできているよ</div>
+            <div class="m-row"><span>これまでひいた回数</span><b>${m.home.fukuN || 0}回</b></div>
+            ${inY > 0 ? `<div class="m-row"><span>はらったお金 → もどってきたお金</span><b class="${outY >= inY ? 'm-up' : 'm-down'}">${mYen(inY)} → ${mYen(outY)}（${(outY / inY * 100).toFixed(0)}%）</b></div>` : ''}
+            ${(m.home.fukuWin || 0) > 0 ? `<div class="m-row"><span>1万円いじょうの当たり</span><b class="m-up">${m.home.fukuWin}回</b></div>` : ''}
+            <button class="btn" style="background:${done ? '#95a5a6' : '#e91e8c'};color:#fff;width:100%;margin-top:8px;" onclick="mFukuBuy()" ${done ? 'disabled' : ''}>${done ? '今日はもうひいたよ（また明日）' : `🎁 ${mYen(M_FUKU_COST)}でひく`}</button>
+            <div class="m-learn">💡 この福袋の「もどり率」は<b>${(mFukuEv() / M_FUKU_COST * 100).toFixed(0)}%</b>。
+            つまり500円はらうと、平均で${Math.round(mFukuEv())}円しかもどってこない。<br>
+            くじ・ガチャ・宝くじは ぜんぶこの形。<b>やる回数がふえるほど、平均に近づいていく</b>（大数の法則）。
+            たまの楽しみならOK。毎日やるとお金は必ずへるよ。</div></div>`;
+    }
+    function mSecretHtml(m) {
+        if(!m.home.secret && !mSecretOpen(m)) {
+            const lv = mLifeLv(m), t = (m.titles || []).length;
+            if(lv < 4) return '';                                    // レベルが低いうちは、あることすら見せない
+            return `<div class="m-card" style="opacity:.75;border:2px dashed #7f8c8d;"><b>🌙 ？？？</b>
+                <div style="font-size:12px;color:#888;">なにか、まだ見つけていないものがあるみたい…<br>
+                （ヒント：生活レベル<b>5</b>・健康<b>75</b>いじょう・称号<b>6</b>こ）</div>
+                <div class="m-row"><span>生活レベル</span><b class="${lv >= 5 ? 'm-up' : ''}">${lv} / 5</b></div>
+                <div class="m-row"><span>健康</span><b class="${(m.home.health || 0) >= 75 ? 'm-up' : ''}">${Math.round(m.home.health)} / 75</b></div>
+                <div class="m-row"><span>称号</span><b class="${t >= 6 ? 'm-up' : ''}">${t} / 6</b></div></div>`;
+        }
+        const own = m.home.shop || {};
+        let h = `<div class="m-card" style="border:3px solid #34495e;background:linear-gradient(180deg,rgba(52,73,94,.14),transparent);">
+            <b>🌙 秘密のお店</b> <span class="m-pill" style="background:rgba(52,73,94,.2);">見つけた人だけ</span>
+            <div style="font-size:12px;color:#888;">よく見ないと分からない路地の奥にあるお店。ふつうのショップより ずっと効果が大きいものが置いてある</div>`;
+        M_SECRET.forEach(it => {
+            const has = !!own[it.c];
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${it.e} ${esc(it.n)} ${has ? '<span class="m-pill">持っている</span>' : ''}</div>
+                <div class="m-desc">${esc(it.d)}</div>
+                <div class="m-desc">きぶん +${it.hp}${it.h ? `／健康 +${it.h}` : ''}${it.evUp ? `／評価 +${it.evUp}` : ''}（ずっと）</div></div>
+                <div class="m-price"><div><b>${mYen(it.buy)}</b></div>
+                <button class="m-btn ${has ? 'm-info' : 'm-buy'}" style="margin-top:4px;" onclick="mSecretBuy('${it.c}')" ${has ? 'disabled' : ''}>${has ? '持っている' : '買う'}</button></div></div>`;
+        });
+        h += `<div class="m-learn">💡 高いものが ぜんぶ良いわけじゃない。でも<b>毎日つかうもの</b>と<b>ねむり</b>にお金をかけるのは、
+            多くの人が「いちばん良かった買いもの」に挙げるんだ。<br>
+            <span style="font-size:11px;color:#888;">…この中の1つには、じつは書かれていない しかけがあるらしい。</span></div></div>`;
+        return h;
+    }
+    function mSecretBuy(c) {
+        const it = M_SECRET.find(x => x.c === c); if(!it) return;
+        const m = mLoad();
+        if((m.home.shop || {})[c]) { alert('もう持っているよ'); return; }
+        if(!mAfford(it.buy, it.n, () => mSecretBuy(c))) return;
+        if(!confirm(`${it.e} ${it.n} を ${mYen(it.buy)} で買う？\n${it.d}`)) return;
+        const m2 = mLoad();
+        if(m2.cash < it.buy) { mNoMoney(it.buy, it.n, () => mSecretBuy(c)); return; }
+        if(!m2.home.shop || typeof m2.home.shop !== 'object') m2.home.shop = {};
+        m2.cash -= it.buy;
+        m2.home.shop[c] = 1;
+        m2.home.happy = Math.max(0, Math.min(100, m2.home.happy + 5));
+        mLifeXp(m2, 30);
+        mLog(m2, `🌙秘密のお店で買う：${it.n}`, -it.buy);
+        mSave(m2); mAwardTitles(); playSfx('finish'); celebrate(); renderLife();
+    }
+    function mTitleHtml(m) {
+        const got = (m.titles || []);
+        return `<div class="m-card"><b>🏆 称号（${got.length}/${M_TITLES.length}）</b>
+            <div style="font-size:12px;color:#888;">とる条件はどこにも書いていないよ。<b>いろいろやっていると、とつぜん出てくる</b>のを楽しんでね</div>
+            <div class="badges" style="margin-top:8px;">
+            ${M_TITLES.map(t => got.includes(t.id)
+                ? `<div class="badge got" title="${esc(t.d)}"><div class="b-e">${t.e}</div>${esc(t.n)}</div>`
+                : `<div class="badge"><div class="b-e">❔</div>？？？</div>`).join('')}
+            </div>
+            ${got.length ? `<div style="font-size:12px;color:#888;margin-top:8px;">とった称号：${M_TITLES.filter(t => got.includes(t.id)).map(t => `${t.e}${esc(t.n)}（${esc(t.d)}）`).join('／')}</div>` : ''}
+            </div>`;
+    }
+    // 季節・景気のようす（生活タブと政治タブの両方で使う）
+    function mSeasonHtml(m) {
+        const se = mSeason(), ke = mKeiki();
+        const denki = mHomeHas(m, 'denki') ? mGoodMonth(m, 'denki') : 0;
+        const gas = mHomeHas(m, 'gas') ? mGoodMonth(m, 'gas') : 0;
+        return `<div class="m-card"><b>${se.e} いまは「${se.n}」／景気は「${ke.e} ${ke.n}」</b>
+            <div class="m-desc">${esc(se.d)}</div>
+            <div class="m-desc">${esc(ke.d)}</div>
+            ${denki ? `<div class="m-row"><span>⚡ 今月の電気代</span><b class="${se.denki > 1 ? 'm-down' : 'm-up'}">${mYen(denki)}（ふだんの${(se.denki * 100).toFixed(0)}%）</b></div>` : ''}
+            ${gas ? `<div class="m-row"><span>🔥 今月のガス代</span><b class="${se.gas > 1 ? 'm-down' : 'm-up'}">${mYen(gas)}（ふだんの${(se.gas * 100).toFixed(0)}%）</b></div>` : ''}
+            <div class="m-row"><span>物のねだん（景気の分）</span><b>${((ke.price - 1) * 100).toFixed(0) >= 0 ? '+' : ''}${((ke.price - 1) * 100).toFixed(0)}%</b></div>
+            <div class="m-learn">💡 光熱費は<b>夏と冬に上がる</b>。だから「月の平均」で家計を考えると、夏と冬に足りなくなる。
+            1年ぶんで考えるのがコツだよ。<br>
+            景気は<b>毎週かわる</b>（月曜にリセット）。景気がいいと就職しやすくてボーナスも出るけど、物のねだんも上がる。
+            これが「インフレ」だよ。</div></div>`;
+    }
     // ---------------- 💳 借金（ローン） ----------------
     // 本物と同じで「金利が低い＝借りにくい／金利が高い＝すぐ借りられる」。ここがいちばん大事な学び
     const M_LOANS = [
-        { c:'BANK', e:'🏦', n:'銀行のローン', rate:0.030, max:3000000, minCredit:700, maxN:60,
+        { c:'BANK', e:'🏦', n:'銀行のローン', rate:0.030, max:3000000, minCredit:700, maxN:60, bank:true,
           d:'いちばん金利が安い。でも審査がきびしくて、信用がないと借りられない', who:'銀行' },
         { c:'CARD', e:'💳', n:'カードローン', rate:0.145, max:1000000, minCredit:550, maxN:36,
           d:'銀行より借りやすいけれど金利は高め。使いすぎに注意', who:'銀行・信販会社' },
@@ -5401,13 +6910,13 @@
           d:'勉強のために借りるお金。金利がとても低い。でも返すのは自分だから、借りすぎに注意', who:'国・団体' },
         { c:'YAMI', e:'☠️', n:'ヤミ金（ぜったい借りてはダメ）', rate:1.095, max:100000, minCredit:0, maxN:3,
           d:'法律を守っていない業者。<b>年109.5%（10日で3割）</b>。これは犯罪で、借りると人生がこわれる', who:'違法業者', illegal:true },
-        { c:'JUTA', e:'🏡', n:'住宅ローン', rate:0.013, max:40000000, minCredit:750, maxN:420,
+        { c:'JUTA', e:'🏡', n:'住宅ローン', rate:0.013, max:40000000, minCredit:750, maxN:420, bank:true,
           d:'家を買うための特別なローン。<b>年1.3%</b>ととても安く、最長35年。人生でいちばん大きな借金', who:'銀行' },
-        { c:'MYCA', e:'🚗', n:'マイカーローン', rate:0.025, max:5000000, minCredit:650, maxN:84,
+        { c:'MYCA', e:'🚗', n:'マイカーローン', rate:0.025, max:5000000, minCredit:650, maxN:84, bank:true,
           d:'車を買うためのローン。車が担保になるので金利が安い', who:'銀行・ディーラー' },
         { c:'KYOI', e:'🎓', n:'教育ローン（国）', rate:0.019, max:3500000, minCredit:400, maxN:180,
           d:'学費のためのローン。国がやっているので金利が低い', who:'日本政策金融公庫' },
-        { c:'FREE', e:'📝', n:'銀行のフリーローン', rate:0.068, max:5000000, minCredit:680, maxN:84,
+        { c:'FREE', e:'📝', n:'銀行のフリーローン', rate:0.068, max:5000000, minCredit:680, maxN:84, bank:true,
           d:'使いみち自由。カードローンより安いけど審査に時間がかかる', who:'銀行' },
         { c:'SHOP', e:'🛍️', n:'ショッピングの分割払い', rate:0.125, max:500000, minCredit:500, maxN:24,
           d:'お店で「分割で」と言うとこれ。金利がついていることに気づきにくい', who:'信販会社' },
@@ -5436,6 +6945,7 @@
     function mLoanHtml(m) {
         const cl = mCreditLabel(m.credit);
         let h = mEventCardHtml(m);
+        h += mHellHtml(m);                              // 💀 借金メーター（レベル1〜5）と、ぬけ出す方法
         h += `<div class="m-card"><b>💳 借金って、わるいこと？</b>
             <div style="font-size:13px;line-height:1.9;">じつは<b>わるくない</b>。家や車を買うとき、ほとんどの大人は借金をする。<br>
             わるいのは<b>「計画なしに借りること」</b>。だからこのアプリでは、借りる前に必ず
@@ -5477,17 +6987,25 @@
         }
         h += `</div>`;
         // 借りる
-        h += `<div class="m-card"><b>🏧 お金を借りる</b>
-            <div style="font-size:12px;color:#888;">同じ100万円でも、どこで借りるかで返す金額が何十万円も変わる。よく見くらべて！</div>`;
-        M_LOANS.forEach(lo => {
-            const ok = m.credit >= lo.minCredit && !lo.illegal;
+        // 🏦 銀行のローンは「銀行」の中にあるよ（ユーザー指定でお引っこし）
+        h += `<div class="m-card" style="border:3px solid #2980b9;"><b>🏦 銀行のローンは「銀行」タブにあるよ</b>
+            <div style="font-size:12px;color:#888;">銀行のローン・住宅ローン・マイカーローン・フリーローンは、
+            <b>金利がいちばん安いかわりに「審査」がある</b>ので、🏦銀行タブの<b>ローン窓口</b>で受けつけているよ</div>
+            ${M_LOANS.filter(lo => lo.bank).map(lo => `<div class="m-row"><span>${lo.e} ${esc(lo.n)}</span><b style="color:#27ae60;">年${(lo.rate * 100).toFixed(1)}%</b></div>`).join('')}
+            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="mSwitchTab('bank')">🏦 銀行のローン窓口へ行く</button></div>`;
+        h += `<div class="m-card"><b>🏧 銀行いがいで借りる</b>
+            <div style="font-size:12px;color:#888;">同じ10万円でも、どこで借りるかで返す金額が大きく変わる。
+            <b>すぐ貸してくれるところほど金利が高い</b>のがルールだよ。よく見くらべて！</div>`;
+        M_LOANS.filter(lo => !lo.bank).forEach(lo => {
+            const can = mLoanCanUse(m, lo);
+            const ok = can.ok;
             const ex = mLoanMonthly(100000, lo.rate, 12);
             h += `<div class="m-row"><div style="flex:1;min-width:0;">
                 <div class="m-name">${lo.e} ${esc(lo.n)} ${lo.illegal ? '<span class="m-pill" style="background:rgba(231,76,60,.2);color:#e74c3c;">違法</span>' : ''}</div>
                 <div class="m-desc">${lo.d}</div>
                 <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／必要な信用 ${lo.minCredit}</div>
                 <div class="m-desc">例：10万円を12回で返すと、毎月 ${mYen(ex)}・利息は合計 <b>${mYen(ex*12-100000)}</b></div>
-                ${!ok && !lo.illegal ? `<div class="m-desc" style="color:#e74c3c;">信用スコアが足りない（あと ${lo.minCredit - Math.round(m.credit)}）</div>` : ''}
+                ${!ok && !lo.illegal ? `<div class="m-desc" style="color:#e74c3c;">✕ ${esc(can.why)}</div>` : ''}
               </div>
               <div class="m-price"><div style="font-size:11px;color:#888;">金利</div><div><b style="color:${lo.rate>=0.15?'#e74c3c':lo.rate>=0.1?'#e67e22':'#27ae60'}">年${(lo.rate*100).toFixed(1)}%</b></div>
                 <button class="m-btn ${ok?'m-buy':'m-info'}" style="margin-top:4px;" onclick="mLoanPlan('${lo.c}')" ${ok?'':'disabled'}>${lo.illegal?'ダメ':'計画を立てる'}</button></div></div>`;
@@ -5505,10 +7023,15 @@
     }
     // 借りる前の計画（いくら・何回・毎月いくら・利息の合計・いつ終わるか）
     let mLP = {};
-    function mLoanPlan(code) {
+    function mLoanPlan(code, want) {
         const lo = M_LOANS.find(x => x.c === code); if(!lo) return;
         const m = mLoad();
-        mLP = { lo, P: Math.min(100000, lo.max), n: Math.min(12, lo.maxN) };
+        const can = mLoanCanUse(m, lo);
+        if(!can.ok) { alert('いまは借りられないよ。\n理由：' + can.why); return; }
+        // 「お金が足りない」画面から来たときは、足りない金額を先に入れておく（1万円単位に切り上げ）
+        let P = Math.min(100000, lo.max);
+        if(want > 0) P = Math.max(10000, Math.min(lo.max, Math.ceil(want / 10000) * 10000));
+        mLP = { lo, P, n: Math.min(12, lo.maxN) };
         mLoanPlanShow();
     }
     function mLoanSetP(v) { mLP.P = Math.max(10000, Math.min(mLP.lo.max, Math.round(Number(v) / 10000) * 10000)); mLoanPlanShow(); }
@@ -5549,7 +7072,8 @@
     function mLoanTake() {
         const { lo, P, n } = mLP;
         const m = mLoad();
-        if(m.credit < lo.minCredit) { alert('信用スコアが足りないよ'); return; }
+        const can = mLoanCanUse(m, lo);
+        if(!can.ok) { alert('借りられなかったよ。\n理由：' + can.why); return; }
         if(mLoanTotalDebt(m) + P > lo.max * 2) { alert('もう借りすぎだよ。まず返そう'); return; }
         const pay = mLoanMonthly(P, lo.rate, n);
         m.loans.push({ c:lo.c, P, rate:lo.rate, n, pay, paid:0, left:pay * n, day:calToday() });
@@ -6153,7 +7677,7 @@
     function mBizStart(c) {
         const bz = M_BIZ.find(x => x.c === c); if(!bz) return;
         const m = mLoad();
-        if(m.cash < bz.cost) { alert('開業のお金が足りないよ'); return; }
+        if(m.cash < bz.cost) { mNoMoney(bz.cost, `${bz.n}の開業資金`, () => mBizStart(c)); return; }
         if(mJobCo(m.job.co) && !confirm('会社をやめて起業する？\n給料は止まって、売上ぜんぶが自分の責任になるよ。')) return;
         if(!confirm(`${bz.n} を ${mYen(bz.cost)} で開く？\n毎月 ${mYen(bz.fix)} の費用がかかって、売上は ${mYen(bz.sales[0])}〜${mYen(bz.sales[1])} の間で変わるよ。`)) return;
         m.cash -= bz.cost;
@@ -6175,7 +7699,7 @@
         const bz = M_BIZ.find(x => x.c === m.biz.c); if(!bz) return false;
         // 評判（健康ときぶん）が良いほど売上が上がる
         const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 200;
-        const sales = Math.round(bz.sales[0] + (bz.sales[1] - bz.sales[0]) * (0.25 + Math.random() * 0.5 + cond * 0.35));
+        const sales = Math.round((bz.sales[0] + (bz.sales[1] - bz.sales[0]) * (0.25 + Math.random() * 0.5 + cond * 0.35)) * mKeiki().biz);
         const profit = sales - bz.fix;
         m.biz.lastSales = sales; m.biz.lastProfit = profit;
         m.biz.total = (m.biz.total || 0) + profit;
@@ -6195,8 +7719,9 @@
               <button class="btn" style="background:#3498db;color:#fff;flex:1;" onclick="mDeposit()">預ける</button>
               <button class="btn" style="background:#e67e22;color:#fff;flex:1;" onclick="mWithdraw()">おろす</button>
             </div>
-            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:8px;" onclick="mKakeiSim()">📊 1か月の家計を見る</button></div>
-            <div class="m-card"><b>🧮 複利シミュレーター</b>
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:8px;" onclick="mKakeiSim()">📊 1か月の家計を見る</button></div>`
+            + mBankLoanHtml(m)
+            + `<div class="m-card"><b>🧮 複利シミュレーター</b>
             <div style="font-size:12px;color:#888;">毎月つみたてたら将来いくらになる？（72の法則も試してみよう）</div>
             <div class="st-grid" style="margin-top:8px;">
               <div class="st-cell">毎月<input class="st-input" id="sim-m" type="number" value="10000"></div>
@@ -6285,7 +7810,7 @@
         if(v === null) return;
         const yen = Math.floor(Number(v));
         if(!isFinite(yen) || yen <= 0) { alert('数字を入れてね'); return; }
-        if(m.cash < yen) { alert('お金が足りないよ'); return; }
+        if(m.cash < yen) { mNoMoney(yen, `${days}日の定期預金`, () => mTeikiPut(days, rate)); return; }
         if(!Array.isArray(m.teiki)) m.teiki = [];
         m.cash -= yen;
         m.teiki.push({ yen, rate, days, until: m.day + days });
@@ -6447,6 +7972,7 @@
             if(v === null) return;
             const shares = Math.floor(Number(v));
             if(!isFinite(shares) || shares <= 0) { alert('1以上の株数を入れてね'); return; }
+            mBuyWant = Math.round(shares * price * 1.005);
             err = mBuyInner(m, code, shares, false, acct);
         } else {
             // 投信・そのほかは「金額」で買う
@@ -6455,11 +7981,20 @@
             if(v === null) return;
             const yen = Math.floor(Number(v));
             if(!isFinite(yen) || yen <= 0) { alert('数字を入れてね'); return; }
+            mBuyWant = yen;
             err = mBuyInner(m, code, yen, false, acct);
         }
-        if(err) { alert(err); return; }
+        if(err) {
+            // 「お金が足りない」ときは、ただのアラートではなく 借金のタブへ案内する画面を出す
+            const need = mBuyNeed(m, code, acct);
+            if(err.indexOf('お金が足りない') >= 0 && need > 0) { mNoMoney(need, (a || {}).n || code, () => mBuy(code, acct)); return; }
+            alert(err); return;
+        }
         mSave(m); playSfx('correct'); mAwardBadges(); mVbSend(m); renderMoney();
     }
+    // 「あといくら足りなかったのか」を出すための、直前に入力された金額のおぼえ
+    let mBuyWant = 0;
+    function mBuyNeed(m, code, acct) { return mBuyWant > 0 ? mBuyWant : 0; }
     function mSell(code, acct) {
         const m = mLoad(); const a = M_ASSET(code);
         acct = acct === 'nisa' ? 'nisa' : 'hold';
