@@ -956,12 +956,13 @@
         mApplyResets();       // 💰 リセット指定があれば1からやり直し（1回だけ・ふだんは空）
         // ☁️ オンラインの記録を先に取りこんでから、配布を受け取る（順番が大事）
         //    先に配布してしまうと、取りこみで上書きされて配布が無かったことになるため
-        cloudPull(true).then(() => {
+        cloudBoot().then(() => {
             mIdbRestoreIfEmpty();   // 🛟 それでも空ならIndexedDBのコピーから
             mApplyGrants();         // 🎁 配布があれば受け取る（同じidは1回だけ）
             const a = document.querySelector('.view.active');
             if(a) switchView(a.id.replace('view-', ''));
         }).catch(() => { mIdbRestoreIfEmpty(); mApplyGrants(); });
+        cloudStartWatch();      // ☁️ つながらなくても、自動で何度でもつなぎ直す
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
         applyUserNav();
@@ -1024,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🌟 <b>生活と政治経済が、めちゃくちゃ やりこめるようになりました！</b>①🏠生活に<b>毎日の日課</b>（6つ）。ぜんぶやると<b>パーフェクトデー</b>でボーナス。連続でやるほど良いことが起きます②<b>生活レベル</b>と<b>4つのスキル</b>（料理・せいけつ・たいりょく・こころ）。上がると食費や光熱費が安くなったり、病気になりにくくなります③<b>かくれた称号45こ</b>。条件は書いていません。見つけてください④数日に1回<b>今日のできごと</b>。えらんだ答えで結果が変わります⑤レベル3で<b>今日の福袋</b>、レベル5＋αで<b>🌙秘密のお店</b>が見つかります⑥夏は電気代・冬はガス代が上がり、<b>景気</b>が毎週かわって就職やボーナスに効きます⑦<b>お金が足りないと自動で「お金が足りないよ」の画面</b>が出て、💳借金のところへ案内します⑧返せないと<b>借金レベル1〜5</b>が上がって、取り立て・差し押さえ・<b>借金地獄</b>に。ぬけ出す道（おまとめ・債務整理・自己破産）もあります⑨<b>銀行のローンは🏦銀行タブへお引っこし</b>。審査を受けてから借ります⑩🏛️政治で<b>選挙に立候補</b>できます。当選すると議員になって歳費と政策が使え、落ちると供託金300万が没収されることも⑪📈投資に<b>⚡信用取引（レバレッジ）</b>。もうけも損も2〜3倍。強制決済されると借金です⑫<b>株価が1時間に1回うごく</b>ようになりました';
+    const UPDATE_NOW = '☁️🔀 <b>オンライン保存が「勝手につながる」ようになりました＋バイトの掛け持ち！</b>①これまでは1回でも通信に失敗すると<b>「つながっていない」のまま止まっていました</b>。これからは<b>自動で何度でもつなぎ直します</b>（3秒→8秒→20秒→45秒→90秒）②電波がもどったとき・アプリに戻ってきたときも<b>すぐつなぎ直します</b>③送れていない変更は<b>この端末におぼえておいて、次に開いたとき必ず送ります</b>。だからオフラインで遊んだ分も消えません④読みこむときは<b>いつも新しいほうを使う</b>ので、古い記録が新しい記録を上書きしません⑤画面に<b>「つながっている／送信まち／つなぎ直しています」</b>が出るようになりました⑥<b>バイトの掛け持ちが3つまでできます</b>（面接なし・すぐ働ける）。本業と一緒でもOK⑦ただし掛け持ちの給料は<b>ぜんぶ合算してから税金がかかる</b>ので、額面ほど手取りはふえません。そして<b>毎日 体力ときぶんがけずられます</b>——むりをすると体をこわすよ';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -3241,7 +3242,7 @@
         // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
         gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
-        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[] },
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[] },
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
@@ -3333,6 +3334,9 @@
         if(!Array.isArray(m.job.hist)) m.job.hist = [];
         if(!Array.isArray(m.job.wish)) m.job.wish = [];
         m.job.wish = m.job.wish.filter(c => mJobCo(c)).slice(0, 3);   // 知らない会社は消す・最大3つ
+        // 🔀 掛け持ちしているバイト（知らない会社・バイト以外・本業とかぶるもの・多すぎる分は消す）
+        if(!Array.isArray(m.job.side)) m.job.side = [];
+        m.job.side = m.job.side.filter((c, i, ar) => { const j = mJobCo(c); return j && j.arbeit && c !== m.job.co && ar.indexOf(c) === i; }).slice(0, M_SIDE_MAX);
         if(!m.job.applied || typeof m.job.applied !== 'object') m.job.applied = {};
         if(m.job.co && !mJobCo(m.job.co)) m.job.co = null;                     // 知らない会社なら退職あつかい
         if(!m.home.own || typeof m.home.own !== 'object') m.home.own = {};
@@ -3502,14 +3506,18 @@
     function mPayMonth(m, y, mo) {
         let did = false;
         // 💼 会社のお給料（額面から社会保険料・所得税・住民税を引いた「手取り」が入る）
-        if(mJobCo(m.job && m.job.co)) {
-            const co = mJobCo(m.job.co), gross = mJobGross(m), s = mJobNet(gross);
+        const _co = mJobCo(m.job && m.job.co), _side = mSideGross(m);
+        if(_co || _side > 0) {
+            // ★本業と掛け持ちバイトの給料をぜんぶ合算してから税金を計算する（本物と同じしくみ）
+            const gross = mAllGross(m), s = mJobNet(gross);
+            const nm = _co ? _co.n : 'バイト' + (mSideList(m).length > 1 ? '×' + mSideList(m).length : '');
             m.cash += s.net;
             m.job.totalPay = (m.job.totalPay || 0) + s.net;
             m.salaryTotal = (m.salaryTotal || 0) + s.net;
             m.taxPaid += s.shotoku + s.jumin;
-            m.job.slip = Object.assign({ ym: y + '年' + mo + '月', co: co.n }, s);
-            mLog(m, `お給料（${co.n}・手取り）`, s.net);
+            m.job.slip = Object.assign({ ym: y + '年' + mo + '月', co: nm + (_side > 0 && _co ? `＋バイト${mSideList(m).length}つ` : '') }, s);
+            mLog(m, `お給料（${nm}・手取り）`, s.net);
+            if(_side > 0) mLog(m, `└ うち 掛け持ちバイト（額面）`, _side);
             mLog(m, `└ 社会保険料・税金`, -(s.gross - s.net));
             did = true;
         }
@@ -4604,9 +4612,96 @@
     function mStudyPower() {
         try { const g = gameState(); return (g.totalQ || 0); } catch(e) { return 0; }
     }
+    // ==========================================================================================
+    //  🔀 バイトの掛け持ち（ユーザー指定）
+    //   バイトは面接なしで すぐ始められるかわりに、体力と時間をけずる。
+    //   ★給料は本業とぜんぶ合算してから税金を計算する（本物と同じ。だから掛け持ちは手取りがのびにくい）
+    // ==========================================================================================
+    const M_SIDE_MAX = 3;                       // 掛け持ちできるバイトの数
+    function mSideList(m) { return ((m.job || {}).side || []).map(c => mJobCo(c)).filter(Boolean); }
+    function mSideGross(m) { return mSideList(m).reduce((s, j) => s + Math.round(j.pay / 12), 0); }
+    function mSideHours(m) { return mSideList(m).reduce((s, j) => s + Math.round(j.pay / 12 / (j.hour || 1000)), 0); }
+    // 本業＋掛け持ち をぜんぶ合わせた額面（税金はこれ全体にかかる）
+    function mAllGross(m) { return mJobGross(m) + mSideGross(m); }
+    function mSideAdd(code) {
+        const j = mJobCo(code); const m = mLoad();
+        if(!j || !j.arbeit) { alert('掛け持ちできるのは「バイト」だけだよ'); return; }
+        if(!Array.isArray(m.job.side)) m.job.side = [];
+        if(m.job.side.indexOf(code) >= 0) { alert('もうやっているよ'); return; }
+        if(code === m.job.co) { alert('本業と同じところは掛け持ちできないよ'); return; }
+        if(m.job.side.length >= M_SIDE_MAX) { alert('掛け持ちは ' + M_SIDE_MAX + 'つまでだよ。\nこれ以上ふやすと体がもたない…'); return; }
+        const gross = Math.round(j.pay / 12);
+        const before = mJobNet(mAllGross(m)).net;
+        const after = mJobNet(mAllGross(m) + gross).net;
+        if(!confirm(j.e + ' ' + j.n + ' を始める？（面接なし・すぐ働ける）\n\n時給 ' + j.hour + '円／月の給料 ' + mYen(gross) + '（額面）\n\n手取りは ' + mYen(before) + ' → ' + mYen(after) + ' にふえる\n（ふえる分 ' + mYen(after - before) + '）\n\nそのかわり毎日 健康と きぶんが へるよ。')) return;
+        m.job.side.push(code);
+        mLog(m, 'バイトを始める：' + j.n, 0);
+        mSave(m); playSfx('finish'); mAwardTitles(); renderMoney();
+        alert(j.e + ' ' + j.n + ' を始めたよ！\n毎月5日に お給料がまとめて入る。\n\n⚠️ 掛け持ちすると 本業とぜんぶ合わせて税金が計算されるから、\n「思ったより手取りがふえない」と感じるよ。これが本物のしくみ。');
+    }
+    function mSideQuit(code) {
+        const m = mLoad(); const j = mJobCo(code); if(!j) return;
+        if(!confirm(j.n + ' をやめる？\n月 ' + mYen(Math.round(j.pay / 12)) + ' の収入がなくなるよ。')) return;
+        m.job.side = (m.job.side || []).filter(c => c !== code);
+        mLog(m, 'バイトをやめる：' + j.n, 0);
+        mSave(m); renderMoney();
+    }
+    function mSideHtml(m) {
+        const side = mSideList(m), gross = mSideGross(m);
+        const mainCo = mJobCo(m.job.co);
+        const allG = mAllGross(m), net = allG > 0 ? mJobNet(allG).net : 0;
+        const baseNet = mJobGross(m) > 0 ? mJobNet(mJobGross(m)).net : 0;
+        let h = `<div class="m-card" style="border:3px solid #f39c12;"><b>🔀 バイトの掛け持ち（${side.length}/${M_SIDE_MAX}）</b>
+            <div style="font-size:12px;color:#888;">バイトは<b>面接なしで すぐ始められる</b>。何個かかけもちして収入をふやせるよ。
+            そのかわり<b>時間と体力</b>をつかうから、毎日 健康ときぶんが へっていく</div>`;
+        if(side.length) {
+            side.forEach(j => {
+                h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name">${j.e} ${esc(j.n)}</div>
+                    <div class="m-desc">時給 ${j.hour}円／${esc(j.work)}</div>
+                    <div class="m-desc">毎日 健康 −1.2／きぶん −1</div></div>
+                  <div class="m-price"><div style="font-size:11px;color:#888;">月の給料</div><div><b>${mYen(Math.round(j.pay / 12))}</b></div>
+                    <button class="m-btn m-sell" style="margin-top:4px;" onclick="mSideQuit('${j.c}')">やめる</button></div></div>`;
+            });
+            h += `<div class="m-row"><span>バイトの給料の合計（額面・月）</span><b class="m-up">${mYen(gross)}</b></div>
+                <div class="m-row"><span>1か月の労働時間のめやす</span><b>${mSideHours(m)}時間</b></div>
+                ${mainCo ? `<div class="m-row"><span>本業だけのときの手取り</span><b>${mYen(baseNet)}</b></div>` : ''}
+                <div class="m-row"><span>いまの手取り（ぜんぶ合わせて）</span><b class="m-up">${mYen(net)}</b></div>
+                <div class="m-row"><span>掛け持ちでふえた手取り</span><b class="m-up">+${mYen(net - baseNet)}</b>（額面では +${mYen(gross)}）</div>
+                <div class="m-warn">😵 毎日 <b>健康 −${(side.length * 1.2).toFixed(1)}／きぶん −${side.length}</b> されているよ。
+                日課の「うんどう」「早ね」でちゃんと回復させないと、体をこわして本業の評価まで下がる。</div>
+                <div class="m-learn">💡 額面では <b>${mYen(gross)}</b> ふえたのに、手取りは <b>${mYen(net - baseNet)}</b> しかふえていないのが分かる？<br>
+                掛け持ちの給料は<b>ぜんぶ合算してから税金が計算される</b>から、税率の高いほうに引っぱられるんだ。
+                本物の世界でも、2か所以上から給料をもらう人は<b>確定申告</b>をして自分で精算するよ。</div>`;
+        } else {
+            h += `<div style="color:#888;font-size:13px;padding:6px 0;">まだ掛け持ちしていないよ。下から選んで始めよう！</div>`;
+        }
+        const can = M_JOBS.filter(j => j.arbeit && j.c !== m.job.co && ((m.job.side || []).indexOf(j.c) < 0));
+        h += `<div style="margin-top:10px;"><b style="font-size:14px;">🔎 始められるバイト（面接なし・すぐ働ける）</b>
+            <div style="font-size:12px;color:#888;">時給が高いものほど えらい。でも どれも体力はつかう</div>`;
+        if(side.length >= M_SIDE_MAX) {
+            h += `<div class="m-warn">これ以上は体がもたないよ。どれかをやめてから ふやそう。</div>`;
+        } else {
+            can.slice().sort((a, b) => b.hour - a.hour).forEach(j => {
+                const g = Math.round(j.pay / 12);
+                const up = mJobNet(allG + g).net - net;
+                h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name">${j.e} ${esc(j.n)}</div>
+                    <div class="m-desc">${esc(j.d)}</div>
+                    <div class="m-desc">月の給料 ${mYen(g)}（額面）→ 手取りは <b>+${mYen(up)}</b> ふえる</div></div>
+                  <div class="m-price"><div style="font-size:11px;color:#888;">時給</div><div><b>${j.hour}円</b></div>
+                    <button class="m-btn m-buy" style="margin-top:4px;" onclick="mSideAdd('${j.c}')">始める</button></div></div>`;
+            });
+        }
+        h += `</div><div class="m-learn">💡 掛け持ちは「すぐ収入をふやせる」いちばん確実な方法。<br>
+            でも<b>時間はふやせない</b>。体をこわしたら本業の評価も下がって、けっきょく損をすることもある。<br>
+            <b>時給を上げる（＝勉強していい仕事につく）</b>ほうが、長い目で見ると ずっと強いよ。</div></div>`;
+        return h;
+    }
     function mJobHtml(m) {
         const j = m.job, co = mJobCo(j.co);
         let h = '';
+        h += mSideHtml(m);      // 🔀 バイトの掛け持ち（本業のあるなしに関係なく使える）
         if(co) {
             // ===== はたらいている人の画面 =====
             const g = mJobGross(m), slip = mJobNet(g), rank = mJobRank(m);
@@ -5226,6 +5321,9 @@
         let dh = baseH + e.h / 6 + (sk.cook >= 80 ? 1 : 0) + (sk.body >= 90 ? 2 : 0), dhp = baseHp + e.hp / 8;
         if(miss.length) { dh -= miss.length * 4; dhp -= miss.length * 2.5; m.home.missed++; }
         else m.home.missed = 0;
+        // 🔀 バイトの掛け持ち：数がふえるほど、毎日 体力ときぶんがけずられる
+        const nSide = ((m.job || {}).side || []).length;
+        if(nSide > 0) { dh -= nSide * 1.2; dhp -= nSide * 1.0; }
         // 🏗️ 公共事業の政策を実行していると、仕事の評価が上がりやすい
         const pev = mPolPolicy(m, 'ev');
         if(pev && mJobCo(m.job.co)) m.job.ev = Math.min(100, m.job.ev + pev.ev);
@@ -5513,7 +5611,7 @@
     // ---- 毎月の手取り収入（借金の重さをはかる「ものさし」）----
     function mMonthIncome(m) {
         let inc = 0;
-        if(mJobCo(m.job.co)) inc += mJobNet(mJobGross(m)).net;
+        if(mJobCo(m.job.co) || mSideGross(m) > 0) inc += mJobNet(mAllGross(m)).net;   // 本業＋掛け持ちバイト
         if(m.biz && m.biz.c) inc += Math.max(0, m.biz.lastProfit || 0);
         if(mPolSeated(m)) inc += M_POL_PAY;
         return Math.round(inc);
@@ -11703,9 +11801,15 @@
     //   ・ログインしたときサーバーの方が新しければ、そっちを取りこむ
     //   ・「保存番号(v)」で新旧を判断するので、古い記録が新しい記録を上書きしない
     // ============================================================
-    let cloudTimer = null, cloudApplying = false, cloudState = { on:false, at:0, v:0, err:null, busy:false };
+    let cloudTimer = null, cloudApplying = false, cloudState = { on:false, at:0, v:0, err:null, busy:false, retry:0, next:0 };
     const cloudVKey = () => ukey('cloudV');
+    const cloudDirtyKey = () => ukey('cloudDirty');
     function cloudV() { const v = Number(localStorage.getItem(cloudVKey())); return isFinite(v) ? v : 0; }
+    // 「まだオンラインへ送れていない変更がある」しるし。アプリを閉じても消えないので、次に開いたとき必ず送れる
+    function cloudDirty() { return localStorage.getItem(cloudDirtyKey()) === '1'; }
+    function cloudSetDirty(on) {
+        try { if(on) localStorage.setItem(cloudDirtyKey(), '1'); else localStorage.removeItem(cloudDirtyKey()); } catch(e) {}
+    }
     // いまの人の記録キーをぜんぶ集める（ほかの人のデータは送らない）
     function cloudCollect() {
         const keys = {};
@@ -11713,47 +11817,75 @@
         const pre = currentUserId + ':';
         for(let i = 0; i < localStorage.length; i++) {
             const k = localStorage.key(i);
-            if(k && k.indexOf(pre) === 0 && k !== cloudVKey()) keys[k] = localStorage.getItem(k);
+            if(k && k.indexOf(pre) === 0 && k !== cloudVKey() && k !== cloudDirtyKey()) keys[k] = localStorage.getItem(k);
         }
         return keys;
     }
     const cloudHasData = (keys) => Object.keys(keys || {}).length > 0;
+    // ネットが遅いときに永遠に待たないよう、必ず時間制限をつけてつなぐ
+    async function cloudFetch(url, opts, ms) {
+        const ac = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+        const t = setTimeout(() => { try { ac && ac.abort(); } catch(e) {} }, ms || 9000);
+        try { return await fetch(url, Object.assign({}, opts, ac ? { signal: ac.signal } : {})); }
+        finally { clearTimeout(t); }
+    }
     function cloudSchedule() {
         if(!SYNC_URL || !currentUserId || cloudApplying) return;
+        cloudSetDirty(true);                            // 送れていない変更があることを覚えておく
         clearTimeout(cloudTimer);
-        cloudTimer = setTimeout(cloudPush, 2500);       // 2.5秒まとめて送る（連打しない）
+        cloudTimer = setTimeout(() => cloudPush(), 2500);   // 2.5秒まとめて送る（連打しない）
     }
+    // ★つながらなかったときは、あきらめずに自動で何度でも つなぎ直す
+    const CLOUD_WAIT = [3000, 8000, 20000, 45000, 90000];
+    function cloudRetryLater() {
+        if(!SYNC_URL || !currentUserId) return;
+        const wait = CLOUD_WAIT[Math.min(cloudState.retry, CLOUD_WAIT.length - 1)];
+        cloudState.retry++;
+        cloudState.next = Date.now() + wait;
+        clearTimeout(cloudTimer);
+        cloudTimer = setTimeout(() => cloudPush(), wait);
+    }
+    function cloudOk() { cloudState.retry = 0; cloudState.next = 0; cloudState.on = true; cloudState.err = null; }
     async function cloudPush() {
         if(!SYNC_URL || !currentUserId || cloudApplying) return false;
+        // いま別の通信の最中なら、少し待ってからもう一度（送るのをやめてしまわない）
+        if(cloudState.busy) { clearTimeout(cloudTimer); cloudTimer = setTimeout(() => cloudPush(), 1200); return false; }
         const keys = cloudCollect();
         if(!cloudHasData(keys)) return false;           // 空っぽを送ってサーバーを消さない
         const v = cloudV() + 1;
         cloudState.busy = true;
         try {
-            const r = await fetch(SYNC_URL + '/save', { method:'POST',
+            const r = await cloudFetch(SYNC_URL + '/save', { method:'POST',
                 headers: vbHeaders({ 'Content-Type':'application/json' }),
                 body: JSON.stringify({ user: currentUserId, v, keys }) });
             const d = await r.json().catch(() => ({}));
             if(d && d.stale) {                          // サーバーの方が新しかった → 追いつく
-                localStorage.setItem(cloudVKey(), String(d.v || v));
-                cloudState.err = null; cloudState.busy = false;
-                await cloudPull(true);
+                // ★ここで保存番号を先に書きかえてはダメ。書きかえると次のcloudPullが
+                //   「同じ番号だから取りこまなくていい」と判断して、新しい記録を取りこめなくなる
+                cloudOk(); cloudState.busy = false;
+                await cloudPull(true);                  // サーバーの新しい方をちゃんと取りこむ
                 return false;
             }
             localStorage.setItem(cloudVKey(), String(v));
-            cloudState.on = true; cloudState.at = Date.now(); cloudState.v = v; cloudState.err = null;
+            cloudSetDirty(false);                       // ちゃんと送れた
+            cloudOk(); cloudState.at = Date.now(); cloudState.v = v;
             return true;
-        } catch(e) { cloudState.err = e.message; return false; }
+        } catch(e) {
+            cloudState.err = (e && e.name === 'AbortError') ? 'つながるのに時間がかかりすぎた' : (e.message || 'つながらない');
+            cloudState.busy = false;
+            cloudRetryLater();                          // ★自動で もう一度つなぎに行く
+            return false;
+        }
         finally { cloudState.busy = false; }
     }
     async function cloudPull(quiet) {
         if(!SYNC_URL || !currentUserId) return false;
         cloudState.busy = true;
         try {
-            const r = await fetch(SYNC_URL + '/save?user=' + encodeURIComponent(currentUserId),
+            const r = await cloudFetch(SYNC_URL + '/save?user=' + encodeURIComponent(currentUserId),
                                   { headers: vbHeaders(), cache:'no-store' });
             const d = await r.json();
-            cloudState.on = true; cloudState.err = null;
+            cloudOk();
             if(!d || !d.keys || !cloudHasData(d.keys)) { if(cloudHasData(cloudCollect())) cloudSchedule(); return false; }
             const mine = cloudV(), theirs = Number(d.v) || 0;
             const localEmpty = !cloudHasData(cloudCollect());
@@ -11762,6 +11894,7 @@
                 try {
                     Object.keys(d.keys).forEach(k => { if(typeof d.keys[k] === 'string') localStorage.setItem(k, d.keys[k]); });
                     localStorage.setItem(cloudVKey(), String(theirs));
+                    cloudSetDirty(false);
                 } finally { cloudApplying = false; }
                 cloudState.at = d.at || Date.now(); cloudState.v = theirs;
                 loadUserState();
@@ -11773,13 +11906,46 @@
             if(mine > theirs) cloudSchedule();           // 手元の方が新しい → 送る
             cloudState.at = d.at || 0; cloudState.v = theirs;
             return false;
-        } catch(e) { cloudState.err = e.message; return false; }
+        } catch(e) {
+            cloudState.err = (e && e.name === 'AbortError') ? 'つながるのに時間がかかりすぎた' : (e.message || 'つながらない');
+            cloudState.busy = false;
+            cloudRetryLater();                          // ★自動で もう一度つなぎに行く
+            return false;
+        }
         finally { cloudState.busy = false; }
+    }
+    // ★ログインしたときの同期。まだ送れていない変更があるなら「先に送ってから」取りこむ
+    //   （先に取りこむと、この端末でオフライン中にやった分が消えてしまうため）
+    async function cloudBoot() {
+        if(!SYNC_URL || !currentUserId) return;
+        if(cloudDirty() && cloudHasData(cloudCollect())) await cloudPush();
+        await cloudPull(true);
+    }
+    // ★ずっと見はっておいて、自動でつなぎ直す
+    //   ①1分ごと：送れていない変更があれば送る ②5分ごと：相手の端末の更新を取りに行く
+    let cloudTick = null, cloudLastPull = 0;
+    function cloudStartWatch() {
+        if(cloudTick) return;
+        cloudTick = setInterval(() => {
+            if(!SYNC_URL || !currentUserId || cloudState.busy || cloudApplying) return;
+            if(typeof navigator !== 'undefined' && navigator.onLine === false) return;   // 電波が無いときは待つ
+            if(cloudState.next && Date.now() < cloudState.next) return;                  // 再チャレンジ待ちの最中
+            if(cloudDirty()) { cloudPush(); return; }
+            if(Date.now() - cloudLastPull > 300000) { cloudLastPull = Date.now(); cloudPull(true); }
+        }, 60000);
+        // 電波がもどった／画面にもどってきた ときは すぐつなぎ直す
+        window.addEventListener('online', () => { cloudState.retry = 0; cloudState.next = 0; if(currentUserId) { cloudDirty() ? cloudPush() : cloudPull(true); } });
+        document.addEventListener('visibilitychange', () => {
+            if(document.visibilityState !== 'visible' || !currentUserId) return;
+            cloudState.retry = 0; cloudState.next = 0;
+            if(cloudDirty()) cloudPush(); else if(Date.now() - cloudLastPull > 60000) { cloudLastPull = Date.now(); cloudPull(true); }
+        });
     }
     // 画面をとじる直前にも送る（取りこぼしを減らす）
     window.addEventListener('pagehide', () => { try { if(!SYNC_URL || !currentUserId) return;
         const keys = cloudCollect(); if(!cloudHasData(keys)) return;
         const v = cloudV() + 1; localStorage.setItem(cloudVKey(), String(v));
+        // ※sendBeaconは届いたかどうか分からないので「送信ずみ」にはしない。次に開いたとき必ず送り直す
         if(navigator.sendBeacon) {
             // sendBeaconはヘッダーを付けられないので、合言葉はURLに付ける（サーバーは ?t= も見る）
             navigator.sendBeacon(SYNC_URL + '/save?t=' + encodeURIComponent(SYNC_TOKEN), new Blob([JSON.stringify({ user: currentUserId, v, keys })], { type:'text/plain' }));
@@ -11788,13 +11954,24 @@
     function cloudStatusHtml() {
         if(!SYNC_URL) return '<div class="m-desc">オンライン保存は設定されていないよ</div>';
         const t = cloudState.at ? new Date(cloudState.at).toLocaleString('ja-JP') : 'まだ';
-        return `<div class="m-row"><span>☁️ オンライン保存</span><b class="${cloudState.err ? 'm-down' : 'm-up'}">${cloudState.err ? 'つながっていない' : 'ON'}</b></div>
+        const waiting = cloudDirty();
+        const ng = !!cloudState.err;
+        const lab = ng ? '⚠️ つなぎ直しています' : waiting ? '⏳ 送信まち' : '✅ つながっている';
+        const col = ng ? 'm-down' : waiting ? '' : 'm-up';
+        const sec = cloudState.next ? Math.max(0, Math.ceil((cloudState.next - Date.now()) / 1000)) : 0;
+        return `<div class="m-row"><span>☁️ オンライン保存</span><b class="${col}">${lab}</b></div>
             <div class="m-row"><span>さいごにオンラインへ保存</span><b>${t}</b></div>
             <div class="m-row"><span>保存番号</span><b>${cloudState.v || cloudV()}</b></div>
-            ${cloudState.err ? `<div class="m-warn">いまオンラインにつながっていないよ（${esc(cloudState.err)}）。<br>この端末には保存されているので、電波のいいところで開けば自動で送られるよ。</div>` : ''}
+            <div class="m-row"><span>この端末だけに残っている変更</span><b>${waiting ? 'あり（自動で送るよ）' : 'なし'}</b></div>
+            ${ng ? `<div class="m-warn">いまオンラインにつながらないよ（${esc(cloudState.err)}）。<br>
+                でも<b>この端末にはちゃんと保存されている</b>し、<b>自動で何度でもつなぎ直す</b>から そのまま遊んでいて大丈夫。
+                ${sec ? `つぎのチャレンジまで あと${sec}秒。` : ''}電波のいいところに行けば すぐ送られるよ。</div>`
+              : waiting ? `<div class="m-desc">まだ送れていない変更があるよ。数秒後に自動で送るからそのままで大丈夫。</div>` : ''}
             <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="cloudSyncNow()">☁️ いますぐ同期する</button>`;
     }
     async function cloudSyncNow() {
+        cloudState.retry = 0; cloudState.next = 0;          // 手で押したときは待たずにすぐ
+        if(cloudDirty()) await cloudPush();                 // 送れていない変更を先に送る
         const got = await cloudPull(true);
         if(!got) await cloudPush();
         if(document.getElementById('view-money').classList.contains('active')) renderMoney();
