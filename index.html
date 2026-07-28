@@ -143,6 +143,12 @@
 
         /* ===== 🗓️ カレンダー（宿題）。月ぜんたいのグリッド表示（今月だけ・自動で切りかわる） ===== */
         .cal-head { text-align: center; font-size: 20px; font-weight: bold; color: var(--head-color); margin-bottom: 10px; }
+        .cal-nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+        .cal-arrow { flex: 0 0 auto; width: 46px; height: 46px; border-radius: 12px; border: 2px solid var(--border-color);
+            background: var(--box-bg); color: var(--head-color); font-size: 18px; font-weight: bold; cursor: pointer;
+            transition: transform .15s, background .2s; }
+        .cal-arrow:hover { background: rgba(52,152,219,.14); transform: translateY(-1px); }
+        .cal-arrow:active { transform: scale(.92); }
         .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; background: var(--box-bg); border-radius: 10px; box-shadow: 0 2px 6px var(--box-shadow); padding: 10px; }
         .cal-wd { text-align: center; font-size: 12px; font-weight: bold; color: #888; padding: 4px 0; }
         .cal-wd.sun { color: #e74c3c; } .cal-wd.sat { color: #3498db; }
@@ -1190,14 +1196,28 @@
         return `<div class="hw-item"><span class="hw-check auto${done ? ' done' : ''}" title="${done ? 'できたね！' : 'アプリでやると自動でまるが付くよ'}">${done ? '✓' : ''}</span>${body}</div>`;
     }
     let calSelected = null; // タップして選んでいる日（'YYYY-M-D'）
+    let calOffset = 0;      // 0=今月 / +1=来月 / -1=先月（◀▶で動かす）
+    let calBaseYM = null;   // 今月がいつだったか（日付が変わったら自動で今月にもどす）
     function calSelect(key) { calSelected = key; renderCalendar(); }
+    function calShift(v) {
+        calOffset = Math.max(-12, Math.min(12, calOffset + v));   // 前後1年まで
+        calSelected = null;
+        renderCalendar();
+    }
+    function calThisMonth() { calOffset = 0; calSelected = null; renderCalendar(); }
     function renderCalendar() {
         if(!currentUserId) return;
         const now = new Date();
-        const y = now.getFullYear(), m = now.getMonth(); // 今月だけ表示（月が変われば自動で切りかわる）
+        const nowYM = now.getFullYear() + '-' + now.getMonth();
+        if(calBaseYM !== null && calBaseYM !== nowYM) { calOffset = 0; calSelected = null; }  // 月が変わったら今月へ
+        calBaseYM = nowYM;
+        const view = new Date(now.getFullYear(), now.getMonth() + calOffset, 1);
+        const y = view.getFullYear(), m = view.getMonth();
         const today = calToday();
-        // 選んでいる日が今月でなければ今日にリセット（月が変わったら真っ白な当月カレンダーへ）
-        if(!calSelected || Number(calSelected.split('-')[0]) !== y || Number(calSelected.split('-')[1]) !== m + 1) calSelected = today;
+        const isThisMonth = (calOffset === 0);
+        // 選んでいる日が見ている月の中になければ、今月なら今日・ほかの月なら1日をえらぶ
+        if(!calSelected || Number(calSelected.split('-')[0]) !== y || Number(calSelected.split('-')[1]) !== m + 1)
+            calSelected = isThisMonth ? today : `${y}-${m + 1}-1`;
         const firstDow = new Date(y, m, 1).getDay();
         const daysInMonth = new Date(y, m + 1, 0).getDate();
         const WD = ['日','月','火','水','木','金','土'];
@@ -1225,12 +1245,21 @@
         selHw.forEach((hw, i) => { detail += hwItemHtml(hw, sel, i); });
         const npi = nobiPartOf(sel);
         if(npi >= 0) { const np = NOBI_TEST.parts[npi];
+            const isFuture = calDayNum(sel) > calDayNum(today);
             detail += `<div style="text-align:center;margin-top:10px;">
-            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest(${npi})">${np.e} のびログ定期テスト ${np.n} を受ける（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）</button></div>`; }
+            <button class="btn" style="background:${isFuture ? '#95a5a6' : '#8e44ad'};color:#fff;width:100%;" onclick="${isFuture ? `alert('このテストは ${np.day.split('-')[1]}月${np.day.split('-')[2]}日 からうけられるよ。それまでに勉強しておこう📚')` : `startNobiTest(${npi})`}">${np.e} のびログ夏休み定期テスト ${np.n}（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）${isFuture ? ' ※当日から' : ' を受ける'}</button></div>`; }
         detail += '</div>';
+        const label = calOffset === 0 ? '今月' : calOffset === 1 ? '来月' : calOffset === -1 ? '先月'
+                    : calOffset > 0 ? `${calOffset}か月あと` : `${-calOffset}か月まえ`;
+        const head = `<div class="cal-nav">
+            <button class="cal-arrow" onclick="calShift(-1)" title="まえの月">◀</button>
+            <div class="cal-head" style="margin:0;">${y}年 ${m + 1}月
+              <div style="font-size:12px;font-weight:normal;color:#888;">${label}</div></div>
+            <button class="cal-arrow" onclick="calShift(1)" title="つぎの月">▶</button>
+          </div>
+          ${calOffset !== 0 ? `<button class="btn" style="background:#11998e;color:#fff;width:100%;margin-bottom:10px;" onclick="calThisMonth()">📍 今月にもどる</button>` : ''}`;
         document.getElementById('cal-list').innerHTML =
-            `<div class="cal-head">${y}年 ${m+1}月</div><div class="cal-grid">${grid}</div>${detail}`
-            + calMonthPlanHtml(y, m + 1);
+            head + `<div class="cal-grid">${grid}</div>${detail}` + calMonthPlanHtml(y, m + 1);
     }
     // ホーム（勉強画面）の「今日の宿題」＝お知らせの下。自動チェックのみ
     function renderTodayHomework() {
