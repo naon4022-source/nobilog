@@ -3409,7 +3409,7 @@
         // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
         gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
-        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0, task:{}, taskDay:null, taskTotal:0, taskPerfect:0 },
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0, task:{}, taskDay:null, taskTotal:0, taskPerfect:0, w:{}, wDay:null, wTotal:0, wMin:0, otMin:0 },
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
@@ -3503,7 +3503,8 @@
         m.job.wish = m.job.wish.filter(c => mJobCo(c)).slice(0, 3);   // 知らない会社は消す・最大3つ
         // 📋 今日の仕事（こわれていても落ちないように）
         if(!m.job.task || typeof m.job.task !== 'object') m.job.task = {};
-        ['taskTotal','taskPerfect'].forEach(k => { if(typeof m.job[k] !== 'number' || !isFinite(m.job[k])) m.job[k] = 0; });
+        if(!m.job.w || typeof m.job.w !== 'object') m.job.w = {};
+        ['taskTotal','taskPerfect','wTotal','wMin','otMin'].forEach(k => { if(typeof m.job[k] !== 'number' || !isFinite(m.job[k])) m.job[k] = 0; });
         // 🔀 掛け持ちしているバイト（知らない会社・バイト以外・本業とかぶるもの・多すぎる分は消す）
         if(!Array.isArray(m.job.side)) m.job.side = [];
         m.job.side = m.job.side.filter((c, i, ar) => { const j = mJobCo(c); return j && j.arbeit && c !== m.job.co && ar.indexOf(c) === i; }).slice(0, M_SIDE_MAX);
@@ -3746,6 +3747,19 @@
             m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`🎁 ${mo === 6 ? '夏' : '冬'}のボーナスが出た！`,
                 msg:`額面 ${mYen(bg)}（給料2か月分×評価）から税金などが引かれて、手取り ${mYen(bs.net)} が入ったよ。評価が高いほど多くなる！` });
             did = true;
+        }
+        // ⏰ 残業代（ためた分をまとめて。時給×1.25×時間。本物と同じ「翌月払い」）
+        const otm = m.job ? (m.job.otMin || 0) : 0;
+        if(otm > 0 && mJobCo(m.job && m.job.co)) {
+            const otp = mOtPay(m);
+            if(otp > 0) {
+                m.cash += otp; m.job.totalPay = (m.job.totalPay || 0) + otp; m.salaryTotal = (m.salaryTotal || 0) + otp;
+                mLog(m, `残業代（${otm}分ぶん）`, otp);
+                mSlipPay(m, `⏰ 残業代（先月ぶん・${otm}分）`, otp,
+                    [['残業の時給（25%わりまし）', mOtWage(m)], [otm + '分 ＝ ' + (otm / 60).toFixed(2) + '時間ぶん', otp]]);
+                did = true;
+            }
+            m.job.otMin = 0;                       // 払ったのでリセット
         }
         // 🎓 資格手当（英検の合格実績で毎月もらえる）
         const qa = mQualPay();
@@ -5287,6 +5301,124 @@
         mSave(m); mAwardBadges(); renderMoney();
         alert(msg);
     }
+    // ==========================================================================================
+    //  🔧 作業（さぎょう）―― タスクより細かい「実際に手を動かす仕事」（ユーザー指定）
+    //   ・出勤するだけ → 合計30分ぶん（10分の作業を3個）
+    //   ・残業する（3時間）→ さらに合計18分ぶん（3分の作業を6個）
+    //   ★残業代はその場では出さない。「はたらいた分」をためて、毎月5日の給料に入る（本物と同じ）
+    // ==========================================================================================
+    const M_WORK_NOR = { min:10, n:3 };      // 出勤ぶん：10分 × 3個 ＝ 30分
+    const M_WORK_OT  = { min:3,  n:6 };      // 残業ぶん： 3分 × 6個 ＝ 18分
+    // 残業のときの こまかい雑務（どの会社でもだいたい同じ。だから「いろんな作業」がまわる）
+    const M_OT_WORK = ['メールを返す','はんこをもらう','コピーをとる','電話に出る','データを入力する','戸じまりをする',
+        '机を片づける','日報を書く','明日のじゅんびをする','資料をならべる','ゴミを出す','パソコンをとじる',
+        '在庫をかぞえる','伝票をそろえる','ファイルにとじる','名ふだを回収する','電気を消す','コーヒーをいれる',
+        '荷物をうけとる','メモを整理する','棚をふく','鍵をかける','タイムカードを押す','明日の連絡をまとめる'];
+    function mWorkList(m) {
+        const co = mJobCo(m.job.co); if(!co) return { nor:[], ot:[] };
+        const r = mRng(mHash('nobilog-work|' + co.c + '|' + calToday()));
+        const pick = (pool, n) => { const a2 = pool.slice();
+            for(let i = a2.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); const t = a2[i]; a2[i] = a2[j]; a2[j] = t; }
+            return a2.slice(0, n); };
+        // 通常の作業＝その会社ならではの仕事から（タスクと同じ土台なので、会社ごとにちがう）
+        let own = co.arbeit ? [co.work || 'お店の仕事', 'レジをうつ', '品出しをする', 'そうじをする']
+                            : (M_TASK_BY_SEC[co.sec] || []).slice();
+        if(co.work && own.indexOf(co.work) < 0) own.unshift(co.work);
+        while(own.length < M_WORK_NOR.n) own = own.concat(M_TASK_DEFAULT);
+        return {
+            nor: pick(own, M_WORK_NOR.n).map(n => ({ n, min:M_WORK_NOR.min })),
+            ot:  pick(M_OT_WORK, M_WORK_OT.n).map(n => ({ n, min:M_WORK_OT.min }))
+        };
+    }
+    function mWorkReset(m) {
+        const t = calToday();
+        if(m.job.wDay !== t) { m.job.w = {}; m.job.wDay = t; return true; }
+        return false;
+    }
+    function mWorkDoneN(m, kind) { return Object.keys(m.job.w || {}).filter(k => k[0] === kind).length; }
+    // いまの時給（月給 ÷ 160時間）と、残業の割増（25%＝法律どおり）
+    function mWage(m) { return Math.max(1, Math.round(mJobGross(m) / 160)); }
+    function mOtWage(m) { return Math.round(mWage(m) * 1.25); }
+    function mOtPay(m) { return Math.round(mOtWage(m) * (m.job.otMin || 0) / 60); }
+    function mWorkDo(kind, i) {
+        const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
+        mWorkReset(m);
+        const list = mWorkList(m); const arr = kind === 'n' ? list.nor : list.ot;
+        const it = arr[i]; if(!it) return;
+        const key = kind + i;
+        if((m.job.w || {})[key]) { alert('それは今日もうやったよ'); return; }
+        if(m.job.lastWork !== calToday()) { alert('まず「出勤する」を押してからだよ！'); return; }
+        if(kind === 'o' && m.job.otDay !== calToday()) { alert('残業の作業は「⏰残業する」を押してから出てくるよ'); return; }
+        if(!m.job.w) m.job.w = {};
+        m.job.w[key] = 1;
+        m.job.wTotal = (m.job.wTotal || 0) + 1;
+        m.job.wMin = (m.job.wMin || 0) + it.min;
+        // 体調で仕事の出来が変わる
+        const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 2;
+        const gain = (cond >= 70 ? 0.5 : cond >= 45 ? 0.35 : cond >= 25 ? 0.2 : 0.05) * (it.min / 10);
+        m.job.ev = Math.max(0, Math.min(100, m.job.ev + gain));
+        let msg = `🔧 ${it.n}（${it.min}分）が終わった！\n評価 +${gain.toFixed(2)}`;
+        if(kind === 'o') {
+            m.job.otMin = (m.job.otMin || 0) + it.min;         // ★残業した分をためる（お金は5日に）
+            m.home.health = Math.max(0, m.home.health - 0.8);
+            m.home.happy = Math.max(0, m.home.happy - 0.7);
+            msg += `\n残業 ${m.job.otMin}分ぶん たまった（残業代 ${mYen(mOtPay(m))}）\n→ このお金は毎月5日の給料に入るよ`;
+        }
+        const doneN = mWorkDoneN(m, kind), allN = arr.length;
+        if(doneN >= allN) {
+            m.job.ev = Math.max(0, Math.min(100, m.job.ev + (kind === 'o' ? 2 : 1.5)));
+            msg += `\n\n🎉 ${kind === 'o' ? '残業ぶん' : '今日の作業'}ぜんぶ終わり！ 評価 +${kind === 'o' ? 2 : 1.5}`;
+            celebrate(); playSfx('finish');
+        } else playSfx('correct');
+        mSave(m); mAwardBadges(); renderMoney();
+        alert(msg);
+    }
+    function mWorkHtml(m) {
+        const co = mJobCo(m.job.co); if(!co) return '';
+        mWorkReset(m);
+        const list = mWorkList(m);
+        const worked = m.job.lastWork === calToday(), otOn = m.job.otDay === calToday();
+        const dn = mWorkDoneN(m, 'n'), dof = mWorkDoneN(m, 'o');
+        const minToday = list.nor.filter((x, i) => (m.job.w || {})['n' + i]).reduce((a, x) => a + x.min, 0)
+                       + list.ot.filter((x, i) => (m.job.w || {})['o' + i]).reduce((a, x) => a + x.min, 0);
+        let h = `<div class="m-card" style="border:3px solid #2980b9;">
+            <b>🔧 作業（${dn + dof}/${list.nor.length + (otOn ? list.ot.length : 0)}）</b>
+            <div style="font-size:12px;color:#888;">タスクより細かい、じっさいに手を動かす仕事。<b>出勤すると30分ぶん（10分×3）</b>、
+            <b>残業すると さらに18分ぶん（3分×6）</b>が出てくるよ</div>
+            <div class="m-row"><span>今日はたらいた時間</span><b>${minToday}分</b></div>
+            <div class="m-row"><span>これまでの作業</span><b>${m.job.wTotal || 0}件／${Math.floor((m.job.wMin || 0) / 60)}時間${(m.job.wMin || 0) % 60}分</b></div>`;
+        if(!worked) { h += `<div class="m-warn">まず<b>出勤する</b>を押そう。押すと作業が出てくるよ。</div></div>`; return h; }
+        h += `<div style="margin-top:8px;"><b style="font-size:14px;">🏢 出勤ぶん（合計30分）</b></div>`;
+        list.nor.forEach((it, i) => {
+            const ok2 = !!(m.job.w || {})['n' + i];
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${ok2 ? '✅' : '⬜'} ${esc(it.n)}</div>
+                <div class="m-desc">${it.min}分</div></div>
+                <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkDo('n',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
+        });
+        h += `<div style="margin-top:10px;"><b style="font-size:14px;">⏰ 残業ぶん（合計18分・3分×6）</b>
+            <div style="font-size:12px;color:#888;">${otOn ? '残業ちゅう。1つずつ かたづけよう' : '「⏰残業する」を押すと出てくるよ'}</div></div>`;
+        if(otOn) {
+            list.ot.forEach((it, i) => {
+                const ok2 = !!(m.job.w || {})['o' + i];
+                h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                    <div class="m-name">${ok2 ? '✅' : '⬜'} ${esc(it.n)}</div>
+                    <div class="m-desc">${it.min}分／健康−0.8・きぶん−0.7</div></div>
+                    <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkDo('o',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
+            });
+        } else {
+            h += `<div style="color:#888;font-size:13px;padding:6px 0;">（まだ出ていない）</div>`;
+        }
+        h += `<div class="m-row" style="border-top:2px solid #2980b9;margin-top:8px;padding-top:8px;">
+              <span>⏰ たまっている残業代</span><b class="m-up">${mYen(mOtPay(m))}</b></div>
+            <div class="m-row"><span>残業した時間（今月ぶん）</span><b>${m.job.otMin || 0}分</b></div>
+            <div class="m-row"><span>いまの時給／残業の時給（25%わりまし）</span><b>${mYen(mWage(m))}／${mYen(mOtWage(m))}</b></div>
+            <div class="m-learn">💡 残業代は<b>その場ではもらえない</b>。ためておいて<b>毎月5日の給料と一緒に</b>入るよ（本物と同じ）。<br>
+            残業には<b>25%の割増</b>がつく（法律で決まっている）。でも増やせる時間には限りがある——
+            長い目では<b>時給そのものを上げる</b>（勉強していい仕事につく・昇進する）ほうがずっと強いよ。<br>
+            <b>これがFIRE（早く働かなくてよくなること）の第一歩</b>：時間を売るのではなく、時給を上げて、あまったお金を投資に回す。</div></div>`;
+        return h;
+    }
     // 💴 初任給（1年目・役職なしのときの月給・額面）
     //   ★会社の「年収」はボーナスも入っているし、ベテランも合わせた平均なので、
     //     年収÷12 では本物の初任給とかけはなれてしまう（年収680万の会社で月56万になってしまう）。
@@ -5325,6 +5457,7 @@
         const j = m.job, co = mJobCo(j.co);
         let h = '';
         h += mTaskHtml(m);      // 📋 今日の仕事（会社によって数も中身もちがう）
+        h += mWorkHtml(m);      // 🔧 作業（出勤30分ぶん＋残業18分ぶん）
         h += mRuleHtml(m);      // 📋 就業規則（副業していいかは会社が決める）
         h += mSideHtml(m);      // 🔀 バイトの掛け持ち（本業のあるなしに関係なく使える）
         if(co) {
@@ -5765,19 +5898,19 @@
         const today = calToday();
         if(m.job.otDay === today) { alert('今日はもう残業したよ。休もう！'); return; }
         if(m.job.lastWork !== today) { alert('まず出勤してからだよ'); return; }
-        const hours = 3;
-        const wage = Math.round(mJobGross(m) / 160 * 1.25);      // 割増25%（本物と同じ）
-        const pay = wage * hours;
-        if(!confirm(`⏰ ${hours}時間 残業する？\n残業代 ${mYen(pay)}（時給${mYen(wage)}×${hours}時間・25%の割増つき）\nそのかわり 健康−6・きぶん−5 になるよ。`)) return;
+        // ★お金はその場で出さない。かわりに「残業ぶんの作業（3分×6個）」が出てきて、
+        //   やった分だけ残業代がたまり、毎月5日の給料に入る（本物と同じ）
+        if(mWorkDoneN(m, 'n') < M_WORK_NOR.n) { alert('まず「出勤ぶんの作業」を3つぜんぶ終わらせてからだよ。\n🔧作業のところを見てね。'); return; }
+        const wage = mOtWage(m);
+        if(!confirm(`⏰ 3時間 残業する？\n\n残業ぶんの作業（3分×6個＝合計18分）が出てくるよ。\nやった分だけ残業代がたまって、<毎月5日の給料>と一緒にもらえる。\n残業の時給は ${mYen(wage)}（25%の割増つき）。\n\nそのかわり 健康と きぶんが へるよ。`.replace(/[<>]/g, '「'))) return;
         m.job.otDay = today;
-        m.cash += pay;
-        m.home.health = Math.max(0, m.home.health - 6);
-        m.home.happy = Math.max(0, m.home.happy - 5);
+        m.home.health = Math.max(0, m.home.health - 3);
+        m.home.happy = Math.max(0, m.home.happy - 2);
         m.job.ev = Math.min(100, m.job.ev + 1);
         m.job.otCount = (m.job.otCount || 0) + 1;
-        mLog(m, '残業代', pay);
+        mLog(m, '残業をはじめた（代金は5日の給料に）', 0);
         mSave(m); playSfx('correct'); renderMoney();
-        setTimeout(() => alert(`残業代 ${mYen(pay)} をもらったよ。\n\n💡 残業は「時間をお金に変える」こと。増やせる時間には限りがあるから、\n長い目では「時給そのものを上げる（=スキルをつける）」ほうが強いんだ。`), 150);
+        setTimeout(() => alert(`⏰ 残業をはじめたよ。\n\n🔧作業のところに「残業ぶん」が6個 出てきたから、1つずつ かたづけよう。\nやった分の残業代は、毎月5日の給料に入るよ（その場ではもらえない）。`), 150);
     }
     // 🏖️ 有給休暇（年10日。使うと体調が回復する）
     function mJobPaidLeave() {
