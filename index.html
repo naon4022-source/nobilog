@@ -3402,7 +3402,7 @@
         feePaid:0, workCount:0, workDay:null, nisaUsed:0, nisaYear:null,
         goal:100000, started:true, autoAmt:0, autoCode:'ALLC', autoAcct:'nisa',
         nisaLife:0, trustFee:0, grants:[],
-        payCorrect:0, salaryTotal:0, lastPaidYM:null,   // 給料：正解した問題数をためて毎月5日にまとめて受け取る
+        payCorrect:0, salaryTotal:0, lastPaidYM:null, slipFull:null, slipHist:[],   // 給料：正解した問題数をためて毎月5日にまとめて受け取る
         // 🛡️ 保険（ins={商品コード:プラン番号1〜3} / life=くらしの設定 / debt=払えなかった分の借金）
         ins:{}, insSeen:false, insPaid:0, insGot:0, insCount:0, insHist:[], insNew:[], insSim:0, insLapse:0, debt:0,
         life:{ phone:true, bike:true, work:true, pet:false, house:false, car:false, trip:false },
@@ -3488,7 +3488,7 @@
         if(!m || typeof m.cash !== 'number') { m = M_EMPTY(); }
         m = Object.assign(M_EMPTY(), m);
         // 配列であるべき所がこわれていても落ちないように直す（保険）
-        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki','titles'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
+        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki','titles','slipHist'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
         ['hold','nisa','ins'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
         // ★アップデートで新しい項目がふえても、今までのデータは絶対に消さずに「足りない所だけ」うめる
         const EMP = M_EMPTY();
@@ -3673,8 +3673,36 @@
         }
         return paid;
     }
+    // ==========================================================================================
+    //  💴 給料明細（5日にもらったお金と、引かれたお金を1円単位で記録する）
+    //   ★お金の順番は「①先に お給料が入る → ②そのあと 先月ぶんの請求が引かれる → ③残りが手元に残る」。
+    //     つまり 7月に使った電気・家賃・保険・ローンは、8月5日の給料から引かれる（本物の口座ふりかえと同じ）
+    // ==========================================================================================
+    function mSlipStart(m, y, mo) {
+        m._slip = { ym: y + '-' + mo, y, mo, pay: [], ded: [], at: Date.now(), day: m.day || 0 };
+    }
+    function mSlipPay(m, name, yen, detail) {      // もらったお金
+        if(!m._slip || !yen) return;
+        m._slip.pay.push({ n: name, yen: Math.round(yen), d: detail || null });
+    }
+    function mSlipDed(m, name, yen, detail) {      // 引かれたお金
+        if(!m._slip || !yen) return;
+        m._slip.ded.push({ n: name, yen: Math.round(yen), d: detail || null });
+    }
+    function mSlipEnd(m) {
+        if(!m._slip) return;
+        const sl = m._slip;
+        sl.payTotal = sl.pay.reduce((a, x) => a + x.yen, 0);
+        sl.dedTotal = sl.ded.reduce((a, x) => a + x.yen, 0);
+        sl.hand = sl.payTotal - sl.dedTotal;                 // 手元に残ったお金
+        m.slipFull = sl;
+        if(!Array.isArray(m.slipHist)) m.slipHist = [];
+        m.slipHist.unshift(sl); if(m.slipHist.length > 12) m.slipHist.length = 12;
+        delete m._slip;
+    }
     function mPayMonth(m, y, mo) {
         let did = false;
+        mSlipStart(m, y, mo);
         // 💼 会社のお給料（額面から社会保険料・所得税・住民税を引いた「手取り」が入る）
         const _co = mJobCo(m.job && m.job.co), _side = mSideGross(m);
         if(_co || _side > 0) {
@@ -3689,10 +3717,20 @@
             mLog(m, `お給料（${nm}・手取り）`, s.net);
             if(_side > 0) mLog(m, `└ うち 掛け持ちバイト（額面）`, _side);
             mLog(m, `└ 社会保険料・税金`, -(s.gross - s.net));
+            // 📄 明細：もらった「全額（額面）」と、そこから引かれた税金・保険料の内わけ
+            mSlipPay(m, `お給料（${nm}）の全額`, s.gross,
+                [['本業の給料（額面）', mJobGross(m)]].concat(_side > 0 ? [['掛け持ちバイト（額面）', _side]] : []));
+            mSlipDed(m, '社会保険料・税金（給料から）', s.gross - s.net, [
+                ['健康保険＋厚生年金＋雇用保険', s.shaho],
+                ['所得税（かせぐほど高くなる）', s.shotoku],
+                ['住民税（およそ10%）', s.jumin]]);
             did = true;
         }
         // 🔁 つみたて（毎月5日に、決めた金額ぶんだけ自動で買う）
-        if(m.autoAmt > 0 && m.cash >= m.autoAmt) { if(!mBuyInner(m, m.autoCode, m.autoAmt, true, m.autoAcct)) did = true; }
+        if(m.autoAmt > 0 && m.cash >= m.autoAmt) { if(!mBuyInner(m, m.autoCode, m.autoAmt, true, m.autoAcct)) {
+            mSlipDed(m, `🔁 つみたて（${(M_ASSET(m.autoCode)||{}).n||''}）`, m.autoAmt,
+                [['これは使ったお金ではなく、投資に回したお金', m.autoAmt]]);
+            did = true; } }
         // 🚀 お店のもうけ（起業している人）
         if(mBizMonth(m)) did = true;
         // 🎁 ボーナス（6月と12月。給料2か月分＋評価で増減）
@@ -3702,18 +3740,27 @@
             m.cash += bs.net; m.job.totalPay += bs.net; m.salaryTotal = (m.salaryTotal || 0) + bs.net;
             m.taxPaid += bs.shotoku + bs.jumin;
             mLog(m, `🎁 ${mo === 6 ? '夏' : '冬'}のボーナス（手取り）`, bs.net);
+            mSlipPay(m, `🎁 ${mo === 6 ? '夏' : '冬'}のボーナスの全額`, bs.gross, [['給料2か月分×評価×景気', bs.gross]]);
+            mSlipDed(m, 'ボーナスの社会保険料・税金', bs.gross - bs.net, [
+                ['社会保険料', bs.shaho], ['所得税', bs.shotoku], ['住民税', bs.jumin]]);
             m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`🎁 ${mo === 6 ? '夏' : '冬'}のボーナスが出た！`,
                 msg:`額面 ${mYen(bg)}（給料2か月分×評価）から税金などが引かれて、手取り ${mYen(bs.net)} が入ったよ。評価が高いほど多くなる！` });
             did = true;
         }
         // 🎓 資格手当（英検の合格実績で毎月もらえる）
         const qa = mQualPay();
-        if(qa > 0 && mJobCo(m.job && m.job.co)) { m.cash += qa; mLog(m, `資格手当（${mQualName()}）`, qa); did = true; }
+        if(qa > 0 && mJobCo(m.job && m.job.co)) { m.cash += qa; mLog(m, `資格手当（${mQualName()}）`, qa);
+            mSlipPay(m, `🎓 資格手当（${mQualName()}）`, qa); did = true; }
         // 📚 勉強手当（勉強でためた正解ぶん・20問で1万円）
         const polPay = mPolPolicy(m, 'pay');
         const mindUp = mHomeSk(m).mind >= 90 ? 0.12 : mHomeSk(m).mind >= 60 ? 0.12 : mHomeSk(m).mind >= 30 ? 0.05 : 0;
         const sal = Math.round((m.payCorrect || 0) * M_PAY_PER_CORRECT * (1 + mHomeEffect(m).pay + mindUp + (polPay ? polPay.pay : 0)));
-        if(sal > 0) { m.cash += sal; m.salaryTotal = (m.salaryTotal || 0) + sal; mLog(m, `勉強手当（${m.payCorrect}問ぶん）`, sal); m.payCorrect = 0; did = true; }
+        if(sal > 0) { m.cash += sal; m.salaryTotal = (m.salaryTotal || 0) + sal;
+            mLog(m, `勉強手当（${m.payCorrect}問ぶん）`, sal);
+            mSlipPay(m, `📚 勉強手当（${m.payCorrect}問 正解ぶん）`, sal,
+                [['1問' + M_PAY_PER_CORRECT + '円 × ' + m.payCorrect + '問', (m.payCorrect || 0) * M_PAY_PER_CORRECT]]
+                .concat(sal > (m.payCorrect || 0) * M_PAY_PER_CORRECT ? [['塾・こころスキル・政策のおまけ', sal - (m.payCorrect || 0) * M_PAY_PER_CORRECT]] : []));
+            m.payCorrect = 0; did = true; }
         // 💴 配当金（1か月ぶん。課税口座は20.315%引き・NISAはまるごと）
         let divTax = 0, divNisa = 0;
         Object.entries(m.hold || {}).forEach(([c, h]) => { const r = m.divRate[c] || M_ASSET(c).div || 0; if(r) divTax += mPrice(m, c) * h.qty * r / 12; });
@@ -3728,6 +3775,9 @@
             if(m.divHist.length > 12) m.divHist.length = 12;
             if(netTax > 0) mLog(m, `配当金（税金${mYen(tax)}引き）`, netTax);
             if(nisaAmt > 0) mLog(m, 'NISAの配当金（税金ゼロ！）', nisaAmt);
+            if(Math.round(divTax) > 0) { mSlipPay(m, '💴 配当金（課税口座）の全額', Math.round(divTax));
+                mSlipDed(m, '配当金の税金（20.315%）', tax); }
+            if(nisaAmt > 0) mSlipPay(m, '🎁 配当金（NISA・税金0円）', nisaAmt);
             // 🔁 配当の再投資（もらった配当で、つみたて先を自動で買いまし）
             if(m.divReinvest) { const re = netTax + nisaAmt; if(re > 0 && m.cash >= re) mBuyInner(m, m.autoCode, re, true, m.autoAcct); }
             did = true;
@@ -3738,6 +3788,7 @@
             const sum = yut.reduce((a, y) => a + y.yen, 0);
             m.cash += sum;
             mLog(m, `株主優待（${yut.length}社ぶん）`, sum);
+            mSlipPay(m, `🎁 株主優待（${yut.length}社ぶん）`, sum, yut.map(y => [((y.a || {}).n || y.c) + '：' + y.n, y.yen]));
             m.home.happy = Math.min(100, (m.home.happy || 0) + 3);
             did = true;
         }
@@ -3760,6 +3811,8 @@
         if(prem > 0 && m.cash >= prem) {
             m.cash -= prem; m.insPaid = (m.insPaid || 0) + prem;
             mLog(m, `保険料（${Object.keys(m.ins).length}つ）`, -prem);
+            mSlipDed(m, `🛡️ 保険料（先月ぶん・${Object.keys(m.ins).length}つ）`, prem,
+                Object.keys(m.ins).map(c => [(mInsProd(c) || {}).n || c, (mInsPlan(m, c) || {}).yen || 0]));
             did = true;
         }
         // 🗳️ 議員の歳費と、実行中の政策でもらえるお金
@@ -3773,8 +3826,10 @@
             const pay = Math.min(m.cash, m.debt);
             m.cash -= pay; m.debt -= pay;
             mLog(m, '借金の返済', -pay);
+            mSlipDed(m, '💳 立てかえ分の返済（事故や払えなかった分）', pay);
             did = true;
         }
+        mSlipEnd(m);                        // 📄 明細をまとめて保存する
         return did;
     }
     // ===== 🛡️ 保険のしくみ =====
@@ -4014,9 +4069,74 @@
         if(mTab === 'gam') mGamStartTimer(); else if(mGamTimer) { clearInterval(mGamTimer); mGamTimer = null; }
         if(mNewsReady) mNewsSync();   // うしろでオンラインの最新ニュースを取りに行く（つながらなくても大丈夫）
     }
+    // ==========================================================================================
+    //  📄 給料明細の画面（5日を過ぎたら、政治と経済を開くといちばん上に出る）
+    //   ★「全額（額面）」を大きく出して、引かれたお金と 手元に残った額を その下に書く。
+    //     引かれた合計をタップすると、どこから何円ひかれたかが1円単位で見られる。
+    // ==========================================================================================
+    function mSlipHtml(m) {
+        const sl = m.slipFull;
+        if(!sl || !sl.pay || (!sl.pay.length && !sl.ded.length)) return '';
+        // 今月ぶんの明細だけ出す（先月のは家計簿から見る）
+        const now = mYMD(mSlotInfo().day);
+        const isThis = sl.y === now.y && sl.mo === now.mo;
+        if(!isThis) return '';
+        const pt = sl.payTotal || 0, dt = sl.dedTotal || 0, hand = sl.hand || 0;
+        const rate = pt > 0 ? hand / pt * 100 : 0;
+        return `<div class="m-card" style="border:3px solid #11998e;background:linear-gradient(180deg,rgba(17,153,142,.10),transparent);">
+            <div style="font-size:12px;color:#11998e;font-weight:bold;">📄 ${sl.y}年${sl.mo}月5日の給料明細</div>
+            <div style="font-size:13px;color:#888;">${sl.mo === 1 ? 12 : sl.mo - 1}月に使った電気・家賃・保険・ローンは、この日の給料から引かれるよ</div>
+            <div style="margin-top:10px;text-align:center;">
+              <div style="font-size:12px;color:#888;">もらった全額（額面）</div>
+              <div style="font-size:30px;font-weight:bold;color:#11998e;line-height:1.2;">${mYen(pt)}</div>
+            </div>
+            <div class="m-row" style="margin-top:8px;"><span>もらった全額（総支給）</span><b>${mYen(pt)}</b></div>
+            <div class="m-row" style="cursor:pointer;background:rgba(231,76,60,.07);border-radius:8px;padding:8px;" onclick="mSlipDetail()">
+              <span>引かれたお金（合計）<br><span style="font-size:11px;color:#e74c3c;">👆 タップすると どこから何円 引かれたか 見られる</span></span>
+              <b class="m-down" style="font-size:17px;">−${mYen(dt).slice(1)} ▶</b></div>
+            <div class="m-row" style="border-top:2px solid #11998e;margin-top:4px;padding-top:8px;">
+              <span><b>手元に残ったお金（手取り）</b></span><b class="${hand >= 0 ? 'm-up' : 'm-down'}" style="font-size:20px;">${mYen(hand)}</b></div>
+            <div class="m-row"><span>全額のうち 手元に残った割合</span><b>${rate.toFixed(1)}%</b></div>
+            <div class="m-meter" style="height:16px;"><div style="width:${Math.max(0,Math.min(100,rate))}%;background:#11998e;"></div></div>
+            <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;" onclick="mSlipDetail()">🔍 引かれたお金の内わけを見る</button>
+            <div class="m-learn">💡 大人が「手取り」と言うのは、この<b>いちばん下の数字</b>のこと。
+            求人の「月給30万円」は<b>いちばん上の全額</b>だから、実際に使えるお金はもっと少ないんだ。<br>
+            <b>この差を知っているかどうかが、お金で困らない人と困る人の分かれ目</b>だよ。</div></div>`;
+    }
+    function mSlipDetail() {
+        const m = mLoad(), sl = m.slipFull;
+        if(!sl) { alert('まだ明細がないよ。毎月5日にお給料が入ると出てくる。'); return; }
+        const row = (x, isDed) => {
+            const sub = (x.d || []).filter(d => d && d[1]).map(d =>
+                `<tr><td style="padding-left:22px;font-size:12px;color:#888;">└ ${esc(String(d[0]))}</td>
+                 <td class="r" style="font-size:12px;color:#888;">${mYen(d[1])}</td></tr>`).join('');
+            return `<tr><td>${esc(x.n)}</td><td class="r"><b class="${isDed ? 'm-down' : 'm-up'}">${isDed ? '−' : '+'}${mYen(x.yen).slice(1)}</b></td></tr>` + sub;
+        };
+        gOpenModal(`<div style="text-align:left;max-width:600px;margin:0 auto;">
+            <h2 style="text-align:center;">📄 ${sl.y}年${sl.mo}月5日 給料明細</h2>
+            <div class="m-desc" style="text-align:center;">${sl.mo === 1 ? 12 : sl.mo - 1}月に使ったぶんの請求が、この給料から引かれているよ</div>
+            <div class="m-tw" style="margin-top:10px;"><table class="m-gtab"><tbody>
+              <tr><th colspan="2" style="text-align:left;background:rgba(17,153,142,.12);">💰 もらったお金（支給）</th></tr>
+              ${sl.pay.length ? sl.pay.map(x => row(x, false)).join('') : '<tr><td colspan="2" style="color:#888;">なし</td></tr>'}
+              <tr style="border-top:2px solid #11998e;"><td><b>もらった全額（総支給）</b></td><td class="r"><b style="font-size:16px;">${mYen(sl.payTotal)}</b></td></tr>
+              <tr><th colspan="2" style="text-align:left;background:rgba(231,76,60,.12);">💸 引かれたお金（控除）</th></tr>
+              ${sl.ded.length ? sl.ded.map(x => row(x, true)).join('') : '<tr><td colspan="2" style="color:#888;">なし</td></tr>'}
+              <tr style="border-top:2px solid #e74c3c;"><td><b>引かれた合計</b></td><td class="r"><b class="m-down" style="font-size:16px;">−${mYen(sl.dedTotal).slice(1)}</b></td></tr>
+              <tr style="border-top:3px double #11998e;"><td><b>手元に残ったお金</b></td>
+                <td class="r"><b class="${sl.hand >= 0 ? 'm-up' : 'm-down'}" style="font-size:20px;">${mYen(sl.hand)}</b></td></tr>
+            </tbody></table></div>
+            <div class="m-learn">💡 <b>引かれるお金は2しゅるい</b>あるよ。<br>
+            ①<b>どうしても引かれるもの</b>…社会保険料・所得税・住民税（給料からいきなり引かれる。これを源泉徴収という）<br>
+            ②<b>自分で決めたもの</b>…家賃・スマホ代・保険・サブスク・ローン・つみたて<br>
+            <b>①は変えられないけど、②は自分で変えられる</b>。お金に余ゆうを作る一番の方法は、②を見なおすことだよ。<br>
+            <span style="font-size:12px;">※つみたては「使ったお金」ではなく<b>自分の資産になるお金</b>。引かれても損していないよ。</span></div>
+            ${(m.slipHist || []).length > 1 ? `<div class="m-desc">これまでの明細：${(m.slipHist || []).slice(0, 6).map(h => `${h.y}/${h.mo}（手元 ${mYen(h.hand || 0)}）`).join('／')}</div>` : ''}
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div></div>`);
+    }
     function mHomeHtml(m, total) {
         const rival = gOtherState ? null : null;
         let h = mEventCardHtml(m);
+        h += mSlipHtml(m);        // 📄 給料明細（5日をすぎたら いちばん上に出る）
         // ニュース（見出しだけ。くわしくは📰ニュースのタブ）
         const nowSlot = M_SLOTS[mSlotInfo().s];
         h += `<div class="m-card"><b>📰 ${nowSlot.e} ${nowSlot.n}のニュース</b>
@@ -5886,10 +6006,16 @@
         const saveAmt = mHomeHas(m, 'chokin') ? mGood('chokin').mon : 0;
         if(m.cash >= fixed) {
             m.cash -= fixed;
-            if(saveAmt > 0) m.bank += saveAmt;
+            if(saveAmt > 0) { m.bank += saveAmt; mSlipPay(m, '🐖 先どり貯金（貯金にうつした分）', 0, [['生活費の中から ' + mYen(saveAmt) + ' を貯金へ', saveAmt]]); }
             mLog(m, `生活費（${Object.keys(m.home.own).length}件）`, -fixed);
+            // 📄 明細：先月つかったぶんの請求。1件ずつ出す
+            mSlipDed(m, `🏠 生活費（先月ぶん・${Object.keys(m.home.own).length}件）`, fixed,
+                Object.keys(m.home.own).map(c => [((mGood(c) || {}).e || '') + ((mGood(c) || {}).n || c), mGoodMonth(m, c)])
+                    .sort((a, b) => b[1] - a[1]));
             return true;
         }
+        mSlipDed(m, `🏠 生活費（先月ぶん・払いきれず）`, fixed,
+            Object.keys(m.home.own).map(c => [((mGood(c) || {}).e || '') + ((mGood(c) || {}).n || c), mGoodMonth(m, c)]).sort((a, b) => b[1] - a[1]));
         const left = mPayCost(m, fixed, '生活費（払えず立てかえ）');
         m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:'生活費が払えなかった…',
             msg:`毎月の生活費 ${mYen(fixed)} を払えず、${mYen(left)} が借金になったよ。固定費を見なおすか、もっと稼ごう。` });
@@ -7240,10 +7366,11 @@
         if(mPolSeated(m)) {
             m.cash += M_POL_PAY; m.pol.salary = (m.pol.salary || 0) + M_POL_PAY;
             mLog(m, '議員の歳費（お給料）', M_POL_PAY);
+            mSlipPay(m, '🎖️ 議員の歳費', M_POL_PAY);
             const a = M_POL_ACTS.find(x => x.c === m.pol.policy);
             if(a) {
-                if(a.cash) { const y = Math.round(mMonthIncome(m) * 0.08); if(y > 0) { m.cash += y; mLog(m, `政策「${a.n}」の効果`, y); } }
-                if(a.kyufu) { m.cash += a.kyufu; mLog(m, `政策「${a.n}」の給付`, a.kyufu); }
+                if(a.cash) { const y = Math.round(mMonthIncome(m) * 0.08); if(y > 0) { m.cash += y; mLog(m, `政策「${a.n}」の効果`, y); mSlipPay(m, `🏛️ 政策「${a.n}」の効果`, y); } }
+                if(a.kyufu) { m.cash += a.kyufu; mLog(m, `政策「${a.n}」の給付`, a.kyufu); mSlipPay(m, `🏛️ 政策「${a.n}」の給付`, a.kyufu); }
                 if(a.happy) m.home.happy = Math.min(100, m.home.happy + a.happy);
             }
             did = true;
@@ -7752,6 +7879,8 @@
                 m.cash -= pay; l.left -= pay; l.paid++;
                 m.loanPaid++; m.credit = Math.min(1000, m.credit + 6);
                 mLog(m, `返済：${(M_LOANS.find(x=>x.c===l.c)||{}).n || l.c}（${l.paid}/${l.n}回）`, -pay);
+                mSlipDed(m, `💳 ローンの返済（${(M_LOANS.find(x=>x.c===l.c)||{}).n || l.c}）`, pay,
+                    [['のこり ' + (l.n - l.paid) + '回', pay], ['金利 年' + (l.rate * 100).toFixed(1) + '%', 0]]);
                 if(l.left <= 0) {
                     m.loans.splice(i, 1);
                     m.credit = Math.min(1000, m.credit + 40);
@@ -8353,7 +8482,8 @@
         m.biz.lastSales = sales; m.biz.lastProfit = profit;
         m.biz.total = (m.biz.total || 0) + profit;
         m.biz.days += 30;
-        if(profit >= 0) { m.cash += profit; mLog(m, `お店のもうけ（売上${mYen(sales)}−費用${mYen(bz.fix)}）`, profit); }
+        if(profit >= 0) { m.cash += profit; mLog(m, `お店のもうけ（売上${mYen(sales)}−費用${mYen(bz.fix)}）`, profit);
+            mSlipPay(m, `🚀 お店のもうけ`, profit, [['売上', sales], ['費用（家賃・材料・人件費）', -bz.fix]]); }
         else { mPayCost(m, -profit, `お店の赤字（売上${mYen(sales)}−費用${mYen(bz.fix)}）`); }
         m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`${bz.e} お店の今月の成績`,
             msg:`売上 ${mYen(sales)} − 費用 ${mYen(bz.fix)} ＝ ${profit >= 0 ? 'もうけ ' : '赤字 '}${mYen(Math.abs(profit))}。${profit >= 0 ? 'この調子！' : '赤字の月は自分のお金がへるよ。'}` });
