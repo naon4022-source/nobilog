@@ -1501,13 +1501,13 @@
     //   ここに入れるのは「対戦ゲームの点数」だけ。成績・宿題・個人情報は送らない。
     const SYNC_URL = 'https://nobilog-board.naon4022.workers.dev';
     const SYNC_TOKEN = 'nobilog_xyHCdnEL5fDMKD97pa3apnpCRFvT'; // 合言葉（サーバー側と同じ文字列にする。半角の英数字だけで作ること）
-    const VB_HIGHER = { money:true, salary:true, credit:true, jobday:true, flash:true, typing:true, kuku:false, memory:true, anagram:true, missing:true, reaction:false, stopClock:false, vocab:true };
+    const VB_HIGHER = { exam:true, money:true, salary:true, credit:true, jobday:true, flash:true, typing:true, kuku:false, memory:true, anagram:true, missing:true, reaction:false, stopClock:false, vocab:true };
     // ★この4つは「ゲームの自己ベスト」ではなく「いまの数字」。
     //   ずっと最高記録を残してしまうと、総資産が減っても・信用が下がっても・
     //   転職して勤続が0にもどっても、古い数字が出たままになる（実際そうなっていた）
     const VB_LIVE = { money:true, salary:true, credit:true, jobday:true };
-    const VB_NAME = { money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
-    const VB_UNIT = { money:'円', salary:'円', credit:'点', jobday:'日', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
+    const VB_NAME = { exam:'📝 夏休み定期テスト', money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
+    const VB_UNIT = { exam:'点', money:'円', salary:'円', credit:'点', jobday:'日', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
     function vbLoad() { try { return JSON.parse(localStorage.getItem('versusBoard')) || {}; } catch(e) { return {}; } }
     function vbSaveLocal(b) { localStorage.setItem('versusBoard', JSON.stringify(b)); }
     // 記録を出したら保存（自己ベストだけ残す）→ ボードに反映＋オンラインなら送信
@@ -9258,7 +9258,7 @@
             return;
         }
         if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); return; }
-        if(id !== 'ottake') otStopTimer();         // 📩 オンラインテストのタイマー
+        if(id !== 'ottake') { otStopTimer(); clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📩 オンラインテストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
         if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer && !otTimer) tb.style.display = 'none'; }
         if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
@@ -12229,6 +12229,288 @@
     const otWhen = (ms) => { const d = new Date(ms); return `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; };
     const otUserName = (uid) => (APP_USERS.find(u => u.id === uid) || {}).name || uid;
 
+    // ==========================================================================================
+    //  📝 のびログ夏休み定期テスト（クロードがファイルに書きこむ・時間指定つき）
+    //   ★もらったプリント（正負の数・文字式・方程式）を もとに、数字と場面を作りかえた
+    //     オリジナル問題にしてある（丸写しはしない）。
+    //   ・8/29 から「もうすぐ」と灰色で出る
+    //   ・8/30 19:50 から 待機できる（まだ始められない）
+    //   ・8/30 20:00〜20:30 だけ 受けられる
+    //   ★users に書いた人にだけ見える（りらんには出さない）
+    // ==========================================================================================
+    const NOBI_EXAM = {
+        id:'nobi-summer-2026-08-30',
+        title:'のびログ夏休み定期テスト',
+        users:['u1'],                       // ★なおだけ
+        show:  '2026-8-29 00:00',           // 1日前から灰色で表示
+        stand: '2026-8-30 19:50',           // 10分前から待機
+        start: '2026-8-30 20:00',
+        end:   '2026-8-30 20:30',
+        limit: 30,
+        range: '正負の数・文字と式・方程式（中1）',
+        parts:[
+            { n:'大問1　正負の数の計算', pt:3, qs:[
+                { q:'-7 + 12', a:'5' },
+                { q:'8 - (-5)', a:'13' },
+                { q:'-6 × (-7)', a:'42' },
+                { q:'-45 ÷ 9', a:'-5' },
+                { q:'(-3)² × 2', a:'18' },
+                { q:'-4² + 10', a:'-6' },
+                { q:'18 ÷ (-3)² - 4 × (-2)', a:'10' },
+                { q:'(-2)³ + 3 × (-5)', a:'-23' }
+            ]},
+            { n:'大問2　文字と式の計算', pt:3, qs:[
+                { q:'5x + 8x', a:'13x' },
+                { q:'-3a × 4b', a:'-12ab' },
+                { q:'4(2x - 3) + 5x', a:'13x-12' },
+                { q:'3(2a - 5b) - 2(4a - 3b)', a:'-2a-9b' },
+                { q:'18x²y ÷ 6xy', a:'3x' },
+                { q:'1/2(4x - 6) - 1/3(9x - 3)', a:'-x-2' }
+            ]},
+            { n:'大問3　方程式を解く', pt:3, qs:[
+                { q:'4x - 7 = 9', a:'x=4' },
+                { q:'5x + 3 = 2x - 12', a:'x=-5' },
+                { q:'3(x - 2) = x + 4', a:'x=5' },
+                { q:'0.3x - 1.2 = 0.5x + 0.4', a:'x=-8' },
+                { q:'(x+2)/3 = (x-4)/2', a:'x=16' },
+                { q:'x/4 - 1 = 2', a:'x=12' }
+            ]},
+            { n:'大問4　文章題', pt:8, qs:[
+                { q:'ある週の最高気温を、水曜日の22℃を基準にして、高い場合を正の数、低い場合を負の数で表したところ、木曜＋4、金曜−3、土曜＋6、日曜−5 だった。<br>いちばん高かった日と、いちばん低かった日の気温の差は何℃か。', a:'11', unit:'℃',
+                  sol:'いちばん高いのは土曜(+6)、いちばん低いのは日曜(-5)。(+6)-(-5)=11 → 11℃' },
+                { q:'上の4日間（木・金・土・日）の最高気温の平均は何℃か。', a:'22.5', unit:'℃',
+                  sol:'基準からの差の平均は (4-3+6-5)÷4 = 2÷4 = +0.5。22+0.5 = 22.5℃' },
+                { q:'1個x円のパンを4個と、1本y円の牛乳を3本買って、2000円を出した。<br>おつりを x、y を使った式で表しなさい。', a:'2000-4x-3y', unit:'円',
+                  sol:'代金は 4x+3y 円。おつり＝2000−(4x+3y)＝2000−4x−3y（円）' },
+                { q:'子どもにあめを配る。1人に6個ずつ配ると14個あまり、1人に8個ずつ配ると6個たりない。<br>子どもの人数を求めなさい。', a:'10', unit:'人',
+                  sol:'人数をx人とすると あめの数は 6x+14 と 8x-6 で同じ。6x+14=8x-6 → -2x=-20 → x=10 → 10人（あめは74個）' },
+                { q:'いま母は42才、子は12才である。<br>母の年れいが子の年れいの2倍になるのは何年後か。', a:'18', unit:'年後',
+                  sol:'x年後とすると 42+x=2(12+x) → 42+x=24+2x → -x=-18 → x=18 → 18年後（母60才・子30才）' }
+            ]}
+        ]
+    };
+    function exParse(str) { const p = String(str).split(/[\s\-:]+/).map(Number); return new Date(p[0], p[1] - 1, p[2], p[3] || 0, p[4] || 0, 0); }
+    function exFor(uid) { return (NOBI_EXAM.users || []).indexOf(uid || currentUserId) >= 0 ? NOBI_EXAM : null; }
+    function exQs(ex) { const out = []; (ex.parts || []).forEach(p => (p.qs || []).forEach(q => out.push(Object.assign({ pt:p.pt, part:p.n }, q)))); return out; }
+    function exTotal(ex) { return exQs(ex).reduce((a, q) => a + q.pt, 0); }
+    // いまの状態（オンラインの時こくで判定する）
+    function exState(ex) {
+        const now = mNow().getTime();
+        const show = exParse(ex.show).getTime(), stand = exParse(ex.stand).getTime();
+        const st = exParse(ex.start).getTime(), en = exParse(ex.end).getTime();
+        if(now < show) return { k:'hidden' };
+        if(now < stand) return { k:'soon', ms: stand - now };
+        if(now < st) return { k:'stand', ms: st - now };
+        if(now <= en) return { k:'open', ms: en - now };
+        return { k:'closed' };
+    }
+    const exKey = (ex) => ukey('exam:' + ex.id);
+    function exLoad(ex) { try { return JSON.parse(localStorage.getItem(exKey(ex))) || null; } catch(e) { return null; } }
+    function exSave(ex, d) { try { localStorage.setItem(exKey(ex), JSON.stringify(d)); } catch(e) {} }
+    // 答え合わせ（全角・スペース・x= のあるなし・単位のあるなしを ぜんぶ許す）
+    function exNorm(v) {
+        let t = String(v == null ? '' : v).trim();
+        t = t.replace(/[Ａ-Ｚａ-ｚ０-９＋－×÷＝（）．，]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+        t = t.replace(/[−ー―‐]/g, '-').replace(/\s|,/g, '').toLowerCase();
+        t = t.replace(/^x=/, '').replace(/^y=/, '');
+        t = t.replace(/(℃|度|円|人|年後|年|個|本|まい|枚|分|m2|m²|cm2|cm²)$/g, '');
+        t = t.replace(/^\+/, '');
+        return t;
+    }
+    function exEq(user, ans) {
+        const u = exNorm(user), a = exNorm(ans);
+        if(!u) return false;
+        if(u === a) return true;
+        // 数字として同じならOK（22.5 と 22.50 など）
+        const nu = Number(u), na = Number(a);
+        if(isFinite(nu) && isFinite(na) && nu === na) return true;
+        // 文字式は「たし算の順番ちがい」も正解にする（-x-2 と -2-x）
+        const split = (t) => (t.match(/[+-]?[^+-]+/g) || []).map(x => x.replace(/^\+/, '')).sort().join('|');
+        if(split(u) === split(a)) return true;
+        return false;
+    }
+    // ---------- 📝 夏休み定期テストの画面 ----------
+    let exNow = null, exTimer = null, exTick = null;
+    function exCardHtml() {
+        const ex = exFor(); if(!ex) return '';                 // 自分あてじゃなければ 何も出さない
+        const st = exState(ex); if(st.k === 'hidden') return '';
+        const done = exLoad(ex);
+        const total = exTotal(ex), nq = exQs(ex).length;
+        const when = `8月30日（日）20:00 〜 20:30`;
+        const fmt = (ms) => { const s2 = Math.floor(ms / 1000); const h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
+            return (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒'; };
+        // ── すでに受けた ──
+        if(done && done.submitted) {
+            const pct = Math.round(done.score / total * 100);
+            return `<div class="m-card" style="border:3px solid #8e44ad;"><b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
+                <div class="m-ok" style="text-align:center;font-size:16px;">✅ 提出ずみ<br>
+                  <b style="font-size:32px;">${done.score}点</b> / ${total}点（${pct}%）</div>
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult()">📊 答え合わせと解説を見る</button></div>`;
+        }
+        // ── まだ日が来ていない（灰色） ──
+        if(st.k === 'soon') {
+            return `<div class="m-card" style="border:3px dashed #95a5a6;opacity:.65;filter:grayscale(1);">
+                <b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
+                <div class="m-row"><span>日にち</span><b>${when}</b></div>
+                <div class="m-row"><span>はじまるまで</span><b>${fmt(st.ms + 600000)}</b></div>
+                <div class="m-warn" style="background:rgba(127,140,141,.15);">🔒 まだ受けられないよ。<b>8月30日 19:50</b>から待機できるようになる。<br>
+                それまでに 正負の数・文字式・方程式 を見なおしておこう！</div>
+                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>まだ始められません</button></div>`;
+        }
+        // ── 待機中（10分前〜） ──
+        if(st.k === 'stand') {
+            return `<div class="m-card" style="border:3px solid #e67e22;background:linear-gradient(180deg,rgba(230,126,34,.12),transparent);">
+                <b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
+                <div style="text-align:center;margin:10px 0;">
+                  <div style="font-size:13px;color:#e67e22;font-weight:bold;">⏳ 待機ちゅう…　はじまるまで</div>
+                  <div id="ex-count" style="font-size:34px;font-weight:bold;color:#e67e22;">${fmt(st.ms)}</div>
+                </div>
+                <div class="m-ok">🕗 <b>20:00</b>になったら 自動でボタンが出るよ。この画面のまま待っていてね。<br>
+                ・トイレは今のうちに　・えんぴつと紙を用意　・時間は<b>30分</b>だよ</div>
+                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>20:00まで待ってね</button></div>`;
+        }
+        // ── 受けられる ──
+        if(st.k === 'open') {
+            return `<div class="m-card" style="border:3px solid #e74c3c;background:linear-gradient(180deg,rgba(231,76,60,.12),transparent);">
+                <b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
+                <div style="text-align:center;margin:8px 0;">
+                  <div style="font-size:13px;color:#e74c3c;font-weight:bold;">🔴 いま受けられます！　しめ切りまで</div>
+                  <div id="ex-count" style="font-size:30px;font-weight:bold;color:#e74c3c;">${fmt(st.ms)}</div>
+                </div>
+                <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分（時間になると自動で提出）</b></div>
+                <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart()">▶️ テストを始める</button>
+                <div class="m-learn">💡 途中で画面を変えても答えは残るよ。あわてずに、まず計算問題からいこう。</div></div>`;
+        }
+        // ── 終わった（受けなかった） ──
+        return `<div class="m-card" style="opacity:.7;"><b>📝 ${esc(ex.title)}</b>
+            <div class="m-desc">${esc(ex.range)}</div>
+            <div class="m-warn">⌛ このテストの時間（${when}）は おわりました。</div></div>`;
+    }
+    function exStartTick() {
+        clearInterval(exTick);
+        exTick = setInterval(() => {
+            const el = document.getElementById('ex-count');
+            const ex = exFor(); if(!ex) { clearInterval(exTick); return; }
+            const st = exState(ex);
+            if(!el) { clearInterval(exTick); return; }
+            if(st.k !== 'stand' && st.k !== 'open') { clearInterval(exTick); renderOtTake(); return; }
+            const s2 = Math.floor(st.ms / 1000), h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
+            el.innerText = (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒';
+            if(st.k === 'stand' && st.ms <= 1000) renderOtTake();     // 20:00になったら画面を切りかえる
+        }, 500);
+    }
+    function exStart() {
+        const ex = exFor(); if(!ex) return;
+        if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
+        if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
+        if(!confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（20:30で自動ていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
+        exNow = { ex, ans: exQs(ex).map(() => ''), t0: Date.now() };
+        exRender();
+        clearInterval(exTimer);
+        exTimer = setInterval(() => {
+            const el = document.getElementById('ex-timer');
+            const st = exState(ex);
+            const left = Math.min(st.k === 'open' ? st.ms : 0, ex.limit * 60000 - (Date.now() - exNow.t0));
+            if(left <= 0) { clearInterval(exTimer); exSubmit(true); return; }
+            if(el) { const s2 = Math.floor(left / 1000);
+                el.innerText = Math.floor(s2 / 60) + ':' + String(s2 % 60).padStart(2, '0');
+                el.style.color = left < 60000 ? '#e74c3c' : left < 300000 ? '#e67e22' : '#11998e'; }
+        }, 500);
+    }
+    function exRender() {
+        const box = document.getElementById('ottake-body'); if(!box || !exNow) return;
+        const ex = exNow.ex; const qs = exQs(ex);
+        let h = `<div class="m-card" style="border:3px solid #e74c3c;position:sticky;top:0;z-index:20;background:var(--card,#fff);">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <b>📝 ${esc(ex.title)}</b><b id="ex-timer" style="font-size:24px;color:#11998e;">${ex.limit}:00</b></div>
+            <div class="m-desc">${esc(ex.range)}／全${qs.length}問・${exTotal(ex)}点</div></div>`;
+        let n = 0;
+        (ex.parts || []).forEach(p => {
+            h += `<div class="m-card"><b>${esc(p.n)}</b><span style="font-size:12px;color:#888;">（各${p.pt}点）</span>`;
+            (p.qs || []).forEach(() => {});
+            p.qs.forEach(q => {
+                const i = n++;
+                h += `<div class="q-row grid-1"><div class="q-text">(${i + 1}) ${q.q}</div>
+                    <input type="text" class="q-input" id="ex-a-${i}" placeholder="答えを入力" value="${esc(exNow.ans[i] || '')}"
+                      oninput="exNow.ans[${i}]=this.value" autocomplete="off">
+                    ${q.unit ? `<div style="font-size:11px;color:#888;">単位（${esc(q.unit)}）は書かなくてもOK</div>` : ''}</div>`;
+            });
+            h += `</div>`;
+        });
+        h += `<div class="m-card"><button class="btn" style="background:#e74c3c;color:#fff;width:100%;font-size:18px;" onclick="exSubmit()">✅ ていしゅつする</button>
+            <div class="m-desc" style="text-align:center;margin-top:6px;">出したあとは やり直せないよ</div></div>`;
+        box.innerHTML = h;
+        window.scrollTo(0, 0);
+    }
+    function exSubmit(auto) {
+        if(!exNow) return;
+        const ex = exNow.ex, qs = exQs(ex);
+        if(!auto) { const blank = exNow.ans.filter(a => !String(a).trim()).length;
+            if(!confirm(`ていしゅつする？${blank ? `\n\n⚠️ ${blank}問 まだ空っぽだよ` : ''}\n出したあとは やり直せないよ。`)) return; }
+        clearInterval(exTimer); clearInterval(exTick);
+        let score = 0; const marks = [];
+        qs.forEach((q, i) => { const ok2 = exEq(exNow.ans[i], q.a); if(ok2) score += q.pt; marks.push(ok2); });
+        const rec = { submitted:true, at:Date.now(), score, ans:exNow.ans.slice(), marks,
+                      total:exTotal(ex), min:Math.round((Date.now() - exNow.t0) / 60000) };
+        exSave(ex, rec);
+        // 記録も残す（成績・オンライン保存にのる）
+        try { hwRecord && hwRecord('test', { subj:'夏休み定期テスト', unit:ex.range, level:3, pct:Math.round(score / rec.total * 100) }); } catch(e) {}
+        try { vbRecord('exam', score); } catch(e) {}
+        exNow = null;
+        playSfx(score >= rec.total * 0.6 ? 'finish' : 'wrong');
+        if(score >= rec.total * 0.8) celebrate('big'); else if(score >= rec.total * 0.6) celebrate();
+        renderOtTake();
+        setTimeout(() => exResult(), 300);
+    }
+    function exResult() {
+        const ex = exFor(); if(!ex) return;
+        const d = exLoad(ex); if(!d || !d.submitted) { alert('まだ受けていないよ'); return; }
+        const qs = exQs(ex);
+        const pct = Math.round(d.score / d.total * 100);
+        const judge = pct >= 90 ? ['🏆 すばらしい！', '完ぺきに近い。この単元はもう自分のものだね'] :
+                      pct >= 75 ? ['😊 よくできた！', 'しっかり力になっている。まちがえた所だけ見直そう'] :
+                      pct >= 60 ? ['🙂 合格ライン', '基本はOK。あと少しで もっと自信がつくよ'] :
+                      pct >= 40 ? ['💪 のびしろ大きい', 'まちがえた所こそ宝。1問ずつ解説を読もう'] :
+                                  ['🌱 ここからスタート', 'できなかった所が分かったのが今日の成果。1つずつでいい'];
+        let h = `<div style="text-align:left;max-width:640px;margin:0 auto;">
+            <h2 style="text-align:center;">📝 ${esc(ex.title)} けっか</h2>
+            <div class="m-ok" style="text-align:center;font-size:16px;">
+              <b style="font-size:38px;">${d.score}点</b> / ${d.total}点（${pct}%）<br>
+              <b>${judge[0]}</b><br><span style="font-size:13px;">${judge[1]}</span><br>
+              <span style="font-size:12px;color:#888;">かかった時間 ${d.min}分</span></div>`;
+        // 大問ごとの出来
+        let n = 0; const byPart = [];
+        (ex.parts || []).forEach(p => { let got = 0, mx = 0, ok2 = 0;
+            p.qs.forEach(() => { if(d.marks[n]) { got += p.pt; ok2++; } mx += p.pt; n++; });
+            byPart.push([p.n, ok2, p.qs.length, got, mx]); });
+        h += `<div class="m-tw" style="margin-top:10px;"><table class="m-gtab">
+            <thead><tr><th>大問</th><th class="r">正解</th><th class="r">点数</th></tr></thead><tbody>
+            ${byPart.map(b => `<tr><td>${esc(b[0])}</td><td class="r">${b[1]}/${b[2]}問</td><td class="r"><b>${b[3]}/${b[4]}点</b></td></tr>`).join('')}
+            </tbody></table></div>`;
+        h += `<div class="m-card" style="margin-top:10px;"><b>🔍 1問ずつの答え合わせ</b>`;
+        n = 0;
+        (ex.parts || []).forEach(p => {
+            h += `<div style="margin-top:8px;font-weight:bold;font-size:13px;">${esc(p.n)}</div>`;
+            p.qs.forEach(q => {
+                const i = n++, ok2 = d.marks[i];
+                h += `<div class="m-ev" style="margin:4px 0;border-left:4px solid ${ok2 ? '#27ae60' : '#e74c3c'};">
+                    <div style="font-size:13px;">${ok2 ? '⭕' : '❌'} (${i + 1}) ${q.q}</div>
+                    <div style="font-size:12px;">あなたの答え：<b>${esc(d.ans[i] || '（空っぽ）')}</b>　正解：<b style="color:#27ae60;">${esc(q.a)}${q.unit ? esc(q.unit) : ''}</b></div>
+                    ${!ok2 && q.sol ? `<div style="font-size:12px;color:#e67e22;">💡 ${esc(q.sol)}</div>` : ''}</div>`;
+            });
+        });
+        h += `</div>
+            <div class="m-learn">💡 テストは「できない所を見つける道具」。点数より<b>まちがえた1問を次はできるようにする</b>ほうが大事だよ。
+            まちがえた問題は 📖勉強 の同じ単元でもう一度やってみよう。</div>
+            <div style="text-align:center;margin-top:12px;">
+              <button class="btn" style="background:#27ae60;color:#fff;" onclick="window.print()">🖨️ 印刷する</button>
+              <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div></div>`;
+        gOpenModal(h);
+    }
     // ---------- 📤 つくる（なおだけ） ----------
     function renderOtMake() {
         const box = document.getElementById('otmake-body'); if(!box) return;
@@ -12352,7 +12634,10 @@
     // ---------- 📩 うける（2人とも） ----------
     function renderOtTake() {
         const box = document.getElementById('ottake-body'); if(!box) return;
-        box.innerHTML = '<div class="m-card">オンラインからテストをさがしています…</div>';
+        if(exNow) { exRender(); return; }                       // テスト中は そのまま
+        const exH = exCardHtml();                               // 📝 夏休み定期テスト（自分あてのときだけ）
+        box.innerHTML = exH + '<div class="m-card">オンラインからテストをさがしています…</div>';
+        if(exH) exStartTick();
         Promise.all([otLoadTests(), otLoadAnswers().catch(() => [])]).then(() => {
             let h = '';
             if(!otCacheTests.length) h += `<div class="m-card"><b>📭 いまテストは出ていないよ</b>
@@ -12372,8 +12657,10 @@
                 }
                 h += `</div>`;
             });
-            box.innerHTML = h;
-        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`; });
+            box.innerHTML = exH + h;
+            if(exH) exStartTick();
+        }).catch(e => { box.innerHTML = exH + `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`;
+            if(exH) exStartTick(); });
     }
     function otStart(id, again) {
         const t = otCacheTests.find(x => x.id === id); if(!t) return;
