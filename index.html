@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '☁️⏰ <b>「つながっていない」で止まるバグを直しました＋株価がぴったりの時こくで動きます</b>①一瞬 電波がとぎれただけで<b>ずっと「つながっていない」のまま固まる</b>不具合を直しました。いまは<b>その場で3回まですぐやり直し</b>、それでもダメなら<b>時間をあけて何度でも自動でつなぎ直します</b>②通信のやり方を変えて<b>往復を半分</b>にしました（事前の問い合わせが不要な形に）。電波が悪くても通りやすくなります③送れていない分は<b>この端末におぼえておいて、次に開いたとき必ず送ります</b>。オフラインで遊んだ分も消えません④画面に<b>「✅つながっている／⏳送信まち／⚠️つなぎ直しています」</b>が出ます⑤株価が<b>オンラインの時こく</b>で動くようになりました。端末の時計がずれていても、どの端末でも同じ値段です⑥株価は<b>ぴったりの時こく</b>（9:20:00、21:30:00 など）で切りかわります。<b>リロードしなくても勝手に入れかわります</b>';
+    const UPDATE_NOW = '📋💴 <b>仕事に「毎日のタスク」ができました＋初任給がちゃんと出ます</b>①就職すると<b>その日やること</b>が出てきます。<b>会社によって数も中身もぜんぶちがいます</b>（保育園なら「子どもをむかえる」「おひるねを見まもる」、銀行なら「金庫の確認をする」「ローンの相談にのる」など・全97社に専用のタスク）②数は会社のむずかしさで<b>3〜6こ</b>（バイトは2こ）。むずかしい会社ほど やることが多いです③まず<b>出勤する</b>を押してから。1つやるごとに評価が上がって、<b>ぜんぶ終わらせると評価+3のボーナス</b>④<b>体調がわるいと同じ仕事でも評価が上がりにくい</b>——🏠生活の日課がここにつながります⑤💴<b>初任給</b>を出しました。<b>「年収」と「初任給」はぜんぜんちがいます</b>（年収はボーナス込み・ベテランもふくめた平均。1年目にもらえるのは初任給のほう）⑥お給料が<b>初任給からスタートして、昇進で上がっていく</b>ようになりました。本物の日本の初任給（年収400万の会社で約21万・1000万で約28万）に合わせてあります';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -3391,7 +3391,7 @@
         // 🎲 ギャンブル（自分の現金でかける。1日の上限あり）
         gam:{ chips:0, day:null, bet:0, ret:0, plays:0, sims:0, big:0, dayBet:0, dayKey:null },
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
-        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0 },
+        job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0, task:{}, taskDay:null, taskTotal:0, taskPerfect:0 },
         // 💳 借金（計画して借りるローン）
         loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
@@ -3483,6 +3483,9 @@
         if(!Array.isArray(m.job.hist)) m.job.hist = [];
         if(!Array.isArray(m.job.wish)) m.job.wish = [];
         m.job.wish = m.job.wish.filter(c => mJobCo(c)).slice(0, 3);   // 知らない会社は消す・最大3つ
+        // 📋 今日の仕事（こわれていても落ちないように）
+        if(!m.job.task || typeof m.job.task !== 'object') m.job.task = {};
+        ['taskTotal','taskPerfect'].forEach(k => { if(typeof m.job[k] !== 'number' || !isFinite(m.job[k])) m.job[k] = 0; });
         // 🔀 掛け持ちしているバイト（知らない会社・バイト以外・本業とかぶるもの・多すぎる分は消す）
         if(!Array.isArray(m.job.side)) m.job.side = [];
         m.job.side = m.job.side.filter((c, i, ar) => { const j = mJobCo(c); return j && j.arbeit && c !== m.job.co && ar.indexOf(c) === i; }).slice(0, M_SIDE_MAX);
@@ -4736,10 +4739,11 @@
     }
     function mJobCo(code) { return M_JOBS.find(j => j.c === code); }
     function mJobRank(m) { return M_RANKS[Math.max(0, Math.min(M_RANKS.length - 1, (m.job || {}).rank || 0))]; }
-    // 月のお給料（額面）＝ 年収÷12 × 役職 ＋ 評価によるボーナス
+    // 月のお給料（額面）＝ 初任給 × 役職 ＋ 評価によるボーナス
+    //   ★1年目は初任給からスタートして、昇進していくと上がっていく（本物と同じ）
     function mJobGross(m) {
         const co = mJobCo(m.job.co); if(!co) return 0;
-        const base = co.pay / 12 * mJobRank(m).up;
+        const base = mShonin(co) * mJobRank(m).up;
         const evb = base * ((m.job.ev - 60) / 100 * 0.35);     // 評価60を基準に±
         return Math.max(0, Math.round(base + evb));
     }
@@ -5005,9 +5009,180 @@
             <b>時給を上げる（＝勉強していい仕事につく）</b>ほうが、長い目で見ると ずっと強いよ。</div></div>`;
         return h;
     }
+    // ==========================================================================================
+    //  📋 毎日のタスク（ユーザー指定：会社によって数も中身も変わる）
+    //   出勤したあとに、その日の仕事が出てくる。ぜんぶ終わらせると評価が大きく上がる。
+    //   数は会社のむずかしさ（diff）で決まる：バイト2つ／ふつうの会社3〜5つ／超難関6つ
+    // ==========================================================================================
+    const M_TASK_BY_SEC = {
+        'IT':['朝会に出る','バグを1つ直す','新しい画面をつくる','コードを見なおす','サーバーの様子をみる'],
+        'ゲーム':['キャラの動きを調整する','バグを直す','新しいステージを作る','テストプレイする','会議でアイデアを出す'],
+        '銀行':['窓口でお客さんに対応する','書類のチェックをする','入出金の記録を合わせる','ローンの相談にのる','金庫の確認をする'],
+        '証券':['相場をチェックする','お客さんに連絡する','注文を出す','レポートを書く','リスクを計算する'],
+        '保険':['お客さんの相談にのる','契約書をつくる','事故の報告をまとめる','見積もりを出す'],
+        '損害保険':['事故の連絡をうける','現場の写真をたしかめる','保険金の計算をする','お客さんに説明する'],
+        '外資系金融':['英語の資料を読む','数字を分析する','会議で発表する','お客さんに提案する','夜おそくまで残る'],
+        '医りょう':['患者さんを診る','カルテを書く','検査の結果をみる','手術のじゅんびをする','急な呼び出しに対応する'],
+        '製薬':['実験のデータをとる','論文を読む','試験のけっかをまとめる','安全性をたしかめる'],
+        '法りつ':['書類をつくる','判例を調べる','依頼者と話す','裁判のじゅんびをする'],
+        '放送':['取材に行く','原稿を書く','編集する','生放送にそなえる'],
+        '放送・メディア':['取材に行く','原稿を書く','映像を編集する','番組の打ち合わせをする'],
+        '新聞':['取材に行く','記事を書く','裏どりをする','しめ切りに間に合わせる'],
+        '航空':['安全チェックをする','お客さんを案内する','荷物をつむ','天気をたしかめる','時間どおりに飛ばす'],
+        '鉄道':['安全確認をする','時間どおりに運行する','駅のアナウンスをする','点検をする'],
+        '外食':['開店のじゅんびをする','注文をとる','料理をつくる','お店をきれいにする','レジをしめる'],
+        'コンビニ':['品出しをする','レジをうつ','店内をそうじする','発注をする'],
+        '小売':['品出しをする','お客さんに声をかける','レジをうつ','売り場をきれいにする'],
+        'スーパー':['品出しをする','値札をつける','レジをうつ','売れゆきをみる'],
+        'アパレル':['たたみ直しをする','お客さんに似合う服をすすめる','レジをうつ','ディスプレイを変える'],
+        '建設':['安全確認をする','図面をたしかめる','現場をまとめる','しんちょくを報告する'],
+        '自動車':['ラインの様子をみる','部品をチェックする','改善のアイデアを出す','会議に出る'],
+        '介護':['朝の見まわりをする','食事のお手つだいをする','記録をつける','ご家族に連絡する'],
+        '保育':['子どもをむかえる','あそびを考える','おひるねを見まもる','連絡帳を書く'],
+        '警備':['見まわりをする','モニターを確認する','入る人をチェックする','報告書を書く'],
+        '運転':['車の点検をする','お客さんを送る','安全運転をする','日報を書く'],
+        '物流':['荷物を仕分ける','トラックにつむ','配達ルートを決める','伝票を整理する'],
+        'コンサル':['データを分析する','資料をつくる','お客さんに提案する','チームと話し合う','仮説を検証する'],
+        '通信':['回線の様子をみる','お客さんの相談にのる','工事の手配をする','新しいプランを考える'],
+        '研究':['実験をする','データをまとめる','論文を読む','発表のじゅんびをする'],
+        '電機・センサー':['お客さんの工場を回る','機械の使い方を説明する','見積もりを出す','注文をとる','改善の提案をする'],
+        '電機':['製品のテストをする','ラインの様子をみる','不良品の原因を調べる','図面をなおす'],
+        '総合電機':['製品のテストをする','会議に出る','部品を手配する','品質をチェックする'],
+        '電機・半導体':['ウエハーの検査をする','クリーンルームに入る','データをとる','装置の調整をする'],
+        '電機・エンタメ':['新しい機能を考える','試作品をさわってみる','デザインを話し合う','発売のじゅんびをする'],
+        '総合商社':['海外とメールをやりとりする','ねだんの交渉をする','船の手配をする','市場の動きを調べる','出張のじゅんびをする'],
+        '広告':['アイデアを出す','絵コンテを書く','クライアントに説明する','撮影に立ち会う'],
+        'ネット通販':['注文を確認する','倉庫に指示を出す','商品ページを直す','レビューをチェックする'],
+        'ネットモール':['出店するお店をサポートする','セールを企画する','売れゆきを分析する','ページを改善する'],
+        'フリマアプリ':['あやしい出品を止める','問い合わせに答える','アプリを使いやすくする','売れゆきをみる'],
+        'メッセージアプリ':['スタンプを企画する','不具合を直す','使われ方を分析する','新機能を考える'],
+        'ネット広告':['広告の効きめを見る','数字を分析する','クライアントに報告する','入札を調整する'],
+        'ネット総合':['サービスの数字をみる','新しい企画を出す','会議で発表する','ユーザーの声を読む'],
+        '動画':['ネタを考える','撮影する','編集する','サムネイルを作る','コメントに返す'],
+        'eスポーツ':['練習する','対戦を分析する','配信する','チームで作戦会議'],
+        '映画':['台本を読む','撮影のじゅんびをする','編集をチェックする','宣伝を考える'],
+        'おもちゃ':['新しいおもちゃを考える','安全テストをする','子どもの反応をみる','工場と打ち合わせる'],
+        '人材・情報':['求人の原稿を書く','会社に話を聞く','応募者と面談する','紹介する人を探す'],
+        '不動産':['お部屋を案内する','契約書をつくる','物件の写真をとる','オーナーに報告する'],
+        '住宅':['お客さんの希望を聞く','間取りを考える','現場を見に行く','引きわたしの準備をする'],
+        '家具・小売':['売り場をつくる','組み立ての説明をする','在庫をたしかめる','レジをうつ'],
+        'ホテル':['お客さんをむかえる','お部屋をととのえる','予約を管理する','朝食の準備をする'],
+        '旅行':['ツアーを企画する','ホテルを予約する','お客さんに説明する','トラブルに対応する'],
+        'レジャー':['お客さんを案内する','アトラクションの安全確認をする','パレードの準備をする','落とし物をさがす'],
+        '飲料':['味のテストをする','ラインをみる','新商品を考える','お店に置いてもらう'],
+        '食品':['品質チェックをする','工場をみまわる','新しい味を考える','衛生管理をする'],
+        '日用品':['商品の改良を考える','売り場をみに行く','広告を打ち合わせる','工場と話す'],
+        '化しょう品':['お客さんに似合う色をすすめる','新商品の説明をする','売り場をきれいにする','肌の相談にのる'],
+        '家電量はん':['商品を説明する','在庫をたしかめる','値札をつける','配送の手配をする'],
+        'ドラッグストア':['薬の相談にのる','品出しをする','レジをうつ','期限をチェックする'],
+        'ディスカウント':['山づみの売り場をつくる','品出しをする','値札をつける','レジをうつ'],
+        '100円ショップ':['品出しをする','売り場をつくる','レジをうつ','発注をする'],
+        '中古販売':['買いとりの査定をする','商品をきれいにする','値段をつける','棚にならべる'],
+        '自動車・二輪':['試作車をテストする','エンジンを調整する','データをとる','改善案を出す'],
+        '自動車部品':['部品の精度をはかる','ラインをみる','不良の原因を調べる','取引先と話す'],
+        '化学':['実験をする','安全をたしかめる','データをまとめる','工場に指示を出す'],
+        '郵便':['郵便を仕分ける','配達に回る','窓口で対応する','日報を書く'],
+        '郵便・物流':['荷物を仕分ける','ルートを組む','積みこみをする','伝票を整理する'],
+        '宅配':['荷物を積む','時間どおりに届ける','不在の連絡をする','伝票をまとめる'],
+        '運送':['車の点検をする','荷物を積む','安全運転で運ぶ','日報を書く'],
+        '清そう':['ゆかをみがく','ゴミをあつめる','トイレをきれいにする','点検表をつける'],
+        '農業':['水やりをする','雑草をとる','収かくする','出荷のじゅんびをする'],
+        '美容':['カットをする','シャンプーをする','お客さんと話す','お店をそうじする'],
+        'スポーツ':['トレーニングを教える','マシンを点検する','食事のアドバイスをする','会員さんと話す']
+    };
+    const M_TASK_DEFAULT = ['朝のあいさつをする','今日やることを整理する','お客さんに対応する','報告書を書く','片づけをする','会議に出る'];
+    function mTaskCount(co) {
+        if(!co) return 0;
+        if(co.arbeit) return 2;
+        return Math.max(3, Math.min(6, 2 + (co.diff || 2)));
+    }
+    // その会社のタスク（会社ごとに毎回おなじ内容・日によって少し入れかわる）
+    function mJobTasks(m) {
+        const co = mJobCo(m.job.co); if(!co) return [];
+        // ★その会社ならではの仕事を先に使う。足りないときだけ、どこでもある仕事でうめる
+        let own = co.arbeit ? [co.work || 'お店の仕事をする', 'お店をきれいにする', 'レジをうつ', '品出しをする']
+                            : (M_TASK_BY_SEC[co.sec] || []).slice();
+        if(co.work && own.indexOf(co.work) < 0) own.unshift(co.work);
+        const n = mTaskCount(co);
+        // その日のぶんを えらぶ（日付と会社から決まるので、その日は何回見ても同じ）
+        const r = mRng(mHash('nobilog-task|' + co.c + '|' + calToday()));
+        const shuffle = (arr) => { const a2 = arr.slice();
+            for(let i = a2.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); const t = a2[i]; a2[i] = a2[j]; a2[j] = t; }
+            return a2; };
+        const out = shuffle(own).slice(0, n);
+        if(out.length < n) shuffle(M_TASK_DEFAULT).forEach(t => { if(out.length < n && out.indexOf(t) < 0) out.push(t); });
+        return out;
+    }
+    function mTaskReset(m) {
+        const t = calToday();
+        if(m.job.taskDay !== t) { m.job.task = {}; m.job.taskDay = t; return true; }
+        return false;
+    }
+    function mTaskDone(m) { return Object.keys(m.job.task || {}).length; }
+    function mTaskDo(i) {
+        const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
+        mTaskReset(m);
+        const list = mJobTasks(m);
+        if(i < 0 || i >= list.length) return;
+        if((m.job.task || {})[i]) { alert('それは今日もうやったよ'); return; }
+        if(m.job.lastWork !== calToday()) { alert('まず「出勤する」を押してからだよ！'); return; }
+        if(!m.job.task) m.job.task = {};
+        m.job.task[i] = 1;
+        // 体調がいいほど、いい仕事ができる（生活タブとつながっている）
+        const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 2;
+        const gain = cond >= 70 ? 1.6 : cond >= 45 ? 1.1 : cond >= 25 ? 0.6 : 0.2;
+        m.job.ev = Math.max(0, Math.min(100, m.job.ev + gain));
+        m.home.happy = Math.max(0, m.home.happy - 0.6);
+        m.job.taskTotal = (m.job.taskTotal || 0) + 1;
+        let msg = `${list[i]} をやった！\n会社からの評価 +${gain.toFixed(1)}`;
+        const all = mTaskDone(m) >= list.length;
+        if(all) {
+            m.job.ev = Math.max(0, Math.min(100, m.job.ev + 3));
+            m.job.taskPerfect = (m.job.taskPerfect || 0) + 1;
+            m.home.happy = Math.min(100, m.home.happy + 5);
+            msg += `\n\n🎉 今日の仕事、ぜんぶ終わった！\n評価 +3 のボーナス（合計${m.job.taskPerfect}回目）\nおつかれさま！`;
+            celebrate(); playSfx('finish');
+        } else playSfx('correct');
+        mSave(m); mAwardBadges(); renderMoney();
+        alert(msg);
+    }
+    // 💴 初任給（1年目・役職なしのときの月給・額面）
+    //   ★会社の「年収」はボーナスも入っているし、ベテランも合わせた平均なので、
+    //     年収÷12 では本物の初任給とかけはなれてしまう（年収680万の会社で月56万になってしまう）。
+    //     本物の日本の初任給（年収400万の会社で約21万・1000万の会社で約28万）に合わせてある。
+    function mShonin(co) {
+        if(!co) return 0;
+        if(co.arbeit) return Math.round(co.pay / 12);          // バイトは 時給×はたらく時間 そのまま
+        return Math.round(Math.max(200000, Math.min(500000, 200000 + (co.pay - 3000000) * 0.012)) / 1000) * 1000;
+    }
+    function mTaskHtml(m) {
+        const co = mJobCo(m.job.co); if(!co) return '';
+        mTaskReset(m);
+        const list = mJobTasks(m);
+        const done = mTaskDone(m), all = done >= list.length;
+        const worked = m.job.lastWork === calToday();
+        let h = `<div class="m-card" style="border:3px solid ${all ? '#f1c40f' : '#11998e'};">
+            <b>📋 今日の仕事（${done}/${list.length}）</b> ${all ? '<span class="m-pill" style="background:rgba(241,196,15,.25);color:#b7950b;">ぜんぶ終わった！</span>' : ''}
+            <div style="font-size:12px;color:#888;">${esc(co.n)}（${esc(co.sec)}）でやることだよ。<b>会社によって数も中身もちがう</b></div>
+            <div class="m-meter" style="height:14px;margin-top:6px;"><div style="width:${list.length ? done / list.length * 100 : 0}%;background:${all ? '#f1c40f' : '#11998e'};"></div></div>`;
+        if(!worked) h += `<div class="m-warn">まず<b>出勤する</b>を押そう。出勤しないと仕事は始められないよ。</div>`;
+        list.forEach((t, i) => {
+            const ok2 = !!(m.job.task || {})[i];
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${ok2 ? '✅' : '⬜'} ${esc(t)}</div></div>
+                <button class="m-btn ${ok2 ? 'm-info' : worked ? 'm-buy' : 'm-info'}" onclick="mTaskDo(${i})" ${ok2 || !worked ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
+        });
+        h += `<div class="m-row"><span>これまでにやった仕事</span><b>${m.job.taskTotal || 0}件</b></div>
+            <div class="m-row"><span>ぜんぶ終わらせた日</span><b>${m.job.taskPerfect || 0}日</b></div>
+            <div class="m-learn">💡 仕事は「行くだけ」じゃなくて<b>ちゃんとやりきる</b>と評価が上がる。
+            評価が上がるとお給料も上がって、昇進も早くなるよ。<br>
+            体調がわるいと同じ仕事でも評価が上がりにくい——だから🏠生活の日課が大事なんだ。</div></div>`;
+        return h;
+    }
     function mJobHtml(m) {
         const j = m.job, co = mJobCo(j.co);
         let h = '';
+        h += mTaskHtml(m);      // 📋 今日の仕事（会社によって数も中身もちがう）
         h += mRuleHtml(m);      // 📋 就業規則（副業していいかは会社が決める）
         h += mSideHtml(m);      // 🔀 バイトの掛け持ち（本業のあるなしに関係なく使える）
         if(co) {
@@ -5021,7 +5196,8 @@
                 <div class="m-desc">${esc(co.sec)}／${esc(co.model)}</div>
                 <div class="m-row"><span>役職</span><b>${esc(rank.n)}</b></div>
                 <div class="m-row"><span>勤続</span><b>${j.days}日</b></div>
-                <div class="m-row"><span>お給料（額面・月）</span><b>${mYen(g)}</b></div>
+                <div class="m-row"><span>💴 初任給（1年目・額面）</span><b>${mYen(mShonin(co))}</b></div>
+                <div class="m-row"><span>お給料（額面・月）</span><b>${mYen(g)}${g > mShonin(co) ? ` <span style="color:#e74c3c;font-size:12px;">初任給より +${mYen(g - mShonin(co))}</span>` : ''}</b></div>
                 <div class="m-row"><span>手取り（実際にもらえる）</span><b class="m-up">${mYen(slip.net)}</b></div>
                 <div class="m-row"><span>これまでの給料の合計</span><b>${mYen(j.totalPay)}</b></div>
                 <div style="margin-top:8px;"><div style="display:flex;justify-content:space-between;font-size:12px;"><span>会社からの評価</span><b>${Math.round(j.ev)} / 100</b></div>
@@ -5094,7 +5270,9 @@
                         ${cool ? `<div class="m-desc" style="color:#e74c3c;">😢 前回ダメだったので、あと ${7 - (calDayNum(calToday()) - calDayNum(ap.day))}日 は受けられない</div>` : ''}
                       </div>
                       <div class="m-price"><div style="font-size:12px;color:#888;">年収</div><div><b>${(co2.pay/10000).toLocaleString('ja-JP')}万</b></div>
-                        <div style="font-size:11px;color:#888;">手取り月 ${mYen(mJobNet(co2.pay/12).net)}</div>
+                        <div style="font-size:11px;color:#888;">初任給 ${mYen(mShonin(co2))}</div>
+                        <div style="font-size:11px;color:#888;">手取り ${mYen(mJobNet(mShonin(co2)).net)}</div>
+                        <div style="font-size:11px;color:#888;">📋 毎日の仕事 ${mTaskCount(co2)}こ</div>
                         <button class="m-btn ${okPaper && !cool ? 'm-buy' : 'm-info'}" style="margin-top:4px;" onclick="mJobApply('${co2.c}')" ${okPaper && !cool ? '' : 'disabled'}>受ける</button>
                       </div></div>`;
                 });
@@ -5370,8 +5548,12 @@
             <h2 style="text-align:center;">🎉 内定！</h2>
             <div class="m-ok" style="font-size:15px;line-height:1.9;text-align:center;">
             <b style="font-size:20px;">${co.e} ${esc(co.n)}</b><br>から内定をもらったよ！</div>
-            <div class="m-row"><span>年収（額面）</span><b>${mYen(co.pay)}</b></div>
-            <div class="m-row"><span>月のお給料（額面）</span><b>${mYen(co.pay/12)}</b></div>
+            <div class="m-row"><span>この会社の年収（みんなの平均）</span><b>${mYen(co.pay)}</b></div>
+            <div class="m-row"><span>💴 初任給（1年目の月給・額面）</span><b>${mYen(mShonin(co))}</b></div>
+            <div class="m-row"><span>📋 毎日の仕事</span><b>${mTaskCount(co)}こ</b></div>
+            <div class="m-learn" style="font-size:12px;">💡 <b>「年収」と「初任給」はぜんぜんちがう</b>。年収はボーナスも入っているし、
+            ベテランの人もふくめた平均だから高く見える。1年目にもらえるのは<b>初任給</b>のほうだよ。
+            きちんと働いて昇進すると、そこから上がっていく。</div>
             <div class="m-row"><span>手取り（実際にもらえる）</span><b class="m-up">${mYen(slip.net)}</b></div>
             <div class="m-row"><span>毎月引かれるお金</span><b class="m-down">${mYen(slip.gross - slip.net)}</b></div>
             <div class="m-learn">💡 お給料は<b>毎月5日</b>に入るよ。毎日「出勤する」を押して評価を上げると、昇進してお給料が上がる。
