@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '📋💴 <b>仕事に「毎日のタスク」ができました＋初任給が出ます</b>①就職すると<b>その日やること</b>が出てきます。<b>会社によって数も中身もぜんぶちがいます</b>（保育園なら「子どもをむかえる」「おひるねを見まもる」、銀行なら「金庫の確認をする」「ローンの相談にのる」など・全97社に専用のタスク）②数は会社のむずかしさで<b>3〜6こ</b>（バイトは2こ）。むずかしい会社ほど やることが多いです③まず<b>出勤する</b>を押してから。1つやるごとに評価が上がって、<b>ぜんぶ終わらせると評価+3のボーナス</b>④<b>体調がわるいと同じ仕事でも評価が上がりにくい</b>——🏠生活の日課がここにつながります⑤💴<b>初任給</b>が出るようになりました。<b>月23万〜54万</b>（保育園24.3万／マクドナルズ24.7万／銀行31.8万／ゲーム35.2万／コンサル50.5万）⑥<b>「年収」と「初任給」はぜんぜんちがいます</b>。年収はボーナス込みで、ベテランもふくめた平均。1年目にもらえるのは初任給のほう⑦お給料は<b>初任給からスタートして、昇進で上がっていきます</b>（新入社員29.8万→課長50.6万→役員83.4万）';
+    const UPDATE_NOW = '⚔️ <b>対戦ボードの数字がおかしかったのを直しました</b>①<b>そう資産・お給料・信用スコア・勤続日数</b>は「ゲームの自己ベスト」あつかいになっていて、<b>いちばん高かったときの数字がずっと残りっぱなし</b>でした（総資産が減っても、信用が下がっても、転職して勤続が0にもどっても 古い数字のまま）②この4つを<b>「いまの数字」</b>に変えました。上がっても下がっても、そのときの本当の数字が出ます③仕事をやめたら お給料と勤続日数は<b>ちゃんと0</b>になります④お金は<b>¥つきの読みやすい表示</b>にしました⑤ミニゲームの点数は今までどおり<b>自己ベスト</b>が残ります（そこは変えていません）⑥📋<b>毎日のタスク</b>と💴<b>初任給</b>も入りました。会社によってやることも初任給もちがいます（初任給は月23万〜54万）';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -1502,6 +1502,10 @@
     const SYNC_URL = 'https://nobilog-board.naon4022.workers.dev';
     const SYNC_TOKEN = 'nobilog_xyHCdnEL5fDMKD97pa3apnpCRFvT'; // 合言葉（サーバー側と同じ文字列にする。半角の英数字だけで作ること）
     const VB_HIGHER = { money:true, salary:true, credit:true, jobday:true, flash:true, typing:true, kuku:false, memory:true, anagram:true, missing:true, reaction:false, stopClock:false, vocab:true };
+    // ★この4つは「ゲームの自己ベスト」ではなく「いまの数字」。
+    //   ずっと最高記録を残してしまうと、総資産が減っても・信用が下がっても・
+    //   転職して勤続が0にもどっても、古い数字が出たままになる（実際そうなっていた）
+    const VB_LIVE = { money:true, salary:true, credit:true, jobday:true };
     const VB_NAME = { money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
     const VB_UNIT = { money:'円', salary:'円', credit:'点', jobday:'日', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
     function vbLoad() { try { return JSON.parse(localStorage.getItem('versusBoard')) || {}; } catch(e) { return {}; } }
@@ -1510,18 +1514,31 @@
     function vbRecord(key, score) {
         if(!currentUserId || score == null || isNaN(score)) return false;
         const b = vbLoad(); b[key] = b[key] || {};
-        const higher = VB_HIGHER[key], prev = b[key][currentUserId];
+        const prev = b[key][currentUserId];
+        if(VB_LIVE[key]) {                        // ★いまの数字：上がっても下がっても そのまま入れかえる
+            if(prev && prev.score === score) return false;
+            b[key][currentUserId] = { score, at: Date.now(), live:true };
+            vbSaveLocal(b); vbPushLater();
+            return false;                         // 「記録こうしん！」の演出は出さない（記録ではないので）
+        }
+        const higher = VB_HIGHER[key];
         const better = !prev || (higher ? score > prev.score : score < prev.score);
         if(better) { b[key][currentUserId] = { score, at: Date.now() }; vbSaveLocal(b); vbPush(); }
         return better;
     }
+    // まとめて送る（いまの数字は何個も同時に変わるので、1回にまとめる）
+    let vbPushTimer = null;
+    function vbPushLater() { clearTimeout(vbPushTimer); vbPushTimer = setTimeout(() => vbPush(), 1500); }
     function vbBetter(key, a, b) { if(a == null) return b == null ? -1 : 1; if(b == null) return 0; if(a === b) return -1; return VB_HIGHER[key] ? (a > b ? 0 : 1) : (a < b ? 0 : 1); }
     // 2つのボードを合体（それぞれのゲームで良い方の記録を残す）
     function vbMerge(a, b) {
         const out = JSON.parse(JSON.stringify(a || {}));
         Object.keys(b || {}).forEach(k => { out[k] = out[k] || {};
             Object.keys(b[k]).forEach(uid => { const mine = out[k][uid], theirs = b[k][uid];
-                if(!mine || (VB_HIGHER[k] ? theirs.score > mine.score : theirs.score < mine.score)) out[k][uid] = theirs; }); });
+                // いまの数字は「あたらしい方」／ゲームの記録は「良い方」を採用する
+                const win = VB_LIVE[k] ? ((theirs.at || 0) > (mine ? (mine.at || 0) : -1))
+                                       : (VB_HIGHER[k] ? theirs.score > mine.score : theirs.score < mine.score);
+                if(!mine || win) out[k][uid] = theirs; }); });
         return out;
     }
     const vbIsFirebase = (u) => /firebaseio\.com|firebasedatabase\.app/.test(u);
@@ -1555,8 +1572,9 @@
             if(mine == null && theirs == null) return; // まだ誰もやってないゲームは出さない
             const w = vbBetter(k, mine, theirs);
             if(w === 0) winMe++; else if(w === 1) winRival++;
-            const fmt = v => v == null ? '<span style="color:#bbb;">まだ</span>' : `${v}${VB_UNIT[k]}`;
-            rows += `<tr><td>${VB_NAME[k]}</td><td style="text-align:center;color:#e67e22;font-weight:bold;">${fmt(mine)}</td>
+            const fmt = v => v == null ? '<span style="color:#bbb;">まだ</span>'
+                : (VB_LIVE[k] && (k === 'money' || k === 'salary')) ? mYen(v) : `${v.toLocaleString('ja-JP')}${VB_UNIT[k]}`;
+            rows += `<tr><td>${VB_NAME[k]}${VB_LIVE[k] ? '<br><span style="font-size:10px;color:#888;">いまの数字</span>' : ''}</td><td style="text-align:center;color:#e67e22;font-weight:bold;">${fmt(mine)}</td>
                 <td style="text-align:center;color:#888;font-weight:bold;">${fmt(theirs)}</td>
                 <td style="text-align:center;">${w === 0 ? '🏆' : w === 1 ? '　' : '🤝'}</td></tr>`;
         });
@@ -3943,7 +3961,9 @@
             m = m || mLoad();
             vbRecord('money', Math.round(mTotal(m)));
             const co = mJobCo((m.job || {}).co);
-            if(co) { vbRecord('salary', mJobNet(mJobGross(m)).net); vbRecord('jobday', m.job.days || 0); }
+            // ★仕事をしていないときは 0 を送る。送らないと「やめたのに前の給料が出たまま」になる
+            vbRecord('salary', (co || mSideGross(m) > 0) ? mJobNet(mAllGross(m)).net : 0);
+            vbRecord('jobday', co ? (m.job.days || 0) : 0);
             vbRecord('credit', Math.round(m.credit || 0));
         } catch(e) {}
     }
@@ -3962,7 +3982,8 @@
         // いちばん最初だけ、オンラインのニュースを取ってから相場を動かす（記事と値動きをそろえるため）
         if(!mNewsReady) { mNewsSync(true).then(() => renderMoney()); }
         const moved = mNewsReady ? mTick(m) : false;
-        if(moved) { mSave(m); mAwardBadges(); mVbSend(m); } // 資産・給料・信用スコアをオンライン対戦ボードへ
+        if(moved) { mSave(m); mAwardBadges(); }
+        mVbSend(m);   // ★資産・給料・信用・勤続は「いまの数字」なので毎回そろえる（変わったときだけ送られる）
         const total = mTotal(m), hv = mHoldValue(m);
         const prev = m.histTotal.length > 1 ? m.histTotal[m.histTotal.length - 2].v : M_START;
         const diff = total - prev;
