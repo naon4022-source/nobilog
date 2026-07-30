@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🧪 <b>理科に「物質」の単元ができました＋オンラインのしらべ方</b>①📖勉強 → 理科 に <b>「物質」</b>の単元を作りました。<b>14,000しゅるい以上</b>の問題が出ます（有機物と無機物／金属の性質／気体の性質と集め方／密度の計算／状態変化／質量パーセント濃度／ろ過・蒸留・再結晶）②★<b>テストに出る問題は、この単元では1問も出ません</b>。同じ考え方をちがう数字・ちがう物質で練習できます③🔍<b>せつぞくテスト</b>を付けました（🏛️政治と経済 → ホーム → 🛟データのまもり）。押すと<b>読みこみ・書きこみ・時こく合わせ</b>をその場でためして、つながっているかを はっきり出します④まだ1回も通信していないときに「つながっている」と出ないよう直しました（正直な表示にしました）⑤つながらないときは<b>この端末に必ず保存されている</b>ことと、<b>自動で何度でもつなぎ直す</b>ことを画面で伝えます';
+    const UPDATE_NOW = '🎫 <b>株主優待が「券」でもらえるようになりました（配当物）</b>①株を<b>100株</b>もっていると、毎月5日に会社から<b>券</b>がとどきます。お金じゃなくてモノやサービスです②🚃電車の1日フリーきっぷ（移動費がタダ）／🏦ATM手数料 無料けん／📱ケータイ代 無料けん／🍱お食事けん（食費半分）／👕お買いものけん（3割引）／💡電気・ガス わりびきけん（半分）／💱売買手数料 無料けん／🎮ゲーム・映画のしょうたいけん／💊けんこうドック／📗図書カード　の<b>10しゅるい</b>③★<b>券には期限があります</b>。使わないと消えてしまうので、とどいたら早めに使おう。期限が近いと赤で警告が出ます④券を使うと<b>ほんとうに固定費が安くなります</b>。毎月5日の給料明細で、安くなっているのが見られるよ⑤📈投資タブの「🎫もっている優待券」から使えます。どの会社が何をくれるかも一覧で見られます⑥💡大事なこと：<b>優待めあてで株を買うと失敗しやすい</b>。3,000円の優待のために株価が5,000円下がったら損だよね。優待は「おまけ」、そして<b>使わないと0円</b>——これが本物の株主優待の学びです';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -3416,7 +3416,7 @@
         // 💼 仕事（co=つとめ先 / ev=評価 / warn=警告 / applied=応募した記録）
         job:{ co:null, rank:0, ev:60, days:0, lastWork:null, worked:0, absent:0, warn:0, totalPay:0, hist:[], applied:{}, slip:null, bonus:0, wish:[], side:[], fukuOk:false, fukuDay:0, task:{}, taskDay:null, taskTotal:0, taskPerfect:0, w:{}, wDay:null, wTotal:0, wMin:0, otMin:0 },
         // 💳 借金（計画して借りるローン）
-        loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false,
+        loans:[], credit:600, loanPaid:0, loanLate:0, teiki:[], feeAtm:0, furusato:0, divReinvest:false, tickets:[],
         biz:{ c:null, days:0, total:0, lastSales:0, lastProfit:0 }, voted:null, voteEff:null,
         // 🏠 生活（own=持っているもの / health=健康 / happy=きぶん / lv・xp・sk＝やりこみの隠しパラメータ）
         home:{ own:{}, shop:{}, health:80, happy:70, lastMeal:null, mealDays:0, missed:0, lastFix:null,
@@ -3493,7 +3493,7 @@
         if(!m || typeof m.cash !== 'number') { m = M_EMPTY(); }
         m = Object.assign(M_EMPTY(), m);
         // 配列であるべき所がこわれていても落ちないように直す（保険）
-        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki','titles','slipHist'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
+        ['ledger','histTotal','news','quizDone','badges','divHist','grants','insHist','insNew','loans','teiki','titles','slipHist','tickets'].forEach(k => { if(!Array.isArray(m[k])) m[k] = []; });
         ['hold','nisa','ins'].forEach(k => { if(!m[k] || typeof m[k] !== 'object') m[k] = {}; });
         // ★アップデートで新しい項目がふえても、今までのデータは絶対に消さずに「足りない所だけ」うめる
         const EMP = M_EMPTY();
@@ -3535,6 +3535,8 @@
         if(m.evt.pend && (typeof m.evt.pend !== 'object' || !M_EVENTS.some(e => e.id === m.evt.pend.id))) m.evt.pend = null;
         m.titles = m.titles.filter(t => M_TITLES.some(x => x.id === t));
         m.loans = m.loans.filter(l => l && typeof l.left === 'number' && isFinite(l.left) && l.left > 0);
+        // 🎫 優待券（知らない券・こわれた券は消す）
+        m.tickets = m.tickets.filter(t => t && typeof t === 'object' && M_TICKET[t.c] && typeof t.until === 'number' && isFinite(t.until));
         ['insPaid','insGot','insCount','insSim','insLapse','debt','credit','loanPaid','loanLate'].forEach(k => { if(typeof m[k] !== 'number' || !isFinite(m[k])) m[k] = (k === 'credit' ? 600 : 0); });
         Object.keys(m.ins).forEach(c => { const p = mInsProd(c); if(!p || !p.plans[m.ins[c] - 1]) delete m.ins[c]; });   // 知らない保険は消す
         // 株価は「今の時間帯」から計算する（保存はしない＝どの端末でも同じ・データがずれない）
@@ -3688,8 +3690,11 @@
         m._slip = { ym: y + '-' + mo, y, mo, pay: [], ded: [], at: Date.now(), day: m.day || 0 };
     }
     function mSlipPay(m, name, yen, detail) {      // もらったお金
-        if(!m._slip || !yen) return;
-        m._slip.pay.push({ n: name, yen: Math.round(yen), d: detail || null });
+        // ★0円のものも載せる（株主優待の「券」や先どり貯金のように、お金ではないけれど
+        //   その日にあったことは 明細に出したいため）
+        if(!m._slip) return;
+        if(!yen && !(detail && detail.length)) return;
+        m._slip.pay.push({ n: name, yen: Math.round(yen || 0), d: detail || null });
     }
     function mSlipDed(m, name, yen, detail) {      // 引かれたお金
         if(!m._slip || !yen) return;
@@ -3801,6 +3806,8 @@
             if(m.divReinvest) { const re = netTax + nisaAmt; if(re > 0 && m.cash >= re) mBuyInner(m, m.autoCode, re, true, m.autoAcct); }
             did = true;
         }
+        // 🎫 株主優待の「券」（配当物）が毎月5日にとどく
+        if(mTicketMonth(m)) did = true;
         // 🎁 株主優待（100株以上持っている会社から毎月）
         const yut = mYutaiList(m);
         if(yut.length) {
@@ -3964,7 +3971,7 @@
             const shares = Math.floor(amount);
             if(shares <= 0) return '1株から買えるよ';
             const gross = shares * price;                       // 1株の値段 × 株数
-            fee = Math.round(gross * 0.005);
+            fee = mTicketOn(m, 'fee') ? 0 : Math.round(gross * 0.005);   // 🎫 売買手数料 無料けん
             spend = gross + fee;                                // 手数料は上のせ
             if(m.cash < spend) return `お金が足りないよ（${shares}株で${mYen(spend)}ひつよう）`;
             qty = shares; cost = gross;
@@ -3973,7 +3980,7 @@
             const yen = Math.floor(amount);
             if(yen <= 0) return '金額を入れてね';
             if(m.cash < yen) return 'お金が足りないよ';
-            fee = a.t === '投信' ? 0 : Math.round(yen * 0.005);
+            fee = (a.t === '投信' || mTicketOn(m, 'fee')) ? 0 : Math.round(yen * 0.005);
             const useable = yen - fee;
             qty = useable / price;
             if(qty <= 0) return '金額が小さすぎるよ';
@@ -4010,7 +4017,7 @@
         const price = mPrice(m, code);
         const gross = sellQty * price;
         const cost = h.cost * (sellQty / h.qty);
-        const fee = a.t === '投信' ? 0 : Math.round(gross * 0.005);
+        const fee = (a.t === '投信' || mTicketOn(m, 'fee')) ? 0 : Math.round(gross * 0.005);   // 🎫 売買手数料 無料けん
         const profit = gross - cost - fee;
         // NISAはもうけに税金がかからない（ここが最大のメリット）
         const tax = (acct === 'hold' && profit > 0) ? Math.round(profit * M_TAX) : 0;
@@ -4323,6 +4330,150 @@
         Object.keys(M_YUTAI).forEach(c => { const q = mQtyOf(m, c); if(q >= 100) out.push({ c, n:M_YUTAI[c][0], yen:M_YUTAI[c][1], a:M_ASSET(c) }); });
         return out;
     }
+    // ==========================================================================================
+    //  🎫 配当物（株主優待の「券」）＝ お金ではなく モノやサービスがもらえる（ユーザー指定）
+    //   100株以上もっている会社から、毎月5日に「券」が配られる。
+    //   券は使うと はたらきがあって、<期限>がある。使わないと期限切れでなくなる。
+    //   これが日本独特の「株主優待」の本当のすがた。
+    // ==========================================================================================
+    //  kind = 券のはたらき
+    //   ride   : 移動の固定費が期限内タダ（電車・バスなど）
+    //   phone  : スマホ・通信の固定費が期限内タダ
+    //   atm    : ATMの手数料が期限内タダ
+    //   fee    : 株の売買手数料が期限内タダ
+    //   meal   : 食事券（食費が期限内やすくなる）
+    //   power  : 電気・ガスの固定費が期限内やすくなる
+    //   goods  : ショップの買いものが期限内やすくなる
+    //   fun    : つかうと きぶんが上がる（映画・レジャーなど）
+    //   health : つかうと 健康が上がる（ジム・健康食品など）
+    //   study  : つかうと こころスキルが上がる（本・図書カード）
+    const M_TICKET = {
+        RAIL:  { e:'🚃', n:'電車の1日フリーきっぷ', kind:'ride',   days:60,  cut:1.0, d:'期限内は 移動の固定費（定期・ガソリンなど）がタダになる' },
+        BANKS: { e:'🏦', n:'ATM手数料 無料けん',    kind:'atm',    days:90,  cut:1.0, d:'期限内は ATMの時間外手数料が0円になる' },
+        TECH:  { e:'📱', n:'ケータイ代 無料けん',    kind:'phone',  days:90,  cut:1.0, d:'期限内は スマホ・通信の固定費がタダになる' },
+        FOOD:  { e:'🍱', n:'お食事けん',            kind:'meal',   days:60,  cut:0.5, d:'期限内は 食費が半分になる' },
+        CLOTH: { e:'👕', n:'お買いものけん',        kind:'goods',  days:60,  cut:0.3, d:'期限内は ショップの買いものが3割やすくなる' },
+        ENGY:  { e:'💡', n:'電気・ガス わりびきけん', kind:'power', days:60,  cut:0.5, d:'期限内は 電気とガスの固定費が半分になる' },
+        GAME:  { e:'🎮', n:'ゲーム・映画のしょうたいけん', kind:'fun', days:45, hp:14, d:'つかうと きぶんが大きく上がる（1回きり）' },
+        MED:   { e:'💊', n:'けんこうドックのけん',   kind:'health', days:90,  h:12, d:'つかうと 健康が大きく上がる（1回きり）' },
+        IDX:   { e:'📗', n:'図書カード',            kind:'study',  days:120, sk:6, d:'つかうと「こころ」スキルが上がる（1回きり）' },
+        SP500: { e:'💱', n:'売買手数料 無料けん',    kind:'fee',    days:60,  cut:1.0, d:'期限内は 株の売買手数料が0円になる' }
+    };
+    const M_TICK_KIND = {
+        ride:'🚃 移動', atm:'🏦 手数料', phone:'📱 通信', fee:'💱 売買手数料',
+        meal:'🍱 食費', power:'💡 光熱費', goods:'🛒 買いもの', fun:'😄 きぶん', health:'💪 健康', study:'📗 学び'
+    };
+    // 毎月5日：100株以上もっている会社から券をもらう（同じ券は1枚まで持てる）
+    function mTicketMonth(m) {
+        if(!Array.isArray(m.tickets)) m.tickets = [];
+        const got = [];
+        Object.keys(M_TICKET).forEach(c => {
+            if(mQtyOf(m, c) < 100) return;
+            const t = M_TICKET[c];
+            if(m.tickets.some(x => x.c === c && !x.used && (x.until || 0) > (m.day || 0))) return;  // まだ持っている
+            m.tickets.push({ c, id: c + '-' + Date.now() + '-' + Math.floor(Math.random() * 1000),
+                got: m.day || 0, until: (m.day || 0) + t.days, used: false });
+            got.push(t.e + ' ' + t.n);
+        });
+        if(m.tickets.length > 40) m.tickets = m.tickets.slice(-40);
+        if(got.length) {
+            mLog(m, `🎫 株主優待の券がとどいた（${got.length}まい）`, 0);
+            mSlipPay(m, `🎫 株主優待の券（${got.length}まい）`, 0, got.map(g => [g, 0]));
+            m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`🎫 株主優待の券がとどいた（${got.length}まい）`,
+                msg:got.map(esc).join('<br>') + '<br><br>📈投資タブの「🎫もっている優待券」から使えるよ。<b>期限があるから、わすれずに使おう！</b>' });
+        }
+        return got.length > 0;
+    }
+    // いま生きている券（期限内・未使用）
+    function mTicketsLive(m) {
+        return (m.tickets || []).filter(x => !x.used && (x.until || 0) > (m.day || 0) && M_TICKET[x.c]);
+    }
+    // その「はたらき」の券を使っている最中か（固定費の割引などに使う）
+    function mTicketOn(m, kind) {
+        return (m.tickets || []).some(x => x.on && !x.done && M_TICKET[x.c] && M_TICKET[x.c].kind === kind && (x.onUntil || 0) > (m.day || 0));
+    }
+    function mTicketCut(m, kind) {
+        let cut = 0;
+        (m.tickets || []).forEach(x => { const t = M_TICKET[x.c];
+            if(x.on && !x.done && t && t.kind === kind && (x.onUntil || 0) > (m.day || 0)) cut = Math.max(cut, t.cut || 0); });
+        return cut;
+    }
+    function mTicketUse(id) {
+        const m = mLoad();
+        const tk = (m.tickets || []).find(x => x.id === id); if(!tk) return;
+        const t = M_TICKET[tk.c]; if(!t) return;
+        if(tk.used) { alert('その券はもう使ったよ'); return; }
+        if((tk.until || 0) <= (m.day || 0)) { alert('その券は期限がすぎているよ…'); return; }
+        const oneShot = ['fun', 'health', 'study'].indexOf(t.kind) >= 0;
+        const msg = oneShot
+            ? `${t.e} ${t.n} を使う？\n\n${t.d}\n\n（1回つかうと なくなるよ）`
+            : `${t.e} ${t.n} を使う？\n\n${t.d}\n期限：あと ${(tk.until - m.day)}日ぶん つかえる\n\n使いはじめると、期限までずっと効きつづけるよ。`;
+        if(!confirm(msg)) return;
+        tk.used = true;
+        if(oneShot) {
+            tk.done = true;
+            if(t.hp) m.home.happy = Math.min(100, (m.home.happy || 0) + t.hp);
+            if(t.h) m.home.health = Math.min(100, (m.home.health || 0) + t.h);
+            if(t.sk) mSkUp(m, 'mind', t.sk);
+            mLifeXp(m, 15);
+            mLog(m, `🎫 優待券をつかう：${t.n}`, 0);
+            mSave(m); playSfx('finish'); celebrate(); renderMoney();
+            alert(`${t.e} ${t.n} をつかったよ！\n${t.hp ? `きぶん +${t.hp}\n` : ''}${t.h ? `健康 +${t.h}\n` : ''}${t.sk ? `こころスキル +${t.sk}\n` : ''}\n💡 お金ではなく「モノやサービス」でもらえるのが株主優待だよ。`);
+        } else {
+            tk.on = true; tk.onUntil = tk.until;
+            mLog(m, `🎫 優待券を使いはじめる：${t.n}`, 0);
+            mSave(m); playSfx('finish'); renderMoney();
+            alert(`${t.e} ${t.n} を使いはじめたよ！\n\n${t.d}\nあと ${(tk.until - m.day)}日ぶん 効きつづけるよ。\n\n💡 毎月5日の給料明細で、安くなっているのが見られる！`);
+        }
+    }
+    function mTicketHtml(m) {
+        if(!Array.isArray(m.tickets)) m.tickets = [];
+        const live = mTicketsLive(m);
+        const onNow = (m.tickets || []).filter(x => x.on && !x.done && (x.onUntil || 0) > (m.day || 0));
+        const expired = (m.tickets || []).filter(x => !x.used && (x.until || 0) <= (m.day || 0)).length;
+        let h = `<div class="m-card" style="border:3px solid #e67e22;"><b>🎫 もっている優待券（配当物）</b>
+            <div style="font-size:12px;color:#888;">株主優待は<b>お金だけじゃない</b>。100株以上もっている会社から、
+            電車のきっぷ・ATM手数料無料・ケータイ代無料 などの<b>「券」</b>が毎月5日にとどくよ。
+            <b>券には期限がある</b>から、わすれずに使おう</div>`;
+        if(onNow.length) {
+            h += `<div class="m-ok" style="margin-top:8px;"><b>いま効いている券</b><br>
+                ${onNow.map(x => { const t = M_TICKET[x.c];
+                    return `${t.e} ${esc(t.n)}（${M_TICK_KIND[t.kind]}／あと${Math.max(0, x.onUntil - m.day)}日）`; }).join('<br>')}</div>`;
+        }
+        if(!live.length) {
+            h += `<div style="color:#888;font-size:13px;padding:8px 0;">いま使える券はないよ。<br>
+                下の会社の株を<b>100株</b>そろえると、毎月5日に券がとどくようになる！</div>`;
+        }
+        live.forEach(x => {
+            const t = M_TICKET[x.c], a = M_ASSET(x.c);
+            const left = Math.max(0, x.until - (m.day || 0));
+            const soon = left <= 10;
+            h += `<div class="m-row"${soon ? ' style="background:rgba(231,76,60,.08);border-radius:8px;"' : ''}>
+                <div style="flex:1;min-width:0;">
+                  <div class="m-name">${t.e} ${esc(t.n)} <span class="m-pill">${M_TICK_KIND[t.kind]}</span></div>
+                  <div class="m-desc">${esc((a || {}).n || x.c)} から</div>
+                  <div class="m-desc">${esc(t.d)}</div>
+                  <div class="m-desc" style="${soon ? 'color:#e74c3c;font-weight:bold;' : ''}">期限：あと ${left}日${soon ? '　⚠️ もうすぐ切れる！' : ''}</div>
+                </div>
+                <button class="m-btn m-buy" onclick="mTicketUse('${x.id}')">つかう</button></div>`;
+        });
+        // どの会社が どの券をくれるか
+        h += `<div style="margin-top:10px;"><b style="font-size:14px;">🔎 券がもらえる会社（100株から）</b></div>`;
+        Object.keys(M_TICKET).forEach(c => {
+            const t = M_TICKET[c], a = M_ASSET(c), q = mQtyOf(m, c);
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${t.e} ${esc(t.n)}</div>
+                <div class="m-desc">${esc((a || {}).n || c)}／${esc(t.d)}／期限${t.days}日</div></div>
+                <div class="m-price"><div style="font-size:11px;color:#888;">もっている株</div>
+                  <div><b class="${q >= 100 ? 'm-up' : ''}">${q}/100株</b></div></div></div>`;
+        });
+        if(expired) h += `<div class="m-warn">⌛ 期限が切れてしまった券が ${expired}まい あるよ。券は<b>もらったら早めに使う</b>のがコツ！</div>`;
+        h += `<div class="m-learn">💡 <b>株主優待は日本独特のしくみ</b>。会社が「株を持ち続けてほしい」から、自社のモノやサービスをプレゼントするんだ。<br>
+            ★ここが大事：<b>優待めあてで株を買うと失敗しやすい</b>。3,000円の優待をもらうために10万円の株を買って、株価が5,000円下がったら 損だよね。<br>
+            <b>優待は「おまけ」</b>。その会社を応援したいか・ちゃんともうかっている会社かで選ぼう。<br>
+            それに<b>券は使わないと0円</b>。もらって満足して期限切れ——これも本当によくある失敗だよ。</div></div>`;
+        return h;
+    }
     function mInvestHtml(m) {
         const kes = mKessan();
         const yut = mYutaiList(m);
@@ -4374,6 +4525,7 @@
             理由は、世界中の株のその日の終わりの値段と、朝10時ごろの為替レートを使って<b>あとから計算する</b>から。
             だから投信は「今すぐ売り買い」ができない——申しこんだ日の夜の値段で買うことになるよ。<br>
             ぎゃくに<b>暗号資産は24時間365日</b>動きっぱなし。休みがないぶん、寝ているあいだに大きく下がることもある。</div></div>`;
+        pre += mTicketHtml(m);                   // 🎫 優待券（配当物）
         pre += mLevHtml(m);                      // ⚡ 信用取引（レバレッジ）
         return pre + mInvestHtmlBody(m);
     }
@@ -6544,16 +6696,19 @@
         const it = mShopItem(c); if(!it) return;
         let m = mLoad();
         if(!it.use && (m.home.shop || {})[c]) { alert('もう持っているよ'); return; }
-        if(!mAfford(it.buy, it.n, () => mShopBuy(c))) return;      // 足りないと「お金が足りない」画面→💳借金へ
-        if(!confirm(`${it.n} を ${mYen(it.buy)} で買う？`)) return;
+        // 🎫 お買いものけん が効いていたら やすくなる
+        const cut = mTicketCut(m, 'goods');
+        const price = Math.round((it.buy || 0) * (1 - cut));
+        if(!mAfford(price, it.n, () => mShopBuy(c))) return;      // 足りないと「お金が足りない」画面→💳借金へ
+        if(!confirm(`${it.n} を ${mYen(price)}${cut ? `（🎫優待券で ${Math.round(cut * 100)}%オフ！もとは${mYen(it.buy)}）` : ''} で買う？`)) return;
         m = mLoad();
-        if(m.cash < it.buy) { mNoMoney(it.buy, it.n, () => mShopBuy(c)); return; }
+        if(m.cash < price) { mNoMoney(price, it.n, () => mShopBuy(c)); return; }
         if(!m.home.shop || typeof m.home.shop !== 'object') m.home.shop = {};
-        m.cash -= it.buy;
+        m.cash -= price;
         m.home.shop[c] = (m.home.shop[c] || 0) + 1;
         m.home.happy = Math.max(0, Math.min(100, m.home.happy + (it.use ? (it.hp || 0) : 0)));
         if(it.use && it.h) m.home.health = Math.max(0, Math.min(100, m.home.health + it.h));
-        mLog(m, `買う：${it.n}`, -it.buy);
+        mLog(m, `買う：${it.n}${cut ? '（🎫優待券わりびき）' : ''}`, -price);
         mSave(m); playSfx('correct'); renderLife();
     }
     // ==========================================================================================
@@ -6628,6 +6783,11 @@
         if(g.cat === 'food') v *= (1 - Math.min(0.22, sk.cook / 100 * 0.22));
         v *= mKeiki().price;
         if(mLifeLv(m) >= 8) v *= 0.97;                                       // レベル8「やりくり上手」
+        // 🎫 株主優待の券が効いているあいだ、その分の固定費が安くなる（またはタダになる）
+        if(g.one === 'move' || g.cat === 'move') v *= (1 - mTicketCut(m, 'ride'));
+        if(g.one === 'sim' || c === 'wifi') v *= (1 - mTicketCut(m, 'phone'));
+        if(g.cat === 'food') v *= (1 - mTicketCut(m, 'meal'));
+        if(c === 'denki' || c === 'gas') v *= (1 - mTicketCut(m, 'power'));
         return Math.round(v);
     }
     // ---- ☀️ 体調（かぜ・絶好調）。健康をほうっておくと、ほんとうに寝こむ ----
@@ -8895,12 +9055,17 @@
     // ⑮ ATM手数料
     function mAtm(fee) {
         const m = mLoad();
+        // 🎫 ATM手数料 無料けん が効いていたら 手数料は0円
+        const freeTicket = fee > 0 && mTicketOn(m, 'atm');
+        if(freeTicket) fee = 0;
         if(m.bank < 10000 + fee) { alert('貯金が足りないよ（1万円＋手数料）'); return; }
         m.bank -= 10000 + fee; m.cash += 10000;
+        if(freeTicket) { mLog(m, '🎫 ATM手数料 無料けんで 0円', 0); }
         if(fee > 0) { m.feeAtm = (m.feeAtm || 0) + 1; m.feePaid += fee; mLog(m, 'ATM時間外手数料', -fee); }
         mLog(m, '貯金からおろす', 10000);
         mSave(m); renderMoney();
-        if(fee > 0) alert(`手数料 ${mYen(fee)} を取られたよ。\nこれを月4回つづけると1年で ${mYen(fee * 48)}。\n無料の時間に下ろすだけで、このお金は守れる！`);
+        if(freeTicket) alert('🎫 ATM手数料 無料けんが効いて、手数料 0円 でおろせたよ！\n\n💡 これが株主優待の力。券をちゃんと使うと、こういう小さなお金が守れる。');
+        else if(fee > 0) alert(`手数料 ${mYen(fee)} を取られたよ。\nこれを月4回つづけると1年で ${mYen(fee * 48)}。\n無料の時間に下ろすだけで、このお金は守れる！`);
     }
     // ⑬ ふるさと納税
     function mFurusato(lim) {
@@ -12961,7 +13126,8 @@
     // ---------- 📝 夏休み定期テストの画面 ----------
     let exNow = null, exTimer = null, exTick = null;
     function exCardHtml(ex) {
-        ex = ex || exFor(); if(!ex) return '';                 // 自分あてじゃなければ 何も出さない
+        ex = ex || exFor();
+        if(!ex || !Array.isArray(ex.parts) || !ex.start) return '';   // テストのデータでなければ 何も出さない
         const st = exState(ex); if(st.k === 'hidden') return '';
         const done = exLoad(ex);
         const total = exTotal(ex), nq = exQs(ex).length;
