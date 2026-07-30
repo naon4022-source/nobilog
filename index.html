@@ -815,7 +815,7 @@
 <script>
     // ===== シラバス・範囲設定 =====
     const studySyllabus = {
-        "中一": { "数学": ["正負の数", "文字式", "方程式", "変化と対応", "平面空間図形", "データの活用"], "英語": ["be動詞", "一般動詞", "過去形", "疑問詞", "文法", "文章"], "国語": ["文法", "漢字", "物語文"], "理科": ["植物と動物", "大地の変動", "物質と光音力", "計算と割合"] },
+        "中一": { "数学": ["正負の数", "文字式", "方程式", "変化と対応", "平面空間図形", "データの活用"], "英語": ["be動詞", "一般動詞", "過去形", "疑問詞", "文法", "文章"], "国語": ["文法", "漢字", "物語文"], "理科": ["植物と動物", "大地の変動", "物質", "物質と光音力", "計算と割合"] },
         "検定": { "数学": ["数検5級"], "英語": ["英検5級", "英検4級", "英検3級", "単語5級", "単語4級", "単語3級"], "国語": ["漢検5級", "漢検4級"], "理科": ["理検5級"] }
     };
     const testSyllabus = {
@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '🔬 <b>理科のテストを、もらったプリントに合わせて作り直しました</b>①<b>植物のなかま9問／動物のなかま8問／身のまわりの物質8問</b>＝25問・100点（プリントと同じ構成）②<b>「あてはまるものを ぜんぶ選ぶ」問題</b>が6問はいりました。ボタンを押すと選べて、もう一度押すとはずせます③選ぶ順番はどうでもOK。ぜんぶ合っていれば満点です（1つでも足りないと0点なので気をつけて）④記述問題は<b>大事なことばが入っているかで採点</b>。ぜんぶの問題に<b>解説</b>がつきます⑤🔧<b>作業</b>は押すだけでは終わりません。🧮計算／⌨️打ちこみ／🔍ちがい探し／📦仕分け／🧠記おく／🔢順番 の<b>ほんものの課題</b>をクリアしてはじめて終わります。まちがえるほど評価の上がりが小さくなるので ていねいに⑥📝テストは<b>1日め 8/30</b>（12:30数学→13:15英語→14:00国語）／<b>2日め 8/31</b>（14:00理科→14:45社会）。8/29から灰色で見えます';
+    const UPDATE_NOW = '🧪 <b>理科に「物質」の単元ができました＋オンラインのしらべ方</b>①📖勉強 → 理科 に <b>「物質」</b>の単元を作りました。<b>14,000しゅるい以上</b>の問題が出ます（有機物と無機物／金属の性質／気体の性質と集め方／密度の計算／状態変化／質量パーセント濃度／ろ過・蒸留・再結晶）②★<b>テストに出る問題は、この単元では1問も出ません</b>。同じ考え方をちがう数字・ちがう物質で練習できます③🔍<b>せつぞくテスト</b>を付けました（🏛️政治と経済 → ホーム → 🛟データのまもり）。押すと<b>読みこみ・書きこみ・時こく合わせ</b>をその場でためして、つながっているかを はっきり出します④まだ1回も通信していないときに「つながっている」と出ないよう直しました（正直な表示にしました）⑤つながらないときは<b>この端末に必ず保存されている</b>ことと、<b>自動で何度でもつなぎ直す</b>ことを画面で伝えます';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -11341,7 +11341,173 @@
         ];
         return randObj(pool)();
     }
+    // ==========================================================================================
+    //  🧪 理科「物質」単元（勉強モード用・組み合わせでとてもたくさん作る）
+    //   ★のびログ夏休み定期テストに出る問題は、ここでは1問も出さない（`mBusExcluded` でふるい落とす）
+    //     テストのための勉強ができるように、同じ考え方・ちがう数字/ちがう物質で作る。
+    // ==========================================================================================
+    // 物質のデータ（密度は本物の値）
+    const BUS_METAL = [['アルミニウム',2.7],['鉄',7.9],['銅',9.0],['鉛',11.4],['金',19.3],['銀',10.5],['亜鉛',7.1],['ニッケル',8.9],['チタン',4.5],['マグネシウム',1.7]];
+    const BUS_YUKI = ['砂糖','デンプン','エタノール','プラスチック','ろう','紙','木','小麦粉','石油','ポリエチレン','酢酸','グラニュー糖','片栗粉','プロパン','メタン','ペットボトル','わりばし','バター'];
+    const BUS_MUKI = ['食塩','鉄','ガラス','アルミニウム','銅','水','酸素','石灰石','砂','食塩水','鉛','スチールウール','炭酸カルシウム','硫黄','アンモニア','水酸化ナトリウム','銀','亜鉛','ステンレス','陶器'];
+    // ★性質は「その気体だけにあてはまるもの」しか入れない（答えが1つに決まらないと問題にならない）
+    //   「水にとけにくい」「刺激臭がある」のような共通の性質は入れないこと
+    const BUS_GAS = [
+        ['酸素',   ['ものを燃やすはたらきがある','火のついた線香を近づけると激しく燃える','空気の約21%をしめる'], '水上置換法'],
+        ['水素',   ['いちばん軽い気体','火をつけると音を立てて燃える','燃えると水ができる'], '水上置換法'],
+        ['二酸化炭素', ['石灰水を白くにごらせる','水にとかすと炭酸水になる','ドライアイスをあたためると出てくる'], '下方置換法'],
+        ['窒素',   ['空気の約78%をしめる','ほかのものと結びつきにくい'], '水上置換法'],
+        ['アンモニア', ['水溶液がアルカリ性になる気体','空気より軽くて水にとてもよくとける','石灰水ではなくフェノールフタレイン液を赤くする'], '上方置換法'],
+        ['塩化水素', ['水にとかすと塩酸になる'], '下方置換法'],
+        ['塩素',   ['黄緑色をしている','漂白作用がある'], '下方置換法']
+    ];
+    // 気体の性質が かぶっていないか（かぶっていたら その性質は使わない）
+    const BUS_GAS_UNIQ = (() => {
+        const cnt = {};
+        BUS_GAS.forEach(g => g[1].forEach(p => { cnt[p] = (cnt[p] || 0) + 1; }));
+        return BUS_GAS.map(g => [g[0], g[1].filter(p => cnt[p] === 1), g[2]]).filter(g => g[1].length);
+    })();
+    const BUS_JOTAI = [['固体','液体','融解'],['液体','固体','凝固'],['液体','気体','蒸発'],['気体','液体','凝縮'],['固体','気体','昇華'],['気体','固体','昇華']];
+    const BUS_KIGU = [
+        ['液体を混ぜずに固体と液体を分けるそうさ','ろ過'],['液体を熱して気体にし、冷やして分ける方法','蒸留'],
+        ['とけているものを、温度を下げて結晶として取り出す方法','再結晶'],
+        ['ろ過のとき、ろうとの先をつけるもの','ビーカーの内側のかべ'],
+        ['液体の体積を正しくはかる器具','メスシリンダー'],['ものの質量をはかる器具','電子てんびん'],
+        ['ガスバーナーで空気の量を調節するねじ','空気調節ねじ'],['液体を加熱するときに入れて、急な沸騰を防ぐもの','沸騰石']
+    ];
+    // 質量パーセント濃度で「ぴったり計算が合う」組み合わせだけを先に作っておく
+    //   （食塩の量を丸めると濃度がずれてしまうため。ずれた問題は答えが合わなくなる）
+    const BUS_NOUDO = (() => {
+        const out = [];
+        const pcts = [1,2,3,4,5,6,8,10,12,15,16,20,24,25,30,32,40,50];
+        for(let total = 20; total <= 1000; total += 5) {
+            pcts.forEach(p => {
+                const so = total * p / 100;
+                if(Math.abs(so - Math.round(so * 10) / 10) > 1e-9) return;   // 小数1桁でぴったり
+                const so2 = Math.round(so * 10) / 10;
+                if(so2 <= 0 || so2 >= total) return;
+                if(Math.abs(so2 / total * 100 - p) > 1e-9) return;           // 逆算しても同じ%になる
+                const w = Math.round((total - so2) * 10) / 10;
+                if(Math.abs(so2 / (w + so2) * 100 - p) > 1e-9) return;       // 水＋食塩から計算しても同じ
+                out.push([p, total, so2, w]);
+            });
+        }
+        return out;
+    })();
+    // ★テストに出る問題は勉強では出さない（問題文のキーになる部分を集めておく）
+    let __busEx = null;
+    function mBusExKeys() {
+        if(__busEx) return __busEx;
+        const set = new Set();
+        try {
+            (typeof NOBI_EXAMS !== 'undefined' ? NOBI_EXAMS : []).forEach(ex => exQs(ex).forEach(q => {
+                const t = String(q.q).replace(/<[^>]*>/g, '').replace(/\s/g, '');
+                set.add(t);
+                // 数字の組み合わせも覚えておく（同じ数字の計算は出さない）
+                const nums = t.match(/\d+/g); if(nums) set.add('N:' + nums.join(','));
+            }));
+        } catch(e) {}
+        __busEx = set; return set;
+    }
+    function mBusExcluded(q) {
+        const set = mBusExKeys();
+        const t = String(q.q).replace(/<[^>]*>/g, '').replace(/\s/g, '');
+        if(set.has(t)) return true;
+        const nums = t.match(/\d+/g);
+        if(nums && set.has('N:' + nums.join(','))) return true;
+        return false;
+    }
+    // 1問つくる（diff 1〜6でむずかしさが変わる）
+    function sciBusOne(diff) {
+        const R = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+        const P = (arr) => arr[Math.floor(Math.random() * arr.length)];
+        const d = Math.max(1, Math.min(6, diff || 3));
+        const kinds = d <= 2 ? [0, 1, 2, 5, 6] : d <= 4 ? [0, 1, 2, 3, 4, 5, 6, 7] : [0, 3, 4, 7, 8, 9];
+        switch(P(kinds)) {
+            case 0: {   // 有機物・無機物
+                if(Math.random() < 0.5) { const x = P(BUS_YUKI); return { q:`「${x}」は有機物・無機物のどちらか。`, a:'有機物' }; }
+                const x = P(BUS_MUKI); return { q:`「${x}」は有機物・無機物のどちらか。`, a:'無機物' };
+            }
+            case 1: {   // 金属の性質
+                const q2 = P([
+                    ['金属をみがくと出る、特有のかがやきを何という？','金属光沢'],
+                    ['金属が電気をよく通す性質を、ひとことで何という？','電気を通しやすい'],
+                    ['金属をたたくとうすく広がる性質を何という？','展性'],
+                    ['金属を引っぱると細くのびる性質を何という？','延性'],
+                    ['「磁石につく」は すべての金属に共通する性質か。「はい」か「いいえ」で答えて。','いいえ'],
+                    ['金属のうち、いちばん電気を通しやすいものは？','銀']
+                ]);
+                return { q:q2[0], a:q2[1] };
+            }
+            case 2: {   // 気体の性質（その気体だけの性質から出す）
+                const g = P(BUS_GAS_UNIQ);
+                const p = P(g[1]);
+                return { q:`「${p}」という気体は何か。`, a:g[0] };
+            }
+            case 3: {   // 気体の集め方
+                const g = P(BUS_GAS);
+                return { q:`「${g[0]}」を集めるのに いちばん適した方法は？（水上置換法・下方置換法・上方置換法のどれか）`, a:g[2] };
+            }
+            case 4: {   // 密度の計算（3方向・答えがきれいになるように作る）
+                const mt = P(BUS_METAL), v = R(2, 200), mass = Math.round(mt[1] * v * 10) / 10;
+                const way = R(0, 2);
+                if(way === 0) return { q:`質量 ${mass}g、体積 ${v}cm³ の金属がある。密度は何g/cm³か。`, a:String(mt[1]) };
+                if(way === 1) return { q:`密度 ${mt[1]}g/cm³ の金属 ${v}cm³ の質量は何gか。`, a:String(mass) };
+                return { q:`密度 ${mt[1]}g/cm³ の金属 ${mass}g の体積は何cm³か。`, a:String(v) };
+            }
+            case 5: {   // 状態変化のよび名
+                const j = P(BUS_JOTAI);
+                return { q:`物質が「${j[0]}」から「${j[1]}」に変わる変化を何という？`, a:j[2] };
+            }
+            case 6: {   // 器具・そうさ
+                const k = P(BUS_KIGU);
+                return { q:k[0] + 'を何という？', a:k[1] };
+            }
+            case 7: {   // 質量パーセント濃度（★ぴったり割り切れる組み合わせだけを使う）
+                const c = P(BUS_NOUDO);
+                const pct = c[0], total = c[1], solute = c[2], water = c[3];
+                const way = R(0, 2);
+                if(way === 0) return { q:`水 ${water}g に食塩 ${solute}g をとかした。この食塩水の質量パーセント濃度は何%か。`, a:String(pct) };
+                if(way === 1) return { q:`${pct}%の食塩水 ${total}g にとけている食塩は何gか。`, a:String(solute) };
+                return { q:`食塩 ${solute}g を使って ${pct}%の食塩水を作るには、全体を何gにすればよいか。`, a:String(total) };
+            }
+            case 8: {   // 状態変化と体積・質量
+                const q2 = P([
+                    ['状態変化するとき、物質の質量は変わるか。「変わる」「変わらない」で答えて。','変わらない'],
+                    ['状態変化するとき、物質の体積は変わるか。「変わる」「変わらない」で答えて。','変わる'],
+                    ['水が氷になると、体積はふえるか へるか。','ふえる'],
+                    ['状態変化で、物質の種類は別のものに変わるか。「はい」「いいえ」で答えて。','いいえ'],
+                    ['純粋な物質が沸騰しているあいだ、温度はどうなる？','変わらない'],
+                    ['液体が沸騰して気体に変わる温度を何という？','沸点'],
+                    ['固体がとけて液体になる温度を何という？','融点']
+                ]);
+                return { q:q2[0], a:q2[1] };
+            }
+            default: {  // 混合物の分け方・浮き沈み
+                const mt = P(BUS_METAL);
+                if(Math.random() < 0.5) return { q:`密度 ${mt[1]}g/cm³ の「${mt[0]}」を水（密度1.0g/cm³）に入れると、浮くか しずむか。`, a:'しずむ' };
+                const q2 = P([
+                    ['水とエタノールの混合物から、エタノールだけを取り出す方法は？','蒸留'],
+                    ['砂と食塩水を分けるのに使う方法は？','ろ過'],
+                    ['食塩水から食塩の結晶を取り出すには、水をどうする？','蒸発させる'],
+                    ['1しゅるいの物質だけからできているものを何という？','純粋な物質'],
+                    ['2しゅるい以上の物質が混ざったものを何という？','混合物']
+                ]);
+                return { q:q2[0], a:q2[1] };
+            }
+        }
+    }
+    // テストの問題とかぶらないように作りなおす
+    function sciBussitsu(diff) {
+        for(let i = 0; i < 40; i++) {
+            const q = sciBusOne(diff);
+            if(!mBusExcluded(q)) return { q:q.q, a:q.a, type:'text' };
+        }
+        return { q:'物質が「固体」から「液体」に変わる変化を何という？', a:'融解', type:'text' };
+    }
     function sciQ(unit, isWord, diff) {
+        if(String(unit) === '物質') return sciBussitsu(diff);      // 🧪 物質だけの単元
+
         if(unit.includes('計算') || unit.includes('割合')) return sciCalc(diff);
         if(isWord) return sciCalc(diff);
         let pool;
@@ -13582,8 +13748,10 @@
         const t = cloudState.at ? new Date(cloudState.at).toLocaleString('ja-JP') : 'まだ';
         const waiting = cloudDirty();
         const ng = !!cloudState.err;
-        const lab = ng ? '⚠️ つなぎ直しています' : waiting ? '⏳ 送信まち' : '✅ つながっている';
-        const col = ng ? 'm-down' : waiting ? '' : 'm-up';
+        // ★まだ1回もつながっていないときに「つながっている」と出すのはウソになるので分ける
+        const never = !cloudState.on && !cloudState.at && !ng;
+        const lab = ng ? '⚠️ つなぎ直しています' : never ? '❓ まだ たしかめていない' : waiting ? '⏳ 送信まち' : '✅ つながっている';
+        const col = ng ? 'm-down' : never ? '' : waiting ? '' : 'm-up';
         const sec = cloudState.next ? Math.max(0, Math.ceil((cloudState.next - Date.now()) / 1000)) : 0;
         return `<div class="m-row"><span>☁️ オンライン保存</span><b class="${col}">${lab}</b></div>
             <div class="m-row"><span>さいごにオンラインへ保存</span><b>${t}</b></div>
@@ -13593,7 +13761,63 @@
                 でも<b>この端末にはちゃんと保存されている</b>し、<b>自動で何度でもつなぎ直す</b>から そのまま遊んでいて大丈夫。
                 ${sec ? `つぎのチャレンジまで あと${sec}秒。` : ''}電波のいいところに行けば すぐ送られるよ。</div>`
               : waiting ? `<div class="m-desc">まだ送れていない変更があるよ。数秒後に自動で送るからそのままで大丈夫。</div>` : ''}
-            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="cloudSyncNow()">☁️ いますぐ同期する</button>`;
+            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="cloudSyncNow()">☁️ いますぐ同期する</button>
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:6px;" onclick="cloudTest()">🔍 つながっているか しらべる（せつぞくテスト）</button>
+            <div class="m-desc" style="font-size:11px;">「つながっていない」と出るときや、ほかの端末と記録がちがうときは これを押すと 原因が分かるよ</div>`;
+    }
+    // 🔍 せつぞくテスト：ほんとうに通信できているかを その場で実測して見せる
+    async function cloudTest() {
+        if(!SYNC_URL) { alert('オンラインの設定がないよ'); return; }
+        gOpenModal(`<div style="text-align:center;max-width:520px;margin:0 auto;">
+            <h2>🔍 せつぞくテスト</h2><div id="ct-out" style="text-align:left;font-size:14px;line-height:2.0;">しらべています…</div></div>`);
+        const out = []; let ngN = 0;
+        const put = () => { const el = document.getElementById('ct-out'); if(el) el.innerHTML = out.join('<br>'); };
+        // ★失敗の数は カウンターで数える（文字さがしだと HTMLタグのせいで数えられない）
+        const line = (ok2, s2) => { if(ok2 === false) ngN++;
+            out.push((ok2 === null ? '⏳' : ok2 ? '<b style="color:#27ae60;">○</b>' : '<b style="color:#e74c3c;">✕</b>') + ' ' + s2); put(); };
+        line(null, 'この端末：' + (navigator.onLine === false ? '<b style="color:#e74c3c;">電波オフ</b>' : 'ネットにつながっている'));
+        line(null, 'ブラウザ：' + esc(String(navigator.userAgent).slice(0, 60)));
+        // ① 読みこみ
+        let t0 = Date.now(), v1 = null;
+        try {
+            const r = await cloudTry(cloudUrl('/save', 'user=' + encodeURIComponent(currentUserId || 'u1')), { cache:'no-store' }, 9000);
+            const d = await r.json(); v1 = Number(d.v) || 0;
+            line(r.ok, `よみこみ（GET）… ${r.status} ／ ${Date.now() - t0}ms ／ サーバーの保存番号 ${v1}`);
+        } catch(e) { line(false, `よみこみ（GET）… <b>できなかった</b>（${esc(e.name + ': ' + e.message)}）`); }
+        // ② 書きこみ（わざと古い番号にして、サーバーに何も書かせずに通信だけ試す）
+        t0 = Date.now();
+        try {
+            const r = await cloudTry(cloudUrl('/save'), { method:'POST', headers:{ 'Content-Type':'text/plain' },
+                body: JSON.stringify({ user: currentUserId || 'u1', v: 1, keys: { probe:'1' } }) }, 9000);
+            const d = await r.json();
+            line(r.ok, `書きこみ（POST）… ${r.status} ／ ${Date.now() - t0}ms ／ ${d && d.stale ? 'サーバーが「古い」と正しく はじいた（＝通信OK・データは無事）' : '書きこめた'}`);
+        } catch(e) { line(false, `書きこみ（POST）… <b>できなかった</b>（${esc(e.name + ': ' + e.message)}）`); }
+        // ③ 時こく
+        t0 = Date.now();
+        try {
+            const r = await cloudTry(cloudUrl('/news'), { cache:'no-store' }, 9000);
+            const d = await r.json();
+            if(d && d.now) { mSetSkew(Number(d.now), t0); line(true, `時こく合わせ… OK ／ サーバーとのずれ ${(mSkew / 1000).toFixed(1)}秒`); }
+            else line(false, '時こく合わせ… サーバーが時こくを返さない（古いサーバー）');
+        } catch(e) { line(false, `時こく合わせ… できなかった（${esc(e.message)}）`); }
+        // ④ この端末のきろく
+        const keys = cloudCollect();
+        line(true, `この端末のきろく… ${Object.keys(keys).length}こ ／ 保存番号 ${cloudV()} ／ 送れていない変更 ${cloudDirty() ? '<b style="color:#e67e22;">あり</b>' : 'なし'}`);
+        const okAll = ngN === 0;
+        out.push('<hr>' + (okAll
+            ? '<b style="color:#27ae60;font-size:16px;">✅ ちゃんとつながっているよ！</b><br>' +
+              '<span style="font-size:13px;">記録はオンラインにも保存されているから、ほかの端末で同じPINを入れれば同じきろくになるよ。<br>' +
+              'もし別の端末で記録がちがって見えたら、その端末で「☁️いますぐ同期する」を押してね。</span>'
+            : '<b style="color:#e74c3c;font-size:16px;">⚠️ つながらないところがあったよ</b><br>' +
+              '<span style="font-size:13px;">でも<b>この端末には必ず保存されている</b>から、記録は消えないよ。<br>' +
+              '電波のいいところで開くか、しばらく待つと自動でつながる（3秒→8秒→20秒→45秒→90秒 と何度でも やり直すよ）。<br>' +
+              'それでもずっとダメなときは、この画面を見せてね。</span>'));
+        put();
+        const el = document.getElementById('ct-out');
+        if(el) el.innerHTML += `<div style="text-align:center;margin-top:14px;">
+            <button class="btn" style="background:#2980b9;color:#fff;" onclick="cloudTest()">もう一度しらべる</button>
+            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div>`;
+        if(document.getElementById('view-money').classList.contains('active')) { /* 表示を新しくする */ }
     }
     async function cloudSyncNow() {
         cloudState.retry = 0; cloudState.next = 0;          // 手で押したときは待たずにすぐ
