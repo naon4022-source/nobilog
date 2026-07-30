@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '⚔️ <b>対戦ボードの数字がおかしかったのを直しました</b>①<b>そう資産・お給料・信用スコア・勤続日数</b>は「ゲームの自己ベスト」あつかいになっていて、<b>いちばん高かったときの数字がずっと残りっぱなし</b>でした（総資産が減っても、信用が下がっても、転職して勤続が0にもどっても 古い数字のまま）②この4つを<b>「いまの数字」</b>に変えました。上がっても下がっても、そのときの本当の数字が出ます③仕事をやめたら お給料と勤続日数は<b>ちゃんと0</b>になります④お金は<b>¥つきの読みやすい表示</b>にしました⑤ミニゲームの点数は今までどおり<b>自己ベスト</b>が残ります（そこは変えていません）⑥📋<b>毎日のタスク</b>と💴<b>初任給</b>も入りました。会社によってやることも初任給もちがいます（初任給は月23万〜54万）';
+    const UPDATE_NOW = '📝 <b>のびログ夏休み定期テストを出しました（なお専用）</b>①<b>📐数学</b>…8月30日（日）<b>12:30〜13:00</b>（30分・25問・100点）正負の数／文字と式／方程式②<b>📖国語</b>…8月31日（月）<b>14:00〜14:45</b>（45分・25問・100点）漢字／ことばの知識／説明文／随筆／小説③どちらも<b>8月29日から灰色で出てきます</b>（まだ押せません）④<b>始まる10分前から「待機画面」</b>になって、秒までのカウントダウンが出ます。時間になると自動でボタンが出るよ⑤時間がきたら<b>自動でていしゅつ</b>。そのあと点数・大問別の出来・1問ずつの答え合わせと解説が見られます⑥国語の記述問題は<b>大事なことばが入っているかで採点</b>（全部入って満点・一部で半分）。解答例もぜんぶ出ます⑦選択問題は<b>ボタンで選ぶ</b>ので打ちまちがいがありません⑧💼仕事に<b>🔧作業</b>（出勤で30分ぶん・残業で18分ぶん）と📄<b>給料明細</b>（引かれた額をタップすると内わけが見られる）も入りました';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -12243,9 +12243,9 @@
         title:'のびログ夏休み定期テスト',
         users:['u1'],                       // ★なおだけ
         show:  '2026-8-29 00:00',           // 1日前から灰色で表示
-        stand: '2026-8-30 19:50',           // 10分前から待機
-        start: '2026-8-30 20:00',
-        end:   '2026-8-30 20:30',
+        stand: '2026-8-30 12:20',           // 10分前から待機
+        start: '2026-8-30 12:30',
+        end:   '2026-8-30 13:00',
         limit: 30,
         range: '正負の数・文字と式・方程式（中1）',
         parts:[
@@ -12289,8 +12289,102 @@
             ]}
         ]
     };
+    // 📝 国語（8/30 と同じしくみ・時間はあとで指定）
+    const NOBI_EXAM_JP = {
+        id:'nobi-summer-2026-kokugo',
+        title:'のびログ夏休み定期テスト（国語）',
+        users:['u1'],
+        show:'2026-8-29 00:00', stand:'2026-8-31 13:50', start:'2026-8-31 14:00', end:'2026-8-31 14:45',
+        limit:45,
+        range:'漢字・ことばの知識・説明文・随筆・小説（中1）',
+        parts:[
+            { n:'第一問　漢字の読み（ひらがなで書く）', pt:2, qs:[
+                { q:'委員長の提案に、全員が<u>速やか</u>に同意した。', a:'すみやか', alts:['すみ'] },
+                { q:'彼の話には<u>矛盾</u>が含まれている。', a:'むじゅん' },
+                { q:'長年の努力が<u>功</u>を奏した。', a:'こう' },
+                { q:'この村には古い風習が<u>廃れ</u>ずに残っている。', a:'すたれ', alts:['すた'] },
+                { q:'会議の内容を<u>克明</u>に記録する。', a:'こくめい' }
+            ]},
+            { n:'第二問　ことばの知識', pt:2, qs:[
+                { q:'「客観」の対義語をひらがなで書きなさい。', a:'しゅかん' },
+                { q:'「うまくいって調子に乗る」という意味の慣用句「□に乗る」。□に入る漢字1字を書きなさい。', a:'図', alts:['ず'] },
+                { q:'先生に対して「（言う）」を正しい敬語にすると「おっしゃる」。では自分が言う場合の謙譲語をひらがなで書きなさい。', a:'もうす', alts:['もうしあげる','いたします'] },
+                { q:'「一石二鳥」と似た意味のことわざ「□をおって二兎を得る」。□に入る漢字1字を書きなさい。', a:'一', alts:['いち'] },
+                { q:'次の文の主語を書きぬきなさい。<br>「昨日 妹が 公園で 大きな 犬を 見た。」', a:'妹が', alts:['妹'] }
+            ]},
+            { n:'第三問　説明文', pt:5, read:'JP_A', qs:[
+                { q:'傍線部①「名前を知ると、急に見えるようになる」とあるが、それはなぜか。本文の言葉を使って三十字以内で説明しなさい。',
+                  a:'名前があると、ほかのものと区別して切り分けられるから',
+                  kw:[['名前','ことば','言葉','語'],['区別','切り分','分け','わけ']],
+                  sol:'（解答例）名前という道具があると、ほかのものと区別して切り分けられるから。（30字）' },
+                { q:'筆者が「雲の名前」を例に挙げたのは何を示すためか。最も適切なものを ア〜エ から選びなさい。<br>ア 気象の知識は生活に役立つということ<br>イ ことばの数が、見えるものの細かさを決めるということ<br>ウ 空をながめる時間を増やすべきだということ<br>エ 専門家の視力は一般の人より優れているということ',
+                  a:'イ', choices:['ア','イ','ウ','エ'] },
+                { q:'傍線部②「ことばは世界を写す鏡ではない」とあるが、筆者が「鏡」という言い方を否定するのはなぜか。四十字以内で説明しなさい。',
+                  a:'鏡ならありのまま写すはずだが、ことばは世界を切り分けて見せているから',
+                  kw:[['鏡'],['切り分','分け','区別','えらび','選び']],
+                  sol:'（解答例）鏡ならありのまま写すはずだが、ことばは世界を自分の都合で切り分けて見せているから。（41字）' },
+                { q:'筆者の考えに合うものを ア〜エ から選びなさい。<br>ア ことばがなければ人は何も感じられない<br>イ ことばの数が多い文化のほうがすぐれている<br>ウ ことばは便利な道具だが、その分け方は唯一のものではない<br>エ 感じたことはすべてことばにできる',
+                  a:'ウ', choices:['ア','イ','ウ','エ'] },
+                { q:'この文章で筆者がいちばん言いたいことを ア〜エ から選びなさい。<br>ア 語彙をできるだけ増やすべきだ<br>イ 自分のことばの網からこぼれるものがあると自覚することが大切だ<br>ウ 専門家の意見にしたがうべきだ<br>エ 名前のないものは存在しない',
+                  a:'イ', choices:['ア','イ','ウ','エ'] }
+            ]},
+            { n:'第四問　随筆', pt:5, read:'JP_B', qs:[
+                { q:'傍線部①「近道ばかり選んでいると、地図が育たない」とはどういうことか。三十五字以内で説明しなさい。',
+                  a:'決められた道しか通らないと、まわりのことを知らないままになるということ',
+                  kw:[['近道','決め','最短','言われた'],['知らない','広がらない','せまい','育たない','おぼえ']],
+                  sol:'（解答例）最短の道しか通らないと、まわりを知らないままで、自分の地図が広がらないということ。（41字→35字例：最短の道だけ通ると、まわりを知らず自分の地図が広がらないこと。29字）' },
+                { q:'筆者が第三段落で三つの例を並べたのは何のためか。ア〜エ から選びなさい。<br>ア むだな時間がいかに人生を損なうかを警告するため<br>イ 回り道の途中でこそ大切なものに出会えると示すため<br>ウ 子どもと大人では時間の使い方がちがうと示すため<br>エ 失敗はいつか必ず成功につながると証明するため',
+                  a:'イ', choices:['ア','イ','ウ','エ'] },
+                { q:'筆者は「効率」についてどう考えているか。ア〜エ から選びなさい。<br>ア どんな場面でも否定されるべきものである<br>イ それ自体は悪くないが、目的を選ぶ物差しにするのは危ない<br>ウ 目的がはっきりした場面でだけ害になる<br>エ もう時代に合わないので捨てるべきである',
+                  a:'イ', choices:['ア','イ','ウ','エ'] },
+                { q:'傍線部②「「何になるの」と聞かれて答えられないこと」が、そのたびに切りすてられていくと、人はどうなると筆者は言っているか。四十字以内で書きなさい。',
+                  a:'与えられた目的をこなす力ばかりのびて、自分が何をしたいのかを問う力を失う',
+                  kw:[['与え','言われた','決められた','目的'],['したい','望','問う','考える']],
+                  sol:'（解答例）与えられた目的をうまくこなす力ばかりのびて、自分が何をしたいのかを問う力を失っていく。（44字）' },
+                { q:'この文章の題名としてふさわしいものを ア〜エ から選びなさい。<br>ア 最短経路の作り方<br>イ 回り道という自由<br>ウ 失敗から学ぶ技術<br>エ 時間割の歴史',
+                  a:'イ', choices:['ア','イ','ウ','エ'] }
+            ]},
+            { n:'第五問　小説', pt:6, read:'JP_C', qs:[
+                { q:'傍線部①「うるさかったはずの音が、聞こえなくなっていた」とあるが、この変化は「ぼく」にとってどんな意味を持つか。祖母の言葉をふまえて四十字以内で説明しなさい。',
+                  a:'音が毎日のふつうになり、祖母からこの家の人間だと認められたということ',
+                  kw:[['ふつう','日常','あたりまえ','なれ','慣れ'],['家の人','この家','なかま','みとめ','認め']],
+                  sol:'（解答例）水音が毎日のふつうになり、祖母から「この家の人間になった」と認められたということ。（42字）' },
+                { q:'「だれも住んでいない家で、ししおどしだけが正しく鳴っている」という描写の効果として最も適切なものを ア〜エ から選びなさい。<br>ア 祖母の留守をきわだたせ、「ぼく」がその役目を引きうけていることを印象づける<br>イ ししおどしの作りの良さを示し、祖母の目のたしかさを伝える<br>ウ 家が荒れていく様子を描き、時間の残酷さを強調する<br>エ 「ぼく」が退屈していることを描き、都会へのあこがれを暗示する',
+                  a:'ア', choices:['ア','イ','ウ','エ'] },
+                { q:'傍線部②「「こまる人」の意味」について、「ぼく」がたどりついた理解を五十字以内で説明しなさい。',
+                  a:'音は誰かのために鳴るのではなく、鳴らし続けることを引きうける人がその家に住むということ',
+                  kw:[['だれかのため','誰かのため','人のため'],['引きう','引き受','つづけ','続け','守る']],
+                  sol:'（解答例）音はだれかのために鳴るのではなく、鳴らし続けることを引きうける人がその家に住むということ。（47字）' },
+                { q:'「ずれとらんな」という祖母の言葉から読み取れる気持ちを ア〜エ から選びなさい。<br>ア 留守のあいだも役目が果たされていたことへの、口には出さない満足<br>イ 孫が勝手にさわったことへの、ひそかないら立ち<br>ウ 入院が長引いたことへの、八つ当たり<br>エ 道具の精度が落ちていないか確かめようとする警戒',
+                  a:'ア', choices:['ア','イ','ウ','エ'] },
+                { q:'最後の一文で「ぼく」が右手をにぎったのはなぜか。その心情として最も適切なものを ア〜エ から選びなさい。<br>ア 竹を直した手ごたえを思い出し、自分も家を引きつぐ側になったと感じたから<br>イ 祖母に感謝されなかったことがくやしく、怒りをこらえようとしたから<br>ウ 祖母の病気の重さを思い出し、こわさに耐えようとしたから<br>エ 音を止めたい気持ちが、まだ消えていなかったから',
+                  a:'ア', choices:['ア','イ','ウ','エ'] }
+            ]}
+        ],
+        reads:{
+            JP_A:{ t:'説明文', body:'私たちは、目に見えているものをそのまま見ていると思っている。けれども、ある日ふいに、①<u>名前を知ると、急に見えるようになる</u>という経験をすることがある。<br><br>'
+              + 'たとえば空の雲である。「積乱雲」「巻雲」「層積雲」という名前を教わった人は、それまで「白いもの」でしかなかった空を、いくつもの形に分けて見るようになる。目のつくりが変わったのではない。手元にことばがふえたから、区別できるようになっただけである。世界を切り分けるための道具が、そのままものの見え方を決めているのだ。<br><br>'
+              + 'だから、②<u>ことばは世界を写す鏡ではない</u>。鏡であれば、映るものはこちらの都合とは関わりなく、ありのままに映るはずだ。しかしことばは、そこにある切れ目のない広がりに、人の側から線を引いていく。ある言語では緑と青を一つの語で呼ぶという。彼らの目が私たちとちがうのではなく、線の引き方がちがうだけである。<br><br>'
+              + 'もっとも、ここから「ことばがなければ何も感じられない」と言ってしまうのは行きすぎだろう。うまく言えない気持ちを、私たちは確かに感じているし、その言えなさに苦しむこともある。大事なのは、ことばが世界を分ける強い道具であることと、その分け方が唯一のものではないことを、同時におぼえておくことだ。自分の使うことばの網の目からは、必ず何かがすりぬけている——そう気づくことが、ほかの人の見ている世界に近づく最初の一歩になる。' },
+            JP_B:{ t:'随筆', body:'「むだをなくそう」という言い方に、正面から反対する人はまずいない。同じ結果がより短い時間で得られるなら、そのほうがいいに決まっている。この考えは、工場のつくり方から学校の時間割まで、いたるところにしみこんでいる。<br><br>'
+              + 'けれども、効率という物差しには、かくれた前提がある。「何を目指すか」が先に決まっている、という前提だ。行き先が決まっていて、はじめて最短の道を計算できる。逆に言えば、行き先そのものを疑ったり作りかえたりする作業は、この物差しでは測れない。それどころか、最短の道から外れる行いとして、いちばん先に「むだ」と呼ばれ、けずられていく。①<u>近道ばかり選んでいると、地図が育たない</u>のである。<br><br>'
+              + '子どもが道ばたの石を意味もなくひっくり返している時間。中学生が結局使わなかった本を読みふけった数か月。研究者が失敗に終わった実験をくり返した数年。あとから見れば、非効率の見本のように見える。だが人が自分にとって本当に大事なものに出会うのは、たいていこうした回り道のとちゅうである。行き先を決めずに歩き回ることでしか出会えない風景が、たしかにある。<br><br>'
+              + '効率そのものが悪いのではない。危ないのは、効率が「目的を選ぶための物差し」にまで広がってしまうことだ。②<u>「何になるの」と聞かれて答えられないこと</u>が、そのたびに切りすてられていく場所では、人は与えられた目的をうまくこなす力ばかりをみがき、自分が何をしたいのかを問う力を失っていく。<br><br>'
+              + 'むだを許す余白は、なまけるための言いわけではない。それは、目的の言いなりにならないために残しておく、最後の自由なのだ。' },
+            JP_C:{ t:'小説', body:'祖母の家の庭には、古いししおどしがあった。竹の筒に水がたまると、こつん、と石を打つ。泊まりに行くと、その音は夜中の二時にも三時にも、まじめに鳴った。<br><br>'
+              + '最初の夏、ぼくはそれがうるさくて眠れず、朝ごはんの席で「あれ、止められないの」と不機嫌に言った。祖母はみそ汁をすすりながら、「止まるとこまる人がおるからな」と答えただけだった。だれがこまるのか、ぼくには分からなかった。<br><br>'
+              + '中学に上がった夏、ぼくは同じ部屋で、①<u>うるさかったはずの音が、聞こえなくなっていた</u>ことに気づいた。自分でもおどろいた。祖母にそう話すと、めずらしく笑って「そりゃあ、この家の人間になったな」と言った。<br><br>'
+              + '祖母が入院したのは、その二年後の冬だった。ぼくは母と交代で家を見に行き、留守の庭で、つまった竹の口を直し、水の落ちる高さを合わせた。やり方は前の夏に教わっていた。だれも住んでいない家で、ししおどしだけが正しく鳴っている。その音を一人で聞きながら、ぼくはようやく②<u>「こまる人」の意味</u>を考えた。<br><br>'
+              + '祖母は、音がだれかのために鳴っていると信じていたのではない。おそらく逆だ。鳴らしつづけることを引きうけている人間が、その家にいる。それが祖母にとって、家に住むということだったのだろう。<br><br>'
+              + '退院の日、ぼくは祖母を車から降ろし、門を開けた。ちょうど、こつん、と音がした。祖母はつっかけをぬぎながら、だれにともなく「ずれとらんな」とつぶやいた。ぼくは何も答えず、竹を直した自分の右手を、上着のポケットの中でそっとにぎった。' }
+        }
+    };
     function exParse(str) { const p = String(str).split(/[\s\-:]+/).map(Number); return new Date(p[0], p[1] - 1, p[2], p[3] || 0, p[4] || 0, 0); }
-    function exFor(uid) { return (NOBI_EXAM.users || []).indexOf(uid || currentUserId) >= 0 ? NOBI_EXAM : null; }
+    const NOBI_EXAMS = [NOBI_EXAM, NOBI_EXAM_JP];
+    // 自分あてで、いま出すべきテストをぜんぶ返す
+    function exList(uid) { return NOBI_EXAMS.filter(e => (e.users || []).indexOf(uid || currentUserId) >= 0); }
+    function exFor(uid) { const l = exList(uid); return l.length ? l[0] : null; }
+    function exById(id) { return NOBI_EXAMS.find(e => e.id === id) || null; }
     function exQs(ex) { const out = []; (ex.parts || []).forEach(p => (p.qs || []).forEach(q => out.push(Object.assign({ pt:p.pt, part:p.n }, q)))); return out; }
     function exTotal(ex) { return exQs(ex).reduce((a, q) => a + q.pt, 0); }
     // いまの状態（オンラインの時こくで判定する）
@@ -12317,6 +12411,24 @@
         t = t.replace(/^\+/, '');
         return t;
     }
+    // 記述問題の採点：本文の大事なことば（キーワード）が入っているかで見る
+    //   ぜんぶ入っていたら満点／一部なら半分／ぜんぜんなら0（＋いつも解答例を見せる）
+    function exKwScore(user, q) {
+        const t = String(user == null ? '' : user).replace(/\s/g, '');
+        if(!t) return 0;
+        const groups = q.kw || [];
+        if(!groups.length) return exEq(user, q.a) ? 1 : 0;
+        let hit = 0;
+        groups.forEach(g => { if(g.some(w => t.indexOf(w) >= 0)) hit++; });
+        if(hit === groups.length) return 1;
+        if(hit > 0) return 0.5;
+        return 0;
+    }
+    // その問題が何点とれたか（0〜満点）
+    function exQScore(user, q) {
+        if(q.kw) return Math.round(q.pt * exKwScore(user, q) * 10) / 10;
+        return exEq(user, q.a) || (q.alts || []).some(x => exEq(user, x)) ? q.pt : 0;
+    }
     function exEq(user, ans) {
         const u = exNorm(user), a = exNorm(ans);
         if(!u) return false;
@@ -12331,12 +12443,15 @@
     }
     // ---------- 📝 夏休み定期テストの画面 ----------
     let exNow = null, exTimer = null, exTick = null;
-    function exCardHtml() {
-        const ex = exFor(); if(!ex) return '';                 // 自分あてじゃなければ 何も出さない
+    function exCardHtml(ex) {
+        ex = ex || exFor(); if(!ex) return '';                 // 自分あてじゃなければ 何も出さない
         const st = exState(ex); if(st.k === 'hidden') return '';
         const done = exLoad(ex);
         const total = exTotal(ex), nq = exQs(ex).length;
-        const when = `8月30日（日）20:00 〜 20:30`;
+        const ds = exParse(ex.start), de = exParse(ex.end);
+        const when = `${ds.getMonth()+1}月${ds.getDate()}日（${'日月火水木金土'[ds.getDay()]}）`
+            + `${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')} 〜 `
+            + `${String(de.getHours()).padStart(2,'0')}:${String(de.getMinutes()).padStart(2,'0')}`;
         const fmt = (ms) => { const s2 = Math.floor(ms / 1000); const h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
             return (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒'; };
         // ── すでに受けた ──
@@ -12346,7 +12461,7 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div class="m-ok" style="text-align:center;font-size:16px;">✅ 提出ずみ<br>
                   <b style="font-size:32px;">${done.score}点</b> / ${total}点（${pct}%）</div>
-                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult()">📊 答え合わせと解説を見る</button></div>`;
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult('${ex.id}')">📊 答え合わせと解説を見る</button></div>`;
         }
         // ── まだ日が来ていない（灰色） ──
         if(st.k === 'soon') {
@@ -12355,8 +12470,8 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
                 <div class="m-row"><span>日にち</span><b>${when}</b></div>
                 <div class="m-row"><span>はじまるまで</span><b>${fmt(st.ms + 600000)}</b></div>
-                <div class="m-warn" style="background:rgba(127,140,141,.15);">🔒 まだ受けられないよ。<b>8月30日 19:50</b>から待機できるようになる。<br>
-                それまでに 正負の数・文字式・方程式 を見なおしておこう！</div>
+                <div class="m-warn" style="background:rgba(127,140,141,.15);">🔒 まだ受けられないよ。<b>${ds.getMonth()+1}月${ds.getDate()}日 ${String(exParse(ex.stand).getHours()).padStart(2,'0')}:${String(exParse(ex.stand).getMinutes()).padStart(2,'0')}</b>から待機できるようになる。<br>
+                それまでに ${esc(ex.range)} を見なおしておこう！</div>
                 <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>まだ始められません</button></div>`;
         }
         // ── 待機中（10分前〜） ──
@@ -12366,11 +12481,11 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
                 <div style="text-align:center;margin:10px 0;">
                   <div style="font-size:13px;color:#e67e22;font-weight:bold;">⏳ 待機ちゅう…　はじまるまで</div>
-                  <div id="ex-count" style="font-size:34px;font-weight:bold;color:#e67e22;">${fmt(st.ms)}</div>
+                  <div id="ex-count-${ex.id}" style="font-size:34px;font-weight:bold;color:#e67e22;">${fmt(st.ms)}</div>
                 </div>
-                <div class="m-ok">🕗 <b>20:00</b>になったら 自動でボタンが出るよ。この画面のまま待っていてね。<br>
-                ・トイレは今のうちに　・えんぴつと紙を用意　・時間は<b>30分</b>だよ</div>
-                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>20:00まで待ってね</button></div>`;
+                <div class="m-ok">🕗 <b>${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')}</b>になったら 自動でボタンが出るよ。この画面のまま待っていてね。<br>
+                ・トイレは今のうちに　・えんぴつと紙を用意　・時間は<b>${ex.limit}分</b>だよ</div>
+                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')}まで待ってね</button></div>`;
         }
         // ── 受けられる ──
         if(st.k === 'open') {
@@ -12379,11 +12494,11 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div style="text-align:center;margin:8px 0;">
                   <div style="font-size:13px;color:#e74c3c;font-weight:bold;">🔴 いま受けられます！　しめ切りまで</div>
-                  <div id="ex-count" style="font-size:30px;font-weight:bold;color:#e74c3c;">${fmt(st.ms)}</div>
+                  <div id="ex-count-${ex.id}" style="font-size:30px;font-weight:bold;color:#e74c3c;">${fmt(st.ms)}</div>
                 </div>
                 <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分（時間になると自動で提出）</b></div>
-                <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart()">▶️ テストを始める</button>
-                <div class="m-learn">💡 途中で画面を変えても答えは残るよ。あわてずに、まず計算問題からいこう。</div></div>`;
+                <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button>
+                <div class="m-learn">💡 あわてずに、できる問題から先にやろう。時間が来ると自動で提出されるよ。</div></div>`;
         }
         // ── 終わった（受けなかった） ──
         return `<div class="m-card" style="opacity:.7;"><b>📝 ${esc(ex.title)}</b>
@@ -12393,18 +12508,22 @@
     function exStartTick() {
         clearInterval(exTick);
         exTick = setInterval(() => {
-            const el = document.getElementById('ex-count');
-            const ex = exFor(); if(!ex) { clearInterval(exTick); return; }
-            const st = exState(ex);
-            if(!el) { clearInterval(exTick); return; }
-            if(st.k !== 'stand' && st.k !== 'open') { clearInterval(exTick); renderOtTake(); return; }
-            const s2 = Math.floor(st.ms / 1000), h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
-            el.innerText = (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒';
-            if(st.k === 'stand' && st.ms <= 1000) renderOtTake();     // 20:00になったら画面を切りかえる
+            const els = document.querySelectorAll('[id^="ex-count-"]');
+            if(!els.length) { clearInterval(exTick); return; }
+            let redraw = false;
+            els.forEach(el => {
+                const ex = exById(el.id.replace('ex-count-', '')); if(!ex) return;
+                const st = exState(ex);
+                if(st.k !== 'stand' && st.k !== 'open') { redraw = true; return; }
+                const s2 = Math.floor(st.ms / 1000), h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
+                el.innerText = (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒';
+                if(st.k === 'stand' && st.ms <= 1000) redraw = true;   // 開始時こくになったら画面を切りかえる
+            });
+            if(redraw) { clearInterval(exTick); renderOtTake(); }
         }, 500);
     }
-    function exStart() {
-        const ex = exFor(); if(!ex) return;
+    function exStart(id) {
+        const ex = id ? exById(id) : exFor(); if(!ex) return;
         if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
         if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
         if(!confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（20:30で自動ていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
@@ -12430,14 +12549,28 @@
             <div class="m-desc">${esc(ex.range)}／全${qs.length}問・${exTotal(ex)}点</div></div>`;
         let n = 0;
         (ex.parts || []).forEach(p => {
+            // 📖 読解の本文（あれば大問の前に出す）
+            if(p.read && ex.reads && ex.reads[p.read]) {
+                const rd = ex.reads[p.read];
+                h += `<div class="m-card" style="border:2px solid #7f8c8d;"><b>📖 ${esc(p.n)}の文章（${esc(rd.t)}）</b>
+                    <div style="font-size:15px;line-height:2.0;margin-top:8px;text-align:left;">${rd.body}</div></div>`;
+            }
             h += `<div class="m-card"><b>${esc(p.n)}</b><span style="font-size:12px;color:#888;">（各${p.pt}点）</span>`;
-            (p.qs || []).forEach(() => {});
             p.qs.forEach(q => {
                 const i = n++;
-                h += `<div class="q-row grid-1"><div class="q-text">(${i + 1}) ${q.q}</div>
-                    <input type="text" class="q-input" id="ex-a-${i}" placeholder="答えを入力" value="${esc(exNow.ans[i] || '')}"
-                      oninput="exNow.ans[${i}]=this.value" autocomplete="off">
-                    ${q.unit ? `<div style="font-size:11px;color:#888;">単位（${esc(q.unit)}）は書かなくてもOK</div>` : ''}</div>`;
+                h += `<div class="q-row grid-1"><div class="q-text">(${i + 1}) ${q.q}</div>`;
+                if(q.choices) {
+                    // 選択問題はボタンでえらぶ（打ちまちがいをなくす）
+                    h += `<div id="ex-c-${i}" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;">
+                        ${q.choices.map(c => `<button class="m-btn ${exNow.ans[i] === c ? 'm-buy' : 'm-info'}" style="min-width:56px;font-size:16px;"
+                          onclick="exPick(${i},'${c}')">${c}</button>`).join('')}</div>`;
+                } else {
+                    h += `<input type="text" class="q-input" id="ex-a-${i}" placeholder="答えを入力" value="${esc(exNow.ans[i] || '')}"
+                        oninput="exNow.ans[${i}]=this.value" autocomplete="off">
+                        ${q.unit ? `<div style="font-size:11px;color:#888;">単位（${esc(q.unit)}）は書かなくてもOK</div>` : ''}
+                        ${q.kw ? `<div style="font-size:11px;color:#888;">📝 記述問題：本文の大事なことばを使って書こう（字数はだいたいでOK）</div>` : ''}`;
+                }
+                h += `</div>`;
             });
             h += `</div>`;
         });
@@ -12446,15 +12579,26 @@
         box.innerHTML = h;
         window.scrollTo(0, 0);
     }
+    function exPick(i, c) {
+        if(!exNow) return;
+        exNow.ans[i] = c;
+        const box = document.getElementById('ex-c-' + i); if(!box) return;
+        const q = exQs(exNow.ex)[i];
+        box.innerHTML = (q.choices || []).map(x => `<button class="m-btn ${x === c ? 'm-buy' : 'm-info'}" style="min-width:56px;font-size:16px;"
+            onclick="exPick(${i},'${x}')">${x}</button>`).join('');
+        playSfx('correct');
+    }
     function exSubmit(auto) {
         if(!exNow) return;
         const ex = exNow.ex, qs = exQs(ex);
         if(!auto) { const blank = exNow.ans.filter(a => !String(a).trim()).length;
             if(!confirm(`ていしゅつする？${blank ? `\n\n⚠️ ${blank}問 まだ空っぽだよ` : ''}\n出したあとは やり直せないよ。`)) return; }
         clearInterval(exTimer); clearInterval(exTick);
-        let score = 0; const marks = [];
-        qs.forEach((q, i) => { const ok2 = exEq(exNow.ans[i], q.a); if(ok2) score += q.pt; marks.push(ok2); });
-        const rec = { submitted:true, at:Date.now(), score, ans:exNow.ans.slice(), marks,
+        let score = 0; const marks = [], got = [];
+        qs.forEach((q, i) => { const p = exQScore(exNow.ans[i], q);
+            score += p; got.push(p); marks.push(p >= q.pt ? 1 : p > 0 ? 0.5 : 0); });
+        score = Math.round(score);
+        const rec = { submitted:true, at:Date.now(), score, ans:exNow.ans.slice(), marks, got,
                       total:exTotal(ex), min:Math.round((Date.now() - exNow.t0) / 60000) };
         exSave(ex, rec);
         // 記録も残す（成績・オンライン保存にのる）
@@ -12466,8 +12610,8 @@
         renderOtTake();
         setTimeout(() => exResult(), 300);
     }
-    function exResult() {
-        const ex = exFor(); if(!ex) return;
+    function exResult(id) {
+        const ex = id ? exById(id) : exFor(); if(!ex) return;
         const d = exLoad(ex); if(!d || !d.submitted) { alert('まだ受けていないよ'); return; }
         const qs = exQs(ex);
         const pct = Math.round(d.score / d.total * 100);
@@ -12485,8 +12629,9 @@
         // 大問ごとの出来
         let n = 0; const byPart = [];
         (ex.parts || []).forEach(p => { let got = 0, mx = 0, ok2 = 0;
-            p.qs.forEach(() => { if(d.marks[n]) { got += p.pt; ok2++; } mx += p.pt; n++; });
-            byPart.push([p.n, ok2, p.qs.length, got, mx]); });
+            p.qs.forEach(() => { const g = d.got ? (d.got[n] || 0) : (d.marks[n] ? p.pt : 0);
+                got += g; if(g >= p.pt) ok2++; mx += p.pt; n++; });
+            byPart.push([p.n, ok2, p.qs.length, Math.round(got * 10) / 10, mx]); });
         h += `<div class="m-tw" style="margin-top:10px;"><table class="m-gtab">
             <thead><tr><th>大問</th><th class="r">正解</th><th class="r">点数</th></tr></thead><tbody>
             ${byPart.map(b => `<tr><td>${esc(b[0])}</td><td class="r">${b[1]}/${b[2]}問</td><td class="r"><b>${b[3]}/${b[4]}点</b></td></tr>`).join('')}
@@ -12496,11 +12641,15 @@
         (ex.parts || []).forEach(p => {
             h += `<div style="margin-top:8px;font-weight:bold;font-size:13px;">${esc(p.n)}</div>`;
             p.qs.forEach(q => {
-                const i = n++, ok2 = d.marks[i];
-                h += `<div class="m-ev" style="margin:4px 0;border-left:4px solid ${ok2 ? '#27ae60' : '#e74c3c'};">
-                    <div style="font-size:13px;">${ok2 ? '⭕' : '❌'} (${i + 1}) ${q.q}</div>
-                    <div style="font-size:12px;">あなたの答え：<b>${esc(d.ans[i] || '（空っぽ）')}</b>　正解：<b style="color:#27ae60;">${esc(q.a)}${q.unit ? esc(q.unit) : ''}</b></div>
-                    ${!ok2 && q.sol ? `<div style="font-size:12px;color:#e67e22;">💡 ${esc(q.sol)}</div>` : ''}</div>`;
+                const i = n++, mk = d.marks[i], g = d.got ? (d.got[i] || 0) : (mk ? p.pt : 0);
+                const col = mk >= 1 ? '#27ae60' : mk > 0 ? '#e67e22' : '#e74c3c';
+                const mark = mk >= 1 ? '⭕' : mk > 0 ? '△' : '❌';
+                h += `<div class="m-ev" style="margin:4px 0;border-left:4px solid ${col};">
+                    <div style="font-size:13px;">${mark} (${i + 1}) ${q.q} <span style="color:#888;">［${g}/${p.pt}点］</span></div>
+                    <div style="font-size:12px;">あなたの答え：<b>${esc(d.ans[i] || '（空っぽ）')}</b></div>
+                    <div style="font-size:12px;">正解${q.kw ? '（例）' : ''}：<b style="color:#27ae60;">${esc(q.a)}${q.unit ? esc(q.unit) : ''}</b></div>
+                    ${q.sol && mk < 1 ? `<div style="font-size:12px;color:#e67e22;">💡 ${esc(q.sol)}</div>` : ''}
+                    ${q.kw && mk > 0 && mk < 1 ? `<div style="font-size:11px;color:#888;">大事なことばが一部だけ入っていたので半分の点にしたよ</div>` : ''}</div>`;
             });
         });
         h += `</div>
@@ -12635,7 +12784,7 @@
     function renderOtTake() {
         const box = document.getElementById('ottake-body'); if(!box) return;
         if(exNow) { exRender(); return; }                       // テスト中は そのまま
-        const exH = exCardHtml();                               // 📝 夏休み定期テスト（自分あてのときだけ）
+        const exH = exList().map(e => exCardHtml(e)).join('');  // 📝 夏休み定期テスト（自分あてのぶんぜんぶ）
         box.innerHTML = exH + '<div class="m-card">オンラインからテストをさがしています…</div>';
         if(exH) exStartTick();
         Promise.all([otLoadTests(), otLoadAnswers().catch(() => [])]).then(() => {
