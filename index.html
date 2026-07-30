@@ -1025,7 +1025,7 @@
     // ===== 📢 アップデートのお知らせ（応援バナーの上）。今回の内容だけ・日付は出さない =====
     // 【更新するとき】アップデートを入れたら、このUPDATE_NOWを今回の内容に書きかえる。
     // ⚠️ お知らせ本文に人の名前は書かないこと（ユーザー指示）
-    const UPDATE_NOW = '📝 <b>のびログ夏休み定期テスト 5教科の時間割が決まりました（なお専用）</b>①<b>1日め 8月30日（日）</b>　12:30 📐数学（〜13:00）→ 15分休み → 13:15 📗英語（〜13:45）→ 15分休み → 14:00 📖国語（〜14:45）②<b>2日め 8月31日（月）</b>　14:00 🔬理科（〜14:30）→ 15分休み → 14:45 🌏社会（〜15:15）③どの教科も<b>始まる10分前から待機できます</b>。📩テスト（オンライン）を開いて待っていてね④5教科ぜんぶ<b>25問・100点</b>。時間がきたら自動でていしゅつ、そのあと1問ずつの答え合わせと解説が見られます⑤<b>8月29日から灰色で出てきます</b>（まだ押せません）⑥ぜんぶ終わると<b>🎉おつかれさま画面</b>が出て、5教科の合計点と次回予告が見られます⑦カレンダーの8/30・8/31に時間割をのせました';
+    const UPDATE_NOW = '🔧📝 <b>作業が「ほんとうにやる」ものになりました＋夏休み定期テスト5教科</b>①🔧<b>作業</b>は押すだけでは終わりません。押すと<b>ほんものの課題</b>が出ます——🧮計算する／⌨️打ちこむ／🔍ちがいを見つける／📦仕分ける／🧠おぼえて書く／🔢順番にならべる の6しゅるい②<b>仕事の中身に合った課題</b>が出ます（レジ→計算、メール→打ちこみ、チェック→まちがい探し、荷物→仕分け、はんこ→記おく）③<b>正しくやりきったときだけ</b>作業が終わって評価が上がる。<b>まちがえるほど上がりが小さくなる</b>のでていねいに④10分の作業は2問・3分の作業は1問⑤📝<b>夏休み定期テスト（5教科・2日間・なお専用）</b><b>1日め 8/30</b> 12:30 数学→15分休み→13:15 英語→15分休み→14:00 国語（〜14:45）<b>2日め 8/31</b> 14:00 理科→15分休み→14:45 社会（〜15:15）⑥どれも<b>始まる10分前から待機</b>できて、時間になると自動でボタンが出ます。8/29から灰色で見えます⑦ぜんぶ終わると<b>🎉おつかれさま画面</b>（5教科の合計点と次回予告）';
     const UPDATE_OLD_1 = '🏛️政治と経済を大アップデート！①ニュースを<b>🏙️のびログ版</b>と<b>🌍現実版</b>に分けました。のびログ版の内容で<b>株価が同じタイミングで動く</b>よ📈②<b>お給料は毎月5日</b>（勉強で<b>20問正解＝1万円</b>）③<b>配当金も毎月5日</b>にもらえる💴④株を<b>「株数」で売り買い</b>できるように（1株千円なら100株で10万円。前は1円で買えちゃうバグがありました🙏）⑤ニュースも相場も<b>2人とも同じ</b>＝オンライン化⑥お詫びに<b>5万円プレゼント</b>🎁';
     function renderUpdateBox() {
         const el = document.getElementById('update-box'); if(!el) return;
@@ -5335,6 +5335,148 @@
             ot:  pick(M_OT_WORK, M_WORK_OT.n).map(n => ({ n, min:M_WORK_OT.min }))
         };
     }
+    // ==========================================================================================
+    //  🎬 作業は「ほんとうにやる」もの（ユーザー指定：ぽちぽち押すだけでは意味がない）
+    //   1つずつ、実際に手を動かす小さな課題が出る。正しくできたときだけ その作業が終わる。
+    //   仕事の中身に合わせて 6しゅるいの課題を出しわける。
+    // ==========================================================================================
+    const M_ACT_KIND = {
+        calc: { e:'🧮', n:'計算する',       d:'お金や数を まちがえずに計算する' },
+        type: { e:'⌨️', n:'打ちこむ',       d:'書いてあるとおりに 正しく打ちこむ' },
+        find: { e:'🔍', n:'ちがいを見つける', d:'ならんだ中から ちがうものを見つける' },
+        sort: { e:'📦', n:'仕分ける',       d:'どこに入れるかを 正しく選ぶ' },
+        memo: { e:'🧠', n:'おぼえて書く',   d:'数字をおぼえて、かくれたあとに書く' },
+        order:{ e:'🔢', n:'順番にならべる', d:'ただしい順番を選ぶ' }
+    };
+    // 作業の中身から、どの課題を出すか決める（会社ごとの仕事に合った課題になる）
+    function mActKindOf(name) {
+        const t = String(name || '');
+        if(/レジ|伝票|見積|在庫|かぞえ|売上|計算|発注|注文|金庫|入出金|お金|保険金|精度|はか/.test(t)) return 'calc';
+        if(/メール|日報|記録|カルテ|原稿|入力|記事|論文|報告|連絡|書類をつく|台本|連絡帳/.test(t)) return 'type';
+        if(/チェック|確認|点検|検査|たしかめ|見なお|直す|バグ|不良|安全|品質|裏どり/.test(t)) return 'find';
+        if(/仕分|品出し|ならべ|整理|片づけ|そうじ|ふく|棚|とじ|回収|そろえ|荷物|積|配達|出荷/.test(t)) return 'sort';
+        if(/はんこ|鍵|かぎ|戸じまり|電気を消す|パソコンをとじ|タイムカード|コピー|名ふだ|ゴミ/.test(t)) return 'memo';
+        return 'order';
+    }
+    // 課題を1つ作る（分数が長いほど むずかしい・数が多い）
+    function mActMake(name, min) {
+        const k = mActKindOf(name);
+        const hard = min >= 10 ? 2 : 1;                      // 10分の作業は 2問／3分は 1問
+        const R = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+        const items = [];
+        for(let i = 0; i < hard; i++) {
+            if(k === 'calc') {
+                const ty = R(0, 3);
+                if(ty === 0) { const a = R(120, 980), b = R(120, 980); items.push({ q:`${a} ＋ ${b}`, a:String(a + b) }); }
+                else if(ty === 1) { const a = R(300, 990), b = R(100, 290); items.push({ q:`${a} − ${b}`, a:String(a - b) }); }
+                else if(ty === 2) { const a = R(12, 48), b = R(3, 9); items.push({ q:`${a} × ${b}`, a:String(a * b) }); }
+                else { const b = R(3, 9), c = R(6, 30); items.push({ q:`${b * c} ÷ ${b}`, a:String(c) }); }
+            } else if(k === 'type') {
+                const pool = ['おせわになっております','かしこまりました','ごかくにんおねがいします','ほんじつはありがとうございました',
+                    'しりょうをおくります','あすもよろしくおねがいします','ごれんらくいたします','たいへんもうしわけありません'];
+                const t = pool[R(0, pool.length - 1)];
+                items.push({ q:`つぎのことばを そのまま打ちこんでね<br><b style="font-size:19px;letter-spacing:1px;">${t}</b>`, a:t });
+            } else if(k === 'find') {
+                const base = String(R(10000, 99999));
+                const wrongPos = R(0, 4);
+                const dif = base.split(''); dif[wrongPos] = String((Number(dif[wrongPos]) + R(1, 8)) % 10);
+                const odd = dif.join('');
+                const n = 5, at = R(1, n);
+                const rows = [];
+                for(let j = 1; j <= n; j++) rows.push(j === at ? odd : base);
+                items.push({ q:`1つだけ ちがう数字がまざっているよ。<b>何番目</b>かを数字で答えてね<br>`
+                    + rows.map((r, j) => `${j + 1}. <b style="font-size:18px;letter-spacing:3px;">${r}</b>`).join('<br>'), a:String(at) });
+            } else if(k === 'sort') {
+                const g = [['🍎 くだもの', ['りんご','みかん','バナナ','いちご','ぶどう']],
+                           ['📗 文ぼうぐ', ['えんぴつ','ノート','消しゴム','じょうぎ','はさみ']],
+                           ['🧴 日用品', ['タオル','せんざい','歯ブラシ','ティッシュ','せっけん']]];
+                const gi = R(0, 2), it = g[gi][1][R(0, 4)];
+                items.push({ q:`「<b>${it}</b>」は どの棚に入れる？　番号で答えてね<br>`
+                    + g.map((x, j) => `${j + 1}. ${x[0]}`).join('　'), a:String(gi + 1) });
+            } else if(k === 'memo') {
+                const num = String(R(1000, 9999));
+                items.push({ memo:num, q:`この番号を おぼえて！　<b style="font-size:28px;letter-spacing:6px;">${num}</b><br>
+                    <span style="font-size:12px;color:#888;">（3秒でかくれるよ）</span>`, a:num });
+            } else {
+                const steps = [['開店のじゅんび', ['電気をつける','レジを用よい','商品をならべる','ドアを開ける']],
+                               ['にもつを送る', ['伝票を書く','箱につめる','ふうをする','受けわたす']],
+                               ['お客さんの対応', ['あいさつする','用けんを聞く','こたえる','おれいを言う']]];
+                const st = steps[R(0, 2)];
+                const idx = st[1].map((x, j) => j);
+                for(let j = idx.length - 1; j > 0; j--) { const q2 = R(0, j); const t = idx[j]; idx[j] = idx[q2]; idx[q2] = t; }
+                items.push({ q:`「${st[0]}」の正しい順番は？　番号を順にならべて書いてね（例：2314）<br>`
+                    + idx.map((n2, j) => `${j + 1}. ${st[1][n2]}`).join('<br>'),
+                    a: idx.map((n2, j) => [n2, j]).sort((x, y) => x[0] - y[0]).map(x => x[1] + 1).join('') });
+            }
+        }
+        return { k, items };
+    }
+    let mAct = null;
+    function mWorkActOpen(kind, i) {
+        const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
+        mWorkReset(m);
+        const list = mWorkList(m); const arr = kind === 'n' ? list.nor : list.ot;
+        const it = arr[i]; if(!it) return;
+        if((m.job.w || {})[kind + i]) { alert('それは今日もうやったよ'); return; }
+        if(m.job.lastWork !== calToday()) { alert('まず「出勤する」を押してからだよ！'); return; }
+        if(kind === 'o' && m.job.otDay !== calToday()) { alert('残業の作業は「⏰残業する」を押してから出てくるよ'); return; }
+        mAct = { kind, i, it, task: mActMake(it.n, it.min), step:0, miss:0 };
+        mActShow();
+    }
+    function mActShow() {
+        if(!mAct) return;
+        const { it, task, step, miss } = mAct;
+        const K = M_ACT_KIND[task.k];
+        const q = task.items[step];
+        if(!q) { mActDone(); return; }
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">${K.e} ${esc(it.n)}</h2>
+            <div class="m-desc" style="text-align:center;">${esc(K.d)}　（${step + 1}/${task.items.length}）${miss ? `　<span style="color:#e74c3c;">まちがい${miss}回</span>` : ''}</div>
+            <div class="m-ev" id="mact-q" style="font-size:16px;line-height:2.0;margin-top:10px;">${q.q}</div>
+            <input type="text" class="q-input" id="mact-in" placeholder="こたえを入力" autocomplete="off"
+                   style="font-size:20px;margin-top:10px;" onkeydown="if(event.key==='Enter')mActCheck()">
+            <div id="mact-msg" style="min-height:22px;font-size:14px;margin-top:6px;"></div>
+            <div style="text-align:center;margin-top:8px;">
+              <button class="btn" style="background:#11998e;color:#fff;font-size:17px;" onclick="mActCheck()">✅ こたえる</button>
+              <button class="btn" style="background:#95a5a6;color:#fff;" onclick="mActQuit()">やめる</button></div>
+            <div class="m-learn" style="font-size:12px;">💡 これが「はたらく」ということ。<b>ちゃんとやりきったときだけ</b>作業が終わって、評価が上がるよ。</div></div>`);
+        setTimeout(() => { const el = document.getElementById('mact-in'); if(el) el.focus(); }, 100);
+        // おぼえる課題は 3秒でかくす
+        if(q.memo) setTimeout(() => { const el = document.getElementById('mact-q');
+            if(el) el.innerHTML = `番号を打ちこんでね<br><b style="font-size:28px;letter-spacing:6px;color:#bbb;">＊＊＊＊</b>`; }, 3000);
+    }
+    function mActNorm(v) {
+        let t = String(v == null ? '' : v).trim();
+        t = t.replace(/[Ａ-Ｚａ-ｚ０-９]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xFEE0));
+        return t.replace(/\s|,/g, '');
+    }
+    function mActCheck() {
+        if(!mAct) return;
+        const el = document.getElementById('mact-in'); if(!el) return;
+        const q = mAct.task.items[mAct.step];
+        const msg = document.getElementById('mact-msg');
+        if(mActNorm(el.value) === mActNorm(q.a)) {
+            playSfx('correct');
+            mAct.step++;
+            if(mAct.step >= mAct.task.items.length) { mActDone(); return; }
+            if(msg) msg.innerHTML = '<b style="color:#27ae60;">⭕ せいかい！ つぎだよ</b>';
+            setTimeout(() => mActShow(), 500);
+        } else {
+            mAct.miss++;
+            playSfx('wrong');
+            if(msg) msg.innerHTML = `<b style="color:#e74c3c;">❌ ちがうよ。もう一度！</b>${mAct.miss >= 3 ? `　<span style="color:#888;">（こたえ：${esc(q.a)}）</span>` : ''}`;
+            el.value = ''; el.focus();
+        }
+    }
+    function mActQuit() {
+        if(!confirm('やめる？　この作業は終わったことにならないよ')) return;
+        mAct = null; gCloseModal(); renderMoney();
+    }
+    function mActDone() {
+        const a = mAct; mAct = null;
+        gCloseModal();
+        mWorkDo(a.kind, a.i, a.miss);      // ここで はじめて作業が「終わった」ことになる
+    }
     function mWorkReset(m) {
         const t = calToday();
         if(m.job.wDay !== t) { m.job.w = {}; m.job.wDay = t; return true; }
@@ -5345,7 +5487,8 @@
     function mWage(m) { return Math.max(1, Math.round(mJobGross(m) / 160)); }
     function mOtWage(m) { return Math.round(mWage(m) * 1.25); }
     function mOtPay(m) { return Math.round(mOtWage(m) * (m.job.otMin || 0) / 60); }
-    function mWorkDo(kind, i) {
+    // ★ここは mWorkActOpen で課題をクリアしたときだけ呼ばれる（ボタン連打では終わらない）
+    function mWorkDo(kind, i, miss) {
         const m = mLoad(); const co = mJobCo(m.job.co); if(!co) return;
         mWorkReset(m);
         const list = mWorkList(m); const arr = kind === 'n' ? list.nor : list.ot;
@@ -5360,9 +5503,11 @@
         m.job.wMin = (m.job.wMin || 0) + it.min;
         // 体調で仕事の出来が変わる
         const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 2;
-        const gain = (cond >= 70 ? 0.5 : cond >= 45 ? 0.35 : cond >= 25 ? 0.2 : 0.05) * (it.min / 10);
+        // まちがえた回数が多いと、上がる評価は小さくなる（ていねいにやるほど得）
+        const acc = (miss || 0) === 0 ? 1 : (miss || 0) === 1 ? 0.7 : (miss || 0) === 2 ? 0.5 : 0.3;
+        const gain = (cond >= 70 ? 0.5 : cond >= 45 ? 0.35 : cond >= 25 ? 0.2 : 0.05) * (it.min / 10) * acc;
         m.job.ev = Math.max(0, Math.min(100, m.job.ev + gain));
-        let msg = `🔧 ${it.n}（${it.min}分）が終わった！\n評価 +${gain.toFixed(2)}`;
+        let msg = `🔧 ${it.n}（${it.min}分）が終わった！\n評価 +${gain.toFixed(2)}${(miss || 0) ? `（まちがい${miss}回ぶん 少なめ）` : '（ノーミス！）'}`;
         if(kind === 'o') {
             m.job.otMin = (m.job.otMin || 0) + it.min;         // ★残業した分をためる（お金は5日に）
             m.home.health = Math.max(0, m.home.health - 0.8);
@@ -5388,8 +5533,9 @@
                        + list.ot.filter((x, i) => (m.job.w || {})['o' + i]).reduce((a, x) => a + x.min, 0);
         let h = `<div class="m-card" style="border:3px solid #2980b9;">
             <b>🔧 作業（${dn + dof}/${list.nor.length + (otOn ? list.ot.length : 0)}）</b>
-            <div style="font-size:12px;color:#888;">タスクより細かい、じっさいに手を動かす仕事。<b>出勤すると30分ぶん（10分×3）</b>、
-            <b>残業すると さらに18分ぶん（3分×6）</b>が出てくるよ</div>
+            <div style="font-size:12px;color:#888;">タスクより細かい、<b>ほんとうに手を動かす仕事</b>。押すと計算・打ちこみ・仕分けなどの
+            <b>ほんものの課題</b>が出るよ。<b>正しくやりきったときだけ</b>終わったことになる（押すだけでは終わらない）。<br>
+            <b>出勤すると30分ぶん（10分×3）</b>、<b>残業すると さらに18分ぶん（3分×6）</b>が出てくる</div>
             <div class="m-row"><span>今日はたらいた時間</span><b>${minToday}分</b></div>
             <div class="m-row"><span>これまでの作業</span><b>${m.job.wTotal || 0}件／${Math.floor((m.job.wMin || 0) / 60)}時間${(m.job.wMin || 0) % 60}分</b></div>`;
         if(!worked) { h += `<div class="m-warn">まず<b>出勤する</b>を押そう。押すと作業が出てくるよ。</div></div>`; return h; }
@@ -5399,7 +5545,7 @@
             h += `<div class="m-row"><div style="flex:1;min-width:0;">
                 <div class="m-name">${ok2 ? '✅' : '⬜'} ${esc(it.n)}</div>
                 <div class="m-desc">${it.min}分</div></div>
-                <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkDo('n',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
+                <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkActOpen('n',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
         });
         h += `<div style="margin-top:10px;"><b style="font-size:14px;">⏰ 残業ぶん（合計18分・3分×6）</b>
             <div style="font-size:12px;color:#888;">${otOn ? '残業ちゅう。1つずつ かたづけよう' : '「⏰残業する」を押すと出てくるよ'}</div></div>`;
@@ -5409,7 +5555,7 @@
                 h += `<div class="m-row"><div style="flex:1;min-width:0;">
                     <div class="m-name">${ok2 ? '✅' : '⬜'} ${esc(it.n)}</div>
                     <div class="m-desc">${it.min}分／健康−0.8・きぶん−0.7</div></div>
-                    <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkDo('o',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
+                    <button class="m-btn ${ok2 ? 'm-info' : 'm-buy'}" onclick="mWorkActOpen('o',${i})" ${ok2 ? 'disabled' : ''}>${ok2 ? '済' : 'やる'}</button></div>`;
             });
         } else {
             h += `<div style="color:#888;font-size:13px;padding:6px 0;">（まだ出ていない）</div>`;
