@@ -3553,6 +3553,7 @@
         if(m.autoAmt > 0 && !M_IS_LISTED(m.autoCode)) { m.autoCode = 'ALLC'; m.autoAcct = 'nisa'; }
         const y = new Date().getFullYear();
         if(m.nisaYear !== y) { m.nisaYear = y; m.nisaUsed = 0; }            // 年が変わるとNISAの枠が復活
+        mBizFix(m);            // 🚀 お店のデータを新しい形にそろえる（昔のセーブでも落ちないように）
         return m;
     }
     // いまの株価（1株いくら）
@@ -7189,7 +7190,7 @@
                   <span style="font-size:12px;color:#888;">売れば ${mYen(holdV)} ぶんある。ただし もうけには税金がかかるよ</span></button>` : ''}
               ${best ? `<button class="m-quiz-btn" style="border-color:#e74c3c;" onclick="mNmGo('loan')"><b>💳 ${best.e} ${esc(best.n)}で借りる（年${(best.rate * 100).toFixed(1)}%）</b><br>
                   <span style="font-size:12px;color:#888;">💳借金のタブへ行って、返す計画を立ててから借りるよ。<b>借りたお金は必ず利息をつけて返す</b></span></button>`
-                : `<div class="m-warn" style="margin-top:8px;">💳 いまのあなたは<b>どこからも借りられない</b>よ。${hell >= 4 ? '借金がふくらみすぎているんだ…' : '信用スコアが足りないか、事故の記録が残っているんだ。'}<br>
+                : `<div class="m-warn" style="margin-top:8px;">💳 いまのあなたは<b>どこの審査も通らない</b>よ。${hell >= 4 ? '借金がふくらみすぎているんだ…' : '収入・返済ひりつ・借入件数のどれかが足りないんだ。'}<br>
                   はたらいてお金を作るか、持ちものを見なおそう。</div>`}
               <button class="m-quiz-btn" onclick="mNmGo('work')"><b>💼 はたらいてお金を作る</b><br>
                   <span style="font-size:12px;color:#888;">遠まわりに見えて、いちばん確実で いちばん安い方法</span></button>
@@ -7231,22 +7232,96 @@
         gCloseModal();
     }
     // いま借りられる中で いちばん金利が安いもの（無いなら null）
+    // ★審査に通る見こみがあるものだけ すすめる（すすめておいて落とされるのは いちばん不親切なので）
     function mLoanBest(m, need) {
-        const list = M_LOANS.filter(lo => !lo.illegal && mLoanCanUse(m, lo).ok && lo.max >= Math.max(10000, need || 0));
+        const want = Math.max(10000, need || 0);
+        const list = M_LOANS.filter(lo => !lo.illegal && lo.max >= want && mLoanCanUse(m, lo).ok && mShinsaPass(m, lo, want));
         if(!list.length) return null;
         return list.slice().sort((a, b) => a.rate - b.rate)[0];
     }
-    // その商品を借りられるか（理由つき）
+    // 「はたらいてきた日数」（会社の勤続＋自分のお店をやっている日数）
+    function mWorkDays(m) {
+        let d = mJobCo(m.job && m.job.co) ? (m.job.days || 0) : 0;
+        if(m.biz && m.biz.c) d += (m.biz.days || 0);
+        return d;
+    }
+    // 🔍 審査でチェックする項目（画面の演出と、通ったかどうかの判定の両方でこれを使う）
+    //    ★信用スコアは もう見ない（ユーザー指定）。見るのは「ほんとうに返せるか」だけ。
+    function mShinsaChecks(m, lo, want, months) {
+        const inc = mMonthIncome(m);
+        const nowPay = mLoanMonthlyTotal(m);
+        const addPay = want > 0 ? mLoanMonthly(want, lo.rate, Math.max(1, Math.min(lo.maxN, months || 60))) : 0;
+        const ratio = inc > 0 ? (nowPay + addPay) / inc : null;
+        const days = mWorkDays(m);
+        const nLoan = (m.loans || []).length;
+        const late = m.loanLate || 0;
+        const cs = [];
+        cs.push({ n:'① 本人かくにん・書るい', ok:true, d:'書類はそろっているね' });
+        cs.push({ n:'② 収入があるか（返せる見こみ）',
+            ok: inc >= (lo.minInc || 0),
+            d: (lo.minInc || 0) <= 0 ? (inc > 0 ? `毎月の手取り ${mYen(inc)} を確認したよ` : 'この商品は収入がなくても申しこめるよ')
+               : inc >= lo.minInc ? `毎月の手取り ${mYen(inc)} を確認したよ`
+               : `毎月 ${mYen(lo.minInc)} 以上の手取りがひつよう（いまは ${inc > 0 ? mYen(inc) : '0円'}）` });
+        cs.push({ n:'③ 返済ひりつ（手取りの何わりを返済にあてるか）',
+            ok: ratio === null ? (lo.minInc || 0) <= 0 : ratio <= lo.maxRatio,
+            d: ratio === null ? ((lo.minInc || 0) <= 0 ? '収入がなくても申しこめる商品だよ' : '収入がないので計算できない')
+               : `借りたあとで ${(ratio * 100).toFixed(0)}%（この商品は ${(lo.maxRatio * 100).toFixed(0)}%まで）` });
+        cs.push({ n:'④ 勤続（どれくらい続けてはたらいているか）',
+            ok: days >= (lo.minDays || 0),
+            d: (lo.minDays || 0) <= 0 ? 'この商品は勤続を見ないよ'
+               : days >= lo.minDays ? `${days}日つづけてはたらいているね` : `あと ${lo.minDays - days}日 はたらくとOK（${lo.minDays}日ひつよう）` });
+        cs.push({ n:'⑤ いま何件 借りているか（多重債務）',
+            ok: nLoan < (lo.maxLoans || 99),
+            d: nLoan < (lo.maxLoans || 99) ? `いま ${nLoan}件（${lo.maxLoans}件まで）` : `もう ${nLoan}件 借りているよ（${lo.maxLoans}件まで）。まず返そう` });
+        cs.push({ n:'⑥ 今までの返済の記録（延滞・事故）',
+            ok: late <= (lo.maxLate || 0) && (m.day || 0) >= (m.hell.blockUntil || 0),
+            d: (m.day || 0) < (m.hell.blockUntil || 0) ? `事故の記録がのこっているよ（あと ${Math.ceil(m.hell.blockUntil - m.day)}日）`
+               : late <= (lo.maxLate || 0) ? (late === 0 ? '一度も返しおくれていないね。すばらしい' : `返せなかったのは ${late}回（${lo.maxLate}回まで）`)
+               : `返せなかった回数が ${late}回（この商品は ${lo.maxLate}回まで）` });
+        if(lo.minSelf) {         // 🚀 創業ゆうしだけ：自己資金を見る（本物の創業融資と同じルール）
+            const need = want > 0 ? want : 0;
+            const self = Math.max(0, m.cash) + Math.max(0, m.bank);
+            // ぜんぶの開業のお金（起業の画面から来たときは その実額。ふつうに来たときは借りたい額から逆算）
+            const zen = (typeof mBizSougWant === 'object' && mBizSougWant && mBizSougWant.cost > 0)
+                        ? mBizSougWant.cost : (need > 0 ? need / (1 - lo.minSelf) : 0);
+            const iru = Math.ceil(zen * lo.minSelf);
+            cs.push({ n:'⑦ 自己資金（開業のお金のうち 自分で用意した分）',
+                ok: need <= 0 || self >= iru,
+                d: need <= 0 ? '開業するお店を先にえらんでね'
+                   : self >= iru ? `開業のお金 ${mYen(Math.round(zen))} のうち 自分で ${mYen(self)} 用意できているね（3ぶんの1をこえている）`
+                   : `自分のお金が ${mYen(iru)} ひつよう（開業のお金 ${mYen(Math.round(zen))} の3ぶんの1）。いまは ${mYen(self)}` });
+        }
+        return cs;
+    }
+    function mShinsaPass(m, lo, want, months) { return mShinsaChecks(m, lo, want, months).every(c => c.ok); }
+    // 審査のきびしさを 🔒1〜5 で表す。★ゆるいほど金利が高いのが ひと目で分かるようにするため
+    // ⚠️ここは `||` で書かないこと。maxLate:0（＝いちばんきびしい）が 0 は falsy なので
+    //   `lo.maxLate || 5` と書くと「いちばんゆるい」に化ける（実際にそのバグを出した）。
+    function mShinsaHard(lo) {
+        if(lo.noShinsa || lo.illegal) return 0;
+        const num = (v, def) => (typeof v === 'number' && isFinite(v)) ? v : def;
+        let s = Math.min(4, num(lo.minInc, 0) / 62500);
+        s += Math.max(0, (0.45 - num(lo.maxRatio, 0.45)) * 20);
+        s += Math.min(3, num(lo.minDays, 0) / 60);
+        s += Math.max(0, 5 - num(lo.maxLoans, 5)) * 0.6;
+        s += Math.max(0, 5 - num(lo.maxLate, 5)) * 0.5;
+        if(lo.minSelf) s += 2;
+        return s;
+    }
+    function mShinsaStars(lo) { const s = mShinsaHard(lo); return s >= 13 ? 5 : s >= 9 ? 4 : s >= 6 ? 3 : s >= 3.5 ? 2 : 1; }
+    function mShinsaLabel(lo) {
+        if(lo.illegal) return '<b style="color:#e74c3c;">審査なし（だから違法）</b>';
+        if(lo.noShinsa) return '審査なし（そのかわり信用をなくすかも）';
+        const n = mShinsaStars(lo);
+        return `審査のきびしさ ${'🔒'.repeat(n)}（${n}/5）`;
+    }
+    // その商品に「申しこめるか」（ここは入口。通るかどうかは審査で決まる）
     function mLoanCanUse(m, lo) {
         if(lo.illegal) return { ok:false, why:'これは違法な業者。ぜったいに借りてはダメ' };
         if((m.day || 0) < (m.hell.blockUntil || 0)) return { ok:false, why:`事故の記録がのこっているので、あと ${Math.ceil((m.hell.blockUntil - m.day))}日 は借りられない` };
-        if((m.credit || 0) < lo.minCredit) return { ok:false, why:`信用スコアが足りない（あと ${lo.minCredit - Math.round(m.credit || 0)}）` };
         if(lo.needJob && !mJobCo(m.job.co)) return { ok:false, why:'会社ではたらいている人だけが使えるよ' };
-        if(lo.bank) {
-            const inc = mMonthIncome(m);
-            if(inc <= 0) return { ok:false, why:'銀行は「返せる見こみ（収入）」がない人には貸してくれない' };
-            if(mLoanMonthlyTotal(m) / inc > 0.40) return { ok:false, why:'すでに毎月の返済が手取りの40%をこえている（返済比率オーバー）' };
-        }
+        // 🚀 創業ゆうしは「これからお店を出す人」か「もうお店をやっている人」だけ
+        if(lo.biz && !(m.biz && m.biz.c) && !mBizDraft) return { ok:false, why:'自分のお店を出す人のためのお金だよ（🚀起業でお店をえらんでから申しこもう）' };
         if(mLoanTotalDebt(m) > lo.max * 2) return { ok:false, why:'もう借りすぎだよ。まず返そう' };
         return { ok:true, why:'' };
     }
@@ -7523,43 +7598,43 @@
         const list = M_LOANS.filter(lo => lo.bank);
         const cl = mCreditLabel(m.credit);
         let h = `<div class="m-card" style="border:3px solid #2980b9;"><b>🏦 銀行でお金を借りる（ローン窓口）</b>
-            <div style="font-size:12px;color:#888;">銀行の金利は<b>いちばん安い</b>。そのかわり<b>審査</b>があって、だれでも借りられるわけじゃない。
+            <div style="font-size:12px;color:#888;">銀行の金利は<b>いちばん安い</b>。そのかわり<b>審査</b>がいちばんきびしい。
             これが「銀行で借りる」と「カードローンですぐ借りる」のいちばんのちがいだよ</div>
-            <div class="m-row"><span>あなたの信用スコア</span><b style="color:${cl[1]};">${Math.round(m.credit)}（${cl[0]}）</b></div>
+            <div class="m-ok" style="font-size:13px;">⭐ <b>信用スコアがなくても申しこめるようになりました。</b>
+            借りられるかどうかは、スコアではなく<b>「ほんとうに返せるか」の審査</b>だけで決まるよ</div>
             <div class="m-row"><span>毎月の手取り</span><b>${mMonthIncome(m) > 0 ? mYen(mMonthIncome(m)) : 'なし（銀行はここを必ず見る）'}</b></div>
-            <div class="m-row"><span>いまの毎月の返済</span><b>${mYen(mLoanMonthlyTotal(m))}</b></div>`;
+            <div class="m-row"><span>いまの毎月の返済</span><b>${mYen(mLoanMonthlyTotal(m))}</b></div>
+            <div class="m-row"><span>はたらいてきた日数（勤続）</span><b>${mWorkDays(m)}日</b></div>
+            <div class="m-row"><span>いま借りている件数／返せなかった回数</span><b>${(m.loans||[]).length}件／${m.loanLate || 0}回</b></div>`;
         list.forEach(lo => {
             const can = mLoanCanUse(m, lo);
             const ex = mLoanMonthly(1000000, lo.rate, 60);
             h += `<div class="m-row"><div style="flex:1;min-width:0;">
                 <div class="m-name">${lo.e} ${esc(lo.n)}</div>
                 <div class="m-desc">${lo.d}</div>
-                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／必要な信用 ${lo.minCredit}</div>
+                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／${mShinsaLabel(lo)}</div>
                 <div class="m-desc">例：100万円を60回で返すと 毎月 ${mYen(ex)}・利息は合計 <b>${mYen(ex * 60 - 1000000)}</b></div>
                 ${!can.ok ? `<div class="m-desc" style="color:#e74c3c;">✕ ${esc(can.why)}</div>` : ''}</div>
               <div class="m-price"><div style="font-size:11px;color:#888;">金利</div><div><b style="color:#27ae60;">年${(lo.rate * 100).toFixed(1)}%</b></div>
                 <button class="m-btn ${can.ok ? 'm-buy' : 'm-info'}" style="margin-top:4px;" onclick="mLoanShinsa('${lo.c}')" ${can.ok ? '' : 'disabled'}>審査を受ける</button></div></div>`;
         });
-        h += `<div class="m-learn">💡 銀行が見ているのは<b>①ちゃんと収入があるか ②いくら借りているか ③今まできちんと返してきたか</b>の3つ。
-            これを積み上げた人だけが、いちばん安い金利で借りられる。それが<b>「信用」</b>の正体だよ。<br>
-            すぐ貸してくれるところほど金利が高いのは、<b>返してもらえないリスクの分</b>を上のせしているから。</div></div>`;
+        h += `<div class="m-learn">💡 審査で見られるのは<b>①収入 ②返済ひりつ ③勤続 ④いま何件借りているか ⑤きちんと返してきたか</b>。
+            ぜんぶ「ほんとうに返せるか」を見ているだけなんだ。<br>
+            <b>審査がゆるいところほど金利が高い</b>のは、返してもらえないリスクの分を上のせしているから。
+            だから<b>いちばん安く借りる方法は、きびしい審査に通れる自分になること</b>だよ。</div></div>`;
         return h;
     }
-    // 🔍 審査（3つのチェックが1つずつ出てくる演出つき）
+    // 🔍 審査（チェックが1つずつ出てくる演出つき）
+    //    ★2026-08-05：銀行だけでなく、**ぜんぶの借り方**でこの審査を通るようになった（ユーザー指定）。
+    //      信用スコアは見ない。そのかわり「ほんとうに返せるか」を6〜7項目できびしく見る。
     let mSH = null;
-    function mLoanShinsa(code) {
+    function mLoanShinsa(code, want) {
         const lo = M_LOANS.find(x => x.c === code); if(!lo) return;
         const m = mLoad();
-        const inc = mMonthIncome(m);
-        const checks = [
-            { n:'① 本人かくにん・年れい', ok:true, d:'書類はそろっているね' },
-            { n:'② 収入があるか（返せる見こみ）', ok:inc > 0, d:inc > 0 ? `毎月の手取り ${mYen(inc)} を確認したよ` : 'いま収入がないので、返せる見こみが立たないんだ' },
-            { n:'③ 信用情報（今まできちんと返してきたか）', ok:(m.credit || 0) >= lo.minCredit && (m.day || 0) >= (m.hell.blockUntil || 0),
-              d:(m.day || 0) < (m.hell.blockUntil || 0) ? '事故の記録がのこっているよ' : (m.credit || 0) >= lo.minCredit ? `信用スコア ${Math.round(m.credit)}。だいじょうぶ` : `信用スコアが ${lo.minCredit} に足りないんだ` },
-            { n:'④ 返済ひりつ（手取りの何%を返済にあてるか）', ok:inc > 0 && mLoanMonthlyTotal(m) / inc <= 0.40,
-              d:inc > 0 ? `いま ${(mLoanMonthlyTotal(m) / inc * 100).toFixed(0)}%（40%まで）` : '収入がないので計算できない' }
-        ];
-        mSH = { lo, checks, i:0 };
+        const can = mLoanCanUse(m, lo);
+        if(!can.ok) { alert('いまは申しこめないよ。\n理由：' + can.why); return; }
+        if(lo.noShinsa) { mLoanPlan(code, want); return; }        // 親から借りるのは審査なし
+        mSH = { lo, checks: mShinsaChecks(m, lo, want), i:0, want: want || 0 };
         mShinsaStep();
     }
     function mShinsaStep() {
@@ -7567,9 +7642,10 @@
         const shown = checks.slice(0, i);
         const done = i >= checks.length;
         const ng = shown.filter(c => !c.ok);
+        const back = lo.biz ? `gCloseModal(); mSwitchTab('job');` : `gCloseModal(); mSwitchTab('${lo.bank ? 'bank' : 'loan'}');`;
         gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
             <h2 style="text-align:center;">🔍 ${lo.e} ${esc(lo.n)}の審査</h2>
-            <div class="m-desc" style="text-align:center;">銀行の人がチェックしています…</div>
+            <div class="m-desc" style="text-align:center;">${esc(lo.who)}の人がチェックしています…</div>
             <div class="m-ev" style="font-size:14px;line-height:2.1;min-height:120px;">
               ${shown.map(c => `<div>${c.ok ? '<b style="color:#27ae60;">○</b>' : '<b style="color:#e74c3c;">✕</b>'} ${esc(c.n)}<br>
                   <span style="font-size:12px;color:#888;padding-left:18px;">${esc(c.d)}</span></div>`).join('')}
@@ -7577,16 +7653,16 @@
             </div>
             ${done ? (ng.length ? `<div class="m-warn" style="font-size:15px;">📨 <b>今回はご希望にそえませんでした</b><br>
                   ${ng.map(c => esc(c.d)).join('<br>')}<br><br>
-                  銀行はきびしいけれど、それは<b>返せない借金をさせないため</b>でもあるんだ。</div>
-                  <div class="m-learn">💡 銀行に断られたときに、金利18%のところへ行くのがいちばん危ない道。
-                  まずは<b>収入を作る・いまの借金を返す・信用を積む</b>。遠まわりに見えて、これが最短だよ。</div>`
+                  きびしいけれど、これは<b>返せない借金をさせないため</b>。ことわられるのは、守られているということでもあるんだ。</div>
+                  <div class="m-learn">💡 ここでことわられて、そのまま<b>審査のゆるい金利18%のところ</b>へ行くのがいちばん危ない道。
+                  まずは<b>はたらいて収入を作る・いまの借金を減らす・きちんと返しつづける</b>。遠まわりに見えて、これが最短だよ。</div>`
               : `<div class="m-ok" style="font-size:16px;text-align:center;">🎉 <b>審査 とおりました！</b><br>
                   <span style="font-size:13px;">つづいて「いくら・何回で返すか」の計画を立てよう</span></div>`) : ''}
             <div style="text-align:center;margin-top:12px;">
               ${!done ? `<button class="btn" style="background:#2980b9;color:#fff;" onclick="mShinsaNext()">つぎ ▶</button>`
-                : (ng.length ? `<button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('bank');">とじる</button>`
-                             : `<button class="btn" style="background:#e74c3c;color:#fff;" onclick="mLoanPlan('${lo.c}')">返す計画を立てる ▶</button>
-                                <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('bank');">やめる</button>`)}
+                : (ng.length ? `<button class="btn" style="background:#34495e;color:#fff;" onclick="${back}">とじる</button>`
+                             : `<button class="btn" style="background:#e74c3c;color:#fff;" onclick="mLoanPlan('${lo.c}', ${mSH.want || 0})">返す計画を立てる ▶</button>
+                                <button class="btn" style="background:#34495e;color:#fff;" onclick="${back}">やめる</button>`)}
             </div></div>`);
     }
     function mShinsaNext() { mSH.i = Math.min(mSH.checks.length, mSH.i + 1); playSfx('correct'); mShinsaStep(); }
@@ -8131,35 +8207,63 @@
     }
     // ---------------- 💳 借金（ローン） ----------------
     // 本物と同じで「金利が低い＝借りにくい／金利が高い＝すぐ借りられる」。ここがいちばん大事な学び
+    // ★2026-08-05 ユーザー指定で大きく変えた：
+    //   「信用ポイントが無くても借りられるようにして、そのかわり審査をきびしくして」
+    //   → minCredit（信用スコアで門前ばらい）は やめた。ぜんぶ「審査」で決まる。
+    //   審査で見るのは 本物の金融機関と同じ ⑴収入 ⑵返済ひりつ ⑶勤続 ⑷いま何件借りているか ⑸延滞の記録 ⑹事故の記録。
+    //   ★審査がゆるい商品ほど金利が高い——これがいちばん大事な学び。
+    //     minInc   = ひつような毎月の手取り（0＝収入がなくてもOK）
+    //     maxRatio = 返済が手取りの何わりまでか
+    //     minDays  = 勤続（またはお店をやっている）日数
+    //     maxLoans = いま借りていていい件数
+    //     maxLate  = 今までに返せなかった回数の上限
+    //     minSelf  = 自己資金の割合（創業ゆうしだけ。開業のお金の何わりを自分で持っているか）
     const M_LOANS = [
-        { c:'BANK', e:'🏦', n:'銀行のローン', rate:0.030, max:3000000, minCredit:700, maxN:60, bank:true,
-          d:'いちばん金利が安い。でも審査がきびしくて、信用がないと借りられない', who:'銀行' },
-        { c:'CARD', e:'💳', n:'カードローン', rate:0.145, max:1000000, minCredit:550, maxN:36,
-          d:'銀行より借りやすいけれど金利は高め。使いすぎに注意', who:'銀行・信販会社' },
-        { c:'SHOH', e:'🏬', n:'消費者金融', rate:0.180, max:500000, minCredit:400, maxN:24,
-          d:'すぐ借りられるけど<b>年18%</b>。10万円借りて1年で1万8千円の利息がつく', who:'消費者金融' },
-        { c:'GAKU', e:'🎓', n:'奨学金（学ぶためのお金）', rate:0.010, max:2000000, minCredit:300, maxN:120,
-          d:'勉強のために借りるお金。金利がとても低い。でも返すのは自分だから、借りすぎに注意', who:'国・団体' },
-        { c:'YAMI', e:'☠️', n:'ヤミ金（ぜったい借りてはダメ）', rate:1.095, max:100000, minCredit:0, maxN:3,
+        { c:'BANK', e:'🏦', n:'銀行のローン', rate:0.030, max:3000000, maxN:60, bank:true,
+          minInc:150000, maxRatio:0.30, minDays:90, maxLoans:2, maxLate:0,
+          d:'いちばん金利が安い。そのかわり<b>審査がいちばんきびしい</b>（収入・勤続90日・借入2件まで・延滞0回）', who:'銀行' },
+        { c:'CARD', e:'💳', n:'カードローン', rate:0.145, max:1000000, maxN:36,
+          minInc:80000, maxRatio:0.35, minDays:30, maxLoans:3, maxLate:2,
+          d:'銀行より審査がやさしいぶん金利は高め。使いすぎに注意', who:'銀行・信販会社' },
+        { c:'SHOH', e:'🏬', n:'消費者金融', rate:0.180, max:500000, maxN:24,
+          minInc:30000, maxRatio:0.45, minDays:0, maxLoans:5, maxLate:5,
+          d:'審査がいちばんゆるい。だから<b>年18%</b>。10万円借りて1年で1万8千円の利息がつく', who:'消費者金融' },
+        { c:'GAKU', e:'🎓', n:'奨学金（学ぶためのお金）', rate:0.010, max:2000000, maxN:120,
+          minInc:0, maxRatio:0.40, minDays:0, maxLoans:3, maxLate:2,
+          d:'勉強のために借りるお金。収入がなくても借りられて金利もとても低い。でも返すのは自分', who:'国・団体' },
+        { c:'YAMI', e:'☠️', n:'ヤミ金（ぜったい借りてはダメ）', rate:1.095, max:100000, maxN:3,
+          minInc:0, maxRatio:9, minDays:0, maxLoans:99, maxLate:99,
           d:'法律を守っていない業者。<b>年109.5%（10日で3割）</b>。これは犯罪で、借りると人生がこわれる', who:'違法業者', illegal:true },
-        { c:'JUTA', e:'🏡', n:'住宅ローン', rate:0.013, max:40000000, minCredit:750, maxN:420, bank:true,
-          d:'家を買うための特別なローン。<b>年1.3%</b>ととても安く、最長35年。人生でいちばん大きな借金', who:'銀行' },
-        { c:'MYCA', e:'🚗', n:'マイカーローン', rate:0.025, max:5000000, minCredit:650, maxN:84, bank:true,
+        { c:'JUTA', e:'🏡', n:'住宅ローン', rate:0.013, max:40000000, maxN:420, bank:true,
+          minInc:250000, maxRatio:0.30, minDays:180, maxLoans:1, maxLate:0,
+          d:'家を買うための特別なローン。<b>年1.3%</b>ととても安く最長35年。そのかわり審査は人生でいちばんきびしい', who:'銀行' },
+        { c:'MYCA', e:'🚗', n:'マイカーローン', rate:0.025, max:5000000, maxN:84, bank:true,
+          minInc:120000, maxRatio:0.32, minDays:60, maxLoans:2, maxLate:1,
           d:'車を買うためのローン。車が担保になるので金利が安い', who:'銀行・ディーラー' },
-        { c:'KYOI', e:'🎓', n:'教育ローン（国）', rate:0.019, max:3500000, minCredit:400, maxN:180,
+        { c:'SOUG', e:'🚀', n:'開業のお金（創業ゆうし）', rate:0, max:10000000, maxN:84,
+          minInc:0, maxRatio:0.35, minDays:0, maxLoans:1, maxLate:0, minSelf:0.33, biz:true,
+          d:'★<b>金利0%</b>。自分でお店を出す人だけが借りられる、国の特別なお金。そのかわり<b>開業のお金の3ぶんの1は自分で用意</b>していないと通らない', who:'日本政策金融公庫' },
+        { c:'KYOI', e:'🎓', n:'教育ローン（国）', rate:0.019, max:3500000, maxN:180,
+          minInc:80000, maxRatio:0.35, minDays:0, maxLoans:3, maxLate:1,
           d:'学費のためのローン。国がやっているので金利が低い', who:'日本政策金融公庫' },
-        { c:'FREE', e:'📝', n:'銀行のフリーローン', rate:0.068, max:5000000, minCredit:680, maxN:84, bank:true,
+        { c:'FREE', e:'📝', n:'銀行のフリーローン', rate:0.068, max:5000000, maxN:84, bank:true,
+          minInc:150000, maxRatio:0.30, minDays:90, maxLoans:2, maxLate:0,
           d:'使いみち自由。カードローンより安いけど審査に時間がかかる', who:'銀行' },
-        { c:'SHOP', e:'🛍️', n:'ショッピングの分割払い', rate:0.125, max:500000, minCredit:500, maxN:24,
+        { c:'SHOP', e:'🛍️', n:'ショッピングの分割払い', rate:0.125, max:500000, maxN:24,
+          minInc:50000, maxRatio:0.38, minDays:0, maxLoans:4, maxLate:3,
           d:'お店で「分割で」と言うとこれ。金利がついていることに気づきにくい', who:'信販会社' },
-        { c:'RIBO', e:'🔁', n:'リボ払い', rate:0.150, max:800000, minCredit:450, maxN:60,
+        { c:'RIBO', e:'🔁', n:'リボ払い', rate:0.150, max:800000, maxN:60,
+          minInc:50000, maxRatio:0.40, minDays:0, maxLoans:4, maxLate:3,
           d:'★毎月の支払いは軽いのに、<b>いつまでも終わらない</b>。借金でいちばんこわい形', who:'カード会社' },
-        { c:'CASH', e:'💴', n:'カードのキャッシング', rate:0.180, max:300000, minCredit:420, maxN:12,
+        { c:'CASH', e:'💴', n:'カードのキャッシング', rate:0.180, max:300000, maxN:12,
+          minInc:50000, maxRatio:0.40, minDays:0, maxLoans:5, maxLate:4,
           d:'ATMですぐ現金が出る。手軽なぶん金利は最高クラス', who:'カード会社' },
-        { c:'SHAN', e:'🏢', n:'社内貸付（会社から借りる）', rate:0.008, max:1000000, minCredit:600, maxN:60,
-          d:'つとめている会社から借りる。いちばん金利が安いが、仕事をしていないと使えない', who:'会社', needJob:true },
-        { c:'OYAK', e:'👨‍👩‍👧', n:'親から借りる', rate:0, max:300000, minCredit:0, maxN:24,
-          d:'金利0円。でも<b>お金より大事なもの（信用）</b>をなくすかもしれない。ちゃんと返そう', who:'家族' }
+        { c:'SHAN', e:'🏢', n:'社内貸付（会社から借りる）', rate:0.008, max:1000000, maxN:60,
+          minInc:100000, maxRatio:0.35, minDays:120, maxLoans:3, maxLate:2,
+          d:'つとめている会社から借りる。金利はいちばん安いが、勤続120日ないと使えない', who:'会社', needJob:true },
+        { c:'OYAK', e:'👨‍👩‍👧', n:'親から借りる', rate:0, max:300000, maxN:24,
+          minInc:0, maxRatio:9, minDays:0, maxLoans:99, maxLate:99, noShinsa:true,
+          d:'金利0円・審査もなし。でも<b>お金より大事なもの（信用）</b>をなくすかもしれない。ちゃんと返そう', who:'家族' }
     ];
     // 毎月の返済額（元利均等返済）。本物の住宅ローンと同じ計算式
     function mLoanMonthly(P, yearRate, n) {
@@ -8186,10 +8290,34 @@
         h += `<div class="m-card"><b>⭐ あなたの信用スコア</b>
             <div style="display:flex;justify-content:space-between;font-size:12px;"><span>0</span><b style="color:${cl[1]};font-size:16px;">${Math.round(m.credit)}（${cl[0]}）</b><span>1000</span></div>
             <div class="m-meter"><div style="width:${Math.max(0,Math.min(100,m.credit/10))}%;background:${cl[1]};"></div></div>
-            <div class="m-desc" style="margin-top:6px;">きちんと返すと上がる／おくれると大きく下がる。
-            スコアが高いほど<b>安い金利でたくさん</b>借りられるよ（本物のクレジットスコアと同じ）</div>
+            <div class="m-ok" style="font-size:13px;margin-top:8px;">⭐ <b>お金を借りるのに、信用スコアはもう要りません。</b>
+            借りられるかどうかは<b>🔍審査</b>（収入・返済ひりつ・勤続・借入件数・返済の記録）だけで決まるよ。
+            スコアは<b>おまとめローン・⚡信用取引・称号</b>で使うよ</div>
             <div class="m-row"><span>これまでに返した回数</span><b>${m.loanPaid}回</b></div>
             <div class="m-row"><span>返せなかった回数</span><b class="${m.loanLate?'m-down':''}">${m.loanLate}回</b></div></div>`;
+        // ⭐ 信用スコアのため方（ユーザーの質問「ため方どうすればいいの」への答え）
+        h += `<div class="m-card"><b>⭐ 信用スコアのため方</b>
+            <div style="font-size:12px;color:#888;">いちばん強いのは「<b>少し借りて、きちんと返しきる</b>」。信用は<b>行動でしか</b>たまらないよ</div>
+            <div class="m-tw"><table class="m-gtab"><tbody>
+              <tr><td>ローンを毎月きちんと1回返す</td><td class="r"><b class="m-up">+6</b></td></tr>
+              <tr><td>ローンを最後まで返しきる</td><td class="r"><b class="m-up">+40</b></td></tr>
+              <tr><td>のこりをまとめて先に返す（くり上げ返済）</td><td class="r"><b class="m-up">+30</b></td></tr>
+              <tr><td>会社の筆記試験で4問いじょう正解</td><td class="r"><b class="m-up">+10</b></td></tr>
+              <tr><td>ひろったさいふを交番にとどける</td><td class="r"><b class="m-up">+25</b></td></tr>
+              <tr><td>さぎの電話をブロックする／かけ直す</td><td class="r"><b class="m-up">+10 / +5</b></td></tr>
+              <tr><td>税金をきちんと払う</td><td class="r"><b class="m-up">+8</b></td></tr>
+              <tr><td>きふをする・保護団体に相談する</td><td class="r"><b class="m-up">+5</b></td></tr>
+              <tr class="bad"><td>お金を借りる</td><td class="r"><b class="m-down">−15</b></td></tr>
+              <tr class="bad"><td>返せなかった（延滞）</td><td class="r"><b class="m-down">−60</b></td></tr>
+              <tr class="bad"><td>ひろったお金を自分のものにする</td><td class="r"><b class="m-down">−60</b></td></tr>
+              <tr class="bad"><td>税金をあとまわしにする</td><td class="r"><b class="m-down">−25</b></td></tr>
+              <tr class="bad"><td>おまとめローンを使う</td><td class="r"><b class="m-down">−10</b></td></tr>
+              <tr class="bad"><td>任意整理 ／ 自己破産</td><td class="r"><b class="m-down">280まで ／ 150に</b></td></tr>
+            </tbody></table></div>
+            <div class="m-learn">💡 いちばん早いのは<b>「3万円だけ借りて、きちんと全部返す」</b>。
+            借りたときに−15されても、返しきったときの+40でおつりがくる。<br>
+            本物の世界でも、これを<b>クレジットヒストリー（信用の記録）</b>といって、
+            <b>一度も借りたことがない人</b>より<b>借りてきちんと返した人</b>のほうが信用されるんだ。ふしぎだけど、そういうしくみだよ。</div></div>`;
         // いま借りているもの
         const tot = mLoanTotalDebt(m), mon = mLoanMonthlyTotal(m);
         h += `<div class="m-card"><b>📋 いま借りているお金</b>`;
@@ -8235,12 +8363,12 @@
             h += `<div class="m-row"><div style="flex:1;min-width:0;">
                 <div class="m-name">${lo.e} ${esc(lo.n)} ${lo.illegal ? '<span class="m-pill" style="background:rgba(231,76,60,.2);color:#e74c3c;">違法</span>' : ''}</div>
                 <div class="m-desc">${lo.d}</div>
-                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／必要な信用 ${lo.minCredit}</div>
+                <div class="m-desc">上限 ${mYen(lo.max)}／最長 ${lo.maxN}回払い／${mShinsaLabel(lo)}</div>
                 <div class="m-desc">例：10万円を12回で返すと、毎月 ${mYen(ex)}・利息は合計 <b>${mYen(ex*12-100000)}</b></div>
                 ${!ok && !lo.illegal ? `<div class="m-desc" style="color:#e74c3c;">✕ ${esc(can.why)}</div>` : ''}
               </div>
               <div class="m-price"><div style="font-size:11px;color:#888;">金利</div><div><b style="color:${lo.rate>=0.15?'#e74c3c':lo.rate>=0.1?'#e67e22':'#27ae60'}">年${(lo.rate*100).toFixed(1)}%</b></div>
-                <button class="m-btn ${ok?'m-buy':'m-info'}" style="margin-top:4px;" onclick="mLoanPlan('${lo.c}')" ${ok?'':'disabled'}>${lo.illegal?'ダメ':'計画を立てる'}</button></div></div>`;
+                <button class="m-btn ${ok?'m-buy':'m-info'}" style="margin-top:4px;" onclick="mLoanShinsa('${lo.c}')" ${ok?'':'disabled'}>${lo.illegal?'ダメ':(lo.noShinsa?'お願いする':'審査を受ける')}</button></div></div>`;
         });
         h += `<div class="m-warn">☠️ <b>ヤミ金</b>は法律の上限（年20%）を大きくこえた金利でお金を貸す<b>犯罪</b>。
             「ブラックでもOK」「すぐ振込」という広告はぜんぶこれ。<b>ぜったいに関わらないこと</b>。もし困ったら大人に相談しよう。</div></div>`;
@@ -8250,7 +8378,8 @@
             ②<b>返せる金額から逆算して借りる</b>。「ほしいから借りる」ではなく「毎月○円なら返せるから、○円まで借りる」<br>
             ③<b>リボ払いは形をかえた借金</b>。毎月の支払いが軽く見えるけど、利息の合計はとても大きい</div>
             <div class="m-learn">💡 このアプリで <b>借りて→ちゃんと返す</b> を体験しておくと、大人になったとき絶対に役に立つよ。
-            信用スコアを上げると、銀行の安い金利で借りられるようになる。それが「信用」の正体だよ。</div></div>`;
+            <b>審査がゆるいところほど金利が高い</b>——これだけは一生おぼえておこう。
+            安く借りたいなら、スコアをためるより<b>「きびしい審査に通れる自分」になる</b>のがいちばんの近道だよ。</div></div>`;
         return h;
     }
     // 借りる前の計画（いくら・何回・毎月いくら・利息の合計・いつ終わるか）
@@ -8260,6 +8389,8 @@
         const m = mLoad();
         const can = mLoanCanUse(m, lo);
         if(!can.ok) { alert('いまは借りられないよ。\n理由：' + can.why); return; }
+        // ★審査を通っていない人がここに来ないよう、念のためもう一度みる
+        if(!lo.noShinsa && !mShinsaPass(m, lo, want)) { mLoanShinsa(code, want); return; }
         // 「お金が足りない」画面から来たときは、足りない金額を先に入れておく（1万円単位に切り上げ）
         let P = Math.min(100000, lo.max);
         if(want > 0) P = Math.max(10000, Math.min(lo.max, Math.ceil(want / 10000) * 10000));
@@ -8295,6 +8426,13 @@
             </tbody></table></div>
             ${inc === 0 ? `<div class="m-warn">⚠️ いま<b>仕事をしていない</b>ので、返すあてがないよ。まず就職してから借りるのが正しい順番。</div>` : ''}
             ${heavy ? `<div class="m-warn">⚠️ 毎月の返済が手取りの<b>${ratio.toFixed(0)}%</b>。これは生活がくるしくなるライン。金額を減らすか、回数をふやそう。</div>` : ''}
+            ${(() => {   // 🔍 いまの金額・回数で審査に通るかを その場で出す（スライダーを動かすと変わる）
+                if(lo.noShinsa) return '';
+                const ng = mShinsaChecks(m, lo, P, n).filter(c => !c.ok);
+                return ng.length
+                  ? `<div class="m-warn">🔍 <b>この金額・回数だと審査に通らないよ</b><br>${ng.map(c => '✕ ' + esc(c.d)).join('<br>')}</div>`
+                  : `<div class="m-ok" style="font-size:13px;">🔍 この金額・回数なら<b>審査OK</b>だよ</div>`;
+              })()}
             <div class="m-learn">💡 <b>回数をふやすと毎月は軽くなるけど、利息の合計はふえる</b>。スライダーを動かして確かめてみて！
             これが「長く借りるほど損」のしくみだよ。</div>
             <div style="text-align:center;margin-top:12px;">
@@ -8306,6 +8444,11 @@
         const m = mLoad();
         const can = mLoanCanUse(m, lo);
         if(!can.ok) { alert('借りられなかったよ。\n理由：' + can.why); return; }
+        // ★最後にもう一度 審査（金額を大きくしたら返済ひりつでアウトになることがあるため）
+        if(!lo.noShinsa) {
+            const ng = mShinsaChecks(m, lo, P, n).filter(c => !c.ok);
+            if(ng.length) { alert('この金額だと審査に通らないよ。\n\n' + ng.map(c => '✕ ' + c.d).join('\n') + '\n\n金額を減らすか、回数をふやしてみよう。'); return; }
+        }
         if(mLoanTotalDebt(m) + P > lo.max * 2) { alert('もう借りすぎだよ。まず返そう'); return; }
         const pay = mLoanMonthly(P, lo.rate, n);
         m.loans.push({ c:lo.c, P, rate:lo.rate, n, pay, paid:0, left:pay * n, day:calToday() });
@@ -8314,6 +8457,14 @@
         mLog(m, `借りる：${lo.n}（${n}回払い）`, P);
         mSave(m); playSfx('finish'); renderMoney();
         gCloseModal();
+        // 🚀 創業ゆうしのときは、お金を持ったまま「お店をデザインする」画面へもどる
+        if(lo.c === 'SOUG' && mBizDraft) {
+            setTimeout(() => {
+                alert(`🚀 ${mYen(P)} を金利0%で借りたよ！\n毎月5日に ${mYen(pay)} ずつ、${n}回で返していこう。\n利息は0円。国が新しいお店をおうえんするしくみだよ。\n\nそれではお店を開こう！`);
+                mBizSougWant = null; mBizDesignShow();
+            }, 150);
+            return;
+        }
         setTimeout(() => alert(`💳 ${mYen(P)} を借りたよ。\n毎月5日に ${mYen(pay)} ずつ、${n}回で返していこう。\n利息は合計 ${mYen(pay*n-P)} だよ。`), 150);
     }
     function mLoanRepay(i) {
@@ -8875,76 +9026,550 @@
             <button class="btn" style="background:#e67e22;color:#fff;" onclick="gCloseModal(); switchView('life');">🏠 固定費を見なおす</button>
             <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div></div>`);
     }
-    // ⑧ 起業する（会社をやめて自分の店を出す）
-    const M_BIZ = [
-        { c:'cafe2', e:'☕', n:'カフェ', cost:3000000, sales:[400000, 1400000], fix:600000, d:'家賃と材料費がかかる。立地が命' },
-        { c:'ramen', e:'🍜', n:'ラーメン店', cost:2500000, sales:[500000, 1600000], fix:700000, d:'回転が速いぶん売上も大きいが、体力勝負' },
-        { c:'shop2', e:'🏪', n:'雑貨のお店', cost:1500000, sales:[250000, 900000], fix:400000, d:'仕入れが命。売れ残ると在庫になる' },
-        { c:'web',   e:'💻', n:'ネットのお店', cost:300000,  sales:[80000, 900000],  fix:80000,  d:'初期費用が安い。そのぶん競争がはげしい' },
-        { c:'you',   e:'🎥', n:'動画クリエイター', cost:500000, sales:[0, 1500000],  fix:50000,  d:'当たれば大きいが、0円の月もある' },
-        { c:'kyou',  e:'🏫', n:'学習じゅく', cost:2000000, sales:[400000, 1200000], fix:500000, d:'先生の腕と評判で決まる。安定しやすい' }
+    // ==========================================================================================
+    //  ⑧ 🚀 起業する（会社をやめて、自分のお店を出す）
+    //  ★2026-08-05 ユーザー指定で大きく作り直した：
+    //    ①商売を6種→50種に ②お店の名前・看板・場所・値段・スタッフ・広告・看板メニューを ぜんぶ自分で決める
+    //    ③開業のお金は「🚀創業ゆうし（金利0%）」で借りられる
+    //  ★売上のしくみを、本物のお店とおなじ形にした（ここがいちばんの学び）：
+    //      お客さんの数 × 客たんか ＝ 売上
+    //      売上 − 材料費(売上×原価率) − 家賃 − 人件費 − 広告費 ＝ もうけ
+    //    だから「安売りするとお客さんはふえるけど、もうけは増えない」ことが数字で分かる。
+    //  ⚠️昔の商売コード(cafe2/ramen/shop2/web/you/kyou)は絶対に消さないこと（開業中の人の店が消える）
+    // ==========================================================================================
+    const M_BIZ_CATS = [
+        ['food',  '🍚', '食べもの・飲食'],
+        ['shop',  '🏪', 'お店・小売'],
+        ['serv',  '🛠️', 'サービス・くらし'],
+        ['net',   '💻', 'ネット・IT'],
+        ['make',  '🎨', 'つくる・クリエイター'],
+        ['learn', '📚', '学び・スポーツ・健康']
     ];
-    function mBizHtml(m) {
+    // [コード, 絵文字, 名前, 分類, 開業のお金, 月のお客さんの数, 客たんか, 家賃など, 原価率, せつめい]
+    const M_BIZ_RAW = [
+        // ── 🍚 食べもの・飲食 ──
+        ['cafe2','☕','カフェ','food',3000000,1000,900,300000,0.32,'コーヒー1ぱいの原価は安い。でも家賃と人の手間がかかる'],
+        ['ramen','🍜','ラーメン店','food',2500000,1250,1000,500000,0.35,'回転が速いぶん売上は大きい。ただし体力しょうぶ'],
+        ['bento','🍱','お弁当屋さん','food',2000000,1800,650,450000,0.40,'数で勝負。売れ残りがそのまま損になる'],
+        ['pan','🥐','パン屋さん','food',3500000,2200,550,400000,0.38,'朝が早い。焼きたての香りがいちばんの宣伝'],
+        ['curry','🍛','カレー屋さん','food',2200000,1100,950,480000,0.33,'仕こんでおけるので回しやすい。ファンがつきやすい'],
+        ['crepe','🍰','スイーツのお店','food',1800000,1300,620,300000,0.34,'見た目が命。SNSでバズると一気にお客さんが来る'],
+        ['kitchen','🚚','キッチンカー','food',3000000,900,800,120000,0.36,'家賃がほとんどかからないのが強み。天気に弱い'],
+        ['teisho','🍲','定食屋さん','food',4000000,1600,950,550000,0.36,'まいにち来てくれる常連さんで持つお店'],
+        ['sushi','🍣','おすし屋さん','food',6000000,900,3500,1200000,0.50,'客たんかが高い。そのかわり材料費も家賃も高い'],
+        ['yaknik','🥩','焼肉店','food',9000000,1300,3200,2000000,0.42,'売上はとても大きいが、固定費もとても大きい'],
+        // ── 🏪 お店・小売 ──
+        ['shop2','🏪','雑貨のお店','shop',1500000,500,1800,250000,0.50,'仕入れが命。売れ残ると在庫（ざいこ）になる'],
+        ['hana','💐','お花屋さん','shop',1600000,400,2200,260000,0.48,'季節とイベントで売上が大きく動く'],
+        ['yao','🥬','八百屋さん','shop',1500000,1300,900,280000,0.62,'原価率が高い＝もうけがうすい商売の代表'],
+        ['recy','♻️','リサイクルショップ','shop',1600000,450,1600,250000,0.35,'安く仕入れて高く売る。目ききの力がすべて'],
+        ['book2','📗','本屋さん','shop',2500000,1500,1300,380000,0.72,'原価率が72%。本屋がへっている理由が数字で分かる'],
+        ['cloth2','👕','洋服のお店','shop',3000000,250,6000,500000,0.45,'1人あたりの売上が大きい。流行を外すと在庫の山に'],
+        ['game2','🎮','ゲーム・カードのお店','shop',2000000,600,2500,350000,0.62,'新作が出ると一気に売れる。原価率は高め'],
+        ['petsho','🐶','ペットショップ','shop',4000000,230,9000,700000,0.52,'いのちをあずかる仕事。責任がとても重い'],
+        // ── 🛠️ サービス・くらし ──
+        ['clean2','🧹','おそうじ代行','serv',800000,30,9000,140000,0.12,'道具だけで始められる。原価がほとんどかからない'],
+        ['shashi','📸','カメラマン','serv',1500000,8,45000,160000,0.15,'1件のたんかが高い。仕事が来ない月もある'],
+        ['nail','💅','ネイルサロン','serv',2000000,80,6500,180000,0.20,'リピーターがつけば安定。ウデがそのまま売上に'],
+        ['soumuk','🚕','送りむかえサービス','serv',2500000,180,3000,150000,0.25,'車があればできる。ガソリン代が原価'],
+        ['biyou','💇','美容室','serv',5000000,150,6500,550000,0.15,'原価が安く もうけが大きい。そのかわり技術がいる'],
+        ['fudou','🏘️','不動産の仲介','serv',3000000,4,180000,400000,0.10,'1件決まると大きい。0件の月もある ハイリスク'],
+        ['kaigo','🧑‍⚕️','訪問かいご','serv',4000000,130,5500,350000,0.18,'人の役に立つ実感が大きい。人手がいちばんの課題'],
+        ['coin','🧺','コインランドリー','serv',12000000,1600,700,350000,0.22,'開業のお金は大きいが、人がいなくても回る（不労所得に近い）'],
+        // ── 💻 ネット・IT ──
+        ['web','💻','ネットのお店','net',300000,200,2200,110000,0.55,'いちばん安く始められる。そのぶん競争がはげしい'],
+        ['sys','🖥️','ホームページ制作','net',600000,2,130000,140000,0.10,'パソコン1台で始められる。作れる人はいつも足りない'],
+        ['sns','📣','SNS運用の代行','net',400000,4,55000,115000,0.08,'スマホが仕事道具。結果が数字で出るのできびしい'],
+        ['ec','📦','ネット通販（せどり）','net',700000,450,1500,150000,0.62,'安く仕入れて売る。原価率が高いので数が必要'],
+        ['app','📱','アプリを作る','net',1000000,1500,250,120000,0.10,'当たれば一気に。当たらないと0円の月がつづく'],
+        ['game3','🕹️','ゲームを作る','net',1500000,900,600,200000,0.12,'作るのに時間がかかる。ヒットすればずっと売れる'],
+        ['ai','🤖','AIサービス','net',2500000,550,1500,350000,0.20,'これからの商売。サーバー代が毎月かかる'],
+        ['blog','✍️','ブログ・メディア','net',300000,5000,40,90000,0.05,'1人あたり40円。数がすべて。育つのに時間がかかる'],
+        // ── 🎨 つくる・クリエイター ──
+        ['you','🎥','動画クリエイター','make',500000,12000,25,150000,0.05,'当たれば大きいが、0円の月もある'],
+        ['hand','🧶','ハンドメイド作家','make',400000,130,2800,150000,0.30,'すきなことがそのまま仕事に。ひとつずつ手で作る'],
+        ['illust','🖌️','イラストレーター','make',500000,13,20000,125000,0.08,'1枚のたんかが高い。名前が売れるまでが勝負'],
+        ['music','🎸','音楽・作曲','make',800000,10,35000,170000,0.10,'機材にお金がかかる。使われつづけると強い'],
+        ['voice','🎙️','声のお仕事（ナレーション）','make',600000,16,18000,140000,0.06,'録音の部屋があればできる。声が商品'],
+        ['atori','👗','服・小物のアトリエ','make',1200000,120,4500,150000,0.35,'デザインから自分で。ファンがつくと強い'],
+        ['design','🎨','デザイン事務所','make',2000000,6,95000,250000,0.10,'1件のたんかが高い。センスと信頼で仕事が来る'],
+        ['cake2','🎂','オーダーケーキ工房','make',2500000,150,5500,300000,0.35,'ひとつずつ作るオーダーメイド。予約でうまる'],
+        // ── 📚 学び・スポーツ・健康 ──
+        ['kyou','🏫','学習じゅく','learn',2000000,30,22000,300000,0.10,'先生のウデと評判で決まる。安定しやすい'],
+        ['eikai','🗣️','英会話きょうしつ','learn',1500000,30,15000,220000,0.10,'続けてもらえるかがすべて。少人数が強い'],
+        ['piano','🎹','ピアノきょうしつ','learn',1200000,26,13000,160000,0.08,'自分の家でもできる。長く続く生徒さんが宝'],
+        ['sport','⚽','スポーツきょうしつ','learn',2000000,70,9000,320000,0.10,'体育館や場所を借りる代がかかる'],
+        ['gym','🏋️','トレーニングジム','learn',8000000,150,9500,1000000,0.10,'マシンにお金がかかる。会費なので売上が安定する'],
+        ['yoga','🧘','ヨガスタジオ','learn',3000000,90,8000,450000,0.08,'場所と先生さえいれば始められる。原価がほぼゼロ'],
+        ['swim','🏊','スイミングスクール','learn',15000000,320,9000,1600000,0.10,'開業のお金がいちばん大きい。そのぶん売上も大きい'],
+        ['hoiku','🧸','小さな保育園','learn',10000000,28,55000,1000000,0.08,'社会になくてはならない仕事。人をたくさんやとう']
+    ];
+    // ★商売ごとの「ブレ」＝月によって売上がどれくらい上下するか。
+    //   会費やお月謝でやる商売（じゅく・ジム・保育園）は毎月ほぼ同じ。
+    //   ネット・クリエイター・不動産は、当たれば大きいけれど 0円に近い月もある。
+    //   ここが「安定した会社員」と「上限も下限もない社長」のちがいを数字にしている所。
+    const M_BIZ_BURE_CAT = { learn:0.15, serv:0.25, food:0.28, shop:0.28, net:0.70, make:0.70 };
+    const M_BIZ_BURE = { coin:0.10, hoiku:0.10, swim:0.10, gym:0.12, kyou:0.12, piano:0.12, eikai:0.14, yoga:0.15, kaigo:0.15,
+                         kitchen:0.45, fudou:0.90, shashi:0.55, sushi:0.35, yaknik:0.35, ec:0.45, web:0.55,
+                         you:0.85, app:0.85, game3:0.85, blog:0.80, illust:0.60, music:0.75, voice:0.60, hand:0.50, design:0.55, sys:0.45, sns:0.50, ai:0.60 };
+    const M_BIZ = M_BIZ_RAW.map(r => ({ c:r[0], e:r[1], n:r[2], cat:r[3], cost:r[4], kyaku:r[5], tanka:r[6], rent:r[7], genka:r[8], d:r[9],
+                                        bure: M_BIZ_BURE[r[0]] !== undefined ? M_BIZ_BURE[r[0]] : (M_BIZ_BURE_CAT[r[3]] || 0.28) }));
+    // 📍 どこにお店を出すか（お客さんの数と家賃が大きく変わる。これが「立地」）
+    const M_BIZ_LOC = [
+        { c:'eki',    e:'🚉', n:'駅前',            kyaku:1.45, rent:2.00, cost:1.5,  d:'人がいちばん多い。でも家賃も開業のお金も高い' },
+        { c:'shou',   e:'🏘️', n:'商店街',          kyaku:1.15, rent:1.20, cost:0.6,  d:'ほどよく人が通る。まようならここ' },
+        { c:'jutaku', e:'🏠', n:'住宅街',          kyaku:0.95, rent:0.85, cost:0.2,  d:'家賃が安め。じもとの常連さんがつきやすい' },
+        { c:'kougai', e:'🌾', n:'郊外（車で来る）', kyaku:0.80, rent:0.50, cost:0.0,  d:'家賃がとても安い。そのかわりお客さんは少ない' },
+        { c:'netto',  e:'🌐', n:'ネットだけ',       kyaku:1.00, rent:0.25, cost:-0.3, d:'お店をかまえない。家賃がほぼゼロで始められる' }
+    ];
+    // 💰 値段のつけ方（安くすると人は来るけど、1人あたりのもうけは小さくなる）
+    const M_BIZ_PRICE = [
+        { c:'yasu',     e:'💴', n:'安さで勝負',      kyaku:1.35, tanka:0.70, d:'お客さんは1.35倍。でも1人あたりの売上は0.7倍' },
+        { c:'futsu',    e:'💰', n:'ふつうの値段',    kyaku:1.00, tanka:1.00, d:'まようならこれ' },
+        { c:'kodawa',   e:'✨', n:'こだわりの高級',  kyaku:0.65, tanka:1.80, d:'お客さんは0.65倍。でも1人あたりの売上は1.8倍' }
+    ];
+    const M_BIZ_STAFF_PAY = 220000;      // スタッフ1人あたり毎月かかるお金（人件費）
+    const M_BIZ_STAFF_MAX = 5;
+    const M_BIZ_LV_MAX = 10;
+    const M_BIZ_MENU_MAX = 5;
+    const M_BIZ_ICONS = ['🏪','☕','🍜','🍰','🌸','⭐','🔥','🌈','🐱','🐶','🚀','💎','🎀','🍀','👑','🎪','🧸','🎧','🛠️','📚','🏝️','⚡','🌙','🍩'];
+    function mBizOf(c) { return M_BIZ.find(x => x.c === c) || null; }
+    // 当たりはずれの大きさを ことばで出す（えらぶ前にリスクが見えるように）
+    function mBizBureLabel(bz) {
+        const b = typeof bz.bure === 'number' ? bz.bure : 0.28;
+        const lo = Math.round((1 - b) * 100), hi = Math.round((1 + b) * 100);
+        return b >= 0.6 ? `⚡ 当たりはずれ <b style="color:#e74c3c;">とても大きい</b>（月の売上が ${lo}%〜${hi}% でふれる。0円に近い月もある）`
+             : b >= 0.4 ? `🌤️ 当たりはずれ <b style="color:#e67e22;">大きめ</b>（${lo}%〜${hi}%）`
+             : b >= 0.25 ? `⛅ 当たりはずれ <b>ふつう</b>（${lo}%〜${hi}%）`
+             : `🛡️ 当たりはずれ <b style="color:#27ae60;">小さい＝安定</b>（${lo}%〜${hi}%）`;
+    }
+    function mBizLoc(c) { return M_BIZ_LOC.find(x => x.c === c) || M_BIZ_LOC[1]; }
+    function mBizPrice(c) { return M_BIZ_PRICE.find(x => x.c === c) || M_BIZ_PRICE[1]; }
+    function mBizCatName(cat) { const f = M_BIZ_CATS.find(x => x[0] === cat); return f ? f[1] + ' ' + f[2] : ''; }
+    // 開業にかかるお金（商売のもとの金額 × 場所による上のせ）
+    function mBizCost(bz, locC) { return Math.round(bz.cost * (1 + mBizLoc(locC).cost)); }
+    // お店をレベルアップするのにかかるお金
+    function mBizLvCost(m) { const bz = mBizOf(m.biz.c); return bz ? Math.round(bz.cost * 0.3 * (m.biz.lv || 1)) : 0; }
+    // 引っこし（場所をかえる）にかかるお金
+    function mBizMoveCost(m, locC) { const bz = mBizOf(m.biz.c); return bz ? Math.round(mBizCost(bz, locC) * 0.4) : 0; }
+    // ★お店の1か月の成績を計算する（画面の「今月の見こみ」と、5日の本番の両方でこれを使う）
+    function mBizCalc(m, rnd) {
+        const b = m.biz, bz = mBizOf(b.c);
+        if(!bz) return null;
+        const loc = mBizLoc(b.loc), pr = mBizPrice(b.price);
+        const star = Math.max(1, Math.min(5, b.star || 3));
+        const staff = Math.max(0, Math.min(M_BIZ_STAFF_MAX, b.staff || 0));
+        const lv = Math.max(1, Math.min(M_BIZ_LV_MAX, b.lv || 1));
+        const ad = Math.max(0, b.ad || 0);
+        const menuN = Array.isArray(b.menu) ? b.menu.length : 0;
+        const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 200;      // 0〜1（自分の体調）
+        const adEff = ad > 0 ? Math.min(0.6, Math.sqrt(ad / 10000) * 0.09) : 0;
+        const rr = rnd ? rnd() : 0.5;                                          // 見こみを出すときは まん中で計算する
+        const bure = typeof bz.bure === 'number' ? bz.bure : 0.28;             // 商売ごとの当たりはずれの大きさ
+        const kyaku = bz.kyaku * loc.kyaku * pr.kyaku
+                    * (0.7 + star / 5 * 0.6)          // 口コミ
+                    * (1 + staff * 0.12)              // スタッフ
+                    * (1 + (lv - 1) * 0.08)           // お店のレベル（設備）
+                    * (1 + adEff)                     // 広告
+                    * (0.75 + cond * 0.35)            // 自分の体調
+                    * mKeiki().biz                    // 景気
+                    * (1 - bure + rr * 2 * bure);     // その月の当たりはずれ（商売によって ふり幅がちがう）
+        const tanka = bz.tanka * pr.tanka * (1 + menuN * 0.04);
+        const sales  = Math.max(0, Math.round(kyaku * tanka));
+        const zairyo = Math.round(sales * bz.genka);
+        const rent   = Math.round(bz.rent * loc.rent);
+        const jinken = staff * M_BIZ_STAFF_PAY;
+        const cost   = zairyo + rent + jinken + ad;
+        return { kyaku:Math.round(kyaku), tanka:Math.round(tanka), sales, zairyo, rent, jinken, ad, cost, profit: sales - cost, star, staff, lv, menuN, adEff };
+    }
+    // お店のデータを新しい形にそろえる（昔のセーブでも落ちないように・足りない所だけうめる）
+    function mBizFix(m) {
+        if(!m.biz || typeof m.biz !== 'object') m.biz = { c:null, days:0, total:0, lastSales:0, lastProfit:0 };
         const b = m.biz;
+        if(b.c && !mBizOf(b.c)) b.c = null;                                   // 知らない商売なら開業していないあつかい
+        if(typeof b.name !== 'string' || !b.name) b.name = b.c ? (mBizOf(b.c).n) : '';
+        b.name = String(b.name).slice(0, 20);
+        if(typeof b.e !== 'string' || !b.e) b.e = b.c ? mBizOf(b.c).e : '🏪';
+        if(!M_BIZ_LOC.some(x => x.c === b.loc)) b.loc = 'shou';
+        if(!M_BIZ_PRICE.some(x => x.c === b.price)) b.price = 'futsu';
+        ['days','total','lastSales','lastProfit','staff','ad','lv','xp'].forEach(k => { if(typeof b[k] !== 'number' || !isFinite(b[k])) b[k] = 0; });
+        b.lv = Math.max(1, Math.min(M_BIZ_LV_MAX, Math.round(b.lv || 1)));
+        b.staff = Math.max(0, Math.min(M_BIZ_STAFF_MAX, Math.round(b.staff)));
+        b.ad = Math.max(0, Math.round(b.ad));
+        if(typeof b.star !== 'number' || !isFinite(b.star)) b.star = 3;
+        b.star = Math.max(1, Math.min(5, b.star));
+        if(!Array.isArray(b.menu)) b.menu = [];
+        b.menu = b.menu.filter(x => x && typeof x.n === 'string').slice(0, M_BIZ_MENU_MAX);
+        if(!Array.isArray(b.hist)) b.hist = [];
+        return m;
+    }
+    // ---- 🚀 起業の画面（開店まえ＝商売えらび／開店ご＝自分のお店の経営）----
+    let mBizCat = 'food';                 // いま見ている分類
+    let mBizDraft = null;                 // 開店じゅんびちゅうのお店（名前・場所・値段をここで決める）
+    let mBizSougWant = null;              // 🚀創業ゆうしで借りようとしている額と、そのときの開業のお金
+    function mBizPickCat(c) { mBizCat = c; renderMoney(); }
+    function mBizHtml(m) {
+        mBizFix(m);
+        const b = m.biz;
+        // ============ ① もうお店をやっている人＝経営の画面 ============
         if(b && b.c) {
-            const bz = M_BIZ.find(x => x.c === b.c) || {};
-            return `<div class="m-card" style="border:3px solid #e67e22;"><b>${bz.e} ${esc(bz.n)}（あなたのお店）</b>
+            const bz = mBizOf(b.c), loc = mBizLoc(b.loc), pr = mBizPrice(b.price);
+            const f = mBizCalc(m);                       // 今月の見こみ（まん中の運で計算）
+            const starS = '★'.repeat(Math.round(b.star)) + '☆'.repeat(5 - Math.round(b.star));
+            let h = `<div class="m-card" style="border:3px solid #e67e22;">
+                <div style="text-align:center;font-size:34px;line-height:1.1;">${esc(b.e)}</div>
+                <div style="text-align:center;font-size:19px;font-weight:bold;">${esc(b.name)}</div>
+                <div style="text-align:center;font-size:12px;color:#888;">${bz.e} ${esc(bz.n)}／${loc.e}${loc.n}／${pr.e}${pr.n}　レベル${b.lv}</div>
+                <div style="text-align:center;font-size:18px;color:#f39c12;margin-top:4px;">${starS} <span style="font-size:12px;color:#888;">口コミ ${b.star.toFixed(1)}</span></div>
                 <div class="m-row"><span>開店してから</span><b>${b.days}日</b></div>
                 <div class="m-row"><span>先月の売上</span><b>${mYen(b.lastSales || 0)}</b></div>
-                <div class="m-row"><span>毎月かかる費用（家賃・材料・人件費）</span><b class="m-down">${mYen(bz.fix)}</b></div>
-                <div class="m-row"><span>先月の利益</span><b class="${(b.lastProfit||0)>=0?'m-up':'m-down'}">${mYen(b.lastProfit || 0)}</b></div>
-                <div class="m-row"><span>これまでの合計もうけ</span><b class="${(b.total||0)>=0?'m-up':'m-down'}">${mYen(b.total || 0)}</b></div>
-                <div class="m-learn">💡 会社員は「売上が0でも給料が出る」。社長は「<b>売上−費用＝自分の取り分</b>」。
-                赤字の月は自分の貯金が減る。それが自由と引きかえのリスクだよ。</div>
-                <button class="m-btn m-info" style="width:100%;margin-top:8px;" onclick="mBizClose()">お店をたたむ</button></div>`;
+                <div class="m-row"><span>先月のもうけ</span><b class="${(b.lastProfit||0)>=0?'m-up':'m-down'}">${mYen(b.lastProfit || 0)}</b></div>
+                <div class="m-row"><span>これまでの合計もうけ</span><b class="${(b.total||0)>=0?'m-up':'m-down'}">${mYen(b.total || 0)}</b></div></div>`;
+            // 今月の見こみ（売上と費用の内わけ）
+            h += `<div class="m-card"><b>📊 今月の見こみ（5日にこれが動く）</b>
+                <div style="font-size:12px;color:#888;">お客さんの数 × 客たんか ＝ 売上。そこから費用を引いたのが もうけ</div>
+                <div class="m-tw"><table class="m-gtab"><tbody>
+                  <tr><td>お客さんの数</td><td class="r"><b>${f.kyaku.toLocaleString()}人</b></td></tr>
+                  <tr><td>客たんか（1人あたり）</td><td class="r"><b>${mYen(f.tanka)}</b></td></tr>
+                  <tr><td><b>売上</b></td><td class="r"><b class="m-up" style="font-size:16px;">${mYen(f.sales)}</b></td></tr>
+                  <tr class="bad"><td>− 材料・仕入れ（売上の${Math.round(bz.genka*100)}%）</td><td class="r">${mYen(f.zairyo)}</td></tr>
+                  <tr class="bad"><td>− 家賃など（${loc.n}）</td><td class="r">${mYen(f.rent)}</td></tr>
+                  <tr class="bad"><td>− 人件費（スタッフ${f.staff}人）</td><td class="r">${mYen(f.jinken)}</td></tr>
+                  <tr class="bad"><td>− 広告費</td><td class="r">${mYen(f.ad)}</td></tr>
+                  <tr><td><b>もうけ</b></td><td class="r"><b class="${f.profit>=0?'m-up':'m-down'}" style="font-size:18px;">${mYen(f.profit)}</b></td></tr>
+                </tbody></table></div>
+                <div class="m-learn">💡 ${f.profit >= 0
+                    ? `売上の <b>${Math.round(f.profit / Math.max(1, f.sales) * 100)}%</b> が手もとに残っているよ（これを<b>利益率</b>という）。10%こえたら立派なお店！`
+                    : `いまは<b>赤字</b>。売上をふやすか、費用（家賃・人件費・広告）を減らそう。赤字の月は自分のお金がへるよ。`}</div></div>`;
+            // お店をそだてる（ぜんぶ自分で決められる）
+            h += `<div class="m-card"><b>🛠️ お店をそだてる</b>
+                <div style="font-size:12px;color:#888;">ぜんぶ自分で決めていいよ。決めたことがそのまま来月の数字になる</div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">📝 お店の名前・看板</div>
+                  <div class="m-desc">いまは「${esc(b.e)} ${esc(b.name)}」</div></div>
+                  <button class="m-btn m-sell" onclick="mBizRename()">かえる</button></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">📍 場所（立地）</div>
+                  <div class="m-desc">${loc.e}${loc.n}：お客さん×${loc.kyaku} ／ 家賃×${loc.rent}</div>
+                  <div class="m-desc">引っこすと ${mYen(mBizMoveCost(m, 'shou'))}〜 かかるよ</div></div>
+                  <button class="m-btn m-sell" onclick="mBizMove()">引っこす</button></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">💰 値段のつけ方</div>
+                  <div class="m-desc">${pr.e}${pr.n}：${pr.d}</div>
+                  <div class="m-desc">かえると常連さんがとまどって 口コミが −0.3 下がるよ</div></div>
+                  <button class="m-btn m-sell" onclick="mBizSetPrice()">かえる</button></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">🧑‍🍳 スタッフ（いま ${b.staff}人）</div>
+                  <div class="m-desc">1人ふえると お客さん +12%、毎月 ${mYen(M_BIZ_STAFF_PAY)} かかる（最大${M_BIZ_STAFF_MAX}人）</div>
+                  <div class="m-desc">人が足りないと いそがしすぎて口コミが下がるよ</div></div>
+                  <div class="m-price"><button class="m-btn m-buy" onclick="mBizStaff(1)">やとう</button>
+                  <button class="m-btn m-info" style="margin-top:4px;" onclick="mBizStaff(-1)">へらす</button></div></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">📣 広告（今月 ${mYen(b.ad)}）</div>
+                  <div class="m-desc">お金をかけるほどお客さんがふえる。でも<b>ふえ方はだんだん にぶくなる</b>（いま +${Math.round(f.adEff*100)}%）</div></div>
+                  <button class="m-btn m-sell" onclick="mBizAd()">きめる</button></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">🔧 お店をよくする（レベル${b.lv}／${M_BIZ_LV_MAX}）</div>
+                  <div class="m-desc">レベルが1上がるとお客さん +8%。いま ${mYen(mBizLvCost(m))} かかる</div></div>
+                  <button class="m-btn ${b.lv < M_BIZ_LV_MAX ? 'm-buy' : 'm-info'}" onclick="mBizLvUp()" ${b.lv < M_BIZ_LV_MAX ? '' : 'disabled'}>${b.lv < M_BIZ_LV_MAX ? 'レベルUP' : 'MAX'}</button></div>
+                <div class="m-row"><div style="flex:1;min-width:0;"><div class="m-name">🍰 看板メニュー（${b.menu.length}／${M_BIZ_MENU_MAX}）</div>
+                  <div class="m-desc">${b.menu.length ? b.menu.map(x => esc(x.n) + '（' + mYen(x.p) + '）').join('・') : 'まだ無いよ。自分で名前と値段を決めよう'}</div>
+                  <div class="m-desc">1つで客たんか +4%。3つ以上あると口コミも上がるよ</div></div>
+                  <button class="m-btn ${b.menu.length < M_BIZ_MENU_MAX ? 'm-buy' : 'm-info'}" onclick="mBizMenu()">つくる</button></div>
+                </div>`;
+            // これまでの成績
+            if(b.hist.length) {
+                h += `<div class="m-card"><b>📒 これまでの成績</b>
+                    <div class="m-tw"><table class="m-gtab"><tbody>
+                      <tr><td>月</td><td class="r">売上</td><td class="r">もうけ</td><td class="r">口コミ</td></tr>
+                      ${b.hist.slice(0, 12).map(x => `<tr><td>${x.ym}</td><td class="r">${mYen(x.sales)}</td>
+                        <td class="r"><b class="${x.profit>=0?'m-up':'m-down'}">${mYen(x.profit)}</b></td><td class="r">${(x.star||3).toFixed(1)}</td></tr>`).join('')}
+                    </tbody></table></div></div>`;
+            }
+            h += `<div class="m-card"><div class="m-learn">💡 会社員は「売上が0でも給料が出る」。社長は「<b>売上−費用＝自分の取り分</b>」。
+                赤字の月は自分のお金がへる。それが自由と引きかえのリスクだよ。</div>
+                <button class="m-btn m-info" style="width:100%;margin-top:8px;" onclick="mBizClose()">🏁 お店をたたむ</button></div>`;
+            return h;
         }
-        return `<div class="m-card"><b>🚀 起業する（自分のお店を出す）</b>
-            <div style="font-size:12px;color:#888;">会社に「やとわれる」のではなく、自分が「やとう側」になる道。毎月5日に <b>売上−費用</b> が自分の取り分になる</div>
-            ${M_BIZ.map(bz => `<div class="m-row"><div style="flex:1;min-width:0;">
+        // ============ ② まだやっていない人＝商売えらびの画面 ============
+        const list = M_BIZ.filter(x => x.cat === mBizCat);
+        let h = `<div class="m-card"><b>🚀 起業する（自分のお店を出す）</b>
+            <div style="font-size:12px;color:#888;">会社に「やとわれる」のではなく、自分が「やとう側」になる道。
+            商売は<b>${M_BIZ.length}しゅるい</b>。名前も場所も値段も、ぜんぶ自分で決められるよ</div>
+            <div class="m-ok" style="font-size:13px;">🚀 開業のお金が足りなくても大丈夫。
+            <b>創業ゆうし（金利0%）</b>で借りられるよ（自分で3ぶんの1を用意できていることが条件）</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;">
+              ${M_BIZ_CATS.map(([c, e, n]) => `<button class="m-btn ${mBizCat === c ? 'm-buy' : 'm-info'}" onclick="mBizPickCat('${c}')">${e} ${n}</button>`).join('')}
+            </div>`;
+        list.forEach(bz => {
+            const cost = mBizCost(bz, 'shou');
+            h += `<div class="m-row"><div style="flex:1;min-width:0;">
                 <div class="m-name">${bz.e} ${esc(bz.n)}</div><div class="m-desc">${esc(bz.d)}</div>
-                <div class="m-desc">毎月の売上のめやす ${mYen(bz.sales[0])}〜${mYen(bz.sales[1])}／毎月の費用 ${mYen(bz.fix)}</div></div>
-                <div class="m-price"><div style="font-size:11px;color:#888;">開業のお金</div><div><b>${mYen(bz.cost)}</b></div>
-                <button class="m-btn ${m.cash>=bz.cost?'m-buy':'m-info'}" style="margin-top:4px;" onclick="mBizStart('${bz.c}')" ${m.cash>=bz.cost?'':'disabled'}>はじめる</button></div></div>`).join('')}
-            <div class="m-learn">💡 起業のいいところは<b>上限がない</b>こと。悪いところは<b>下限もない</b>こと。
+                <div class="m-desc">お客さん ${bz.kyaku.toLocaleString()}人／月 × 客たんか ${mYen(bz.tanka)} ＝ 売上 ${mYen(bz.kyaku * bz.tanka)}</div>
+                <div class="m-desc">材料は売上の${Math.round(bz.genka * 100)}%／家賃など ${mYen(bz.rent)}</div>
+                <div class="m-desc">${mBizBureLabel(bz)}</div></div>
+                <div class="m-price"><div style="font-size:11px;color:#888;">開業のお金</div><div><b>${mYen(cost)}</b></div>
+                <button class="m-btn m-buy" style="margin-top:4px;" onclick="mBizDesign('${bz.c}')">これにする ▶</button></div></div>`;
+        });
+        h += `<div class="m-learn">💡 起業のいいところは<b>上限がない</b>こと。悪いところは<b>下限もない</b>こと。
             会社員は安定、社長は自由。どちらが良い・悪いではなく、どちらを選ぶかだよ。</div></div>`;
+        return h;
     }
-    function mBizStart(c) {
-        const bz = M_BIZ.find(x => x.c === c); if(!bz) return;
+    // ---- 🎨 お店をデザインする（名前・看板・場所・値段を ぜんぶ自分で決める）----
+    function mBizDesign(c) {
+        const bz = mBizOf(c); if(!bz) return;
         const m = mLoad();
         const canB = mCanSide(m);         // 📋 会社の就業規則をまず見る（起業も副業のうち）
         if(!canB.ok) { mFukuBlocked(m, '起業（自分のお店を出すこと）'); return; }
-        if(m.cash < bz.cost) { mNoMoney(bz.cost, `${bz.n}の開業資金`, () => mBizStart(c)); return; }
+        if(!mBizDraft || mBizDraft.c !== c) mBizDraft = { c, name:'', e:bz.e, loc:'shou', price:'futsu' };
+        mBizDesignShow();
+    }
+    function mBizDesignSet(k, v) {
+        if(!mBizDraft) return;
+        if(k === 'name') {
+            // ★名前を打っているときは 画面を作り直さない（作り直すと1文字ごとにカーソルが飛ぶ）。
+            //   上のプレビューの文字だけを書きかえる。
+            mBizDraft.name = String(v || '').slice(0, 20);
+            const pv = document.getElementById('biz-preview-name');
+            if(pv) pv.textContent = mBizDraft.name || 'お店の名前';
+            return;
+        }
+        mBizDraft[k] = v;
+        mBizDesignShow();
+    }
+    function mBizDesignShow() {
+        const d = mBizDraft; if(!d) return;
+        const bz = mBizOf(d.c), m = mLoad();
+        const cost = mBizCost(bz, d.loc);
+        const self = Math.max(0, m.cash);
+        const lack = Math.max(0, cost - self);
+        // 開店したときの1か月の見こみ（口コミ3.0・スタッフ0・広告0・レベル1のとき）
+        const sim = mBizCalc(Object.assign({}, m, { biz:{ c:d.c, loc:d.loc, price:d.price, star:3, staff:0, ad:0, lv:1, menu:[] } }));
+        const nameNow = d.name || '';
+        gOpenModal(`<div style="text-align:left;max-width:560px;margin:0 auto;">
+            <h2 style="text-align:center;">🎨 お店をデザインしよう</h2>
+            <div class="m-desc" style="text-align:center;">${bz.e} ${esc(bz.n)}　—　ぜんぶ自分で決めていいよ</div>
+            <div style="text-align:center;font-size:40px;line-height:1.1;margin-top:8px;">${esc(d.e)}</div>
+            <div id="biz-preview-name" style="text-align:center;font-size:20px;font-weight:bold;min-height:26px;">${esc(nameNow || 'お店の名前')}</div>
+
+            <div style="margin-top:12px;"><b>① お店の名前</b>
+              <input id="biz-name" class="st-input" style="width:100%;font-size:16px;" maxlength="20" placeholder="れい：なおのカフェ"
+                     value="${esc(nameNow)}" oninput="mBizDesignSet('name', this.value)"></div>
+
+            <div style="margin-top:12px;"><b>② 看板の絵</b>
+              <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;">
+                ${M_BIZ_ICONS.map(ic => `<button class="m-btn ${d.e === ic ? 'm-buy' : 'm-info'}" style="font-size:19px;padding:4px 8px;" onclick="mBizDesignSet('e','${ic}')">${ic}</button>`).join('')}
+              </div></div>
+
+            <div style="margin-top:12px;"><b>③ どこに出す？（立地）</b>
+              ${M_BIZ_LOC.map(l => `<div class="m-row" style="cursor:pointer;" onclick="mBizDesignSet('loc','${l.c}')">
+                <div style="flex:1;min-width:0;"><div class="m-name">${d.loc === l.c ? '✅ ' : '　'}${l.e} ${l.n}</div>
+                <div class="m-desc">${l.d}</div>
+                <div class="m-desc">お客さん ×${l.kyaku}／家賃 ×${l.rent}／開業のお金 ${l.cost >= 0 ? '+' : ''}${Math.round(l.cost * 100)}%</div></div>
+                <div class="m-price"><b>${mYen(mBizCost(bz, l.c))}</b></div></div>`).join('')}</div>
+
+            <div style="margin-top:12px;"><b>④ 値段のつけ方</b>
+              ${M_BIZ_PRICE.map(p => `<div class="m-row" style="cursor:pointer;" onclick="mBizDesignSet('price','${p.c}')">
+                <div style="flex:1;min-width:0;"><div class="m-name">${d.price === p.c ? '✅ ' : '　'}${p.e} ${p.n}</div>
+                <div class="m-desc">${p.d}</div></div></div>`).join('')}</div>
+
+            <div class="m-ev" style="margin-top:12px;">
+              <div style="font-size:13px;font-weight:bold;">📊 このお店の1か月の見こみ</div>
+              <div class="m-row"><span>お客さん × 客たんか</span><b>${sim.kyaku.toLocaleString()}人 × ${mYen(sim.tanka)}</b></div>
+              <div class="m-row"><span>売上</span><b class="m-up">${mYen(sim.sales)}</b></div>
+              <div class="m-row"><span>費用（材料・家賃）</span><b class="m-down">${mYen(sim.cost)}</b></div>
+              <div class="m-row"><span><b>毎月のもうけ</b></span><b class="${sim.profit>=0?'m-up':'m-down'}" style="font-size:17px;">${mYen(sim.profit)}</b></div>
+              <div class="m-row"><span>開業のお金</span><b>${mYen(cost)}</b></div>
+              <div class="m-row"><span>いまの現金</span><b>${mYen(self)}</b></div>
+              ${lack > 0 ? `<div class="m-row"><span>足りない</span><b class="m-down">${mYen(lack)}</b></div>` : ''}
+              ${sim.profit > 0 ? `<div class="m-desc">この調子だと、開業のお金は <b>${Math.ceil(cost / sim.profit)}か月</b> でとりもどせる計算だよ</div>` : ''}
+              <div class="m-desc">${mBizBureLabel(bz)}</div>
+            </div>
+            ${(bz.bure || 0) >= 0.6 ? `<div class="m-warn">⚡ この商売は<b>当たりはずれがとても大きい</b>よ。上の見こみは「まん中」の月の話。
+              ドンともうかる月もあれば、<b>売上がほとんど無い月</b>もある。少ないお金で始められるのは、そのぶんリスクを自分で背おうからなんだ。</div>` : ''}
+            ${sim.profit < 0 ? `<div class="m-warn">⚠️ このままだと<b>毎月あかじ</b>だよ。場所を安いところにするか、値段のつけ方を見なおそう。</div>` : ''}
+            <div style="text-align:center;margin-top:12px;">
+              ${lack > 0 ? `<button class="btn" style="background:#11998e;color:#fff;" onclick="mBizSoug()">🚀 創業ゆうし（金利0%）で ${mYen(lack)} 借りる</button>` : ''}
+              <button class="btn" style="background:${lack > 0 ? '#95a5a6' : '#e67e22'};color:#fff;" onclick="mBizOpen()">${lack > 0 ? 'お金が足りない' : '🎉 この店で開店する！'}</button>
+              <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">やめる</button>
+            </div></div>`);
+    }
+    // 🚀 創業ゆうし（金利0%）で足りない分を借りる。★お店を決めてからでないと申しこめない
+    function mBizSoug() {
+        const d = mBizDraft; if(!d) return;
+        const m = mLoad();
+        const cost = mBizCost(mBizOf(d.c), d.loc);
+        const lack = Math.max(0, cost - Math.max(0, m.cash));
+        if(lack <= 0) { alert('もう足りているよ！そのまま開店できる'); return; }
+        const lo = M_LOANS.find(x => x.c === 'SOUG');
+        // 自己資金のチェックのために、いったん「開業のじゅんびちゅう」あつかいにする
+        mBizSougWant = { want: Math.min(lo.max, Math.ceil(lack / 10000) * 10000), cost };
+        mLoanShinsa('SOUG', mBizSougWant.want);
+    }
+    // 🎉 開店する
+    function mBizOpen() {
+        const d = mBizDraft; if(!d) return;
+        const bz = mBizOf(d.c); if(!bz) return;
+        const m = mLoad();
+        const canB = mCanSide(m);
+        if(!canB.ok) { gCloseModal(); mFukuBlocked(m, '起業（自分のお店を出すこと）'); return; }
+        const cost = mBizCost(bz, d.loc);
+        if(m.cash < cost) { alert(`開業のお金が ${mYen(cost - m.cash)} 足りないよ。\n🚀創業ゆうし（金利0%）で借りられるか、ためしてみよう。`); return; }
+        const name = (d.name || '').trim() || (bz.n);
         if(mJobCo(m.job.co) && !confirm('会社をやめて起業する？\n給料は止まって、売上ぜんぶが自分の責任になるよ。')) return;
-        if(!confirm(`${bz.n} を ${mYen(bz.cost)} で開く？\n毎月 ${mYen(bz.fix)} の費用がかかって、売上は ${mYen(bz.sales[0])}〜${mYen(bz.sales[1])} の間で変わるよ。`)) return;
-        m.cash -= bz.cost;
+        if(!confirm(`${d.e} ${name} を ${mYen(cost)} で開店する？`)) return;
+        m.cash -= cost;
         m.job.co = null; m.job.slip = null;
-        m.biz = { c, days:0, total:0, lastSales:0, lastProfit:0 };
-        mLog(m, `起業：${bz.n}`, -bz.cost);
-        mSave(m); playSfx('finish'); celebrate('big'); renderMoney();
-        alert(`🚀 ${bz.n} を開店したよ！\n毎月5日に「売上−費用」が入る（赤字ならマイナス）。がんばって！`);
+        m.biz = { c:d.c, name, e:d.e, loc:d.loc, price:d.price,
+                  days:0, total:0, lastSales:0, lastProfit:0, staff:0, ad:0, lv:1, star:3, menu:[], hist:[] };
+        mLog(m, `起業：${name}`, -cost);
+        mBizFix(m); mSave(m); playSfx('finish'); celebrate('big');
+        gCloseModal(); mBizDraft = null; mSwitchTab('job');
+        setTimeout(() => alert(`🚀 ${d.e} ${name} を開店したよ！\n\n毎月5日に「売上−費用」が自分の取り分になる。\nスタッフ・広告・看板メニューで お店をそだてよう！`), 200);
+    }
+    // ---- お店をそだてる（開店ご）----
+    function mBizRename() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        const nm = prompt('お店の新しい名前は？（20文字まで）', m.biz.name);
+        if(nm === null) return;
+        const t = String(nm).trim().slice(0, 20);
+        if(!t) { alert('名前を入れてね'); return; }
+        const ic = prompt('看板の絵を1つ入れてね（コピーしてはりつけてもOK）\n' + M_BIZ_ICONS.join(' '), m.biz.e);
+        m.biz.name = t;
+        if(ic !== null && String(ic).trim()) m.biz.e = String(ic).trim().slice(0, 4);
+        mBizFix(m); mSave(m); renderMoney();
+        alert(`かんばんを「${m.biz.e} ${m.biz.name}」にかえたよ！`);
+    }
+    function mBizMove() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">📍 引っこす（場所をかえる）</h2>
+            <div class="m-desc" style="text-align:center;">立地でお客さんの数も家賃も大きく変わるよ</div>
+            ${M_BIZ_LOC.map(l => `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${m.biz.loc === l.c ? '✅ いまここ　' : ''}${l.e} ${l.n}</div>
+                <div class="m-desc">${l.d}</div>
+                <div class="m-desc">お客さん ×${l.kyaku}／家賃 ×${l.rent}</div></div>
+                <div class="m-price"><div style="font-size:11px;color:#888;">引っこし代</div><div><b>${mYen(mBizMoveCost(m, l.c))}</b></div>
+                <button class="m-btn ${m.biz.loc === l.c ? 'm-info' : 'm-buy'}" style="margin-top:4px;" onclick="mBizMoveGo('${l.c}')" ${m.biz.loc === l.c ? 'disabled' : ''}>引っこす</button></div></div>`).join('')}
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">やめる</button></div></div>`);
+    }
+    function mBizMoveGo(locC) {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        const cost = mBizMoveCost(m, locC);
+        if(m.cash < cost) { gCloseModal(); mNoMoney(cost, '引っこし代', () => mBizMoveGo(locC)); return; }
+        if(!confirm(`${mBizLoc(locC).n} に引っこす？（${mYen(cost)}）`)) return;
+        m.cash -= cost; m.biz.loc = locC;
+        mLog(m, `お店の引っこし（${mBizLoc(locC).n}）`, -cost);
+        mSave(m); gCloseModal(); mSwitchTab('job');
+    }
+    function mBizSetPrice() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        gOpenModal(`<div style="text-align:left;max-width:520px;margin:0 auto;">
+            <h2 style="text-align:center;">💰 値段のつけ方をかえる</h2>
+            <div class="m-desc" style="text-align:center;">安くするとお客さんはふえる。でも1人あたりのもうけは小さくなるよ</div>
+            ${M_BIZ_PRICE.map(p => `<div class="m-row"><div style="flex:1;min-width:0;">
+                <div class="m-name">${m.biz.price === p.c ? '✅ いまここ　' : ''}${p.e} ${p.n}</div>
+                <div class="m-desc">${p.d}</div></div>
+                <button class="m-btn ${m.biz.price === p.c ? 'm-info' : 'm-buy'}" onclick="mBizPriceGo('${p.c}')" ${m.biz.price === p.c ? 'disabled' : ''}>これにする</button></div>`).join('')}
+            <div class="m-learn">💡 安さで勝負は お客さん1.35倍 × たんか0.7倍 ＝ 売上はほぼ同じ。
+            でも<b>お客さんが多い分だけ 材料費も手間もふえる</b>。「安売りはもうからない」のはこれが理由だよ。</div>
+            <div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal(); mSwitchTab('job');">やめる</button></div></div>`);
+    }
+    function mBizPriceGo(pc) {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        if(!confirm(`${mBizPrice(pc).n} にかえる？\n常連さんがとまどうので 口コミが 0.3 下がるよ。`)) return;
+        m.biz.price = pc;
+        m.biz.star = Math.max(1, m.biz.star - 0.3);
+        mSave(m); gCloseModal(); mSwitchTab('job');
+    }
+    function mBizStaff(d) {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        const now = m.biz.staff || 0;
+        if(d > 0 && now >= M_BIZ_STAFF_MAX) { alert(`スタッフは ${M_BIZ_STAFF_MAX}人までだよ`); return; }
+        if(d < 0 && now <= 0) { alert('スタッフはいないよ'); return; }
+        if(d > 0 && !confirm(`スタッフを1人やとう？\n\n毎月 ${mYen(M_BIZ_STAFF_PAY)} かかるようになるよ。\nそのかわり お客さんが 12% ふえて、いそがしさもへる。\n\n★人をやとうのは「毎月ずっとかかるお金」。売上がふえないと赤字になるよ。`)) return;
+        if(d < 0 && !confirm('スタッフを1人へらす？\n人件費はへるけど、お客さんもへって いそがしくなるよ。')) return;
+        m.biz.staff = Math.max(0, Math.min(M_BIZ_STAFF_MAX, now + d));
+        mSave(m); renderMoney();
+    }
+    function mBizAd() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        const v = prompt('今月の広告費をいくらにする？（0〜500000円）\n\nお金をかけるほどお客さんはふえるけど、\nふえ方はだんだん にぶくなるよ（10万円で約+28%、50万円でも+60%どまり）', String(m.biz.ad || 0));
+        if(v === null) return;
+        const n = Math.max(0, Math.min(500000, Math.round(Number(v) || 0)));
+        m.biz.ad = n;
+        mSave(m); renderMoney();
+        const eff = n > 0 ? Math.min(0.6, Math.sqrt(n / 10000) * 0.09) : 0;
+        alert(`今月の広告費を ${mYen(n)} にしたよ。\nお客さんが約 +${Math.round(eff * 100)}% ふえる見こみ。\n\n※広告費は5日に売上から引かれるよ`);
+    }
+    function mBizLvUp() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        if(m.biz.lv >= M_BIZ_LV_MAX) { alert('もうレベルMAXだよ！'); return; }
+        const cost = mBizLvCost(m);
+        if(m.cash < cost) { mNoMoney(cost, 'お店の設備（レベルUP）', () => mBizLvUp()); return; }
+        if(!confirm(`${mYen(cost)} でお店をよくする？\n\nレベル ${m.biz.lv} → ${m.biz.lv + 1}（お客さん +8%）\n\n★これを「設備投資」という。先にお金を出して、あとから売上でとりもどす考え方だよ。`)) return;
+        m.cash -= cost; m.biz.lv++;
+        mLog(m, `お店の設備投資（レベル${m.biz.lv}）`, -cost);
+        mSave(m); playSfx('finish'); celebrate(); renderMoney();
+    }
+    function mBizMenu() {
+        const m = mLoad(); if(!m.biz || !m.biz.c) return;
+        if(m.biz.menu.length >= M_BIZ_MENU_MAX) {
+            if(!confirm(`看板メニューは ${M_BIZ_MENU_MAX}こまでだよ。\nいちばん古いのを消して 新しく作る？`)) return;
+            m.biz.menu.shift();
+        }
+        const nm = prompt('看板メニューの名前は？（自分で考えよう・20文字まで）\n\nれい：ふわとろオムライス／なおスペシャル');
+        if(nm === null) return;
+        const t = String(nm).trim().slice(0, 20);
+        if(!t) { alert('名前を入れてね'); return; }
+        const pv = prompt(`「${t}」の値段はいくらにする？（円）`, String(mBizOf(m.biz.c).tanka));
+        if(pv === null) return;
+        const p = Math.max(0, Math.min(1000000, Math.round(Number(pv) || 0)));
+        m.biz.menu.push({ n:t, p });
+        m.biz.star = Math.min(5, m.biz.star + 0.1);
+        mBizFix(m); mSave(m); playSfx('finish'); renderMoney();
+        alert(`🍰 看板メニュー「${t}（${mYen(p)}）」ができた！\n客たんかが 4% 上がって、口コミも 0.1 上がったよ。`);
     }
     function mBizClose() {
         const m = mLoad(); if(!m.biz || !m.biz.c) return;
-        if(!confirm('お店をたたむ？（もどってくるお金はないよ）')) return;
-        mLog(m, 'お店をたたむ', 0);
-        m.biz = { c:null, days:0, total:0, lastSales:0, lastProfit:0 };
+        if(!confirm(`${m.biz.e} ${m.biz.name} をたたむ？\n\n開業のお金はもどってこないよ。`)) return;
+        mLog(m, `お店をたたむ：${m.biz.name}`, 0);
+        m.biz = { c:null, name:'', e:'🏪', loc:'shou', price:'futsu', days:0, total:0, lastSales:0, lastProfit:0, staff:0, ad:0, lv:1, star:3, menu:[], hist:[] };
         mSave(m); renderMoney();
     }
+    // 毎月5日：お店の1か月ぶんの成績を出す
     function mBizMonth(m) {
+        mBizFix(m);
         if(!m.biz || !m.biz.c) return false;
-        const bz = M_BIZ.find(x => x.c === m.biz.c); if(!bz) return false;
-        // 評判（健康ときぶん）が良いほど売上が上がる
+        const bz = mBizOf(m.biz.c); if(!bz) return false;
+        const b = m.biz;
+        const f = mBizCalc(m, Math.random);
+        b.lastSales = f.sales; b.lastProfit = f.profit;
+        b.total = (b.total || 0) + f.profit;
+        b.days += 30;
+        // 🌟 口コミが動く（ちゃんと回せているか・赤字か・自分の体調）
         const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 200;
-        const sales = Math.round((bz.sales[0] + (bz.sales[1] - bz.sales[0]) * (0.25 + Math.random() * 0.5 + cond * 0.35)) * mKeiki().biz);
-        const profit = sales - bz.fix;
-        m.biz.lastSales = sales; m.biz.lastProfit = profit;
-        m.biz.total = (m.biz.total || 0) + profit;
-        m.biz.days += 30;
-        if(profit >= 0) { m.cash += profit; mLog(m, `お店のもうけ（売上${mYen(sales)}−費用${mYen(bz.fix)}）`, profit);
-            mSlipPay(m, `🚀 お店のもうけ`, profit, [['売上', sales], ['費用（家賃・材料・人件費）', -bz.fix]]); }
-        else { mPayCost(m, -profit, `お店の赤字（売上${mYen(sales)}−費用${mYen(bz.fix)}）`); }
-        m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`${bz.e} お店の今月の成績`,
-            msg:`売上 ${mYen(sales)} − 費用 ${mYen(bz.fix)} ＝ ${profit >= 0 ? 'もうけ ' : '赤字 '}${mYen(Math.abs(profit))}。${profit >= 0 ? 'この調子！' : '赤字の月は自分のお金がへるよ。'}` });
+        let ds = f.profit >= 0 ? 0.12 : -0.25;
+        const perStaff = f.kyaku / (f.staff + 1);
+        if(perStaff > bz.kyaku * 1.3) ds -= 0.20;          // 人が足りなくて回らない
+        else if(f.staff > 0) ds += 0.08;                    // 手がたりている
+        if(f.menuN >= 3) ds += 0.05;
+        if(b.lv >= 5) ds += 0.05;
+        if(cond < 0.5) ds -= 0.10;
+        b.star = Math.max(1, Math.min(5, b.star + ds));
+        const ym = mYMD(calToday()).mo + '月';
+        b.hist.unshift({ ym, sales:f.sales, cost:f.cost, profit:f.profit, star:b.star });
+        if(b.hist.length > 24) b.hist.length = 24;
+        if(f.profit >= 0) {
+            m.cash += f.profit;
+            mLog(m, `お店のもうけ（${b.name}）`, f.profit);
+            mSlipPay(m, `🚀 ${b.name} のもうけ`, f.profit,
+                [['売上（' + f.kyaku.toLocaleString() + '人 × ' + mYen(f.tanka) + '）', f.sales],
+                 ['材料・仕入れ', -f.zairyo], ['家賃など', -f.rent],
+                 ['人件費（' + f.staff + '人）', -f.jinken], ['広告費', -f.ad]]);
+        } else {
+            mPayCost(m, -f.profit, `お店の赤字（${b.name}）`);
+        }
+        m.insNew.unshift({ d:Date.now(), day:m.day, bill:true, n:`${b.e} ${b.name} の今月の成績`,
+            msg:`お客さん ${f.kyaku.toLocaleString()}人 × ${mYen(f.tanka)} ＝ 売上 ${mYen(f.sales)}。` +
+                `そこから費用 ${mYen(f.cost)} を引いて ${f.profit >= 0 ? 'もうけ ' : '赤字 '}${mYen(Math.abs(f.profit))}。` +
+                `口コミは ${b.star.toFixed(1)}（${ds >= 0 ? '+' : ''}${ds.toFixed(2)}）。` +
+                (f.profit >= 0 ? 'この調子！' : '赤字の月は自分のお金がへるよ。費用を見なおそう。') });
+        b.ad = 0;                                    // 広告費は毎月えらび直す
         return true;
     }
     function mBankHtml(m) {
