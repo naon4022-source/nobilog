@@ -501,6 +501,31 @@
         .chat-edit-note { max-width:720px; margin:8px auto 0; font-size:13px; color:#e67e22; font-weight:bold; }
         .chat-state { max-width:720px; margin:6px auto 0; font-size:12px; color:#888; text-align:right; min-height:16px; }
         @media (max-width:600px) { .chat-body { max-width:80%; } .chat-log { height:52vh; } }
+        /* ================= 💎 お金持ちになる ================= */
+        .r-hero { background:linear-gradient(135deg,#11998e,#38ef7d); color:#fff; border-radius:14px; padding:16px 18px; margin-bottom:12px; }
+        .r-hero h2 { margin:0 0 4px; font-size:19px; }
+        .r-hero p { margin:0; font-size:13px; opacity:.95; line-height:1.7; }
+        .r-prog { height:8px; background:rgba(255,255,255,.3); border-radius:4px; margin-top:12px; overflow:hidden; }
+        .r-prog span { display:block; height:100%; background:#fff; border-radius:4px; transition:width .5s; }
+        .r-q { font-size:15px; font-weight:bold; margin:0 0 8px; line-height:1.6; }
+        .r-lead { font-size:14px; line-height:1.9; margin:0 0 10px; }
+        .r-ctrl { margin:12px 0; }
+        .r-ctrl label { display:block; font-size:13px; font-weight:bold; margin-bottom:4px; }
+        .r-ctrl input[type=range] { width:100%; accent-color:#11998e; }
+        .r-val { color:#11998e; font-weight:bold; }
+        body.dark-mode .r-val { color:#38ef7d; }
+        .r-out { background:var(--bg-color); border-radius:10px; padding:12px 14px; margin-top:10px; }
+        .r-big { font-size:26px; font-weight:bold; color:#11998e; text-align:center; margin:6px 0; line-height:1.3; }
+        body.dark-mode .r-big { color:#38ef7d; }
+        .r-bar { display:flex; height:26px; border-radius:6px; overflow:hidden; margin:10px 0 4px; font-size:11px; color:#fff; }
+        .r-bar div { display:flex; align-items:center; justify-content:center; white-space:nowrap; overflow:hidden; }
+        .r-pick { display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 2px; }
+        .r-pick button { flex:1 1 auto; min-width:78px; padding:9px 10px; font-size:13px; border-radius:8px; border:2px solid var(--border-color); background:var(--bg-color); color:var(--text-color); cursor:pointer; font-family:inherit; }
+        .r-pick button.on { border-color:#11998e; background:#11998e; color:#fff; font-weight:bold; }
+        .r-note { font-size:12px; color:#888; line-height:1.8; margin-top:10px; border-top:1px dashed var(--border-color); padding-top:10px; }
+        .r-done { width:100%; background:#11998e; color:#fff; border:none; border-radius:10px; padding:13px; font-size:15px; font-weight:bold; cursor:pointer; margin-top:12px; font-family:inherit; }
+        .r-done.got { background:#95a5a6; }
+        .r-key { background:rgba(17,153,142,.13); border-left:4px solid #11998e; border-radius:8px; padding:10px 12px; font-size:13.5px; line-height:1.8; margin:10px 0; }
         /* ================= 📲 アプリ版（ホーム画面に入れる） ================= */
         #offline-bar { position:fixed; left:0; right:0; bottom:0; z-index:4700; background:#e67e22; color:#fff; text-align:center; padding:9px 14px; font-size:13px; line-height:1.6; box-shadow:0 -2px 12px rgba(0,0,0,.25); }
         #pwa-overlay { display:none; position:fixed; inset:0; z-index:4800; background:rgba(0,0,0,.5); overflow-y:auto; padding:16px 14px; }
@@ -604,6 +629,7 @@
     <div class="nav-item" id="nav-money" onclick="switchView('money')">🏛️ 政治と経済</div>
     <div class="nav-item" id="nav-life" onclick="switchView('life')">🏠 生活</div>
     <div class="nav-item" id="nav-stats" onclick="switchView('stats')">📊 成績・グラフ</div>
+    <div class="nav-item" id="nav-rich" onclick="switchView('rich')">💎 お金持ちになる</div>
     <div class="nav-item" id="nav-chat" onclick="switchView('chat')">💬 DM<span id="nav-chat-badge" class="chat-badge" style="display:none;">0</span></div>
 </div>
 
@@ -806,6 +832,12 @@
         <div id="life-body"></div>
     </div>
 
+    <!-- ================= 💎 お金持ちになる（お金の勉強・体験できる計算つき） ================= -->
+    <div id="view-rich" class="view">
+        <h1 class="no-print">💎 お金持ちになる</h1>
+        <div id="rich-body"></div>
+    </div>
+
     <!-- ================= 💬 DM（なお ⇄ りらん の1対1チャット） ================= -->
     <div id="view-chat" class="view">
         <h1 class="no-print">💬 DM <span id="chat-with" style="font-size:14px;color:#888;font-weight:normal;"></span></h1>
@@ -929,10 +961,10 @@
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-chat'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-chat', 'nav-rich'];
     // 📝 定期テストは りらんにも「見える」。ただし受けられるのは なお だけ（ボタンが灰色になる）
     const OWNER_ONLY = [];
-    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-chat'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-chat','nav-rich'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
         const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
@@ -10678,9 +10710,10 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','ottake','chat'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats','ottake','chat','rich'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
-                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト', chat:'💬 DM' };
+                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト', chat:'💬 DM',
+                         rich:'💎 お金持ちになる' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
                   `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
@@ -10714,10 +10747,416 @@
         if(id === 'money') renderMoney();
         if(id === 'life') renderLife();
         if(id === 'ottake') renderOtTake();
+        if(id === 'rich') renderRich();
         if(id === 'run') showRunCheer();
         // 💬 DM は開いている間だけ細かく見にいく（ほかの画面では未読バッジのためにゆっくり見にいく）
         if(id === 'chat') { renderChat(); chatPull(true); chatSetPoll(CHAT_POLL_OPEN); }
         else chatSetPoll(CHAT_POLL_BG);
+    }
+
+    /* ================= 💎 お金持ちになる =================
+       「遊んで体験する」🏛️政治と経済 に対して、こっちは「なぜそうなるかを知る」場所。
+       ぜんぶ その場で数字をいじって、自分の目で結果を見られるようにしてある。
+       ★お金の教育であって、投資のすすめではない。特定の商品はすすめないこと。
+         数字はぜんぶ「勉強用の目安」であることを画面にも書いてある。
+    ======================================================== */
+    const RICH_CH = [
+        { id:'comp',  n:'⏳ 時間のちから' },
+        { id:'take',  n:'💴 手取り' },
+        { id:'asset', n:'🏠 ふえる物・へる物' },
+        { id:'life',  n:'🎯 人生シミュレーション' },
+        { id:'trap',  n:'🚨 だまされない' }
+    ];
+    let richTab = 'comp';
+    let richCompS = { m:10000, y:30, r:5 };
+    let richTakeS = { inc:5000000 };
+    let richLifeS = { path:'daigaku', job:'kaisha', home:'chin', car:'no', tsumi:10000 };
+    let richQuizS = { i:0, ok:0, shown:false };
+    let richTrapS = { kari:100000 };
+    const richKey = () => ukey('richDone');
+    function richLoad() { const a = jparse(richKey(), []); return Array.isArray(a) ? a : []; }
+    function richDone(id) { return richLoad().indexOf(id) >= 0; }
+    function richMarkDone(id) {
+        const a = richLoad();
+        if(a.indexOf(id) >= 0) return;
+        a.push(id);
+        try { localStorage.setItem(richKey(), JSON.stringify(a)); } catch(e) {}
+        if(a.length === RICH_CH.length) { celebrate('big'); alert('🎉 5つぜんぶ読みきった！\n\nここに書いてあることを知っているだけで、\n大人になってからのお金のこまり方が ぜんぜん変わるよ。'); }
+        else celebrate('');
+        renderRich();
+    }
+
+    /* ---- 計算のしくみ（ぜんぶ日本のいまのルールに合わせた目安） ---- */
+    // 毎月つみたてた場合の合計（1か月ごとに利息がつく）
+    function richComp(monthly, years, ratePct) {
+        const i = ratePct / 100 / 12, n = Math.round(years * 12);
+        const total = (i === 0) ? monthly * n : monthly * ((Math.pow(1 + i, n) - 1) / i);
+        const moto = monthly * n;
+        return { moto, total: Math.round(total), fue: Math.round(total - moto) };
+    }
+    // 給与所得控除（働く人の「経費」としてあらかじめ引かれる分）
+    function richKyuyoKojo(inc) {
+        if(inc <= 1625000) return 550000;
+        if(inc <= 1800000) return inc * 0.4 - 100000;
+        if(inc <= 3600000) return inc * 0.3 + 80000;
+        if(inc <= 6600000) return inc * 0.2 + 440000;
+        if(inc <= 8500000) return inc * 0.1 + 1100000;
+        return 1950000;
+    }
+    // 所得税（もうけが多いほど税率が上がる＝累進課税。復興特別所得税2.1%こみ）
+    function richShotokuzei(kazei) {
+        const T = [[1950000,0.05,0],[3300000,0.10,97500],[6950000,0.20,427500],[9000000,0.23,636000],
+                   [18000000,0.33,1536000],[40000000,0.40,2796000],[Infinity,0.45,4796000]];
+        // 所得税は100円未満を切りすてる（本物のルール。計算のはしたで1円ずれるのも防げる）
+        for(const [lim, r, d] of T) if(kazei <= lim) return Math.max(0, Math.floor((kazei * r - d) * 1.021 / 100) * 100);
+        return 0;
+    }
+    // 社会保険料（厚生年金と健康保険には「ここから上は増えない」上限がある）
+    function richShaho(inc) {
+        const kousei = Math.min(inc, 650000 * 12) * 0.0915;    // 厚生年金
+        const kenko  = Math.min(inc, 1390000 * 12) * 0.050;    // 健康保険
+        const koyo   = inc * 0.006;                            // 雇用保険
+        return Math.round(kousei + kenko + koyo);
+    }
+    // 額面から 手取り までを出す
+    function richTedori(inc) {
+        inc = Math.max(0, Math.round(inc));
+        const shaho = richShaho(inc);
+        const kyuyo = richKyuyoKojo(inc);
+        const kazeiS = Math.max(0, Math.floor((inc - kyuyo - shaho - 480000) / 1000) * 1000);  // 所得税（基礎控除48万）
+        const kazeiJ = Math.max(0, inc - kyuyo - shaho - 430000);                              // 住民税（基礎控除43万）
+        const zeiS = richShotokuzei(kazeiS);
+        const zeiJ = kazeiJ > 0 ? Math.floor(kazeiJ * 0.10) + 5000 : 0;
+        return { inc, shaho, zeiS, zeiJ, hiku: shaho + zeiS + zeiJ, tedori: inc - shaho - zeiS - zeiJ };
+    }
+
+    /* ---- 人生シミュレーション ---- */
+    const RICH_PATH = {
+        kousotsu: { n:'高校を出て働く', start:18, gaku:0,       base:2400000, peak:4800000 },
+        senmon:   { n:'専門・短大',     start:20, gaku:2000000, base:2800000, peak:5300000 },
+        daigaku:  { n:'大学',           start:22, gaku:5000000, base:3200000, peak:6800000 }
+    };
+    const RICH_JOB = {
+        kaisha: { n:'会社員',     mul:1.00, tai:15000000 },
+        koumu:  { n:'公務員',     mul:0.98, tai:20000000 },
+        teshoku:{ n:'手に職',     mul:1.12, tai:8000000  },
+        jibun:  { n:'自分でやる', mul:1.30, tai:0        }
+    };
+    const RICH_TSUMI = [0, 10000, 30000, 50000];
+    function richNenshu(P, J, age) {
+        if(age < P.start) return 0;
+        const t = Math.min(1, (age - P.start) / Math.max(1, 50 - P.start));
+        let v = (P.base + (P.peak - P.base) * t) * J.mul;
+        if(age >= 60) v *= 0.7;                      // 60をすぎると下がるのがふつう
+        return Math.round(v);
+    }
+    // o = { path, job, home, car, tsumi }
+    function richLifeSim(o) {
+        const P = RICH_PATH[o.path] || RICH_PATH.daigaku;
+        const J = RICH_JOB[o.job] || RICH_JOB.kaisha;
+        let cash = -P.gaku;              // 学費は奨学金（あとで返すお金）としてマイナスから始める
+        let toushi = 0;
+        let sumTedori = 0, sumTsumi = 0;
+        for(let age = P.start; age <= 65; age++) {
+            const inc = richNenshu(P, J, age);
+            const t = richTedori(inc);
+            sumTedori += t.tedori;
+            let sumai = 1080000;                                          // ずっと賃貸（月9万）
+            if(o.home === 'kai') {
+                const buy = P.start + 10;                                 // 10年はたらいて家を買う
+                if(age < buy) sumai = 1080000;
+                else if(age < buy + 35) sumai = 1320000 + 150000;         // ローン＋固定資産税など
+                else sumai = 300000;                                      // 払い終わったら 維持費だけ
+                if(age === buy) sumai += 3000000;                         // 頭金
+            }
+            const kuruma = (o.car === 'yes') ? 450000 : 0;
+            const nokori = t.tedori - 1800000 - sumai - kuruma;           // 1,800,000＝食べる・着る・遊ぶの基本
+            let toTsumi = Math.max(0, Math.min(o.tsumi * 12, nokori));
+            if(cash < 0) toTsumi = 0;                                     // 借金があるうちは まず返す
+            toushi = toushi * 1.05 + toTsumi;                             // 年5%で増えたとして計算
+            sumTsumi += toTsumi;
+            cash += nokori - toTsumi;
+        }
+        const tai = J.tai;
+        return { sumTedori: Math.round(sumTedori), tsumi: Math.round(sumTsumi),
+                 toushi: Math.round(toushi), cash: Math.round(cash), tai,
+                 total: Math.round(toushi + cash + tai), path:P, job:J };
+    }
+
+    /* ---- ふえる物・へる物 クイズ ---- */
+    const RICH_QUIZ = [
+        { n:'🏦 銀行のふつう預金', a:'up',   w:'利息はほんの少しだけど、減りはしない。ただし物のねだんが上がると 買える量は減っていく（インフレ）' },
+        { n:'🚗 新しい車',         a:'down', w:'買ったしゅんかんに値段が下がる。そのうえ 税金・保険・ガソリン・車検で毎年お金が出ていく' },
+        { n:'🏠 人に貸している部屋', a:'up',  w:'毎月 家賃が入ってくる。「持っているだけでお金を生む物」の代表' },
+        { n:'👜 ブランドのかばん', a:'down', w:'ほとんどは買った値段より安くなる。使ってもお金は入ってこない' },
+        { n:'📚 自分が身につけた力', a:'up', w:'★いちばん強い。だれにも取り上げられないし、一生 稼ぐ力になる。勉強はここに効く' },
+        { n:'📱 毎月のサブスク',   a:'down', w:'小さく見えても 月1,000円＝40年で48万円。しかも 使っていなくても出ていく' },
+        { n:'💳 リボ払いののこり', a:'down', w:'年15%くらいの利息がつく。複利が「味方」ではなく「敵」になっている状態' },
+        { n:'🏢 会社の株',         a:'up',   w:'会社がもうかると分け前がもらえる。※減ることもある。ほんとうにやるかは 大人になってから自分でよく調べて決めること' },
+        { n:'🎮 ゲームの課金',     a:'down', w:'楽しい時間は買えるけど お金は生まない。「使うお金」だと分かって使うならOK' },
+        { n:'🧰 仕事の道具',       a:'up',   w:'その道具でお金を稼げるなら「ふえる物」。同じ物でも 稼ぐために使うかどうかで変わる' },
+        { n:'🏫 奨学金（借りた学費）', a:'down', w:'返すときに利息がつくものもある。ただし それで稼ぐ力が上がるなら、人生ぜんたいではプラスになることも' },
+        { n:'💧 使っていない部屋のサブスク倉庫', a:'down', w:'「気づいていない毎月の出費」がいちばん こわい。年に1回は ぜんぶ見なおすこと' }
+    ];
+
+    /* ---- リボ払いの計算（借りたお金が どれだけふくらむか） ---- */
+    function richRibo(kari, monthly, ratePct) {
+        let zan = kari, m = 0, total = 0;
+        const r = ratePct / 100 / 12;
+        while(zan > 0 && m < 1200) {
+            const ri = zan * r;
+            if(monthly <= ri) return { m:-1, total:-1, risoku:-1 };   // 利息ぶんも払えない＝一生おわらない
+            const pay = Math.min(monthly, zan + ri);
+            zan = zan + ri - pay;
+            total += pay; m++;
+        }
+        return { m, total: Math.round(total), risoku: Math.round(total - kari) };
+    }
+
+    /* ---- 画面 ---- */
+    const richPct = (a, b) => (b > 0 ? Math.max(0, Math.min(100, a / b * 100)) : 0);
+    function renderRich() {
+        const body = document.getElementById('rich-body'); if(!body) return;
+        const done = richLoad();
+        let h = `<div class="r-hero">
+            <h2>💎 お金持ちになる人が知っていること</h2>
+            <p>学校では ほとんど教わらないのに、知っているかどうかで<br>大人になってからの生活が いちばん変わるところ。<br>ぜんぶ その場で数字をいじって、自分の目で確かめられるよ。</p>
+            <div class="r-prog"><span style="width:${richPct(done.length, RICH_CH.length)}%"></span></div>
+            <p style="margin-top:6px;font-size:12px;">読んだ章 ${done.length} / ${RICH_CH.length}</p>
+        </div><div class="m-tabs">`;
+        RICH_CH.forEach(c => {
+            h += `<button class="btn ${richTab === c.id ? 'btn-active' : 'btn-inactive'}" onclick="richGo('${c.id}')">${richDone(c.id) ? '✅ ' : ''}${c.n}</button>`;
+        });
+        h += `</div><div id="rich-ch"></div>`;
+        body.innerHTML = h;
+        richRenderCh();
+    }
+    function richGo(id) { richTab = id; richQuizS = { i:0, ok:0, shown:false }; renderRich(); }
+    function richRenderCh() {
+        const el = document.getElementById('rich-ch'); if(!el) return;
+        el.innerHTML = ({ comp: richChComp, take: richChTake, asset: richChAsset,
+                          life: richChLife, trap: richChTrap }[richTab] || richChComp)();
+        richUpdate();
+    }
+    // いま開いている章の「結果」だけを描きなおす（スライダーがカクつかないように）
+    function richUpdate() {
+        if(richTab === 'comp')  richUpComp();
+        if(richTab === 'take')  richUpTake();
+        if(richTab === 'life')  richUpLife();
+        if(richTab === 'trap')  richUpTrap();
+    }
+    function richDoneBtn(id) {
+        const got = richDone(id);
+        return `<button class="r-done ${got ? 'got' : ''}" onclick="richMarkDone('${id}')">${got ? '✅ 読んだ' : 'わかった！'}</button>`;
+    }
+
+    /* --- 章1 時間のちから --- */
+    function richChComp() {
+        return `<div class="m-card">
+            <p class="r-q">お金持ちになる人が いちばん最初に知ること。<br>それは「毎月いくら稼ぐか」より <span class="r-val">「何年つづけるか」</span>。</p>
+            <p class="r-lead">お金は、ふえた分にもまた利息がつく。これを<b>複利</b>という。<br>最初はほとんど変わらないのに、あるところから急に立ち上がる。<br>下のつまみを動かして、<b>年数だけ</b>を伸ばしてみて。</p>
+            <div class="r-ctrl"><label>毎月つみたてる金額：<span class="r-val" id="rc-m">¥10,000</span></label>
+                <input type="range" min="1000" max="100000" step="1000" value="${richCompS.m}" oninput="richCompS.m=+this.value; richUpComp();"></div>
+            <div class="r-ctrl"><label>つづける年数：<span class="r-val" id="rc-y">30年</span></label>
+                <input type="range" min="1" max="45" step="1" value="${richCompS.y}" oninput="richCompS.y=+this.value; richUpComp();"></div>
+            <div class="r-ctrl"><label>1年にふえる割合：<span class="r-val" id="rc-r">5%</span></label>
+                <input type="range" min="0" max="10" step="0.5" value="${richCompS.r}" oninput="richCompS.r=+this.value; richUpComp();"></div>
+            <div class="r-out" id="rc-out"></div>
+            <div class="r-key" id="rc-72"></div>
+            <div class="r-note">※ 年5%は「これくらいで増えたとしたら」という勉強用の仮の数字だよ。ほんとうは増える年も減る年もあって、増え方は だれにも約束できない。ここで分かってほしいのは金額じゃなくて<b>「年数が効く」という形</b>のほう。</div>
+            ${richDoneBtn('comp')}</div>`;
+    }
+    function richUpComp() {
+        const s = richCompS, r = richComp(s.m, s.y, s.r);
+        const set = (id, v) => { const e = document.getElementById(id); if(e) e.textContent = v; };
+        set('rc-m', mYen(s.m)); set('rc-y', s.y + '年'); set('rc-r', s.r + '%');
+        const out = document.getElementById('rc-out');
+        if(out) {
+            const p = richPct(r.moto, r.total);
+            out.innerHTML = `<div style="text-align:center;font-size:13px;color:#888;">${s.y}年後には…</div>
+                <div class="r-big">${mYen(r.total)}</div>
+                <div class="r-bar"><div style="width:${p}%;background:#7f8c8d;">自分で入れた分</div><div style="width:${100-p}%;background:#11998e;">ふえた分</div></div>
+                <div class="m-row"><span>自分で入れたお金</span><b>${mYen(r.moto)}</b></div>
+                <div class="m-row"><span>かってにふえた分</span><b style="color:#11998e;">${mYen(r.fue)}</b></div>`;
+        }
+        const k = document.getElementById('rc-72');
+        if(k) {
+            const half = richComp(s.m, Math.max(1, Math.round(s.y / 2)), s.r);
+            k.innerHTML = s.r > 0
+                ? `<b>⏳ 72の法則</b>：72 ÷ ${s.r} ＝ <span class="r-val">約${(72 / s.r).toFixed(0)}年</span>で お金は2倍になる。<br>
+                   <b>そして いちばん大事なこと</b>：期間を半分（${Math.max(1, Math.round(s.y/2))}年）にすると ${mYen(half.total)}。
+                   年数は半分でも、もらえるお金は <span class="r-val">半分よりずっと少ない</span>。<br>
+                   だから「あとで多く」より <b>「今から少しずつ」</b>が強い。始めた年が いちばんの武器になる。`
+                : `いま「ふえる割合」が0%だから、入れた分しか残らないね。つまみを右に動かしてみて。`;
+        }
+    }
+
+    /* --- 章2 手取り --- */
+    function richChTake() {
+        return `<div class="m-card">
+            <p class="r-q">「年収500万」の人が、じっさいに使えるお金は いくらだと思う？</p>
+            <p class="r-lead">答えは <b>500万じゃない</b>。働くと、給料から 税金と社会保険が引かれる。<br>のこったお金を<b>手取り</b>という。大人が本当に使えるのは こっち。</p>
+            <div class="r-ctrl"><label>額面の年収（引かれる前）：<span class="r-val" id="rt-i">¥5,000,000</span></label>
+                <input type="range" min="1000000" max="20000000" step="100000" value="${richTakeS.inc}" oninput="richTakeS.inc=+this.value; richUpTake();"></div>
+            <div class="r-out" id="rt-out"></div>
+            <div class="r-key" id="rt-key"></div>
+            <div class="r-note">※ ひとり暮らし・扶養なしの会社員で計算した目安だよ。ほんとうは 住んでいる場所・家族・保険で少し変わる。<br>引かれたお金は消えたわけじゃなくて、病院代が3割で済むこと・将来の年金・道路や学校になっている。</div>
+            ${richDoneBtn('take')}</div>`;
+    }
+    function richUpTake() {
+        const t = richTedori(richTakeS.inc);
+        const e = document.getElementById('rt-i'); if(e) e.textContent = mYen(t.inc);
+        const out = document.getElementById('rt-out');
+        if(out) {
+            const w = (v) => richPct(v, t.inc);
+            out.innerHTML = `<div style="text-align:center;font-size:13px;color:#888;">じっさいに使えるお金（手取り）</div>
+                <div class="r-big">${mYen(t.tedori)}</div>
+                <div style="text-align:center;font-size:13px;color:#888;">月にすると ${mYen(t.tedori / 12)}</div>
+                <div class="r-bar">
+                    <div style="width:${w(t.tedori)}%;background:#11998e;">手取り</div>
+                    <div style="width:${w(t.shaho)}%;background:#e67e22;">保険</div>
+                    <div style="width:${w(t.zeiS)}%;background:#c0392b;">所得税</div>
+                    <div style="width:${w(t.zeiJ)}%;background:#8e44ad;">住民税</div>
+                </div>
+                <div class="m-row"><span>🏥 社会保険料</span><b>-${mYen(t.shaho)}</b></div>
+                <div class="m-row"><span>🇯🇵 所得税</span><b>-${mYen(t.zeiS)}</b></div>
+                <div class="m-row"><span>🏙️ 住民税</span><b>-${mYen(t.zeiJ)}</b></div>
+                <div class="m-row"><span>引かれた合計</span><b style="color:#c0392b;">-${mYen(t.hiku)}（${(t.hiku / t.inc * 100).toFixed(1)}%）</b></div>`;
+        }
+        const k = document.getElementById('rt-key');
+        if(k) {
+            const a = richTedori(5000000), b = richTedori(10000000);
+            k.innerHTML = `<b>💡 年収が2倍になっても、手取りは2倍にならない</b><br>
+                年収500万 → 手取り <span class="r-val">${mYen(a.tedori)}</span><br>
+                年収1000万 → 手取り <span class="r-val">${mYen(b.tedori)}</span>（${(b.tedori / a.tedori).toFixed(2)}倍にしかならない）<br>
+                もうけが多い人ほど税率が上がるから（<b>累進課税</b>）。<br>
+                だから お金持ちは「年収を上げる」だけじゃなく、<b>お金に働いてもらう</b>ほうも考える。`;
+        }
+    }
+
+    /* --- 章3 ふえる物・へる物 --- */
+    function richChAsset() {
+        const q = RICH_QUIZ[richQuizS.i];
+        if(!q) {
+            return `<div class="m-card">
+                <p class="r-q">ぜんぶ終わり！ ${RICH_QUIZ.length}問中 <span class="r-val">${richQuizS.ok}問</span> 正解</p>
+                <div class="r-key"><b>お金持ちのやっていること は、じつはこれだけ</b><br>
+                    ① <b>ふえる物</b>（持っているとお金が入ってくる物）を こつこつ買う<br>
+                    ② <b>へる物</b>（持っていると出ていく物）を できるだけ持たない<br>
+                    ③ その差額を また ①に回す<br><br>
+                    同じ年収でも、この3つをやった人とやらない人で、30年後の資産は けた が変わる。<br>
+                    ★そして いちばん強い「ふえる物」は <b>自分が身につけた力</b>。これは値下がりしないし、だれにも取られない。</div>
+                <button class="r-done" onclick="richQuizS={i:0,ok:0,shown:false}; richRenderCh();">もう一度やる</button>
+                ${richDoneBtn('asset')}</div>`;
+        }
+        let h = `<div class="m-card">
+            <div style="font-size:12px;color:#888;">${richQuizS.i + 1} / ${RICH_QUIZ.length}　正解 ${richQuizS.ok}</div>
+            <p class="r-q" style="margin-top:8px;">これは 持っていると お金が…？</p>
+            <div style="font-size:22px;text-align:center;margin:14px 0;">${q.n}</div>`;
+        if(!richQuizS.shown) {
+            h += `<div class="r-pick">
+                    <button onclick="richAns('up')">📈 ふえる</button>
+                    <button onclick="richAns('down')">📉 へる</button>
+                  </div>`;
+        } else {
+            h += `<div class="r-key"><b>${q.a === 'up' ? '📈 ふえる物' : '📉 へる物'}</b><br>${q.w}</div>
+                  <button class="r-done" onclick="richNext()">つぎへ →</button>`;
+        }
+        h += `<div class="r-note">「同じ物でも、稼ぐために使えば ふえる物・ただ持っているだけなら へる物」になることもあるよ。</div></div>`;
+        return h;
+    }
+    function richAns(v) {
+        const q = RICH_QUIZ[richQuizS.i]; if(!q || richQuizS.shown) return;
+        if(v === q.a) { richQuizS.ok++; playSfx('correct'); } else playSfx('wrong');
+        richQuizS.shown = true;
+        richRenderCh();
+    }
+    function richNext() { richQuizS.i++; richQuizS.shown = false; richRenderCh(); }
+
+    /* --- 章4 人生シミュレーション --- */
+    function richChLife() {
+        const pick = (key, list, cur) => `<div class="r-pick">` + list.map(([v, n]) =>
+            `<button class="${cur === v ? 'on' : ''}" onclick="richLifeS.${key}=${typeof v === 'number' ? v : `'${v}'`}; richRenderCh();">${n}</button>`).join('') + `</div>`;
+        return `<div class="m-card">
+            <p class="r-q">えらび方で、65歳のときの資産は どれくらい変わると思う？</p>
+            <p class="r-lead">18歳から65歳まで、毎年の手取りと出ていくお金をぜんぶ計算するよ。<br>1つずつ変えて、どこが いちばん効くか さがしてみて。</p>
+            <div class="r-ctrl"><label>🎓 進路</label>${pick('path', [['kousotsu','高校を出て働く'],['senmon','専門・短大'],['daigaku','大学']], richLifeS.path)}</div>
+            <div class="r-ctrl"><label>💼 仕事</label>${pick('job', [['kaisha','会社員'],['koumu','公務員'],['teshoku','手に職'],['jibun','自分でやる']], richLifeS.job)}</div>
+            <div class="r-ctrl"><label>🏠 住まい</label>${pick('home', [['chin','ずっと賃貸'],['kai','家を買う']], richLifeS.home)}</div>
+            <div class="r-ctrl"><label>🚗 車</label>${pick('car', [['no','持たない'],['yes','持つ']], richLifeS.car)}</div>
+            <div class="r-ctrl"><label>📈 毎月のつみたて</label>${pick('tsumi', RICH_TSUMI.map(v => [v, v === 0 ? 'しない' : '月' + (v / 10000) + '万']), richLifeS.tsumi)}</div>
+            <div class="r-out" id="rl-out"></div>
+            <div class="r-key" id="rl-key"></div>
+            <div class="r-note">※ 生活の基本を年180万、賃貸を月9万、車を年45万として計算した「勉強用の目安」だよ。ほんとうの人生は 結婚・子ども・病気・転職でぜんぜん変わる。金額を当てにするんじゃなくて、<b>どのえらび方が どれくらい効くか</b>を見てね。<br>学費は奨学金（あとで返すお金）としてマイナスから始めているよ。</div>
+            ${richDoneBtn('life')}</div>`;
+    }
+    function richUpLife() {
+        const r = richLifeSim(richLifeS);
+        const out = document.getElementById('rl-out');
+        if(out) {
+            const col = r.total >= 0 ? '#11998e' : '#c0392b';
+            out.innerHTML = `<div style="text-align:center;font-size:13px;color:#888;">65歳のときに のこっているお金</div>
+                <div class="r-big" style="color:${col};">${mYen(r.total)}</div>
+                <div class="m-row"><span>一生でもらった手取りの合計</span><b>${mYen(r.sumTedori)}</b></div>
+                <div class="m-row"><span>📈 つみたてに回した合計</span><b>${mYen(r.tsumi)}</b></div>
+                <div class="m-row"><span>　→ 65歳でいくらになったか</span><b style="color:#11998e;">${mYen(r.toushi)}</b></div>
+                <div class="m-row"><span>🏦 ふつうの貯金</span><b style="color:${r.cash < 0 ? '#c0392b' : ''};">${mYen(r.cash)}</b></div>
+                <div class="m-row"><span>🎁 退職金</span><b>${mYen(r.tai)}</b></div>`;
+        }
+        const k = document.getElementById('rl-key');
+        if(k) {
+            const zero = richLifeSim(Object.assign({}, richLifeS, { tsumi: 0 }));
+            const max  = richLifeSim(Object.assign({}, richLifeS, { tsumi: 50000 }));
+            const noCar = richLifeSim(Object.assign({}, richLifeS, { car: 'no' }));
+            const car   = richLifeSim(Object.assign({}, richLifeS, { car: 'yes' }));
+            k.innerHTML = `<b>🔍 どこが いちばん効いた？</b><br>
+                📈 つみたてを <b>0 → 月5万</b>にすると… <span class="r-val">${mYen(max.total - zero.total)}</span> のちがい<br>
+                🚗 車を <b>持たない ↔ 持つ</b>で… <span class="r-val">${mYen(noCar.total - car.total)}</span> のちがい<br><br>
+                気づいた？ <b>年収を上げること より、毎月のつみたてと 固定費のほうが 効くことがある。</b><br>
+                車も家も「持つな」という話じゃないよ。<b>それが自分にとって それだけの値打ちがあるか</b>を、数字を知ったうえで自分で決められることが大事。`;
+        }
+    }
+
+    /* --- 章5 だまされない --- */
+    function richChTrap() {
+        return `<div class="m-card">
+            <p class="r-q">複利は 味方にもなるけど、<span style="color:#c0392b;">敵にもなる</span>。</p>
+            <p class="r-lead">章1でやった「ふえた分にもまた利息がつく」は、<b>借りたお金にも同じように起きる</b>。<br>これを知らない人が、いちばんお金を取られる。</p>
+            <div class="r-ctrl"><label>🚨 リボ払いで買った金額：<span class="r-val" id="rp-k">¥100,000</span></label>
+                <input type="range" min="30000" max="500000" step="10000" value="${richTrapS.kari}" oninput="richTrapS.kari=+this.value; richUpTrap();"></div>
+            <div class="r-out" id="rp-out"></div>
+            <div class="r-key">
+                <b>🚨 「月10%ふえます」は なぜウソだと分かるか</b><br>
+                月10%を1年つづけると <b>1.1の12乗＝約3.1倍</b>。10年で <b>約9万倍</b>。<br>
+                10万円が10年で <b>92億円</b>になる計算。そんな話は この世に無い。<br>
+                <b>数字を自分で計算できると、うまい話は 一瞬で見やぶれる。</b>
+            </div>
+            <div class="r-key" style="border-left-color:#c0392b;background:rgba(192,57,43,.10);">
+                <b>覚えておくと一生とくする3つ</b><br>
+                ① <b>リボ払いは使わない</b>。毎月の支払いが小さく見えるのは、期間が長いから。利息の合計は ものすごい<br>
+                ② <b>「元本保証で高利回り」は 必ずウソ</b>。安全と高もうけは両立しない<br>
+                ③ <b>急がせる話は 断る</b>。「今日だけ」「あなただけ」は、考える時間を取らせないための言葉
+            </div>
+            <div class="r-note">※ 借金がぜんぶ悪いわけじゃないよ。家や仕事の道具みたいに「それでお金を生む物」を買う借金と、消えてしまう物を買う借金は、まったく別ものとして考えてね。</div>
+            ${richDoneBtn('trap')}</div>`;
+    }
+    function richUpTrap() {
+        const kari = richTrapS.kari;
+        const monthly = Math.max(5000, Math.round(kari / 20 / 1000) * 1000);   // 「月々らくらく」な支払い額
+        const r = richRibo(kari, monthly, 15);
+        const e = document.getElementById('rp-k'); if(e) e.textContent = mYen(kari);
+        const out = document.getElementById('rp-out');
+        if(!out) return;
+        if(r.m < 0) {
+            out.innerHTML = `<div class="r-big" style="color:#c0392b;">一生おわらない</div>
+                <div style="text-align:center;font-size:13px;">毎月 ${mYen(monthly)} ずつ払っても、利息のほうが多くて のこりが減らないよ。</div>`;
+            return;
+        }
+        out.innerHTML = `<div style="text-align:center;font-size:13px;color:#888;">毎月 ${mYen(monthly)} ずつ、年15%のリボ払いで返すと…</div>
+            <div class="r-big" style="color:#c0392b;">${Math.floor(r.m / 12)}年${r.m % 12}か月</div>
+            <div class="m-row"><span>買った物のねだん</span><b>${mYen(kari)}</b></div>
+            <div class="m-row"><span>じっさいに払った合計</span><b style="color:#c0392b;">${mYen(r.total)}</b></div>
+            <div class="m-row"><span>利息だけで</span><b style="color:#c0392b;">${mYen(r.risoku)}（${(r.risoku / kari * 100).toFixed(0)}%ぶん多く払う）</b></div>`;
     }
 
     /* ================= 📲 アプリ版（PWA） =================
