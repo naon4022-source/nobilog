@@ -844,9 +844,9 @@
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats'];
-    // 📝 定期テストは なお だけ。メニューごと出さない
-    const OWNER_ONLY = ['nav-ottake'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake'];
+    // 📝 定期テストは りらんにも「見える」。ただし受けられるのは なお だけ（ボタンが灰色になる）
+    const OWNER_ONLY = [];
     const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
@@ -859,8 +859,8 @@
             OWNER_ONLY.forEach(id => show(id, false));         // なおだけの管理画面は出さない
         }
         else OWNER_ONLY.forEach(id => show(id, isOwner()));
-        // 📝 定期テストの中身は なお 以外の画面に残さない（人が変わったら消す）
-        if(!isOwner()) { exNow = null; const ob = el('ottake-body'); if(ob) ob.innerHTML = ''; }
+        // 📝 前の人の中身が残らないように、人が変わったら いったん消す（つぎに開いたとき描き直す）
+        { exNow = null; const ob = el('ottake-body'); if(ob) ob.innerHTML = ''; }
         // 体験版は「お知らせ」と「今日の宿題」を出さない
         const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
         if(ub) ub.style.display = isTrial() ? 'none' : '';
@@ -1250,11 +1250,6 @@
         selEv.forEach(ev => { detail += `<div class="hw-item"><span class="hw-remind">${ev.e}</span><div class="hw-body"><span class="hw-text" style="color:${ev.c};font-weight:bold;">${esc(ev.t)}</span></div></div>`; });
         if(!selHw.length && !selEv.length) detail += `<div class="cal-empty">この日は宿題も予定もないよ😊</div>`;
         selHw.forEach((hw, i) => { detail += hwItemHtml(hw, sel, i); });
-        const npi = nobiPartOf(sel);
-        if(npi >= 0) { const np = NOBI_TEST.parts[npi];
-            const isFuture = calDayNum(sel) > calDayNum(today);
-            detail += `<div style="text-align:center;margin-top:10px;">
-            <button class="btn" style="background:${isFuture ? '#95a5a6' : '#8e44ad'};color:#fff;width:100%;" onclick="${isFuture ? `alert('このテストは ${np.day.split('-')[1]}月${np.day.split('-')[2]}日 からうけられるよ。それまでに勉強しておこう📚')` : `startNobiTest(${npi})`}">${np.e} のびログ夏休み定期テスト ${np.n}（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）${isFuture ? ' ※当日から' : ' を受ける'}</button></div>`; }
         detail += '</div>';
         const label = calOffset === 0 ? '今月' : calOffset === 1 ? '来月' : calOffset === -1 ? '先月'
                     : calOffset > 0 ? `${calOffset}か月あと` : `${-calOffset}か月まえ`;
@@ -1277,11 +1272,6 @@
         box.style.display = '';
         let html = `<div class="cal-date">📌 今日の宿題（${esc(calLabel(key))}）</div>`;
         hws.forEach((hw, i) => { html += hwItemHtml(hw, key, i); });
-        // 📝 のびログ定期テストの日は、ホームからそのまま受けられるようにする
-        const npi = nobiPartOf(key);
-        if(npi >= 0) { const np = NOBI_TEST.parts[npi];
-            html += `<div style="text-align:center;margin-top:8px;">
-                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;" onclick="startNobiTest(${npi})">${np.e} のびログ定期テスト ${np.n} を受ける（${np.subjs.map(x=>x[0]).join('・')}／⏰${NOBI_TEST.limit}分）</button></div>`; }
         box.innerHTML = html;
     }
 
@@ -3995,6 +3985,7 @@
                 mHellDaily(m);     // 💀 借金地獄（取り立て・遅延損害金・差し押さえ）
                 mLevDaily(m);      // ⚡ 信用取引の追証・強制決済
                 mEvtRoll(m);       // 🎬 生活のできごとを抽選
+                mShops(m).forEach(sh => { sh.days = (sh.days || 0) + 1; });   // 🏬 開店してからの日数（毎日1ふえる）
             }
             changed = true;
         }
@@ -9932,7 +9923,6 @@
         if(!f) return false;
         b.lastSales = f.sales; b.lastProfit = f.profit;
         b.total = (b.total || 0) + f.profit;
-        b.days += 30;
         // 🌟 口コミが動く（ちゃんと回せているか・赤字か・自分の体調）
         const cond = ((m.home.health || 0) + (m.home.happy || 0)) / 200;
         let ds = f.profit >= 0 ? 0.12 : -0.25;
@@ -10595,9 +10585,9 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats','ottake'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
-                         life:'🏠 生活', stats:'📊 成績・グラフ' };
+                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
                   `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
@@ -10606,7 +10596,6 @@
             return;
         }
         // 🔒 📝定期テストは なお 専用（問題を1問も見せない）
-        if(!isOwner() && id === 'ottake') { alert('📝 定期テストは なお のアカウントだけで使えるよ。'); toggleMenu(); return; }
         if(id !== 'ottake') { clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📝 定期テストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
         if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer) tb.style.display = 'none'; }
@@ -13760,59 +13749,10 @@
         switchView('run');
     }
 
-    // ===== 📝 のびログ定期テスト（5教科まとめて）=====
-    //   数学・国語・英語・理科・社会を1回のテストで出す。ふつうのテストと同じ画面・同じ採点を使う。
-    // 📝 のびログ定期テスト（本物の定期テストと同じで2日に分ける）
-    //   1日ぶんの中身は「20分で終わる量」、制限時間は30分（見直しの時間つき）
-    const NOBI_TEST = {
-        limit: 30,                                    // 制限時間（分）
-        parts: [
-            { day:'2026-8-30', n:'前半', e:'📘', subjs:[['数学',8],['英語',7],['国語',7]] },
-            { day:'2026-8-31', n:'後半', e:'📗', subjs:[['理科',11],['社会',11]] }
-        ]
-    };
-    let nobiPart = null, nobiTimer = null, nobiRemain = 0;
-    function nobiPartOf(day) { return NOBI_TEST.parts.findIndex(p => p.day === day); }
-    function startNobiTest(pi) {
-        const part = NOBI_TEST.parts[pi]; if(!part) return;
-        const total = part.subjs.reduce((a, x) => a + x[1], 0);
-        if(!confirm(`${part.e} のびログ夏休み定期テスト ${part.n} を受ける？\n\n${part.subjs.map(x => x[0] + ' ' + x[1] + '問').join('・')}（ぜんぶで${total}問）\n⏰ 制限時間は ${NOBI_TEST.limit}分（${Math.round(NOBI_TEST.limit * 0.67)}分ぐらいで終わる量だよ）\n\n時間になったら自動で答え合わせをします。`)) return;
-        closeUnitHelp(); setUnitHelpBtn(false);
-        currentRunMode = 'test';
-        nobiPart = pi;
-        pTest = { grade:'中1', subj:'のびログ定期テスト' + part.n, unit:part.subjs.map(x => x[0]).join('・'), level:4, count:total };
-        document.getElementById('print-title').innerText = `のびログ夏休み定期テスト ${part.n}`;
-        document.getElementById('run-title').innerText = `${part.e} のびログ夏休み定期テスト ${part.n}（${part.subjs.map(x => x[0]).join('・')}）`;
-        testQuestionsData = [];
-        const seen = new Set();
-        usedMathT = {};
-        let html = '', qIndex = 1;
-        part.subjs.forEach((sp, si) => {
-            const sj = sp[0], cnt = sp[1];
-            html += `<div style="margin-top:20px;margin-bottom:10px;font-size:18px;font-weight:bold;border-bottom:2px solid var(--main-color);">大問 ${si + 1}　${sj}（${cnt}問）</div><div class="grid-3">`;
-            for(let i = 0; i < cnt; i++) {
-                const isWord = (sj === '数学') ? (i >= cnt - 3) : (i >= cnt - 2);
-                let q;
-                try { q = genUnique(sj, 'すべて', isWord, 4, seen); }
-                catch(e) { q = { q:'（問題を作れませんでした）', a:'', type:'text' }; }
-                testQuestionsData.push({ id:qIndex, daimon:si + 1, q:q.q, a:q.a, type:q.type, work:q.work, subj:sj });
-                html += `<div class="q-row ${q.type === 'text' ? 'grid-1' : ''}">
-                    <div class="q-text">(${qIndex}) ${q.q}</div>
-                    ${q.type === 'text' ? '<div class="text-space no-print"></div>' : ''}
-                    <input type="text" class="q-input no-print" id="t-ans-${qIndex}" placeholder="答えを入力"></div>`;
-                qIndex++;
-            }
-            html += `</div>`;
-        });
-        document.getElementById('run-content').innerHTML = html;
-        document.getElementById('test-controls').style.display = 'block';
-        document.getElementById('study-controls').style.display = 'none';
-        const rc = document.getElementById('run-cheer'); if(rc) rc.style.display = 'none';
-        switchView('run');
-        startNobiTimer(NOBI_TEST.limit);
-        window.scrollTo(0, 0);
-    }
     // ⏰ 30分のカウントダウン（英検のタイマーと同じ見た目・0になったら自動で採点）
+    // ⚠️ 自動生成の「⏰30分テスト」は消したが、このタイマーは switchView から stopNobiTimer() が
+    //    呼ばれるので 変数ごと残しておく（消すと画面をきりかえるたびにエラーで固まる）
+    let nobiTimer = null, nobiRemain = 0;
     function startNobiTimer(min) {
         stopNobiTimer();
         nobiRemain = min * 60;
@@ -15400,6 +15340,7 @@
     }
     // 🔁 いつでも受けられるテストだけ、受けなおせるようにする（前の記録は消える）
     function exRetake(id) {
+        if(!isOwner()) return;                                    // 🔒
         const ex = exById(id); if(!ex || !ex.always) return;
         const d = exLoad(ex);
         if(d && d.submitted && !confirm(`「${ex.title}」をもう一度うける？\n\n前の記録（${d.score}点）は消えて、新しい点に上書きされるよ。`)) return;
@@ -15407,6 +15348,7 @@
         renderOtTake();
     }
     function exStart(id) {
+        if(!isOwner()) { alert('📝 このテストを受けられるのは なお だけだよ。'); return; }   // 🔒 念のため
         const ex = id ? exById(id) : exFor(); if(!ex) return;
         if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
         if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
@@ -15505,6 +15447,7 @@
         setTimeout(() => exResult(), 300);
     }
     function exResult(id) {
+        if(!isOwner()) return;                                    // 🔒 答えも なお だけ
         const ex = id ? exById(id) : exFor(); if(!ex) return;
         const d = exLoad(ex); if(!d || !d.submitted) { alert('まだ受けていないよ'); return; }
         const qs = exQs(ex);
@@ -15554,11 +15497,35 @@
               <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div></div>`;
         gOpenModal(h);
     }
+    // ---------- 👀 なお以外の人が見る画面（中身は見えない・ボタンは灰色）----------
+    //   ★問題文は1文字も出さない。教科の名前・問題数・点数（何点満点か）だけ。
+    function renderOtTakeView(box) {
+        const list = NOBI_EXAMS.filter(e => Array.isArray(e.parts) && (e.users || []).length);
+        const max = list.reduce((a, e) => a + exTotal(e), 0);
+        let h = `<div class="m-card" style="border:3px solid #95a5a6;">
+            <div style="text-align:center;">
+              <div style="font-size:20px;font-weight:bold;">📝 のびログ定期テスト</div>
+              <div style="font-size:13px;color:#888;margin-top:2px;">5教科・各100点（ぜんぶで${max}点）</div>
+              <div class="m-warn" style="margin-top:10px;text-align:left;">🔒 このテストを受けられるのは <b>なお</b> だけだよ。
+              どんなテストがあるかは見られるけど、問題は開けません。</div>
+            </div></div>`;
+        list.forEach(ex => {
+            const nq = exQs(ex).length, total = exTotal(ex);
+            h += `<div class="m-card" style="border:3px solid #bdc3c7;opacity:.85;">
+                <b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
+                <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分</b></div>
+                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:10px;font-size:18px;cursor:not-allowed;"
+                  disabled>▶️ テストを始める</button>
+                <div class="m-desc" style="text-align:center;margin-top:4px;">🔒 なお せんよう</div></div>`;
+        });
+        box.innerHTML = h;
+    }
     // ---------- 📝 定期テストの画面（5教科ぶんのカードをならべる） ----------
     function renderOtTake() {
         const box = document.getElementById('ottake-body'); if(!box) return;
-        // 🔒 なお 以外には 問題を1問も出さない（メニューにも出していないが、念のため）
-        if(!isOwner()) { exNow = null; box.innerHTML = '<div class="m-warn">📝 定期テストは <b>なお</b> のアカウントだけで使えるよ。</div>'; return; }
+        const owner = isOwner();
+        if(!owner) { exNow = null; return renderOtTakeView(box); }   // 👀 なお以外は「見るだけ」
         if(exNow) { exRender(); return; }                       // テスト中は そのまま
         const list = exList();
         if(!list.length) {
