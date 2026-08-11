@@ -529,9 +529,6 @@
     <div class="nav-item" id="nav-review" onclick="switchView('review')">🔁 間違い直し</div>
     <div class="nav-item" id="nav-hyakumasu" onclick="switchView('hyakumasu')">🧮 百ます計算</div>
     <div class="nav-item" id="nav-ottake" onclick="switchView('ottake')">📝 定期テスト</div>
-    <div class="nav-item" id="nav-ottest" onclick="switchView('ottest')">📩 なおが出したテスト</div>
-    <div class="nav-item" id="nav-otmake" onclick="switchView('otmake')">📤 テスト作成（オンライン）</div>
-    <div class="nav-item" id="nav-otans" onclick="switchView('otans')">📥 テストの解答</div>
     <div class="nav-item" id="nav-calendar" onclick="switchView('calendar')">🗓️ カレンダー（宿題）</div>
     <div class="nav-item" id="nav-game" onclick="switchView('game')">🎮 きろく・あそび</div>
     <div class="nav-item" id="nav-money" onclick="switchView('money')">🏛️ 政治と経済</div>
@@ -718,29 +715,12 @@
         <div id="money-body"></div>
     </div>
 
-    <!-- ================= 📤 テスト作成（オンライン・なおのみ） ================= -->
-    <div id="view-otmake" class="view">
-        <h1 class="no-print">📤 テスト作成（オンライン）</h1>
-        <div id="otmake-body"></div>
-    </div>
-
     <!-- ================= 📝 定期テスト（5教科・クロードが書きこむ／なお専用） ================= -->
     <div id="view-ottake" class="view">
         <h1 class="no-print">📝 定期テスト</h1>
         <div id="ottake-body"></div>
     </div>
 
-    <!-- ================= 📩 なおが出したテスト（オンライン・2人が受ける） ================= -->
-    <div id="view-ottest" class="view">
-        <h1 class="no-print">📩 なおが出したテスト</h1>
-        <div id="ottest-body"></div>
-    </div>
-
-    <!-- ================= 📥 テストの解答（なおのみ） ================= -->
-    <div id="view-otans" class="view">
-        <h1 class="no-print">📥 テストの解答</h1>
-        <div id="otans-body"></div>
-    </div>
 
     <!-- ================= 🏠 生活 ================= -->
     <div id="view-life" class="view">
@@ -857,10 +837,10 @@
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottest'];
-    // 📝 定期テストと、テストを出す・採点する画面は なお だけ。メニューごと出さない
-    const OWNER_ONLY = ['nav-ottake', 'nav-otmake', 'nav-otans'];
-    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-ottest','nav-otmake','nav-otans'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats'];
+    // 📝 定期テストは なお だけ。メニューごと出さない
+    const OWNER_ONLY = ['nav-ottake'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
         const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
@@ -984,10 +964,9 @@
     function logoutUser() {
         if(currentUserId && !confirm('ユーザーを切り替えますか？\n（解いている途中の問題は消えます。記録した分は保存済み）')) return;
         stopEikenTimer();
-        // 📝 定期テスト・📩 なおが出したテストは、人が変わる前に画面の中身を消しておく
-        try { clearInterval(exTick); clearInterval(exTimer); exNow = null; otStopTimer(); otNow = null;
-              const ob = document.getElementById('ottake-body'); if(ob) ob.innerHTML = '';
-              const tb = document.getElementById('ottest-body'); if(tb) tb.innerHTML = ''; } catch(e) {}
+        // 📝 定期テストは、人が変わる前に画面の中身を消しておく
+        try { clearInterval(exTick); clearInterval(exTimer); exNow = null;
+              const ob = document.getElementById('ottake-body'); if(ob) ob.innerHTML = ''; } catch(e) {}
         currentUserId = null;
         showLogin();
     }
@@ -1074,10 +1053,10 @@
     for(let d = 1; d <= 31; d++) HOMEWORK['2026-8-' + d] = [ { t:'夏休みを楽しむ🌻', self:true } ];
     // 📝 のびログ夏休み定期テスト（2日間・5教科）※始まる10分前から待機できる
     HOMEWORK['2026-8-30'] = [ { t:'夏休みを楽しむ🌻', self:true },
-        { t:'📝 定期テスト1日め　12:30 数学（〜13:00）→ 15分休み → 13:15 英語（〜13:45）→ 15分休み → 14:00 国語（〜14:45）' },
-        { t:'⏰ どの教科も「始まる10分前」から待機できるよ。📩テスト（オンライン）を開いて待っていてね' } ];
+        { t:'📝 定期テスト 1日め（数学・英語・国語）　12:30 数学（〜13:10）→ 15分休み → 13:25 英語（〜14:05）→ 15分休み → 14:20 国語（〜15:10）' },
+        { t:'⏰ 📝定期テスト の画面をひらいて、時間になったら始めてね' } ];
     HOMEWORK['2026-8-31'] = [ { t:'夏休みを楽しむ🌻', self:true },
-        { t:'📝 定期テスト2日め　14:00 理科（〜14:30）→ 15分休み → 14:45 社会（〜15:15）' },
+        { t:'📝 定期テスト 2日め（理科・社会）　13:00 理科（〜13:40）→ 15分休み → 13:55 社会（〜14:35）' },
         { t:'🎉 これで夏休みのテストは終わり！おつかれさま' } ];
     // ❄️ 冬休みの定期テスト（日にちはまだ言わない。カレンダーにだけ そっと置いてある）
     HOMEWORK['2026-12-26'] = [ { t:'❄️ のびログ冬休み定期テスト 1日め（予定）' } ];
@@ -1092,8 +1071,8 @@
     ];
     const CAL_ONCE = {
         '2026-8-1':  [{ e:'🌻', t:'夏休み！ 8月の宿題は「夏休みを楽しむ」だけ🌻', c:'#f39c12' }],
-        '2026-8-30': [{ e:'📘', t:'のびログ夏休み定期テスト 前半（数学・英語・国語／⏰30分）', c:'#8e44ad' }],
-        '2026-8-31': [{ e:'📗', t:'のびログ夏休み定期テスト 後半（理科・社会／⏰30分）', c:'#8e44ad' },
+        '2026-8-30': [{ e:'📘', t:'のびログ定期テスト 1日め 12:30〜15:10（数学40分・英語40分・国語50分）', c:'#8e44ad' }],
+        '2026-8-31': [{ e:'📗', t:'のびログ定期テスト 2日め 13:00〜14:35（理科40分・社会40分）', c:'#8e44ad' },
                       { e:'🏁', t:'夏休みラスト！ あしたから2学期', c:'#e74c3c' }],
         '2026-6-5':  [{ e:'🎁', t:'夏のボーナス（給料2か月分×評価）', c:'#e74c3c' }],
         '2026-12-5': [{ e:'🎁', t:'冬のボーナス（給料2か月分×評価）', c:'#e74c3c' }],
@@ -10474,9 +10453,9 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','ottest'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
-                         life:'🏠 生活', stats:'📊 成績・グラフ', ottest:'📩 なおが出したテスト' };
+                         life:'🏠 生活', stats:'📊 成績・グラフ' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
                   `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
@@ -10484,16 +10463,16 @@
             toggleMenu();
             return;
         }
-        // 🔒 📝定期テストは なお 専用（問題を1問も見せない）。テストを出す・採点する画面も なおだけ
+        // 🔒 📝定期テストは なお 専用（問題を1問も見せない）
         if(!isOwner() && id === 'ottake') { alert('📝 定期テストは なお のアカウントだけで使えるよ。'); toggleMenu(); return; }
-        if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); toggleMenu(); return; }
         if(id !== 'ottake') { clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📝 定期テストのタイマー
-        if(id !== 'ottest') otStopTimer();          // 📩 なおが出したテストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
-        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer && !otTimer) tb.style.display = 'none'; }
+        if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer) tb.style.display = 'none'; }
         if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
+        const vEl = document.getElementById(`view-${id}`);
+        if(!vEl) return;                                  // 無い画面をよばれても落ちないように（消した画面よけ）
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-        document.getElementById(`view-${id}`).classList.add('active');
+        vEl.classList.add('active');
         document.getElementById('sidebar').classList.remove('open');
         if(id === 'stats') { renderStats('today'); ekRenderGrowth(); renderSchoolTests(false); renderFlower(); }
         if(id === 'review') renderReview();
@@ -10502,10 +10481,7 @@
         if(id === 'game') renderGame();
         if(id === 'money') renderMoney();
         if(id === 'life') renderLife();
-        if(id === 'otmake') renderOtMake();
         if(id === 'ottake') renderOtTake();
-        if(id === 'ottest') renderOtList();
-        if(id === 'otans') renderOtAns();
         if(id === 'run') showRunCheer();
     }
 
@@ -14162,31 +14138,6 @@
         ov.classList.add('on'); ov.scrollTop = 0;
     }
 
-    // ============================================================
-    //  📝 オンラインテスト（なおが作って出す → 2人が受ける → 解答が集まる → 採点）
-    // ============================================================
-    const OT_MAX_FILE = 6 * 1024 * 1024;   // 1つのテストに付けられる資料の合計（およそ6MB）
-    let otDraft = { title:'', limit:20, items:[], files:[] };
-    let otNow = null, otTimer = null, otRemain = 0;
-    let otCacheTests = [], otCacheAns = [];
-
-    function otHeaders(extra) { return vbHeaders(extra); }
-    async function otGet(path) {
-        if(!SYNC_URL) throw new Error('オンラインの設定がありません');
-        const r = await fetch(SYNC_URL + path, { headers: otHeaders(), cache:'no-store' });
-        if(!r.ok) throw new Error('サーバーエラー ' + r.status);
-        return await r.json();
-    }
-    async function otPost(path, body) {
-        if(!SYNC_URL) throw new Error('オンラインの設定がありません');
-        const r = await fetch(SYNC_URL + path, { method:'POST', headers: otHeaders({ 'Content-Type':'application/json' }), body: JSON.stringify(body) });
-        if(!r.ok) throw new Error('サーバーエラー ' + r.status);
-        return await r.json();
-    }
-    const otFmt = (sec) => { const m2 = Math.floor(sec / 60), s2 = sec % 60; return m2 + ':' + String(s2).padStart(2, '0'); };
-    const otWhen = (ms) => { const d = new Date(ms); return `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; };
-    const otUserName = (uid) => (APP_USERS.find(u => u.id === uid) || {}).name || uid;
-
     // ==========================================================================================
     //  📝 のびログ定期テスト（5教科・クロードがファイルに書きこむ）
     //   ★もらったプリント（数学の文章題／国語／英検5級4級ミックス／理科／地理）を もとに、
@@ -14945,126 +14896,6 @@
               <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal();">とじる</button></div></div>`;
         gOpenModal(h);
     }
-    // ---------- 📤 つくる（なおだけ） ----------
-    function renderOtMake() {
-        const box = document.getElementById('otmake-body'); if(!box) return;
-        if(!isOwner()) { box.innerHTML = '<div class="m-warn">この画面は なお のアカウントだけで使えるよ。</div>'; return; }
-        let h = `<div class="m-card"><b>①　テストの名前と時間をきめる</b>
-            <div class="st-grid" style="margin-top:8px;">
-              <div class="st-cell" style="flex:2;">テスト名<input class="st-input" id="ot-title" type="text" placeholder="例：夏休み まとめテスト" value="${esc(otDraft.title)}" oninput="otDraft.title=this.value"></div>
-              <div class="st-cell">制限時間(分)<input class="st-input" id="ot-limit" type="number" min="1" max="180" value="${otDraft.limit}" oninput="otDraft.limit=Math.max(1,Math.min(180,Number(this.value)||20))"></div>
-            </div></div>`;
-        h += `<div class="m-card"><b>②　問題用紙をつける（PDF・写真）</b>
-            <div style="font-size:12px;color:#888;">プリントを写真にとって出せば、それがそのまま問題用紙になるよ。PDFでもOK（合計6MBまで）</div>
-            <input type="file" id="ot-file" accept="image/*,application/pdf" multiple style="margin-top:8px;width:100%;" onchange="otAddFiles(this)">
-            <div id="ot-files" style="margin-top:8px;">${otFilesHtml()}</div></div>`;
-        h += `<div class="m-card"><b>③　問題と答えを入れる</b>
-            <div style="font-size:12px;color:#888;">ここに入れた「答え」で🤖AI採点ができるよ。答えが決まらない問題は、答えを空っぽにしてもOK</div>
-            <div id="ot-items">${otItemsHtml()}</div>
-            <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="otAddItem()">＋ 問題をふやす</button>
-            <button class="btn" style="background:#7f8c8d;color:#fff;width:100%;margin-top:6px;" onclick="otBulk()">📋 まとめて入れる（1行に1問）</button></div>`;
-        const total = otDraft.items.length;
-        h += `<div class="m-card"><b>④　オンラインに出す</b>
-            <div class="m-row"><span>テスト名</span><b>${esc(otDraft.title) || '（まだ）'}</b></div>
-            <div class="m-row"><span>問題数</span><b>${total}問</b></div>
-            <div class="m-row"><span>制限時間</span><b>${otDraft.limit}分</b></div>
-            <div class="m-row"><span>問題用紙</span><b>${otDraft.files.length}まい</b></div>
-            <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:17px;" onclick="otPublish()">🚀 2人に出す</button>
-            <div class="m-learn">💡 出すと、なお と りらん の「📩テスト（オンライン）」にすぐ出てくるよ。</div></div>`;
-        h += `<div class="m-card"><b>📚 出したテスト</b><div id="ot-list">よみこみ中…</div></div>`;
-        box.innerHTML = h;
-        otLoadTests().then(() => { const el = document.getElementById('ot-list'); if(el) el.innerHTML = otMadeListHtml(); })
-                     .catch(e => { const el = document.getElementById('ot-list'); if(el) el.innerHTML = '<div class="m-warn">オンラインにつながらなかったよ（' + esc(e.message) + '）</div>'; });
-    }
-    function otItemsHtml() {
-        if(!otDraft.items.length) return '<div style="color:#888;font-size:13px;padding:6px 0;">まだ問題がないよ。「＋問題をふやす」か「まとめて入れる」を使ってね</div>';
-        return otDraft.items.map((it, i) => `<div class="m-row"><div style="flex:1;min-width:0;">
-            <div style="font-size:12px;color:#888;">(${i + 1})</div>
-            <input class="m-search" style="margin-bottom:4px;" type="text" placeholder="問題文" value="${esc(it.q)}" oninput="otDraft.items[${i}].q=this.value">
-            <input class="m-search" type="text" placeholder="答え（AI採点に使う・空でもOK）" value="${esc(it.a)}" oninput="otDraft.items[${i}].a=this.value">
-          </div><button class="m-btn m-sell" onclick="otDelItem(${i})">けす</button></div>`).join('');
-    }
-    function otFilesHtml() {
-        if(!otDraft.files.length) return '<div style="color:#888;font-size:13px;">まだ付けていないよ</div>';
-        return otDraft.files.map((f, i) => `<div class="m-row"><div style="flex:1;min-width:0;">
-            <div class="m-name">${f.type.indexOf('image') === 0 ? '🖼️' : '📄'} ${esc(f.name)}</div>
-            <div class="m-desc">${Math.round(f.data.length / 1400)}KB ぐらい</div>
-            ${f.type.indexOf('image') === 0 ? `<img src="${f.data}" style="max-width:100%;max-height:160px;border-radius:8px;margin-top:6px;">` : ''}
-          </div><button class="m-btn m-sell" onclick="otDelFile(${i})">けす</button></div>`).join('');
-    }
-    function otAddItem() { otDraft.items.push({ q:'', a:'' }); renderOtMake(); }
-    function otDelItem(i) { otDraft.items.splice(i, 1); renderOtMake(); }
-    function otDelFile(i) { otDraft.files.splice(i, 1); renderOtMake(); }
-    function otBulk() {
-        const v = prompt('1行に1問ずつ書いてね。\n「問題 → 答え」の順で、あいだを「｜」か「,」で区切ると答えも入るよ。\n\n例）\n1+1は？｜2\n日本の首都は？｜東京', '');
-        if(v === null) return;
-        String(v).split(/\n+/).forEach(line => {
-            const t = line.trim(); if(!t) return;
-            const m2 = t.split(/[｜|,、\t]/);
-            otDraft.items.push({ q: (m2[0] || '').trim(), a: (m2[1] || '').trim() });
-        });
-        renderOtMake();
-    }
-    // 写真は小さくしてから付ける（大きすぎると送れないため）
-    function otAddFiles(input) {
-        const files = [].slice.call(input.files || []);
-        if(!files.length) return;
-        let done = 0;
-        files.forEach(f => {
-            if(f.type.indexOf('image') === 0) {
-                const rd = new FileReader();
-                rd.onload = () => {
-                    const img = new Image();
-                    img.onload = () => {
-                        const max = 1400, sc = Math.min(1, max / Math.max(img.width, img.height));
-                        const cv = document.createElement('canvas');
-                        cv.width = Math.round(img.width * sc); cv.height = Math.round(img.height * sc);
-                        cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
-                        otDraft.files.push({ name:f.name, type:'image/jpeg', data: cv.toDataURL('image/jpeg', 0.72) });
-                        if(++done === files.length) { input.value = ''; renderOtMake(); }
-                    };
-                    img.onerror = () => { if(++done === files.length) { input.value = ''; renderOtMake(); } };
-                    img.src = rd.result;
-                };
-                rd.readAsDataURL(f);
-            } else {
-                if(f.size > OT_MAX_FILE) { alert(`${f.name} は大きすぎるよ（${Math.round(f.size/1024/1024)}MB）。6MBより小さいPDFにしてね。`); if(++done === files.length) { input.value=''; renderOtMake(); } return; }
-                const rd = new FileReader();
-                rd.onload = () => { otDraft.files.push({ name:f.name, type:f.type || 'application/pdf', data: rd.result });
-                    if(++done === files.length) { input.value = ''; renderOtMake(); } };
-                rd.readAsDataURL(f);
-            }
-        });
-    }
-    async function otPublish() {
-        if(!otDraft.title.trim()) { alert('テストの名前を入れてね'); return; }
-        if(!otDraft.items.length && !otDraft.files.length) { alert('問題か、問題用紙（写真・PDF）のどちらかは入れてね'); return; }
-        const size = JSON.stringify(otDraft).length;
-        if(size > 11000000) { alert('資料が大きすぎるよ。写真を減らすか、小さくしてね。'); return; }
-        if(!confirm(`「${otDraft.title}」を2人に出す？\n問題${otDraft.items.length}問／制限時間${otDraft.limit}分`)) return;
-        try {
-            await otPost('/tests', { title: otDraft.title.trim(), limit: otDraft.limit, by: currentUserId,
-                                     items: otDraft.items.filter(x => (x.q || '').trim() || (x.a || '').trim()), files: otDraft.files });
-            otDraft = { title:'', limit:20, items:[], files:[] };
-            alert('🚀 出したよ！2人の「📩 なおが出したテスト」に出てくるよ。');
-            renderOtMake();
-        } catch(e) { alert('出せなかった…オンラインにつながっているか確認してね\n（' + e.message + '）'); }
-    }
-    async function otLoadTests() { const d = await otGet('/tests'); otCacheTests = (d && d.tests) || []; return otCacheTests; }
-    async function otLoadAnswers() { const d = await otGet('/answers'); otCacheAns = (d && d.answers) || []; return otCacheAns; }
-    function otMadeListHtml() {
-        if(!otCacheTests.length) return '<div style="color:#888;font-size:13px;">まだ出していないよ</div>';
-        return otCacheTests.map(t => `<div class="m-row"><div style="flex:1;min-width:0;">
-            <div class="m-name">${esc(t.title)}</div>
-            <div class="m-desc">${(t.items||[]).length}問／${t.limit}分／${(t.files||[]).length}まい／${otWhen(t.at)}</div>
-          </div><button class="m-btn m-sell" onclick="otDelTest('${t.id}')">消す</button></div>`).join('');
-    }
-    async function otDelTest(id) {
-        if(!confirm('このテストと、提出された解答をぜんぶ消す？')) return;
-        try { await otPost('/tests?del=' + encodeURIComponent(id), {}); await otLoadTests(); renderOtMake(); }
-        catch(e) { alert('消せなかった…（' + e.message + '）'); }
-    }
-
     // ---------- 📝 定期テストの画面（5教科ぶんのカードをならべる） ----------
     function renderOtTake() {
         const box = document.getElementById('ottake-body'); if(!box) return;
@@ -15098,264 +14929,6 @@
         box.innerHTML = h;
         exStartTick();
     }
-    // ---------- 📩 なおが出したテストを うける（2人とも） ----------
-    //   ★定期テストとは別の画面。りらんも使うので、なお専用にはしない
-    function renderOtList() {
-        const box = document.getElementById('ottest-body'); if(!box) return;
-        if(otNow) return;                                       // テスト中は そのまま
-        box.innerHTML = '<div class="m-card">オンラインからテストをさがしています…</div>';
-        Promise.all([otLoadTests(), otLoadAnswers().catch(() => [])]).then(() => {
-            let h = '';
-            if(!otCacheTests.length) h += `<div class="m-card"><b>📭 いまテストは出ていないよ</b>
-                <div style="font-size:13px;color:#888;margin-top:6px;">なおがテストを出すと、ここに出てくるよ。</div></div>`;
-            otCacheTests.forEach(t => {
-                const mine = otCacheAns.find(a => a.testId === t.id && a.user === currentUserId);
-                h += `<div class="m-card"><b>📝 ${esc(t.title)}</b>
-                    <div class="m-row"><span>問題数</span><b>${(t.items||[]).length}問${(t.files||[]).length ? '＋問題用紙' + (t.files||[]).length + 'まい' : ''}</b></div>
-                    <div class="m-row"><span>制限時間</span><b>⏰ ${t.limit}分</b></div>
-                    <div class="m-row"><span>出された日</span><b>${otWhen(t.at)}</b></div>`;
-                if(mine) {
-                    h += `<div class="m-ok">✅ 提出ずみ（${otWhen(mine.at)}）${typeof mine.score === 'number' ? `<br>採点けっか：<b>${mine.score}点</b>` : '<br>採点をまってね'}</div>`;
-                    if(mine.graded) h += `<button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:8px;" onclick="otShowResult('${t.id}')">📊 答え合わせを見る</button>`;
-                    h += `<button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:6px;" onclick="otStart('${t.id}',true)">もう一度うける（上書き）</button>`;
-                } else {
-                    h += `<button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:17px;" onclick="otStart('${t.id}')">▶️ このテストを受ける</button>`;
-                }
-                h += `</div>`;
-            });
-            box.innerHTML = h;
-        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`; });
-    }
-    function otStart(id, again) {
-        const t = otCacheTests.find(x => x.id === id); if(!t) return;
-        if(!confirm(`「${t.title}」を始める？\n⏰ 制限時間 ${t.limit}分（時間になったら自動で提出）\n\n始めたら最後までやりきろう！`)) return;
-        otNow = { t, answers: (t.items || []).map(() => '') };
-        const box = document.getElementById('ottest-body');
-        let h = `<div class="m-card" style="border:3px solid #e74c3c;"><b>📝 ${esc(t.title)}</b>
-            <div class="m-desc">全${(t.items||[]).length}問／制限時間 ${t.limit}分</div></div>`;
-        (t.files || []).forEach((f, i) => {
-            if(f.type.indexOf('image') === 0) h += `<div class="m-card"><b>📄 問題用紙 ${i + 1}</b><img src="${f.data}" style="width:100%;border-radius:8px;margin-top:6px;"></div>`;
-            else h += `<div class="m-card"><b>📄 問題用紙 ${i + 1}（PDF）</b>
-                <button class="btn" style="background:#2980b9;color:#fff;width:100%;margin-top:8px;" onclick="otOpenFile('${t.id}',${i})">📄 ${esc(f.name)} をひらく</button></div>`;
-        });
-        h += `<div class="m-card"><b>✍️ 答えを入れてね</b>`;
-        (t.items || []).forEach((it, i) => {
-            h += `<div class="q-row grid-1"><div class="q-text">(${i + 1}) ${esc(it.q)}</div>
-                <input type="text" class="q-input" id="ot-a-${i}" placeholder="答え" oninput="otNow.answers[${i}]=this.value"></div>`;
-        });
-        if(!(t.items || []).length) h += `<div style="color:#888;font-size:13px;">問題用紙を見て、下の欄に番号ごとに答えを書いてね</div>`;
-        h += `</div>
-            <div class="m-card"><button class="btn" style="background:#27ae60;color:#fff;width:100%;font-size:17px;" onclick="otSubmit()">✅ 提出する</button>
-            <button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:8px;" onclick="otQuit()">やめる（提出しない）</button></div>`;
-        box.innerHTML = h;
-        otStartTimer(t.limit);
-        window.scrollTo(0, 0);
-    }
-    function otOpenFile(id, i) {
-        const t = otCacheTests.find(x => x.id === id); if(!t) return;
-        const f = (t.files || [])[i]; if(!f) return;
-        try {
-            const b64 = f.data.split(',')[1];
-            const bin = atob(b64), arr = new Uint8Array(bin.length);
-            for(let k = 0; k < bin.length; k++) arr[k] = bin.charCodeAt(k);
-            const url = URL.createObjectURL(new Blob([arr], { type: f.type }));
-            window.open(url, '_blank');
-            setTimeout(() => URL.revokeObjectURL(url), 60000);
-        } catch(e) { alert('ひらけなかったよ'); }
-    }
-    function otStartTimer(min) {
-        otStopTimer();
-        otRemain = min * 60;
-        const box = document.getElementById('timer-box');
-        box.style.display = 'flex';
-        document.getElementById('timer-text').innerText = otFmt(otRemain);
-        otTimer = setInterval(() => {
-            otRemain--;
-            const t = document.getElementById('timer-text');
-            if(!t || !document.getElementById('view-ottest').classList.contains('active')) { otStopTimer(); return; }
-            t.innerText = otFmt(Math.max(0, otRemain));
-            box.classList.remove('timer-caution', 'timer-warn', 'timer-danger');
-            if(otRemain <= 60) box.classList.add('timer-danger');
-            else if(otRemain <= 300) box.classList.add('timer-warn');
-            else if(otRemain <= 600) box.classList.add('timer-caution');
-            if(otRemain <= 0) { otStopTimer(); alert('⏰ 時間切れ！ここまでの答えを提出するね。'); otSubmit(true); }
-        }, 1000);
-    }
-    function otStopTimer() {
-        if(otTimer) { clearInterval(otTimer); otTimer = null; }
-        const box = document.getElementById('timer-box');
-        if(box) { box.style.display = 'none'; box.classList.remove('timer-caution', 'timer-warn', 'timer-danger'); }
-    }
-    function otQuit() { if(!confirm('やめる？答えは保存されないよ')) return; otStopTimer(); otNow = null; renderOtList(); }
-    async function otSubmit(auto) {
-        if(!otNow) return;
-        if(!auto && !confirm('提出する？あとから見直せないよ')) return;
-        otStopTimer();
-        const body = { testId: otNow.t.id, user: currentUserId, name: otUserName(currentUserId), answers: otNow.answers };
-        try {
-            await otPost('/answers', body);
-            const nq = (otNow.t.items || []).length;
-            otNow = null;
-            alert('✅ 提出したよ！おつかれさま。\nなおが採点したら、ここで点数が見られるよ。');
-            if(nq > 0) { motiAddDone(nq); flowerAddActivity(); gameOnActivity(nq, { correct:0 }); }
-            renderOtList();
-        } catch(e) { alert('提出できなかった…電波のいいところでもう一度ためしてね\n（' + e.message + '）'); }
-    }
-    function otShowResult(id) {
-        const t = otCacheTests.find(x => x.id === id);
-        const a = otCacheAns.find(x => x.testId === id && x.user === currentUserId);
-        if(!t || !a) return;
-        let h = `<div style="text-align:left;max-width:560px;margin:0 auto;">
-            <h2 style="text-align:center;">📊 ${esc(t.title)} の けっか</h2>
-            <div class="m-ev" style="text-align:center;font-size:18px;"><b>${a.score}点</b>（${(a.marks||[]).filter(m2=>m2==='○').length} / ${(t.items||[]).length}問 正解）</div>`;
-        (t.items || []).forEach((it, i) => {
-            const mk = (a.marks || [])[i] || '';
-            h += `<div class="m-row"><div style="flex:1;min-width:0;">
-                <div class="m-desc">(${i + 1}) ${esc(it.q)}</div>
-                <div style="font-size:13px;">あなたの答え：<b>${esc((a.answers || [])[i] || '（空）')}</b></div>
-                ${it.a ? `<div style="font-size:13px;color:#e74c3c;">正解：<b>${esc(it.a)}</b></div>` : ''}
-              </div><div style="font-size:22px;">${mk === '○' ? '⭕️' : mk === '△' ? '△' : '❌'}</div></div>`;
-        });
-        h += `<div style="text-align:center;margin-top:12px;"><button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`;
-        gOpenModal(h);
-    }
-
-    // ---------- 📥 解答を見る・採点する（なおだけ） ----------
-    function renderOtAns() {
-        const box = document.getElementById('otans-body'); if(!box) return;
-        if(!isOwner()) { box.innerHTML = '<div class="m-warn">この画面は なお のアカウントだけで使えるよ。</div>'; return; }
-        box.innerHTML = '<div class="m-card">よみこみ中…</div>';
-        Promise.all([otLoadTests(), otLoadAnswers()]).then(() => {
-            let h = '';
-            if(!otCacheTests.length) h += `<div class="m-card">まだテストを出していないよ</div>`;
-            otCacheTests.forEach(t => {
-                const list = otCacheAns.filter(a => a.testId === t.id);
-                h += `<div class="m-card"><b>📝 ${esc(t.title)}</b>
-                    <div class="m-desc">${(t.items||[]).length}問／${t.limit}分／${otWhen(t.at)}</div>`;
-                if(!list.length) h += `<div style="color:#888;font-size:13px;padding:6px 0;">まだ だれも提出していないよ</div>`;
-                list.forEach(a => {
-                    h += `<div class="m-row"><div style="flex:1;min-width:0;">
-                        <div class="m-name">👤 ${esc(a.name || otUserName(a.user))}</div>
-                        <div class="m-desc">提出 ${otWhen(a.at)}${typeof a.score === 'number' ? `／採点ずみ <b>${a.score}点</b>` : '／まだ採点していない'}</div>
-                      </div><button class="m-btn m-buy" onclick="otOpenAns('${t.id}','${a.user}')">見る</button></div>`;
-                });
-                h += `</div>`;
-            });
-            box.innerHTML = h;
-        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）</div>`; });
-    }
-    function otOpenAns(tid, uid) {
-        const t = otCacheTests.find(x => x.id === tid);
-        const a = otCacheAns.find(x => x.testId === tid && x.user === uid);
-        if(!t || !a) return;
-        const items = t.items || [];
-        let h = `<div style="text-align:left;max-width:600px;margin:0 auto;">
-            <h2 style="text-align:center;">👤 ${esc(a.name || otUserName(uid))} の解答</h2>
-            <div class="m-desc" style="text-align:center;">${esc(t.title)}／提出 ${otWhen(a.at)}</div>
-            <div style="text-align:center;margin:10px 0;">
-              <button class="btn" style="background:#8e44ad;color:#fff;" onclick="otAiGrade('${tid}','${uid}')">🤖 AI採点する</button>
-            </div>`;
-        if(typeof a.score === 'number') h += `<div class="m-ev" style="text-align:center;font-size:18px;">いまの点数：<b>${a.score}点</b></div>`;
-        items.forEach((it, i) => {
-            const mk = (a.marks || [])[i] || '';
-            h += `<div class="m-row"><div style="flex:1;min-width:0;">
-                <div class="m-desc">(${i + 1}) ${esc(it.q)}</div>
-                <div style="font-size:14px;">答え：<b>${esc((a.answers || [])[i] || '（空）')}</b></div>
-                ${it.a ? `<div style="font-size:12px;color:#888;">正解：${esc(it.a)}</div>` : ''}
-              </div>
-              <div style="white-space:nowrap;">
-                ${['○','△','✕'].map(x => `<button class="m-btn ${mk === x ? 'm-buy' : 'm-info'}" style="padding:4px 8px;" onclick="otMark('${tid}','${uid}',${i},'${x}')">${x}</button>`).join('')}
-              </div></div>`;
-        });
-        if(!items.length) h += `<div class="m-desc">この テストは問題用紙だけなので、下の欄に書かれた答えを見て採点してね</div>`
-            + (a.answers || []).map((x, i) => `<div class="m-row"><span>(${i + 1})</span><b>${esc(x)}</b></div>`).join('');
-        h += `<div style="text-align:center;margin-top:12px;">
-            <button class="btn" style="background:#27ae60;color:#fff;" onclick="otSaveGrade('${tid}','${uid}')">💾 採点を保存して知らせる</button>
-            <button class="btn" style="background:#34495e;color:#fff;" onclick="gCloseModal()">とじる</button></div></div>`;
-        gOpenModal(h);
-    }
-    // 手で○△✕をつける
-    function otMark(tid, uid, i, mk) {
-        const a = otCacheAns.find(x => x.testId === tid && x.user === uid); if(!a) return;
-        if(!Array.isArray(a.marks)) a.marks = [];
-        a.marks[i] = mk;
-        a.score = otScoreOf(otCacheTests.find(x => x.id === tid), a);
-        otOpenAns(tid, uid);
-    }
-    function otScoreOf(t, a) {
-        const items = (t && t.items) || [];
-        if(!items.length) return 0;
-        let pt = 0;
-        items.forEach((it, i) => { const mk = (a.marks || [])[i]; pt += mk === '○' ? 1 : mk === '△' ? 0.5 : 0; });
-        return Math.round(pt / items.length * 100);
-    }
-    // 🤖 AI採点：正解と見くらべて ○△✕ を自動でつける（表記ゆれ・1文字ちがいも拾う）
-    function otAiGrade(tid, uid) {
-        const t = otCacheTests.find(x => x.id === tid);
-        const a = otCacheAns.find(x => x.testId === tid && x.user === uid);
-        if(!t || !a) return;
-        const items = t.items || [];
-        if(!items.length || !items.some(x => (x.a || '').trim())) { alert('正解が入っていないので自動では採点できないよ。\n○△✕のボタンで手でつけてね。'); return; }
-        a.marks = items.map((it, i) => {
-            const ua = (a.answers || [])[i] || '';
-            if(!(it.a || '').trim()) return '';
-            return otJudge(ua, it.a);
-        });
-        a.score = otScoreOf(t, a);
-        otOpenAns(tid, uid);
-        setTimeout(() => alert(`🤖 AI採点おわり！\n${a.score}点（○ ${a.marks.filter(m2=>m2==='○').length} ／ △ ${a.marks.filter(m2=>m2==='△').length} ／ ✕ ${a.marks.filter(m2=>m2==='✕').length}）\n\nちがうと思ったところは ○△✕ のボタンで直せるよ。\nさいごに「💾採点を保存して知らせる」をおしてね。`), 200);
-    }
-    // 半角カナ→全角カナの対応表（ﾄｳｷｮｳ と トウキョウ を同じあつかいにするため）
-    const OT_KANA = { 'ｱ':'ア','ｲ':'イ','ｳ':'ウ','ｴ':'エ','ｵ':'オ','ｶ':'カ','ｷ':'キ','ｸ':'ク','ｹ':'ケ','ｺ':'コ',
-        'ｻ':'サ','ｼ':'シ','ｽ':'ス','ｾ':'セ','ｿ':'ソ','ﾀ':'タ','ﾁ':'チ','ﾂ':'ツ','ﾃ':'テ','ﾄ':'ト',
-        'ﾅ':'ナ','ﾆ':'ニ','ﾇ':'ヌ','ﾈ':'ネ','ﾉ':'ノ','ﾊ':'ハ','ﾋ':'ヒ','ﾌ':'フ','ﾍ':'ヘ','ﾎ':'ホ',
-        'ﾏ':'マ','ﾐ':'ミ','ﾑ':'ム','ﾒ':'メ','ﾓ':'モ','ﾔ':'ヤ','ﾕ':'ユ','ﾖ':'ヨ',
-        'ﾗ':'ラ','ﾘ':'リ','ﾙ':'ル','ﾚ':'レ','ﾛ':'ロ','ﾜ':'ワ','ｦ':'ヲ','ﾝ':'ン',
-        'ｧ':'ァ','ｨ':'ィ','ｩ':'ゥ','ｪ':'ェ','ｫ':'ォ','ｬ':'ャ','ｭ':'ュ','ｮ':'ョ','ｯ':'ッ' };
-    function otNorm(s2) {
-        let t = String(s2 || '');
-        // 半角カナ（濁点・半濁点つきも）を全角にそろえる
-        t = t.replace(/([ｦ-ﾝ])(ﾞ|ﾟ)?/g, (mm, k, d) => {
-            const base = OT_KANA[k] || k;
-            if(!d) return base;
-            const v = 'カキクケコサシスセソタチツテトハヒフヘホ'.indexOf(base);
-            if(d === 'ﾞ' && v >= 0) return String.fromCharCode(base.charCodeAt(0) + 1);
-            if(d === 'ﾟ' && 'ハヒフヘホ'.indexOf(base) >= 0) return String.fromCharCode(base.charCodeAt(0) + 2);
-            return base;
-        });
-        return t.replace(/[！-～]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0))
-            .replace(/[−ーｰ–]/g, '-').replace(/\s+/g, '').replace(/[.,!?'’"`。、]/g, '').toLowerCase();
-    }
-    function otDist(x, y) {   // レーベンシュタイン距離（1文字ちがいを見つける）
-        const dp = Array.from({ length: x.length + 1 }, (_, i) => [i].concat(new Array(y.length).fill(0)));
-        for(let j = 0; j <= y.length; j++) dp[0][j] = j;
-        for(let i = 1; i <= x.length; i++) for(let j = 1; j <= y.length; j++)
-            dp[i][j] = Math.min(dp[i-1][j] + 1, dp[i][j-1] + 1, dp[i-1][j-1] + (x[i-1] === y[j-1] ? 0 : 1));
-        return dp[x.length][y.length];
-    }
-    function otJudge(user, correct) {
-        const u = otNorm(user), c = otNorm(correct);
-        if(!u) return '✕';
-        // 「,」「/」で区切って、どれかに合っていれば正解あつかい
-        const alts = String(correct).split(/[\/／,、]|または/).map(otNorm).filter(Boolean);
-        if(alts.some(x => x === u)) return '○';
-        if(u === c) return '○';
-        if(alts.some(x => x.indexOf(u) === 0 && u.length >= Math.max(2, x.length - 1))) return '○';
-        const d = Math.min.apply(null, alts.concat([c]).map(x => otDist(u, x)));
-        if(d === 1 && c.length >= 2) return '△';
-        if(d === 2 && c.length >= 6) return '△';
-        return '✕';
-    }
-    async function otSaveGrade(tid, uid) {
-        const a = otCacheAns.find(x => x.testId === tid && x.user === uid); if(!a) return;
-        try {
-            await otPost('/answers', Object.assign({}, a, { graded:true, gradedAt: Date.now() }));
-            a.graded = true;
-            alert('💾 採点を保存したよ。本人の「📩テスト」に点数が出るようになったよ。');
-            gCloseModal(); renderOtAns();
-        } catch(e) { alert('保存できなかった…（' + e.message + '）'); }
-    }
-
     // ============================================================
     //  ☁️ きろくのクラウド保存
     //   ・保存のたびにサーバーへまるごと送る（どの端末でひらいても同じ記録になる）
@@ -15681,13 +15254,31 @@
         return null;
     }
     const abHasUserData = (obj) => Object.keys(obj || {}).some(k => k.startsWith('u1:') || k.startsWith('u2:'));
+    // ⚠️ 保存フックが自分で自分を呼ばないようにする見張り（下の autoBackupInit のコメントを読んで）
+    let abHookBusy = false;
     function autoBackupInit() {
         if (!window.indexedDB) return;
         try { // どの保存関数から書かれても漏れなくミラーされるよう、保存そのものをフックする
             const oSet = localStorage.setItem.bind(localStorage);
             const oRem = localStorage.removeItem.bind(localStorage);
-            localStorage.setItem = function(k, v) { oSet(k, v); abSchedule(); cloudSchedule(); };
-            localStorage.removeItem = function(k) { oRem(k); abSchedule(); cloudSchedule(); };
+            // ⚠️ 2026-08-11 に直したところ。前はここが
+            //      setItem → cloudSchedule() → cloudSetDirty() → setItem → … と
+            //    自分で自分を呼びつづけ、1回の保存で cloudSchedule が 2,344回 走っていた。
+            //    スタックあふれを cloudSetDirty の try/catch がにぎりつぶしていたので、
+            //    エラーは出ないまま「保存のたびに 0.5〜0.9秒 固まる」状態になっていた。
+            //    ★フックの中から呼ばれた保存では、フックを動かさない（abHookBusy）。
+            localStorage.setItem = function(k, v) {
+                oSet(k, v);
+                if(abHookBusy) return;
+                abHookBusy = true;
+                try { abSchedule(); cloudSchedule(); } finally { abHookBusy = false; }
+            };
+            localStorage.removeItem = function(k) {
+                oRem(k);
+                if(abHookBusy) return;
+                abHookBusy = true;
+                try { abSchedule(); cloudSchedule(); } finally { abHookBusy = false; }
+            };
         } catch(e) {}
         setInterval(abSaveNow, 5 * 60 * 1000);            // 保険の定期保存（5分ごと）
         window.addEventListener('pagehide', abSaveNow);    // アプリを閉じる直前にも保存
