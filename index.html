@@ -14748,7 +14748,7 @@
     // ---------- 📐 数学（文章題：正負の数・文字と式・一次方程式）25問×4点＝100点 ----------
     const NOBI_EXAM_MA = {
         id:'nobi-teiki-01-sugaku', title:'のびログ定期テスト（数学）', users:['u1'],
-        always:true, limit:40, range:'正負の数・文字と式・一次方程式の文章題（中1）',
+        at:'2026-8-30 12:30', limit:40, range:'正負の数・文字と式・一次方程式の文章題（中1）',
         parts:[
             { n:'第一問　正負の数の文章題', pt:4, qs:[
                 { q:'下の表は、ある町の月曜日から土曜日までの最高気温を、<b>月曜日の18℃を基準</b>にして、それより高い場合を正の数、低い場合を負の数で表したものである。<br>'
@@ -14814,7 +14814,7 @@
     // ---------- 📖 国語（漢字・説明文・随筆・小説）25問×4点＝100点 ----------
     const NOBI_EXAM_JP = {
         id:'nobi-teiki-01-kokugo', title:'のびログ定期テスト（国語）', users:['u1'],
-        always:true, limit:50, range:'漢字の読み・説明文・随筆・小説（中1）',
+        at:'2026-8-30 14:20', limit:50, range:'漢字の読み・説明文・随筆・小説（中1）',
         parts:[
             { n:'第一問　漢字の読み（ひらがなで書く）', pt:4, qs:[
                 { q:'友人の<u>寛大</u>な心に助けられた。', a:'かんだい' },
@@ -14915,7 +14915,7 @@
     // ---------- 🔤 英語（英検5級・4級ミックス／4つの中から番号でえらぶ）25問×4点＝100点 ----------
     const NOBI_EXAM_EN = {
         id:'nobi-teiki-01-eigo', title:'のびログ定期テスト（英語）', users:['u1'],
-        always:true, limit:40, range:'英検5級・4級レベル（語い・文法・会話・長文）',
+        at:'2026-8-30 13:25', limit:40, range:'英検5級・4級レベル（語い・文法・会話・長文）',
         parts:[
             { n:'第一問　短文の語い・文法（1〜4からえらぶ）', pt:4, qs:[
                 { q:'I ( ) my room before lunch yesterday.<br>1 clean　2 cleans　3 cleaned　4 cleaning',
@@ -14989,7 +14989,7 @@
     // ---------- 🔬 理科（植物・動物・身のまわりの物質）25問×4点＝100点 ----------
     const NOBI_EXAM_SC = {
         id:'nobi-teiki-01-rika', title:'のびログ定期テスト（理科）', users:['u1'],
-        always:true, limit:40, range:'植物のなかま・動物のなかま・身のまわりの物質（中1）',
+        at:'2026-8-31 13:00', limit:40, range:'植物のなかま・動物のなかま・身のまわりの物質（中1）',
         parts:[
             { n:'第一問　植物のなかま', pt:4, qs:[
                 { q:'つぎのA・Bの特ちょうをもつ植物がある。<b>単子葉類</b>はどちらか、記号で答えなさい。<br>'
@@ -15067,7 +15067,7 @@
     // ---------- 🌏 社会（地理：世界と日本の地域構成／世界のさまざまな地域）25問×4点＝100点 ----------
     const NOBI_EXAM_SO = {
         id:'nobi-teiki-01-shakai', title:'のびログ定期テスト（社会・地理）', users:['u1'],
-        always:true, limit:40, range:'世界と日本の地域構成・世界のさまざまな地域（中1地理）',
+        at:'2026-8-31 13:55', limit:40, range:'世界と日本の地域構成・世界のさまざまな地域（中1地理）',
         parts:[
             { n:'第一問　世界と日本の地域構成', pt:4, qs:[
                 { q:'地球の表面のうち、陸地と海洋の面積の割合はおよそ何対何か。「3対7」のような形で答えなさい。',
@@ -15141,16 +15141,18 @@
     function exTotal(ex) { return exQs(ex).reduce((a, q) => a + q.pt, 0); }
     // いまの状態（オンラインの時こくで判定する）
     //   always:true のテストは 日づけのカギがなく、いつでも受けられる
+    const EX_STAND_MIN = 15;        // ⏳ 何分前から待機できるか（ユーザー指定：15分前）
     function exState(ex) {
         if(ex.always) return { k:'open', always:true, ms: Infinity };
+        if(!ex.at) return { k:'open', always:true, ms: Infinity };
         const now = mNow().getTime();
-        const show = exParse(ex.show).getTime(), stand = exParse(ex.stand).getTime();
-        const st = exParse(ex.start).getTime(), en = exParse(ex.end).getTime();
-        if(now < show) return { k:'hidden' };
-        if(now < stand) return { k:'soon', ms: stand - now };
-        if(now < st) return { k:'stand', ms: st - now };
-        if(now <= en) return { k:'open', ms: en - now };
-        return { k:'closed' };
+        const st = exParse(ex.at).getTime();
+        const stand = st - EX_STAND_MIN * 60000;          // 15分前から待機
+        const en = st + (ex.limit || 30) * 60000;         // 制限時間がおわるまでが本番
+        if(now < stand) return { k:'soon',  ms: stand - now, at:st };   // ★かくさない。ずっとカードは出す
+        if(now < st)    return { k:'stand', ms: st - now,    at:st };   // ⏳ 待機ちゅう（15分→0）
+        if(now <= en)   return { k:'open',  ms: en - now,    at:st };   // ▶️ 本番
+        return { k:'late', at:st };                                      // ⌛ 時間はすぎた（あとから受けられる）
     }
     const exKey = (ex) => ukey('exam:' + ex.id);
     function exLoad(ex) { try { return JSON.parse(localStorage.getItem(exKey(ex))) || null; } catch(e) { return null; } }
@@ -15248,17 +15250,16 @@
     let exNow = null, exTimer = null, exTick = null;
     function exCardHtml(ex) {
         ex = ex || exFor();
-        if(!ex || !Array.isArray(ex.parts) || (!ex.start && !ex.always)) return '';   // テストのデータでなければ 何も出さない
-        const st = exState(ex); if(st.k === 'hidden') return '';
+        if(!ex || !Array.isArray(ex.parts)) return '';
+        const st = exState(ex);
         const done = exLoad(ex);
         const total = exTotal(ex), nq = exQs(ex).length;
-        const ds = ex.always ? null : exParse(ex.start), de = ex.always ? null : exParse(ex.end);
-        const when = ex.always ? 'いつでも'
-            : `${ds.getMonth()+1}月${ds.getDate()}日（${'日月火水木金土'[ds.getDay()]}）`
-            + `${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')} 〜 `
-            + `${String(de.getHours()).padStart(2,'0')}:${String(de.getMinutes()).padStart(2,'0')}`;
-        const fmt = (ms) => { const s2 = Math.floor(ms / 1000); const h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
-            return (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒'; };
+        const d = st.at ? new Date(st.at) : null;
+        const hhmm = (x) => `${String(x.getHours()).padStart(2,'0')}:${String(x.getMinutes()).padStart(2,'0')}`;
+        const when = d ? `${d.getMonth()+1}月${d.getDate()}日（${'日月火水木金土'[d.getDay()]}）${hhmm(d)} 〜 ${hhmm(new Date(st.at + ex.limit*60000))}` : 'いつでも';
+        const fmt = (ms) => { const s2 = Math.max(0, Math.floor(ms / 1000));
+            const dd = Math.floor(s2 / 86400), h = Math.floor((s2 % 86400) / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
+            return (dd ? dd + '日' : '') + (dd || h ? h + '時間' : '') + (dd || h || mi ? mi + '分' : '') + se + '秒'; };
         // ── すでに受けた ──
         if(done && done.submitted) {
             const pct = Math.round(done.score / total * 100);
@@ -15267,99 +15268,108 @@
                 <div class="m-ok" style="text-align:center;font-size:16px;">✅ 提出ずみ<br>
                   <b style="font-size:32px;">${done.score}点</b> / ${total}点（${pct}%）</div>
                 <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult('${ex.id}')">📊 答え合わせと解説を見る</button>
-                ${ex.always ? `<button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:6px;" onclick="exRetake('${ex.id}')">🔁 もう一度うける（記録は上書き）</button>` : ''}</div>`;
+                <button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:6px;" onclick="exRetake('${ex.id}')">🔁 もう一度うける（記録は上書き）</button></div>`;
         }
-        // ── いつでも受けられる（日づけのカギなし） ──
+        // ── いつでも受けられる（時こくを決めていないテスト）──
         if(st.always) {
             return `<div class="m-card" style="border:3px solid #8e44ad;background:linear-gradient(180deg,rgba(142,68,173,.12),transparent);">
                 <b>📝 ${esc(ex.title)}</b>
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div class="m-row"><span>いつ受けられる</span><b>🟢 いつでも</b></div>
                 <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分（時間になると自動で提出）</b></div>
-                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button>
-                <div class="m-learn">💡 えんぴつと紙を用意してから始めよう。できる問題から先にやると点がのびるよ。</div></div>`;
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button></div>`;
         }
-        // ── まだ日が来ていない（灰色） ──
+        // ── ① まだ（15分前より前）。カードは いつでも見える ──
         if(st.k === 'soon') {
-            return `<div class="m-card" style="border:3px dashed #95a5a6;opacity:.65;filter:grayscale(1);">
+            return `<div class="m-card" style="border:3px dashed #95a5a6;">
                 <b>📝 ${esc(ex.title)}</b>
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
                 <div class="m-row"><span>日にち</span><b>${when}</b></div>
-                <div class="m-row"><span>はじまるまで</span><b>${fmt(st.ms + 600000)}</b></div>
-                <div class="m-warn" style="background:rgba(127,140,141,.15);">🔒 まだ受けられないよ。<b>${ds.getMonth()+1}月${ds.getDate()}日 ${String(exParse(ex.stand).getHours()).padStart(2,'0')}:${String(exParse(ex.stand).getMinutes()).padStart(2,'0')}</b>から待機できるようになる。<br>
-                それまでに ${esc(ex.range)} を見なおしておこう！</div>
-                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>まだ始められません</button></div>`;
+                <div class="m-row"><span>待機できるまで</span><b id="ex-count-${ex.id}" data-k="soon">${fmt(st.ms)}</b></div>
+                <div class="m-desc" style="margin-top:6px;">⏳ はじまる <b>${EX_STAND_MIN}分前</b>（${hhmm(new Date(st.at - EX_STAND_MIN*60000))}）から この画面で待機できるよ</div>
+                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;cursor:not-allowed;" disabled>まだ始められません</button></div>`;
         }
-        // ── 待機中（10分前〜） ──
+        // ── ② 待機ちゅう（15分前〜0）。0になったら自動で問題が出る ──
         if(st.k === 'stand') {
-            return `<div class="m-card" style="border:3px solid #e67e22;background:linear-gradient(180deg,rgba(230,126,34,.12),transparent);">
+            return `<div class="m-card" style="border:3px solid #e67e22;background:linear-gradient(180deg,rgba(230,126,34,.14),transparent);">
                 <b>📝 ${esc(ex.title)}</b>
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
-                <div style="text-align:center;margin:10px 0;">
-                  <div style="font-size:13px;color:#e67e22;font-weight:bold;">⏳ 待機ちゅう…　はじまるまで</div>
-                  <div id="ex-count-${ex.id}" style="font-size:34px;font-weight:bold;color:#e67e22;">${fmt(st.ms)}</div>
+                <div style="text-align:center;margin:12px 0;">
+                  <div style="font-size:13px;color:#e67e22;font-weight:bold;">⏳ 待機ちゅう…　テスト開始まで</div>
+                  <div id="ex-count-${ex.id}" data-k="stand" style="font-size:40px;font-weight:bold;color:#e67e22;line-height:1.1;">${fmt(st.ms)}</div>
+                  <div style="font-size:12px;color:#888;">0になったら 問題と解答らんが出てくるよ</div>
                 </div>
-                <div class="m-ok">🕗 <b>${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')}</b>になったら 自動でボタンが出るよ。この画面のまま待っていてね。<br>
-                ・トイレは今のうちに　・えんぴつと紙を用意　・時間は<b>${ex.limit}分</b>だよ</div>
-                <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:8px;" disabled>${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')}まで待ってね</button></div>`;
+                <div class="m-ok">🕗 <b>${hhmm(d)}</b> スタート。この画面のまま待っていてね。<br>
+                ・トイレは今のうちに　・えんぴつと紙を用意　・時間は<b>${ex.limit}分</b>だよ</div></div>`;
         }
-        // ── 受けられる ──
+        // ── ③ 本番の時間内（まだ始めていない）──
         if(st.k === 'open') {
             return `<div class="m-card" style="border:3px solid #e74c3c;background:linear-gradient(180deg,rgba(231,76,60,.12),transparent);">
                 <b>📝 ${esc(ex.title)}</b>
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div style="text-align:center;margin:8px 0;">
                   <div style="font-size:13px;color:#e74c3c;font-weight:bold;">🔴 いま受けられます！　しめ切りまで</div>
-                  <div id="ex-count-${ex.id}" style="font-size:30px;font-weight:bold;color:#e74c3c;">${fmt(st.ms)}</div>
+                  <div id="ex-count-${ex.id}" data-k="open" style="font-size:30px;font-weight:bold;color:#e74c3c;">${fmt(st.ms)}</div>
                 </div>
                 <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分（時間になると自動で提出）</b></div>
-                <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button>
-                <div class="m-learn">💡 あわてずに、できる問題から先にやろう。時間が来ると自動で提出されるよ。</div></div>`;
+                <button class="btn" style="background:#e74c3c;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button></div>`;
         }
-        // ── 終わった（受けなかった） ──
-        return `<div class="m-card" style="opacity:.7;"><b>📝 ${esc(ex.title)}</b>
-            <div class="m-desc">${esc(ex.range)}</div>
-            <div class="m-warn">⌛ このテストの時間（${when}）は おわりました。</div></div>`;
+        // ── ④ 時間はすぎた（でも あとから受けられる）──
+        return `<div class="m-card" style="border:3px solid #95a5a6;">
+            <b>📝 ${esc(ex.title)}</b>
+            <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点・${ex.limit}分</div>
+            <div class="m-row"><span>本番の時間</span><b>${when}</b></div>
+            <div class="m-warn">⌛ 本番の時間はおわりました。あとからでも受けられるよ。</div>
+            <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:8px;font-size:17px;" onclick="exStart('${ex.id}')">▶️ あとから受ける</button></div>`;
     }
     function exStartTick() {
         clearInterval(exTick);
         exTick = setInterval(() => {
             const els = document.querySelectorAll('[id^="ex-count-"]');
             if(!els.length) { clearInterval(exTick); return; }
-            let redraw = false;
+            let redraw = false, autoStart = null;
+            const fmt = (ms) => { const s2 = Math.max(0, Math.floor(ms / 1000));
+                const dd = Math.floor(s2 / 86400), h = Math.floor((s2 % 86400) / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
+                return (dd ? dd + '日' : '') + (dd || h ? h + '時間' : '') + (dd || h || mi ? mi + '分' : '') + se + '秒'; };
             els.forEach(el => {
                 const ex = exById(el.id.replace('ex-count-', '')); if(!ex) return;
                 const st = exState(ex);
-                if(st.k !== 'stand' && st.k !== 'open') { redraw = true; return; }
-                const s2 = Math.floor(st.ms / 1000), h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
-                el.innerText = (h ? h + '時間' : '') + (h || mi ? mi + '分' : '') + se + '秒';
-                if(st.k === 'stand' && st.ms <= 1000) redraw = true;   // 開始時こくになったら画面を切りかえる
+                // ⏳ 待機ちゅうに 0 になったら、そのまま問題と解答らんを出す（ユーザー指定）
+                if(el.getAttribute('data-k') === 'stand' && st.k === 'open') { autoStart = ex.id; return; }
+                if(st.k !== 'soon' && st.k !== 'stand' && st.k !== 'open') { redraw = true; return; }
+                if(el.getAttribute('data-k') && el.getAttribute('data-k') !== st.k) { redraw = true; return; }
+                el.innerText = fmt(st.ms);
             });
+            if(autoStart) { clearInterval(exTick); exStart(autoStart, true); return; }
             if(redraw) { clearInterval(exTick); renderOtTake(); }
         }, 500);
     }
     // 🔁 いつでも受けられるテストだけ、受けなおせるようにする（前の記録は消える）
     function exRetake(id) {
         if(!isOwner()) return;                                    // 🔒
-        const ex = exById(id); if(!ex || !ex.always) return;
+        const ex = exById(id); if(!ex) return;      // ⚠️ 時こくを決めたテストでも受けなおせるようにした
         const d = exLoad(ex);
         if(d && d.submitted && !confirm(`「${ex.title}」をもう一度うける？\n\n前の記録（${d.score}点）は消えて、新しい点に上書きされるよ。`)) return;
         try { localStorage.removeItem(exKey(ex)); } catch(e) {}
         renderOtTake();
     }
-    function exStart(id) {
+    function exStart(id, auto) {
         if(!isOwner()) return;                                    // 🔒 念のため（何も出さずに止める）
         const ex = id ? exById(id) : exFor(); if(!ex) return;
-        if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
+        const stk = exState(ex).k;
+        if(stk !== 'open' && stk !== 'late' && !exState(ex).always) { alert('いまは受けられないよ'); renderOtTake(); return; }
         if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
-        if(!confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（時間になったら自動でていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
+        // ⏳ 待機から自動で始まったときは かくにんを出さず、そのまま問題を出す
+        if(!auto && !confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（時間になったら自動でていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
+        if(auto) { try { playSfx('finish'); celebrate(); } catch(e) {} }
         exNow = { ex, ans: exQs(ex).map(() => ''), t0: Date.now() };
         exRender();
         clearInterval(exTimer);
         exTimer = setInterval(() => {
             const el = document.getElementById('ex-timer');
             const st = exState(ex);
-            const left = Math.min(st.k === 'open' ? st.ms : 0, ex.limit * 60000 - (Date.now() - exNow.t0));
+            const rest = ex.limit * 60000 - (Date.now() - exNow.t0);   // 始めてからの残り時間
+            const left = (st.k === 'open') ? Math.min(st.ms, rest) : rest;
             if(left <= 0) { clearInterval(exTimer); exSubmit(true); return; }
             if(el) { const s2 = Math.floor(left / 1000);
                 el.innerText = Math.floor(s2 / 60) + ':' + String(s2 % 60).padStart(2, '0');
@@ -15538,7 +15548,7 @@
         let h = `<div class="m-card" style="border:3px solid #8e44ad;">
             <div style="text-align:center;">
               <div style="font-size:20px;font-weight:bold;">📝 のびログ定期テスト</div>
-              <div style="font-size:13px;color:#888;margin-top:2px;">5教科・各100点（ぜんぶで${max}点）／いつでも受けられるよ</div>
+              <div style="font-size:13px;color:#888;margin-top:2px;">5教科・各100点（ぜんぶで${max}点）／はじまる ${EX_STAND_MIN}分前 から待機できるよ</div>
               <div style="font-size:26px;font-weight:bold;color:#8e44ad;margin-top:8px;">${sum} / ${max}点</div>
               <div style="font-size:13px;color:#888;">${done.length} / ${list.length} 教科おわり</div>
             </div>
