@@ -2985,7 +2985,14 @@
         { id:'20260811-natsu-nao-nint', user:'u1', yen:500000, msg:'☀️ 🎮任転堂 からの夏のボーナス 50万円！' },
         { id:'20260811-natsu-nao-cafe', user:'u1', yen:500000, msg:'☀️ 🍰カフェティーノ からの夏のボーナス 50万円！' },
         { id:'20260811-natsu-rir-suki', user:'u2', yen:500000, msg:'☀️ 🍚すきぼー からの夏のボーナス 50万円！' },
-        { id:'20260811-present-rir',    user:'u2', yen:200000, msg:'🎁 なお からのプレゼント 20万円！' }
+        { id:'20260811-present-rir',    user:'u2', yen:200000, msg:'🎁 なお からのプレゼント 20万円！' },
+        // 🚀 りらんへの開業補助金 500万円。3分の1（約167万円）は「返す分」＝創業ゆうし（金利0%・60回）
+        { id:'20260811-kaigyou500-rir', user:'u2', yen:5000000,
+          loan:{ c:'SOUG', P:1666667, n:60 },
+          msg:'🚀 開業補助金 500万円がとどきました！自分のお店を出すためのお金だよ' },
+        // 💰 なおへの補助金 1,100万円（ユーザー指定・返す分なし）
+        { id:'20260811-hojo1100-nao', user:'u1', yen:11000000,
+          msg:'💰 補助金 1,100万円がとどきました！お店をふやすもよし、チェーンにするもよし' }
     ];
     // 【お金データのリセット】ここにidを書くと、次に開いたとき1回だけ まっさら（1万円スタート）に戻る
     // ⚠️ここに書いた人は、次に開いたときお金データが消えて1万円からになる。ふだんは【必ず空】にしておくこと
@@ -3485,6 +3492,16 @@
             m.grants.push(g.id);
             if(typeof g.to === 'number') { const d = g.to - m.cash; m.cash = g.to; mLog(m, 'とくべつ配布', d); msgs.push(`${g.msg}`); }
             else { m.cash += g.yen; mLog(m, 'とくべつ配布', g.yen); msgs.push(`${g.msg}（${mYen(g.yen)}）`); }
+            // 💴 返す分（借金）がついている配布。もらったお金の一部を あとで返していく形
+            if(g.loan) {
+                const lo = M_LOANS.find(x => x.c === g.loan.c) || M_LOANS.find(x => x.c === 'SOUG');
+                const P = Math.round(g.loan.P), n = Math.max(1, Math.round(g.loan.n));
+                const pay = mLoanMonthly(P, lo.rate, n);
+                if(!Array.isArray(m.loans)) m.loans = [];
+                m.loans.push({ c:lo.c, P, rate:lo.rate, n, pay, paid:0, left:pay * n, day:calToday() });
+                mLog(m, `返す分（${lo.n}・${n}回）`, 0);
+                msgs.push(`　└ このうち ${mYen(P)} は 毎月5日に ${mYen(pay)} ずつ ${n}回で返していくよ（金利${Math.round(lo.rate*1000)/10}%）`);
+            }
             changed = true;
         });
         if(changed) { mSave(m); celebrate('big'); playSfx('finish'); setTimeout(() => alert(msgs.join('\n')), 300); }
