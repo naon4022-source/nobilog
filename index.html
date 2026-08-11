@@ -528,7 +528,8 @@
     <div class="nav-item" id="nav-test-setup" onclick="switchView('test-setup')">📝 テスト作成</div>
     <div class="nav-item" id="nav-review" onclick="switchView('review')">🔁 間違い直し</div>
     <div class="nav-item" id="nav-hyakumasu" onclick="switchView('hyakumasu')">🧮 百ます計算</div>
-    <div class="nav-item" id="nav-ottake" onclick="switchView('ottake')">📩 テスト（オンライン）</div>
+    <div class="nav-item" id="nav-ottake" onclick="switchView('ottake')">📝 定期テスト</div>
+    <div class="nav-item" id="nav-ottest" onclick="switchView('ottest')">📩 なおが出したテスト</div>
     <div class="nav-item" id="nav-otmake" onclick="switchView('otmake')">📤 テスト作成（オンライン）</div>
     <div class="nav-item" id="nav-otans" onclick="switchView('otans')">📥 テストの解答</div>
     <div class="nav-item" id="nav-calendar" onclick="switchView('calendar')">🗓️ カレンダー（宿題）</div>
@@ -565,10 +566,7 @@
         <div class="section">
             <h3>🎯 単元</h3><div id="study-unit-container"></div>
         </div>
-        <div class="section" id="study-level-section">
-            <h3>📶 レベル (1:やさしい 〜 6:激ムズ)</h3>
-            <div id="study-level-container"></div>
-        </div>
+        <!-- 📶 レベルの欄は なくした（いつも レベル5 の難しさで出す・ユーザー指定） -->
         <div class="section" id="study-count-section">
             <h3>🔢 問題数</h3>
             <div id="study-count-container"></div>
@@ -592,6 +590,7 @@
             <button class="btn btn-inactive" onclick="setTestParam('subj', '英語', this)">英語 (約45問)</button>
             <button class="btn btn-inactive" onclick="setTestParam('subj', '国語', this)">国語 (約30問)</button>
             <button class="btn btn-inactive" onclick="setTestParam('subj', '理科', this)">理科 (約40問)</button>
+            <button class="btn btn-inactive" onclick="setTestParam('subj', '社会', this)">社会 (約40問)</button>
         </div>
         <div class="section">
             <h3>🎫 英検（本番形式・記述式・100点・時間制限あり）</h3>
@@ -603,10 +602,7 @@
             <h3>🎯 テスト範囲 (単元)</h3>
             <div id="test-unit-container"></div>
         </div>
-        <div class="section" id="test-level-section">
-            <h3>📶 レベル (1:やさしい 〜 6:激ムズ)</h3>
-            <div id="test-level-container"></div>
-        </div>
+        <!-- 📶 レベルの欄は なくした（いつも レベル5 の難しさで出す・ユーザー指定） -->
         <button class="btn btn-test" style="width:100%;" onclick="startTest()">テスト作成</button>
     </div>
 
@@ -728,10 +724,16 @@
         <div id="otmake-body"></div>
     </div>
 
-    <!-- ================= 📩 テスト（オンライン・2人） ================= -->
+    <!-- ================= 📝 定期テスト（5教科・クロードが書きこむ／なお専用） ================= -->
     <div id="view-ottake" class="view">
-        <h1 class="no-print">📩 テスト（オンライン）</h1>
+        <h1 class="no-print">📝 定期テスト</h1>
         <div id="ottake-body"></div>
+    </div>
+
+    <!-- ================= 📩 なおが出したテスト（オンライン・2人が受ける） ================= -->
+    <div id="view-ottest" class="view">
+        <h1 class="no-print">📩 なおが出したテスト</h1>
+        <div id="ottest-body"></div>
     </div>
 
     <!-- ================= 📥 テストの解答（なおのみ） ================= -->
@@ -815,18 +817,22 @@
 <script>
     // ===== シラバス・範囲設定 =====
     const studySyllabus = {
-        "中一": { "数学": ["正負の数", "文字式", "方程式", "変化と対応", "平面空間図形", "データの活用"], "英語": ["be動詞", "一般動詞", "過去形", "疑問詞", "文法", "文章"], "国語": ["文法", "漢字", "物語文"], "理科": ["植物と動物", "大地の変動", "物質", "物質と光音力", "計算と割合"] },
+        "中一": { "数学": ["正負の数", "文字式", "方程式", "変化と対応", "平面空間図形", "データの活用"], "英語": ["be動詞", "一般動詞", "過去形", "疑問詞", "文法", "文章"], "国語": ["文法", "漢字", "物語文"], "理科": ["植物と動物", "大地の変動", "物質", "物質と光音力", "計算と割合"], "社会": ["世界の姿", "日本の姿", "人々の生活と環境", "アジア州・ヨーロッパ州", "アフリカ州・アメリカ州・オセアニア州", "地域調査と地形図", "日本の地域的特色", "日本の諸地域"] },
         "検定": { "数学": ["数検5級"], "英語": ["英検5級", "英検4級", "英検3級", "単語5級", "単語4級", "単語3級"], "国語": ["漢検5級", "漢検4級"], "理科": ["理検5級"] }
     };
     const testSyllabus = {
         "数学": ["第1:正負と因数分解", "第2:文字式方程式", "第3:変化と対応", "第4:平面空間図形", "第5:データの利用"],
         "英語": ["5級レベル", "4級レベル", "3級レベル"],
         "国語": ["第1:文法", "第2:漢字読み書き", "第3:物語文"],
-        "理科": ["第1:植物と動物", "第2:大地", "第3:物質・光・音・力", "第4:計算"]
+        "理科": ["第1:植物と動物", "第2:大地", "第3:物質・光・音・力", "第4:計算"],
+        "社会": ["第1:世界の姿", "第2:日本の姿", "第3:人々の生活と環境", "第4:アジア州・ヨーロッパ州",
+                 "第5:アフリカ州・アメリカ州・オセアニア州", "第6:地域調査と地形図", "第7:日本の地域的特色", "第8:日本の諸地域"]
     };
 
-    let pStudy = { grade: '中一', subj: '数学', unit: '正負の数', count: 15, level: 3 };
-    let pTest = { grade: '中学1年', subj: '数学', unit: '第1:正負と因数分解', level: 3 };
+    // 📶 レベルは いつも 5（むずかしめ）に固定。えらぶ欄は なくした（ユーザー指定）
+    const FIXED_LEVEL = 5;
+    let pStudy = { grade: '中一', subj: '数学', unit: '正負の数', count: 15, level: FIXED_LEVEL };
+    let pTest = { grade: '中学1年', subj: '数学', unit: '第1:正負と因数分解', level: FIXED_LEVEL };
 
     // レベル1〜6 → ページ内で使う難易度の幅 [最低, 最高]
     const LEVEL_RANGE = { 1:[1,1], 2:[1,2], 3:[2,3], 4:[3,4], 5:[4,5], 6:[5,6] };
@@ -849,11 +855,12 @@
         history: [] // { id, timestamp, type, title, score, details }
     };
 
-    // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／テスト作成はなおだけ）
+    // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake'];
-    const OWNER_ONLY = ['nav-otmake', 'nav-otans'];
-    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-otmake','nav-otans'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottest'];
+    // 📝 定期テストと、テストを出す・採点する画面は なお だけ。メニューごと出さない
+    const OWNER_ONLY = ['nav-ottake', 'nav-otmake', 'nav-otans'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-ottest','nav-otmake','nav-otans'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
         const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
@@ -865,6 +872,8 @@
             OWNER_ONLY.forEach(id => show(id, false));         // なおだけの管理画面は出さない
         }
         else OWNER_ONLY.forEach(id => show(id, isOwner()));
+        // 📝 定期テストの中身は なお 以外の画面に残さない（人が変わったら消す）
+        if(!isOwner()) { exNow = null; const ob = el('ottake-body'); if(ob) ob.innerHTML = ''; }
         // 体験版は「お知らせ」と「今日の宿題」を出さない
         const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
         if(ub) ub.style.display = isTrial() ? 'none' : '';
@@ -975,6 +984,10 @@
     function logoutUser() {
         if(currentUserId && !confirm('ユーザーを切り替えますか？\n（解いている途中の問題は消えます。記録した分は保存済み）')) return;
         stopEikenTimer();
+        // 📝 定期テスト・📩 なおが出したテストは、人が変わる前に画面の中身を消しておく
+        try { clearInterval(exTick); clearInterval(exTimer); exNow = null; otStopTimer(); otNow = null;
+              const ob = document.getElementById('ottake-body'); if(ob) ob.innerHTML = '';
+              const tb = document.getElementById('ottest-body'); if(tb) tb.innerHTML = ''; } catch(e) {}
         currentUserId = null;
         showLogin();
     }
@@ -1513,7 +1526,7 @@
     //   ずっと最高記録を残してしまうと、総資産が減っても・信用が下がっても・
     //   転職して勤続が0にもどっても、古い数字が出たままになる（実際そうなっていた）
     const VB_LIVE = { money:true, salary:true, credit:true, jobday:true };
-    const VB_NAME = { exam:'📝 夏休み定期テスト', money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
+    const VB_NAME = { exam:'📝 定期テスト', money:'💰 そう資産', salary:'💼 お給料（手取り）', credit:'⭐ 信用スコア', jobday:'🏢 勤続日数', flash:'⚡ フラッシュ暗算', typing:'⌨️ タイピング', kuku:'🧮 九九タイム', memory:'🧠 記憶ゲーム', anagram:'🔤 アナグラム', missing:'➗ 虫食い算', reaction:'🎯 反射神経', stopClock:'⏰ 10秒ぴったり', vocab:'📝 英単語4択' };
     const VB_UNIT = { exam:'点', money:'円', salary:'円', credit:'点', jobday:'日', flash:'問', typing:'語', kuku:'秒', memory:'けた', anagram:'点', missing:'点', reaction:'ms', stopClock:'秒差', vocab:'点' };
     function vbLoad() { try { return JSON.parse(localStorage.getItem('versusBoard')) || {}; } catch(e) { return {}; } }
     function vbSaveLocal(b) { localStorage.setItem('versusBoard', JSON.stringify(b)); }
@@ -10461,10 +10474,9 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','ottake','otmake','otans'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats','ottest'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
-                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📩 テスト（オンライン）',
-                         otmake:'📤 テスト作成（オンライン）', otans:'📥 テストの解答' };
+                         life:'🏠 生活', stats:'📊 成績・グラフ', ottest:'📩 なおが出したテスト' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
                   `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
@@ -10472,8 +10484,11 @@
             toggleMenu();
             return;
         }
-        if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); return; }
-        if(id !== 'ottake') { otStopTimer(); clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📩 オンラインテストのタイマー
+        // 🔒 📝定期テストは なお 専用（問題を1問も見せない）。テストを出す・採点する画面も なおだけ
+        if(!isOwner() && id === 'ottake') { alert('📝 定期テストは なお のアカウントだけで使えるよ。'); toggleMenu(); return; }
+        if(!isOwner() && ['otmake','otans'].indexOf(id) >= 0) { alert('この画面は なお のアカウントだけで使えるよ。'); toggleMenu(); return; }
+        if(id !== 'ottake') { clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📝 定期テストのタイマー
+        if(id !== 'ottest') otStopTimer();          // 📩 なおが出したテストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
         if(id !== 'run' || currentRunMode !== 'eiken') { stopEikenTimer(); let tb = document.getElementById('timer-box'); if(tb && !nobiTimer && !otTimer) tb.style.display = 'none'; }
         if(id !== 'money') mGamStopAll();   // 🎲 週替わりのカウントダウン・演出を止める
@@ -10489,6 +10504,7 @@
         if(id === 'life') renderLife();
         if(id === 'otmake') renderOtMake();
         if(id === 'ottake') renderOtTake();
+        if(id === 'ottest') renderOtList();
         if(id === 'otans') renderOtAns();
         if(id === 'run') showRunCheer();
     }
@@ -10505,7 +10521,6 @@
     function updateStudySections() {
         let u = String(pStudy.unit);
         let noOpts = pStudy.subj === '英語' && (u.includes('単語') || u.includes('文章'));
-        document.getElementById('study-level-section').style.display = noOpts ? 'none' : '';
         document.getElementById('study-count-section').style.display = noOpts ? 'none' : '';
     }
     function initStudyMenu() {
@@ -10522,12 +10537,7 @@
             let b = document.createElement('button'); b.className = `btn ${n===pStudy.count?'btn-active':'btn-inactive'}`; b.innerText = n+'問';
             b.onclick = function() { setStudyParam('count', n, this); }; cDiv.appendChild(b);
         });
-
-        let lDiv = document.getElementById('study-level-container'); lDiv.innerHTML = '';
-        [1,2,3,4,5,6].forEach(n => {
-            let b = document.createElement('button'); b.className = `btn ${n===pStudy.level?'btn-active':'btn-inactive'}`; b.innerText = 'レベル'+n;
-            b.onclick = function() { setStudyParam('level', n, this); }; lDiv.appendChild(b);
-        });
+        pStudy.level = FIXED_LEVEL;      // 📶 レベルはえらばない（いつも5）
     }
     function updateStudyUnits() {
         let uDiv = document.getElementById('study-unit-container'); uDiv.innerHTML = '';
@@ -10539,13 +10549,9 @@
         updateStudySections();
     }
 
-    function initTestMenu() { // 初期表示でテスト範囲(単元)・レベルボタンを用意
+    function initTestMenu() { // 初期表示でテスト範囲(単元)ボタンを用意（レベルはえらばない）
         updateTestUnits();
-        let lDiv = document.getElementById('test-level-container'); lDiv.innerHTML = '';
-        [1,2,3,4,5,6].forEach(n => {
-            let b = document.createElement('button'); b.className = `btn ${n===pTest.level?'btn-active':'btn-inactive'}`; b.innerText = 'レベル'+n;
-            b.onclick = function() { setTestParam('level', n, this); }; lDiv.appendChild(b);
-        });
+        pTest.level = FIXED_LEVEL;
     }
     function setTestParam(type, val, btn) {
         pTest[type] = val;
@@ -10564,11 +10570,10 @@
             updateTestSections();
         }
     }
-    // 英検を選んだときは単元・レベルは使わないので隠す
+    // 英検を選んだときは単元は使わないので隠す
     function updateTestSections() {
         let isEiken = String(pTest.subj).startsWith('英検');
         document.getElementById('test-unit-section').style.display = isEiken ? 'none' : '';
-        document.getElementById('test-level-section').style.display = isEiken ? 'none' : '';
     }
     function updateTestUnits() {
         let uDiv = document.getElementById('test-unit-container'); uDiv.innerHTML = '';
@@ -12582,6 +12587,573 @@
         return {...randObj(pool), type:'text'};
     }
 
+    // ============================================================================================
+    //  🌏 社会（地理）中1 ― もらった教科書のもくじに合わせた8単元
+    //    第1編 世界と日本の地域構成 ／ 第2編 世界のさまざまな地域 ／ 第3編 日本のさまざまな地域
+    //  ★1単元あたり 2,000問以上つくれるように、
+    //    「事実の表 × いろいろな聞き方」＋「数字を変える計算問題」で組み立てている。
+    //    単元ごとに 何種類もの作り方（ジェネレーター）を用意して、毎回どれか1つを等確率でえらぶので、
+    //    1つの型ばかりに かたよらない。
+    // ============================================================================================
+
+    // 都道府県：[県名, 県庁所在地, 地方, 緯度, 経度, 内陸県か]
+    const SOC_PREF = [
+        ['北海道','札幌市','北海道',43.06,141.35,0],['青森県','青森市','東北',40.82,140.74,0],
+        ['岩手県','盛岡市','東北',39.70,141.15,0],['宮城県','仙台市','東北',38.27,140.87,0],
+        ['秋田県','秋田市','東北',39.72,140.10,0],['山形県','山形市','東北',38.24,140.36,0],
+        ['福島県','福島市','東北',37.75,140.47,0],['茨城県','水戸市','関東',36.34,140.45,0],
+        ['栃木県','宇都宮市','関東',36.57,139.88,1],['群馬県','前橋市','関東',36.39,139.06,1],
+        ['埼玉県','さいたま市','関東',35.86,139.65,1],['千葉県','千葉市','関東',35.60,140.12,0],
+        ['東京都','東京','関東',35.69,139.69,0],['神奈川県','横浜市','関東',35.45,139.64,0],
+        ['新潟県','新潟市','中部',37.90,139.02,0],['富山県','富山市','中部',36.70,137.21,0],
+        ['石川県','金沢市','中部',36.59,136.63,0],['福井県','福井市','中部',36.07,136.22,0],
+        ['山梨県','甲府市','中部',35.66,138.57,1],['長野県','長野市','中部',36.65,138.18,1],
+        ['岐阜県','岐阜市','中部',35.39,136.72,1],['静岡県','静岡市','中部',34.98,138.38,0],
+        ['愛知県','名古屋市','中部',35.18,136.91,0],['三重県','津市','近畿',34.73,136.51,0],
+        ['滋賀県','大津市','近畿',35.00,135.87,1],['京都府','京都市','近畿',35.02,135.76,0],
+        ['大阪府','大阪市','近畿',34.69,135.52,0],['兵庫県','神戸市','近畿',34.69,135.18,0],
+        ['奈良県','奈良市','近畿',34.69,135.83,1],['和歌山県','和歌山市','近畿',34.23,135.17,0],
+        ['鳥取県','鳥取市','中国',35.50,134.24,0],['島根県','松江市','中国',35.47,133.05,0],
+        ['岡山県','岡山市','中国',34.66,133.93,0],['広島県','広島市','中国',34.40,132.46,0],
+        ['山口県','山口市','中国',34.19,131.47,0],['徳島県','徳島市','四国',34.07,134.56,0],
+        ['香川県','高松市','四国',34.34,134.04,0],['愛媛県','松山市','四国',33.84,132.77,0],
+        ['高知県','高知市','四国',33.56,133.53,0],['福岡県','福岡市','九州',33.61,130.42,0],
+        ['佐賀県','佐賀市','九州',33.25,130.30,0],['長崎県','長崎市','九州',32.74,129.87,0],
+        ['熊本県','熊本市','九州',32.79,130.74,0],['大分県','大分市','九州',33.24,131.61,0],
+        ['宮崎県','宮崎市','九州',31.91,131.42,0],['鹿児島県','鹿児島市','九州',31.56,130.56,0],
+        ['沖縄県','那覇市','九州',26.21,127.68,0]
+    ];
+    const SOC_R7 = (r) => (r === '中国' || r === '四国') ? '中国・四国' : r;   // 7地方区分にまとめる
+    const SOC_PBARE = (p) => p[0].replace(/[都道府県]$/, '');                 // 「〜県」を取った名前
+    const SOC_CBARE = (c) => c.replace(/市$/, '');                            // 「〜市」を取った名前
+
+    // 世界の国：[国名, 首都, 州, 経度（＋が東経・−が西経）]
+    const SOC_COUNTRY = [
+        ['中国','ペキン','アジア州',116],['韓国','ソウル','アジア州',127],['モンゴル','ウランバートル','アジア州',107],
+        ['インド','デリー','アジア州',77],['パキスタン','イスラマバード','アジア州',73],['バングラデシュ','ダッカ','アジア州',90],
+        ['ネパール','カトマンズ','アジア州',85],['タイ','バンコク','アジア州',100],['ベトナム','ハノイ','アジア州',106],
+        ['カンボジア','プノンペン','アジア州',105],['ラオス','ビエンチャン','アジア州',103],['ミャンマー','ネピドー','アジア州',96],
+        ['マレーシア','クアラルンプール','アジア州',102],['シンガポール','シンガポール','アジア州',104],
+        ['インドネシア','ジャカルタ','アジア州',107],['フィリピン','マニラ','アジア州',121],
+        ['サウジアラビア','リヤド','アジア州',47],['アラブ首長国連邦','アブダビ','アジア州',54],
+        ['イラン','テヘラン','アジア州',51],['イラク','バグダッド','アジア州',44],['トルコ','アンカラ','アジア州',33],
+        ['カザフスタン','アスタナ','アジア州',71],['ウズベキスタン','タシケント','アジア州',69],
+        ['イギリス','ロンドン','ヨーロッパ州',0],['フランス','パリ','ヨーロッパ州',2],['ドイツ','ベルリン','ヨーロッパ州',13],
+        ['イタリア','ローマ','ヨーロッパ州',12],['スペイン','マドリード','ヨーロッパ州',-4],['ポルトガル','リスボン','ヨーロッパ州',-9],
+        ['オランダ','アムステルダム','ヨーロッパ州',5],['ベルギー','ブリュッセル','ヨーロッパ州',4],
+        ['スイス','ベルン','ヨーロッパ州',7],['オーストリア','ウィーン','ヨーロッパ州',16],
+        ['スウェーデン','ストックホルム','ヨーロッパ州',18],['ノルウェー','オスロ','ヨーロッパ州',11],
+        ['フィンランド','ヘルシンキ','ヨーロッパ州',25],['デンマーク','コペンハーゲン','ヨーロッパ州',13],
+        ['ポーランド','ワルシャワ','ヨーロッパ州',21],['ギリシャ','アテネ','ヨーロッパ州',24],
+        ['ロシア','モスクワ','ヨーロッパ州',38],['ウクライナ','キーウ','ヨーロッパ州',31],
+        ['エジプト','カイロ','アフリカ州',31],['南アフリカ共和国','プレトリア','アフリカ州',28],
+        ['ナイジェリア','アブジャ','アフリカ州',7],['ケニア','ナイロビ','アフリカ州',37],
+        ['エチオピア','アディスアベバ','アフリカ州',39],['ガーナ','アクラ','アフリカ州',0],
+        ['モロッコ','ラバト','アフリカ州',-7],['アルジェリア','アルジェ','アフリカ州',3],
+        ['タンザニア','ドドマ','アフリカ州',36],['コンゴ民主共和国','キンシャサ','アフリカ州',15],
+        ['アメリカ合衆国','ワシントンD.C.','北アメリカ州',-77],['カナダ','オタワ','北アメリカ州',-76],
+        ['メキシコ','メキシコシティ','北アメリカ州',-99],['キューバ','ハバナ','北アメリカ州',-82],
+        ['ジャマイカ','キングストン','北アメリカ州',-77],['パナマ','パナマシティ','北アメリカ州',-79],
+        ['ブラジル','ブラジリア','南アメリカ州',-48],['アルゼンチン','ブエノスアイレス','南アメリカ州',-58],
+        ['チリ','サンティアゴ','南アメリカ州',-71],['ペルー','リマ','南アメリカ州',-77],
+        ['コロンビア','ボゴタ','南アメリカ州',-74],['ベネズエラ','カラカス','南アメリカ州',-67],
+        ['ボリビア','ラパス','南アメリカ州',-68],['エクアドル','キト','南アメリカ州',-78],
+        ['ウルグアイ','モンテビデオ','南アメリカ州',-56],
+        ['オーストラリア','キャンベラ','オセアニア州',149],['ニュージーランド','ウェリントン','オセアニア州',175],
+        ['パプアニューギニア','ポートモレスビー','オセアニア州',147],['フィジー','スバ','オセアニア州',178],
+        ['ツバル','フナフティ','オセアニア州',179]
+    ];
+    // 時差の計算につかう都市：[都市, 標準時子午線（＋東経・−西経）]
+    const SOC_TZ = [
+        ['東京',135],['ソウル',135],['ペキン',120],['バンコク',105],['ジャカルタ',105],['ダッカ',90],
+        ['カラチ',75],['ドバイ',60],['モスクワ',45],['カイロ',30],['ローマ',15],['ロンドン',0],
+        ['アクラ',0],['リオデジャネイロ',-45],['ニューヨーク',-75],['シカゴ',-90],['デンバー',-105],
+        ['ロサンゼルス',-120],['アンカレジ',-135],['ホノルル',-150],['シドニー',150],['ウェリントン',180]
+    ];
+
+    // 数え上げのじゃまにならないよう、問題文が長いときだけ 記述らんを広くする
+    const socQA = (q, a) => ({ q, a: String(a), type: String(q).length > 44 ? 'text' : undefined });
+    const socPair = (arr) => { let i = randNum(0, arr.length - 1), j = randNum(0, arr.length - 2); if(j >= i) j++; return [arr[i], arr[j]]; };
+    const socHour = (h) => (h + 24) % 24;
+
+    // ---------- 共通でつかう小さな部品 ----------
+    // 時差の問題（何時になるか）。経度差 ÷ 15 で時差を出す
+    function socTimeDiffQ() {
+        const [a, b] = socPair(SOC_TZ);
+        const d = Math.round((a[1] - b[1]) / 15);
+        if(d === 0) return socQA(`${a[0]}と${b[0]}の時差は何時間か。数字で答えなさい。`, 0);
+        const lonTxt = (v) => v >= 0 ? `東経${v}度` : `西経${-v}度`;
+        if(Math.random() < 0.5) return socQA(`${a[0]}（${lonTxt(a[1])}）と ${b[0]}（${lonTxt(b[1])}）の時差は何時間か。数字で答えなさい。`, Math.abs(d));
+        const h = randNum(0, 23);
+        const t = socHour(h - d);
+        return socQA(`${a[0]}が ${h}時のとき、${b[0]}は何時か。24時間の言い方（0〜23）で答えなさい。（日付は考えなくてよい）`, t);
+    }
+    // 割合（％）の計算：資料を読み取る力
+    function socPctQ(theme, whole, partName) {
+        const total = randNum(4, 40) * 25;              // 100〜1000
+        const p = randNum(1, 19) * 5;                   // 5〜95%
+        const part = Math.round(total * p / 100);
+        if(Math.random() < 0.5) return socQA(`${theme}の${whole}は${total}${'億円'}で、そのうち${partName}は${part}億円だった。${partName}の割合は何％か。`, p);
+        return socQA(`${theme}の${whole}は${total}億円である。${partName}がその${p}％をしめるとき、${partName}は何億円か。`, part);
+    }
+    // 人口密度の計算
+    function socDensityQ(name) {
+        const area = randNum(2, 60) * 500;              // 1000〜30000 km2
+        const dens = randNum(2, 120) * 5;               // 10〜600 人/km2
+        const pop = area * dens;
+        if(Math.random() < 0.5) return socQA(`${name}の面積は${area}km²、人口は${pop.toLocaleString()}人である。人口密度は1km²あたり何人か。`, dens);
+        return socQA(`${name}の面積は${area}km²、人口密度は1km²あたり${dens}人である。人口は何人か。`, pop);
+    }
+
+    // ============================ 単元1：世界の姿 ============================
+    const SOC_CONT = [['ユーラシア大陸',1],['アフリカ大陸',2],['北アメリカ大陸',3],['南アメリカ大陸',4],['南極大陸',5],['オーストラリア大陸',6]];
+    const SOC_OCEAN = [['太平洋',1],['大西洋',2],['インド洋',3]];
+    const SOC_STATE = ['アジア州','ヨーロッパ州','アフリカ州','北アメリカ州','南アメリカ州','オセアニア州'];
+    const SOC_G1 = [
+        // 国と首都
+        () => { const c = randObj(SOC_COUNTRY); return socQA(`${c[0]}の首都はどこか。`, c[1]); },
+        () => { const c = randObj(SOC_COUNTRY); return socQA(`首都が「${c[1]}」である国はどこか。`, c[0]); },
+        () => { const c = randObj(SOC_COUNTRY); return socQA(`${c[0]}はどの州にふくまれるか。「〜州」の形で答えなさい。`, c[2]); },
+        // 大陸・海洋（１つの作り方にまとめて、同じ問題ばかり当たらないようにする）
+        () => { const r = randNum(0, 3);
+                if(r === 0) { const c = randObj(SOC_CONT); return socQA(`六大陸のうち、面積が${c[1]}番目に大きい大陸はどこか。`, c[0]); }
+                if(r === 1) { const c = randObj(SOC_CONT); return socQA(`${c[0]}は、六大陸のうち面積が何番目に大きいか。数字で答えなさい。`, c[1]); }
+                if(r === 2) { const o = randObj(SOC_OCEAN); return socQA(`三大洋のうち、面積が${o[1]}番目に大きい大洋はどこか。`, o[0]); }
+                const o = randObj(SOC_OCEAN); return socQA(`${o[0]}は、三大洋のうち面積が何番目に大きいか。数字で答えなさい。`, o[1]); },
+        // 緯度・経度
+        () => { const d = randNum(1, 80); return socQA(`緯度1度の長さをおよそ111kmとすると、北緯${d}度の地点は赤道からおよそ何km北にあるか。`, d * 111); },
+        () => { const d = randNum(15, 180); const half = Math.random() < 0.5;
+                return socQA(`本初子午線から${half ? '東' : '西'}へ${d}度はなれた地点の経度を、「東経◯度」「西経◯度」の形で答えなさい。`, (half ? '東経' : '西経') + d + '度'); },
+        () => { const d = randNum(1, 89); const north = Math.random() < 0.5;
+                const other = north ? '南' : '北';
+                return socQA(`${north ? '北緯' : '南緯'}${d}度の地点から、地球の反対がわ（緯度が同じで半球がちがう地点）の緯度を、「北緯◯度」「南緯◯度」の形で答えなさい。`, other + '緯' + d + '度'); },
+        // 時差
+        socTimeDiffQ,
+        () => { const lon = randNum(1, 12) * 15; const east = Math.random() < 0.5;
+                return socQA(`${east ? '東経' : '西経'}${lon}度を標準時子午線とする国と、経度0度のイギリスとの時差は何時間か。`, lon / 15); },
+        // 地球のすがた
+        () => randObj([
+            socQA('地球の表面のうち、陸地と海洋の面積の割合はおよそ何対何か。「3対7」のような形で答えなさい。', '3対7'),
+            socQA('地球一周の長さはおよそ何万kmか。数字だけで答えなさい。', 4),
+            socQA('地球の半径はおよそ何kmか。数字で答えなさい。', 6400),
+            socQA('緯度0度の線を何というか。', '赤道'),
+            socQA('経度0度の線を何というか。', '本初子午線'),
+            socQA('北緯23.4度を通る、太陽が真上にくる北のかぎりの線を何というか。', '北回帰線'),
+            socQA('南緯66.6度より南の、太陽がしずまない日がある地域の境の線を何というか。', '南極圏'),
+            socQA('地球儀のように、面積・形・方位・距離をすべて正しく表せるのは地球儀と世界地図のどちらか。', '地球儀'),
+            socQA('世界を6つの州に分けたとき、日本がふくまれる州はどこか。', 'アジア州'),
+            socQA('海に囲まれ、まわりを海岸線でかこまれた国を何というか。', '島国'),
+            socQA('まったく海に面していない国を何というか。', '内陸国'),
+            socQA('国の位置を表すとき、たてに引かれた線を何というか。', '経線'),
+            socQA('国の位置を表すとき、よこに引かれた線を何というか。', '緯線'),
+            socQA('国と国との境目を何というか。', '国境'),
+            socQA('世界の国の数はおよそ何か国か。「190」「200」のような数字で答えなさい。', 190),
+            ...SOC_STATE.map(st => socQA(`この本の表にのっている国のうち、${st}の国はいくつあるか。数字で答えなさい。`, SOC_COUNTRY.filter(c => c[2] === st).length))
+        ]),
+        // 2つの国をくらべる（位置関係）
+        () => { const [a, b] = socPair(SOC_COUNTRY); const e = a[3] >= b[3] ? a : b;
+                return socQA(`${a[0]}と${b[0]}では、より東（経度が東より）にあるのはどちらか。国名で答えなさい。`, e[0]); },
+        () => { const [a, b] = socPair(SOC_COUNTRY);
+                return socQA(`${a[0]}と${b[0]}は、同じ州にふくまれるか。「はい」か「いいえ」で答えなさい。`, a[2] === b[2] ? 'はい' : 'いいえ'); }
+    ];
+
+    // ============================ 単元2：日本の姿 ============================
+    const SOC_G2 = [
+        () => { const p = randObj(SOC_PREF); return socQA(`${p[0]}の県庁所在地はどこか。`, p[1]); },
+        () => { const p = randObj(SOC_PREF); return socQA(`「${p[1]}」は何という都道府県の県庁所在地か。`, p[0]); },
+        () => { const p = randObj(SOC_PREF); return socQA(`${p[0]}は、日本を7つに分けたときの何地方にふくまれるか。「〜地方」の形で答えなさい。`, SOC_R7(p[2]) + '地方'); },
+        () => { const p = randObj(SOC_PREF);
+                return socQA(`${p[0]}は、海に面していない「内陸県」か。「はい」か「いいえ」で答えなさい。`, p[5] ? 'はい' : 'いいえ'); },
+        () => { const p = randObj(SOC_PREF);
+                return socQA(`${p[0]}の県庁所在地の名前は、都道府県の名前と同じか、ちがうか。「同じ」か「ちがう」で答えなさい。`,
+                             SOC_PBARE(p) === SOC_CBARE(p[1]) ? '同じ' : 'ちがう'); },
+        () => { const [a, b] = socPair(SOC_PREF); const n = a[3] >= b[3] ? a : b;
+                return socQA(`${a[0]}と${b[0]}では、より北にあるのはどちらか。都道府県名で答えなさい。`, n[0]); },
+        () => { const [a, b] = socPair(SOC_PREF); const e = a[4] >= b[4] ? a : b;
+                return socQA(`${a[0]}と${b[0]}では、より東にあるのはどちらか。都道府県名で答えなさい。`, e[0]); },
+        () => { const [a, b] = socPair(SOC_PREF);
+                return socQA(`${a[0]}と${b[0]}は、同じ地方（7地方区分）にふくまれるか。「はい」か「いいえ」で答えなさい。`,
+                             SOC_R7(a[2]) === SOC_R7(b[2]) ? 'はい' : 'いいえ'); },
+        socTimeDiffQ,
+        () => { const c = randObj(SOC_TZ.filter(x => x[0] !== '東京')); const d = Math.abs(Math.round((135 - c[1]) / 15));
+                return socQA(`日本（東経135度）と${c[0]}の時差は何時間か。数字で答えなさい。`, d); },
+        () => randObj([
+            socQA('日本の標準時子午線は東経何度か。数字で答えなさい。', 135),
+            socQA('日本の標準時子午線が通る、兵庫県の都市はどこか。', '明石市'),
+            socQA('日本の国土面積はおよそ何万km²か。数字だけで答えなさい。', 38),
+            socQA('日本の都道府県の数はいくつか。数字で答えなさい。', 47),
+            socQA('日本の東のはしにある島を何というか。', '南鳥島'),
+            socQA('日本の西のはしにある島を何というか。', '与那国島'),
+            socQA('日本の南のはしにある島を何というか。', '沖ノ鳥島'),
+            socQA('日本の北のはしにある島を何というか。', '択捉島'),
+            socQA('海岸から12海里までの、その国の主権がおよぶ海を何というか。', '領海'),
+            socQA('海岸から200海里までの、水産資源や鉱産資源をその国が利用できる範囲を何というか。', '排他的経済水域'),
+            socQA('領土・領海・領空をまとめて何というか。', '領域'),
+            socQA('北方領土は現在どの国との間で問題となっているか。国名で答えなさい。', 'ロシア'),
+            socQA('竹島は現在どの国との間で問題となっているか。国名で答えなさい。', '韓国'),
+            socQA('尖閣諸島に対して領有を主張している国はどこか。国名で答えなさい。', '中国'),
+            socQA('北方領土にふくまれる4つの島のうち、いちばん面積が大きい島はどこか。', '択捉島'),
+            socQA('日本は世界の6つの州のうち、どの州にふくまれるか。', 'アジア州'),
+            socQA('日本の国土のうち、山地・丘陵がしめる割合はおよそ何分の3か。「4分の3」の形で答えなさい。', '4分の3'),
+            socQA('日本の島の数のうち、いちばん大きい島はどこか。', '本州'),
+            socQA('日本を7つに分けたときの地方の数はいくつか。数字で答えなさい。', 7),
+            ...['北海道','東北','関東','中部','近畿','中国','四国','九州'].map(r =>
+                socQA(`${r}地方にふくまれる都道府県はいくつあるか。数字で答えなさい。`, SOC_PREF.filter(p => p[2] === r).length))
+        ]),
+        () => socDensityQ(randObj(SOC_PREF)[0])
+    ];
+
+    // ============================ 単元3：人々の生活と環境 ============================
+    //  気候帯の判定（最寒月・最暖月・年降水量の数字から見分ける）＝ 数字を変えて何千通りでも作れる
+    function socClimateQ() {
+        const kind = randNum(0, 4);
+        let cold, warm, rain, ans;
+        if(kind === 0) { cold = randNum(18, 27); warm = randNum(cold + 1, 32); rain = randNum(1200, 4000); ans = '熱帯'; }
+        else if(kind === 1) { cold = randNum(-5, 20); warm = randNum(Math.max(cold + 5, 25), 40); rain = randNum(20, 400); ans = '乾燥帯'; }
+        else if(kind === 2) { cold = randNum(-2, 15); warm = randNum(Math.max(cold + 5, 18), 30); rain = randNum(600, 2500); ans = '温帯'; }
+        else if(kind === 3) { cold = randNum(-30, -5); warm = randNum(12, 25); rain = randNum(400, 1200); ans = '亜寒帯'; }
+        else { cold = randNum(-40, -12); warm = randNum(-5, 9); rain = randNum(50, 400); ans = '寒帯'; }
+        return socQA(`ある都市の気温と降水量を調べたところ、最も寒い月の平均気温は${cold}℃、最も暖かい月の平均気温は${warm}℃、年降水量は${rain}mmだった。この都市の気候帯はどれか。（熱帯・乾燥帯・温帯・亜寒帯・寒帯 から選ぶ）`, ans);
+    }
+    const SOC_LIVE = [
+        ['イグルー','寒帯','雪や氷のブロックを積んで作る、イヌイットの伝統的な住居'],
+        ['ゲル','乾燥帯','モンゴルの遊牧民が使う、組み立て式のテントのような住居'],
+        ['日干しれんがの家','乾燥帯','木が少ない乾燥した土地で、土を固めて作る住居'],
+        ['高床の家','熱帯','しめり気や熱、虫をさけるため床を地面から上げた住居'],
+        ['石造りの家','温帯','夏に乾燥する地中海ぞいで多い、厚い石のかべの住居']
+    ];
+    const SOC_REL = [
+        ['キリスト教','聖書','教会','日曜日に礼拝を行う','クリスマス'],
+        ['イスラム教','コーラン','モスク','1日5回メッカに向かっていのる','ラマダン'],
+        ['仏教','経典','寺院','東南アジアや東アジアに広がる','出家'],
+        ['ヒンドゥー教','ヴェーダ','寺院','インドで多くの人が信仰し、牛を神聖な動物とする','ガンジス川']
+    ];
+    const SOC_G3 = [
+        socClimateQ, socClimateQ,                      // 気候帯の判定は大事なので2つ入れる
+        () => randObj([
+            socQA('一年中暑く、雨が多くて熱帯林が広がる気候帯を何というか。', '熱帯'),
+            socQA('雨がとても少なく、砂や岩の砂漠が広がる気候帯を何というか。', '乾燥帯'),
+            socQA('四季の変化があり、日本の多くの地域がふくまれる気候帯を何というか。', '温帯'),
+            socQA('冬の寒さがきびしく、針葉樹林（タイガ）が広がる気候帯を何というか。', '亜寒帯'),
+            socQA('一年中寒く、樹木が育たない気候帯を何というか。', '寒帯'),
+            socQA('乾燥した土地で、水が得られる場所を中心に人々が生活する土地を何というか。', 'オアシス'),
+            socQA('アンデス山脈の高地で飼われ、荷物の運搬や毛の利用に使われる家畜を1つ答えなさい。', 'リャマ'),
+            socQA('寒帯の地域で、こけ類を求めて移動しながら飼われている家畜は何か。', 'トナカイ'),
+            socQA('砂漠の移動に使われ、「砂漠の船」とよばれる家畜は何か。', 'ラクダ'),
+            socQA('季節ごとに家畜とともに移動しながら暮らすことを何というか。', '遊牧'),
+            socQA('太平洋の島々で主食となる、地下にできるいもを1つ答えなさい。', 'タロいも'),
+            socQA('シベリアなどに広がる、一年中こおったままの土を何というか。', '永久凍土'),
+            socQA('高山の気候で、標高が高いために一年中すずしい気候を何というか。', '高山気候'),
+            socQA('イスラム教で食べることが禁じられている肉は何か。', '豚肉'),
+            socQA('ヒンドゥー教で神聖な動物とされ、食べられないのは何か。', '牛'),
+            socQA('世界でいちばん信者が多い宗教は何か。', 'キリスト教'),
+            socQA('その土地の気候や歴史の中で受けつがれてきた、くらしのしかたを何というか。', '伝統的な生活文化'),
+            socQA('熱帯の地域で、森林を焼いてその灰を肥料にする農業を何というか。', '焼畑農業'),
+            socQA('標高が100m高くなると、気温はおよそ何℃下がるか。小数で答えなさい。', 0.6),
+            ...SOC_LIVE.map(l => socQA(`「${l[2]}」を何というか。`, l[0])),
+            ...SOC_LIVE.map(l => socQA(`${l[0]}が見られるのは、おもにどの気候帯か。`, l[1])),
+            ...SOC_REL.map(r => socQA(`${r[0]}の教えが書かれた書物を何というか。`, r[1])),
+            ...SOC_REL.map(r => socQA(`${r[0]}の信者が集まっていのる建物を何というか。`, r[2])),
+            ...SOC_REL.map(r => socQA(`「${r[3]}」という特ちょうをもつ宗教は何か。`, r[0])),
+            ...SOC_REL.map(r => socQA(`${r[0]}に関係の深いことばとして、この本があげているものは何か。`, r[4]))
+        ]),
+        // 標高と気温の計算
+        () => { const h = randNum(1, 30) * 100; const t = randNum(5, 30);
+                const top = Math.round((t - h * 0.006) * 10) / 10;
+                return socQA(`ふもと（標高0m）の気温が${t}℃のとき、標高${h}mの地点の気温はおよそ何℃か。標高が100m高くなると気温は0.6℃下がるものとする。`, top); },
+        // 緯度と気候帯
+        () => { const d = randNum(0, 80);
+                const ans = d < 20 ? '熱帯' : d < 30 ? '乾燥帯' : d < 50 ? '温帯' : d < 66 ? '亜寒帯' : '寒帯';
+                return socQA(`赤道からのきょりだけで大まかに考えるとき、緯度${d}度あたりに広がることが多い気候帯はどれか。（熱帯・乾燥帯・温帯・亜寒帯・寒帯 から選ぶ）`, ans); }
+    ];
+
+    // ============================ 単元4：アジア州・ヨーロッパ州 ============================
+    const SOC_G4 = [
+        () => { const c = randObj(SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州')); return socQA(`${c[0]}の首都はどこか。`, c[1]); },
+        () => { const c = randObj(SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州')); return socQA(`首都が「${c[1]}」である国はどこか。`, c[0]); },
+        () => { const c = randObj(SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州'));
+                return socQA(`${c[0]}は、アジア州とヨーロッパ州のどちらにふくまれるか。`, c[2]); },
+        () => { const list = SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州'); const [a, b] = socPair(list);
+                return socQA(`${a[0]}と${b[0]}では、より東にあるのはどちらか。国名で答えなさい。`, (a[3] >= b[3] ? a : b)[0]); },
+        socTimeDiffQ,
+        () => socDensityQ(randObj(SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州'))[0]),
+        () => socPctQ(randObj(SOC_COUNTRY.filter(x => x[2] === 'アジア州' || x[2] === 'ヨーロッパ州'))[0], '輸出額', randObj(['機械類','原油','自動車','衣類','鉄鋼','医薬品'])),
+        () => randObj([
+            socQA('中国が1979年から2015年ごろまで行っていた、人口の増加をおさえる政策を何というか。', '一人っ子政策'),
+            socQA('中国が外国の企業を受け入れるためにつくった、税を軽くするなどの特別な地区を何というか。', '経済特区'),
+            socQA('中国の人口の9割ほどをしめる民族は何か。', '漢族'),
+            socQA('「世界の工場」とよばれるようになった、アジアで人口が最も多い国はどこか。', '中国'),
+            socQA('東南アジアの10か国が加盟する地域協力組織の略称をアルファベットで答えなさい。', 'ASEAN'),
+            socQA('植民地時代につくられた、輸出用の作物を大規模に栽培する農園を何というか。', 'プランテーション'),
+            socQA('インドで急速に成長している、コンピューターやソフトウェアの産業を何というか。「ICT産業」の形で答えなさい。', 'ICT産業'),
+            socQA('インドで最も多くの人が信仰している宗教は何か。', 'ヒンドゥー教'),
+            socQA('南アジアの気候に大きな影響をあたえる、季節によって向きが変わる風を何というか。', '季節風'),
+            socQA('西アジアの産油国などが石油の生産量や価格を話し合うためにつくった組織の略称をアルファベットで答えなさい。', 'OPEC'),
+            socQA('西アジアで最も多くの人が信仰している宗教は何か。', 'イスラム教'),
+            socQA('韓国の首都で、人口が集中している都市はどこか。', 'ソウル'),
+            socQA('ヨーロッパ連合の略称をアルファベットで答えなさい。', 'EU'),
+            socQA('ヨーロッパ連合（EU）の共通通貨の名前を答えなさい。', 'ユーロ'),
+            socQA('ヨーロッパの西岸が高緯度のわりに暖かいのは、暖流と何という風のはたらきによるか。', '偏西風'),
+            socQA('ヨーロッパの西岸を流れ、気候を暖かくしている暖流を何というか。', '北大西洋海流'),
+            socQA('氷河にけずられた谷に海水が入りこんでできた、細長く深い入り江を何というか。', 'フィヨルド'),
+            socQA('ヨーロッパを流れ、複数の国を通って船が行き来できる川を「国際河川」という。その代表的な川を1つ答えなさい。', 'ライン川'),
+            socQA('小麦などの穀物づくりと家畜の飼育を組み合わせた、ヨーロッパの農業を何というか。', '混合農業'),
+            socQA('夏の乾燥に強いオリーブやぶどうを栽培する、地中海ぞいの農業を何というか。', '地中海式農業'),
+            socQA('アルプス地方などで、牛を飼ってチーズやバターをつくる農業を何というか。', '酪農'),
+            socQA('EUの加盟国どうしで、パスポートなしで国境をこえられるようにした取り決めがある。EUで人・もの・お金の移動が自由なことを何というか。', '経済統合'),
+            socQA('EUがかかえる大きな課題の1つで、加盟国どうしの豊かさのちがいを何というか。', '経済格差'),
+            socQA('アジア州で、面積がいちばん大きい国はどこか。', '中国'),
+            socQA('世界で人口がいちばん多い国はどこか（2023年以降）。', 'インド'),
+            socQA('アジアとヨーロッパにまたがり、世界で面積がいちばん大きい国はどこか。', 'ロシア'),
+            socQA('日本と同じように島国で、東南アジアにある、1万をこえる島からなる国はどこか。', 'インドネシア'),
+            socQA('マレー半島の南のはしにある、貿易がさかんな都市国家はどこか。', 'シンガポール'),
+            socQA('ヨーロッパのアルプス山脈より南にある、ながぐつの形をした国はどこか。', 'イタリア'),
+            socQA('北ヨーロッパの3か国（スウェーデン・ノルウェー・デンマーク）をまとめて何とよぶか。', 'スカンディナビア諸国'),
+            socQA('EUの本部が置かれている都市はどこか。', 'ブリュッセル')
+        ])
+    ];
+
+    // ============================ 単元5：アフリカ州・アメリカ州・オセアニア州 ============================
+    const SOC_OTHER_ST = ['アフリカ州','北アメリカ州','南アメリカ州','オセアニア州'];
+    const SOC_G5 = [
+        () => { const c = randObj(SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0)); return socQA(`${c[0]}の首都はどこか。`, c[1]); },
+        () => { const c = randObj(SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0)); return socQA(`首都が「${c[1]}」である国はどこか。`, c[0]); },
+        () => { const c = randObj(SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0));
+                return socQA(`${c[0]}はどの州にふくまれるか。「〜州」の形で答えなさい。`, c[2]); },
+        () => { const list = SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0); const [a, b] = socPair(list);
+                return socQA(`${a[0]}と${b[0]}は、同じ州にふくまれるか。「はい」か「いいえ」で答えなさい。`, a[2] === b[2] ? 'はい' : 'いいえ'); },
+        () => { const list = SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0); const [a, b] = socPair(list);
+                return socQA(`${a[0]}と${b[0]}では、より東にあるのはどちらか。国名で答えなさい。`, (a[3] >= b[3] ? a : b)[0]); },
+        () => socPctQ(randObj(SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0))[0], '輸出額', randObj(['カカオ豆','原油','鉄鉱石','コーヒー豆','石炭','銅','大豆'])),
+        () => socDensityQ(randObj(SOC_COUNTRY.filter(x => SOC_OTHER_ST.indexOf(x[2]) >= 0))[0]),
+        socTimeDiffQ,
+        () => randObj([
+            socQA('アフリカ大陸の北部に広がる、世界最大の砂漠を何というか。', 'サハラ砂漠'),
+            socQA('アフリカを流れる、世界最長級の川を何というか。', 'ナイル川'),
+            socQA('サハラ砂漠の南のふちで、砂漠化が進んでいる地域を何というか。', 'サヘル'),
+            socQA('特定の農産物や鉱産資源の輸出にたよっている経済を何というか。', 'モノカルチャー経済'),
+            socQA('アフリカの国境線に直線が多いのは、何時代に引かれた境界がもとになっているからか。', '植民地時代'),
+            socQA('携帯電話などに使われる、産出量が少ない貴重な金属をまとめて何というか。', 'レアメタル'),
+            socQA('チョコレートの原料になる、ギニア湾ぞいで多く生産される作物は何か。', 'カカオ豆'),
+            socQA('アフリカの国々が協力するためにつくった組織の略称をアルファベットで答えなさい。', 'AU'),
+            socQA('アメリカ合衆国で、その土地の自然に合った作物をつくる農業のやり方を何というか。', '適地適作'),
+            socQA('広い農地を大型機械で耕す、アメリカ合衆国の大規模な農業を何というか。', '企業的な農業'),
+            socQA('アメリカ合衆国の中央部に広がる、小麦などをつくる広大な平原を何というか。', 'グレートプレーンズ'),
+            socQA('牛を囲いの中で効率よく育てる、アメリカ合衆国の施設を何というか。', 'フィードロット'),
+            socQA('アメリカ合衆国のサンフランシスコ近くにある、ICT関連企業が集まる地域を何というか。', 'シリコンバレー'),
+            socQA('アメリカ合衆国の北緯37度より南の、工業がさかんになった地域を何というか。', 'サンベルト'),
+            socQA('アメリカ合衆国でふえている、スペイン語を話す中南米からの移民を何というか。', 'ヒスパニック'),
+            socQA('アメリカとカナダの国境にある5つの大きな湖をまとめて何というか。', '五大湖'),
+            socQA('南アメリカで、流域面積が世界最大の川を何というか。', 'アマゾン川'),
+            socQA('アマゾン川流域に広がる熱帯林を何というか。', 'セルバ'),
+            socQA('アルゼンチンに広がる、小麦づくりや牧畜がさかんな草原を何というか。', 'パンパ'),
+            socQA('さとうきびなどからつくられる、自動車の燃料になるものを何というか。', 'バイオエタノール'),
+            socQA('ブラジルで最も多く話されている言語は何か。', 'ポルトガル語'),
+            socQA('南アメリカのアンデス地方で栄えた、古代の帝国を何というか。', 'インカ帝国'),
+            socQA('オーストラリアの先住民を何というか。', 'アボリジニ'),
+            socQA('ニュージーランドの先住民を何というか。', 'マオリ'),
+            socQA('オーストラリアがかつて行っていた、白人以外の移民を制限する政策を何というか。', '白豪主義'),
+            socQA('いまのオーストラリアがめざしている、いろいろな文化を認め合う社会を何というか。', '多文化社会'),
+            socQA('オーストラリアの輸出品で、日本にも多く送られている鉱産資源を1つ答えなさい。', '鉄鉱石'),
+            socQA('オーストラリア東岸に広がる、世界最大のさんご礁を何というか。', 'グレートバリアリーフ'),
+            socQA('太平洋の島々のうち、「小さな島々」という意味の地域区分を何というか。', 'ミクロネシア'),
+            socQA('アジアと太平洋の国と地域が経済について話し合う会議の略称をアルファベットで答えなさい。', 'APEC')
+        ])
+    ];
+
+    // ============================ 単元6：地域調査と地形図 ============================
+    const SOC_SCALE = [[10000,'1万分の1'],[25000,'2万5千分の1'],[50000,'5万分の1'],[200000,'20万分の1']];
+    const SOC_MARK = [
+        ['〒','郵便局'],['⛩','神社'],['卍','寺院'],['文','小・中学校'],['×','交番'],['♨','温泉'],
+        ['◎','市役所'],['○','町・村役場'],['⊕','保健所'],['⚓','港']
+    ];
+    const SOC_G6 = [
+        // 縮尺：地図上の長さ → 実際の長さ
+        () => { const s = randObj(SOC_SCALE); const cm = randNum(1, 40);
+                const m = cm * s[0] / 100;
+                if(m >= 1000 && m % 1000 === 0) return socQA(`${s[1]}の地形図上で${cm}cmの長さは、実際には何kmか。`, m / 1000);
+                return socQA(`${s[1]}の地形図上で${cm}cmの長さは、実際には何mか。`, m); },
+        // 縮尺：実際の長さ → 地図上の長さ
+        () => { const s = randObj(SOC_SCALE); const cm = randNum(1, 40); const m = cm * s[0] / 100;
+                return socQA(`実際の長さが${m >= 1000 ? (m / 1000) + 'km' : m + 'm'}のとき、${s[1]}の地形図上では何cmになるか。`, cm); },
+        // 縮尺：面積
+        () => { const s = randObj([SOC_SCALE[1], SOC_SCALE[2]]); const cm = randNum(1, 20);
+                const km = cm * s[0] / 100000;
+                const area = Math.round(km * km * 100) / 100;
+                return socQA(`${s[1]}の地形図上で1辺${cm}cmの正方形の土地がある。実際の面積は何km²か。`, area); },
+        // 標高差
+        () => { const a = randNum(0, 300) * 5, b = randNum(0, 300) * 5;
+                if(a === b) return socQA(`地点Aの標高が${a}m、地点Bの標高も${b}mのとき、2地点の標高差は何mか。`, 0);
+                return socQA(`地点Aの標高が${a}m、地点Bの標高が${b}mのとき、2地点の標高差は何mか。`, Math.abs(a - b)); },
+        // 等高線から標高を読む
+        () => { const s = randObj([SOC_SCALE[1], SOC_SCALE[2]]); const step = s[0] === 25000 ? 10 : 20;
+                const base = randNum(0, 60) * (step * 5); const n = randNum(1, 9);
+                return socQA(`${s[1]}の地形図で、標高${base}mの計曲線から主曲線を${n}本ぶん高いほうへ数えた地点の標高は何mか。`, base + step * n); },
+        // 等高線の間かく
+        () => { const s = randObj([SOC_SCALE[1], SOC_SCALE[2]]); const main = s[0] === 25000 ? 10 : 20;
+                const n = randNum(2, 20);
+                return socQA(`${s[1]}の地形図で、主曲線を${n}本ぶん数えると標高は何m変わるか。`, main * n); },
+        // 傾斜の計算
+        () => { const d = randNum(1, 40) * 50; const h = randNum(1, 40) * 5;
+                return socQA(`水平きょり${d}m、標高差${h}mの斜面がある。100mあたり何m上がる坂か。小数第1位まで答えなさい。`, Math.round(h / d * 100 * 10) / 10); },
+        // 地図記号
+        () => { const m = randObj(SOC_MARK);
+                return Math.random() < 0.5 ? socQA(`地形図の記号「${m[0]}」は何を表しているか。`, m[1])
+                                           : socQA(`「${m[1]}」を表す地形図の記号を書きなさい。`, m[0]); },
+        // 調査の進め方・地形図のきまり
+        () => randObj([
+            socQA('地形図で、とくに断らないかぎり地図の上はどの方位を表すか。', '北'),
+            socQA('同じ高さのところを結んだ線を何というか。', '等高線'),
+            socQA('等高線の間かくがせまいところは、傾斜が急か、ゆるやかか。', '急'),
+            socQA('等高線の間かくが広いところは、傾斜が急か、ゆるやかか。', 'ゆるやか'),
+            socQA('地形図をつくっている国の機関を何というか。', '国土地理院'),
+            socQA('実際のきょりを縮めた割合を何というか。', '縮尺'),
+            socQA('地域調査で、まず決めるものは何か。「調査◯◯」の形で答えなさい。', '調査テーマ'),
+            socQA('実際に現地に出かけて調べる調査を何というか。', '野外調査'),
+            socQA('図書館やインターネットで資料を集めて調べる調査を何というか。', '文献調査'),
+            socQA('調査で人に会って話を聞くことを何というか。', '聞き取り調査'),
+            socQA('調査の結果をまとめて人に伝えることを何というか。', '発表'),
+            socQA('野外調査に持っていき、気づいたことを書きこむ地図を何というか。', '白地図'),
+            socQA('土地の高さを正確にはかるための基準になる点を何というか。', '水準点'),
+            socQA('位置を正確に決めるために山頂などに置かれる基準の点を何というか。', '三角点'),
+            socQA('災害が起きたときの危険な場所やひなん場所を示した地図を何というか。', 'ハザードマップ'),
+            socQA('8方位のうち、北と東のちょうど間の方位を何というか。', '北東'),
+            socQA('8方位のうち、南と西のちょうど間の方位を何というか。', '南西'),
+            ...[SOC_SCALE[1], SOC_SCALE[2]].map(sc => socQA(`${sc[1]}の地形図で、主曲線は何mごとに引かれているか。`, sc[0] === 25000 ? 10 : 20)),
+            ...[SOC_SCALE[1], SOC_SCALE[2]].map(sc => socQA(`${sc[1]}の地形図で、計曲線は何mごとに引かれているか。`, sc[0] === 25000 ? 50 : 100))
+        ])
+    ];
+
+    // ============================ 単元7：日本の地域的特色 ============================
+    const SOC_CLIMATE6 = [
+        ['北海道の気候','冬の寒さがきびしく、梅雨がほとんどない'],
+        ['日本海側の気候','冬に北西の季節風のえいきょうで雪が多い'],
+        ['太平洋側の気候','夏に雨が多く、冬は晴れて乾燥する'],
+        ['内陸（中央高地）の気候','1年の気温の差が大きく、降水量が少ない'],
+        ['瀬戸内の気候','山地にはさまれ、1年を通して降水量が少ない'],
+        ['南西諸島の気候','1年を通して気温が高く、降水量が多い']
+    ];
+    const SOC_PYRAMID = [['富士山型','子どもが多く、高齢者が少ない'],['つりがね型','子どもと働く人の数の差が小さい'],['つぼ型','子どもが少なく、高齢者が多い']];
+    const SOC_G7 = [
+        () => socDensityQ(randObj(SOC_PREF)[0]),
+        () => socPctQ('日本', '食料の消費量', randObj(['米','小麦','大豆','野菜','肉類'])),
+        // 食料自給率の計算
+        () => { const need = randNum(4, 40) * 25; const p = randNum(1, 19) * 5;
+                return socQA(`ある食料の国内消費量が${need}万トンで、そのうち国内で生産されたものが${Math.round(need * p / 100)}万トンだった。自給率は何％か。`, p); },
+        // 人口の増減
+        () => { const a = randNum(20, 300) * 1000; const p = randNum(1, 30);
+                const down = Math.random() < 0.5;
+                const b = Math.round(a * (down ? (100 - p) : (100 + p)) / 100);
+                return socQA(`ある市の人口は${a.toLocaleString()}人から${b.toLocaleString()}人に変わった。${down ? '減った' : 'ふえた'}割合は何％か。`, p); },
+        () => randObj([
+            socQA('日本列島がふくまれる、火山や地震が多い造山帯を何というか。', '環太平洋造山帯'),
+            socQA('本州の中央部にある、日本を東西に分ける大きなみぞを何というか。', 'フォッサマグナ'),
+            socQA('日本アルプスとよばれる3つの山脈のうち、いちばん北にあるものを答えなさい。', '飛騨山脈'),
+            socQA('川が山地から平地へ出るところに、土砂が積もってできる地形を何というか。', '扇状地'),
+            socQA('川が海に注ぐところに、細かい土砂が積もってできる地形を何というか。', '三角州'),
+            socQA('山地が海にしずんでできた、出入りの複雑な海岸を何というか。', 'リアス海岸'),
+            socQA('日本でいちばん長い川を答えなさい。', '信濃川'),
+            socQA('日本でいちばん広い平野を答えなさい。', '関東平野'),
+            socQA('日本でいちばん大きい湖を答えなさい。', '琵琶湖'),
+            socQA('水深およそ200mまでの、なだらかな海の底を何というか。', '大陸棚'),
+            socQA('日本の近くを流れる暖流のうち、太平洋側を北へ流れるものを何というか。', '黒潮'),
+            socQA('日本の近くを流れる寒流のうち、太平洋側を南へ流れるものを何というか。', '親潮'),
+            socQA('夏に東北地方の太平洋側にふく、冷たい北東の風を何というか。', 'やませ'),
+            socQA('冬に日本海側へ大雪をもたらす、北西からふく風を何というか。', '季節風'),
+            socQA('地震のときに海底が動いて起こる、大きな波を何というか。', '津波'),
+            socQA('災害の被害をできるだけ小さくしようとする考え方を何というか。', '減災'),
+            socQA('災害のとき、自分の身は自分で守ることを何というか。', '自助'),
+            socQA('災害のとき、地域の人どうしで助け合うことを何というか。', '共助'),
+            socQA('子どもが減り高齢者がふえていくことを何というか。', '少子高齢化'),
+            socQA('都市に人が集まりすぎることを何というか。', '過密'),
+            socQA('地方で人が減りすぎて、くらしを続けるのがむずかしくなることを何というか。', '過疎'),
+            socQA('東京・大阪・名古屋を中心とする3つの都市圏をまとめて何というか。', '三大都市圏'),
+            socQA('太平洋側に工業地帯・工業地域が帯のように連なる地域を何というか。', '太平洋ベルト'),
+            socQA('自動車工業がさかんな、愛知県を中心とする工業地帯を何というか。', '中京工業地帯'),
+            socQA('農業・林業・水産業をまとめて第何次産業というか。数字で答えなさい。', 1),
+            socQA('商業やサービス業をまとめて第何次産業というか。数字で答えなさい。', 3),
+            socQA('日本の食料自給率はおよそ何％か（カロリーベース）。数字で答えなさい。', 38),
+            socQA('風力・太陽光・地熱などの、くり返し使えるエネルギーをまとめて何というか。', '再生可能エネルギー'),
+            socQA('日本の発電でいちばん多くをしめている発電方法は何か。', '火力発電'),
+            socQA('日本が石油を最も多く輸入している地域はどこか。', '西アジア'),
+            socQA('人や物を運ぶ道すじが集まる、乗りかえの中心になる空港を何というか。', 'ハブ空港'),
+            socQA('情報を使える人と使えない人との差を何というか。', '情報格差'),
+            ...SOC_CLIMATE6.map(c => socQA(`「${c[1]}」という特ちょうをもつ日本の気候区分を何というか。`, c[0])),
+            ...SOC_CLIMATE6.map(c => socQA(`${c[0]}の特ちょうを、かんたんに書きなさい。`, c[1])),
+            ...SOC_PYRAMID.map(pp => socQA(`「${pp[1]}」という形になる人口ピラミッドを何型というか。`, pp[0])),
+            ...SOC_PYRAMID.map(pp => socQA(`人口ピラミッドが${pp[0]}のとき、どんな人口のようすといえるか。かんたんに書きなさい。`, pp[1]))
+        ]),
+        // 47都道府県の位置関係（日本全体をつかむ）
+        () => { const [a, b] = socPair(SOC_PREF);
+                return socQA(`${a[0]}と${b[0]}では、より南にあるのはどちらか。都道府県名で答えなさい。`, (a[3] <= b[3] ? a : b)[0]); }
+    ];
+
+    // ============================ 単元8：日本の諸地域 ============================
+    const SOC_REGION = [
+        ['九州地方','シラス台地','火山灰が積もった、水もちの悪い台地','畜産','阿蘇山','世界最大級のカルデラをもつ火山'],
+        ['中国・四国地方','瀬戸内工業地域','石油化学コンビナートが多い工業地域','促成栽培','本州四国連絡橋','本州と四国を結ぶ3つのルート'],
+        ['近畿地方','阪神工業地帯','中小工場が多い工業地帯','ニュータウン','琵琶湖','日本最大の湖'],
+        ['中部地方','中京工業地帯','日本一の生産額をほこる工業地帯','高原野菜','日本アルプス','3つの山脈が連なる高い山地'],
+        ['関東地方','京浜工業地帯','東京・神奈川を中心とする工業地帯','近郊農業','関東ローム','火山灰が積もった赤土'],
+        ['東北地方','伝統的工芸品','昔からの技術で作られる工芸品','果樹栽培','三陸海岸','出入りの複雑なリアス海岸'],
+        ['北海道地方','石狩平野','客土によって稲作ができるようになった平野','酪農','流氷','冬にオホーツク海に流れ着く氷']
+    ];
+    const SOC_MEIBUTSU = [
+        ['青森県','りんご'],['山形県','さくらんぼ'],['福島県','もも'],['和歌山県','うめ'],['静岡県','茶'],
+        ['北海道','じゃがいも'],['鹿児島県','ぶた'],['宮崎県','ピーマン'],['高知県','なす'],['新潟県','米'],
+        ['愛知県','キャベツ'],['長野県','レタス'],['茨城県','はくさい'],['千葉県','らっかせい'],['山梨県','ぶどう'],
+        ['熊本県','トマト'],['佐賀県','たまねぎ'],['愛媛県','みかん'],['岩手県','わかめ'],['広島県','かき（貝）']
+    ];
+    const SOC_G8 = [
+        () => { const r = randObj(SOC_REGION); const k = randNum(0, 2);
+                if(k === 0) return socQA(`「${r[2]}」を何というか。`, r[1]);
+                if(k === 1) return socQA(`「${r[5]}」を何というか。`, r[4]);
+                return socQA(`${r[0]}でさかんな農業として、この本であげているものは何か。`, r[3]); },
+        () => { const r = randObj(SOC_REGION);
+                return Math.random() < 0.5 ? socQA(`${r[1]}が見られるのは何地方か。「〜地方」の形で答えなさい。`, r[0])
+                                           : socQA(`${r[4]}があるのは何地方か。「〜地方」の形で答えなさい。`, r[0]); },
+        () => { const m = randObj(SOC_MEIBUTSU); return socQA(`${m[1]}の生産量が日本有数であることで知られる都道府県はどこか。`, m[0]); },
+        () => { const m = randObj(SOC_MEIBUTSU); return socQA(`${m[0]}の産物として、この本であげているものは何か。`, m[1]); },
+        () => { const p = randObj(SOC_PREF); return socQA(`${p[0]}は、日本を7つに分けたときの何地方にふくまれるか。「〜地方」の形で答えなさい。`, SOC_R7(p[2]) + '地方'); },
+        () => { const p = randObj(SOC_PREF); return socQA(`${p[0]}の県庁所在地はどこか。`, p[1]); },
+        () => { const [a, b] = socPair(SOC_PREF);
+                return socQA(`${a[0]}と${b[0]}は、同じ地方（7地方区分）にふくまれるか。「はい」か「いいえ」で答えなさい。`,
+                             SOC_R7(a[2]) === SOC_R7(b[2]) ? 'はい' : 'いいえ'); },
+        () => socDensityQ(randObj(SOC_PREF)[0]),
+        () => randObj([
+            socQA('九州地方の南部に広がる、水もちの悪い火山灰の台地を何というか。', 'シラス台地'),
+            socQA('高知平野や宮崎平野で、あたたかい気候をいかして野菜を早くつくる栽培方法を何というか。', '促成栽培'),
+            socQA('長野県などの高地で、すずしい気候をいかして野菜をおそくつくる栽培方法を何というか。', '抑制栽培'),
+            socQA('九州でIC（集積回路）工場が多かったことから、九州は何とよばれたか。', 'シリコンアイランド'),
+            socQA('熊本県で、工場の排水が原因で起こった公害病を何というか。', '水俣病'),
+            socQA('中国・四国地方で、人口が減って生活が続けにくくなっている問題を何というか。', '過疎'),
+            socQA('大都市の近くで、新鮮な野菜などをつくる農業を何というか。', '近郊農業'),
+            socQA('大阪の千里や東京の多摩などにつくられた、計画的な住宅地を何というか。', 'ニュータウン'),
+            socQA('京都・奈良のように、昔 都が置かれた都市を何というか。', '古都'),
+            socQA('中部地方の東海で、温室などを使って花や野菜をつくる農業を何というか。', '施設園芸農業'),
+            socQA('中央高地の諏訪湖の周辺で発達した、細かい部品をつくる工業を何というか。', '精密機械工業'),
+            socQA('北陸地方で、雪の多い冬の仕事として発達した産業を何というか。', '地場産業'),
+            socQA('東京に人口や仕事が集まりすぎていることを何というか。', '東京一極集中'),
+            socQA('都市の中心部の気温が周辺より高くなる現象を何というか。', 'ヒートアイランド現象'),
+            socQA('東北地方の夏に、やませがふくと起こりやすくなる被害を何というか。', '冷害'),
+            socQA('青森県で毎年8月に行われる、大きな灯ろうを引く祭りを何というか。', 'ねぶた祭'),
+            socQA('北海道の十勝平野でさかんな、広い畑で作物を育てる農業を何というか。', '畑作'),
+            socQA('北海道の根釧台地でさかんな、牛を飼って乳をとる農業を何というか。', '酪農'),
+            socQA('石狩平野で、農業に向かない土に他の土を運び入れて改良したことを何というか。', '客土'),
+            socQA('北海道のもともとの住民である民族を何というか。', 'アイヌ民族'),
+            socQA('地域の課題を見つけ、これからのすがたを考えていく学習を「持続可能な地域の◯◯◯」という。◯◯◯を答えなさい。', '在り方')
+        ])
+    ];
+
+    // ---------- 単元と作り方をむすびつける ----------
+    const SOC_GEN = {
+        '世界の姿': SOC_G1, '日本の姿': SOC_G2, '人々の生活と環境': SOC_G3,
+        'アジア州・ヨーロッパ州': SOC_G4, 'アフリカ州・アメリカ州・オセアニア州': SOC_G5,
+        '地域調査と地形図': SOC_G6, '日本の地域的特色': SOC_G7, '日本の諸地域': SOC_G8
+    };
+    const SOC_UNITS = Object.keys(SOC_GEN);
+    const SOC_ALLGEN = SOC_UNITS.reduce((a, k) => a.concat(SOC_GEN[k]), []);
+
     // 教科ごとに、選択中の単元・難易度(diff:1〜5)に合った問題を生成する
     // ===== 🌏 社会（地理・歴史・公民）の問題 =====
     const SOC_GEO = [
@@ -12673,12 +13245,15 @@
         ['2030年までに達成をめざす世界共通の17の目標を何という？','SDGs']
     ];
     function socQ(unit, isWord, diff) {
-        let pool;
-        if(String(unit).includes('地理')) pool = SOC_GEO;
-        else if(String(unit).includes('歴史')) pool = SOC_HIS;
-        else if(String(unit).includes('公民')) pool = SOC_CIV;
-        else pool = SOC_GEO.concat(SOC_HIS, SOC_CIV);
-        const q = pool[Math.floor(Math.random() * pool.length)];
+        // 「第1:世界の姿」のような書き方でも、単元名だけ取り出して使う
+        const u = String(unit).replace(/^第\d+[:：]\s*/, '').trim();
+        const gens = SOC_GEN[u];
+        if(gens) { const q = gens[Math.floor(Math.random() * gens.length)](); return { q:q.q, a:q.a, type:q.type }; }
+        // 単元名がわからないとき（検定など）は、地理・歴史・公民のむかしからのプールも合わせて使う
+        if(String(unit).includes('歴史')) { const q = randObj(SOC_HIS); return { q:q[0], a:q[1], type:'text' }; }
+        if(String(unit).includes('公民')) { const q = randObj(SOC_CIV); return { q:q[0], a:q[1], type:'text' }; }
+        if(Math.random() < 0.7) { const g = randObj(SOC_ALLGEN); const q = g(); return { q:q.q, a:q.a, type:q.type }; }
+        const q = randObj(SOC_GEO.concat(SOC_HIS, SOC_CIV));
         return { q: q[0], a: q[1], type: 'text' };
     }
     function generateQ(subj, level, isWordProblem = false, diff = 1) {
@@ -12866,8 +13441,8 @@
         }
 
         closeUnitHelp(); setUnitHelpBtn(!!unitHelpKey()); // 過去形・疑問詞のときだけ❓を出す
-        document.getElementById('print-title').innerText = `勉強プリント: ${pStudy.subj} (${pStudy.unit}) レベル${pStudy.level}`;
-        document.getElementById('run-title').innerText = `📖 ${pStudy.subj} - ${pStudy.unit} (${pStudy.count}問・レベル${pStudy.level})`;
+        document.getElementById('print-title').innerText = `勉強プリント: ${pStudy.subj} (${pStudy.unit})`;
+        document.getElementById('run-title').innerText = `📖 ${pStudy.subj} - ${pStudy.unit} (${pStudy.count}問)`;
 
         let seenStudy = new Set();
         let shareItems = [];
@@ -12879,19 +13454,19 @@
             let idx = 1;
             html += secTitleHtml('【計算問題】') + '<div class="grid-3">';
             for(let i=1; i<=calcCount; i++, idx++) {
-                let q = genUnique('数学', pStudy.unit, false, rampDiff(i, calcCount, pStudy.level), seenStudy);
+                let q = genUnique('数学', pStudy.unit, false, rampDiff(i, calcCount, FIXED_LEVEL), seenStudy);
                 shareItems.push(q); html += qRowHtml(idx, q);
             }
             html += '</div>' + secTitleHtml('【文章問題】') + '<div class="grid-3">';
             for(let i=1; i<=wordCount; i++, idx++) {
-                let q = genUnique('数学', pStudy.unit, true, rampDiff(i, wordCount, pStudy.level), seenStudy);
+                let q = genUnique('数学', pStudy.unit, true, rampDiff(i, wordCount, FIXED_LEVEL), seenStudy);
                 shareItems.push(q); html += qRowHtml(idx, q);
             }
             html += '</div>';
         } else {
             html = '<div class="grid-3">';
             for(let i=1; i<=pStudy.count; i++) {
-                let diff = rampDiff(i, pStudy.count, pStudy.level);
+                let diff = rampDiff(i, pStudy.count, FIXED_LEVEL);
                 let isWord = Math.random() < (0.2 + diff * 0.06); // 後半ほど文章題を増やす
                 let q = genUnique(pStudy.subj, pStudy.unit, isWord, diff, seenStudy);
                 shareItems.push(q); html += qRowHtml(i, q);
@@ -12906,7 +13481,7 @@
                 <div class="ek-write-note">✍️ 書けたら、この画面をスクリーンショットして <u>なお</u> に送ってね！</div>
                 <textarea class="ek-write no-print" placeholder="ここに英文を書こう✏️"></textarea></div>`;
         }
-        runShareData = { title: `${pStudy.subj} ${pStudy.unit} レベル${pStudy.level} (${pStudy.count}問)`, items: shareItems };
+        runShareData = { title: `${pStudy.subj} ${pStudy.unit} (${pStudy.count}問)`, items: shareItems };
 
         document.getElementById('run-content').innerHTML = html;
         document.getElementById('study-controls').style.display = 'block';
@@ -13006,14 +13581,16 @@
         if(String(pTest.subj).startsWith('英検')) { startEikenTest(); return; }
         currentRunMode = 'test';
         let title = `${pTest.grade} ${pTest.subj} テスト`;
-        document.getElementById('print-title').innerText = `${title} レベル${pTest.level}`;
-        document.getElementById('run-title').innerText = `📝 ${title} - 範囲: ${pTest.unit}（レベル${pTest.level}）`;
+        document.getElementById('print-title').innerText = title;
+        document.getElementById('run-title').innerText = `📝 ${title} - 範囲: ${pTest.unit}`;
         
         let totalQ = 0;
         if(pTest.subj === '数学') totalQ = randNum(60, 70); // 約65
         else if(pTest.subj === '英語') totalQ = randNum(40, 50); // 約45
         else if(pTest.subj === '理科') totalQ = randNum(35, 45); // 約40
         else if(pTest.subj === '国語') totalQ = randNum(25, 35); // 約30
+        else if(pTest.subj === '社会') totalQ = randNum(35, 45); // 約40
+        if(!totalQ) totalQ = randNum(35, 45);                    // 念のため（0問だと空のテストになる）
 
         testQuestionsData = [];
         let seenTest = new Set(); // 同じ問題（文章問題含む）を出さない
@@ -13036,7 +13613,7 @@
             html += `<div class="${isWordSection ? '' : 'grid-3'}">`;
 
             for(let i=0; i<sectionCount; i++) {
-                let diff = rampDiff(qIndex, totalQ, pTest.level); // レベルの幅の中で後半の大問ほど難しく
+                let diff = rampDiff(qIndex, totalQ, FIXED_LEVEL); // レベル5の幅の中で後半の大問ほど難しく
                 let q = genUnique(pTest.subj, pTest.unit, isWordSection, diff, seenTest);
                 testQuestionsData.push({ id: qIndex, daimon: daimon, q: q.q, a: q.a, type: q.type, work: q.work });
                 
@@ -13054,7 +13631,7 @@
             daimon++;
         }
 
-        runShareData = { title: `${title} 範囲:${pTest.unit} レベル${pTest.level} (${testQuestionsData.length}問)`, items: testQuestionsData };
+        runShareData = { title: `${title} 範囲:${pTest.unit} (${testQuestionsData.length}問)`, items: testQuestionsData };
 
         document.getElementById('run-content').innerHTML = html;
         document.getElementById('study-controls').style.display = 'none';
@@ -13224,7 +13801,7 @@
         switchView('test-result');
 
         motiAddDone(testQuestionsData.length); flowerAddActivity();
-        hwRecord('test', { subj: pTest.subj, unit: pTest.unit, level: pTest.level, pct: totalPct }); // 宿題の自動チェック用
+        hwRecord('test', { subj: pTest.subj, unit: pTest.unit, level: FIXED_LEVEL, pct: totalPct }); // 宿題の自動チェック用
         gameOnActivity(testQuestionsData.length, { subj: pTest.subj, correct }); moneyEarnFromStudy(correct, 'test'); // 🎮💰
         playSfx(totalPct >= 80 ? 'finish' : totalPct >= 60 ? 'correct' : 'wrong');
         // 🎉 高得点は紙吹雪でお祝い
@@ -13611,316 +14188,402 @@
     const otUserName = (uid) => (APP_USERS.find(u => u.id === uid) || {}).name || uid;
 
     // ==========================================================================================
-    //  📝 のびログ夏休み定期テスト（クロードがファイルに書きこむ・時間指定つき）
-    //   ★もらったプリント（正負の数・文字式・方程式）を もとに、数字と場面を作りかえた
-    //     オリジナル問題にしてある（丸写しはしない）。
-    //   ・8/29 から「もうすぐ」と灰色で出る
-    //   ・8/30 19:50 から 待機できる（まだ始められない）
-    //   ・8/30 20:00〜20:30 だけ 受けられる
-    //   ★users に書いた人にだけ見える（りらんには出さない）
+    //  📝 のびログ定期テスト（5教科・クロードがファイルに書きこむ）
+    //   ★もらったプリント（数学の文章題／国語／英検5級4級ミックス／理科／地理）を もとに、
+    //     場面・数字・材料をぜんぶ作りかえた オリジナル問題にしてある（丸写しはしない）。
+    //   ・日づけのカギはナシ。📝定期テストの画面から いつでも受けられる。
+    //   ・users に書いた人にだけ見える。
     // ==========================================================================================
-    const NOBI_EXAM = {
-        id:'nobi-summer-2026-08-30',
-        title:'のびログ夏休み定期テスト',
-        users:['u1'],                       // ★なおだけ
-        show:  '2026-8-29 00:00',           // 1日前から灰色で表示
-        stand: '2026-8-30 12:20',           // 10分前から待機
-        start: '2026-8-30 12:30',
-        end:   '2026-8-30 13:00',
-        limit: 30,
-        range: '正負の数・文字と式・方程式（中1）',
+    function exParse(str) { const p = String(str).split(/[\s\-:]+/).map(Number); return new Date(p[0], p[1] - 1, p[2], p[3] || 0, p[4] || 0, 0); }
+
+    // ---------- 📐 数学（文章題：正負の数・文字と式・一次方程式）25問×4点＝100点 ----------
+    const NOBI_EXAM_MA = {
+        id:'nobi-teiki-01-sugaku', title:'のびログ定期テスト（数学）', users:['u1'],
+        always:true, limit:40, range:'正負の数・文字と式・一次方程式の文章題（中1）',
         parts:[
-            { n:'大問1　正負の数の計算', pt:3, qs:[
-                { q:'-7 + 12', a:'5' },
-                { q:'8 - (-5)', a:'13' },
-                { q:'-6 × (-7)', a:'42' },
-                { q:'-45 ÷ 9', a:'-5' },
-                { q:'(-3)² × 2', a:'18' },
-                { q:'-4² + 10', a:'-6' },
-                { q:'18 ÷ (-3)² - 4 × (-2)', a:'10' },
-                { q:'(-2)³ + 3 × (-5)', a:'-23' }
+            { n:'第一問　正負の数の文章題', pt:4, qs:[
+                { q:'下の表は、ある町の月曜日から土曜日までの最高気温を、<b>月曜日の18℃を基準</b>にして、それより高い場合を正の数、低い場合を負の数で表したものである。<br>'
+                   + '［月 0／火 +4／水 −6／木 +9／金 −3／土 +2］<br><br>最高気温がいちばん高かった日と、いちばん低かった日の気温の差は何℃か。',
+                  a:'15', unit:'℃', sol:'いちばん高いのは木曜(+9)、いちばん低いのは水曜(−6)。(+9)−(−6)＝15 → 15℃' },
+                { q:'上の表について、この6日間の最高気温の平均は何℃か。', a:'19', unit:'℃',
+                  sol:'基準との差の平均は {0+4+(−6)+9+(−3)+2}÷6 ＝ 6÷6 ＝ +1。18+1 ＝ 19℃' },
+                { q:'全15問のクイズ大会があり、正解は＋4点、まちがいは−2点、パスは0点になる。全員が15問すべてに答えるかパスするものとする。<br>'
+                   + 'Aさんは正解が10問、まちがいが3問、パスが2問だった。Aさんの得点は何点か。',
+                  a:'34', unit:'点', sol:'4×10＋(−2)×3＋0×2 ＝ 40−6 ＝ 34点' },
+                { q:'上のクイズ大会で、Bさんはパスが1問もなく、得点はAさんより4点低かった。<br>Bさんの正解は何問か。',
+                  a:'10', unit:'問', sol:'Bさんの得点は34−4＝30点。正解をx問とするとまちがいは(15−x)問。4x−2(15−x)＝30 → 6x−30＝30 → 6x＝60 → x＝10。正解10問・まちがい5問' },
+                { q:'5人の生徒の数学のテストの結果を、<b>80点を基準</b>にして表したところ、Aさん＋14、Bさん−9、Cさん＋6、Dさん−18、Eさん＋22 となった。<br>'
+                   + '最高点の人と最低点の人の得点の差は何点か。',
+                  a:'40', unit:'点', sol:'最高はEさん(+22)、最低はDさん(−18)。(+22)−(−18)＝40点' },
+                { q:'上の5人の平均点は何点か。', a:'83', unit:'点',
+                  sol:'差の平均は {14+(−9)+6+(−18)+22}÷5 ＝ 15÷5 ＝ +3。80+3 ＝ 83点' },
+                { q:'上の5人のうち、平均点より高い点をとった生徒は何人いるか。', a:'3', unit:'人',
+                  sol:'平均は基準＋3。これより大きいのは A(+14)・C(+6)・E(+22) の3人' },
+                { q:'ある調査船が海面から潜水艇を出発させた。海面を0mとし、下に進むことを負の数、上に進むことを正の数で表すと、潜水艇は順に <b>−150m、＋60m、−95m、＋40m</b> と動いて調査を終えた。<br>'
+                   + '調査を終えたとき、潜水艇は海面から何mの深さにいるか。',
+                  a:'145', unit:'m', sol:'(−150)+60+(−95)+40 ＝ −145。深さ145m' },
+                { q:'上の潜水艇が いちばん深いところにいたときの深さは何mか。', a:'185', unit:'m',
+                  sol:'位置は −150 → −90 → −185 → −145 と変わる。いちばん深いのは 185m' },
+                { q:'上の潜水艇が じっさいに動いた道のりは合計何mか。', a:'345', unit:'m',
+                  sol:'向きに関係なく動いた長さの合計。150+60+95+40 ＝ 345m' }
             ]},
-            { n:'大問2　文字と式の計算', pt:3, qs:[
-                { q:'5x + 8x', a:'13x' },
-                { q:'-3a × 4b', a:'-12ab' },
-                { q:'4(2x - 3) + 5x', a:'13x-12' },
-                { q:'3(2a - 5b) - 2(4a - 3b)', a:'-2a-9b' },
-                { q:'18x²y ÷ 6xy', a:'3x' },
-                { q:'1/2(4x - 6) - 1/3(9x - 3)', a:'-x-2' }
+            { n:'第二問　文字と式', pt:4, qs:[
+                { q:'1個a円のみかんを4個と、1本b円のお茶を3本買って、2000円を出した。<br>おつりを a、b を使った式で表しなさい。',
+                  a:'2000-4a-3b', unit:'円', sol:'代金は 4a＋3b 円。おつり＝2000−(4a＋3b)＝2000−4a−3b（円）' },
+                { q:'上の店で、みかんだけが2割引になった。このときのおつりを a、b を使った式で表しなさい。',
+                  a:'2000-3.2a-3b', unit:'円', sol:'2割引のみかんは 0.8a 円。4個で 3.2a 円。おつり＝2000−3.2a−3b（円）' },
+                { q:'a＝120、b＝150 のとき、上の（2割引のときの）おつりはいくらか。', a:'1166', unit:'円',
+                  sol:'2000−3.2×120−3×150 ＝ 2000−384−450 ＝ 1166円' },
+                { q:'縦xm、横ymの長方形の形をした畑がある。この畑のまわりを、はば2mの道が取り囲んでいる。<br>道をふくめた全体の土地の面積を、x、y を使って<b>かっこをはずした式</b>で表しなさい。',
+                  a:'xy+4x+4y+16', alts:['(x+4)(y+4)'], sol:'縦は(x+4)m、横は(y+4)m。(x+4)(y+4)＝xy+4x+4y+16（m²）' },
+                { q:'上の畑について、<b>道だけ</b>の部分の面積を、x、y を使ってできるだけ簡単な式で表しなさい。',
+                  a:'4x+4y+16', sol:'全体−畑 ＝ (xy+4x+4y+16)−xy ＝ 4x+4y+16（m²）' },
+                { q:'家から図書館までの道のりは1500mである。ある日、行きは分速am、帰りは分速bmの速さで歩いた。<br>行きにかかった時間を、a を使った式で表しなさい。',
+                  a:'1500/a', alts:['1500÷a'], unit:'分', sol:'時間＝道のり÷速さ。1500÷a ＝ 1500/a（分）' },
+                { q:'上の道のりについて、a＝75、b＝50 のとき、往復にかかった時間は何分か。', a:'50', unit:'分',
+                  sol:'1500÷75＝20分、1500÷50＝30分。20＋30＝50分' },
+                { q:'十の位の数がx、一の位の数がyである2けたの整数をAとし、Aの十の位と一の位を入れかえてできる2けたの整数をBとする。<br>A−B を、できるだけ簡単な式で表しなさい。',
+                  a:'9x-9y', alts:['9(x-y)'], sol:'A＝10x＋y、B＝10y＋x。A−B＝(10x＋y)−(10y＋x)＝9x−9y＝9(x−y)。つねに9の倍数になる' }
             ]},
-            { n:'大問3　方程式を解く', pt:3, qs:[
-                { q:'4x - 7 = 9', a:'x=4' },
-                { q:'5x + 3 = 2x - 12', a:'x=-5' },
-                { q:'3(x - 2) = x + 4', a:'x=5' },
-                { q:'0.3x - 1.2 = 0.5x + 0.4', a:'x=-8' },
-                { q:'(x+2)/3 = (x-4)/2', a:'x=16' },
-                { q:'x/4 - 1 = 2', a:'x=12' }
-            ]},
-            { n:'大問4　文章題', pt:8, qs:[
-                { q:'ある週の最高気温を、水曜日の22℃を基準にして、高い場合を正の数、低い場合を負の数で表したところ、木曜＋4、金曜−3、土曜＋6、日曜−5 だった。<br>いちばん高かった日と、いちばん低かった日の気温の差は何℃か。', a:'11', unit:'℃',
-                  sol:'いちばん高いのは土曜(+6)、いちばん低いのは日曜(-5)。(+6)-(-5)=11 → 11℃' },
-                { q:'上の4日間（木・金・土・日）の最高気温の平均は何℃か。', a:'22.5', unit:'℃',
-                  sol:'基準からの差の平均は (4-3+6-5)÷4 = 2÷4 = +0.5。22+0.5 = 22.5℃' },
-                { q:'1個x円のパンを4個と、1本y円の牛乳を3本買って、2000円を出した。<br>おつりを x、y を使った式で表しなさい。', a:'2000-4x-3y', unit:'円',
-                  sol:'代金は 4x+3y 円。おつり＝2000−(4x+3y)＝2000−4x−3y（円）' },
-                { q:'子どもにあめを配る。1人に6個ずつ配ると14個あまり、1人に8個ずつ配ると6個たりない。<br>子どもの人数を求めなさい。', a:'10', unit:'人',
-                  sol:'人数をx人とすると あめの数は 6x+14 と 8x-6 で同じ。6x+14=8x-6 → -2x=-20 → x=10 → 10人（あめは74個）' },
-                { q:'いま母は42才、子は12才である。<br>母の年れいが子の年れいの2倍になるのは何年後か。', a:'18', unit:'年後',
-                  sol:'x年後とすると 42+x=2(12+x) → 42+x=24+2x → -x=-18 → x=18 → 18年後（母60才・子30才）' }
+            { n:'第三問　一次方程式の文章題', pt:4, qs:[
+                { q:'あめを何人かの子どもに配る。1人に4個ずつ配ると15個あまり、1人に6個ずつ配ると7個たりない。<br>子どもの人数を求めなさい。',
+                  a:'11', unit:'人', sol:'人数をx人とすると、あめの数は 4x＋15 と 6x−7 で同じ。4x＋15＝6x−7 → −2x＝−22 → x＝11。11人' },
+                { q:'上のあめは全部で何個あるか。', a:'59', unit:'個', sol:'4×11＋15 ＝ 59個（6×11−7＝59 でも同じ）' },
+                { q:'妹が家を出発し、分速50mで駅に向かって歩き始めた。その15分後に、姉が同じ道を分速200mの自転車で追いかけた。<br>姉が妹に追いつくのは、姉が出発してから何分後か。',
+                  a:'5', unit:'分', sol:'姉が出発してx分後とすると、妹は(x＋15)分歩いている。200x＝50(x＋15) → 200x＝50x＋750 → 150x＝750 → x＝5。5分後' },
+                { q:'上で、姉が妹に追いついた地点は、家から何mのところか。', a:'1000', unit:'m',
+                  sol:'200×5 ＝ 1000m' },
+                { q:'いま母は45才、子は9才である。<br>母の年れいが子の年れいの3倍になるのは何年後か。',
+                  a:'9', unit:'年後', sol:'x年後とすると 45＋x＝3(9＋x) → 45＋x＝27＋3x → −2x＝−18 → x＝9。9年後（母54才・子18才）' },
+                { q:'ある美術館の入館料は、大人1人分が中学生1人分より500円高い。大人2人と中学生4人で入館したところ、料金の合計は4000円だった。<br>中学生1人の入館料はいくらか。',
+                  a:'500', unit:'円', sol:'中学生をx円とすると大人は(x＋500)円。2(x＋500)＋4x＝4000 → 6x＋1000＝4000 → 6x＝3000 → x＝500。中学生500円' },
+                { q:'上の美術館の、大人1人の入館料はいくらか。', a:'1000', unit:'円', sol:'500＋500 ＝ 1000円' }
             ]}
         ]
     };
-    // 📝 国語（8/30 と同じしくみ・時間はあとで指定）
+
+    // ---------- 📖 国語（漢字・説明文・随筆・小説）25問×4点＝100点 ----------
     const NOBI_EXAM_JP = {
-        id:'nobi-summer-2026-kokugo',
-        title:'のびログ夏休み定期テスト（国語）',
-        users:['u1'],
-        show:'2026-8-29 00:00', stand:'2026-8-30 13:50', start:'2026-8-30 14:00', end:'2026-8-30 14:45',
-        limit:45,
-        range:'漢字・ことばの知識・説明文・随筆・小説（中1）',
+        id:'nobi-teiki-01-kokugo', title:'のびログ定期テスト（国語）', users:['u1'],
+        always:true, limit:50, range:'漢字の読み・説明文・随筆・小説（中1）',
         parts:[
-            { n:'第一問　漢字の読み（ひらがなで書く）', pt:2, qs:[
-                { q:'委員長の提案に、全員が<u>速やか</u>に同意した。', a:'すみやか', alts:['すみ'] },
-                { q:'彼の話には<u>矛盾</u>が含まれている。', a:'むじゅん' },
-                { q:'長年の努力が<u>功</u>を奏した。', a:'こう' },
-                { q:'この村には古い風習が<u>廃れ</u>ずに残っている。', a:'すたれ', alts:['すた'] },
-                { q:'会議の内容を<u>克明</u>に記録する。', a:'こくめい' }
+            { n:'第一問　漢字の読み（ひらがなで書く）', pt:4, qs:[
+                { q:'友人の<u>寛大</u>な心に助けられた。', a:'かんだい' },
+                { q:'二人の意見には大きな<u>隔たり</u>がある。', a:'へだたり', alts:['へだ'] },
+                { q:'実験の手順を<u>詳細</u>に記録する。', a:'しょうさい' },
+                { q:'台風で電車のダイヤが<u>滞る</u>。', a:'とどこおる', alts:['とどこお'] },
+                { q:'彼女はいつも<u>謙虚</u>な態度で話を聞く。', a:'けんきょ' }
             ]},
-            { n:'第二問　ことばの知識', pt:2, qs:[
-                { q:'「客観」の対義語をひらがなで書きなさい。', a:'しゅかん' },
-                { q:'「うまくいって調子に乗る」という意味の慣用句「□に乗る」。□に入る漢字1字を書きなさい。', a:'図', alts:['ず'] },
-                { q:'先生に対して「（言う）」を正しい敬語にすると「おっしゃる」。では自分が言う場合の謙譲語をひらがなで書きなさい。', a:'もうす', alts:['もうしあげる','いたします'] },
-                { q:'「一石二鳥」と似た意味のことわざ「□をおって二兎を得る」。□に入る漢字1字を書きなさい。', a:'一', alts:['いち'] },
-                { q:'次の文の主語を書きぬきなさい。<br>「昨日 妹が 公園で 大きな 犬を 見た。」', a:'妹が', alts:['妹'] }
-            ]},
-            { n:'第三問　説明文', pt:5, read:'JP_A', qs:[
-                { q:'傍線部①「名前を知ると、急に見えるようになる」とあるが、それはなぜか。本文の言葉を使って三十字以内で説明しなさい。',
-                  a:'名前があると、ほかのものと区別して切り分けられるから',
-                  kw:[['名前','ことば','言葉','語'],['区別','切り分','分け','わけ']],
-                  sol:'（解答例）名前という道具があると、ほかのものと区別して切り分けられるから。（30字）' },
-                { q:'筆者が「雲の名前」を例に挙げたのは何を示すためか。最も適切なものを ア〜エ から選びなさい。<br>ア 気象の知識は生活に役立つということ<br>イ ことばの数が、見えるものの細かさを決めるということ<br>ウ 空をながめる時間を増やすべきだということ<br>エ 専門家の視力は一般の人より優れているということ',
+            { n:'第二問　説明文', pt:4, read:'JP_A', qs:[
+                { q:'傍線部①「ことばの数だけ雨の種類がある、と考えるのは順番が逆だ」とあるが、なぜ「逆」なのか。本文の言葉を使って三十字以内で説明しなさい。',
+                  a:'雨は切れ目なく続いていて、人がことばで線を引いて分けているから',
+                  kw:[['切れ目','つながっ','続いて','連続'],['ことば','名前','線を引','分け','切り分']],
+                  sol:'（解答例）雨は切れ目なく続いていて、人がことばで線を引いて分けているから。（33字）' },
+                { q:'筆者が「雪の多い土地」の例を挙げたのは何を示すためか。ア〜エから選びなさい。<br>ア 寒い土地の人ほど注意深い性格になるということ<br>イ 必要から生まれたことばが、ものの見え方まで決めるということ<br>ウ 雪国の人は目のはたらきがすぐれているということ<br>エ ことばは多いほど生活が豊かになるということ',
                   a:'イ', choices:['ア','イ','ウ','エ'] },
-                { q:'傍線部②「ことばは世界を写す鏡ではない」とあるが、筆者が「鏡」という言い方を否定するのはなぜか。四十字以内で説明しなさい。',
-                  a:'鏡ならありのまま写すはずだが、ことばは世界を切り分けて見せているから',
-                  kw:[['鏡'],['切り分','分け','区別','えらび','選び']],
-                  sol:'（解答例）鏡ならありのまま写すはずだが、ことばは世界を自分の都合で切り分けて見せているから。（41字）' },
-                { q:'筆者の考えに合うものを ア〜エ から選びなさい。<br>ア ことばがなければ人は何も感じられない<br>イ ことばの数が多い文化のほうがすぐれている<br>ウ ことばは便利な道具だが、その分け方は唯一のものではない<br>エ 感じたことはすべてことばにできる',
+                { q:'傍線部②「ことばは世界を写す写真ではない」とあるが、筆者が「写真」という言い方を打ち消すのはなぜか。四十字以内で説明しなさい。',
+                  a:'写真はこちらの都合と関わりなく写るが、ことばは人の都合で線を引いて名前をつけるから',
+                  kw:[['写真'],['都合','人の側','線を引','切り分','分け']],
+                  sol:'（解答例）写真ならありのまま写るはずだが、ことばは人の都合で線を引いて名前をつけているから。（42字）' },
+                { q:'筆者の考えに合うものを ア〜エ から選びなさい。<br>ア ことばがなければ人は何も感じられない<br>イ ことばの数が多い言語のほうがすぐれている<br>ウ ことばは世界を分ける強い道具だが、その分け方は一つではない<br>エ 言い表せない気持ちは、無いのと同じである',
                   a:'ウ', choices:['ア','イ','ウ','エ'] },
-                { q:'この文章で筆者がいちばん言いたいことを ア〜エ から選びなさい。<br>ア 語彙をできるだけ増やすべきだ<br>イ 自分のことばの網からこぼれるものがあると自覚することが大切だ<br>ウ 専門家の意見にしたがうべきだ<br>エ 名前のないものは存在しない',
+                { q:'この文章で筆者がいちばん言いたいことを ア〜エ から選びなさい。<br>ア できるだけ多くのことばをおぼえるべきだ<br>イ 自分のことばの網からこぼれるものがあると気づくことが大切だ<br>ウ 外国語を学べば世界の見え方は正しくなる<br>エ 名前のないものは存在しない',
                   a:'イ', choices:['ア','イ','ウ','エ'] }
             ]},
-            { n:'第四問　随筆', pt:5, read:'JP_B', qs:[
-                { q:'傍線部①「近道ばかり選んでいると、地図が育たない」とはどういうことか。三十五字以内で説明しなさい。',
-                  a:'決められた道しか通らないと、まわりのことを知らないままになるということ',
-                  kw:[['近道','決め','最短','言われた'],['知らない','広がらない','せまい','育たない','おぼえ']],
-                  sol:'（解答例）最短の道しか通らないと、まわりを知らないままで、自分の地図が広がらないということ。（41字→35字例：最短の道だけ通ると、まわりを知らず自分の地図が広がらないこと。29字）' },
-                { q:'筆者が第三段落で三つの例を並べたのは何のためか。ア〜エ から選びなさい。<br>ア むだな時間がいかに人生を損なうかを警告するため<br>イ 回り道の途中でこそ大切なものに出会えると示すため<br>ウ 子どもと大人では時間の使い方がちがうと示すため<br>エ 失敗はいつか必ず成功につながると証明するため',
+            { n:'第三問　随筆', pt:4, read:'JP_B', qs:[
+                { q:'傍線部①「行き先が決まっていて、はじめて最短の道は計算できる」とあるが、このことから、効率という物差しでは測れないのはどのような作業か。三十字以内で書きなさい。',
+                  a:'行き先そのものを疑ったり、作りかえたりする作業',
+                  kw:[['行き先','目的','ゴール'],['疑','作りかえ','作り変え','見直','変える']],
+                  sol:'（解答例）行き先そのものを疑ったり、作りかえたりする作業。（25字）' },
+                { q:'筆者が第三段落で三つの例をならべたのは何のためか。ア〜エ から選びなさい。<br>ア むだな時間が人生をだめにすると警告するため<br>イ 回り道のとちゅうでこそ大切なものに出会えると示すため<br>ウ 子どもと大人では時間の使い方がちがうと示すため<br>エ 失敗はいつか必ず成功につながると証明するため',
                   a:'イ', choices:['ア','イ','ウ','エ'] },
-                { q:'筆者は「効率」についてどう考えているか。ア〜エ から選びなさい。<br>ア どんな場面でも否定されるべきものである<br>イ それ自体は悪くないが、目的を選ぶ物差しにするのは危ない<br>ウ 目的がはっきりした場面でだけ害になる<br>エ もう時代に合わないので捨てるべきである',
+                { q:'筆者は「効率」そのものについてどう考えているか。ア〜エ から選びなさい。<br>ア どんな場面でも否定されるべきものである<br>イ それ自体は悪くないが、目的を選ぶ物差しにするのはあぶない<br>ウ 目的がはっきりした場面でだけ害になる<br>エ もう時代に合わないので捨てるべきである',
                   a:'イ', choices:['ア','イ','ウ','エ'] },
-                { q:'傍線部②「「何になるの」と聞かれて答えられないこと」が、そのたびに切りすてられていくと、人はどうなると筆者は言っているか。四十字以内で書きなさい。',
-                  a:'与えられた目的をこなす力ばかりのびて、自分が何をしたいのかを問う力を失う',
-                  kw:[['与え','言われた','決められた','目的'],['したい','望','問う','考える']],
-                  sol:'（解答例）与えられた目的をうまくこなす力ばかりのびて、自分が何をしたいのかを問う力を失っていく。（44字）' },
-                { q:'この文章の題名としてふさわしいものを ア〜エ から選びなさい。<br>ア 最短経路の作り方<br>イ 回り道という自由<br>ウ 失敗から学ぶ技術<br>エ 時間割の歴史',
+                { q:'傍線部②「「それ、何の役に立つの」と聞かれて答えられないこと」が、そのたびに切りすてられていく場所では、人はどうなると筆者は言っているか。四十五字以内で書きなさい。',
+                  a:'与えられた目的をこなす力ばかりのびて、自分が何をしたいのかを問う力を失っていく',
+                  kw:[['与え','言われた','決められた','目的をこなす'],['したい','望','問う']],
+                  sol:'（解答例）与えられた目的をうまくこなす力ばかりみがき、自分が何をしたいのかを問う力を失っていく。（44字）' },
+                { q:'この文章の題名としてふさわしいものを ア〜エ から選びなさい。<br>ア 最短経路の作り方<br>イ むだという名の自由<br>ウ 失敗から学ぶ技術<br>エ 時間割の歴史',
                   a:'イ', choices:['ア','イ','ウ','エ'] }
             ]},
-            { n:'第五問　小説', pt:6, read:'JP_C', qs:[
+            { n:'第四問　小説', pt:4, read:'JP_C', qs:[
                 { q:'傍線部①「うるさかったはずの音が、聞こえなくなっていた」とあるが、この変化は「ぼく」にとってどんな意味を持つか。祖母の言葉をふまえて四十字以内で説明しなさい。',
-                  a:'音が毎日のふつうになり、祖母からこの家の人間だと認められたということ',
-                  kw:[['ふつう','日常','あたりまえ','なれ','慣れ'],['家の人','この家','なかま','みとめ','認め']],
-                  sol:'（解答例）水音が毎日のふつうになり、祖母から「この家の人間になった」と認められたということ。（42字）' },
-                { q:'「だれも住んでいない家で、ししおどしだけが正しく鳴っている」という描写の効果として最も適切なものを ア〜エ から選びなさい。<br>ア 祖母の留守をきわだたせ、「ぼく」がその役目を引きうけていることを印象づける<br>イ ししおどしの作りの良さを示し、祖母の目のたしかさを伝える<br>ウ 家が荒れていく様子を描き、時間の残酷さを強調する<br>エ 「ぼく」が退屈していることを描き、都会へのあこがれを暗示する',
+                  a:'水車の音が毎日のふつうになり、祖母からこの家の人間だと認められたということ',
+                  kw:[['ふつう','日常','あたりまえ','なれ','慣れ','気にならな'],['家の人','この家','みとめ','認め','なかま']],
+                  sol:'（解答例）水車の音が毎日のふつうになり、祖母から「この家の人間になった」と認められたということ。（44字）' },
+                { q:'「だれも住んでいない家で、水車だけが正しく回っている」という描写の効果として最も適切なものを ア〜エ から選びなさい。<br>ア 祖母の留守をきわだたせ、「ぼく」がその役目を引きうけていることを印象づける<br>イ 水車の作りの良さを示し、祖母の目のたしかさを伝える<br>ウ 家が荒れていく様子を描き、時間の残酷さを強調する<br>エ 「ぼく」が退屈していることを描き、都会へのあこがれを暗示する',
                   a:'ア', choices:['ア','イ','ウ','エ'] },
                 { q:'傍線部②「「こまる人」の意味」について、「ぼく」がたどりついた理解を五十字以内で説明しなさい。',
-                  a:'音は誰かのために鳴るのではなく、鳴らし続けることを引きうける人がその家に住むということ',
+                  a:'音はだれかのために鳴るのではなく、回しつづけることを引きうける人がその家に住むということ',
                   kw:[['だれかのため','誰かのため','人のため'],['引きう','引き受','つづけ','続け','守る']],
-                  sol:'（解答例）音はだれかのために鳴るのではなく、鳴らし続けることを引きうける人がその家に住むということ。（47字）' },
-                { q:'「ずれとらんな」という祖母の言葉から読み取れる気持ちを ア〜エ から選びなさい。<br>ア 留守のあいだも役目が果たされていたことへの、口には出さない満足<br>イ 孫が勝手にさわったことへの、ひそかないら立ち<br>ウ 入院が長引いたことへの、八つ当たり<br>エ 道具の精度が落ちていないか確かめようとする警戒',
+                  sol:'（解答例）音はだれかのために鳴るのではなく、回しつづけることを引きうける人がその家に住むということ。（47字）' },
+                { q:'「止まっとらんな」という祖母の言葉から読み取れる気持ちを ア〜エ から選びなさい。<br>ア 留守のあいだも役目が果たされていたことへの、口には出さない満足<br>イ 孫が勝手にさわったことへの、ひそかないら立ち<br>ウ 入院が長引いたことへの、八つ当たり<br>エ 道具がこわれていないか確かめようとする警戒',
                   a:'ア', choices:['ア','イ','ウ','エ'] },
-                { q:'最後の一文で「ぼく」が右手をにぎったのはなぜか。その心情として最も適切なものを ア〜エ から選びなさい。<br>ア 竹を直した手ごたえを思い出し、自分も家を引きつぐ側になったと感じたから<br>イ 祖母に感謝されなかったことがくやしく、怒りをこらえようとしたから<br>ウ 祖母の病気の重さを思い出し、こわさに耐えようとしたから<br>エ 音を止めたい気持ちが、まだ消えていなかったから',
+                { q:'最後の一文で「ぼく」が右手をにぎったのはなぜか。その心情として最も適切なものを ア〜エ から選びなさい。<br>ア 水車を守った手ごたえを思い出し、自分も家を引きつぐ側になったと感じたから<br>イ 祖母に感謝されなかったことがくやしく、怒りをこらえようとしたから<br>ウ 祖母の病気の重さを思い出し、こわさに耐えようとしたから<br>エ 音を止めたい気持ちが、まだ消えていなかったから',
+                  a:'ア', choices:['ア','イ','ウ','エ'] }
+            ]},
+            { n:'第五問　随筆', pt:4, read:'JP_D', qs:[
+                { q:'傍線部①「むかしこの店を満たしていたのは、無音ではなかった」とあるが、むかしの静けさと今の静けさはどうちがうか。両方のちがいが分かるように五十字以内で説明しなさい。',
+                  a:'むかしは小さな音がたくさん重なって打ち消し合う静けさだったが、今は音そのものが生まれない静けさである',
+                  kw:[['重な','たくさん','打ち消','小さな音','物音','まざ'],['生まれな','音がない','無音','出ない','発生し','しない']],
+                  sol:'（解答例）むかしは小さな物音が重なって打ち消し合う静けさで、今は音そのものが生まれない静けさ。（43字）' },
+                { q:'筆者が「音のない静けさ」を落ちつかないと感じるのはなぜか。ア〜エ から選びなさい。<br>ア 自分の立てる音をかくしてくれるものがなく、目立ってしまうから<br>イ 客が減って、店がつぶれそうだと感じたから<br>ウ 静かすぎると食事の味が分からなくなるから<br>エ となりの人が何を食べているか分からなくなったから',
+                  a:'ア', choices:['ア','イ','ウ','エ'] },
+                { q:'傍線部②「私が惜しんでいるのは、あの雑音そのものではないのだろう」とあるが、筆者がほんとうに惜しんでいるものは何か。三十五字以内で書きなさい。',
+                  a:'雑音の向こうに人がいると分かっていた感覚',
+                  kw:[['雑音','物音','音'],['人がいる','人の気配','気配','人が','伝わ']],
+                  sol:'（解答例）雑音の向こうに人がいると分かっていた感覚。（21字）' },
+                { q:'「かたん」という音の描写が果たしている役割として最も適切なものを ア〜エ から選びなさい。<br>ア 店の決まりのきびしさを思い出させる役割<br>イ 人々が同じ場所にいることを一瞬だけ目に見えるようにする役割<br>ウ 筆者のそそっかしい性格を印象づける役割<br>エ 時代の変化に対する筆者の怒りを表す役割',
+                  a:'イ', choices:['ア','イ','ウ','エ'] },
+                { q:'最後の「苦笑した」に表れている筆者の気持ちとして最も適切なものを ア〜エ から選びなさい。<br>ア 小さな出来事で喜んでしまう自分を、少し照れくさく思う気持ち<br>イ まわりの人の無関心さに、深い怒りを覚える気持ち<br>ウ むかしの食堂を取りもどせると確信し、希望を持つ気持ち<br>エ 自分だけが時代に取り残されたと絶望する気持ち',
                   a:'ア', choices:['ア','イ','ウ','エ'] }
             ]}
         ],
         reads:{
-            JP_A:{ t:'説明文', body:'私たちは、目に見えているものをそのまま見ていると思っている。けれども、ある日ふいに、①<u>名前を知ると、急に見えるようになる</u>という経験をすることがある。<br><br>'
-              + 'たとえば空の雲である。「積乱雲」「巻雲」「層積雲」という名前を教わった人は、それまで「白いもの」でしかなかった空を、いくつもの形に分けて見るようになる。目のつくりが変わったのではない。手元にことばがふえたから、区別できるようになっただけである。世界を切り分けるための道具が、そのままものの見え方を決めているのだ。<br><br>'
-              + 'だから、②<u>ことばは世界を写す鏡ではない</u>。鏡であれば、映るものはこちらの都合とは関わりなく、ありのままに映るはずだ。しかしことばは、そこにある切れ目のない広がりに、人の側から線を引いていく。ある言語では緑と青を一つの語で呼ぶという。彼らの目が私たちとちがうのではなく、線の引き方がちがうだけである。<br><br>'
-              + 'もっとも、ここから「ことばがなければ何も感じられない」と言ってしまうのは行きすぎだろう。うまく言えない気持ちを、私たちは確かに感じているし、その言えなさに苦しむこともある。大事なのは、ことばが世界を分ける強い道具であることと、その分け方が唯一のものではないことを、同時におぼえておくことだ。自分の使うことばの網の目からは、必ず何かがすりぬけている——そう気づくことが、ほかの人の見ている世界に近づく最初の一歩になる。' },
-            JP_B:{ t:'随筆', body:'「むだをなくそう」という言い方に、正面から反対する人はまずいない。同じ結果がより短い時間で得られるなら、そのほうがいいに決まっている。この考えは、工場のつくり方から学校の時間割まで、いたるところにしみこんでいる。<br><br>'
-              + 'けれども、効率という物差しには、かくれた前提がある。「何を目指すか」が先に決まっている、という前提だ。行き先が決まっていて、はじめて最短の道を計算できる。逆に言えば、行き先そのものを疑ったり作りかえたりする作業は、この物差しでは測れない。それどころか、最短の道から外れる行いとして、いちばん先に「むだ」と呼ばれ、けずられていく。①<u>近道ばかり選んでいると、地図が育たない</u>のである。<br><br>'
-              + '子どもが道ばたの石を意味もなくひっくり返している時間。中学生が結局使わなかった本を読みふけった数か月。研究者が失敗に終わった実験をくり返した数年。あとから見れば、非効率の見本のように見える。だが人が自分にとって本当に大事なものに出会うのは、たいていこうした回り道のとちゅうである。行き先を決めずに歩き回ることでしか出会えない風景が、たしかにある。<br><br>'
-              + '効率そのものが悪いのではない。危ないのは、効率が「目的を選ぶための物差し」にまで広がってしまうことだ。②<u>「何になるの」と聞かれて答えられないこと</u>が、そのたびに切りすてられていく場所では、人は与えられた目的をうまくこなす力ばかりをみがき、自分が何をしたいのかを問う力を失っていく。<br><br>'
+            JP_A:{ t:'説明文', body:'日本語には、雨を言い表すことばがたくさんある。小雨、霧雨、通り雨、夕立、氷雨。ならべてみると、どれも同じ「雨」なのに、思いうかぶ景色はまるでちがう。<br><br>'
+              + 'ここで気をつけたいのは、①<u>ことばの数だけ雨の種類がある、と考えるのは順番が逆だ</u>ということである。空から落ちてくる水は、粒の大きさも、降る時間の長さも、切れ目なくつながっている。そこに「ここからが霧雨」という線が引かれているわけではない。線を引いているのは、いつも人の側だ。<br><br>'
+              + 'たとえば、雪の多い土地では、雪を表すことばが細かく分かれていることが知られている。そこに住む人の目が特別なのではない。毎日それを見分けなければ暮らしていけないから、見分けるための道具を作った、というだけのことである。道具ができると、こんどはその道具のほうが、ものの見え方を決めはじめる。<br><br>'
+              + 'だから、②<u>ことばは世界を写す写真ではない</u>。写真であれば、写るものはこちらの都合と関わりなく写るはずだ。しかしことばは、切れ目のない広がりに、人の都合で線を引いて名前をつけていく。ある言語では、日本語の「青」と「緑」を一つの語で呼ぶという。彼らの目がにぶいのではなく、線の引き方がちがうだけである。<br><br>'
+              + 'とはいえ、ここから「ことばがなければ何も感じられない」と言ってしまうのは行きすぎだろう。うまく言えない気持ちを、私たちはたしかに感じているし、その言えなさに苦しみもする。大切なのは、ことばが世界を切り分ける強い道具であることと、その切り分け方が唯一のものではないことを、同時におぼえておくことだ。自分の使うことばの網の目からは、必ず何かがすりぬけている——そう気づくことが、ほかの人の見ている世界に近づく第一歩になる。' },
+            JP_B:{ t:'随筆', body:'「時間をむだにするな」ということばに、正面から反対する人はまずいない。同じ結果が短い時間で手に入るなら、そのほうがいいに決まっている。この考え方は、工場の作業手順から学校の時間割まで、あらゆるところにしみこんでいる。<br><br>'
+              + 'けれども、効率という物差しには、かくれた前提がある。「どこへ行くか」が先に決まっている、という前提だ。①<u>行き先が決まっていて、はじめて最短の道は計算できる</u>。逆に言えば、行き先そのものを疑ったり、作りかえたりする作業は、この物差しでは測れない。それどころか、最短の道から外れるふるまいとして、まっさきに「むだ」と呼ばれ、けずられていく。<br><br>'
+              + '道ばたの石を意味もなくひっくり返している子どもの午後。結局使わなかった本を読みふけった中学生の数か月。失敗に終わった実験をくり返した研究者の数年。あとから見れば、非効率の見本のように見える。だが人が、自分にとってほんとうに大事なものに出会うのは、たいていこうした回り道のとちゅうである。行き先を決めずに歩き回ることでしか見えない景色が、たしかにある。<br><br>'
+              + '効率そのものが悪いのではない。あぶないのは、効率が「目的を選ぶための物差し」にまで広がってしまうことだ。②<u>「それ、何の役に立つの」と聞かれて答えられないこと</u>が、そのたびに切りすてられていく場所では、人は与えられた目的をうまくこなす力ばかりをみがき、自分が何をしたいのかを問う力を失っていく。<br><br>'
               + 'むだを許す余白は、なまけるための言いわけではない。それは、目的の言いなりにならないために残しておく、最後の自由なのだ。' },
-            JP_C:{ t:'小説', body:'祖母の家の庭には、古いししおどしがあった。竹の筒に水がたまると、こつん、と石を打つ。泊まりに行くと、その音は夜中の二時にも三時にも、まじめに鳴った。<br><br>'
+            JP_C:{ t:'小説', body:'祖母の家の裏には細い水路が流れていて、そこに小さな水車がかかっていた。木でできた古いもので、水を受けるたびに、からから、と軽い音を立てて回る。泊まりに行くと、その音は夜中の二時にも三時にも、まじめに鳴りつづけた。<br><br>'
               + '最初の夏、ぼくはそれがうるさくて眠れず、朝ごはんの席で「あれ、止められないの」と不機嫌に言った。祖母はみそ汁をすすりながら、「止まるとこまる人がおるからな」と答えただけだった。だれがこまるのか、ぼくには分からなかった。<br><br>'
               + '中学に上がった夏、ぼくは同じ部屋で、①<u>うるさかったはずの音が、聞こえなくなっていた</u>ことに気づいた。自分でもおどろいた。祖母にそう話すと、めずらしく笑って「そりゃあ、この家の人間になったな」と言った。<br><br>'
-              + '祖母が入院したのは、その二年後の冬だった。ぼくは母と交代で家を見に行き、留守の庭で、つまった竹の口を直し、水の落ちる高さを合わせた。やり方は前の夏に教わっていた。だれも住んでいない家で、ししおどしだけが正しく鳴っている。その音を一人で聞きながら、ぼくはようやく②<u>「こまる人」の意味</u>を考えた。<br><br>'
-              + '祖母は、音がだれかのために鳴っていると信じていたのではない。おそらく逆だ。鳴らしつづけることを引きうけている人間が、その家にいる。それが祖母にとって、家に住むということだったのだろう。<br><br>'
-              + '退院の日、ぼくは祖母を車から降ろし、門を開けた。ちょうど、こつん、と音がした。祖母はつっかけをぬぎながら、だれにともなく「ずれとらんな」とつぶやいた。ぼくは何も答えず、竹を直した自分の右手を、上着のポケットの中でそっとにぎった。' }
+              + '祖母が入院したのは、その二年後の冬だった。ぼくは母と交代で家を見に行き、留守の庭で、水路に落ちた枝や葉をすくい、水車の軸に油をさした。やり方は前の夏に教わっていた。だれも住んでいない家で、水車だけが正しく回っている。その音を一人で聞きながら、ぼくはようやく②<u>「こまる人」の意味</u>を考えた。<br><br>'
+              + '祖母は、あの音がだれかのために鳴っていると信じていたのではない。おそらく逆だ。回しつづけることを引きうけている人間が、その家にいる。それが祖母にとって、家に住むということだったのだろう。<br><br>'
+              + '退院の日、ぼくは祖母を車から降ろし、門を開けた。ちょうど、からから、と音がした。祖母はつっかけをぬぎながら、だれにともなく「止まっとらんな」とつぶやいた。ぼくは何も答えず、枝をすくった自分の右手を、上着のポケットの中でそっとにぎった。' },
+            JP_D:{ t:'随筆', body:'久しぶりに入った町の食堂は、記憶の中よりずっと静かだった。いや、静けさの中身が変わった、と言うほうが近い。①<u>むかしこの店を満たしていたのは、無音ではなかった</u>。皿がふれる音、いすを引く音、奥で野菜を切る音、となりの席の笑い声。そういう小さな音がたくさん重なり、たがいを打ち消し合って、結果として「落ちついた店」になっていた。いまはちがう。それぞれの席で画面を見ている人たちのあいだには、ほとんど音が生まれない。<br><br>'
+              + '音のない静けさは、思っていたよりも落ちつかなかった。まわりの物音がないと、自分のはしが皿に当たる音や、水を飲む音が、不つりあいなほど大きく響いてしまう。他人の立てるわずかな音は、じつは自分の音をかくしてくれていたのだと気づく。たがいの生活音にまぎれることで、私たちは安心してそこにいられたのだ。<br><br>'
+              + 'もっとも、これはただの懐かしがりかもしれない、とも思う。②<u>私が惜しんでいるのは、あの雑音そのものではないのだろう</u>。画面に向かう人たちも、たしかに何かに集中している。ただ、その気配がこちらまで届いてこない。むかしは、となりの人が食べる速さや、はしを置くタイミングから、その人が急いでいるのかどうかまで、なんとなく伝わってきたものだった。<br><br>'
+              + '帰りぎわ、返却台に食器を置いたとき、木の台に当たった茶わんが、かたん、と音を立てた。何人かが顔を上げ、すぐにまた画面へもどった。その一瞬だけ、この部屋にいる人たちが同じ場所にいるのだということが、はっきりと分かった。私は少しうれしくなって、それから、そんなことでうれしくなる自分に苦笑した。' }
         }
     };
-    function exParse(str) { const p = String(str).split(/[\s\-:]+/).map(Number); return new Date(p[0], p[1] - 1, p[2], p[3] || 0, p[4] || 0, 0); }
-    // 📝 英語（1日め 13:15〜13:45）
+
+    // ---------- 🔤 英語（英検5級・4級ミックス／4つの中から番号でえらぶ）25問×4点＝100点 ----------
     const NOBI_EXAM_EN = {
-        id:'nobi-summer-2026-eigo', title:'のびログ夏休み定期テスト（英語）', users:['u1'],
-        show:'2026-8-29 00:00', stand:'2026-8-30 13:05', start:'2026-8-30 13:15', end:'2026-8-30 13:45',
-        limit:30, range:'be動詞・一般動詞・過去形・疑問詞・単語（中1）',
+        id:'nobi-teiki-01-eigo', title:'のびログ定期テスト（英語）', users:['u1'],
+        always:true, limit:40, range:'英検5級・4級レベル（語い・文法・会話・長文）',
         parts:[
-            { n:'第一問　( )に入る語を書きなさい', pt:4, qs:[
-                { q:'I ( ) a student. （私は生徒です）', a:'am' },
-                { q:'She ( ) my sister. （彼女は私の姉です）', a:'is' },
-                { q:'They ( ) in the park now. （彼らは今 公園にいます）', a:'are' },
-                { q:'He ( ) soccer every day. （彼は毎日サッカーをします）', a:'plays' },
-                { q:'I ( ) to school by bus yesterday. （私はきのうバスで学校へ行きました）', a:'went' },
-                { q:'We ( ) not have school last Sunday. （先週の日曜は学校がありませんでした）', a:'did' },
-                { q:'( ) you like music? （あなたは音楽が好きですか）', a:'do' },
-                { q:'She ( ) breakfast at seven this morning. （彼女は今朝7時に朝食を食べました）', a:'had', alts:['ate'] }
+            { n:'第一問　短文の語い・文法（1〜4からえらぶ）', pt:4, qs:[
+                { q:'I ( ) my room before lunch yesterday.<br>1 clean　2 cleans　3 cleaned　4 cleaning',
+                  a:'3', choices:['1','2','3','4'], sol:'yesterday があるので過去形 cleaned。' },
+                { q:'We have music class ( ) Tuesday.<br>1 in　2 on　3 at　4 for',
+                  a:'2', choices:['1','2','3','4'], sol:'曜日の前は on。' },
+                { q:'A: ( ) is your science teacher?　B: Ms. White. She is very kind.<br>1 What　2 Where　3 Who　4 When',
+                  a:'3', choices:['1','2','3','4'], sol:'人を答えているので Who。' },
+                { q:'This box is ( ) than that one.<br>1 heavy　2 heavier　3 heaviest　4 more heavy',
+                  a:'2', choices:['1','2','3','4'], sol:'than があるので比較級 heavier。' },
+                { q:'It was ( ) last night, so we could not see the stars.<br>1 cloudy　2 sleepy　3 kind　4 sweet',
+                  a:'1', choices:['1','2','3','4'], sol:'星が見えなかった＝くもり cloudy。' },
+                { q:'A: Are you busy now?　B: No, I ( ) not.<br>1 do　2 is　3 am　4 are',
+                  a:'3', choices:['1','2','3','4'], sol:'I に合う be動詞は am（I&#39;m not）。' },
+                { q:'Look! Your cat ( ) drinking milk.<br>1 am　2 is　3 are　4 be',
+                  a:'2', choices:['1','2','3','4'], sol:'主語が Your cat（3人称単数）なので is。' },
+                { q:'This is the ( ) river in our town.<br>1 long　2 longer　3 longest　4 more long',
+                  a:'3', choices:['1','2','3','4'], sol:'the ... in ～ は最上級 longest。' },
+                { q:'My father ( ) a new camera last week.<br>1 buy　2 buys　3 bought　4 buying',
+                  a:'3', choices:['1','2','3','4'], sol:'last week があるので過去形 bought。' },
+                { q:'My sister is good ( ) playing the piano.<br>1 at　2 of　3 to　4 by',
+                  a:'1', choices:['1','2','3','4'], sol:'be good at ～ ＝ ～が得意だ。' },
+                { q:'That is my friend Aya. I often talk with ( ).<br>1 she　2 her　3 hers　4 they',
+                  a:'2', choices:['1','2','3','4'], sol:'with のあとは目的格 her。' },
+                { q:'A: What time do you ( ) home?　B: At six.<br>1 come　2 sing　3 write　4 open',
+                  a:'1', choices:['1','2','3','4'], sol:'come home ＝ 家に帰る。' },
+                { q:'They ( ) watching TV then.<br>1 is　2 was　3 were　4 are',
+                  a:'3', choices:['1','2','3','4'], sol:'They ＋ 過去進行形なので were。' },
+                { q:'My brother can swim very ( ).<br>1 well　2 good　3 much　4 many',
+                  a:'1', choices:['1','2','3','4'], sol:'動詞 swim をくわしくするので副詞 well。' },
+                { q:'I want ( ) some flowers for my mother.<br>1 buy　2 buys　3 to buy　4 buying',
+                  a:'3', choices:['1','2','3','4'], sol:'want to ＋ 動詞の原形。' }
             ]},
-            { n:'第二問　疑問詞を1語で書きなさい', pt:4, qs:[
-                { q:'( ) is your name? — My name is Ken.', a:'what' },
-                { q:'( ) do you live? — I live in Tokyo.', a:'where' },
-                { q:'( ) is that boy? — He is my brother.', a:'who' },
-                { q:'( ) do you go to bed? — At ten.', a:'when' },
-                { q:'( ) old are you? — I am thirteen.', a:'how' },
-                { q:'( ) books do you have? — I have five books.（2語）', a:'how many', alts:['howmany'] }
+            { n:'第二問　会話文の応答（1〜4からえらぶ）', pt:4, qs:[
+                { q:'Girl: How is the weather in Osaka?<br>Boy: (　　) You need an umbrella.<br>1 It&#39;s rainy.　2 I&#39;m thirteen.　3 He&#39;s my brother.　4 Yes, please.',
+                  a:'1', choices:['1','2','3','4'], sol:'かさが必要＝雨。' },
+                { q:'Father: What were you doing at eight last night?<br>Girl: (　　)<br>1 It&#39;s under the bed.　2 I was doing my homework.　3 Yes, I did.　4 No, I&#39;m not.',
+                  a:'2', choices:['1','2','3','4'], sol:'What were you doing? には過去進行形で答える。' },
+                { q:'Woman: Excuse me. Where is the library?<br>Man: (　　) It&#39;s near the station.<br>1 Yes, I can.　2 It&#39;s three o&#39;clock.　3 Turn left at the corner.　4 I&#39;m fine, thank you.',
+                  a:'3', choices:['1','2','3','4'], sol:'道をたずねられているので道案内で答える。' },
+                { q:'Mother: Can you help me, Ken?<br>Boy: (　　)<br>1 Sure.　2 Good night.　3 It&#39;s Sunday.　4 No, it isn&#39;t.',
+                  a:'1', choices:['1','2','3','4'], sol:'たのまれたときの返事は Sure.（いいよ）' },
+                { q:'Teacher: Don&#39;t run in the hallway.<br>Student: (　　)<br>1 I&#39;m sorry.　2 Here you are.　3 It&#39;s mine.　4 Nice to meet you.',
+                  a:'1', choices:['1','2','3','4'], sol:'注意されたときは I&#39;m sorry.（ごめんなさい）' }
             ]},
-            { n:'第三問　日本語を英語1語で書きなさい', pt:4, qs:[
-                { q:'学校', a:'school' }, { q:'水曜日', a:'wednesday' }, { q:'図書館', a:'library' },
-                { q:'いそがしい', a:'busy' }, { q:'買う', a:'buy' }, { q:'たいへん・むずかしい（difficultと同じ意味で d から始まる語）', a:'difficult' }
-            ]},
-            { n:'第四問　英文を正しい順にならべ、全文を書きなさい', pt:4, qs:[
-                { q:'（ 日本語 ）私は毎朝 6時に起きます。<br>[ get / I / at / up / six ] every morning.', a:'I get up at six every morning', alts:['i get up at six every morning.'] },
-                { q:'（ 日本語 ）彼はギターをひくことができます。<br>[ can / the guitar / he / play ]', a:'He can play the guitar', alts:['he can play the guitar.'] },
-                { q:'（ 日本語 ）あなたはどこでこの本を買いましたか。<br>[ this book / did / where / buy / you ]', a:'Where did you buy this book', alts:['where did you buy this book?'] },
-                { q:'（ 日本語 ）私はきのう宿題をしませんでした。<br>[ my homework / I / do / did / not ] yesterday.', a:'I did not do my homework', alts:['i did not do my homework yesterday'] },
-                { q:'（ 日本語 ）彼女は英語の先生ではありません。<br>[ an / she / not / English teacher / is ]', a:'She is not an English teacher', alts:['she is not an english teacher.'] }
+            { n:'第三問　長文を読んで答える（1〜4からえらぶ）', pt:4, read:'EN_R', qs:[
+                { q:'【A】 When will the Music Festival be held?<br>1 On October 3.　2 On September 3.　3 At 1:30 a.m.　4 Next week.',
+                  a:'1', choices:['1','2','3','4'], sol:'Date: October 3 と書いてある。' },
+                { q:'【A】 What should students bring?<br>1 A cap.　2 A music book.　3 A racket.　4 A lunch box.',
+                  a:'2', choices:['1','2','3','4'], sol:'Please bring your music book. とある。' },
+                { q:'【B】 Where was Tom born?<br>1 In Japan.　2 In Canada.　3 In London.　4 In Australia.',
+                  a:'2', choices:['1','2','3','4'], sol:'Tom Baker was born in Canada.' },
+                { q:'【B】 What did Tom like watching when he was a child?<br>1 Birds.　2 Cars.　3 Movies.　4 Soccer games.',
+                  a:'1', choices:['1','2','3','4'], sol:'he liked watching birds in the park.' },
+                { q:'【B】 What is Tom&#39;s job now?<br>1 A teacher.　2 A doctor.　3 A photographer.　4 A cook.',
+                  a:'3', choices:['1','2','3','4'], sol:'became a photographer とある。' }
             ]}
-        ]
+        ],
+        reads:{
+            EN_R:{ t:'掲示と説明文', body:'<b>【A】 School Music Festival</b><br>'
+              + 'Our school will have a Music Festival next month.<br>'
+              + 'All students can join it. Ms. Baker will teach us some songs.<br>'
+              + 'Date: October 3　　Time: 1:30 p.m.　　Place: the school gym<br>'
+              + '★ Please bring your music book.<br><br>'
+              + '<b>【B】 About Tom Baker</b><br>'
+              + 'Tom Baker was born in Canada. When he was a child, he liked watching birds in the park. He also loved reading books about animals.<br>'
+              + 'Tom studied science at university and became a photographer. Now many people enjoy his bird pictures. On weekends, he still walks in the park with his camera.' }
+        }
     };
-    // 📝 理科（2日め 14:00〜14:30）※もらったプリントの構成（植物・動物・物質／記号・複数選択・記述）に合わせ、
-    //    中身の生き物や物質は入れかえたオリジナル問題。25問×4点＝100点
+
+    // ---------- 🔬 理科（植物・動物・身のまわりの物質）25問×4点＝100点 ----------
     const NOBI_EXAM_SC = {
-        id:'nobi-summer-2026-rika', title:'のびログ夏休み定期テスト（理科）', users:['u1'],
-        show:'2026-8-29 00:00', stand:'2026-8-31 13:50', start:'2026-8-31 14:00', end:'2026-8-31 14:30',
-        limit:30, range:'植物のなかま・動物のなかま・身のまわりの物質（中1）',
+        id:'nobi-teiki-01-rika', title:'のびログ定期テスト（理科）', users:['u1'],
+        always:true, limit:40, range:'植物のなかま・動物のなかま・身のまわりの物質（中1）',
         parts:[
             { n:'第一問　植物のなかま', pt:4, qs:[
                 { q:'つぎのA・Bの特ちょうをもつ植物がある。<b>単子葉類</b>はどちらか、記号で答えなさい。<br>'
-                   + 'A：葉脈が網目のように広がり、根は太い主根と、そこから枝分かれした側根からできている。<br>'
-                   + 'B：葉脈がほぼ平行にならび、根は同じくらいの太さのひげ根が広がっている。',
-                  a:'B', choices:['A','B'], sol:'葉脈が平行でひげ根なのが単子葉類。網目状の葉脈＋主根・側根は双子葉類。' },
-                { q:'上のAの植物は何類か。「〜類」の形で答えなさい。', a:'双子葉類', alts:['そうしようるい'], sol:'子葉が2枚のなかま。' },
-                { q:'光合成について正しいものを1つ選びなさい。<br>ア 光合成は葉の細胞の中の核で行われる<br>イ 二酸化炭素と水からデンプンと酸素がつくられる<br>ウ 日光が当たらない夜にさかんに行われる<br>エ できた養分は道管を通って運ばれる<br>オ 酸素をとり入れて二酸化炭素を出す<br>カ 根でだけ行われる',
-                  a:'イ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'光合成は葉緑体で、光を使って二酸化炭素と水からデンプンと酸素をつくる。養分が通るのは師管、水が通るのは道管。' },
-                { q:'<b>種子をつくらない</b>植物を すべて選びなさい。<br>ア ゼンマイ　イ アサガオ　ウ スギゴケ<br>エ イチョウ　オ ワラビ　カ ウメ',
-                  a:'アウオ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'ゼンマイ・ワラビはシダ植物、スギゴケはコケ植物で胞子でふえる。アサガオ・ウメは被子植物、イチョウは裸子植物で種子をつくる。' },
+                   + 'A：葉脈がほぼ平行にならび、根は同じくらいの太さのひげ根が広がっている。<br>'
+                   + 'B：葉脈が網目のように広がり、根は太い主根と、そこから枝分かれした側根からできている。',
+                  a:'A', choices:['A','B'], sol:'葉脈が平行でひげ根なのが単子葉類。網目状の葉脈＋主根・側根は双子葉類。' },
+                { q:'上のBの植物は何類か。「〜類」の形で答えなさい。', a:'双子葉類', alts:['そうしようるい','そうしようるい類'],
+                  sol:'子葉が2枚のなかま。葉脈は網状脈、根は主根と側根。' },
+                { q:'光合成について正しいものを1つ選びなさい。<br>ア 光合成でできた養分は道管を通って運ばれる<br>イ 光合成は根でだけ行われる<br>ウ 二酸化炭素と水からデンプンと酸素がつくられる<br>エ 光合成は葉の細胞の中の核で行われる<br>オ 日光が当たらない夜にさかんに行われる<br>カ 酸素をとり入れて二酸化炭素を出す',
+                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'光合成は葉緑体で、光を使って二酸化炭素と水からデンプンと酸素をつくる。養分が通るのは師管、水が通るのは道管。' },
+                { q:'<b>種子をつくらない</b>植物を すべて選びなさい。<br>ア ヒノキ　イ ゼンマイ　ウ アサガオ<br>エ スギゴケ　オ ソテツ　カ ワラビ',
+                  a:'イエカ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
+                  sol:'ゼンマイ・ワラビはシダ植物、スギゴケはコケ植物で、どれも胞子でふえる。ヒノキ・ソテツは裸子植物、アサガオは被子植物で種子をつくる。' },
                 { q:'被子植物の花のつくりを、<b>外側から中心へ</b>ならんでいる順に4つ書きなさい。',
                   a:'がく 花弁 おしべ めしべ', kw:[['がく'],['花弁','花びら'],['おしべ'],['めしべ']],
                   sol:'（解答例）がく → 花弁（花びら）→ おしべ → めしべ' },
-                { q:'受粉したあと、めしべの「子房」と「胚珠」はそれぞれ何に変わるか。「子房→○○、胚珠→○○」の形で書きなさい。',
-                  a:'子房→果実、胚珠→種子', kw:[['果実','実'],['種子','たね']],
-                  sol:'（解答例）子房→果実、胚珠→種子。子房の中に胚珠があるのが被子植物。' },
-                { q:'<b>裸子植物</b>であるものを1つ選びなさい。<br>ア ヒマワリ　イ ソテツ　ウ ムギ<br>エ ヘチマ　オ サツキ　カ ダイズ',
-                  a:'イ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'ソテツ・マツ・スギ・イチョウは裸子植物。ほかは被子植物。' },
-                { q:'<b>双子葉類</b>を すべて選びなさい。<br>ア ススキ　イ ヘチマ　ウ チューリップ<br>エ ヒマワリ　オ ムギ　カ ダイズ',
-                  a:'イエカ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'ヘチマ・ヒマワリ・ダイズが双子葉類。ススキ・チューリップ・ムギは単子葉類（子葉1枚・平行脈・ひげ根）。' },
-                { q:'葉の表皮にある、2つの孔辺細胞にはさまれたすきまで、水蒸気や気体が出入りする部分を何というか。',
-                  a:'気孔', alts:['きこう'], sol:'葉の裏側に多く、蒸散や気体の出入りが行われる。' }
+                { q:'裸子植物には、被子植物にある あるつくりがない。胚珠を包んでいるそのつくりの名前を書きなさい。',
+                  a:'子房', alts:['しぼう'], sol:'被子植物は胚珠が子房に包まれている。裸子植物は子房がなく胚珠がむき出し。' },
+                { q:'<b>裸子植物</b>であるものを1つ選びなさい。<br>ア ナズナ　イ タンポポ　ウ イチョウ<br>エ ヘチマ　オ ツツジ　カ エンドウ',
+                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'イチョウ・スギ・ヒノキ・ソテツは裸子植物で、胚珠がむき出しになっている。ほかは被子植物。' },
+                { q:'<b>単子葉類</b>を すべて選びなさい。<br>ア ツユクサ　イ ヒマワリ　ウ トウモロコシ<br>エ アサガオ　オ ユリ　カ ダイズ',
+                  a:'アウオ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
+                  sol:'ツユクサ・トウモロコシ・ユリが単子葉類（子葉1枚・平行脈・ひげ根）。ヒマワリ・アサガオ・ダイズは双子葉類。' },
+                { q:'植物の体の中の水が、おもに葉の気孔から水蒸気になって出ていくはたらきを何というか。',
+                  a:'蒸散', alts:['じょうさん'], sol:'蒸散。気孔は2つの孔辺細胞にはさまれたすきまで、葉の裏側に多い。' }
             ]},
             { n:'第二問　動物のなかま', pt:4, qs:[
-                { q:'セキツイ動物の分類について正しいものを1つ選びなさい。<br>ア 魚類・両生類・ハチュウ類は恒温動物である<br>イ 鳥類とホニュウ類は変温動物である<br>ウ 両生類は子のときえらと皮ふ、親になると肺と皮ふで呼吸する<br>エ ハチュウ類はうすい膜のような卵を水中に産む<br>オ ホニュウ類はすべて陸上でしか生活できない<br>カ 魚類は肺で呼吸する',
-                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'恒温動物は鳥類とホニュウ類だけ。ハチュウ類の卵は陸上でかたい殻。魚類はえら呼吸。' },
-                { q:'<b>胎生</b>である動物を すべて選びなさい。<br>ア キンギョ　イ クジラ　ウ ニワトリ<br>エ ネズミ　オ トカゲ　カ ヘビ',
-                  a:'イエ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'クジラ・ネズミはホニュウ類なので胎生。キンギョ（魚類）・ニワトリ（鳥類）・トカゲ・ヘビ（ハチュウ類）は卵生。' },
-                { q:'つぎの特ちょうを すべてもつ動物のなかまは何類か。<br>「一生 肺で呼吸する・体はかたいうろこでおおわれる・陸上にかたい殻のある卵を産む」',
-                  a:'ハチュウ類', alts:['は虫類','爬虫類','ハチュウ'], sol:'両生類は子のときえら呼吸なので当てはまらない。' },
-                { q:'節足動物について正しいものを1つ選びなさい。<br>ア 体の外側は外骨格でおおわれ、体やあしに節がある<br>イ 背骨をもつなかまである<br>ウ 内臓は外とう膜に包まれている<br>エ 成長するとき脱皮をしない<br>オ 昆虫類のあしは6本、体は頭部と腹部の2つ<br>カ クモ類は昆虫類にふくまれる',
-                  a:'ア', choices:['ア','イ','ウ','エ','オ','カ'], sol:'昆虫類の体は頭部・胸部・腹部の3つ。外とう膜は軟体動物の特ちょう。クモ類は昆虫類ではない。' },
-                { q:'<b>軟体動物</b>を すべて選びなさい。<br>ア シジミ　イ トンボ　ウ タコ<br>エ カニ　オ ナメクジ　カ ゴカイ',
+                { q:'セキツイ動物の分類について正しいものを1つ選びなさい。<br>ア 鳥類とホニュウ類は変温動物である<br>イ 魚類は肺で呼吸する<br>ウ ハチュウ類はうすい膜のような卵を水中に産む<br>エ ホニュウ類はすべて陸上でしか生活できない<br>オ 両生類は子のときえらと皮ふ、親になると肺と皮ふで呼吸する<br>カ 魚類・両生類・ハチュウ類は恒温動物である',
+                  a:'オ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'恒温動物は鳥類とホニュウ類だけ。ハチュウ類の卵は陸上でかたい殻。魚類はえら呼吸。クジラやイルカは水中で生活するホニュウ類。' },
+                { q:'<b>卵生</b>である動物を すべて選びなさい。<br>ア ウサギ　イ ペンギン　ウ サンショウウオ<br>エ クジラ　オ ワニ　カ コウモリ',
+                  a:'イウオ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
+                  sol:'ペンギン（鳥類）・サンショウウオ（両生類）・ワニ（ハチュウ類）は卵生。ウサギ・クジラ・コウモリはホニュウ類なので胎生。' },
+                { q:'つぎの特ちょうを すべてもつ動物のなかまは何類か。<br>「一生 えらで呼吸する・体はうろこでおおわれる・水中に殻のない卵を産む」',
+                  a:'魚類', alts:['ぎょるい'], sol:'一生えら呼吸なのは魚類。両生類は子のときだけえら呼吸。' },
+                { q:'節足動物について正しいものを1つ選びなさい。<br>ア 背骨をもつなかまである<br>イ 内臓は外とう膜に包まれている<br>ウ 成長するとき脱皮をしない<br>エ 体の外側は外骨格でおおわれ、体やあしに節がある<br>オ 昆虫類のあしは8本である<br>カ クモ類は昆虫類にふくまれる',
+                  a:'エ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'昆虫類のあしは6本、体は頭部・胸部・腹部の3つ。外とう膜は軟体動物の特ちょう。クモ類は昆虫類ではない。' },
+                { q:'<b>節足動物</b>を すべて選びなさい。<br>ア ザリガニ　イ アサリ　ウ カブトムシ<br>エ イカ　オ クモ　カ ミミズ',
                   a:'アウオ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'シジミ・タコ・ナメクジは軟体動物で、内臓が外とう膜に包まれる。トンボ・カニは節足動物。' },
-                { q:'オタマジャクシ（カエルの子）は、どこで呼吸しているか。2つ書きなさい。',
-                  a:'えらと皮ふ', kw:[['えら'],['皮ふ','ひふ','皮膚']], sol:'（解答例）えら と 皮ふ。親のカエルになると肺と皮ふで呼吸する。' },
-                { q:'肉食動物の目は顔の前についている。この目のつき方は、えものをとらえるうえでどんな点で都合がよいか、かんたんに説明しなさい。',
-                  a:'両目で見える範囲が重なり、えものまでの距離をつかみやすい',
-                  kw:[['両目','2つの目','りょうめ'],['きょり','距離','遠さ','立体']],
-                  sol:'（解答例）両目で見える範囲が重なるので、えものまでの距離を正確につかめるから。草食動物は目が横向きで視野が広い。' },
-                { q:'<b>ホニュウ類だけ</b>を組み合わせたものを1つ選びなさい。<br>ア イルカ・ペンギン　イ ゾウ・コウモリ　ウ ヤモリ・イモリ<br>エ カモノハシ・サンショウウオ　オ ワニ・カメ　カ サケ・カエル',
-                  a:'イ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'ゾウ・コウモリはどちらもホニュウ類。ペンギンは鳥類、イモリとサンショウウオは両生類。' }
+                  sol:'ザリガニ（甲かく類）・カブトムシ（昆虫類）・クモ（クモ類）が節足動物。アサリとイカは内臓が外とう膜に包まれた軟体動物、ミミズはそれ以外の無セキツイ動物。' },
+                { q:'親になったカエルは、どこで呼吸しているか。2つ書きなさい。',
+                  a:'肺と皮ふ', kw:[['肺'],['皮ふ','ひふ','皮膚']], sol:'（解答例）肺 と 皮ふ。子（オタマジャクシ）のときはえらと皮ふで呼吸する。' },
+                { q:'草食動物の目は顔の横についている。この目のつき方は、身を守るうえでどんな点で都合がよいか、かんたんに説明しなさい。',
+                  a:'見わたせる範囲が広く、近づく敵を早く見つけられる',
+                  kw:[['視野','見わたせ','見える範囲','広い','広く'],['敵','てき','おそわ','見つけ','気づ']],
+                  sol:'（解答例）見える範囲（視野）が広いので、まわりから近づく敵を早く見つけられるから。肉食動物は目が前向きで、えものまでの距離をつかみやすい。' },
+                { q:'<b>鳥類だけ</b>を組み合わせたものを1つ選びなさい。<br>ア ペンギン・ダチョウ　イ イルカ・クジラ　ウ ヤモリ・イモリ<br>エ カモノハシ・コウモリ　オ ワニ・カメ　カ サケ・カエル',
+                  a:'ア', choices:['ア','イ','ウ','エ','オ','カ'], sol:'ペンギンもダチョウも飛べないが鳥類。イルカ・クジラ・カモノハシ・コウモリはホニュウ類、イモリは両生類。' }
             ]},
             { n:'第三問　身のまわりの物質', pt:4, qs:[
-                { q:'<b>有機物</b>であるものを1つ選びなさい。<br>ア 食塩　イ 銅　ウ エタノール<br>エ ガラス　オ アルミニウム　カ 水',
-                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'有機物は炭素をふくみ、燃えると二酸化炭素と水ができる（砂糖・デンプン・エタノール・プラスチックなど）。' },
-                { q:'<b>金属に共通する性質</b>を すべて選びなさい。<br>ア 電気をよく通す　イ 磁石につく　ウ 熱をよく伝える<br>エ みがくと金属光沢が出る　オ 水にうく　カ 必ず銀色である',
-                  a:'アウエ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'磁石につくのは鉄など一部だけ。銅（赤）や金（黄）もあり、水にうくものはふつうない。' },
+                { q:'<b>無機物</b>であるものを1つ選びなさい。<br>ア 砂糖　イ エタノール　ウ プラスチック<br>エ 食塩　オ デンプン　カ ろう',
+                  a:'エ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'有機物は炭素をふくみ、燃えると二酸化炭素と水ができる（砂糖・デンプン・エタノール・プラスチック・ろうなど）。食塩は無機物。' },
+                { q:'<b>金属に共通する性質</b>を すべて選びなさい。<br>ア たたくとうすく広がる　イ 必ず磁石につく　ウ 電気をよく通す<br>エ 水にとける　オ みがくと金属光沢が出る　カ 熱をよく伝える',
+                  a:'アウオカ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
+                  sol:'金属に共通するのは「電気を通す・熱を伝える・金属光沢・たたくとのびて広がる（展性）」。磁石につくのは鉄など一部だけ。' },
                 { q:'物質の密度を求める式を「密度＝○○÷○○」の形で書きなさい。',
                   a:'質量÷体積', kw:[['質量','重さ'],['体積','かさ']], sol:'（解答例）密度(g/cm³) ＝ 質量(g) ÷ 体積(cm³)' },
-                { q:'質量63g、体積7cm³の金属がある。この金属の<b>密度</b>を求め、下の表から<b>金属の名前</b>も答えなさい。<br>'
+                { q:'質量237g、体積30cm³の金属がある。この金属の<b>密度</b>を求め、下の表から<b>金属の名前</b>も答えなさい。<br>'
                    + '［密度(g/cm³) アルミニウム2.7／鉄7.9／銅9.0／鉛11.4］<br>'
                    + '<span style="font-size:12px;color:#888;">（例：「9 銅」のように 数字と名前をつづけて書いてね）</span>',
-                  a:'9 銅', kw:[['9'],['銅','どう']],
-                  sol:'63÷7＝9 g/cm³。表から密度9.0は銅。（答え：9 g/cm³・銅）' },
-                { q:'二酸化炭素の性質として正しいものを1つ選びなさい。<br>ア 空気より軽く、水にたいへんよくとける<br>イ 石灰水に通すと白くにごる<br>ウ ものを燃やすはたらきがある<br>エ 刺激臭があり、水溶液はアルカリ性<br>オ 火のついた線香を近づけると音を立てて燃える<br>カ 空気中に約20%ふくまれている',
-                  a:'イ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'二酸化炭素は空気より重く、水に少しとけ、水溶液は酸性。助燃性は酸素、音を立てて燃えるのは水素。' },
-                { q:'水にとけにくく、<b>水上置換法</b>で集めるのに適した気体を すべて選びなさい。<br>ア 水素　イ アンモニア　ウ 酸素<br>エ 塩化水素　オ 窒素　カ 塩素',
-                  a:'アウオ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
-                  sol:'水素・酸素・窒素は水にとけにくい。アンモニア・塩化水素は水に非常によくとけ、塩素もとけるので適さない。' },
-                { q:'白い粉末A・Bを燃焼さじにとって加熱したところ、Aは黒くこげて炭になり、Bは変化しなかった。<br>Aは有機物・無機物のどちらか。また、そう判断できる理由も書きなさい。',
-                  a:'有機物。加熱すると黒くこげて炭が残ったから',
-                  kw:[['有機物'],['炭','炭素','こげ','炭化']],
-                  sol:'（解答例）有機物。加熱すると黒くこげて炭（炭素）が残ったから。' },
-                { q:'状態変化について正しいものを1つ選びなさい。<br>ア 状態変化すると質量が変化する<br>イ 水は氷になると体積が小さくなる<br>ウ 粒子の数は変わらず、粒子の運動と集まり方が変わる<br>エ 状態変化すると別の物質に変わる<br>オ 液体が気体になると体積は小さくなる<br>カ 純粋な物質でも沸騰中は温度が上がり続ける',
-                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'状態変化では物質の種類も質量も粒子の数も変わらず、体積だけが変わる。水は例外で氷になると体積がふえる。純物質の沸騰中は温度が一定。' }
+                  a:'7.9 鉄', kw:[['7.9'],['鉄','てつ']],
+                  sol:'237÷30＝7.9 g/cm³。表から密度7.9は鉄。（答え：7.9 g/cm³・鉄）' },
+                { q:'酸素の性質として正しいものを1つ選びなさい。<br>ア 石灰水に通すと白くにごる<br>イ 空気より軽く、水にたいへんよくとける<br>ウ 火のついた線香を近づけると、ほのおを上げて激しく燃える<br>エ 刺激臭があり、水溶液はアルカリ性<br>オ マッチの火を近づけると音を立てて燃える<br>カ 空気中に約78%ふくまれている',
+                  a:'ウ', choices:['ア','イ','ウ','エ','オ','カ'], sol:'酸素にはものを燃やすはたらき（助燃性）がある。石灰水を白くにごらせるのは二酸化炭素、音を立てて燃えるのは水素、空気の約78%は窒素。' },
+                { q:'水にとけやすく、空気より重いので<b>下方置換法</b>で集めるのに適した気体を すべて選びなさい。<br>ア 水素　イ 二酸化炭素　ウ アンモニア<br>エ 塩化水素　オ 酸素　カ 塩素',
+                  a:'イエカ', multi:true, choices:['ア','イ','ウ','エ','オ','カ'],
+                  sol:'二酸化炭素・塩化水素・塩素は水にとけて空気より重い。水素と酸素は水にとけにくいので水上置換法、アンモニアは空気より軽いので上方置換法。' },
+                { q:'砂糖を燃焼さじにとって加熱し、火をつけて燃やした。出てきた気体を集めて石灰水に通すと白くにごった。<br>このことから、砂糖には何がふくまれているといえるか。',
+                  a:'炭素', kw:[['炭素']], sol:'（解答例）炭素。石灰水を白くにごらせる気体は二酸化炭素で、それがふくまれる炭素からできる。だから砂糖は有機物である。' },
+                { q:'状態変化について正しいものを1つ選びなさい。<br>ア 粒子の数は変わらず、粒子の運動と集まり方が変わる<br>イ 状態変化すると物質の質量が変化する<br>ウ 水は氷になると体積が小さくなる<br>エ 状態変化すると別の物質に変わる<br>オ 液体が気体になると体積は小さくなる<br>カ 純粋な物質でも沸騰中は温度が上がり続ける',
+                  a:'ア', choices:['ア','イ','ウ','エ','オ','カ'], sol:'状態変化では物質の種類も質量も粒子の数も変わらず、体積だけが変わる。水は例外で氷になると体積がふえる。純物質の沸騰中は温度が一定。' }
             ]}
         ]
     };
-    // 📝 社会（2日め 14:45〜15:15）
+
+    // ---------- 🌏 社会（地理：世界と日本の地域構成／世界のさまざまな地域）25問×4点＝100点 ----------
     const NOBI_EXAM_SO = {
-        id:'nobi-summer-2026-shakai', title:'のびログ夏休み定期テスト（社会）', users:['u1'],
-        show:'2026-8-29 00:00', stand:'2026-8-31 14:35', start:'2026-8-31 14:45', end:'2026-8-31 15:15',
-        limit:30, range:'世界と日本の地理・古代〜中世の歴史（中1）',
+        id:'nobi-teiki-01-shakai', title:'のびログ定期テスト（社会・地理）', users:['u1'],
+        always:true, limit:40, range:'世界と日本の地域構成・世界のさまざまな地域（中1地理）',
         parts:[
-            { n:'第一問　世界の地理', pt:4, qs:[
-                { q:'地球を南北に分ける、緯度0度の線を何というか。', a:'赤道', alts:['せきどう'] },
-                { q:'イギリスのロンドンを通る、経度0度の線を何というか。', a:'本初子午線', alts:['ほんしょしごせん'] },
-                { q:'六大陸のうち、いちばん面積が大きい大陸を答えなさい。', a:'ユーラシア大陸', alts:['ユーラシア'] },
-                { q:'一年中暑く、雨が多くて熱帯林が広がる気候帯を何というか。', a:'熱帯', alts:['ねったい'] },
-                { q:'イスラム教で、信者が1日に何回いのりをするか。数字で答えなさい。', a:'5', unit:'回' },
-                { q:'日本の標準時子午線は東経何度か。数字で答えなさい。', a:'135', unit:'度' }
+            { n:'第一問　世界と日本の地域構成', pt:4, qs:[
+                { q:'地球の表面のうち、陸地と海洋の面積の割合はおよそ何対何か。「3対7」のような形で答えなさい。',
+                  a:'3対7', alts:['3:7','三対七','3：7'], sol:'陸地：海洋 ＝ およそ 3：7' },
+                { q:'六大陸のうち、<b>2番目に</b>面積が大きい大陸の名前を答えなさい。',
+                  a:'アフリカ大陸', alts:['アフリカ'], sol:'1位ユーラシア大陸、2位アフリカ大陸、3位北アメリカ大陸。' },
+                { q:'三大洋のうち、いちばん面積が大きい大洋の名前を答えなさい。',
+                  a:'太平洋', alts:['たいへいよう'], sol:'三大洋は 太平洋・大西洋・インド洋。いちばん広いのは太平洋。' },
+                { q:'イギリスのロンドン（旧グリニッジ天文台）を通る、経度0度の線を何というか。',
+                  a:'本初子午線', alts:['ほんしょしごせん'] },
+                { q:'緯度0度の線を何というか。', a:'赤道', alts:['せきどう'] },
+                { q:'地球儀とくらべたとき、世界地図（平面の地図）には必ず生じてしまう欠点がある。それはどのようなことか、かんたんに書きなさい。',
+                  a:'距離・面積・方位・形をすべて同時に正しく表すことはできない',
+                  kw:[['同時','すべて','ぜんぶ','いちどに','全部'],['正しく','正確','表せ','できな','ゆがみ','ひずみ']],
+                  sol:'（解答例）球面を平面にするため、距離・面積・方位・形をすべて同時に正しく表すことはできない（必ずゆがみが生じる）。' },
+                { q:'日本の標準時子午線（東経135度）が通る、兵庫県の都市名を答えなさい。',
+                  a:'明石市', alts:['明石','あかし','あかしし'] },
+                { q:'日本とロンドンの時差は何時間か。数字で答えなさい。', a:'9', unit:'時間',
+                  sol:'135÷15＝9。日本のほうが9時間進んでいる。' },
+                { q:'日本の国土面積はおよそ何万km²か。1つ選びなさい。<br>ア 18万　イ 38万　ウ 58万　エ 78万',
+                  a:'イ', choices:['ア','イ','ウ','エ'], sol:'約38万km²。' },
+                { q:'北方領土は、現在どの国との間で問題となっているか。国名を答えなさい。',
+                  a:'ロシア', alts:['ロシア連邦','ろしあ'], sol:'北方領土＝ロシア、竹島＝韓国、尖閣諸島＝中国（いずれも日本固有の領土）。' },
+                { q:'沿岸から200海里までの、水産資源や鉱産資源を沿岸国が利用できる範囲を何というか。',
+                  a:'排他的経済水域', alts:['はいたてきけいざいすいいき','EEZ','eez'] },
+                { q:'日本の都道府県の数はいくつか。数字で答えなさい。', a:'47', sol:'1都1道2府43県で47。' }
             ]},
-            { n:'第二問　日本の地理', pt:4, qs:[
-                { q:'日本の国土のおよそ何分の3が山地・丘陵か。「4分の3」のような形で答えなさい。', a:'4分の3', alts:['3/4','四分の三'] },
-                { q:'冬に日本海側へ大雪をもたらす、北西から吹く風を何というか。', a:'季節風', alts:['きせつふう','モンスーン'] },
-                { q:'日本アルプスの東側にあり、日本を東西に分ける大きな溝を何というか。', a:'フォッサマグナ', alts:['ふぉっさまぐな'] },
-                { q:'日本でいちばん長い川の名前を答えなさい。', a:'信濃川', alts:['しなのがわ'] },
-                { q:'関東平野に広がる、火山灰が積もった赤土を何というか。', a:'関東ローム', alts:['ローム','関東ローム層'] },
-                { q:'日本を7つに分けたとき、東京都がふくまれる地方を何地方というか。', a:'関東', alts:['関東地方'] }
+            { n:'第二問　人々の生活と環境', pt:4, qs:[
+                { q:'世界の気候帯を5つ書きなさい。',
+                  a:'熱帯・乾燥帯・温帯・亜寒帯（冷帯）・寒帯',
+                  kw:[['熱帯'],['乾燥帯','乾燥'],['温帯'],['亜寒帯','冷帯'],['寒帯']],
+                  sol:'（解答例）熱帯・乾燥帯・温帯・亜寒帯（冷帯）・寒帯' },
+                { q:'寒帯の地域でイヌイットが、雪や氷を使って作ってきた伝統的な住居を何というか。',
+                  a:'イグルー', alts:['いぐるー'], sol:'イグルー。あざらしやカリブーの狩りをして、肉や毛皮を利用してきた。' },
+                { q:'乾燥した土地で、水が得られる場所を中心に人々が生活している土地を何というか。',
+                  a:'オアシス', alts:['おあしす'] },
+                { q:'標高の高いアンデス山脈で飼育され、荷物の運搬や毛の利用に使われている家畜を2つ答えなさい。',
+                  a:'リャマ・アルパカ', kw:[['リャマ','ラマ'],['アルパカ']], sol:'（解答例）リャマ と アルパカ' },
+                { q:'イスラム教で、信者が聖地メッカに向かって1日に何回いのり（礼拝）をするか。数字で答えなさい。',
+                  a:'5', unit:'回' },
+                { q:'イスラム教で、食べることが禁じられている肉を答えなさい。',
+                  a:'豚肉', alts:['ぶたにく','豚','ぶた'] }
             ]},
-            { n:'第三問　古代の歴史', pt:4, qs:[
-                { q:'大きな古墳が各地につくられた時代を何時代というか。', a:'古墳', alts:['古墳時代'] },
-                { q:'593年に摂政となり、十七条の憲法を定めた人物はだれか。', a:'聖徳太子', alts:['厩戸王','うまやどのおう'] },
-                { q:'645年に始まった、天皇中心の国づくりを目指した改革を何というか。', a:'大化の改新', alts:['たいかのかいしん'] },
-                { q:'710年に都が置かれた場所を何というか。', a:'平城京', alts:['へいじょうきょう'] },
-                { q:'聖武天皇が国ごとに建てさせた寺を何というか。', a:'国分寺', alts:['こくぶんじ'] },
-                { q:'794年に都を京都に移した天皇はだれか。', a:'桓武天皇', alts:['かんむてんのう','桓武'] }
-            ]},
-            { n:'第四問　中世の歴史', pt:4, qs:[
-                { q:'1192年に征夷大将軍となり、鎌倉に幕府を開いた人物はだれか。', a:'源頼朝', alts:['みなもとのよりとも'] },
-                { q:'将軍と御家人が、御恩と奉公で結ばれた関係を何というか。', a:'封建制度', alts:['ほうけんせいど','封建'] },
-                { q:'1274年と1281年に元が日本に攻めてきたできごとを何というか。', a:'元寇', alts:['げんこう','蒙古襲来'] },
-                { q:'室町幕府を開いた人物はだれか。', a:'足利尊氏', alts:['あしかがたかうじ'] },
-                { q:'室町時代に、村の農民が自分たちで村を運営したしくみを何というか。', a:'惣村', alts:['そう','惣'] },
-                { q:'鎌倉幕府で、将軍を助けて政治を行った役職を何というか。', a:'執権', alts:['しっけん'] },
-                { q:'1338年に室町幕府が開かれた都市はどこか。', a:'京都', alts:['きょうと'] }
+            { n:'第三問　世界のさまざまな地域', pt:4, qs:[
+                { q:'中国が1979年から2015年ごろまで行っていた、人口の増加をおさえる政策を何というか。',
+                  a:'一人っ子政策', alts:['ひとりっこせいさく','一人っ子'] },
+                { q:'東南アジアの10か国が加盟している地域協力組織の略称を、アルファベットで答えなさい。',
+                  a:'ASEAN', alts:['asean','アセアン'] },
+                { q:'西アジアの産油国などが、石油の生産量や価格について話し合うためにつくった組織の略称を、アルファベットで答えなさい。',
+                  a:'OPEC', alts:['opec','オペック'], sol:'石油輸出国機構（OPEC）。' },
+                { q:'ヨーロッパ連合（EU）の共通通貨の名前を答えなさい。', a:'ユーロ', alts:['ゆーろ','euro'] },
+                { q:'EUがかかえている課題を、「経済格差」ということばを使って説明しなさい。',
+                  a:'加盟国の間に経済格差があり、賃金の安い国から高い国へ労働者が移動して問題が起きている',
+                  kw:[['経済格差','格差'],['労働者','はたらく人','移動','出かせぎ','仕事','雇用']],
+                  sol:'（解答例）西ヨーロッパと東ヨーロッパの間に経済格差があり、賃金の安い国から高い国へ労働者が移動して、雇用の問題が起きている。' },
+                { q:'特定の農産物や鉱産資源の輸出にたよっている経済を何というか。',
+                  a:'モノカルチャー経済', alts:['モノカルチャー','ものかるちゃー経済'],
+                  sol:'価格や生産量の変動で、国の収入が不安定になるという問題がある。' },
+                { q:'オーストラリアがかつて行っていた、白人以外の移民を制限する政策を何というか。',
+                  a:'白豪主義', alts:['はくごうしゅぎ'] }
             ]}
         ]
     };
-    const NOBI_EXAMS = [NOBI_EXAM, NOBI_EXAM_EN, NOBI_EXAM_JP, NOBI_EXAM_SC, NOBI_EXAM_SO];
+
+    const NOBI_EXAMS = [NOBI_EXAM_MA, NOBI_EXAM_JP, NOBI_EXAM_EN, NOBI_EXAM_SC, NOBI_EXAM_SO];
     // 自分あてで、いま出すべきテストをぜんぶ返す
     function exList(uid) { return NOBI_EXAMS.filter(e => (e.users || []).indexOf(uid || currentUserId) >= 0); }
     function exFor(uid) { const l = exList(uid); return l.length ? l[0] : null; }
@@ -13928,7 +14591,9 @@
     function exQs(ex) { const out = []; (ex.parts || []).forEach(p => (p.qs || []).forEach(q => out.push(Object.assign({ pt:p.pt, part:p.n }, q)))); return out; }
     function exTotal(ex) { return exQs(ex).reduce((a, q) => a + q.pt, 0); }
     // いまの状態（オンラインの時こくで判定する）
+    //   always:true のテストは 日づけのカギがなく、いつでも受けられる
     function exState(ex) {
+        if(ex.always) return { k:'open', always:true, ms: Infinity };
         const now = mNow().getTime();
         const show = exParse(ex.show).getTime(), stand = exParse(ex.stand).getTime();
         const st = exParse(ex.start).getTime(), en = exParse(ex.end).getTime();
@@ -13964,13 +14629,23 @@
         if(hit > 0) return 0.5;
         return 0;
     }
+    // 単位（℃・円・人・m・分…）を書いてしまっても正解にするため、うしろの単位だけ取りのぞく
+    //   ★問題に unit が書いてあるときだけ働く（英語の答え "am" から "m" を消す、のような事故を防ぐ）
+    function exStripUnit(v, unit) {
+        let t = String(v == null ? '' : v).trim();
+        const u = String(unit == null ? '' : unit).trim();
+        if(!u) return t;
+        if(t.length > u.length && t.slice(-u.length) === u) t = t.slice(0, -u.length).trim();
+        return t;
+    }
     // その問題が何点とれたか（0〜満点）
     function exQScore(user, q) {
         if(q.multi) {                                  // すべて選ぶ問題：ぜんぶ合って満点（順番は自由）
             return exMultiNorm(user) === exMultiNorm(q.a) ? q.pt : 0;
         }
         if(q.kw) return Math.round(q.pt * exKwScore(user, q) * 10) / 10;
-        return exEq(user, q.a) || (q.alts || []).some(x => exEq(user, x)) ? q.pt : 0;
+        const u = exStripUnit(user, q.unit);
+        return exEq(u, q.a) || (q.alts || []).some(x => exEq(u, x)) ? q.pt : 0;
     }
     // 複数えらぶ問題は「ならび順ちがい・区切り文字ちがい」を許して、記号の集合でくらべる
     function exMultiNorm(v) {
@@ -13991,13 +14666,13 @@
         return false;
     }
     // ---------- 🎉 ぜんぶ終わったあとの「おつかれさま」 ----------
-    //   2日めの最後（社会）が終わったら出る。次回予告は「冬休み」だけで、日にちは言わない
+    //   5教科ぜんぶ提出したら出る（日づけのカギがあるテストは、しめ切りをすぎても出る）
     function exAllDoneHtml() {
         const list = exList(); if(list.length < 2) return '';
-        const last = list.slice().sort((a, b) => exParse(b.end) - exParse(a.end))[0];
-        if(mNow().getTime() <= exParse(last.end).getTime()) return '';   // まだ全部おわっていない
         const recs = list.map(e => ({ e, d: exLoad(e) }));
         const took = recs.filter(x => x.d && x.d.submitted);
+        const overdue = list.every(e => !e.always && mNow().getTime() > exParse(e.end).getTime());
+        if(took.length < list.length && !overdue) return '';   // まだ全部おわっていない
         if(!took.length) return '';
         const sum = took.reduce((a, x) => a + x.d.score, 0);
         const max = took.reduce((a, x) => a + x.d.total, 0);
@@ -14007,31 +14682,30 @@
             <div style="text-align:center;">
               <div style="font-size:44px;">🎉</div>
               <div style="font-size:22px;font-weight:bold;">おつかれさま！</div>
-              <div style="font-size:14px;color:#888;margin-top:4px;">のびログ夏休み定期テスト ぜんぶ終わり</div>
+              <div style="font-size:14px;color:#888;margin-top:4px;">のびログ定期テスト 5教科ぜんぶ終わり</div>
               <div style="font-size:30px;font-weight:bold;color:#b7950b;margin-top:10px;">${sum} / ${max}点</div>
               <div style="font-size:14px;">（${pct}%）　${esc(word)}</div>
             </div>
             <div class="m-tw" style="margin-top:10px;"><table class="m-gtab"><tbody>
-              ${recs.map(x => `<tr><td>${esc(x.e.title.replace('のびログ夏休み定期テスト', '').replace(/[（）()]/g, '') || '数学')}</td>
+              ${recs.map(x => `<tr><td>${esc(x.e.title.replace('のびログ定期テスト', '').replace(/[（）()]/g, '') || '数学')}</td>
                 <td class="r">${x.d && x.d.submitted ? `<b>${x.d.score}</b>/${x.d.total}点` : '<span style="color:#bbb;">受けていない</span>'}</td>
                 <td class="r">${x.d && x.d.submitted ? `<button class="m-btn m-info" onclick="exResult('${x.e.id}')">見る</button>` : ''}</td></tr>`).join('')}
             </tbody></table></div>
-            <div class="m-learn" style="margin-top:10px;">🌟 2日間、5教科ぜんぶ受けきったね。<br>
+            <div class="m-learn" style="margin-top:10px;">🌟 5教科ぜんぶ受けきったね。<br>
             点数よりも大事なのは<b>「できなかった所が分かった」</b>こと。まちがえた問題は、📖勉強で同じ単元をもう一度やってみよう。<br><br>
-            <b>📣 次回予告</b><br>
-            つぎの のびログ定期テストは <b>冬休み</b> にやるよ。<br>
-            日にちは、そのときになったら お知らせします。それまで ゆっくり休んで、また少しずつ積み上げていこう！</div></div>`;
+            もう一度ちょうせんしたいテストは、下のカードの<b>「もう一度うける」</b>から やり直せるよ。</div></div>`;
     }
-    // ---------- 📝 夏休み定期テストの画面 ----------
+    // ---------- 📝 定期テストの画面 ----------
     let exNow = null, exTimer = null, exTick = null;
     function exCardHtml(ex) {
         ex = ex || exFor();
-        if(!ex || !Array.isArray(ex.parts) || !ex.start) return '';   // テストのデータでなければ 何も出さない
+        if(!ex || !Array.isArray(ex.parts) || (!ex.start && !ex.always)) return '';   // テストのデータでなければ 何も出さない
         const st = exState(ex); if(st.k === 'hidden') return '';
         const done = exLoad(ex);
         const total = exTotal(ex), nq = exQs(ex).length;
-        const ds = exParse(ex.start), de = exParse(ex.end);
-        const when = `${ds.getMonth()+1}月${ds.getDate()}日（${'日月火水木金土'[ds.getDay()]}）`
+        const ds = ex.always ? null : exParse(ex.start), de = ex.always ? null : exParse(ex.end);
+        const when = ex.always ? 'いつでも'
+            : `${ds.getMonth()+1}月${ds.getDate()}日（${'日月火水木金土'[ds.getDay()]}）`
             + `${String(ds.getHours()).padStart(2,'0')}:${String(ds.getMinutes()).padStart(2,'0')} 〜 `
             + `${String(de.getHours()).padStart(2,'0')}:${String(de.getMinutes()).padStart(2,'0')}`;
         const fmt = (ms) => { const s2 = Math.floor(ms / 1000); const h = Math.floor(s2 / 3600), mi = Math.floor((s2 % 3600) / 60), se = s2 % 60;
@@ -14043,7 +14717,18 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div class="m-ok" style="text-align:center;font-size:16px;">✅ 提出ずみ<br>
                   <b style="font-size:32px;">${done.score}点</b> / ${total}点（${pct}%）</div>
-                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult('${ex.id}')">📊 答え合わせと解説を見る</button></div>`;
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;" onclick="exResult('${ex.id}')">📊 答え合わせと解説を見る</button>
+                ${ex.always ? `<button class="btn" style="background:#95a5a6;color:#fff;width:100%;margin-top:6px;" onclick="exRetake('${ex.id}')">🔁 もう一度うける（記録は上書き）</button>` : ''}</div>`;
+        }
+        // ── いつでも受けられる（日づけのカギなし） ──
+        if(st.always) {
+            return `<div class="m-card" style="border:3px solid #8e44ad;background:linear-gradient(180deg,rgba(142,68,173,.12),transparent);">
+                <b>📝 ${esc(ex.title)}</b>
+                <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
+                <div class="m-row"><span>いつ受けられる</span><b>🟢 いつでも</b></div>
+                <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分（時間になると自動で提出）</b></div>
+                <button class="btn" style="background:#8e44ad;color:#fff;width:100%;margin-top:10px;font-size:18px;" onclick="exStart('${ex.id}')">▶️ テストを始める</button>
+                <div class="m-learn">💡 えんぴつと紙を用意してから始めよう。できる問題から先にやると点がのびるよ。</div></div>`;
         }
         // ── まだ日が来ていない（灰色） ──
         if(st.k === 'soon') {
@@ -14104,11 +14789,19 @@
             if(redraw) { clearInterval(exTick); renderOtTake(); }
         }, 500);
     }
+    // 🔁 いつでも受けられるテストだけ、受けなおせるようにする（前の記録は消える）
+    function exRetake(id) {
+        const ex = exById(id); if(!ex || !ex.always) return;
+        const d = exLoad(ex);
+        if(d && d.submitted && !confirm(`「${ex.title}」をもう一度うける？\n\n前の記録（${d.score}点）は消えて、新しい点に上書きされるよ。`)) return;
+        try { localStorage.removeItem(exKey(ex)); } catch(e) {}
+        renderOtTake();
+    }
     function exStart(id) {
         const ex = id ? exById(id) : exFor(); if(!ex) return;
         if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
         if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
-        if(!confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（20:30で自動ていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
+        if(!confirm(`「${ex.title}」を始める？\n\n⏰ ${ex.limit}分（時間になったら自動でていしゅつ）\n全${exQs(ex).length}問・${exTotal(ex)}点\n\n始めたら最後までやりきろう！`)) return;
         exNow = { ex, ans: exQs(ex).map(() => ''), t0: Date.now() };
         exRender();
         clearInterval(exTimer);
@@ -14194,7 +14887,7 @@
                       total:exTotal(ex), min:Math.round((Date.now() - exNow.t0) / 60000) };
         exSave(ex, rec);
         // 記録も残す（成績・オンライン保存にのる）
-        try { hwRecord && hwRecord('test', { subj:'夏休み定期テスト', unit:ex.range, level:3, pct:Math.round(score / rec.total * 100) }); } catch(e) {}
+        try { hwRecord && hwRecord('test', { subj:'のびログ定期テスト', unit:ex.range, level:3, pct:Math.round(score / rec.total * 100) }); } catch(e) {}
         try { vbRecord('exam', score); } catch(e) {}
         exNow = null;
         playSfx(score >= rec.total * 0.6 ? 'finish' : 'wrong');
@@ -14353,7 +15046,7 @@
             await otPost('/tests', { title: otDraft.title.trim(), limit: otDraft.limit, by: currentUserId,
                                      items: otDraft.items.filter(x => (x.q || '').trim() || (x.a || '').trim()), files: otDraft.files });
             otDraft = { title:'', limit:20, items:[], files:[] };
-            alert('🚀 出したよ！2人の「📩テスト（オンライン）」に出てくるよ。');
+            alert('🚀 出したよ！2人の「📩 なおが出したテスト」に出てくるよ。');
             renderOtMake();
         } catch(e) { alert('出せなかった…オンラインにつながっているか確認してね\n（' + e.message + '）'); }
     }
@@ -14372,13 +15065,45 @@
         catch(e) { alert('消せなかった…（' + e.message + '）'); }
     }
 
-    // ---------- 📩 うける（2人とも） ----------
+    // ---------- 📝 定期テストの画面（5教科ぶんのカードをならべる） ----------
     function renderOtTake() {
         const box = document.getElementById('ottake-body'); if(!box) return;
+        // 🔒 なお 以外には 問題を1問も出さない（メニューにも出していないが、念のため）
+        if(!isOwner()) { exNow = null; box.innerHTML = '<div class="m-warn">📝 定期テストは <b>なお</b> のアカウントだけで使えるよ。</div>'; return; }
         if(exNow) { exRender(); return; }                       // テスト中は そのまま
-        const exH = exAllDoneHtml() + exList().map(e => exCardHtml(e)).join('');  // 🎉おつかれさま ＋ 📝夏休み定期テスト
-        box.innerHTML = exH + '<div class="m-card">オンラインからテストをさがしています…</div>';
-        if(exH) exStartTick();
+        const list = exList();
+        if(!list.length) {
+            box.innerHTML = `<div class="m-card"><b>📭 いま定期テストは出ていないよ</b>
+                <div style="font-size:13px;color:#888;margin-top:6px;">つぎのテストができたら、ここに出てくるよ。</div></div>`;
+            return;
+        }
+        // 5教科ぜんぶの ようす（何教科おわったか・いまの合計点）
+        const recs = list.map(e => ({ e, d: exLoad(e), total: exTotal(e) }));
+        const done = recs.filter(x => x.d && x.d.submitted);
+        const sum = done.reduce((a, x) => a + x.d.score, 0);
+        const max = recs.reduce((a, x) => a + x.total, 0);
+        let h = `<div class="m-card" style="border:3px solid #8e44ad;">
+            <div style="text-align:center;">
+              <div style="font-size:20px;font-weight:bold;">📝 のびログ定期テスト</div>
+              <div style="font-size:13px;color:#888;margin-top:2px;">5教科・各100点（ぜんぶで${max}点）／いつでも受けられるよ</div>
+              <div style="font-size:26px;font-weight:bold;color:#8e44ad;margin-top:8px;">${sum} / ${max}点</div>
+              <div style="font-size:13px;color:#888;">${done.length} / ${list.length} 教科おわり</div>
+            </div>
+            <div class="m-tw" style="margin-top:8px;"><table class="m-gtab"><tbody>
+              ${recs.map(x => `<tr><td>${esc(x.e.title.replace('のびログ定期テスト', '').replace(/[（）()]/g, '') || '教科')}</td>
+                <td class="r">${x.d && x.d.submitted ? `<b>${x.d.score}</b>/${x.total}点` : '<span style="color:#bbb;">まだ</span>'}</td></tr>`).join('')}
+            </tbody></table></div></div>`;
+        h += exAllDoneHtml();                                   // 🎉 5教科ぜんぶ終わったら
+        h += list.map(e => exCardHtml(e)).join('');             // 📝 教科ごとのカード
+        box.innerHTML = h;
+        exStartTick();
+    }
+    // ---------- 📩 なおが出したテストを うける（2人とも） ----------
+    //   ★定期テストとは別の画面。りらんも使うので、なお専用にはしない
+    function renderOtList() {
+        const box = document.getElementById('ottest-body'); if(!box) return;
+        if(otNow) return;                                       // テスト中は そのまま
+        box.innerHTML = '<div class="m-card">オンラインからテストをさがしています…</div>';
         Promise.all([otLoadTests(), otLoadAnswers().catch(() => [])]).then(() => {
             let h = '';
             if(!otCacheTests.length) h += `<div class="m-card"><b>📭 いまテストは出ていないよ</b>
@@ -14398,16 +15123,14 @@
                 }
                 h += `</div>`;
             });
-            box.innerHTML = exH + h;
-            if(exH) exStartTick();
-        }).catch(e => { box.innerHTML = exH + `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`;
-            if(exH) exStartTick(); });
+            box.innerHTML = h;
+        }).catch(e => { box.innerHTML = `<div class="m-warn">オンラインにつながらなかったよ（${esc(e.message)}）<br>電波のいいところで、もう一度ひらいてみてね。</div>`; });
     }
     function otStart(id, again) {
         const t = otCacheTests.find(x => x.id === id); if(!t) return;
         if(!confirm(`「${t.title}」を始める？\n⏰ 制限時間 ${t.limit}分（時間になったら自動で提出）\n\n始めたら最後までやりきろう！`)) return;
         otNow = { t, answers: (t.items || []).map(() => '') };
-        const box = document.getElementById('ottake-body');
+        const box = document.getElementById('ottest-body');
         let h = `<div class="m-card" style="border:3px solid #e74c3c;"><b>📝 ${esc(t.title)}</b>
             <div class="m-desc">全${(t.items||[]).length}問／制限時間 ${t.limit}分</div></div>`;
         (t.files || []).forEach((f, i) => {
@@ -14449,7 +15172,7 @@
         otTimer = setInterval(() => {
             otRemain--;
             const t = document.getElementById('timer-text');
-            if(!t || !document.getElementById('view-ottake').classList.contains('active')) { otStopTimer(); return; }
+            if(!t || !document.getElementById('view-ottest').classList.contains('active')) { otStopTimer(); return; }
             t.innerText = otFmt(Math.max(0, otRemain));
             box.classList.remove('timer-caution', 'timer-warn', 'timer-danger');
             if(otRemain <= 60) box.classList.add('timer-danger');
@@ -14463,7 +15186,7 @@
         const box = document.getElementById('timer-box');
         if(box) { box.style.display = 'none'; box.classList.remove('timer-caution', 'timer-warn', 'timer-danger'); }
     }
-    function otQuit() { if(!confirm('やめる？答えは保存されないよ')) return; otStopTimer(); otNow = null; renderOtTake(); }
+    function otQuit() { if(!confirm('やめる？答えは保存されないよ')) return; otStopTimer(); otNow = null; renderOtList(); }
     async function otSubmit(auto) {
         if(!otNow) return;
         if(!auto && !confirm('提出する？あとから見直せないよ')) return;
@@ -14475,7 +15198,7 @@
             otNow = null;
             alert('✅ 提出したよ！おつかれさま。\nなおが採点したら、ここで点数が見られるよ。');
             if(nq > 0) { motiAddDone(nq); flowerAddActivity(); gameOnActivity(nq, { correct:0 }); }
-            renderOtTake();
+            renderOtList();
         } catch(e) { alert('提出できなかった…電波のいいところでもう一度ためしてね\n（' + e.message + '）'); }
     }
     function otShowResult(id) {
