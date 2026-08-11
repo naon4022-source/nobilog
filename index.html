@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport-meta" content="width=device-width, initial-scale=1.0">
     <title>🌱 のびログ</title>
+    <!-- 📲 アプリ版（ホーム画面に入れると、アイコンから全画面でひらく） -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#27ae60">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="のびログ">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* ====== ベースデザイン ====== */
@@ -492,6 +501,20 @@
         .chat-edit-note { max-width:720px; margin:8px auto 0; font-size:13px; color:#e67e22; font-weight:bold; }
         .chat-state { max-width:720px; margin:6px auto 0; font-size:12px; color:#888; text-align:right; min-height:16px; }
         @media (max-width:600px) { .chat-body { max-width:80%; } .chat-log { height:52vh; } }
+        /* ================= 📲 アプリ版（ホーム画面に入れる） ================= */
+        #offline-bar { position:fixed; left:0; right:0; bottom:0; z-index:4700; background:#e67e22; color:#fff; text-align:center; padding:9px 14px; font-size:13px; line-height:1.6; box-shadow:0 -2px 12px rgba(0,0,0,.25); }
+        #pwa-overlay { display:none; position:fixed; inset:0; z-index:4800; background:rgba(0,0,0,.5); overflow-y:auto; padding:16px 14px; }
+        #pwa-overlay.on { display:block; }
+        .pwa-card { max-width:440px; margin:20px auto; background:var(--box-bg); color:var(--text-color); border-radius:18px; padding:22px 20px; box-shadow:0 12px 44px rgba(0,0,0,.35); }
+        .pwa-icon { width:78px; height:78px; border-radius:19px; display:block; margin:0 auto 12px; box-shadow:0 4px 14px rgba(0,0,0,.18); }
+        .pwa-title { text-align:center; font-size:20px; font-weight:bold; margin:0 0 6px; }
+        .pwa-sub { text-align:center; font-size:13px; color:#888; margin:0 0 18px; line-height:1.7; }
+        .pwa-step { display:flex; gap:10px; align-items:flex-start; margin:11px 0; font-size:14px; line-height:1.65; }
+        .pwa-num { flex:none; width:24px; height:24px; border-radius:50%; background:#27ae60; color:#fff; font-size:13px; font-weight:bold; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+        .pwa-key { background:var(--bg-color); border:1px solid var(--border-color); border-radius:6px; padding:1px 7px; font-weight:bold; white-space:nowrap; }
+        .pwa-btn { width:100%; background:#27ae60; color:#fff; border:none; border-radius:12px; padding:14px; font-size:16px; font-weight:bold; cursor:pointer; margin-top:16px; font-family:inherit; }
+        .pwa-later { width:100%; background:none; border:none; color:#888; font-size:13px; padding:12px; cursor:pointer; font-family:inherit; }
+        .pwa-note { font-size:12px; color:#888; line-height:1.8; margin-top:14px; border-top:1px dashed var(--border-color); padding-top:12px; }
     </style>
 </head>
 <body>
@@ -521,6 +544,22 @@
         </div>
     </div>
 </div>
+
+<!-- 📲 アプリ版のすすめ（ウェブ版で開いたときだけ出す。アプリ版では出さない） -->
+<div id="pwa-overlay" class="no-print">
+    <div class="pwa-card">
+        <img src="/icon-192.png" alt="のびログ" class="pwa-icon" onerror="this.style.display='none';">
+        <div class="pwa-title">📲 のびログをアプリにする</div>
+        <div class="pwa-sub">ホーム画面にアイコンがならんで、全画面でひらくよ。<br>電波がないところでも 📖 勉強 ができる。</div>
+        <div id="pwa-steps"></div>
+        <button class="pwa-btn" id="pwa-install-btn" style="display:none;" onclick="pwaDoInstall()">📲 アプリにする</button>
+        <button class="pwa-later" onclick="pwaClose()">あとでね</button>
+        <div class="pwa-note">記録はこれまでと同じところに残るよ。アプリにしても消えないし、ウェブ版とも同じ記録を見られる。</div>
+    </div>
+</div>
+
+<!-- 📴 電波がないときのお知らせ（ふだんは出ない） -->
+<div id="offline-bar" class="no-print" style="display:none;"></div>
 
 <!-- 📦 きろくの引っこし（アドレス／端末が変わっても記録を持っていく） -->
 <div id="migrate-overlay" class="no-print" style="display:none; position:fixed; inset:0; z-index:5500; background:var(--bg-color); overflow-y:auto; padding:20px;">
@@ -907,6 +946,7 @@
         else OWNER_ONLY.forEach(id => show(id, isOwner()));
         // 📝 前の人の中身が残らないように、人が変わったら いったん消す（つぎに開いたとき描き直す）
         { exNow = null; const ob = el('ottake-body'); if(ob) ob.innerHTML = ''; }
+        pwaApplyOffline();   // 📴 電波が無いときは 勉強 いがいを灰色にする（灰色をここで一度ぜんぶ外すため、この順番で）
         // 体験版は「お知らせ」と「今日の宿題」を出さない
         const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
         if(ub) ub.style.display = isTrial() ? 'none' : '';
@@ -1013,6 +1053,9 @@
         document.getElementById('login-overlay').classList.remove('on');
         showMotivation();
         switchView('study');
+        // 📲 ウェブ版で開いているときだけ「アプリにする？」を出す（アプリ版では出さない）
+        //    配布（ボーナス）のお知らせが先に出るように、少しあとで出す
+        setTimeout(() => { if(!pwaIsApp()) pwaShowInstall(); }, 1400);
     }
     // ヘッダーの👤ボタン＝ユーザー切り替え
     function logoutUser() {
@@ -1033,6 +1076,8 @@
         initTestMenu();
         generateHyakumasu();
         showMotivation();
+        pwaRegisterSW();    // 📲 アプリ版の中身を端末に持たせる（電波が無くても開けるように）
+        pwaApplyOffline();  // 📴 いま電波が無ければ、はじめからお知らせを出す
         initUserSystem();
     };
 
@@ -10643,6 +10688,13 @@
             toggleMenu();
             return;
         }
+        // 📴 電波が無いあいだは 📖 勉強 だけ（ユーザー指定）。やった記録はつながったら自動で送られる
+        if(!pwaOnline() && PWA_OFFLINE_OK.indexOf(id) < 0) {
+            alert('📴 いま電波がないよ。\n\nつながっていない間は 📖 勉強 だけできます。\n' +
+                  'やった記録は、電波がもどったら自動で保存されるから安心してね。');
+            const sb = document.getElementById('sidebar'); if(sb) sb.classList.remove('open');
+            return;
+        }
         // 🔒 📝定期テストは なお 専用（問題を1問も見せない）
         if(id !== 'ottake') { clearInterval(exTick); clearInterval(exTimer); if(exNow) exNow = null; }   // 📝 定期テストのタイマー
         if(id !== 'run') stopNobiTimer();          // 📝 定期テストのタイマー
@@ -10667,6 +10719,100 @@
         if(id === 'chat') { renderChat(); chatPull(true); chatSetPoll(CHAT_POLL_OPEN); }
         else chatSetPoll(CHAT_POLL_BG);
     }
+
+    /* ================= 📲 アプリ版（PWA） =================
+       ・ホーム画面に入れると、アイコンから全画面でひらく（Safariの枠が消える）
+       ・すすめる案内は「ウェブ版で開いたときだけ」出す。アプリ版では出さない（ユーザー指定）
+       ・電波が無いあいだは 📖 勉強 だけできる。ほかの画面には入れない（ユーザー指定）
+       ・オフラインでやった記録は、電波が戻ると自動でクラウドへ送られる
+         （これは前からある cloudStartWatch の window 'online' が受けもっている）
+    ======================================================== */
+    const PWA_OFFLINE_OK = ['study', 'run'];      // 電波が無くても入れる画面（run＝問題を解く画面）
+    let pwaPrompt = null;                          // Android/パソコンの「入れる？」の合図をとっておく箱
+
+    // アプリ版で開いているか（ホーム画面のアイコンから開いた＝standalone）
+    function pwaIsApp() {
+        try {
+            if(window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+            if(navigator.standalone === true) return true;   // iPhone / iPad
+        } catch(e) {}
+        return false;
+    }
+    const pwaOnline = () => !(typeof navigator !== 'undefined' && navigator.onLine === false);
+    function pwaIsIOS() {
+        const ua = navigator.userAgent || '';
+        if(/iPad|iPhone|iPod/.test(ua)) return true;
+        // iPadOS は Mac のふりをするので、指でさわれるかどうかで見分ける
+        return /Macintosh/.test(ua) && (navigator.maxTouchPoints || 0) > 1;
+    }
+
+    function pwaRegisterSW() {
+        if(!('serviceWorker' in navigator)) return;
+        // https（本番）と localhost だけ。ファイルを直接ひらいたときは動かない
+        if(location.protocol !== 'https:' && location.hostname !== 'localhost') return;
+        try { navigator.serviceWorker.register('/sw.js').catch(() => {}); } catch(e) {}
+    }
+    try {
+        window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); pwaPrompt = e; });
+        window.addEventListener('appinstalled', () => { pwaPrompt = null; pwaClose(); });
+    } catch(e) {}
+
+    // 端末に合わせた入れかたを作る
+    function pwaStepsHtml() {
+        const step = (n, html) => `<div class="pwa-step"><div class="pwa-num">${n}</div><div>${html}</div></div>`;
+        if(pwaIsIOS()) {
+            return step(1, '下（iPadは上）の <span class="pwa-key">共有 ⬆️</span> ボタンをおす')
+                 + step(2, 'メニューを下にスクロールして <span class="pwa-key">ホーム画面に追加</span> をえらぶ')
+                 + step(3, '右上の <span class="pwa-key">追加</span> をおす')
+                 + step(4, 'ホーム画面に 🌱 <b>のびログ</b> のアイコンができる！つぎからはそれをおしてね');
+        }
+        if(pwaPrompt) {
+            return step(1, '下の <b>「📲 アプリにする」</b> をおす')
+                 + step(2, '出てきた画面で <span class="pwa-key">インストール</span> をおす')
+                 + step(3, 'ホーム画面（パソコンはデスクトップ）に 🌱 <b>のびログ</b> ができる！');
+        }
+        if(/Android/.test(navigator.userAgent || '')) {
+            return step(1, '右上の <span class="pwa-key">⋮</span>（点が3つ）をおす')
+                 + step(2, '<span class="pwa-key">アプリをインストール</span> か <span class="pwa-key">ホーム画面に追加</span> をえらぶ')
+                 + step(3, 'ホーム画面に 🌱 <b>のびログ</b> ができる！');
+        }
+        return step(1, 'アドレスバーの右はしにある <span class="pwa-key">⊕</span> か <span class="pwa-key">インストール</span> をおす')
+             + step(2, '出てきた画面で <span class="pwa-key">インストール</span> をおす')
+             + step(3, 'Dock（デスクトップ）に 🌱 <b>のびログ</b> ができる！')
+             + step('！', 'ボタンが見あたらないときは <b>Chrome</b> か <b>Edge</b> でひらいてね（Safari は右上の <span class="pwa-key">共有 ⬆️</span> →「Dock に追加」）');
+    }
+    function pwaShowInstall() {
+        if(pwaIsApp()) return;                       // ★アプリ版では出さない
+        const ov = document.getElementById('pwa-overlay'); if(!ov) return;
+        const st = document.getElementById('pwa-steps'); if(st) st.innerHTML = pwaStepsHtml();
+        const b = document.getElementById('pwa-install-btn'); if(b) b.style.display = pwaPrompt ? '' : 'none';
+        ov.classList.add('on');
+    }
+    function pwaClose() { const ov = document.getElementById('pwa-overlay'); if(ov) ov.classList.remove('on'); }
+    async function pwaDoInstall() {
+        if(!pwaPrompt) { pwaClose(); return; }
+        try { pwaPrompt.prompt(); await pwaPrompt.userChoice; } catch(e) {}
+        pwaPrompt = null; pwaClose();
+    }
+
+    // 📴 電波が無いあいだのお知らせと、メニューの灰色（勉強だけ使える）
+    function pwaApplyOffline() {
+        const bar = document.getElementById('offline-bar');
+        const off = !pwaOnline();
+        if(bar) {
+            bar.style.display = off ? '' : 'none';
+            if(off) bar.innerHTML = '📴 電波がないよ。いまは <b>📖 勉強</b> だけできます。<br>やった記録は、つながったら自動で保存されるよ';
+        }
+        if(typeof ALL_NAV === 'undefined') return;
+        ALL_NAV.forEach(id => {
+            const e = document.getElementById(id); if(!e) return;
+            if(off && id !== 'nav-study') e.classList.add('locked');
+        });
+    }
+    try {
+        window.addEventListener('offline', () => pwaApplyOffline());
+        window.addEventListener('online',  () => { if(typeof applyUserNav === 'function') applyUserNav(); else pwaApplyOffline(); });
+    } catch(e) {}
 
     /* ================= 💬 DM（なお ⇄ りらん の1対1チャット） =================
        ・サーバー(/chat)に置いた1つの箱を2人で読み書きする。1キーにまとめてあるので読むのは1往復で済む

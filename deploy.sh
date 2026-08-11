@@ -5,6 +5,8 @@
 set -e
 cd "$(dirname "$0")"
 mkdir -p site
+rm -f site/*                           # 前に出したものが残らないように いったん空にする
 cp index.html site/index.html          # ひみつを含めないよう index.html だけを公開フォルダへ
+cp site-assets/* site/                 # 📲 アプリ版の部品（アイコン・manifest・サービスワーカー）
 npx --yes wrangler@latest pages deploy site --project-name nobilog --branch main --commit-dirty=true
 echo "✅ https://nobilog.pages.dev が最新版になりました"
