@@ -15348,7 +15348,7 @@
         renderOtTake();
     }
     function exStart(id) {
-        if(!isOwner()) { alert('📝 このテストを受けられるのは なお だけだよ。'); return; }   // 🔒 念のため
+        if(!isOwner()) return;                                    // 🔒 念のため（何も出さずに止める）
         const ex = id ? exById(id) : exFor(); if(!ex) return;
         if(exState(ex).k !== 'open') { alert('いまは受けられないよ'); renderOtTake(); return; }
         if(exLoad(ex) && exLoad(ex).submitted) { alert('もう提出しているよ'); return; }
@@ -15506,8 +15506,6 @@
             <div style="text-align:center;">
               <div style="font-size:20px;font-weight:bold;">📝 のびログ定期テスト</div>
               <div style="font-size:13px;color:#888;margin-top:2px;">5教科・各100点（ぜんぶで${max}点）</div>
-              <div class="m-warn" style="margin-top:10px;text-align:left;">🔒 このテストを受けられるのは <b>なお</b> だけだよ。
-              どんなテストがあるかは見られるけど、問題は開けません。</div>
             </div></div>`;
         list.forEach(ex => {
             const nq = exQs(ex).length, total = exTotal(ex);
@@ -15516,8 +15514,7 @@
                 <div class="m-desc">${esc(ex.range)}／全${nq}問・${total}点</div>
                 <div class="m-row"><span>制限時間</span><b>⏰ ${ex.limit}分</b></div>
                 <button class="btn" style="background:#bdc3c7;color:#fff;width:100%;margin-top:10px;font-size:18px;cursor:not-allowed;"
-                  disabled>▶️ テストを始める</button>
-                <div class="m-desc" style="text-align:center;margin-top:4px;">🔒 なお せんよう</div></div>`;
+                  disabled>▶️ テストを始める</button></div>`;
         });
         box.innerHTML = h;
     }
