@@ -470,37 +470,6 @@
             .hyakumasu th, .hyakumasu td { border: 2px solid #000 !important; width: 48px; height: 48px; color: #000 !important; background: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .hyakumasu td.hm-answer { color: #000 !important; }
         }
-        /* ================= 💬 DM（なお ⇄ りらん の1対1チャット） ================= */
-        .chat-badge { display:inline-block; min-width:18px; padding:0 5px; margin-left:6px; border-radius:9px; background:#e74c3c; color:#fff; font-size:11px; font-weight:bold; text-align:center; line-height:18px; vertical-align:middle; }
-        .chat-log { max-width:720px; margin:0 auto; height:min(56vh, 520px); overflow-y:auto; padding:10px 12px; background:var(--box-bg); border:1px solid var(--border-color); border-radius:12px; box-shadow:0 2px 8px var(--box-shadow); }
-        .chat-empty { text-align:center; color:#999; padding:46px 10px; font-size:14px; line-height:1.9; }
-        .chat-day { text-align:center; margin:14px 0 8px; }
-        .chat-day span { background:var(--bg-color); color:#888; font-size:11px; padding:3px 12px; border-radius:10px; }
-        .chat-row { display:flex; margin:8px 0; align-items:flex-end; gap:6px; }
-        .chat-row.me { flex-direction:row-reverse; }
-        .chat-bubble { max-width:100%; padding:8px 12px; border-radius:14px; font-size:15px; line-height:1.55; word-break:break-word; white-space:pre-wrap; }
-        .chat-row.me .chat-bubble { background:#e67e22; color:#fff; border-bottom-right-radius:4px; }
-        .chat-row.you .chat-bubble { background:#eceff1; color:#333; border-bottom-left-radius:4px; }
-        body.dark-mode .chat-row.you .chat-bubble { background:#2c2c2c; color:#e0e0e0; }
-        .chat-body { max-width:72%; }
-        .chat-bubble.stamp { background:none !important; font-size:44px; padding:0 4px; line-height:1.15; }
-        .chat-edited { font-size:10px; opacity:.75; margin-left:4px; }
-        .chat-side { font-size:10px; color:#999; text-align:center; min-width:34px; line-height:1.5; }
-        .chat-tools { display:flex; gap:2px; margin-top:2px; }
-        .chat-row.me .chat-tools { justify-content:flex-end; }
-        .chat-mini { border:none; background:none; color:#888; font-size:11px; cursor:pointer; padding:1px 5px; border-radius:5px; font-family:inherit; }
-        .chat-mini:hover { background:rgba(127,127,127,.18); }
-        .chat-bar { max-width:720px; margin:10px auto 0; display:flex; gap:6px; align-items:flex-end; }
-        .chat-input { flex:1; resize:none; height:42px; max-height:120px; padding:10px 14px; font-size:15px; font-family:inherit; color:var(--text-color); background:var(--box-bg); border:1px solid var(--border-color); border-radius:18px; }
-        .chat-send { background:#e67e22; color:#fff; border:none; border-radius:18px; padding:11px 18px; font-size:15px; font-weight:bold; cursor:pointer; font-family:inherit; white-space:nowrap; }
-        .chat-stamp-btn { background:none; border:1px solid var(--border-color); border-radius:50%; width:42px; height:42px; font-size:20px; cursor:pointer; flex:none; }
-        .chat-stamps { max-width:720px; margin:8px auto 0; display:none; flex-wrap:wrap; gap:2px; padding:8px; background:var(--box-bg); border:1px solid var(--border-color); border-radius:12px; }
-        .chat-stamps.on { display:flex; }
-        .chat-stamps button { font-size:26px; background:none; border:none; cursor:pointer; padding:4px 6px; border-radius:8px; }
-        .chat-stamps button:hover { background:rgba(127,127,127,.18); }
-        .chat-edit-note { max-width:720px; margin:8px auto 0; font-size:13px; color:#e67e22; font-weight:bold; }
-        .chat-state { max-width:720px; margin:6px auto 0; font-size:12px; color:#888; text-align:right; min-height:16px; }
-        @media (max-width:600px) { .chat-body { max-width:80%; } .chat-log { height:52vh; } }
         /* ================= ✅ いまからできる100のこと ================= */
         .tk-hero { background:linear-gradient(135deg,#2980b9,#6dd5fa); color:#fff; border-radius:14px; padding:16px 18px; margin-bottom:10px; }
         .tk-hero h2 { margin:0 0 4px; font-size:19px; }
@@ -646,7 +615,6 @@
     <div class="nav-item" id="nav-stats" onclick="switchView('stats')">📊 成績・グラフ</div>
     <div class="nav-item" id="nav-task" onclick="switchView('task')">✅ いまからできる100のこと</div>
     <div class="nav-item" id="nav-rich" onclick="switchView('rich')">💎 お金持ちになる</div>
-    <div class="nav-item" id="nav-chat" onclick="switchView('chat')">💬 DM<span id="nav-chat-badge" class="chat-badge" style="display:none;">0</span></div>
 </div>
 
 <div class="container">
@@ -860,19 +828,6 @@
         <div id="rich-body"></div>
     </div>
 
-    <!-- ================= 💬 DM（なお ⇄ りらん の1対1チャット） ================= -->
-    <div id="view-chat" class="view">
-        <h1 class="no-print">💬 DM <span id="chat-with" style="font-size:14px;color:#888;font-weight:normal;"></span></h1>
-        <div id="chat-log" class="chat-log"></div>
-        <div id="chat-state" class="chat-state no-print"></div>
-        <div id="chat-edit-note" class="chat-edit-note no-print" style="display:none;">✏️ 書きなおし中 <button class="chat-mini" onclick="chatCancelEdit()">やめる</button></div>
-        <div id="chat-stamps" class="chat-stamps no-print"></div>
-        <div class="chat-bar no-print">
-            <button class="chat-stamp-btn" onclick="chatToggleStamps()" title="スタンプ">😀</button>
-            <textarea id="chat-input" class="chat-input" rows="1" maxlength="1000" placeholder="メッセージを書く…" oninput="chatGrow(this)" onkeydown="chatKey(event)"></textarea>
-            <button class="chat-send" id="chat-send-btn" onclick="chatSend()">送る</button>
-        </div>
-    </div>
 
     <div id="game-modal" class="g-modal no-print">
         <button class="btn uh-back" style="background:#34495e; color:white; max-width:640px; margin:0 auto 12px; display:block; width:100%;" onclick="gCloseModal()">← とじる</button>
@@ -983,10 +938,10 @@
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-chat', 'nav-rich', 'nav-task'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-rich', 'nav-task'];
     // 📝 定期テストは りらんにも「見える」。ただし受けられるのは なお だけ（ボタンが灰色になる）
     const OWNER_ONLY = [];
-    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-chat','nav-rich','nav-task'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-rich','nav-task'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
         const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
@@ -1001,10 +956,18 @@
         // 📝 前の人の中身が残らないように、人が変わったら いったん消す（つぎに開いたとき描き直す）
         { exNow = null; const ob = el('ottake-body'); if(ob) ob.innerHTML = ''; }
         pwaApplyOffline();   // 📴 電波が無いときは 勉強 いがいを灰色にする（灰色をここで一度ぜんぶ外すため、この順番で）
+        navHideDone();       // ✅💎 ぜんぶ終わった画面はメニューから消す
         // 体験版は「お知らせ」と「今日の宿題」を出さない
         const ub = document.getElementById('update-box'), th = document.getElementById('today-hw');
         if(ub) ub.style.display = isTrial() ? 'none' : '';
         if(th) th.style.display = isTrial() ? 'none' : '';
+    }
+    // ✅💎 ぜんぶ終わったらメニューから消す（ユーザー指定）
+    //    ★消えっぱなしにはしない：チェックを1つ外せば また出てくる（やり直せるように）
+    function navHideDone() {
+        const set = (id, hide) => { const e = document.getElementById(id); if(e) e.style.display = hide ? 'none' : ''; };
+        try { set('nav-rich', richLoad().length >= RICH_CH.length); } catch(e) {}
+        try { set('nav-task', taskDone().length >= TASKS.length); } catch(e) {}
     }
     // ===== 👤 ユーザー（PINだけで判定：3258=なお / 8569=りらん）。記録はユーザーごとのキーに分けて保存 =====
     const APP_USERS = [
@@ -1102,7 +1065,6 @@
         mNewsSync(true); // 📰 その日のニュースをオンラインで取ってくる（つながらなければ自分で作る）
         applyAutoDark(); // 🌙 設定ONなら夜は自動ダーク
         applyUserNav();
-        chatStart();     // 💬 DM を見にいく（未読バッジ用。体験版のときは何もしない）
         document.getElementById('user-chip').innerText = (u.trial ? '🔰 ' : '👤 ') + u.name;
         document.getElementById('login-overlay').classList.remove('on');
         showMotivation();
@@ -1118,7 +1080,6 @@
         // 📝 定期テストは、人が変わる前に画面の中身を消しておく
         try { clearInterval(exTick); clearInterval(exTimer); exNow = null;
               const ob = document.getElementById('ottake-body'); if(ob) ob.innerHTML = ''; } catch(e) {}
-        chatStop();   // 💬 DM も止めて中身を消す（前の人のやりとりを次の人に見せない）
         currentUserId = null;
         showLogin();
     }
@@ -10732,9 +10693,9 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','ottake','chat','rich','task'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats','ottake','rich','task'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
-                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト', chat:'💬 DM',
+                         life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト',
                          rich:'💎 お金持ちになる', task:'✅ いまからできる100のこと' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
@@ -10772,9 +10733,6 @@
         if(id === 'rich') renderRich();
         if(id === 'task') renderTask();
         if(id === 'run') showRunCheer();
-        // 💬 DM は開いている間だけ細かく見にいく（ほかの画面では未読バッジのためにゆっくり見にいく）
-        if(id === 'chat') { renderChat(); chatPull(true); chatSetPoll(CHAT_POLL_OPEN); }
-        else chatSetPoll(CHAT_POLL_BG);
     }
 
     /* ================= ✅ いまからできる100のこと =================
@@ -10875,7 +10833,7 @@
         { id:79, b:'money', n:'やりたい仕事の お給料を調べる',                  t:'10分', c:25 },
         { id:80, b:'money', n:'1000円あったら何につかうか、3つ書く',            t:'5分',  c:15 },
         // ── 🚀 チャレンジ（のびログの中でできること＋ちょっと勇気がいること）
-        { id:81, b:'chal',  n:'💬DM を1つ送る',                                t:'2分',  c:10 },
+        { id:81, b:'chal',  n:'家の人に 今日の勉強を1つ報告する',              t:'2分',  c:10 },
         { id:82, b:'chal',  n:'📝定期テストの範囲を1つ たしかめる',              t:'5分',  c:15 },
         { id:83, b:'chal',  n:'📕夏休みドリルを1ページやる',                    t:'10分', c:20 },
         { id:84, b:'chal',  n:'🧮百ます計算を1回やる',                          t:'5分',  c:15 },
@@ -10925,6 +10883,7 @@
             else celebrate('');
         }
         try { localStorage.setItem(taskDoneKey(), JSON.stringify(done)); } catch(e) {}
+        navHideDone();      // 100こそろったら メニューから消える（1つ外せば また出る）
         renderTask();
     }
     function taskGo(b) { taskTab = b; renderTask(); }
@@ -10998,6 +10957,7 @@
         try { localStorage.setItem(richKey(), JSON.stringify(a)); } catch(e) {}
         if(a.length === RICH_CH.length) { celebrate('big'); alert('🎉 5つぜんぶ読みきった！\n\nここに書いてあることを知っているだけで、\n大人になってからのお金のこまり方が ぜんぜん変わるよ。'); }
         else celebrate('');
+        navHideDone();      // 5つそろったら メニューから消える
         renderRich();
     }
 
@@ -11467,209 +11427,6 @@
         window.addEventListener('offline', () => pwaApplyOffline());
         window.addEventListener('online',  () => { if(typeof applyUserNav === 'function') applyUserNav(); else pwaApplyOffline(); });
     } catch(e) {}
-
-    /* ================= 💬 DM（なお ⇄ りらん の1対1チャット） =================
-       ・サーバー(/chat)に置いた1つの箱を2人で読み書きする。1キーにまとめてあるので読むのは1往復で済む
-       ・チャット画面を見ている間は5秒ごと、ほかの画面にいる間は60秒ごとに見にいく（未読バッジのため）
-       ・体験版(u3)は使えない（ナビで🔒＋switchViewでも止める）
-       ・ひかえを localStorage に持つが、キーは 'chatCache:u1' の形にしてある。
-         ★'u1:' で始めないこと。始めるとcloudCollectが拾って、記録の保存に毎回チャットが混ざる
-    ================================================================================ */
-    const CHAT_STAMPS = ['👍','🙏','😀','😂','🥹','😭','😡','😴','🤔','👀','🎉','🔥','💯','✨','❤️','💪','🙌','👏','🍀','🌱',
-                         '🍚','🍜','🍰','🧋','⚽','🎮','📚','✏️','⏰','💰','🚗','🐶','🐱','🌸','☀️','🌙','⭐','❓','⭕','❌'];
-    const CHAT_POLL_OPEN = 5000;    // チャット画面を見ているとき
-    const CHAT_POLL_BG   = 60000;   // ほかの画面にいるとき（未読バッジだけ）
-    let chatData = { msgs: [], read: {} };
-    let chatTimer = null, chatBusy = false, chatEditId = null, chatLastSeenAt = 0, chatKnownIds = null, chatCacheLast = '';
-
-    const chatSeenKey  = () => 'chatSeen:'  + currentUserId;   // ここまで読んだ時こく（この端末だけ）
-    const chatCacheKey = () => 'chatCache:' + currentUserId;   // つながらないときも前回の続きが見えるように
-    const chatCanUse = () => !!(SYNC_URL && currentUserId && !isTrial());
-
-    function chatLoadCache() {
-        const d = jparse(chatCacheKey(), null);
-        chatData = (d && typeof d === 'object' && Array.isArray(d.msgs)) ? { msgs: d.msgs, read: d.read || {} } : { msgs: [], read: {} };
-        const s = Number(localStorage.getItem(chatSeenKey()));
-        chatLastSeenAt = isFinite(s) ? s : 0;
-        chatCacheLast = JSON.stringify(chatData);   // 読んだ直後に同じ中身を書きもどさない
-        chatKnownIds = null;   // 起動して最初に読みこんだぶんでは音を鳴らさない
-    }
-    // ★localStorage.setItem は autoBackupInit にフックされていて、1回書くたびに
-    //   「IndexedDBへの保存」と「全記録のクラウド送信」が予約される。
-    //   DMは5秒ごとに見にいくので、中身が変わっていないのに書くと
-    //   画面を開けているあいだ ずっと全記録を送りつづけることになる。
-    //   → 変わったときだけ書く。ここのガードを外さないこと。
-    function chatSaveCache() {
-        const s = JSON.stringify(chatData);
-        if(s === chatCacheLast) return;
-        chatCacheLast = s;
-        try { localStorage.setItem(chatCacheKey(), s); } catch(e) {}
-    }
-    function chatSetState(msg) { const e = document.getElementById('chat-state'); if(e) e.textContent = msg || ''; }
-    function chatIsOpen() { const v = document.getElementById('view-chat'); return !!(v && v.classList.contains('active')); }
-
-    // 未読＝相手が送ったもののうち、この端末で見たときより後のもの
-    function chatUnread() {
-        if(!chatCanUse()) return 0;
-        return chatData.msgs.filter(m => m.u !== currentUserId && Number(m.at) > chatLastSeenAt).length;
-    }
-    function chatUpdateBadge() {
-        const b = document.getElementById('nav-chat-badge'); if(!b) return;
-        const n = chatUnread();
-        b.textContent = n > 99 ? '99+' : String(n);
-        b.style.display = n > 0 ? 'inline-block' : 'none';
-    }
-    // 「ここまで読んだ」を いちばん新しいメッセージの時こくで覚える。
-    //   Date.now() にすると開いているあいだ毎回ちがう値になり、5秒ごとに保存が走ってしまう
-    function chatMarkSeen() {
-        const newest = chatData.msgs.length ? Math.max.apply(null, chatData.msgs.map(m => Number(m.at) || 0)) : 0;
-        if(newest > chatLastSeenAt) {
-            chatLastSeenAt = newest;
-            try { localStorage.setItem(chatSeenKey(), String(chatLastSeenAt)); } catch(e) {}
-        }
-        chatUpdateBadge();
-    }
-    // 相手に「読んだよ」を知らせる必要があるか（無いのに送ると読む→送る→読む…と ぐるぐる回ってしまう）
-    function chatNeedRead() {
-        const last = chatData.msgs.length ? Math.max.apply(null, chatData.msgs.map(m => Number(m.at) || 0)) : 0;
-        return last > (Number(chatData.read[currentUserId]) || 0);
-    }
-
-    // 受けとった中身を画面に反映する
-    function chatApply(d) {
-        if(!d || !Array.isArray(d.msgs)) return;
-        const before = chatKnownIds;
-        chatData = { msgs: d.msgs, read: (d.read && typeof d.read === 'object') ? d.read : {} };
-        chatSaveCache();
-        // 相手からの新しいメッセージが来たら音でお知らせ（起動して最初の読みこみでは鳴らさない）
-        if(before && chatData.msgs.some(m => m.u !== currentUserId && !before.has(m.id))) playSfx('badge');
-        chatKnownIds = new Set(chatData.msgs.map(m => m.id));
-        if(chatIsOpen()) { renderChat(); if(chatNeedRead()) chatMarkRead(); }
-        chatUpdateBadge();
-    }
-    async function chatPull(quiet) {
-        if(!chatCanUse() || chatBusy) return false;
-        chatBusy = true;
-        try {
-            const r = await cloudTry(cloudUrl('/chat'), { cache:'no-store' }, 9000);
-            if(!r.ok) throw new Error('http ' + r.status);
-            chatApply(await r.json());
-            chatSetState('');
-            return true;
-        } catch(e) { if(!quiet) chatSetState('いまつながらないよ…あとでもう一度みにいくね'); return false; }
-        finally { chatBusy = false; }
-    }
-    // 送る・書きなおす・消す・既読 は ぜんぶ POST。返事が最新の中身なのでそのまま画面に反映する
-    async function chatPost(q, body) {
-        if(!chatCanUse()) return false;
-        try {
-            const r = await cloudTry(cloudUrl('/chat', q), {
-                method:'POST', headers:{ 'Content-Type':'text/plain' },
-                body: JSON.stringify(Object.assign({ user: currentUserId }, body || {}))
-            }, 9000);
-            if(!r.ok) throw new Error('http ' + r.status);
-            chatApply(await r.json());
-            chatSetState('');
-            return true;
-        } catch(e) { chatSetState('送れなかったよ…電波を確かめて、もう一度おしてね'); return false; }
-    }
-    function chatMarkRead() { chatPost('read=1'); }
-
-    function chatSend() {
-        const inp = document.getElementById('chat-input'); if(!inp) return;
-        const text = inp.value.trim(); if(!text) return;
-        if(chatEditId) { const id = chatEditId; chatCancelEdit(); chatPost('edit=' + encodeURIComponent(id), { text }); }
-        else { chatPost('', { text: text, kind:'t' }); inp.value = ''; chatGrow(inp); }
-    }
-    function chatSendStamp(s) { chatPost('', { text: s, kind:'s' }); chatCloseStamps(); }
-    function chatStartEdit(id) {
-        const m = chatData.msgs.find(x => x.id === id);
-        if(!m || m.u !== currentUserId || m.k === 's') return;      // 自分の「文字」のメッセージだけ直せる
-        chatEditId = id;
-        const inp = document.getElementById('chat-input');
-        if(inp) { inp.value = m.t; chatGrow(inp); inp.focus(); }
-        const n = document.getElementById('chat-edit-note'); if(n) n.style.display = '';
-        const b = document.getElementById('chat-send-btn'); if(b) b.textContent = '直す';
-    }
-    function chatCancelEdit() {
-        chatEditId = null;
-        const n = document.getElementById('chat-edit-note'); if(n) n.style.display = 'none';
-        const b = document.getElementById('chat-send-btn'); if(b) b.textContent = '送る';
-        const inp = document.getElementById('chat-input'); if(inp) { inp.value = ''; chatGrow(inp); }
-    }
-    function chatDelete(id) {
-        const m = chatData.msgs.find(x => x.id === id);
-        if(!m || m.u !== currentUserId) return;                      // 自分のだけ消せる
-        if(!confirm('このメッセージを消す？\n（相手の画面からも消えるよ）')) return;
-        if(chatEditId === id) chatCancelEdit();
-        chatPost('del=' + encodeURIComponent(id));
-    }
-    function chatGrow(el) { if(!el) return; el.style.height = 'auto'; el.style.height = Math.min(120, el.scrollHeight || 42) + 'px'; }
-    function chatKey(e) { if(e && e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); chatSend(); } }
-    function chatToggleStamps() {
-        const p = document.getElementById('chat-stamps'); if(!p) return;
-        if(!p.innerHTML) p.innerHTML = CHAT_STAMPS.map(s => `<button onclick="chatSendStamp('${s}')" title="${s}">${s}</button>`).join('');
-        p.classList.toggle('on');
-    }
-    function chatCloseStamps() { const p = document.getElementById('chat-stamps'); if(p) p.classList.remove('on'); }
-
-    const chatEsc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
-    function chatTime(at) { const d = new Date(at); return ('0'+d.getHours()).slice(-2) + ':' + ('0'+d.getMinutes()).slice(-2); }
-    function chatDayLabel(at) {
-        const d = new Date(at), t = new Date();
-        const same = (a, b) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
-        if(same(d, t)) return '今日';
-        if(same(d, new Date(t.getTime() - 86400000))) return 'きのう';
-        return `${d.getMonth() + 1}月${d.getDate()}日`;
-    }
-    function renderChat() {
-        const log = document.getElementById('chat-log'); if(!log) return;
-        const me = stMe(), other = stOtherUser();
-        const w = document.getElementById('chat-with');
-        if(w) w.textContent = (me && other) ? `${me.name} ⇄ ${other.name}` : '';
-        if(!chatCanUse()) { log.innerHTML = '<div class="chat-empty">💬 DM はオンラインのときだけ使えるよ</div>'; return; }
-        const msgs = chatData.msgs.slice().sort((a, b) => (Number(a.at) || 0) - (Number(b.at) || 0));
-        if(!msgs.length) {
-            log.innerHTML = `<div class="chat-empty">まだメッセージはないよ📭<br>下のらんに書いて「送る」をおしてね。<br>😀 からスタンプも送れるよ。</div>`;
-        } else {
-            const otherRead = Number(chatData.read[other ? other.id : '']) || 0;
-            let h = '', lastDay = '';
-            msgs.forEach(m => {
-                const at = Number(m.at) || 0;
-                const day = chatDayLabel(at);
-                if(day !== lastDay) { h += `<div class="chat-day"><span>${chatEsc(day)}</span></div>`; lastDay = day; }
-                const mine = m.u === currentUserId, stamp = m.k === 's';
-                const tools = mine
-                    ? `<div class="chat-tools">${stamp ? '' : `<button class="chat-mini" onclick="chatStartEdit('${chatEsc(m.id)}')">✏️ 直す</button>`}<button class="chat-mini" onclick="chatDelete('${chatEsc(m.id)}')">🗑 消す</button></div>`
-                    : '';
-                h += `<div class="chat-row ${mine ? 'me' : 'you'}">`
-                   +   `<div class="chat-body"><div class="chat-bubble${stamp ? ' stamp' : ''}">${chatEsc(m.t)}${m.ed ? '<span class="chat-edited">(直したよ)</span>' : ''}</div>${tools}</div>`
-                   +   `<div class="chat-side">${mine && otherRead >= at ? '既読<br>' : ''}${chatTime(at)}</div>`
-                   + `</div>`;
-            });
-            log.innerHTML = h;
-        }
-        log.scrollTop = log.scrollHeight;
-        chatMarkSeen();
-    }
-    function chatSetPoll(ms) {
-        clearInterval(chatTimer); chatTimer = null;
-        if(!chatCanUse()) return;
-        chatTimer = setInterval(() => chatPull(true), ms);
-    }
-    function chatStart() {          // ログインしたときに1回
-        if(!chatCanUse()) { chatSetPoll(0); chatUpdateBadge(); return; }
-        chatLoadCache(); chatUpdateBadge();
-        chatPull(true);
-        chatSetPoll(CHAT_POLL_BG);
-    }
-    function chatStop() {           // ユーザーを切りかえるとき（前の人の中身を残さない）
-        clearInterval(chatTimer); chatTimer = null;
-        chatData = { msgs: [], read: {} }; chatKnownIds = null; chatLastSeenAt = 0; chatCacheLast = '';
-        chatCancelEdit(); chatCloseStamps();
-        const log = document.getElementById('chat-log'); if(log) log.innerHTML = '';
-        const b = document.getElementById('nav-chat-badge'); if(b) b.style.display = 'none';
-    }
 
     // ===== メニューUI制御 =====
     function setStudyParam(type, val, btn) {
