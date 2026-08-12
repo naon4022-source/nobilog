@@ -962,6 +962,45 @@
         if(ub) ub.style.display = isTrial() ? 'none' : '';
         if(th) th.style.display = isTrial() ? 'none' : '';
     }
+    /* 🏆 やりきったごほうび（ユーザー指定：2つとも達成したら 50万・50万を配る）
+       ・入るのは 🏛️政治と経済 の現金。「やったことで利益が出た」という形にする
+       ・★1回だけ。ふだんの配布と同じ `m.grants` に記録するので、
+         チェックを外して押しなおしても 二度ともらえない
+       ・毎日もらえる形にはしないこと（日課ボーナスを1,000円に抑えているのと同じ理由。
+         くり返しお金が湧くと「固定費をやりくりする」学びが消える）        */
+    const DONE_REWARD = {
+        rich: { id:'done-rich-500k', yen:500000, msg:
+            '🎉 💎お金持ちになる を ぜんぶ読みきった！\n\n' +
+            '💰 やったことで 利益が出たぞ！ 50万円\n\n' +
+            '複利・手取り・資産と負債・だまされない方法。\n' +
+            'これを知っているだけで、同じだけ働いても 手もとに残るお金が変わる。\n' +
+            'これは その最初の1回ぶんだと思ってね。\n\n' +
+            '🏛️ 政治と経済 の「現金」に入れておいたよ。' },
+        task: { id:'done-task-500k', yen:500000, msg:
+            '🎉 ✅いまからできる100のこと を ぜんぶ達成！\n\n' +
+            '💰 やったことで 利益が出たぞ！ 50万円\n\n' +
+            '1つ1つは 5分や10分の小さなこと。\n' +
+            'それを100こ積み上げたから、これだけの形になった。\n' +
+            '実さいの人生でも、やった分は かならず どこかで返ってくる。\n\n' +
+            '🏛️ 政治と経済 の「現金」に入れておいたよ。' }
+    };
+    function doneReward(key) {
+        const R = DONE_REWARD[key];
+        if(!R || !currentUserId) return false;
+        let m;
+        try { m = mLoad(); } catch(e) { return false; }
+        if(!m) return false;
+        if(!Array.isArray(m.grants)) m.grants = [];
+        if(m.grants.indexOf(R.id) >= 0) return false;      // ★もう配ってある
+        m.grants.push(R.id);
+        m.cash = (m.cash || 0) + R.yen;
+        mLog(m, 'やりきった利益', R.yen);
+        mSave(m);
+        celebrate('big'); playSfx('finish');
+        alert(R.msg);
+        return true;
+    }
+
     // ✅💎 ぜんぶ終わったらメニューから消す（ユーザー指定）
     //    ★消えっぱなしにはしない：チェックを1つ外せば また出てくる（やり直せるように）
     function navHideDone() {
@@ -10878,7 +10917,7 @@
             playSfx('correct');
             // ※ここは setTimeout をつかわない。💎の章と同じく その場で出す
             //   （setTimeout の中だと Node の検証ハーネスから見えず、確かめられなくなるため）
-            if(done.length === TASKS.length) { celebrate('big'); alert('🎉 100こ ぜんぶ達成！\n\nここに書いてあることを ぜんぶやった人は そうそういないよ。\n本当にすごい。'); }
+            if(done.length === TASKS.length) { celebrate('big'); doneReward('task'); }   // 🏆 50万円が入る（1回だけ）
             else if(done.length % 10 === 0) celebrate('big');
             else celebrate('');
         }
@@ -10955,7 +10994,7 @@
         if(a.indexOf(id) >= 0) return;
         a.push(id);
         try { localStorage.setItem(richKey(), JSON.stringify(a)); } catch(e) {}
-        if(a.length === RICH_CH.length) { celebrate('big'); alert('🎉 5つぜんぶ読みきった！\n\nここに書いてあることを知っているだけで、\n大人になってからのお金のこまり方が ぜんぜん変わるよ。'); }
+        if(a.length === RICH_CH.length) { celebrate('big'); doneReward('rich'); }   // 🏆 50万円が入る（1回だけ）
         else celebrate('');
         navHideDone();      // 5つそろったら メニューから消える
         renderRich();
