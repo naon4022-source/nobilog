@@ -501,6 +501,21 @@
         .chat-edit-note { max-width:720px; margin:8px auto 0; font-size:13px; color:#e67e22; font-weight:bold; }
         .chat-state { max-width:720px; margin:6px auto 0; font-size:12px; color:#888; text-align:right; min-height:16px; }
         @media (max-width:600px) { .chat-body { max-width:80%; } .chat-log { height:52vh; } }
+        /* ================= ✅ いまからできる100のこと ================= */
+        .tk-hero { background:linear-gradient(135deg,#2980b9,#6dd5fa); color:#fff; border-radius:14px; padding:16px 18px; margin-bottom:10px; }
+        .tk-hero h2 { margin:0 0 4px; font-size:19px; }
+        .tk-hero p { margin:0; font-size:13px; opacity:.95; line-height:1.7; }
+        .tk-dice { width:100%; background:#2980b9; color:#fff; border:none; border-radius:10px; padding:12px; font-size:15px; font-weight:bold; cursor:pointer; font-family:inherit; margin-bottom:8px; }
+        .tk-pick { background:rgba(41,128,185,.13); border-left:4px solid #2980b9; border-radius:8px; padding:10px 12px; font-size:14px; line-height:1.8; margin-bottom:8px; }
+        .tk-cnt { font-size:11px; opacity:.75; margin-left:5px; }
+        .tk-item { display:flex; align-items:center; gap:8px; width:100%; text-align:left; padding:11px 10px; margin:5px 0; border-radius:9px; border:2px solid var(--border-color); background:var(--bg-color); color:var(--text-color); cursor:pointer; font-size:14px; font-family:inherit; line-height:1.5; }
+        .tk-item.on { border-color:#27ae60; background:rgba(39,174,96,.12); }
+        .tk-item.on .tk-name { text-decoration:line-through; opacity:.6; }
+        .tk-box { flex:none; width:22px; height:22px; border-radius:6px; border:2px solid var(--border-color); display:flex; align-items:center; justify-content:center; font-size:14px; background:var(--box-bg); }
+        .tk-item.on .tk-box { border-color:#27ae60; }
+        .tk-name { flex:1; }
+        .tk-time { flex:none; font-size:11px; color:#888; white-space:nowrap; }
+        .tk-coin { flex:none; font-size:11px; color:#e67e22; font-weight:bold; white-space:nowrap; }
         /* ================= 💎 お金持ちになる ================= */
         .r-hero { background:linear-gradient(135deg,#11998e,#38ef7d); color:#fff; border-radius:14px; padding:16px 18px; margin-bottom:12px; }
         .r-hero h2 { margin:0 0 4px; font-size:19px; }
@@ -629,6 +644,7 @@
     <div class="nav-item" id="nav-money" onclick="switchView('money')">🏛️ 政治と経済</div>
     <div class="nav-item" id="nav-life" onclick="switchView('life')">🏠 生活</div>
     <div class="nav-item" id="nav-stats" onclick="switchView('stats')">📊 成績・グラフ</div>
+    <div class="nav-item" id="nav-task" onclick="switchView('task')">✅ いまからできる100のこと</div>
     <div class="nav-item" id="nav-rich" onclick="switchView('rich')">💎 お金持ちになる</div>
     <div class="nav-item" id="nav-chat" onclick="switchView('chat')">💬 DM<span id="nav-chat-badge" class="chat-badge" style="display:none;">0</span></div>
 </div>
@@ -832,6 +848,12 @@
         <div id="life-body"></div>
     </div>
 
+    <!-- ================= ✅ いまからできる100のこと（5つのタブ） ================= -->
+    <div id="view-task" class="view">
+        <h1 class="no-print">✅ いまからできる100のこと</h1>
+        <div id="task-body"></div>
+    </div>
+
     <!-- ================= 💎 お金持ちになる（お金の勉強・体験できる計算つき） ================= -->
     <div id="view-rich" class="view">
         <h1 class="no-print">💎 お金持ちになる</h1>
@@ -961,10 +983,10 @@
 
     // 使う人に合わせてメニューを出しわける（体験版はできることを絞る／定期テストはなおだけ）
     // 体験版では使えない項目（消さずに灰色のカギつきで見せて、押すと理由を出す）
-    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-chat', 'nav-rich'];
+    const TRIAL_LOCK = ['nav-calendar', 'nav-game', 'nav-money', 'nav-life', 'nav-stats', 'nav-ottake', 'nav-chat', 'nav-rich', 'nav-task'];
     // 📝 定期テストは りらんにも「見える」。ただし受けられるのは なお だけ（ボタンが灰色になる）
     const OWNER_ONLY = [];
-    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-chat','nav-rich'];
+    const ALL_NAV = ['nav-study','nav-test-setup','nav-review','nav-hyakumasu','nav-calendar','nav-game','nav-money','nav-life','nav-stats','nav-ottake','nav-chat','nav-rich','nav-task'];
     function applyUserNav() {
         const el = (id) => document.getElementById(id);
         const show = (id, on) => { const e = el(id); if(e) e.style.display = on ? '' : 'none'; };
@@ -10710,10 +10732,10 @@
     function switchView(id) {
         // 英検テスト以外の画面に入るときはタイマーを止めてバッジを隠す
         // 🔒 体験版で使えない画面はブロック（メニューにも出していないが、念のため）
-        if(isTrial() && ['calendar','game','money','life','stats','ottake','chat','rich'].indexOf(id) >= 0) {
+        if(isTrial() && ['calendar','game','money','life','stats','ottake','chat','rich','task'].indexOf(id) >= 0) {
             const NM = { calendar:'🗓️ カレンダー（宿題）', game:'🎮 きろく・あそび', money:'🏛️ 政治と経済',
                          life:'🏠 生活', stats:'📊 成績・グラフ', ottake:'📝 定期テスト', chat:'💬 DM',
-                         rich:'💎 お金持ちになる' };
+                         rich:'💎 お金持ちになる', task:'✅ いまからできる100のこと' };
             alert(`🔒 ${NM[id] || 'この機能'} は 体験版では使えないよ。\n\n` +
                   `つかってみたかったら、<なお> に相談してね！\n\n`.replace(/[<>]/g, '「') +
                   `体験版では つぎの4つがぜんぶ使えるよ👇\n` +
@@ -10748,10 +10770,203 @@
         if(id === 'life') renderLife();
         if(id === 'ottake') renderOtTake();
         if(id === 'rich') renderRich();
+        if(id === 'task') renderTask();
         if(id === 'run') showRunCheer();
         // 💬 DM は開いている間だけ細かく見にいく（ほかの画面では未読バッジのためにゆっくり見にいく）
         if(id === 'chat') { renderChat(); chatPull(true); chatSetPoll(CHAT_POLL_OPEN); }
         else chatSetPoll(CHAT_POLL_BG);
+    }
+
+    /* ================= ✅ いまからできる100のこと =================
+       ぜんぶ「思い立った今すぐ始められて、長くても25分で終わる」ものだけ。
+       1回やったら終わり（ためていく形）。★コインは はじめて終わらせたときだけ入る
+       （外して また押す、でコインを増やせないようにするため taskPaid を別に持つ）。
+    ============================================================== */
+    const TASK_TABS = [
+        { id:'study', n:'📖 勉強のコツ' },
+        { id:'body',  n:'💪 からだ・こころ' },
+        { id:'home',  n:'🏠 生活・おてつだい' },
+        { id:'money', n:'💰 お金' },
+        { id:'chal',  n:'🚀 チャレンジ' }
+    ];
+    const TASKS = [
+        // ── 📖 勉強のコツ（やり方が変わると、同じ時間でも のびが変わる）
+        { id:1,  b:'study', n:'机の上に、いま使う物だけ残す',                   t:'5分',  c:10 },
+        { id:2,  b:'study', n:'スマホを別の部屋に置いて15分やる',               t:'15分', c:25 },
+        { id:3,  b:'study', n:'タイマーを25分にして、鳴るまでやる',             t:'25分', c:25 },
+        { id:4,  b:'study', n:'今日やる3つを紙に書く',                         t:'3分',  c:10 },
+        { id:5,  b:'study', n:'教科書のもくじを1教科ぶん ぜんぶ読む',           t:'10分', c:15 },
+        { id:6,  b:'study', n:'🔁間違い直しを5問やる',                         t:'10分', c:20 },
+        { id:7,  b:'study', n:'覚えたい所を、声に出して読む',                   t:'5分',  c:10 },
+        { id:8,  b:'study', n:'覚えたことを だれかに説明してみる',              t:'10分', c:30 },
+        { id:9,  b:'study', n:'昨日やった所を、何も見ずに思い出す',             t:'5分',  c:25 },
+        { id:10, b:'study', n:'ノート1ページを、色をつかわず書いてみる',         t:'10分', c:10 },
+        { id:11, b:'study', n:'わからない所に ふせんを貼る',                    t:'5分',  c:10 },
+        { id:12, b:'study', n:'いちばん苦手な教科から手をつける',               t:'20分', c:30 },
+        { id:13, b:'study', n:'寝る前に5分だけ英単語を見る',                    t:'5分',  c:15 },
+        { id:14, b:'study', n:'朝おきてすぐ10分だけやる',                       t:'10分', c:25 },
+        { id:15, b:'study', n:'解く前に「答えはこれくらい」と予想する',          t:'5分',  c:15 },
+        { id:16, b:'study', n:'5分わからなかったら とばす、を練習する',          t:'15分', c:20 },
+        { id:17, b:'study', n:'まちがえた問題を「なぜ」でグループ分けする',      t:'15分', c:30 },
+        { id:18, b:'study', n:'教科書の太字だけ ひろって書き出す',              t:'10分', c:15 },
+        { id:19, b:'study', n:'音のない場所で15分やってみる',                   t:'15分', c:15 },
+        { id:20, b:'study', n:'今日やったことを1行だけ書きのこす',              t:'2分',  c:10 },
+        // ── 💪 からだ・こころ（頭は体の一部。ここが整うと勉強も進む）
+        { id:21, b:'body',  n:'コップ1杯の水を飲む',                            t:'1分',  c:5  },
+        { id:22, b:'body',  n:'スクワット10回',                                t:'2分',  c:10 },
+        { id:23, b:'body',  n:'外に出て 空を見る',                              t:'3分',  c:5  },
+        { id:24, b:'body',  n:'背のびを10秒×3回',                              t:'2分',  c:5  },
+        { id:25, b:'body',  n:'いつもより30分早く 寝るじゅんびをする',           t:'5分',  c:20 },
+        { id:26, b:'body',  n:'今日あった いいことを3つ書く',                   t:'5分',  c:15 },
+        { id:27, b:'body',  n:'窓を開けて 空気を入れかえる',                    t:'2分',  c:5  },
+        { id:28, b:'body',  n:'5分あるく',                                     t:'5分',  c:10 },
+        { id:29, b:'body',  n:'目を閉じて1分、なにも考えない',                  t:'1分',  c:10 },
+        { id:30, b:'body',  n:'好きな曲を1曲、最後まで聴く',                    t:'4分',  c:5  },
+        { id:31, b:'body',  n:'深呼吸を10回',                                  t:'2分',  c:5  },
+        { id:32, b:'body',  n:'せすじを のばして5分すわる',                     t:'5分',  c:5  },
+        { id:33, b:'body',  n:'画面から目をはなして 遠くを20秒見る',             t:'1分',  c:5  },
+        { id:34, b:'body',  n:'いちばん つかれている所を のばす',                t:'5分',  c:10 },
+        { id:35, b:'body',  n:'朝ごはんを ちゃんと食べる',                      t:'15分', c:15 },
+        { id:36, b:'body',  n:'だれかに「ありがとう」を言う',                   t:'1分',  c:10 },
+        { id:37, b:'body',  n:'顔をあらって さっぱりする',                      t:'3分',  c:5  },
+        { id:38, b:'body',  n:'明日の朝の服を出しておく',                       t:'3分',  c:10 },
+        { id:39, b:'body',  n:'スマホを見ないで10分すごす',                     t:'10分', c:20 },
+        { id:40, b:'body',  n:'自分をほめられる所を1つ書く',                    t:'2分',  c:10 },
+        // ── 🏠 生活・おてつだい（できることが増えるほど、大人になってからラク）
+        { id:41, b:'home',  n:'つかったコップを 自分であらう',                  t:'2分',  c:5  },
+        { id:42, b:'home',  n:'部屋のゴミを集めて すてる',                      t:'5分',  c:10 },
+        { id:43, b:'home',  n:'せんたく物を たたむ',                            t:'10分', c:15 },
+        { id:44, b:'home',  n:'げんかんの くつをそろえる',                      t:'2分',  c:5  },
+        { id:45, b:'home',  n:'テーブルを ふく',                                t:'3分',  c:5  },
+        { id:46, b:'home',  n:'自分のふとんを なおす',                          t:'2分',  c:5  },
+        { id:47, b:'home',  n:'お風呂そうじを する',                            t:'10分', c:20 },
+        { id:48, b:'home',  n:'ごはんの用意を手つだう',                         t:'15分', c:20 },
+        { id:49, b:'home',  n:'ゴミ出しをする',                                t:'5分',  c:10 },
+        { id:50, b:'home',  n:'洗面台を ふく',                                 t:'3分',  c:10 },
+        { id:51, b:'home',  n:'かばんを空にして、いらない紙をすてる',            t:'10分', c:15 },
+        { id:52, b:'home',  n:'引き出しを1つだけ 片づける',                     t:'10分', c:15 },
+        { id:53, b:'home',  n:'スマホの写真を10まい けす',                      t:'5分',  c:10 },
+        { id:54, b:'home',  n:'つかっていないアプリを3つ けす',                 t:'3分',  c:10 },
+        { id:55, b:'home',  n:'明日の時間わりに 教科書を入れかえる',             t:'5分',  c:15 },
+        { id:56, b:'home',  n:'家の人に「なにか手つだうことある？」と聞く',      t:'1分',  c:20 },
+        { id:57, b:'home',  n:'つけっぱなしの電気を消して回る',                 t:'2分',  c:10 },
+        { id:58, b:'home',  n:'自分のくつを あらう',                            t:'15分', c:20 },
+        { id:59, b:'home',  n:'冷ぞうこの 古いものを1つ見つける',               t:'5分',  c:10 },
+        { id:60, b:'home',  n:'いらない物を1つ 手ばなす',                       t:'5分',  c:15 },
+        // ── 💰 お金（知っているかどうかで、大人になってから いちばん差がつく）
+        { id:61, b:'money', n:'いま持っているお金を ぜんぶ数える',              t:'5分',  c:10 },
+        { id:62, b:'money', n:'今月つかったお金を 思い出して書く',              t:'10分', c:20 },
+        { id:63, b:'money', n:'さいふの中のレシートを 見なおす',                t:'5分',  c:10 },
+        { id:64, b:'money', n:'ほしい物を3つ書いて、順番をつける',              t:'5分',  c:15 },
+        { id:65, b:'money', n:'その中の「なくても困らない物」に線を引く',        t:'3分',  c:20 },
+        { id:66, b:'money', n:'毎日100円を1年つづけたら いくらか計算する',       t:'3分',  c:20 },
+        { id:67, b:'money', n:'貯金ばこに 10円入れる',                          t:'1分',  c:5  },
+        { id:68, b:'money', n:'ほしい物を、買う前に1日 待ってみる',              t:'1分',  c:25 },
+        { id:69, b:'money', n:'おこづかいで コンビニに何回行けるか計算する',      t:'5分',  c:15 },
+        { id:70, b:'money', n:'💎お金持ちになる の ⏳時間のちから をやる',        t:'5分',  c:25 },
+        { id:71, b:'money', n:'💎お金持ちになる の 💴手取り をやる',              t:'5分',  c:25 },
+        { id:72, b:'money', n:'💎お金持ちになる の 🎯人生シミュレーション をやる', t:'10分', c:30 },
+        { id:73, b:'money', n:'家の人に「はじめて働いたとき」の話を聞く',        t:'10分', c:25 },
+        { id:74, b:'money', n:'家の人に「いちばん高い買い物」を聞く',            t:'5分',  c:20 },
+        { id:75, b:'money', n:'同じ物のねだんを、2つの店でくらべる',             t:'10分', c:20 },
+        { id:76, b:'money', n:'「安いから買う」を1回 やめてみる',                t:'1分',  c:25 },
+        { id:77, b:'money', n:'つかっていない月ぎめのサービスがないか聞く',       t:'5分',  c:20 },
+        { id:78, b:'money', n:'1週間つかわないお金を決める',                    t:'3分',  c:20 },
+        { id:79, b:'money', n:'やりたい仕事の お給料を調べる',                  t:'10分', c:25 },
+        { id:80, b:'money', n:'1000円あったら何につかうか、3つ書く',            t:'5分',  c:15 },
+        // ── 🚀 チャレンジ（のびログの中でできること＋ちょっと勇気がいること）
+        { id:81, b:'chal',  n:'💬DM を1つ送る',                                t:'2分',  c:10 },
+        { id:82, b:'chal',  n:'📝定期テストの範囲を1つ たしかめる',              t:'5分',  c:15 },
+        { id:83, b:'chal',  n:'📕夏休みドリルを1ページやる',                    t:'10分', c:20 },
+        { id:84, b:'chal',  n:'🧮百ます計算を1回やる',                          t:'5分',  c:15 },
+        { id:85, b:'chal',  n:'英単語を5つ おぼえる',                           t:'10分', c:20 },
+        { id:86, b:'chal',  n:'🎮ミニゲームを1つやる',                          t:'5分',  c:10 },
+        { id:87, b:'chal',  n:'なにかの自己ベストを1つ こえる',                 t:'10分', c:30 },
+        { id:88, b:'chal',  n:'今日の目標を決めて、やりきる',                   t:'20分', c:30 },
+        { id:89, b:'chal',  n:'🌱のびログの花を そだてる',                      t:'15分', c:20 },
+        { id:90, b:'chal',  n:'連続記録を1日 のばす',                          t:'15分', c:25 },
+        { id:91, b:'chal',  n:'知らない言葉を1つ 調べる',                       t:'3分',  c:10 },
+        { id:92, b:'chal',  n:'本を5ページ読む',                               t:'10分', c:15 },
+        { id:93, b:'chal',  n:'ニュースを1つ読んで、家の人に話す',              t:'10分', c:25 },
+        { id:94, b:'chal',  n:'絵か字を1つ 書いてみる',                         t:'10分', c:10 },
+        { id:95, b:'chal',  n:'明日の予定を 書き出す',                          t:'5分',  c:15 },
+        { id:96, b:'chal',  n:'今日あったことを 家の人に話す',                  t:'5分',  c:15 },
+        { id:97, b:'chal',  n:'自分の とくいなことを1つ書く',                   t:'3分',  c:15 },
+        { id:98, b:'chal',  n:'1年後の自分に 手紙を書く',                       t:'10分', c:30 },
+        { id:99, b:'chal',  n:'やったことがないことを1つ やってみる',            t:'15分', c:35 },
+        { id:100,b:'chal',  n:'この100このうち、好きなものを もう一度やる',      t:'—',    c:40 }
+    ];
+    let taskTab = 'study';
+    const taskDoneKey = () => ukey('taskDone');
+    const taskPaidKey = () => ukey('taskPaid');   // コインを1回しか出さないための記録
+    function taskLoad(key) { const a = jparse(key, []); return Array.isArray(a) ? a.filter(x => typeof x === 'number') : []; }
+    const taskDone = () => taskLoad(taskDoneKey());
+    const taskOf = (b) => TASKS.filter(t => t.b === b);
+    function taskCount(b) { const d = taskDone(); return taskOf(b).filter(t => d.indexOf(t.id) >= 0).length; }
+
+    function taskToggle(id) {
+        const t = TASKS.find(x => x.id === id); if(!t) return;
+        const done = taskDone();
+        const i = done.indexOf(id);
+        if(i >= 0) done.splice(i, 1);            // まちがえて押したとき用に、外すこともできる
+        else {
+            done.push(id);
+            const paid = taskLoad(taskPaidKey());
+            if(paid.indexOf(id) < 0) {           // ★コインは はじめて終わらせたときだけ
+                paid.push(id);
+                try { localStorage.setItem(taskPaidKey(), JSON.stringify(paid)); } catch(e) {}
+                const g = gameState(); g.coins = (g.coins || 0) + t.c; gsSave(g);
+            }
+            playSfx('correct');
+            // ※ここは setTimeout をつかわない。💎の章と同じく その場で出す
+            //   （setTimeout の中だと Node の検証ハーネスから見えず、確かめられなくなるため）
+            if(done.length === TASKS.length) { celebrate('big'); alert('🎉 100こ ぜんぶ達成！\n\nここに書いてあることを ぜんぶやった人は そうそういないよ。\n本当にすごい。'); }
+            else if(done.length % 10 === 0) celebrate('big');
+            else celebrate('');
+        }
+        try { localStorage.setItem(taskDoneKey(), JSON.stringify(done)); } catch(e) {}
+        renderTask();
+    }
+    function taskGo(b) { taskTab = b; renderTask(); }
+    // 🎲 まだやっていないものから1つ えらぶ
+    function taskPick() {
+        const d = taskDone();
+        const yet = TASKS.filter(t => d.indexOf(t.id) < 0);
+        if(!yet.length) { alert('🎉 もう ぜんぶ やりきったよ！'); return; }
+        const t = yet[Math.floor(Math.random() * yet.length)];
+        taskTab = t.b;
+        renderTask();
+        const box = document.getElementById('task-pick');
+        if(box) box.innerHTML = `<div class="tk-pick">🎲 これをやってみる？<br><b>${t.n}</b>　<span class="tk-time">${t.t}</span></div>`;
+    }
+    function renderTask() {
+        const body = document.getElementById('task-body'); if(!body) return;
+        const d = taskDone(), all = TASKS.length;
+        let h = `<div class="tk-hero">
+            <h2>✅ いまからできる100のこと</h2>
+            <p>ぜんぶ「思い立った今すぐ始められて、長くても25分で終わる」ことだけ。<br>やったら押してね。1つ終わるたびに 🪙コインがもらえるよ。</p>
+            <div class="r-prog"><span style="width:${richPct(d.length, all)}%"></span></div>
+            <p style="margin-top:6px;font-size:12px;">${d.length} / ${all} こ 達成</p>
+        </div>
+        <button class="tk-dice" onclick="taskPick()">🎲 なにをやるか えらんでもらう</button>
+        <div id="task-pick"></div>
+        <div class="m-tabs">`;
+        TASK_TABS.forEach(t => {
+            const c = taskCount(t.id), n = taskOf(t.id).length;
+            h += `<button class="btn ${taskTab === t.id ? 'btn-active' : 'btn-inactive'}" onclick="taskGo('${t.id}')">${c === n ? '✅ ' : ''}${t.n}<span class="tk-cnt">${c}/${n}</span></button>`;
+        });
+        h += `</div><div class="m-card">`;
+        taskOf(taskTab).forEach(t => {
+            const on = d.indexOf(t.id) >= 0;
+            h += `<button class="tk-item ${on ? 'on' : ''}" onclick="taskToggle(${t.id})">
+                    <span class="tk-box">${on ? '✅' : ''}</span>
+                    <span class="tk-name">${t.n}</span>
+                    <span class="tk-time">${t.t}</span>
+                    <span class="tk-coin">🪙${t.c}</span>
+                  </button>`;
+        });
+        h += `<div class="r-note">もらったコインは 🎮きろく・あそび で使えるよ。<br>まちがえて押したら もう一度押すと外れる（コインは減らないし、同じものでは2回もらえない）。</div></div>`;
+        body.innerHTML = h;
     }
 
     /* ================= 💎 お金持ちになる =================
