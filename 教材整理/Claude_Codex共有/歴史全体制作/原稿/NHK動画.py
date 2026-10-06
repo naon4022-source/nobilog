@@ -11,13 +11,6 @@ NHK = {
     "url": "https://edu.web.nhk/school/watch/clip/?das_id=D0005403004_00000",
     "source": "NHK for School"
    }
-  ],
-  "VP": [
-   {
-    "label": "古代文明（YouTube・とある男が授業をしてみた）",
-    "url": "https://www.youtube.com/watch?v=SZIgrcW6mj0",
-    "source": "YouTube"
-   }
   ]
  },
  "縄文・弥生・古墳時代": {
@@ -158,6 +151,11 @@ NHK = {
   ],
   "VP": [
    {
+    "label": "産業の発達（室町時代の農業・手工業）（クリップ）",
+    "url": "https://edu.web.nhk/school/watch/clip/?das_id=D0005403047_00000",
+    "source": "NHK for School"
+   },
+   {
     "label": "守護大名（クリップ）",
     "url": "https://edu.web.nhk/school/watch/clip/?das_id=D0005403036_00000",
     "source": "NHK for School"
@@ -270,11 +268,6 @@ NHK = {
    }
   ],
   "VP": [
-   {
-    "label": "産業の発達（クリップ）",
-    "url": "https://edu.web.nhk/school/watch/clip/?das_id=D0005403047_00000",
-    "source": "NHK for School"
-   },
    {
     "label": "天下の台所（クリップ）",
     "url": "https://edu.web.nhk/school/watch/clip/?das_id=D0005403054_00000",

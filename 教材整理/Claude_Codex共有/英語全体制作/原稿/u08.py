@@ -46,6 +46,6 @@ UNIT = {"label": "Lesson 8", "code": "L8", "title": "週末の予定を話そう
         ("★ 次の文の誤りを直してみよう。How a beautiful picture!", "What a beautiful picture!"),
         ("友だちの絵を見て、ほめる英語を一つ書いてみよう。", "例：What a nice picture!")],
   "sum": ["What ＋ (a) ＋ 形容詞 ＋ 名詞!", "How ＋ 形容詞!", "名詞が複数のときは a をつけない。"],
-  "easy": ["名詞があるか、指でさがす。あれば What。", "最後は「!」で終わる。"],
+  "easy": ["名詞があるか、指でさがす。あれば What、なければ How。", "最後は「!」で終わる。"],
   "video": "What と How の感嘆文"},
  ]}

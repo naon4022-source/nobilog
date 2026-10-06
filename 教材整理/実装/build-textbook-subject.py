@@ -93,7 +93,20 @@ def build(book_id):
         if ext:
             srcs = '・'.join(dict.fromkeys(x['source'] for x in ext))
             return {'t': 'media', 'kind': 'video', 'id': uid(i), 'title': srcs + 'で見る：' + L['title'], 'src': None, 'ext': srcs, 'links': ext}
+        script = [f"【Claude が作る動画】{title}（{where}）", "形式：動画エンジン（Kyoko・音声共有/設定.json の承認済み設定・30fps・1文1ステップ・字幕つき）。長さ60〜90秒。", "めあて：" + (L['goal'] if L else '')]
+        steps = []
+        for k, (screen, say) in enumerate(lines, 1):
+            script.append(f"場面{k}　画面：{screen}　／　ナレーション：「{say}」"); steps.append({'say': say, 'cap': say, 'screen': screen, 'hold': 0.6})
+        script.append("点検：数・ラベル・答えのかくし方を確かめ、1.5秒ごとのコマを目で見る。読み方は台本の say を使い、まちがえやすい読みは yomi で直す。")
         mp4 = WORK / 'メディア' / (i + '.mp4')
+        if steps and (not mp4.exists() or '--scripts' in sys.argv):   # --scripts：動画があっても台本を書き直す
+            SCRIPTS.mkdir(parents=True, exist_ok=True)
+            try:   # 台本に手で足した読み方（read）は消さずに残す（2026-10-06）
+                old = {x['say']: x['read'] for x in json.loads((SCRIPTS / f'{i}.json').read_text(encoding='utf-8'))['steps'] if x.get('read')}
+                for x in steps:
+                    if x['say'] in old: x['read'] = old[x['say']]
+            except (OSError, ValueError, KeyError): pass
+            (SCRIPTS / f'{i}.json').write_text(json.dumps({'settings': '音声共有/設定.json', 'title': title, 'where': where, 'steps': steps}, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
         if mp4.exists():
             # Claude が作った動画（教科動画/make.py）があれば本に入れる
             out = f'textbook-book-{book_id}-{i.lower()}.mp4'
@@ -102,19 +115,6 @@ def build(book_id):
             d = {'t': 'media', 'kind': 'video', 'id': uid(i), 'title': title, 'src': '/' + out}
             if links: d['links'] = links
             return d
-        script = [f"【Claude が作る動画】{title}（{where}）", "形式：動画エンジン（Kyoko・音声共有/設定.json の承認済み設定・30fps・1文1ステップ・字幕つき）。長さ60〜90秒。", "めあて：" + (L['goal'] if L else '')]
-        steps = []
-        for k, (screen, say) in enumerate(lines, 1):
-            script.append(f"場面{k}　画面：{screen}　／　ナレーション：「{say}」"); steps.append({'say': say, 'cap': say, 'screen': screen, 'hold': 0.6})
-        script.append("点検：数・ラベル・答えのかくし方を確かめ、1.5秒ごとのコマを目で見る。読み方は台本の say を使い、まちがえやすい読みは yomi で直す。")
-        if steps:
-            SCRIPTS.mkdir(parents=True, exist_ok=True)
-            try:   # 台本に手で足した読み方（read）は消さずに残す（2026-10-06）
-                old = {x['say']: x['read'] for x in json.loads((SCRIPTS / f'{i}.json').read_text(encoding='utf-8'))['steps'] if x.get('read')}
-                for x in steps:
-                    if x['say'] in old: x['read'] = old[x['say']]
-            except (OSError, ValueError, KeyError): pass
-            (SCRIPTS / f'{i}.json').write_text(json.dumps({'settings': '音声共有/設定.json', 'title': title, 'where': where, 'steps': steps}, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
         vids.append((i, title, where))
         d = {'t': 'media', 'kind': 'video', 'id': uid(i), 'title': title, 'src': None, 'maker': 'Claude', 'script': script}
         if links: d['links'] = links
@@ -184,7 +184,13 @@ def build(book_id):
             E_ = L['ex']; b = [{'t': 'h3', 'x': '例題　' + E_['h']}]
             if E_.get('text'): b.append({'t': 'note', 'x': E_['text']})
             ex_lines = [('のびーが登場し、今日の問題を出す', 'きょうは「' + L['title'] + '」の例題だよ。いっしょに考えよう！')]
-            if E_.get('text'): ex_lines.append(('問題文を大きく表示する', '問題はこれ。' + re.sub(r'\s+', ' ', E_['text'])[:80]))
+            if E_.get('text'):
+                # 動画では出典メモ（自作）は出さず、文の途中で切らない（長い本文は120字までの文の切れ目まで）（2026-10-06）
+                pt = re.sub(r'^[（(]自作[）)]\s*', '', re.sub(r'\s+', ' ', E_['text']).strip())
+                if len(pt) > 120:
+                    cut = max(pt.rfind(c, 0, 121) for c in '。．.!?！？')
+                    pt = pt[:cut + 1] if cut > 20 else pt[:120]
+                ex_lines.append(('問題文を大きく表示する', '問題はこれ。' + pt))
             ex_lines += [('手順' + str(k) + 'のところを光らせ、矢印で動かす', s) for k, s in enumerate(E_['steps'], 1)]
             ex_lines += [('答えをふわっと出して丸で囲む', '答えは、' + ('　'.join(E_['ans']) if isinstance(E_['ans'], list) else E_['ans'])),
                          ('まとめのカードを出す', 'ポイントは、' + (L['easy'][0] if L.get('easy') else L['sum'][0]))]

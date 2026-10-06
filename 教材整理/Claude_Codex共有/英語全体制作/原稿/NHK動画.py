@@ -6,8 +6,8 @@ NHK = {
  "I am 〜. / I like 〜.": {
   "V01": [
    {
-    "label": "気持ちやからだの調子を伝えよう 〜am/are/is の使い方①〜（ベーシック英語 2026年度 第7回・10分）",
-    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180461_00000",
+    "label": "友だちをつくろう 〜am/are/is の使い方②（自己紹介）〜（ベーシック英語 2026年度 第8回・10分）",
+    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180462_00000",
     "source": "NHK高校講座"
    }
   ],
@@ -38,8 +38,8 @@ NHK = {
  "I can 〜. / My favorite 〜 is 〜.": {
   "VP": [
    {
-    "label": "してもいいこと／いけないこと 〜can と can’t〜（ベーシック英語 2026年度 第17回・10分）",
-    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180471_00000",
+    "label": "できる！っていうときは（can・お願いの can）（ベーシック英語 2025年度 第12回・10分）",
+    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180220_00000",
     "source": "NHK高校講座"
    }
   ]
@@ -163,8 +163,8 @@ NHK = {
  "Can I 〜? / Can you 〜?": {
   "VP": [
    {
-    "label": "できる！っていうときは（can・お願いの can）（ベーシック英語 2025年度 第12回・10分）",
-    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180220_00000",
+    "label": "してもいいこと／いけないこと 〜can と can’t〜（ベーシック英語 2026年度 第17回・10分）",
+    "url": "https://edu.web.nhk/kokokoza/watch/?das_id=D0022180471_00000",
     "source": "NHK高校講座"
    }
   ]
