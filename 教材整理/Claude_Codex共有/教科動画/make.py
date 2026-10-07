@@ -5,7 +5,7 @@
 台本（制作ソース/<ID>.json）は build-textbook-subject.py が書くので、ここでは読むだけ。
 読み上げは Kyoko（速め 205）。英語の本の英文だけ Samantha。承認済みの音声補正（音声共有/設定.json の filter）を使う。
 共有の動画エンジン（engine.js・render.mjs）は読みこむだけで変更しない。"""
-import json, re, sys, os, wave, subprocess, tempfile, pathlib
+import time, json, re, sys, os, wave, subprocess, tempfile, pathlib
 HERE = pathlib.Path(__file__).resolve().parent
 SHARE = HERE.parent
 ENGINE = SHARE / '数学全体制作/メディア/制作ソース/動画エンジン'
@@ -85,7 +85,11 @@ def tts(segs, work, k):
     frames = b''
     for j, (voice, txt) in enumerate(segs):
         a = work / f's{k:02d}_{j}.wav'
-        subprocess.run(['say', '-v', voice, '-r', str(JA_RATE if voice == 'Kyoko' else EN_RATE), '-o', str(a), '--data-format=LEI16@24000', txt], check=True, timeout=25)
+        cmd = ['say', '-v', voice, '-r', str(JA_RATE if voice == 'Kyoko' else EN_RATE), '-o', str(a), '--data-format=LEI16@24000', txt]
+        try: subprocess.run(cmd, check=True, timeout=25)
+        except subprocess.TimeoutExpired:   # 読み上げの部品が固まったとき：部品を立ち上げ直して1回だけやり直す（2026-10-06）
+            for name in ('KonaSynthesizer', 'SiriAUSP', 'MauiAUSP'): subprocess.run(['pkill', '-f', name], capture_output=True)
+            time.sleep(3); subprocess.run(cmd, check=True, timeout=60)
         with wave.open(str(a)) as f: fr = f.readframes(f.getnframes())
         if len(fr) < 2 * 24000 * max(0.04, 0.012 * len(txt)): raise RuntimeError(f'読み上げの音声が短すぎます：{voice} {txt}')   # 空の音声（読み上げの故障）だけを止める
         frames += fr + (b'\0\0' * int(24000 * 0.06) if j < len(segs) - 1 else b'')

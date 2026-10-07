@@ -37,6 +37,7 @@ def build(book_id):
     units = [runpy.run_path(str(f))['UNIT'] for f in sorted(SRC.glob('u*.py'))]
     HITO = runpy.run_path(str(SRC / 'ひとこと.py'))['HITOKOTO'] if (SRC / 'ひとこと.py').exists() else {}
     FUN = runpy.run_path(str(SRC / 'おもしろ.py'))['FUN'] if (SRC / 'おもしろ.py').exists() else {}
+    TALK = runpy.run_path(str(SRC / 'かいわ.py'))['TALK'] if (SRC / 'かいわ.py').exists() else {}   # 2026-10-06 わかりやすく・増やした会話
     # 2026-10-06：作品の「内容」（自分の言葉のまとめ）と、著作権の切れた作品の「本文」（ユーザー指示「文章を書いて」）
     HON = runpy.run_path(str(SRC / '本文.py'))['HONBUN'] if (SRC / '本文.py').exists() else {}
     LINKS = runpy.run_path(str(SRC / '動画リンク.py'))['LINKS'] if (SRC / '動画リンク.py').exists() else {}
@@ -44,6 +45,7 @@ def build(book_id):
     NHK = runpy.run_path(str(SRC / 'NHK動画.py'))['NHK'] if (SRC / 'NHK動画.py').exists() else None
     SCRIPTS = WORK / '制作ソース'
     ids, imgs, vids = set(), [], []
+    YOMI = {}   # 節のコード → 読み上げの表（本文の音声）
     def uid(x):
         assert x not in ids, x
         ids.add(x); return x
@@ -86,6 +88,18 @@ def build(book_id):
             return {'t': 'media', 'kind': 'diagram', 'id': uid(i), 'title': title, 'src': '/' + out, 'maker': 'Claude', 'zoom': True}
         imgs.append((i, '図解', title, where, pr))
         return {'t': 'media', 'kind': 'diagram', 'id': uid(i), 'title': title, 'src': None, 'maker': 'ChatGPT Images', 'prompt': pr}
+    def talk_block(lines, rid=None):   # rid：読み上げ用のIDの頭（例 K1-C1-S1-T）。1行ずつ番号をつける
+        def face(w, x):
+            if w != 'のびー': return {'ソラ': '🧒', 'ミオ': '👧', '先生': '🧑‍🏫'}.get(w, '🙂')
+            if re.match(r'(正解|そのとおり|ばっちり|いいね|最高|いい表現|いい発見|いいところ|よく気づ|いい調子|いい判断|いい読み方|いい目|まさにそれ|それそれ)', x): return 'nobi-joy'
+            if re.match(r'(ひっかか|ざんねん|ちょっと待って|それが落とし穴|ひっかけ|……)', x): return 'nobi-surprise'
+            if 'たとえば' in x or re.match(r'(まず|見て|最後の|先に|一字ずつ|手をたたき)', x): return 'nobi-point'
+            if x.endswith('？'): return 'nobi-think'
+            if x.startswith('そう') or x.startswith('ある'): return 'nobi-wave'
+            return 'nobi-normal'
+        out = {'t': 'talk', 'lines': [[w, face(w, x), x] for w, x in lines]}
+        if rid: out['rids'] = [f'{rid}{k:02d}' for k in range(1, len(lines) + 1)]
+        return out
     def video(i, title, where, lines=None, links=None):
         L = CUR.get('L'); lines = lines or []
         # 2026-10-06：動画はNHK（NHK for School・高校講座）を優先し、合うものがない枠は Claude が作った動画にする（ユーザー指示）
@@ -151,11 +165,18 @@ def build(book_id):
             b = [{'t': 'hook', 'x': L['hook']}, {'t': 'goal', 'x': soft(L['goal'])}, scene(code + '-SCENE', L.get('scene') or ('「' + L['title'] + '」の場面'), where + '（はじめに）'),
                  {'t': 'h3', 'x': '教科書・ワークのどこ？'}, {'t': 'ul', 'items': li(L['where'])}, {'t': 'h3', 'x': L.get('intro_h', 'ここで考えること')}, {'t': 'ul', 'items': li(L['intro'])}]
             pages.append({**base, 'tag': 'はじめに', 'topic': '', 'blocks': b})
+            yj = WORK / 'メディア' / f'YOMI-{code}.json'
+            if yj.exists() and (WORK / 'メディア' / f'YOMI-{code}.mp3').exists():
+                # 読み上げの音声と、どの文字を何秒に読むかの表（本文・あらすじ・会話）（Claude_Codex共有/読み上げ/make_yomi.py が作る）
+                for ext in ('json', 'mp3'):
+                    if '--check' not in sys.argv: shutil.copyfile(WORK / 'メディア' / f'YOMI-{code}.{ext}', OUT / f'textbook-yomi-{code.lower()}.{ext}')
+                YOMI[code] = f'/textbook-yomi-{code.lower()}.json'
             HB = HON.get(L['title'])
             if HB:
                 b = []
-                if HB.get('naiyou'): b += [{'t': 'h3', 'x': 'どんな内容？'}, {'t': 'ol', 'items': li(HB['naiyou'])}]
+                if HB.get('naiyou'): b += [{'t': 'h3', 'x': 'どんな内容？'}, {'t': 'ol', 'items': li(HB['naiyou']), 'rids': [f'{code}-N{k:02d}' for k in range(1, len(HB['naiyou']) + 1)]}]   # rids：読み上げ用
                 if HB.get('honbun'):
+                    hid = [0]
                     b.append({'t': 'h3', 'x': '本文'})
                     for kind, x in HB['honbun']:
                         if kind == 'h': b.append({'t': 'h3', 'x': x}); continue
@@ -165,14 +186,17 @@ def build(book_id):
                             if len(cur) + len(piece) > 180 and cur: parts.append(cur); cur = ''
                             cur += piece
                         if cur: parts.append(cur)
-                        for k, part in enumerate(parts): b.append({'t': 'p', 'x': part, 'hon': True if k == 0 else 'cont'})
+                        for k, part in enumerate(parts):
+                            hid[0] += 1   # 読み上げ用の段落ID（教科書の本文を声で読むときに、どこを読んでいるかを合わせる）
+                            b.append({'t': 'p', 'x': part, 'hon': True if k == 0 else 'cont', 'rid': f'{code}-H{hid[0]:02d}'})
                 b.append({'t': 'note', 'x': '出典・確かめ方：' + HB['src']})
                 pages.append({**base, 'tag': '本文' if HB.get('honbun') else '内容', 'topic': L['title'], 'blocks': b})
             b = []
             e1 = L.get('easy1') or HITO.get(L['title'])
             if e1: b.append({'t': 'hook', 'x': 'ひとことで言うと… ' + e1})
             F = FUN.get(L['title'], {})
-            if F.get('talk'): b.append({'t': 'talk', 'lines': [[w, {'のびー': '🌱', 'ソラ': '🧒', 'ミオ': '👧', '先生': '🧑‍🏫'}.get(w, '🙂'), x] for w, x in F['talk']]})
+            tk = (TALK.get(L['title']) or {}).get('talk') or F.get('talk')
+            if tk: b.append(talk_block(tk, f'{code}-T'))
             for h, items in L['keys']:
                 b += [{'t': 'h3', 'x': h}, {'t': 'ul', 'items': li(items)}]
                 if h == L['keys'][0][0]:
@@ -182,6 +206,8 @@ def build(book_id):
             if F.get('trivia'): b.append({'t': 'extra', 'kind': '豆知識', 'title': F['trivia'][0], 'x': F['trivia'][1], 'answer': None})
             pages.append({**base, 'tag': L.get('key_tag', S['key'] if S['key'] != '読み方・しくみ' else ('読み方' if L['area'] in ('読む', '古典', '詩') else 'しくみ')), 'topic': L.get('key_topic', L['title']), 'blocks': b})
             E_ = L['ex']; b = [{'t': 'h3', 'x': '例題　' + E_['h']}]
+            t2 = (TALK.get(L['title']) or {}).get('talk2')
+            if t2: b.append(talk_block(t2, f'{code}-U'))   # 解く前の「考える順番」の相談
             if E_.get('text'): b.append({'t': 'note', 'x': E_['text']})
             ex_lines = [('のびーが登場し、今日の問題を出す', 'きょうは「' + L['title'] + '」の例題だよ。いっしょに考えよう！')]
             if E_.get('text'):
@@ -214,6 +240,7 @@ def build(book_id):
         for bl in p.get('blocks', []):
             if 'x' in bl: assert isinstance(bl['x'], str) and bl['x'].strip(), (p.get('topic'), bl)
     book = {'id': book_id, 'subject': S['subject'], 'grade': S['grade'], 'title': S['title'], 'pageCount': len(pages), 'toc': toc, 'fillers': fillers, 'pages': pages}
+    if YOMI: book['yomi'] = YOMI
     text = json.dumps(book, ensure_ascii=False, separators=(',', ':'))
     target = OUT / f'textbook-book-{book_id}.json'
     if '--check' in sys.argv:

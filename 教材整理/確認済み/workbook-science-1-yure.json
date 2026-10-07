@@ -1,0 +1,2442 @@
+{
+ "id": "workbook-science-1-yure",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "ゆれの大きさと日本列島の地震",
+ "majorTitle": "ゆれる大地",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-science-1-yure-1",
+   "type": "input",
+   "prompt": "地震のゆれの大きさを示す階級を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震度",
+     "しんど"
+    ]
+   },
+   "explanation": "教科書p78：ゆれの大きさは震度で表される。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(1)"
+   },
+   "ref": "参考：理科ワーク p25 ①(1)（震度）・教科書 p78 2 ゆれの大きさ",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "マグニチュード"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-2",
+   "type": "input",
+   "prompt": "震度は、各地に設置した何で測定するか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震度計",
+     "しんどけい"
+    ]
+   },
+   "explanation": "教科書p78：震度は、各地点に設置した震度計で測定し、0〜7の階級によって示す。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(1)"
+   },
+   "ref": "参考：理科ワーク p25 ①(1)（震度）・教科書 p78 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "地震計"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-3",
+   "type": "input",
+   "prompt": "日本の震度は、いくつの階級に分けられているか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "階級",
+     "つ"
+    ]
+   },
+   "explanation": "教科書p78図17：0、1、2、3、4、5弱、5強、6弱、6強、7の10階級。ワークp25ポイント：地震のゆれの大きさは10階級で示される。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17 震度階級表",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "8",
+    "7"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-4",
+   "type": "input",
+   "prompt": "震度階級のうち、「弱」と「強」に分けられている震度を2つ答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "5",
+      "震度5"
+     ],
+     [
+      "6",
+      "震度6"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "教科書p78図17：5弱・5強・6弱・6強。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "5"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-5",
+   "type": "input",
+   "prompt": "震度0は、どのようなゆれか。教科書の震度階級表から答えよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "感じない",
+       "かんじない",
+       "感じられない"
+      ]
+     }
+    ],
+    "allowNegation": true
+   },
+   "explanation": "教科書p78図17：震度0＝人はゆれを感じない。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-6",
+   "type": "input",
+   "prompt": "震度階級表で、「動くことができず、飛ばされることもある」のはいちばん大きい震度いくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "震度"
+    ]
+   },
+   "explanation": "教科書p78図17：震度7＝動くことができず、飛ばされることもある。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-7",
+   "type": "input",
+   "prompt": "1996年9月以前に用いられていた旧震度階級は、0〜7の何段階だったか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "段階"
+    ]
+   },
+   "explanation": "教科書p78図17：1996年9月以前は、0〜7の8段階の旧震度階級が用いられていた。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-8",
+   "type": "input",
+   "prompt": "旧震度階級が改められるきっかけとなった地震は何か。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "兵庫県南部",
+       "兵庫県",
+       "阪神"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p78図17：兵庫県南部地震（1995年）をきっかけに改められた。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 図17",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-9",
+   "type": "input",
+   "prompt": "「ある観測点での地震によるゆれの大きさを表したものを震度という。」この文は正しいか。正しければ〇、誤りなら正しい言葉を書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "〇",
+     "○",
+     "O",
+     "o",
+     "正しい"
+    ]
+   },
+   "explanation": "ワークp28○×③：正しい（震度）。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "○×③"
+   },
+   "ref": "参考：理科ワーク p28 ○×③（震度）・教科書 p78 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "マグニチュード"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-10",
+   "type": "input",
+   "prompt": "ふつう、震央（震源）から近いところほど、震度はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きくなる",
+     "大きい",
+     "おおきくなる"
+    ]
+   },
+   "explanation": "教科書p79：ふつう、震央（震源）から近いところほど震度は大きくなる。ワークp28①(2)：距離が大きくなるほどゆれは小さくなる。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（震度）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "小さくなる"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-11",
+   "type": "input",
+   "prompt": "震央から遠いところでも、震央から近いところより大きな震度になることがある。それは大地をつくる岩石などの何のちがいによるか。2つ答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "かたさ",
+      "硬さ",
+      "固さ"
+     ],
+     [
+      "つくり",
+      "作り",
+      "構造"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "教科書p79：大地をつくる岩石などのかたさやつくりなどのちがいによって、震央から近いところより大きな震度になることがある。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（震度）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "かたさ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-12",
+   "type": "input",
+   "prompt": "ようかんとプリンを同じ皿にのせて動かすモデル実験で、大きくゆれたのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "プリン",
+     "ぷりん"
+    ]
+   },
+   "explanation": "教科書p79図19：同じ皿にのせて動かしたようかんとプリンは、やわらかいプリンのほうが大きくゆれている。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（震度）・教科書 p79 図19",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "ようかん"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-13",
+   "type": "input",
+   "prompt": "ようかんとプリンのモデル実験は、大地の何によってゆれ方がちがうことを示しているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かたさ",
+     "硬さ",
+     "固さ",
+     "やわらかさ",
+     "大地のかたさ"
+    ]
+   },
+   "explanation": "教科書p79図19：大地のかたさによってゆれ方がちがうことを示すモデル実験。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（震度）・教科書 p79 図19",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "大きさ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-14",
+   "type": "input",
+   "prompt": "地震そのものの規模の大小は、何で表されるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "マグニチュード",
+     "まぐにちゅーど",
+     "M"
+    ]
+   },
+   "explanation": "教科書p79：地震そのものの規模は、マグニチュード（記号：M）で表される。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "震度"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-15",
+   "type": "input",
+   "prompt": "マグニチュードを表す記号をアルファベット1文字で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "M",
+     "m",
+     "Ｍ"
+    ]
+   },
+   "explanation": "教科書p79：マグニチュード（記号：M）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-16",
+   "type": "input",
+   "prompt": "マグニチュードが1ふえると、地震のエネルギーは約何倍になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "教科書p79：マグニチュードが1ふえると地震のエネルギーは約32倍、2ふえると1000倍になる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "10",
+    "1000"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-17",
+   "type": "input",
+   "prompt": "マグニチュードが2ふえると、地震のエネルギーは何倍になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "1000",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "教科書p79：2ふえると1000倍（32×32＝1024でおよそ1000倍）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "64",
+    "100"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-18",
+   "type": "input",
+   "prompt": "マグニチュード6.9の地震と比べて、マグニチュード7.9の地震のエネルギーは約何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "教科書p79：マグニチュードが1ふえると約32倍。7.9−6.9＝1。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "1",
+    "1000"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-19",
+   "type": "input",
+   "prompt": "マグニチュード7.3の地震と比べて、マグニチュード9.3の地震のエネルギーは約何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "1000",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "教科書p79：マグニチュードが2ふえると1000倍。9.3−7.3＝2。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "64",
+    "32"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-20",
+   "type": "input",
+   "prompt": "震源から岩石の破壊が一気に進み、ずれ動いた断層の範囲を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震源域",
+     "しんげんいき"
+    ]
+   },
+   "explanation": "教科書p79なるほど：ずれ動いた断層の範囲を震源域という。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（震源域）・教科書 p79 なるほど 震源域",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "震源",
+    "震央"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-21",
+   "type": "input",
+   "prompt": "震源域が広いほど、マグニチュードはどうなる傾向があるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きくなる",
+     "大きい",
+     "おおきくなる"
+    ]
+   },
+   "explanation": "教科書p79：震源域が広いほど、マグニチュードも大きくなる傾向がある。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（震源域）・教科書 p79 図20",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "小さくなる"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-22",
+   "type": "input",
+   "prompt": "震源域が広いと、断層の大きさと、ずれ動く時間はどうなるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "巨大",
+       "大き"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "長"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p79なるほど：震源域が広いと、断層は巨大で、ずれ動く時間も長くなり、各地のゆれは長く続く。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（震源域）・教科書 p79 なるほど",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-23",
+   "type": "input",
+   "prompt": "教科書の図20で、震源域がもっとも広く、マグニチュード9.0とされている地震は何か。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "東北地方太平洋沖",
+       "東北",
+       "東日本大震災"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p79図20：東北地方太平洋沖地震 M9.0（2011年）、関東地震 M7.9（1923年）、兵庫県南部地震 M7.3（1995年）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 図20",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-24",
+   "type": "input",
+   "prompt": "関東地震（1923年）のマグニチュードはいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "7.9",
+    "units": [
+     "M"
+    ]
+   },
+   "explanation": "教科書p79図20：関東地震 M7.9（1923年）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 図20",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "7.3",
+    "9.0"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-25",
+   "type": "input",
+   "prompt": "兵庫県南部地震（1995年）のマグニチュードはいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "7.3",
+    "units": [
+     "M"
+    ]
+   },
+   "explanation": "教科書p79図20：兵庫県南部地震 M7.3（1995年）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p25 ①(2)（マグニチュード）・教科書 p79 図20",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "7.9",
+    "9.0"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-26",
+   "type": "input",
+   "prompt": "震源がほぼ同じ位置にある関東地震（M7.9）と伊豆半島沖地震（M6.9）の震度分布を比べた。地震の規模が大きいのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "関東地震",
+     "かんとうじしん",
+     "関東"
+    ]
+   },
+   "explanation": "ワークp25①(3)・教科書p78図18：関東地震 M7.9、伊豆半島沖地震 M6.9。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p25 ①(3)（マグニチュード）・教科書 p78 図18",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "伊豆半島沖地震"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-27",
+   "type": "input",
+   "prompt": "震源の位置が同じとき、マグニチュードが大きい地震ほど、ゆれる範囲と同じ観測点でのゆれはどうなるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "広",
+       "ひろ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大き",
+       "おおき"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p79：震源の位置が同じでも、マグニチュードが大きい地震ほど、ゆれる範囲が広くなり、同じ観測点でのゆれは大きくなる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(4)"
+   },
+   "ref": "参考：理科ワーク p25 ①(4)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-28",
+   "type": "input",
+   "prompt": "2つの地震の震度分布で、規模が大きいと判断できる理由を書こう（ワークp25①(4)）。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "範囲",
+       "はんい"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "広",
+       "ひろ"
+      ]
+     }
+    ]
+   },
+   "explanation": "ワークp25①(4)：ゆれの範囲が広く、震度の大きいところが多いから。マグニチュードが大きいほどゆれる範囲が広くなる（教科書p79）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(4)"
+   },
+   "ref": "参考：理科ワーク p25 ①(4)（マグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-29",
+   "type": "input",
+   "prompt": "震度のちがいに関係していることとして教科書にあげられているものを、次からすべて選ぼう。\nア 震央距離や震源距離　イ 地下の岩石などのかたさやつくり　ウ マグニチュード　エ 地震が起きた季節",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、イ、ウ",
+     "ア,イ,ウ",
+     "アイウ",
+     "ア イ ウ",
+     "ア・イ・ウ",
+     "アとイとウ",
+     "ア、ウ、イ",
+     "ア,ウ,イ",
+     "アウイ",
+     "ア ウ イ",
+     "ア・ウ・イ",
+     "アとウとイ",
+     "イ、ア、ウ",
+     "イ,ア,ウ",
+     "イアウ",
+     "イ ア ウ",
+     "イ・ア・ウ",
+     "イとアとウ",
+     "イ、ウ、ア",
+     "イ,ウ,ア",
+     "イウア",
+     "イ ウ ア",
+     "イ・ウ・ア",
+     "イとウとア",
+     "ウ、ア、イ",
+     "ウ,ア,イ",
+     "ウアイ",
+     "ウ ア イ",
+     "ウ・ア・イ",
+     "ウとアとイ",
+     "ウ、イ、ア",
+     "ウ,イ,ア",
+     "ウイア",
+     "ウ イ ア",
+     "ウ・イ・ア",
+     "ウとイとア"
+    ]
+   },
+   "explanation": "教科書p79：震度のちがいは、震央距離や震源距離、地下の岩石などのかたさやつくり、マグニチュードのちがいが関係している。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(1)"
+   },
+   "ref": "参考：理科ワーク p25 ①(1)（震度とマグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "アイ",
+    "アウ",
+    "イウ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-30",
+   "type": "input",
+   "prompt": "「地震そのものの規模」と「ある地点でのゆれの大きさ」を表すものを、この順に書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "マグニチュード、震度",
+     "マグニチュード・震度",
+     "マグニチュード,震度",
+     "マグニチュード 震度",
+     "マグニチュードと震度"
+    ]
+   },
+   "explanation": "教科書p78〜79：地震そのものの規模はマグニチュード、ゆれの大きさは震度。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(4)"
+   },
+   "ref": "参考：理科ワーク p28 ①(4)（震度とマグニチュード）・教科書 p79 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   },
+   "near": [
+    "震度、マグニチュード"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-31",
+   "type": "input",
+   "prompt": "1つの地震で、震度は観測点によってちがうか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ちがう",
+     "違う",
+     "異なる",
+     "観測点によってちがう"
+    ]
+   },
+   "explanation": "教科書p78：震度は観測点によってちがう。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(3)"
+   },
+   "ref": "参考：理科ワーク p28 ①(3)（震度）・教科書 p78 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 78
+   },
+   "near": [
+    "同じ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-32",
+   "type": "input",
+   "prompt": "地震計は、空間内で起こる複雑なゆれを正確に記録するため、何方向のゆれを記録するか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "方向",
+     "つ"
+    ]
+   },
+   "explanation": "教科書p80深めるラボ：東西、南北、上下の3方向のゆれを記録する。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（地震計）・教科書 p80 深めるラボ ゆれの記録と震度",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 80
+   },
+   "near": [
+    "2",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-33",
+   "type": "input",
+   "prompt": "地震計のしくみで、地面のゆれによって動くのは記録紙と、ばねでつり下げられたおもりにつながった針の先のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "記録紙",
+     "きろくし"
+    ]
+   },
+   "explanation": "教科書p80：地面のゆれによって記録紙は動くが、ばねでつり下げられたおもりとつながった針の先はほとんど動かない。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（地震計）・教科書 p80 地震計のしくみ",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 80
+   },
+   "near": [
+    "針の先",
+    "おもり"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-34",
+   "type": "input",
+   "prompt": "ニュースなどで発表される震度は、その観測点での何の震度か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最大震度",
+     "さいだいしんど",
+     "最大"
+    ]
+   },
+   "explanation": "教科書p80：ニュースなどで発表される震度は、その観測点での最大震度。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（地震計）・教科書 p80 深めるラボ",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 80
+   },
+   "near": [
+    "平均"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-35",
+   "type": "input",
+   "prompt": "岩石でできた土地に置いた地震計Aと、土砂で谷を埋めた土地に置いた地震計Bでは、震源距離がほとんど同じでも、どちらのゆれが大きかったか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "B",
+     "地震計B",
+     "b",
+     "土砂で谷を埋めた土地"
+    ]
+   },
+   "explanation": "教科書p80 Action図21：土砂で埋めた土地に置いた地震計Bのほうが大きかった。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(2)"
+   },
+   "ref": "参考：理科ワーク p28 ①(2)（震度）・教科書 p80 図21",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 80
+   },
+   "near": [
+    "A"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-36",
+   "type": "input",
+   "prompt": "日本列島付近では、小さな規模のものもふくめると、地震はどのくらい起こっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ほぼ毎日",
+     "毎日",
+     "まいにち",
+     "ほとんど毎日"
+    ]
+   },
+   "explanation": "教科書p81：日本列島付近では、小さな規模のものをふくめると、ほぼ毎日地震が起こっている。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "②"
+   },
+   "ref": "参考：理科ワーク p29 ②（日本列島の地震）・教科書 p81 3 日本列島の地震",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-37",
+   "type": "input",
+   "prompt": "日本列島付近の震央は、海溝やトラフを境にして、太平洋側と大陸側のどちらに多く分布しているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大陸側",
+     "たいりくがわ",
+     "大陸",
+     "日本海側"
+    ]
+   },
+   "explanation": "教科書p81：震央は、海溝やトラフを境に大陸側に多く分布している。ワークp28○×④：太平洋側は誤り。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "○×④"
+   },
+   "ref": "参考：理科ワーク p28 ○×④（日本列島の地震）・教科書 p81 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "太平洋側"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-38",
+   "type": "input",
+   "prompt": "日本列島付近の震源の深さは、日本海溝から日本列島（大陸側）に向かってどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "深くなる",
+     "ふかくなる",
+     "深い"
+    ]
+   },
+   "explanation": "教科書p81：震源の深さが大陸側に向かって深くなっていることがわかる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(3)"
+   },
+   "ref": "参考：理科ワーク p25 ②(3)（日本列島の地震）・教科書 p81 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "浅くなる"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-39",
+   "type": "input",
+   "prompt": "日本列島付近の4つのプレートのうち、日本海溝の東側にある海洋プレートは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "太平洋プレート",
+     "たいへいようプレート"
+    ]
+   },
+   "explanation": "教科書p81図23：太平洋プレート（海洋プレート）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(1)"
+   },
+   "ref": "参考：理科ワーク p25 ②(1)（プレート）・教科書 p81 図23",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "フィリピン海プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-40",
+   "type": "input",
+   "prompt": "日本列島付近の4つのプレートのうち、西日本がのっている大陸プレートは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ユーラシアプレート",
+     "ゆーらしあプレート"
+    ]
+   },
+   "explanation": "教科書p81図23：ユーラシアプレート（大陸プレート）。東日本は北アメリカプレート。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(1)"
+   },
+   "ref": "参考：理科ワーク p25 ②(1)（プレート）・教科書 p81 図23",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "北アメリカプレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-41",
+   "type": "input",
+   "prompt": "震源が深い地震は、大陸プレートと海洋プレートのどちらに沿って起きているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "海洋プレート",
+     "かいようプレート",
+     "沈みこむ海洋プレート"
+    ]
+   },
+   "explanation": "教科書p82：震源が深い地震は、沈みこむ海洋プレートに沿って起きている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(2)"
+   },
+   "ref": "参考：理科ワーク p25 ②(2)（日本列島の地震）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "大陸プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-42",
+   "type": "input",
+   "prompt": "日本列島の下では、どのプレートの下に、どのプレートが沈みこんでいるか。「〇〇プレートの下に〇〇プレート」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大陸プレートの下に海洋プレート",
+     "大陸プレートの下に海洋プレートが沈みこむ",
+     "大陸の下に海洋"
+    ]
+   },
+   "explanation": "教科書p82：日本列島の下では、大陸プレートの下に海洋プレートが沈みこみ、プレートに巨大な力がはたらき続けている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(4)A"
+   },
+   "ref": "参考：理科ワーク p25 ②(4)A（地震が起こるしくみ）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "海洋プレートの下に大陸プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-43",
+   "type": "input",
+   "prompt": "海溝やトラフ付近で起こる地震のしくみを、次の①〜③を正しい順に並べよう。\n① 大陸プレートがひずみにたえきれなくなると地震が起こる\n② 大陸プレートの下に海洋プレートが沈みこむ\n③ 大陸プレートが海洋プレートに引きずられる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2→3→1",
+     "2、3、1",
+     "2,3,1",
+     "231",
+     "2 3 1",
+     "2-3-1"
+    ]
+   },
+   "explanation": "教科書p82図25：①大陸プレートの下に海洋プレートが沈みこむ→②大陸プレートが海洋プレートに引きずられる→③ひずみにたえきれなくなると地震。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(4)"
+   },
+   "ref": "参考：理科ワーク p25 ②(4)（地震が起こるしくみ）・教科書 p82 図25",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "321",
+    "2→1→3"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-44",
+   "type": "input",
+   "prompt": "海溝付近で、大陸プレートにひずみがたまるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "海洋プレート"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "引きずら",
+       "ひきずら",
+       "引きずり",
+       "引っぱ",
+       "引っ張"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p82：沈みこむ海洋プレートに大陸プレートが引きずられて、その周辺にひずみがたまる。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "②(4)"
+   },
+   "ref": "参考：理科ワーク p29 ②(4)（地震が起こるしくみ）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-45",
+   "type": "input",
+   "prompt": "海底の急激な変形などによって発生する、大規模な波を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "津波",
+     "つなみ"
+    ]
+   },
+   "explanation": "教科書p82：海底の急激な変形などが起きると津波が発生することがある。ワークp44まとめ：津波＝大規模かつ急激な海底の変形によって発生する波。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-46",
+   "type": "input",
+   "prompt": "津波が発生しやすいのは、震源が浅いか深いか、震央が陸域と海域のどちらにある地震か。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "浅",
+       "あさ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "海",
+       "うみ"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p82図25：大規模かつ急激な海底の上下の変形によって、震源が浅く、震央が海域にある地震は、津波が発生しやすい。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p82 図25",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-47",
+   "type": "input",
+   "prompt": "津波は太平洋だけで発生するか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しない",
+     "太平洋だけではない",
+     "日本海でも発生する",
+     "いいえ",
+     "発生しない"
+    ]
+   },
+   "explanation": "教科書p82図25：津波は太平洋だけでなく、日本海でも発生する。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p82 図25",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "する"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-48",
+   "type": "input",
+   "prompt": "ふだん見られる海の波は海上をふく風によって起こるが、津波では海底から海面までのどの海水が動くか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "すべての海水",
+     "すべて",
+     "全部",
+     "全て",
+     "海底から海面までのすべての海水"
+    ]
+   },
+   "explanation": "教科書p83防災減災ラボ：津波は、海底から海面までのすべての海水が動いていて、広範囲の海岸にくり返し押し寄せる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "海面付近の海水"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-49",
+   "type": "input",
+   "prompt": "津波は陸に近づくと、高さはどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "高くなる",
+     "増す",
+     "高さを増す",
+     "たかくなる",
+     "高い"
+    ]
+   },
+   "explanation": "教科書p83：津波は陸に近づくと高さを増し、岬の先端やせまい湾の奥では、海水が集中してさらに高くなる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "低くなる"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-50",
+   "type": "input",
+   "prompt": "津波で海水が集中してさらに高くなる場所を2つ答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "岬の先端",
+      "岬",
+      "みさき"
+     ],
+     [
+      "せまい湾の奥",
+      "湾の奥",
+      "せまい湾",
+      "湾"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "教科書p83：岬の先端やせまい湾の奥では、海水が集中してさらに高くなる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "湾の奥"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-51",
+   "type": "input",
+   "prompt": "津波が押し寄せる可能性があるときは、どのような場所へ避難することがたいせつか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "遠く",
+       "とおく",
+       "離れ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "高い",
+       "たかい"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p83：海岸から遠く、高いところへ、すみやかに避難することがたいせつ。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-52",
+   "type": "input",
+   "prompt": "海の近くに高いところがない地域で建築が進められている施設は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "避難タワー",
+     "津波避難タワー",
+     "ひなんタワー"
+    ]
+   },
+   "explanation": "教科書p83：海の近くに高いところがない地域では、避難タワーなどの建築が進められている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "防潮堤"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-53",
+   "type": "input",
+   "prompt": "津波に備えて、海岸沿いにコンクリートで築かれている高い堤を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "防潮堤",
+     "ぼうちょうてい"
+    ]
+   },
+   "explanation": "教科書p83：海岸沿いにコンクリートによる高い防潮堤を築いたりしている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "避難タワー"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-54",
+   "type": "input",
+   "prompt": "過去にくり返しずれ動き、今後もずれ動く可能性がある断層を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "活断層",
+     "かつだんそう"
+    ]
+   },
+   "explanation": "教科書p82注：活断層＝過去にくり返しずれ動き、今後もずれ動く可能性がある断層。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(6)"
+   },
+   "ref": "参考：理科ワーク p25 ②(6)（活断層）・教科書 p82 注❶",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "断層"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-55",
+   "type": "input",
+   "prompt": "大きな力によって生じた大地のずれを（①）という。①の中でも、今後もずれ動く可能性があるものを特に（②）という。①・②をこの順に書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "断層、活断層",
+     "断層・活断層",
+     "断層,活断層",
+     "断層 活断層",
+     "断層活断層"
+    ]
+   },
+   "explanation": "ワークp29②(5)：①断層　②活断層。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p29 ②(5)（活断層）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "活断層、断層"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-56",
+   "type": "input",
+   "prompt": "日本列島で、現在見つかっている活断層の数は、およそいくつ以上か。",
+   "answer": {
+    "kind": "number",
+    "value": "2000",
+    "units": [
+     "以上",
+     "つ以上",
+     "か所以上"
+    ]
+   },
+   "explanation": "教科書p82図26：日本列島には、現在、2000以上の活断層が見つかっている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(6)"
+   },
+   "ref": "参考：理科ワーク p25 ②(6)（活断層）・教科書 p82 図26",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "200",
+    "20000"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-57",
+   "type": "input",
+   "prompt": "内陸で起こる地震は、海洋プレートに押されている何プレートにひずみがたまり、活断層で岩石の破壊が進んで起こるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大陸プレート",
+     "たいりくプレート"
+    ]
+   },
+   "explanation": "教科書p82：内陸では、海洋プレートによって押されている大陸プレートにひずみがたまり、すでにできていた活断層において再び岩石の破壊が一気に進んでずれ動き、地震が起こる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(6)"
+   },
+   "ref": "参考：理科ワーク p25 ②(6)（内陸の地震）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "海洋プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-58",
+   "type": "input",
+   "prompt": "内陸の活断層で起こる地震は、マグニチュードが小さくても、震源が浅ければ直上の地表はどうなるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "大きく",
+       "おおきく",
+       "強く"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "ゆれ",
+       "揺れ"
+      ]
+     }
+    ]
+   },
+   "explanation": "教科書p82：マグニチュードが小さくても、震源の深さが浅ければ、直上の地表は大きくゆれ、大きな被害をもたらすことがある。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(6)"
+   },
+   "ref": "参考：理科ワーク p25 ②(6)（内陸の地震）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-59",
+   "type": "input",
+   "prompt": "震源が浅い地震は、海溝やトラフ付近で起こるもののほかに、どこで起こるものがあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "内陸",
+     "ないりく",
+     "陸",
+     "陸地"
+    ]
+   },
+   "explanation": "教科書p82：震源が浅い地震は、海溝やトラフ付近で起こるものと内陸で起こるものがある。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "②(3)"
+   },
+   "ref": "参考：理科ワーク p29 ②(3)（日本列島の地震）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "海溝"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-60",
+   "type": "input",
+   "prompt": "日本海溝付近で沈みこんでいる、海洋プレートと大陸プレートのうち、日本列島をのせているのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大陸プレート",
+     "たいりくプレート"
+    ]
+   },
+   "explanation": "教科書p81〜82：日本列島は大陸プレート（北アメリカプレート・ユーラシアプレート）の上にあり、その下に海洋プレートが沈みこむ。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "②(1)"
+   },
+   "ref": "参考：理科ワーク p29 ②(1)（プレート）・教科書 p82 図24",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "海洋プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-61",
+   "type": "input",
+   "prompt": "東北地方太平洋沖地震では、震度5強または6弱のゆれが約何分間続いたところもあったか。「約○〜○分間」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "約2〜3分間",
+     "2〜3分間",
+     "2〜3分",
+     "約2〜3分",
+     "2~3分",
+     "2から3分"
+    ]
+   },
+   "explanation": "教科書p79なるほど：東北地方太平洋沖地震では、震度5強または6弱のゆれが、約2〜3分間続いたところもあった。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(1)"
+   },
+   "ref": "参考：理科ワーク p25 ①(1)（震度）・教科書 p79 なるほど",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629806_0.jpg",
+    "sha256": "f7b11551269b16800a6aedab72bd0ed3bac02804ab64adc9d2cdd7ce558621a4",
+    "page": 79
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-62",
+   "type": "input",
+   "prompt": "マグニチュードが小さい地震でも、大きな被害が出ることがある。その理由として正しいものを選ぼう。\nア 震源が浅いと直上の地表が大きくゆれるから　イ マグニチュードは観測点によって変わるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "教科書p82：マグニチュードが小さくても、震源の深さが浅ければ、直上の地表は大きくゆれ、大きな被害をもたらすことがある。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "①(4)"
+   },
+   "ref": "参考：理科ワーク p28 ①(4)（震度とマグニチュード）・教科書 p82 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-63",
+   "type": "input",
+   "prompt": "「地震で最初に地下の岩石が破壊された場所」「その真上の地表の位置」を表す用語を、この順に書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震源、震央",
+     "震源・震央",
+     "震源,震央",
+     "震源 震央",
+     "震源と震央"
+    ]
+   },
+   "explanation": "ワークp44まとめ：震源、震央。",
+   "source": {
+    "id": "source-0522",
+    "file": "理科ワーク/S__16252955_0.jpg",
+    "sha256": "6fac24ff7a789aebfe6a1e7098cb187bf33fba89b3e6f02e1a95805ad1340bf6",
+    "page": 44,
+    "number": "まとめ"
+   },
+   "ref": "参考：理科ワーク p44 まとめ（用語）・教科書 p74 本文",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74
+   },
+   "near": [
+    "震央、震源"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-64",
+   "type": "input",
+   "prompt": "地震の用語のうち、「将来の災害に備えた被害予測図」は地球の分野のまとめで何とよばれているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ハザードマップ",
+     "はざーどまっぷ"
+    ]
+   },
+   "explanation": "ワークp45まとめ：ハザードマップ＝将来の災害に備えた被害予測図。",
+   "source": {
+    "id": "source-0522",
+    "file": "理科ワーク/S__16252955_0.jpg",
+    "sha256": "6fac24ff7a789aebfe6a1e7098cb187bf33fba89b3e6f02e1a95805ad1340bf6",
+    "page": 45,
+    "number": "まとめ"
+   },
+   "ref": "参考：理科ワーク p45 まとめ（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "地質図"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-65",
+   "type": "input",
+   "prompt": "海溝付近で起こる地震で、ひずみにたえきれなくなってはね上がるのは、大陸プレートと海洋プレートのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大陸プレート",
+     "たいりくプレート"
+    ]
+   },
+   "explanation": "教科書p82図25③：大陸プレートがひずみにたえきれなくなると地震が起こる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(4)"
+   },
+   "ref": "参考：理科ワーク p25 ②(4)（地震が起こるしくみ）・教科書 p82 図25",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 82
+   },
+   "near": [
+    "海洋プレート"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-66",
+   "type": "input",
+   "prompt": "高層ビルでは、地震のゆれから建物を守るため、建物全体の強度を上げる何を行っているか（あべのハルカスの例）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "耐震対策",
+     "たいしんたいさく",
+     "耐震"
+    ]
+   },
+   "explanation": "教科書p80防災減災ラボ：あべのハルカスは、建物全体の強度を上げる耐震対策などを行い、建物のゆれの大きさやゆれる時間を減らすくふうをしている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "①(1)"
+   },
+   "ref": "参考：理科ワーク p25 ①(1)（地震に備える）・教科書 p80 防災減災ラボ",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 80
+   }
+  },
+  {
+   "id": "workbook-science-1-yure-67",
+   "type": "input",
+   "prompt": "津波は、川をさかのぼることがあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ある",
+     "あります",
+     "さかのぼることがある",
+     "はい"
+    ]
+   },
+   "explanation": "教科書p83：津波は川をさかのぼることもある。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   },
+   "near": [
+    "ない"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-68",
+   "type": "input",
+   "prompt": "東北地方の太平洋側の沖にある、太平洋プレートが沈みこむ海溝を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "日本海溝",
+     "にほんかいこう"
+    ]
+   },
+   "explanation": "教科書p81図22：日本海溝。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(1)"
+   },
+   "ref": "参考：理科ワーク p25 ②(1)（海溝）・教科書 p81 図22",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "南海トラフ"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-69",
+   "type": "input",
+   "prompt": "西日本の太平洋側の沖にある、フィリピン海プレートが沈みこむ海底の谷を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "南海トラフ",
+     "なんかいトラフ"
+    ]
+   },
+   "explanation": "教科書p81図22：南海トラフ（海溝よりも浅い海底の谷）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(1)"
+   },
+   "ref": "参考：理科ワーク p25 ②(1)（トラフ）・教科書 p81 図22",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629807_0.jpg",
+    "sha256": "fc3618791bdcc1b6707c3f5afea9f899f7a33b70d720e1d0648204ff321a55c8",
+    "page": 81
+   },
+   "near": [
+    "日本海溝"
+   ]
+  },
+  {
+   "id": "workbook-science-1-yure-70",
+   "type": "input",
+   "prompt": "津波によってたおれにくい木を海岸沿いに植えて育てることで、何を減らす研究が進められているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "被害",
+     "ひがい",
+     "津波による被害",
+     "津波の被害"
+    ]
+   },
+   "explanation": "教科書p83：津波によってたおれにくい木を海岸沿いに植えて育てることで、景観や環境に配慮しながら、津波による被害を減らす研究も進められている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 25,
+    "number": "②(5)"
+   },
+   "ref": "参考：理科ワーク p25 ②(5)（津波）・教科書 p83 津波に備える",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "理科の教科書/S__16629809_0.jpg",
+    "sha256": "e68b998c3d21b23909b351321c678ff4790f7777f020cf1d74cf62aa22636197",
+    "page": 83
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-05 Claude作成。理科ワークp25（教科書チェック①②）・p28基本①と○×③④・p29力だめし①(5)・②・p44まとめと、教科書p78〜83（ゆれの大きさ・震度階級表・マグニチュード・震源域・地震計のしくみ・日本列島の地震・活断層・津波に備える・Review）を写真で確認して作成。"
+}

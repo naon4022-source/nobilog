@@ -1,0 +1,51 @@
+/* 🎫 英検の練習800問をのびログで解く（Claude・2026-10-06） */
+#eiken-practice{margin-bottom:14px}
+.ep-head h3{margin:0 0 6px}
+.ep-note{font-size:14px;line-height:1.7;margin:0 0 8px;opacity:.9}
+.ep-msg{border:2px solid #c0392b;border-radius:12px;padding:8px 12px;font-weight:bold;color:#c0392b;background:rgba(192,57,43,.06)}
+.ep-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.ep-tab{min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-weight:bold;cursor:pointer}
+.ep-tab.on{background:var(--main-color,#2980b9);border-color:var(--main-color,#2980b9);color:#fff}
+.ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,210px),1fr));gap:10px}
+.ep-set{border:1px solid var(--border-color,#ccd);border-radius:16px;padding:12px;min-width:0}
+.ep-set h4{margin:0 0 4px;font-size:16px}
+.ep-state{margin:0 0 8px;font-size:14px;opacity:.85}
+.ep-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.ep-btn{min-height:44px;padding:8px 14px;border-radius:12px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-weight:bold;cursor:pointer;font-size:15px}
+.ep-btn.ep-main{background:var(--main-color,#2980b9);border-color:var(--main-color,#2980b9);color:#fff}
+.ep-btn:disabled{opacity:.45;cursor:default}
+.ep-runhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.ep-where{font-weight:bold}
+.ep-bar{height:8px;border-radius:999px;background:rgba(127,127,127,.2);margin:8px 0 12px;overflow:hidden}
+.ep-bar span{display:block;height:100%;background:var(--main-color,#2980b9);transition:width .3s ease}
+.ep-card{border:1px solid var(--border-color,#ccd);border-radius:18px;padding:16px;animation:epIn .25s ease both}
+@keyframes epIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ep-kind{margin:0 0 8px;font-size:13px;font-weight:bold;opacity:.75}
+.ep-passage{border-left:5px solid var(--main-color,#2980b9);background:rgba(127,127,127,.07);border-radius:10px;padding:10px 14px;margin-bottom:12px}
+.ep-passage h4{margin:0 0 4px}
+.ep-passage p{margin:0 0 8px;line-height:1.8;font-size:17px}
+.ep-q{font-size:18px;line-height:1.8;margin:0 0 12px;overflow-wrap:anywhere}
+.ep-choices{display:grid;gap:8px}
+.ep-choice{min-height:48px;text-align:left;padding:10px 14px;border-radius:12px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-size:17px;cursor:pointer}
+.ep-choice:hover,.ep-tile:hover{border-color:var(--main-color,#2980b9)}
+.ep-line{min-height:52px;border:2px dashed var(--border-color,#ccd);border-radius:12px;padding:6px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ep-ph{opacity:.55;font-size:14px;padding:0 6px}
+.ep-pool{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ep-tile{min-height:44px;padding:6px 12px;border-radius:10px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-size:17px;cursor:pointer}
+.ep-tile.on{background:rgba(41,128,185,.12);border-color:var(--main-color,#2980b9)}
+.ep-text{width:100%;box-sizing:border-box;font-size:18px;padding:10px 12px;border-radius:12px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-family:inherit}
+.ep-count{font-size:13px;margin:4px 0 0;opacity:.8}
+.ep-fb{border-radius:14px;padding:10px 14px;margin-top:6px}
+.ep-fb.ok{background:rgba(39,174,96,.1)}.ep-fb.ng{background:rgba(192,57,43,.08)}.ep-fb.near{background:rgba(243,156,18,.12)}
+.ep-mark{font-size:20px;font-weight:bold;margin:0 0 6px}
+.ep-label{font-size:12px;font-weight:bold;margin:8px 0 0;opacity:.7}
+.ep-mine,.ep-model{margin:2px 0 0;font-size:17px;overflow-wrap:anywhere;white-space:pre-wrap}
+.ep-model{font-weight:bold}
+.ep-why{margin:8px 0 0;line-height:1.7;font-size:15px}
+.ep-rubric{margin:4px 0 0;padding-left:20px;line-height:1.7}
+.ep-speak{margin-top:8px}
+.ep-score{font-size:26px;font-weight:bold;margin:6px 0}
+.ep-list{padding-left:24px;line-height:1.8}
+.ep-list li{overflow-wrap:anywhere}.ep-m{margin-right:6px}
+@media (prefers-reduced-motion:reduce){.ep-card{animation:none}.ep-bar span{transition:none}}
+@media print{#eiken-practice{display:none}}

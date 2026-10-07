@@ -1,0 +1,48 @@
+/* 📚 英検の英単語カード（Claude・2026-10-07） */
+#eiken-vocab{margin-bottom:14px}
+.ev-head h3{margin:0 0 6px}
+.ev-note{font-size:14px;line-height:1.7;margin:0 0 8px;opacity:.9}
+.ev-small{font-size:12px;opacity:.75}
+.ev-msg{border:2px solid #c0392b;border-radius:12px;padding:8px 12px;font-weight:bold;color:#c0392b;background:rgba(192,57,43,.06)}
+.ev-tabs,.ev-dirs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.ev-tab,.ev-dir{min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-weight:bold;cursor:pointer;font-size:15px}
+.ev-tab.on,.ev-dir.on{background:var(--main-color,#2980b9);border-color:var(--main-color,#2980b9);color:#fff}
+.ev-dir{min-height:40px;font-size:14px}
+.ev-panel{border:1px solid var(--border-color,#ccd);border-radius:16px;padding:14px;margin-top:6px}
+.ev-desc{margin:0 0 10px;font-size:14px}
+.ev-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.ev-stat{border-radius:12px;padding:8px 4px;text-align:center;background:rgba(127,127,127,.08);min-width:0}
+.ev-num{display:block;font-size:22px;font-weight:bold}
+.ev-lab{display:block;font-size:12px;opacity:.8}
+.ev-learned .ev-num{color:#27ae60}.ev-weak .ev-num{color:#c0392b}
+.ev-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.ev-btn{min-height:44px;padding:8px 14px;border-radius:12px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-weight:bold;cursor:pointer;font-size:15px}
+.ev-btn.ev-main{background:var(--main-color,#2980b9);border-color:var(--main-color,#2980b9);color:#fff}
+.ev-speak{margin:4px 0 0;min-width:44px}
+.ev-runhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.ev-where{font-weight:bold}
+.ev-bar{height:8px;border-radius:999px;background:rgba(127,127,127,.2);margin:8px 0 12px;overflow:hidden}
+.ev-bar span{display:block;height:100%;background:var(--main-color,#2980b9);transition:width .3s ease}
+.ev-card{border:1px solid var(--border-color,#ccd);border-radius:18px;padding:16px;animation:evIn .25s ease both;overflow-wrap:anywhere}
+@keyframes evIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ev-meta{margin:0 0 6px;font-size:13px;font-weight:bold;opacity:.7}
+.ev-word{font-size:34px;font-weight:bold;margin:4px 0;letter-spacing:.02em}
+.ev-mean{font-size:24px;font-weight:bold;margin:4px 0;line-height:1.5}
+.ev-ask{margin:10px 0 8px;font-size:14px;opacity:.85}
+.ev-text{width:100%;box-sizing:border-box;font-size:20px;padding:10px 12px;border-radius:12px;border:2px solid var(--border-color,#ccd);background:transparent;color:inherit;font-family:inherit}
+.ev-other{margin:8px 0 0;padding:8px 12px;border-radius:10px;background:rgba(243,156,18,.14);font-size:14px;line-height:1.6}
+.ev-fb{border-radius:14px;padding:10px 14px;margin-top:6px}
+.ev-fb.ok{background:rgba(39,174,96,.1)}.ev-fb.ng{background:rgba(192,57,43,.08)}.ev-fb.near{background:rgba(243,156,18,.12)}
+.ev-mark{font-size:20px;font-weight:bold;margin:0 0 6px}
+.ev-label{font-size:12px;font-weight:bold;margin:10px 0 0;opacity:.7}
+.ev-mine,.ev-model{margin:2px 0 0;font-size:17px}
+.ev-model{font-weight:bold}
+.ev-ex{margin:2px 0 0;font-size:17px;line-height:1.6}
+.ev-exja{margin:2px 0 0;font-size:14px;opacity:.85}
+.ev-next{margin:10px 0 0;font-size:14px;font-weight:bold}
+.ev-score{font-size:26px;font-weight:bold;margin:6px 0}
+.ev-list{padding-left:24px;line-height:1.8}
+.ev-list li{overflow-wrap:anywhere}.ev-m{margin-right:6px}
+@media (max-width:420px){.ev-word{font-size:30px}.ev-mean{font-size:20px}.ev-stats{gap:6px}.ev-num{font-size:19px}}
+@media (prefers-reduced-motion:reduce){.ev-card{animation:none}.ev-bar span{transition:none}}
+@media print{#eiken-vocab{display:none}}

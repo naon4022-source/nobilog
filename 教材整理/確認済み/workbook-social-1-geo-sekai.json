@@ -1,0 +1,2126 @@
+{
+ "id": "workbook-social-1-geo-sekai",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "世界の位置（大陸・大洋・州・国）と資料の読み取り",
+ "majorTitle": "地理",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-social-1-geo-sekai-1",
+   "type": "input",
+   "prompt": "地球の表面で、陸地と海洋の面積の割合はおよそ何対何か。「陸地：海洋」の順に答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3:7",
+     "3対7",
+     "3：7",
+     "３：７",
+     "３対７"
+    ]
+   },
+   "explanation": "地球の表面は陸地がおよそ3割、海洋がおよそ7割。このため地球は「水の惑星」とよばれる。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（地球の姿）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7:3",
+    "7対3"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-2",
+   "type": "input",
+   "prompt": "海洋の面積が陸地より広いことから、地球は何とよばれることがあるか。「〇〇の惑星」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水の惑星",
+     "みずのわくせい"
+    ]
+   },
+   "explanation": "海洋が地表の約7割をしめるので「水の惑星」。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（地球の姿）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "青い惑星"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-3",
+   "type": "input",
+   "prompt": "六大陸のうち、最も面積が大きい大陸は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ユーラシア大陸",
+     "ユーラシア"
+    ]
+   },
+   "explanation": "六大陸で最大はユーラシア大陸（陸地全体の約35％）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（六大陸）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アフリカ大陸",
+    "アジア大陸"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-4",
+   "type": "input",
+   "prompt": "六大陸のうち、最も面積が小さい大陸は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オーストラリア大陸",
+     "オーストラリア"
+    ]
+   },
+   "explanation": "最小はオーストラリア大陸。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（六大陸）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "南極大陸"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-5",
+   "type": "input",
+   "prompt": "一年中厚い氷におおわれ、どこの国の領土にもなっていない大陸を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "南極大陸",
+     "南極"
+    ]
+   },
+   "explanation": "南極大陸。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（六大陸）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "北極"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-6",
+   "type": "input",
+   "prompt": "六大陸をすべて書こう（順は自由）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ユーラシア大陸",
+      "ユーラシア"
+     ],
+     [
+      "アフリカ大陸",
+      "アフリカ"
+     ],
+     [
+      "北アメリカ大陸",
+      "北アメリカ"
+     ],
+     [
+      "南アメリカ大陸",
+      "南アメリカ"
+     ],
+     [
+      "オーストラリア大陸",
+      "オーストラリア"
+     ],
+     [
+      "南極大陸",
+      "南極"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "ユーラシア・アフリカ・北アメリカ・南アメリカ・オーストラリア・南極の6つ。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（六大陸）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ユーラシア、アフリカ、北アメリカ、南アメリカ、オーストラリア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-7",
+   "type": "input",
+   "prompt": "三大洋のうち、最も面積が大きい海洋は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "太平洋",
+     "たいへいよう"
+    ]
+   },
+   "explanation": "三大洋で最大は太平洋。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（三大洋）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "大西洋",
+    "インド洋"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-8",
+   "type": "input",
+   "prompt": "三大洋をすべて書こう（順は自由）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "太平洋"
+     ],
+     [
+      "大西洋"
+     ],
+     [
+      "インド洋"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "太平洋・大西洋・インド洋。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（三大洋）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "太平洋、大西洋"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-9",
+   "type": "input",
+   "prompt": "アフリカ大陸の東側とオーストラリア大陸の西側にはさまれた大洋は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "インド洋",
+     "いんどよう"
+    ]
+   },
+   "explanation": "インド洋。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（三大洋）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "大西洋",
+    "太平洋"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-10",
+   "type": "input",
+   "prompt": "ヨーロッパ・アフリカと南北アメリカ大陸の間に広がる大洋は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大西洋",
+     "たいせいよう"
+    ]
+   },
+   "explanation": "大西洋。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（三大洋）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "太平洋",
+    "インド洋"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-11",
+   "type": "input",
+   "prompt": "世界を6つの州に分けたとき、日本がふくまれる州は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アジア州",
+     "アジア"
+    ]
+   },
+   "explanation": "日本はアジア州（さらに細かく分けると東アジア）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "オセアニア州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-12",
+   "type": "input",
+   "prompt": "アジア州をさらに細かく区分したとき、日本がふくまれる地域を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "東アジア",
+     "ひがしアジア"
+    ]
+   },
+   "explanation": "アジア州は東・東南・南・中央・西アジアなどに分けられる。日本は東アジア。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "⑯"
+   },
+   "ref": "参考：地理ワーク p74 ⑯（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "東南アジア",
+    "南アジア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-13",
+   "type": "input",
+   "prompt": "世界の6つの州のうち、オーストラリアやニュージーランド、太平洋の島々がふくまれる州は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オセアニア州",
+     "オセアニア"
+    ]
+   },
+   "explanation": "オセアニア州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アジア州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-14",
+   "type": "input",
+   "prompt": "世界の6つの州をすべて書こう（順は自由）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "アジア州",
+      "アジア"
+     ],
+     [
+      "ヨーロッパ州",
+      "ヨーロッパ"
+     ],
+     [
+      "アフリカ州",
+      "アフリカ"
+     ],
+     [
+      "北アメリカ州",
+      "北アメリカ"
+     ],
+     [
+      "南アメリカ州",
+      "南アメリカ"
+     ],
+     [
+      "オセアニア州",
+      "オセアニア"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "アジア・ヨーロッパ・アフリカ・北アメリカ・南アメリカ・オセアニアの6州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アジア州、ヨーロッパ州、アフリカ州、北アメリカ州、南アメリカ州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-15",
+   "type": "input",
+   "prompt": "アジア州とヨーロッパ州の両方にまたがる国を、次から2つ選ぼう。\nア ロシア　イ ブラジル　ウ トルコ　エ カナダ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ",
+     "ア,ウ",
+     "アウ",
+     "ア ウ",
+     "ア・ウ",
+     "アとウ",
+     "ウ、ア",
+     "ウ,ア",
+     "ウア",
+     "ウ ア",
+     "ウ・ア",
+     "ウとア"
+    ]
+   },
+   "explanation": "ロシアとトルコはアジア州とヨーロッパ州にまたがる。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "D①(1)"
+   },
+   "ref": "参考：地理ワーク p8 D①(1)（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-16",
+   "type": "input",
+   "prompt": "現在、世界にはおよそいくつの国があるか。次から選ぼう。\nア 約50　イ 約100　ウ 約190　エ 約500",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "世界には約190の国がある（日本が承認している国は195か国）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（世界の国々）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-17",
+   "type": "input",
+   "prompt": "スペイン語で「赤道」を表す言葉から国名がつけられた、南アメリカの国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エクアドル",
+     "えくあどる"
+    ]
+   },
+   "explanation": "エクアドル＝スペイン語で赤道。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国名の由来）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ペルー",
+    "コロンビア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-18",
+   "type": "input",
+   "prompt": "スペインの皇太子フェリペの名前にちなんで国名がつけられた、東南アジアの国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "フィリピン",
+     "ふぃりぴん"
+    ]
+   },
+   "explanation": "フィリピン。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国名の由来）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "インドネシア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-19",
+   "type": "input",
+   "prompt": "オーストラリアやニュージーランドの国旗の一部に、ある国の国旗がえがかれている。その国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イギリス",
+     "いぎりす",
+     "英国"
+    ]
+   },
+   "explanation": "かつてイギリスの植民地だったなど、イギリスとの関係が深いことを表している。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①(1)"
+   },
+   "ref": "参考：地理ワーク p28 その①(1)（国旗）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アメリカ合衆国",
+    "フランス"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-20",
+   "type": "input",
+   "prompt": "オセアニア州の国の国旗に、イギリスの国旗がえがかれているものがあるのはなぜか。「〜から。」の形で書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "イギリス"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "植民地",
+       "関係",
+       "つながり"
+      ]
+     }
+    ]
+   },
+   "explanation": "過去にイギリスの植民地だったなど、イギリスとの関係が深いから。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①(1)"
+   },
+   "ref": "参考：地理ワーク p28 その①(1)（国旗）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-21",
+   "type": "input",
+   "prompt": "国と国との境界を何というか。漢字2字で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "国境",
+     "こっきょう"
+    ]
+   },
+   "explanation": "国境。山脈や川などの自然を利用したもの、緯線・経線を利用したものなどがある。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国境）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "県境"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-22",
+   "type": "input",
+   "prompt": "山脈や川など、自然の地形を利用して引かれた国境と、緯線や経線を利用して引かれた国境のうち、直線になりやすいのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "緯線や経線を利用した国境",
+     "緯線や経線",
+     "緯線・経線",
+     "緯線・経線を利用した国境",
+     "緯線や経線を利用したもの"
+    ]
+   },
+   "explanation": "緯線・経線を利用した国境は直線になる。アフリカ州に多い。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国境）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "山脈や川を利用した国境",
+    "山脈や川"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-23",
+   "type": "input",
+   "prompt": "アメリカ合衆国とカナダの国境の一部が、まっすぐな直線になっている理由を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "緯線",
+       "緯度"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "利用",
+       "もとに",
+       "基に",
+       "沿って",
+       "そって"
+      ]
+     }
+    ]
+   },
+   "explanation": "緯線を利用して国境線が引かれているから。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①(3)"
+   },
+   "ref": "参考：地理ワーク p28 その①(3)（国境）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-24",
+   "type": "input",
+   "prompt": "西アフリカの地図で、曲がりくねった国境線は何を利用して引かれていると考えられるか。次から選ぼう。\nア 経線　イ 川　ウ 緯線",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "曲がった国境線は自然の地形（川など）に沿っていることが多い。直線は緯線・経線。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "C①(1)"
+   },
+   "ref": "参考：地理ワーク p8 C①(1)（国境）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-25",
+   "type": "input",
+   "prompt": "日本やイギリスのように、まわりのすべてを海に囲まれた国を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "島国",
+     "しまぐに",
+     "海洋国",
+     "島国（海洋国）"
+    ]
+   },
+   "explanation": "島国（海洋国）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（島国と内陸国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "内陸国"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-26",
+   "type": "input",
+   "prompt": "モンゴルやスイスのように、国土がまったく海に面していない国を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "内陸国",
+     "ないりくこく"
+    ]
+   },
+   "explanation": "内陸国。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（島国と内陸国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "島国"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-27",
+   "type": "input",
+   "prompt": "内陸国とはどのような国か。「海」という語を使って書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "海"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "接していない",
+       "面していない",
+       "ない国",
+       "がない",
+       "していない"
+      ]
+     }
+    ],
+    "allowNegation": true
+   },
+   "explanation": "どこにも海と接している部分がない国。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その②(1)"
+   },
+   "ref": "参考：地理ワーク p28 その②(1)（島国と内陸国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-28",
+   "type": "input",
+   "prompt": "世界で最も面積が大きい国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ロシア",
+     "ロシア連邦",
+     "ろしあ"
+    ]
+   },
+   "explanation": "ロシア。日本の面積の約45倍。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "カナダ",
+    "中国"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-29",
+   "type": "input",
+   "prompt": "ロシアの面積は日本の約何倍か。次から選ぼう。\nア 約5倍　イ 約15倍　ウ 約45倍　エ 約100倍",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ロシアは日本の約45倍の面積。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ",
+    "エ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-30",
+   "type": "input",
+   "prompt": "世界で最も面積が小さい国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "バチカン市国",
+     "バチカン"
+    ]
+   },
+   "explanation": "バチカン市国（イタリアのローマ市内にある）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "モナコ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-31",
+   "type": "input",
+   "prompt": "バチカン市国は、どこの国の首都の中にあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イタリア",
+     "いたりあ",
+     "ローマ"
+    ]
+   },
+   "explanation": "イタリアの首都ローマの中にある。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "㉒"
+   },
+   "ref": "参考：地理ワーク p74 ㉒（国の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "フランス",
+    "スペイン"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-32",
+   "type": "input",
+   "prompt": "中国とともに、人口が10億人をこえる国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "インド",
+     "いんど"
+    ]
+   },
+   "explanation": "中国とインドは人口が10億人をこえる。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "㉓"
+   },
+   "ref": "参考：地理ワーク p74 ㉓（人口）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "インドネシア",
+    "アメリカ合衆国"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-33",
+   "type": "input",
+   "prompt": "6つの州のうち、最も人口が多い州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アジア州",
+     "アジア"
+    ]
+   },
+   "explanation": "アジア州。中国やインドなど人口の多い国がある。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（人口）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アフリカ州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-34",
+   "type": "input",
+   "prompt": "人口を面積で割った値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "人口密度",
+     "じんこうみつど"
+    ]
+   },
+   "explanation": "人口密度＝人口÷面積（1km²あたりの人数）。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "㉔"
+   },
+   "ref": "参考：地理ワーク p74 ㉔（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "人口"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-35",
+   "type": "input",
+   "prompt": "ある国の人口が1500万人、面積が30万km²のとき、人口密度は1km²あたり何人か。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "人",
+     "人/km2",
+     "人/km²"
+    ]
+   },
+   "explanation": "1500万÷30万＝50人/km²。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "資料"
+   },
+   "ref": "参考：地理ワーク p5 資料（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5",
+    "500",
+    "0.02"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-36",
+   "type": "input",
+   "prompt": "人口が480万人、面積が120万km²の国の人口密度は、1km²あたり何人か。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "人",
+     "人/km2",
+     "人/km²"
+    ]
+   },
+   "explanation": "480万÷120万＝4人/km²。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "C①(2)"
+   },
+   "ref": "参考：地理ワーク p8 C①(2)（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "40",
+    "0.25"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-37",
+   "type": "input",
+   "prompt": "人口がほぼ同じ2つの国で、人口密度が4倍ちがう。人口密度が高い国の面積は、低い国と比べてどうなっているか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "面積"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "小さい",
+       "せまい",
+       "狭い",
+       "4分の1",
+       "四分の一"
+      ]
+     }
+    ]
+   },
+   "explanation": "人口が同じなら、面積が小さい国ほど人口密度が高い（面積は約4分の1）。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "C①(3)"
+   },
+   "ref": "参考：地理ワーク p8 C①(3)（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-38",
+   "type": "input",
+   "prompt": "人口が同じくらいの2つの国A・Bがある。Aの面積はBの2倍である。人口密度が高いのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "B",
+     "Ｂ",
+     "Bの国"
+    ]
+   },
+   "explanation": "人口が同じなら、面積が小さいBのほうが人口密度は高い。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "C①(3)"
+   },
+   "ref": "参考：地理ワーク p8 C①(3)（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "A"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-39",
+   "type": "input",
+   "prompt": "国ごとの人口のように、数量の大小を比べるのに適したグラフは何か。次から選ぼう。\nア 棒グラフ　イ 折れ線グラフ　ウ 帯グラフ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "棒グラフは数量の差を比べるのに適する。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（グラフの種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-40",
+   "type": "input",
+   "prompt": "日本の人口のうつり変わりのように、変化のようすを表すのに適したグラフは何か。次から選ぼう。\nア 棒グラフ　イ 折れ線グラフ　ウ 帯グラフ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "折れ線グラフは変化を読み取るのに適する。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（グラフの種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-41",
+   "type": "input",
+   "prompt": "大陸別の面積の割合のように、全体にしめる割合を表すのに適したグラフは何か。次から選ぼう。\nア 棒グラフ　イ 折れ線グラフ　ウ 帯グラフ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "帯グラフ（円グラフ）は割合を表すのに適する。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（グラフの種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-42",
+   "type": "input",
+   "prompt": "資料を読み取るとき最初に確認する、資料の上などに書かれた「何についての資料か」を表すものを何というか。漢字3字で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "資料名",
+     "しりょうめい",
+     "タイトル",
+     "題名"
+    ]
+   },
+   "explanation": "まず資料名、次に単位・縦軸と横軸を確認する。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（資料の読み取り方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "単位"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-43",
+   "type": "input",
+   "prompt": "グラフの数値が「億人」なのか「万人」なのかを示すものを何というか。漢字2字で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "単位",
+     "たんい"
+    ]
+   },
+   "explanation": "単位を確かめないと数値を正しく読めない。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（資料の読み取り方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "資料名"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-44",
+   "type": "input",
+   "prompt": "陸地の総面積が約1億5000万km²で、ある大陸の割合が20％のとき、その大陸の面積は約何万km²か。",
+   "answer": {
+    "kind": "number",
+    "value": "3000",
+    "units": [
+     "万km2",
+     "万km²",
+     "万"
+    ]
+   },
+   "explanation": "割合から実数を求める：1億5000万×0.2＝3000万km²。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（帯グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "300",
+    "30000",
+    "7500"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-45",
+   "type": "input",
+   "prompt": "帯グラフで、ユーラシア大陸の割合が35.0％、アフリカ大陸が20.0％のとき、ユーラシア大陸の面積はアフリカ大陸の何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "1.75",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "35.0÷20.0＝1.75倍。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（帯グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "15",
+    "0.57"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-46",
+   "type": "input",
+   "prompt": "日本の人口は、1950年から2010年ごろまで増え、その後は減っている。このようすを読み取るのに使うグラフの、横軸に表されているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "年",
+     "年代",
+     "時間",
+     "西暦",
+     "年（西暦）"
+    ]
+   },
+   "explanation": "変化を表す折れ線グラフの横軸は年（時間）。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（折れ線グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "人口"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-47",
+   "type": "input",
+   "prompt": "A国の人口が3.4億人、B国が0.7億人のとき、A国の人口はB国の約何倍か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "3.4÷0.7＝4.857…→約5倍。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（棒グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4",
+    "2.7"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-48",
+   "type": "input",
+   "prompt": "地図上で、周りがすべて陸地で、海に面していない国々に共通する特徴を書こう。「海」という語を使おう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "海"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "面していない",
+       "接していない",
+       "ない"
+      ]
+     }
+    ],
+    "allowNegation": true
+   },
+   "explanation": "それぞれの国の周りはすべて陸地で、海に面していない（内陸国）。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "D①(6)"
+   },
+   "ref": "参考：地理ワーク p8 D①(6)（内陸国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-49",
+   "type": "input",
+   "prompt": "北極点を中心にした地図で、インドの南に広がる海洋は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "インド洋",
+     "いんどよう"
+    ]
+   },
+   "explanation": "インドの南はインド洋。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 9,
+    "number": "D②(1)"
+   },
+   "ref": "参考：地理ワーク p9 D②(1)（三大洋）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "太平洋",
+    "大西洋"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-50",
+   "type": "input",
+   "prompt": "面積が大きい国を、大きい順に並べよう（記号で）。\nア 中国　イ ロシア　ウ 日本",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ→ア→ウ",
+     "イ、ア、ウ",
+     "イ,ア,ウ",
+     "イアウ",
+     "イ ア ウ",
+     "イ-ア-ウ"
+    ]
+   },
+   "explanation": "ロシア（約1710万km²）＞中国（約960万km²）＞日本（約38万km²）。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p5 ②（世界の国々）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アイウ",
+    "イウア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-51",
+   "type": "input",
+   "prompt": "国のまわりのすべてが海に囲まれている国を、次からすべて選ぼう。\nア 日本　イ モンゴル　ウ ニュージーランド　エ スイス",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ",
+     "ア,ウ",
+     "アウ",
+     "ア ウ",
+     "ア・ウ",
+     "アとウ",
+     "ウ、ア",
+     "ウ,ア",
+     "ウア",
+     "ウ ア",
+     "ウ・ア",
+     "ウとア"
+    ]
+   },
+   "explanation": "日本・ニュージーランドは島国、モンゴル・スイスは内陸国。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "⑲"
+   },
+   "ref": "参考：地理ワーク p74 ⑲（島国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-52",
+   "type": "input",
+   "prompt": "海に面していない内陸国を、次からすべて選ぼう。\nア モンゴル　イ イギリス　ウ スイス　エ フィリピン",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ",
+     "ア,ウ",
+     "アウ",
+     "ア ウ",
+     "ア・ウ",
+     "アとウ",
+     "ウ、ア",
+     "ウ,ア",
+     "ウア",
+     "ウ ア",
+     "ウ・ア",
+     "ウとア"
+    ]
+   },
+   "explanation": "モンゴル・スイスは内陸国。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "⑳"
+   },
+   "ref": "参考：地理ワーク p74 ⑳（内陸国）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-53",
+   "type": "input",
+   "prompt": "エジプトがふくまれる州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アフリカ州",
+     "アフリカ"
+    ]
+   },
+   "explanation": "エジプトはアフリカ大陸の北東部にあり、アフリカ州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アジア州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-54",
+   "type": "input",
+   "prompt": "ブラジルがふくまれる州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "南アメリカ州",
+     "南アメリカ"
+    ]
+   },
+   "explanation": "ブラジルは南アメリカ州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "北アメリカ州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-55",
+   "type": "input",
+   "prompt": "メキシコがふくまれる州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "北アメリカ州",
+     "北アメリカ"
+    ]
+   },
+   "explanation": "メキシコや中央アメリカ、カリブ海の国々は北アメリカ州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "南アメリカ州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-56",
+   "type": "input",
+   "prompt": "ドイツやフランスがふくまれる州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ヨーロッパ州",
+     "ヨーロッパ"
+    ]
+   },
+   "explanation": "ヨーロッパ州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アジア州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-57",
+   "type": "input",
+   "prompt": "アフリカ州に直線の国境線が多いのはなぜか。次から選ぼう。\nア 山脈が多いから　イ かつての植民地時代に、ヨーロッパの国々が緯線・経線を利用して引いたから　ウ 川がまっすぐ流れているから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "植民地時代にヨーロッパの国々が緯線・経線を基に引いた境界が国境になった。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p4 ③（国境）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-58",
+   "type": "input",
+   "prompt": "ツバルやフィジーなど、国旗にイギリスの国旗がえがかれている国が多い州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オセアニア州",
+     "オセアニア"
+    ]
+   },
+   "explanation": "オセアニア州の国の国旗に多い。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p5 ②（世界の国々）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アフリカ州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-59",
+   "type": "input",
+   "prompt": "「ロシア・トルコ・エジプト・カザフスタン」のうち、アフリカ州にある国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エジプト",
+     "えじぷと"
+    ]
+   },
+   "explanation": "エジプトはアフリカ州。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 9,
+    "number": "D①(1)"
+   },
+   "ref": "参考：地理ワーク p9 D①(1)（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "トルコ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-60",
+   "type": "input",
+   "prompt": "人口密度が高い国と低い国では、どちらが人が密集して住んでいるといえるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "人口密度が高い国",
+     "高い国",
+     "高いほう",
+     "人口密度が高いほう"
+    ]
+   },
+   "explanation": "人口密度が高いほど、一定の面積に多くの人が住んでいる。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p5 ③（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "人口密度が低い国",
+    "低い国"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-61",
+   "type": "input",
+   "prompt": "日本（人口約1億2400万人、面積約38万km²）の人口密度は約何人/km²か。次から選ぼう。\nア 約30人　イ 約330人　ウ 約3300人",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "1億2400万÷38万≒326人/km²。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p5 ③（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-62",
+   "type": "input",
+   "prompt": "ロシアは人口が日本より多いのに、人口密度は日本よりずっと低い。その理由を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "面積"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大きい",
+       "広い"
+      ]
+     }
+    ]
+   },
+   "explanation": "ロシアは面積がとても広いので、人口が多くても人口密度は低い。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p5 ③（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-63",
+   "type": "input",
+   "prompt": "「人口が多い国は、必ず人口密度も高い」という文は正しいか。〇か×で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "×",
+     "x",
+     "バツ",
+     "ばつ",
+     "✕"
+    ]
+   },
+   "explanation": "人口密度は面積にも左右される。人口が多くても面積が広ければ低くなる（例：ロシア）。",
+   "source": {
+    "id": "source-0367",
+    "file": "地理ワーク/S__15982600_0.jpg",
+    "sha256": "0753f2ecc0c7d5f2e3b12f5ac76ef01a9cc6fa077ce5ac603d2e02e12b848540",
+    "page": 8,
+    "number": "C①(3)"
+   },
+   "ref": "参考：地理ワーク p8 C①(3)（人口密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "〇",
+    "o",
+    "○"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-64",
+   "type": "input",
+   "prompt": "「〜なのはなぜですか」と理由を問われたとき、答えの文の終わりはどのような形にするか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "〜から",
+     "から",
+     "〜から。",
+     "から。",
+     "～から"
+    ]
+   },
+   "explanation": "理由を問われたら「〜から。」で答える。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①"
+   },
+   "ref": "参考：地理ワーク p28 その①（記述の文末）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "〜こと",
+    "〜ため"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-65",
+   "type": "input",
+   "prompt": "折れ線グラフで、グラフの線が右下がりになっている期間は、その数量がどうなっていることを示すか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "減っている",
+     "減少している",
+     "へっている",
+     "減る",
+     "減少"
+    ]
+   },
+   "explanation": "右上がり＝増加、右下がり＝減少。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（折れ線グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "増えている",
+    "増加している"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-66",
+   "type": "input",
+   "prompt": "帯グラフで「その他」以外の項目の割合を合計すると全体は何％になるか。「その他」もふくめた全体の割合を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "%",
+     "％",
+     "パーセント"
+    ]
+   },
+   "explanation": "帯グラフの全体は100％。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 3,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p3 読みトレ（帯グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "10",
+    "1000"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-67",
+   "type": "input",
+   "prompt": "南アメリカ大陸と北アメリカ大陸のうち、赤道が通るのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "南アメリカ大陸",
+     "南アメリカ"
+    ]
+   },
+   "explanation": "赤道は南アメリカ大陸の北部（エクアドル・ブラジルなど）を通る。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p4 ①（六大陸）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "北アメリカ大陸",
+    "北アメリカ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-68",
+   "type": "input",
+   "prompt": "日本の国土面積は約何万km²か。",
+   "answer": {
+    "kind": "number",
+    "value": "38",
+    "units": [
+     "万km2",
+     "万km²",
+     "万"
+    ]
+   },
+   "explanation": "日本の面積は約38万km²。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 5,
+    "number": "③"
+   },
+   "ref": "参考：地理ワーク p5 ③（国の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "380",
+    "3.8"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-69",
+   "type": "input",
+   "prompt": "インドやタイがふくまれる州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アジア州",
+     "アジア"
+    ]
+   },
+   "explanation": "インドは南アジア、タイは東南アジアで、どちらもアジア州。",
+   "source": {
+    "id": "source-0365",
+    "file": "地理ワーク/S__15982598_0.jpg",
+    "sha256": "c1d679c30002df32edad8b0de95b695edb28f92f702129c1c11d91934d8b7817",
+    "page": 4,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p4 ②（六つの州）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "オセアニア州"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-sekai-70",
+   "type": "input",
+   "prompt": "人口が2.2億人の国と0.7億人の国の人口の差は何億人か。",
+   "answer": {
+    "kind": "number",
+    "value": "1.5",
+    "units": [
+     "億人",
+     "億"
+    ]
+   },
+   "explanation": "2.2−0.7＝1.5億人。",
+   "source": {
+    "id": "source-0364",
+    "file": "地理ワーク/S__15982597_0.jpg",
+    "sha256": "4f6ba1394e49efc63a74de2fcd115e241b0d107370622fc7836774c8c9bb4b7c",
+    "page": 2,
+    "number": "読みトレ"
+   },
+   "ref": "参考：地理ワーク p2 読みトレ（棒グラフ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2.9",
+    "15"
+   ]
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成。地理ワークp2〜3（読みトレ 資料の読み取り入門編：棒・折れ線・帯グラフ）、p4〜5（地球の姿・世界のさまざまな国々）、p8〜9（重要資料・確かめ問題）、p28（書きトレ）、p74（重要用語マスター 世界の姿）を写真で確認し、数値・国・問い方を変えて作り直した。手書きの答えは使っていない。"
+}

@@ -1,0 +1,78 @@
+"""英語 Lesson 5（ワーク p54〜61・112）：現在進行形"""
+from eng import unit, EN, CS, T, C, SEQ, R
+from l1 import NARABE, FILL
+
+def l5():
+    u = unit('l5', "現在進行形（am［are, is］＋～ing）", 'Lesson 5', {54, 55, 56, 57, 58, 59, 60, 61, 113},
+             "2026-10-07 Claude作成。英語ワークp54〜55（Lesson5 Part1：現在進行形の文・否定文、ing のつけ方、習慣・状態は現在形）、p56〜57（Part2：疑問文・What is ～ doing?）、p58（Part3：重要文・必ず覚えたい語句・絵の説明）、p59読解のコツ①（主語と動詞をとらえる）、p60〜61まとめテスト、p113基本文総チェックを写真で確認し、人物・語・場面・英文を変えて作り直した。手書きの答えは使っていない。")
+    q = u.q
+    for verb, ing, hint, nr in [("play", "playing", "ふつうはそのまま ing。", ["plaing"]), ("read", "reading", "そのまま ing。", ["readding"]),
+                                ("make", "making", "e で終わる語は e をとって ing。", ["makeing"]), ("write", "writing", "e をとって ing（t は重ねない）。", ["writeing", "writting"]),
+                                ("swim", "swimming", "m を重ねて ing。", ["swiming"]), ("sit", "sitting", "t を重ねて ing。", ["siting"]),
+                                ("run", "running", "〈短い母音＋子音字〉は最後の文字を重ねて ing。", ["runing"]), ("study", "studying", "y はそのまま ing（studing としない）。", ["studing", "studiing"])]:
+        q(54, "ポイント", "ing のつけ方", f"{verb} の ing 形を書こう。", EN(ing), f"{verb} → {ing}。{hint}", near=nr)
+    q(54, "A", "現在進行形", "次の（　）内から正しい語を選ぼう。\nI (am / is) running now.", EN("am"), "主語 I なので am。", near=["is"])
+    q(54, "A", "現在進行形", "次の（　）内から正しい語を選ぼう。\nMiki and Kumi (is / are) dancing now.", EN("are"), "主語が複数なので are。", near=["is"])
+    q(54, "A", "現在進行形", "次の（　）内から正しい語を選ぼう。\nMy brother is (plays / playing) the guitar.", EN("playing"), "is ＋ ing 形。", near=["plays"])
+    q(54, "A", "現在進行形", "（　）内の語を正しい形にかえて書こう。\nJim is (have) lunch now.", EN("having"), "have は e をとって having（「食べている」の意味なら進行形にできる）。", near=["haveing", "has"])
+    q(54, "A", "現在進行形", "（　）内の語を正しい形にかえて書こう。\nThe boys (be) playing baseball now.", EN("are"), "The boys は複数なので are。", near=["is", "be"])
+    q(54, "A", "現在進行形", FILL + "\n私は今、泳いでいます。\nI'm (　) now.", EN("swimming"), "swim → swimming。", near=["swiming", "swim"])
+    q(54, "A", "現在進行形の否定文", FILL + "\nエリーは今、ピアノをひいていません。\nElly (　)(　) the piano now.（2語）", EN("isn't playing", "is not playing"), "否定文は be動詞のあとに not。", near=["doesn't play", "isn't play", "not playing"])
+    q(54, "ポイント", "現在形と現在進行形", "「健は毎日走ります。」の英語として正しいものを選ぼう。\nア Ken is running every day.　イ Ken runs every day.", T("イ"), "ふだんの習慣は現在形で表す。", near=["ア"])
+    q(54, "ポイント", "現在形と現在進行形", "「私は東京に住んでいます。」の英語として正しいものを選ぼう。\nア I'm living in Tokyo.　イ I live in Tokyo.", T("イ"), "「住んでいる」のような状態は現在形（live）で表す。", near=["ア"])
+    q(54, "ポイント", "現在形と現在進行形", "次の文を、文末を now にかえて現在進行形の文に書きかえよう。\nShe eats lunch every day.", EN("She is eating lunch now.", "She's eating lunch now."), "is ＋ eating。every day を now にかえる。", near=["She eating lunch now.", "She is eats lunch now."])
+    q(55, "B", "現在進行形", NARABE + "\nリズは手紙を書いています。（ is / a / writing / letter / Liz ）.", EN("Liz is writing a letter."), "is ＋ writing。", near=["Liz writing is a letter."])
+    q(55, "B", "現在進行形", NARABE + "\nジンは今、自分の部屋をそうじしています。（ his / is / room / cleaning / Jin ）now.", EN("Jin is cleaning his room now."), "is ＋ cleaning ＋ his room。", near=["Jin is clean his room now."])
+    q(55, "B", "現在進行形の否定文", NARABE + "\n私は音楽を聞いていません。（ listening / not / am / I ）to music.", EN("I am not listening to music."), "am not ＋ listening。", near=["I not am listening to music."])
+    q(55, "B", "現在進行形", "校庭のようすを伝えよう。「ミクはウサギを見ています。」を英語で書こう（watching を使う）。", EN("Miku is watching a rabbit.", "Miku is watching the rabbit."), "is ＋ watching。", near=["Miku watching a rabbit.", "Miku is watch a rabbit."])
+    q(55, "B", "現在進行形", "「モエとショウはテニスをしています。」を英語で書こう。", EN("Moe and Sho are playing tennis."), "主語が複数なので are。", near=["Moe and Sho is playing tennis."])
+    q(55, "必ず覚えたい語句", "語句", "「水を飲む」を英語2語で書こう。", EN("drink water"), "drink。", near=["drinks water", "dlink water"])
+    q(55, "必ず覚えたい語句", "語句", "「それらの」を英語1語で書こう（that の複数形）。", EN("those"), "that → those、this → these。", near=["these", "that"])
+    # 疑問文
+    q(56, "ポイント", "現在進行形の疑問文", "次の文を疑問文に書きかえよう。\nAya is singing.", EN("Is Aya singing?"), "be動詞 Is を主語の前に出す。", near=["Does Aya singing?", "Does Aya sing?"])
+    q(56, "ポイント", "現在進行形の疑問文", "「Is Aya singing?」に No で答えよう（3語）。", EN("No, she isn't.", "No, she's not."), "be動詞を使って答える。", near=["No, she doesn't.", "No, she don't."])
+    q(56, "ポイント", "現在進行形の疑問文", "「Are you playing the piano?」に Yes で答えよう（3語）。", EN("Yes, I am."), "Are you ～? には I am で答える。", near=["Yes, I do.", "Yes, I'm."])
+    q(56, "ポイント", "現在進行形の疑問文", "「Are Yuka and Mami watching TV?」に No で答えよう（3語）。", EN("No, they aren't.", "No, they're not."), "Yuka and Mami は they で受ける。", near=["No, they don't.", "No, they isn't."])
+    q(56, "A", "現在進行形の疑問文", "次の（　）内から正しい語を選ぼう。\n(Do / Are) you eating tempura?", EN("Are"), "進行形の疑問文は be動詞。", near=["Do"])
+    q(56, "A", "現在進行形の疑問文", "次の（　）内から正しい語を選ぼう。\nIs Taku (goes / going) to the park?", EN("going"), "Is ＋主語＋ ing 形。", near=["goes"])
+    q(56, "A", "現在進行形の疑問文", "次の（　）内から正しい語を選ぼう。\nWhat is Sho (does / doing)?", EN("doing"), "What is ～ doing?＝～は何をしているのですか。", near=["does"])
+    q(56, "ポイント", "What ～ doing?", FILL + "\nあなたは何をしているのですか。—私は理科を勉強しているところです。\nWhat are you (　)? — I'm (　) science.（2語、順に書こう）", SEQ(["doing", "studying"], seps=(" ", "、", ",", ", ", "・")), "What are you doing? には I'm ～ing. で答える。", near=["doing study", "do studying"])
+    q(56, "ポイント", "What ～ doing?", "「What is she singing?」に「彼女は『マイ・ソング』を歌っています。」と答えよう（She's で始める。曲名は \"My Song\"）。", EN("She's singing \"My Song.\"", "She is singing \"My Song.\"", "She's singing My Song.", "She is singing My Song."), "具体的に She's singing ～. と答える。", near=["She sings \"My Song.\"", "Yes, she is."])
+    q(57, "B", "現在進行形の疑問文", NARABE + "\nあなたのお兄さんは今、宿題をしていますか。（ your brother / doing / is / his homework ）now?", EN("Is your brother doing his homework now?"), "Is ＋主語＋ doing ～?", near=["Does your brother doing his homework now?"])
+    q(57, "B", "現在進行形の疑問文", NARABE + "\n生徒たちは何を見ているのですか。（ watching / the students / what / are ）?", EN("What are the students watching?"), "What ＋ are ＋主語＋ watching?", near=["What the students are watching?"])
+    q(57, "B", "現在形の疑問文", NARABE + "\nあなたは釣りが好きですか。（ like / you / do / fishing ）?", EN("Do you like fishing?"), "「好き」は状態なので現在形 Do you like ～?（進行形にしない）。", near=["Are you liking fishing?"])
+    q(57, "自己表現", "現在形と現在進行形", "「ダンは毎週日曜日にサッカーを練習しますか。」を「ダンは今、サッカーを練習しているのですか。」に変えた英文を書こう。", EN("Is Dan practicing soccer now?"), "今のこと → Is ～ practicing ～ now?", near=["Does Dan practicing soccer now?", "Does Dan practice soccer now?"])
+    q(57, "自己表現", "現在形と現在進行形", "「あなたは毎朝、朝食を料理しますか。」を「あなたは今、朝食を料理しているのですか。」に変えた英文を書こう。", EN("Are you cooking breakfast now?"), "Are you ～ing ～ now?", near=["Do you cooking breakfast now?", "Do you cook breakfast now?"])
+    q(57, "必ず覚えたい語句", "語句", "「興味深い」を英語1語で書こう。", EN("interesting"), "interesting。", near=["intresting", "interested"])
+    q(57, "必ず覚えたい語句", "語句", "「いろいろな国々」を英語2語で書こう。", EN("various countries", "many countries"), "various（いろいろな）＋ countries。", near=["various country", "various countrys"])
+    q(57, "必ず覚えたい語句", "語句", "「だれかが歌っています。」を英語で書こう（Someone で始める）。", EN("Someone is singing."), "Someone は三人称単数なので is。", near=["Someone are singing.", "Someone singing."])
+    q(57, "必ず覚えたい語句", "語句", "「（線で）～を描く」を英語1語で書こう。", EN("draw"), "draw。paint は絵の具でかく。", near=["drow", "paint"])
+    # Part 3
+    q(58, "重要文", "現在進行形", FILL + "\n1人の少年が机のそばに立っています。\nA boy is (　) by the desk.", EN("standing"), "stand → standing。", near=["stand", "standding"])
+    q(58, "重要文", "現在進行形", FILL + "\n彼はケースからCDを取り出しています。\nHe is (　) a CD out of the case.", EN("taking"), "take ～ out of …＝…から～を取り出す。", near=["takeing", "take"])
+    q(58, "問題練習", "絵の説明", FILL + "\nクロはベッドの上で眠っています。\nKuro is sleeping (　) the bed.", EN("on"), "on ～＝～の上で。", near=["in", "at"])
+    q(58, "問題練習", "絵の説明", FILL + "\nペロは部屋の中を走っています。\nPero is running (　) the room.", EN("in"), "in ～＝～の中で。", near=["on", "at"])
+    q(58, "問題練習", "絵の説明", FILL + "\nシロとタマは牛乳を飲んでいます。\nShiro and Tama (　)(　) milk.（2語）", EN("are drinking"), "主語が複数なので are drinking。", near=["is drinking", "are drink"])
+    q(58, "問題練習", "絵の説明", NARABE + "\n私たちはお祭りで踊っています。（ dancing / at / are / the festival ）\nWe ～.", EN("We are dancing at the festival."), "are ＋ dancing ＋ at the festival。", near=["We dancing are at the festival."])
+    q(58, "問題練習", "絵の説明", NARABE + "\n健は絵を描いていますか。（ Ken / a picture / drawing / is ）?", EN("Is Ken drawing a picture?"), "Is ＋ Ken ＋ drawing ～?", near=["Ken is drawing a picture?"])
+    q(58, "問題練習", "絵の説明", NARABE + "\nあなたは何を読んでいるのですか。（ are / what / you / reading ）?", EN("What are you reading?"), "What ＋ are you ＋ reading?", near=["What you are reading?"])
+    q(58, "必ず覚えたい語句", "語句", "「窓のそばに」を英語3語で書こう。", EN("by the window"), "by ～＝～のそばに。", near=["by window", "near window"])
+    q(59, "読解のコツ①", "主語と動詞", "次の英文の主語を1語で書こう。\n「My aunt works at a hospital in the city.」の動詞 works の主語は？（2語で）", EN("My aunt"), "主語は「だれが」にあたる My aunt。", near=["aunt", "hospital"])
+    q(59, "読解のコツ①", "主語と動詞", "次の英文を読んで答えよう。\n「Ryo has a tablet in his hand. His sister is using it now, so he can't do his homework.」\n今タブレットを使っているのはだれか。日本語で答えよう。", T("リョウの妹", "リョウの姉", "妹", "姉", "リョウの姉妹", "姉妹"), "His sister is using it now. の主語は His sister（リョウの姉［妹］）。", near=["リョウ"])
+    q(59, "読解のコツ①", "主語と動詞", "同じ英文で、リョウができないことは何か。日本語で答えよう。", R((1, ["宿題"])), "he can't do his homework.＝宿題ができない。", example="宿題")
+    q(60, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\n(I / I'm / My) studying English.", EN("I'm"), "I'm（I am）＋ studying。", near=["I", "My"])
+    q(60, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\nKevin is (watch / watches / watching) TV now.", EN("watching"), "is ＋ ing 形。", near=["watch", "watches"])
+    q(60, "まとめテスト", "書きかえ", "現在進行形の文に書きかえよう。\nPeople take pictures of animals.", EN("People are taking pictures of animals."), "People は複数なので are taking。", near=["People is taking pictures of animals.", "People are takeing pictures of animals."])
+    q(60, "まとめテスト", "書きかえ", "下線部をたずねる文に書きかえよう。\nHe is studying now.（下線部：studying）", EN("What is he doing now?", "What's he doing now?"), "「何をしているのか」＝ What is he doing?", near=["What is he studying now?", "What does he doing now?"])
+    q(60, "まとめテスト", "書きかえ", "文末に now を加えて、現在進行形の否定文に書きかえよう。\nI don't listen to music.", EN("I'm not listening to music now.", "I am not listening to music now."), "am not ＋ listening。", near=["I don't listening to music now."])
+    q(60, "まとめテスト", "連語", FILL + "\nおもしろそうだね。\nThat (　)(　).（2語）", EN("sounds interesting", "sounds fun"), "That sounds ～.＝～そうだね。", near=["looks interesting", "sound interesting"])
+    q(60, "まとめテスト", "連語", FILL + "\nかばんから本を取り出しなさい。\n(　) the book (　) of your bag.（順に2語）", SEQ(["Take", "out"], seps=(" ", "、", ",", ", ", "・")), "take ～ out of …。", near=["Take off", "Get out"])
+    q(60, "まとめテスト", "並べかえ", NARABE + "\nあの女の子たちはおしゃべりをしていません。（ not / girls / chatting / those / are ）.", EN("Those girls are not chatting."), "Those girls ＋ are not ＋ chatting。", near=["Those girls not are chatting."])
+    q(61, "まとめテスト", "英文を読む", "次のメールを読んで答えよう。\n「Hi, Saki. I'm at the aquarium. I'm watching the dolphins now. I'm thirsty, but I'm not drinking anything now.」\n書いた人は今どこにいるか。日本語で答えよう。", T("水族館", "すいぞくかん"), "I'm at the aquarium.", near=["動物園"])
+    q(61, "まとめテスト", "英文を読む", "同じメールで、書いた人が今見ているものを英語で書こう（the をつけて2語）。", EN("the dolphins"), "I'm watching the dolphins now.", near=["dolphins", "the fish"])
+    q(61, "まとめテスト", "英文を読む", "同じメールで、書いた人は今、何か飲んでいるか。「飲んでいる」か「飲んでいない」で答えよう。", T("飲んでいない", "のんでいない"), "I'm not drinking anything now.", near=["飲んでいる"])
+    q(61, "まとめテスト", "場面に合わせて書く", "電話の相手に、弟のようすを伝えよう。「ジュンはギターをひいています。」を英語で書こう。", EN("Jun is playing the guitar."), "is ＋ playing the guitar。", near=["Jun plays the guitar.", "Jun is playing guitar."])
+    q(113, "基本文総チェック", "基本文", "「私たちは今、朝のお茶を飲んでいるところです。」を英語で書こう（having morning tea を使う）。", EN("We are having morning tea now.", "We're having morning tea now."), "are ＋ having。", near=["We have morning tea now.", "We are haveing morning tea now."])
+    q(113, "基本文総チェック", "基本文", "「彼女は今、昼食を食べていません。」を英語で書こう（isn't を使う）。", EN("She isn't eating lunch now."), "isn't ＋ eating。", near=["She doesn't eating lunch now.", "She isn't eat lunch now."])
+    q(56, "A", "現在進行形の疑問文", "次の英文を日本語にしよう。\nWho is cooking in the kitchen?", R((1, ["だれ", "誰"]), (1, ["台所", "キッチン"]), (1, ["料理"])), "Who is ～ing?＝だれが～しているか。", example="だれが台所で料理をしていますか。")
+    return u

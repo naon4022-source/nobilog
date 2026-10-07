@@ -1,0 +1,155 @@
+"""英語 Lesson 3（ワーク p32〜41・112）：過去の文／過去の否定文・疑問文"""
+from eng import unit, EN, CS, T, C, SEQ, R
+from l1 import NARABE, FILL
+
+MAJ = 'Lesson 3'
+
+def l3a():
+    u = unit('l3a', "過去の文（played・went・was）", MAJ, {32, 33, 38, 39, 40, 41, 112},
+             '2026-10-07 Claude作成。英語ワークp32〜33（Lesson3 Part1：規則動詞・不規則動詞の過去形、was・were、必ず覚えたい語句、伝える練習）、p38〜39まとめテスト、p40〜41 Tips for Writing①（日記）、p112基本文総チェックを写真で確認し、人物・語・場面を変えて作り直した。手書きの答えは使っていない。')
+    q = u.q
+    for verb, past, hint, nr in [("play", "played", "ふつうは ed をつける。", ["plaied", "plays"]),
+                                 ("watch", "watched", "ed をつける。", ["watchd", "watches"]),
+                                 ("visit", "visited", "ed をつける。", ["visitted", "visits"]),
+                                 ("like", "liked", "e で終わる語は d だけをつける。", ["likeed", "likes"]),
+                                 ("use", "used", "e で終わる語は d だけ。", ["useed"]),
+                                 ("study", "studied", "〈子音字＋y〉で終わる語は y を i にかえて ed。", ["studyed", "studed"]),
+                                 ("try", "tried", "〈子音字＋y〉は y を i にかえて ed。", ["tryed"]),
+                                 ("stop", "stopped", "〈短い母音＋子音字〉で終わる語は、最後の文字を重ねて ed。", ["stoped"]),
+                                 ("enjoy", "enjoyed", "〈母音字＋y〉で終わる語は、そのまま ed（enjoied としない）。", ["enjoied"])]:
+        q(32, "ポイント", "規則動詞の過去形", f"{verb} の過去形を書こう。", EN(past), f"{verb} → {past}。{hint}", near=nr)
+    for verb, past, nr in [("go", "went", ["goed"]), ("see", "saw", ["seed", "seen"]), ("eat", "ate", ["eated", "eaten"]),
+                           ("have", "had", ["haved", "has"]), ("take", "took", ["taked", "taken"]), ("make", "made", ["maked"]),
+                           ("get", "got", ["getted"]), ("come", "came", ["comed"]), ("buy", "bought", ["buyed", "brought"]),
+                           ("write", "wrote", ["writed", "written"])]:
+        q(32, "ポイント", "不規則動詞の過去形", f"{verb} の過去形を書こう（不規則に変化する）。", EN(past), f"{verb} → {past}（不規則動詞）。", near=nr)
+    q(32, "ポイント", "be動詞の過去形", "am と is の過去形を書こう（1語）。", EN("was"), "am・is → was、are → were。", near=["were"])
+    q(32, "ポイント", "be動詞の過去形", "are の過去形を書こう。", EN("were"), "are → were。", near=["was"])
+    q(32, "A", "過去の文", FILL + "\n私たちはきのう、公園でバスケットボールをしました。\nWe (　) basketball in the park yesterday.", EN("played"), "yesterday（きのう）があるので過去形。", near=["play", "plaied"])
+    q(32, "A", "過去の文", FILL + "\n私は先週の日曜日、買い物に行きました。\nI (　) shopping last Sunday.", EN("went"), "go shopping の過去 went shopping。", near=["go", "goed"])
+    q(32, "A", "過去の文", FILL + "\nそれはとても楽しかったです。\nIt (　) a lot of fun.", EN("was"), "It is の過去は It was。", near=["is", "were"])
+    q(32, "A", "過去の文", FILL + "\n私たちはきのう、神戸にいました。\nWe (　) in Kobe yesterday.", EN("were"), "主語 we の be動詞の過去は were。", near=["was", "are"])
+    q(33, "B", "過去の文", "次の文を、yesterday を加えて過去の文に書きかえよう。\nI practice the piano.", EN("I practiced the piano yesterday."), "practice → practiced（e で終わるので d）。", near=["I practice the piano yesterday.", "I practiceed the piano yesterday."])
+    q(33, "B", "過去の文", "次の文を、last night を加えて過去の文に書きかえよう。\nMy brother is at home.", EN("My brother was at home last night."), "is → was。", near=["My brother were at home last night.", "My brother is at home last night."])
+    q(33, "B", "過去の文", "次の文を、last week を加えて過去の文に書きかえよう。\nThey are very busy.", EN("They were very busy last week."), "are → were。", near=["They was very busy last week."])
+    q(33, "B", "過去の文", NARABE + "\n私はきのう、学校へ行きました。（ to / went / school / I / yesterday ）.", EN("I went to school yesterday."), "went to school ＋ yesterday（文の終わり）。", near=["I yesterday went to school."])
+    q(33, "B", "過去の文", NARABE + "\n昼食のあと、私たちは花火を見ました。（ saw / we / fireworks / after lunch ）.\n※ After lunch で始めずに書こう。", EN("We saw fireworks after lunch."), "see の過去形 saw。", near=["We see fireworks after lunch."])
+    q(33, "B", "過去の文", "「私は海で泳ぎました。」を英語で書こう（in the sea を使う）。", EN("I swam in the sea."), "swim の過去形は swam（不規則）。", near=["I swimmed in the sea.", "I swim in the sea."])
+    q(33, "必ず覚えたい語句", "語句", "「～の一員」を英語3語で書こう（a で始める）。", EN("a member of"), "a member of ～。", near=["a menber of", "member of"])
+    q(33, "必ず覚えたい語句", "語句", "「きのう」を英語1語で書こう。", EN("yesterday"), "yesterday。", near=["yesterdy", "yestarday"])
+    q(33, "必ず覚えたい語句", "語句", "「昼食後に」を英語2語で書こう。", EN("after lunch"), "after ～＝～のあとで。", near=["before lunch"])
+    q(33, "B", "時を表す語", "次のうち、過去を表す語句を選ぼう。\nア tomorrow　イ every day　ウ two days ago　エ next week", T("ウ"), "～ ago＝～前。", near=["ア", "イ", "エ"])
+    q(33, "B", "時を表す語", "「3日前に」を英語で書こう（ago を使う）。", EN("three days ago", "3 days ago"), "～ ago＝（今から）～前に。", near=["three days before", "ago three days"])
+    q(33, "B", "時を表す語", "「この前の土曜日に」を英語2語で書こう。", EN("last Saturday"), "last ～＝この前の～。", near=["next Saturday", "on Saturday"])
+    q(38, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\nI (see / saw / seed) a rainbow this morning.", EN("saw"), "this morning（今朝）＝過去のことなので saw。", near=["see", "seed"])
+    q(38, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\nThe concert (is / was / were) wonderful last night.", EN("was"), "last night があるので過去。主語は1つなので was。", near=["is", "were"])
+    q(38, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\nMy friends and I (was / were / are) in the gym an hour ago.", EN("were"), "主語は複数（My friends and I）で過去なので were。", near=["was", "are"])
+    q(38, "まとめテスト", "連語", FILL + "\n私は姉と買い物に行きました。\nI (　)(　) with my sister.（2語）", EN("went shopping"), "go shopping の過去 went shopping。", near=["go shopping", "went to shopping"])
+    q(38, "まとめテスト", "並べかえ", NARABE + "\n私は家で昼食を食べました。（ lunch / had / home / I / at ）.", EN("I had lunch at home."), "have lunch の過去 had lunch。", near=["I had at home lunch."])
+    q(39, "まとめテスト", "英文を読む", "次の英文を読んで答えよう。\n「Last summer I went to Sydney with my family. We swam at the beach. The fish there were very colorful.」\n筆者はだれとシドニーへ行ったか。日本語で答えよう。", T("家族", "家族と", "かぞく"), "with my family＝家族と。", near=["友達"])
+    q(39, "まとめテスト", "英文を読む", "同じ英文で、筆者たちは海辺で何をしたか。日本語で答えよう。", R((1, ["泳"])), "We swam at the beach.＝海辺で泳いだ。", example="海辺で泳いだ。")
+    q(39, "まとめテスト", "英文を読む", "同じ英文で、魚はどんなようすだったか。英語1語で答えよう。", EN("colorful"), "very colorful＝とてもカラフルだった。", near=["color", "beautiful"])
+    q(40, "Tips for Writing①", "日記", "日記で「きのうの午後、図書館へ行きました。」を英語で書こう（in the afternoon を使う）。", EN("I went to the library in the afternoon yesterday.", "Yesterday I went to the library in the afternoon.", "Yesterday afternoon I went to the library.", "I went to the library yesterday afternoon."), "go の過去形 went。", near=["I go to the library in the afternoon yesterday."])
+    q(40, "Tips for Writing①", "日記", "日記で「私たちはコアラを見ました。それらはとてもかわいかったです。」の2文目を英語で書こう（They で始める）。", EN("They were very cute."), "They のあとの be動詞の過去は were。", near=["They was very cute.", "They are very cute."])
+    q(40, "Tips for Writing①", "日記", "日記で「私は朝食を食べませんでした。」を英語で書こう（eat を使う）。", EN("I didn't eat breakfast.", "I did not eat breakfast."), "過去の否定は didn't ＋原形。", near=["I didn't ate breakfast.", "I don't eat breakfast."])
+    q(40, "Tips for Writing①", "日記", "日記を書くとき、その日のできごとを表す動詞はふつう何形にするか。漢字2字で答えよう。", T("過去", "過去形", "かこ", "かこけい"), "日記は終わったできごとなので過去形で書く。", near=["現在", "未来"])
+    q(41, "Tips for Writing①", "日記", "さきの日記を読んで答えよう。\n「I visited Eri today. We watched a movie about a lion. I liked it very much.」\nさきは今日、だれを訪ねたか。英語1語で答えよう。", EN("Eri"), "I visited Eri today.", near=["a lion", "lion"])
+    q(41, "Tips for Writing①", "日記", "同じ日記で、2人が見た映画は何についての映画か。英語2語で答えよう。", EN("a lion"), "a movie about a lion＝ライオンについての映画。", near=["lion movie"])
+    q(112, "基本文総チェック", "基本文", "「私たちはバスケットボールをしました。」を英語で書こう。", EN("We played basketball."), "play → played。", near=["We play basketball.", "We plaied basketball."])
+    q(112, "基本文総チェック", "基本文", "「私は買い物に行きました。それは楽しかったです。」を英語で書こう（2文、fun を使う）。", EN("I went shopping. It was fun."), "went shopping ／ It was fun.", near=["I go shopping. It is fun."])
+    q(32, "ポイント", "過去の文", "次の英文の誤りを1か所直して、全文を書こう。\nI goed to Hiroshima last month.", EN("I went to Hiroshima last month."), "go の過去形は went。", near=["I go to Hiroshima last month."])
+    q(32, "ポイント", "過去の文", "次の英文の誤りを1か所直して、全文を書こう。\nWe was tired after the game.", EN("We were tired after the game."), "we の be動詞の過去は were。", near=["We are tired after the game."])
+    q(32, "ポイント", "過去の文", "次の英文の誤りを1か所直して、全文を書こう。\nShe studyed English yesterday.", EN("She studied English yesterday."), "study → studied。", near=["She studies English yesterday."])
+    q(38, "まとめテスト", "書きかえ", "次の文の下線部を now から yesterday にかえて書きかえよう。\nI am in the music room now.", EN("I was in the music room yesterday."), "am → was。", near=["I were in the music room yesterday."])
+    q(38, "まとめテスト", "書きかえ", "次の文の下線部を every day から yesterday にかえて書きかえよう。\nI make my lunch every day.", EN("I made my lunch yesterday."), "make → made。", near=["I maked my lunch yesterday."])
+    q(39, "まとめテスト", "英文を読む", "次の英文を読んで答えよう。\n「My uncle is a pianist. Last Sunday I went to his concert. The hall was big and beautiful.」\nおじさんの仕事を英語1語で答えよう。", EN("pianist", "a pianist"), "My uncle is a pianist.", near=["piano", "singer"])
+    q(39, "まとめテスト", "英文を読む", "同じ英文で、筆者がコンサートに行ったのはいつか。英語2語で答えよう。", EN("Last Sunday"), "Last Sunday＝この前の日曜日。", near=["Next Sunday", "Sunday"])
+    q(39, "まとめテスト", "英文を読む", "同じ英文で、ホールのようすを表す語を2つ英語で答えよう（順は自由）。", {'kind': 'set', 'items': [['big'], ['beautiful']], 'plain': True}, "big and beautiful。", near=["big", "beautiful"], example="big、beautiful")
+    q(40, "Tips for Writing①", "日記", "日記の文で、ふさわしくないものを選ぼう。\nア I watched a drama.　イ It was fun.　ウ I visit my grandmother yesterday.", T("ウ"), "yesterday があるので visited にする。", near=["ア", "イ"])
+    q(41, "Tips for Writing①", "日記", "「私は公園へ行って、サッカーをしました。」を英語で書こう（and を使う1文）。", EN("I went to the park and played soccer."), "went ～ and played ～。2つの動詞を両方過去形に。", near=["I went to the park and play soccer.", "I go to the park and played soccer."])
+    q(41, "Tips for Writing①", "日記", "「私はスパゲッティを食べました。それはおいしかったです。」を英語で書こう（2文、delicious を使う）。", EN("I ate spaghetti. It was delicious."), "eat → ate、is → was。", near=["I eat spaghetti. It is delicious.", "I ate spaghetti. It is delicious."])
+    q(33, "B", "過去の文", "次の英文を日本語にしよう。\nI got up at six this morning.", R((1, ["6時", "六時", "６時"]), (1, ["起き"])), "get up の過去 got up＝起きた。", example="私は今朝6時に起きた。")
+    q(33, "B", "過去の文", "次の英文を日本語にしよう。\nWe had a good time at the festival.", R((1, ["祭り", "まつり", "フェスティバル"]), (1, ["楽しい", "楽しく", "楽しん", "よい時", "いい時"])), "have a good time の過去＝楽しい時を過ごした。", example="私たちは祭りで楽しい時を過ごした。")
+    q(32, "ポイント", "過去の文", "「私は去年、北海道に住んでいました。」を英語で書こう（live を使う）。", EN("I lived in Hokkaido last year."), "live → lived（e で終わるので d）。", near=["I live in Hokkaido last year.", "I liveed in Hokkaido last year."])
+    q(33, "B", "過去の文", "「私は先月、新しい自転車を買いました。」を英語で書こう。", EN("I bought a new bike last month.", "I bought a new bicycle last month."), "buy の過去形 bought。", near=["I buyed a new bike last month.", "I buy a new bike last month."])
+    q(33, "B", "過去の文", "「私たちは駅で写真をとりました。」を英語で書こう（pictures を使う）。", EN("We took pictures at the station."), "take の過去形 took。", near=["We taked pictures at the station.", "We take pictures at the station."])
+    q(33, "B", "過去の文", "「ケンは昨夜10時に帰宅しました。」を英語で書こう（came home を使う）。", EN("Ken came home at ten last night.", "Ken came home at 10 last night."), "come の過去形 came。", near=["Ken comes home at ten last night.", "Ken come home at ten last night."])
+    return u
+
+def l3b():
+    u = unit('l3b', "過去の否定文・疑問文（didn't・Did ～?・Were ～?）", MAJ, {34, 35, 36, 37, 38, 39, 112},
+             "2026-10-07 Claude作成。英語ワークp34〜35（Lesson3 Part2：didn't・wasn't・weren't、必ず覚えたい語句、やることリスト）、p36〜37（Part3：Did ～?・Were ～?・Was ～?、アンケート）、p38〜39まとめテスト、p112基本文総チェックを写真で確認し、人物・語・場面を変えて作り直した。手書きの答えは使っていない。")
+    q = u.q
+    q(34, "ポイント", "過去の否定文", FILL + "\n私はきのう、テレビを見ませんでした。\nI (　) watch TV yesterday.（1語）", EN("didn't"), "過去の否定文は did not［didn't］＋動詞の原形。", near=["don't", "wasn't", "not"])
+    q(34, "ポイント", "過去の否定文", "「did not」を短縮形（1語）で書こう。", EN("didn't", fixed=True), "did not → didn't。", near=["didnt", "did'nt"])
+    q(34, "ポイント", "過去の否定文", "didn't のあとの動詞は、何形にするか。漢字2字で答えよう。", T("原形", "げんけい"), "didn't ＋動詞の原形（過去形にしない）。", near=["過去", "過去形"])
+    q(34, "A", "過去の否定文", "次の英文の誤りを1か所直して、全文を書こう。\nI didn't went to the pool.", EN("I didn't go to the pool."), "didn't のあとは原形 go。", near=["I don't go to the pool."])
+    q(34, "A", "過去の否定文", "次の英文の誤りを1か所直して、全文を書こう。\nKota didn't goes to bed at nine.", EN("Kota didn't go to bed at nine."), "didn't のあとは原形。", near=["Kota doesn't go to bed at nine."])
+    q(34, "A", "過去の否定文", "次の文を否定文に書きかえよう。\nI cleaned my room last weekend.", EN("I didn't clean my room last weekend."), "didn't ＋原形 clean。", near=["I didn't cleaned my room last weekend.", "I don't clean my room last weekend."])
+    q(34, "A", "過去の否定文", "次の文を否定文に書きかえよう。\nWe ate dinner at the restaurant.", EN("We didn't eat dinner at the restaurant."), "ate の原形は eat。", near=["We didn't ate dinner at the restaurant."])
+    q(34, "ポイント", "be動詞の過去の否定文", FILL + "\n私はきのうの夜、眠くありませんでした。\nI (　) sleepy last night.（1語）", EN("wasn't"), "was not → wasn't。", near=["didn't", "weren't", "don't"])
+    q(34, "ポイント", "be動詞の過去の否定文", FILL + "\n私たちはこの前の日曜日、東京にいませんでした。\nWe (　) in Tokyo last Sunday.（1語）", EN("weren't"), "were not → weren't。", near=["wasn't", "didn't"])
+    q(34, "A", "be動詞の過去の否定文", "次の文を否定文に書きかえよう。\nThe test was easy.", EN("The test wasn't easy."), "was のあとに not。", near=["The test didn't easy.", "The test didn't was easy."])
+    q(34, "A", "be動詞の過去の否定文", "次の文を否定文に書きかえよう。\nMy parents were at home this morning.", EN("My parents weren't at home this morning."), "were のあとに not。", near=["My parents didn't at home this morning.", "My parents wasn't at home this morning."])
+    q(35, "B", "過去の否定文", NARABE + "\nユウジはきのう日本にいませんでした。（ in / was / Japan / not / Yuji ）yesterday.", EN("Yuji was not in Japan yesterday."), "was not ＋ in Japan。", near=["Yuji not was in Japan yesterday."])
+    q(35, "B", "過去の否定文", NARABE + "\n私は英語を勉強しませんでした。（ English / didn't / study / I ）.", EN("I didn't study English."), "didn't ＋ study。", near=["I study didn't English."])
+    q(35, "B", "過去の否定文", "やることリストを見て、まだしていないことを英語で書こう。\n【リスト】ノートを買う（済）　部屋をそうじする（まだ）\nI (　)(　) my room.（2語）", EN("didn't clean"), "まだしていない＝ didn't clean。", near=["don't clean", "didn't cleaned"])
+    q(35, "必ず覚えたい語句", "語句", "「祖母」を英語1語で書こう。", EN("grandmother"), "grandmother（grandma とも言う）。", near=["grandma", "grandmather"])
+    q(35, "必ず覚えたい語句", "語句", "「そこに［で、へ］」を英語1語で書こう。", EN("there"), "there。their（彼らの）と区別。", near=["their", "they're"])
+    q(35, "必ず覚えたい語句", "語句", "「生活」「人生」を英語1語で書こう。", EN("life"), "life。", near=["live", "lif"])
+    q(35, "必ず覚えたい語句", "語句", "「そのとおりです。」を英語2語で書こう。", EN("That's right.", "That is right."), "That's right.", near=["That's light.", "That's write."])
+    q(35, "必ず覚えたい語句", "語句", "「うれしい」を英語1語で書こう（h で始まる）。", EN("happy"), "happy。", near=["hapy", "happi"])
+    # Did ~? / Were ~?
+    q(36, "ポイント", "過去の疑問文", "次の文を疑問文に書きかえよう。\nYou had a game yesterday.", EN("Did you have a game yesterday?"), "過去の疑問文は Did ＋主語＋原形 ～?", near=["Did you had a game yesterday?", "Do you have a game yesterday?"])
+    q(36, "ポイント", "過去の疑問文", "「Did you finish your homework?」に Yes で答えよう（3語）。", EN("Yes, I did."), "Did ～? には did で答える。", near=["Yes, I do.", "Yes, I was."])
+    q(36, "ポイント", "過去の疑問文", "「Did you call Ken last night?」に No で答えよう（3語）。", EN("No, I didn't."), "No, I didn't.", near=["No, I don't.", "No, I wasn't."])
+    q(36, "ポイント", "be動詞の過去の疑問文", "次の文を疑問文に書きかえよう。\nYou were busy this morning.", EN("Were you busy this morning?"), "be動詞 Were を主語の前に。", near=["Did you busy this morning?", "Did you were busy this morning?"])
+    q(36, "ポイント", "be動詞の過去の疑問文", "「Were you at home last night?」に No で答えよう（3語）。", EN("No, I wasn't."), "Were you ～? には I was／I wasn't で答える。", near=["No, I weren't.", "No, I didn't."])
+    q(36, "A", "be動詞の過去の疑問文", "「Was the movie exciting?」に Yes で答えよう（3語）。", EN("Yes, it was."), "the movie は it で受ける。", near=["Yes, it is.", "Yes, it did."])
+    q(36, "A", "過去の疑問文", "次の（　）内から正しい語を選ぼう。\n(Did / Were / Do) you listen to music yesterday?", EN("Did"), "listen は一般動詞・過去なので Did。", near=["Were", "Do"])
+    q(36, "A", "過去の疑問文", "次の（　）内から正しい語を選ぼう。\n(Did / Were / Was) you in the gym after school?", EN("Were"), "in the gym（場所にいた）は be動詞。you の過去は Were。", near=["Did", "Was"])
+    q(36, "A", "過去の疑問文", "次の（　）内から正しい語を選ぼう。\n(Did / Was / Were) Saki study English last night?", EN("Did"), "study は一般動詞なので Did。", near=["Was", "Were"])
+    q(36, "A", "過去の疑問文", "次の英文の誤りを1か所直して、全文を書こう。\nDid Shin watched TV?", EN("Did Shin watch TV?"), "Did ～? の動詞は原形。", near=["Does Shin watch TV?"])
+    q(37, "B", "過去の疑問文", NARABE + "\nあなたはきのう公園へ行きましたか。（ go / did / park / you / to / the ）yesterday?", EN("Did you go to the park yesterday?"), "Did you go ～?", near=["Did you went to the park yesterday?"])
+    q(37, "B", "過去の疑問文", "「週末はどうでしたか。」を英語で書こう（How で始める4語）。", EN("How was your weekend?"), "How was ～?＝～はどうでしたか。", near=["How is your weekend?", "What was your weekend?"])
+    q(37, "必ず覚えたい語句", "語句", "「悪い」を英語1語で書こう。", EN("bad"), "bad。", near=["bed", "bat"])
+    q(37, "必ず覚えたい語句", "語句", "「忙しい」を英語1語で書こう。", EN("busy"), "busy（u をイと読む）。", near=["bisy", "buzy"])
+    q(37, "必ず覚えたい語句", "語句", "「手紙」を英語1語で書こう。", EN("letter"), "letter。", near=["leter", "latter"])
+    q(37, "必ず覚えたい語句", "語句", "「この前の週末」を英語2語で書こう。", EN("last weekend"), "last weekend。", near=["next weekend", "this weekend"])
+    q(37, "B", "アンケート", "アンケートの結果を見て答えよう。\n【ミホ：きのう宿題をした○】\nDid Miho do her homework yesterday? —（3語で）", EN("Yes, she did."), "Miho は she で答える。", near=["Yes, she does.", "Yes, she was."])
+    q(37, "B", "アンケート", "アンケートの結果を見て答えよう。\n【タク：きのう忙しかった×】\nWas Taku busy yesterday? —（3語で）", EN("No, he wasn't."), "Was ～? には was で答える。", near=["No, he didn't.", "No, he isn't."])
+    # まとめ
+    q(38, "まとめテスト", "語を選ぶ", "次の（　）内から正しい語を選ぼう。\nDid Aya (talk / talked / talks) to Mr. Ito?", EN("talk"), "Did のあとは原形。", near=["talked", "talks"])
+    q(38, "まとめテスト", "書きかえ", "次の文を否定文に書きかえよう（短縮形を使う）。\nI was busy.", EN("I wasn't busy.", fixed=True), "was not → wasn't。", near=["I didn't busy.", "I wasnt busy."])
+    q(38, "まとめテスト", "並べかえ", NARABE + "\n私は去年、祖母を訪ねませんでした。（ visit / didn't / grandmother / my / I ）last year.", EN("I didn't visit my grandmother last year."), "didn't ＋ visit。", near=["I didn't visited my grandmother last year."])
+    q(38, "まとめテスト", "並べかえ", NARABE + "\nこのイヌは今朝、公園にいましたか。（ dog / was / this / in / the park ）this morning?", EN("Was this dog in the park this morning?"), "Was ＋ this dog ＋ in the park ～?", near=["Did this dog in the park this morning?"])
+    q(38, "まとめテスト", "書きかえ", "次の文を疑問文に書きかえよう。\nThey enjoyed the party.", EN("Did they enjoy the party?"), "Did ＋ they ＋ enjoy（原形）。", near=["Did they enjoyed the party?", "Were they enjoy the party?"])
+    q(38, "まとめテスト", "書きかえ", "次の文を疑問文に書きかえよう。\nThe questions were difficult.", EN("Were the questions difficult?"), "Were を主語の前へ。", near=["Did the questions difficult?", "Was the questions difficult?"])
+    q(39, "まとめテスト", "対話文", "対話を完成させよう。（　）に入る1語は何か。\nA: Did you see the fireworks last night?\nB: No, I (　). I was very tired.", EN("didn't"), "Did ～? に No で答えるので didn't。", near=["wasn't", "don't"])
+    q(39, "まとめテスト", "対話文", "対話を完成させよう。（　）に入る1語は何か。\nA: (　) your brother at the station at five?\nB: Yes, he was.", EN("Was"), "答えが he was なので Was ～?", near=["Did", "Were"])
+    q(39, "まとめテスト", "対話文", "対話を完成させよう。（　）に入る1語は何か。\nA: What did you do last Sunday?\nB: I (　) a cake with my mother.", EN("made"), "What did you do ～? には過去形で答える。make → made。", near=["make", "maked"])
+    q(39, "まとめテスト", "対話文", "「What did you do last night?」に「私は手紙を書きました。」と答えよう。", EN("I wrote a letter."), "write の過去形 wrote。", near=["I writed a letter.", "I write a letter."])
+    q(112, "基本文総チェック", "基本文", "「私はきのう、練習がありませんでした。」を英語で書こう（practice を使う）。", EN("I didn't have practice yesterday."), "didn't have ～。", near=["I didn't had practice yesterday.", "I don't have practice yesterday."])
+    q(112, "基本文総チェック", "基本文", "「私は昨夜、眠くありませんでした。」を英語で書こう。", EN("I wasn't sleepy last night."), "wasn't ＋ sleepy。", near=["I didn't sleepy last night.", "I'm not sleepy last night."])
+    q(112, "基本文総チェック", "基本文", "「あなたは今朝、忙しかったですか。」を英語で書こう。", EN("Were you busy this morning?"), "Were you ～?", near=["Did you busy this morning?", "Are you busy this morning?"])
+    q(36, "A", "過去の疑問文", "次の英文を日本語にしよう。\nDid you sleep well last night?", R((1, ["昨夜", "きのうの夜", "昨日の夜", "ゆうべ"]), (1, ["よく眠", "よくねむ", "よく寝", "ぐっすり"]), (1, ["ましたか", "たか", "でしたか"])), "Did you ～?＝～しましたか。sleep well＝よく眠る。", example="あなたは昨夜よく眠れましたか。")
+    q(34, "A", "過去の否定文", "次の英文を日本語にしよう。\nI didn't bring my umbrella.", R((1, ["かさ", "傘"]), (1, ["持って", "もって"]), (1, ["こなかった", "来なかった", "いかなかった", "行かなかった", "なかった"])), "didn't bring＝持ってこなかった。", example="私はかさを持ってこなかった。")
+    q(35, "B", "過去の否定文", "次の2つの文の意味のちがいを考えて、（　）に入る1語を書こう。\nI don't eat breakfast.（ふだん朝食を食べない）\nI (　) eat breakfast this morning.（今朝は食べなかった）", EN("didn't"), "今朝のこと（過去）なので didn't。", near=["don't", "wasn't"])
+    q(36, "A", "過去の疑問文", "「あなたはきのう、何時に寝ましたか。」を英語で書こう（What time で始める）。", EN("What time did you go to bed yesterday?", "What time did you go to bed last night?"), "疑問詞＋ did you ＋原形 ～?", near=["What time did you went to bed yesterday?", "What time do you go to bed yesterday?"])
+    q(37, "B", "過去の疑問文", "「Where did you go last summer?」に「私は沖縄へ行きました。」と答えよう。", EN("I went to Okinawa."), "過去形 went で答える。", near=["I go to Okinawa.", "Yes, I did."])
+    q(34, "A", "過去の否定文", "次の英文の誤りを1か所直して、全文を書こう。\nWe didn't busy yesterday.", EN("We weren't busy yesterday."), "busy は形容詞なので be動詞の否定 weren't。", near=["We wasn't busy yesterday."])
+    q(36, "A", "過去の疑問文", "次の英文の誤りを1か所直して、全文を書こう。\nWere you play tennis yesterday?", EN("Did you play tennis yesterday?"), "play は一般動詞なので Did you ～?", near=["Were you playing tennis yesterday?"])
+    q(37, "B", "過去の疑問文", "「あなたはその手紙を読みましたか。」を英語で書こう。", EN("Did you read the letter?"), "Did you ＋原形 read。", near=["Do you read the letter?", "Were you read the letter?"])
+    q(35, "B", "過去の否定文", "「私はきのう、母を手伝いませんでした。」を英語で書こう（help を使う）。", EN("I didn't help my mother yesterday."), "didn't ＋ help。", near=["I didn't helped my mother yesterday."])
+    q(39, "まとめテスト", "対話文", "対話を完成させよう。（　）に入る1語は何か。\nA: Were you and Ken in the same class last year?\nB: Yes, we (　).", EN("were"), "you and Ken にたずねられたので we were で答える。", near=["was", "did"])
+    q(39, "まとめテスト", "対話文", "対話を完成させよう。（　）に入る1語は何か。\nA: (　) Mr. Ito come to school today?\nB: No, he didn't.", EN("Did"), "答えが didn't なので Did ～?", near=["Was", "Does"])
+    q(37, "B", "過去の疑問文", "「あなたの夏休みはどうでしたか。」を英語で書こう（How で始める）。", EN("How was your summer vacation?"), "How was ～?", near=["How is your summer vacation?", "How were your summer vacation?"])
+    q(36, "A", "過去の疑問文", "「あなたのお父さんはきのう料理をしましたか。」を英語で書こう。", EN("Did your father cook yesterday?"), "Did ＋ your father ＋ cook（原形）。", near=["Did your father cooked yesterday?", "Does your father cook yesterday?"])
+    q(34, "A", "be動詞の過去の否定文", "「その店は日曜日に開いていませんでした。」を英語で書こう（open を使う）。", EN("The shop wasn't open on Sunday.", "The store wasn't open on Sunday."), "open（形容詞：開いている）なので wasn't。", near=["The shop didn't open on Sunday.", "The shop weren't open on Sunday."])
+    q(37, "B", "be動詞の過去の疑問文", "「彼らはきのう学校にいましたか。—いいえ、いませんでした。」を英語で書こう（2文）。", EN("Were they at school yesterday? No, they weren't."), "Were they ～? ／ No, they weren't.", near=["Did they at school yesterday? No, they didn't.", "Were they at school yesterday? No, they wasn't."])
+    q(36, "A", "過去の疑問文", "「Did your sister go to Kyoto?」に No で答えよう（3語）。", EN("No, she didn't."), "your sister は she で受ける。", near=["No, she doesn't.", "No, she wasn't."])
+    q(35, "B", "過去の否定文", "「私はその映画を見ませんでした。」を英語で書こう（see を使う）。", EN("I didn't see the movie.", "I didn't see that movie."), "didn't ＋原形 see。", near=["I didn't saw the movie.", "I don't see the movie."])
+    q(36, "A", "過去の疑問文", "「Did Ken and Mai come to the party?」に Yes で答えよう（3語）。", EN("Yes, they did."), "Ken and Mai は they で受ける。", near=["Yes, they do.", "Yes, they were."])
+    q(35, "B", "過去の否定文", "「私は昨夜、宿題をしませんでした。」を英語で書こう（do my homework を使う）。", EN("I didn't do my homework last night."), "didn't do ～（2つ目の do は「する」）。", near=["I didn't my homework last night.", "I didn't did my homework last night."])
+    q(36, "A", "be動詞の過去の疑問文", "「Were you tired after the game?」に Yes で答えよう（3語）。", EN("Yes, I was."), "Were you ～? には I was で答える。", near=["Yes, I were.", "Yes, I did."])
+    return u

@@ -6,7 +6,7 @@
    - 本の中身は textbook-books.json（本棚）と textbook-book-*.json（原稿のページ）から読む。文字はすべて textContent で表示する。 */
 (function(root){
 'use strict';
-const W=600,H=848,LAYOUT_VERSION='2026-10-04.12';// 組み方を変えたら番号を上げる（覚えておいた組み結果を使わない）
+const W=600,H=848,LAYOUT_VERSION='2026-10-07.1';// 組み方を変えたら番号を上げる（覚えておいた組み結果を使わない）
 const state={app:null,view:'gate',shelf:null,book:null,spread:0,fallback:false,epoch:0,message:'',sheet:null};
 const ratio=new Map();// 画像の縦÷横（先に読みこんで測る）
 let measuring=false;// ページを組むために測っている間は、絵を読みこまない（高さは縦横比で決まっているので組み方は変わらない）
@@ -72,15 +72,17 @@ function cover(book,small){
 }
 
 // ---- ブロック（1つずつページに置いて、入りきるかを測る） ----
+const NOBI_POSE=['normal','wave','point','think','surprise','joy','read'];
+function face(f){const pose=f==='🌱'?'normal':(/^nobi-([a-z]+)$/.exec(f||'')||[])[1];const nobi=NOBI_POSE.includes(pose);const s=el('span','tb-hook-face'+(nobi?' tb-hook-nobi':''));if(nobi){const i=document.createElement('img');i.src='/nobi-'+pose+'.svg';i.alt='のびー';i.decoding='async';s.append(i);}else s.textContent=f||'🙂';return s;}// のびーは絵文字ではなく動画・図解と同じ絵（2026-10-06）
 function block(b){
  if(!b||typeof b!=='object')return null;
  if(b.t==='h3'){const x=String(b.x||'');const kind=/^例題/.test(x)?' tb-h3-ex':/つまずき/.test(x)?' tb-h3-warn':/確認|振り返りの問題|まとめの問題|30秒チェック/.test(x)?' tb-h3-check':/^なぜ|なぜ.*[？?]|（なぜ）/.test(x)?' tb-h3-why':/かんたんにやる方法|コツ/.test(x)?' tb-h3-tip':'';const h=el('h3','tb-h3'+kind);if(/^例題/.test(x)){h.append(el('span','tb-code',b.code||'000-A'));if(b.code)h.dataset.code=b.code;}inline(h,b.x);const lv=/（(基本|標準|応用)）/.exec(x);if(lv)h.dataset.level=lv[1];return h;}
  if(b.t==='h4')return inline(el('h4','tb-h4'),b.x);
- if(b.t==='p'){const x=String(b.x||'');const q=isQuestion(b);const node=el('p',q?'tb-p tb-q':(b.hon?(b.hon==='cont'?'tb-p tb-honbun tb-honbun-cont':'tb-p tb-honbun'):'tb-p'));if(q)node.append(el('span','tb-code',b.code||'000-A'));inline(node,b.x);if(b.code)node.dataset.code=b.code;return node;}
+ if(b.t==='p'){const x=String(b.x||'');const q=isQuestion(b);const node=el('p',q?'tb-p tb-q':(b.hon?(b.hon==='cont'?'tb-p tb-honbun tb-honbun-cont':'tb-p tb-honbun'):'tb-p'));if(q)node.append(el('span','tb-code',b.code||'000-A'));inline(node,b.x);if(b.code)node.dataset.code=b.code;if(b.rid)node.dataset.rid=b.rid;return node;}
  if(b.t==='divider'){const d=el('div','tb-divider');d.dataset.tag=b.tag||'';d.append(el('span','tb-tag',b.tag||''));return d;}
  if(b.t==='extra'){const box=el('aside','tb-extra tb-extra-'+(b.kind==='クイズ'?'quiz':b.kind==='やってみよう'?'try':'fact'));const head=el('div','tb-extra-head');head.append(el('span','tb-extra-kind',b.kind==='クイズ'?'ちょこっとクイズ':b.kind),el('span','tb-extra-title',b.title||''));box.append(head,inline(el('p'),b.x));if(b.answer){const btn=button('','tb-answer-btn',()=>openSheet({summary:b.kind==='クイズ'?'答え':'例',body:[{t:'p',x:b.answer}]}),'答え');inline(btn,b.kind==='クイズ'?'答え':'例');box.append(btn);}return box;}
- if(b.t==='hook'){const box=el('div','tb-hook');box.append(el('span','tb-hook-face','🌱'));const bubble=el('div','tb-hook-bubble');bubble.append(el('span','tb-hook-name','のびー'));bubble.append(inline(el('p'),b.x));box.append(bubble);return box;}
- if(b.t==='talk'){const wrap=el('div','tb-talk');for(const [who,face,x] of b.lines||[]){const box=el('div','tb-hook');box.append(el('span','tb-hook-face',face||'🌱'));const bubble=el('div','tb-hook-bubble');bubble.append(el('span','tb-hook-name',who||'のびー'));bubble.append(inline(el('p'),x));box.append(bubble);wrap.append(box);}return wrap;}// かけあい（のびーと生徒）
+ if(b.t==='hook'){const box=el('div','tb-hook');box.append(face('🌱'));const bubble=el('div','tb-hook-bubble');bubble.append(el('span','tb-hook-name','のびー'));bubble.append(inline(el('p'),b.x));box.append(bubble);return box;}
+ if(b.t==='talk'){const wrap=el('div','tb-talk');let li_=0;for(const [who,face_,x] of b.lines||[]){const rid=(b.rids||[])[li_++];const w=who||'のびー';const box=el('div','tb-hook tb-talk-line '+(w==='のびー'?'tb-who-nobi':w==='ソラ'?'tb-who-sora tb-talk-right':w==='ミオ'?'tb-who-mio tb-talk-right':'tb-who-other tb-talk-right'));box.append(face(face_||'🌱'));const bubble=el('div','tb-hook-bubble');bubble.append(el('span','tb-hook-name',who||'のびー'));const tp=inline(el('p'),x);if(rid)tp.dataset.rid=rid;bubble.append(tp);box.append(bubble);wrap.append(box);}return wrap;}// かけあい（のびーと生徒）
  if(b.t==='goal'){const box=el('div','tb-goal');box.append(el('span','tb-goal-label','めあて'));box.append(inline(el('p'),b.x));return box;}
  if(b.t==='summary'){const box=el('section','tb-summary');box.append(el('h4',null,'まとめ'));const list=el('ul');for(const x of b.items||[])list.append(inline(el('li'),x));box.append(list);return box;}
  if(b.t==='media'){
@@ -94,7 +96,7 @@ function block(b){
  if(b.t==='zoomimg'&&typeof b.src==='string'&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg)$/.test(b.src)){const img=el('img','tb-zoom-img');img.src=b.src;img.alt=b.alt||'図';return img;}
  if(b.t==='note')return inline(el('p','tb-note'),b.x);
  if(b.t==='topic'){const h=el('h2','tb-topic',b.x);if(b.cont)h.append(el('span','tb-cont','（つづき）'));return h;}
- if(b.t==='ul'||b.t==='ol'){const list=el(b.t,'tb-list');if(b.t==='ol'&&b.start>1)list.start=b.start;for(const item of b.items||[]){const li=inline(el('li'),item.x);if(item.level)li.classList.add('tb-sub'+Math.min(2,item.level));list.append(li);}return list;}
+ if(b.t==='ul'||b.t==='ol'){const list=el(b.t,'tb-list');if(b.t==='ol'&&b.start>1)list.start=b.start;(b.items||[]).forEach((item,k)=>{const li=inline(el('li'),item.x);if(item.level)li.classList.add('tb-sub'+Math.min(2,item.level));if(b.rids&&b.rids[k])li.dataset.rid=b.rids[k];list.append(li);});return list;}
  if(b.t==='table'){const wrap=el('div','tb-table-wrap'),table=el('table','tb-table');(b.rows||[]).forEach((row,i)=>{const tr=el('tr');for(const cell of row)tr.append(inline(el(i===0?'th':'td'),cell));table.append(tr);});wrap.append(table);return wrap;}
  if(b.t==='details'){const btn=button('','tb-answer-btn',()=>openSheet(b),b.summary||'答え');inline(btn,b.summary||'答え');return btn;}
  if(b.t==='fig'){
@@ -148,10 +150,16 @@ const SAFE=14;
 const over=body=>{const last=body.lastElementChild;if(!last)return false;const mb=parseFloat(getComputedStyle(last).marginBottom)||0;return last.offsetTop+last.offsetHeight+mb>body.clientHeight-SAFE||body.scrollHeight>body.clientHeight+1;};
 function split(b,body){
  // 長い箇条書き・表は、入るところまで置いて、残りを次のページへ回す。
+ // 長いかけあいは、行の切れ目で次のページへ分ける（読み上げのIDも一緒に分ける）
+ if(b.t==='talk'&&(b.lines||[]).length>2){
+  const L=b.lines;let keep=0;
+  for(let i=1;i<L.length;i++){const node=block({...b,lines:L.slice(0,i),rids:b.rids&&b.rids.slice(0,i)});body.append(node);const bad=over(body);node.remove();if(bad)break;keep=i;}
+  if(keep>0&&keep<L.length)return [{...b,lines:L.slice(0,keep),rids:b.rids&&b.rids.slice(0,keep)},{...b,lines:L.slice(keep),rids:b.rids&&b.rids.slice(keep)}];
+ }
  if(b.t==='ul'||b.t==='ol'){
   const items=b.items||[];let keep=0;
   for(let i=1;i<=items.length;i++){const node=block({...b,items:items.slice(0,i)});body.append(node);const bad=over(body);node.remove();if(bad)break;keep=i;}
-  if(keep>0&&keep<items.length)return [{...b,items:items.slice(0,keep)},{...b,items:items.slice(keep),start:(b.start||1)+keep}];
+  if(keep>0&&keep<items.length)return [{...b,items:items.slice(0,keep),rids:b.rids&&b.rids.slice(0,keep)},{...b,items:items.slice(keep),rids:b.rids&&b.rids.slice(keep),start:(b.start||1)+keep}];
  }
  if(b.t==='table'&&(b.rows||[]).length>2){
   const rows=b.rows;let keep=0;
@@ -210,7 +218,7 @@ async function paginateBody(book,measure,progress){
    if(['fig','media'].includes(b.t)&&placed>0){const free=cur.body.clientHeight-used(cur.body),cap=48;if(free-cap>=140){const small={...b,maxh:Math.min(free-cap-16,b.t==='media'?200:220)};const n2=block(small);cur.body.append(n2);if(!over(cur.body)){cur.blocks.push(small);placed++;continue;}n2.remove();}}
    const parts=split(b,cur.body);
    if(parts){cur.blocks.push(parts[0]);cur.body.append(block(parts[0]));queue.unshift(parts[1]);}
-   else if(placed===0||(placed===1&&cur.blocks[0].t==='topic')){cur.blocks.push(b);cur.body.append(block(b));placed++;continue;}// 分割できない部品も測定用のページへ置き、後続がその高さを無視しないようにする
+   else if(placed===0||(placed===1&&cur.blocks[0].t==='topic')||cur.blocks.every(x=>['divider','topic','goal','h3','h4'].includes(x.t))){cur.blocks.push(b);cur.body.append(block(b));placed++;continue;}// 見出しだけのページなら、入りきらない部品もここに置く（見出しと一緒に次のページへ回し続けて、組み終わらなくなるのを防ぐ）// 分割できない部品も測定用のページへ置き、後続がその高さを無視しないようにする
    else queue.unshift(b);
    // 見出しだけがページの下に残らないように、見出しごと次のページへ回す
    const moved=[];while(cur.blocks.length>1&&['divider','topic','goal','h3','h4'].includes(cur.blocks[cur.blocks.length-1].t)){moved.unshift(cur.blocks.pop());cur.body.lastElementChild?.remove();}
@@ -252,12 +260,34 @@ function renderSheet(){
 
 // ---- 見開き ----
 function spreads(count){const list=[[1]];for(let n=2;n<=count;n+=2)list.push(n+1<=count?[n,n+1]:[n]);return list;}
-function goPage(n){if(!state.book||!n)return;const list=spreads(state.book.phys.length);const at=list.findIndex(s=>s.includes(n));if(at>=0){state.motion=at>state.spread?'next':'prev';state.spread=at;state.sheet=null;render();}}
-function turn(delta){if(state.view!=='book'||!state.book)return;const list=spreads(state.book.phys.length),next=state.spread+delta;if(next<0||next>=list.length)return;state.spread=next;state.sheet=null;state.motion=delta>0?'next':'prev';render();}
+// 縦向きの画面（スマホ・タブレットを縦に持ったとき）は1ページずつ、横向きは2ページの見開き。向きを変えると自動で切りかわる。
+function isSingle(){const a=state.app;const w=a&&a.clientWidth||root.innerWidth||0,h=a&&a.clientHeight||root.innerHeight||0;return w>0&&h>0&&w<h;}
+function views(){const count=state.book?state.book.phys.length:0;if(!state.single)return spreads(count);const list=[];for(let n=1;n<=count;n++)list.push([n]);return list;}
+// ---- 教科書と問題の行き来（2026-10-06）：textbook-links.json で、本の章・節と問題タブの大単元を結ぶ ----
+let links=[];
+async function loadLinks(){try{const d=await loadJson('/textbook-links.json');if(d&&d.v===1&&Array.isArray(d.links))links=d.links.filter(l=>l&&typeof l.book==='string'&&typeof l.major==='string'&&Array.isArray(l.targets)&&l.targets.length);}catch(_){links=[];}}
+function linkFor(subject,grade,major){return links.find(l=>l.subject===subject&&l.grade===grade&&l.major===major)||null;}
+function tocPage(book,target){for(const c of book.toc||[]){if(c.title===target)return c.page;for(const sec of c.sections||[])if(sec.title===target)return sec.page;}return 0;}
+// いま見ているページが入っている章と節（本の中のページ番号で比べる）
+function placeOf(n){const b=state.book;if(!b)return null;let at=null;for(const c of b.toc||[]){const cp=b.map[c.page]||c.page;if(cp<=n)at={chapter:c.title,section:null};for(const sec of c.sections||[]){const sp=b.map[sec.page]||sec.page;if(sp<=n)at={chapter:c.title,section:sec.title};}}return at;}
+function problemLink(n){const at=placeOf(n);if(!at||!state.book)return null;return links.find(l=>l.book===state.book.meta.id&&(l.targets.includes(at.section)||l.targets.includes(at.chapter)))||null;}
+function toProblems(link){leave();if(typeof root.switchView==='function')root.switchView('study');root.NobiMaterialEntry?.focus?.({subject:link.subject,grade:link.grade,major:link.major});}
+// 問題タブの「教科書を読む」から：本を開いて、その章・節のページへ
+function openAt(link){if(!link||typeof link.book!=='string')return false;state.pending={book:link.book,target:link.targets[0]};if(typeof root.switchView==='function')root.switchView('textbook');else void enter();return true;}
+function relayout(){
+ const single=isSingle();if(single===state.single)return false;
+ // 縦→横→縦と回したとき、もとの1ページに戻れるように、縦で見ていたページを覚えておく
+ const cur=state.book?(views()[state.spread]||[1]):[1];if(state.single)state.anchor=cur[0];
+ const was=!state.single&&cur.includes(state.anchor)?state.anchor:cur[0];state.single=single;
+ if(state.book){const at=views().findIndex(v=>v.includes(was));state.spread=at>=0?at:0;}
+ return true;
+}
+function goPage(n){if(!state.book||!n)return;const list=views();const at=list.findIndex(s=>s.includes(n));if(at>=0){state.motion=at>state.spread?'next':'prev';state.spread=at;state.sheet=null;render();}}
+function turn(delta){if(state.view!=='book'||!state.book)return;const list=views(),next=state.spread+delta;if(next<0||next>=list.length)return;state.spread=next;state.sheet=null;state.motion=delta>0?'next':'prev';render();}
 function fitSpread(){
  const stage=state.app&&state.app.querySelector('.tb-stage'),wrap=stage&&stage.querySelector('.tb-spread-wrap'),spread=wrap&&wrap.querySelector('.tb-spread');if(!spread)return;
- const scale=Math.max(0.1,Math.min((stage.clientWidth-12)/(2*W),(stage.clientHeight-12)/H));
- spread.style.transform='scale('+scale+')';wrap.style.width=(2*W*scale)+'px';wrap.style.height=(H*scale)+'px';
+ const k=state.single?1:2,scale=Math.max(0.1,Math.min((stage.clientWidth-12)/(k*W),(stage.clientHeight-12)/H));
+ spread.style.transform='scale('+scale+')';wrap.style.width=(k*W*scale)+'px';wrap.style.height=(H*scale)+'px';
  // 縦長の画面で下に余白があるときは、＜ ＞を本の下に出して本文に重ねない。
  const below=stage.clientHeight-H*scale>150;stage.classList.toggle('tb-nav-below',below);
  stage.style.setProperty('--tb-nav-top',below?(stage.clientHeight/2+H*scale/2+44)+'px':'50%');
@@ -290,14 +320,15 @@ function render(){
   const measure=el('div','tb-measure');measure.setAttribute('aria-hidden','true');shelf.append(measure);
   app.append(shelf);return;
  }
- const book=state.book,list=spreads(book.phys.length),pair=list[state.spread]||list[0];
+ relayout();const book=state.book,list=views(),pair=list[state.spread]||list[0];
  const info=pair[0]===1?'表紙':'p.'+pair.join('–')+' / '+book.phys.length,spreadCode=(book.meta.code||'')+pair.join('-');
  const codeBox=el('form','tb-jump'),codeInput=el('input');codeInput.type='text';codeInput.inputMode='text';codeInput.placeholder='コード（12-A）';codeInput.setAttribute('aria-label','コードでページへ移動');codeInput.maxLength=12;codeBox.append(codeInput,button('移動','tb-btn',()=>{},'コードで移動'));codeBox.lastChild.type='submit';codeBox.addEventListener('submit',e=>{e.preventDefault();jump(codeInput.value);});
- app.append(bar(book.meta.title,[el('span','tb-spread-code',spreadCode),el('span','tb-page-info',info),codeBox,button('もくじ','tb-btn',()=>goPage(2),'もくじへ戻る'),button('本棚へ','tb-btn',()=>{state.view='shelf';state.book=null;state.sheet=null;render();},'本棚へ戻る'),homeButton(),exitButton()]));
- const stage=el('div','tb-stage'),wrap=el('div','tb-spread-wrap'),spread=el('div','tb-spread'+(state.motion?' tb-turn-'+state.motion:''));state.motion=null;
+ app.append(bar(book.meta.title,[el('span','tb-spread-code',spreadCode),el('span','tb-page-info',info),codeBox,...(problemLink(pair[pair.length-1])?[button('問題を解く','tb-btn tb-btn-problems',()=>toProblems(problemLink(pair[pair.length-1])),'この単元の問題を解く')]:[]),button('もくじ','tb-btn',()=>goPage(2),'もくじへ戻る'),button('本棚へ','tb-btn',()=>{state.view='shelf';state.book=null;state.sheet=null;render();},'本棚へ戻る'),homeButton(),exitButton()]));
+ const stage=el('div','tb-stage'),wrap=el('div','tb-spread-wrap'),spread=el('div','tb-spread'+(state.single?' tb-single':'')+(state.motion?' tb-turn-'+state.motion:''));state.motion=null;
  spread.style.setProperty('--tb-color',book.meta.color);spread.style.setProperty('--tb-tint',tint(book.meta.color,0.88));spread.style.setProperty('--tb-soft',tint(book.meta.color,0.94));
  const page=n=>book.phys[n-1];
- if(pair[0]===1)spread.append(renderPage(null,'left'),renderPage(page(1),'right'));
+ if(state.single)spread.append(renderPage(page(pair[0]),pair[0]%2?'right':'left'));
+ else if(pair[0]===1)spread.append(renderPage(null,'left'),renderPage(page(1),'right'));
  else spread.append(renderPage(page(pair[0]),'left'),renderPage(pair[1]?page(pair[1]):null,'right'));
  wrap.append(spread);
  const prev=button('＜','tb-nav tb-prev',()=>turn(-1),'前のページ'),next=button('＞','tb-nav tb-next',()=>turn(1),'次のページ');
@@ -306,8 +337,101 @@ function render(){
  let start=null;
  stage.addEventListener('pointerdown',e=>{start={x:e.clientX,y:e.clientY};});stage.addEventListener('pointercancel',()=>{start=null;});stage.addEventListener('dragstart',e=>e.preventDefault());
  stage.addEventListener('pointerup',e=>{if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;start=null;if(Math.abs(dx)>60&&Math.abs(dy)<50)turn(dx<0?1:-1);});
+ yRender(stage,spread);
  fitSpread();renderSheet();
  if(state.highlight){const q=spread.querySelector('[data-code="'+state.highlight+'"]');if(q)q.classList.add('tb-highlight');state.highlight=null;}
+}
+// ===== 🔊 本文の読み上げ（Claude・2026-10-06）=====
+// 押すと声で読み、いま読んでいる1行に色がつき、その下の線が読む速さに合わせてなめらかに伸びる。
+// 音声と「どの文字を何秒に読むか」の表は /textbook-yomi-<節>.json（Claude_Codex共有/読み上げ/make_yomi.py が作る）。
+// 線の位置は、表の区切り（読点・句点ごと）の中を時間で割り合わせて文字の位置を出し、文字の実際の場所（Range）に合わせて描く。
+const Y={on:false,auto:false,audio:null,code:null,data:null,order:[],el:null,chars:null,at:0,spread:-1,gen:0,raf:0,lt:-1,lp:0};
+function yCode(rid){return String(rid).replace(/-[HNTU]\d+$/,'');}
+// 読むまとまり：本文とあらすじ（H・N）、しくみの会話（T）、例題の会話（U）。押したまとまりの終わりで止まる
+function yKind(rid){const m=/-([HNTU])\d+$/.exec(String(rid));return m?(m[1]==='N'?'H':m[1]):'';}
+function yFirst(spread){const yo=state.book&&state.book.yomi;if(!yo||!spread)return null;for(const n of spread.querySelectorAll('[data-rid]'))if(yo[yCode(n.dataset.rid)])return n;return null;}
+function yPageOf(rid){const ph=(state.book&&state.book.phys)||[];for(let i=0;i<ph.length;i++)for(const b of ph[i].blocks||[])if(b&&(b.rid===rid||(b.rids||[]).includes(rid)))return i+1;return 0;}
+function yBtn(label){const b=state.app&&state.app.querySelector('.tb-yomi-btn');if(!b)return;b.classList.toggle('on',Y.on);b.querySelector('span').textContent=label||(Y.on?'とめる':'読み上げ');b.querySelector('img').src=Y.on?'/nobi-read.svg':'/nobi-normal.svg';b.setAttribute('aria-pressed',Y.on?'true':'false');}
+function yNote(msg){const info=state.app&&state.app.querySelector('.tb-page-info');if(info)info.textContent=msg;}
+function yClear(){document.querySelectorAll('.tb-yomi').forEach(x=>x.remove());Y.el=null;Y.chars=null;}
+function yStop(){Y.on=false;Y.gen++;cancelAnimationFrame(Y.raf);if(Y.audio)try{Y.audio.pause();}catch(_){}yClear();yBtn();}
+const yCache={};
+async function yLoad(code){
+ const url=state.book&&state.book.yomi[code];if(typeof url!=='string'||!/^\/textbook-yomi-[a-z0-9-]+\.json$/.test(url))return null;
+ if(!yCache[code])yCache[code]=fetch(url,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('yomi');return r.json();}).then(d=>(d&&d.blocks&&typeof d.audio==='string'&&/^\/textbook-yomi-[a-z0-9-]+\.mp3$/.test(d.audio))?d:null).catch(()=>{delete yCache[code];return null;});
+ return yCache[code];
+}
+function yAudio(src){
+ if(!Y.audio){Y.audio=new Audio();Y.audio.preload='auto';Y.audio.addEventListener('ended',()=>{if(Y.on)yStop();});}
+ if(Y.audio.getAttribute('src')!==src){Y.audio.src=src;try{Y.audio.load();}catch(_){}}
+ return Y.audio;
+}
+async function yPrefetch(code){if(Y.on)return;const d=await yLoad(code);if(d&&!Y.on)yAudio(d.audio);}
+async function yStart(from){
+ const book=state.book,spread=state.app&&state.app.querySelector('.tb-spread');const first=from||yFirst(spread);if(!book||!first)return;
+ const code=yCode(first.dataset.rid);
+ const gen=++Y.gen;yBtn('じゅんび中…');
+ const data=await yLoad(code);
+ if(gen!==Y.gen)return;
+ if(!data){yStop();yNote('読み上げの音声を読み込めませんでした。');return;}
+ const kind=yKind(first.dataset.rid);Y.code=code;Y.data=data;Y.order=Object.keys(data.blocks).filter(k=>yKind(k)===kind).sort((a,b)=>data.blocks[a].t0-data.blocks[b].t0);
+ yAudio(data.audio);
+ const blk=data.blocks[first.dataset.rid];Y.on=true;Y.spread=state.spread;yClear();
+ try{const p=Y.audio.play();if(p&&p.then)await p;}catch(_){if(gen===Y.gen){yStop();yNote('音声を再生できませんでした。もう一度押してください。');}return;}
+ if(gen!==Y.gen)return;
+ try{Y.audio.currentTime=blk?blk.t0:0;}catch(_){}
+ Y.lt=-1;yBtn();cancelAnimationFrame(Y.raf);Y.raf=requestAnimationFrame(yTick);
+}
+// 文字ひとつずつの場所（ページの中の座標。拡大縮小をもどした値）と、行のはじめ・終わり
+function yMeasure(el){
+ const page=el.closest('.tb-page');if(!page)return null;const pr=page.getBoundingClientRect(),sc=(pr.width/page.offsetWidth)||1;
+ const list=[],range=document.createRange();
+ const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement&&n.parentElement.closest('rt,rp,.tb-code')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+ let n;while((n=walk.nextNode())){for(let i=0;i<n.length;i++){range.setStart(n,i);range.setEnd(n,i+1);const rs=range.getClientRects();const r=rs.length?rs[rs.length-1]:range.getBoundingClientRect();list.push({x:(r.left-pr.left)/sc,y:(r.top-pr.top)/sc,w:r.width/sc,h:r.height/sc});}}
+ let st=0;for(let i=0;i<list.length;i++){if(i>0&&list[i].y>list[i-1].y+list[i-1].h*.5)st=i;list[i].ls=st;}
+ for(let i=list.length-1,en=list.length-1;i>=0;i--){if(i<list.length-1&&list[i+1].ls!==list[i].ls)en=i;list[i].le=en;}
+ return {page,list};
+}
+function yDraw(c,pos){
+ if(!c||!c.list.length)return;const L=c.list,i=Math.min(L.length-1,Math.max(0,Math.floor(pos))),f=Math.min(1,Math.max(0,pos-i)),r=L[i];
+ let top=1e9,bot=-1e9;for(let k=r.ls;k<=r.le;k++){top=Math.min(top,L[k].y);bot=Math.max(bot,L[k].y+L[k].h);}
+ const a=L[r.ls],e=L[r.le],x=r.x+r.w*f;
+ let lay=c.page.querySelector('.tb-yomi');
+ if(!lay){document.querySelectorAll('.tb-yomi').forEach(z=>z.remove());lay=el('div','tb-yomi');const tip=document.createElement('img');tip.className='tb-yomi-nobi';tip.src='/nobi-read.svg';tip.alt='';lay.append(el('div','tb-yomi-band'),el('div','tb-yomi-line'),tip);c.page.append(lay);}
+ const [band,line,tip]=lay.children;
+ band.style.cssText='left:'+(a.x-6)+'px;top:'+(top-3)+'px;width:'+(e.x+e.w-a.x+12)+'px;height:'+(bot-top+6)+'px';
+ const full=Math.max(1,e.x+e.w-a.x);line.style.cssText='left:'+a.x+'px;top:'+(bot+1)+'px;width:'+full+'px;transform:scaleX('+Math.min(1,Math.max(0,(x-a.x)/full)).toFixed(4)+')';
+ tip.style.cssText='left:'+Math.max(2,a.x-34)+'px;top:'+((top+bot)/2-15)+'px';
+}
+function yTick(){
+ if(!Y.on||!Y.audio||!Y.data)return;const A=Y.audio,D=Y.data,now=performance.now();
+ // 再生時間は数十ミリ秒ごとにしか変わらないことがあるので、その間は時計で補ってなめらかにする
+ const ct=A.currentTime;if(ct!==Y.lt){Y.lt=ct;Y.lp=now;}const t=A.paused?ct:Math.min(ct+.25,Y.lt+(now-Y.lp)/1000*(A.playbackRate||1));
+ let rid=null;for(const k of Y.order){if(D.blocks[k].t0<=t+.05)rid=k;else break;}
+ const last=Y.order[Y.order.length-1];if(last&&t>D.blocks[last].t1+.8){yStop();return;}
+ if(rid){
+  const spread=state.app&&state.app.querySelector('.tb-spread');let node=spread&&spread.querySelector('[data-rid="'+rid+'"]');
+  if(!node){const n=yPageOf(rid);if(n){Y.auto=true;try{goPage(n);}finally{Y.auto=false;}Y.spread=state.spread;yClear();}}
+  else{
+   if(node!==Y.el){Y.el=node;Y.chars=null;}
+   if(!Y.chars||now-Y.at>350){Y.chars=yMeasure(node);Y.at=now;}
+   const B=D.blocks[rid];let pos=0;
+   for(const [s,e,t0,t1] of B.segs){if(t>=t1){pos=e;continue;}if(t>=t0)pos=s+(e-s)*Math.min(1,(t-t0)/Math.max(.01,t1-t0));break;}
+   if(Y.chars)yDraw(Y.chars,pos*(Y.chars.list.length/Math.max(1,B.n)));
+  }
+ }
+ Y.raf=requestAnimationFrame(yTick);
+}
+// 見開きを描くたびに呼ぶ：ボタンを置く。読み上げ中に自分でページを動かしたら止める
+function yRender(stage,spread){
+ if(Y.on&&!Y.auto&&Y.spread!==state.spread)yStop();
+ const first=yFirst(spread);if(!first)return;
+ const b=el('button','tb-yomi-btn');b.type='button';b.setAttribute('aria-label','本文を読み上げる');const img=document.createElement('img');img.alt='';b.append(img,el('span'));
+ b.addEventListener('click',e=>{e.stopPropagation();if(Y.on)yStop();else void yStart();});b.addEventListener('pointerdown',e=>e.stopPropagation());b.addEventListener('pointerup',e=>e.stopPropagation());
+ stage.append(b);yBtn();
+ void yPrefetch(yCode(first.dataset.rid));
+ // 読み上げ中に段落を押すと、そこから読む
+ spread.addEventListener('click',e=>{const p=e.target.closest&&e.target.closest('[data-rid]');if(!p||!Y.on||!Y.data)return;if(!Y.order.includes(p.dataset.rid)){if(state.book.yomi[yCode(p.dataset.rid)])void yStart(p);return;}const B=Y.data.blocks[p.dataset.rid];if(B&&Y.audio){try{Y.audio.currentTime=B.t0;}catch(_){}Y.lt=-1;}});
 }
 // コードで移動：「数12-13」「12」「12-A」を受け付ける。問題コードならその問題を光らせる。
 function jump(raw){
@@ -322,10 +446,11 @@ function flash(){const info=state.app?.querySelector('.tb-page-info');if(info){i
 async function loadJson(url){const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw Error('load');return r.json();}
 async function showShelf(){
  const run=++state.epoch;state.view='shelf';state.message=state.shelf?'':'本棚を読み込んでいます。';render();
- if(state.shelf)return;
+ if(state.shelf){if(state.pending){const meta=state.shelf.find(b=>b.id===state.pending.book&&b.status==='ready');if(meta)void openBook(meta);else state.pending=null;}return;}
  try{const data=await loadJson('/textbook-books.json');if(run!==state.epoch)return;if(!data||!Array.isArray(data.books))throw Error('shelf');state.shelf=data.books.filter(b=>b&&typeof b.id==='string'&&typeof b.title==='string');state.message='';}
  catch(_){if(run===state.epoch)state.message='本棚を読み込めませんでした。全画面を終わって、もう一度開いてください。';}
  if(run===state.epoch&&state.view==='shelf')render();
+ if(run===state.epoch&&state.view==='shelf'&&state.pending){const meta=(state.shelf||[]).find(b=>b.id===state.pending.book&&b.status==='ready');if(meta)void openBook(meta);else state.pending=null;}
 }
 // 図の高さが決まってから組む（画像の読み込みを待つ。読めない画像は枠だけで組む）
 function preload(pages){
@@ -340,7 +465,7 @@ async function openBook(meta){
   if(!data||!Array.isArray(data.pages)||!data.pages.length||data.pages.some((p,i)=>!p||p.n!==i+1))throw Error('book');
   await preload(data.pages);if(run!==state.epoch||state.view!=='shelf')return;
   const measure=state.app.querySelector('.tb-measure');measure.style.setProperty('--tb-color',meta.color);
-  state.book={meta,pages:data.pages,toc:data.toc||[],fillers:data.fillers||{},map:{}};
+  state.book={meta,pages:data.pages,toc:data.toc||[],fillers:data.fillers||{},map:{},yomi:(data.yomi&&typeof data.yomi==='object')?data.yomi:{}};
   // 一度組んだ結果は端末に覚えておき、中身が同じなら2回目からすぐ開く（覚えられない端末では毎回組む）
   const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length,cacheKey='nobi-textbook-layout:'+meta.id;
   let laid=null;
@@ -353,7 +478,8 @@ async function openBook(meta){
    try{root.localStorage.setItem(cacheKey,JSON.stringify({sig,pages:laid.pages,map:laid.map}));}catch(_){}
   }
   state.book.phys=laid.pages;state.book.map=laid.map;
-  state.view='book';state.spread=state.book.phys.length>=2?1:0;state.message='';render();
+  state.single=isSingle();state.view='book';state.spread=state.book.phys.length>=2?1:0;state.message='';render();
+  if(state.pending&&state.pending.book===meta.id){const p=tocPage(state.book,state.pending.target);state.pending=null;if(p)goPage(state.book.map[p]||p);}else state.pending=null;
  }catch(_){if(run===state.epoch){state.book=null;state.message='教科書を読み込めませんでした。もう一度押してください。';render();}}
 }
 async function enter(){
@@ -365,7 +491,7 @@ async function enter(){
  try{await request.call(app);}catch(_){state.message='全画面にできませんでした。もう一度「全画面で教科書を開く」を押してください。';state.view='gate';render();return;}
  if(isFull()&&state.view==='gate')void showShelf();
 }
-function close(){state.epoch++;state.view='gate';state.book=null;state.spread=0;state.sheet=null;render();}
+function close(){yStop();state.epoch++;state.pending=null;state.view='gate';state.book=null;state.spread=0;state.sheet=null;render();}
 function leave(){
  if(state.fallback){state.fallback=false;state.app?.classList.remove('tb-fallback');document.documentElement.classList.remove('tb-lock');close();return;}
  const f=document.fullscreenElement||document.webkitFullscreenElement;
@@ -375,12 +501,13 @@ function leave(){
 function onFullChange(){if(!state.app)return;if(isFull()){if(state.view==='gate')void showShelf();}else if(state.view!=='gate')close();}
 function mount(app){
  if(!app||state.app===app)return;
- state.app=app;render();
+ state.app=app;render();void loadLinks();
  document.addEventListener('fullscreenchange',onFullChange);document.addEventListener('webkitfullscreenchange',onFullChange);
  document.addEventListener('keydown',e=>{if(!isFull())return;if(state.sheet&&e.key==='Escape'){e.preventDefault();closeSheet();return;}if(state.view!=='book'||state.sheet)return;if(e.key==='ArrowLeft'){e.preventDefault();turn(-1);}else if(e.key==='ArrowRight'){e.preventDefault();turn(1);}});
- root.addEventListener('resize',()=>{if(state.view==='book')fitSpread();});
+ // 向きが変わったら、いま見ているページを保ったまま1ページ⇄見開きを組みかえる（読み上げ中なら続ける）
+ root.addEventListener('resize',()=>{if(state.view!=='book')return;if(relayout()){Y.auto=true;try{render();}finally{Y.auto=false;}if(Y.on)Y.spread=state.spread;}else fitSpread();});
 }
-root.NobiTextbook=Object.freeze({mount,enter,leave,_state:state});
+root.NobiTextbook=Object.freeze({mount,enter,leave,openAt,linkFor,_state:state,_yomi:()=>({on:Y.on,spread:Y.spread,audio:Y.audio,data:Y.data})});
 function auto(){const app=document.getElementById('textbook-app');if(app)mount(app);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',auto);else auto();
 })(globalThis);

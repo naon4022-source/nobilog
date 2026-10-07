@@ -44,6 +44,8 @@ def fit(s, maxw, maxh, big=26, small=13, lh=1.35):
         if len(L) * z * lh <= maxh: return z, L
     return small, wrap(s, small, maxw)
 
+import importlib.util as _iu, pathlib as _pl
+_sp = _iu.spec_from_file_location('nobi_kit', _pl.Path(__file__).resolve().parent.parent / 'のびー' / 'nobi_kit.py'); NOBI = _iu.module_from_spec(_sp); _sp.loader.exec_module(NOBI)
 class SVG:
     def __init__(self, title=''):
         self.p = []; self.title = title
@@ -132,13 +134,10 @@ class SVG:
         z, L = fit(s, W - 60, 40, 26, 15)
         self.rect(0, 0, W, 54, COL['sky'], None, r=0); self.lines(L[:1], z, W / 2, 27 - z * .68, COL['blue'], 'middle', 800, box='title')
         return 62
-    def sprout(self, x, y, s=1.0):
-        """芽の形のマスコット（のびー）を小さく添える"""
-        g = f'<g transform="translate({x},{y}) scale({s})">'
-        g += '<path d="M0,-30 Q-26,-54 -6,-68 Q4,-48 0,-30Z" fill="#3fa34d"/><path d="M0,-30 Q26,-54 6,-68 Q-4,-48 0,-30Z" fill="#2a7a37"/>'
-        g += '<ellipse cx="0" cy="0" rx="30" ry="27" fill="#8fd19e" stroke="#2a7a37" stroke-width="3"/><circle cx="-10" cy="-4" r="3.5" fill="#1d2b3a"/><circle cx="10" cy="-4" r="3.5" fill="#1d2b3a"/>'
-        g += '<path d="M-7,6 Q0,12 7,6" fill="none" stroke="#1d2b3a" stroke-width="2.5" stroke-linecap="round"/></g>'
-        return self.add(g)
+    def sprout(self, x, y, s=1.0, pose='normal'):
+        """マスコット「のびー」を小さく添える。顔と形は のびー/nobi_kit.py が正本（動画・教科書と同じ）"""
+        self._nb = getattr(self, '_nb', 0) + 1; k = f'nb{self._nb}'
+        return self.add(NOBI.defs(k) + f'<g transform="translate({x},{y}) scale({s * .5})">' + NOBI.body_svg(pose, k) + '</g>')   # 前の芽と同じ大きさになるよう半分に
     def done(self):
         return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" font-family=\'{FONT}\' role="img" aria-label="{esc(self.title)}">'
                 f'<rect width="{W}" height="{H}" fill="#ffffff"/>' + ''.join(self.p) + '</svg>\n')

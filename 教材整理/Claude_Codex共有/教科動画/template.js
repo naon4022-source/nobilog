@@ -38,23 +38,63 @@ function fit(s, maxW, maxH, big, small, lh = 1.38) {
 function lines(F, x, y, col = C.ink, align = 'left', lh = 1.38) { F.L.forEach((l, k) => text(l, x, y + F.z * (k * lh + 1) - F.z * .14, F.z, col, align, 700)); }
 function tag(label, x, y, fill, col = '#fff') { const w = tw(label, 26, 800) + 30; rbox(x, y, w, 40, 14, fill); text(label, x + w / 2, y + 30, 26, col, 'center', 800); return w; }
 
-// マスコット「のびー」：芽の形。wave＝手をふる、point＝指さす。ゆっくりはずむ
-function nobi(x, y, s = 1, o = {}) {
-  const t = o.t || 0, bob = Math.sin(t * 5) * 6 * s;
-  g.save(); g.translate(x, y + bob); g.scale(s, s);
-  const sway = Math.sin(t * 3) * .12;
-  for (const d of [-1, 1]) { g.save(); g.translate(0, -52); g.rotate(d * (.55 + sway)); g.fillStyle = d < 0 ? P.leaf : P.leafDark; g.beginPath(); g.moveTo(0, 0); g.quadraticCurveTo(d * 30, -40, d * 4, -64); g.quadraticCurveTo(d * -18, -30, 0, 0); g.fill(); g.restore(); }
-  g.strokeStyle = P.leafDark; g.lineWidth = 5; g.beginPath(); g.moveTo(0, -30); g.lineTo(0, -56); g.stroke();
-  g.fillStyle = P.body; g.strokeStyle = P.leafDark; g.lineWidth = 4; g.beginPath(); g.ellipse(0, 0, 56, 50, 0, 0, Math.PI * 2); g.fill(); g.stroke();
-  g.fillStyle = C.ink; for (const d of [-1, 1]) { g.beginPath(); g.ellipse(d * 18, -6, 6, 8, 0, 0, Math.PI * 2); g.fill(); }
-  g.fillStyle = 'rgba(232,110,120,.45)'; for (const d of [-1, 1]) { g.beginPath(); g.ellipse(d * 32, 10, 9, 6, 0, 0, Math.PI * 2); g.fill(); }
-  g.strokeStyle = C.ink; g.lineWidth = 4; g.beginPath(); g.arc(0, 8, 12, .15 * Math.PI, .85 * Math.PI); g.stroke();
-  g.strokeStyle = P.leafDark; g.lineWidth = 7; g.lineCap = 'round';
-  if (o.wave) { const a = -1.1 + Math.sin(t * 9) * .35; g.beginPath(); g.moveTo(48, 0); g.lineTo(48 + 40 * Math.cos(a), 40 * Math.sin(a)); g.stroke(); }
-  else if (o.point) { g.beginPath(); g.moveTo(50, 4); g.lineTo(92, -18); g.stroke(); }
-  else { g.beginPath(); g.moveTo(50, 8); g.lineTo(66, 26); g.stroke(); }
-  g.beginPath(); g.moveTo(-50, 8); g.lineTo(-66, 26); g.stroke(); g.lineCap = 'butt';
+// マスコット「のびー」：芽のおもち。wave＝手をふる、point＝指さす。はずむ・ときどきまばたき
+function nobi(x, y, s = 1, o = {}) {   // 2026-10-06 かわいく描き直し：おもちの体・きらきらの目・ぷっくり葉・まばたき・はずみ
+  const t = o.t || 0;
+  const k = Math.sin(t * 5);                       // はずみ
+  const sq = 1 + k * .035, st = 1 - k * .035;      // つぶれ・のび
+  const blink = ((t * 1.0) % 3.2) > 3.05;          // ときどき まばたき
+  g.save(); g.translate(x, y); g.scale(s, s);
+  // かげ
+  g.fillStyle = 'rgba(40,90,60,.13)'; g.beginPath(); g.ellipse(0, 54, 50 * (1.05 - k * .05), 9, 0, 0, Math.PI * 2); g.fill();
+  g.save(); g.translate(0, -Math.max(0, k) * 7); g.scale(st, sq);
+  // 足
+  g.fillStyle = '#6cbf80'; g.strokeStyle = '#3e8f55'; g.lineWidth = 3;
+  for (const d of [-1, 1]) { g.beginPath(); g.ellipse(d * 20, 46, 15, 9, 0, 0, Math.PI * 2); g.fill(); g.stroke(); }
+  // 芽（くき＋ぷっくりした葉っぱ2まい）
+  const sway = Math.sin(t * 3) * .1;
+  g.save(); g.translate(0, -44); g.rotate(sway * .5);
+  g.strokeStyle = '#3e8f55'; g.lineWidth = 5; g.lineCap = 'round'; g.beginPath(); g.moveTo(0, 6); g.quadraticCurveTo(2, -10, 0, -22); g.stroke();
+  for (const d of [-1, 1]) {
+    g.save(); g.translate(0, -20); g.rotate(d * (.95 + sway));
+    const lg = g.createLinearGradient(0, 0, 0, -40); lg.addColorStop(0, '#4fb562'); lg.addColorStop(1, '#8be09a');
+    g.fillStyle = lg; g.strokeStyle = '#3e8f55'; g.lineWidth = 3;
+    g.beginPath(); g.moveTo(0, 0); g.bezierCurveTo(d * 22, -6, d * 24, -34, 0, -42); g.bezierCurveTo(d * -16, -32, d * -12, -8, 0, 0); g.fill(); g.stroke();
+    g.strokeStyle = 'rgba(46,120,70,.55)'; g.lineWidth = 2; g.beginPath(); g.moveTo(0, -3); g.quadraticCurveTo(d * 4, -20, 0, -36); g.stroke();
+    g.fillStyle = 'rgba(255,255,255,.55)'; g.beginPath(); g.ellipse(d * 6, -28, 3.5, 6, d * .4, 0, Math.PI * 2); g.fill();
+    g.restore();
+  }
   g.restore();
+  // 手（まるいおてて）
+  const arm = (ax, ay, ang) => { g.save(); g.translate(ax, ay); g.rotate(ang); g.fillStyle = '#9edbae'; g.strokeStyle = '#3e8f55'; g.lineWidth = 3; g.beginPath(); g.ellipse(0, 14, 10, 16, 0, 0, Math.PI * 2); g.fill(); g.stroke(); g.restore(); };
+  arm(-50, 10, .45);
+  if (!o.wave && !o.point) arm(50, 10, -.45);
+  // からだ（おもち形）
+  const bg = g.createRadialGradient(-18, -22, 6, 0, 0, 70); bg.addColorStop(0, '#d9f7df'); bg.addColorStop(.55, '#a9e4b6'); bg.addColorStop(1, '#7fcf93');
+  g.fillStyle = bg; g.strokeStyle = '#3e8f55'; g.lineWidth = 3.5;
+  g.beginPath(); g.moveTo(0, -46); g.bezierCurveTo(40, -46, 60, -18, 60, 12); g.bezierCurveTo(60, 40, 34, 50, 0, 50); g.bezierCurveTo(-34, 50, -60, 40, -60, 12); g.bezierCurveTo(-60, -18, -40, -46, 0, -46); g.closePath(); g.fill(); g.stroke();
+  // つや
+  g.fillStyle = 'rgba(255,255,255,.7)'; g.beginPath(); g.ellipse(-30, -22, 9, 5, -.6, 0, Math.PI * 2); g.fill();
+  g.beginPath(); g.arc(-17, -31, 2.6, 0, Math.PI * 2); g.fill();
+  // 前に出す手（手をふる・指さす）
+  if (o.wave) arm(52, -4, -2.75 + Math.sin(t * 9) * .35);
+  else if (o.point) { arm(54, 6, -1.9); g.fillStyle = '#9edbae'; g.strokeStyle = '#3e8f55'; g.lineWidth = 3; g.beginPath(); g.arc(80, -2, 5, 0, Math.PI * 2); g.fill(); g.stroke(); }
+  // ほっぺ
+  for (const d of [-1, 1]) { const cg = g.createRadialGradient(d * 33, 16, 1, d * 33, 16, 13); cg.addColorStop(0, 'rgba(255,128,150,.75)'); cg.addColorStop(1, 'rgba(255,128,150,0)'); g.fillStyle = cg; g.beginPath(); g.arc(d * 33, 16, 13, 0, Math.PI * 2); g.fill(); }
+  // 目（きらきら）
+  for (const d of [-1, 1]) {
+    const ex = d * 19, ey = 4;
+    if (blink) { g.strokeStyle = '#2b2f45'; g.lineWidth = 3.5; g.lineCap = 'round'; g.beginPath(); g.arc(ex, ey - 2, 8, .15 * Math.PI, .85 * Math.PI); g.stroke(); continue; }
+    g.fillStyle = '#2b2f45'; g.beginPath(); g.ellipse(ex, ey, 9, 11.5, 0, 0, Math.PI * 2); g.fill();
+    const ig = g.createLinearGradient(0, ey - 4, 0, ey + 11); ig.addColorStop(0, 'rgba(90,120,200,0)'); ig.addColorStop(1, 'rgba(110,150,235,.75)');
+    g.fillStyle = ig; g.beginPath(); g.ellipse(ex, ey + 2, 7, 8.5, 0, 0, Math.PI * 2); g.fill();
+    g.fillStyle = '#fff'; g.beginPath(); g.arc(ex - 3, ey - 4.5, 3.6, 0, Math.PI * 2); g.fill(); g.beginPath(); g.arc(ex + 3.4, ey + 4, 1.7, 0, Math.PI * 2); g.fill();
+  }
+  // 口
+  g.strokeStyle = '#2b2f45'; g.lineWidth = 3; g.lineCap = 'round'; g.lineJoin = 'round';
+  if (o.wave) { g.fillStyle = '#e8566c'; g.beginPath(); g.moveTo(-8, 17); g.quadraticCurveTo(0, 30, 8, 17); g.closePath(); g.fill(); g.stroke(); g.fillStyle = '#ff9aa8'; g.beginPath(); g.ellipse(0, 24, 3.5, 2.5, 0, 0, Math.PI * 2); g.fill(); }
+  else { g.beginPath(); g.moveTo(-8, 18); g.quadraticCurveTo(-4, 23, 0, 18); g.quadraticCurveTo(4, 23, 8, 18); g.stroke(); }
+  g.restore(); g.restore();
 }
 function bubble(x, y, w, h, tailX, tailY, a) {
   g.globalAlpha = a; g.fillStyle = '#fff'; g.strokeStyle = '#c9d6e8'; g.lineWidth = 3;

@@ -52,6 +52,7 @@ html.tb-lock,html.tb-lock body{overflow:hidden}
 /* 見開き */
 .tb-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
 .tb-spread-wrap{position:relative;flex:0 0 auto;perspective:2200px}
+.tb-spread.tb-single{width:600px}
 .tb-spread{position:absolute;left:0;top:0;width:1200px;height:848px;display:flex;transform-origin:top left;filter:drop-shadow(0 16px 30px rgba(0,0,0,.5))}
 .tb-page{position:relative;box-sizing:border-box;width:600px;height:848px;background:#fffefa;color:#20262d;overflow:hidden;background-image:radial-gradient(rgba(0,0,0,.025) 1px,transparent 1px);background-size:6px 6px}
 .tb-page::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--tb-page-color,var(--tb-color))}
@@ -218,3 +219,21 @@ img.tb-zoomable{cursor:zoom-in}
 .tb-end-art-small .tb-cover-art{width:196px;height:170px}
 
 .tb-frame-tools{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:4px}.tb-link{text-decoration:none;display:inline-flex;align-items:center}.tb-talk{margin:6px 0 10px}.tb-talk .tb-hook{margin:0 0 6px}
+.tb-hook-face.tb-hook-nobi{width:48px;height:56px;border-radius:0;background:none;box-shadow:none;overflow:visible}.tb-hook-nobi img{width:48px;height:56px;object-fit:contain}
+.tb-yomi{position:absolute;inset:0;pointer-events:none;z-index:4}
+.tb-yomi-band{position:absolute;border-radius:8px;background:rgba(255,214,102,.30);transition:top .28s ease,left .28s ease,width .28s ease,height .28s ease}
+.tb-yomi-line{position:absolute;height:4px;border-radius:3px;transform-origin:0 50%;will-change:transform;background:linear-gradient(90deg,#ffc15e,#ff7a59);box-shadow:0 1px 4px rgba(255,122,89,.4)}
+.tb-yomi-nobi{position:absolute;width:30px;height:30px;will-change:transform;transition:top .28s ease,left .28s ease;animation:tbYomiHop .55s ease-in-out infinite alternate}
+@keyframes tbYomiHop{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.tb-yomi-btn{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:6px;padding:4px 16px 4px 6px;border-radius:999px;border:2px solid #3e8f55;background:#fff;color:#2a6a40;font:800 15px/1 system-ui,sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.2);cursor:pointer}
+.tb-yomi-btn img{width:34px;height:34px}
+.tb-yomi-btn.on{background:#3e8f55;color:#fff}
+@media (prefers-reduced-motion:reduce){.tb-yomi-band,.tb-yomi-nobi{transition:none;animation:none}}
+.tb-talk .tb-talk-right{flex-direction:row-reverse}
+.tb-talk .tb-talk-right .tb-hook-bubble{border-radius:14px 4px 14px 14px}
+.tb-talk .tb-who-nobi .tb-hook-bubble{border-radius:4px 14px 14px 14px}
+.tb-talk .tb-who-sora .tb-hook-bubble{background:#eef5ff;border-color:#8ab4ef}.tb-talk .tb-who-sora .tb-hook-name{color:#2f6fbf}
+.tb-talk .tb-who-mio .tb-hook-bubble{background:#fff0f4;border-color:#f0a3b8}.tb-talk .tb-who-mio .tb-hook-name{color:#c2416a}
+.tb-talk .tb-talk-right .tb-hook-bubble::before{left:auto;right:-9px;border:8px solid transparent;border-left-color:#8ab4ef;border-right:0}
+.tb-talk .tb-who-mio .tb-hook-bubble::before{border-left-color:#f0a3b8}
+.tb-talk .tb-talk-right .tb-hook-bubble::after{display:none}

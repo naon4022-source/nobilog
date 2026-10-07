@@ -1,0 +1,2719 @@
+{
+ "id": "workbook-math-1-spaceline",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "空間内の平面と直線",
+ "majorTitle": "空間図形",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-math-1-spaceline-1",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線AEと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、DA、EF、HE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-2",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線EFと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "HE",
+      "EH"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "BF",
+      "FB"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え FG、HE、AE、BF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-3",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線BFとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え CD、DA、GH、HE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-4",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線DEとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "CA",
+      "AC"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え BC、CA、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-5",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線ABと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "GH",
+      "HG"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え CD、EF、GH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-6",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線BCと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "BF",
+      "FB"
+     ],
+     [
+      "CG",
+      "GC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、CD、BF、CG",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-7",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線FGとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、CD、AE、DH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-8",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線ABとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FD",
+      "DF"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え EF、FD、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-9",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線DEとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "AC",
+      "CA"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、AC",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-10",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線ADと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BE",
+      "EB"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え BE、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-11",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線DEと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FD",
+      "DF"
+     ],
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "BE",
+      "EB"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え EF、FD、AD、BE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-12",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線ADと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CA",
+      "AC"
+     ],
+     [
+      "DE",
+      "ED"
+     ],
+     [
+      "FD",
+      "DF"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、CA、DE、FD",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-13",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線EBと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え CD",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-14",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線ADとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "EF",
+      "FE"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え BC、EF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-15",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線EFと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "GH",
+      "HG"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、CD、GH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-16",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線CGとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、DA、EF、HE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-17",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線DEと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え BC",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-18",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線BCとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "AE",
+      "EA"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AD、AE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-19",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線DAとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-20",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線GHとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-21",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線CGとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-22",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線BCとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-23",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線AEとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-24",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線、面を平面とみる。平面DEF上にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DE",
+      "ED"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FD",
+      "DF"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え DE、EF、FD",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-25",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線、面を平面とみる。平面ABCと垂直に交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "BE",
+      "EB"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え AD、BE、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-26",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線、面を平面とみる。平面ABCDと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え EF、FG、GH、HE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-27",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線、面を平面とみる。平面EFGHと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DA",
+      "AD"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え AB、BC、CD、DA",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-28",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線、面を平面とみる。平面ABC上にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "CA",
+      "AC"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え AB、BC、CA",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-29",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線、面を平面とみる。平面ABCと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DE",
+      "ED"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FD",
+      "DF"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え DE、EF、FD",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-30",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線、面を平面とみる。平面DAEH上にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "HE",
+      "EH"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え DA、HE、AE、DH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-31",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線、面を平面とみる。平面DAEHと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "BF",
+      "FB"
+     ],
+     [
+      "CG",
+      "GC"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え BC、FG、BF、CG",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-32",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線、面を平面とみる。平面ABCD上にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DA",
+      "AD"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え AB、BC、CD、DA",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-33",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線、面を平面とみる。平面DEFと垂直に交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "BE",
+      "EB"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "直線と平面の位置関係は「平面上にある」「交わる」「平行である」の3つ。垂直は、交わる点を通る平面上のすべての直線と垂直なとき。答え AD、BE、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（直線と平面の位置関係）・教科書 p196 問3",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-34",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、面を平面とみる。平面DEFと垂直な平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABED",
+      "BEDA",
+      "EDAB",
+      "DABE",
+      "DEBA",
+      "ADEB",
+      "BADE",
+      "EBAD"
+     ],
+     [
+      "BCFE",
+      "CFEB",
+      "FEBC",
+      "EBCF",
+      "EFCB",
+      "BEFC",
+      "CBEF",
+      "FCBE"
+     ],
+     [
+      "CADF",
+      "ADFC",
+      "DFCA",
+      "FCAD",
+      "FDAC",
+      "CFDA",
+      "ACFD",
+      "DACF"
+     ]
+    ]
+   },
+   "explanation": "2平面の位置関係は「交わる」「平行である」の2つ。平面Pに垂直な直線をふくむ平面は、Pと垂直。答え ABED、BCFE、CADF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "A③"
+   },
+   "ref": "参考：数学ワーク p119 A③（2平面の位置関係）・教科書 p196 直線と平面の位置関係・垂直",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-35",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、面を平面とみる。平面ABCと平行な平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DEF",
+      "EFD",
+      "FDE",
+      "FED",
+      "DFE",
+      "EDF"
+     ]
+    ]
+   },
+   "explanation": "2平面の位置関係は「交わる」「平行である」の2つ。平面Pに垂直な直線をふくむ平面は、Pと垂直。答え DEF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "A③"
+   },
+   "ref": "参考：数学ワーク p119 A③（2平面の位置関係）・教科書 p196 直線と平面の位置関係・垂直",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-36",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、面を平面とみる。平面BCGFと平行な平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DAEH",
+      "AEHD",
+      "EHDA",
+      "HDAE",
+      "HEAD",
+      "DHEA",
+      "ADHE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "2平面の位置関係は「交わる」「平行である」の2つ。平面Pに垂直な直線をふくむ平面は、Pと垂直。答え DAEH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "A③"
+   },
+   "ref": "参考：数学ワーク p119 A③（2平面の位置関係）・教科書 p196 直線と平面の位置関係・垂直",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-37",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、面を平面とみる。平面ABCと垂直な平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABED",
+      "BEDA",
+      "EDAB",
+      "DABE",
+      "DEBA",
+      "ADEB",
+      "BADE",
+      "EBAD"
+     ],
+     [
+      "BCFE",
+      "CFEB",
+      "FEBC",
+      "EBCF",
+      "EFCB",
+      "BEFC",
+      "CBEF",
+      "FCBE"
+     ],
+     [
+      "CADF",
+      "ADFC",
+      "DFCA",
+      "FCAD",
+      "FDAC",
+      "CFDA",
+      "ACFD",
+      "DACF"
+     ]
+    ]
+   },
+   "explanation": "2平面の位置関係は「交わる」「平行である」の2つ。平面Pに垂直な直線をふくむ平面は、Pと垂直。答え ABED、BCFE、CADF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "A③"
+   },
+   "ref": "参考：数学ワーク p119 A③（2平面の位置関係）・教科書 p196 直線と平面の位置関係・垂直",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-38",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、面を平面とみる。平面ABCDと平行な平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EFGH",
+      "FGHE",
+      "GHEF",
+      "HEFG",
+      "HGFE",
+      "EHGF",
+      "FEHG",
+      "GFEH"
+     ]
+    ]
+   },
+   "explanation": "2平面の位置関係は「交わる」「平行である」の2つ。平面Pに垂直な直線をふくむ平面は、Pと垂直。答え EFGH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "A③"
+   },
+   "ref": "参考：数学ワーク p119 A③（2平面の位置関係）・教科書 p196 直線と平面の位置関係・垂直",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-39",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、直線EFをふくむ平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EFGH",
+      "FGHE",
+      "GHEF",
+      "HEFG",
+      "HGFE",
+      "EHGF",
+      "FEHG",
+      "GFEH"
+     ],
+     [
+      "ABFE",
+      "BFEA",
+      "FEAB",
+      "EABF",
+      "EFBA",
+      "AEFB",
+      "BAEF",
+      "FBAE"
+     ]
+    ]
+   },
+   "explanation": "直線EFは2つの面の境目の辺なので、2つの平面にふくまれる。答え EFGH、ABFE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②(4)"
+   },
+   "ref": "参考：数学ワーク p118 A②(4)（直線をふくむ平面）・教科書 p196 直線は平面上にある",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-40",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、直線FGをふくむ平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EFGH",
+      "FGHE",
+      "GHEF",
+      "HEFG",
+      "HGFE",
+      "EHGF",
+      "FEHG",
+      "GFEH"
+     ],
+     [
+      "BCGF",
+      "CGFB",
+      "GFBC",
+      "FBCG",
+      "FGCB",
+      "BFGC",
+      "CBFG",
+      "GCBF"
+     ]
+    ]
+   },
+   "explanation": "直線FGは2つの面の境目の辺なので、2つの平面にふくまれる。答え EFGH、BCGF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②(4)"
+   },
+   "ref": "参考：数学ワーク p118 A②(4)（直線をふくむ平面）・教科書 p196 直線は平面上にある",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-41",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、直線DHをふくむ平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CDHG",
+      "DHGC",
+      "HGCD",
+      "GCDH",
+      "GHDC",
+      "CGHD",
+      "DCGH",
+      "HDCG"
+     ],
+     [
+      "DAEH",
+      "AEHD",
+      "EHDA",
+      "HDAE",
+      "HEAD",
+      "DHEA",
+      "ADHE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "直線DHは2つの面の境目の辺なので、2つの平面にふくまれる。答え CDHG、DAEH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②(4)"
+   },
+   "ref": "参考：数学ワーク p118 A②(4)（直線をふくむ平面）・教科書 p196 直線は平面上にある",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-42",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、直線DAをふくむ平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABCD",
+      "BCDA",
+      "CDAB",
+      "DABC",
+      "DCBA",
+      "ADCB",
+      "BADC",
+      "CBAD"
+     ],
+     [
+      "DAEH",
+      "AEHD",
+      "EHDA",
+      "HDAE",
+      "HEAD",
+      "DHEA",
+      "ADHE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "直線DAは2つの面の境目の辺なので、2つの平面にふくまれる。答え ABCD、DAEH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②(4)"
+   },
+   "ref": "参考：数学ワーク p118 A②(4)（直線をふくむ平面）・教科書 p196 直線は平面上にある",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-43",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、直線AEをふくむ平面をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABFE",
+      "BFEA",
+      "FEAB",
+      "EABF",
+      "EFBA",
+      "AEFB",
+      "BAEF",
+      "FBAE"
+     ],
+     [
+      "DAEH",
+      "AEHD",
+      "EHDA",
+      "HDAE",
+      "HEAD",
+      "DHEA",
+      "ADHE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "直線AEは2つの面の境目の辺なので、2つの平面にふくまれる。答え ABFE、DAEH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②(4)"
+   },
+   "ref": "参考：数学ワーク p118 A②(4)（直線をふくむ平面）・教科書 p196 直線は平面上にある",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 196
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-44",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝6cm、AD＝9cm、AE＝7cm である。この直方体から、3点B、D、Eを通る平面で切り取った三角錐A−BDEについて、面ABDを底面としたときの高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AEは、面ABDをふくむ平面（直方体の上の面）と垂直なので、高さはAEの長さ 7cm",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①(1)"
+   },
+   "ref": "参考：数学ワーク p119 B①(1)（三角錐の高さ・点と平面との距離）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "6",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-45",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝6cm、AD＝8cm、AE＝4cm である。この直方体から切り取った三角錐A−BDEの体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "cm³"
+    ]
+   },
+   "explanation": "面ABDを底面とすると、底面積は 6×8÷2、高さは AE＝4。体積は (6×8÷2)×4÷3＝32（cm³）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①"
+   },
+   "ref": "参考：数学ワーク p119 B①（三角錐の高さと体積）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "96",
+    "64"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-46",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝6cm、AD＝4cm、AE＝5cm である。この直方体から切り取った三角錐A−BDEの体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm³"
+    ]
+   },
+   "explanation": "面ABDを底面とすると、底面積は 6×4÷2、高さは AE＝5。体積は (6×4÷2)×5÷3＝20（cm³）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①"
+   },
+   "ref": "参考：数学ワーク p119 B①（三角錐の高さと体積）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "60",
+    "40"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-47",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝7cm、AD＝9cm、AE＝8cm である。この直方体から、3点B、D、Eを通る平面で切り取った三角錐A−BDEについて、面ABDを底面としたときの高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AEは、面ABDをふくむ平面（直方体の上の面）と垂直なので、高さはAEの長さ 8cm",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①(1)"
+   },
+   "ref": "参考：数学ワーク p119 B①(1)（三角錐の高さ・点と平面との距離）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "7",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-48",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝3cm、AD＝6cm、AE＝2cm である。この直方体から切り取った三角錐A−BDEの体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm³"
+    ]
+   },
+   "explanation": "面ABDを底面とすると、底面積は 3×6÷2、高さは AE＝2。体積は (3×6÷2)×2÷3＝6（cm³）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①"
+   },
+   "ref": "参考：数学ワーク p119 B①（三角錐の高さと体積）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "18",
+    "12"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-49",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝5cm、AD＝9cm、AE＝6cm である。この直方体から、3点B、D、Eを通る平面で切り取った三角錐A−BDEについて、面ABDを底面としたときの高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AEは、面ABDをふくむ平面（直方体の上の面）と垂直なので、高さはAEの長さ 6cm",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①(1)"
+   },
+   "ref": "参考：数学ワーク p119 B①(1)（三角錐の高さ・点と平面との距離）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "5",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-50",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝5cm、AD＝8cm、AE＝7cm である。この直方体から切り取った三角錐A−BDEの体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "140/3",
+    "units": [
+     "cm³"
+    ]
+   },
+   "explanation": "面ABDを底面とすると、底面積は 5×8÷2、高さは AE＝7。体積は (5×8÷2)×7÷3＝140/3（cm³）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①"
+   },
+   "ref": "参考：数学ワーク p119 B①（三角錐の高さと体積）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "140",
+    "280/3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-51",
+   "type": "input",
+   "prompt": "直方体の頂点Aに集まる3本の辺の長さが AB＝6cm、AD＝9cm、AE＝5cm である。この直方体から、3点B、D、Eを通る平面で切り取った三角錐A−BDEについて、面ABDを底面としたときの高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AEは、面ABDをふくむ平面（直方体の上の面）と垂直なので、高さはAEの長さ 5cm",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①(1)"
+   },
+   "ref": "参考：数学ワーク p119 B①(1)（三角錐の高さ・点と平面との距離）・教科書 p197 問4",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "6",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-52",
+   "type": "input",
+   "prompt": "空間内の2直線が、平行でなく、交わらないとき、2直線はどのような位置にあるというか答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ねじれの位置",
+     "ねじれ"
+    ]
+   },
+   "explanation": "空間内の2直線の位置関係は「交わる」「平行である」「ねじれの位置にある」の3つ。ねじれの位置にある2直線は同じ平面上にない。",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "平行"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-53",
+   "type": "input",
+   "prompt": "点Aから平面Pに垂線をひき、平面Pとの交点をHとする。線分AHの長さを何というか。「点Aと平面Pとの○○」の○○にあてはまることばを答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "距離"
+    ]
+   },
+   "explanation": "線分AHは、点Aと平面P上の点を結ぶ線分のうちでもっとも短い。その長さを点Aと平面Pとの距離という。",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 119,
+    "number": "B①"
+   },
+   "ref": "参考：数学ワーク p119 B①（点と平面との距離）・教科書 p197 点と平面との距離",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466033_0.jpg",
+    "sha256": "07aab649c2e6ada5966d6634d1b706e635960b7529a00527d261f8308875d7de",
+    "page": 197
+   },
+   "near": [
+    "高さ"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-54",
+   "type": "input",
+   "prompt": "三脚のように脚が3本だと、カメラを支えるとぐらつかない。これは、同じ直線上にない3点をふくむ平面が、いくつに決まるからか。数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "同じ直線上にない3点をふくむ平面はただ1つに決まる。だから3本の脚の先は必ず1つの平面（床）にのる。",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p118 A②（平面が1つに決まる条件）・教科書 p194 説明しよう",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 194
+   },
+   "near": [
+    "3",
+    "2"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-55",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線ABと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DE",
+      "ED"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え DE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-56",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線CDと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AC",
+      "CA"
+     ],
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "DE",
+      "ED"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AC、AD、BC、DE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-57",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線DEと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "EB",
+      "BE"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AD、AE、CD、EB",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-58",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線CDと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EB",
+      "BE"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え EB",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-59",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線HEとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "BF",
+      "FB"
+     ],
+     [
+      "CG",
+      "GC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、CD、BF、CG",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-60",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線DEと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-61",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線DAとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "BF",
+      "FB"
+     ],
+     [
+      "CG",
+      "GC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え EF、GH、BF、CG",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-62",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線DHと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え CD、DA、GH、HE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-63",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線ABとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DE",
+      "ED"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え CD、DE",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-64",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線AEと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "AC",
+      "CA"
+     ],
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "DE",
+      "ED"
+     ],
+     [
+      "EB",
+      "BE"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、AC、AD、DE、EB",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-65",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線ABとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "HE",
+      "EH"
+     ],
+     [
+      "CG",
+      "GC"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え FG、HE、CG、DH",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-66",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線BFと交わる直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FG",
+      "GF"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AB、BC、EF、FG",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-67",
+   "type": "input",
+   "prompt": "正四角錐A−BCDE（Aが頂点で、底面は正方形BCDE）で、辺を直線とみる。直線ADとねじれの位置にある直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "EB",
+      "BE"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え BC、EB",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 問2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-68",
+   "type": "input",
+   "prompt": "三角柱ABC−DEF（面ABCが上の底面、面DEFが下の底面で、AとD、BとE、CとFがそれぞれ側面の辺で結ばれている）で、辺を直線とみる。直線BEと平行な直線をすべて答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AD",
+      "DA"
+     ],
+     [
+      "CF",
+      "FC"
+     ]
+    ]
+   },
+   "explanation": "同じ平面上にあって交わるもの、同じ平面上にあって交わらないもの（平行）、同じ平面上にないもの（ねじれの位置）に分ける。答え AD、CF",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p118 A①（2直線の位置関係）・教科書 p195 2直線の位置関係",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   }
+  },
+  {
+   "id": "workbook-math-1-spaceline-69",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線FGとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-spaceline-70",
+   "type": "input",
+   "prompt": "直方体ABCD−EFGH（面ABCDが上の面、面EFGHが下の面で、AとE、BとF、CとG、DとHがそれぞれ辺で結ばれている）で、辺を直線とみる。直線EFとねじれの位置にある辺は全部で何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "交わる辺（4本）と平行な辺（3本）をのぞいた残りがねじれの位置。12−1−7＝4（本）",
+   "source": {
+    "id": "source-0350",
+    "file": "数学ワーク/S__15982749.jpg",
+    "sha256": "ac8c74784557abfe3d234aa9d4541bbf16113bb27e450cd0008a7189c5a2da25",
+    "page": 118,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p118 A①(3)（ねじれの位置）・教科書 p195 ねじれの位置",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466032_0.jpg",
+    "sha256": "d281bf8462b96c42fbbf171296c0f95d831423b374737e8701e8f74ba4cb2b89",
+    "page": 195
+   },
+   "near": [
+    "8",
+    "3"
+   ]
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-05 Claude作成。数学ワークp118〜119（A①2直線の位置関係・A②直線と平面の位置関係・A③2平面の位置関係・B①三角錐の高さ・B②展開図と位置関係・B+③ねじれの位置）と教科書p194〜197（2直線の位置関係・ねじれの位置・問1・問2・直線と平面・垂直・点と平面との距離・問3・問4）を写真で確認。立体は文章で示し、関係は座標で計算して確かめた。"
+}
