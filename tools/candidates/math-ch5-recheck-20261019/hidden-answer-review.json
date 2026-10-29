@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-20",
+  "bookSha256": "ee90db6f0792fac2810afa8abcb333e44aa334a5f51cc7353d21910f0edb45ae",
+  "videos": [
+    {
+      "id": "M1-C5-REVIEW-V01",
+      "sha256": "479e2b29906b82c38818e99e0639df92eab922294221daf4744c236befde05ba"
+    },
+    {
+      "id": "M1-C5-S1-V01",
+      "sha256": "13f5a20db9a275f102b1847f52b2ab084177794ddba5c225d7a8532116358ea1"
+    },
+    {
+      "id": "M1-C5-S1-VP",
+      "sha256": "d6100524d38c73b247b7d67ab3097d0f3cefec01dbb63eb806d41d97a813c6ab"
+    },
+    {
+      "id": "M1-C5-S2-V01",
+      "sha256": "a94b593cad92334f281bf5847852c5d77a9488dfa5dae052eaf105ce4ccae561"
+    },
+    {
+      "id": "M1-C5-S2-V02",
+      "sha256": "dec9fa773762fdb183967838e066d62937a386e88f2220de41c758fc37a81d4e"
+    },
+    {
+      "id": "M1-C5-S2-V03",
+      "sha256": "3886ae340807fd76dc888ec5bf91e4000e1b54738eca1213cc6c9de63f587109"
+    },
+    {
+      "id": "M1-C5-S2-VP",
+      "sha256": "1d7d679d54951fc88b2651f63fcf46303c5223db42686323c05f43c3e913618e"
+    },
+    {
+      "id": "M1-C5-S3-V01",
+      "sha256": "2c6fc090f85eb4578fb18ecb374961afd08e0cc8a87dd2d94cf78ce4dd9281b9"
+    },
+    {
+      "id": "M1-C5-S3-VP",
+      "sha256": "15287ccbc19f1be03e0a9e5c7baa9d1f3e65339e97c15e09c0bc1a7db1acb2fb"
+    },
+    {
+      "id": "M1-C5-S4-V01",
+      "sha256": "21e68b874b0ea5d2df7a518a45ee37a11afc62d6f1529a2d85e0713f4ef46e22"
+    },
+    {
+      "id": "M1-C5-S4-V02",
+      "sha256": "9e5fdf5294dc465eddf16f67cd5088cb6dfdecde0af71eb7ac2ac50c4b39cf11"
+    },
+    {
+      "id": "M1-C5-S4-VP",
+      "sha256": "5ba476dcd5770046a97b11e7b28888665add85ebc64b1149f51982ae31cf3111"
+    }
+  ],
+  "scope": "近接確認14問・各節ポイント8問と媒体を照合。本文全問と原資料全文は別。",
+  "reviews": [
+    {
+      "pid": "M1-P211",
+      "conditions": "PQRSの垂直辺・DEFの二等辺三角形",
+      "finding": "一般の図形記号を説明。指定する辺名の答えの表示なし。"
+    },
+    {
+      "pid": "M1-P218",
+      "conditions": "180度回転・(3,2)の右4下1",
+      "finding": "動画は90度、右6上1で条件が異なる。"
+    },
+    {
+      "pid": "M1-P222",
+      "conditions": "27度の二等分線・三頂点からの等距離",
+      "finding": "動画は数量を置かない作図の性質。54度や指定問題の解答の表示なし。"
+    },
+    {
+      "pid": "M1-P226",
+      "conditions": "75度の作図・6/8/10の三角形高さ",
+      "finding": "D03の75度の式と同問題の比較表の行を、閉じた確認4-1解説へ移動。本文・答えは保持。4.8cmは図/動画に表示なし。"
+    },
+    {
+      "pid": "M1-P233",
+      "conditions": "両点高さ3/横8の最短路・公園三入口",
+      "finding": "動画の岸との高さは異なる。寄り点の距離数値は非表示。"
+    },
+    {
+      "pid": "M1-P240",
+      "conditions": "直径が最長の理由・30度6cm²から150度",
+      "finding": "動画は接線と一般の公式。指定の30cm²の答え表示なし。"
+    },
+    {
+      "pid": "M1-P244",
+      "conditions": "半径6/210度の弧と面積・120度/6πの半径",
+      "finding": "図と動画は一般式。7π/21π/9cmを該当条件の解答として表示しない。"
+    },
+    {
+      "pid": "POINTS",
+      "conditions": "角PQR・65度の残角・118度の半分・PA6・同高さ4/横10の最短路・道の等距離・半径3円・半径4/90度",
+      "finding": "8つの30秒チェックの指定数値を動画へ代入する表示なし。一般の学習内容は保持。"
+    }
+  ],
+  "fixedAnswerLeak": "D03と75度の比較表の行を確認4-1の閉じた解説へ移動",
+  "answerVisibilityReport": "tools/candidates/math-ch5-recheck-20261019/answer-integrated-visibility/browser-result.json"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "locally integrated;76 focused checks passed; combined full64595 running",
+  "waitFor": {
+    "status": "running",
+    "sessionId": 64595,
+    "log": "/tmp/nobi-appendix-word-after-20261021.log",
+    "frozenInputs": "final-full-inputs.json",
+    "frozenInputCount": 1556,
+    "previousAttempt": "final-full-failed-41293.json",
+    "inputChangesAllowed": false,
+    "pid": 1514
+  },
+  "next": [
+    "Observe same unified session64595; do not restart while live",
+    "If terminal0, run exact frozen-input finalize-full.py64595 0",
+    "If terminal1, inspect failure and preserve evidence before repair"
+  ],
+  "mainChanged": false,
+  "noRealMicrophone": true
+}

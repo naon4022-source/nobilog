@@ -1,0 +1,66 @@
+--- tools/releases/preview-verified-20261026/before/site-assets/plan-study.js
+
++++ site-assets/plan-study.js
+
+@@ -20,0 +21 @@
+
++ if(required){introduction(required);return;}
+--- tools/releases/preview-verified-20261026/before/.claude/verify/verify-plan-study.mjs
+
++++ .claude/verify/verify-plan-study.mjs
+
+@@ -21 +21 @@
+
+-  await page.getByRole('button',{name:'AIに相談 🔒',exact:true}).click();ok((await page.getByRole('alert').textContent()).includes('Pro以上'),'clear Free notice');ok(await page.evaluate(()=>calls.length)===0,'locked action never dispatches');ok(await page.locator('#draft').inputValue()==='書きかけ','notice retains answer');await page.getByRole('button',{name:'プラン案内を閉じる'}).click();
++  await page.getByRole('button',{name:'AIに相談 🔒',exact:true}).click();ok((await page.getByRole('dialog').textContent()).includes('Pro以上'),'clear Free notice');ok(await page.evaluate(()=>calls.length)===0,'locked action never dispatches');ok(await page.locator('#draft').inputValue()==='書きかけ','notice retains answer');await page.getByRole('button',{name:'紹介を閉じる'}).click();
+@@ -23 +23 @@
+
+-  ok(await page.evaluate(()=>fetches)===0,'Student cannot fetch Pro review');await page.getByRole('button',{name:'学習ペースを調整',exact:true}).click();ok(await page.evaluate(()=>calls.at(-1))==='planning','Student scheduling allowed');await page.getByRole('button',{name:'AIに相談 🔒',exact:true}).click();ok((await page.getByRole('alert').textContent()).includes('Pro以上'),'Student chat stays locked');await page.getByRole('button',{name:'プラン案内を閉じる'}).click();
++  ok(await page.evaluate(()=>fetches)===0,'Student cannot fetch Pro review');await page.getByRole('button',{name:'学習ペースを調整',exact:true}).click();ok(await page.evaluate(()=>calls.at(-1))==='planning','Student scheduling allowed');await page.getByRole('button',{name:'AIに相談 🔒',exact:true}).click();ok((await page.getByRole('dialog').textContent()).includes('Pro以上'),'Student chat stays locked');await page.getByRole('button',{name:'紹介を閉じる'}).click();
+@@ -28 +28 @@
+
+-  await page.getByRole('button',{name:'一問ずつ詳しく振り返る 🔒',exact:true}).click();ok((await page.getByRole('alert').textContent()).includes('UNLIMIT'),'Pro locked detail');await page.getByRole('button',{name:'Pro・UNLIMITの紹介を見る'}).click();ok(await page.getByRole('dialog',{name:'プラン紹介'}).count()===1,'introduction opened');ok((await page.getByRole('dialog').textContent()).includes('毎日100回分'),'latest Student daily credits');ok(!(await page.getByRole('dialog').textContent()).includes('契約してください'),'no pressure');ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'intro fits');await page.keyboard.press('Escape');ok(await page.getByRole('dialog').count()===0,'escape closes intro');ok(await page.locator('#draft').inputValue()==='書きかけ','intro preserves work');
++  await page.getByRole('button',{name:'一問ずつ詳しく振り返る 🔒',exact:true}).click();ok((await page.getByRole('dialog').textContent()).includes('UNLIMIT'),'Pro locked detail');ok(await page.getByRole('dialog',{name:'プラン紹介'}).count()===1,'introduction opened');ok((await page.getByRole('dialog').textContent()).includes('毎日100回分'),'latest Student daily credits');ok(!(await page.getByRole('dialog').textContent()).includes('契約してください'),'no pressure');ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'intro fits');await page.keyboard.press('Escape');ok(await page.getByRole('dialog').count()===0,'escape closes intro');ok(await page.locator('#draft').inputValue()==='書きかけ','intro preserves work');
+@@ -37,2 +37,2 @@
+
+- await gate.evaluate(()=>{window.gets=[];window.posts=[];window.view=NobiMessages.mount(document.querySelector('#host'),{tab:'ai',same:()=>true,plan:async()=>({provisional:true,plan:'standard',features:{chat:false,nao:false}}),get:async path=>{gets.push(path);return {items:[]};},post:async path=>posts.push(path),draftGet:()=>'',draftSet:()=>{}});});await gate.getByRole('alert').waitFor();ok(await gate.evaluate(()=>view.state().tab)==='nao','Student direct chat entrance stays outside');ok(await gate.evaluate(()=>gets.includes('/learning-chat'))===false,'no locked API request');await gate.getByRole('button',{name:'プラン案内を閉じる'}).click();await gate.getByRole('button',{name:/AI相談/}).click();ok(await gate.evaluate(()=>view.state().tab)==='nao','locked tab does not enter');ok(await gate.locator('textarea').count()===0,'no paid composer exposed');ok(await gate.evaluate(()=>posts.length)===0,'notice not written to notifications');await gate.getByRole('button',{name:'Pro・UNLIMITの紹介を見る'}).click();ok(await gate.getByRole('dialog').count()===1,'message lock links to introduction');await gate.keyboard.press('Escape');ok(await gate.evaluate(()=>view.state().plan)==='standard','introduction cannot alter subscription');await gate.close();
+- const full=await browser.newPage();await full.setContent('<div id="full"></div>');await full.addScriptTag({content:js});await full.evaluate(()=>{Object.defineProperty(document,'fullscreenElement',{value:document.querySelector('#full'),configurable:true});window.keys=0;document.addEventListener('keydown',()=>keys++);NobiPlanStudy.notify('pro');});ok(await full.locator('#full [role=alert]').count()===1,'fullscreen notice stays visible');await full.getByRole('button',{name:'Pro・UNLIMITの紹介を見る'}).click();ok(await full.locator('#full [role=dialog]').count()===1,'fullscreen introduction stays visible');await full.keyboard.press('ArrowRight');await full.keyboard.press('Escape');ok(await full.evaluate(()=>keys)===0,'dialog keys do not turn textbook pages');ok(await full.getByRole('dialog').count()===0,'fullscreen dialog closes');await full.close();
++ await gate.evaluate(()=>{window.gets=[];window.posts=[];window.view=NobiMessages.mount(document.querySelector('#host'),{tab:'ai',same:()=>true,plan:async()=>({provisional:true,plan:'standard',features:{chat:false,nao:false}}),get:async path=>{gets.push(path);return {items:[]};},post:async path=>posts.push(path),draftGet:()=>'',draftSet:()=>{}});});await gate.getByRole('dialog').waitFor();ok(await gate.evaluate(()=>view.state().tab)==='nao','Student direct chat entrance stays outside');ok(await gate.evaluate(()=>gets.includes('/learning-chat'))===false,'no locked API request');await gate.getByRole('button',{name:'紹介を閉じる'}).click();await gate.getByRole('button',{name:/AI相談/}).click();ok(await gate.evaluate(()=>view.state().tab)==='nao','locked tab does not enter');ok(await gate.locator('textarea').count()===0,'no paid composer exposed');ok(await gate.evaluate(()=>posts.length)===0,'notice not written to notifications');ok(await gate.getByRole('dialog').count()===1,'message lock links to introduction');await gate.keyboard.press('Escape');ok(await gate.evaluate(()=>view.state().plan)==='standard','introduction cannot alter subscription');await gate.close();
++ const full=await browser.newPage();await full.setContent('<div id="full"></div>');await full.addScriptTag({content:js});await full.evaluate(()=>{Object.defineProperty(document,'fullscreenElement',{value:document.querySelector('#full'),configurable:true});window.keys=0;document.addEventListener('keydown',()=>keys++);NobiPlanStudy.notify('pro');});ok(await full.locator('#full [role=dialog]').count()===1,'fullscreen notice stays visible');ok(await full.locator('#full [role=dialog]').count()===1,'fullscreen introduction stays visible');await full.keyboard.press('ArrowRight');await full.keyboard.press('Escape');ok(await full.evaluate(()=>keys)===0,'dialog keys do not turn textbook pages');ok(await full.getByRole('dialog').count()===0,'fullscreen dialog closes');await full.close();
+--- tools/releases/preview-verified-20261026/before/preview/deploy.sh
+
++++ preview/deploy.sh
+
+@@ -5,0 +6,3 @@
+
++python3 tools/releases/preview-verified-20261026/prepare-release.py
++node tools/releases/preview-verified-20261026/verify-package.mjs
++python3 tools/releases/preview-verified-20261026/scan-package.py
+--- tools/releases/preview-verified-20261026/before/preview/math-video-release.json
+
++++ preview/math-video-release.json
+
+@@ -2 +2 @@
+
+-  "version": "2.48.0",
++  "version": "2.51.0",
+@@ -5 +5,4 @@
+
+-    2
++    2,
++    3,
++    4,
++    5
+--- 
+
++++ 
+
+@@ -6,0 +7 @@
+
++const {makeSessionFixture}=require('./material-test-session-fixture.cjs');
+@@ -17,0 +19 @@
+
++const sessionFixture=(${makeSessionFixture.toString()})(()=>crypto.randomUUID());
+@@ -20,0 +23 @@
+
++ if(path.startsWith('/material-test-session'))return sessionFixture(path,options,currentUserId,(await(await fetch('/material-bank.json')).json()).units,[...attempts.values()]);

@@ -1,0 +1,242 @@
+{
+  "at": "20261022T082523700665Z",
+  "status": "failed; inspect the retained log",
+  "inputsBeforeSha256": {
+    "tools/candidates/coop-story-rpg-20261021/verify-progress-store.mjs": "f409bb75c20b20334a524a0767cae02ff010fa762bc7c70bb696f407ebd6e3cb",
+    "tools/candidates/coop-story-rpg-20261021/verify-party.mjs": "5c82bd6d28b6e3102925a8d106ab583925130ae000331b66d5a6d8eabeb8f2dc",
+    "tools/candidates/coop-story-rpg-20261021/resume-store.mjs": "cf207944a567ff16e3635e26a7faf4bd8118ba190a59ccb35d6baa0beea6931b",
+    "tools/candidates/coop-story-rpg-20261021/battle-core.mjs": "6ed96bf5fbc095a818eef261df5110a773b4f52e3e1fc307cd1adb239a2af76f",
+    "tools/candidates/coop-story-rpg-20261021/invalidation-do.mjs": "656071095589fe2e7b0f0a259add32d6acfcea99580a3346c0f31f0f1ab53317",
+    "tools/candidates/coop-story-rpg-20261021/verify-main-route.mjs": "a9e1bf3381792d2be56d35a4a546fcb4f6d961e27163af1b1d14dfc944337133",
+    "tools/candidates/coop-story-rpg-20261021/invalidation-hub.mjs": "61f37cf2d4bf9d443ab1f40a0f9a454999fa39906006ac42edb777f332c6f469",
+    "tools/candidates/coop-story-rpg-20261021/invitation-store.mjs": "a11d52b7cf46f667d8208516768fe2ea90c45d471ba03a35904a25448e3f296e",
+    "tools/candidates/coop-story-rpg-20261021/verify-campaign.mjs": "19b8f7f3b53569bca4ef0cd331bb494daa9413b23019bff88c65c817a32e8a9e",
+    "tools/candidates/coop-story-rpg-20261021/verify-equipment.mjs": "ee7b8864c31bdb3dfcf44a9878cdf1da1197932befa215b6f4635b210a6c4a05",
+    "tools/candidates/coop-story-rpg-20261021/view.mjs": "b8b3ea1442797381f564871fa9b2e3e0f5c67ef886a86e4759008a18845dd3b0",
+    "tools/candidates/coop-story-rpg-20261021/verify-view.mjs": "f8ed7b0c1ea98dfa65f080f9d7daec99768d233accd4344a5f1e89ca2c240c12",
+    "tools/candidates/coop-story-rpg-20261021/progress-store.mjs": "fa1cddb892728ff707a7623963dec1fecd26d37b8435b97115322ab81e821004",
+    "tools/candidates/coop-story-rpg-20261021/route.mjs": "595f5bb382a109b25984409ee4d38a578ef137263a56f122ad36f58bbaa9c5f3",
+    "tools/candidates/coop-story-rpg-20261021/verify-native-rpc.mjs": "1ef0328d48f1ef19de3252c6edb2706c48bebcb7b9f70e22adcedb1274355128",
+    "tools/candidates/coop-story-rpg-20261021/eligible-pool.mjs": "27ae6a722d20a05ea16483fee555c7c78ee0c92bbe7a2eb5979a1de791481d84",
+    "tools/candidates/coop-story-rpg-20261021/verify-battle.mjs": "cd03c3758445f428816360ebc5e04648a7c7409bcab60739d5cd9d0eaa03a98e",
+    "tools/candidates/coop-story-rpg-20261021/verify-worker-adapter.mjs": "9d9bd652af9f76c2cadd17c0a3f512a103d107a51afa348cc48165cc684998ac",
+    "tools/candidates/coop-story-rpg-20261021/verify-store.mjs": "5bf06582a57e075424028020e0fd187566bf2d44e566863f2fe9baa9663de6e5",
+    "tools/candidates/coop-story-rpg-20261021/verify-resume-store.mjs": "ee2dd30119fcb58393ae6107d98618aa7c41f8064e10da1d23ca346550dfddbf",
+    "tools/candidates/coop-story-rpg-20261021/worker-adapter.mjs": "b7aa51b24b7d37a0582f4b8e4c678bf7beb20c2df03325edfc563be7a40b19ae",
+    "tools/candidates/coop-story-rpg-20261021/runtime-fixture.mjs": "6ce7cd6f4d10f21928f134be91c2a0f498c95a5ce4ed7f74dcd75cc63ec4c359",
+    "tools/candidates/coop-story-rpg-20261021/word-grader.mjs": "0f19d6174201b4e176a0943c123587c95d54f8119c32295ce664db3eacd3ae83",
+    "tools/candidates/coop-story-rpg-20261021/verify-equipment-store.mjs": "d46b9c4bb8033b0badd74b1279ea9f18e25a1bd64ad6c74c83dde2cfed1934a4",
+    "tools/candidates/coop-story-rpg-20261021/verify-quiz-service.mjs": "f2809fed74d3bb3cb064db1a8af59cb254008a85ec335c4d69bbb31839126564",
+    "tools/candidates/coop-story-rpg-20261021/verify-invitation-store.mjs": "f4a72bf6f045c0cfd23458203c84e3799811356fde4d68080305e78e1e1eeda5",
+    "tools/candidates/coop-story-rpg-20261021/browser-fixture.mjs": "65a6dba0c9813eca6f8f03ea0524c6283a669e951eaa7ef714366a2a41729124",
+    "tools/candidates/coop-story-rpg-20261021/battle-store.mjs": "e90f7c8d524f056da7a27ec64b6df5e6dbc610af4a9ab845bc691badfab96b6a",
+    "tools/candidates/coop-story-rpg-20261021/verify-room-management.mjs": "3640178b81c9afb32a5e7e5d2099623b2b736b6c6195149bb6db07bcd97eb3e7",
+    "tools/candidates/coop-story-rpg-20261021/verify-live-refresh.mjs": "ea4f67f86aa904410b1c6a3612adb774a14095cf091e2e4ce6dd318f9a3c9a89",
+    "tools/candidates/coop-story-rpg-20261021/verify-invalidation.mjs": "f3e35ca167e7e046a65df6b040b40a943af0b30a53c03bd91fa4d362c2b4983a",
+    "tools/candidates/coop-story-rpg-20261021/verify-word-challenges.mjs": "a6c8cb53d5d87cbeeff90f196a4a93de19ad24636662d68e77c6261088d1303e",
+    "tools/candidates/coop-story-rpg-20261021/history-store.mjs": "d86705a7ecc4e6433fc97ca2a0952fff2b1dca6cb77fd2c7d96a0f590e659c5c",
+    "tools/candidates/coop-story-rpg-20261021/game-controller.mjs": "935363d54f3768f5b438b766c810db8e4c2bf292f378ddf1e041193c03afaa45",
+    "tools/candidates/coop-story-rpg-20261021/party-core.mjs": "c41789f2b5c45ff2be569516247a3fa941ab6d51b3e372b2ca7425e14b5ba54f",
+    "tools/candidates/coop-story-rpg-20261021/room-management.mjs": "3604b4e7f09b5f017c0959c6c13505babe61428d996b9ff678a72ec4316483ac",
+    "tools/candidates/coop-story-rpg-20261021/client-actions.mjs": "003905a4af1c018033a102b2d9bcdaf37630c4b0c7f2b3b1fcb2a5d3e8704184",
+    "tools/candidates/coop-story-rpg-20261021/live-refresh.mjs": "7674774f4f52016648fe11ada313f4047b39a9ef251ff2247c047ac7e5ad6df8",
+    "tools/candidates/coop-story-rpg-20261021/browser-events-fixture.mjs": "9fb6099ad0aecf9b6e73a3fc1197d0b533520e162ae8e201106d74a9df91c595",
+    "tools/candidates/coop-story-rpg-20261021/build-main-assets.mjs": "46180f774f33573c93808955f31aeed713d440a4cb5651f57df31e2d1d723f7e",
+    "tools/candidates/coop-story-rpg-20261021/verify-three-browser.mjs": "6df937590404d552c711cab83ed9daa1d99523119c6f551d7ae9c7fe132d9582",
+    "tools/candidates/coop-story-rpg-20261021/view-dom.mjs": "4aa4978884a1f1251d9a8572af45e15e6b47de24d3519cd576823084ace9f415",
+    "tools/candidates/coop-story-rpg-20261021/verify-main-browser.mjs": "e21f6ccbb4a4987e883382aa6216563ad0ff53f0f2ba7d10eb6dd43dad9c16e1",
+    "tools/candidates/coop-story-rpg-20261021/verify-battle-store.mjs": "907a33f9d680ceda5a4e1fd4780e5fdc32f4eaf968ed493f5f7b967330bea65f",
+    "tools/candidates/coop-story-rpg-20261021/story-catalog.mjs": "46acf49451ea9e449fdb2e939cf64b6de8781ba4c178272f79a394f58fca5d84",
+    "tools/candidates/coop-story-rpg-20261021/verify-battle-service.mjs": "46b3aa08cace2b2a7bffd0e70ffa5c3391092be8cab43322854d718570f4459c",
+    "tools/candidates/coop-story-rpg-20261021/word-challenges.mjs": "ff71ed2d919ab4b044d220466b1c94863bac3c8083f3e5bc65c9400cf9bdc714",
+    "tools/candidates/coop-story-rpg-20261021/party-store.mjs": "1b6de0c3485fb990a6227dbee87ea9b9ac3271ec2337af264cdf90686e3a0c12",
+    "tools/candidates/coop-story-rpg-20261021/presence-store.mjs": "b4ad840e6cde35612d52f3c33f33ed61dda00ebacd1b033fdfb51239137914d2",
+    "tools/candidates/coop-story-rpg-20261021/equipment.mjs": "57cbda39634070edcfc060b8c61d11f44ced1705dd5c393ce8bc7f792ab82d08",
+    "tools/candidates/coop-story-rpg-20261021/equipment-store.mjs": "f023d9979476cbc5724c01d85b1c769c89eb184b51ae5926ff3f4a0cc1601fe7",
+    "tools/candidates/coop-story-rpg-20261021/battle-service.mjs": "c48d197490012110f3aa7cf09ed3b930fd170485c145c594e9cd06f9e9f01a80",
+    "tools/candidates/coop-story-rpg-20261021/owned-word-reader.mjs": "70c3b4658e5a3868228b9fd389214120d9b1b962f261c735065963a9bfb9bb2a",
+    "tools/candidates/coop-story-rpg-20261021/verify-presence-store.mjs": "0966005193f21bdfeb4083b663618bb5e595486d12e9f2f89398a88dd0fcb921",
+    "tools/candidates/coop-story-rpg-20261021/verify-client-actions.mjs": "3830206133d7101ae1d587fb473ab711460e2d849a1cf51925d7fa0d4fc52d36",
+    "tools/candidates/coop-story-rpg-20261021/quiz-service.mjs": "93ec4f790daeea76ca9d4462cb7077f5d24337380cbc9b5013d882b756142b88",
+    "tools/candidates/coop-story-rpg-20261021/verify-pool.mjs": "4efc31b3813d133c5971fdee9efe58c08e9146dbf1167f28fb7923cca1dd2802",
+    "tools/candidates/coop-story-rpg-20261021/verify-route.mjs": "0b3d60a8b4a9a91d9d8b3135024fb864d617e02c1f2705289f0f6e2e077bd11d",
+    "tools/candidates/coop-story-rpg-20261021/verify-owned-word-reader.mjs": "d70374e69b99d3e426c7a81439010e10dd103444cd0b6ccafeefcb8f4601e2f9",
+    "tools/candidates/coop-story-rpg-20261021/view.css": "5a788f45e399eeaffbdf3392f47dfdc28cf3c658a63cb52ebac95244785dfb9a",
+    "tools/candidates/coop-story-rpg-20261021/verify-gameplay.py": "84d85e834a700e6703f32faa5fb53c2c39b61313f561ab7370df8a5afd160dcf",
+    "tools/candidates/coop-story-rpg-20261021/app-entry.js": "783dded169a729fcae073562729416aaa648f7fd4e521732c1fc5868045f25c3",
+    "tools/candidates/coop-story-rpg-20261021/story-catalog.json": "289d3f6d167c98d630194d66c235c451cd0bfd767bf8d88d6ccf399cca27fc4a",
+    "cf-worker/src/material-engine.cjs": "8cb960ad3336ea8540a954a32c565897a1150d5319ad9809c96ad1afeced2c2b",
+    "cf-worker/src/material-bank.mjs": "954292d453f037e312fc66ceca5f7cd3cb9cae47aea4bda956f4ceaa7cdabb2e",
+    "site-assets/vertical-fractions.js": "b76f506e18839038f4fd194326746204623ee4a1bdb34fecb1b4a0d60900b4a5",
+    ".claude/verify/d1-sqlite.js": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb",
+    "index.html": "52eb3411e628d4373b1139d35efc53b768499c4438dd4878b065ff9f1b6b525e",
+    "cf-worker/src/index.js": "b0e681d4e15fea4b7b3c0e24c8d64245972dae35804dff0b69a8a4854e0bd5fb",
+    "cf-worker/src/coop-story.mjs": "af37432117f7bde0d6e0601a73b1860bc232ce2a571db6c185d019314ee94c4f",
+    "cf-worker/src/v3-worker.mjs": "4e7eb257d2bc110b5746b73d3acb133311319a137220dc18851a9c0d07a7201f",
+    "cf-worker/wrangler.toml": "85a17c879fd49f02e4f3d510ba9be470ef452c30ba5f0c46845a3bacffbcba6f",
+    "site-assets/eiken-vocab-bank.json": "b6dadb2e6634816aab88f82c919b754d2374c871df0a71e5a6ae3c4c4daf0930",
+    "site-assets/coop-story-client.mjs": "3144a9274d94cc21b02ed64ce6373de23cd6a46a67049ce66ba36aa7bbe5c5ec",
+    "site-assets/coop-story-entry.js": "783dded169a729fcae073562729416aaa648f7fd4e521732c1fc5868045f25c3",
+    "site-assets/coop-story.css": "5a788f45e399eeaffbdf3392f47dfdc28cf3c658a63cb52ebac95244785dfb9a",
+    "cf-worker/src/coop-story/resume-store.mjs": "cf207944a567ff16e3635e26a7faf4bd8118ba190a59ccb35d6baa0beea6931b",
+    "cf-worker/src/coop-story/battle-core.mjs": "6ed96bf5fbc095a818eef261df5110a773b4f52e3e1fc307cd1adb239a2af76f",
+    "cf-worker/src/coop-story/invalidation-do.mjs": "656071095589fe2e7b0f0a259add32d6acfcea99580a3346c0f31f0f1ab53317",
+    "cf-worker/src/coop-story/invalidation-hub.mjs": "61f37cf2d4bf9d443ab1f40a0f9a454999fa39906006ac42edb777f332c6f469",
+    "cf-worker/src/coop-story/invitation-store.mjs": "a11d52b7cf46f667d8208516768fe2ea90c45d471ba03a35904a25448e3f296e",
+    "cf-worker/src/coop-story/progress-store.mjs": "fa1cddb892728ff707a7623963dec1fecd26d37b8435b97115322ab81e821004",
+    "cf-worker/src/coop-story/route.mjs": "595f5bb382a109b25984409ee4d38a578ef137263a56f122ad36f58bbaa9c5f3",
+    "cf-worker/src/coop-story/eligible-pool.mjs": "27ae6a722d20a05ea16483fee555c7c78ee0c92bbe7a2eb5979a1de791481d84",
+    "cf-worker/src/coop-story/worker-adapter.mjs": "b7aa51b24b7d37a0582f4b8e4c678bf7beb20c2df03325edfc563be7a40b19ae",
+    "cf-worker/src/coop-story/word-grader.mjs": "0f19d6174201b4e176a0943c123587c95d54f8119c32295ce664db3eacd3ae83",
+    "cf-worker/src/coop-story/battle-store.mjs": "e90f7c8d524f056da7a27ec64b6df5e6dbc610af4a9ab845bc691badfab96b6a",
+    "cf-worker/src/coop-story/history-store.mjs": "d86705a7ecc4e6433fc97ca2a0952fff2b1dca6cb77fd2c7d96a0f590e659c5c",
+    "cf-worker/src/coop-story/party-core.mjs": "c41789f2b5c45ff2be569516247a3fa941ab6d51b3e372b2ca7425e14b5ba54f",
+    "cf-worker/src/coop-story/room-management.mjs": "3604b4e7f09b5f017c0959c6c13505babe61428d996b9ff678a72ec4316483ac",
+    "cf-worker/src/coop-story/story-catalog.mjs": "46acf49451ea9e449fdb2e939cf64b6de8781ba4c178272f79a394f58fca5d84",
+    "cf-worker/src/coop-story/word-challenges.mjs": "ff71ed2d919ab4b044d220466b1c94863bac3c8083f3e5bc65c9400cf9bdc714",
+    "cf-worker/src/coop-story/party-store.mjs": "1b6de0c3485fb990a6227dbee87ea9b9ac3271ec2337af264cdf90686e3a0c12",
+    "cf-worker/src/coop-story/presence-store.mjs": "b4ad840e6cde35612d52f3c33f33ed61dda00ebacd1b033fdfb51239137914d2",
+    "cf-worker/src/coop-story/equipment.mjs": "57cbda39634070edcfc060b8c61d11f44ced1705dd5c393ce8bc7f792ab82d08",
+    "cf-worker/src/coop-story/equipment-store.mjs": "f023d9979476cbc5724c01d85b1c769c89eb184b51ae5926ff3f4a0cc1601fe7",
+    "cf-worker/src/coop-story/battle-service.mjs": "c48d197490012110f3aa7cf09ed3b930fd170485c145c594e9cd06f9e9f01a80",
+    "cf-worker/src/coop-story/owned-word-reader.mjs": "70c3b4658e5a3868228b9fd389214120d9b1b962f261c735065963a9bfb9bb2a",
+    "cf-worker/src/coop-story/quiz-service.mjs": "93ec4f790daeea76ca9d4462cb7077f5d24337380cbc9b5013d882b756142b88"
+  },
+  "checks": [
+    {
+      "file": "verify-equipment.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-equipment.mjs.log",
+      "logSha256": "bf93e000254b8a86703686d55896729a5135698ed7e11c7b732d266d58ae84bb"
+    },
+    {
+      "file": "verify-equipment-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-equipment-store.mjs.log",
+      "logSha256": "98a8dbb7d047209f0e76cd16213c399cfa09ab1996448ebf60f57d89948b74f1"
+    },
+    {
+      "file": "verify-invitation-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-invitation-store.mjs.log",
+      "logSha256": "4a748108a4448237bb1a264a90b5610bda8cfa99e241c49781d6781ef374fa3f"
+    },
+    {
+      "file": "verify-presence-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-presence-store.mjs.log",
+      "logSha256": "b8611533ba95dc53870f0c4fb3e765aec28645ca2d4f7d104352bd9c581c615c"
+    },
+    {
+      "file": "verify-pool.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-pool.mjs.log",
+      "logSha256": "5431cfd13811e46dcf05c09a044356830fefa2632070d4ea58b62dc1de3c7d37"
+    },
+    {
+      "file": "verify-word-challenges.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-word-challenges.mjs.log",
+      "logSha256": "18a98026283777b525725a00295fdcd2acd7c07f2460a6b0fa67bd2dd2d1ff59"
+    },
+    {
+      "file": "verify-battle.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-battle.mjs.log",
+      "logSha256": "59db41b933f6d6e725c7b05e855bfc6cc16f3891c95a7e4efc9f8d2a9c11f5c9"
+    },
+    {
+      "file": "verify-battle-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-battle-store.mjs.log",
+      "logSha256": "d60967b928e82db626b20cc011f8315cf0b7fb9d754ddc97703c7ce33ca78a60"
+    },
+    {
+      "file": "verify-quiz-service.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-quiz-service.mjs.log",
+      "logSha256": "01e75458a32bcce8e086c9a9ef8e9d2266828fd7cee4f96039cb7239639d9060"
+    },
+    {
+      "file": "verify-battle-service.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-battle-service.mjs.log",
+      "logSha256": "977e0e096f9a5e3d6e75427618ceb0c76a463987093cd93eca39a29c40806bc6"
+    },
+    {
+      "file": "verify-owned-word-reader.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-owned-word-reader.mjs.log",
+      "logSha256": "108d8201bd2e38b13f23d972d608e70bb7ad366d3ffa20777c36b488f0455b8a"
+    },
+    {
+      "file": "verify-resume-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-resume-store.mjs.log",
+      "logSha256": "ba85756fdc605892b508fd8c6d6e10f6a70a1862fe280d6e34af794e745ebcc1"
+    },
+    {
+      "file": "verify-progress-store.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-progress-store.mjs.log",
+      "logSha256": "c4d00ec351393a595ffd3667394c495dca5b5ff79ab613eb094162cec57f3bab"
+    },
+    {
+      "file": "verify-room-management.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-room-management.mjs.log",
+      "logSha256": "4646db47955f363d1cf120e34af587238dd23b6716b6b22198ccc67f80305b8e"
+    },
+    {
+      "file": "verify-worker-adapter.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-worker-adapter.mjs.log",
+      "logSha256": "b91bc7b28aa6cdf2679f2746a47352682d575734debbc3f9a24f361d08efbc14"
+    },
+    {
+      "file": "verify-route.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-route.mjs.log",
+      "logSha256": "60707d941ca40769bbcb55ca2633aee19fe99f82449499a9166cb8d84138f404"
+    },
+    {
+      "file": "verify-client-actions.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-client-actions.mjs.log",
+      "logSha256": "68810d73088fae2da23b2875322868d2f724d748d6c11cc68341aa32c47b445a"
+    },
+    {
+      "file": "verify-campaign.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-campaign.mjs.log",
+      "logSha256": "d75fcbd393e5eb1716fbc9c00a62a69ffe504cc361e8f0509a557da717d730c4"
+    },
+    {
+      "file": "verify-view.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-view.mjs.log",
+      "logSha256": "54dd51a943f277bf4914f971ec76cfe3a368221e49382a38b8affeb4993d9464"
+    },
+    {
+      "file": "verify-three-browser.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-three-browser.mjs.log",
+      "logSha256": "7cacfd6a1682d10b787b1611f46e67dba3c5df1e58c415cc602d08b578e120cb"
+    },
+    {
+      "file": "verify-main-route.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-main-route.mjs.log",
+      "logSha256": "0715b7b8410316105cdb67b9156c05063518cb3cb5d861a0d49917b05376144b"
+    },
+    {
+      "file": "verify-main-browser.mjs",
+      "exitCode": 1,
+      "log": "tools/candidates/coop-story-rpg-20261021/gameplay-checks/20261022T082523700665Z/verify-main-browser.mjs.log",
+      "logSha256": "4e162dcce0156a845fc661ff080ee4a6813fafc0bed0afc0cd67b8dd108516dc"
+    }
+  ],
+  "mainIntegrated": false,
+  "deployed": false,
+  "realUserData": false
+}

@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "status": "candidate; not connected to main practice library",
+  "patterns": [
+    {
+      "id": "math-negative-subtraction",
+      "subject": "数学",
+      "grade": 1,
+      "causeToCheck": "負の数を引くことを、反対向きへの移動や加法への変形に直せるかを確かめる。誤答理由を本人へ断定しない。",
+      "purpose": "引く数と移動方向の確認",
+      "commentExample": "負の数を引くと、数直線ではどちらへ動くかな。移動の理由も確かめよう。",
+      "sources": [
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-5"
+        },
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-6"
+        }
+      ],
+      "practiceIds": [
+        "review-math-neg-01",
+        "review-math-neg-02",
+        "review-math-neg-03"
+      ]
+    },
+    {
+      "id": "math-order-and-power",
+      "subject": "数学",
+      "grade": 1,
+      "causeToCheck": "かっこの内側・同順位の左からの計算・累乗の底の範囲を区別できるかを確かめる。",
+      "purpose": "計算順と累乗の底の確認",
+      "commentExample": "先に計算する場所と、累乗する範囲を分けて確かめよう。途中の一行が理由になるよ。",
+      "sources": [
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-12"
+        },
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-test-2"
+        },
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-test-3"
+        },
+        {
+          "unitId": "drill-math-1-signedcalc",
+          "questionId": "drill-math-1-signedcalc-10"
+        }
+      ],
+      "practiceIds": [
+        "review-math-order-01",
+        "review-math-order-02",
+        "review-math-order-03"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "review-math-neg-01",
+      "patternId": "math-negative-subtraction",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "−4−(−7) を数直線で考える。正しい移動と理由を1つ選び、ア・イ・ウの1字で答えよう。\nア　−4から右へ7動く。負の7を引くことは、正の7を加えることだから。\nイ　−4から左へ7動く。引き算では、引く数の符号に関係なく左へ動くから。\nウ　−4から右へ4動く。出発点が負の数なら、まず0へ戻すから。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "ア"
+        ]
+      },
+      "explanation": "ア。−4−(−7)＝−4＋7＝3。右へ7動きます。イは引く数の符号を無視し、ウは引く数の大きさ7を使っていません。",
+      "whyThisChecksCause": "計算結果だけでなく、負の数を引く操作を右向きの移動へ結び付けられるかを問う。",
+      "numericCheck": {
+        "expression": "-4-(-7)",
+        "expected": "3"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-5",
+        "drill-math-1-signedcalc-6"
+      ]
+    },
+    {
+      "id": "review-math-neg-02",
+      "patternId": "math-negative-subtraction",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "□−(−3)＝2 を解くとき、元の式と同じ意味になる変形と答えを1つ選び、ア・イ・ウの1字で答えよう。\nア　□−3＝2 なので、□＝5。\nイ　□＋3＝2 なので、□＝−1。\nウ　−□＋3＝2 なので、□＝1。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "イ"
+        ]
+      },
+      "explanation": "イ。引く数−3の符号を反対にして足すので、□＋3＝2。3を足す前の数は2−3＝−1です。□自体の符号は勝手に変えません。−1−(−3)＝2でも確認できます。",
+      "whyThisChecksCause": "引く数の符号だけを反対にする操作と、先頭の数まで反転する操作を区別する。",
+      "numericCheck": {
+        "expression": "-1-(-3)",
+        "expected": "2"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-5",
+        "drill-math-1-signedcalc-6"
+      ]
+    },
+    {
+      "id": "review-math-neg-03",
+      "patternId": "math-negative-subtraction",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "−2−□＝4 となる□と、数直線での説明が両方正しいものを1つ選び、ア・イ・ウの1字で答えよう。\nア　□＝6。−2から左へ6動くと4になる。\nイ　□＝−2。負の数を引けば、必ず4になる。\nウ　□＝−6。−2から右へ6動くと4になる。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "ウ"
+        ]
+      },
+      "explanation": "ウ。−2から4までは右へ6。したがって、引く数は−6です。−2−(−6)＝4。□＝6なら−8、□＝−2なら0になるので、負かどうかだけでは決まりません。",
+      "whyThisChecksCause": "移動後の値から引く数を逆向きに考え、符号だけで答えを決めていないかを確かめる。",
+      "numericCheck": {
+        "expression": "-2-(-6)",
+        "expected": "4"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-5",
+        "drill-math-1-signedcalc-6"
+      ]
+    },
+    {
+      "id": "review-math-order-01",
+      "patternId": "math-order-and-power",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "3＋2×(5−1)² の計算で、まず行う操作と理由を1つ選び、ア・イ・ウの1字で答えよう。\nア　5−1を計算する。かっこの中を1つの数にしてから、その数を2乗するため。\nイ　3＋2を計算する。式はどんな場合も、先頭の計算から始めるため。\nウ　2×5を計算する。かけ算は、かっこの中の計算より必ず先だから。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "ア"
+        ]
+      },
+      "explanation": "ア。かっこの中は4なので、3＋2×4²＝3＋2×16＝35。2乗するのは5だけでも1だけでもなく、かっこの中を計算した4です。",
+      "whyThisChecksCause": "かっこの内側が累乗の底を決めることを説明として選ばせ、単に順番の語句を暗記しただけでは解けないようにする。",
+      "numericCheck": {
+        "expression": "3+2*(5-1)**2",
+        "expected": "35"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-test-3"
+      ]
+    },
+    {
+      "id": "review-math-order-02",
+      "patternId": "math-order-and-power",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "ある人が18÷3×2＝18÷6＝3と計算した。直し方と理由が両方正しいものを1つ選び、ア・イ・ウの1字で答えよう。\nア　最後の3だけを9に直す。割り算の式では最後に3をかける決まりだから。\nイ　最初を18÷3＝6とし、6×2＝12とする。乗除は同じ順位なので左から計算するから。\nウ　18÷(3×2)と書き直す。かけ算は割り算よりいつでも先だから。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "イ"
+        ]
+      },
+      "explanation": "イ。÷と×は同じ順位です。左から18÷3を先に計算して12。18÷(3×2)は、元の式にはないかっこを加えた別の式で、値は3になります。",
+      "whyThisChecksCause": "誤った途中式を特定し、同順位の乗除を左から進める理由を選ばせる。",
+      "numericCheck": {
+        "expression": "18/3*2",
+        "expected": "12"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-10"
+      ]
+    },
+    {
+      "id": "review-math-order-03",
+      "patternId": "math-order-and-power",
+      "type": "input",
+      "difficulty": "hard",
+      "prompt": "−3²＋(−3)² の値と理由が両方正しいものを1つ選び、ア・イ・ウの1字で答えよう。\nア　18。どちらも負の数を2乗するので、9＋9になる。\nイ　−18。式に負の符号が2つあるので、−9−9になる。\nウ　0。最初は3²に負の符号を付けて−9、後ろは−3全体を2乗して9になる。",
+      "answer": {
+        "kind": "exact",
+        "accepted": [
+          "ウ"
+        ]
+      },
+      "explanation": "ウ。−3²＝−(3×3)＝−9、(−3)²＝(−3)×(−3)＝9。累乗する範囲が違うので、和は0です。負の符号の数を式全体で数えるだけでは判断できません。",
+      "whyThisChecksCause": "見た目が似た2つの式で累乗の底の範囲を比べ、かっこの役割を理解しているかを確かめる。",
+      "numericCheck": {
+        "expression": "-3**2+(-3)**2",
+        "expected": "0"
+      },
+      "appliesToSourceIds": [
+        "drill-math-1-signedcalc-12",
+        "drill-math-1-signedcalc-test-2"
+      ]
+    }
+  ],
+  "displayPolicy": {
+    "availableOnlyFromOwnedCompletedReview": true,
+    "sendAnswerBeforeSubmit": false,
+    "explanationInitiallyHidden": true,
+    "countTowardExistingStudyRecords": false,
+    "consumeAdditionalAICredits": false,
+    "realUserDataUsed": false
+  }
+}

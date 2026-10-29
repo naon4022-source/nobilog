@@ -1,0 +1,21 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: synthetic provider job completion {"action":"ack","job":{"id":"7f3ae86f-7ca8-4595-a061-649df58469c8","state":"done","code":null,"total":5,"completed":5,"credits":100,"createdAt":1792996632212,"completedAt":1792996633561}}
++ actual - expected
+
++ undefined
+- 'done'
+
+    at f.drain (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/verify-review-client-browser.mjs:22:172)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/verify-review-client-browser.mjs:49:332 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'done',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

@@ -1,0 +1,17 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: correct option wording remains untouched
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/build.mjs:35:79
+    at Array.map (<anonymous>)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/build.mjs:27:56 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'ウ',
+  expected: 'ウ',
+  operator: 'notStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

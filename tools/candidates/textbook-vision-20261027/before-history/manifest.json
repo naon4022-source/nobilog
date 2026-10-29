@@ -1,0 +1,87 @@
+{
+  "status": "isolated candidate; not main or enabled",
+  "files": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "7aeb7b01d9ffc462112c66568a3a131177202b22c16f63053892b37bc0efe341"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-input.mjs",
+      "sha256": "d0166f38fdc1cbd2ea7d318338a134bd26cc509117fa29a5d93d186f5c213c44"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-transport.mjs",
+      "sha256": "549d585553a39d95406e49f43a875bcc2ac2e63a10ab61b3539f89028783c2b8"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "sha256": "0a97b266ba24ee8da7d122f9feb8bb31f61bc924836db2d78a9ac070e4b4984c"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/README.md",
+      "sha256": "70db4fa1283ff446ebdf247388ca11794342665012466fd4c239266e91f8e311"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/official-contract.json",
+      "sha256": "2031e27fee864616da38976dc00ccb86ba731b4b3caba4c715890bc0bdb725f5"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs",
+      "sha256": "f4be600795a0d5604d68cb95cf0171f309e8a865b66a9d62de15cde8ef47d0e4"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-images-route.mjs",
+      "sha256": "02a0a0fa6e04f8ffa1736855b106606dd29a763d64f29e74b6dc48cc3b3d574f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs",
+      "sha256": "8db868f6e0427171ad3a83ae944b73847f4c76988c20253c8c94e4f1116f9187"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-service.mjs",
+      "sha256": "d5e539597ee534945c527d98b51cbc0b91ca342316e3f4ee5f236447f3d5481d"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/input-result.json",
+      "checks": 347,
+      "sha256": "c7548a90a9d217b66fe74bc3435f6799020107df1205444517bb083ab1616ca0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/transport-result.json",
+      "checks": 65,
+      "sha256": "8d73437b4665324b085467ff952e69db80fd0cacdde39ace3e2c78ddb60d7775"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/images-route-result.json",
+      "checks": 213,
+      "sha256": "202f25e37b54f3c9f813b70e6d3149916d68e42bc40d9984589770e5f69cc3c2"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/operation-current-result.json",
+      "checks": 354,
+      "sha256": "d27bc81a4ef9be9c168931abfda500a93562752532ea63a1bbeee3258fbf3eee"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/service-result.json",
+      "checks": 479,
+      "sha256": "610eb5741fd94910f013b0dca8714dbb9fb35c1b15da1215e6eb2db3a10b7d7f"
+    }
+  ],
+  "unimplemented": [
+    "main authenticated routing",
+    "immutable multimodal context/history and old pending recovery",
+    "actual textbook figure-only capture UI and IndexedDB recovery",
+    "main integration and post-integration full verification",
+    "real model semantic/latency observation"
+  ]
+}

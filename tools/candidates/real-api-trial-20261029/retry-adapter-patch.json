@@ -1,0 +1,18 @@
+{
+  "status": "candidate only; waits for an existing save before its single verified draft save",
+  "target": "index.html",
+  "beforeSourceSha256": "7f1558a31704b9c71390907854cdf600f971e39894b8f0df46a7ca23f8ebc6b2",
+  "beforeExcerptSha256": "28e76031e9a5603296cd0b0b9529dafd56f431aa5ffb0f289da4696849715233",
+  "candidateExcerptSha256": "d41ed5cf3bf2a5fe589097690a27d06afabe0050e05071b0b8bbf42ca0db8a45",
+  "edits": [
+    {
+      "before": "      push:()=>cloudPush(),",
+      "after": "      push:async()=>{\n       const until=Date.now()+10000;\n       while(cloudState.busy){\n        if(!cloudSame(who)||authLeaseBlocked||cloudConflict()||Date.now()>=until)return false;\n        await new Promise(resolve=>setTimeout(resolve,50));\n       }\n       if(!cloudSame(who)||authLeaseBlocked||cloudConflict())return false;\n       return cloudPush();\n      },"
+    }
+  ],
+  "bounds": {
+    "maxBusyWaitMs": 10000,
+    "intervalMs": 50
+  },
+  "preserved": "owner/lease/conflict gates, exact request marker and content hash, server readback equality, no provider retry"
+}

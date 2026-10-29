@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "checks": 45,
+  "results": [
+    {
+      "width": 390,
+      "orphanedNotes": 4,
+      "savedNotes": 5,
+      "screenshot": "notes-390.png",
+      "sha256": "8bac8ff0cc8fd7c8eda37be26626ebf227a94732b6a8530e9de9d0fbb2e93adb"
+    },
+    {
+      "width": 1180,
+      "orphanedNotes": 4,
+      "savedNotes": 5,
+      "screenshot": "notes-1180.png",
+      "sha256": "cc9eee24f15289e6a59b77745a0687ee9a0a093fb07a721b357115f83249110b"
+    }
+  ],
+  "inputs": [
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-ai-context-kokugo1.json",
+      "sha256": "7367c4849368f96a645007c13e2723d29a6b8d5080fdedf9cabe604fa97988d4"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-ai-context-kokugo1.json",
+      "sha256": "8c14a9b8fc4124d67594bc5e6a8a1fe38e4f412440699cca9a3d77ba9cd18bee"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-annotation-model.js",
+      "sha256": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-annotations.js",
+      "sha256": "a58c96e5d01ede825f39a4bc6e29fea94337b34b0b89da628fd0843b29d9ba63"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-annotations.css",
+      "sha256": "8e01e6a48dfd7ccc35a8dcd11946e3d4b2adc52de09d5818d2903b508b2ef649"
+    }
+  ],
+  "scope": "Actual unchanged annotation UI and model;390/1180 widths;4 changed-text notes stay readable with original quotes and source-update notice,1 retained anchor still locates; synthetic API only, no writes/real storage/login/AI/network. Book pagination/full main integration separate."
+}

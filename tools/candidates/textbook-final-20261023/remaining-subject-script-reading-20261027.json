@@ -1,0 +1,87 @@
+{
+  "status": "remaining8 nonmath scripts read; not AV approval",
+  "scripts": [
+    {
+      "id": "S1-LIFE-S1-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-LIFE-S1-VP.json",
+      "sha256": "092b15c3e0db2c04598cf089d67a4fca0be82e26bba9b080ef90fd4ce96d2a7b",
+      "stepsRead": 7
+    },
+    {
+      "id": "S1-LIFE-S2-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-LIFE-S2-VP.json",
+      "sha256": "17c401b29f3abfe33d5bda454bf226e54cf93dcdef8c0ba939c336cfa91c8e73",
+      "stepsRead": 6
+    },
+    {
+      "id": "S1-EARTH-S3-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-EARTH-S3-VP.json",
+      "sha256": "93535939e71b635c0c9134dcd120153ac6333abc4cb6c9b6e7b77520dcdf5ae3",
+      "stepsRead": 6
+    },
+    {
+      "id": "S1-MATTER-S2-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-MATTER-S2-VP.json",
+      "sha256": "530b68d799b04598e6992b535351d012da8e8e65bb7e8f7271c2d712924de1b2",
+      "stepsRead": 5
+    },
+    {
+      "id": "S1-MATTER-S3-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-MATTER-S3-VP.json",
+      "sha256": "b986521bf4a3c7673794c8f4acab74567e4b4a1c911526eb75880af98982416e",
+      "stepsRead": 7
+    },
+    {
+      "id": "S1-ENERGY-S2-VP",
+      "book": "science1",
+      "file": "教材整理/Claude_Codex共有/理科全体制作/制作ソース/S1-ENERGY-S2-VP.json",
+      "sha256": "5b0cabf0ebb99775e7eac9c4134538922c1b445b4791bfc7d7fa5816ecdc07f8",
+      "stepsRead": 6
+    },
+    {
+      "id": "G-C2-S1-VP",
+      "book": "geography",
+      "file": "教材整理/Claude_Codex共有/地理全体制作/制作ソース/G-C2-S1-VP.json",
+      "sha256": "62542e625b01a51ea9dbdfed21487046cb838ec94f7496de08617bcf35db67c7",
+      "stepsRead": 7
+    },
+    {
+      "id": "H-C1-S1-VP",
+      "book": "history",
+      "file": "教材整理/Claude_Codex共有/歴史全体制作/制作ソース/H-C1-S1-VP.json",
+      "sha256": "8e2fc0cdaa5a76437fca83189208c134012637cc415ff9d01d4740fb227f7938",
+      "stepsRead": 6
+    }
+  ],
+  "readings": [
+    "Science6 scripts cover observation, seed plants, strata, gases, concentration and convex lens.",
+    "Geography now contains approved climate wording; do not recreate this completed correction.",
+    "History summary names civilizations, script types and three religions without individual exam questions."
+  ],
+  "pending": [
+    {
+      "id": "S1-EARTH-S3-VP",
+      "reason": "Older-below and particle-size/depth statements need context and exceptions checked against source, including overturned strata."
+    },
+    {
+      "id": "S1-MATTER-S2-VP",
+      "reason": "Short oxygen and ammonia keywords should be checked in actual screen/context before deciding whether clarity changes are necessary; do not misread the Japanese transitive burn verb as a claim oxygen itself burns."
+    },
+    {
+      "id": "S1-MATTER-S3-VP",
+      "reason": "Formula uses solute/solution without explicitly saying mass or mass-percent in this sentence. Original lesson scope/layout must be checked before expansion."
+    },
+    {
+      "id": "S1-ENERGY-S2-VP",
+      "reason": "Lens position rule should be compared with source treatment at the focus and applicable object-position domain."
+    }
+  ],
+  "noMainOrMediaEdits": true,
+  "actualGeographyProof": "tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/current-result.json",
+  "limits": "No new movie/audio review and no claim source textbooks independently checked in full."
+}

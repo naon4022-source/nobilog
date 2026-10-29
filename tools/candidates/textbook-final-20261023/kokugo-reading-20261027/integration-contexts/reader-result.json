@@ -1,0 +1,584 @@
+{
+  "status": "passed",
+  "checks": 3550,
+  "textRows": 1433,
+  "imageRows": 129,
+  "retainedTextAnchors": 1429,
+  "publicCatalogRequests": 2,
+  "bookSourceSha256": "4a87f48872989749128b2ccf25e44b41b63fe7c14a81cbf269d41994ebbe0d6c",
+  "annotationSignature": "ac6feb8a6eef655a4dda5cdb48da925f89e686efe7efba5c061602370d7de05b",
+  "preparedReceiptSha256": "d3ba966c54d15a8dddcd97097fc24eae7cedc6322b6e02b1842eb6e996e92fbf",
+  "moduleInputs": [
+    {
+      "file": "cf-worker/src/textbook-ai-context.mjs",
+      "sha256": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context-reader.mjs",
+      "sha256": "1b2211ab8825417ba4d868eefa01c2586d8247946bcdf1c94704f55a6d0b6838"
+    }
+  ],
+  "inputs": [
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-ai-context-kokugo1.json",
+      "sha256": "8c14a9b8fc4124d67594bc5e6a8a1fe38e4f412440699cca9a3d77ba9cd18bee"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-ai-media-context-kokugo1.json",
+      "sha256": "9aec86c9d3d39238878a9bac801ff91d91d5abcd9d32d6077614416e540706e7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/cf-worker/src/textbook-ai-context-manifest.mjs",
+      "sha256": "8276d089c979026e391c78f1ac95d6ae429ff6785fa1f13a43aebb6db43ed887"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/cf-worker/src/textbook-vision-media-manifest.mjs",
+      "sha256": "498608a24eef33f94b883bd9da6e642a444dc9d9eadf8747b8c192bbad59f522"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-vision-media-manifest.mjs",
+      "sha256": "498608a24eef33f94b883bd9da6e642a444dc9d9eadf8747b8c192bbad59f522"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/textbook-ai-context.mjs",
+      "sha256": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/textbook-vision-context-reader.mjs",
+      "sha256": "1b2211ab8825417ba4d868eefa01c2586d8247946bcdf1c94704f55a6d0b6838"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s1-d01.svg",
+      "sha256": "86b5a168f7be6ef9bdcdc0895070631fc3edcb86dc67bc161bb851ab7a582df6"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s1-dq.svg",
+      "sha256": "98124e072427b503450c3ef74b3a973f98bd09e3372a670cfdea87c4a8887a77"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s1-dp.svg",
+      "sha256": "79d6d142b6f5a84f0e00febeed0e2fb0cd310b36b08d97e608fc11e0bff3c21d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s2-d01.svg",
+      "sha256": "b221b46f11c02629531811e8997e54cad8734ae9a38903ce55404c40edee3170"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s2-dq.svg",
+      "sha256": "4d26ae9ba59372b7bf33758aa9b672856481d9f19ac04755050ed867ab1f6a8f"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s2-dp.svg",
+      "sha256": "b2ee07e612687c222609e05c96c7a441521740d16770222c5399939176374a3d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s3-d01.svg",
+      "sha256": "f995d4fa2aa72be1342ca8e5ebbac49752b3d13949557d97da1e7f6d158aa995"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s3-dq.svg",
+      "sha256": "e4c520a930fed2ba978f3ddda686969e658207190db5f1999b1620f08ce27a43"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s3-dp.svg",
+      "sha256": "bb5a0be9ed7e6fe6b98549e69a8abd7cbdcf1ee70ae3c808d3f2fd020d278eab"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s4-d01.svg",
+      "sha256": "cf7af202e1fdc6fac01b400dc733f4e5b73d76ea14ea9a8ee83d5e8d602299ef"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s4-dq.svg",
+      "sha256": "e8a0ec1a6d724a965c7b103f46b7fcc97be36899822cdfd7e6d2dc88b5afc01f"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s4-dp.svg",
+      "sha256": "42da44365b58c88bb88c0bc0c8220774902944cc0273cfcb9ffeefb2ede78a8a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s5-d01.svg",
+      "sha256": "d8e38b18753c432903e0a914e8122c3ef99c145e210c6d6a9a8594a673c04fb6"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s5-dq.svg",
+      "sha256": "61b907d4107ac80e0a36dadfc610c2cc75f708a770f32e0837e7f96cfa91bb4a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c1-s5-dp.svg",
+      "sha256": "04bc2ed1da28a53b60865da6b29b17a1b0c87f18fb8b64a6afcd4ac35517fb12"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s1-d01.svg",
+      "sha256": "86ebc7c46e68effc9ad100bc43157ce77bec16f606f764d95dc0aef2174dfe05"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s1-dq.svg",
+      "sha256": "8cbb36fce770277a724096d9e9d779b2d8a2af6e6f728189d7c326a79d489de5"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s1-dp.svg",
+      "sha256": "cdda3c6eb0e2fc9ebf9f85f855905acab5fe3fd2db0ab724ed675241c0a26e65"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s2-d01.svg",
+      "sha256": "59661e98171ba4c55977dea82e2e0b64ed2602ee6bf1837cd7a97842efbb8dd0"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s2-dq.svg",
+      "sha256": "48c6501782075ff806f40e14dcdc08e52aa67cfb0ebdb6e42e8924c6e77f673b"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s2-dp.svg",
+      "sha256": "4a09a9fb0ede48c97d89e0b64b1650ade945f498f8964d100ae7a8797db772ae"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s3-d01.svg",
+      "sha256": "0671d0ccb00713fbef6b03dba8a3def4847d471a9f085b999fde1ea32e7f41fd"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s3-dq.svg",
+      "sha256": "5c96a480a4ee6011901dbc5e10a724903262a58b27f9a7b614f53b6c61d3372c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s3-dp.svg",
+      "sha256": "abb81785a440fa97bd52e7eb99d43a13772f90406bf4138982cf5a464c2fdf40"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s4-d01.svg",
+      "sha256": "39dc364cbd620923cef115a57d4495da6420d95ed2516d5e499618a537945765"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s4-dq.svg",
+      "sha256": "825f17a00e88eb330dfd374478aa6af860e354c938e6375ba32a0adf44036fb0"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s4-dp.svg",
+      "sha256": "2b2681285c5783fc25aeaffef21edad27c05f5ad29faef80ab829b857bdc13cf"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s5-d01.svg",
+      "sha256": "a1dd9d2ad67ba515177386690c3ec2c88b5ac1722f33493ea8e10f36d44df5d9"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s5-dq.svg",
+      "sha256": "d77d514e4d7ce3d4867ad6ce803b94686042d86206809d92de87e67472f428ca"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c2-s5-dp.svg",
+      "sha256": "c6dd8994f45f65114da48fa2e57b5fa250aaf58f2c6852145ac8271be860e782"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s1-d01.svg",
+      "sha256": "23bd28818dbab2b811923846ed7fe1bd0d220f643265f43a2df0b459499b298a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s1-dq.svg",
+      "sha256": "0fa9033cf6803de23c78760623db66ecf4c56b05ecbaf52cfcb0fdb6a98a2c00"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s1-dp.svg",
+      "sha256": "b94368c8b34ce933d06ba3fa50393eaca4e602521909c09d4e2294b579c81768"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s2-d01.svg",
+      "sha256": "bb777cfd367208bf73a75483197e5f1e0e64f4bdfcff78aa1a0eceee34f59981"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s2-dq.svg",
+      "sha256": "a2ce85f01a942c13e0941ef702f61057a824fd7592cc8734dd480101fa3c013d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s2-dp.svg",
+      "sha256": "4ad2d34a86d8a834667698e125080de759f469531e11ae475d6b9ecd883bc83c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s3-d01.svg",
+      "sha256": "b3b465727b8a99d0cbc5561a354ba5f14bb8ecd79da9daf821d6814225098894"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s3-dq.svg",
+      "sha256": "9e96a740a4f5266dc679bd6aa4099092ce438980b83cd7f1efa4617cbb722b66"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s3-dp.svg",
+      "sha256": "a2490bf346482ee7cb621d24cafbfcb638a736e405c5ef2cad6d00cb2e102d71"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s4-d01.svg",
+      "sha256": "8cecb1a4374249b4cfe5c7b040cf28d9764fc004b5715c983adbf7d03e911f3a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s4-dq.svg",
+      "sha256": "c90c7219aabb6641eb79f6715d18d711b247c9e49527af2ccf28dc68abe68bdc"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s4-dp.svg",
+      "sha256": "d63c2151dd7b6354bb35833e1fc507320bc9a127c38d14ba1f0fcbaf62a08504"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s5-d01.svg",
+      "sha256": "a0a502b1805aedc813b524066fdc221a8835c8aa92dc48c634408ec06251133e"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s5-dq.svg",
+      "sha256": "446e2f703a9d62e58b03a38e0546b446a8e91dacb0da07640a6141cfb9982848"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c3-s5-dp.svg",
+      "sha256": "3d0f4bea60aebd551b9755f5043f4968139bbe59d047e1bb1baa270d5a248c72"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s1-d01.svg",
+      "sha256": "387aa797a8e36a9373f9711613968608aae2939a2c75ac93c5eef66df89435ff"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s1-dq.svg",
+      "sha256": "0ec669c660fa156814d2eb34b444f9692b5ba6d502bad95b2f91c7b56bf1904c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s1-dp.svg",
+      "sha256": "d980828aeb5e68a7a9ec7fc902b57fd6c768fefe6ba1f0838a7d77277c620e7f"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s2-d01.svg",
+      "sha256": "4efa884781e1417205dcfae385e4c98f22af91f8bf147bc05769d0d0ebb2bfa7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s2-dq.svg",
+      "sha256": "de8fc26f391eb6836925705463070f1521d5ded7f8f72092dcc679222f90f75d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s2-dp.svg",
+      "sha256": "f7bb896ae6ce548aa00f0739ef0dc22141fbf7144480ae73caa1652c891def51"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s3-d01.svg",
+      "sha256": "4712fecb049371401765eaa4842b21088fbb6eecb3071107b9422a8dce44bf80"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s3-dq.svg",
+      "sha256": "941d2f5018962b6d1d5e5f0f66f46a4473114d718c859ac8d868c95c047caa28"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s3-dp.svg",
+      "sha256": "8b4b6d37d2b0246bbdfe6b9ace0aa4891d4c5fbc3694bdeec8fe7d97b46bd943"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s4-d01.svg",
+      "sha256": "1af8263ccb70be06da5cb5082a526165f3b9280c99de9164d99c647fa1687e70"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s4-dq.svg",
+      "sha256": "573aa1e742681c5dd2a3d066c50946a9eac34870531a988a2a7ba8911f44ac76"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s4-dp.svg",
+      "sha256": "b44fdf66df93420beccbe23c8313ac972dd4de0354dc9c2053ac447226530a4d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s5-d01.svg",
+      "sha256": "e214e5b1c87919a7a7a9844e20c143d3e5cd252a93574092113245a492e7fbc2"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s5-dq.svg",
+      "sha256": "a16d4a8f80f112e484b8dc48ba59b3656f6b76db9e16264b69a1fad6949e57c5"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s5-dp.svg",
+      "sha256": "3b3b5388caf3e125285eb1aa0ccfdd298e1ad4cc6c0aa42d9b2293b9f4c69405"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s6-d01.svg",
+      "sha256": "ea91675873fd1baded49871e3c83471723bc37908e3abb582852086bf51edfa7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s6-dq.svg",
+      "sha256": "f2cd822b269957bd1da07a2e852a5489e691d4e1c3f59213248602f9395d5658"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c4-s6-dp.svg",
+      "sha256": "7601395ddf5a3a599a63cd9f35fa2f5f9ddf6ab2b11516ff7cc40009185df377"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s1-d01.svg",
+      "sha256": "b73c96e1a71c8472270c92fb979bfaed82581503bc331663a6d243a216cc66b3"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s1-dq.svg",
+      "sha256": "81cd1a4308058f444a84226bccc47b009648692feb7bb7884e11d5c8a07da855"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s1-dp.svg",
+      "sha256": "dac84ed3a83b1c3e194f6c513f7a9b369cb8bc49fe319b8c40e558f78f58b801"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s2-d01.svg",
+      "sha256": "f419dfdf8473de99cf2d56c526639f25b28f48d64a2669188cc835b33d8bd061"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s2-dq.svg",
+      "sha256": "3d6e4a3d312da9351947ab25ea3ced12f4c894364097c756552bdc523dda6c45"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s2-dp.svg",
+      "sha256": "5f93afd609a37372190a0ff869f27e68e6d398fb2460a7e42447a4ee9b5b604a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s3-d01.svg",
+      "sha256": "8c028ea9b53ef9e25b0a911771c372a175873e3e7e9e929fc1ad6ad78d5423d0"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s3-dq.svg",
+      "sha256": "cca0ee1fdec87f3c05a758a9f7220ad9f10c51031929e0060c9a69f166c30572"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s3-dp.svg",
+      "sha256": "ae55d6f40ac262efe6c78f7dd1b5b45f9eeb3cca52a0c6ccc75b2e11c68c0394"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s4-d01.svg",
+      "sha256": "752438b8623ce5f5147e46e2559178733bf7f7e2e718c1aab7ad41ea1159b455"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s4-dq.svg",
+      "sha256": "b74540a6ee5be9311c6b2f9dfe5fa9d4d2843be6af194e0706de26631351f64e"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s4-dp.svg",
+      "sha256": "7773e36595b27509d6f28876e16ebaf8b8da893ff1bedc228526e6689c588d70"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s5-d01.svg",
+      "sha256": "969d8b4730033eff6443dbafc394ec28f533f0a8305c747591946b0be2a1be4a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s5-dq.svg",
+      "sha256": "f24452b6e42e4a1dd5643f6b925e79654fb59607563007b476d0becd913411fb"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c5-s5-dp.svg",
+      "sha256": "fb909ebc1fc5bab0d72f832fd61883500cac2715d73b90a5b7de51922e6495a7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s1-d01.svg",
+      "sha256": "22cd21a69bec681c3647d863acdc16d55d34be4a40ba9e1db9fa58f09c03e5f9"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s1-dq.svg",
+      "sha256": "405dff894ace343636973469b659bcd1ceed9f13e8fd4f596ea46edc2cb9e30a"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s1-dp.svg",
+      "sha256": "24fc52a0e65cd15fb8550f69771f8f5eaca77afee6015b21d296bb82948d94de"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s2-d01.svg",
+      "sha256": "deab1f45825957622c15055ff0b1c6925c9f3b73a03a54b6864eb907dccc8deb"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s2-dq.svg",
+      "sha256": "edf7028d56d1372d0baff081db0bff9f628a0b23ec7c359d593430c6409c6ee3"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s2-dp.svg",
+      "sha256": "a9a7ddd4508209ceabb19090fc2c37fdb1d17e612005255136e6e7556f2ec302"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s3-d01.svg",
+      "sha256": "2ea6078ee94a02ea0520b540096715b4717f63b7596639f891d67eab0e47cebf"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s3-dq.svg",
+      "sha256": "de67c911a8543a9dbc82fdb4ab55b5cd5e197842183bc8b7e43be27a64221c01"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s3-dp.svg",
+      "sha256": "b539a9ad49feba2d2844aca2a5201d432b120955ecceb4b2cc9447f2a0638246"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s4-d01.svg",
+      "sha256": "d2579144738f85ec6813d4f122bf408771c9c5e2fd1a8ac7127895c56ac98493"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s4-dq.svg",
+      "sha256": "514fc1717bbc7dbae6fa8c4f85f965f7c11f9c75310eed30d48a67dbf69cb716"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c6-s4-dp.svg",
+      "sha256": "9d8bf99f492cf8e7059d32ecd52e3df36a0653c2c9e290cea5d2fab8e5f17feb"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s1-d01.svg",
+      "sha256": "0357948e4a8daed846d61bc446743f0bfe5032c63cabdfcd9aeadb157e25961c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s1-dq.svg",
+      "sha256": "15f9d419ac5309084617eeb263be6c9b898ebd68c3dd64d230255cc745b16ad8"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s1-dp.svg",
+      "sha256": "b09d759083a98cf68e084415e70ef6d0ad025b64a01b42d8bb1a4c1aff0050f0"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s2-d01.svg",
+      "sha256": "808f25405d30ab043fa3c818b12b84a6b83ec536097ee284478bab676b78686f"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s2-dq.svg",
+      "sha256": "1809ce6f9e319b01db15c7fcbf7b9642a1eb82a15a4bfcea1d0a66ca0b8490d7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s2-dp.svg",
+      "sha256": "9cb5b1eb2bc5f0d9df3e2572e8058992db9b8b084dc0d58f5f8cf3846b9068ae"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s3-d01.svg",
+      "sha256": "49af514eb007a72453fadce90e9619e971e450c34d40089bcff69a9f65c23fcb"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s3-dq.svg",
+      "sha256": "f22071758b068285dec65972bbd9c8b33b76d4f0a2fc169f7f538dc860e1da7d"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s3-dp.svg",
+      "sha256": "afb5391639f3ccbe665b98aa12491ce22e32f7ce9faae272df99db95b2dd647e"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s4-d01.svg",
+      "sha256": "0df908153b428cca33de1a5cbfdb88d77d4da87d762a44455bcea1b22b5879df"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s4-dq.svg",
+      "sha256": "d1f7fa4a1f33dc05977ea5e928e16fe1c5d4da240b133d09d56480c3a904ef74"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c7-s4-dp.svg",
+      "sha256": "97515df1313e1d4b80ac23d04af01545433fe644a6abdefc778824c90c149ec4"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s1-d01.svg",
+      "sha256": "e8a46617c5ba705cb2d7383b8692fdccde1d2f770b0da26f3e8d21c2cfe07a70"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s1-dq.svg",
+      "sha256": "10919175684332e2985ef1f4f1ba051fe745c908a2c79c30be9919a1bd8166e2"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s1-dp.svg",
+      "sha256": "c46c54716bae4ff25b4e46c9d3054772f73701337ee05e183b0c07214155dfcf"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s2-d01.svg",
+      "sha256": "5de03e8d7f1999bc73467f3f1afaa9d886d4297b4a2050e09b32b2f351012cd7"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s2-dq.svg",
+      "sha256": "cb04bba2bace5f2be77132b1ed467380c3c4ec99539fb12e530bd0c1541b798e"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s2-dp.svg",
+      "sha256": "2ff9f0807bc9506583d98e8c9845c270ad1fc5decfc34b99d5c28ab8c05d6f88"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s3-d01.svg",
+      "sha256": "1a6547700def4babe318321c477eba300cede73e22768a03b05973b1b5f69e4c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s3-dq.svg",
+      "sha256": "68dc4a3318744016b8e3f2c4639898d7962d5198721651b9857909abc67db673"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s3-dp.svg",
+      "sha256": "bc518d175c9556cd358d37d136440b5ab733e22a399215e6dbf363d1fa455eaa"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s4-d01.svg",
+      "sha256": "842ea1ecb671fb571bfe1ec07af65b08cfdcbff790ad569a3a5284c859f709f6"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s4-dq.svg",
+      "sha256": "702b520f7ce1457897b32fcc643900e081572f8641b3ece0c198c35ac55bf314"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s4-dp.svg",
+      "sha256": "eca22b995f7e939b83d09626f294da9a6d58038841ee5a6a9df1cdbc011da759"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s5-d01.svg",
+      "sha256": "01c8d9e6a34c79c3f783233e9ec73c57d25fc74b3a2519fa0c68de60e6e10da4"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s5-dq.svg",
+      "sha256": "9aa790a7f613cf79555b075476de196ca1592560ecf19188316478943b2893fe"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c8-s5-dp.svg",
+      "sha256": "0ce7924c1543ca0dc59ec6123095cea01705fac14f802392e265fb01c393eae4"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s1-d01.svg",
+      "sha256": "6120a6456b529844310da7ade1da1d083f1bad62186a1d1cd6577a5898cdab01"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s1-dq.svg",
+      "sha256": "89cbf93c00bde680c4f03463bfa9de8626058128f58d875246e1aafaf9074197"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s1-dp.svg",
+      "sha256": "df91e3aa06e9b5f4b589111983589eb529936bffeb00736d19acdccda2aed17b"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s2-d01.svg",
+      "sha256": "6b6516e4d95c9736b01bc850d675330cfb2a800955c3450c26ff71ba5d61f54c"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s2-dq.svg",
+      "sha256": "c6db678c3c8dc93b87063f321a3cfd346aa5c7490729bf4282e9907bc30d05ff"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s2-dp.svg",
+      "sha256": "e7dd971299bc4be92e6956f9058238b143bf80d33a252c122e71f9e461dbc4a3"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s3-d01.svg",
+      "sha256": "92de20fd1acd36899818c9aac4d8909a086f2142b4d34d8035b6f402aee5f878"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s3-dq.svg",
+      "sha256": "31094ce34a878390b0673628ace44cb37201876b790c3b8e63dfee1cf3e6a4b0"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s3-dp.svg",
+      "sha256": "b6410db8e70c51472fd0919b248d7c0c2532dc4c794d7f3af62595cf2fd92157"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s4-d01.svg",
+      "sha256": "34b1ac83a321989d8f06f0636cf4d696b2c1d347339593092ab9d0ef497a1ff3"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s4-dq.svg",
+      "sha256": "918a817107e503f89104340208a5be119b7aa900c2f6660815ac8694124eb8c5"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/sources/site-assets/textbook-book-kokugo1-k1-c9-s4-dp.svg",
+      "sha256": "34fcb96f6ec0f95b6fc0acc9998e7a5d17e828190acc5eaea661b3b1417245ef"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-ai-context-kokugo1.json",
+      "sha256": "7367c4849368f96a645007c13e2723d29a6b8d5080fdedf9cabe604fa97988d4"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e"
+    }
+  ],
+  "scope": "Unchanged production text/media reader modules copied byte-for-byte with candidate manifests. All1433 text excerpts and129 image references; stale signature/catalog, tampered bytes, unknown anchors and injected URL rejected. Synthetic public metadata only; no real API/provider/auth/user state, main changes or publication. Panel/UI and main integration remain separate."
+}

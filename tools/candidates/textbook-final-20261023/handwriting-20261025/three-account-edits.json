@@ -1,0 +1,31 @@
+{
+  "status": "local implementation; related verification pending",
+  "edits": [
+    {
+      "file": "cf-worker/src/plans.mjs",
+      "before": "const people=env=>env.PREVIEW_PLAN_ACCOUNTS==='1'?[...FAMILY,...Object.keys(PREVIEW_PROFILES)]:FAMILY;",
+      "after": "const people=env=>env.PREVIEW_PLAN_ACCOUNTS==='1'?[...FAMILY,...Object.keys(PREVIEW_PROFILES)]:FAMILY;\n// 非adminの本人別契約だけに、既存そうたUIDを含める。管理画面の対象一覧は変更しない。\nconst members=env=>[...people(env),'u4'];",
+      "occurrences": 1
+    },
+    {
+      "file": "cf-worker/src/plans.mjs",
+      "before": "people(env).includes(uid)",
+      "after": "members(env).includes(uid)",
+      "occurrences": 5
+    },
+    {
+      "file": "cf-worker/src/textbook-annotations.mjs",
+      "before": "u[12]|p_",
+      "after": "u[124]|p_",
+      "occurrences": 1
+    },
+    {
+      "file": "site-assets/textbook-annotation-model.js",
+      "before": "['u1','u2','p_free'",
+      "after": "['u1','u2','u4','p_free'",
+      "occurrences": 1
+    }
+  ],
+  "adminRouteAndExistingPeopleFunctionUnchanged": true,
+  "noAuthenticationOrPublicReleaseChanges": true
+}

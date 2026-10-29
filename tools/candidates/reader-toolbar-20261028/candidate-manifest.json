@@ -1,0 +1,30 @@
+{
+  "status": "isolated wheel candidate passed14 checks and3 screenshot reviews; main not applied",
+  "file": "site-assets/textbook-book.js",
+  "beforeSha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1",
+  "candidateSha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745",
+  "reason": "Book-level horizontal wheel handler prevents native scrolling and turns pages even when the wheel target is the toolbar scroller. Exclude only that existing scrollable control row.",
+  "remaining": [
+    "Apply after full8 terminal; current reader frozen",
+    "Keyboard-focus test failed in three prior harness attempts; not claimed fixed; initial focus criterion was separate from actual wheel issue",
+    "Physical touch-device confirmation not performed"
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/reader-toolbar-20261028/baseline-result.json",
+      "sha256": "98daa6174113dce19b3d6079518a6e98dd8e885bb2b9414fabaa41eecd9003ed"
+    },
+    {
+      "file": "tools/candidates/reader-toolbar-20261028/candidate-result.json",
+      "sha256": "10c51f3c84d8a393b24b78b0f7d87cc41dcfa1f04bcda45e127980dc9157372f"
+    }
+  ],
+  "directVisualReview": {
+    "widths": [
+      320,
+      390,
+      700
+    ],
+    "finding": "Rightmost exit fully visible after native horizontal wheel; page unchanged. Native page-area swipe retained."
+  }
+}

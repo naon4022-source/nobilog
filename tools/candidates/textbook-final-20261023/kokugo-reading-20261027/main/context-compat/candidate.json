@@ -1,0 +1,36 @@
+{
+  "status": "candidate only;not applied to frozen whole-verification inputs",
+  "file": "tools/candidates/textbook-ai-20261025/verify-contexts.mjs",
+  "beforeSha256": "a37f13fc9607911e93a9a594f0858cdbec4d8fe376ae3a8a5ac142740798b989",
+  "canonicalCandidateSha256": "acbc538ec88024b4277b9735a1e1593966dd2b3d036cced41411b4083ab5f178",
+  "delta": {
+    "before": "const {checkedSource}=createRequire(import.meta.url)('../textbook-final-20261023/explanations-20261025/checked-source.cjs');",
+    "after": "const require=createRequire(import.meta.url);\nconst {checkedSource:checkedExplanationSource}=require('../textbook-final-20261023/explanations-20261025/checked-source.cjs');\nconst {checkMainSource}=require('../textbook-vision-20261027/main/checked-source.cjs');\n// Validate the entire exact teaching successor before comparing historical source identity.\nconst approvedBefore=checkMainSource(require('node:url').fileURLToPath(ROOT),{assets:false});\nconst checkedSource=relative=>approvedBefore.get(relative)||checkedExplanationSource(relative);"
+  },
+  "isolatedHarness": {
+    "sha256": "9ed034cb1e58b0fef2b4ffcf79112367f91f3df6a1bf392151a296505ad5a6d0",
+    "rebases": [
+      {
+        "before": "from './build-contexts.mjs'",
+        "after": "from \"file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261025/build-contexts.mjs\""
+      },
+      {
+        "before": "new URL('../../../',import.meta.url)",
+        "after": "new URL(\"file:///Users/shimizunaotomoo/Desktop/my-app/\")"
+      },
+      {
+        "before": "require('../textbook-final-20261023/explanations-20261025/checked-source.cjs')",
+        "after": "require(\"/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/explanations-20261025/checked-source.cjs\")"
+      },
+      {
+        "before": "require('../textbook-vision-20261027/main/checked-source.cjs')",
+        "after": "require(\"/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs\")"
+      },
+      {
+        "before": "new URL('./baseline.json',import.meta.url)",
+        "after": "new URL(\"file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261025/baseline.json\")"
+      }
+    ]
+  },
+  "scope": "Original source hash assertion and all other assertions retained. Exact current teaching guard must validate before supplying approved prior bytes only for historical source identity. Actual context generation and current page/closed-answer checks still consume current book. Future canonical application needs coordinated20-file successor/27 normalized entries after full6 terminal;do not edit active1371 inputs."
+}

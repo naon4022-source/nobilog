@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-25",
+  "status": "candidate visually reviewed; not integrated",
+  "id": "S1-MATTER-S1-DQ",
+  "svgSha256": "45071ae43f7ed22373e568ac842757587e1eb75dea73be62961b6163acae556e",
+  "screenshot": "tools/candidates/textbook-final-20261023/science-fraction-candidate/S1-MATTER-S1-DQ.png",
+  "screenshotSha256": "6f8a26ca2b24d098015440c084c186cd2f8210d44935e4d941195ee30d861465",
+  "glyphAudit": "tools/candidates/textbook-final-20261023/science-fraction-candidate/glyph-audit.json",
+  "glyphAuditSha256": "e7bb2dc357304c589b4ab7ed3b4203db81898e20d7c77d85244ff5c8ff75295e",
+  "neighborFit": "tools/candidates/textbook-final-20261023/science-fraction-candidate/neighbor-fit.json",
+  "neighborFitSha256": "d8becf1ddfa80f1186e8ef51e7835385523affb35bbc7178f3d14c1a2c82d485",
+  "visualReview": "原図と全改訂候補を目視。1/10の分子・分母・分数線、前後の行間、元の箱内を確認。cm³の途中改行は値・連結文字列・座標・図形を保った2行の折り返しだけで解消。元の問題の答え・マスクは変更しない。",
+  "knownAttemptFailure": "Neighbor checker first included the density heading as a body line due shared data-box=b22; failed. Diagnostic retained; corrected to assert all labels inside actual card and the2 changed rows below original header, then passed."
+}

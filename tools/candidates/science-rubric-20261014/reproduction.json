@@ -1,0 +1,87 @@
+{
+  "scope": "synthetic learner answers against current reviewed question data; no saved attempts",
+  "cases": [
+    {
+      "id": "tokkun-science-1-hansha-69",
+      "input": "物体が反射する光が目に届かないから",
+      "expected": true,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-hansha-69",
+      "input": "物体が反射する光が目に届くから",
+      "expected": false,
+      "actual": true,
+      "reason": "必要な内容をすべて満たしています。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-kitai-24",
+      "input": "二酸化炭素は水に少ししか溶けないがアンモニアは多く溶けるから",
+      "expected": true,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-kitai-24",
+      "input": "アンモニアは水に少ししか溶けないが二酸化炭素は多く溶けるから",
+      "expected": false,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": true
+    },
+    {
+      "id": "tokkun-science-1-kubetsu-22",
+      "input": "有害な薬品かもしれず、安全かどうかわからないから",
+      "expected": true,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-kubetsu-22",
+      "input": "有害な薬品ではないから安全である",
+      "expected": false,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": true
+    },
+    {
+      "id": "tokkun-science-1-youkaido-19",
+      "input": "温度でほとんど変わらないため、水を加える",
+      "expected": true,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-youkaido-19",
+      "input": "水を加えない",
+      "expected": false,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": true
+    },
+    {
+      "id": "tokkun-science-1-youkaido-66",
+      "input": "温度が下がると溶けきれなくなるから",
+      "expected": true,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": false
+    },
+    {
+      "id": "tokkun-science-1-youkaido-66",
+      "input": "気温が低いだけで溶解度は変わらないから",
+      "expected": false,
+      "actual": false,
+      "reason": "否定の表現があるため、正解の条件と照合できません。",
+      "matched": true
+    }
+  ],
+  "matched": 4,
+  "mismatches": 6
+}

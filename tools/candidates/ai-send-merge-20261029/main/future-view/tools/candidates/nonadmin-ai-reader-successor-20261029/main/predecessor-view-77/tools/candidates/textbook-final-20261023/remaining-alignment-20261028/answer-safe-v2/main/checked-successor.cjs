@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/checked-successor.cjs

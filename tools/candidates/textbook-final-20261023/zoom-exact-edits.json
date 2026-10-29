@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "file": "site-assets/textbook-book.js",
+      "beforeSha256": "e4825307fde3f785fa27a8c5725f984ae87dafea013574fac4a525e088fe9329",
+      "afterSha256": "1f1a4bbe132abfcc2fd3cc819ec53ea49394ea29eaecef649a32b87e610e6a80",
+      "beforeFile": "tools/candidates/textbook-final-20261023/before-zoom-controls/textbook-book.js",
+      "edits": [
+        {
+          "start": 24707,
+          "end": 24707,
+          "before": "",
+          "after": "imageZoomControls(img,body){\n const row=el('div','tb-zoom-controls');row.setAttribute('role','group');row.setAttribute('aria-label','図の拡大率');\n const status=el('output','','100%');status.setAttribute('aria-live','polite');status.setAttribute('aria-label','拡大率');\n let scale=1,baseWidth=0;\n function resize(next){\n  if(!img.isConnected)return;\n  const oldWidth=img.clientWidth,oldHeight=img.clientHeight;\n  if(!baseWidth)baseWidth=Math.max(640,oldWidth);\n  const centerX=(body.scrollLeft+body.clientWidth/2)/Math.max(1,oldWidth),centerY=(body.scrollTop+body.clientHeight/2)/Math.max(1,oldHeight);\n  scale=Math.max(1,Math.min(3,next));img.style.width=baseWidth*scale+'px';img.style.maxWidth='none';\n  body.scrollLeft=Math.max(0,img.clientWidth*centerX-body.clientWidth/2);body.scrollTop=Math.max(0,img.clientHeight*centerY-body.clientHeight/2);\n  status.textContent=Math.round(scale*100)+'%';smaller.disabled=scale===1;larger.disabled=scale===3;\n }\n const smaller=button('−','tb-btn',()=>resize(scale-.5),'図を小さくする');smaller.disabled=true;\n const larger=button('＋','tb-btn',()=>resize(scale+.5),'図を大きくする');\n row.append(smaller,status,larger,button('元の大きさ','tb-btn',()=>resize(1),'図を元の大きさに戻す'),el('span','tb-zoom-hint','図の中を上下左右に動かして見られます'));\n return row;\n}\nfunction "
+        },
+        {
+          "start": 25528,
+          "end": 25528,
+          "before": "",
+          "after": ");const zoom=body.querySelector('.tb-zoom-img');if(zoom)card.append(imageZoomControls(zoom"
+        },
+        {
+          "start": 25529,
+          "end": 25529,
+          "before": "",
+          "after": "body));\n card.append("
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-book.css",
+      "beforeSha256": "9a5d489c28f5c54bc9b57f36779e2aeedad0a701d428807594be774f1aa56910",
+      "afterSha256": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec",
+      "beforeFile": "tools/candidates/textbook-final-20261023/before-zoom-controls/textbook-book.css",
+      "edits": [
+        {
+          "start": 27318,
+          "end": 27318,
+          "before": "",
+          "after": ".tb-zoom-controls{position:sticky;top:0;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:6px 0;background:#fffefb}\n.tb-zoom-controls output{font-variant-numeric:tabular-nums;min-width:3.7em;text-align:center;color:#203348}\n.tb-zoom-hint{flex-basis:100%;font-size:.8rem;line-height:1.5;color:#52657b}\n.tb-sheet.tb-sheet-wide{display:flex;flex-direction:column;overflow:hidden}\n.tb-sheet-wide .tb-sheet-body{min-height:0;overflow:auto;overscroll-behavior:contain}\n.tb-sheet-wide .tb-sheet-title,.tb-sheet-wide .tb-zoom-controls,.tb-sheet-wide .tb-sheet-close{flex-shrink:0}\n"
+        }
+      ]
+    }
+  ],
+  "scope": "Exact reviewed zoom-only JS/CSS delta; no historical proof hashes overwritten"
+}

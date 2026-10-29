@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "checks": 31,
+  "calculations": [
+    {
+      "id": "review-math-neg-01-v2",
+      "value": "3"
+    },
+    {
+      "id": "review-math-neg-02-v2",
+      "value": "2"
+    },
+    {
+      "id": "review-math-neg-03-v2",
+      "value": "4"
+    },
+    {
+      "id": "review-math-order-01-v2",
+      "value": "35"
+    },
+    {
+      "id": "review-math-order-02-v2",
+      "value": "12"
+    },
+    {
+      "id": "review-math-order-03-v2",
+      "value": "0"
+    },
+    {
+      "id": "review-sci-density-01-v2",
+      "value": "3"
+    },
+    {
+      "id": "review-sci-density-02-v2",
+      "value": "3"
+    },
+    {
+      "id": "review-sci-density-03-v2",
+      "value": "3"
+    },
+    {
+      "id": "review-sci-echo-01-v2",
+      "value": "136"
+    },
+    {
+      "id": "review-sci-echo-02-v2",
+      "value": "900"
+    },
+    {
+      "id": "review-soc-time-01-v2",
+      "value": "3"
+    },
+    {
+      "id": "review-soc-time-02-v2",
+      "value": "5"
+    },
+    {
+      "id": "review-soc-time-03-v2",
+      "value": "-1"
+    },
+    {
+      "id": "review-math-transpose-01",
+      "value": "-6"
+    },
+    {
+      "id": "review-math-transpose-02",
+      "value": "-5"
+    },
+    {
+      "id": "review-math-transpose-03",
+      "value": "-2"
+    },
+    {
+      "id": "review-math-prop-01",
+      "value": "-8"
+    },
+    {
+      "id": "review-math-prop-03",
+      "value": "-6"
+    },
+    {
+      "id": "review-sci-reflect-01",
+      "value": "60"
+    },
+    {
+      "id": "review-sci-reflect-02",
+      "value": "80"
+    },
+    {
+      "id": "review-sci-quake-01",
+      "value": "24"
+    },
+    {
+      "id": "review-sci-quake-02",
+      "value": "24"
+    },
+    {
+      "id": "review-sci-quake-03",
+      "value": "12"
+    },
+    {
+      "id": "review-sci-spring-01",
+      "value": "30"
+    },
+    {
+      "id": "review-sci-spring-02",
+      "value": "30"
+    },
+    {
+      "id": "review-sci-spring-03",
+      "value": "6"
+    }
+  ],
+  "sourceBindingArithmetic": {
+    "id": "drill-math-1-signedcalc-test-14",
+    "value": "-5"
+  },
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/data.json",
+      "sha256": "fb4268c30b4439bbaa0c7d5635d8596298d607773c1a0283f5f839b4c947b0c4"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-arithmetic.py",
+      "sha256": "b2bf2155274e2709953aeae5b8a1d7f7af13bf5e02af53b8b1237b1e6b5f1f8f"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    }
+  ],
+  "scope": "Independent AST and exact Fraction arithmetic for all27 numericCheck fields, three unsafe syntax refusals and the new actual-test source. No eval, network or grading of learner data. Non-numeric reasoning and UI are separate."
+}

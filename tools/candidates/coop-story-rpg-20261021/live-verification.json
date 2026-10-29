@@ -1,0 +1,35 @@
+{
+  "status": "native streams and synthetic IO passed; not integrated",
+  "at": "2026-10-21T13:50:30.123947+00:00",
+  "sources": {
+    "invalidation-hub.mjs": "61f37cf2d4bf9d443ab1f40a0f9a454999fa39906006ac42edb777f332c6f469",
+    "invalidation-do.mjs": "656071095589fe2e7b0f0a259add32d6acfcea99580a3346c0f31f0f1ab53317",
+    "live-refresh.mjs": "7674774f4f52016648fe11ada313f4047b39a9ef251ff2247c047ac7e5ad6df8",
+    "verify-invalidation.mjs": "f3e35ca167e7e046a65df6b040b40a943af0b30a53c03bd91fa4d362c2b4983a",
+    "verify-live-refresh.mjs": "ea4f67f86aa904410b1c6a3612adb774a14095cf091e2e4ce6dd318f9a3c9a89"
+  },
+  "checks": [
+    {
+      "log": "/tmp/nobi-coop-invalidation-20261021.log",
+      "stdout": "Invalidation candidate: byte-stream delivery, revision validation, duplicate suppression, bounded slow receiver, cap, cancel and finite lease passed; actual Cloudflare RPC remains unverified.\n",
+      "sha256": "1e255370f0adfd84e0a9b382ad3897145818ce324d93b755b2c4ab03a3d89b12"
+    },
+    {
+      "log": "/tmp/nobi-coop-live-refresh-20261021.log",
+      "stdout": "Live refresh candidate: split packets, monotonic revision, coalesced state reads, owner change, late fetch disposal, expired lease stop and one reconnect loop passed; actual app adapter/RPC unverified.\n",
+      "sha256": "3088dc6e3b868098e19c868a2595122c2a1d7c47fa0f4d71d0c8dfe2d45e64e8"
+    }
+  ],
+  "realCloudflareRpcVerified": false,
+  "realBrowserAdapterVerified": false,
+  "realUserData": false,
+  "published": false,
+  "precedingFull": {
+    "log": "/tmp/nobi-claude-answer-forms-after2-20261021.log",
+    "logSha256": "1bb1525dd83f6bb08569f81d5eab98209a3eb27e9e4770f45dca302c1dc10974",
+    "logReportsExitCode": 0,
+    "allPassMarkerObserved": true,
+    "exitCodeViaOwnSession": false,
+    "allInputsFrozenByCodex": false
+  }
+}

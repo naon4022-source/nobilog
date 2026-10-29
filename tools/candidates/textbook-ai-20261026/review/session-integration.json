@@ -1,0 +1,46 @@
+{
+  "status": "individual checks passed; frontend and paid job pending; final full pending",
+  "files": [
+    {
+      "file": "cf-worker/src/index.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/session-before/cf-worker/src/index.js",
+      "beforeSha256": "6de6ac2e501a7338fd4929ed1e805e88749ab733962eb11d9de83db49d6b5fc5",
+      "afterSha256": "56397c12c7bd399e0c0109aaffa7bfc75a57b7daf8c437ed3b87c4efecff474e",
+      "edits": [
+        {
+          "before": "    if(path==='/textbook-ai-chat'){",
+          "after": "    if(path==='/material-test-session'){\n      const {testSessionRoute}=await import('./ai-test-session-route.mjs');\n      return scopedApiResponse(await testSessionRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);\n    }\n    if(path==='/textbook-ai-chat'){"
+        }
+      ]
+    },
+    {
+      "file": "preview/build.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/session-before/preview/build.py",
+      "beforeSha256": "276329b25cbcab938440951efaca0fb7b4b1d1d39092831a2869724624a228a6",
+      "afterSha256": "a8bdf0fa0eb2b2f66d7135478c7db870366d573dfd4f5fff3be5e4c99024a55e",
+      "edits": [
+        {
+          "before": "'textbook-ai-route.mjs', 'openai-priced-operation.mjs'",
+          "after": "'textbook-ai-route.mjs', 'ai-test-session.mjs', 'ai-test-session-route.mjs', 'openai-priced-operation.mjs'"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/sw.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/session-before/site-assets/sw.js",
+      "beforeSha256": "f925480f2d6bf8e31aae1f6f451dabb19abb4ebf5d69f55974ceb3dc898ae2f0",
+      "afterSha256": "49f5158278ebc2d530cfe086b2d4238f4f7cce24f51458c27b53fb7aa6d1cb4e",
+      "edits": [
+        {
+          "before": "(?:textbook-(?:annotations|ink|ai-context|ai-chat)|learning-",
+          "after": "(?:material-test-session|textbook-(?:annotations|ink|ai-context|ai-chat)|learning-"
+        }
+      ]
+    }
+  ],
+  "priorServiceReceipt": {
+    "file": "tools/candidates/textbook-ai-20261026/review/session-integration-before.json",
+    "sha256": "b99d217350a9b6e3a2b865235f9302e0065d7fbd36415530be1a53da3996e724"
+  },
+  "note": "Owned immutable roster route only; no frontend or AI review route yet"
+}

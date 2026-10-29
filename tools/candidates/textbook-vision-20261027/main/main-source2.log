@@ -1,0 +1,9 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:23
+  if(!/^(?:cf-worker\/src|site-assets)\/textbook-(?:vision-[a-z-]+\.(?:js|mjs|css)|ai-media-context-(?:math1|kokugo1|english1|science1|geography|history)\.json)$/.test(row.file)||row.candidateFile!==BASE+'output/'+row.file)throw Error('vision new asset path');
+                                                                                                                                                                                                                                     ^
+
+Error: vision new asset path
+    at checkMainSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:23:230)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:12:77
+
+Node.js v24.18.0

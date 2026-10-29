@@ -1,0 +1,76 @@
+{
+  "status": "candidate AI catalogs and note-preservation verified;16 exact successor rows not applied",
+  "proofs": [
+    {
+      "file": "result.json",
+      "sha256": "d3ba966c54d15a8dddcd97097fc24eae7cedc6322b6e02b1842eb6e996e92fbf"
+    },
+    {
+      "file": "reader-result.json",
+      "sha256": "db9e96894b8f01a9b6b8130cf740709d3fb2b15bddebff4544626386ef7d179d"
+    },
+    {
+      "file": "note-preservation-result.json",
+      "sha256": "3d698faffb701259b0e6407fd0b4a4978c14d89a478dde73c47a8893276a2760"
+    },
+    {
+      "file": "note-ui-result.json",
+      "sha256": "efd4c3483749a12f85c4284a010c1690defb8b68aa64bdfb91cbd7ebd1276c99"
+    },
+    {
+      "file": "promotion-plan.json",
+      "sha256": "222cabbdd9d6e3c0632f2acc6915b9c51f99b3ca3e0705f910a8e1964a734fb8"
+    },
+    {
+      "file": "../prepare-integration-contexts.mjs",
+      "sha256": "8f5613bb46983085d66e4ed13e7e197a4286e99b6dd7a82a64b7c5a8e9874cb5"
+    },
+    {
+      "file": "../verify-integration-contexts.mjs",
+      "sha256": "e7cb482be95bc6a5dfdb928af20d3712245d81e22c3db2c788e4304b8bc7ee4f"
+    },
+    {
+      "file": "../verify-note-preservation.mjs",
+      "sha256": "96f85f08b9ae0bc19e565981864f9dd6b280487297071643fb4c0c1e6c9fd668"
+    },
+    {
+      "file": "../verify-note-ui.mjs",
+      "sha256": "4464b8988922dba65ac1e62acf17d7e253c0e41b6499961f3ceac03900fa547b"
+    }
+  ],
+  "directlyReviewedNoteScreens": [
+    {
+      "file": "notes-390.png",
+      "sha256": "8bac8ff0cc8fd7c8eda37be26626ebf227a94732b6a8530e9de9d0fbb2e93adb"
+    },
+    {
+      "file": "notes-1180.png",
+      "sha256": "cc9eee24f15289e6a59b77745a0687ee9a0a093fb07a721b357115f83249110b"
+    }
+  ],
+  "checks": {
+    "candidateReaders": 3550,
+    "actualNoteUI": 45,
+    "syntheticSavedNotes": 1433,
+    "retainedAnchors": 1429,
+    "changedTextNotes": 4,
+    "preservedDrafts": 4
+  },
+  "failuresRetained": [
+    {
+      "file": "../integration-note-preservation.log",
+      "cause": "First fixture compared an array from VM realm with host JSON array using deepStrictEqual. Normalize synthetic HTTP data to host JSON; app code unchanged.",
+      "fixedExitCode": 0,
+      "fixedLog": "../integration-note-preservation-attempt2.log"
+    }
+  ],
+  "mainChanged": false,
+  "remaining": [
+    "Synthetic annotation model and actual UI passed; retain these proofs when checking actual main book after promotion",
+    "Prepare reproducible canonical scene/timeline successors if original scene metadata is consumed",
+    "Implement narrowly reviewed historical-verifier successor, preserving all existing assertions and immutable prior evidence",
+    "Apply exact matched files transactionally, rejecting any before-SHA drift",
+    "Actual main reader and AI panel/route binding checks, preview artifact SHA check, then one standalone whole verification"
+  ],
+  "globalCompletionPercent": null
+}

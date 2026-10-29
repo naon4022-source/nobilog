@@ -1,0 +1,119 @@
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/cf-worker/src/plans.mjs
+
++++ cf-worker/src/plans.mjs
+
+@@ -11,0 +12,2 @@
+
++// 非adminの本人別契約だけに、既存そうたUIDを含める。管理画面の対象一覧は変更しない。
++const members=env=>[...people(env),'u4'];
+@@ -42 +44 @@
+
+- if(!on(env)||!env.AUTH_DB||!people(env).includes(uid))return;
++ if(!on(env)||!env.AUTH_DB||!members(env).includes(uid))return;
+@@ -60 +62 @@
+
+- if(!on(env)||!env.AUTH_DB||!people(env).includes(uid))return {provisional:false};
++ if(!on(env)||!env.AUTH_DB||!members(env).includes(uid))return {provisional:false};
+@@ -78 +80 @@
+
+- if(!people(env).includes(uid))return false;
++ if(!members(env).includes(uid))return false;
+@@ -91 +93 @@
+
+- if(!on(env)||!people(env).includes(uid))return;
++ if(!on(env)||!members(env).includes(uid))return;
+@@ -101 +103 @@
+
+- if(!on(env)||db!==env.AUTH_DB||!people(env).includes(uid))return false;
++ if(!on(env)||db!==env.AUTH_DB||!members(env).includes(uid))return false;
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/cf-worker/src/textbook-annotations.mjs
+
++++ cf-worker/src/textbook-annotations.mjs
+
+@@ -18 +18 @@
+
+- if(!/^(?:u[12]|p_(?:free|mini|standard|pro|unlimit))$/.test(session.uid))return reply({error:'forbidden'},403);
++ if(!/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/.test(session.uid))return reply({error:'forbidden'},403);
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/cf-worker/src/index.js
+
++++ cf-worker/src/index.js
+
+@@ -1777,0 +1778,4 @@
+
++    }
++    if(path==='/textbook-ink'){
++      const {textbookInkRoute}=await import('./textbook-ink.mjs');
++      return scopedApiResponse(await textbookInkRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/site-assets/textbook-annotation-model.js
+
++++ site-assets/textbook-annotation-model.js
+
+@@ -40 +40 @@
+
+- if(!root.indexedDB||!['u1','u2','p_free','p_mini','p_standard','p_pro','p_unlimit'].includes(uid)||!['math1','kokugo1','english1','science1','geography','history'].includes(book))return null;
++ if(!root.indexedDB||!['u1','u2','u4','p_free','p_mini','p_standard','p_pro','p_unlimit'].includes(uid)||!['math1','kokugo1','english1','science1','geography','history'].includes(book))return null;
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/site-assets/textbook-annotations.js
+
++++ site-assets/textbook-annotations.js
+
+@@ -7 +7 @@
+
+-function reset(){controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}
++function reset(){root.NobiTextbookInk?.reset();controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}
+@@ -16,0 +17 @@
+
++ const ink=root.NobiTextbookInk?.mount(app,book,{...context,beforeOpen(){close();stopPick();}});
+@@ -75 +76 @@
+
+-  if(!live())return;if(picking){stopPick();return;}showList();const run=uiEpoch;void load().then(()=>{if(run===uiEpoch)showList();}).catch(()=>{if(run===uiEpoch)showList('読み込めませんでした。保存済みの表示は消していません。');});
++  if(!live())return;root.NobiTextbookInk?.close();if(picking){stopPick();return;}showList();const run=uiEpoch;void load().then(()=>{if(run===uiEpoch)showList();}).catch(()=>{if(run===uiEpoch)showList('読み込めませんでした。保存済みの表示は消していません。');});
+@@ -82 +83 @@
+
+- controller={paint,destroy(){alive=false;close();stopPick();button.remove();app.removeEventListener('click',select,true);document.removeEventListener('keydown',key,true);}};
++ controller={paint,destroy(){ink?.destroy();alive=false;close();stopPick();button.remove();app.removeEventListener('click',select,true);document.removeEventListener('keydown',key,true);}};
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/index.html
+
++++ index.html
+
+@@ -36,0 +37,4 @@
+
++    <link rel="stylesheet" href="/textbook-ink.css">
++    <script src="/textbook-ink-format.js" defer></script>
++    <script src="/textbook-ink-model.js" defer></script>
++    <script src="/textbook-ink.js" defer></script>
+@@ -2157,0 +2162,6 @@
+
++    };
++    window.nobiTextbookInkAPI={
++        available:()=>!!currentUserId&&!isTrial(),snapshot:()=>cloudIdentity(),matches:who=>cloudSame(who),
++        list:(book,who)=>textbookAnnotationRequest('/textbook-ink?book='+encodeURIComponent(book),{cache:'no-store'},who),
++        get:(book,anchor,who)=>textbookAnnotationRequest('/textbook-ink?book='+encodeURIComponent(book)+'&anchor='+encodeURIComponent(anchor),{cache:'no-store'},who),
++        post:(body,who)=>textbookAnnotationRequest('/textbook-ink',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/site-assets/sw.js
+
++++ site-assets/sw.js
+
+@@ -75 +75 @@
+
+-  if (/(?:^|\/)(?:learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
++  if (/(?:^|\/)(?:textbook-(?:annotations|ink)|learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/preview/build.py
+
++++ preview/build.py
+
+@@ -102,0 +103,2 @@
+
++    for name in ['textbook-annotations.mjs', 'textbook-ink.mjs', 'textbook-ink-format.cjs']:
++        shutil.copyfile(ROOT / 'cf-worker/src' / name, DEST / name)
+--- tools/candidates/textbook-final-20261023/handwriting-20261025/before/.claude/verify/verify-learning-images-cache.mjs
+
++++ .claude/verify/verify-learning-images-cache.mjs
+
+@@ -9,3 +9,3 @@
+
+-for(const path of ['/learning-review','/api/learning-review?cursor=fixture','/learning-chat','/learning-notes','/learning-time','/api/learning-time?month=2026-10','/learning-time-start','/api/learning-time-start','/learning-note-analysis?id=fixture','/api/learning-note-analysis?id=fixture','/learning-note-analysis-job?noteId=fixture','/api/learning-note-analysis-job?noteId=fixture','/plan','/api/plan']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'navigate'},respondWith(){intercepted=true;}});assert.equal(intercepted,false);checks++;}
+-for(const path of ['/learning-images.js','/learning-images.css','/profile-sprout.svg','/profile-photos.js','/profile-photos.css','/camera.js','/note-analysis.js','/note-analysis-api.js','/note-analysis.css']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'cors'},respondWith(){intercepted=true;}});assert.equal(intercepted,true);checks++;}
+-console.log('learning image cache: '+checks+' checks passed; private image API never cached, including navigation/custom origin; static icons/scripts remain cached');
++for(const path of ['/textbook-ink?book=math1','/api/textbook-ink?book=math1&anchor=fixture','/textbook-annotations?book=math1','/api/textbook-annotations?book=math1','/learning-review','/api/learning-review?cursor=fixture','/learning-chat','/learning-notes','/learning-time','/api/learning-time?month=2026-10','/learning-time-start','/api/learning-time-start','/learning-note-analysis?id=fixture','/api/learning-note-analysis?id=fixture','/learning-note-analysis-job?noteId=fixture','/api/learning-note-analysis-job?noteId=fixture','/plan','/api/plan']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'navigate'},respondWith(){intercepted=true;}});assert.equal(intercepted,false);checks++;}
++for(const path of ['/textbook-ink-format.js','/textbook-ink-model.js','/textbook-ink.js','/textbook-ink.css','/textbook-annotation-model.js','/textbook-annotations.js','/textbook-annotations.css','/learning-images.js','/learning-images.css','/profile-sprout.svg','/profile-photos.js','/profile-photos.css','/camera.js','/note-analysis.js','/note-analysis-api.js','/note-analysis.css']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'cors'},respondWith(){intercepted=true;}});assert.equal(intercepted,true);checks++;}
++console.log('learning image cache: '+checks+' checks passed; private image/textbook APIs never cached, including navigation/custom origin; static icons/scripts remain cached');

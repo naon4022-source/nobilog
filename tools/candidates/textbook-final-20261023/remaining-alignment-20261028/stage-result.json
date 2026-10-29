@@ -1,0 +1,81 @@
+{
+  "status": "remaining6 topics aligned into independent19 source files;source preservation passed;main unchanged",
+  "counts": {
+    "authorFiles": 8,
+    "explanationLeaves": 27,
+    "scriptFiles": 11,
+    "pairedStepChanges": 14
+  },
+  "proofs": [
+    {
+      "file": "manifest.json",
+      "sha256": "284fdb811c393273572fdb925a4b4c9f5f408a801e4ad3c362413c9b9237b474"
+    },
+    {
+      "file": "source-preservation-result.json",
+      "sha256": "8b3c0e0df824208744323fd01676af6d84867265ce1faa813fdeb50397793aeb"
+    },
+    {
+      "file": "reference-review.json",
+      "sha256": "4a6cf7d81d7e37987b3194223ba0cf0b2725a038072359fc734e787b8ac58225"
+    },
+    {
+      "file": "preparation-failures.json",
+      "sha256": "70aa65c4f2eed7055cc2dbf86c5f79a2fdc6952d5f15c92b166fcf60ea6825e6"
+    },
+    {
+      "file": "prepare.py",
+      "sha256": "361d711ffe00e3db3d50f53982bea4a3225f229964d1cf3ff208cac86601cbe0"
+    },
+    {
+      "file": "prepare-attempt2.log",
+      "sha256": "4fc65698d804fab5939e27d7fa8f2e95099b447d2f269b1665b2b3fc378000fd"
+    },
+    {
+      "file": "prepare-attempt3.log",
+      "sha256": "23cdc81437058a075d20c3d399a291e0eabea70f19e9f48316a5a0b8680450bb"
+    }
+  ],
+  "remainingLocalMovieIds": [
+    "E1-L2-S3-V01",
+    "E1-L8-S2-V01",
+    "E1-L8-S2-VP",
+    "K1-C2-S5-VP",
+    "K1-C6-S1-V01",
+    "K1-C6-S1-VP",
+    "K1-C7-S3-V01",
+    "K1-C7-S3-VP",
+    "K1-C8-S4-V01",
+    "K1-C8-S4-VP"
+  ],
+  "notLocalDoNotGenerate": [
+    "E1-L2-S3-VP"
+  ],
+  "audioReuse": {
+    "id": "K1-C2-S5-VP",
+    "sourceByteIdentical": true,
+    "receipt": "../kokugo-intonation-20261027/alignment-v2/audio-result.json",
+    "sha256": "433c01d70b46d1b17aba8327e46b64ca9b2f0b561a9f58c52ebc583c54f96975"
+  },
+  "mainBase": [
+    {
+      "file": "site-assets/textbook-book-kokugo1.json",
+      "sha256": "4a87f48872989749128b2ccf25e44b41b63fe7c14a81cbf269d41994ebbe0d6c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1.json",
+      "sha256": "d52f9a1f1532121af8f13e651a6f04cbe3f800cd34ad15a7fa72a0fdc3b416fd"
+    }
+  ],
+  "next": [
+    "semantic/visual source review of expanded candidates",
+    "regenerate combined books and only affected diagrams",
+    "render/review currently referenced remaining10 videos;do not render unreferenced E1-L2-S3-VP",
+    "main integration/context/catalog and final whole verification"
+  ],
+  "wholeVerification": {
+    "session": 59354,
+    "state": "same process live observed;not success yet"
+  },
+  "publications": 0
+}

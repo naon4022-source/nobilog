@@ -1,0 +1,748 @@
++++ 教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本文.md
++++ 
+
++1. かっこの中（内側から。その中でも、累乗 → 乗除 → 加減の順）
++2. 累乗
++3. 乗法・除法（左から）
++4. 加法・減法（左から）
++1. かっこの内側を先に計算する。その中でも累乗 → 乗除 → 加減の順を守り、かっこが外れたら同じ順で計算する。
++**確かめる**：途中の式で、先に計算した部分に下線を引く。かっこの内側から、その中でも「累乗 → 乗除 → 加減」の順になっているか。
++++ site-assets/textbook-book-math1.json
++{"path": ["pages", 69, "blocks", 7, "items", 0, "x"], "after": "かっこの中（内側から。その中でも、累乗 → 乗除 → 加減の順）"}
++{"path": ["pages", 69, "blocks", 7, "items", 1, "x"], "after": "累乗"}
++{"path": ["pages", 69, "blocks", 7, "items", 2, "x"], "after": "乗法・除法（左から）"}
++{"path": ["pages", 69, "blocks", 7, "items", 3, "x"], "after": "加法・減法（左から）"}
++{"path": ["pages", 70, "blocks", 1, "items", 0, "x"], "after": "かっこの内側を先に計算する。その中でも累乗 → 乗除 → 加減の順を守り、かっこが外れたら同じ順で計算する。"}
++{"path": ["pages", 70, "blocks", 2, "x"], "after": "**確かめる**：途中の式で、先に計算した部分に下線を引く。かっこの内側から、その中でも「累乗 → 乗除 → 加減」の順になっているか。"}
++{"path": ["pages", 69, "blocks", 1, "x"], "after": "累乗の意味と、計算の順序（かっこの中→累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。"}
++++ 教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本の追加.json
++++ 
+
++   "x": "累乗の意味と、計算の順序（かっこの中→累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。"
++++ site-assets/textbook-book-geography.json
++{"path": ["pages", 22, "blocks", 3, "items", 0, "x"], "after": "赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。"}
++++ 教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py
++++ 
+
++  "easy": ["赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。", "雨温図は、まず最高気温の月が何月かを見て北半球か南半球かを判断。"],
++++ tools/candidates/textbook-final-20261023/explanations-20261025/verify-preservation.cjs
++const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
++const {checkDelta}=require('./checked-source.cjs'),ROOT=path.resolve(__dirname,'../../../..');
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++const receipt=checkDelta({requireProof:false});ok(receipt.files.length===5,'exact five reviewed source/book deltas; every other byte/JSON field retained');
++const math=JSON.parse(fs.readFileSync(path.join(ROOT,'site-assets/textbook-book-math1.json')));
++const p=math.pages.find(p=>p.pid==='M1-P051'&&p.tag==='しくみ'),list=p.blocks.find(b=>b.t==='ol').items.map(x=>x.x);
++ok(list[0].startsWith('かっこの中（内側から。')&&list[1]==='累乗','parentheses before outer power, including precedence within parentheses');
++ok(list[2]==='乗法・除法（左から）'&&list[3]==='加法・減法（左から）','same-rank operations evaluated left to right');
++const steps=math.pages.find(p=>p.pid==='M1-P052'&&p.tag==='解き方');
++ok(steps.blocks[1].items[0].x.startsWith('かっこの内側を先に計算する。'),'procedure agrees with source explanation');
++ok(steps.blocks[2].x.includes('かっこの内側から、その中でも'),'self-check includes parentheses');
++ok(p.blocks.find(b=>b.t==='goal').x.includes('かっこの中→累乗→乗除→加減'),'goal agrees with explanation');
++// Fixed independent examples distinguish incorrect interpretations without adding answers to teaching material.
++ok((-2+5)**2===9,'evaluate bracket sum before applying its exponent');
++ok(2*(1+3**2)===20,'power still precedes addition inside a bracket');
++ok(24/4*2===12,'division and multiplication have equal priority, left to right');
++ok(8-3+2===7,'subtraction and addition have equal priority, left to right');
++for(const row of receipt.files.filter(r=>r.jsonChanges)){
++ const old=JSON.parse(fs.readFileSync(path.join(ROOT,row.beforeFile))),now=JSON.parse(fs.readFileSync(path.join(ROOT,row.file)));
++ const details=v=>Array.isArray(v)?v.flatMap(details):v&&typeof v==='object'?(v.t==='details'?[JSON.stringify(v)]:Object.values(v).flatMap(details)):[];
++ assert.deepEqual(details(old),details(now));checks++;
++ ok(old.pages.length===now.pages.length&&JSON.stringify(old.toc)===JSON.stringify(now.toc),'logical pages/TOC/hidden answers preserved');
++}
++const geo=JSON.parse(fs.readFileSync(path.join(ROOT,'site-assets/textbook-book-geography.json'))),tip=geo.pages[22].blocks[3].items[0].x;
++ok(tip.includes('寒くなる傾向')&&tip.includes('乾燥帯は雨の少なさ'),'latitude tendency and dryness are distinguished');
++const inputs=Object.fromEntries(receipt.files.map(r=>[r.file,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,r.file))).digest('hex')]));
++fs.writeFileSync(path.join(__dirname,'preservation-result.json'),JSON.stringify({status:'passed',checks,inputs,scope:'Exact approved explanation/goal/order changes only; all other fields and hidden answers retained. Fixed arithmetic witnesses, no real data or browser submissions.'},null,2)+'\n');
++console.log('Approved explanations preservation: '+checks+' checks passed');
++++ tools/candidates/textbook-final-20261023/explanations-20261025/checked-source.cjs
++// Tooling-only strict bridge for explicitly approved explanatory deltas.
++const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
++const ROOT=path.resolve(__dirname,'../../../..'),RECEIPT=path.join(__dirname,'receipt.json');
++const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
++const mathSource='教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/';
++const expected=new Set([mathSource+'本文.md',mathSource+'本の追加.json','site-assets/textbook-book-math1.json','site-assets/textbook-book-geography.json','教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py']);
++const mathPaths=new Set(['pages/69/blocks/7/items/0/x','pages/69/blocks/7/items/1/x','pages/69/blocks/7/items/2/x','pages/69/blocks/7/items/3/x','pages/70/blocks/1/items/0/x','pages/70/blocks/2/x','pages/69/blocks/1/x']);
++function checkDelta({requireProof=true}={}){
++ const receipt=JSON.parse(fs.readFileSync(RECEIPT));assert.equal(receipt.version,1);assert.equal(receipt.files.length,5);
++ assert.match(receipt.approval,/explicitly authorized all/);
++ assert.deepEqual(new Set(receipt.files.map(r=>r.file)),expected);
++ for(const row of receipt.files){
++  const backup=path.resolve(ROOT,row.beforeFile);assert.ok(backup.startsWith(path.join(__dirname,'before')+path.sep));
++  const old=fs.readFileSync(backup),current=fs.readFileSync(path.join(ROOT,row.file));
++  assert.equal(sha(old),row.beforeSha256);assert.equal(sha(current),row.afterSha256);
++  let result;
++  if(row.jsonChanges){
++   const value=JSON.parse(old);assert.equal(JSON.stringify(value),old.toString());
++   const allowed=row.file.endsWith('math1.json')?mathPaths:new Set(['pages/22/blocks/3/items/0/x']);
++   assert.deepEqual(new Set(row.jsonChanges.map(c=>c.path.join('/'))),allowed);
++   assert.equal(row.jsonChanges.length,allowed.size);
++   for(const c of row.jsonChanges){
++    let node=value;for(const key of c.path.slice(0,-1))node=node[key];
++    assert.equal(node[c.path.at(-1)],c.before);assert.equal(typeof c.before,'string');assert.equal(typeof c.after,'string');
++    node[c.path.at(-1)]=c.after;
++   }
++   result=Buffer.from(JSON.stringify(value));
++  }else{
++   assert.equal(row.edits.length,row.file.endsWith('本文.md')?3:1);
++   let text=old.toString();
++   for(const edit of row.edits){assert.equal(text.split(edit.before).length,2);text=text.replace(edit.before,edit.after);}
++   result=Buffer.from(text);
++  }
++  assert.deepEqual(current,result,row.file+': unapproved change outside exact explanatory delta');
++ }
++ if(requireProof){
++  assert.equal(receipt.status,'preservation and actual book display passed; connected-batch full pending');
++  assert.equal(receipt.proofs.length,2);
++  for(const proof of receipt.proofs){
++   assert.equal(proof.observedExitCode,0);const bytes=fs.readFileSync(path.join(ROOT,proof.file));assert.equal(sha(bytes),proof.sha256);
++   const result=JSON.parse(bytes);assert.equal(result.status,'passed');assert.equal(result.checks,proof.checks);
++   for(const row of receipt.files)assert.equal(result.inputs[row.file],row.afterSha256);
++  }
++ }
++ return receipt;
++}
++function checkedSource(relative){
++ if(!expected.has(relative))return fs.readFileSync(path.join(ROOT,relative));
++ const receipt=checkDelta(),row=receipt.files.find(r=>r.file===relative);return fs.readFileSync(path.join(ROOT,row.beforeFile));
++}
++module.exports={checkDelta,checkedSource};
++if(require.main===module){
++ const relative=process.argv[2];assert.ok(expected.has(relative));const receipt=checkDelta();
++ console.log(receipt.files.find(r=>r.file===relative).beforeFile);
++}
++++ tools/candidates/textbook-final-20261023/explanations-20261025/verify-bridge.cjs
++const fs=require('node:fs'),os=require('node:os'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict'),{spawnSync}=require('node:child_process');
++const ROOT=path.resolve(__dirname,'../../../..'),REL=path.relative(ROOT,__dirname),receipt=JSON.parse(fs.readFileSync(path.join(__dirname,'receipt.json'))),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
++let checks=0;
++function clone(run){
++ const root=fs.mkdtempSync(path.join(os.tmpdir(),'nobi-explanation-bridge-'));
++ const copy=relative=>{const out=path.join(root,relative);fs.mkdirSync(path.dirname(out),{recursive:true});fs.copyFileSync(path.join(ROOT,relative),out);};
++ for(const f of [path.join(REL,'receipt.json'),path.join(REL,'checked-source.cjs'),...receipt.files.flatMap(r=>[r.file,r.beforeFile]),...receipt.proofs.map(r=>r.file)])copy(f);
++ try{run(root);}finally{fs.rmSync(root,{recursive:true,force:true});}
++}
++function execute(root){return spawnSync(process.execPath,[path.join(root,REL,'checked-source.cjs'),'site-assets/textbook-book-math1.json'],{encoding:'utf8'});}
++function mutateReceipt(root,fn){const f=path.join(root,REL,'receipt.json'),r=JSON.parse(fs.readFileSync(f));fn(r);fs.writeFileSync(f,JSON.stringify(r));}
++clone(root=>{const result=execute(root);assert.equal(result.status,0);assert.equal(result.stdout.trim(),receipt.files.find(r=>r.file==='site-assets/textbook-book-math1.json').beforeFile);checks++;});
++const cases=[
++ root=>fs.appendFileSync(path.join(root,'site-assets/textbook-book-math1.json'),' '),
++ root=>mutateReceipt(root,r=>r.files.find(x=>x.jsonChanges).jsonChanges[0].path=['title']),
++ root=>{
++  const file='site-assets/textbook-book-math1.json',book=JSON.parse(fs.readFileSync(path.join(root,file)));
++  function find(v,p=[]){if(v&&typeof v==='object'&&v.t==='details'&&v.body?.[0]?.x)return [...p,'body',0,'x'];if(v&&typeof v==='object')for(const [key,x]of Object.entries(v)){const found=find(x,[...p,Array.isArray(v)?Number(key):key]);if(found)return found;}return null;}
++  const pointer=find(book);assert.ok(pointer);let node=book;for(const k of pointer.slice(0,-1))node=node[k];const old=node.x;node.x+=' tampered answer';const bytes=JSON.stringify(book);fs.writeFileSync(path.join(root,file),bytes);
++  mutateReceipt(root,r=>{const row=r.files.find(x=>x.file===file);row.afterSha256=sha(bytes);row.jsonChanges.push({path:pointer,before:old,after:node.x});});
++ },
++ root=>fs.appendFileSync(path.join(root,receipt.files[0].beforeFile),'unexpected backup edit'),
++ root=>fs.appendFileSync(path.join(root,receipt.proofs[0].file),' '),
++ root=>mutateReceipt(root,r=>{const proof=r.proofs[0],file=path.join(root,proof.file),data=JSON.parse(fs.readFileSync(file));data.inputs[r.files[0].file]='0'.repeat(64);const bytes=JSON.stringify(data);fs.writeFileSync(file,bytes);proof.sha256=sha(bytes);}),
++ root=>mutateReceipt(root,r=>r.files[0].file='unapproved-file.txt')
++];
++for(const run of cases)clone(root=>{run(root);assert.notEqual(execute(root).status,0);checks++;});
++const inputs=Object.fromEntries(receipt.files.map(r=>[r.file,sha(fs.readFileSync(path.join(ROOT,r.file)))]));
++fs.writeFileSync(path.join(__dirname,'bridge-result.json'),JSON.stringify({status:'passed',checks,inputs,scope:'Cloned-source strict bridge positive and seven tamper rejections: source, unexpected path, protected answer even with updated digest, backup, proof bytes, proof inputs even with updated digest, unknown file. Actual application files untouched.'},null,2)+'\n');
++console.log('Approved explanation strict bridge: '+checks+' cloned-source checks passed');
++++ tools/candidates/textbook-final-20261023/explanations-20261025/verify-book.mjs
++import assert from 'node:assert/strict';
++import {readFile,writeFile,mkdir} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {createRequire} from 'node:module';
++import {createServer} from 'node:http';
++const {chromium}=createRequire(import.meta.url)('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const here=new URL('./',import.meta.url),ROOT=new URL('../../../../',here),ASSETS=new URL('site-assets/',ROOT);
++const receipt=JSON.parse(await readFile(new URL('receipt.json',here))),inputs=Object.fromEntries(await Promise.all(receipt.files.map(async r=>[r.file,createHash('sha256').update(await readFile(new URL(r.file,ROOT))).digest('hex')])));
++const html='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/textbook-book.css"><script src="/text-settings.js"></script><script src="/textbook-annotation-model.js"></script><script>window.nobiTextbookAnnotationAPI={};window.NobiTextbookAnnotations={mount(){},unmount(){}};</script><section id="view-textbook"><div id="textbook-app" class="tb-app"></div></section><script src="/vertical-fractions.js"></script><script src="/textbook-book.js"></script>';
++const types={js:'text/javascript',css:'text/css',json:'application/json',svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg',webp:'image/webp',mp4:'video/mp4'};
++const server=createServer(async(req,res)=>{
++ const name=decodeURIComponent(new URL(req.url,'http://fixture.test').pathname.slice(1));
++ if(!name){res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'}).end(html);return;}
++ if(!/^[a-zA-Z0-9._-]+$/.test(name)){res.writeHead(404).end();return;}
++ try{res.writeHead(200,{'Content-Type':types[name.split('.').pop()]||'application/octet-stream'}).end(await readFile(new URL(name,ASSETS)));}catch{res.writeHead(404).end();}
++});
++await new Promise(r=>server.listen(0,'127.0.0.1',r));
++const origin='http://127.0.0.1:'+server.address().port,results=[],errors=[],outside=[];
++let checks=0,browser;const ok=(v,m)=>{assert.ok(v,m);checks++;};const clean=s=>s.replace(/\s/g,'');
++async function settle(page){await page.evaluate(async()=>{
++ await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
++ await Promise.all(document.getAnimations().filter(a=>Number.isFinite(a.effect?.getTiming().iterations)).map(a=>a.finished.catch(e=>{if(e.name!=='AbortError')throw e;})));
++ await Promise.all([...document.querySelectorAll('.tb-spread img')].map(n=>n.decode().catch(()=>{})));
++ await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
++});}
++await mkdir(new URL('screens/',here),{recursive:true});
++try{
++ browser=await chromium.launch({headless:true});
++ for(const [book,title] of [['math1','数学 1'],['geography','社会 地理']]){
++  const context=await browser.newContext(),page=await context.newPage();
++  await page.addInitScript(()=>{Element.prototype.requestFullscreen=undefined;Element.prototype.webkitRequestFullscreen=undefined;});
++  page.on('pageerror',e=>errors.push(e.message));
++  await page.route('**/*',r=>{if(r.request().url().startsWith(origin+'/'))return r.continue();outside.push(r.request().url());return r.abort();});
++  await page.goto(origin);
++  for(const [width,large] of [[390,false],[820,false],[1180,false],[1440,false],[390,true]]){
++   await page.setViewportSize({width,height:900});await page.evaluate(large=>NobiTextSettings.apply(large),large);
++   await page.getByRole('button',{name:'全画面で教科書を開く',exact:true}).click();
++   await page.getByRole('button',{name:title+'を開く',exact:true}).evaluate(b=>b.click());
++   await page.locator('.tb-spread').waitFor({timeout:240000});
++   const target=await page.evaluate(book=>{
++    const b=NobiTextbook._state.book,selected=book==='math1'
++     ?b.pages.flatMap(p=>p.pid==='M1-P051'&&p.tag==='しくみ'?p.blocks.filter(x=>['goal','ol'].includes(x.t)):p.pid==='M1-P052'&&p.tag==='解き方'?p.blocks.filter(x=>['ol','p'].includes(x.t)):[])
++     :b.pages.find(p=>p.n===23).blocks.filter(x=>x.t==='ol');
++    const needles=selected.map(x=>x.annotationAnchor||JSON.stringify(x));
++    const pages=b.phys.filter(p=>needles.some(n=>JSON.stringify(p.blocks||[]).includes(n))).map(p=>p.n);
++    return {pages,texts:selected.flatMap(x=>x.t==='ol'?x.items.map(i=>i.x):[x.x]),total:b.phys.length};
++   },book);
++   ok(target.pages.length>0&&target.texts.length>0,'actual reviewed blocks found after pagination');
++   let shown='';
++   for(const n of target.pages){
++    await page.evaluate(n=>{const form=document.querySelector('.tb-jump');form.querySelector('input').value=String(n);form.requestSubmit();},n);
++    await settle(page);
++    const body=page.locator('.tb-page[data-page="'+n+'"] .tb-body');
++    const m=await body.evaluate(n=>({text:n.textContent,fits:n.scrollHeight<=n.clientHeight+1&&n.scrollWidth<=n.clientWidth+1,stable:[...n.children].every(x=>Number(getComputedStyle(x).opacity)>.99),images:[...n.querySelectorAll('img')].every(x=>x.complete&&x.naturalWidth>0)}));
++    ok(m.fits,book+' '+width+' '+large+' page'+n+' content fits');shown+=' '+m.text;
++    ok(m.stable,'body reveal animations completed before acceptance');ok(m.images,'shown images decoded');
++    ok(await page.locator('.tb-sheet').count()===0,'no answers automatically opened');
++   }
++   for(const text of target.texts)ok(clean(shown).includes(clean(text.replace(/\*\*/g,''))),book+' reviewed explanation visible');
++   const screenshot='screens/'+book+'-'+width+(large?'-large':'')+'.png';await page.screenshot({path:new URL(screenshot,here).pathname});
++   results.push({book,width,large,physicalPages:target.total,reviewedPages:target.pages,screenshot});
++   await page.evaluate(()=>NobiTextbook.leave());
++   console.log(book+' '+width+(large?' large':'')+': approved explanation visible, fits and answers closed');
++  }
++  await context.close();
++ }
++ ok(errors.length===0,errors.join(' | '));ok(outside.length===0,'no outside requests');
++ for(const [file,digest] of Object.entries(inputs))ok(createHash('sha256').update(await readFile(new URL(file,ROOT))).digest('hex')===digest,'source input stable');
++ await writeFile(new URL('book-result.json',here),JSON.stringify({status:'passed',checks,inputs,results,scope:'Actual local two-book renderer/model; revised explanation blocks at four widths and large390, fit/text/closed-answer checks; no grading, real accounts, AI calls or user data.'},null,2)+'\n');
++ console.log('Approved explanation actual book: '+checks+' checks passed');
++}finally{await browser?.close();await new Promise(r=>server.close(r));}
++++ tools/candidates/textbook-final-20261023/explanations-20261025/verify-geography-builder.py
++from pathlib import Path
++import hashlib
++import json
++import runpy
++import shutil
++import sys
++import tempfile
++
++here = Path(__file__).resolve().parent
++root = here.parents[3]
++work_relative = Path('教材整理/Claude_Codex共有/地理全体制作')
++source = root / work_relative
++before = {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
++          for folder in ['原稿', '制作ソース'] for p in (source / folder).glob('*') if p.is_file()}
++with tempfile.TemporaryDirectory(prefix='nobi-geo-source-') as temporary:
++    isolated = Path(temporary)
++    work = isolated / work_relative
++    for folder in ['原稿', '制作ソース']:
++        shutil.copytree(source / folder, work / folder)
++    # The check-mode generator reads existing media presence; production media are never copied/written.
++    (work / 'メディア').symlink_to(source / 'メディア', target_is_directory=True)
++    out = isolated / 'site-assets'
++    out.mkdir()
++    shutil.copyfile(root / 'site-assets/textbook-book-geography.json', out / 'textbook-book-geography.json')
++    module = runpy.run_path(str(root / '教材整理/実装/build-textbook-subject.py'))
++    globals_ = module['build'].__globals__
++    globals_['ROOT'] = isolated
++    globals_['OUT'] = out
++    previous = sys.argv
++    try:
++        sys.argv = ['isolated-source-check', 'geography', '--check']
++        assert module['build']('geography'), 'Generated geography differs from current textbook'
++    finally:
++        sys.argv = previous
++after = {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
++         for folder in ['原稿', '制作ソース'] for p in (source / folder).glob('*') if p.is_file()}
++assert before == after
++(here / 'geography-builder-result.json').write_text(json.dumps({
++    'status': 'passed', 'checks': 2,
++    'scope': 'Real geography builder in temporary source/output tree, check-mode media-presence symlink only; exact current generated book and unchanged original manuscripts/scripts.',
++    'productionSourceWrites': 0
++}, indent=2) + '\n')
++print('Geography isolated builder: exact current book; production source/scripts unchanged')
++++ tools/candidates/textbook-final-20261023/explanations-20261025/apply-reviewed.py
++from pathlib import Path
++import hashlib
++import json
++import shutil
++
++here = Path(__file__).resolve().parent
++root = here.parents[3]
++proposal = json.loads((here.parent / 'calculation-order-proposal.json').read_text())
++sha = lambda value: hashlib.sha256(value).hexdigest()
++rows = []
++
++def save(relative, old, new, changes=None, edits=None):
++    path = root / relative
++    backup = here / 'before' / relative
++    assert path.read_bytes() == old and old != new
++    assert not backup.exists(), 'Do not reapply an already saved explanation delta'
++    backup.parent.mkdir(parents=True, exist_ok=True)
++    backup.write_bytes(old)
++    path.write_bytes(new)
++    rows.append({'file': relative, 'beforeFile': str(backup.relative_to(root)),
++                 'beforeSha256': sha(old), 'afterSha256': sha(new),
++                 **({'jsonChanges': changes} if changes else {}), **({'edits': edits} if edits else {})})
++
++md = root / proposal['source']
++raw = md.read_bytes()
++assert sha(raw) == proposal['sourceSha256']
++text = raw.decode()
++edits = []
++for before, after in proposal['replacements']:
++    assert text.count(before) == 1
++    text = text.replace(before, after, 1)
++    edits.append({'before': before, 'after': after})
++save(proposal['source'], raw, text.encode(), edits=edits)
++
++book_path = 'site-assets/textbook-book-math1.json'
++raw = (root / book_path).read_bytes()
++book = json.loads(raw)
++assert json.dumps(book, ensure_ascii=False, separators=(',', ':')).encode() == raw
++page1 = next(i for i, page in enumerate(book['pages']) if page.get('pid') == 'M1-P051' and page.get('tag') == 'しくみ')
++page2 = next(i for i, page in enumerate(book['pages']) if page.get('pid') == 'M1-P052' and page.get('tag') == '解き方')
++changes = []
++
++def replace_at(path, after):
++    node = book
++    for key in path[:-1]:
++        node = node[key]
++    before = node[path[-1]]
++    assert isinstance(before, str) and before != after
++    node[path[-1]] = after
++    changes.append({'path': path, 'before': before, 'after': after})
++
++list_index = next(i for i, block in enumerate(book['pages'][page1]['blocks']) if block['t'] == 'ol')
++new_list = [line.split('. ', 1)[1] for line in proposal['replacements'][0][1].splitlines()]
++old_list = [line.split('. ', 1)[1] for line in proposal['replacements'][0][0].splitlines()]
++assert [x['x'] for x in book['pages'][page1]['blocks'][list_index]['items']] == old_list
++for i, value in enumerate(new_list):
++    replace_at(['pages', page1, 'blocks', list_index, 'items', i, 'x'], value)
++assert book['pages'][page2]['blocks'][1]['items'][0]['x'] == proposal['replacements'][1][0][3:]
++replace_at(['pages', page2, 'blocks', 1, 'items', 0, 'x'], proposal['replacements'][1][1][3:])
++assert book['pages'][page2]['blocks'][2]['x'] == proposal['replacements'][2][0]
++replace_at(['pages', page2, 'blocks', 2, 'x'], proposal['replacements'][2][1])
++goal_index = next(i for i, block in enumerate(book['pages'][page1]['blocks']) if block['t'] == 'goal')
++old_goal = book['pages'][page1]['blocks'][goal_index]['x']
++new_goal = old_goal.replace('（累乗→乗除→加減）', '（かっこの中→累乗→乗除→加減）')
++replace_at(['pages', page1, 'blocks', goal_index, 'x'], new_goal)
++save(book_path, raw, json.dumps(book, ensure_ascii=False, separators=(',', ':')).encode(), changes=changes)
++
++extra_path = str(Path(proposal['source']).with_name('本の追加.json'))
++raw = (root / extra_path).read_bytes()
++assert raw.decode().count(old_goal) == 1
++save(extra_path, raw, raw.decode().replace(old_goal, new_goal, 1).encode(), edits=[{'before': old_goal, 'after': new_goal}])
++
++geo_book_path = 'site-assets/textbook-book-geography.json'
++raw = (root / geo_book_path).read_bytes()
++geo = json.loads(raw)
++assert json.dumps(geo, ensure_ascii=False, separators=(',', ':')).encode() == raw
++path = ['pages', 22, 'blocks', 3, 'items', 0, 'x']
++old = geo['pages'][22]['blocks'][3]['items'][0]['x']
++assert old == '赤道から極に向かって「熱→乾→温→冷→寒」の順に並ぶイメージ。'
++new = '赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。'
++geo['pages'][22]['blocks'][3]['items'][0]['x'] = new
++save(geo_book_path, raw, json.dumps(geo, ensure_ascii=False, separators=(',', ':')).encode(), changes=[{'path': path, 'before': old, 'after': new}])
++geo_source = '教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py'
++raw = (root / geo_source).read_bytes()
++assert raw.decode().count(old) == 1
++save(geo_source, raw, raw.decode().replace(old, new, 1).encode(), edits=[{'before': old, 'after': new}])
++
++receipt = {'version': 1, 'status': 'applied locally; preservation/browser/source generation checks pending',
++           'approval': 'User explicitly authorized all evidence-backed corrections to confusing/incorrect explanations and improvements to clarity/fun; not only the geography sentence.',
++           'scope': 'Math chapter1 explanatory text/order/goal and geography climate tip only. All other JSON fields and all problems/answers/example numbers preserved.',
++           'files': rows, 'mathVideo': 'Existing V07 already puts brackets first; no regeneration.',
++           'geographyVideo': 'Source scripts and existing source image contain former text; actual current MP4 verification and any affected-only repair remain pending.',
++           'wholeBefore': 'tools/candidates/textbook-ai-20261025/post-access-full-attempt1.json',
++           'references': ['https://hosho.ees.hokudai.ac.jp/tsuyu/top/dct/climate-j.html'],
++           'proofs': []}
++(here / 'receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n')
++print('Applied five exact source/book changes. Content/media integration verification still pending.')
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/build.py
++from pathlib import Path
++import hashlib
++import json
++import os
++import runpy
++import shutil
++import subprocess
++import wave
++
++here = Path(__file__).resolve().parent
++root = here.parents[4]
++share = root / '教材整理/Claude_Codex共有'
++generic = share / '教科動画'
++engine = share / '数学全体制作/メディア/制作ソース/動画エンジン/engine.js'
++settings_file = share / '数学全体制作/メディア/制作ソース/音声共有/設定.json'
++settings = json.loads(settings_file.read_text())
++assert settings['voice'] == 'Kyoko' and settings['rate'] == 175 and settings['profile'] == 'clear'
++binary = share / '数学全体制作/メディア/制作ソース/制作ツール/imageio_ffmpeg/binaries/ffmpeg-macos-x86_64-v7.1'
++source = share / '地理全体制作/制作ソース/G-C2-S1-VP.json'
++original = json.loads(source.read_text())
++book = json.loads((root / 'site-assets/textbook-book-geography.json').read_text())
++approved = book['pages'][22]['blocks'][3]['items'][0]['x']
++assert approved == '赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。'
++assert original['steps'][4]['say'].startswith('かんたんにやるコツ。赤道から極')
++assert not (here / 'candidate.mp4').exists(), 'Do not regenerate a completed candidate'
++original['steps'] = original['steps'][:4] + [
++    {'say': '赤道付近は暑く、極に近づくほど寒くなる傾向があります。',
++     'cap': '赤道付近は暑く、極に近づくほど寒くなる傾向があります。',
++     'read': 'せきどうふきんは暑く、きょくに近づくほど寒くなる傾向があります。', 'hold': 0.35},
++    {'say': '乾燥帯は雨の少なさにも注目して見分けましょう。',
++     'cap': '乾燥帯は雨の少なさにも注目して見分けましょう。',
++     'read': 'かんそうたいは雨の少なさにも注目して見分けましょう。', 'hold': 0.35}
++] + original['steps'][5:]
++assert all(s['say'] == s['cap'] for s in original['steps'])
++(here / 'script.json').write_text(json.dumps(original, ensure_ascii=False, indent=2) + '\n')
++module = runpy.run_path(str(generic / 'make.py'))
++metadata = {'kind': 'VP', 'chip': '地理', 'title': '世界の気候と暮らし',
++            'steps': [{'role': 'pt', 'text': s['say']} for s in original['steps']]}
++relative = lambda p: os.path.relpath(p, here)
++(here / 'scene.html').write_text('<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>\n'
++    + '<script src="' + relative(engine) + '"></script><script>window.META=' + json.dumps(metadata, ensure_ascii=False) + ';</script>'
++    + '<script src="' + relative(generic / 'template.js') + '"></script><script src="scene.js"></script>\n')
++audio = here / 'audio'
++audio.mkdir(exist_ok=True)
++steps = []
++clips = []
++at = settings['head']
++for i, s in enumerate(original['steps']):
++    raw = audio / f'{i:02}.wav'
++    # Pronunciation overrides are speech-only; visible captions keep the exact canonical say.
++    reading = module['yomi_ja'](s.get('read') or s['say'], False)
++    subprocess.run(['say', '-v', settings['voice'], '-r', str(settings['rate']), '-o', str(raw), '--data-format=LEI16@24000', reading], check=True, capture_output=True, timeout=45)
++    filtered = audio / f'{i:02}-clear.wav'
++    subprocess.run([str(binary), '-nostdin', '-v', 'error', '-y', '-i', str(raw), '-af', settings['filter'], '-ar', '24000', '-ac', '1', '-c:a', 'pcm_s16le', str(filtered)], check=True, capture_output=True)
++    with wave.open(str(filtered)) as f:
++        duration = f.getnframes() / f.getframerate()
++    assert duration >= max(0.1, len(reading) * 0.025)
++    end = at + duration + settings['gap'] + s.get('hold', 0.35)
++    steps.append({'start': round(at, 3), 'speak': round(duration, 3), 'end': round(end, 3), 'say': s['say'], 'cap': s['cap'], 'yomi': reading})
++    clips.append((filtered, at))
++    at = end
++steps[0]['start'] = 0
++timeline = {'total': round(at + settings['tail'], 3), 'head': settings['head'], 'steps': steps, 'credit': ''}
++(here / 'timeline.json').write_text(json.dumps(timeline, ensure_ascii=False, indent=2) + '\n')
++subprocess.run(['node', str(generic / 'render_fast.mjs'), str(here / 'scene.html'), str(here / 'timeline.json'), str(here / 'silent.mp4'), str(binary), '30', ''], check=True, capture_output=True, timeout=1200)
++args = [str(binary), '-nostdin', '-v', 'error', '-y', '-i', str(here / 'silent.mp4')]
++for clip, _ in clips:
++    args += ['-i', str(clip)]
++filters = ''.join(f'[{i+1}:a]adelay={round(start*1000)}|{round(start*1000)}[a{i}];' for i, (_, start) in enumerate(clips))
++filters += ''.join(f'[a{i}]' for i in range(len(clips))) + f'amix=inputs={len(clips)}:normalize=0:duration=longest,apad=whole_dur={timeline["total"]}[out]'
++args += ['-filter_complex', filters, '-map', '0:v', '-map', '[out]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '96k', '-t', str(timeline['total']), '-movflags', '+faststart', str(here / 'candidate.mp4')]
++subprocess.run(args, check=True, capture_output=True, timeout=300)
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++result = {'status': 'candidate generated, not yet integrated/AV/visual approved', 'id': 'G-C2-S1-VP', 'settingsFile': str(settings_file.relative_to(root)),
++          'settingsSha256': sha(settings_file), 'voice': settings['voice'], 'rate': settings['rate'], 'profile': settings['profile'], 'fps': 30,
++          'duration': timeline['total'], 'steps': len(steps), 'inputs': {str(p.relative_to(root)): sha(p) for p in [source, engine, generic / 'template.js', generic / 'render_fast.mjs', here / 'scene.js', here / 'script.json', here / 'timeline.json']},
++          'movieSha256': sha(here / 'candidate.mp4'), 'scope': 'One actual confirmed defective geography movie only. Original source/media untouched; all7 say/cap pairs identical. No source engine edits, external APIs, user data or service termination.'}
++(here / 'generation-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
++print('Generated corrected geography candidate:', timeline['total'], 'seconds; original movie unchanged')
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/verify-media.py
++from pathlib import Path
++import hashlib
++import json
++import math
++import re
++import subprocess
++import wave
++
++here = Path(__file__).resolve().parent
++root = here.parents[4]
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++generation = json.loads((here / 'generation-result.json').read_text())
++movie = here / 'candidate.mp4'
++assert sha(movie) == generation['movieSha256']
++for file, digest in generation['inputs'].items():
++    if sha(root / file) == digest:
++        continue
++    promotion = json.loads((here / 'integration.json').read_text())
++    row = next(r for r in promotion['files'] if r['file'] == file)
++    assert file == '教材整理/Claude_Codex共有/地理全体制作/制作ソース/G-C2-S1-VP.json'
++    assert row['beforeSha256'] == digest and sha(root / row['beforeFile']) == digest
++    assert sha(root / file) == row['afterSha256']
++assert sha(root / generation['settingsFile']) == generation['settingsSha256']
++output = here / 'media-result.json'
++if output.exists():
++    prior = json.loads(output.read_text())
++    assert prior['movieSha256'] == sha(movie)
++    assert all(sha(root / file) == digest for file, digest in prior['outputs'].items())
++    print('Existing exact media verification reused; no duplicate decode/extraction')
++    raise SystemExit(0)
++binary = root / '教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/制作ツール/imageio_ffmpeg/binaries/ffmpeg-macos-x86_64-v7.1'
++script = json.loads((here / 'script.json').read_text())
++timeline = json.loads((here / 'timeline.json').read_text())
++assert len(script['steps']) == len(timeline['steps']) == 7
++audio = []
++for i, (source, step) in enumerate(zip(script['steps'], timeline['steps'])):
++    assert source['say'] == source['cap'] == step['say'] == step['cap']
++    clip = here / 'audio' / f'{i:02}-clear.wav'
++    with wave.open(str(clip)) as f:
++        assert f.getframerate() == 24000 and f.getnchannels() == 1 and f.getsampwidth() == 2
++        duration = f.getnframes() / f.getframerate()
++    assert abs(duration - step['speak']) <= 0.001
++    assert step['end'] - step['start'] >= duration
++    audio.append({'step': i, 'seconds': duration, 'file': str(clip.relative_to(root)), 'sha256': sha(clip)})
++assert timeline['total'] <= 60
++decoded = subprocess.run([str(binary), '-nostdin', '-hide_banner', '-xerror', '-err_detect', 'explode', '-i', str(movie), '-map', '0', '-f', 'null', '-'], capture_output=True, text=True, check=True)
++(here / 'full-av-decode.log').write_text(decoded.stderr)
++assert re.search(r'Video: h264[^\n]*1280x720[^\n]*30 fps', decoded.stderr)
++assert re.search(r'Audio: aac[^\n]*24000 Hz[^\n]*mono', decoded.stderr)
++frames_count = re.findall(r'frame=\s*(\d+)', decoded.stderr)
++assert frames_count and int(frames_count[-1]) == round(timeline['total'] * 30)
++frames = here / 'actual-frames'
++frames.mkdir()
++subprocess.run([str(binary), '-nostdin', '-v', 'error', '-i', str(movie), '-vf', 'select=not(mod(n\,45))', '-vsync', 'vfr', str(frames / '%03d.png')], capture_output=True, check=True)
++shots = sorted(frames.glob('*.png'))
++expected = math.floor((int(frames_count[-1]) - 1) / 45) + 1
++assert len(shots) == expected
++tail_time = (int(frames_count[-1]) - 1) / 30
++subprocess.run([str(binary), '-nostdin', '-v', 'error', '-ss', str(tail_time), '-i', str(movie), '-frames:v', '1', str(frames / 'tail.png')], capture_output=True, check=True)
++result = {'status': 'technical checks passed; every-scene direct visual review pending', 'id': 'G-C2-S1-VP',
++          'movieSha256': sha(movie), 'fullAVDecode': 'passed', 'fps': 30, 'frames': int(frames_count[-1]),
++          'seconds': timeline['total'], 'voice': 'Kyoko', 'rate': 175, 'profile': 'clear', 'captions': 'all7 canonical say/cap pairs identical',
++          'audio': audio, 'samples': [{'time': i * 1.5, 'file': str(p.relative_to(root)), 'sha256': sha(p)} for i, p in enumerate(shots)]
++                     + [{'time': tail_time, 'file': str((frames / 'tail.png').relative_to(root)), 'sha256': sha(frames / 'tail.png')}],
++          'outputs': {str(p.relative_to(root)): sha(p) for p in [*shots, frames / 'tail.png', here / 'full-av-decode.log']},
++          'scope': 'Candidate only. Actual full AV decode and actual encoded frames every1.5s plus tail; no publication, integration, real account use or unchanged-media redecoding.'}
++output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
++print('Corrected geography full AV/30fps/audio lengths/caption identity passed; actual sampled images:', len(result['samples']))
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/verify-current.py
++from pathlib import Path
++import hashlib
++import json
++
++here = Path(__file__).resolve().parent
++root = here.parents[4]
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++integration = json.loads((here / 'integration.json').read_text())
++generation = json.loads((here / 'generation-result.json').read_text())
++technical = json.loads((here / 'media-result.json').read_text())
++visual = json.loads((here / 'visual-review.json').read_text())
++assert integration['id'] == 'G-C2-S1-VP' and len(integration['files']) == 6
++changed = {r['file']: r for r in integration['files']}
++checks = 0
++for row in integration['files']:
++    assert sha(root / row['file']) == row['afterSha256']
++    if row['beforeFile']:
++        assert sha(root / row['beforeFile']) == row['beforeSha256']
++    checks += 1
++for file, digest in generation['inputs'].items():
++    # Canonical script was intentionally promoted after rendering. Its preserved predecessor
++    # is the original generation input; all other renderer/candidate sources remain exact.
++    if file in changed:
++        row = changed[file]
++        assert row['beforeFile'] and row['beforeSha256'] == digest
++        assert sha(root / row['beforeFile']) == digest
++    else:
++        assert sha(root / file) == digest
++    checks += 1
++assert sha(root / generation['settingsFile']) == generation['settingsSha256']
++assert sha(here / 'candidate.mp4') == generation['movieSha256'] == technical['movieSha256'] == visual['movieSha256'] == integration['candidateMovieSha256']
++assert sha(here / 'visual-review.json') == integration['actualSceneVisualProofSha256']
++assert technical['fullAVDecode'] == 'passed' and technical['fps'] == 30 and technical['frames'] == 1150
++assert technical['captions'] == 'all7 canonical say/cap pairs identical'
++assert visual['status'] == 'all27 actual encoded video samples directly viewed' and len(visual['samples']) == 27
++for file, digest in technical['outputs'].items():
++    assert sha(root / file) == digest
++    checks += 1
++script_file = next(root / r['file'] for r in integration['files'] if r['file'].endswith('/G-C2-S1-VP.json') and '/制作ソース/' in r['file'])
++script = json.loads(script_file.read_text())
++renderer = script.pop('renderer')
++assert script == json.loads((here / 'script.json').read_text())
++assert sha(root / renderer['scene']) == sha(here / 'scene.js')
++book = json.loads((root / 'site-assets/textbook-book-geography.json').read_text())
++references = [b for p in book['pages'] for b in p.get('blocks', []) if b.get('id') == 'G-C2-S1-VP']
++assert len(references) == 1 and references[0]['src'] == '/textbook-book-geography-g-c2-s1-vp.mp4'
++assert sha(root / 'site-assets/textbook-book-geography-g-c2-s1-vp.mp4') == technical['movieSha256']
++checks += 7
++result = {'status': 'passed', 'checks': checks,
++          'movieSha256': technical['movieSha256'], 'visualSamples': 27,
++          'currentInputs': {r['file']: r['afterSha256'] for r in integration['files']},
++          'scope': 'Current source/copy/reference exact SHA and preserved actual AV/30fps/audio/1.5s visual proof. The intentional script promotion is validated against its generation predecessor. No duplicate AV decode or media generation.'}
++(here / 'current-result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
++print('Current corrected geography media:', checks, 'checks passed; no duplicate AV decode')
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/integrate.py
++from pathlib import Path
++import hashlib
++import json
++import os
++
++here = Path(__file__).resolve().parent
++root = here.parents[4]
++sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
++old = json.loads((here.parent / 'geography-original-frame.json').read_text())
++generation = json.loads((here / 'generation-result.json').read_text())
++media = json.loads((here / 'media-result.json').read_text())
++review = json.loads((here / 'visual-review.json').read_text())
++assert review['status'] == 'all27 actual encoded video samples directly viewed'
++assert len(review['samples']) == 27
++assert sha(here / 'candidate.mp4') == review['movieSha256'] == media['movieSha256'] == generation['movieSha256']
++assert sha(root / old['source']) == old['sourceSha256']
++assert sha(root / old['bookCopy']) == old['bookCopySha256'] == old['sourceSha256']
++assert not (here / 'integration.json').exists(), 'Do not repeat an already completed integration'
++share = root / '教材整理/Claude_Codex共有'
++source = share / '地理全体制作/制作ソース/G-C2-S1-VP.json'
++script = json.loads((here / 'script.json').read_text())
++scene_js = source.with_name('G-C2-S1-VP-corrected.js')
++assert not scene_js.exists(), 'Preserve any existing independently created scene source'
++html = share / '教科動画/場面/G-C2-S1-VP.html'
++timeline = share / '教科動画/時間割/G-C2-S1-VP.json'
++engine = share / '数学全体制作/メディア/制作ソース/動画エンジン/engine.js'
++template = share / '教科動画/template.js'
++metadata = {'kind': 'VP', 'chip': '地理', 'title': '世界の気候と暮らし', 'steps': [{'role': 'pt', 'text': s['say']} for s in script['steps']]}
++relative = lambda p: os.path.relpath(p, html.parent)
++html_text = '<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>\n'
++html_text += '<script src="' + relative(engine) + '"></script><script>window.META=' + json.dumps(metadata, ensure_ascii=False) + ';</script>'
++html_text += '<script src="' + relative(template) + '"></script><script src="' + relative(scene_js) + '"></script>\n'
++script['renderer'] = {'scene': str(scene_js.relative_to(root)), 'html': str(html.relative_to(root)),
++                      'recipe': str((here / 'build.py').relative_to(root)),
++                      'reproduction': 'Use the preserved before/source snapshot when reproducing this guarded one-time recipe; default generic make.py does not contain the corrected scene.'}
++changes = [
++    (source, (json.dumps(script, ensure_ascii=False, indent=2) + '\n').encode()),
++    (scene_js, (here / 'scene.js').read_bytes()),
++    (html, html_text.encode()),
++    (timeline, (here / 'timeline.json').read_bytes()),
++    (root / old['source'], (here / 'candidate.mp4').read_bytes()),
++    (root / old['bookCopy'], (here / 'candidate.mp4').read_bytes())
++]
++rows = []
++for file, after in changes:
++    relative_file = str(file.relative_to(root))
++    if file.exists():
++        before = here / 'before' / relative_file
++        assert not before.exists()
++        before.parent.mkdir(parents=True, exist_ok=True)
++        before.write_bytes(file.read_bytes())
++        row = {'file': relative_file, 'beforeFile': str(before.relative_to(root)), 'beforeSha256': sha(before)}
++    else:
++        row = {'file': relative_file, 'beforeFile': None, 'beforeSha256': None}
++    rows.append({**row, 'afterSha256': hashlib.sha256(after).hexdigest()})
++for (file, after), row in zip(changes, rows):
++    file.write_bytes(after)
++    assert sha(file) == row['afterSha256']
++result = {'status': 'integrated locally; actual book playback check pending', 'id': 'G-C2-S1-VP', 'files': rows,
++          'candidateMovieSha256': media['movieSha256'], 'actualSceneVisualProofSha256': sha(here / 'visual-review.json'),
++          'scope': 'Only confirmed defective geography VP script/scene/timeline/movie and its existing book copy. Other videos, shared engine/template/settings, book questions/answers and account data unchanged.',
++          'publication': 'No publish, commit or deletion. Previous source/media retained in before/.',
++          'reproductionInput': next(r['beforeFile'] for r in rows if r['file'] == str(source.relative_to(root)))}
++(here / 'integration.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
++print('Corrected geography movie/script/scene integrated locally; original and book copy SHA match; playback verification pending')
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/verify-playback.mjs
++import assert from 'node:assert/strict';
++import {readFile,writeFile,mkdir} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {createRequire} from 'node:module';
++import {createServer} from 'node:http';
++const {chromium}=createRequire(import.meta.url)('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const here=new URL('./',import.meta.url),ROOT=new URL('../../../../../',here),ASSETS=new URL('site-assets/',ROOT),hash=b=>createHash('sha256').update(b).digest('hex');
++const integration=JSON.parse(await readFile(new URL('integration.json',here))),timeline=JSON.parse(await readFile(new URL('timeline.json',here)));
++const inputs={};for(const file of ['site-assets/textbook-book.js','site-assets/textbook-book-geography.json',...integration.files.map(r=>r.file)])inputs[file]=hash(await readFile(new URL(file,ROOT)));
++assert.equal(inputs['site-assets/textbook-book-geography-g-c2-s1-vp.mp4'],integration.candidateMovieSha256);
++const html='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/textbook-book.css"><div id="textbook-app" class="tb-app"></div><script src="/textbook-book.js"></script>';
++const types={js:'text/javascript',css:'text/css',json:'application/json',svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg',webp:'image/webp',mp4:'video/mp4'};
++let rangeRequests=0;
++const server=createServer(async(req,res)=>{
++ const name=decodeURIComponent(new URL(req.url,'http://fixture.test').pathname.slice(1));
++ if(!name){res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'}).end(html);return;}
++ if(!/^[a-zA-Z0-9._-]+$/.test(name)){res.writeHead(404).end();return;}
++ try{
++  const bytes=await readFile(new URL(name,ASSETS)),headers={'Content-Type':types[name.split('.').pop()]||'application/octet-stream','Accept-Ranges':'bytes'};
++  const match=/^bytes=(\d+)-(\d*)$/.exec(req.headers.range||'');
++  if(req.headers.range&&!match){res.writeHead(416,{'Content-Range':'bytes */'+bytes.length}).end();return;}
++  if(match){const start=Number(match[1]),end=Math.min(bytes.length-1,match[2]?Number(match[2]):bytes.length-1);if(start>end){res.writeHead(416,{'Content-Range':'bytes */'+bytes.length}).end();return;}rangeRequests++;res.writeHead(206,{...headers,'Content-Length':end-start+1,'Content-Range':`bytes ${start}-${end}/${bytes.length}`}).end(bytes.subarray(start,end+1));}
++  else res.writeHead(200,{...headers,'Content-Length':bytes.length}).end(bytes);
++ }catch{res.writeHead(404).end();}
++});
++await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port;
++let browser,checks=0;const results=[],outside=[],errors=[],ok=(v,m)=>{assert.ok(v,m);checks++;};
++await mkdir(new URL('playback-screens/',here),{recursive:true});
++async function seek(page,time){
++ const painted=await page.evaluate(time=>new Promise((resolve,reject)=>{
++  const video=window.examinedMovie;video.pause();let callback;
++  const timer=setTimeout(()=>{video.cancelVideoFrameCallback(callback);reject(Error('target video frame was not painted'));},30000);
++  const frame=(_,metadata)=>{if(Math.abs(metadata.mediaTime-time)<.15){clearTimeout(timer);resolve(metadata.mediaTime);}else callback=video.requestVideoFrameCallback(frame);};
++  callback=video.requestVideoFrameCallback(frame);video.currentTime=time;
++ }),time);
++ ok(Math.abs(painted-time)<.15,'decoded target video frame actually submitted for painting');
++ await page.waitForFunction(t=>!examinedMovie.seeking&&Math.abs(examinedMovie.currentTime-t)<.12&&examinedMovie.readyState>=2,time,{timeout:30000});
++ await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
++}
++try{
++ browser=await chromium.launch({headless:true});const page=await browser.newPage();
++ await page.addInitScript(()=>{Element.prototype.requestFullscreen=undefined;Element.prototype.webkitRequestFullscreen=undefined;});
++ page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>{if(r.request().url().startsWith(origin+'/'))return r.continue();outside.push(r.request().url());return r.abort();});
++ await page.goto(origin);
++ for(const width of [390,820,1180,1440]){
++  await page.setViewportSize({width,height:900});await page.getByRole('button',{name:'全画面で教科書を開く',exact:true}).click();await page.getByRole('button',{name:'社会 地理を開く',exact:true}).evaluate(b=>b.click());await page.locator('.tb-spread').waitFor({timeout:240000});
++  const n=await page.evaluate(()=>NobiTextbook._state.book.phys.find(p=>p.blocks?.some(b=>b.id==='G-C2-S1-VP'))?.n);ok(Number.isInteger(n),'existing movie slot found in current book');
++  await page.evaluate(n=>{const f=document.querySelector('.tb-jump');f.querySelector('input').value=String(n);f.requestSubmit();},n);
++  await page.locator('video[src*="geography-g-c2-s1-vp.mp4"]').waitFor();
++  await page.evaluate(()=>{window.examinedMovie=document.querySelector('video[src*="geography-g-c2-s1-vp.mp4"]');examinedMovie.muted=true;});
++  await page.waitForFunction(()=>examinedMovie.readyState>=2&&Number.isFinite(examinedMovie.duration),null,{timeout:30000});
++  const meta=await page.evaluate(()=>({duration:examinedMovie.duration,width:examinedMovie.videoWidth,height:examinedMovie.videoHeight,src:examinedMovie.currentSrc}));
++  ok(Math.abs(meta.duration-timeline.total)<.15,'actual corrected duration loaded');ok(meta.width===1280&&meta.height===720,'actual movie decoded, no still-image substitute');ok(meta.src===origin+'/textbook-book-geography-g-c2-s1-vp.mp4','current existing book reference used');
++  await page.evaluate(()=>examinedMovie.play());await page.waitForFunction(()=>examinedMovie.currentTime>.2&&!examinedMovie.paused,null,{timeout:10000});ok(true,'actual playback time advances');
++  const tip=timeline.steps[4].start+1;await seek(page,tip);
++  await page.evaluate(async()=>{await Promise.all(document.getAnimations().filter(a=>Number.isFinite(a.effect?.getTiming().iterations)).map(a=>a.finished.catch(()=>{})));});
++  const box=await page.evaluate(()=>{const r=examinedMovie.getBoundingClientRect(),b=examinedMovie.closest('.tb-body').getBoundingClientRect();return {fits:r.width>0&&r.left>=b.left-1&&r.right<=b.right+1&&r.top>=b.top-1&&r.bottom<=b.bottom+1};});ok(box.fits,'movie fits the actual page');
++  const screenshot='playback-screens/'+width+'.png';await page.screenshot({path:new URL(screenshot,here).pathname});
++  await seek(page,meta.duration-.25);ok(await page.evaluate(()=>examinedMovie.readyState>=2&&!examinedMovie.error),'tail decodes inside book');
++  await seek(page,tip);await page.evaluate(()=>examinedMovie.play());await page.waitForFunction(t=>examinedMovie.currentTime>t+.15&&!examinedMovie.paused,tip,{timeout:10000});
++  await page.evaluate(()=>NobiTextbook.leave());ok(await page.evaluate(()=>examinedMovie.paused&&!examinedMovie.isConnected),'leaving book stops active movie');
++  results.push({width,physicalPage:n,duration:meta.duration,screenshot});console.log(width+': corrected actual book movie play/seek/tail/leave-stop passed');
++ }
++ ok(errors.length===0,errors.join('|'));ok(outside.length===0,'all requests stayed in isolated localhost fixture');ok(rangeRequests>0,'actual browser byte-range requests served');
++ for(const [file,digest]of Object.entries(inputs))ok(hash(await readFile(new URL(file,ROOT)))===digest,'input remained stable');
++ await writeFile(new URL('playback-result.json',here),JSON.stringify({status:'passed',checks,inputs,results,rangeRequests,movieSha256:integration.candidateMovieSha256,scope:'Actual current geography book movie at4widths; real decode/play/time/seek/end/leave-stop. Synthetic local reader only; no login, grading, real data or outside requests.'},null,2)+'\n');
++ console.log('Corrected geography book playback: '+checks+' checks passed');
++}finally{await browser?.close();await new Promise(r=>server.close(r));}
++++ tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/scene.js
++// One corrected geography movie only; shared engines/templates remain unchanged.
++const labels=['熱帯','乾燥帯','温帯','冷帯','寒帯'];
++function line(s,x,y,size=40,col=C.ink,align='center'){text(s,x,y,size,col,align,800);}
++function card(x,y,w,h,col=C.card){rbox(x,y,w,h,20,col,'#c9d6e8',3);}
++function thermometer(x,y,warm,a){
++ g.strokeStyle=C.ink;g.lineWidth=5;g.beginPath();g.roundRect(x-15,y,30,160,15);g.stroke();
++ g.fillStyle=warm?C.orange:C.blue;g.beginPath();g.arc(x,y+175,26,0,Math.PI*2);g.fill();
++ const height=(warm?130:40)*a;g.fillRect(x-9,y+150-height,18,height+18);
++}
++window.SCENE={caption:true,draw({i,p,t}){
++ const a=seg(p,0,.25);hdr('世界の気候と暮らし','地理');
++ if(i===0){
++  line('気温と雨から、暮らしの工夫を探そう',640,175,46);
++  nobi(640,415,1.1,{t,wave:true});
++ }else if(i===1){
++  line('五つの気候帯を比べよう',640,150,46);
++  labels.forEach((s,k)=>{const u=seg(p,k*.07,k*.07+.18),x=64+k*233;g.globalAlpha=u;
++   card(x,220+(1-u)*18,220,140,k===1?'#fff6d6':'#e8f0fa');line(s,x+110,305+(1-u)*18,42);g.globalAlpha=1;
++  });
++  line('気温と、雨の多さ・少なさに注目',640,455,40);
++ }else if(i===2){
++  line('雨温図は「線」と「棒」を見分ける',640,145,44);
++  const xs=[225,385,545,705,865,1025],heights=[70,120,150,190,115,80];
++  g.strokeStyle=C.dim;g.lineWidth=4;g.beginPath();g.moveTo(150,225);g.lineTo(150,510);g.lineTo(1120,510);g.stroke();
++  xs.forEach((x,k)=>{g.fillStyle=C.sky;g.fillRect(x-33,510-heights[k]*a,66,heights[k]*a);});
++  const yy=[370,310,250,220,285,355];g.strokeStyle=C.orange;g.lineWidth=7;g.beginPath();
++  xs.forEach((x,k)=>{const y=510-(510-yy[k])*a;k?g.lineTo(x,y):g.moveTo(x,y);});g.stroke();
++  line('折れ線＝気温（℃）',380,205,34,C.orange);line('棒＝降水量（mm）',910,205,34,C.blue);
++  line('読み方のイメージ',640,555,32);
++ }else if(i===3){
++  line('その土地で暮らすための工夫',640,160,46);
++  ['衣服','食事','住まい','宗教'].forEach((s,k)=>{const u=seg(p,k*.07,k*.07+.2),x=120+k*270;
++   g.globalAlpha=u;card(x,250+(1-u)*20,230,140);line(s,x+115,335+(1-u)*20,42);g.globalAlpha=1;
++  });
++  line('地域ごとの違いと、理由を比べよう',640,480,40);
++ }else if(i===4){
++  line('極に近づくほど、寒くなる傾向',640,150,46);
++  thermometer(260,260,true,a);thermometer(1020,260,false,a);
++  line('赤道付近',260,225,38,C.orange);line('極の近く',1020,225,38,C.blue);
++  arrow(390,350,890,350,C.blue);line('気温の傾向',640,310,38);
++ }else if(i===5){
++  line('乾燥帯は「雨」にも注目',640,155,48);
++  card(170,230,940,260,'#fff6d6');
++  for(let k=0;k<6;k++){g.fillStyle=C.sky;g.fillRect(260+k*145,380-45*a,36,45*a);}
++  line('雨が少ない地域',640,445,42);line('気温の並びだけで決めない',640,545,36);
++ }else{
++  line('気温と雨から、暮らしを考えよう！',640,160,46);
++  nobi(640,410,1.1,{t,wave:true});
++ }
++ g.globalAlpha=1;
++}};

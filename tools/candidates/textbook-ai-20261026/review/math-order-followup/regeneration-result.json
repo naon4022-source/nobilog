@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "checks": 618,
+  "questions": 325,
+  "explanationChanges": 132,
+  "guideChanges": 1,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/確認済み/drill-math-1-signedcalc.json",
+      "sha256": "e5c162a9845328b3817b3917f72d82be768e3f44e122efcca466bc251efca10f"
+    },
+    {
+      "file": "教材整理/確認済み/drill-math-1-signedcalc.json",
+      "sha256": "500fb31b9f3457a6f07e6e06ce0320dc0b84905c0a10d41d5e97d46ce2b2a8a4"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/確認済み/workbook-math-1-calc1.json",
+      "sha256": "86ddaad2a51ef24a6d39510c59eadba8cacdac1a1a35331766c208edb4c45777"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-calc1.json",
+      "sha256": "909e935371202c96c077ffcadb00e9d36f3729c135d5ce036bc20f5b782b0a40"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/確認済み/workbook-math-1-calc2.json",
+      "sha256": "5e4b18cc1d7ce8821666601a9d42af6a1089c7ddc7b1baa95dcc1c862cfa6447"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-calc2.json",
+      "sha256": "45322297087e16ee4ad999c7f13bc9cab03793bb75b56c2957eea4b7955b3b2b"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/確認済み/workbook-math-1-review.json",
+      "sha256": "eced3bfa1c057474a207a018d8138f57e857566bb3e19d38887e2f255a9c2b32"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-review.json",
+      "sha256": "d259235fcfe3f513374a1b55a6c8bdfbd339bd9d56f4e2fa3bd928710da03273"
+    },
+    {
+      "file": "教材整理/実装/mathbank/bank.py",
+      "sha256": "77886bc48628f90894280c2b7add970426f4c22f480c1afd40112c8be66a52ac"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/実装/mathbank/bank.py",
+      "sha256": "a51b7e228d16090365eb877a528be1844f2716f0d66c974ae3682f15d9730f3b"
+    },
+    {
+      "file": "教材整理/実装/mathbank/expr.py",
+      "sha256": "09310215786f3562f624d61836aff876a09dea08071b94bb9b7900433746726f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/実装/mathbank/expr.py",
+      "sha256": "dd3f60f22069dc67d0aa6b5406e55282ce4928e8ef937d41ac08134c2b3eb273"
+    },
+    {
+      "file": "教材整理/実装/drillbank/mdrill_a.py",
+      "sha256": "439f40bd52414dbf05f9612189cf7ebc363c718ccc197d339596fd28f769542d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate/教材整理/実装/drillbank/mdrill_a.py",
+      "sha256": "a87c02cacabfcefab44bfef5fc0597c2b0ab1043f1f8aa6a77c361bca74c533f"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "cda189685dd39868150fcc79fccb2844e0d4ec8dd5f2945f6b896897b40f7e36"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "ead41c78f047691ece39ac0a7f4d774c6f746cc5b39d684235abdd31e7db0932"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/verify-candidate.py",
+      "sha256": "d8bee61aba7a1c394d4231a6c94d3b310ee80594d2d04200e0d10419b75342ab"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/candidate-result.json",
+      "sha256": "91827bd24327ea1cc45304f365d44b9dbe878a1c9a96511242f4d70164c0d80f"
+    }
+  ],
+  "scope": "Candidate only. Real four-unit generator output versus current canonical reviewed JSON and matching browser/server package. Every field including prompts, answers, near answers, numbers, sources, order and metadata retained except132 explanation texts and one explicitly corrected guide. Independent AST/Fraction arithmetic proof bound. Main source unchanged; no main/browser/full integration claim."
+}

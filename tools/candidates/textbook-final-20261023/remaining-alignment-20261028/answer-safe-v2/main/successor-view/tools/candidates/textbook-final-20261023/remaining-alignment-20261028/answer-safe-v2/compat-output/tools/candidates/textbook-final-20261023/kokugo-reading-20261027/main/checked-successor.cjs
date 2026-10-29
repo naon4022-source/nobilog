@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/compat-output/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs

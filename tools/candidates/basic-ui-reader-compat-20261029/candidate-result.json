@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checks": 14,
+  "originalAssertionsPreserved": true,
+  "originalBrowserChecks": 84,
+  "originalModelChecks": 31,
+  "posts": 6,
+  "generations": 6,
+  "inputs": [
+    {
+      "file": "tools/candidates/basic-ui-reader-compat-20261029/checked-basic-ui.candidate.cjs",
+      "sha256": "74c89c888aef58b436308ef7053e77fd4db08434143b4c8749b2aa38c7b7cd41"
+    },
+    {
+      "file": "tools/candidates/basic-ui-reader-compat-20261029/checked-basic-ui.original.cjs",
+      "sha256": "b771938dc0084e8b8ebb1dd7e27c3fcb812f4ee2a70987a85cfaac247a8e6ebf"
+    },
+    {
+      "file": "site-assets/textbook-book.js",
+      "sha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/site-assets/textbook-book.js",
+      "sha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-book-result.json",
+      "sha256": "fafe417004e098db807f359e37742d53a7561ba80e401d0aa684b98502c560fb"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-model-result.json",
+      "sha256": "a4fa1b1a176a4c24f48668d2c2e5679dc02e118314a1c70f4394c860fcea09bd"
+    }
+  ],
+  "scope": "Current exact67-file guard plus exact one-line toolbar change validated first. Original basic UI source/asset/proof/visual assertions executed unchanged through private prior-reader view. Tamper and incomplete84/6/6/31 proofs rejected. Candidate only; canonical source not edited; final whole verification separate."
+}

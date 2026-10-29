@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "utc": "2026-10-25T05:34:18.031037+00:00",
+  "scope": "exact own batch baseline; unrelated dirty changes preserved",
+  "whitespaceChecked": [
+    "cf-worker/src/plans.mjs",
+    "cf-worker/src/textbook-annotations.mjs",
+    "cf-worker/src/index.js",
+    "site-assets/textbook-annotation-model.js",
+    "site-assets/textbook-annotations.js",
+    "index.html",
+    "site-assets/sw.js",
+    "preview/build.py",
+    ".claude/verify/verify-learning-images-cache.mjs",
+    ".claude/verify/run.sh",
+    "site-assets/textbook-ink-format.js",
+    "site-assets/textbook-ink-model.js",
+    "site-assets/textbook-ink.js",
+    "site-assets/textbook-ink.css",
+    "cf-worker/src/textbook-ink.mjs",
+    "cf-worker/src/textbook-ink-format.cjs"
+  ],
+  "adminPlanRouteByteUnchanged": true,
+  "originalPeopleUnchanged": true,
+  "formatCopiesIdentical": true,
+  "unchangedBookRuntimeAndNineFigures": true,
+  "gateExactRegisteredDelta": true,
+  "individual": {
+    "api": 79,
+    "model": 37,
+    "actualBook": 97,
+    "lastBookSession": 91959,
+    "lastBookObservedExitCode": 0
+  },
+  "screens": {
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1180.png": "20417f3ae04802ec669857f460b5ca05567e27d508e431263f0fcd4139b504e1",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1440-large.png": "6b50a2679289140b3c00ba53bab90875bb92e1a3d3c233ff7daf646397d5b9a5",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1440.png": "ed25a47ba8b7ac0fcfdeb011288ea094dafc3120df7e21deec8be66655fbb98f",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-390-large.png": "c1660053f41314cfabc3efe834f8699782f7f3b59b2dbd264060c9f3366bd78c",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-390.png": "a0800f1b7f2110bb5554bad1c2038900603c27c6e2a643fb8e8348a51468e57d",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-820.png": "87bb8f5acfb7a8f126977a37266f6a42efb87a893b86e9015dcc02ea052ba74e"
+  },
+  "visualReview": "Latest large390 and dark1440 visually inspected; readable controls/save/close and figure underlay. Earlier normal four-width visual review retained; no hardware claim.",
+  "reviewAttempt1": "Metadata script initially required no-index diff exit0; git returns1 for ordinary differences even with clean --check. Corrected to accept0/1 only with empty stdout/stderr; no source change."
+}

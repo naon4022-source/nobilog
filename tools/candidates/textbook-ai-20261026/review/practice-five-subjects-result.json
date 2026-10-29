@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checks": 463,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-five-subjects-candidate.json",
+      "sha256": "817c1907bccc49d3da8a2276a5fd7f91362c1bc1f10e2ea9db93a1a63bf7e7a0"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/build-practice-other-candidate.mjs",
+      "sha256": "411bd48c693f335507fe6877dd46ba3d49510d21a0c0b22ddf6ce3a8979fc35d"
+    },
+    {
+      "file": "site-assets/material-engine.js",
+      "sha256": "d73351afbcc3cca84ca1c03db2dbcfefd5198fd98d472bd09384711f0646a243"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "ead41c78f047691ece39ac0a7f4d774c6f746cc5b39d684235abdd31e7db0932"
+    }
+  ],
+  "questions": 30,
+  "patterns": 10,
+  "subjects": 5,
+  "numericChecks": 14,
+  "scope": "Candidate only. Original passages/options, same-grade real canonical refs and exact skill mapping, unique IDs,70/20 text bounds, existing grader single-choice truth table,14 exact independent rational checks plus day boundary checks, original math6 preserved. Does not prove pedagogical completeness, real owned practice route/UI, all test formats or whole completion."
+}

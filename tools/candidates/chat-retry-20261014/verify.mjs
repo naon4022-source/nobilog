@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {retryMarker} from './chat-retry.mjs';
+let saved='',ids=0,n=0;
+const store={get:()=>saved,set:v=>{saved=v;}},next=()=>`request_${++ids}`;
+const eq=(a,b)=>{assert.deepEqual(a,b);n++;};
+const first=await retryMarker('Synthetic question',[],store,next);
+eq(first.id,'request_1');eq(ids,1);eq(saved.includes('Synthetic question'),false);
+eq(await retryMarker('Synthetic question',[],store,next),first);eq(ids,1);
+eq((await retryMarker('Changed question',[],store,next)).id,'request_2');
+eq((await retryMarker('Changed question',['a'.repeat(64)],store,next)).id,'request_3');
+saved='malformed';eq((await retryMarker('Question',[],store,next)).id,'request_4');
+saved=JSON.stringify({version:1,id:'bad',hash:first.hash});eq((await retryMarker('Synthetic question',[],store,next)).id,'request_5');
+await assert.rejects(retryMarker('Question',[],{get:()=>'',set:()=>{}},next),/retry_not_saved/);n++;
+await assert.rejects(retryMarker('Question',[],{get:()=>'',set:()=>{throw Error('quota');}},next),/quota/);n++;
+await assert.rejects(retryMarker('Question',['other-owner'],store,next),/invalid_retry_input/);n++;
+const accountA={v:'',get(){return this.v;},set(v){this.v=v;}},accountB={v:'',get(){return this.v;},set(v){this.v=v;}};
+const a=await retryMarker('Question',[],accountA,next),b=await retryMarker('Question',[],accountB,next);eq(a.id!==b.id,true);
+console.log(`Chat retry candidate: ${n} checks passed; reload identity, changed content, image identity, corruption, failed storage and account isolation`);

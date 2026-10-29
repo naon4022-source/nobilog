@@ -1,0 +1,29 @@
+{
+  "status": "targeted passed; full rerun required",
+  "rounds": [
+    {
+      "log": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round2.log",
+      "result": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round2-result.json",
+      "exitCode": 0,
+      "checks": 11
+    },
+    {
+      "log": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round3.log",
+      "result": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round3-result.json",
+      "exitCode": 0,
+      "checks": 11
+    },
+    {
+      "log": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round4.log",
+      "result": "tools/candidates/verification-dialog-repair-20261027/auth-repair-round4-result.json",
+      "exitCode": 0,
+      "checks": 11
+    }
+  ],
+  "source": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+  "sha256": "38ea470d7d29a544a5a89cf0d13d037c92550d8abc1c21d5c5b39000392b2710",
+  "preservedChecks": 10,
+  "addedChecks": 1,
+  "applicationChanges": 0,
+  "note": "waitUntil load and original save acknowledgement assertion retained; no timeout increased or assertion weakened"
+}

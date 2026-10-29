@@ -1,0 +1,26 @@
+{
+  "status": "generator dependency review only; no new movies yet",
+  "inputs": [
+    {
+      "file": "教材整理/Claude_Codex共有/教科動画/make.py",
+      "sha256": "35773a6def6b285a810be639fd85afffa52e5ca7a8d1da80e72893da41a7543d"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/教科動画/template.js",
+      "sha256": "a3a31afd076cdf05a0996d33d840a22be5a023e96e1678ca8b432df4cb2b51e9"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/build.py",
+      "sha256": "269b40a409f1f4847ff72246c1139fb2c7a30e6d4158144c3920d26be514ddfd"
+    }
+  ],
+  "constraints": [
+    "Use approved shared Kyoko settings and30fps for regenerated Japanese speech. Preserve native English pronunciation policy pending explicit source-setting comparison.",
+    "Generic make.py hardcodes Japanese205 and uses broad service-name pkill on speech timeout. Do not directly invoke that path for new correction candidates.",
+    "Use isolated scene/audio/movie/timeline outputs and bounded child commands like the existing geography correction, without changing the original generator or terminating unrelated speech services.",
+    "Source205 alone does not prove the rate of existing current movies; do not remake completed unrelated media.",
+    "Generate only current12 affected references, after preservation/factual/layout checks. Existing math75 and Claude19 remain untouched."
+  ],
+  "geographyBuilderCaution": "This script is a historical single-geography recipe with a pre-correction source assertion and existing-candidate refusal; do not rerun it or overwrite its completed output. Reuse the reviewed approach, not the one-shot invocation.",
+  "currentFullVerificationSession": 57891
+}

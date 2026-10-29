@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),{build}=require('./model.cjs');
+const unit=(id,subject='数学')=>({id,subject,title:id,status:'ready',questions:Array.from({length:70},(_,i)=>({id:'q'+i}))});
+const bank={units:[unit('a'),unit('b','英語'),unit('a'),{...unit('hidden'),status:'preparing'},unit('foreign','体育')]};
+const progress={a:{done:[...Array.from({length:35},(_,i)=>'q'+i),'q0','unknown']},b:{done:Array.from({length:56},(_,i)=>'q'+i)}};
+const original=JSON.stringify({bank,progress});let tree=build(bank,progress);assert.equal(tree.length,5);assert.equal(tree[0].units.length,1);assert.equal(tree[0].units[0].done,35);assert.equal(tree[0].points,5);assert.equal(tree[1].points,10);assert.equal(JSON.stringify({bank,progress}),original);
+for(let i=0;i<100;i++)assert.deepEqual(build(bank,progress),tree);
+assert(build(bank,{}) .every(g=>g.points===0));assert(build(null,null).every(g=>g.units.length===0));
+tree=build(bank,{a:{done:Array.from({length:70},(_,i)=>'q'+i)}});assert.equal(tree[0].points,15);assert.equal(tree[0].units[0].stars,3);
+assert.equal(build(bank,{a:{done:Array.from({length:56},(_,i)=>'fake'+i)}})[0].points,0);
+console.log('Skill tree candidate: immutable records, duplicate/unknown questions, hidden units, 35/56/70 stars, 100 repeated views and empty accounts passed; not integrated');

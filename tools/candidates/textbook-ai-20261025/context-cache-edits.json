@@ -1,0 +1,33 @@
+{
+  "scope": "only authenticated AI-context API bypass and six public static context assets; no cache version change or private cache contents accessed",
+  "files": [
+    {
+      "file": "site-assets/sw.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/before/site-assets/sw.js",
+      "beforeSha256": "babe239f8605e9ba12a653b481c8a6217b17b4f8a8d0b03e68e66cab48e6ebe7",
+      "afterSha256": "edb419362ad9ce73235ffee164fd96b7c6ab916d51338d7a22bc89263e0a5368",
+      "edits": [
+        {
+          "before": "textbook-(?:annotations|ink)",
+          "after": "textbook-(?:annotations|ink|ai-context)"
+        }
+      ]
+    },
+    {
+      "file": ".claude/verify/verify-learning-images-cache.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/before/.claude/verify/verify-learning-images-cache.mjs",
+      "beforeSha256": "765a0ceaa5a2a0da248bb68a608be3c828c3b63f7a20b5c2cb8bd768e3fb0f54",
+      "afterSha256": "cae81331031e35a163067e46f0fba1cf92c6fc45317efe2fbe410c9126927c5c",
+      "edits": [
+        {
+          "before": "['/textbook-ink?book=math1'",
+          "after": "['/textbook-ai-context?book=math1','/api/textbook-ai-context?book=math1&anchor=fixture','/textbook-ink?book=math1'"
+        },
+        {
+          "before": "['/textbook-ink-format.js'",
+          "after": "['/textbook-ai-context-math1.json','/textbook-ai-context-kokugo1.json','/textbook-ai-context-english1.json','/textbook-ai-context-science1.json','/textbook-ai-context-geography.json','/textbook-ai-context-history.json','/textbook-ink-format.js'"
+        }
+      ]
+    }
+  ]
+}

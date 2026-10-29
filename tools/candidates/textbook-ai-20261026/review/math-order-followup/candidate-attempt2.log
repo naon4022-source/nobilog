@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/math-order-followup/verify-candidate.py", line 71, in <module>
+    check(independent(row['prompt'].rsplit('\n',1)[-1])==expected,'independent original prompt agrees with unchanged official answer')
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/math-order-followup/verify-candidate.py", line 30, in independent
+    return number(ast.parse(text,mode='eval').body)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+  File "<unknown>", line 1
+    Cさんは -4**2 - (-3)**2 を計算して 7 と答えたが、まちがっていた。正しい答えを求めよう。
+                         ^
+SyntaxError: invalid syntax

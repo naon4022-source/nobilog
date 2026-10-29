@@ -1,0 +1,151 @@
+{
+  "status": "individual checks passed; final full pending",
+  "files": [
+    {
+      "file": "cf-worker/src/index.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/cf-worker/src/index.js",
+      "beforeSha256": "f8f0e538d901bf8f87fa2d752100ee337deb64aceb80603f33a4ba43831a30cb",
+      "afterSha256": "6de6ac2e501a7338fd4929ed1e805e88749ab733962eb11d9de83db49d6b5fc5",
+      "edits": [
+        {
+          "before": "    if(path==='/textbook-ai-context'){",
+          "after": "    if(path==='/textbook-ai-chat'){\n      const {textbookAIRoute}=await import('./textbook-ai-route.mjs');\n      return scopedApiResponse(await textbookAIRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);\n    }\n    if(path==='/textbook-ai-context'){"
+        },
+        {
+          "before": "return scopedApiResponse(await textbookAnnotationsRoute(request,env,session),env);",
+          "after": "return scopedApiResponse(await textbookAnnotationsRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);"
+        }
+      ]
+    },
+    {
+      "file": "cf-worker/src/openai-receipts.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/cf-worker/src/openai-receipts.mjs",
+      "beforeSha256": "b38e5f0cc1222fe2543ef417f27ae80f113b68f6d5059ae4d5a73c741173e8ca",
+      "afterSha256": "1780da9e3af668e8f665ff76e41b415a8cae393b08651d67063d6108511d45c6",
+      "edits": [
+        {
+          "before": "u[12]",
+          "after": "u[124]"
+        }
+      ]
+    },
+    {
+      "file": "cf-worker/src/openai-priced-operation.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/cf-worker/src/openai-priced-operation.mjs",
+      "beforeSha256": "b2f80eb32b3829a642efc6cd0bf2a3f428bb3a04b0f2e59d5d936fd38c3b87f8",
+      "afterSha256": "61971fc215de9870a207446b806d445682a9485eb4a59d7bc03bbe614db03dd6",
+      "edits": [
+        {
+          "before": "u[12]",
+          "after": "u[124]"
+        }
+      ]
+    },
+    {
+      "file": "preview/build.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/preview/build.py",
+      "beforeSha256": "7dde8516cc4f22983514011cb95b5a2c107fec0ab7240304dad28cac1108aea3",
+      "afterSha256": "276329b25cbcab938440951efaca0fb7b4b1d1d39092831a2869724624a228a6",
+      "edits": [
+        {
+          "before": "'textbook-access.mjs']",
+          "after": "'textbook-access.mjs', 'textbook-ai-chat-content.mjs', 'textbook-ai-chat-context.mjs', 'textbook-ai-service.mjs', 'textbook-ai-quota.mjs', 'textbook-ai-refund.mjs', 'textbook-ai-history.mjs', 'textbook-ai-route.mjs', 'openai-priced-operation.mjs']"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/sw.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/site-assets/sw.js",
+      "beforeSha256": "edb419362ad9ce73235ffee164fd96b7c6ab916d51338d7a22bc89263e0a5368",
+      "afterSha256": "f925480f2d6bf8e31aae1f6f451dabb19abb4ebf5d69f55974ceb3dc898ae2f0",
+      "edits": [
+        {
+          "before": "textbook-(?:annotations|ink|ai-context)",
+          "after": "textbook-(?:annotations|ink|ai-context|ai-chat)"
+        }
+      ]
+    },
+    {
+      "file": "cf-worker/src/textbook-annotations.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/cf-worker/src/textbook-annotations.mjs",
+      "beforeSha256": "f48cb41a92c68915348f6cd1205d1454669daf184de357641db6d23dba7ad2da",
+      "afterSha256": "e61e15d2c0c908ac7ab6ccb5772d780d49be719958e2a48a470ec61ede3e660b",
+      "edits": [
+        {
+          "before": "// 個人の教科書マーカー・メモ。認証済みUIDだけを使い、教材や成績は変更しない。\nimport {subscriptionOn,planAllows} from './plans.mjs';\nconst BOOKS=new Set(['math1','kokugo1','english1','science1','geography','history']);\nconst COLORS=new Set(['none','yellow','blue','pink']);\n",
+          "after": "// 個人の教科書マーカー・メモ。認証済みUIDだけを使い、教材や成績は変更しない。\nimport {textbookAccessOn,textbookAccess,textbookWriteGuard} from './textbook-access.mjs';\nconst BOOKS=new Set(['math1','kokugo1','english1','science1','geography','history']);\nconst COLORS=new Set(['none','yellow','blue','pink']);\n"
+        },
+        {
+          "before": " return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(data));\n}\nexport async function textbookAnnotationsRoute(request,env,session){\n if(!subscriptionOn(env))return reply({error:'not_found'},404);\n if(!session?.uid)return reply({error:'unauthorized'},401);\n if(!/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/.test(session.uid))return reply({error:'forbidden'},403);\n if(!env.AUTH_DB)return reply({error:'unavailable'},503);\n const url=new URL(request.url),db=env.AUTH_DB,uid=session.uid;\n if(url.pathname!=='/textbook-annotations')return reply({error:'not_found'},404);\n if(request.method==='GET'){\n",
+          "after": " return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(data));\n}\nexport async function textbookAnnotationsRoute(request,env,session,{owner,now=()=>Date.now()}={}){\n if(!textbookAccessOn(env))return reply({error:'not_found'},404);\n if(!session?.uid)return reply({error:'unauthorized'},401);\n if(!/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/.test(session.uid))return reply({error:'forbidden'},403);\n if(session.uid.startsWith('p_')&&env.PREVIEW_PLAN_ACCOUNTS!=='1')return reply({error:'forbidden'},403);\n if(!env.AUTH_DB)return reply({error:'unavailable'},503);\n const url=new URL(request.url),db=env.AUTH_DB,uid=session.uid;\n const configured=env.TEXTBOOK_RELEASE_STAGE!==undefined||env.TEXTBOOK_RELEASE_EPOCH!==undefined;\n if(configured&&(typeof owner!=='string'||!owner))return reply({error:'unauthorized'},401);\n // The authenticated parent always supplies owner. Legacy internal harness calls remain compatible.\n const enforceLease=typeof owner==='string'&&!!owner;\n const activeSql=enforceLease?'EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND v=? AND expires_at>?)':'1';\n const activeArgs=()=>enforceLease?['active-session:'+uid,owner,now()]:[];\n const active=async()=>!enforceLease||!!await db.prepare('SELECT 1 AS x FROM auth_kv WHERE k=? AND v=? AND expires_at>?').bind(...activeArgs()).first('x');\n if(url.pathname!=='/textbook-annotations')return reply({error:'not_found'},404);\n if(request.method==='GET'){\n"
+        },
+        {
+          "before": "  const book=url.searchParams.get('book'),prefix='textbook-annotation:'+uid+':'+book+':';\n  try{\n   const rows=(await db.prepare('SELECT v FROM auth_kv WHERE k>=? AND k<? ORDER BY k LIMIT 2048').bind(prefix,prefix+'￿').all()).results||[];\n   return reply({book,items:rows.map(r=>JSON.parse(r.v)),writable:await planAllows(env,uid,'annotations')});\n  }catch(_){return reply({error:'load_failed'},503);}\n }\n",
+          "after": "  const book=url.searchParams.get('book'),prefix='textbook-annotation:'+uid+':'+book+':';\n  try{\n   if(!await active())return reply({error:'active_session'},409);\n   const status=await textbookAccess(env,uid,now());\n   const rows=(await db.prepare('SELECT v FROM auth_kv WHERE k>=? AND k<? AND '+activeSql+' ORDER BY k LIMIT 2048').bind(prefix,prefix+'￿',...activeArgs()).all()).results||[];\n   if(!await active())return reply({error:'active_session'},409);\n   return reply({book,items:rows.map(r=>JSON.parse(r.v)),writable:!!status.features.annotations});\n  }catch(_){return reply({error:'load_failed'},503);}\n }\n"
+        },
+        {
+          "before": " try{\n  // 下位プランでも本人の書き込みは読むことができる。書き足しはPro以上。\n  if(!await planAllows(env,uid,'annotations'))return reply({error:'plan_required'},403);\n  const item={book:b.book,anchor:b.anchor,quote:b.quote,color:b.color,note:b.note,revision:b.revision+1,updatedAt:Date.now()};\n  const raw=b.revision===0\n   ?await db.prepare('INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,0 WHERE (SELECT COUNT(*) FROM auth_kv WHERE k>=? AND k<?)<2048 ON CONFLICT(k) DO NOTHING RETURNING v').bind(key,JSON.stringify(item),prefix,prefix+'￿').first('v')\n   :await db.prepare(\"UPDATE auth_kv SET v=? WHERE k=? AND CAST(json_extract(v,'$.revision') AS INTEGER)=? RETURNING v\").bind(JSON.stringify(item),key,b.revision).first('v');\n  if(raw)return reply({item:JSON.parse(raw),cached:false});\n  const existing=await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(key).first('v');\n  if(existing){\n   const row=JSON.parse(existing);\n",
+          "after": " try{\n  // 下位プランでも本人の書き込みは読むことができる。書き足しはPro以上。\n  if(!await active())return reply({error:'active_session'},409);\n  const status=await textbookAccess(env,uid,now());\n  if(!status.features.annotations)return reply({error:'plan_required'},403);\n  const guard=enforceLease?textbookWriteGuard(status,{uid,owner,feature:'annotations',now:now()}):{sql:'1',values:[]};\n  const item={book:b.book,anchor:b.anchor,quote:b.quote,color:b.color,note:b.note,revision:b.revision+1,updatedAt:now()};\n  const raw=b.revision===0\n   ?await db.prepare('INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,0 WHERE '+guard.sql+' AND (SELECT COUNT(*) FROM auth_kv WHERE k>=? AND k<?)<2048 ON CONFLICT(k) DO NOTHING RETURNING v').bind(key,JSON.stringify(item),...guard.values,prefix,prefix+'￿').first('v')\n   :await db.prepare(\"UPDATE auth_kv SET v=? WHERE k=? AND CAST(json_extract(v,'$.revision') AS INTEGER)=? AND \"+guard.sql+' RETURNING v').bind(JSON.stringify(item),key,b.revision,...guard.values).first('v');\n  if(!await active())return reply({error:'active_session'},409);\n  if(raw)return reply({item:JSON.parse(raw),cached:false});\n  const latest=await textbookAccess(env,uid,now());\n  if(latest.accessVersion!==status.accessVersion||!latest.features.annotations)return reply({error:'plan_changed'},409);\n  const existing=await db.prepare('SELECT v FROM auth_kv WHERE k=? AND '+activeSql).bind(key,...activeArgs()).first('v');\n  if(existing){\n   const row=JSON.parse(existing);\n"
+        },
+        {
+          "before": "  }\n  return reply({error:b.revision===0?'annotation_limit':'revision_conflict'},409);\n }catch(_){return reply({error:'save_failed'},503);}\n}\n",
+          "after": "  }\n  return reply({error:b.revision===0?'annotation_limit':'revision_conflict'},409);\n }catch(error){if(['release_changed','plan_changed'].includes(error?.message))return reply({error:'plan_changed'},409);return reply({error:'save_failed'},503);}\n}\n"
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "file": "cf-worker/src/textbook-ai-chat-content.mjs",
+      "sha256": "96984ec9ec8161f7911ab4005bb49cef9a151685852bf30d6295972135a793ae"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-chat-context.mjs",
+      "sha256": "e081ca4b5a242d99f9c3267743399f84bf71a65107c57ae38d891918b461129d"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-manifest.mjs",
+      "sha256": "4109f5527d7a7105c55efdd6b7bf481820747e76c3fa5db4f6b08cb59e9472bf"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-route.mjs",
+      "sha256": "7414c82daec49cd4bae0a02e83100fc65f8a01dbcdfa729c0717943cb40dac64"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context.mjs",
+      "sha256": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-history.mjs",
+      "sha256": "9d8402531af0c181743514effe1eb365d118e51eeb6363711f8d816d17849bc6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-quota.mjs",
+      "sha256": "1510b9f42c1cdd0f1d73b258d025eda4ebbd7da940aef1d9e1e3dc4bf0ac7dfe"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-refund.mjs",
+      "sha256": "809ea6ecb183b829871dd5fe7bfbdfccdb65c93d05c0ffc00bceff230c87feec"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-route.mjs",
+      "sha256": "eab0ea4a487377384d366ac62a83713b1e6405f643e5fafe40d78e63178dfce6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-service.mjs",
+      "sha256": "621e400323979f4e2a35a13ba58946f12a95e7308ea57f63154aa8e8b379c18d"
+    }
+  ],
+  "proof": {
+    "file": "tools/candidates/textbook-ai-20261025/service-20261025/service-result.json",
+    "sha256": "65429bb70e5d12cb906fe50ebcd342030fc1ad357c7e828b7146c71210b6e8cf",
+    "checks": 260
+  },
+  "additionalProofs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/marker-access-result.json",
+      "sha256": "1ddfcd3db34f2629ee7917c50909b9d3ca47c8a5a6d68a77338afa34e3ea253c",
+      "checks": 34
+    }
+  ]
+}

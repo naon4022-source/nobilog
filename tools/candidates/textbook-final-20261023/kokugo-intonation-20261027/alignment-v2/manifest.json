@@ -1,0 +1,81 @@
+{
+  "status": "aligned explanation candidate only; main unchanged",
+  "files": [
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/原稿/u02.py",
+      "beforeSha256": "b66f214b97b31329520c569895b0367a1b77b952bc0a1ca8cc3f52a998fa1ebd",
+      "afterSha256": "b1afc608dd0c05c07caf5c1dd5ac5ae5bc71ba3d459b9dfc687fda1eb23a0b0c",
+      "changes": [
+        {
+          "path": [
+            "lessons",
+            4,
+            "keys",
+            2,
+            1,
+            1
+          ],
+          "before": "**イントネーション**：文の終わりの上げ下げ。「行く？」（上がる＝質問）と「行く。」（下がる）。",
+          "after": "**イントネーション**：文全体の音の高低の変化。たとえば「行く？」の文末を上げ、質問の気持ちを表す。"
+        },
+        {
+          "path": [
+            "lessons",
+            4,
+            "sum",
+            2
+          ],
+          "before": "アクセントは単語の音の高低、イントネーションは文の終わりの上げ下げ。",
+          "after": "アクセントは単語の音の高低、イントネーションは文全体の音の高低の変化。"
+        },
+        {
+          "path": [
+            "lessons",
+            4,
+            "easy",
+            2
+          ],
+          "before": "質問かどうかは、文の終わりが上がるかで判断する。",
+          "after": "文末の上げ下げを手がかりにし、文の内容や前後の話も確かめる。"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/原稿/かいわ.py",
+      "beforeSha256": "4b8787743cbd4bdb1a12c214d7844a55eed85943c7dfcf7778fdc18a845aeb02",
+      "afterSha256": "37225f6c8e995ee483058280eb7d1abe0b18ef53f9844adc34c93ae4993e5b6a",
+      "changes": [
+        {
+          "path": [
+            "構成を考えて話す・日本語の音声",
+            "talk",
+            3,
+            1
+          ],
+          "before": "それはイントネーション！ 文の最後を上げると質問になる。",
+          "after": "たとえば「いく？」は、文末を上げて質問の気持ちを表せるね。文全体の音の高低の変化が、イントネーションなんだ。"
+        }
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "old": "イントネーションは文の終わりの上げ下げ",
+      "new": "イントネーションは文全体の音の高低の変化"
+    },
+    {
+      "old": "**イントネーション**：文の終わりの上げ下げ。「行く？」（上がる＝質問）と「行く。」（下がる）。",
+      "new": "**イントネーション**：文全体の音の高低の変化。たとえば「行く？」の文末を上げ、質問の気持ちを表す。"
+    },
+    {
+      "old": "質問かどうかは、文の終わりが上がるかで判断する。",
+      "new": "文末の上げ下げを手がかりにし、文の内容や前後の話も確かめる。"
+    },
+    {
+      "old": "それはイントネーション！ 文の最後を上げると質問になる。",
+      "new": "たとえば「いく？」は、文末を上げて質問の気持ちを表せるね。文全体の音の高低の変化が、イントネーションなんだ。"
+    }
+  ],
+  "primarySource": "https://www.jpf.go.jp/j/project/japanese/teach/tsushin/research/202302.html",
+  "scope": "Four explanatory leaves only; full UNIT/TALK AST comparison preserves all other fields, exercises, answers, values and IDs. Previous chapter1 current dialogue retained."
+}

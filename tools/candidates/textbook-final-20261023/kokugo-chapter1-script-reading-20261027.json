@@ -1,0 +1,107 @@
+{
+  "status": "10 chapter1 scripts manually read; not AV approval",
+  "book": "kokugo1",
+  "chapter": 1,
+  "scripts": [
+    {
+      "id": "K1-C1-S1-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-V01.json",
+      "sha256": "e9a73f80a5920715f3fed43f13ad859af2f86e8fcaeec3f14c0af39e816c14c8",
+      "stepsRead": 7,
+      "kind": "worked example"
+    },
+    {
+      "id": "K1-C1-S1-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-VP.json",
+      "sha256": "30474cb1811e02983de7afc5b4a3771b3f370d57d7f4f543915a8f84a94ffb28",
+      "stepsRead": 8,
+      "kind": "section summary"
+    },
+    {
+      "id": "K1-C1-S2-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S2-V01.json",
+      "sha256": "b0ca64ffa7b62bec94a70881cff60c0b7bd57a25b7ebe56dceddd936e4b47d7e",
+      "stepsRead": 7,
+      "kind": "worked example"
+    },
+    {
+      "id": "K1-C1-S2-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S2-VP.json",
+      "sha256": "db82750680e95d602546db589bc95bd41dee43941cc8b324a6ca4a38a00038cc",
+      "stepsRead": 8,
+      "kind": "section summary"
+    },
+    {
+      "id": "K1-C1-S3-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S3-V01.json",
+      "sha256": "f11b9d0a4faf8385b7390425bfae3af8d79b71ad234badab2ecf7e566d45bfaa",
+      "stepsRead": 7,
+      "kind": "worked example"
+    },
+    {
+      "id": "K1-C1-S3-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S3-VP.json",
+      "sha256": "99ee18a25a7f6f1e3a94e2e957e17f36e6ad6f53732c3b92f8723482e5e1301e",
+      "stepsRead": 7,
+      "kind": "section summary"
+    },
+    {
+      "id": "K1-C1-S4-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S4-V01.json",
+      "sha256": "2faf2ccd9f4cebbbfbc9c8b4b33631d2f1350f5388998e123b97cc7c84745ec4",
+      "stepsRead": 7,
+      "kind": "worked example"
+    },
+    {
+      "id": "K1-C1-S4-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S4-VP.json",
+      "sha256": "c2ddcee28f8d8a3cfde9b92b82ad0ff92c1ae14a56b36f388259f5e43d19fba8",
+      "stepsRead": 8,
+      "kind": "section summary"
+    },
+    {
+      "id": "K1-C1-S5-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S5-V01.json",
+      "sha256": "a0083bab27ffd464524395ecdd4713a82dd57ae44b2091aaa62450adb558890d",
+      "stepsRead": 7,
+      "kind": "worked example"
+    },
+    {
+      "id": "K1-C1-S5-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S5-VP.json",
+      "sha256": "ed8d01af89c920c07860b1e696dc8f706a16e485e92c7ccff8b2ad68538c5939",
+      "stepsRead": 6,
+      "kind": "section summary"
+    }
+  ],
+  "findings": [
+    {
+      "id": "K1-C1-S1-V01 / K1-C1-S1-VP",
+      "state": "explanation correction candidate prepared",
+      "candidate": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/manifest.json",
+      "reason": "Avoid suffix-only classification as universal rule."
+    },
+    {
+      "id": "K1-C1-S2-V01",
+      "reading": "Worked first-person scene supportsぼく perspective and inference of the other character; no obvious contradiction in the script."
+    },
+    {
+      "id": "K1-C1-S3-V01",
+      "reading": "Speech example announces2 reasons and pairs a memory with the second reason; preserves original source example."
+    },
+    {
+      "id": "K1-C1-S4-V01",
+      "reading": "小さな／鳥が／庭の／木に／とまった is5 phrase units, matching stated answer."
+    },
+    {
+      "id": "K1-C1-S5-V01",
+      "reading": "明らかな間違い matches prompt; this reading does not independently certify official送り仮名 policy."
+    }
+  ],
+  "limits": [
+    "No actual current MP4 frames/audio reviewed in this pass.",
+    "No universal interpretation ofVP suffix; first summary compared directly with book pages9–11.",
+    "No claim every textbook source or surrounding answer visibility independently reviewed.",
+    "No runtime/source-media edits and no newAV generation/decoding while full5 running."
+  ]
+}

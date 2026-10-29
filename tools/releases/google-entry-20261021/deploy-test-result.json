@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "checks": 20,
+  "scope": "real wrapper/fake CLIs; no Cloudflare calls",
+  "cases": [
+    "ok",
+    "proof_fail",
+    "dry_fail",
+    "missing_secret",
+    "pages_changed",
+    "worker_changed",
+    "worker_fail",
+    "pages_old",
+    "pages_unknown",
+    "pages_lost"
+  ]
+}

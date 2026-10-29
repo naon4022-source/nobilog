@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-vision-20261027/verify-client-browser.mjs

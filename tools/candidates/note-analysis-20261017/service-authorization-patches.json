@@ -1,0 +1,22 @@
+[
+  {
+    "old": "if(!await db.prepare('SELECT 1 AS x FROM auth_kv WHERE k=? AND v=? AND expires_at>?').bind('active-session:'+uid,owner,clock()).first('x'))",
+    "new": "if(!await authorized())",
+    "count": 2
+  },
+  {
+    "old": " if(!status.provisional||!status.features?.[feature])return {error:'plan_required'};",
+    "new": " if(!status.provisional||!status.features?.[feature])return {error:'plan_required'};\n const authorized=async()=>{\n  if(!await db.prepare('SELECT 1 AS x FROM auth_kv WHERE k=? AND v=? AND expires_at>?').bind('active-session:'+uid,owner,clock()).first('x'))return false;\n  let currentAccess;try{currentAccess=JSON.parse(await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind('openai-access:'+uid).first('v'));}catch(_){return false;}\n  if(!currentAccess||currentAccess.version!=='2026-10-14'||currentAccess.approved!==true||!['13-17','adult'].includes(currentAccess.ageBand)||(currentAccess.ageBand==='13-17'&&currentAccess.guardianConsent!==true))return false;\n  const current=await planStatus(env,uid,clock());\n  return current.provisional&&current.plan===status.plan&&current.revision===status.revision&&current.features?.[feature]===true;\n };\n const guardedFetcher=async(...args)=>{if(!await authorized())throw Error('session_changed');return fetcher(...args);};",
+    "count": 1
+  },
+  {
+    "old": "  if(prior.state==='done'){",
+    "new": "  if(prior.state==='done'){\n   if(!await authorized())return {error:'session_changed'};",
+    "count": 1
+  },
+  {
+    "old": "{fetcher,validate:spec.validate,signal,reserve:",
+    "new": "{fetcher:guardedFetcher,validate:spec.validate,signal,reserve:",
+    "count": 1
+  }
+]

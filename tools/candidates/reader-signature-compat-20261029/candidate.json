@@ -1,0 +1,43 @@
+{
+  "status": "three exact registered edits; current signature-browser whole verification pending",
+  "file": "site-assets/textbook-book.js",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/site-assets/textbook-book.js",
+  "beforeSha256": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7",
+  "afterSha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745",
+  "edits": [
+    {
+      "before": "state.book={meta,pages:data.pages,",
+      "after": "state.book={meta,annotationSignature:annotationSig.slice(1),pages:data.pages,"
+    },
+    {
+      "before": "root.NobiTextbookAnnotations?.mount(app,book.meta.id,{locate(anchor){",
+      "after": "root.NobiTextbookAnnotations?.mount(app,book.meta.id,{annotationSignature:book.annotationSignature,locate(anchor){"
+    },
+    {
+      "before": "  if(!isFull())return;\n",
+      "after": "  if(!isFull())return;\n  if(e.target.closest?.('.tb-bar-actions'))return;\n"
+    }
+  ],
+  "scope": "Original two source-signature metadata edits plus the separately approved one-line toolbar wheel guard; no other rendering or teaching changes",
+  "preWhole": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt2.json",
+  "previousVerification": {
+    "file": "tools/candidates/textbook-ai-20261025/book-signature-result.json",
+    "sha256": "94e1621bd15d08c25392db28cdfcda9bbaba33ac1509017fa3e8a8f6d0d1ada9",
+    "checks": 43,
+    "session": 37267,
+    "observedExitCode": 0,
+    "referenceStatus": "Historical declared reference; its original path was already overwritten before this task and does not currently match the declared SHA. Not current-success evidence."
+  },
+  "currentVerification": {
+    "statusAtRegistration": "pending",
+    "resultFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/full10-result.json",
+    "signatureResultFile": "tools/candidates/textbook-ai-20261025/book-signature-result.json",
+    "legacyAssertionText": "The unchanged historical test says two metadata edits, but replays all registered edits and compares the entire current source SHA; this register now contains exactly three."
+  },
+  "lastAvailablePreviousResult": {
+    "file": "tools/candidates/reader-signature-compat-20261029/previous-available-book-signature-result.json",
+    "sha256": "bb6431ad4ec38ac04d213c3fb1c7e61b24d7a3c113addcd84c3d71f0729359f3",
+    "checks": 43,
+    "status": "Archived existing result only; not proof for current toolbar source"
+  }
+}

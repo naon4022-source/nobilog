@@ -1,0 +1,1562 @@
+{
+  "5": {
+    "label": "5級",
+    "cloze": [
+      {
+        "q": "My aunt is a teacher at a ( school / river / kitchen ).",
+        "answer": "school",
+        "why": "英語を教える場所は学校。riverは川、kitchenは台所です。",
+        "id": 1,
+        "accepted": [
+          "school"
+        ]
+      },
+      {
+        "q": "A: Is this your bag? B: No. It is ( he / his / him ).",
+        "answer": "his",
+        "why": "「彼のもの」は所有代名詞his。heは主語、himは目的語です。",
+        "id": 2,
+        "accepted": [
+          "his"
+        ]
+      },
+      {
+        "q": "We have music class ( on / at / in ) Friday.",
+        "answer": "on",
+        "why": "曜日の前にはonを使います。時刻の前はatです。",
+        "id": 3,
+        "accepted": [
+          "on"
+        ]
+      },
+      {
+        "q": "My sister ( like / likes / liking ) oranges, but I like apples.",
+        "answer": "likes",
+        "why": "主語My sisterは三人称単数。現在形の動詞にsを付けます。",
+        "id": 4,
+        "accepted": [
+          "likes"
+        ]
+      },
+      {
+        "q": "There ( is / are / am ) two bicycles behind the house.",
+        "answer": "are",
+        "why": "two bicyclesは複数なのでThere areを使います。",
+        "id": 5,
+        "accepted": [
+          "are"
+        ]
+      },
+      {
+        "q": "A: ( Who / Where / When ) is your lunch box? B: On the desk.",
+        "answer": "Where",
+        "why": "答えが場所なのでWhere。「誰」ならWho、「いつ」ならWhenです。",
+        "id": 6,
+        "accepted": [
+          "Where"
+        ]
+      },
+      {
+        "q": "Ken can ( swims / swim / swimming ) very fast.",
+        "answer": "swim",
+        "why": "助動詞canの直後は動詞の原形です。",
+        "id": 7,
+        "accepted": [
+          "swim"
+        ]
+      },
+      {
+        "q": "Listen! The children are ( sing / sings / singing ) in the next room.",
+        "answer": "singing",
+        "why": "areと動詞のing形で、今している動作を表します。",
+        "id": 8,
+        "accepted": [
+          "singing"
+        ]
+      },
+      {
+        "q": "A: ( How / What / Which ) many notebooks do you have? B: Three.",
+        "answer": "How",
+        "why": "数をたずねる決まった形はHow manyです。",
+        "id": 9,
+        "accepted": [
+          "How"
+        ]
+      },
+      {
+        "q": "I am hungry. Let's ( eat / drink / wear ) these sandwiches.",
+        "answer": "eat",
+        "why": "サンドイッチを食べるのでeat。飲むはdrink、着るはwearです。",
+        "id": 10,
+        "accepted": [
+          "eat"
+        ]
+      }
+    ],
+    "order": [
+      {
+        "q": "「私は毎朝、犬と歩きます。」( every / walk / I / morning / my dog / with )",
+        "answer": "I walk with my dog every morning.",
+        "why": "主語I、動詞walk、with my dog、時を表すevery morningの順。",
+        "id": 11,
+        "accepted": [
+          "I walk with my dog every morning.",
+          "Every morning I walk with my dog."
+        ]
+      },
+      {
+        "q": "「あなたのお父さんは何時に起きますか。」( your father / does / get up / what time )",
+        "answer": "What time does your father get up?",
+        "why": "What timeのあとにdoes、主語、動詞の原形を置きます。",
+        "id": 12,
+        "accepted": [
+          "What time does your father get up?"
+        ]
+      },
+      {
+        "q": "「箱の中にボールが一つあります。」( a ball / is / in the box / there )",
+        "answer": "There is a ball in the box.",
+        "why": "存在を表すThere isと、物、場所を並べます。",
+        "id": 13,
+        "accepted": [
+          "There is a ball in the box."
+        ]
+      },
+      {
+        "q": "「その女の子は今、本を読んでいます。」( now / a book / reading / the girl / is )",
+        "answer": "The girl is reading a book now.",
+        "why": "主語、is、reading、目的語、nowの順です。",
+        "id": 14,
+        "accepted": [
+          "The girl is reading a book now.",
+          "Now the girl is reading a book."
+        ]
+      }
+    ],
+    "passages": [
+      [
+        "A notice",
+        "The school library opens at nine on Saturday. A story reading starts at ten. Please bring a pencil. You can borrow two books. The library closes at twelve.",
+        [
+          {
+            "q": "何曜日に図書室が開きますか。英語1語で答えなさい。",
+            "answer": "Saturday",
+            "why": "文のon Saturdayが曜日を示しています。",
+            "id": 15,
+            "accepted": [
+              "Saturday"
+            ]
+          },
+          {
+            "q": "読み聞かせは何時に始まりますか。数字で答えなさい。",
+            "answer": "10",
+            "why": "A story reading starts at ten.が根拠。開館の9時とは違います。",
+            "id": 16,
+            "accepted": [
+              "10"
+            ]
+          },
+          {
+            "q": "何冊まで借りられますか。数字で答えなさい。",
+            "answer": "2",
+            "why": "borrow two booksから2冊と分かります。",
+            "id": 17,
+            "accepted": [
+              "2"
+            ]
+          }
+        ]
+      ],
+      [
+        "An email",
+        "Hi Mei, I live near a park. I play tennis there with my brother on Sundays. Today it is rainy, so we are at home. My brother is making lunch. I am drawing a picture of our cat. See you, Yuki",
+        [
+          {
+            "q": "Yukiが日曜日にするスポーツを英語1語で答えなさい。",
+            "answer": "tennis",
+            "why": "I play tennis thereが根拠です。",
+            "id": 18,
+            "accepted": [
+              "tennis"
+            ]
+          },
+          {
+            "q": "今日の天気を英語1語で答えなさい。",
+            "answer": "rainy",
+            "why": "Today it is rainyと明記されています。",
+            "id": 19,
+            "accepted": [
+              "rainy"
+            ]
+          },
+          {
+            "q": "Yukiは何の絵を描いていますか。英語1語で答えなさい。",
+            "answer": "cat",
+            "why": "a picture of our catから猫の絵と分かります。",
+            "id": 20,
+            "accepted": [
+              "cat"
+            ]
+          }
+        ]
+      ]
+    ],
+    "writing": [],
+    "questions": [
+      {
+        "q": "My aunt is a teacher at a ( school / river / kitchen ).",
+        "answer": "school",
+        "why": "英語を教える場所は学校。riverは川、kitchenは台所です。",
+        "id": 1,
+        "accepted": [
+          "school"
+        ]
+      },
+      {
+        "q": "A: Is this your bag? B: No. It is ( he / his / him ).",
+        "answer": "his",
+        "why": "「彼のもの」は所有代名詞his。heは主語、himは目的語です。",
+        "id": 2,
+        "accepted": [
+          "his"
+        ]
+      },
+      {
+        "q": "We have music class ( on / at / in ) Friday.",
+        "answer": "on",
+        "why": "曜日の前にはonを使います。時刻の前はatです。",
+        "id": 3,
+        "accepted": [
+          "on"
+        ]
+      },
+      {
+        "q": "My sister ( like / likes / liking ) oranges, but I like apples.",
+        "answer": "likes",
+        "why": "主語My sisterは三人称単数。現在形の動詞にsを付けます。",
+        "id": 4,
+        "accepted": [
+          "likes"
+        ]
+      },
+      {
+        "q": "There ( is / are / am ) two bicycles behind the house.",
+        "answer": "are",
+        "why": "two bicyclesは複数なのでThere areを使います。",
+        "id": 5,
+        "accepted": [
+          "are"
+        ]
+      },
+      {
+        "q": "A: ( Who / Where / When ) is your lunch box? B: On the desk.",
+        "answer": "Where",
+        "why": "答えが場所なのでWhere。「誰」ならWho、「いつ」ならWhenです。",
+        "id": 6,
+        "accepted": [
+          "Where"
+        ]
+      },
+      {
+        "q": "Ken can ( swims / swim / swimming ) very fast.",
+        "answer": "swim",
+        "why": "助動詞canの直後は動詞の原形です。",
+        "id": 7,
+        "accepted": [
+          "swim"
+        ]
+      },
+      {
+        "q": "Listen! The children are ( sing / sings / singing ) in the next room.",
+        "answer": "singing",
+        "why": "areと動詞のing形で、今している動作を表します。",
+        "id": 8,
+        "accepted": [
+          "singing"
+        ]
+      },
+      {
+        "q": "A: ( How / What / Which ) many notebooks do you have? B: Three.",
+        "answer": "How",
+        "why": "数をたずねる決まった形はHow manyです。",
+        "id": 9,
+        "accepted": [
+          "How"
+        ]
+      },
+      {
+        "q": "I am hungry. Let's ( eat / drink / wear ) these sandwiches.",
+        "answer": "eat",
+        "why": "サンドイッチを食べるのでeat。飲むはdrink、着るはwearです。",
+        "id": 10,
+        "accepted": [
+          "eat"
+        ]
+      },
+      {
+        "q": "「私は毎朝、犬と歩きます。」( every / walk / I / morning / my dog / with )",
+        "answer": "I walk with my dog every morning.",
+        "why": "主語I、動詞walk、with my dog、時を表すevery morningの順。",
+        "id": 11,
+        "accepted": [
+          "I walk with my dog every morning.",
+          "Every morning I walk with my dog."
+        ]
+      },
+      {
+        "q": "「あなたのお父さんは何時に起きますか。」( your father / does / get up / what time )",
+        "answer": "What time does your father get up?",
+        "why": "What timeのあとにdoes、主語、動詞の原形を置きます。",
+        "id": 12,
+        "accepted": [
+          "What time does your father get up?"
+        ]
+      },
+      {
+        "q": "「箱の中にボールが一つあります。」( a ball / is / in the box / there )",
+        "answer": "There is a ball in the box.",
+        "why": "存在を表すThere isと、物、場所を並べます。",
+        "id": 13,
+        "accepted": [
+          "There is a ball in the box."
+        ]
+      },
+      {
+        "q": "「その女の子は今、本を読んでいます。」( now / a book / reading / the girl / is )",
+        "answer": "The girl is reading a book now.",
+        "why": "主語、is、reading、目的語、nowの順です。",
+        "id": 14,
+        "accepted": [
+          "The girl is reading a book now.",
+          "Now the girl is reading a book."
+        ]
+      },
+      {
+        "q": "何曜日に図書室が開きますか。英語1語で答えなさい。",
+        "answer": "Saturday",
+        "why": "文のon Saturdayが曜日を示しています。",
+        "id": 15,
+        "accepted": [
+          "Saturday"
+        ]
+      },
+      {
+        "q": "読み聞かせは何時に始まりますか。数字で答えなさい。",
+        "answer": "10",
+        "why": "A story reading starts at ten.が根拠。開館の9時とは違います。",
+        "id": 16,
+        "accepted": [
+          "10"
+        ]
+      },
+      {
+        "q": "何冊まで借りられますか。数字で答えなさい。",
+        "answer": "2",
+        "why": "borrow two booksから2冊と分かります。",
+        "id": 17,
+        "accepted": [
+          "2"
+        ]
+      },
+      {
+        "q": "Yukiが日曜日にするスポーツを英語1語で答えなさい。",
+        "answer": "tennis",
+        "why": "I play tennis thereが根拠です。",
+        "id": 18,
+        "accepted": [
+          "tennis"
+        ]
+      },
+      {
+        "q": "今日の天気を英語1語で答えなさい。",
+        "answer": "rainy",
+        "why": "Today it is rainyと明記されています。",
+        "id": 19,
+        "accepted": [
+          "rainy"
+        ]
+      },
+      {
+        "q": "Yukiは何の絵を描いていますか。英語1語で答えなさい。",
+        "answer": "cat",
+        "why": "a picture of our catから猫の絵と分かります。",
+        "id": 20,
+        "accepted": [
+          "cat"
+        ]
+      }
+    ]
+  },
+  "4": {
+    "label": "4級",
+    "cloze": [
+      {
+        "q": "I ( buy / bought / buying ) a notebook at that shop yesterday.",
+        "answer": "bought",
+        "why": "yesterdayは過去。buyの過去形はboughtです。",
+        "id": 1,
+        "accepted": [
+          "bought"
+        ]
+      },
+      {
+        "q": "A: Did Hana finish her homework? B: Yes, she ( did / does / is ).",
+        "answer": "did",
+        "why": "Didで始まる質問にはdidで答えます。",
+        "id": 2,
+        "accepted": [
+          "did"
+        ]
+      },
+      {
+        "q": "This street is ( wide / wider / widest ) than the street near my school.",
+        "answer": "wider",
+        "why": "thanを伴って二つを比べるので比較級widerです。",
+        "id": 3,
+        "accepted": [
+          "wider"
+        ]
+      },
+      {
+        "q": "Of the three boxes, this one is the ( heavy / heavier / heaviest ).",
+        "answer": "heaviest",
+        "why": "三つの中で最も重いので最上級heaviestです。",
+        "id": 4,
+        "accepted": [
+          "heaviest"
+        ]
+      },
+      {
+        "q": "We are going ( visit / to visit / visiting ) our uncle next week.",
+        "answer": "to visit",
+        "why": "be going toと動詞の原形で予定を表します。",
+        "id": 5,
+        "accepted": [
+          "to visit"
+        ]
+      },
+      {
+        "q": "I went to the station ( meet / to meet / met ) my cousin.",
+        "answer": "to meet",
+        "why": "目的「会うために」はtoと動詞の原形で表します。",
+        "id": 6,
+        "accepted": [
+          "to meet"
+        ]
+      },
+      {
+        "q": "Thank you for ( help / helped / helping ) me with my bag.",
+        "answer": "helping",
+        "why": "前置詞forのあとで動作を表すにはing形を使います。",
+        "id": 7,
+        "accepted": [
+          "helping"
+        ]
+      },
+      {
+        "q": "There isn't ( some / any / many ) milk in the bottle.",
+        "answer": "any",
+        "why": "否定文で不特定の量を表すときはany。milkは数えない名詞です。",
+        "id": 8,
+        "accepted": [
+          "any"
+        ]
+      },
+      {
+        "q": "I went to bed early ( because / during / despite ) I was tired.",
+        "answer": "because",
+        "why": "疲れていたことが早く寝た理由なのでBecauseです。",
+        "id": 9,
+        "accepted": [
+          "because"
+        ]
+      },
+      {
+        "q": "A: How ( long / far / many ) does the trip take? B: About forty minutes.",
+        "answer": "long",
+        "why": "時間の長さをたずねるにはHow longです。距離はHow farです。",
+        "id": 10,
+        "accepted": [
+          "long"
+        ]
+      }
+    ],
+    "order": [
+      {
+        "q": "「私は昨日、駅で彼女に会いました。」( at the station / her / yesterday / I / met )",
+        "answer": "I met her at the station yesterday.",
+        "why": "metはmeetの過去形。人herのあとに場所、時を置きます。",
+        "id": 11,
+        "accepted": [
+          "I met her at the station yesterday.",
+          "Yesterday I met her at the station.",
+          "I met her yesterday at the station."
+        ]
+      },
+      {
+        "q": "「私の兄は私より背が高いです。」( than / taller / my brother / I am / is )",
+        "answer": "My brother is taller than I am.",
+        "why": "比較級tallerのあとにthanを置き、比べる相手を続けます。",
+        "id": 12,
+        "accepted": [
+          "My brother is taller than I am."
+        ]
+      },
+      {
+        "q": "「私たちは明日、公園を掃除する予定です。」( tomorrow / clean / going to / we / the park / are )",
+        "answer": "We are going to clean the park tomorrow.",
+        "why": "are going to cleanで掃除する予定を表します。",
+        "id": 13,
+        "accepted": [
+          "We are going to clean the park tomorrow.",
+          "Tomorrow we are going to clean the park."
+        ]
+      },
+      {
+        "q": "「私は科学について学びたいです。」( about / want / science / I / to learn )",
+        "answer": "I want to learn about science.",
+        "why": "want to learnは学びたい、about scienceは科学についてです。",
+        "id": 14,
+        "accepted": [
+          "I want to learn about science."
+        ]
+      }
+    ],
+    "passages": [
+      [
+        "A club message",
+        "Our hiking club planned to meet at the station at eight on Sunday. The weather report says it will rain in the morning. We will now meet at ten, when the rain should stop. Please bring lunch and a jacket. The walk will take two hours.",
+        [
+          {
+            "q": "集合は変更後、何時ですか。数字で答えなさい。",
+            "answer": "10",
+            "why": "We will now meet at tenが新しい集合時刻。eightは変更前です。",
+            "id": 15,
+            "accepted": [
+              "10"
+            ]
+          },
+          {
+            "q": "朝の天気予報を英語1語で答えなさい。",
+            "answer": "rain",
+            "why": "it will rain in the morningが根拠です。rainyも天気の表現として認めます。",
+            "id": 16,
+            "accepted": [
+              "rain",
+              "rainy"
+            ]
+          },
+          {
+            "q": "歩く時間は何時間ですか。数字で答えなさい。",
+            "answer": "2",
+            "why": "The walk will take two hoursから2時間です。",
+            "id": 17,
+            "accepted": [
+              "2"
+            ]
+          }
+        ]
+      ],
+      [
+        "A new hobby",
+        "Last month, Riku started cooking with his grandfather. At first, cutting vegetables was difficult for him. He practiced every Saturday. Yesterday he made vegetable soup for his family. His sister asked for another bowl. Next weekend he wants to make bread.",
+        [
+          {
+            "q": "Rikuに料理を教えている家族を英語1語で答えなさい。",
+            "answer": "grandfather",
+            "why": "started cooking with his grandfatherから祖父です。",
+            "id": 18,
+            "accepted": [
+              "grandfather"
+            ]
+          },
+          {
+            "q": "Rikuが練習した曜日を英語1語で答えなさい。",
+            "answer": "Saturday",
+            "why": "He practiced every Saturdayが根拠です。",
+            "id": 19,
+            "accepted": [
+              "Saturday"
+            ]
+          },
+          {
+            "q": "次に作りたい食べ物を英語1語で答えなさい。",
+            "answer": "bread",
+            "why": "Next weekend he wants to make breadが根拠です。",
+            "id": 20,
+            "accepted": [
+              "bread"
+            ]
+          }
+        ]
+      ]
+    ],
+    "writing": [],
+    "questions": [
+      {
+        "q": "I ( buy / bought / buying ) a notebook at that shop yesterday.",
+        "answer": "bought",
+        "why": "yesterdayは過去。buyの過去形はboughtです。",
+        "id": 1,
+        "accepted": [
+          "bought"
+        ]
+      },
+      {
+        "q": "A: Did Hana finish her homework? B: Yes, she ( did / does / is ).",
+        "answer": "did",
+        "why": "Didで始まる質問にはdidで答えます。",
+        "id": 2,
+        "accepted": [
+          "did"
+        ]
+      },
+      {
+        "q": "This street is ( wide / wider / widest ) than the street near my school.",
+        "answer": "wider",
+        "why": "thanを伴って二つを比べるので比較級widerです。",
+        "id": 3,
+        "accepted": [
+          "wider"
+        ]
+      },
+      {
+        "q": "Of the three boxes, this one is the ( heavy / heavier / heaviest ).",
+        "answer": "heaviest",
+        "why": "三つの中で最も重いので最上級heaviestです。",
+        "id": 4,
+        "accepted": [
+          "heaviest"
+        ]
+      },
+      {
+        "q": "We are going ( visit / to visit / visiting ) our uncle next week.",
+        "answer": "to visit",
+        "why": "be going toと動詞の原形で予定を表します。",
+        "id": 5,
+        "accepted": [
+          "to visit"
+        ]
+      },
+      {
+        "q": "I went to the station ( meet / to meet / met ) my cousin.",
+        "answer": "to meet",
+        "why": "目的「会うために」はtoと動詞の原形で表します。",
+        "id": 6,
+        "accepted": [
+          "to meet"
+        ]
+      },
+      {
+        "q": "Thank you for ( help / helped / helping ) me with my bag.",
+        "answer": "helping",
+        "why": "前置詞forのあとで動作を表すにはing形を使います。",
+        "id": 7,
+        "accepted": [
+          "helping"
+        ]
+      },
+      {
+        "q": "There isn't ( some / any / many ) milk in the bottle.",
+        "answer": "any",
+        "why": "否定文で不特定の量を表すときはany。milkは数えない名詞です。",
+        "id": 8,
+        "accepted": [
+          "any"
+        ]
+      },
+      {
+        "q": "I went to bed early ( because / during / despite ) I was tired.",
+        "answer": "because",
+        "why": "疲れていたことが早く寝た理由なのでBecauseです。",
+        "id": 9,
+        "accepted": [
+          "because"
+        ]
+      },
+      {
+        "q": "A: How ( long / far / many ) does the trip take? B: About forty minutes.",
+        "answer": "long",
+        "why": "時間の長さをたずねるにはHow longです。距離はHow farです。",
+        "id": 10,
+        "accepted": [
+          "long"
+        ]
+      },
+      {
+        "q": "「私は昨日、駅で彼女に会いました。」( at the station / her / yesterday / I / met )",
+        "answer": "I met her at the station yesterday.",
+        "why": "metはmeetの過去形。人herのあとに場所、時を置きます。",
+        "id": 11,
+        "accepted": [
+          "I met her at the station yesterday.",
+          "Yesterday I met her at the station.",
+          "I met her yesterday at the station."
+        ]
+      },
+      {
+        "q": "「私の兄は私より背が高いです。」( than / taller / my brother / I am / is )",
+        "answer": "My brother is taller than I am.",
+        "why": "比較級tallerのあとにthanを置き、比べる相手を続けます。",
+        "id": 12,
+        "accepted": [
+          "My brother is taller than I am."
+        ]
+      },
+      {
+        "q": "「私たちは明日、公園を掃除する予定です。」( tomorrow / clean / going to / we / the park / are )",
+        "answer": "We are going to clean the park tomorrow.",
+        "why": "are going to cleanで掃除する予定を表します。",
+        "id": 13,
+        "accepted": [
+          "We are going to clean the park tomorrow.",
+          "Tomorrow we are going to clean the park."
+        ]
+      },
+      {
+        "q": "「私は科学について学びたいです。」( about / want / science / I / to learn )",
+        "answer": "I want to learn about science.",
+        "why": "want to learnは学びたい、about scienceは科学についてです。",
+        "id": 14,
+        "accepted": [
+          "I want to learn about science."
+        ]
+      },
+      {
+        "q": "集合は変更後、何時ですか。数字で答えなさい。",
+        "answer": "10",
+        "why": "We will now meet at tenが新しい集合時刻。eightは変更前です。",
+        "id": 15,
+        "accepted": [
+          "10"
+        ]
+      },
+      {
+        "q": "朝の天気予報を英語1語で答えなさい。",
+        "answer": "rain",
+        "why": "it will rain in the morningが根拠です。rainyも天気の表現として認めます。",
+        "id": 16,
+        "accepted": [
+          "rain",
+          "rainy"
+        ]
+      },
+      {
+        "q": "歩く時間は何時間ですか。数字で答えなさい。",
+        "answer": "2",
+        "why": "The walk will take two hoursから2時間です。",
+        "id": 17,
+        "accepted": [
+          "2"
+        ]
+      },
+      {
+        "q": "Rikuに料理を教えている家族を英語1語で答えなさい。",
+        "answer": "grandfather",
+        "why": "started cooking with his grandfatherから祖父です。",
+        "id": 18,
+        "accepted": [
+          "grandfather"
+        ]
+      },
+      {
+        "q": "Rikuが練習した曜日を英語1語で答えなさい。",
+        "answer": "Saturday",
+        "why": "He practiced every Saturdayが根拠です。",
+        "id": 19,
+        "accepted": [
+          "Saturday"
+        ]
+      },
+      {
+        "q": "次に作りたい食べ物を英語1語で答えなさい。",
+        "answer": "bread",
+        "why": "Next weekend he wants to make breadが根拠です。",
+        "id": 20,
+        "accepted": [
+          "bread"
+        ]
+      }
+    ]
+  },
+  "3": {
+    "label": "3級",
+    "cloze": [
+      {
+        "q": "I have ( lived / living / live ) in this town for three years.",
+        "answer": "lived",
+        "why": "haveと過去分詞、for three yearsで現在までの継続を表します。",
+        "id": 1,
+        "accepted": [
+          "lived"
+        ]
+      },
+      {
+        "q": "The bridge was ( build / built / building ) fifty years ago.",
+        "answer": "built",
+        "why": "受動態wasと過去分詞。buildの過去分詞はbuiltです。",
+        "id": 2,
+        "accepted": [
+          "built"
+        ]
+      },
+      {
+        "q": "This is the book ( who / which / where ) I borrowed yesterday.",
+        "answer": "which",
+        "why": "先行詞bookは物。目的格の関係代名詞whichを使います。",
+        "id": 3,
+        "accepted": [
+          "which"
+        ]
+      },
+      {
+        "q": "It is important for us ( save / to save / saved ) water.",
+        "answer": "to save",
+        "why": "It is形容詞for人to動詞の形。to saveが内容を表します。",
+        "id": 4,
+        "accepted": [
+          "to save"
+        ]
+      },
+      {
+        "q": "If it ( rains / rained / will rain ) tomorrow, we will stay inside.",
+        "answer": "rains",
+        "why": "未来のことでも条件を表すif節では現在形を使います。",
+        "id": 5,
+        "accepted": [
+          "rains"
+        ]
+      },
+      {
+        "q": "I have never ( went / go / been ) to Canada.",
+        "answer": "been",
+        "why": "have never been toで「一度も行ったことがない」という経験です。",
+        "id": 6,
+        "accepted": [
+          "been"
+        ]
+      },
+      {
+        "q": "Please speak more ( slow / slowly / slower ) so I can understand.",
+        "answer": "slowly",
+        "why": "動詞speakを説明する副詞slowly。more slowlyで「もっとゆっくり」です。",
+        "id": 7,
+        "accepted": [
+          "slowly"
+        ]
+      },
+      {
+        "q": "My father asked me ( wash / washing / to wash ) the dishes.",
+        "answer": "to wash",
+        "why": "ask人to動詞で、人に何かするよう頼むことを表します。",
+        "id": 8,
+        "accepted": [
+          "to wash"
+        ]
+      },
+      {
+        "q": "The boy ( sit / sitting / sits ) by the window is my cousin.",
+        "answer": "sitting",
+        "why": "名詞boyのあとに現在分詞sittingを置いて、座っている少年を説明します。",
+        "id": 9,
+        "accepted": [
+          "sitting"
+        ]
+      },
+      {
+        "q": "You may bring your own lunch, but you ( mustn't / don't have to / couldn't ) because meals are provided.",
+        "answer": "don't have to",
+        "why": "食事が用意されるので持参する必要がない。禁止を表すmustn'tとは異なります。",
+        "id": 10,
+        "accepted": [
+          "don't have to"
+        ]
+      }
+    ],
+    "order": [
+      {
+        "q": "「私はすでにその手紙を書きました。」( already / the letter / have / I / written )",
+        "answer": "I have already written the letter.",
+        "why": "haveと過去分詞writtenで完了。alreadyをhaveとwrittenの間に置きます。",
+        "id": 11,
+        "accepted": [
+          "I have already written the letter.",
+          "I have written the letter already."
+        ]
+      },
+      {
+        "q": "「この部屋は毎日掃除されます。」( every day / cleaned / this room / is )",
+        "answer": "This room is cleaned every day.",
+        "why": "is cleanedで現在の受動態を作ります。",
+        "id": 12,
+        "accepted": [
+          "This room is cleaned every day."
+        ]
+      },
+      {
+        "q": "「私はどこで切符を買うべきか分かりません。」( tickets / where / I / to buy / don't know )",
+        "answer": "I don't know where to buy tickets.",
+        "why": "where to buyでどこで買うべきかという内容をまとめます。",
+        "id": 13,
+        "accepted": [
+          "I don't know where to buy tickets."
+        ]
+      },
+      {
+        "q": "「音楽を聴くことは私を幸せにします。」( makes / to music / me / listening / happy )",
+        "answer": "Listening to music makes me happy.",
+        "why": "動名詞のまとまりが主語。make人形容詞で「人をその状態にする」です。",
+        "id": 14,
+        "accepted": [
+          "Listening to music makes me happy."
+        ]
+      }
+    ],
+    "passages": [
+      [
+        "Repair Saturday",
+        "At Elm School, students used to throw away broken umbrellas. Mina suggested a repair event. A local shop owner showed volunteers how to replace small parts. At the first event, they repaired eighteen umbrellas but could not fix four. Those four were sent to a recycling center. The next event will be in November. Students should book a place by email because only twelve volunteers can work safely in the room.",
+        [
+          {
+            "q": "最初の行事で修理できた傘の数を数字で答えなさい。",
+            "answer": "18",
+            "why": "repaired eighteen umbrellasが根拠です。fourは修理できなかった数です。",
+            "id": 15,
+            "accepted": [
+              "18"
+            ]
+          },
+          {
+            "q": "予約に使う手段を英語1語で答えなさい。",
+            "answer": "email",
+            "why": "book a place by emailが根拠。作業スペースの安全を保つため予約します。",
+            "id": 16,
+            "accepted": [
+              "email"
+            ]
+          }
+        ]
+      ],
+      [
+        "Reading outside",
+        "Leo did not enjoy reading long books. His teacher suggested a short nature guide. Leo took it to a riverside park and looked for birds shown in the pictures. He became interested in learning more and borrowed a longer book about birds. He now visits the park twice a month. On rainy days, he reads at home instead. He says the first guide helped him connect reading with something he could actually see.",
+        [
+          {
+            "q": "最初にLeoへ提案した人を英語1語で答えなさい。",
+            "answer": "teacher",
+            "why": "His teacher suggested a short nature guideが根拠です。",
+            "id": 17,
+            "accepted": [
+              "teacher"
+            ]
+          },
+          {
+            "q": "毎月、公園へ行く回数を数字で答えなさい。",
+            "answer": "2",
+            "why": "twice a monthは月に2回です。雨の日は家で読書します。",
+            "id": 18,
+            "accepted": [
+              "2"
+            ]
+          }
+        ]
+      ]
+    ],
+    "writing": [
+      {
+        "q": "友達へのメールです。英語30語程度で返事を書き、二つの質問両方に答えなさい。Hi! I want to learn a new sport. What sport do you recommend? Why do you recommend it?",
+        "answer": "I recommend badminton. You can play it indoors, so rain is not a problem. It is also easy to start with friends. I think you will enjoy playing it.",
+        "why": "模範例は一例です。競技名と薦める理由の両方が必要。理由が競技の特徴とつながっているか、主語と動詞があるかを確認します。",
+        "id": 19,
+        "accepted": [
+          "I recommend badminton. You can play it indoors, so rain is not a problem. It is also easy to start with friends. I think you will enjoy playing it."
+        ]
+      },
+      {
+        "q": "Do you think students should help clean their local parks? 英語40語程度で自分の考えと理由二つを書きなさい。",
+        "answer": "Yes, I do. First, clean parks are safer for children because there is less trash on the ground. Second, students can learn to take care of their town. Working together can also help them make new friends.",
+        "why": "YesでもNoでもよい。立場、異なる理由二つ、理由とのつながりを評価します。模範例と同じ文章である必要はありません。",
+        "id": 20,
+        "accepted": [
+          "Yes, I do. First, clean parks are safer for children because there is less trash on the ground. Second, students can learn to take care of their town. Working together can also help them make new friends."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "q": "I have ( lived / living / live ) in this town for three years.",
+        "answer": "lived",
+        "why": "haveと過去分詞、for three yearsで現在までの継続を表します。",
+        "id": 1,
+        "accepted": [
+          "lived"
+        ]
+      },
+      {
+        "q": "The bridge was ( build / built / building ) fifty years ago.",
+        "answer": "built",
+        "why": "受動態wasと過去分詞。buildの過去分詞はbuiltです。",
+        "id": 2,
+        "accepted": [
+          "built"
+        ]
+      },
+      {
+        "q": "This is the book ( who / which / where ) I borrowed yesterday.",
+        "answer": "which",
+        "why": "先行詞bookは物。目的格の関係代名詞whichを使います。",
+        "id": 3,
+        "accepted": [
+          "which"
+        ]
+      },
+      {
+        "q": "It is important for us ( save / to save / saved ) water.",
+        "answer": "to save",
+        "why": "It is形容詞for人to動詞の形。to saveが内容を表します。",
+        "id": 4,
+        "accepted": [
+          "to save"
+        ]
+      },
+      {
+        "q": "If it ( rains / rained / will rain ) tomorrow, we will stay inside.",
+        "answer": "rains",
+        "why": "未来のことでも条件を表すif節では現在形を使います。",
+        "id": 5,
+        "accepted": [
+          "rains"
+        ]
+      },
+      {
+        "q": "I have never ( went / go / been ) to Canada.",
+        "answer": "been",
+        "why": "have never been toで「一度も行ったことがない」という経験です。",
+        "id": 6,
+        "accepted": [
+          "been"
+        ]
+      },
+      {
+        "q": "Please speak more ( slow / slowly / slower ) so I can understand.",
+        "answer": "slowly",
+        "why": "動詞speakを説明する副詞slowly。more slowlyで「もっとゆっくり」です。",
+        "id": 7,
+        "accepted": [
+          "slowly"
+        ]
+      },
+      {
+        "q": "My father asked me ( wash / washing / to wash ) the dishes.",
+        "answer": "to wash",
+        "why": "ask人to動詞で、人に何かするよう頼むことを表します。",
+        "id": 8,
+        "accepted": [
+          "to wash"
+        ]
+      },
+      {
+        "q": "The boy ( sit / sitting / sits ) by the window is my cousin.",
+        "answer": "sitting",
+        "why": "名詞boyのあとに現在分詞sittingを置いて、座っている少年を説明します。",
+        "id": 9,
+        "accepted": [
+          "sitting"
+        ]
+      },
+      {
+        "q": "You may bring your own lunch, but you ( mustn't / don't have to / couldn't ) because meals are provided.",
+        "answer": "don't have to",
+        "why": "食事が用意されるので持参する必要がない。禁止を表すmustn'tとは異なります。",
+        "id": 10,
+        "accepted": [
+          "don't have to"
+        ]
+      },
+      {
+        "q": "「私はすでにその手紙を書きました。」( already / the letter / have / I / written )",
+        "answer": "I have already written the letter.",
+        "why": "haveと過去分詞writtenで完了。alreadyをhaveとwrittenの間に置きます。",
+        "id": 11,
+        "accepted": [
+          "I have already written the letter.",
+          "I have written the letter already."
+        ]
+      },
+      {
+        "q": "「この部屋は毎日掃除されます。」( every day / cleaned / this room / is )",
+        "answer": "This room is cleaned every day.",
+        "why": "is cleanedで現在の受動態を作ります。",
+        "id": 12,
+        "accepted": [
+          "This room is cleaned every day."
+        ]
+      },
+      {
+        "q": "「私はどこで切符を買うべきか分かりません。」( tickets / where / I / to buy / don't know )",
+        "answer": "I don't know where to buy tickets.",
+        "why": "where to buyでどこで買うべきかという内容をまとめます。",
+        "id": 13,
+        "accepted": [
+          "I don't know where to buy tickets."
+        ]
+      },
+      {
+        "q": "「音楽を聴くことは私を幸せにします。」( makes / to music / me / listening / happy )",
+        "answer": "Listening to music makes me happy.",
+        "why": "動名詞のまとまりが主語。make人形容詞で「人をその状態にする」です。",
+        "id": 14,
+        "accepted": [
+          "Listening to music makes me happy."
+        ]
+      },
+      {
+        "q": "最初の行事で修理できた傘の数を数字で答えなさい。",
+        "answer": "18",
+        "why": "repaired eighteen umbrellasが根拠です。fourは修理できなかった数です。",
+        "id": 15,
+        "accepted": [
+          "18"
+        ]
+      },
+      {
+        "q": "予約に使う手段を英語1語で答えなさい。",
+        "answer": "email",
+        "why": "book a place by emailが根拠。作業スペースの安全を保つため予約します。",
+        "id": 16,
+        "accepted": [
+          "email"
+        ]
+      },
+      {
+        "q": "最初にLeoへ提案した人を英語1語で答えなさい。",
+        "answer": "teacher",
+        "why": "His teacher suggested a short nature guideが根拠です。",
+        "id": 17,
+        "accepted": [
+          "teacher"
+        ]
+      },
+      {
+        "q": "毎月、公園へ行く回数を数字で答えなさい。",
+        "answer": "2",
+        "why": "twice a monthは月に2回です。雨の日は家で読書します。",
+        "id": 18,
+        "accepted": [
+          "2"
+        ]
+      },
+      {
+        "q": "友達へのメールです。英語30語程度で返事を書き、二つの質問両方に答えなさい。Hi! I want to learn a new sport. What sport do you recommend? Why do you recommend it?",
+        "answer": "I recommend badminton. You can play it indoors, so rain is not a problem. It is also easy to start with friends. I think you will enjoy playing it.",
+        "why": "模範例は一例です。競技名と薦める理由の両方が必要。理由が競技の特徴とつながっているか、主語と動詞があるかを確認します。",
+        "id": 19,
+        "accepted": [
+          "I recommend badminton. You can play it indoors, so rain is not a problem. It is also easy to start with friends. I think you will enjoy playing it."
+        ]
+      },
+      {
+        "q": "Do you think students should help clean their local parks? 英語40語程度で自分の考えと理由二つを書きなさい。",
+        "answer": "Yes, I do. First, clean parks are safer for children because there is less trash on the ground. Second, students can learn to take care of their town. Working together can also help them make new friends.",
+        "why": "YesでもNoでもよい。立場、異なる理由二つ、理由とのつながりを評価します。模範例と同じ文章である必要はありません。",
+        "id": 20,
+        "accepted": [
+          "Yes, I do. First, clean parks are safer for children because there is less trash on the ground. Second, students can learn to take care of their town. Working together can also help them make new friends."
+        ]
+      }
+    ]
+  },
+  "pre2": {
+    "label": "準2級",
+    "cloze": [
+      {
+        "q": "The museum offers free ( admission / attention / direction ) to children under six.",
+        "answer": "admission",
+        "why": "入場を表すadmission。attentionは注意、directionは方向です。",
+        "id": 1,
+        "accepted": [
+          "admission"
+        ]
+      },
+      {
+        "q": "The heavy snow caused a ( delay / habit / purpose ) in train services.",
+        "answer": "delay",
+        "why": "列車の運行が遅れることはdelay。habitは習慣、purposeは目的です。",
+        "id": 2,
+        "accepted": [
+          "delay"
+        ]
+      },
+      {
+        "q": "We need to ( reduce / refuse / replace ) food waste by buying only what we need.",
+        "answer": "reduce",
+        "why": "必要な分だけ買うことで食品廃棄を減らすのでreduceです。",
+        "id": 3,
+        "accepted": [
+          "reduce"
+        ]
+      },
+      {
+        "q": "Our prediction was wrong: the results were different from what we had ( expected / protected / collected ).",
+        "answer": "expected",
+        "why": "予想していた内容との違いなのでexpected。protectは守る、collectは集めるです。",
+        "id": 4,
+        "accepted": [
+          "expected"
+        ]
+      },
+      {
+        "q": "The match was put ( off / out / away ) until Monday because of the storm.",
+        "answer": "off",
+        "why": "put offは延期する。put outは火を消す、put awayは片付けるです。",
+        "id": 5,
+        "accepted": [
+          "off"
+        ]
+      },
+      {
+        "q": "Although the route was longer, it was much ( safe / safely / safer ).",
+        "answer": "safer",
+        "why": "wasの補語は形容詞。muchは比較級saferを強めます。",
+        "id": 6,
+        "accepted": [
+          "safer"
+        ]
+      },
+      {
+        "q": "I wish I ( have / had / will have ) more time to practice now.",
+        "answer": "had",
+        "why": "現在の事実と異なる願いはI wishと過去形で表します。",
+        "id": 7,
+        "accepted": [
+          "had"
+        ]
+      },
+      {
+        "q": "By the time I arrived, the meeting had already ( begun / began / begin ).",
+        "answer": "begun",
+        "why": "hadと過去分詞で到着前の開始を表します。beginの過去分詞はbegunです。",
+        "id": 8,
+        "accepted": [
+          "begun"
+        ]
+      },
+      {
+        "q": "She is used to ( work / working / worked ) with people from different countries.",
+        "answer": "working",
+        "why": "be used toは「慣れている」。このtoは前置詞なのでing形を続けます。",
+        "id": 9,
+        "accepted": [
+          "working"
+        ]
+      },
+      {
+        "q": "The device allows users ( check / checking / to check ) the temperature remotely.",
+        "answer": "to check",
+        "why": "allow人to動詞で、人が何かできるようにすることを表します。",
+        "id": 10,
+        "accepted": [
+          "to check"
+        ]
+      }
+    ],
+    "order": [
+      {
+        "q": "「彼はその申し出を受け入れるかどうか決めていません。」( the offer / decided / he / whether to accept / hasn't )",
+        "answer": "He hasn't decided whether to accept the offer.",
+        "why": "whether to acceptは受け入れるかどうか。hasn't decidedの目的語になります。",
+        "id": 11,
+        "accepted": [
+          "He hasn't decided whether to accept the offer."
+        ]
+      },
+      {
+        "q": "「悪天候にもかかわらず、彼らは調査を続けました。」( the survey / despite / continued / they / the bad weather )",
+        "answer": "Despite the bad weather, they continued the survey.",
+        "why": "despiteのあとに名詞句を置き、逆接を表します。文末に置いても認めます。",
+        "id": 12,
+        "accepted": [
+          "Despite the bad weather, they continued the survey.",
+          "They continued the survey despite the bad weather."
+        ]
+      },
+      {
+        "q": "「その説明は、私が理解できるほど明確でした。」( for me / clear enough / the explanation / to understand / was )",
+        "answer": "The explanation was clear enough for me to understand.",
+        "why": "形容詞enough for人to動詞で、人がその動作をできる程度であることを表します。",
+        "id": 13,
+        "accepted": [
+          "The explanation was clear enough for me to understand."
+        ]
+      },
+      {
+        "q": "「誰がその展示を担当するのか教えてください。」( the display / tell me / in charge of / please / who is )",
+        "answer": "Please tell me who is in charge of the display.",
+        "why": "間接疑問はwho isの語順。be in charge ofは担当しているという意味です。",
+        "id": 14,
+        "accepted": [
+          "Please tell me who is in charge of the display."
+        ]
+      }
+    ],
+    "passages": [
+      [
+        "A shared freezer",
+        "Westfield residents opened a shared freezer for extra garden vegetables. At first, anyone could leave food without a label. Volunteers soon found that this made it difficult to check how long food had been stored. They introduced labels showing the date and the name of the vegetable. Cooked meals are not accepted because the volunteers cannot check all ingredients. The freezer is open three afternoons a week. A nearby cafe pays the electricity bill, while residents take turns cleaning the area.",
+        [
+          {
+            "q": "ラベルのない食品では何の確認が難しかったですか。日本語で答えなさい。",
+            "answer": "食品がどれくらいの期間保存されていたか",
+            "why": "how long food had been storedが根拠。種類や量だけを答えると目的を捉えられていません。",
+            "id": 15,
+            "accepted": [
+              "食品がどれくらいの期間保存されていたか",
+              "食品の保存期間",
+              "食品がいつから保存されているか"
+            ]
+          },
+          {
+            "q": "電気代を払っている施設を英語1語で答えなさい。",
+            "answer": "cafe",
+            "why": "A nearby cafe pays the electricity billが根拠です。住民は清掃を分担します。",
+            "id": 16,
+            "accepted": [
+              "cafe"
+            ]
+          }
+        ]
+      ],
+      [
+        "Testing a bus route",
+        "A town tested a late bus for students attending evening classes. The first survey asked whether people wanted the service, and most said yes. However, only a few used it during the first month. A second survey revealed that the bus left ten minutes before many classes ended. The town changed the departure time rather than canceling the route. Passenger numbers then increased. Officials decided to continue the test for three more months before making a final decision.",
+        [
+          {
+            "q": "利用者が少なかった理由を日本語で答えなさい。",
+            "answer": "多くの授業が終わる10分前にバスが出発していたから",
+            "why": "wanted the serviceへの肯定と実際の利用は別。2回目の調査で出発時刻の問題が分かりました。",
+            "id": 17,
+            "accepted": [
+              "多くの授業が終わる10分前にバスが出発していたから",
+              "多くの授業の終了より10分早くバスが出発したから"
+            ]
+          },
+          {
+            "q": "最終判断の前に、さらに何か月試験運行しますか。数字で答えなさい。",
+            "answer": "3",
+            "why": "for three more monthsが根拠です。first monthは最初の実施期間です。",
+            "id": 18,
+            "accepted": [
+              "3"
+            ]
+          }
+        ]
+      ]
+    ],
+    "writing": [
+      {
+        "q": "英語50語程度でメールへの返信を書きなさい。相手の提案に賛成か反対かと理由を述べ、必要な情報を一つ質問しなさい。Our club may hold a weekend event where students exchange books. Do you think this is a good idea?",
+        "answer": "I think a book exchange is a good idea because students can discover new stories without spending much money. It also gives us a chance to talk about our favorite writers. Could you tell me where we would hold the event? We will need enough space for the books.",
+        "why": "賛否、関連する理由、情報を求める質問が必要です。書き手の意図が伝わるかを確認し、例と違う考えでも認めます。",
+        "id": 19,
+        "accepted": [
+          "I think a book exchange is a good idea because students can discover new stories without spending much money. It also gives us a chance to talk about our favorite writers. Could you tell me where we would hold the event? We will need enough space for the books."
+        ]
+      },
+      {
+        "q": "Should towns provide more places where young people can study after school? 英語60語程度で意見と理由二つを書きなさい。",
+        "answer": "I think towns should provide more study spaces. First, some students do not have a quiet place at home, so a public space would help them concentrate. Second, students could support each other when they have difficult homework. These spaces should have clear rules so that everyone can use them safely and comfortably. This would make them more useful.",
+        "why": "YesでもNoでもよい。理由二つが別の観点か、意見を支えているか、文同士がつながるかを評価します。模範例は唯一の正答ではありません。",
+        "id": 20,
+        "accepted": [
+          "I think towns should provide more study spaces. First, some students do not have a quiet place at home, so a public space would help them concentrate. Second, students could support each other when they have difficult homework. These spaces should have clear rules so that everyone can use them safely and comfortably. This would make them more useful."
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "q": "The museum offers free ( admission / attention / direction ) to children under six.",
+        "answer": "admission",
+        "why": "入場を表すadmission。attentionは注意、directionは方向です。",
+        "id": 1,
+        "accepted": [
+          "admission"
+        ]
+      },
+      {
+        "q": "The heavy snow caused a ( delay / habit / purpose ) in train services.",
+        "answer": "delay",
+        "why": "列車の運行が遅れることはdelay。habitは習慣、purposeは目的です。",
+        "id": 2,
+        "accepted": [
+          "delay"
+        ]
+      },
+      {
+        "q": "We need to ( reduce / refuse / replace ) food waste by buying only what we need.",
+        "answer": "reduce",
+        "why": "必要な分だけ買うことで食品廃棄を減らすのでreduceです。",
+        "id": 3,
+        "accepted": [
+          "reduce"
+        ]
+      },
+      {
+        "q": "Our prediction was wrong: the results were different from what we had ( expected / protected / collected ).",
+        "answer": "expected",
+        "why": "予想していた内容との違いなのでexpected。protectは守る、collectは集めるです。",
+        "id": 4,
+        "accepted": [
+          "expected"
+        ]
+      },
+      {
+        "q": "The match was put ( off / out / away ) until Monday because of the storm.",
+        "answer": "off",
+        "why": "put offは延期する。put outは火を消す、put awayは片付けるです。",
+        "id": 5,
+        "accepted": [
+          "off"
+        ]
+      },
+      {
+        "q": "Although the route was longer, it was much ( safe / safely / safer ).",
+        "answer": "safer",
+        "why": "wasの補語は形容詞。muchは比較級saferを強めます。",
+        "id": 6,
+        "accepted": [
+          "safer"
+        ]
+      },
+      {
+        "q": "I wish I ( have / had / will have ) more time to practice now.",
+        "answer": "had",
+        "why": "現在の事実と異なる願いはI wishと過去形で表します。",
+        "id": 7,
+        "accepted": [
+          "had"
+        ]
+      },
+      {
+        "q": "By the time I arrived, the meeting had already ( begun / began / begin ).",
+        "answer": "begun",
+        "why": "hadと過去分詞で到着前の開始を表します。beginの過去分詞はbegunです。",
+        "id": 8,
+        "accepted": [
+          "begun"
+        ]
+      },
+      {
+        "q": "She is used to ( work / working / worked ) with people from different countries.",
+        "answer": "working",
+        "why": "be used toは「慣れている」。このtoは前置詞なのでing形を続けます。",
+        "id": 9,
+        "accepted": [
+          "working"
+        ]
+      },
+      {
+        "q": "The device allows users ( check / checking / to check ) the temperature remotely.",
+        "answer": "to check",
+        "why": "allow人to動詞で、人が何かできるようにすることを表します。",
+        "id": 10,
+        "accepted": [
+          "to check"
+        ]
+      },
+      {
+        "q": "「彼はその申し出を受け入れるかどうか決めていません。」( the offer / decided / he / whether to accept / hasn't )",
+        "answer": "He hasn't decided whether to accept the offer.",
+        "why": "whether to acceptは受け入れるかどうか。hasn't decidedの目的語になります。",
+        "id": 11,
+        "accepted": [
+          "He hasn't decided whether to accept the offer."
+        ]
+      },
+      {
+        "q": "「悪天候にもかかわらず、彼らは調査を続けました。」( the survey / despite / continued / they / the bad weather )",
+        "answer": "Despite the bad weather, they continued the survey.",
+        "why": "despiteのあとに名詞句を置き、逆接を表します。文末に置いても認めます。",
+        "id": 12,
+        "accepted": [
+          "Despite the bad weather, they continued the survey.",
+          "They continued the survey despite the bad weather."
+        ]
+      },
+      {
+        "q": "「その説明は、私が理解できるほど明確でした。」( for me / clear enough / the explanation / to understand / was )",
+        "answer": "The explanation was clear enough for me to understand.",
+        "why": "形容詞enough for人to動詞で、人がその動作をできる程度であることを表します。",
+        "id": 13,
+        "accepted": [
+          "The explanation was clear enough for me to understand."
+        ]
+      },
+      {
+        "q": "「誰がその展示を担当するのか教えてください。」( the display / tell me / in charge of / please / who is )",
+        "answer": "Please tell me who is in charge of the display.",
+        "why": "間接疑問はwho isの語順。be in charge ofは担当しているという意味です。",
+        "id": 14,
+        "accepted": [
+          "Please tell me who is in charge of the display."
+        ]
+      },
+      {
+        "q": "ラベルのない食品では何の確認が難しかったですか。日本語で答えなさい。",
+        "answer": "食品がどれくらいの期間保存されていたか",
+        "why": "how long food had been storedが根拠。種類や量だけを答えると目的を捉えられていません。",
+        "id": 15,
+        "accepted": [
+          "食品がどれくらいの期間保存されていたか",
+          "食品の保存期間",
+          "食品がいつから保存されているか"
+        ]
+      },
+      {
+        "q": "電気代を払っている施設を英語1語で答えなさい。",
+        "answer": "cafe",
+        "why": "A nearby cafe pays the electricity billが根拠です。住民は清掃を分担します。",
+        "id": 16,
+        "accepted": [
+          "cafe"
+        ]
+      },
+      {
+        "q": "利用者が少なかった理由を日本語で答えなさい。",
+        "answer": "多くの授業が終わる10分前にバスが出発していたから",
+        "why": "wanted the serviceへの肯定と実際の利用は別。2回目の調査で出発時刻の問題が分かりました。",
+        "id": 17,
+        "accepted": [
+          "多くの授業が終わる10分前にバスが出発していたから",
+          "多くの授業の終了より10分早くバスが出発したから"
+        ]
+      },
+      {
+        "q": "最終判断の前に、さらに何か月試験運行しますか。数字で答えなさい。",
+        "answer": "3",
+        "why": "for three more monthsが根拠です。first monthは最初の実施期間です。",
+        "id": 18,
+        "accepted": [
+          "3"
+        ]
+      },
+      {
+        "q": "英語50語程度でメールへの返信を書きなさい。相手の提案に賛成か反対かと理由を述べ、必要な情報を一つ質問しなさい。Our club may hold a weekend event where students exchange books. Do you think this is a good idea?",
+        "answer": "I think a book exchange is a good idea because students can discover new stories without spending much money. It also gives us a chance to talk about our favorite writers. Could you tell me where we would hold the event? We will need enough space for the books.",
+        "why": "賛否、関連する理由、情報を求める質問が必要です。書き手の意図が伝わるかを確認し、例と違う考えでも認めます。",
+        "id": 19,
+        "accepted": [
+          "I think a book exchange is a good idea because students can discover new stories without spending much money. It also gives us a chance to talk about our favorite writers. Could you tell me where we would hold the event? We will need enough space for the books."
+        ]
+      },
+      {
+        "q": "Should towns provide more places where young people can study after school? 英語60語程度で意見と理由二つを書きなさい。",
+        "answer": "I think towns should provide more study spaces. First, some students do not have a quiet place at home, so a public space would help them concentrate. Second, students could support each other when they have difficult homework. These spaces should have clear rules so that everyone can use them safely and comfortably. This would make them more useful.",
+        "why": "YesでもNoでもよい。理由二つが別の観点か、意見を支えているか、文同士がつながるかを評価します。模範例は唯一の正答ではありません。",
+        "id": 20,
+        "accepted": [
+          "I think towns should provide more study spaces. First, some students do not have a quiet place at home, so a public space would help them concentrate. Second, students could support each other when they have difficult homework. These spaces should have clear rules so that everyone can use them safely and comfortably. This would make them more useful."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": 8,
+  "books": [
+    {
+      "book": "kokugo1",
+      "closedAnswerBodies": 319,
+      "bookSha256": "664e3d8358646b695f1c232d545435afda6a00a3e42ddd3e47d726c129237c67",
+      "publicRows": 1433
+    },
+    {
+      "book": "english1",
+      "closedAnswerBodies": 178,
+      "bookSha256": "cf15e2496432d365976ca730a4c0a47782904d0d7f4bfebe44674aa9bca84649",
+      "publicRows": 696
+    }
+  ],
+  "scope": "Every details answer body replaced only in memory by a unique private marker; actual text-context generator returns identical public contexts. Original candidates untouched. Render-time exposure and media/AI answer generation are separate."
+}

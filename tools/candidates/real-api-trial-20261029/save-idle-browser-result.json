@@ -1,0 +1,26 @@
+{
+  "status": "passed isolated actual UI/adapter",
+  "checks": 11,
+  "realAPICalls": 0,
+  "mainChanged": false,
+  "liveCauseConfirmed": false,
+  "inputs": [
+    {
+      "file": "messages.candidate.js",
+      "sha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642"
+    },
+    {
+      "file": "retry-adapter.before.js",
+      "sha256": "28e76031e9a5603296cd0b0b9529dafd56f431aa5ffb0f289da4696849715233"
+    },
+    {
+      "file": "retry-adapter.candidate.js",
+      "sha256": "d41ed5cf3bf2a5fe589097690a27d06afabe0050e05071b0b8bbf42ca0db8a45"
+    },
+    {
+      "file": "verify-save-idle-browser.mjs",
+      "sha256": "66e78c22141f840e4c9de3586690dfdfc76f8ce7377c0e5f80061f081b188b3e"
+    }
+  ],
+  "scope": "One explicit click through actual messages candidate and before/candidate retry adapters, real browser timers, synthetic save/readback. Original busy failure reproduced; candidate waits120ms and sends once only after matching remote id/text. No real server or records."
+}

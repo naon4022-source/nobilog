@@ -1,0 +1,17 @@
+{
+  "sourceSHA": "41d3e52b5c87bf8c27f3f122f00880ca058da1b06142e26731a8da0eb6381c4d",
+  "patches": [
+    {
+      "old": "export async function runRealAITrial(db, work, now = Date.now()) {",
+      "new": "export function runRealAITrial(db,work,now=Date.now()){return runBoundedTrial(db,work,now,12000);}\nexport function runAvatarAITrial(db,work,now=Date.now()){return runBoundedTrial(db,work,now,60000);}\nasync function runBoundedTrial(db, work, now, timeoutMs) {"
+    },
+    {
+      "old": "now+60000,now).first('v')",
+      "new": "now+timeoutMs+48000,now).first('v')"
+    },
+    {
+      "old": "const remaining=12000-(performance.now()-started);",
+      "new": "const remaining=timeoutMs-(performance.now()-started);"
+    }
+  ]
+}

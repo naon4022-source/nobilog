@@ -1,0 +1,8 @@
+{
+  "status": "applied after full87031 terminal exit1",
+  "file": ".claude/verify/run.sh",
+  "beforeSha256": "70fc8af9bde5376fd1a376a1dce22e660c498a2ad86c13387d041a7169344058",
+  "afterSha256": "df3e132d997091e58ab890fbff773dddb7f9d632449565481dc05c18aeffaaa8",
+  "reason": "R tests resolve source paths from project root; full runner starts from verification directory. Give only these invocations a project-root subshell, preserving all assertions and parent working directory.",
+  "appliedAfterObservedExitCode": 1
+}

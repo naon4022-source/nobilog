@@ -1,0 +1,18 @@
+--- tools/candidates/textbook-ai-20261026/review/math-order-followup/social-verifier-before.mjs
+
++++ tools/candidates/social-geo-nihon-review-20261021/verify-integrated.mjs
+
+@@ -0,0 +1 @@
+
++import {reviewedMathBankSuccessor} from '../textbook-ai-20261026/review/math-order-followup/checked-bank-successor.mjs';
+@@ -23 +24 @@
+
+-assert.deepEqual(bankWithoutKentei,expected,'all other units and source registries exact');assert.deepEqual(serverBank,bank);
++assert.deepEqual(bankWithoutKentei,await reviewedMathBankSuccessor(expected,bank),'all other units and source registries exact');assert.deepEqual(serverBank,bank);
+--- tools/candidates/textbook-ai-20261026/review/math-order-followup/runner-before-bank-successor.sh
+
++++ .claude/verify/run.sh
+
+@@ -206,0 +207 @@
+
++(cd "$PROJECT_DIR" && node "$PROJECT_DIR/tools/candidates/textbook-ai-20261026/review/math-order-followup/verify-bank-successor.mjs") || fail=1

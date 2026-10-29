@@ -1,0 +1,28 @@
+{
+  "status": "candidate source prepared; not executed, persisted, integrated or published",
+  "module": "lobby-core.mjs",
+  "moduleSha256": "ec94061801d5563e527f38fd768ec180c202049e56f268895fa665ac02c0f663",
+  "docs": [
+    "https://developers.cloudflare.com/workers/best-practices/workers-best-practices/",
+    "https://developers.cloudflare.com/d1/worker-api/d1-database/"
+  ],
+  "publicWorkerTypes": {
+    "package": "@cloudflare/workers-types",
+    "version": "5.20261021.1",
+    "url": "https://unpkg.com/@cloudflare/workers-types@5.20261021.1/index.d.ts",
+    "sha256": "dd24c1870cb19c1b9337cca57bbc0bd9a7ae9b14098dacd81ae7a712196ab5ca"
+  },
+  "storageBoundary": "future adapter must CAS revision and active-session owner in same SQL write; no Workers global room state",
+  "scope": "lobby lifecycle and redacted public projection only; server storage/auth route, realtime transport, authoritative answers, score/speed rules, boss outcome, UI and end-to-end verification remain",
+  "bossRule": "superseded by latest user decision: tap RPG, 2-3 participants only, companion clear history",
+  "actualTestsRun": false,
+  "realUserData": false,
+  "mainChanged": false,
+  "activeFull": {
+    "sessionId": 52964,
+    "pid": 7018
+  },
+  "sourceReview": "added strict persisted-state validation, retry conflict handling, readiness replay after countdown, no other-user UID/timestamp projection; public logical phase keeps persisted revision so read does not invent a saved version",
+  "coopSupersededBy": "tools/candidates/coop-story-rpg-20261021/実装条件.md",
+  "reuseBoundary": "two-player lobby candidate is not the new 2-3 participant RPG; VS remains separate and unintegrated"
+}

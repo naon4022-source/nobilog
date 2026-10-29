@@ -1,0 +1,81 @@
+{
+  "status": "twelve isolated checks passed with unchanged recorded inputs; main/real RPC/UI integration incomplete",
+  "userDecision": "2-3 participants only; no solo start; keep who cleared each stage together",
+  "sourceOfDecision": "latest direct user answer in this chat",
+  "supersedes": "old two-player-only coop lobby proposal; VS scope is separate",
+  "files": {
+    "verify-party.mjs": "5c82bd6d28b6e3102925a8d106ab583925130ae000331b66d5a6d8eabeb8f2dc",
+    "record-progress.py": "35465aa3372b97671725b038d90570675b85e209011a6d5a26e94539e64127aa",
+    "verify-equipment.mjs": "ee7b8864c31bdb3dfcf44a9878cdf1da1197932befa215b6f4635b210a6c4a05",
+    "実装条件.md": "884bf6c217d706e584dc462b9fa4d065a89b4605471b7cb23905d2f452580ce2",
+    "eligible-pool.mjs": "27ae6a722d20a05ea16483fee555c7c78ee0c92bbe7a2eb5979a1de791481d84",
+    "verify-candidate.py": "8e01bb11645bd61752f46264c86dfb29834d2a8eaf83e5e4eb6c61f1554f079d",
+    "verify-store.mjs": "5bf06582a57e075424028020e0fd187566bf2d44e566863f2fe9baa9663de6e5",
+    "party-core.mjs": "c41789f2b5c45ff2be569516247a3fa941ab6d51b3e372b2ca7425e14b5ba54f",
+    "物語構成.md": "d9d1791b384bcb802863360122f967fa4633780e6b5a0973a7c8a1911ff5b37c",
+    "party-store.mjs": "f3e5b8034c0bfb463b838181e6dd7b5f59f4a11433af8b1be71c2b4d0775cf17",
+    "equipment.mjs": "f830eea8ae2c94c9d8852a0c83fc3e6056dcd1fe35c0ec33e862081935c700f3",
+    "verify-pool.mjs": "4efc31b3813d133c5971fdee9efe58c08e9146dbf1167f28fb7923cca1dd2802"
+  },
+  "mainChanged": false,
+  "published": false,
+  "actualTestsRun": true,
+  "realUserData": false,
+  "preparedChecks": [
+    "verify-party.mjs",
+    "verify-pool.mjs",
+    "verify-store.mjs"
+  ],
+  "story": {
+    "plannedChapters": 12,
+    "draftChapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "allChaptersComplete": false,
+    "allDraftChaptersWritten": true,
+    "firstEditorialPass": "物語初回通読点検.md",
+    "currentBuild": "story-build.json"
+  },
+  "remaining": [
+    "real local Worker/RPC and browser adapters",
+    "main authentication/permission/origin/snapshot integration",
+    "hamburger menu and avatar/shop/story/battle/quiz/history UI",
+    "multiple clients, hide/close/reconnect and own save-ACK refresh",
+    "final story game/UI/play-through review",
+    "current whole-app failures and final post-integration full"
+  ],
+  "activeFullUnmodified": {
+    "status": "terminal_exit1",
+    "result": "external-full2-result.json"
+  },
+  "verification": "candidate-verification.json",
+  "precedingFull": {
+    "sessionId": 52964,
+    "observedExitCode": 0,
+    "status": "input drift; current main full success not certified",
+    "proof": "../social-geo-nihon-review-20261021/post-full-input-drift-52964.json"
+  },
+  "additionalUntestedCommunication": "live-preparation.json",
+  "currentEquipmentCatalogRequiresRecheck": false,
+  "backendVerification": "backend-verification.json",
+  "preparationHistory": {
+    "newBackendUntested": "backend-preparation.json",
+    "newBattleUntested": "battle-preparation.json",
+    "newWordDirectionsUntested": "word-direction-decision.json",
+    "newQuizAdapterUntested": "quiz-preparation.json",
+    "newBattleServiceUntested": "service-preparation.json",
+    "newRouteUntested": "route-preparation.json",
+    "newWordReaderUntested": "word-reader-preparation.json"
+  }
+}

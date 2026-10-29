@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd'
+- 'cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af'
+
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/verify-current-math-playback.mjs:13:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd',
+  expected: 'cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

@@ -1,0 +1,88 @@
+{
+  "files": [
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/index.html",
+      "beforeSha256": "1ddb1fc1df9a3829840b1aeaa313923118a790599f93c1e1c0a66546c4c479c2",
+      "afterSha256": "5fd6f7b4960ebbd1aebab7d8216ceed8def44a420c34dbb5d36b7f88e8defc68",
+      "edits": [
+        {
+          "start": 3297,
+          "end": 3297,
+          "before": "",
+          "after": "    <link rel=\"stylesheet\" href=\"/test-review.css\">\n    <script src=\"/test-review-model.js\" defer></script>\n    <script src=\"/test-review-cards.js\" defer></script>\n    <script src=\"/test-review.js\" defer></script>\n"
+        },
+        {
+          "start": 135398,
+          "end": 135398,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 137545,
+          "end": 137545,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 141154,
+          "end": 141154,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 204310,
+          "end": 204310,
+          "before": "",
+          "after": "    function testReviewNotice(job){return {id:'test-review:'+job.id,testReviewId:job.id,category:'exam',title:'テストの解答とコメントができました',body:'ノビーと解説を確認して、次の一問につなげよう。',at:job.completedAt};}\n    function testReviewReady(who){return !!currentUserId&&serverBootReady&&!authLeaseBlocked&&!isTrial()&&(!who||cloudSame(who));}\n    async function testReviewRequest(path,options,who){\n        if(!testReviewReady(who))throw Object.assign(Error('session_changed'),{code:'session_changed'});\n        const result=await textbookAIRequest(path,options,who);\n        if(!testReviewReady(who))throw Object.assign(Error('session_changed'),{code:'session_changed'});\n        return result;\n    }\n    window.nobiTestReviewAPI={\n        available:()=>testReviewReady(),snapshot:()=>cloudIdentity(),matches:who=>testReviewReady(who),\n        list:who=>testReviewRequest('/material-test-review',{},who),\n        get:(id,who)=>testReviewRequest('/material-test-review?id='+encodeURIComponent(id),{},who),\n        post:(body,who)=>testReviewRequest('/material-test-review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who),\n        status:(id,who)=>testReviewRequest('/material-test-session?id='+encodeURIComponent(id),{},who),\n        plan:who=>testReviewRequest('/plan',{},who),\n        canNotify:()=>testReviewReady()&&noticeAllowed(testReviewNotice({id:'',completedAt:0})),\n        notify:(job,who)=>{if(!testReviewReady(who)||document.hidden)return false;const before=noticeToastSerial;noticeToast(testReviewNotice(job));return noticeToastSerial>before;}\n    };\n"
+        },
+        {
+          "start": 236999,
+          "end": 236999,
+          "before": "",
+          "after": "        if(n.testReviewId){void window.NobiTestReviews?.open(n.testReviewId);return;}\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/site-assets/material-ui.js",
+      "beforeSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "afterSha256": "80143f5742fd685ddb88cc3ba21c55c2d482f8cd0d4120b0b23cb4a1422e5dff",
+      "edits": [
+        {
+          "start": 65206,
+          "end": 65206,
+          "before": "",
+          "after": "  if(root.NobiTestReviews&&bridge.testSessionAvailable?.())wrap.append(button('AI解説の履歴',()=>void root.NobiTestReviews.openHistory()));\n"
+        },
+        {
+          "start": 67603,
+          "end": 67603,
+          "before": "",
+          "after": "  if(state.started&&!activeReview&&(state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.()&&root.NobiTestReviews)article.append(button('ノビーの全問解説',()=>void root.NobiTestReviews.openForCurrent(bridge,bridge.identity()),false,state.busy));\n"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/実装/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/教材整理/実装/material-ui.js",
+      "beforeSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "afterSha256": "80143f5742fd685ddb88cc3ba21c55c2d482f8cd0d4120b0b23cb4a1422e5dff",
+      "edits": [
+        {
+          "start": 65206,
+          "end": 65206,
+          "before": "",
+          "after": "  if(root.NobiTestReviews&&bridge.testSessionAvailable?.())wrap.append(button('AI解説の履歴',()=>void root.NobiTestReviews.openHistory()));\n"
+        },
+        {
+          "start": 67603,
+          "end": 67603,
+          "before": "",
+          "after": "  if(state.started&&!activeReview&&(state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.()&&root.NobiTestReviews)article.append(button('ノビーの全問解説',()=>void root.NobiTestReviews.openForCurrent(bridge,bridge.identity()),false,state.busy));\n"
+        }
+      ]
+    }
+  ]
+}

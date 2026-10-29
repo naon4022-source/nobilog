@@ -1,0 +1,133 @@
+{
+  "status": "running",
+  "command": "bash .claude/verify/run.sh",
+  "log": "tools/candidates/verification-dialog-repair-20261027/full3.log",
+  "inputs": [
+    {
+      "file": ".claude/verify/run.sh",
+      "sha256": "c8eca6713c6f0b205d7cef24a550caa4ee2d1d6f4d313597e3d995a7909347a1"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "c2143fdce5b84ac1981289620c8c551657e0abfe6e3a747c33b71fa2c0d6269d"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "sha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "sha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "0f50e50148d34751214bb9a18a903fded0c9435b466abb80bcbf35b157d1ce3e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "06a5139905aeebdfce98b8d8b0edcd93730464190a56f9c4017b320e2f1e406c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-result.json",
+      "sha256": "3118e0d814c49dec8aef5e780200708856535aa4581d60a122bf6b9bfb1a348e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs",
+      "sha256": "f212e47e3dd56ff90a5490d0ee91a85fbd5786bc59ff17b5745a631ab6a853e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/main-integration.json",
+      "sha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-integration-result.json",
+      "sha256": "99d7981a5cbf60d8b8d6be0fa0ea7b43f15a114b9a53edc440fbd6acb81c96d8"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-main-library-result.json",
+      "sha256": "bd83815804d13c60cce2dbdc0cc9204430e1bf74074699b2e57809e7b0d3a031"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-result.json",
+      "sha256": "247788e3b9b6d08c81da3e8df928f9e185a0ed1d167480c72b9f363386af36ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-1440.png",
+      "sha256": "d189ba46cc826e5e64101ccf313b6d136558d31cb54d2be4ac962bbbf84fb5e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-390.png",
+      "sha256": "bffe12083aeef485d02afeec79889bee9d1aa649cbd629f9aa1d99ad0261f4f1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-820.png",
+      "sha256": "88147597167ae3ebb0dfc39dd52c376615b4e87f3df3a1cfd8c0b7eb93d80e7d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "caaf83dd01bc6a179b3b800e1c0df68d1dce67bc28cb5de3f928125a7e2a4dd6"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "108c5074b16baef8120278b188d11ba69042d1f73150813402f7f51ecd7f2118"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "3f48daa78744dcfd3cfbe87bf192f88f46baf8a68a50d3b3c7f6c04767d53b6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "f849445121367c97e0fe40e28b83daea1dca5d181ceae94cd3ae700cb4a1689f"
+    },
+    {
+      "file": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+      "sha256": "1baced6e2ee0c18de98890b224f8f0b8bfb80c65fdf99839a43de27e0cba0b09"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/result.json",
+      "sha256": "e557c9e261a991b8b1bf64b9b724e360113cf7dddd07440cb6d0b7fa21ba9d1b"
+    },
+    {
+      "file": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+      "sha256": "38ea470d7d29a544a5a89cf0d13d037c92550d8abc1c21d5c5b39000392b2710"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/auth-repair-result.json",
+      "sha256": "87ec0a8f5e1a190375f423ab27bfa605085437d3f086f83892921c17537ce5f0"
+    }
+  ],
+  "scope": "Previous29 source/proof inputs plus exact auth-repair save/idle verifier correction and three-round proof; candidate image AI remains unregistered; not an all-repository snapshot.",
+  "session": 75917
+}

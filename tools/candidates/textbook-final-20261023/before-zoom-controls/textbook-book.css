@@ -1,0 +1,244 @@
+/* 📚 教科書タブ（本棚・見開き）。ページは 600×848 の紙として組み、画面に合わせて縮小する。
+   フォントは端末に入っているものだけを使う（外部から読み込まない）。 */
+.tb-app{--tb-desk:#262b33;
+ --tb-font-head:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic Pro","BIZ UDPGothic","Yu Gothic UI","Yu Gothic","Meiryo",sans-serif;
+ --tb-font-body:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+ --tb-font-note:"Hiragino Mincho ProN","BIZ UDPMincho","Yu Mincho","YuMincho",serif;
+ --tb-font-num:"Avenir Next","Segoe UI","Hiragino Sans",sans-serif;
+ font-family:var(--tb-font-body)}
+/* 入口 */
+.tb-gate{max-width:540px;margin:12px auto;padding:30px 22px;text-align:center;border-radius:24px;background:linear-gradient(160deg,#ffffff,#eef4fb);color:#27313a;box-shadow:0 10px 30px rgba(31,95,168,.12);border:1px solid #d7e2ee}
+.tb-gate-icon{font-size:52px;margin:0;animation:tbFloat 3s ease-in-out infinite}
+.tb-gate h3{margin:8px 0;font-family:var(--tb-font-head);font-size:22px}.tb-gate p{line-height:1.7}
+.tb-gate-message{color:#9b2c2c;font-weight:700}
+.tb-btn{min-height:44px;padding:9px 16px;border:1px solid #c6ccd3;border-radius:999px;background:#fff;color:#27313a;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.tb-btn:hover{transform:translateY(-1px)}
+.tb-btn-main{background:linear-gradient(135deg,#2a74c9,#1f5fa8);border-color:#1f5fa8;color:#fff;padding:12px 24px;box-shadow:0 6px 16px rgba(31,95,168,.35)}
+/* 全画面 */
+.tb-app:fullscreen,.tb-app.tb-fallback{display:flex;flex-direction:column;width:100%;height:100%;background:radial-gradient(circle at 50% 30%,#3a414c,var(--tb-desk) 70%);color:#fff;overflow:hidden}
+.tb-app:-webkit-full-screen{display:flex;flex-direction:column;width:100%;height:100%;background:radial-gradient(circle at 50% 30%,#3a414c,var(--tb-desk) 70%);color:#fff;overflow:hidden}
+.tb-app.tb-fallback{position:fixed;inset:0;z-index:6000;width:100vw;height:100vh;height:100dvh}
+html.tb-lock,html.tb-lock body{overflow:hidden}
+.tb-bar{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:8px 14px;background:rgba(0,0,0,.28);backdrop-filter:blur(6px)}
+.tb-bar-title{font-family:var(--tb-font-head);font-weight:800;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-bar-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.tb-bar .tb-btn{min-height:38px;padding:6px 14px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);color:#fff}
+@media(max-width:700px){.tb-bar{flex-wrap:wrap;padding:8px;gap:6px}.tb-bar-title{width:100%;min-width:0}.tb-bar-actions{width:100%;min-width:0;margin-left:0;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.tb-bar-actions>*{flex-shrink:0}.tb-stage{min-height:120px}}
+.tb-btn-home{background:rgba(255,255,255,.94)!important;color:#1d2a36!important}
+.tb-page-info{font-family:var(--tb-font-num);font-size:14px;opacity:.9;white-space:nowrap}
+/* 本棚 */
+.tb-shelf{flex:1;overflow:auto;padding:18px 18px 32px}
+.tb-shelf-lead{margin:0 0 14px;text-align:center;font-family:var(--tb-font-head)}
+.tb-shelf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding-bottom:18px;border-bottom:10px solid #5b4632;box-shadow:0 14px 0 -4px #3d2f22}
+.tb-book{display:flex;flex-direction:column;align-items:center;gap:8px;padding:0;border:0;background:none;color:#fff;font:inherit;cursor:pointer;animation:tbRise .5s ease both;transition:transform .2s ease}
+.tb-book:nth-child(2){animation-delay:.05s}.tb-book:nth-child(3){animation-delay:.1s}.tb-book:nth-child(4){animation-delay:.15s}.tb-book:nth-child(5){animation-delay:.2s}.tb-book:nth-child(6){animation-delay:.25s}.tb-book:nth-child(7){animation-delay:.3s}
+.tb-book:not(:disabled):hover{transform:translateY(-6px) rotate(-1deg)}
+.tb-book:disabled{cursor:default}.tb-book-wait .tb-cover{filter:grayscale(.75) brightness(.85)}
+.tb-book-title{font-family:var(--tb-font-head);font-weight:700}
+.tb-shelf-message{text-align:center;color:#ffd7d7}
+.tb-measure{position:fixed;left:-20000px;top:0;width:600px;height:848px;visibility:hidden;pointer-events:none;contain:strict}
+.tb-measure .tb-page{contain:strict}.tb-measure .tb-body{contain:layout style}
+/* 表紙 */
+.tb-cover{position:relative;box-sizing:border-box;width:600px;height:848px;padding:70px 56px;overflow:hidden;color:#fff;font-family:var(--tb-font-head);background:linear-gradient(160deg,var(--tb-color) 0%,var(--tb-color) 55%,rgba(0,0,0,.35) 140%);border-radius:4px 10px 10px 4px}
+.tb-cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:26px;background:rgba(0,0,0,.18)}
+.tb-cover::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08)}
+.tb-cover-grade{font-size:30px;font-weight:700;letter-spacing:.1em;opacity:.95}
+.tb-cover-title{margin-top:26px;display:flex;align-items:baseline;gap:18px}
+.tb-cover-subject{font-size:110px;font-weight:900;line-height:1;letter-spacing:.06em;text-shadow:0 6px 18px rgba(0,0,0,.25)}
+.tb-cover-num{font-size:84px;font-weight:900;line-height:1;font-family:var(--tb-font-num)}
+.tb-cover-art{position:absolute;right:30px;bottom:110px;width:360px;height:312px;fill:none;stroke:rgba(255,255,255,.72);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.tb-cover-brand{position:absolute;left:56px;bottom:46px;font-size:28px;font-weight:800}
+.tb-cover-ribbon{position:absolute;top:44px;right:-62px;width:260px;padding:10px 0;transform:rotate(35deg);background:#fff;color:#444;text-align:center;font-weight:800;font-size:26px}
+.tb-cover-illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.tb-cover-illustrated::after{display:none}.tb-cover-illustrated::before{z-index:1}.tb-cover-illustrated .tb-cover-grade,.tb-cover-illustrated .tb-cover-title{position:relative;z-index:2;text-shadow:0 2px 12px #0009}.tb-cover-illustrated .tb-cover-brand{z-index:2;background:#162c45cc;border-radius:999px;padding:8px 18px}.tb-cover-illustrated .tb-cover-ribbon{z-index:3}
+.tb-cover-small{width:600px;height:848px;transform:scale(.25);transform-origin:top left;margin:0 -450px -636px 0;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+/* 見開き */
+.tb-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.tb-spread-wrap{position:relative;flex:0 0 auto;perspective:2200px}
+.tb-spread.tb-single{width:600px}
+.tb-spread{position:absolute;left:0;top:0;width:1200px;height:848px;display:flex;transform-origin:top left;filter:drop-shadow(0 16px 30px rgba(0,0,0,.5))}
+.tb-page{position:relative;box-sizing:border-box;width:600px;height:848px;background:#fffefa;color:#20262d;overflow:hidden;background-image:radial-gradient(rgba(0,0,0,.025) 1px,transparent 1px);background-size:6px 6px}
+.tb-page::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--tb-page-color,var(--tb-color))}
+.tb-left{border-radius:6px 0 0 6px;box-shadow:inset -26px 0 30px -22px rgba(0,0,0,.32)}
+.tb-right{border-radius:0 6px 6px 0;box-shadow:inset 26px 0 30px -22px rgba(0,0,0,.32)}
+.tb-page.tb-blank{background:transparent;box-shadow:none}.tb-page.tb-blank::before{display:none}
+.tb-kind-cover{background:transparent;box-shadow:none}.tb-kind-cover::before{display:none}
+.tb-body{position:absolute;left:50px;right:50px;top:82px;bottom:60px;font-size:15px;line-height:1.78;overflow:hidden;overflow-wrap:anywhere}
+.tb-large .tb-body{font-size:18px}
+.tb-kind-toc .tb-body,.tb-kind-guide .tb-body,.tb-kind-end .tb-body,.tb-kind-chapter-open .tb-body,.tb-kind-preparing .tb-body{top:48px}
+/* ページの種類の色 */
+.tb-page[data-tag="はじめに"]{--tb-page-color:#e67e22}.tb-page[data-tag="しくみ"]{--tb-page-color:#2f6db5}.tb-page[data-tag="解き方"]{--tb-page-color:#2c9a6a}
+.tb-page[data-tag="例題"]{--tb-page-color:#d35454}.tb-page[data-tag="確認"]{--tb-page-color:#7a52b3}.tb-page[data-tag="つかってみよう"]{--tb-page-color:#0e9aa7}
+.tb-page[data-tag="ふりかえり"]{--tb-page-color:#8a6d3b}.tb-page[data-tag="ポイント"]{--tb-page-color:#e2a52d}.tb-page[data-tag="章のまとめ"]{--tb-page-color:#34495e}.tb-page[data-tag="まとめの問題"]{--tb-page-color:#c0392b}.tb-page[data-tag="練習"]{--tb-page-color:#1f8a5b}
+/* 節の帯 */
+.tb-head{position:absolute;left:0;right:0;top:6px;height:56px;display:flex;align-items:center;gap:10px;padding:0 44px 0 50px;background:linear-gradient(90deg,var(--tb-soft),#fff 85%);border-bottom:2px solid var(--tb-color);font-family:var(--tb-font-head)}
+.tb-right .tb-head{padding:0 50px 0 44px}
+.tb-sec{flex:0 0 auto;min-width:48px;height:36px;padding:0 9px;display:flex;align-items:center;justify-content:center;background:var(--tb-color);color:#fff;font-weight:900;font-size:16px;clip-path:polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%)}
+.tb-sec-title{font-weight:800;font-size:17px;color:#1d2733;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-tag{flex:0 0 auto;margin-left:auto;padding:3px 13px;border-radius:999px;color:#fff;background:var(--tb-page-color,var(--tb-color,#1f5fa8));font-family:var(--tb-font-head);font-size:13px;font-weight:800;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+/* 文字 */
+.tb-topic{margin:0 0 10px;padding:2px 0 6px 14px;border-left:8px solid var(--tb-page-color,var(--tb-color));font-family:var(--tb-font-head);font-size:1.42em;line-height:1.35;color:#14253a}
+.tb-cont{margin-left:8px;font-size:.6em;color:#6b7783;font-weight:700}
+.tb-h3{margin:14px 0 6px;padding:5px 12px;border-radius:9px;background:var(--tb-tint);font-family:var(--tb-font-head);font-size:1.06em;color:#122a46}
+.tb-h3-ex{background:none;padding:6px 12px 6px 64px;position:relative;border:2px solid #d35454;color:#7c1f1f}
+.tb-h3-ex::before{content:"例題";position:absolute;left:-2px;top:-2px;bottom:-2px;width:52px;display:flex;align-items:center;justify-content:center;background:#d35454;color:#fff;border-radius:9px 0 0 9px;font-size:.85em}
+.tb-h3-ex[data-level]::after{content:attr(data-level);position:absolute;right:8px;top:-11px;padding:0 8px;border-radius:999px;background:#fff;border:1.5px solid #d35454;font-size:.72em;color:#b03a3a}
+.tb-h3-ex[data-level="応用"]::after{background:#d35454;color:#fff}
+.tb-h3-warn{background:#fff1ec;color:#8c3412;border-left:6px solid #e67e22}.tb-h3-warn::before{content:"⚠ "}
+.tb-h3-check{background:#f2ecfb;color:#4a2c80;border-left:6px solid #7a52b3}.tb-h3-check::before{content:"✔ "}
+.tb-h3-why{background:#eaf6ff;color:#0f4c7a;border-left:6px solid #2f86d1}.tb-h3-why::before{content:"💡 "}
+.tb-h3-tip{background:#fff6dc;color:#7a5200;border-left:6px solid #e2a52d}.tb-h3-tip::before{content:"⚡ "}
+.tb-h4{margin:10px 0 4px;font-family:var(--tb-font-head);font-size:1em}
+.tb-p{margin:4px 0}
+.tb-p ruby rt,.tb-list ruby rt{font-size:.5em;font-weight:400}
+.tb-honbun{text-indent:1em;line-height:1.95}
+.tb-honbun-cont{text-indent:0;margin-top:-4px}
+.tb-q{margin:10px 0 4px;padding:7px 10px 7px 12px;border-radius:10px;background:#fbf9ff;border:1.5px solid #d9cdf0;border-left:6px solid #7a52b3}
+.tb-note{margin:8px 0;padding:9px 14px;border-radius:4px 14px 14px 14px;background:#fbf1dc;border:1px solid #ecd6a6;font-family:var(--tb-font-note);font-size:1.02em}
+.tb-list{margin:4px 0;padding-left:1.5em}.tb-list li{margin:2px 0}.tb-list li::marker{color:var(--tb-page-color,var(--tb-color));font-weight:800}
+.tb-list .tb-sub1{margin-left:1.2em;list-style:circle}.tb-list .tb-sub2{margin-left:2.4em;list-style:square}
+ol.tb-list{counter-reset:none}
+.tb-table-wrap{overflow:hidden;margin:6px 0;border-radius:10px;border:1px solid #b9c7d6}
+.tb-table{border-collapse:collapse;width:100%;font-size:.93em;font-family:var(--tb-font-body)}.tb-table th,.tb-table td{border:1px solid #c9d4df;padding:4px 7px;text-align:center;vertical-align:middle}.tb-table th{background:var(--tb-tint);font-family:var(--tb-font-head)}
+.tb-table tr:nth-child(even) td{background:#f8fafc}
+code{font-family:var(--tb-font-num);background:#eef2f6;padding:0 4px;border-radius:4px}
+strong{color:#0f2f57}
+/* めあて・まとめ */
+.tb-goal{display:flex;align-items:flex-start;gap:10px;margin:2px 0 12px;padding:9px 12px;border-radius:12px;background:linear-gradient(90deg,#fff4d6,#fffaf0);border:1.5px solid #f0c24d}
+.tb-goal-label{flex:0 0 auto;padding:2px 10px;border-radius:999px;background:#e2a52d;color:#fff;font-family:var(--tb-font-head);font-weight:900;font-size:.88em}
+.tb-goal-label::before{content:"🎯 "}
+.tb-goal p{margin:0;font-family:var(--tb-font-head);font-weight:700;color:#5a3d00}
+.tb-summary{position:relative;margin:14px 0 4px;padding:10px 14px 8px;border-radius:14px;background:#effaf3;border:2px solid #57b37a}
+.tb-summary h4{position:absolute;top:-12px;left:12px;margin:0;padding:0 10px;border-radius:999px;background:#2c9a6a;color:#fff;font-family:var(--tb-font-head);font-size:.86em;line-height:1.7}
+.tb-summary h4::before{content:"📝 "}
+.tb-summary ul{margin:6px 0 0;padding-left:1.3em}.tb-summary li::marker{color:#2c9a6a}
+/* 図・絵・動画 */
+.tb-fig{margin:10px 0;text-align:center}.tb-fig img{display:block;margin:0 auto;max-width:100%;height:220px;object-fit:contain}.tb-fig-scene img{height:210px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.tb-fig figcaption,.tb-media figcaption{font-size:.82em;color:#4d5966;margin-top:4px;font-family:var(--tb-font-head)}
+.tb-fig-box{display:flex;align-items:center;justify-content:center;height:110px;border:2px dashed #b9c3cd;border-radius:12px;color:#8a95a1;font-weight:700;background:#f6f8fa}
+.tb-media{margin:12px auto;width:356px;max-width:100%;text-align:center}
+.tb-media-screen{display:block;width:100%;height:200px;border-radius:14px;object-fit:contain;background:#000}
+img.tb-media-screen{background:#fff}
+img.tb-zoomable{cursor:zoom-in}
+.tb-sheet.tb-sheet-wide{width:min(1100px,100%)}
+.tb-zoom-img{display:block;width:100%;height:auto;border-radius:10px;background:#fff}
+.tb-media-wait{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;overflow:hidden;color:#fff;font-family:var(--tb-font-head)}
+.tb-media-video .tb-media-wait{background:linear-gradient(135deg,#1f2b3a,#34506e)}
+.tb-media-diagram .tb-media-wait{background:repeating-linear-gradient(45deg,#f4f8fc,#f4f8fc 12px,#eaf1f8 12px,#eaf1f8 24px);color:#3b5878;border:2px dashed #9fb6cc}
+.tb-media-wait::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);background-size:250% 100%;animation:tbShine 3s linear infinite}
+.tb-media-icon{display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.18);font-size:26px}
+.tb-media-diagram .tb-media-icon{background:#fff;color:#3b5878;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.tb-media-video .tb-media-icon{animation:tbPulse 2.2s ease-in-out infinite}
+.tb-media-label{font-size:13px;font-weight:800;opacity:.9}
+/* 章のつめ・ページの下 */
+.tb-index{position:absolute;top:150px;width:30px;height:250px;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;background:var(--tb-color);color:#fff;font-family:var(--tb-font-head);font-size:13px;font-weight:800;letter-spacing:.08em}
+.tb-left .tb-index{left:0;border-radius:0 10px 10px 0}.tb-right .tb-index{right:0;border-radius:10px 0 0 10px}
+.tb-tcy{text-combine-upright:all;-webkit-text-combine:horizontal}
+.tb-foot{position:absolute;bottom:18px;left:30px;right:30px;display:flex;align-items:center;gap:12px;font-family:var(--tb-font-head)}
+.tb-right .tb-foot{flex-direction:row-reverse}
+.tb-num{display:flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 6px;border-radius:999px;background:var(--tb-color);color:#fff;font-family:var(--tb-font-num);font-size:15px;font-weight:800}
+.tb-foot-chapter{font-size:11px;color:#7a8794;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* もくじ・使い方・章 */
+.tb-big-title{margin:0 0 16px;font-family:var(--tb-font-head);font-size:1.9em;color:var(--tb-color)}
+.tb-kind-toc .tb-big-title{margin-bottom:8px}
+.tb-toc-chapter{display:flex;align-items:center;gap:10px;margin:6px 0 1px;padding:2px 8px;border-radius:8px;background:var(--tb-tint);font-family:var(--tb-font-head);font-weight:800}
+.tb-toc-num{color:var(--tb-color)}.tb-toc-section{display:flex;align-items:center;gap:10px;margin:0 0 0 2.2em;padding:0 8px;border-bottom:1px dotted #bcc6d0}
+.tb-toc-page{margin-left:auto;min-height:22px;padding:0 8px;border:1px solid var(--tb-color);border-radius:999px;background:#fff;color:var(--tb-color);font:inherit;font-family:var(--tb-font-num);font-size:.85em;font-weight:800;cursor:pointer}
+.tb-toc-wait{margin-left:auto;font-size:.85em;color:#8a95a1}.tb-toc-wait-row .tb-toc-title{font-size:.85em;color:#6b7783}
+.tb-guide{display:grid;gap:8px;margin-bottom:10px}.tb-guide-row{display:flex;align-items:center;gap:12px}.tb-guide-row .tb-tag{margin-left:0;min-width:6.5em;text-align:center}
+.tb-chap-mark{display:flex;align-items:baseline;gap:6px;margin-top:6px;color:var(--tb-color);font-family:var(--tb-font-head)}
+.tb-chap-num{font-size:120px;font-weight:900;line-height:1;font-family:var(--tb-font-num);text-shadow:4px 4px 0 var(--tb-tint)}.tb-chap-word{font-size:40px;font-weight:900}
+.tb-kind-chapter-open .tb-chap-num{font-size:96px}
+.tb-chap-title{margin:6px 0 12px;padding-bottom:10px;border-bottom:5px solid var(--tb-color);font-family:var(--tb-font-head);font-size:2.2em}
+.tb-kind-chapter-open .tb-fig img{height:300px;max-height:300px}
+.tb-kind-points .tb-head{background:linear-gradient(90deg,#fff3d6,#fff 85%);border-bottom-color:#e2a52d}
+/* 答え */
+.tb-answer-btn{display:inline-block;margin:4px 8px 4px 0;padding:2px 14px;border:1.5px solid var(--tb-page-color,var(--tb-color));border-radius:999px;background:#fff;color:var(--tb-page-color,var(--tb-color));font:inherit;font-family:var(--tb-font-head);font-size:.9em;font-weight:800;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.tb-answer-btn::before{content:"▶ "}.tb-answer-btn:hover{background:var(--tb-tint);transform:translateY(-1px)}
+.tb-sheet-back{position:absolute;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.45);animation:tbFade .2s ease both}
+.tb-sheet{box-sizing:border-box;width:min(560px,100%);max-height:85%;overflow:auto;padding:18px 20px;border-radius:18px;background:#fffefb;color:#222;font-size:16px;line-height:1.78;box-shadow:0 12px 34px rgba(0,0,0,.45);border-top:8px solid var(--tb-color);animation:tbPop .25s cubic-bezier(.2,.9,.3,1.2) both}
+.tb-sheet-title{margin:0 0 8px;color:var(--tb-color);font-family:var(--tb-font-head)}
+.tb-sheet-close{margin-top:12px;background:var(--tb-color);border-color:var(--tb-color);color:#fff}
+/* ＜ ＞ */
+.tb-nav{position:absolute;top:var(--tb-nav-top,50%);width:56px;height:56px;margin-top:-28px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#223;font:inherit;font-size:26px;font-weight:900;box-shadow:0 4px 14px rgba(0,0,0,.35);cursor:pointer;z-index:2;transition:transform .15s ease,opacity .2s ease}
+.tb-prev{left:8px}.tb-next{right:8px}.tb-nav:disabled{opacity:.25;cursor:default}.tb-nav:not(:disabled):hover{transform:scale(1.08)}
+.tb-nav-below .tb-prev{left:calc(50% - 76px)}.tb-nav-below .tb-next{right:calc(50% - 76px)}
+/* 動き（「動きを減らす」設定や端末の設定では止まる） */
+@keyframes tbRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes tbFade{from{opacity:0}to{opacity:1}}
+@keyframes tbPop{from{opacity:0;transform:scale(.92) translateY(10px)}to{opacity:1;transform:none}}
+@keyframes tbShine{from{background-position:150% 0}to{background-position:-100% 0}}
+@keyframes tbPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes tbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes tbFlipNext{from{transform:rotateY(-28deg);opacity:.35}to{transform:none;opacity:1}}
+@keyframes tbFlipPrev{from{transform:rotateY(28deg);opacity:.35}to{transform:none;opacity:1}}
+.tb-turn-next .tb-right{transform-origin:left center;animation:tbFlipNext .45s cubic-bezier(.2,.8,.3,1) both}
+.tb-turn-next .tb-left{animation:tbFade .45s ease both}
+.tb-turn-prev .tb-left{transform-origin:right center;animation:tbFlipPrev .45s cubic-bezier(.2,.8,.3,1) both}
+.tb-turn-prev .tb-right{animation:tbFade .45s ease both}
+.tb-spread .tb-body>*{animation:tbRise .45s ease both;animation-delay:calc(var(--i,0) * 45ms + .12s)}
+@media (prefers-reduced-motion:reduce){.tb-app *,.tb-app *::before,.tb-app *::after{animation:none!important;transition:none!important}}
+@media print{.tb-app{display:none}}
+/* 続けて組む区切り・コード */
+.tb-divider{display:flex;align-items:center;gap:10px;margin:18px 0 8px}
+.tb-divider::before,.tb-divider::after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,#c7d2de 0 6px,transparent 6px 10px)}
+.tb-divider .tb-tag{margin:0}
+.tb-divider[data-tag="はじめに"] .tb-tag{background:#e67e22}.tb-divider[data-tag="しくみ"] .tb-tag{background:#2f6db5}.tb-divider[data-tag="解き方"] .tb-tag{background:#2c9a6a}.tb-divider[data-tag="例題"] .tb-tag{background:#d35454}.tb-divider[data-tag="確認"] .tb-tag{background:#7a52b3}.tb-divider[data-tag="つかってみよう"] .tb-tag{background:#0e9aa7}.tb-divider[data-tag="ふりかえり"] .tb-tag{background:#8a6d3b}.tb-divider[data-tag="ポイント"] .tb-tag{background:#e2a52d}
+.tb-code{display:inline-block;margin-right:8px;padding:0 7px;border-radius:6px;background:#1d2733;color:#fff;font-family:var(--tb-font-num);font-size:.78em;font-weight:800;letter-spacing:.02em;vertical-align:.08em}
+.tb-h3-ex .tb-code{background:#7c1f1f}
+.tb-highlight{outline:4px solid #f5b400;outline-offset:3px;border-radius:10px;animation:tbGlow 1.2s ease 2}
+@keyframes tbGlow{0%,100%{outline-color:#f5b400}50%{outline-color:rgba(245,180,0,.2)}}
+.tb-spread-code{font-family:var(--tb-font-num);font-weight:800;font-size:15px;padding:3px 10px;border-radius:8px;background:rgba(255,255,255,.16)}
+.tb-jump{display:flex;gap:4px}.tb-jump input{width:118px;min-height:36px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:14px}
+.tb-jump input::placeholder{color:rgba(255,255,255,.6)}
+@media (max-width:900px){.tb-jump,.tb-foot-chapter{display:none}.tb-bar .tb-btn{padding:6px 10px;font-size:13px}}
+.tb-spread img{-webkit-user-drag:none;user-select:none}
+.tb-media-scene .tb-media-wait{background:linear-gradient(135deg,#fff3e0,#fde3c8);color:#8a4b12;border:2px dashed #e9a96a}.tb-media-scene .tb-media-icon{background:#fff;color:#c26a1b}
+.tb-divider[data-tag="練習"] .tb-tag{background:#1f8a5b}
+.tb-q{position:relative}
+/* のびーの吹き出し */
+.tb-hook{display:flex;align-items:flex-start;gap:10px;margin:2px 0 10px}
+.tb-hook-face{flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#eaffd9,#b9e89a);font-size:26px;box-shadow:0 3px 8px rgba(60,140,40,.25);animation:tbBob 3.2s ease-in-out infinite}
+.tb-hook-bubble{position:relative;flex:1;padding:7px 12px;border-radius:14px;background:#f1fbe9;border:2px solid #8ccf6a}
+.tb-hook-bubble::before{content:"";position:absolute;left:-9px;top:14px;border:8px solid transparent;border-right-color:#8ccf6a;border-left:0}
+.tb-hook-name{display:block;font-family:var(--tb-font-head);font-size:.74em;font-weight:900;color:#3f8a24}
+.tb-hook-bubble p{margin:0;font-family:var(--tb-font-head);color:#284a17;line-height:1.6}
+@keyframes tbBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(-4deg)}}
+/* 空白を埋める 豆知識・クイズ・やってみよう */
+.tb-extra{margin:12px 0 4px;padding:8px 12px 8px;border-radius:14px;border:2px solid;position:relative}
+.tb-extra p{margin:4px 0}
+.tb-extra-head{display:flex;align-items:center;gap:8px;font-family:var(--tb-font-head)}
+.tb-extra-kind{padding:1px 10px;border-radius:999px;color:#fff;font-size:.78em;font-weight:900}
+.tb-extra-title{font-weight:800;font-size:.95em}
+.tb-extra-fact{background:#eef7ff;border-color:#9cc6ec}.tb-extra-fact .tb-extra-kind{background:#2f86d1}.tb-extra-fact .tb-extra-kind::before{content:"📘 "}
+.tb-extra-quiz{background:#fff4f6;border-color:#f0a8b8}.tb-extra-quiz .tb-extra-kind{background:#d1477a}.tb-extra-quiz .tb-extra-kind::before{content:"❓ "}
+.tb-extra-try{background:#f2fbef;border-color:#9fd38a}.tb-extra-try .tb-extra-kind{background:#3f9a2a}.tb-extra-try .tb-extra-kind::before{content:"✋ "}
+.tb-extra-fact p{font-family:var(--tb-font-note)}
+.tb-kind-chapter-open .tb-fig-scene img{height:300px!important;width:100%;object-fit:cover;border-radius:16px}
+
+/* おわりのページの絵（表紙と同じ線画を本の色で） */
+.tb-end-art{display:flex;justify-content:center;margin:18px 0 22px}
+.tb-end-art .tb-cover-art{position:static;width:300px;height:260px;stroke:#1f5fa8;opacity:.55}
+.tb-end-art-small{margin:6px 0}
+.tb-end-art-small .tb-cover-art{width:196px;height:170px}
+
+.tb-frame-tools{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:4px}.tb-link{text-decoration:none;display:inline-flex;align-items:center}.tb-talk{margin:6px 0 10px}.tb-talk .tb-hook{margin:0 0 6px}
+.tb-hook-face.tb-hook-nobi{width:48px;height:56px;border-radius:0;background:none;box-shadow:none;overflow:visible}.tb-hook-nobi img{width:48px;height:56px;object-fit:contain}
+.tb-yomi{position:absolute;inset:0;pointer-events:none;z-index:4}
+.tb-yomi-band{position:absolute;border-radius:8px;background:rgba(255,214,102,.30);transition:top .28s ease,left .28s ease,width .28s ease,height .28s ease}
+.tb-yomi-line{position:absolute;height:4px;border-radius:3px;transform-origin:0 50%;will-change:transform;background:linear-gradient(90deg,#ffc15e,#ff7a59);box-shadow:0 1px 4px rgba(255,122,89,.4)}
+.tb-yomi-nobi{position:absolute;width:30px;height:30px;will-change:transform;transition:top .28s ease,left .28s ease;animation:tbYomiHop .55s ease-in-out infinite alternate}
+@keyframes tbYomiHop{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.tb-yomi-btn{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:6;display:flex;align-items:center;gap:6px;padding:4px 16px 4px 6px;border-radius:999px;border:2px solid #3e8f55;background:#fff;color:#2a6a40;font:800 15px/1 system-ui,sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.2);cursor:pointer}
+.tb-yomi-btn img{width:34px;height:34px}
+.tb-yomi-btn.on{background:#3e8f55;color:#fff}
+@media (prefers-reduced-motion:reduce){.tb-yomi-band,.tb-yomi-nobi{transition:none;animation:none}}
+.tb-talk .tb-talk-right{flex-direction:row-reverse}
+.tb-talk .tb-talk-right .tb-hook-bubble{border-radius:14px 4px 14px 14px}
+.tb-talk .tb-who-nobi .tb-hook-bubble{border-radius:4px 14px 14px 14px}
+.tb-talk .tb-who-sora .tb-hook-bubble{background:#eef5ff;border-color:#8ab4ef}.tb-talk .tb-who-sora .tb-hook-name{color:#2f6fbf}
+.tb-talk .tb-who-mio .tb-hook-bubble{background:#fff0f4;border-color:#f0a3b8}.tb-talk .tb-who-mio .tb-hook-name{color:#c2416a}
+.tb-talk .tb-talk-right .tb-hook-bubble::before{left:auto;right:-9px;border:8px solid transparent;border-left-color:#8ab4ef;border-right:0}
+.tb-talk .tb-who-mio .tb-hook-bubble::before{border-left-color:#f0a3b8}
+.tb-talk .tb-talk-right .tb-hook-bubble::after{display:none}
+/* 図の拡大（2026-10-10 Claude）：スマホでも図の中の文字が読める大きさにする。幅が足りないときは図の中で横にずらして見る（ページ全体は横にはみ出さない） */
+.tb-sheet-wide .tb-sheet-body{overflow-x:auto;-webkit-overflow-scrolling:touch}.tb-sheet-wide .tb-zoom-img{min-width:640px}

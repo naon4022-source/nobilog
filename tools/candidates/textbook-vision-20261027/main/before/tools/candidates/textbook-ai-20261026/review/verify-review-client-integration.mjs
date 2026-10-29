@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readFile,writeFile,mkdtemp,mkdir,copyFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+const {checkClientSource}=createRequire(import.meta.url)('./client-source.cjs'),here=new URL('./',import.meta.url),base='tools/candidates/textbook-ai-20261026/review/',hash=v=>createHash('sha256').update(v).digest('hex');
+let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;},receipt=JSON.parse(await readFile(new URL('client-integration.json',here)));
+ok(checkClientSource().size===3,'only intended index and two identical UI source copies changed');
+const main=await readFile('index.html','utf8'),ui=await readFile('site-assets/material-ui.js','utf8'),model=await readFile('site-assets/test-review-model.js','utf8'),controller=await readFile('site-assets/test-review.js','utf8');
+for(const file of receipt.newFiles)ok(main.includes(file.file.endsWith('.css')?`href="/${path.basename(file.file)}"`:`src="/${path.basename(file.file)}" defer`),'new asset loaded '+file.file);
+ok(main.indexOf('src="/test-review-model.js"')<main.indexOf('src="/test-review.js"'),'model loaded before controller');
+for(const anchor of ['function authLeasePause(data)','async function completeLogin(u)','recordMemory.clear();serverBootReady=false;']){const at=main.indexOf(anchor);ok(main.slice(at,at+250).includes('window.NobiTestReviews?.reset();'),'identity transition resets modal '+anchor);}
+ok(main.includes("testReviewId:job.id,category:'exam'")&&main.includes("noticeAllowed(testReviewNotice(")&&main.includes('document.hidden)return false'),'existing test notification preference and visible owner guard reused');
+ok(main.includes('if(n.testReviewId){void window.NobiTestReviews?.open(n.testReviewId);return;}'),'completion toast opens saved own result');
+ok(ui.includes("button('ノビーの全問解説'")&&ui.includes("button('AI解説の履歴'"),'generation and history entry buttons wired');
+ok(ui.indexOf("button('ノビーの全問解説'")<ui.indexOf("if(!q&&unit.mode==='kentei'"),'completed qualification still exposes review entry');
+ok(controller.includes('(document.fullscreenElement||document.body).append(back)'),'dialog also inside an active fullscreen root');
+ok(controller.includes("imageSrc:'/nobi-point.svg'")&&!controller.includes('innerHTML'),'fixed approved mascot and text-only cards');
+ok(model.includes("requestId:root.crypto.randomUUID()")&&model.includes('Persist the stable receipt before POST'),'durable receipt precedes paid POST');
+for(const row of receipt.verifierEdits){const before=await readFile(row.beforeFile,'utf8'),actual=await readFile(row.file,'utf8');ok(hash(before)===row.beforeSha256&&hash(actual)===row.afterSha256,'previous verifier backup/current source preserved');let expected=before;for(const e of [...row.edits].reverse()){ok(before.slice(e.start,e.end)===e.before,'exact verifier delta');expected=expected.slice(0,e.start)+e.after+expected.slice(e.end);}ok(expected===actual,'old assertions preserved with predecessor/output path adjustment');}
+for(const row of receipt.visuals)ok(hash(await readFile(row.file))===row.sha256,'frozen three-width visual retained');
+const art=JSON.parse(await readFile(new URL('nobi-confirmed.json',here)));ok(hash(await readFile(art.reference))===art.referenceSha256,'user-confirmed comparison image unchanged');for(const row of art.assets)ok(hash(await readFile(row.file))===row.sha256,'approved mascot asset '+row.pose);
+const clone=await mkdtemp(path.join(tmpdir(),'nobi-review-client-source-'));const files=new Set([base+'client-integration.json',...receipt.files.flatMap(r=>[r.file,r.beforeFile]),...receipt.newFiles.map(r=>r.file),...receipt.proofs.map(r=>r.file)]);for(const row of receipt.proofs){const proof=JSON.parse(await readFile(row.file));for(const input of proof.inputs)files.add(input.file);}for(const f of createRequire(import.meta.url)('./practice-source.cjs').practiceDependencyFiles())files.add(f);for(const file of files){const target=path.join(clone,file);await mkdir(path.dirname(target),{recursive:true});await copyFile(file,target);}ok(checkClientSource(clone).size===3,'independent clone validates exact reviewed source');
+for(const file of ['index.html','site-assets/material-ui.js','site-assets/test-review.js']){const target=path.join(clone,file),before=await readFile(target);await writeFile(target,Buffer.concat([before,Buffer.from('\n/* unrelated synthetic mutation */')]));assert.throws(()=>checkClientSource(clone),/drift/);checks++;await writeFile(target,before);}
+const runner=JSON.parse(await readFile(new URL('runner-edit.json',here))),current=await readFile('.claude/verify/run.sh','utf8');ok(hash(current)===runner.afterSha256&&current.includes(runner.addition),'new checks registered without changing existing checks');
+await writeFile(new URL('review-client-integration-result.json',here),JSON.stringify({status:'passed',checks,scope:'Exact three existing file delta, four new assets, model/browser proof bound to current sources, old verifier predecessor and frozen evidence retained, approved seven Nobi assets and three frozen screenshots, clone mutation refusal and runner registration. No whole/live-provider/publication claim.'},null,2)+'\n');console.log('AI review client integration: '+checks+' checks passed');

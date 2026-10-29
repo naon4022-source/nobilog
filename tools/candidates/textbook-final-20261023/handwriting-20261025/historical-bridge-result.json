@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": 6,
+  "cases": [
+    "site-assets/textbook-annotation-model.js: exact predecessor",
+    "site-assets/textbook-annotations.js: exact predecessor",
+    "foreign current source rejected",
+    "altered predecessor rejected",
+    "changed proof rejected",
+    "unrelated source not substituted"
+  ],
+  "scope": "actual helper against cloned source/proof files; actual sources not mutated; previous historical expected hashes unchanged",
+  "affectedChains": {
+    "chapter4CurrentEvidence": 0,
+    "chapter5AnswerData": 0,
+    "chapter5CurrentEvidence": 0
+  },
+  "strictLoginFlow": {
+    "session": 55943,
+    "observedExitCode": 0,
+    "checks": 10
+  }
+}

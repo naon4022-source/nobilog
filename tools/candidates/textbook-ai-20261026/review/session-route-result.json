@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": 145,
+  "inputs": [
+    {
+      "file": "cf-worker/src/ai-test-session.mjs",
+      "sha256": "db3e69a708300b58bd388ccb321cd67b44458b6493b88b0efde14cc5ef2ecd08"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session-route.mjs",
+      "sha256": "a2b246182bcd4fb6de8851fc28535793e12c29f4376b0787dbb24f72a68dd055"
+    }
+  ],
+  "scope": "Actual HTTP handler and SQLite. Three identities, immutable creation replay, wrong/all-answered metadata, owner replacement, byte-bounded/cancelled streams, strict body/query/origin, preview separation and rate cap. No main parent route/front-end/AI provider proof."
+}

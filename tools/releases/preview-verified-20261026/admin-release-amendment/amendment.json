@@ -1,0 +1,34 @@
+{
+  "status": "reviewed packaging amendment applied; actual post-build checks still required",
+  "observedAt": "2026-10-26T15:41:57.021090+00:00",
+  "files": [
+    {
+      "file": "tools/releases/preview-verified-20261026/prepare-release.py",
+      "beforeFile": "tools/releases/preview-verified-20261026/admin-release-amendment/prepare-release.py.before",
+      "beforeSha256": "46112313de29206482cc41f86fcaa17e6334ed1f5e2395bef7009858d04b8f7a",
+      "afterSha256": "00b37a8742b5462ef55e37bfc1d23439443a538f9dc9b22a1ff5cc47187ed8df"
+    },
+    {
+      "file": "tools/releases/preview-verified-20261026/verify-package.mjs",
+      "beforeFile": "tools/releases/preview-verified-20261026/admin-release-amendment/verify-package.mjs.before",
+      "beforeSha256": "03e99cd7078d48c0f97916424ce98fbaba4bc53753081dc56599dd1ea855d015",
+      "afterSha256": "d00fe54a48b91415da6e1896dea2024f9739c49522b11d62fb1111b01094859c"
+    },
+    {
+      "file": "preview/wrangler.jsonc",
+      "beforeFile": "tools/releases/preview-verified-20261026/admin-release-amendment/wrangler.before.jsonc",
+      "beforeSha256": "b1d4e42e23b962ae6a45ec87121f157d18468870e8df10789a1d1acc88671a98",
+      "afterSha256": "3df654814abf0d4692613e0b38a6b63a739e028550d5b1ae2d53ae11ffeee7d2"
+    }
+  ],
+  "checks": 96,
+  "stageProof": "tools/releases/preview-verified-20261026/stage-package-admin-result.json",
+  "stageProofSha256": "afe67d5abf575c60e8c1721446744e97ed5e9e36124c886713af5c95528d429c",
+  "dryRunObservedExitCode": 0,
+  "dryRunLogSha256": "247d92e685558b26177ff569216b01d1aaa36c7d7d4a424d513fd26e99627d4a",
+  "fullStageLog": "tools/releases/preview-verified-20261026/full-stage.log",
+  "fullStageLogSha256": "dc98dc478a952a300c0af4af9b6ea278199c1273a6b9cd42f2ed26c6bafe8ee6",
+  "applicationSourceChanged": false,
+  "originalAdminModulesChanged": false,
+  "purpose": "Only release packaging changed after unchanged application full-stage success: pause admin UI/API; retain shared newspaper. Source config changes only main entry, preserving bindings/switches/auth. No test assertions or application code weakened."
+}

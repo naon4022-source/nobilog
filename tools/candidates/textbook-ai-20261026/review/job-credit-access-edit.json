@@ -1,0 +1,8 @@
+{
+  "file": "cf-worker/src/ai-test-review-credits.mjs",
+  "beforeFile": "tools/candidates/textbook-ai-20261026/review/job-before/cf-worker/src/ai-test-review-credits.mjs",
+  "beforeSha256": "436c4dd4e81f3b863cb712753252590b3a463c09b2f4d2633aa226b7b37ddcf4",
+  "afterSha256": "8095a583275b53d337ae1ab188c8761ed3e9ab52ea07b779c1a71841c6633660",
+  "addition": "// Server-only access/snapshot for the durable review worker. Reading the\n// existing receipt must never implicitly reserve another100 credits.\nexport async function testReviewAccess(env,uid,{owner,now=Date.now()}={}){\n identity(env,uid,owner,now);return access(env,uid,owner,now);\n}\nexport async function testReviewCreditSnapshot(db,uid,sessionId){\n const key=rowKey(uid,sessionId),raw=await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(key).first('v');\n return raw===null?null:{key,raw,row:readReceipt(raw,uid)};\n}\n",
+  "scope": "Only two server-internal read/access exports. Existing reservation/link/refund implementation unchanged. No new public route."
+}

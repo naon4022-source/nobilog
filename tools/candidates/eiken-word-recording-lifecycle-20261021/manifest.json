@@ -1,0 +1,55 @@
+{
+  "status": "local word-recorder lifecycle fixed; integrated and post-change full passed",
+  "file": "site-assets/eiken-vocab.js",
+  "beforeSha256": "fa87d8979613f6c16567a29f9f215098a92955050eff240ac5904343131257ea",
+  "afterSha256": "afe4a330c5baaffdd5c76318150d84aeff29e32c157bd88831b36b0efe7a898f",
+  "candidate": "eiken-vocab.js",
+  "evidence": "Source-only: original shadowBtn keeps stream/recorder/timer/URL local and teardown stops sentencePractice only. Awaiting isolated reproduction.",
+  "scope": "retain3second word recording and existing captions/grading/storage; add teardown through existing export plus visibility/pagehide/detach and reject late microphone permission after owner change",
+  "testsRequired": [
+    "reproduce original pending-permission leak after stopSentencePractice",
+    "active recording stops on exit without late audio element",
+    "late acquired stream stopped after exit/account change",
+    "normal3second recording still playable and retry frees old URL",
+    "denied/unsupported/error paths, hidden/detached/pagehide cleanup",
+    "existing Eiken regression and full suite after later integration"
+  ],
+  "mainChanged": true,
+  "blockedByFullSession": 41293,
+  "regression": {
+    "observedExitCode": 0,
+    "checks": 102,
+    "log": "/tmp/nobi-word-recording-regression-20261021.log",
+    "logSha256": "fc173a05ecfc88dfda6668c46cbc9da137c8bdb8182bdf73e91d148f8dfc5d35"
+  },
+  "integratedChecks": 76,
+  "indexLifecycleChecks": 4,
+  "postFullSuite": {
+    "status": "passed",
+    "sessionId": 64595,
+    "observedExitCode": 0,
+    "log": "/tmp/nobi-appendix-word-after-20261021.log",
+    "logSha256": "7f8fb7585a3b89436a4bfa8fb6bdb1d20aa0b1ce8db1ec9a08bedf2eeb765fd6",
+    "frozenInputCount": 1556,
+    "allExplicitInputsUnchanged": true,
+    "observedAt": "2026-10-21T10:40:40.145377+00:00",
+    "scope": "appendix6 local integration and this post-change full; other nonadmin unfinished/held requirements remain",
+    "published": false,
+    "metadataFinalization": {
+      "phase": "after observed completion and explicit frozen-input comparison",
+      "file": "教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/依頼台帳_1件ずつ.json",
+      "beforeSha256": "9eb0c82152743807dfb2b1191b3fac2d7328fa6bf5883cd7d2ba28c768e60afb",
+      "afterSha256": "59eebf602c95f55b91f7a8b2121453691ff51addb5b1e1c7dc47505430f98a46",
+      "change": "six state and postFullSuite metadata fields only; assets/code unchanged"
+    }
+  },
+  "additionalReview": "Old pending permission must release only its own late stream, without disposing a newer recording started after visibility-return retry; extra regression added.",
+  "laterChanges": [
+    {
+      "sha256": "df5965fcc6fe5215ea08e270c35fa6798b3cc78ff7ab97b691227daa5f4947e6",
+      "date": "2026-10-22",
+      "by": "Claude",
+      "reason": "例文の「話して採点（練習版）」を追加（speakingPractice の作成と停止を stopSentencePractice に足しただけ。単語の録音の処理は変えていない）"
+    }
+  ]
+}

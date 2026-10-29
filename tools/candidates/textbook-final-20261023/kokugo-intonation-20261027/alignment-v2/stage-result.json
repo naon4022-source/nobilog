@@ -1,0 +1,87 @@
+{
+  "status": "chapter2 candidate4 explanations and reproduced book/audio prepared;movie not generated;main unchanged",
+  "proofs": [
+    {
+      "file": "alignment-v2/manifest.json",
+      "sha256": "4808c774f52664090a693497dfd279e84bd008d4959e3c2685dd91251067e7f6"
+    },
+    {
+      "file": "alignment-v2/tools.json",
+      "sha256": "7c62931495209eef19773240767ebf7d60f456ca7eee02fb154c1b109d0b791e"
+    },
+    {
+      "file": "alignment-v2/audio-result.json",
+      "sha256": "433c01d70b46d1b17aba8327e46b64ca9b2f0b561a9f58c52ebc583c54f96975"
+    },
+    {
+      "file": "book-result.json",
+      "sha256": "add40daff7682513815f60bd237466d33047a3b29e0c236eac8b96432e3625b1"
+    },
+    {
+      "file": "audio-prepare.log",
+      "sha256": "04684c22eb13b97f0caf408de90e1143544d6a693e201944897c12767cc872b6"
+    },
+    {
+      "file": "book-build-attempt2.log",
+      "sha256": "51acdec684b79d2fe79a8492ec60929d80d307e37d0a42a42863182385f43031"
+    },
+    {
+      "file": "build-videos.py",
+      "sha256": "a6bb4702b7f39a148de0d87353604430db50790ea69a16d07c7c9877224433d6"
+    },
+    {
+      "file": "build-book.py",
+      "sha256": "d9e69d8050252c0f554f5c667bd86cfaa9493eebd4287bf5992c77891fc97e7a"
+    },
+    {
+      "file": "scene.js",
+      "sha256": "234486a8753ef293c091930ac00a3a9013dae63c3f0bdbf4b2cb2f582a4b9198"
+    },
+    {
+      "file": "verify-media.py",
+      "sha256": "92fd73298c6026b3e500418a992c88a14ef60b69f7087c745a8c2f51237bb0bb"
+    },
+    {
+      "file": "verify-scene.mjs",
+      "sha256": "5d24dcf2bb483c0a4b9e3500bcca5d4e32a03662186376708cf2f44eefcefd16"
+    },
+    {
+      "file": "prepare-followup.py",
+      "sha256": "da69a804d9daea0a1fefd89862c000d7a4560d5dc191ad461426471b6099ee42"
+    }
+  ],
+  "counts": {
+    "explanationLeaves": 4,
+    "derivedDialoguePose": 1,
+    "logicalPages": 291,
+    "logicalScenes": 7,
+    "captionChunks": 7,
+    "secondsPrepared": 39.853,
+    "completedMovies": 0
+  },
+  "failurePreserved": {
+    "file": "book-build.log",
+    "cause": "Strict comparison detected original builder normal-to-pointing pose selected by revised example sentence. Only that exact derived pose allowed in the repaired comparison; all other metadata stays strict.",
+    "fixedLog": "book-build-attempt2.log",
+    "fixedExitCode": 0,
+    "oldWorkingTree": "book-build",
+    "newWorkingTree": "book-build-attempt2"
+  },
+  "documentationClarification": {
+    "archive": "alignment-v2/book-result-before-scope-clarification.json",
+    "changed": "receipt scope wording only; explicit pose field and book/source hashes unchanged"
+  },
+  "next": [
+    "canvas/header/body/caption preflight after current standalone whole suite",
+    "generate one currently referenced30fps MP4",
+    "full AV decode and audio/encoded frame checks",
+    "every1.5s andtail actual-frame visual review",
+    "candidate-book playback4 widths",
+    "combine remaining corrections with reviewed main successor and final verification"
+  ],
+  "wholeVerification": {
+    "session": 59354,
+    "state": "live observed;main1371 inputs must remain fixed"
+  },
+  "publication": false
+}

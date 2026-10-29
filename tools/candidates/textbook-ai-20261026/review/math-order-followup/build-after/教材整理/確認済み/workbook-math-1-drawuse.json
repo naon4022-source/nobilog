@@ -1,0 +1,2370 @@
+{
+ "id": "workbook-math-1-drawuse",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "図形の移動と基本の作図の利用",
+ "majorTitle": "平面図形",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-math-1-drawuse-1",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(1, 3)、B(5, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,-3)",
+     "(5、-3)",
+     "5,-3",
+     "5、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(5, −3)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-5,3",
+    "(-5,3)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-2",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 6)、B(8, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(8,-3)",
+     "(8、-3)",
+     "8,-3",
+     "8、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(8, −3)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-8,3",
+    "(-8,3)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-3",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−5, 5)、B(4, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(0,0)",
+     "(0、0)",
+     "0,0",
+     "0、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(4, −4)。AからB′へは、y が 5 から −4 まで 9 下がる間に、x が 9 進む。ℓ（y＝0）までは 5 下がるので、x は 9×(5/9)＝5 進む。P(0, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-1/2,0",
+    "(-1/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-4",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 4)、B(4, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,-4)",
+     "(4、-4)",
+     "4,-4",
+     "4、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(4, −4)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-4,4",
+    "(-4,4)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-5",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−5, 6)、B(7, 2) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,-2)",
+     "(7、-2)",
+     "7,-2",
+     "7、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(7, −2)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-7,2",
+    "(-7,2)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-6",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−2, 1)、B(2, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,-1)",
+     "(2、-1)",
+     "2,-1",
+     "2、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(2, −1)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-2,1",
+    "(-2,1)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-7",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 3)、B(2, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,-3)",
+     "(2、-3)",
+     "2,-3",
+     "2、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(2, −3)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-2,3",
+    "(-2,3)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-8",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 4)、B(6, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,-5)",
+     "(6、-5)",
+     "6,-5",
+     "6、-5"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(6, −5)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-6,5",
+    "(-6,5)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-9",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−2, 3)、B(6, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(6, −5)。AからB′へは、y が 3 から −5 まで 8 下がる間に、x が 8 進む。ℓ（y＝0）までは 3 下がるので、x は 8×(3/8)＝3 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "2,0",
+    "(2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-10",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 3)、B(7, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,-1)",
+     "(7、-1)",
+     "7,-1",
+     "7、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(7, −1)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-7,1",
+    "(-7,1)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-11",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−4, 3)、B(3, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,0)",
+     "(-1、0)",
+     "-1,0",
+     "-1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(3, −4)。AからB′へは、y が 3 から −4 まで 7 下がる間に、x が 7 進む。ℓ（y＝0）までは 3 下がるので、x は 7×(3/7)＝3 進む。P(−1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-1/2,0",
+    "(-1/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-12",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(1, 1)、B(5, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,-3)",
+     "(5、-3)",
+     "5,-3",
+     "5、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(5, −3)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-5,3",
+    "(-5,3)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-13",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 4)、B(6, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,-4)",
+     "(6、-4)",
+     "6,-4",
+     "6、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(6, −4)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-6,4",
+    "(-6,4)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-14",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 1)、B(8, 2) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(8,-2)",
+     "(8、-2)",
+     "8,-2",
+     "8、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(8, −2)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-8,2",
+    "(-8,2)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-15",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−4, 2)、B(5, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,-4)",
+     "(5、-4)",
+     "5,-4",
+     "5、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(5, −4)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-5,4",
+    "(-5,4)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-16",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−2, 1)、B(6, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,-1)",
+     "(6、-1)",
+     "6,-1",
+     "6、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(6, −1)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-6,1",
+    "(-6,1)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-17",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 1)、B(7, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −3)。AからB′へは、y が 1 から −3 まで 4 下がる間に、x が 8 進む。ℓ（y＝0）までは 1 下がるので、x は 8×(1/4)＝2 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "3,0",
+    "(3,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-18",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 2)、B(5, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,0)",
+     "(3、0)",
+     "3,0",
+     "3、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(5, −1)。AからB′へは、y が 2 から −1 まで 3 下がる間に、x が 6 進む。ℓ（y＝0）までは 2 下がるので、x は 6×(2/3)＝4 進む。P(3, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "2,0",
+    "(2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-19",
+   "type": "input",
+   "prompt": "直線ℓを対称の軸として、点Bを対称移動した点をB′とする。ℓ上に点Pをとると BP＝B′P となる。その理由を説明する次の文の □ にあてはまることばを答えよう。\n「直線ℓは、線分BB′の □ と考えられる。2点から等しい距離にある点は、その2点を結んだ線分の □ 上にあるから。」",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直二等分線"
+    ]
+   },
+   "explanation": "対称移動の対称の軸は、対応する点を結んだ線分の垂直二等分線。垂直二等分線上の点は、線分の両端から等しい距離にある。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(2)"
+   },
+   "ref": "参考：数学ワーク p102 A①(2)（もっとも短い道のりの理由）・教科書 p159 垂直二等分線",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   },
+   "near": [
+    "垂線",
+    "中点"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-20",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、一直線（180°）から、その角をひいた残りの角をつくる。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 180° からひいて 120°。答え 120°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-21",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 二等分して 30°。答え 30°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-22",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角に 60° の角を加える。次にその角に 45° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "165",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 60° を加えて 120° → 45° を加えて 165°。答え 165°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-23",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。垂線でできる角（90°）をもとにして、一直線（180°）から、その角をひいた残りの角をつくる。次にその角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。90° → 180° からひいて 90° → 二等分して 45°。答え 45°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-24",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。垂線でできる角（90°）をもとにして、その角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。90° → 二等分して 45°。答え 45°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-25",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、一直線（180°）から、その角をひいた残りの角をつくる。次に一直線（180°）から、その角をひいた残りの角をつくる。次にその角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 180° からひいて 120° → 180° からひいて 60° → 二等分して 30°。答え 30°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-26",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角を二等分する。次にその角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 二等分して 30° → 二等分して 15°。答え 15°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-27",
+   "type": "input",
+   "prompt": "120° の角を作図するとき、一直線の角 180° から □° の角をひくと考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "180−120＝60。60° は、正三角形をかいてつくる。一直線からその角をのぞいた残りが 120°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(2)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(2)（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "120"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-28",
+   "type": "input",
+   "prompt": "150° の角を作図するとき、150°＝90°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "150−90＝60。60° は、正三角形をかいてつくる。90° の角と合わせて 150°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "120"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-29",
+   "type": "input",
+   "prompt": "75° の角を作図するとき、75°＝60°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "75−60＝15。15° は、正三角形の60°を二等分した30°を、さらに二等分してつくる。60° の角と合わせて 75°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-30",
+   "type": "input",
+   "prompt": "135° の角を作図するとき、135°＝90°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "135−90＝45。45° は、垂線の90°を二等分してつくる。90° の角と合わせて 135°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "90"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-31",
+   "type": "input",
+   "prompt": "75° の角を作図するとき、75°＝45°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "75−45＝30。30° は、正三角形の60°を二等分してつくる。45° の角と合わせて 75°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-32",
+   "type": "input",
+   "prompt": "105° の角を作図するとき、105°＝90°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "105−90＝15。15° は、正三角形の60°を二等分した30°を、さらに二等分してつくる。90° の角と合わせて 105°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-33",
+   "type": "input",
+   "prompt": "105° の角を作図するとき、105°＝60°＋□° と考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "105−60＝45。45° は、垂線の90°を二等分してつくる。60° の角と合わせて 105°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(1)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(1)（いろいろな角の作図）・教科書 p168 話しあおう（75°）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "90"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-34",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝15° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "165",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−15°＝165°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "15",
+    "75"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-35",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝60° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−60°＝120°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "60",
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-36",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝30° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−30°＝150°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "30",
+    "60"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-37",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝75° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−75°＝105°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "75",
+    "15"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-38",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝45° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−45°＝135°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "45"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-39",
+   "type": "input",
+   "prompt": "線分ABを直径とする半円がある。ABの中点をO、半円の弧AB上に点Pをとり、∠POB＝120° となるようにしたい。∠POA の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "∠POAと∠POBを合わせると、一直線の角で180°。∠POA＝180°−120°＝60°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "120",
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-40",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 4)、B(6, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(6, −5)。AからB′へは、y が 4 から −5 まで 9 下がる間に、x が 9 進む。ℓ（y＝0）までは 4 下がるので、x は 9×(4/9)＝4 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "3/2,0",
+    "(3/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-41",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 3)、B(6, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,0)",
+     "(4、0)",
+     "4,0",
+     "4、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(6, −3)。AからB′へは、y が 3 から −3 まで 6 下がる間に、x が 4 進む。ℓ（y＝0）までは 3 下がるので、x は 4×(3/6)＝2 進む。P(4, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-42",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 1)、B(1, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,0)",
+     "(-2、0)",
+     "-2,0",
+     "-2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(1, −3)。AからB′へは、y が 1 から −3 まで 4 下がる間に、x が 4 進む。ℓ（y＝0）までは 1 下がるので、x は 4×(1/4)＝1 進む。P(−2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-1,0",
+    "(-1,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-43",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 2)、B(3, 2) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(3, −2)。AからB′へは、y が 2 から −2 まで 4 下がる間に、x が 4 進む。ℓ（y＝0）までは 2 下がるので、x は 4×(2/4)＝2 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-44",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 4)、B(7, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,0)",
+     "(6、0)",
+     "6,0",
+     "6、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −1)。AからB′へは、y が 4 から −1 まで 5 下がる間に、x が 5 進む。ℓ（y＝0）までは 4 下がるので、x は 5×(4/5)＝4 進む。P(6, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "9/2,0",
+    "(9/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-45",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−5, 1)、B(7, 3) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,0)",
+     "(-2、0)",
+     "-2,0",
+     "-2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −3)。AからB′へは、y が 1 から −3 まで 4 下がる間に、x が 12 進む。ℓ（y＝0）までは 1 下がるので、x は 12×(1/4)＝3 進む。P(−2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "1,0",
+    "(1,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-46",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 5)、B(7, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,0)",
+     "(3、0)",
+     "3,0",
+     "3、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −5)。AからB′へは、y が 5 から −5 まで 10 下がる間に、x が 8 進む。ℓ（y＝0）までは 5 下がるので、x は 8×(5/10)＝4 進む。P(3, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-47",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 4)、B(2, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(2, −1)。AからB′へは、y が 4 から −1 まで 5 下がる間に、x が 5 進む。ℓ（y＝0）までは 4 下がるので、x は 5×(4/5)＝4 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-1/2,0",
+    "(-1/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-48",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 1)、B(8, 2) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,0)",
+     "(4、0)",
+     "4,0",
+     "4、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(8, −2)。AからB′へは、y が 1 から −2 まで 3 下がる間に、x が 6 進む。ℓ（y＝0）までは 1 下がるので、x は 6×(1/3)＝2 進む。P(4, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "5,0",
+    "(5,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-49",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(1, 6)、B(6, 4) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,0)",
+     "(4、0)",
+     "4,0",
+     "4、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(6, −4)。AからB′へは、y が 6 から −4 まで 10 下がる間に、x が 5 進む。ℓ（y＝0）までは 6 下がるので、x は 5×(6/10)＝3 進む。P(4, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "7/2,0",
+    "(7/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-50",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 2)、B(6, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,0)",
+     "(2、0)",
+     "2,0",
+     "2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(6, −1)。AからB′へは、y が 2 から −1 まで 3 下がる間に、x が 12 進む。ℓ（y＝0）までは 2 下がるので、x は 12×(2/3)＝8 進む。P(2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "0,0",
+    "(0,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-51",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 5)、B(7, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,0)",
+     "(2、0)",
+     "2,0",
+     "2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −5)。AからB′へは、y が 5 から −5 まで 10 下がる間に、x が 10 進む。ℓ（y＝0）までは 5 下がるので、x は 10×(5/10)＝5 進む。P(2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-52",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 1)、B(2, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,0)",
+     "(-2、0)",
+     "-2,0",
+     "-2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(2, −1)。AからB′へは、y が 1 から −1 まで 2 下がる間に、x が 8 進む。ℓ（y＝0）までは 1 下がるので、x は 8×(1/2)＝4 進む。P(−2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-53",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 2)、B(4, 2) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,-2)",
+     "(4、-2)",
+     "4,-2",
+     "4、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(4, −2)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-4,2",
+    "(-4,2)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-54",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−3, 5)、B(1, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,0)",
+     "(-1、0)",
+     "-1,0",
+     "-1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(1, −5)。AからB′へは、y が 5 から −5 まで 10 下がる間に、x が 4 進む。ℓ（y＝0）までは 5 下がるので、x は 4×(5/10)＝2 進む。P(−1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-55",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 5)、B(8, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,0)",
+     "(1、0)",
+     "1,0",
+     "1、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(8, −5)。AからB′へは、y が 5 から −5 まで 10 下がる間に、x が 14 進む。ℓ（y＝0）までは 5 下がるので、x は 14×(5/10)＝7 進む。P(1, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-56",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−1, 4)、B(8, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,0)",
+     "(3、0)",
+     "3,0",
+     "3、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(8, −5)。AからB′へは、y が 4 から −5 まで 9 下がる間に、x が 9 進む。ℓ（y＝0）までは 4 下がるので、x は 9×(4/9)＝4 進む。P(3, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "7/2,0",
+    "(7/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-57",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−6, 1)、B(6, 1) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,-1)",
+     "(6、-1)",
+     "6,-1",
+     "6、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(6, −1)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-6,1",
+    "(-6,1)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-58",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角を二等分する。次にその角に 45° の角を加える。次に一直線（180°）から、その角をひいた残りの角をつくる。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 二等分して 30° → 45° を加えて 75° → 180° からひいて 105°。答え 105°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-59",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、一直線（180°）から、その角をひいた残りの角をつくる。次にその角を二等分する。次にその角に 60° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 180° からひいて 120° → 二等分して 60° → 60° を加えて 120°。答え 120°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-60",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角を二等分する。次に一直線（180°）から、その角をひいた残りの角をつくる。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 二等分して 30° → 180° からひいて 150°。答え 150°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-61",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。垂線でできる角（90°）をもとにして、その角に 60° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。90° → 60° を加えて 150°。答え 150°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-62",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角を二等分する。次にその角に 45° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 二等分して 30° → 45° を加えて 75°。答え 75°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-63",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。垂線でできる角（90°）をもとにして、一直線（180°）から、その角をひいた残りの角をつくる。次にその角に 45° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。90° → 180° からひいて 90° → 45° を加えて 135°。答え 135°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-64",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。垂線でできる角（90°）をもとにして、その角を二等分する。次にその角に 60° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。90° → 二等分して 45° → 60° を加えて 105°。答え 105°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-65",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角に 60° の角を加える。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 60° を加えて 120°。答え 120°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-66",
+   "type": "input",
+   "prompt": "定規とコンパスで角を作図する。正三角形の1つの角（60°）をもとにして、その角に 45° の角を加える。次にその角に 45° の角を加える。次にその角を二等分する。できた角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "順に計算する。60° → 45° を加えて 105° → 45° を加えて 150° → 二等分して 75°。答え 75°",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p103 A②（いろいろな角の作図）・教科書 p168 いろいろな角の作図・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "workbook-math-1-drawuse-67",
+   "type": "input",
+   "prompt": "165° の角を作図するとき、一直線の角 180° から □° の角をひくと考える。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "180−165＝15。15° は、正三角形の60°を二等分した30°を、さらに二等分してつくる。一直線からその角をのぞいた残りが 165°。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 103,
+    "number": "B+②(2)"
+   },
+   "ref": "参考：数学ワーク p103 B+②(2)（いろいろな角の作図）・教科書 p168 いろいろな角の作図",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   },
+   "near": [
+    "165"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-68",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(2, 3)、B(8, 6) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,0)",
+     "(4、0)",
+     "4,0",
+     "4、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(8, −6)。AからB′へは、y が 3 から −6 まで 9 下がる間に、x が 6 進む。ℓ（y＝0）までは 3 下がるので、x は 6×(3/9)＝2 進む。P(4, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "5,0",
+    "(5,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-69",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−4, 6)、B(7, 5) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。点Pの座標を答えよう（Bをℓについて対称移動した点B′と、Aとを結んだ直線がℓと交わる点がP）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,0)",
+     "(2、0)",
+     "2,0",
+     "2、0"
+    ],
+    "compact": true
+   },
+   "explanation": "B′(7, −5)。AからB′へは、y が 6 から −5 まで 11 下がる間に、x が 11 進む。ℓ（y＝0）までは 6 下がるので、x は 11×(6/11)＝6 進む。P(2, 0)",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(3)"
+   },
+   "ref": "参考：数学ワーク p102 A①(3)（もっとも短い道のり）・教科書 p167 ステップ2",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "3/2,0",
+    "(3/2,0)"
+   ]
+  },
+  {
+   "id": "workbook-math-1-drawuse-70",
+   "type": "input",
+   "prompt": "x 軸を直線ℓとみる。2点A(−5, 6)、B(7, 6) があり、ℓ上に点Pをとって AP＋PB がもっとも短くなるようにする。そのために、直線ℓを対称の軸として点Bを対称移動した点B′の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,-6)",
+     "(7、-6)",
+     "7,-6",
+     "7、-6"
+    ],
+    "compact": true
+   },
+   "explanation": "対称の軸が x 軸なので、y 座標の符号だけが変わる。B′(7, −6)。PB＝PB′ なので、AP＋PB＝AP＋PB′ が一直線になるとき最短。",
+   "source": {
+    "id": "source-0342",
+    "file": "数学ワーク/S__15982741_0.jpg",
+    "sha256": "2ff0186dc9cd57245c7a09b26f443d434dbca0eb6d55a59ce434081b72d4d539",
+    "page": 102,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p102 A①(1)（もっとも短い道のり）・教科書 p167 対称移動の利用",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "near": [
+    "-7,6",
+    "(-7,6)"
+   ]
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-05 Claude作成。数学ワークp102〜103（A①もっとも短い道のり・A②いろいろな角の作図・B①AP＋PDがもっとも短い点・B+②105°の作図）と教科書p166〜168（どこで水を飲ませる？・対称移動の利用・説明しよう・いろいろな角の作図・問1・話しあおう75°）を写真で確認。作図は座標と角の大きさで答える問題にした。"
+}

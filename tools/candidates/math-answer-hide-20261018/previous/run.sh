@@ -1,0 +1,184 @@
+#!/bin/bash
+# のびログ 検証スイート ぜんぶ実行
+#   使い方:  bash ~/Desktop/my-app/.claude/verify/run.sh
+VERIFY_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(cd "$VERIFY_DIR/../.." && pwd)"
+cd "$VERIFY_DIR"
+fail=0
+for f in verify3.js verify6.js verify8.js verify9.js verify12.js verify15.js verify16.js verify17.js verify18.js verify19.js verify20.js verify21.js verify22.js verify23.js verify24.js verify-ui280.js verify-client-sync.js verify-unit-guides.js verify-session-security.js verify-migration-security.js verify-september.js verify-september-ui.js verify-september-flow.js verify-review-pdf.js verify-notice-history.js verify-login-days.js verify-server-storage.js verify-record-archive.js verify-notice-kinds.js verify-school-calendar.js verify-september-archive.js verify-ai-judge.js; do
+  [ -f "$f" ] || continue
+  printf "%-12s " "$f"
+  out=$(node "$f" 2>&1 | tail -1)
+  echo "$out"
+  echo "$out" | grep -q "❌ 0" || fail=1
+done
+python3 "$PROJECT_DIR/教材整理/scripts/test_catalog.py" || fail=1
+python3 "$PROJECT_DIR/教材整理/scripts/catalog.py" --check || fail=1
+python3 "$PROJECT_DIR/教材整理/scripts/discover_sources.py" --check || fail=1
+python3 "$PROJECT_DIR/教材整理/scripts/validate_catalog.py" || fail=1
+python3 "$PROJECT_DIR/教材整理/scripts/test_reference_catalog.py" || fail=1
+python3 "$PROJECT_DIR/教材整理/scripts/reference_catalog.py" --check || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-engine.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-ui.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-marks-ui.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-login-review.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-drafts.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-tokkun.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-formula.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-reminder.cjs" || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-material-tts.cjs" || fail=1
+node "$VERIFY_DIR/verify-problem-share.js" || fail=1
+node "$VERIFY_DIR/verify-problem-pdf.mjs" || fail=1
+node "$VERIFY_DIR/verify-problem-pages.mjs" || fail=1
+node "$VERIFY_DIR/verify-problem-share-api.mjs" || fail=1
+node "$VERIFY_DIR/verify-achievements.mjs" || fail=1
+node "$VERIFY_DIR/verify-achievement-ui.js" || fail=1
+python3 "$PROJECT_DIR/preview/build.py" https://nobilog-preview.naon4022.workers.dev || fail=1
+node "$VERIFY_DIR/verify-preview.mjs" || fail=1
+node "$VERIFY_DIR/verify-preview-plans.mjs" || fail=1
+node "$VERIFY_DIR/verify-preview-access.mjs" || fail=1
+python3 "$VERIFY_DIR/verify-gemini-registration.py" || fail=1
+python3 "$VERIFY_DIR/verify-gemini-window.py" || fail=1
+PYTHONDONTWRITEBYTECODE=1 python3 "$VERIFY_DIR/verify-openai-registration.py" || fail=1
+node "$VERIFY_DIR/verify-openai-registration-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-gemini-context.mjs" || fail=1
+node "$VERIFY_DIR/verify-gemini-tutor.mjs" || fail=1
+node "$VERIFY_DIR/verify-ai-trial-control.mjs" || fail=1
+for part in policy transport budget billing billing-release trial tutor-bridge receipts receipts-checkpoints tutor-service tutor-service-failure tutor-route chat-content chat-context chat-service chat-route connection-status service-gates vision; do
+  node "$VERIFY_DIR/verify-openai-$part.mjs" || fail=1
+done
+node "$PROJECT_DIR/tools/candidates/image-consultation-20261016/verify-credits.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/image-consultation-20261016/verify-vision-transport.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/image-consultation-20261016/verify-service.mjs" || fail=1
+node "$VERIFY_DIR/verify-openai-image-chat.mjs" || fail=1
+node "$VERIFY_DIR/verify-openai-image-chat-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-ai-trial-integration.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/budget-settlement-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/budget-settlement-20261017/verify-service.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-png.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-transport.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-trial.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-service.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-route.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-avatar-20261017/verify-ui.mjs" --main || fail=1
+node "$VERIFY_DIR/verify-ai-trial-notice-browser.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-unsent-release-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/avatar-unsent-20261018/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/avatar-unsent-20261018/verify-service.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/subscription-terms-20261018/verify.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/subscription-terms-20261018/verify-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-gemini-mock.mjs" || fail=1
+node "$VERIFY_DIR/verify-gemini-more.mjs" || fail=1
+node "$VERIFY_DIR/verify-gemini-ui-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-auto-notebook-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-review-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-create-browser.mjs" || fail=1
+python3 "$PROJECT_DIR/教材整理/実装/build-textbook-book.py" --check || true
+node "$VERIFY_DIR/verify-textbook-book-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-eiken-practice.cjs" || fail=1
+node "$VERIFY_DIR/verify-eiken-practice-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-eiken-vocab.cjs" || fail=1
+node "$VERIFY_DIR/verify-eiken-vocab-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-assignments.mjs" || fail=1
+node "$VERIFY_DIR/verify-assignments-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-admin.mjs" || fail=1
+node "$VERIFY_DIR/verify-admin-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-plans.mjs" || fail=1
+node "$VERIFY_DIR/verify-plan-daily.mjs" || fail=1
+node "$VERIFY_DIR/verify-subscription-credits-v2.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-notes.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-images.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-images-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-images-cache.mjs" || fail=1
+node "$VERIFY_DIR/verify-profile-photos.mjs" || fail=1
+node "$VERIFY_DIR/verify-photos-browser.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/screenshot-20261016/verify-browser.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/screenshot-20261016/verify-button.mjs" || fail=1
+node "$VERIFY_DIR/verify-ai-hub-entry-browser.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs" --smoke || fail=1
+node "$PROJECT_DIR/tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs" --smoke --english || fail=1
+node "$PROJECT_DIR/tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs" --smoke --drill || fail=1
+node "$VERIFY_DIR/verify-textbook-annotations.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-annotation-model.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-annotations-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-annotations-book-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-chat.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-chat-atomic.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-ui.mjs" || fail=1
+node "$VERIFY_DIR/verify-plan-study.mjs" || fail=1
+node "$VERIFY_DIR/verify-plans-compare.mjs" || fail=1
+node "$VERIFY_DIR/verify-plan-study-api.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-jobs.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-browser-api.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-authorization.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-owner-plan.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-browser.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-analysis-20261017/verify-flow.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/extended-note-20261017/verify-content.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/extended-note-20261017/verify-transport.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/extended-note-20261017/verify-service.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/extended-note-20261017/verify-browser.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-recovery-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/note-recovery-20261017/verify-browser.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/ai-limit-notice-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/subscription-pricing-20261017/verify.mjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/exam-date-validation-20261017/verify.cjs" --main || fail=1
+node "$PROJECT_DIR/tools/candidates/subscription-cache-compat-20261017/verify-browser.mjs" --main || fail=1
+node "$VERIFY_DIR/verify-student-planner.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-skill-tree.mjs" || fail=1
+node "$VERIFY_DIR/verify-stats-server-progress.mjs" || fail=1
+node "$VERIFY_DIR/verify-messages.mjs" || fail=1
+node "$VERIFY_DIR/verify-plan-setup.mjs" || fail=1
+node "$VERIFY_DIR/verify-messages-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-openai-chat-retry-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-openai-connection-display-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-links-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-mobile-entry.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-yomi-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-large-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-math-figures-browser.mjs" 1 || fail=1
+node "$VERIFY_DIR/verify-push.js" || fail=1
+node "$VERIFY_DIR/verify-push-integration.js" || fail=1
+node "$VERIFY_DIR/verify-device-push.js" || fail=1
+node "$VERIFY_DIR/verify-sw-push.js" || fail=1
+node "$VERIFY_DIR/verify-sw-push.js" ../../preview/sw.js https://nobilog-preview.test.workers.dev || fail=1
+node "$PROJECT_DIR/教材整理/実装/verify-signed-numbers.cjs" || fail=1
+node "$VERIFY_DIR/verify-material-connection.js" || fail=1
+node "$VERIFY_DIR/verify-science-rubric.mjs" || fail=1
+node "$VERIFY_DIR/verify-workbook-review.js" || fail=1
+node "$VERIFY_DIR/verify-workbook-subtraction.js" || fail=1
+node "$VERIFY_DIR/verify-material-records.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-time.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-time-history-window.mjs" || fail=1
+node "$VERIFY_DIR/verify-learning-time-limits.mjs" || fail=1
+for name in verify-client.cjs verify-app.cjs verify-month.cjs verify-aggregate.cjs verify-history.cjs; do
+  node "$PROJECT_DIR/tools/candidates/learning-timeline/$name" || fail=1
+done
+node "$VERIFY_DIR/verify-learning-time-entry-browser.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/learning-timeline/verify-calendar-browser.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-diary.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-speed.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-marks.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-rubric-length.cjs" || fail=1
+node "$VERIFY_DIR/verify-japanese-drill-original.mjs" || fail=1
+node "$VERIFY_DIR/verify-english-reorder-fixes.cjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/japanese-tokkun-integration-20261016/verify-records.mjs" || fail=1
+node "$PROJECT_DIR/tools/candidates/japanese-tokkun-integration-20261016/verify-records.mjs" --english || fail=1
+(cd "$PROJECT_DIR" && node .claude/verify/verify-material-speed-bridge.cjs) || fail=1
+(cd "$PROJECT_DIR" && node .claude/verify/verify-material-diary-bridge.cjs) || fail=1
+node "$VERIFY_DIR/verify-material-activity.cjs" || fail=1
+node "$VERIFY_DIR/verify-material-export.cjs" || fail=1
+node "$VERIFY_DIR/verify-textbook-check.cjs" || fail=1
+node "$VERIFY_DIR/verify-material-review.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-daily.mjs" || fail=1
+node "$VERIFY_DIR/verify-material-rewards.mjs" || fail=1
+node "$VERIFY_DIR/verify-eiken-original.js" || fail=1
+node "$VERIFY_DIR/verify-study-goal.js" || fail=1
+node "$VERIFY_DIR/verify-appearance.js" || fail=1
+node "$VERIFY_DIR/verify-appearance-full.js" || fail=1
+node "$VERIFY_DIR/verify-input-tools.js" || fail=1
+[ $fail -eq 0 ] && echo "✅ ぜんぶ通過" || echo "❌ 落ちたスイートがある"
+exit $fail
+

@@ -1,0 +1,27 @@
+{
+  "status": "candidate only; main unchanged",
+  "files": [
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "beforeSha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf",
+      "afterSha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-content.mjs",
+      "candidateFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-content.mjs"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "beforeSha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec",
+      "afterSha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-jobs.mjs",
+      "candidateFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-jobs.mjs"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "beforeSha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a",
+      "afterSha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-service.mjs",
+      "candidateFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-service.mjs"
+    }
+  ],
+  "scope": "Reproduce exact original practice options only for matching stored unfinished job manifests; current jobs use48 defaults. Existing authorization, CAS, credit, unknown-operation and full digest guards retained."
+}

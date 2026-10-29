@@ -1,0 +1,159 @@
+{
+  "status": "passed",
+  "checks": 97,
+  "results": [
+    {
+      "book": "math1",
+      "width": 390,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 820,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 1180,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 1440,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "kokugo1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "english1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "science1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "geography",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "history",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "math1",
+      "width": 390,
+      "large": true,
+      "saved": true
+    },
+    {
+      "book": "math1",
+      "width": 1440,
+      "large": true,
+      "saved": true
+    },
+    {
+      "book": "science1",
+      "width": 390,
+      "touch": true,
+      "twoFingerPan": true,
+      "leaseRetry": true,
+      "saved": true
+    }
+  ],
+  "posts": 16,
+  "requests": [
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 409
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u1",
+      "status": 200
+    },
+    {
+      "uid": "u2",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 403
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 409
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    }
+  ],
+  "inputs": {
+    "textbook-book.js": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745",
+    "textbook-book-math1.json": "685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd",
+    "textbook-ink.css": "f2b9ca8ce2605baf197712e0d2cdbb52c69b0eeb0e6c86d7f996fb4bfd331a95",
+    "textbook-annotations.js": "a58c96e5d01ede825f39a4bc6e29fea94337b34b0b89da628fd0843b29d9ba63",
+    "textbook-ink.js": "60ce37d98b1094231ef1af081ee3e7179dbb4908e6ef858d6d1b7bd926ed868d",
+    "textbook-ink-model.js": "97ef477150891fd148a2869b201f187344c472c5b6e3464bda1b1d0ad52755af",
+    "textbook-ink-format.js": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735"
+  },
+  "actualIndexAdapter": true,
+  "actualBookRenderer": true,
+  "actualSQLiteRoutes": true,
+  "noRealUserData": true,
+  "limits": [
+    "No real account login or iPhone device test; no production publication",
+    "Five nonmath books checked at820px; math at four widths plus390/1440 large; science at390 with trusted touch"
+  ]
+}

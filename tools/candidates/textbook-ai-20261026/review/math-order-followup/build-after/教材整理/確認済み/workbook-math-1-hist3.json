@@ -1,0 +1,2091 @@
+{
+ "id": "workbook-math-1-hist3",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ヒストグラムと相対度数③",
+ "majorTitle": "データの活用",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-math-1-hist3-1",
+   "type": "input",
+   "prompt": "次の度数分布表から、平均値を求めよう。\n10以上14未満：度数 3\n14以上18未満：度数 5\n18以上22未満：度数 6\n22以上26未満：度数 8\n26以上30未満：度数 6\n30以上34未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "22"
+   },
+   "explanation": "それぞれの階級の階級値×度数の合計を、度数の合計でわる。階級値は 12、16、20、24、28、32。（階級値×度数）の合計は 660、度数の合計は 30。660÷30＝22",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 例1・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "660",
+    "5"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-2",
+   "type": "input",
+   "prompt": "次の度数分布表から、平均値を求めよう。\n0以上10未満：度数 8\n10以上20未満：度数 4\n20以上30未満：度数 6\n30以上40未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "16"
+   },
+   "explanation": "それぞれの階級の階級値×度数の合計を、度数の合計でわる。階級値は 5、15、25、35。（階級値×度数）の合計は 320、度数の合計は 20。320÷20＝16",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 例1・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "320",
+    "5"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-3",
+   "type": "input",
+   "prompt": "次の度数分布表で、22 以上 24 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 2\n24以上26未満：度数 3\n26以上28未満：度数 1\n28以上30未満：度数 9\n30以上32未満：度数 8\n32以上34未満：度数 6",
+   "answer": {
+    "kind": "number",
+    "value": "46"
+   },
+   "explanation": "階級値は (22＋24)÷2＝23。23×2＝46",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "44",
+    "2"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-4",
+   "type": "input",
+   "prompt": "次の度数分布表で、14 以上 18 未満の階級の（階級値×度数）を求めよう。\n10以上14未満：度数 1\n14以上18未満：度数 7\n18以上22未満：度数 6\n22以上26未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "112"
+   },
+   "explanation": "階級値は (14＋18)÷2＝16。16×7＝112",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "98",
+    "7"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-5",
+   "type": "input",
+   "prompt": "次の度数分布表で、0 以上 10 未満の階級の（階級値×度数）を求めよう。\n0以上10未満：度数 4\n10以上20未満：度数 1\n20以上30未満：度数 3\n30以上40未満：度数 1\n40以上50未満：度数 7\n50以上60未満：度数 8",
+   "answer": {
+    "kind": "number",
+    "value": "20"
+   },
+   "explanation": "階級値は (0＋10)÷2＝5。5×4＝20",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "0",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-6",
+   "type": "input",
+   "prompt": "次の度数分布表で、5 以上 10 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 5\n5以上10未満：度数 7\n10以上15未満：度数 3\n15以上20未満：度数 9\n20以上25未満：度数 3",
+   "answer": {
+    "kind": "number",
+    "value": "52.5"
+   },
+   "explanation": "階級値は (5＋10)÷2＝7.5。7.5×7＝52.5",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "35",
+    "7"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-7",
+   "type": "input",
+   "prompt": "次の度数分布表で、15 以上 20 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 9\n5以上10未満：度数 4\n10以上15未満：度数 9\n15以上20未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "階級値は (15＋20)÷2＝17.5。17.5×2＝35",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "30",
+    "2"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-8",
+   "type": "input",
+   "prompt": "次の度数分布表で、30 以上 32 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 9\n24以上26未満：度数 2\n26以上28未満：度数 2\n28以上30未満：度数 7\n30以上32未満：度数 8",
+   "answer": {
+    "kind": "number",
+    "value": "248"
+   },
+   "explanation": "階級値は (30＋32)÷2＝31。31×8＝248",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "240",
+    "8"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-9",
+   "type": "input",
+   "prompt": "次の度数分布表で、24 以上 26 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 2\n24以上26未満：度数 4\n26以上28未満：度数 1\n28以上30未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "100"
+   },
+   "explanation": "階級値は (24＋26)÷2＝25。25×4＝100",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "96",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-10",
+   "type": "input",
+   "prompt": "次の度数分布表で、0 以上 5 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 9\n5以上10未満：度数 2\n10以上15未満：度数 9\n15以上20未満：度数 5",
+   "answer": {
+    "kind": "number",
+    "value": "22.5"
+   },
+   "explanation": "階級値は (0＋5)÷2＝2.5。2.5×9＝22.5",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "0",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-11",
+   "type": "input",
+   "prompt": "次の度数分布表で、32 以上 34 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 9\n24以上26未満：度数 3\n26以上28未満：度数 9\n28以上30未満：度数 3\n30以上32未満：度数 5\n32以上34未満：度数 3",
+   "answer": {
+    "kind": "number",
+    "value": "99"
+   },
+   "explanation": "階級値は (32＋34)÷2＝33。33×3＝99",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "96",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-12",
+   "type": "input",
+   "prompt": "次の度数分布表で、10 以上 14 未満の階級の（階級値×度数）を求めよう。\n10以上14未満：度数 9\n14以上18未満：度数 2\n18以上22未満：度数 3\n22以上26未満：度数 7\n26以上30未満：度数 9",
+   "answer": {
+    "kind": "number",
+    "value": "108"
+   },
+   "explanation": "階級値は (10＋14)÷2＝12。12×9＝108",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "90",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-13",
+   "type": "input",
+   "prompt": "次の度数分布表で、10 以上 15 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 8\n5以上10未満：度数 1\n10以上15未満：度数 6\n15以上20未満：度数 8",
+   "answer": {
+    "kind": "number",
+    "value": "75"
+   },
+   "explanation": "階級値は (10＋15)÷2＝12.5。12.5×6＝75",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "60",
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-14",
+   "type": "input",
+   "prompt": "次の度数分布表で、22 以上 24 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 8\n24以上26未満：度数 6\n26以上28未満：度数 7\n28以上30未満：度数 1\n30以上32未満：度数 3\n32以上34未満：度数 1",
+   "answer": {
+    "kind": "number",
+    "value": "184"
+   },
+   "explanation": "階級値は (22＋24)÷2＝23。23×8＝184",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "176",
+    "8"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-15",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 9\n10以上15未満：度数 9\n15以上20未満：度数 2\n20以上25未満：度数 5\n25以上30未満：度数 1\n30以上35未満：度数 3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10以上15未満",
+     "10〜15"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 29。中央値は小さい方から 15 番目の値。累積度数を調べると、10 以上 15 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-16",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 6\n10以上15未満：度数 6\n15以上20未満：度数 3\n20以上25未満：度数 8\n25以上30未満：度数 8\n30以上35未満：度数 3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 34。中央値は小さい方から 17番目と18 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-17",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 5\n12以上14未満：度数 4\n14以上16未満：度数 5\n16以上18未満：度数 1\n18以上20未満：度数 9\n20以上22未満：度数 2",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14以上16未満",
+     "14〜16"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 26。中央値は小さい方から 13番目と14 番目の値。累積度数を調べると、14 以上 16 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-18",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n0以上10未満：度数 3\n10以上20未満：度数 3\n20以上30未満：度数 4\n30以上40未満：度数 2\n40以上50未満：度数 9\n50以上60未満：度数 4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "40以上50未満",
+     "40〜50"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 25。中央値は小さい方から 13 番目の値。累積度数を調べると、40 以上 50 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-19",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 8\n12以上14未満：度数 2\n14以上16未満：度数 6\n16以上18未満：度数 1\n18以上20未満：度数 9\n20以上22未満：度数 4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14以上16未満",
+     "14〜16"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 30。中央値は小さい方から 15番目と16 番目の値。累積度数を調べると、14 以上 16 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-20",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 6\n10以上15未満：度数 3\n15以上20未満：度数 1\n20以上25未満：度数 4\n25以上30未満：度数 7\n30以上35未満：度数 3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 24。中央値は小さい方から 12番目と13 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-21",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 1\n12以上14未満：度数 6\n14以上16未満：度数 3\n16以上18未満：度数 2\n18以上20未満：度数 6\n20以上22未満：度数 9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "18以上20未満",
+     "18〜20"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 27。中央値は小さい方から 14 番目の値。累積度数を調べると、18 以上 20 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-22",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 1\n10以上15未満：度数 4\n15以上20未満：度数 3\n20以上25未満：度数 9\n25以上30未満：度数 2\n30以上35未満：度数 1",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 20。中央値は小さい方から 10番目と11 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-23",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n0以上10未満：度数 2\n10以上20未満：度数 4\n20以上30未満：度数 3\n30以上40未満：度数 9\n40以上50未満：度数 1\n50以上60未満：度数 3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "30以上40未満",
+     "30〜40"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 22。中央値は小さい方から 11番目と12 番目の値。累積度数を調べると、30 以上 40 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-24",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 3\n10以上15未満：度数 7\n15以上20未満：度数 9\n20以上25未満：度数 8\n25以上30未満：度数 2\n30以上35未満：度数 8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "15以上20未満",
+     "15〜20"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 37。中央値は小さい方から 19 番目の値。累積度数を調べると、15 以上 20 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-25",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 1、10、1、0、0、0、0、0、0\nイ 0、0、0、8、5、7、0、0、0\nウ 0、5、7、5、5、9、0、0、0\nエ 10、4、7、9、10、0、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 25くらい　イ 54.5くらい　ウ 46.9くらい　エ 36.2くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-26",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、0、0、1、7、1、7、7\nイ 0、3、7、8、0、0、0、0、0\nウ 10、4、1、3、3、4、0、0、0\nエ 5、10、6、1、0、0、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 50　イ 30　ウ 60　エ 40",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-27",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、2、4、2、0、0、0、0、0\nイ 7、10、7、2、0、0、0、0、0\nウ 0、0、10、8、3、5、3、3、4\nエ 0、0、0、0、4、9、9、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 35くらい　イ 26.5くらい　ウ 57.2くらい　エ 67.3くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-28",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、1、1、5、1、7、0、0\nイ 0、8、9、4、6、9、1、7、0\nウ 9、7、2、10、9、10、0、0、0\nエ 10、8、7、3、10、1、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 50　イ 70　ウ 60　エ 60",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-29",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、0、7、2、9、5、9、0、0\nイ 0、0、0、0、2、4、8、8、6\nウ 0、0、0、0、4、3、1、3、5\nエ 0、0、0、0、0、6、10、8、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 57.2くらい　イ 79.3くらい　ウ 76.2くらい　エ 75.8くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-30",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 8、8、7、8、9、0、0、0、0\nイ 0、0、5、7、4、0、0、0、0\nウ 0、0、0、0、0、7、6、8、0\nエ 0、8、6、9、8、6、1、5、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 35.5くらい　イ 44.4くらい　ウ 75.5くらい　エ 49.9くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-31",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、0、0、0、0、8、5、3、0\nイ 6、9、7、4、0、0、0、0、0\nウ 0、0、0、7、9、3、10、2、6\nエ 4、3、7、2、0、0、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 71.9くらい　イ 28.5くらい　ウ 67.4くらい　エ 29.4くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-32",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、0、0、6、8、9、0、0、0\nイ 0、0、0、0、1、9、5、6、10\nウ 6、6、10、1、10、0、0、0、0\nエ 3、10、7、10、5、0、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 56.3くらい　イ 79.8くらい　ウ 35.9くらい　エ 36.1くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-33",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、6、8、9、2、8、0、0、0\nイ 0、1、6、9、0、0、0、0、0\nウ 5、7、2、2、2、2、2、0、0\nエ 0、0、0、0、0、4、6、4、3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 44.4くらい　イ 40くらい　ウ 36.4くらい　エ 78.5くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-34",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、0、0、0、0、2、8、2、5\nイ 0、0、0、0、0、0、9、9、9\nウ 10、1、3、0、0、0、0、0、0\nエ 0、0、0、0、6、5、8、8、9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 80.9くらい　イ 85くらい　ウ 20くらい　エ 77.5くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-35",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。平均値がもっとも大きいと考えられるものを記号で答えよう（平均値は階級値を使って求める）。\nア 0、3、3、8、9、7、4、4、0\nイ 0、0、0、0、0、4、3、8、0\nウ 0、0、0、0、1、7、1、0、0\nエ 0、7、1、10、2、9、9、5、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "各ヒストグラムで（階級値×度数）の合計÷度数の合計を比べる。ア 56.1くらい　イ 77.7くらい　ウ 65くらい　エ 57.1くらい",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-36",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、6、6、2、2、3、0、0\nイ 0、0、0、0、1、1、10、2、6\nウ 6、8、2、3、5、4、0、0、0\nエ 0、0、0、0、0、7、4、3、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 50　イ 50　ウ 60　エ 30",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-37",
+   "type": "input",
+   "prompt": "度数分布表から平均値を求めるとき、1つの階級にはいっているデータの値は、すべてその階級の何であると考えるか答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "階級値"
+    ]
+   },
+   "explanation": "度数分布表では、各階級のデータの値をすべて階級値とみなして、（階級値×度数）の合計÷度数の合計 で平均値を求める。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 度数分布表から平均値を求める",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "最頻値",
+    "中央値"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-38",
+   "type": "input",
+   "prompt": "2つの容器の卵の重さの平均値と中央値は同じだが、範囲は容器Aが5.5g、容器Bが13.9gだった。重さが平均値の近くに集まっていると考えられるのはどちらか。「ア 容器A」「イ 容器B」から選び、記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "範囲が小さい容器Aの方が、データが平均値の近くに集まっている。代表値だけでなく範囲や分布のようすも合わせて考える。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A①"
+   },
+   "ref": "参考：数学ワーク p138 A①（データの分布のようす）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-39",
+   "type": "input",
+   "prompt": "A班とB班のゲームの得点（点）は次のとおりで、平均値はどちらも 11 点だった。A班の得点の範囲を求めよう。\nA班：18、12、2、16、8、12、2、10、19\nB班：3、13、20、6、9、17、17、7、7",
+   "answer": {
+    "kind": "number",
+    "value": "17",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "範囲＝最大値−最小値＝19−2＝17（点）。平均値が同じでも、範囲がちがえば散らばりのようすがちがう。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p138 A①(1)（データの分布のようす）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   },
+   "near": [
+    "19",
+    "18"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-40",
+   "type": "input",
+   "prompt": "A班とB班のゲームの得点（点）は次のとおりで、平均値はどちらも 12 点だった。B班の得点の範囲を求めよう。\nA班：16、17、12、4、10、16、8、17、8\nB班：10、16、5、7、10、17、7、17、19",
+   "answer": {
+    "kind": "number",
+    "value": "14",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "範囲＝最大値−最小値＝19−5＝14（点）。平均値が同じでも、範囲がちがえば散らばりのようすがちがう。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A①(1)"
+   },
+   "ref": "参考：数学ワーク p138 A①(1)（データの分布のようす）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   },
+   "near": [
+    "19",
+    "15"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-41",
+   "type": "input",
+   "prompt": "次の度数分布表から、平均値を求めよう。\n10以上14未満：度数 8\n14以上18未満：度数 0\n18以上22未満：度数 9\n22以上26未満：度数 7",
+   "answer": {
+    "kind": "number",
+    "value": "18.5"
+   },
+   "explanation": "それぞれの階級の階級値×度数の合計を、度数の合計でわる。階級値は 12、16、20、24。（階級値×度数）の合計は 444、度数の合計は 24。444÷24＝18.5",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 例1・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "444",
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-42",
+   "type": "input",
+   "prompt": "次の度数分布表から、平均値を求めよう。\n0以上5未満：度数 6\n5以上10未満：度数 2\n10以上15未満：度数 5\n15以上20未満：度数 3\n20以上25未満：度数 8\n25以上30未満：度数 1",
+   "answer": {
+    "kind": "number",
+    "value": "14.1"
+   },
+   "explanation": "それぞれの階級の階級値×度数の合計を、度数の合計でわる。階級値は 2.5、7.5、12.5、17.5、22.5、27.5。（階級値×度数）の合計は 352.5、度数の合計は 25。352.5÷25＝14.1",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 例1・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "705/2",
+    "25/6"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-43",
+   "type": "input",
+   "prompt": "次の度数分布表から、平均値を求めよう。\n10以上14未満：度数 4\n14以上18未満：度数 6\n18以上22未満：度数 4\n22以上26未満：度数 0",
+   "answer": {
+    "kind": "number",
+    "value": "16"
+   },
+   "explanation": "それぞれの階級の階級値×度数の合計を、度数の合計でわる。階級値は 12、16、20、24。（階級値×度数）の合計は 224、度数の合計は 14。224÷14＝16",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p138 A②（度数分布表と平均値）・教科書 p237 例1・問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "224",
+    "7/2"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-44",
+   "type": "input",
+   "prompt": "次の度数分布表で、10 以上 20 未満の階級の（階級値×度数）を求めよう。\n0以上10未満：度数 4\n10以上20未満：度数 7\n20以上30未満：度数 5\n30以上40未満：度数 5",
+   "answer": {
+    "kind": "number",
+    "value": "105"
+   },
+   "explanation": "階級値は (10＋20)÷2＝15。15×7＝105",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "70",
+    "7"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-45",
+   "type": "input",
+   "prompt": "次の度数分布表で、0 以上 10 未満の階級の（階級値×度数）を求めよう。\n0以上10未満：度数 9\n10以上20未満：度数 1\n20以上30未満：度数 7\n30以上40未満：度数 5",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "階級値は (0＋10)÷2＝5。5×9＝45",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "0",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-46",
+   "type": "input",
+   "prompt": "次の度数分布表で、15 以上 20 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 1\n5以上10未満：度数 4\n10以上15未満：度数 9\n15以上20未満：度数 3\n20以上25未満：度数 3",
+   "answer": {
+    "kind": "number",
+    "value": "52.5"
+   },
+   "explanation": "階級値は (15＋20)÷2＝17.5。17.5×3＝52.5",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "45",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-47",
+   "type": "input",
+   "prompt": "次の度数分布表で、10 以上 20 未満の階級の（階級値×度数）を求めよう。\n0以上10未満：度数 6\n10以上20未満：度数 1\n20以上30未満：度数 1\n30以上40未満：度数 7\n40以上50未満：度数 6",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "階級値は (10＋20)÷2＝15。15×1＝15",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "10",
+    "1"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-48",
+   "type": "input",
+   "prompt": "次の度数分布表で、24 以上 26 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 5\n24以上26未満：度数 8\n26以上28未満：度数 3\n28以上30未満：度数 7\n30以上32未満：度数 4",
+   "answer": {
+    "kind": "number",
+    "value": "200"
+   },
+   "explanation": "階級値は (24＋26)÷2＝25。25×8＝200",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "192",
+    "8"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-49",
+   "type": "input",
+   "prompt": "次の度数分布表で、30 以上 32 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 4\n24以上26未満：度数 9\n26以上28未満：度数 9\n28以上30未満：度数 8\n30以上32未満：度数 5\n32以上34未満：度数 2",
+   "answer": {
+    "kind": "number",
+    "value": "155"
+   },
+   "explanation": "階級値は (30＋32)÷2＝31。31×5＝155",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "150",
+    "5"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-50",
+   "type": "input",
+   "prompt": "次の度数分布表で、22 以上 26 未満の階級の（階級値×度数）を求めよう。\n10以上14未満：度数 2\n14以上18未満：度数 3\n18以上22未満：度数 8\n22以上26未満：度数 6",
+   "answer": {
+    "kind": "number",
+    "value": "144"
+   },
+   "explanation": "階級値は (22＋26)÷2＝24。24×6＝144",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "132",
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-51",
+   "type": "input",
+   "prompt": "次の度数分布表で、0 以上 5 未満の階級の（階級値×度数）を求めよう。\n0以上5未満：度数 4\n5以上10未満：度数 7\n10以上15未満：度数 1\n15以上20未満：度数 1\n20以上25未満：度数 2\n25以上30未満：度数 4",
+   "answer": {
+    "kind": "number",
+    "value": "10"
+   },
+   "explanation": "階級値は (0＋5)÷2＝2.5。2.5×4＝10",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "0",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-52",
+   "type": "input",
+   "prompt": "次の度数分布表で、0 以上 10 未満の階級の（階級値×度数）を求めよう。\n0以上10未満：度数 9\n10以上20未満：度数 9\n20以上30未満：度数 4\n30以上40未満：度数 9\n40以上50未満：度数 6",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "階級値は (0＋10)÷2＝5。5×9＝45",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "0",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-53",
+   "type": "input",
+   "prompt": "次の度数分布表で、10 以上 14 未満の階級の（階級値×度数）を求めよう。\n10以上14未満：度数 1\n14以上18未満：度数 7\n18以上22未満：度数 3\n22以上26未満：度数 4\n26以上30未満：度数 9",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "階級値は (10＋14)÷2＝12。12×1＝12",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "10",
+    "1"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-54",
+   "type": "input",
+   "prompt": "次の度数分布表で、26 以上 30 未満の階級の（階級値×度数）を求めよう。\n10以上14未満：度数 6\n14以上18未満：度数 3\n18以上22未満：度数 7\n22以上26未満：度数 3\n26以上30未満：度数 6",
+   "answer": {
+    "kind": "number",
+    "value": "168"
+   },
+   "explanation": "階級値は (26＋30)÷2＝28。28×6＝168",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "156",
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-55",
+   "type": "input",
+   "prompt": "次の度数分布表で、24 以上 26 未満の階級の（階級値×度数）を求めよう。\n22以上24未満：度数 3\n24以上26未満：度数 9\n26以上28未満：度数 5\n28以上30未満：度数 5\n30以上32未満：度数 9",
+   "answer": {
+    "kind": "number",
+    "value": "225"
+   },
+   "explanation": "階級値は (24＋26)÷2＝25。25×9＝225",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 138,
+    "number": "A②(1)"
+   },
+   "ref": "参考：数学ワーク p138 A②(1)（階級値×度数）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   },
+   "near": [
+    "216",
+    "9"
+   ]
+  },
+  {
+   "id": "workbook-math-1-hist3-56",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 2\n12以上14未満：度数 4\n14以上16未満：度数 3\n16以上18未満：度数 6\n18以上20未満：度数 2\n20以上22未満：度数 8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "16以上18未満",
+     "16〜18"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 25。中央値は小さい方から 13 番目の値。累積度数を調べると、16 以上 18 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-57",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 5\n10以上15未満：度数 5\n15以上20未満：度数 4\n20以上25未満：度数 3\n25以上30未満：度数 6\n30以上35未満：度数 7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 30。中央値は小さい方から 15番目と16 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-58",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 1\n10以上15未満：度数 5\n15以上20未満：度数 7\n20以上25未満：度数 5\n25以上30未満：度数 4\n30以上35未満：度数 3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "15以上20未満",
+     "15〜20"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 25。中央値は小さい方から 13 番目の値。累積度数を調べると、15 以上 20 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-59",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 8\n12以上14未満：度数 9\n14以上16未満：度数 5\n16以上18未満：度数 4\n18以上20未満：度数 3\n20以上22未満：度数 6",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14以上16未満",
+     "14〜16"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 35。中央値は小さい方から 18 番目の値。累積度数を調べると、14 以上 16 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-60",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 7\n10以上15未満：度数 2\n15以上20未満：度数 2\n20以上25未満：度数 8\n25以上30未満：度数 2\n30以上35未満：度数 7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 28。中央値は小さい方から 14番目と15 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-61",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 3\n12以上14未満：度数 3\n14以上16未満：度数 6\n16以上18未満：度数 5\n18以上20未満：度数 5\n20以上22未満：度数 5",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "16以上18未満",
+     "16〜18"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 27。中央値は小さい方から 14 番目の値。累積度数を調べると、16 以上 18 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-62",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 5\n10以上15未満：度数 5\n15以上20未満：度数 6\n20以上25未満：度数 7\n25以上30未満：度数 4\n30以上35未満：度数 6",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 33。中央値は小さい方から 17 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-63",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 8\n12以上14未満：度数 5\n14以上16未満：度数 7\n16以上18未満：度数 2\n18以上20未満：度数 1\n20以上22未満：度数 8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14以上16未満",
+     "14〜16"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 31。中央値は小さい方から 16 番目の値。累積度数を調べると、14 以上 16 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-64",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 1\n10以上15未満：度数 5\n15以上20未満：度数 8\n20以上25未満：度数 4\n25以上30未満：度数 7\n30以上35未満：度数 9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 34。中央値は小さい方から 17番目と18 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-65",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n0以上10未満：度数 3\n10以上20未満：度数 5\n20以上30未満：度数 9\n30以上40未満：度数 7\n40以上50未満：度数 1\n50以上60未満：度数 1",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上30未満",
+     "20〜30"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 26。中央値は小さい方から 13番目と14 番目の値。累積度数を調べると、20 以上 30 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-66",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n5以上10未満：度数 2\n10以上15未満：度数 7\n15以上20未満：度数 7\n20以上25未満：度数 8\n25以上30未満：度数 4\n30以上35未満：度数 7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20以上25未満",
+     "20〜25"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 35。中央値は小さい方から 18 番目の値。累積度数を調べると、20 以上 25 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-67",
+   "type": "input",
+   "prompt": "次の度数分布表で、中央値がふくまれる階級を答えよう（「○以上○未満」のように答える）。\n10以上12未満：度数 1\n12以上14未満：度数 3\n14以上16未満：度数 7\n16以上18未満：度数 9\n18以上20未満：度数 5\n20以上22未満：度数 1",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "16以上18未満",
+     "16〜18"
+    ],
+    "compact": true
+   },
+   "explanation": "度数の合計は 26。中央値は小さい方から 13番目と14 番目の値。累積度数を調べると、16 以上 18 未満の階級にふくまれる。",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "A②"
+   },
+   "ref": "参考：数学ワーク p139 A②（中央値がふくまれる階級）・教科書 p237 問1",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 237
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-68",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、0、0、0、0、7、9、1\nイ 7、7、3、5、0、0、0、0、0\nウ 0、6、9、2、6、7、7、2、0\nエ 0、0、0、0、10、5、6、4、4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 30　イ 40　ウ 70　エ 50",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-69",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、0、0、10、6、5、5、10\nイ 0、0、0、7、9、5、4、7、4\nウ 0、0、0、3、8、9、0、0、0\nエ 0、0、0、10、7、7、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 50　イ 60　ウ 30　エ 30",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "workbook-math-1-hist3-70",
+   "type": "input",
+   "prompt": "次のア〜エは、10点以上20点未満から90点以上100点未満まで（階級の幅10点）の度数を、左から順に並べたものである。範囲がもっとも大きいと考えられるものを記号で答えよう（範囲は、度数が0でない最初と最後の階級から考える）。\nア 0、0、0、0、0、4、10、6、0\nイ 0、0、0、0、10、5、8、0、0\nウ 0、4、9、8、0、0、0、0、0\nエ 3、4、4、3、0、0、0、0、0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "度数が0でない階級の広がりを比べる。ア 30　イ 30　ウ 30　エ 40",
+   "source": {
+    "id": "source-0360",
+    "file": "数学ワーク/S__15982760_0.jpg",
+    "sha256": "a42c46a789365eaa7de64c4db353a258cb39674adb3514388423db67752d3e83",
+    "page": 139,
+    "number": "B+②"
+   },
+   "ref": "参考：数学ワーク p139 B+②（範囲・平均値の比較）・教科書 p236 データの分布のようす",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-05 Claude作成。数学ワークp138〜139（A①データの分布のようす（範囲）・A②度数分布表と平均値・B①ヒストグラムから平均値・B+②範囲・平均値・中央値の比較）と教科書p234〜237（度数分布表の読みとり・データの分布のようす・度数分布表から平均値を求める・例1・問1）を写真で確認。"
+}

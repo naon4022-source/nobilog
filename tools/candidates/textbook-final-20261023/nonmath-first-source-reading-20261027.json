@@ -1,0 +1,36 @@
+{
+  "id": "K1-C1-S1-V01",
+  "status": "first pending nonmath source read; actual media approval remains pending",
+  "source": {
+    "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-V01.json",
+    "sha256": "e9a73f80a5920715f3fed43f13ad859af2f86e8fcaeec3f14c0af39e816c14c8"
+  },
+  "timeline": {
+    "file": "教材整理/Claude_Codex共有/教科動画/時間割/K1-C1-S1-V01.json",
+    "sha256": "e654f3d14a5c9d0463b5de0742f25d60fccc03706cced8b52ff86b9bd3b22fbb"
+  },
+  "sourceSteps": 7,
+  "sourceRead": "Read all7 script steps and corresponding timeline say/yomi. Example uses a grandmother conversation to identify experience, thought and supporting evidence. Answers shown are for the example; exercise answer leakage has not been established from this script alone.",
+  "limits": [
+    "Past-tense endings andと思う are clues within this example, not a sufficient universal classification rule. Do not approve general-purpose language claims solely from this heuristic.",
+    "Current source/public MP4 exist and both have1792103 bytes; byte length alone does not prove equal SHA or AV quality.",
+    "No new movie generation or AV decode during the single full verification. Actual1.5-second visual review, sound and shared setting provenance remain pending."
+  ],
+  "next": "After terminal full5, bind current source/public SHA and existing prior evidence before decoding missing media evidence.",
+  "placementReview": {
+    "id": "K1-C1-S1-VP",
+    "bookFile": "site-assets/textbook-book-kokugo1.json",
+    "bookSha256": "c84dca489c1db7fd1fe264091ed6bcfcc94bfc6a9958cdf78b3fa891ad636074",
+    "page": 11,
+    "tag": "ポイント",
+    "scriptFile": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-VP.json",
+    "scriptSha256": "30474cb1811e02983de7afc5b4a3771b3f370d57d7f4f543915a8f84a94ffb28",
+    "finding": "VP here means a section summary, not a practice-answer video. Read all8 summary steps and pages9–11. No literal answer③ orイ from page10 is supplied by this summary. Do not blanket-hide all52 nonmath VP references based on the suffix. Each needs its own content comparison.",
+    "explanationCandidate": {
+      "old": "文の終わりを見る：「〜た」は体験、「〜と思う・〜だ・〜べきだ」は考え。",
+      "proposal": "文末は手がかり。実際に起きたことを述べているか、筆者の判断や意見を述べているかを、文の内容から確かめよう。",
+      "reason": "Avoid teaching suffix-only classification as a universal rule. Explanation-only candidate; questions, answers and values unchanged.",
+      "state": "not applied; current whole verification running; source/generation dependencies need confirmation before application"
+    }
+  }
+}

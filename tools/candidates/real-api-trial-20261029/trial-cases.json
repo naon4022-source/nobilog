@@ -1,0 +1,22 @@
+{
+  "status": "not sent",
+  "model": "server chooses the authenticated Pro model; no client override",
+  "cases": [
+    {
+      "id": "synthetic-math-signs",
+      "text": "実接続の動作確認です。架空の生徒が−3＋5を−8と答えました。正しくは2です。なぜ違うかを70文字以内のやさしい日本語で説明してください。"
+    },
+    {
+      "id": "synthetic-science-reflection",
+      "text": "実接続の動作確認です。鏡の法線に対する入射角が30度なのに、架空の生徒は反射角を60度と答えました。正しくは30度です。理由を70文字以内で説明してください。"
+    },
+    {
+      "id": "synthetic-english-third-person",
+      "text": "実接続の動作確認です。She plays tennis every Sunday. のplaysがplayではない理由を、70文字以内のやさしい日本語で説明してください。"
+    }
+  ],
+  "maximumCallsThisTrial": 3,
+  "globalDailyCap": 10,
+  "retryPolicy": "no automatic retry after unknown outcome; keep shared server trial counter and circuit; do not reset",
+  "source": "synthetic only; no learner history/images/private identifiers"
+}

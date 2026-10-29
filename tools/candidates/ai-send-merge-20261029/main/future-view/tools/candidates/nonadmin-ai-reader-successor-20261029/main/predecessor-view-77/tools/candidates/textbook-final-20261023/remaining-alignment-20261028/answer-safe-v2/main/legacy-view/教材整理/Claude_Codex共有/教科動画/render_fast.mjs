@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view-77/教材整理/Claude_Codex共有/教科動画/render_fast.mjs

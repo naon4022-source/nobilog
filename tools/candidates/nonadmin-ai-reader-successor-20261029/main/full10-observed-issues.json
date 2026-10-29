@@ -1,0 +1,25 @@
+{
+  "status": "whole still running with observed failures; no terminal success",
+  "observedAtUTC": "2026-10-29T13:01:42.812422+00:00",
+  "pid": 76891,
+  "session": 19827,
+  "failureClass": "Historical metadata predecessor expected074 renderer while actual356 includes the approved toolbar wheel guard",
+  "affectedObserved": [
+    "math-ch4 verify-current-evidence.py",
+    "math-ch5 verify-answer-data.py",
+    "math-ch5 verify-current-evidence.py"
+  ],
+  "candidate": "tools/candidates/math-history-toolbar-20261029/result.json",
+  "candidateChecks": 7,
+  "candidateMainApplied": false,
+  "wholeRestarted": false,
+  "evidence": "full10.log",
+  "independentPartialSuccesses": [
+    "Chapter2 M1-P087/P094 reader96; M05/M06 generated39 and manuscript63, distinct scopes",
+    "manuscript hidden-answer63 checks",
+    "subscription terms150 SQLite and75 UI checks",
+    "math chapter3 independent97/chapter4 independent179/chapter5 geometry143"
+  ],
+  "scope": "Individual passes do not override observed whole-suite failures.",
+  "scopeCorrection": "The96 reader checks cover Chapter2 M1-P087/P094, not M05/M06. M05/M06 are covered by the39 generated structure/source checks and63 manuscript-preview checks; a separate current-reader test is being prepared."
+}

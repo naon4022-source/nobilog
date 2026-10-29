@@ -1,0 +1,4649 @@
+{
+  "status": "frozen before final full",
+  "inputs": [
+    {
+      "file": ".claude/verify/run.sh",
+      "sha256": "90f55e94bbf271cf459eaf46cc362a15ed9d3e23bcfed22647b0186e54e372f6"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "c2143fdce5b84ac1981289620c8c551657e0abfe6e3a747c33b71fa2c0d6269d"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "cf-worker/src/index.js",
+      "sha256": "47d5bf8c2269fa1a29a697aedbf441d753c1ef9006d919553d412ea98b2a4d9a"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context-reader.mjs",
+      "sha256": "1b2211ab8825417ba4d868eefa01c2586d8247946bcdf1c94704f55a6d0b6838"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context-route.mjs",
+      "sha256": "b5f0b1ec98cb1725c73e36f18d0808093558f82ea3f5801854f8251841d34bf4"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context.mjs",
+      "sha256": "1cfa489dd4d3c154208533ae64ceb53ce781ae2a8b2859d17a51083cf7d5a88f"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-images-route.mjs",
+      "sha256": "246a2a986ff51e8bf460e3734a3522fc2a8189b4381e85bfd916f7b70961f6fb"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-input.mjs",
+      "sha256": "96814eb81a7fda3b350c10967bc4fe0f43ee66ea2eb229278e9993c5300d1925"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-operation.mjs",
+      "sha256": "385989910d72a0bc7ff9ebbd8ca2f0f6ff7eb3db06db0cdceb2bb19ea53e88b3"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-route.mjs",
+      "sha256": "18fc1aa9ab4f6e3dc990fbd8963bdb1baa9201d6e51e5e1f3112f42dcfbc7020"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-service.mjs",
+      "sha256": "a451f6aa1fb3df3ed6202e23815502541b351301075f3fbb7bedd6f6eb7a7bc4"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-transport.mjs",
+      "sha256": "bd8f3ee1b2c6abf5ab3ddb0c36592fb8b279ffb596db8ce6253550a50b8d5aae"
+    },
+    {
+      "file": "index.html",
+      "sha256": "7f1558a31704b9c71390907854cdf600f971e39894b8f0df46a7ca23f8ebc6b2"
+    },
+    {
+      "file": "preview/build.py",
+      "sha256": "bf20cebc1574a6cf886916b984f62e979da1863dc949068be85b0b4361baaef0"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    },
+    {
+      "file": "site-assets/nobi-joy.svg",
+      "sha256": "0b883ec088ba9d6158b7569e905184bd5d7bf7c987d78c72df789d8c9577d84c"
+    },
+    {
+      "file": "site-assets/nobi-normal.svg",
+      "sha256": "0f1ca6ce48fa594089659d289a66afa5fa6234edda0c066da64f78147cdee253"
+    },
+    {
+      "file": "site-assets/nobi-point.svg",
+      "sha256": "23b552a78b0e99d9adce7d9b5a1c26cc17eec67b6771d43232d565f6121e664b"
+    },
+    {
+      "file": "site-assets/nobi-surprise.svg",
+      "sha256": "8bb5a1fd586609a5ffc735a3921957c959a129b0d599f7f4bf257c57da12d104"
+    },
+    {
+      "file": "site-assets/nobi-think.svg",
+      "sha256": "70a919c9dbc32a52747d5c52650172cc7b9aaf19c72db48e3ab29a035d252205"
+    },
+    {
+      "file": "site-assets/nobi-wave.svg",
+      "sha256": "6b7174f513b8ce26690664928d240de499a4017210bc8d20e232050f0023bb63"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "sha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "sha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5"
+    },
+    {
+      "file": "site-assets/sw.js",
+      "sha256": "21733b03dc9b2a79dfe3c243e3cd32edb9363b21136ec9fae7a5b70443127d91"
+    },
+    {
+      "file": "site-assets/text-settings.js",
+      "sha256": "747b3b6d820216a2905457bba38d406324da318faf88f0bb4880472acefd6a3f"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-english1.json",
+      "sha256": "ff8e63917578e6e274461ad4b8e0e11044acec0f7a8472532be42a4a36008ac5"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-geography.json",
+      "sha256": "07dff1925d45fb9473cfec5ce02851842f6161703e405f0c3f968217bd7ffba1"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-history.json",
+      "sha256": "cd804a8a10b46e8845087e96905b93b26fe591338ff27ad2afa32aa9cd93a066"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-math1.json",
+      "sha256": "d4ee3d77cdef10a88c36c058c91d712ee004b5b1c9bed250b875e06e9976f743"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-science1.json",
+      "sha256": "1ba2065a76da258d48d42fd546e1da38fc149da021f9680fddfa182ed8ddb1ef"
+    },
+    {
+      "file": "site-assets/textbook-ai-model.js",
+      "sha256": "9af9d612c51dcfe92c029d40f09f22fb0192b2706c377e4aee20b82af57e055e"
+    },
+    {
+      "file": "site-assets/textbook-ai.css",
+      "sha256": "8ac588618a4baf1cfacda8c06ea930a6fe81d2fbcfc074259f74d4ab0bb11661"
+    },
+    {
+      "file": "site-assets/textbook-ai.js",
+      "sha256": "49b4744c71b0792abfaee93d211ef9de2a4f021df2be888c621ca23aeceba8c4"
+    },
+    {
+      "file": "site-assets/textbook-annotation-model.js",
+      "sha256": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483"
+    },
+    {
+      "file": "site-assets/textbook-annotations.css",
+      "sha256": "8e01e6a48dfd7ccc35a8dcd11946e3d4b2adc52de09d5818d2903b508b2ef649"
+    },
+    {
+      "file": "site-assets/textbook-annotations.js",
+      "sha256": "a58c96e5d01ede825f39a4bc6e29fea94337b34b0b89da628fd0843b29d9ba63"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-open.png",
+      "sha256": "744757e91ac635cd7a08afb1bdb6bce9129dc024e06671e9f1f330cf23e9515b"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s1-d01.svg",
+      "sha256": "8001edb3788e18a7279e47f9ea2af1050c3ddc9fd5eba4a1e8751596e3286187"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s1-dp.svg",
+      "sha256": "651dbbb256979c067a35b1b8280ef29ab0876c2baca136c753d8e2adc2311b93"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s1-dq.svg",
+      "sha256": "467c52b5bb9312759017699acebaefc33068db382fa20adbf08fce50f8845dcb"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s1-scene.png",
+      "sha256": "006b9cd3661353eec86f12975fed00bc9625e6bfead6bfda947256c36ad860fd"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s2-d01.svg",
+      "sha256": "4ec6d5ff87cfe154387c2cca59ce61935e62e06cd8a3f9eec842bfeac60935fe"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s2-dp.svg",
+      "sha256": "51d0b6c8d99eb8249efbd8ec4fd33b6a7776f0aef625013405a9ee716bdb32ed"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s2-dq.svg",
+      "sha256": "ec663c8db5068d4f4045ae0c684ee4789ea982da4bf1a2e3dfd289bea56c9ec8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s2-scene.png",
+      "sha256": "adf0b212bfbeae2d0a8d96b71f69cce15d95844e622b95e2fe8db675badb10f3"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s3-d01.svg",
+      "sha256": "d7c6d5b7fc9efafa585664756b6d8fda1fceb4c5fbf435cef004018611c5b7a6"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s3-dp.svg",
+      "sha256": "4869dc563b0f2b2c33f373444f59936c049fc1bf4f968830333c02448202b08a"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s3-dq.svg",
+      "sha256": "d12832736724c8177ee1bb99995573f379e0cc75f4e795cb567c7b166b1ed11f"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s3-scene.png",
+      "sha256": "ef911fe2ca55f4001068db23956a5e2ce5bc4fe43013d60bd3db7db8f8130752"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l1-s3-v01.mp4",
+      "sha256": "65205608695da698e3559a47d8ba46b88eb2d79bc821806952351c1c627539a2"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-open.png",
+      "sha256": "044fa1b064fceb72d8780073205ab687ff60c530475249b1e972bcfe02c170e6"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s1-d01.svg",
+      "sha256": "f9429571599989aa1d2d7dfe92e3f4d6687c2747b220a3d6cb14a7d9985aa84a"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s1-dp.svg",
+      "sha256": "881af44ad80b3fb0f152a020e1e4902d73ee5f919b70108b7cdd0f40721d5000"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s1-dq.svg",
+      "sha256": "bcf8e8d3d5d357ae53f901f0ff30f771bcfb08611eed9927e1601de62eb3dad1"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s1-scene.png",
+      "sha256": "6d391daa1639d20dc7cb537a0993279935c77386dcd0e55e3c4089a790167136"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s2-d01.svg",
+      "sha256": "dbc3b75ecf83a50ca3d910f6b207f8fc4f103ae05191a390a76fbea4fed886b8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s2-dp.svg",
+      "sha256": "5d68fde755105c9ce077016dcfa175b6b9ce8bda6faa58108025a814f067fdf3"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s2-dq.svg",
+      "sha256": "fb349f6724182f23ef01e026c557d5e9db5a8ab3f3e503672da2c5b04a0acef9"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s2-scene.png",
+      "sha256": "8ea1f80e0beb27583500bfdc988974577988c4356f0bea69ef9947b618b06e95"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s3-d01.svg",
+      "sha256": "00884a67ead70efe09d3e4c1001e3e1d1338dc4b1bf93058acd0a39094b8680a"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s3-dp.svg",
+      "sha256": "405de0e79938d3a29d16ef6c12dcc7360864a67e569ca0b75c5f67a67d5aa405"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s3-dq.svg",
+      "sha256": "a3536cc9fe1fb8b47ac33750985d85707473b1a52593e1ab895e1ca34c28f5b8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s3-scene.png",
+      "sha256": "3c2c465612007bd6881d56ca6f41b36dcb4d958dd64336212af658f2ad79c9c9"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l2-s3-v01.mp4",
+      "sha256": "ba619488642a3a12f1757ae3a9cb6e850cd6f31a24021a85322dc8481b662152"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-open.png",
+      "sha256": "735e6745f54798c6b93d12bf70f1f2936436b5de22804a0f263bc940c5c5bb62"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s1-d01.svg",
+      "sha256": "ace1b355c43578d21ec354f0ca4012fb69941e850d11715ff8eb47482ca9bb3a"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s1-dp.svg",
+      "sha256": "948175e4222b35a3675df5ef9b5a233fab7e859752dcc56110284198b20dda65"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s1-dq.svg",
+      "sha256": "7e0e0ff4d0ee84b74160d1c4f2c7376b49bf08b2fba3745e95ef60f3ad179dc1"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s1-scene.png",
+      "sha256": "5c3cc81e7f6761c9a503fe35b947878eebee9ab4bbb4d9a7982e270fbc25f6ce"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-d01.svg",
+      "sha256": "14b42795056252c497747dfe4baff561b4edd45493f4ada96fe131b32a6007a1"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-dp.svg",
+      "sha256": "239f3052f4e41e46d8a794f67fc500146519329843cb40cd0cb8eff26601e7da"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-dq.svg",
+      "sha256": "d75a61e83238a5602aedb32ba493b9a478745f447f8cc75a0bb00b1c007a9b40"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-scene.png",
+      "sha256": "96f2113390d46332c4ea33d95ff620de5c4d28c970aa16493cb5ea31d1081eeb"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-v01.mp4",
+      "sha256": "0ea6e9def2e1afff719698390a7fd45cf4926f47e3e1ef4373ba6e1edbaffbb6"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l3-s2-vp.mp4",
+      "sha256": "3de145e4d4981e7d146a3e6bbcb8d27ce4693a5c9e3d3abdc4c992b09cabf05e"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-open.png",
+      "sha256": "721e0be5dcd72685c858dcd78f38a847f5f8dc250e6305eb6ad78dfb239f3813"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-d01.svg",
+      "sha256": "ef88786abbfd27fd5d354e53680748294e3f8c0949861c96dd23e92a67a52f38"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-dp.svg",
+      "sha256": "433f324306ea2203fe7a5e2a8c99b617d62b55dd79d8244b5762f9129c036f0b"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-dq.svg",
+      "sha256": "3d822cf4a558af2de5311f0f72a770c112f6fbb7e54eca88be21b31a99788ca8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-scene.png",
+      "sha256": "3881d6968c609148a59425d74e94671e631cdaacc7cb4d15cd47a8ffb0006fe2"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-v01.mp4",
+      "sha256": "66f03984ae0e018d60ac34c6f1c40cfac247f355f8bd8c0034b3ce644a62d2ee"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s1-vp.mp4",
+      "sha256": "6a212556bc40e0d7fdbfa6c6b61923041a3d907bf42037fc91a9644f4976c44d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s2-d01.svg",
+      "sha256": "b690c5698006f3d83cb34984105831dd5aa86ae828274f43459e0b43c16cc86f"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s2-dp.svg",
+      "sha256": "e098dd8781a6195a1b5e82d42ecbbeaa69bcf48a0cfca8cc0167f5d3e7f9fb30"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s2-dq.svg",
+      "sha256": "e1144f8927622d64db1ff75ef04e015ce026986551c9beabeb5b1877fac322e3"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s2-scene.png",
+      "sha256": "e62ed2d5443681b0d21ae410640b3f2350f0191f1c7ea654cf6a249d73eff8f8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l4-s2-vp.mp4",
+      "sha256": "d3d8a51ad1ca61f1905122699e42a78a2a4e62c9bd4278c60897a22faed9a6a2"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-open.png",
+      "sha256": "b51729c2484d211efab1eb350b728783803e7c4fc126d51a828dd4da6277a4e0"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s1-d01.svg",
+      "sha256": "4b7026b3c5c78cb851ee09f285ae53ff84459b03d001304cac26611b2e2eea34"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s1-dp.svg",
+      "sha256": "2c5edcc29d4991a6603a94ab15f9747ce280e21ca71b0abdf873455adb6ea871"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s1-dq.svg",
+      "sha256": "19eb3b37a0088b18a35d99039676f466528ae0150e5e4d9541328e160b1914b8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s1-scene.png",
+      "sha256": "f503bed7a48238e4c22658ebf76e83951d8da27be32633d767d913f07b99a656"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-d01.svg",
+      "sha256": "69129ca3d150574cf22147cc9a5483e60da1f90aef3a0d91ebeb8f3526d550cc"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-dp.svg",
+      "sha256": "75378aba897d36cab0d7c8b9179ee92088e4aa87339cf94a3b745c09ac64d5c2"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-dq.svg",
+      "sha256": "10473830f7f32612f4f5e466436f56ca2e4ae879ef34585fa5e405ca02e44bed"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-scene.png",
+      "sha256": "a914eb82c6c33245d284e9d3b903ea3c8c564373deaf2dd280c831d4e35312ec"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-v01.mp4",
+      "sha256": "2bbb5975749b60e75d0a96bc6836fb85fff62ecc239a9e765a995874b9e04c36"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l5-s2-vp.mp4",
+      "sha256": "4bc4e9717205d62eadf10068a9b2c2a249f072e28fe1c7d979664b3e9381cf5d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-open.png",
+      "sha256": "80880aa45f62ea586255976562ff9fb00083bc229689ca251f6d221cb7cfd19c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s1-d01.svg",
+      "sha256": "2255ab4064e4a51f777dfa6776af671c4986679ceec45a4b9936473b356cc717"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s1-dp.svg",
+      "sha256": "f2297291fee5abb2fa73aa607bedf2ddc2a033437c9f2a43beab9457369804ee"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s1-dq.svg",
+      "sha256": "949443d0648075934435c28ba9162b8c24af43cfd0d0b971055b336ba7336f67"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s1-scene.png",
+      "sha256": "1788a754202ffa6ec55baef6a9af22ee116df6d639196a48264b61b4b14aae3b"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s1-v01.mp4",
+      "sha256": "c9aa9a6372e8e9da5daaa22c1f6e0ee23cc213cf85d2ba4be608724b488a5117"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s2-d01.svg",
+      "sha256": "0d9cbc1db815b1aa393a4e2f2bf9ac43ffcc8126ca60abdd734d9c7fd244346f"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s2-dp.svg",
+      "sha256": "dee93975dd9f9a4b8ad7265151a06f068c469dc15d78be425e4740bc2a692cce"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s2-dq.svg",
+      "sha256": "95641d52fb0f52b3928e771056527be3426974d2eb723d59a06d93ddfe210d08"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l6-s2-scene.png",
+      "sha256": "c63defd9c903589e1df9fa8d7b999de5f10820ee3ada8b51ec4e4d255bd07057"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-open.png",
+      "sha256": "167cd1a37e12cdb0f56587c25c65310cde363313244c0cb0575d9554cc70d216"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s1-d01.svg",
+      "sha256": "2d5ee4e066f839269b0489dd71d32a0c9a74b59a2308ca794dc3a933f134da8d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s1-dp.svg",
+      "sha256": "76d417eab530fd8b8357ff98fe35a64cd52c7fe19e805ad40d3e6ed686f7a1cf"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s1-dq.svg",
+      "sha256": "5f051e90093250a6251b3f90f9d6fa68b4f5481bfed0c970676e80ffe6c96283"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s1-scene.png",
+      "sha256": "f9be4a4f85ce796e4453381a0c68764c26d715867bf8580fdfc6973c137acf2d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s1-v01.mp4",
+      "sha256": "ce851ab4250080105ce9806ab16d2178446fe62035c9dec28d87cbd557973b43"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s2-d01.svg",
+      "sha256": "101f270391a874c5db761426e6e9ac05fb3623ed6c6e253b2f27be93dafc29fc"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s2-dp.svg",
+      "sha256": "9b8705bfe3951ca4fedfbafc6a0b1332d314a8de3102ac38be7aa05c62b6d4c0"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s2-dq.svg",
+      "sha256": "b4db2e4444085e5b308cc06cb07262858d9ee31856dbc9c91d87cab86711fddb"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s2-scene.png",
+      "sha256": "6e9e0649cf126fab98cfdb99720663b6653f285ff381c096e6dfe9046b34e0d6"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l7-s2-v01.mp4",
+      "sha256": "43423138e07dc121ca675e8afff4e7b4cd316db6e5a1912bab52b40fc577039c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-open.png",
+      "sha256": "4f566c5d033357ef51bfa679b52ced5a1631a17b9ab3f05a6286795f6bcf96fc"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s1-d01.svg",
+      "sha256": "4cf869b6e8d96b9ac118e2a88f9e57a4d28f29b2cfa912f996626569c78a6413"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s1-dp.svg",
+      "sha256": "3a54056403e45b3c1cd476da87278d9bd94f766cef1fd248ac287493ba37ef45"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s1-dq.svg",
+      "sha256": "57f49a926742b449268e62418e04e3327548d2c14c0b912166561ac5ea68d257"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s1-scene.png",
+      "sha256": "9d539dd7f7b17ea4253c34de5256840ae909f8ff6dc0ef99c5e38e77bc1991d4"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s1-v01.mp4",
+      "sha256": "261dbb4f331b9cfb224a311fdbf88115f242052781daaf26409ba0a6e6c89565"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-d01.svg",
+      "sha256": "bb79f3fadd670e04c133187819d5e9708ecbf9723bebd4d93ad394ee324525bc"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-dp.svg",
+      "sha256": "864de6139a3d8b9690be7461198074f4147c80e3b03483f4a25f47007d4d7dd5"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-dq.svg",
+      "sha256": "065b121e62ba0469735c93875b01def0f475c1b287442ea7dda869fa553b1563"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-scene.png",
+      "sha256": "2494761e4e0314b1084ee1dbd796a07832e82e383c1b1684a7b519b7232d519e"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-v01.mp4",
+      "sha256": "e11a5a72ef7da6ba2c20025dc49274ba821289c78c6f78e463b980792c5ec217"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l8-s2-vp.mp4",
+      "sha256": "2acf00c39a38cb485ae23c15ab2a35f8a03cc3d1c4a2950dd2fa54f1235c655d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-open.png",
+      "sha256": "017029d2ded53ad7fc89fa0aff6da569bdb3f623161300959b59b317844951f8"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s1-d01.svg",
+      "sha256": "eb516647f36e9fb982e4a4c9d8f4e153a30f04c2a71716d94d29cd47a920764c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s1-dp.svg",
+      "sha256": "d87d05d9bfa21f69fcc144e2dfe8cf4ce6a6331b6ddee118673336e66c7875fc"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s1-dq.svg",
+      "sha256": "8f0f4cd370f3265828cb70443dcc4a9a4929964b62efd290a2c2e5ccd501776d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s1-scene.png",
+      "sha256": "85e451183f9e956bf0d7aa2efe481dec2e8a95904060d06105ae8ccb3b5de130"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s2-d01.svg",
+      "sha256": "9f4cc330f0d59dc2cf9fc60661403237c5f97571ea5499e19767fc356cba5f7f"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s2-dp.svg",
+      "sha256": "696f1ad3baac80702c32291754d29f2ce9674c0cfc5928b0b2b54d4752dfa10c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s2-dq.svg",
+      "sha256": "4f36972bb013800a6c1ed71d0e891fca284419cbd1d8535e8609ab28fb28a5c4"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s2-scene.png",
+      "sha256": "3337f04322a8b3df3d2575e0303d4b31c164c5c54cde274ff15cf44ff63c61b5"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-l9-s2-v01.mp4",
+      "sha256": "83130de550d747561da38c4f2b41942c4a951b3e0470d80d22f59820a804acc5"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-open.png",
+      "sha256": "73dfc81b9c94e43c31237892bcfcde25aefa563b3f9d1409228055e5ceaf7194"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-d01.svg",
+      "sha256": "3b54a4db6e23bb63ed8f240e5037d0548ee52c39b3615251e10a1c343a83a3ee"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-dp.svg",
+      "sha256": "b3fdf6cf0bc715325702749e64a9952eec73a5221f2f2a54802c7f305f8ddb84"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-dq.svg",
+      "sha256": "3615736e89a7df6e6b30b3eef196e43bedc85b78f48c8ea84dc7d0f63a567f22"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-scene.png",
+      "sha256": "ff471f090718985c67749e8550dd28ab9f35ce073e5c98569170da96fe857231"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-v01.mp4",
+      "sha256": "dc4e8aa46321b773c7b0aa0656530a397183d7f38cd5fd262fc35b0cb7bb4e98"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s1-vp.mp4",
+      "sha256": "af229c27443b3e2cb920c8e890915304a550cc35d67121bb68eda2edd06c4f4b"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-d01.svg",
+      "sha256": "914b5d208af219d709eb543c0fa767c513d7c1b962157c0d360ac4accddb5226"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-dp.svg",
+      "sha256": "28dbeeebe93b9cbae60111458546630d0310006f783112ad6530c1d20eef895a"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-dq.svg",
+      "sha256": "f2bebbbc1172fe671e9813d54f3263cb9d424618f7e41ff95e786af3d62b4722"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-scene.png",
+      "sha256": "428ef50de0f52d8b4004b32fca9753054d7b596e0a813c17897b589566fa00af"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-v01.mp4",
+      "sha256": "4f461ad5929aac1622163100e8a56ad02db5991cced136d244132c4ccf3fa612"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-rd-s2-vp.mp4",
+      "sha256": "38bae88c437c7216738077d3c0e99316402a03f28bc2f6eae0b65b883e4a23ef"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-open.png",
+      "sha256": "17dcc67636c96842ea8783d0edb20bc9421549e203b3f7f87583676b5072d907"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-d01.svg",
+      "sha256": "65d4df6f54c02dd0c8128582b12d6ae61943f2d61823d0d93b327e57c9d9aa17"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-dp.svg",
+      "sha256": "535f225aed57b01486490690cf1671e77d00d177c22b9e63d005bf2c85cd9842"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-dq.svg",
+      "sha256": "d0930724487b3ee349d1bf94dedbad0df8507355bdb57e0e0746a9a68e0937fa"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-scene.png",
+      "sha256": "362235e6b836cfe9bbb22dc5933af2a09d02f6a93ddc48eff5f7953910f8d80c"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-v01.mp4",
+      "sha256": "398ce315a6ea049f9d7e3789897d611a3963275c207d3e5e2a278e792a41375d"
+    },
+    {
+      "file": "site-assets/textbook-book-english1-e1-sb-s1-vp.mp4",
+      "sha256": "a36c6dc35bfec3e85b829b5189cd62847ed2c803b6e2aadf0660b8db653b521e"
+    },
+    {
+      "file": "site-assets/textbook-book-english1.json",
+      "sha256": "d52f9a1f1532121af8f13e651a6f04cbe3f800cd34ad15a7fa72a0fdc3b416fd"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-open.png",
+      "sha256": "dca8bbda9b94cdf33e8634b4d74dbf33367f8e9b1dfd2cf81b28d7270f634c80"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s1-d01.svg",
+      "sha256": "b1bba3507d2513ae618f7fcac1c27f944750e77540bd6577f29a9f1341e68254"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s1-dp.svg",
+      "sha256": "9a51950155afdf63ff05e8472e26e299bef50835888469308c85b43439871fd8"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s1-dq.svg",
+      "sha256": "77c3eefebfcf47bff73b621e3da20e98bd02767e343731faa0519a57565614de"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s1-scene.png",
+      "sha256": "becd35daccac4d9811f773baab21810f2ffd6a4443b29751ab9d2e077f37b7e9"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s2-d01.svg",
+      "sha256": "990fed21d7f3ca9be9dc15f8c7559b53d6d34a3bba228b3382eb06b64f678c0b"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s2-dp.svg",
+      "sha256": "fc0202b2f9655b8d3751b35c03b127e75710ad9196fa417549d55124a9fb0e1d"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s2-dq.svg",
+      "sha256": "8fe620516da3c08eef5f2817f88bd640b97836b29aa65b039e0f90e45b23cee3"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c1-s2-scene.png",
+      "sha256": "f559ef9fd6440854ad61f631157db1bdf91900ed092e175922f32eca594448ed"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-open.png",
+      "sha256": "5a81de04151f099171e80ee6b09d8df913d0825a16baa5c344d7b5f2f00ed52f"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-s1-d01.svg",
+      "sha256": "e6586c6e7300d7f94c0b4898e1564d2e529f512bee9f15faa13c3bef859b6e50"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-s1-dp.svg",
+      "sha256": "4a2c766342965566f031950817cd051b40857017c3d2b5ceec30014a8fbb1315"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-s1-dq.svg",
+      "sha256": "665b4de4c00a06620cc7c3c27d56341bb20425f533a42937c323f6cd5484dbfd"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-s1-scene.png",
+      "sha256": "5b4485848a1f298b44907d92acfc2010f83c655f92a698c073cb9b0b20a01448"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c2-s1-vp.mp4",
+      "sha256": "239ff1313247c2bc9e1804794add5bbeef176f876130748e6f26e9418f7a0c9b"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-open.png",
+      "sha256": "9a74717fff1c1305ca3ad1960f14c16c5242c6e81757349a7e1f109c799fd69b"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s1-d01.svg",
+      "sha256": "43db93954c1a2f7391b386309fa1dedf6c61db3a06aa87a1e301998d0778b2ad"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s1-dp.svg",
+      "sha256": "aff789387ca2dfc5cdf8263e94d4255a271e98c50344d53dd8929336a222ff71"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s1-dq.svg",
+      "sha256": "b230783b4222b687765470873709d1706f27a6cf0c845a356b2af53227823802"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s1-scene.png",
+      "sha256": "dfd89f5fa56d3c2346738b8f3bbfc17f5212518f29d44f778f96d3c87bffff5e"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s2-d01.svg",
+      "sha256": "04095301d3b1a0d812f1cd4324d75ce313324e0347b294b14a04c907eda51ca5"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s2-dp.svg",
+      "sha256": "becc0d3d80b787ae3b16be3d0bffaafa15ef71e06c836518c6a0fe8486546d48"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s2-dq.svg",
+      "sha256": "d7a6de21c84bfb1ed58d85f21f623e2b8bbc2c88e7731feed452efb0d3a14df1"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s2-scene.png",
+      "sha256": "5777220de4b1c6c7091f08da2f0df04af72677da2dd6b3fadd3150f78aa25b0c"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s3-d01.svg",
+      "sha256": "b4e8b10f6d7ba6a9d7f5eb48d7822b178bf68a247ff68bb72aa28dde187a253a"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s3-dp.svg",
+      "sha256": "a65f46b6c9cb9df57c84851f3d7504de55fa12a4c2f104075d402adb12eb6cb5"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s3-dq.svg",
+      "sha256": "07ca0fdf228a65ab6061ea789b6e3f8f60a0f79c68b0290d433b45ab62f18435"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c3-s3-scene.png",
+      "sha256": "d4469a93bdf1278dbb4c9ebd75c3afb567dd3801394643f1125b6392a0157063"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-open.png",
+      "sha256": "92bb9a3c2344538a58887047ad5d6a4a7c846c623976223f6193e3985f19ff41"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s1-d01.svg",
+      "sha256": "881524b71a15c570e3f62a8c8eaa7103244ac18b943a0748beb520bd1ad7229f"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s1-dp.svg",
+      "sha256": "239e570225c5cd380e614525bb1c1557e47c45f589ed85e49706d96ee2dc93fa"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s1-dq.svg",
+      "sha256": "dced749ce901addfe6daaa6fd8b350d781f9da70626927257f11589f43bc9a00"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s1-scene.png",
+      "sha256": "fb3e55811c3eed838fc00429d9bf9c21990382c816364119e461d7ed2cfdb76e"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s2-d01.svg",
+      "sha256": "6d87bd359a4bb10804d3ce3536dbeed053667b77762daac52e6e741fdbf1e6c1"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s2-dp.svg",
+      "sha256": "4122e737a1ba7f17287f884803eb081b0de2e739ebbd828bc86e75d9931fe1e9"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s2-dq.svg",
+      "sha256": "9c228aa0f5deaa582db1406b3d2a18e61e6997d02317a40745cd188e4042d5fc"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s2-scene.png",
+      "sha256": "baee7d24c325a8a9532de3c342da36f49eb36f1a71f1b6d63ed3e3f5974f8c8a"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s3-d01.svg",
+      "sha256": "ed510358dc2e717a737e0bf71194b99dbabdf4b80c383eb4af2b4dc59e682829"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s3-dp.svg",
+      "sha256": "b331465b4b82120e827d35a260e43909b6b873ecc2701ea44ac083298eab1964"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s3-dq.svg",
+      "sha256": "fb454df4320af0ad4f40056b56322c9444821ee1dd2ed6b25d4494f6aaf6a2c8"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c4-s3-scene.png",
+      "sha256": "a127cd43efc7f7c4977121b80ad8691fda30f919a1156a58a77f0312b0d3435f"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-open.png",
+      "sha256": "9f9ea420b0c0a63c5c1a8c48488c813c0ab26d935657f5d30f874662114b08d7"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s1-d01.svg",
+      "sha256": "f52b3b02dfc2b29ec48e6449399fc71d754b9d14df3fe0477eae5ce8a00681aa"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s1-dp.svg",
+      "sha256": "492f025d9084b5932b694bda0297c8c64ea956727dfd14d9fcee1869c3e0ebd6"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s1-dq.svg",
+      "sha256": "74335f1a0e65e75f9e22df1706c79afdbe2569f4a749a365f41fbb6b2abb2ea5"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s1-scene.png",
+      "sha256": "090cc77afa60b17a6795c38c221f530d845111530f15c4ac1c4626ca37229a52"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s2-d01.svg",
+      "sha256": "1f8c3d5671a4a682301a009e8a06a277bdca6ae6fb8aedba39a0293975a28bf0"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s2-dp.svg",
+      "sha256": "b90782e32fa2e0767066bdba8845755220fae2d8670eb53e696ad80ff5a980ff"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s2-dq.svg",
+      "sha256": "8fa483a59b7cf8ce68ca47e0dcb31fa19904b9e8d45245d2b52f4a4ad7982683"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s2-scene.png",
+      "sha256": "467a38a18d6b752114abead855d48355ea1dc748ea9cc778dcf99bc1b02643a6"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s3-d01.svg",
+      "sha256": "e0eb2e7497a8b4e107b5aa15e10c9fb67562491da92901a4a21a7bc818a8a3cf"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s3-dp.svg",
+      "sha256": "982ecc15909b9b8e2c836d3546b07410ad69aa23c03adf4614596bb7c271c10f"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s3-dq.svg",
+      "sha256": "33e29df24c5b4fea2daa67e2fe8f0248bf325de2f8aaede3e400b8da5e554328"
+    },
+    {
+      "file": "site-assets/textbook-book-geography-g-c5-s3-scene.png",
+      "sha256": "b77bbbd187d4b52552025ea49ddcc003927099a3e2e51aa1548a1828169e5828"
+    },
+    {
+      "file": "site-assets/textbook-book-geography.json",
+      "sha256": "5e8e314dfe44ab31b0c6fa80cc3ed0d1cab45873759afda880623cd4b390a9bc"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-open.png",
+      "sha256": "f4f1d3ab5fd9024e3498428a0bea867ed03ac6aed55301dd925d762eca80e6e9"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s1-d01.svg",
+      "sha256": "e5a2b3b2d1b1a781be29a4e85c7f0d40eb672cf4decf05681290e39a4427634b"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s1-dp.svg",
+      "sha256": "2c2c1820673644f12bf831c27a65ea1664a6eaf17709e0eda61ce589c9cb8670"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s1-dq.svg",
+      "sha256": "2c182a82d62be19f28b38678e471a99b8eb393d04e51d7cb4c969ca2b12b79ff"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s1-scene.png",
+      "sha256": "efa160e8054ce30c53e2c89c1feebb7ec199e363f850e66f211fcf3cb3060bc3"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s1-vp.mp4",
+      "sha256": "f49cca2b2485d4e0a005fbd668892a93fbc38e88d0e09af6a3344a1aa0e80d8d"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s2-d01.svg",
+      "sha256": "b00ff5a2d968639c369e883b08a3f6689fc963687d2898710343d377ab951b8d"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s2-dp.svg",
+      "sha256": "db1c1e552bd973dbdd458c6b676897c2dad354d001795105d9f6b649802cf980"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s2-dq.svg",
+      "sha256": "39d508709e7e4c1bc253d9a4782326a05494f4c7ebfacaabd1a0a74748724b79"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s2-scene.png",
+      "sha256": "15daa64c6c709568406be9e0970443e4d141103aac8a7677ad79cc528f213ca7"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s3-d01.svg",
+      "sha256": "c9a6b9d8ce70a49010785141b6ce91d6928cc6b608c5bb697c82b46a8065bf16"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s3-dp.svg",
+      "sha256": "d73230bfb738d27b9c1d11c729dc67062c327a629d4540abad438bfe20c0dcef"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s3-dq.svg",
+      "sha256": "4cf76ef58e43a84533e145d5915a1925cf9619125332a533d6e04947f77718ac"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c1-s3-scene.png",
+      "sha256": "bf6f623331a97f94095bce986e2ce61ec8c0b0070e07c4f8a1e5f6f7812accb6"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-open.png",
+      "sha256": "4cef8dfa2d767c975e3ea18cb3fd8a52751539f1e6e5eea9b40bae3c5c698907"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s1-d01.svg",
+      "sha256": "56a7a75713324684818e887daec0063874403921edfc67d8da6c799adcf0b12e"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s1-dp.svg",
+      "sha256": "c57fb94da552be2fd4546beea9f7324e1ef36e73993effd50d72c109547df535"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s1-dq.svg",
+      "sha256": "d6570f79c4aa8c54461fab763844abe2fe83d0944f18d018553693807edb5b79"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s1-scene.png",
+      "sha256": "eefed36d6a2f2adb61de11186b72d90d424033e5e8054293c99566da08cd3042"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s2-d01.svg",
+      "sha256": "31a95a30f7b055c5181f6231395fdccc4d14f29da4e824ec48fbc51e9ecd5919"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s2-dp.svg",
+      "sha256": "927c37211463721a7f2672e2fba171d0bd8ee9f560f9e8a95e26c6305a3debda"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s2-dq.svg",
+      "sha256": "8fcc2c00c7c8543bd504d10f0edca935134bb21a9e0f75366399934928e73eb3"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c2-s2-scene.png",
+      "sha256": "7c1f9a22be55c5e9f0ba077941f3ae44be208a97a0bd816627df93dd2fbb83db"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-open.png",
+      "sha256": "b97236c306e447e82ee9f87f905eca1dfb8fe931cc8fec72be886ef5b2895c03"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s1-d01.svg",
+      "sha256": "8fe034233847824b7adf024eca57e14b4b0d7c0047bc16472495959c5096d5f0"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s1-dp.svg",
+      "sha256": "c2a0952b295837558acb2fbf7f4350cba2a2a47df5b9dded353267c82aa53251"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s1-dq.svg",
+      "sha256": "7fab09c1130c5342ce0eaac4264595b6be0fba62eb5fa23ddfaf9cc2d7bb6685"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s1-scene.png",
+      "sha256": "bb5d43d28df28bac295db1ad9eaabcca69180820c7c8cb3445313b08bc2b9e95"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s2-d01.svg",
+      "sha256": "0a0578fc09a9e1914d167b7c752a6059672eb34f9f1bec981b4987bc30cb5288"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s2-dp.svg",
+      "sha256": "7f666f1c9e53cc6e29e6a4949969080702f0058274a0ebd1f05a77d82c28d97d"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s2-dq.svg",
+      "sha256": "2b96a32915313e20e4e3df22808b1317878e916961c3f31a47d0328d2cf585db"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s2-scene.png",
+      "sha256": "fe031c4b3d126d1979c1f821c56873c1886847d7bad22c28b7f896dc69b03135"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s3-d01.svg",
+      "sha256": "df79396e12b276744f6c9174de87b81e17329bd3b369d42191346d5acadbe598"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s3-dp.svg",
+      "sha256": "18f191363edc146ccf54a4af4a1cd9bea30a0a7fb42763a5a55fee9ddc6fc52a"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s3-dq.svg",
+      "sha256": "33fef6cb15cdba16c5f865f22e1aea80d7e3c419e5109351e739a1849f747f79"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c3-s3-scene.png",
+      "sha256": "a92b3b865043b8ac1d9d210d999d43368cb569e43d3370bf88cd875d69c5cd14"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-open.png",
+      "sha256": "02f83d4cad14159e542d216062d48351a436c46954bd14c520cbdaa9b8778e7a"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s1-d01.svg",
+      "sha256": "0affbb522dfd20cdeafbcaf7b9f6b84c0c1e53ac726f8933cf653cd7b588e32a"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s1-dp.svg",
+      "sha256": "aa9f425dfa5edeed717b8d12ad05fc8bc4e3c7689371810afcdfddf34ba6cd75"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s1-dq.svg",
+      "sha256": "0f781d269d96ac2ce92c405d31813fe6d03dfd75a6f3ab80618ea58e6cc91439"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s1-scene.png",
+      "sha256": "02ba5b91419ebfdd49769af1b2e803959a2d1856361d229dcff3a888f3076993"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s2-d01.svg",
+      "sha256": "647c8dff16a81fecb382b332bbb714143e5a33f09e817e0aa029c01b4c963e31"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s2-dp.svg",
+      "sha256": "4a42ccef3b2503b0761157009215cc4dcc52dbb68c94a71042ee77a2f9755d17"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s2-dq.svg",
+      "sha256": "8864781575be8e1af32a2ca5f2401cbbebba8c46f9f2f4b23d9e3adc9dcf95d6"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s2-scene.png",
+      "sha256": "ecb21441258cd46cc870db44032d9285f4cfc2cfa841cfae1c167a4ef3544ac0"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s3-d01.svg",
+      "sha256": "bb1221c39531ac95fb5e23e4848fca4ce2eb4e4231d119d4dbe253f2c91a67a6"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s3-dp.svg",
+      "sha256": "f1d81c7124ea31b0897d3a7c2f764c25dbd615804e4d97027d5cd926f7bfc2c2"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s3-dq.svg",
+      "sha256": "d44ad423e55340e0ee92f5971f737920df4d77ba70a2df9d916928625035b6da"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c4-s3-scene.png",
+      "sha256": "048f848e16cdb114550303565e5a4bdaf2eba04f29c2c4911d0175e4a52480be"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-open.png",
+      "sha256": "a7222e2a2b04eb5826f70be9ae00f92155d0eb3a9d300c7061cc13f7a979cd10"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s1-d01.svg",
+      "sha256": "67163739d9002bede6444648902899cf4db38a3a91a487ae15584b9bebe4ce15"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s1-dp.svg",
+      "sha256": "ade0b64452967fd2f7d9869b4f56f8f67aae34c5177914255d53a7358623e061"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s1-dq.svg",
+      "sha256": "bfa15251cbaa10b5577b02b46585deeefbfc4e8f40de6358c149da387b2007ce"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s1-scene.png",
+      "sha256": "a0901a366c7816487fe8c9cfc0c2d6794ed525adc09d7e45ac9da19598122c1b"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s2-d01.svg",
+      "sha256": "ed2fe4a76f553bcb349caad6b2be3841661edfebaf1c111ec29e2469bcbd354b"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s2-dp.svg",
+      "sha256": "91fd8585ce044a480867750d79ef5655c3b49b07e89830dbe31753418aaf441c"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s2-dq.svg",
+      "sha256": "8c1ca502a2836daf030b6b9aae33c2b4adfc424ab5750fa89ab900e88ad334b9"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s2-scene.png",
+      "sha256": "7733ba8bfe95c0d3e1d0f3b96f6c42e6b28c716df00df8ea480e7e539e020f45"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s3-d01.svg",
+      "sha256": "fe2eefc5edae26a6c3ca1d5907872841df630a33a535c8ad696c6234bd297928"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s3-dp.svg",
+      "sha256": "b4acc16638f4c5b9dc1cd0d393d6d6db0fae3fbc4efe66468c362edd7eb4a347"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s3-dq.svg",
+      "sha256": "963f2749ec1fd6d64ae92f9a8627ecf1064c07785bab311309cf8bea07648290"
+    },
+    {
+      "file": "site-assets/textbook-book-history-h-c5-s3-scene.png",
+      "sha256": "d338ce6f39a6a4ef0939ab4d5be2fcd252c009d6a0f522eb8187a7d987f0df71"
+    },
+    {
+      "file": "site-assets/textbook-book-history.json",
+      "sha256": "86e40853ea511c05a051ad8b0c2ca370ba7f3a140606188d794450356c2d8696"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-open.png",
+      "sha256": "d08b2cf04621641f2355f7a852db49da55ee32713b12266619efb125ee67b4e2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-d01.svg",
+      "sha256": "86b5a168f7be6ef9bdcdc0895070631fc3edcb86dc67bc161bb851ab7a582df6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-dp.svg",
+      "sha256": "56c0958f11658b9955dcfb373915641ce794dd64ebfd3e2cf8dc80817b4dbc24"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-dq.svg",
+      "sha256": "98124e072427b503450c3ef74b3a973f98bd09e3372a670cfdea87c4a8887a77"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-scene.png",
+      "sha256": "e9d3530b5cc6e36b7fe30534dd7d93e24dcd5439321122a682dbf0c96fd46355"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-v01.mp4",
+      "sha256": "4c1e668eb58d66ede79fde156fddfb768689709a5159a72e439a4059b4eda9fc"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-vp.mp4",
+      "sha256": "9a4287708211729405b9625e0a05a0750a662092ccc399603ac4aaccfcd2ae79"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-d01.svg",
+      "sha256": "b221b46f11c02629531811e8997e54cad8734ae9a38903ce55404c40edee3170"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-dp.svg",
+      "sha256": "b2ee07e612687c222609e05c96c7a441521740d16770222c5399939176374a3d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-dq.svg",
+      "sha256": "4d26ae9ba59372b7bf33758aa9b672856481d9f19ac04755050ed867ab1f6a8f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-scene.png",
+      "sha256": "c8baf1a194499b41b99cbd97064a6e4a087beeab0d1ca6e0d146ff7cf1208d84"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-v01.mp4",
+      "sha256": "ff2479b00d570517989b183d8c8a38694cb4205f448d92a77b88e4f71f2da6d0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s2-vp.mp4",
+      "sha256": "68d64a5312715e9b9cb130a5de7cdbab98ce337e0f7681bf961a314927356a80"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-d01.svg",
+      "sha256": "f995d4fa2aa72be1342ca8e5ebbac49752b3d13949557d97da1e7f6d158aa995"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-dp.svg",
+      "sha256": "bb5a0be9ed7e6fe6b98549e69a8abd7cbdcf1ee70ae3c808d3f2fd020d278eab"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-dq.svg",
+      "sha256": "e4c520a930fed2ba978f3ddda686969e658207190db5f1999b1620f08ce27a43"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-scene.png",
+      "sha256": "9eb7b20620a373fd9341e8166b5b8a2d5e5e35a188fac289830ec558f05f72a9"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-v01.mp4",
+      "sha256": "45fc8df3416ca90e0706f1814b0d4f0c93ff9c0bd334275303ae3e51c65f32b2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s3-vp.mp4",
+      "sha256": "289cf8179daa7804dd756a5b6990b2c71b05efd49146ae19eed7b4f81a3a74a6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-d01.svg",
+      "sha256": "cf7af202e1fdc6fac01b400dc733f4e5b73d76ea14ea9a8ee83d5e8d602299ef"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-dp.svg",
+      "sha256": "42da44365b58c88bb88c0bc0c8220774902944cc0273cfcb9ffeefb2ede78a8a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-dq.svg",
+      "sha256": "e8a0ec1a6d724a965c7b103f46b7fcc97be36899822cdfd7e6d2dc88b5afc01f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-scene.png",
+      "sha256": "917fb8f89c9b7a11ca11d59e2a820c3e1f818feaff4ba1cd695fd201153615b4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-v01.mp4",
+      "sha256": "65fdab55bcaba30bc859664a0d88f4f3d73bb2611f1b345146957ae2aa83870f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s4-vp.mp4",
+      "sha256": "60fa91a581af9221e732b9b236d2806bd7a5195d43817e2a65f5799d1db7fd18"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-d01.svg",
+      "sha256": "d8e38b18753c432903e0a914e8122c3ef99c145e210c6d6a9a8594a673c04fb6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-dp.svg",
+      "sha256": "04bc2ed1da28a53b60865da6b29b17a1b0c87f18fb8b64a6afcd4ac35517fb12"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-dq.svg",
+      "sha256": "61b907d4107ac80e0a36dadfc610c2cc75f708a770f32e0837e7f96cfa91bb4a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-scene.png",
+      "sha256": "98f63596795a73167c62c1dbe9350bdcd239d757cefe4cb21e1b8e9aefb2e62e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-v01.mp4",
+      "sha256": "22785a03749fc5e77ea42b47972d7c60475e579278e86ff080473157f95802c1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s5-vp.mp4",
+      "sha256": "a4886804fd69e0f4f841270257470d0ba7ffa6c208f05ae5af4e7a652b3d5cac"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-open.png",
+      "sha256": "e2071c9de989ee8d3c6624ffe4486928dd7debcfded277a76eb88269c1610560"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s1-d01.svg",
+      "sha256": "86ebc7c46e68effc9ad100bc43157ce77bec16f606f764d95dc0aef2174dfe05"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s1-dp.svg",
+      "sha256": "cdda3c6eb0e2fc9ebf9f85f855905acab5fe3fd2db0ab724ed675241c0a26e65"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s1-dq.svg",
+      "sha256": "8cbb36fce770277a724096d9e9d779b2d8a2af6e6f728189d7c326a79d489de5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s1-scene.png",
+      "sha256": "f04869cb517a3becf0f250c38e87ea985b4dbf5005476fa68ae76d6877805922"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s1-v01.mp4",
+      "sha256": "8fceb11a223ffc9f928f6769ea15dfadec83f98023fa8f318a09d69b4821d6e1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-d01.svg",
+      "sha256": "59661e98171ba4c55977dea82e2e0b64ed2602ee6bf1837cd7a97842efbb8dd0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-dp.svg",
+      "sha256": "4a09a9fb0ede48c97d89e0b64b1650ade945f498f8964d100ae7a8797db772ae"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-dq.svg",
+      "sha256": "48c6501782075ff806f40e14dcdc08e52aa67cfb0ebdb6e42e8924c6e77f673b"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-scene.png",
+      "sha256": "f1f6ad262b41de31c197226cc3b8c9d6fb99ded4dc95a6366d07340e83337fd0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-v01.mp4",
+      "sha256": "f749f318c0444a0e3d53d4d84ef31ace459aec76db0fbe0a65ab00b824a99d75"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s2-vp.mp4",
+      "sha256": "e3697eada33613aff91401d39fcfc9ddefca8c29a6ef9799ada4880f0b483656"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-d01.svg",
+      "sha256": "0671d0ccb00713fbef6b03dba8a3def4847d471a9f085b999fde1ea32e7f41fd"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-dp.svg",
+      "sha256": "abb81785a440fa97bd52e7eb99d43a13772f90406bf4138982cf5a464c2fdf40"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-dq.svg",
+      "sha256": "5c96a480a4ee6011901dbc5e10a724903262a58b27f9a7b614f53b6c61d3372c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-scene.png",
+      "sha256": "7764afe8a2dcc5bfa4027f8bbdf8dc86946a8401874e317d518cc87e398eeed6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-v01.mp4",
+      "sha256": "b24846ff4b7532b33073569c10cbce73834ac89a1414cc86b036750929834896"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s3-vp.mp4",
+      "sha256": "de2ecf01ed9880e1a2d72f4a630babd8531b4a86c5203889acd55970cceb0767"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-d01.svg",
+      "sha256": "39dc364cbd620923cef115a57d4495da6420d95ed2516d5e499618a537945765"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-dp.svg",
+      "sha256": "2b2681285c5783fc25aeaffef21edad27c05f5ad29faef80ab829b857bdc13cf"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-dq.svg",
+      "sha256": "825f17a00e88eb330dfd374478aa6af860e354c938e6375ba32a0adf44036fb0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-scene.png",
+      "sha256": "5c785619bdd9684b85d3f6ee41b0bed2003d081fdd4fd5fafcaaccbb520aca6f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-v01.mp4",
+      "sha256": "477d6caeb3702824088ec02791536fb6480ab88f2056a8eb0b3f2b7874feb437"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s4-vp.mp4",
+      "sha256": "344697fa6e7be8a2d42a745d2dadd1de3e9700ab2b5d902d4c22e58608d11b16"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-d01.svg",
+      "sha256": "a1dd9d2ad67ba515177386690c3ec2c88b5ac1722f33493ea8e10f36d44df5d9"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-dp.svg",
+      "sha256": "c6dd8994f45f65114da48fa2e57b5fa250aaf58f2c6852145ac8271be860e782"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-dq.svg",
+      "sha256": "d77d514e4d7ce3d4867ad6ce803b94686042d86206809d92de87e67472f428ca"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-scene.png",
+      "sha256": "4c3d64f8cc24ac4ce9ce970b00b7e488c97a3b61d6b103de51b5c1c5dd799697"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-v01.mp4",
+      "sha256": "1df3e48424bc96c567c955d447a4861d1b997d2b96dc1e924c9f49815913b623"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-vp.mp4",
+      "sha256": "109674567656e0718254997b2c1be79a5cb681507ae9bd764dec60362ca7d738"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-open.png",
+      "sha256": "a849b7041d45b90cbc2947b393c8569eeb00ec4918543652ec4741d2fd71954e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-d01.svg",
+      "sha256": "23bd28818dbab2b811923846ed7fe1bd0d220f643265f43a2df0b459499b298a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-dp.svg",
+      "sha256": "b94368c8b34ce933d06ba3fa50393eaca4e602521909c09d4e2294b579c81768"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-dq.svg",
+      "sha256": "0fa9033cf6803de23c78760623db66ecf4c56b05ecbaf52cfcb0fdb6a98a2c00"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-scene.png",
+      "sha256": "35aa9afbf431cd22e806b8f89faf9ae5509ca4d04e8c9a6c97a5a452b12815e7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-v01.mp4",
+      "sha256": "ec165096808f43c498f28c0e17bcf22890fed195a8bd4e8c03bf9ac03ce13521"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s1-vp.mp4",
+      "sha256": "4fbed6591465f3cb0b89482efec82e2ff2d0845f0f016bab3bb51007060273b1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-d01.svg",
+      "sha256": "bb777cfd367208bf73a75483197e5f1e0e64f4bdfcff78aa1a0eceee34f59981"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-dp.svg",
+      "sha256": "4ad2d34a86d8a834667698e125080de759f469531e11ae475d6b9ecd883bc83c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-dq.svg",
+      "sha256": "a2ce85f01a942c13e0941ef702f61057a824fd7592cc8734dd480101fa3c013d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-scene.png",
+      "sha256": "510f278eb6ebd455312c60b34edb127759e06c89a94311b1b6b6f65f7416904f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-v01.mp4",
+      "sha256": "610f160372ce4967340d31f554518aa4c5e905991011332c1c647c871d03524c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s2-vp.mp4",
+      "sha256": "430afa546a67de055643fd3a39dff02419a401bbc77cac35c39fd02b50592fc7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-d01.svg",
+      "sha256": "b3b465727b8a99d0cbc5561a354ba5f14bb8ecd79da9daf821d6814225098894"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-dp.svg",
+      "sha256": "a2490bf346482ee7cb621d24cafbfcb638a736e405c5ef2cad6d00cb2e102d71"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-dq.svg",
+      "sha256": "9e96a740a4f5266dc679bd6aa4099092ce438980b83cd7f1efa4617cbb722b66"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-scene.png",
+      "sha256": "0dd8110406b0b0012d9b265940a3ba6e2716fa4572e3d50a59b63a9ddc84b4b1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-v01.mp4",
+      "sha256": "a80f4091089fd63bbbc17d3a6f9a6043bb2781a669f285c9d2de919298c5f1bb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s3-vp.mp4",
+      "sha256": "c8c936f4c36858d4526f3a708cf70bb36b579c3ff6c10909f21cfef6d1ce79cb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-d01.svg",
+      "sha256": "8cecb1a4374249b4cfe5c7b040cf28d9764fc004b5715c983adbf7d03e911f3a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-dp.svg",
+      "sha256": "d63c2151dd7b6354bb35833e1fc507320bc9a127c38d14ba1f0fcbaf62a08504"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-dq.svg",
+      "sha256": "c90c7219aabb6641eb79f6715d18d711b247c9e49527af2ccf28dc68abe68bdc"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-scene.png",
+      "sha256": "7c499a53be8b4443e07d3a4555b07e0f89b04573873b95ac405990baa46958ff"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-v01.mp4",
+      "sha256": "c204f899152c265b0be06922efaf28442e22d2f2c37e8acfc0c5c536fe5d1c73"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s4-vp.mp4",
+      "sha256": "1611b93e084a9ee3557767184988ad7511b001e9fe38f5e32bee2b596fcc5164"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-d01.svg",
+      "sha256": "a0a502b1805aedc813b524066fdc221a8835c8aa92dc48c634408ec06251133e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-dp.svg",
+      "sha256": "3d0f4bea60aebd551b9755f5043f4968139bbe59d047e1bb1baa270d5a248c72"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-dq.svg",
+      "sha256": "446e2f703a9d62e58b03a38e0546b446a8e91dacb0da07640a6141cfb9982848"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-scene.png",
+      "sha256": "c7f30f9f6e0976f97f945be4a7e4b806e23e55063627d1bba299e672ff41edc5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-v01.mp4",
+      "sha256": "526daad038e376525b671054bb8980df33c5ee61e07cd59f719c1d08e4b77c7f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c3-s5-vp.mp4",
+      "sha256": "6df78e61906142b31782e8ebf41333bfce31da45afd07556843de1055892ca23"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-open.png",
+      "sha256": "4f124d37cede59da396abf569a2b49d11465923b9284b5b4bce277a5124b8e06"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s1-d01.svg",
+      "sha256": "387aa797a8e36a9373f9711613968608aae2939a2c75ac93c5eef66df89435ff"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s1-dp.svg",
+      "sha256": "d980828aeb5e68a7a9ec7fc902b57fd6c768fefe6ba1f0838a7d77277c620e7f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s1-dq.svg",
+      "sha256": "0ec669c660fa156814d2eb34b444f9692b5ba6d502bad95b2f91c7b56bf1904c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s1-scene.png",
+      "sha256": "3d47b310ce18db51d9609a16b21d648f855ff556111cb72af473ba55a5064dc9"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-d01.svg",
+      "sha256": "4efa884781e1417205dcfae385e4c98f22af91f8bf147bc05769d0d0ebb2bfa7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-dp.svg",
+      "sha256": "f7bb896ae6ce548aa00f0739ef0dc22141fbf7144480ae73caa1652c891def51"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-dq.svg",
+      "sha256": "de8fc26f391eb6836925705463070f1521d5ded7f8f72092dcc679222f90f75d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-scene.png",
+      "sha256": "8fde90ae5d9f88ee47946ebe391eea4c5068c120fe14f7eca9838737b46ff916"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-v01.mp4",
+      "sha256": "cd93c315f8df8e9214278db4eecf599b069f2b30ab175c0d54cfd23ddbbd5bf0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s2-vp.mp4",
+      "sha256": "396a990af6a714ae3faecb6254791a03417df875ed6db41a76d39dcba00f5b42"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-d01.svg",
+      "sha256": "4712fecb049371401765eaa4842b21088fbb6eecb3071107b9422a8dce44bf80"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-dp.svg",
+      "sha256": "8b4b6d37d2b0246bbdfe6b9ace0aa4891d4c5fbc3694bdeec8fe7d97b46bd943"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-dq.svg",
+      "sha256": "941d2f5018962b6d1d5e5f0f66f46a4473114d718c859ac8d868c95c047caa28"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-scene.png",
+      "sha256": "76925b63bac8f9ca545afc2f4267b0aa6dd8519830a4f8364f4a8b2a7ffc1e2b"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-v01.mp4",
+      "sha256": "8c8f1d36b0e03f58a97fd5c2fdfc4865f7ecd5439a1fca1a507c26f98e0d5a4e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s3-vp.mp4",
+      "sha256": "c394642267a31aa5a03455ad689082ad6292297b08e45f3ae404a35af12e7fbc"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-d01.svg",
+      "sha256": "1af8263ccb70be06da5cb5082a526165f3b9280c99de9164d99c647fa1687e70"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-dp.svg",
+      "sha256": "b44fdf66df93420beccbe23c8313ac972dd4de0354dc9c2053ac447226530a4d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-dq.svg",
+      "sha256": "573aa1e742681c5dd2a3d066c50946a9eac34870531a988a2a7ba8911f44ac76"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-scene.png",
+      "sha256": "6affb26ddd41d15ac8d17f66cb996750596eef1450c12d2d2394c529940e815f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-v01.mp4",
+      "sha256": "3e1d8b915833e5d81c1e5bd3b29455f13d25eaa1e7c2bb252709de129537b956"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s4-vp.mp4",
+      "sha256": "9223caa4ceb806e4aa74d74f3d1c6dfe16a3a5ef81f74153460df6200eb2f498"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-d01.svg",
+      "sha256": "e214e5b1c87919a7a7a9844e20c143d3e5cd252a93574092113245a492e7fbc2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-dp.svg",
+      "sha256": "3b3b5388caf3e125285eb1aa0ccfdd298e1ad4cc6c0aa42d9b2293b9f4c69405"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-dq.svg",
+      "sha256": "a16d4a8f80f112e484b8dc48ba59b3656f6b76db9e16264b69a1fad6949e57c5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-scene.png",
+      "sha256": "d4d36ce33edfeb287cde218b4578262277927fa3463f8475f88083c09bca3058"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-v01.mp4",
+      "sha256": "aa1eb58617f5373091cb4a8a8a6c5f837c91a322ec1c4b8cf391b5e1a4df85b8"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s5-vp.mp4",
+      "sha256": "6dafbee2a01bfa39ed804cb5983f21848fba7d8e0a79c35ab381b69a6bdb22f1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-d01.svg",
+      "sha256": "ea91675873fd1baded49871e3c83471723bc37908e3abb582852086bf51edfa7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-dp.svg",
+      "sha256": "7601395ddf5a3a599a63cd9f35fa2f5f9ddf6ab2b11516ff7cc40009185df377"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-dq.svg",
+      "sha256": "f2cd822b269957bd1da07a2e852a5489e691d4e1c3f59213248602f9395d5658"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-scene.png",
+      "sha256": "cfcb427d0fe38299b82a521efe3d0ca1f4421def5476e19dc0bac0ed794b0c2b"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-v01.mp4",
+      "sha256": "1e0494a6e1588a881b6bd0ac4c1aad78f559ce1618ba263840a9ae554ea44e90"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c4-s6-vp.mp4",
+      "sha256": "239be26e258b880c8826e811aa9a73a89231d4a12e6077c5ba30c8bd150ef3d5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-open.png",
+      "sha256": "8f73f6fe9e4b1ad4b9c281df84188e5a3e0e3a22fadc8dad2bcdffe073b1e7a4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s1-d01.svg",
+      "sha256": "b73c96e1a71c8472270c92fb979bfaed82581503bc331663a6d243a216cc66b3"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s1-dp.svg",
+      "sha256": "dac84ed3a83b1c3e194f6c513f7a9b369cb8bc49fe319b8c40e558f78f58b801"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s1-dq.svg",
+      "sha256": "81cd1a4308058f444a84226bccc47b009648692feb7bb7884e11d5c8a07da855"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s1-scene.png",
+      "sha256": "7416049e3f16fe8f6a28887bafee92716744e5ce1b3fc5b2f8f91b90f78972b0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-d01.svg",
+      "sha256": "f419dfdf8473de99cf2d56c526639f25b28f48d64a2669188cc835b33d8bd061"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-dp.svg",
+      "sha256": "5f93afd609a37372190a0ff869f27e68e6d398fb2460a7e42447a4ee9b5b604a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-dq.svg",
+      "sha256": "3d6e4a3d312da9351947ab25ea3ced12f4c894364097c756552bdc523dda6c45"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-scene.png",
+      "sha256": "b25b2ce640f8af6b734b7dc18d64d52304a067966b8cadba145b24cd060cfe90"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-v01.mp4",
+      "sha256": "6433ab936d790a4ba8b403db91b7bb284d9cd2a3a9682787d7944543ae96db4e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s2-vp.mp4",
+      "sha256": "dfdaee133fd9bb2875532a074c04e9db7bb9d7adfff74e6c0291d80bb7dda49e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s3-d01.svg",
+      "sha256": "8c028ea9b53ef9e25b0a911771c372a175873e3e7e9e929fc1ad6ad78d5423d0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s3-dp.svg",
+      "sha256": "ae55d6f40ac262efe6c78f7dd1b5b45f9eeb3cca52a0c6ccc75b2e11c68c0394"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s3-dq.svg",
+      "sha256": "cca0ee1fdec87f3c05a758a9f7220ad9f10c51031929e0060c9a69f166c30572"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s3-scene.png",
+      "sha256": "c86a515ec63f1a138f8ddfb7970bd8c8982cc339cd5ded95d05650a9199dc4e6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s4-d01.svg",
+      "sha256": "752438b8623ce5f5147e46e2559178733bf7f7e2e718c1aab7ad41ea1159b455"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s4-dp.svg",
+      "sha256": "7773e36595b27509d6f28876e16ebaf8b8da893ff1bedc228526e6689c588d70"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s4-dq.svg",
+      "sha256": "b74540a6ee5be9311c6b2f9dfe5fa9d4d2843be6af194e0706de26631351f64e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s4-scene.png",
+      "sha256": "ffe812dec7ba228d39857c617a70b6b5a8ab13bf8bd2b913ba0f88f442bdea83"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s4-v01.mp4",
+      "sha256": "bc15ef71769dac13880dfaf30c87871e50638de58dec9686f8a44170b8a2ceb6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-d01.svg",
+      "sha256": "969d8b4730033eff6443dbafc394ec28f533f0a8305c747591946b0be2a1be4a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-dp.svg",
+      "sha256": "fb909ebc1fc5bab0d72f832fd61883500cac2715d73b90a5b7de51922e6495a7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-dq.svg",
+      "sha256": "f24452b6e42e4a1dd5643f6b925e79654fb59607563007b476d0becd913411fb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-scene.png",
+      "sha256": "fffcceebcfa95406ab37eb9ad56eae069f6da7ca75d64b311ae24c13dfbdba27"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-v01.mp4",
+      "sha256": "6328cb3b5b57763d7f1ff4447671b3928e7a9b26cb8311b1b3d38888bad439ce"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c5-s5-vp.mp4",
+      "sha256": "01b63f06b44235b09984105226555737ad105b66d99e61b45b5314ebfc022a84"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-open.png",
+      "sha256": "3403ee5bbcf8d3ea41f9f163fe09a5a46e7a54a18826a9ad7c57cf230da6ad4a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-d01.svg",
+      "sha256": "22cd21a69bec681c3647d863acdc16d55d34be4a40ba9e1db9fa58f09c03e5f9"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-dp.svg",
+      "sha256": "24fc52a0e65cd15fb8550f69771f8f5eaca77afee6015b21d296bb82948d94de"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-dq.svg",
+      "sha256": "405dff894ace343636973469b659bcd1ceed9f13e8fd4f596ea46edc2cb9e30a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-scene.png",
+      "sha256": "6b7119b4aea252a1d15690f0e3068ef3f8730df6045906203e042cc3192a4760"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-v01.mp4",
+      "sha256": "9393fe49cabe7233f42654b91af7371a6a79053e7913a225bf1513f37e3130a2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s1-vp.mp4",
+      "sha256": "fabb348d999da37e553b0183ef281192cf38fe74458a4b6061a73ac103c07822"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s2-d01.svg",
+      "sha256": "deab1f45825957622c15055ff0b1c6925c9f3b73a03a54b6864eb907dccc8deb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s2-dp.svg",
+      "sha256": "a9a7ddd4508209ceabb19090fc2c37fdb1d17e612005255136e6e7556f2ec302"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s2-dq.svg",
+      "sha256": "edf7028d56d1372d0baff081db0bff9f628a0b23ec7c359d593430c6409c6ee3"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s2-scene.png",
+      "sha256": "01c756cab625dfb2b2177041ade9ff254df186483f9e9774df42c3d9f6a94d61"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s2-v01.mp4",
+      "sha256": "5621bb6c7fd1f509021864d1855e461e640bcb0b623c6909cc975c03bfe9d3bc"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-d01.svg",
+      "sha256": "2ea6078ee94a02ea0520b540096715b4717f63b7596639f891d67eab0e47cebf"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-dp.svg",
+      "sha256": "b539a9ad49feba2d2844aca2a5201d432b120955ecceb4b2cc9447f2a0638246"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-dq.svg",
+      "sha256": "de67c911a8543a9dbc82fdb4ab55b5cd5e197842183bc8b7e43be27a64221c01"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-scene.png",
+      "sha256": "870b9139ac580314363751d3033004b5eabfa6e8f0df85e08cde7336c721589d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-v01.mp4",
+      "sha256": "8f0ce1400e741b165fa2f142edf1461ebe4ba225584f269ecc6eee88ac695c18"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s3-vp.mp4",
+      "sha256": "cd4e57c46ece990c9ace4dee50efe9414050bc83a712f2dbb6e02a4f9223bbb2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-d01.svg",
+      "sha256": "d2579144738f85ec6813d4f122bf408771c9c5e2fd1a8ac7127895c56ac98493"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-dp.svg",
+      "sha256": "9d8bf99f492cf8e7059d32ecd52e3df36a0653c2c9e290cea5d2fab8e5f17feb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-dq.svg",
+      "sha256": "514fc1717bbc7dbae6fa8c4f85f965f7c11f9c75310eed30d48a67dbf69cb716"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-scene.png",
+      "sha256": "f29d0ce1203440c8562a3edccfc751fe7eb790f9bf3c52cbc9aa0ab5a9d7129f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-v01.mp4",
+      "sha256": "ce5cecbdbcf3b2b463cb7d48e0e6f190eca6b798d97766900487b7635e276931"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c6-s4-vp.mp4",
+      "sha256": "35b934db918e134af80bc11f1777db2d0215e54186d11db94ebbd28b709190cb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-open.png",
+      "sha256": "6c0436dc215f1a4ab61d1f7880ca328a1d8571c57bf61b7f0df082a4a9eacdb6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-d01.svg",
+      "sha256": "0357948e4a8daed846d61bc446743f0bfe5032c63cabdfcd9aeadb157e25961c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-dp.svg",
+      "sha256": "b09d759083a98cf68e084415e70ef6d0ad025b64a01b42d8bb1a4c1aff0050f0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-dq.svg",
+      "sha256": "15f9d419ac5309084617eeb263be6c9b898ebd68c3dd64d230255cc745b16ad8"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-scene.png",
+      "sha256": "1470fe5527df8196083673bed3151164dfef3ed3b5471ea8fa3a1f463ed151bd"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-v01.mp4",
+      "sha256": "fa4678dc18bf81b05f91cd1e9d38b05d5877dd1bd2734e1842fa4d12426ff81c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s1-vp.mp4",
+      "sha256": "7a00a04452a22f53b53b4271345d7d99ece22e69614b6c31211ff4333d0ebb16"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-d01.svg",
+      "sha256": "808f25405d30ab043fa3c818b12b84a6b83ec536097ee284478bab676b78686f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-dp.svg",
+      "sha256": "9cb5b1eb2bc5f0d9df3e2572e8058992db9b8b084dc0d58f5f8cf3846b9068ae"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-dq.svg",
+      "sha256": "1809ce6f9e319b01db15c7fcbf7b9642a1eb82a15a4bfcea1d0a66ca0b8490d7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-scene.png",
+      "sha256": "16db0f153c0ae1c15e7651f98ea4045515d946dba70e0f5f5e871ad0d85854de"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-v01.mp4",
+      "sha256": "b35dd5481869adcfc894f605c505008bbd781e8da5910ca60771f626335c2771"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s2-vp.mp4",
+      "sha256": "91c63958dfac3258e3dfd172e7361e4cfbcb01927a1f7106925b856fe3e2047d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-d01.svg",
+      "sha256": "49af514eb007a72453fadce90e9619e971e450c34d40089bcff69a9f65c23fcb"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-dp.svg",
+      "sha256": "afb5391639f3ccbe665b98aa12491ce22e32f7ce9faae272df99db95b2dd647e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-dq.svg",
+      "sha256": "f22071758b068285dec65972bbd9c8b33b76d4f0a2fc169f7f538dc860e1da7d"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-scene.png",
+      "sha256": "24a13a838b5990eac22b2bea299ae50ea3589a164566e1d914b5c496154e0428"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-v01.mp4",
+      "sha256": "3c0b0d871a6496991f4ebe6b5d1f6642ca119115a8f080b17494cc3ee955ee9e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s3-vp.mp4",
+      "sha256": "95aacca4b20e174350f08b53cd774135d20af23c7646590a515bdb2670aa0ed4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-d01.svg",
+      "sha256": "0df908153b428cca33de1a5cbfdb88d77d4da87d762a44455bcea1b22b5879df"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-dp.svg",
+      "sha256": "97515df1313e1d4b80ac23d04af01545433fe644a6abdefc778824c90c149ec4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-dq.svg",
+      "sha256": "d1f7fa4a1f33dc05977ea5e928e16fe1c5d4da240b133d09d56480c3a904ef74"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-scene.png",
+      "sha256": "d9a72e249a35fae3836f5fb2d978da2f60ce3bede0a1200e4bf0cf8cc2ec9334"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-v01.mp4",
+      "sha256": "b4a3c80bd76344b190f571e0cd4bd0d9b413e77d5069798e131c0ccd37667cae"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c7-s4-vp.mp4",
+      "sha256": "a44cef5addc7850ebf8ec213628b6cce6268edb6377fd769d59aa08f01829799"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-open.png",
+      "sha256": "6ed194b06a7ef434d74e3828316d8028824b904e3034af6805ba0181625730ba"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-d01.svg",
+      "sha256": "e8a46617c5ba705cb2d7383b8692fdccde1d2f770b0da26f3e8d21c2cfe07a70"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-dp.svg",
+      "sha256": "c46c54716bae4ff25b4e46c9d3054772f73701337ee05e183b0c07214155dfcf"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-dq.svg",
+      "sha256": "10919175684332e2985ef1f4f1ba051fe745c908a2c79c30be9919a1bd8166e2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-scene.png",
+      "sha256": "569ecbe202a243bef5c8fb27ee6a01dfc632ef85bca05225b4e774d1b6ab5296"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-v01.mp4",
+      "sha256": "0602c8a9ad639ca08cf0462e53a6c50e2d28ee4fcf6b1edd6776a11a544fd61e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s1-vp.mp4",
+      "sha256": "c7acf4ebd4172b11b74f2ede080fc20dd2be21f9104bca6f3c08b383f77142df"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-d01.svg",
+      "sha256": "5de03e8d7f1999bc73467f3f1afaa9d886d4297b4a2050e09b32b2f351012cd7"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-dp.svg",
+      "sha256": "2ff9f0807bc9506583d98e8c9845c270ad1fc5decfc34b99d5c28ab8c05d6f88"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-dq.svg",
+      "sha256": "cb04bba2bace5f2be77132b1ed467380c3c4ec99539fb12e530bd0c1541b798e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-scene.png",
+      "sha256": "975148216c8a7035ffac25b1a640c76f045b72d78f4e58002f3de5808e9af032"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-v01.mp4",
+      "sha256": "0a78e958c1939d019b7d889201c54279a5c92e41cb9d56dd3ba3e214736f5657"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s2-vp.mp4",
+      "sha256": "c6478dd60450976aa2718cba24d389b45cbfbcc073bc8ef20aafe137fd439de2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-d01.svg",
+      "sha256": "1a6547700def4babe318321c477eba300cede73e22768a03b05973b1b5f69e4c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-dp.svg",
+      "sha256": "bc518d175c9556cd358d37d136440b5ab733e22a399215e6dbf363d1fa455eaa"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-dq.svg",
+      "sha256": "68dc4a3318744016b8e3f2c4639898d7962d5198721651b9857909abc67db673"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-scene.png",
+      "sha256": "4fc60c9ec67a53eb6cb28b7fea3f29dadd190011cbf13bd3f073d2c934c7ac7f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-v01.mp4",
+      "sha256": "ac0b941f31abd86b0541efefe8dc77579eb0979af6cf2d9385ec7ad0357d5d23"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s3-vp.mp4",
+      "sha256": "23392108d09a82ade81d2852dab295a5661da69a8f7442733529063b2cf490ca"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-d01.svg",
+      "sha256": "842ea1ecb671fb571bfe1ec07af65b08cfdcbff790ad569a3a5284c859f709f6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-dp.svg",
+      "sha256": "eca22b995f7e939b83d09626f294da9a6d58038841ee5a6a9df1cdbc011da759"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-dq.svg",
+      "sha256": "702b520f7ce1457897b32fcc643900e081572f8641b3ece0c198c35ac55bf314"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-scene.png",
+      "sha256": "6991d015e4134927851d435e26e23e2fb91c024a31453d91a9d15e8ceba59989"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-v01.mp4",
+      "sha256": "18922a02a59a38745f5ef53edf7a2a1c95937073a5d253ba10c4308b176321c5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s4-vp.mp4",
+      "sha256": "096df7a18ae5f9c3345791db23dab849fb06d3f92f4990ef39d6d90860e50b72"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-d01.svg",
+      "sha256": "01c8d9e6a34c79c3f783233e9ec73c57d25fc74b3a2519fa0c68de60e6e10da4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-dp.svg",
+      "sha256": "0ce7924c1543ca0dc59ec6123095cea01705fac14f802392e265fb01c393eae4"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-dq.svg",
+      "sha256": "9aa790a7f613cf79555b075476de196ca1592560ecf19188316478943b2893fe"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-scene.png",
+      "sha256": "948b6efd3d7846c32cbb059763943b23909ac9a80ae155f54a0e1c6cbee56666"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-v01.mp4",
+      "sha256": "51630fc3e5f7d0fdd5d112fc9b12023a7eb24f7d2a3adfc4235e07324831ed2f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c8-s5-vp.mp4",
+      "sha256": "e38fbbe769780fde7402655df6701301f97c05d2214c06d928db59de8526beb6"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-open.png",
+      "sha256": "e7f49db23753a8a09c7cac471ef82351aeaee9ae885d5c0796ae5350bb8934ca"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s1-d01.svg",
+      "sha256": "6120a6456b529844310da7ade1da1d083f1bad62186a1d1cd6577a5898cdab01"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s1-dp.svg",
+      "sha256": "df91e3aa06e9b5f4b589111983589eb529936bffeb00736d19acdccda2aed17b"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s1-dq.svg",
+      "sha256": "89cbf93c00bde680c4f03463bfa9de8626058128f58d875246e1aafaf9074197"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s1-scene.png",
+      "sha256": "f3f4dac7d0a5bd8247e73ed7d841a6f53e9578ad41e5ab16a19064dbc1465ad2"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s1-v01.mp4",
+      "sha256": "5ae3fb8112e2f6326e82ada24010bcc3242464a5ced1bac1f766183de75d683e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-d01.svg",
+      "sha256": "6b6516e4d95c9736b01bc850d675330cfb2a800955c3450c26ff71ba5d61f54c"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-dp.svg",
+      "sha256": "e7dd971299bc4be92e6956f9058238b143bf80d33a252c122e71f9e461dbc4a3"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-dq.svg",
+      "sha256": "c6db678c3c8dc93b87063f321a3cfd346aa5c7490729bf4282e9907bc30d05ff"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-scene.png",
+      "sha256": "122d3687b23ec1ed0211bfde18859900be99140e234f6d33ffca0c46692b276b"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-v01.mp4",
+      "sha256": "40657d97dfc496360bcfef114c986702c5cfabab6fdea6ddec7156c8d3bdd33f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s2-vp.mp4",
+      "sha256": "dd643db0aa0da360fc0fdc366098809861b4a1a0eba018a19ab7ece396a409f1"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-d01.svg",
+      "sha256": "92de20fd1acd36899818c9aac4d8909a086f2142b4d34d8035b6f402aee5f878"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-dp.svg",
+      "sha256": "b6410db8e70c51472fd0919b248d7c0c2532dc4c794d7f3af62595cf2fd92157"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-dq.svg",
+      "sha256": "31094ce34a878390b0673628ace44cb37201876b790c3b8e63dfee1cf3e6a4b0"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-scene.png",
+      "sha256": "9607cf391e3ab11e88b79aedf84cbf48af29c1ecc703c7d26ab0df3ddab2f410"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-v01.mp4",
+      "sha256": "3e129d074ce0e7530c7b9fc33a9ef8c931d41deadfe538e4dec011b5c93e6a5a"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s3-vp.mp4",
+      "sha256": "028774c8c7da4f2c6426e88f8f9956173d9eaea7fe247aa69908ca42d1b0ff54"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-d01.svg",
+      "sha256": "34b1ac83a321989d8f06f0636cf4d696b2c1d347339593092ab9d0ef497a1ff3"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-dp.svg",
+      "sha256": "34fcb96f6ec0f95b6fc0acc9998e7a5d17e828190acc5eaea661b3b1417245ef"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-dq.svg",
+      "sha256": "918a817107e503f89104340208a5be119b7aa900c2f6660815ac8694124eb8c5"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-scene.png",
+      "sha256": "079d49b452a14590a062cc466ef6d23b230cce36d6f4f379aea8696b4645617e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-v01.mp4",
+      "sha256": "8d517a48da8e8d60d0c0d853fbc40bbcdd5ba3434e41eaab33e7549af9037108"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c9-s4-vp.mp4",
+      "sha256": "5b2403e7ec69342fc80587730b4b9847375d4447a7657c5357153a00871b173f"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1.json",
+      "sha256": "c84dca489c1db7fd1fe264091ed6bcfcc94bfc6a9958cdf78b3fa891ad636074"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-d01.svg",
+      "sha256": "0d67c0a4a1df88e6f0986d4bf10e17b2c3a3e877b1149b6e30d97dae1d2acc68"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-fig01.svg",
+      "sha256": "009374a86cb1392e72860010ce6288b610a9a5d4953f4f792ad20f16d57d6840"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-fig02.svg",
+      "sha256": "b5d365bd9ddea04e44ceed5355c16bb025a2f731065a7b3523b6c9aac4ded62a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-fig03.svg",
+      "sha256": "ee7ce51e8bc09e1f37c41fe338b6651f678e75580c3ece83703ea1fb825d2d3e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-fig04.svg",
+      "sha256": "3caa6e887c3f85fc6c9c505aaf822dd49975553d18d81435657be635c187a825"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-intro.jpg",
+      "sha256": "ee3548934cefa823c371bb8d103c3033aa58f94355e689a30fc05d3b4b3f35f7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-v01.mp4",
+      "sha256": "8e84171a599657d71ebb3043a5ed40cf024fb8e889b7a6bbf9deb91757c58977"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app1-v02.mp4",
+      "sha256": "dd5b0ea78c1365ddbd6ee4c37c1f6b94ea81c79b58701d43e2022db4c5c8511c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c1-ch.svg",
+      "sha256": "d1c997d4298b7b9f0e32526e8f1006bd432390f9b5a9b5703ae20b90a827f090"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c2-ch.svg",
+      "sha256": "f517ab74a73e3253f99ea63fdacd08baffbb79ffb0cb8c0c1ae596d8d0980c77"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c3-ch.svg",
+      "sha256": "902dd1d1912d805f284b24f572787769c41733b569cb4630ff00aa95b64ee81f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c4-ch.svg",
+      "sha256": "8cd31ea2bbb4738d73e849615c474fcac6c4823ee562e027111c9d2a59db0a83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c5-ch.svg",
+      "sha256": "2387a40f1e16a6df5fd9afc3a435216371a1320bbdeeebeb4079520af01d76b2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c6-ch.svg",
+      "sha256": "c0cb84df34b1c48f7c38d68bb9e970e2e4e8d6bf8fe89f11b8e9799744404690"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-c7-ch.svg",
+      "sha256": "8c10caa8dd08e65f0956fa6caede91f42b51fdfa07056f5ce38331831db21a78"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-dmap.svg",
+      "sha256": "f97b5daccda5de70f4939aa97d5ea45358c90f5006b0bbcc531133652acd8807"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig01.svg",
+      "sha256": "285cf3dd3df2b7b09681279eb82d707a6baed67567677e42bbfd09237973be09"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig02.svg",
+      "sha256": "ed0b61c5797c73d11382030ea081a9b07eac681590f34a1364fda3ad10358137"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig03.svg",
+      "sha256": "1990bf0451dce01f86bd99b61d6add5258dddfdf36863c526cd0e9daa15d78ae"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig04.svg",
+      "sha256": "07456bb6aa60f6238d63a533998abc6770f214b467e343312e5640b45d52be93"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig05.svg",
+      "sha256": "a10faa4ac3a1f9005c9339f15cdfa76858e40fed8a8c3432175b97de30d80cab"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig06.svg",
+      "sha256": "4c44d22d56f3a9b6a7cd28a11b306ef5000f47aa01d28ffab401aea2ef4f3a20"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-fig07.svg",
+      "sha256": "f3ff2753ef24b285347dafbc912403886efb68bd82e08040092ddf8187614cd0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-intro.jpg",
+      "sha256": "760aab0c62f2fae772e62456e7395e94c8978c65f627b6d702453a2b40c6c768"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app2-v01.mp4",
+      "sha256": "74f03c1059c3a759c420a52ec6e85013bba7940af3e5e0aa770fa8ceaab61a27"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig01.svg",
+      "sha256": "5891fda5e76ca3b9c4b90672660295b5380d701a7e2275ea4810082274600ce5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig02.svg",
+      "sha256": "aa2d8ca0eee1564a697e8e87b27e01084634c07958d7090f343d954d261c9465"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig03.svg",
+      "sha256": "7f3b77f3ce88ccc1ec9eba4723bf162d36cfdc6156135241a36b3a75a6b2d8b1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig04.svg",
+      "sha256": "9aa62a27503244bf4e96d48d009c4c099e4a28806e2bc482aded8c3a924b5e45"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig05.svg",
+      "sha256": "ff7901408a16bebf93dfd88a02347bfa801de9a97fc83d86dbf4de90df558005"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-fig06.svg",
+      "sha256": "a3db0aa167ee6b8fbb5c4ade34f9b429c8501f80b0d06e608632d0c1c15b5990"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-intro.jpg",
+      "sha256": "4c296b9d44bcf8faae56047f37999ccb13e25ea6f8f177a7d8044f73f782d7d9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-v01.mp4",
+      "sha256": "78b7e9bc11509822df6cf8dd50a527182bd82aab5266bcbecb1937aba9879df7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-app3-v02.mp4",
+      "sha256": "05e5ff1c3cd21211fd10aa1bd2cf1b713b9767ac4012b1aa7a427b7cd427a9e4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-open-scene.jpg",
+      "sha256": "05034788a9934690cd4b97813b113164c1531fa95b3be99d5f86d24b281deaf3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-review-e01.svg",
+      "sha256": "77b4da27c20d70110d08027f8988f6d9ab9ab66bd3ceb75f8e86645aec640e18"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-review-s01.jpg",
+      "sha256": "4ed31fd565743c46c9585ea4e336242506509ca99d55c187f376c85ecc5b8b60"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-review-v01.mp4",
+      "sha256": "fbea446b382291540b855dea9e2c556e2065972d1b610fa9709936ef899c7654"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-apply.jpg",
+      "sha256": "3b5efdd727f64c3d43607296c99a9d04484416b8f73fcbfe351cacd96b0d2f17"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d01.svg",
+      "sha256": "fd5011d3ffd8148783eb45d65f029b1df05fc96cd642dc0a509d28cb25e9d620"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d02.svg",
+      "sha256": "1424a59e3faf65e0f9f004a50260757e8c6a8f9ce99f517ee627213921852081"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d03.svg",
+      "sha256": "bdc64fed58edf10aab734937ef5d422e227413996f5b92ff1957b4df23d015f4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d04.svg",
+      "sha256": "f8ebb6aeea040b8b25cbb3afe9bbe607841b444c7e0a0b0d3099e7c0a1e9576c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d05.svg",
+      "sha256": "988effa92397114a7d424618145faf996cfbbaccb8073cf80a24624bcfa697c0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d06.svg",
+      "sha256": "21f8f90885858f89ffb360ece87b892314c6751ec91dc23b9c3d68ad78f2c85d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-d07.svg",
+      "sha256": "fb88ee521d1b46c3d0523a27deb768a22a8e8fc14811a81b527fa6b6ce3bca7a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-e01.svg",
+      "sha256": "d6ec8c79017cac55917e08cbfc1b18f1873a76f80cbf7c196322bca3a1fe5b2f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig01.svg",
+      "sha256": "f9a5e23ef13d5c94e13051a3cde940ba59f63627c0a85ba53ddd97bbb131db85"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig02.svg",
+      "sha256": "17ab388e5c352252305b7d94ffde36be1e1e914fdb7924311ba055d16c98ad5a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig03.svg",
+      "sha256": "4146205e1bd02edebd3561b413cc3dbb3b8e11eff7b88fc4459dda2dd28e66e8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig04.svg",
+      "sha256": "3509c95b42bebe6cdcb171ff47efa031c7d97f889de9cf201ec359d08cfb1dfc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig05.svg",
+      "sha256": "87cf9238264fa4fff2d29e6fc587917ad4afaa2957e8014a44314eb386e51171"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-fig06.svg",
+      "sha256": "2ad03e971e77647bcbf90384cf1f2d73f47ce111d3a88d86343c9bf4d0bc188b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-intro.jpg",
+      "sha256": "43ecc85bde9219b4530b38b6d2b5d14b917099d4c3580246e0697c4c3b5af063"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m01.svg",
+      "sha256": "886db04ce731d7858e412def82fc7465915b8a712bf7ff34f04a3272f57de6eb"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m02.svg",
+      "sha256": "664efe20c8057cae9a73103c88590b9513d8f4fe1bfabcc47889fe52dcfd34ad"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m03.svg",
+      "sha256": "26462b5a8eaae918c765b7e6e388097a3085e8389b97f834ac17717c8fad4df0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m04.svg",
+      "sha256": "bd2b08c5abb8f77fa6fde3a9a256c298596d2a667098c7c80f7dce22c3c78a6b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m05.svg",
+      "sha256": "26cc3928f63b2623e3a3174c96af3a69586bec14302c564ceb419a8804cd88bf"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-m06.svg",
+      "sha256": "cf17ccfa012d5e5edea1d45c2da823ff83ff789aa378c3edaa656616c17a2983"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v01.mp4",
+      "sha256": "3f4d396fdbb983c8a174ecad3f85633aed3c0d554dbd3b4d8e6f9cf7173efa8a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v02.mp4",
+      "sha256": "ed6219a7172df2384abc4e90ad1b146fded066085d3bb62b5a99e31002f94982"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v03.mp4",
+      "sha256": "2ac57ad6372e47b62b7e8331bb68347f5b60da49faf22354ec1f49cab1c4aae3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v04.mp4",
+      "sha256": "94a0c912387fbb71c5ef56398221ec14dd49b59f385c30afe0c3bc47129148cd"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v05.mp4",
+      "sha256": "d04a4e3e417ca0e100e29b08d326e9ca6e73b940bb7cbaec3e5a4fbe6ad69687"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-v06.mp4",
+      "sha256": "f104a3be260cec2d51749462ca583c6f85bf4c10dc56c864e96d1db02636fbce"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s1-vp.mp4",
+      "sha256": "b8c903605e7ab3f4e0bba8b2834302705f730d21b1c19a680e2d765c1c87cec3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-apply.jpg",
+      "sha256": "d5c194d75310ceae2470bc4731dbc6863deb8ecc9777c35ab6342eb225fd8aa9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d01.svg",
+      "sha256": "b6daad7ceb1ada1409157394dafa09630b2c8997f9d85da7a30fd91d5a14d6d9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d02.svg",
+      "sha256": "944ff7eae22f6cece675a2876ca59650411da71cc41bc90e788c60d8b486f31c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d03.svg",
+      "sha256": "aa97af537a9a80dc0dfe4c8a77d95693e77824e179f970c666670f1da747c4d8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d04.svg",
+      "sha256": "71d5f0b232034a4a8c1c2f204127ec76387cde4c833c263f4a45e49e8ac6475d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d05.svg",
+      "sha256": "bc375a3a78bcf89bc9b13e42b3c72c8abb0aff56833e72750107953de1133497"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d06.svg",
+      "sha256": "8626bb8d0dc7d20cde4bbcce9c6c677b323cded5afe1b7eee852bb3201a1f77c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d07.svg",
+      "sha256": "31d905a77d71bf43adec9c56ee2c60cafb56690f6277b7d186a6504e01805ada"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d08.svg",
+      "sha256": "826df975cb85c40d46ef1cf6c68ee69c98b16be507e2e14089cd776ee0a91252"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d09.svg",
+      "sha256": "e0b95b9ad70de48199e45269c6bc2cde4ce2ccc34a54060693da1f928159b614"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d10.svg",
+      "sha256": "c42ba0cbb35315bea8250d3e1957abe4fc2a2d9bded68f837d3585ba6a16b357"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-d11.svg",
+      "sha256": "3b654055805d9a40c1d40c20f1389aedb68a96abe2f8a3c1305c08a857817f9f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-dmap.svg",
+      "sha256": "e929e50b2b9d1d19bab3162a338e379e4e62e30d19277f764043fbf7f05807f0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-e01.svg",
+      "sha256": "072f328f10445b9f1adb52520444e7867070afad61b5768c60430722b13e378b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-e02.svg",
+      "sha256": "0de1f986e90657f50eb585ee605533677cea40c758bc6a0ad595579607e979ef"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig01.svg",
+      "sha256": "be300988d015074f5bf845d6a08459148d762633b1d376a14ec4441cf299a49b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig02.svg",
+      "sha256": "0855c4fae8d83e2b8688c3619222d282f197718845dbfc16fe185293e53979f3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig03.svg",
+      "sha256": "27422e01b97ecf2b133f2077c6a2359ac1f1ef3b759460fbee18509c95a69b95"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig04.svg",
+      "sha256": "fcab7f10fe0a22d8ff13a703afa4feefaed5e6e50c5245c77e3b316313bf8e7b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig05.svg",
+      "sha256": "82bf105206a42cf8f8f35985ca847408ca093993b8b15fcdf658bc9141df8f90"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig06.svg",
+      "sha256": "3502079e9d8adb0ee14534de21c0b7e3b11a13923c50a64b15c459e200f9aa94"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig07.svg",
+      "sha256": "c9ce56793b392cc866fe87613c4cbbe6fb5e3ba9affdc1cb646dfe9c8ddcb9e2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-fig08.svg",
+      "sha256": "631502e325f0aa183a0bdd726f1fd0572d1cfdeab5dce4b846d0a2b19a8e9ee0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-intro.jpg",
+      "sha256": "a7e8ab756a34d2ec24f172805db74056720eaa12f93ed8f3ea95fe82890a1b8f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m01.svg",
+      "sha256": "91e9554ae907b809335531c38392fc620038f03f6764ef014bacbb3fbcacf9f2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m02.svg",
+      "sha256": "c5457f6d6fccd618725875dd1ae9c7eb02ba593b0ae45fda8e8ba90ede53ad7d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m03.svg",
+      "sha256": "3216eef8e3b5bc2a9e21b229413aba4b4dc04b1f53b6b310a0c3be192fcc07b1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m04.svg",
+      "sha256": "e313dfb87c97989d131cb3c7a13ed4e8657aef9df803a3fcbb5fb2f4e9193e78"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m07.svg",
+      "sha256": "53f2a75054367f03b3ee7c5eb69505b1a5e209db08fd253ecf024662f15d8c56"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m08.svg",
+      "sha256": "a01e2f79c12653da33396ff1b270845b04ccf5a8687251a968a7ca85c86df1c8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m09.svg",
+      "sha256": "ea2e68518edacd7ce0d1af0a0bc72c04a222f4ed6bf7eca8f30e601aea802822"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-m10.svg",
+      "sha256": "3ee37f9d31df4f6f15164470c7c534320e91199a23295c9e2e8bd4b98e93d564"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v01.mp4",
+      "sha256": "7ee96b3becc27e6e3049dd140f25d323516d2b275ddab93c9470397a6ed95d1f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v02.mp4",
+      "sha256": "5aff3c901c31aada4eceb81347c12e2385cb9da45dc3a1d552d81a9ab8e7430d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v03.mp4",
+      "sha256": "d6beaeba2a3894ed23eeec3c9d5311d5b3d9026f9a5bc625f88f6f732ecb5172"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v04.mp4",
+      "sha256": "7e64ac35d0de7ba61dec971f900740471c269a66e61081fd63c99eb1ed1817f4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v05.mp4",
+      "sha256": "f433599a4e5f01a002b5ec49a22df8e69c2dad4edc604be032479154fcc4af0e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v06.mp4",
+      "sha256": "ffd9029641bcceb358c0bd99c08a903c3f7ec9a5ebeddc90e814859988e17de2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v07.mp4",
+      "sha256": "96e6fb3ef2dbbe5c49119f3d6632b487d26e456b6a37e6c178203852436b5b47"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v08.mp4",
+      "sha256": "fde028c9a96d6ef55ed1730b4041b48241a9870c06df4a8a04ef250fbb14bb95"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v09.mp4",
+      "sha256": "161851436309817549f93386d6390a6f9b0639e7dc99ac027e8cf76f7064d5b5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-v10.mp4",
+      "sha256": "171c29548f92163c56f2eff844f27b38f5649d7a4e4439e5a83e99fd9954a358"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s2-vp.mp4",
+      "sha256": "9e1596d44ea3a85337db1a2858d3f80353eb91b4ab40077092c6d5ea381bd8e0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-apply.jpg",
+      "sha256": "946a4a35717c1c518a7e3baa2046b41bce2d2f5a301132e1e4d5034ecb0ad38a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-d01.svg",
+      "sha256": "a8471602c0ab29bf1e9a6e0dbba3151ba3689c47cb54136f91ad4ea68d5b3235"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-dmap.svg",
+      "sha256": "843d6a306ee2bde6aab691bbe6c50a77a916475e7d2e44f77b420a8390436b2f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-fig01.svg",
+      "sha256": "e5f068eba2fcd25c971ca492de2a45334133c6f5d65e473fb03b16ea025110d0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-intro.jpg",
+      "sha256": "d882012ae5a33fa19607cd884d674d98e6b39136650770b9ae1b815f840705bf"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-m01.svg",
+      "sha256": "b1f3c2642454b0d42581d7f37a7fc931aeac272ba1a43b9a2801882551a53481"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-v01.mp4",
+      "sha256": "4eb5c0018fed76d844b396d8c74c3d9426a0a04af2baa32ebb055c9a970e02c2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c1-s3-vp.mp4",
+      "sha256": "d2edbd8d7c6a3f20868cebc79b0a35afacafe86b30ccdaa00c8a9e0884b9d0c3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-open-scene.jpg",
+      "sha256": "82a28f543e7498bc45ebaa6772867d84dc5c1174b67163f48dd91046c66602e0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-review-e01.svg",
+      "sha256": "66e9838de34b8637b8a3550bcfc0bbc7c1c035c73eb40931c4325ecb6cfcbf90"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-review-s01.jpg",
+      "sha256": "163ecc0607f00ddebfe6dd94d79e589902479060f3fd98c50620d9726cc6861b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-review-v01.mp4",
+      "sha256": "194b43a114f537a3f36458f12a725a9f046bbb164b40f5a344d2063ddf4b9dc5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-apply.jpg",
+      "sha256": "223c5e22f50a1a81cf289131e7d262289045f3f4e340a12c8e05a5133df4f6d7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-d01.svg",
+      "sha256": "0c322dda71928206ebd08c1bc6eb7f04d25e158319fbf93c2e4d0096e72b95c9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-d02.svg",
+      "sha256": "9aac9ed046f8114a9e8196eb8eb376e6dd80db0280fb44d01e8b6b32ad8c15ed"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-d03.svg",
+      "sha256": "96249cf770077358687823bd678ac04638dc44de1cbb55fc6dd8f5ff94e74282"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-dmap.svg",
+      "sha256": "853c00ccfe24658a88f65ea15606b1ee0f2bab98cb14ad7296f30967fa948827"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-e01.svg",
+      "sha256": "43d45711898e14acc2281c2a28835897e3c9c7b43f2f88479ca2da629ace7815"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-fig01.svg",
+      "sha256": "433870abfe1273858eff9e9d030fe994d62f93b93a0b70b7e4177682334e7cc9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-fig02.svg",
+      "sha256": "69629e2308a52292744bad4ee7e9a466e291000460c9c3b4517241d41eea5a40"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-intro.jpg",
+      "sha256": "287d819cf18ec251b06b1bebaf75f644e0bfb6c3975c4a6e3a596ca90fbd3a8e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-m01.svg",
+      "sha256": "42cc94cee6490b2fedd62bff859206daf2366fa1966dcfe4caafdebb80f76e09"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-m02.svg",
+      "sha256": "e5574aada9ff2a508ef13ee89e46ad18fa04b303280c1904817e90d5ae3fdf3d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-m03.svg",
+      "sha256": "41893c641d35c0e829c26f4c9541b89627f13de18f8e5e693f2922231708b4c2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-v01.mp4",
+      "sha256": "7496d56ca88c58f12173e8040a83562a7885bbfbb121268d5499099095f90656"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-v02.mp4",
+      "sha256": "72fc07f70913fe26342ac595a57f4dec4e9d299fdd4eb1805473908bdff9409a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-v03.mp4",
+      "sha256": "2141f2df7b0acec8ca8c6ecf04990d3018773d6708bdd550b14f0159117c2d48"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s1-vp.mp4",
+      "sha256": "76fbdb3cf87716ec6b8cb112b7a0adfd3a1a72eeefe9a498b2dd9dd55e639684"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-apply.jpg",
+      "sha256": "3a37190bd9796eb79550e16ad9a7e7ea42e730173e29c4615059336a152a0a2d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d01.svg",
+      "sha256": "bf1faa11a091269728ef3c248cf7cb37ef906bc3672ba8c12a88418b36b90c43"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d02.svg",
+      "sha256": "807ee35faf9307651bec4ccaea493b553318d447f68a2ecae93601a1b03fa261"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d03.svg",
+      "sha256": "fc64f83538084a00e668e27e72bbcb34566c8bde857582aa87aad0839ee146a2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d04.svg",
+      "sha256": "aec4eab6aa2868720164f97f89b461ef30579c6343d128fdd1a11a7f7323adae"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d05.svg",
+      "sha256": "6858dace185aaf92c9162b3e7f2868402f6cf7e5ab92ad6ee40b0034f9749890"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-d06.svg",
+      "sha256": "2c49db6b3deaaff3773271a59c4fde0482f27d357efc4fd0af30c33ab3131dce"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-dmap.svg",
+      "sha256": "0640fd718ce44520748f98865ae327a7b24ccef6aa0b301f03ee40e2a56a805b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-e01.svg",
+      "sha256": "49084a971b23cea1e6f303ec190622f62594c91c24a43ba2efebb92a99b33b70"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-e02.svg",
+      "sha256": "8c5fe00c0f7482cd2160d3641a322513e6d0a720b6a1ee7c077fb79274287581"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-fig01.svg",
+      "sha256": "0b320178404dff43f772c121a0ba8600a59d7675c594749a227a694f63548034"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-fig02.svg",
+      "sha256": "ecb093e4e9e974303fb0bb8ec3f97e465279629224d21fc4ffd3b734b26e45ff"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-fig03.svg",
+      "sha256": "0d0b62a999eadbc4abaa396477f331db3d48e104afc724eae2043a5018b2de9e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-intro.jpg",
+      "sha256": "1e7e0bf09e821053588954958d8740141423784d40e2dcc99a9835e70122d110"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-m01.svg",
+      "sha256": "d2ed916ea118c714faff9df53df3eec2e626b3ba27c95bd0fe991837e2b1864f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-m02.svg",
+      "sha256": "f7635db9224a5deae152b7f45c41b7568ae753dd419d7eac585c66b4e3f7acce"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-m03.svg",
+      "sha256": "72319b0111419a222a4fb9580a8a35a45c05c7edaaa3e41a241c5c9dab5cef14"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-m04.svg",
+      "sha256": "1f5ab4ac303cf2d6343fefa49fd015708516f63e5fd65ba96264b85306c9edbd"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-m05.svg",
+      "sha256": "788a3bee8c51c8014314171f090f93aa295b4a66aa821e2fa357ca3b2df45e4f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-v01.mp4",
+      "sha256": "4bd83abcc11395d62920379d1622eec73ed0050f22af17372ee7d55c37b63330"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-v02.mp4",
+      "sha256": "b0bf24fbd54b89331344e7b79600efed8e5f92792ca543639335863f4abb3d02"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-v03.mp4",
+      "sha256": "36d3734136cd66116d7ad9de1b4e46ed0803607870c553d2a7acfc7b86c2ebca"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-v04.mp4",
+      "sha256": "873bd86677a8e1f23987ccb9d81606470b33cf8539790a82351f90ff515d3411"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-v05.mp4",
+      "sha256": "2e6c67eec1a3831ebaef05fd0042bee649d2757add5b2cc9004873698db1dc33"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s2-vp.mp4",
+      "sha256": "59274f3bbafad2acd5298d69fe018e5afaf4aef13b560358ad08b472c41f951c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-apply.jpg",
+      "sha256": "1fcbec3d43dfa894954359604c7d3f1db66da1b6d27eb6e6836a3ff1ab43fe46"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-d01.svg",
+      "sha256": "5226a8913f89c67622abf1242ea5b0ef0ae4bc99bc61088992e7d333ae2ee380"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-dmap.svg",
+      "sha256": "3b7bc742c6e662ff39628e4ceae1ace1050ba54ea39e94295ed7e75ce91e00e4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-fig01.svg",
+      "sha256": "e9460895c1d8d0b12feba6b9132a9c9b04f19ae50034ecf94ea0d05739776012"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-intro.jpg",
+      "sha256": "0d94b5ffef9787aa6ae8a7d9abdb7956cfa02d9694879c71a412b2fbdb24f326"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-m01.svg",
+      "sha256": "3ee026b5161a264384a9ef15d189397cc355982aea2afcd801d6194d470fbd57"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-v01.mp4",
+      "sha256": "95a4bb66171e39f20d62b059114d3a5d7cc7397bbda2cd2bf1084b0b542526e9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c2-s3-vp.mp4",
+      "sha256": "8c5ef874fd08a305b6553274125d4ff6a1a6a67db4bbffb789c3b02da79e2b1c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-open-scene.jpg",
+      "sha256": "46c4df5c2b140df5a893e089c1a96d1f9ae5b708a3deee51353cc61f9c171954"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-e01.svg",
+      "sha256": "713057ce599e46b8b8f9c330b806fcfa68cfb37193d73a673cbab6f188f302df"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-e02.svg",
+      "sha256": "fa5be7b549449f302c2e696906107bc6347505cd914b2f8a71568373e63965d6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-e03.svg",
+      "sha256": "275b5f0f3a4408f7ec40404979216e831462d184048c97713446bbaf803b537d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-e04.svg",
+      "sha256": "43466f5c1ad6334911805f394da50c1183118116562b14da98d5a527ab3ecfa4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-fig01.svg",
+      "sha256": "e415c1739e5af115974d3dce77e8fe21a40efb519f7af25099e57b4f4e0cc02f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-s01.jpg",
+      "sha256": "ce4a59778e63423abaf140003b43375640ad3cd9dc879464ffedf7bb803a059c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-review-v01.mp4",
+      "sha256": "71819706121234eb420c773623e7e7bc4a1f5c900bd490282596e1b203ee801d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-apply.jpg",
+      "sha256": "f88281de8d148c353f087850197113507139b179804d9396553cf5799e9fe1a1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d01.svg",
+      "sha256": "fe57dadf7a1840bd35ae24f451f6682d9cb8d5dc3a91a731d2468c713012dd60"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d02.svg",
+      "sha256": "9813f61f692a42a76e3ae7b38a115b9ab649c23b22b83f18422ce7bdcb8e20d4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d03.svg",
+      "sha256": "7f40497bc9b7311d01b11ad95f2c2a80c3034b501f8e4e2a61239f10d5b7fcf5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d04.svg",
+      "sha256": "b9f869a89896e5b474ce41982f7bab3a25a0cf539e8f54c4a2d5b9d84ebb2a0d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d05.svg",
+      "sha256": "7d25142954735643cc599938595f6e49a7283c68beb9f1d5ddbf1fd2b633506a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-d06.svg",
+      "sha256": "755536747824eca2f7299289b2ed25b1e338d3e4af97a01fe31ab4c650c429a8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-dmap.svg",
+      "sha256": "52fcf4cafadc74e363a27dc8f23ba61fcfd8f7402517d459c73e237b6784d49c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-e01.svg",
+      "sha256": "deaf2f97a70761fba30f21021c309992156ab89b98093fc50ee52dc4e433d117"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-e02.svg",
+      "sha256": "cf73d721388a05da18e009ca1d7a44a9fff39d12902696e56c19e0659e1d7660"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-fig01.svg",
+      "sha256": "d656d8b3959d73af383ed32fb682000a0bf17f8fddd3ca8c93cf27a1bfc85b3a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-fig02.svg",
+      "sha256": "e3a3021ca0151a4d63c742f585bc513b0c80dfdb929cbb15e7f5fecec511da4b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-fig03.svg",
+      "sha256": "e9bdc9bb1c539dc092256f2f06d97f514863da832f749d255b4babc814512f8d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-intro.jpg",
+      "sha256": "a3967fe93f6ee9715157e4d88e3277d4af33804d552dd3d790b62eeeeaee05a8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-m01.svg",
+      "sha256": "4aaf3554cf20caca936d6a898d3f090f4944b11e0006c7a10b91028a56050aa2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-m02.svg",
+      "sha256": "3cb06b7d1a93846760b419e66e1478e46e4f71423b7fbf225505d30be00bcfd7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-m03.svg",
+      "sha256": "6e3512e0d167d61e3ce47bba59c17eb2205b70bc6164d3b07b64b87469019925"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-m04.svg",
+      "sha256": "1080f684fe80ebb75777df69c815f38cfd6887f14f8e3a0ff057ee12e9f409cd"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-m05.svg",
+      "sha256": "5a6998308260eafbb27d464bff0780fd549b4cea04cb1346d8fc55d359ca5920"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-v01.mp4",
+      "sha256": "67804f939f4dd0798a1beebdb759f6f61dde0ff4a065eea1810273f008ec3494"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-v02.mp4",
+      "sha256": "af54eec676ba24a11f0da9d540174c5add0c5428b7edf82806fc01b5aa90c4ac"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-v03.mp4",
+      "sha256": "3548f84e8a7748dbc724135320c9fed871d051f6f219ab816ee8f82966fbdb04"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-v04.mp4",
+      "sha256": "34a275e2e9f9c82ddeab2ba8eb01fa4fe906eaca69880df1263ced850cce29d2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-v05.mp4",
+      "sha256": "4447846d7f8e94c9287ebad97f2d338b4cb083d6a09e0e5be9cabb20850ad1e0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s1-vp.mp4",
+      "sha256": "5725325bf47705466f104b15d9561746fa56886a511f6ccfc47e5b3e96dc7699"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-apply.jpg",
+      "sha256": "febcad51f9afb1c89f78d39dbc27468eb1cbc8e8f0e919a9ec66906df93c8ad0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-d01.svg",
+      "sha256": "b052311206496dbd13838b99a2b95c73377ad9e13425231f7ae2cf8653f70888"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-d02.svg",
+      "sha256": "7a057525a25a5144c9913906f72ab0432f96facc2f9df515a479f7fb5f24fbdf"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-d03.svg",
+      "sha256": "4b9539f5696189bb65228a80bfc7a2ae2ab0e4b3cd4d342953c1f2094328557c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-dmap.svg",
+      "sha256": "519ddcd1c2f0179974ca317e200018cdb8c39ef705c108031de6c27e5a2448a6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-fig01.svg",
+      "sha256": "11d74e9dc929fe1889ec54308b8b05d54760d15478b6b401d1b16df798d41175"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-fig02.svg",
+      "sha256": "54540ba36f90ab2cc5027aa805702b05f43978cb0653c5faddbf1beddeabd54e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-fig03.svg",
+      "sha256": "ff55a3d14de06ad1a649339c6fa950db84f1c720e3f9eae9dd8fde866a6512dd"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-intro.jpg",
+      "sha256": "4fc9277e30eeed782f49fb70260ac883fabcd900a6e8242c55ceae378684cd86"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-m01.svg",
+      "sha256": "ac276f0bd88e9ef04164c99dcea1fa0f1383f33263828e119db4527e8df976b1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-m02.svg",
+      "sha256": "877c93bf899420c9d313e361ef01a55ca0f653690513cb00e71eb235f5d5e003"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-m03.svg",
+      "sha256": "d1dbc161e7fff24fccc51e9c68b06915c27c9ea6b431848c1670428ba3fa11d7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-v01.mp4",
+      "sha256": "4ec3e11c88b4679490c3bacc3dcb0c3c811e6069cbfd96d7c7dad43c3c589804"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-v02.mp4",
+      "sha256": "d23eda125b14e7e628c17026457ff5b3a09805c4c066a9e32c56d011d5b7e692"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-v03.mp4",
+      "sha256": "889d3b7bada8ce04974fc424ae444b1648f613dc6d07d015c4c5262144b73209"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c3-s2-vp.mp4",
+      "sha256": "37a02b826907bae5148cedd82c63ac5ec72f9807a1fa47367208a99b555eb9e0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-open-scene.jpg",
+      "sha256": "95a93b6ef963fc289f0add3625ef91ab8407475bcb0231a45952da3208acce83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-review-e01.svg",
+      "sha256": "a8cae6758f73281db479343d19177d4e847ba997bd4d5ee7861757001ff10e05"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-review-s01.jpg",
+      "sha256": "0e685f07b229710b300a2d4d23ac10416f11332ad440a0a443f8cee41b3c1fdb"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-review-v01.mp4",
+      "sha256": "9980a74460e276971e4d5ad304adb559c58111008adeb94dc0150fcee4498974"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-d01.svg",
+      "sha256": "787ec9f3879d3fa535ffdd6c12e5f9f6be02a4658b68469bd97801758de56192"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-d02.svg",
+      "sha256": "db444238c44f4b791e29a41b28f9e076f14f1eb7e933467e1026f8fdf18f0bef"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-dmap.svg",
+      "sha256": "07e42517ce4f94bfcb6fc03076f922eccb922419b63d93beb5ac011b14b1bf83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-dp1.svg",
+      "sha256": "f892184ef3675cdb5a0e1f34e014a1eab39d8e654e9cac2c3d1ca4bfb9e83fbe"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-fig01.svg",
+      "sha256": "4d7ccb52319f1c9f230655a9907147ca8cd71b4053503b28656d8ecc8a815c72"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-intro.jpg",
+      "sha256": "9c7333505d02b91de95cb4f93cb4a2802da77151a5739c5b0aa58c87f0018778"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-v01.mp4",
+      "sha256": "d40118ac77b7d7e99618a97538fd1d25f8c810845f749dfd6b1f63cba6eef286"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s1-vp.mp4",
+      "sha256": "161d11630352898743261ca7bd2fec820b21f79a278fb6cfc1c93b6529355952"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-d01.svg",
+      "sha256": "49e6597b525b77b5bd4b5d693b1a1ed76e9052466490a3856673e6c3a3d18f3a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-d02.svg",
+      "sha256": "25fff55943377ae399fe8a23585d1342e1eb2bc799cc8857ce5c55400ae3aadc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-d03.svg",
+      "sha256": "a89774425a447532bd01fde2d3b0a3f3eec5cf9800de949f9c810553103de0fb"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-d04.svg",
+      "sha256": "f9fd06fb2a90def0cc8ffcee375ef64ebfa4039dd55f29de942e2b7e12f29069"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-dmap.svg",
+      "sha256": "551968dc25ebb61331f45710d27c36ddcebfc8479ac48ca72816ffa8eb1e8508"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-dp1.svg",
+      "sha256": "7557739129bad56a70fb1def7e0f9e8e76f03a9eb4d6cdb7e3c97fd0a2404d91"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-dp2.svg",
+      "sha256": "7b82f8abae89d7dfde7803669b554d8a41fe48ad6a01e25011a3049319174027"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-dp3.svg",
+      "sha256": "d0a5657e1ea7b645d1b3e8df6301352e1859b91d7602e5ef952b343c7e6a883f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-fig01.svg",
+      "sha256": "173fcd24ec173cae2967948a130cb6baff3ec1ad7a9b0c90f60160970c303182"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-fig02.svg",
+      "sha256": "b533745951d221f128cd5d6903eb0367708c8e5c482107cbac35c0fd4e82cd83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-fig03.svg",
+      "sha256": "0044fe4f1f063ac2e01feae341c6d5ae302ec8a5ec64708612d2904796a53aec"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-intro.jpg",
+      "sha256": "a5f0e6a34ac1ae465d07f3fee8cfea4073e49e98e07163b85e49a3191a8f9a69"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-v01.mp4",
+      "sha256": "7010da69a9abdf2ff8e34ee269c0f72dc705152d335aa1078cd0286767e2636d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-v02.mp4",
+      "sha256": "05cdd624bcaa075039fcaa6a0b413cedd585871417fe2e44b45d0268165cb060"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-v03.mp4",
+      "sha256": "d625bc59242ea9fd947c5f02cd1fa5b83a66d9fcc0b342f61ce6601d329cd5c8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s2-vp.mp4",
+      "sha256": "e6e573a9b2d22fb21e909daee77c24f8bb57fcc5a61bbdeb7099fe7c0b8688ae"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-d01.svg",
+      "sha256": "aa4f3c470cff19a3900b713714a68cdb1e5623811bfb208445b82d171159ea77"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-d02.svg",
+      "sha256": "c16231247a1eab6c6d4b74e42750e388ad0dd454d7f7ecf23af36315cbc8a584"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-d03.svg",
+      "sha256": "d128dab71d7fe873eb0d8e5c64d863769a02ea7d031406caf0a366aa3530846a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-dmap.svg",
+      "sha256": "a8cd931503537972e0aae2a915f00b798d11e1f1f75a8c3242e0ddbf7649f7f3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-dp1.svg",
+      "sha256": "daeb6fc8939c617c5d2b602f3581b51380094ee81f5be6ae4260a16b1e2a0283"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-fig01.svg",
+      "sha256": "67e765227608e5c5fe3f2534fb19871db1db47faaae5c1e0798d9f2ea4e04f6c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-fig02.svg",
+      "sha256": "9050e3910f24060a2bbe514dbacdb32fb103e8921eba58dbeef993c68c93ec62"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-fig03.svg",
+      "sha256": "154a9b60e6d37af1f119fa7ce6d366c8298e500b7fd7c0d9eb692b1c7016c8f1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-intro.jpg",
+      "sha256": "188ee113d8f4a30b217d25b054cb60f5b8f9d2c6c2280245ad27b7c1aa5c8185"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-v01.mp4",
+      "sha256": "f3330f37594ac499b889e52b3a75042d167d32bbbd06181a939df637d090cbf5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-v02.mp4",
+      "sha256": "b2b3643b924db438162f4dbac958eab49f33728e686afacec6d657b60a9333e6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s3-vp.mp4",
+      "sha256": "840b86684c22424d165e93b0e9e4012d84041dea8b001652a8105a06cb71ab9d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-d01.svg",
+      "sha256": "c1b524328a31e692ffc50994fc32d77a7768989afdec423c759b3fca3de39668"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-d02.svg",
+      "sha256": "1ff7a23aca77ccfa79b85c9ad5c177980aa3ab2bea894263497e85e73d5468fa"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-dmap.svg",
+      "sha256": "fd2e9af555b46c9d906061c180f95744204e8f2ca856a1377571073b3118c32d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-dp1.svg",
+      "sha256": "08ee7df50b5a72fc63e2d3feb422f7a36448d8388e7fd5782d8d9ad0664e0960"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-fig01.svg",
+      "sha256": "0e4e0a4122d0133487788f26d310a90392a20ea8d057075dbeac89d2f43816c5"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-intro.jpg",
+      "sha256": "b811a4e0a3bfdb60cd807a1c440915b6a79dd88a79f3e427c375d1f206824c75"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-v01.mp4",
+      "sha256": "95abb6611eeac6aa11f4b38f0d9f294c01e7bf46830007c4fb7d1240575de9f8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c4-s4-vp.mp4",
+      "sha256": "30ab095d0c831e84fc0a8aab9cb2ca93dac71a0ecbf5798c2235fc68b05c0080"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-open-scene.jpg",
+      "sha256": "0e0191c05bb9e642e86e2dc0b727b09874df876a32360c1cedc843c24a5f17fc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-review-e01.svg",
+      "sha256": "0ffc15b3cd6a6a1ec8faf7caa8f787057db99dbf1558fe2f65ab61b473910bb0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-review-e02.svg",
+      "sha256": "c228c1ed001b24cee02c4c16c6252c82c56ce49ba0d69b4dc1f59ad3936824cc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-review-s01.jpg",
+      "sha256": "f086990d89fbe1dc2e88a3680dce7ef8ccaaf04b7c9858bed94db5fd4c2d7738"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-review-v01.mp4",
+      "sha256": "479e2b29906b82c38818e99e0639df92eab922294221daf4744c236befde05ba"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-d01.svg",
+      "sha256": "09a0af53c121fa4f19383e8ccd028fc1bf185a86ee2a21cc215000e48b6ef233"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-d02.svg",
+      "sha256": "2871702fabfb708e25a5d4eb6b29e66265d15bb959dac9596157b0058069228e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-dmap.svg",
+      "sha256": "e2b68a18f3004cf380659211163582c8a3bf367567246febe3f05c1653ee7e86"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-dp1.svg",
+      "sha256": "06fdab22d1902c78b293dc7dbb7e52d241b2cc93f81481b3683008e02ef57833"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-fig01.svg",
+      "sha256": "d06676b25f3004fc2cc2f2e13d7e25c2034c8a3737fdaa93a108ff53cff28798"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-fig02.svg",
+      "sha256": "3a46252d2c7ae32643d63f0f477fde9c33abce3f2c5168a87cb44245b5db7f74"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-intro.jpg",
+      "sha256": "d964e8b9911fc4d83694235d8915366a1181c1487429af60ee8d222579b0c938"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-v01.mp4",
+      "sha256": "13f5a20db9a275f102b1847f52b2ab084177794ddba5c225d7a8532116358ea1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s1-vp.mp4",
+      "sha256": "d6100524d38c73b247b7d67ab3097d0f3cefec01dbb63eb806d41d97a813c6ab"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-apply.jpg",
+      "sha256": "bc1578675faae30c461a118e44197e83f06dceeb4ba754f951c7d82880034d2b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-d01.svg",
+      "sha256": "2d59b43ed6e1b50d284985e431938765d2cd138c3b90628c9a6f3fdb3f165c74"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-d02.svg",
+      "sha256": "e57b868b646a0504ff123021de052634f3989de0dd351c657fad4b627f21b416"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-dmap.svg",
+      "sha256": "23f098bf1eeb907002d6ace14c3a528d864872b89d989e7fcf23f23eb2404a66"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-dp1.svg",
+      "sha256": "a48e2974df5bdd9a6cf7652a6334d54fe5fcc2d892a675d19b0553b2c36fde55"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-dp2.svg",
+      "sha256": "12ec10de005c8b84dfbe7789dc5b669974cf62dbbcb1e0f3a7ad43921bdcce70"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-dp3.svg",
+      "sha256": "be5025863ddb9749fe3d5503b2103bbc4c1ac918df1179d58039824e503a5a83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-fig01.svg",
+      "sha256": "72233c8fed50d40545c8c2c1c25fb84c4991a225a0776f7febd3428d7c44cc1c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-fig02.svg",
+      "sha256": "3abf47aeb9288e488e887f1b0b09d55857231ccf5c23383917fc3ef110e252fe"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-fig03.svg",
+      "sha256": "49b9172ef08a3999d38c1876281b41edcfd7344db7f29f9b117fd49b1317c821"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-fig04.svg",
+      "sha256": "e76791c4ab227c96bd353016a8933225874c83e37e73fcbb59c4edfb26210240"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-intro.jpg",
+      "sha256": "1cd482c8d01876d23f3727043747cdfdbf1ea3037152a465c847775403ee3a1b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-v01.mp4",
+      "sha256": "a94b593cad92334f281bf5847852c5d77a9488dfa5dae052eaf105ce4ccae561"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-v02.mp4",
+      "sha256": "dec9fa773762fdb183967838e066d62937a386e88f2220de41c758fc37a81d4e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-v03.mp4",
+      "sha256": "3886ae340807fd76dc888ec5bf91e4000e1b54738eca1213cc6c9de63f587109"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s2-vp.mp4",
+      "sha256": "1d7d679d54951fc88b2651f63fcf46303c5223db42686323c05f43c3e913618e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-d01.svg",
+      "sha256": "d8f9752aee0f07eeb8390d508193da23a72a8b563ecdc9c134ebe8f9d65127aa"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-dmap.svg",
+      "sha256": "94b9e84a55ebabbc5295e0358023c4c8e3a68b74de4e394ea5f754fe86b5800d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-dp1.svg",
+      "sha256": "138cfa95ae2945cfe62750f1d6602c5eb8233b8274dcb47f4f7f11cde1a01218"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-fig01.svg",
+      "sha256": "370f46d55881325e6df9a2c5ed4352796db2cba31d084c771b9f4a2d77395c83"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-fig02.svg",
+      "sha256": "cb75ba8114b18f2bd6e732e8bbea13d1e0f9c1ef43aced60b1753a0cb0272457"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-intro.jpg",
+      "sha256": "684738b4898419f53997cc2c75fadb5fb336552e0fe9cff751d0c7694c1c5e9f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-v01.mp4",
+      "sha256": "2c6fc090f85eb4578fb18ecb374961afd08e0cc8a87dd2d94cf78ce4dd9281b9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s3-vp.mp4",
+      "sha256": "15287ccbc19f1be03e0a9e5c7baa9d1f3e65339e97c15e09c0bc1a7db1acb2fb"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-d01.svg",
+      "sha256": "d155872624246df4a2f3eab6f1ac639754c8df073ac87b5875bc0d1e18d131fc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-d02.svg",
+      "sha256": "59ed5a2ef3c7283d29bdf2f26e644ac178149caae24a553b66d8b18af0d64a4b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-dmap.svg",
+      "sha256": "d9491e1e73c9fe2f521eb23af45bd17e8b64e306099cb59617ba9b4466cc1788"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-dp1.svg",
+      "sha256": "e71429f9b29a6f96834cadf45e3d688fb7989189075e4eb8afa427ccdebe840f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-dp2.svg",
+      "sha256": "e6cd34fe1833d50c7bb4396e86b6ff092bb4ebbf4ff59a1ace8dca424ad786e6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-fig01.svg",
+      "sha256": "1c8434539adf016059679e3d2963c6eb7ac671f76c714dec73e47c9f87a7ed21"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-fig02.svg",
+      "sha256": "169bbf7a17bfeef6e0bc37e38d2956cc27638e3396525b085779d0c3515698e0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-fig03.svg",
+      "sha256": "8ebcec853b36fc4e9d4c359a80dbee4c9a20d260b560f5107e483387c39d57d8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-intro.jpg",
+      "sha256": "3b3ee71b7b27e77908044e9498f094c8b2174d10b7f0138b8a6f282fccbf85e9"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-v01.mp4",
+      "sha256": "21e68b874b0ea5d2df7a518a45ee37a11afc62d6f1529a2d85e0713f4ef46e22"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-v02.mp4",
+      "sha256": "9e5fdf5294dc465eddf16f67cd5088cb6dfdecde0af71eb7ac2ac50c4b39cf11"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c5-s4-vp.mp4",
+      "sha256": "5ba476dcd5770046a97b11e7b28888665add85ebc64b1149f51982ae31cf3111"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-open-scene.jpg",
+      "sha256": "e6fc8bedef0799a21ec25db257a7304d21407a5e81c3b49abaa12c7b16f41d5b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-review-e01.svg",
+      "sha256": "251da251f08dc7e740df02637e1a801c464b3395877c8d624d2c983d812c2892"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-review-e02.svg",
+      "sha256": "e6f77d2b1a8b590a3bebc516dfd7812045d6ff450cfe1e60f7548f830d2f6a21"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-review-s01.jpg",
+      "sha256": "2f363d79dd6d727d2607129ff53b62500bc9bd8c3114a81a9b8219b519518954"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-review-v01.mp4",
+      "sha256": "79efae44482a0f09f26765106c90bdf699f966696ae7b00384825329089bb4d7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-d01.svg",
+      "sha256": "b03d405bfa989a8b079e75d6cdd11838ce94ad4c35aaed4097fb0d605b1eb384"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-d02.svg",
+      "sha256": "3986d3c5ea60f47711b108056198118553edd613225d332d7b90d8023c74d780"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-d03.svg",
+      "sha256": "8c2cb14a637335e7672def715b35e369dfb2e62ffac6589ec767ca559880d351"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-d04.svg",
+      "sha256": "cb9f9c3c2e6b88a6fcb877d22ae8a6a31a0d48156a62b3902b5c86dbf44a250c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-dmap.svg",
+      "sha256": "2354ced43fe2959307819ca39aa232f60923b00effc82af807616195c5a303dc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-dp1.svg",
+      "sha256": "50f4c0e2bb6fb7b32f8ce5ab6b49848434886d4b4de7e6160043ead4c7e3d987"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-dp2.svg",
+      "sha256": "e2a4efe1cc547bc93194602b7f5ea67b65074ebc0fdc55ef003ffc4c7e535a46"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-dp3.svg",
+      "sha256": "b9e6074a8cfef6904f3a0eb8f3a4183f6a1618ed7cbd05d1d292bb3bf552eab6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-dp4.svg",
+      "sha256": "72a56155404555b6890f14aaac73b908dd2c1a9b7bfa6f571fa7911cfdee860a"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-fig01.svg",
+      "sha256": "642d11bbf1960e181d19debaf0248df5c85b8b2b699b2663d5d022c8c12096a8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-fig02.svg",
+      "sha256": "9d82421124cd5fb41cb792fe2c1e02010b999cc2a2eab66292b5acf09a6a0fd1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-fig03.svg",
+      "sha256": "46ea0f85730eba79edb23b3cb6d8f5995a3b3aa2206a011d19dbde56e45712ca"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-fig04.svg",
+      "sha256": "df7839ae35445e917b25603d4179e2a285d6116f5803ba30dc52e6b922ee5108"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-fig05.svg",
+      "sha256": "75a7132f4e456fa644c4f599e41c21de3c2316167b5afb6e1c5907d117fa3aeb"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-intro.jpg",
+      "sha256": "9641bf88ebda3ea83c92a3e8a1534111409fe1519072a22cdea56bb83828f137"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-v01.mp4",
+      "sha256": "30159f2ae48368289f8ab71ef3a67a51080f3b03717135eb4aba5ba51780639e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-v02.mp4",
+      "sha256": "9517ed21e71b2b0cc392478094289e4dd9c50b6ac87a485280d008db4fe721d6"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-v03.mp4",
+      "sha256": "a41e36722898301e67492293f4f1d7d98ffb5f9bbd962cd39a3d2cb5f8c5176b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-v04.mp4",
+      "sha256": "15f575c2c0d05b14fcb9f4be77d1ca3b73dbdfad13b5d7e43fd5bed8aded0ced"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s1-vp.mp4",
+      "sha256": "d381456537654de511a396426c07b07f16c541a29099bdb51a2850db0198793f"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-d01.svg",
+      "sha256": "3db31c922feacc42a1ea50ceb1ab52cd5d05c36e70a51c15e4e0165bf6ff3582"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-d02.svg",
+      "sha256": "2088cc5c2d87cdf1a03d7dbd13159e2474eba8d6a8e2e880f38b8d3a809a322e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-d03.svg",
+      "sha256": "ef54ed9d3cc219554bfa2d9d23296ed67cb3d9794eef782b31c4a348a3dcae4b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-dmap.svg",
+      "sha256": "8e22101fbc0c16f8a6b7e0afac0f8cc645e834c4db829d745de1b6f7bafdec68"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-dp1.svg",
+      "sha256": "30219b03f98c36034b197e29bb8604bd7d261bc0c1cc4375bb64108f39ed36b1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-dp2.svg",
+      "sha256": "a68ec225942a32809a0b5f13563fbea41b1fd44a5f1bac64d5c12fbd3f898191"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-dp3.svg",
+      "sha256": "e1e023bd304408274ad374c7ee73ffdecf61217fe5701c3ecd5384c7a528d58e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-fig01.svg",
+      "sha256": "43bdba01ee7f1c1f4aad25fbe826a84af0b7dce1db6d7f7f397bd7d901952b14"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-fig02.svg",
+      "sha256": "9aa36a63856c2d4b87ce8f033bdc1a66ef37e210e61c300a5a6c65fa84380dbd"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-fig03.svg",
+      "sha256": "89094549f9e56abc2940f43ee313645adbe1813bb15f8f7128c2e17de030468d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-fig04.svg",
+      "sha256": "b849d6a8e1636c8fb36745f8d0c6b5333148dd30e99cf9406c93ea2d1d5f43e1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-intro.jpg",
+      "sha256": "aef1e7c39175ca475861ecb879a5b596069a11ae5445fa6ef994bf32e22b6d70"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-v01.mp4",
+      "sha256": "8bff57e6db8937870e137451951bf112c9f64963c6482abada9ce0deefda2892"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-v02.mp4",
+      "sha256": "5ff849553871a1145836b2778fe652eeb6fc8985d8beac4c553acc93b2b58edc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-v03.mp4",
+      "sha256": "6fcd5e29a9c803846540aa5360b585daf41896deaa996a7c3db6daf23e08f259"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s2-vp.mp4",
+      "sha256": "671df1cfefc0566331faafc74fedfe2b073701a7dc764dc46924c9d55a2a11d0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-d01.svg",
+      "sha256": "553fffeb7d4135ee9686bf1ffe819caa7ca61323e621535c57f9a9c5f5d26332"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-dmap.svg",
+      "sha256": "66e207928e499fdd109fab864936d3f084b7b9b822cd02c8c9b9631bfe4bf885"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-dp1.svg",
+      "sha256": "ab39e96df91aef1648660c09238e5c68af2b1de2dd1a683b3366e196ce070831"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-fig01.svg",
+      "sha256": "3f7601e03f24e2581db023f37f2668585ac3fabc273eddce8ac4be33e1a6f077"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-fig02.svg",
+      "sha256": "9aa43815e34d9d6ac7fd96f1267439c1e4a161088e9df3b742eb499788feea57"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-intro.jpg",
+      "sha256": "c75516e581fb056d61fdbd5483038acc630d739d6285b4a3416c7510579585e8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-v01.mp4",
+      "sha256": "dbfa22059fdc6121d4207e2a06ea2d6a00b1e40096a37c386c97f064099b34c0"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c6-s3-vp.mp4",
+      "sha256": "dd06808e4ad6c856f039decbc34a5d692f3dd6385780bf29bc2dd53e24446afc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-open-scene.jpg",
+      "sha256": "b0301ddd5214e92c2deb7b004c24240562fb5d0af0eefa1b81a85e6af8c43c8d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-review-e01.svg",
+      "sha256": "5ba7c999741ffe850b2141194652ec3d12a366421bfa376583fd0c410bb4d8f2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-review-e02.svg",
+      "sha256": "d03e36880d2b02158d6adddbad8f8759816090b879e4732fcfa52dd8c2c371fc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-review-s01.jpg",
+      "sha256": "3cc07cedc5f7a45fec853e6f2ddbf131400bf60a836f14f688959cb8e0cd11a8"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-review-v01.mp4",
+      "sha256": "2e23ca6936be528e9e64a07aa000cb2009db75d3bb42ebca2fc5f10cdc02d128"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-d01.svg",
+      "sha256": "96fa3d008ee102f3de07971323e996c65460043030a72948c43676ee0562c3d3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-d02.svg",
+      "sha256": "88b816f0cbabb244db8d6a8d655e2be40aaf7227c9e34576c91d7e9136a209ea"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-d03.svg",
+      "sha256": "ecf28698480c437217f0a4679305f09ac14c428c00264c793ae1b4784876a0af"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-dmap.svg",
+      "sha256": "2399e4fb37d9c2ff5be975e89058519f871ea084df9f96479b85508e67074a86"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-dp1.svg",
+      "sha256": "64cf0a963a24ce4fad44ba2ebbb678c6c04381f7cd4fc13580f930323b749310"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-dp2.svg",
+      "sha256": "0d5e53f57906933ff2b38b6071a1cac437e45be7a26d6b39cf8c3f9935ad9f6e"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-dp3.svg",
+      "sha256": "a55ee4499cff5897d784f50b02172c84baea8d10e87b540fc0d6e639ff306e5b"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-fig01.svg",
+      "sha256": "646a1195d79caad89381139e01de49e2503cbce00f312ca05bf81323aab01bc3"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-fig02.svg",
+      "sha256": "4063c517b353f038d6f9d237d13293e9cee42182de21477bba855c59cb91afe1"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-fig03.svg",
+      "sha256": "7410e0c075637a37abdf24bb129cb22df9828dcf2ed74d908ad953edebbc95ce"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-fig04.svg",
+      "sha256": "941d227fef79b7c399c0d1b4da96d42fc7328ef3bb524b0475cad539715efb58"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-fig05.svg",
+      "sha256": "585f4a7cd5967f47d13d27448b40ec4e3f6184b204b423e4f65b61c61f133994"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-intro.jpg",
+      "sha256": "163932f843d1a0769254300cbf21f7bca552bc314fdaa2ec21a6b14058467d7c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-v01.mp4",
+      "sha256": "dfda644dbbf16428b88f3ecae4d54be2379bf7d2e3c4a39f1d48f62ddde62034"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-v02.mp4",
+      "sha256": "d7ef5733be9bc1527237b7a8f3bef8873973bb8408a782d0bc4f4ec679a49766"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-v03.mp4",
+      "sha256": "d39cd7da2dfd579522ce4f01bc50f2f05ed157e33f3e98a598669b69c1bc8191"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s1-vp.mp4",
+      "sha256": "517719216eb55112176e6c413778d13217159dd206f639608851f5a13d24cddc"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-d01.svg",
+      "sha256": "c80193aded0f1036727037000799ce4a4b4f3fd7e128d0421354d0776c7b4a3d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-dmap.svg",
+      "sha256": "7d0937a7cf7e9d219533d63adba48260c5e208f3713f475281c8f3d847ac83e4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-dp1.svg",
+      "sha256": "7a79becf97d76b659aa8e9392e0cd00f745a4463688a1fdc8470b168cf7e4b3d"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-fig01.svg",
+      "sha256": "8bae0f52dc7865018d30d7e938f443381a9d0fde5d3f5e3f5e3f66893f7cbde2"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-fig02.svg",
+      "sha256": "644eb85892b2dcd6bf76551bcf200c0098280446aec4e43e0b01eef911b8deac"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-intro.jpg",
+      "sha256": "9600c44fac54e3b6e5f196fa8abf297d19313609cd23b782bd8d344c40a0b352"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-v01.mp4",
+      "sha256": "efebac64cab6be85b57260b73b79a79ef0a9733671600dd0d36070049e500ee7"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-c7-s2-vp.mp4",
+      "sha256": "67ecbe183d4c125907019c8a249d7cdea5fb573c6ea7207625cd4a3fd14ef5e4"
+    },
+    {
+      "file": "site-assets/textbook-book-math1-m1-plaza-scene.jpg",
+      "sha256": "7589b01a81e32b7da3a728f81441aaba3fe05e4afe5a244172ac309fbb98933c"
+    },
+    {
+      "file": "site-assets/textbook-book-math1.json",
+      "sha256": "685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-open.png",
+      "sha256": "76456f70927887369b70f9941ab819d755440e01c8484b5eb9cc1518aa13d4c1"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s1-d01.svg",
+      "sha256": "c0d1f82ca9163b8d6d056281fdc514597eddc7ed5814acdb7dc1380476c1fc9d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s1-dp.svg",
+      "sha256": "2f5dc4700c3f8829f253c2b7250f31574309f47e9e0dce0e01f330f1fc928376"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s1-dq.svg",
+      "sha256": "a23c65d55336c5f87ebec3b37e986c3257c491b639af959db4bf391f9433bae7"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s1-scene.png",
+      "sha256": "f7bad7b679141b6d1853200bb4016414ba13725c8ba1c511bc81246eca6eb807"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s2-d01.svg",
+      "sha256": "abd47a952a53a915726b9d398c409f09bfe88a645487b88dab34d1f370b4de70"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s2-dp.svg",
+      "sha256": "14fa41f06eff9a35732ae88f05f0d493ff7a5a65f922c3a97ee528bfe43e18bd"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s2-dq.svg",
+      "sha256": "d958e5cd9e18ff0a5692562248bec96f9862e749b49ed6a191a942fc128f35d6"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s2-scene.png",
+      "sha256": "39e846bd19b5cd3c4bf9f0cd544d668817887623026adff6b0eef1e74745b0fb"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s3-d01.svg",
+      "sha256": "83dfea24010ef0b6fd53675607e4fa27abe9c963e26e8099e94fa99f0479a15c"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s3-dp.svg",
+      "sha256": "ea5661b8654c6cd4731775e79b561cc62929c5a8926c392411dbc85f9c021b47"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s3-dq.svg",
+      "sha256": "0ccb8a29152e8fc9b7fd6379c8e72501abe3a1f6d8bcb77d33c8b2a6a1ddba0f"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s3-scene.png",
+      "sha256": "53564864867db5f6a0363bdd85a9e14c0818e009424c03b8bbd287a360cd1e57"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-earth-s3-vp.mp4",
+      "sha256": "d31105577a09a55cc917cd314d41c140f8ca2fa8c62b13722ae5c1d04436801b"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-open.png",
+      "sha256": "491e870b1e7dc1557d5c5d5e707fb6715d54232fd393dca65544cc3b74e676df"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s1-d01.svg",
+      "sha256": "2d170d8f907c24f046a90c622ef6d82c35dd0236a66721cae97d02c3b3a72452"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s1-dp.svg",
+      "sha256": "84efd015e4401383d08d4a9533b997d5355211d352668d67c7ed7c36396f096a"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s1-dq.svg",
+      "sha256": "1e33d9f57472b4056543bcb0e7f329504ff7febd46ccc3d096099f34573a264f"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s1-scene.png",
+      "sha256": "497bc150b1614a447e2df6a481da7b4306f1b3242187627bcd5d338316a9ab34"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s2-d01.svg",
+      "sha256": "64eaa20a0e2d934e08a84fec3b18d1de01d001877d10d06218710d9c80807c52"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s2-dp.svg",
+      "sha256": "1009cd43b5d2b7a67f1eb791398f5ec30abaa3297d2fc541e8593f01d44cc31f"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s2-dq.svg",
+      "sha256": "12c04a5fc1c525a5d2292cb097aff2ac95e72776dcd44ff7469513a64c2fd296"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s2-scene.png",
+      "sha256": "2d2c03556dab615fb90dec3ff0dbff0eff955ca29041dadeb2207cb6b8bf2ed6"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s2-vp.mp4",
+      "sha256": "4c11712396ce726117ed6983d0f976824e78fac7bd3c0e119c7a561ceea62818"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s3-d01.svg",
+      "sha256": "5f09f8cec142cfa54bf5e5ffd86cd9cbebcdd47ce6bf05dfbb1593cbf662ae6e"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s3-dp.svg",
+      "sha256": "da7b7d28e6dc65f6f94488c67bd6ae5e8b70fca3feb38b14175a6c407b2f2cbf"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s3-dq.svg",
+      "sha256": "1a910094c3654e8a9ccb458eb88f7c929f2fb8d09ff70e9b2f3946b19d832089"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s3-scene.png",
+      "sha256": "ba7e27d3e0aa68099739a5bc8fbc0d9b70bfa77604a882279cf03d4aacce78dc"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s4-d01.svg",
+      "sha256": "9dfa70c59f447d725852a52e47cf218ce3526b4f2e656f8b9d05c99c9c0bc75a"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s4-dp.svg",
+      "sha256": "3045a7320333550ffffee6dae6d54e54be945e2ba03183b1fe63a210c08f02d1"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s4-dq.svg",
+      "sha256": "a3080b10bbef738bad352a00889890cb3295f3a32c4efbdf72ac88b303e22b2d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-energy-s4-scene.png",
+      "sha256": "b9965bff7783b77e917fba4132f0981b2026591483f6fbea985de7f28c38bc18"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-open.png",
+      "sha256": "685ac0791aeab91854847ba18730d49de589bb48ce2fa9ceb2edf3b956a26931"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s1-d01.svg",
+      "sha256": "50f95c9f6d69013b16e3434032710a728ac87385f97cc4f29e32f9a4d5bee92c"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s1-dp.svg",
+      "sha256": "d5d844c7db12ad3bcf0ed50f51b75908ab857854dcd0fecfb0a2b74643bcca64"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s1-dq.svg",
+      "sha256": "ebd214f3a0150f5ea5ea0ef9c052e10d3bc81e839f363363e884a042dddb0f5d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s1-scene.png",
+      "sha256": "1792b6dbee911014ff7a78ac7c64d200a1774fb00bf6cca30d60c4f765ed5489"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s1-vp.mp4",
+      "sha256": "600e5a360ab9b6bf5d623819820e4572d48bc55416f4cfdc64013ff9743b1361"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s2-d01.svg",
+      "sha256": "d20d5cfacaf3f544f07a47968a0a57941a07158c89bef91d68606641c8f6bd7c"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s2-dp.svg",
+      "sha256": "eaebfce17fed8dad574d7285953d840f6c0e8c08abeedb165b2aadb18be41ed7"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s2-dq.svg",
+      "sha256": "4332420442d0c433b7bc09507e215e9604a81a3e690a15d10e13e46eabf3a6e8"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s2-scene.png",
+      "sha256": "f579126d8976b387aaded7b9b741e2a7c5dee7a63e4a6c06478350174f40043f"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s2-vp.mp4",
+      "sha256": "6a2d4e655c09f7863d709bf75a6a3c18dad60a8578cde48d6cc68be42e0bd716"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s3-d01.svg",
+      "sha256": "ef85e15dbcb260a7b5deb531e9f6229f7cecad72ab13b68daf29c9be6f3b7edb"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s3-dp.svg",
+      "sha256": "30c55bffa33d29bda912d988a408e1e4eda801e64f9e09e96b4368afbaa51173"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s3-dq.svg",
+      "sha256": "eb80c11287fd94597a6a53cd5cddce99de8d052816a106ff9cf4679a1a4c1a06"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s3-scene.png",
+      "sha256": "785dec2b4d35646a6ac4924def3006c55d1dab8a6c6ae1e46f485ecbc9ae411c"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s4-d01.svg",
+      "sha256": "ae978d6c5346df047135de4d7ae81e9a7f0e22c7a8761af82fce2196d5e72015"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s4-dp.svg",
+      "sha256": "48fa005ded1d20f35f3e901e724eb58995c17e1a4a70c866d25860ecc6ed6639"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s4-dq.svg",
+      "sha256": "6804e48d70692e3a361999f9fd9c5ebf58d26a5490b4475ce886ac64304e048d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-life-s4-scene.png",
+      "sha256": "f60b9d94cc28b66f749a27ec262d1813aa159a866a8091a6904e86f5dee5930e"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-open.png",
+      "sha256": "2d83d69896dcf6558972d4d610bb8c220b825d74c264a0f94d7d85ffaa3f8ad5"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s1-d01.svg",
+      "sha256": "6d603372922e6a5864732f92ec25ea9b75d688d33bc54c4f82a4c6da8b601ab0"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s1-dp.svg",
+      "sha256": "e5b87bc7f3e5bd3f8e4fcedc34408a60ba60405d826fe26b58ac2b6efecaf16b"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s1-dq.svg",
+      "sha256": "45071ae43f7ed22373e568ac842757587e1eb75dea73be62961b6163acae556e"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s1-scene.png",
+      "sha256": "14ffd95aa330793671f694e29db8a13c22c9c778fa1d6dae56e9a1fe80e989ea"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s2-d01.svg",
+      "sha256": "ebc90ce52383f2dcd8f264aa1a32a3b95410a6a242f2211a6460f6d73745d77d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s2-dp.svg",
+      "sha256": "7e83ea1ef6ed50e88600616c5713de0ee72d416849d727e9d08589a56a000f13"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s2-dq.svg",
+      "sha256": "1ee5818869ada5c3ccbeb45ca29dead3de7a3fcd15190b7a3fa62da21b0add59"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s2-scene.png",
+      "sha256": "6359249d743a5428cb16446c40c188521cb020f1482f41f633dbebc7eff7c9db"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s2-vp.mp4",
+      "sha256": "8f53ffc7efd937334e284c7a8f62926cf1513f42fe48671d666f7f7fdfe5370d"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s3-d01.svg",
+      "sha256": "cb0f69db708b999b1f4f701b0aa399a5379477dcd4f5ec01539e2bf7d929273a"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s3-dp.svg",
+      "sha256": "f9d9310d6bfa5eedb11aafc120e034529009b14b5400def47808ddfef316db67"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s3-dq.svg",
+      "sha256": "c7fce8812345c436c4a48b093bf7f3fbd04a602328208d1546ef90d87d51be48"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s3-scene.png",
+      "sha256": "b8995a2d853a0babd62273cfba439dc8c377ca68321ee18a1e1afd6c463626ef"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s3-vp.mp4",
+      "sha256": "f6e1d8709cf3b9faa12548a74ee38636d3d3fb9c0c59766f721bc8beb5194a36"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s4-d01.svg",
+      "sha256": "d8122ba1ceb22f83150a3daccd3d94222a82b95b7fa4db082b09c3b395ffbb7b"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s4-dp.svg",
+      "sha256": "ad21f5cbf8dec404c06e18b71d266c99d26e4a59109cc0e6ac394a09acb4ce5e"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s4-dq.svg",
+      "sha256": "449fdd6b7b6b6b2558a77ada52d360ab2da2adc12e90589e833e61a844f21b90"
+    },
+    {
+      "file": "site-assets/textbook-book-science1-s1-matter-s4-scene.png",
+      "sha256": "44a34295bebb9393559836c7ff7325ec4a0bc740c7158e1720979cf27b44d052"
+    },
+    {
+      "file": "site-assets/textbook-book-science1.json",
+      "sha256": "7c8177a234e4443c24f74cfa0c9bf9d8739c9e820cff23d6ab6cb6c532a0e892"
+    },
+    {
+      "file": "site-assets/textbook-book.css",
+      "sha256": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec"
+    },
+    {
+      "file": "site-assets/textbook-book.js",
+      "sha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1"
+    },
+    {
+      "file": "site-assets/textbook-books.json",
+      "sha256": "720550c7d0ade41330c1d6882aac01c112e9c3159fbf262e28a0536eab806eba"
+    },
+    {
+      "file": "site-assets/textbook-ink-format.js",
+      "sha256": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735"
+    },
+    {
+      "file": "site-assets/textbook-ink-model.js",
+      "sha256": "97ef477150891fd148a2869b201f187344c472c5b6e3464bda1b1d0ad52755af"
+    },
+    {
+      "file": "site-assets/textbook-ink.css",
+      "sha256": "f2b9ca8ce2605baf197712e0d2cdbb52c69b0eeb0e6c86d7f996fb4bfd331a95"
+    },
+    {
+      "file": "site-assets/textbook-ink.js",
+      "sha256": "60ce37d98b1094231ef1af081ee3e7179dbb4908e6ef858d6d1b7bd926ed868d"
+    },
+    {
+      "file": "site-assets/textbook-links.json",
+      "sha256": "02f21d031c58a600a52992dd3ef9ff6d39aa4697fb4475c313c20a5d3dbc39bd"
+    },
+    {
+      "file": "site-assets/textbook-vision-api.js",
+      "sha256": "e64b060f006147ee3e392ef821b850f0f435dd129494e6fb79460f42a4eec2e7"
+    },
+    {
+      "file": "site-assets/textbook-vision-boot.js",
+      "sha256": "53ce1f62d7b23792b7c09489540c355a7e8d118a73370a4307f473bfd70f328f"
+    },
+    {
+      "file": "site-assets/textbook-vision-capture.js",
+      "sha256": "ea3c2d06e32fd22d93246550b54ce37145afd2bbdcad09caf37206e615c0ab57"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-browser.mjs",
+      "sha256": "bfd403a0e5143a2a92fe9ddf41197f615f2cc952ea12522bbdeec86a3cf79b0e"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-dom.mjs",
+      "sha256": "63465d89585a8bcfa0fe8d7b9f62681180768dfa9b7c5b93d36c5fd8e2dcde75"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "site-assets/textbook-vision-model.js",
+      "sha256": "55c398dea3f896a4c0a6a6cb9c3b17a15c33539dd43dd077a8804c4b165638bd"
+    },
+    {
+      "file": "site-assets/textbook-vision-panel.js",
+      "sha256": "d6e6ecc5fd3278afd3bf92d41f94159de9d14fa9ce536b3f584f3b6cfbd4aedf"
+    },
+    {
+      "file": "site-assets/textbook-vision.css",
+      "sha256": "2dc683214295a6fd288048c672fe9d30071be8bac5b8568c227ae250872b6b23"
+    },
+    {
+      "file": "site-assets/textbook-yomi-e1-sb-s1.json",
+      "sha256": "347f789dfdeae9682c7e996d92c48541dea808995c3dec9aef38e626befb41e5"
+    },
+    {
+      "file": "site-assets/textbook-yomi-g-c1-s1.json",
+      "sha256": "4f7ac81d75f7692a31dd4c3a2ba33a3568b50f62e43adadd1ec6d645153bc364"
+    },
+    {
+      "file": "site-assets/textbook-yomi-h-c1-s1.json",
+      "sha256": "e5771d239c6fe62ecd38f2112b32652165b1a0ae471aeee0712d10ea25c77b73"
+    },
+    {
+      "file": "site-assets/textbook-yomi-s1-life-s1.json",
+      "sha256": "9aa2a2aea89fa913c91d38218accf92fc42ade97074ceb06e8f7605777dff9fe"
+    },
+    {
+      "file": "site-assets/vertical-fractions.js",
+      "sha256": "f94d7f58a6c595c2d18f26281e63cbe3b23402cefbc43f422ad11770b2856e37"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "0f50e50148d34751214bb9a18a903fded0c9435b466abb80bcbf35b157d1ce3e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "06a5139905aeebdfce98b8d8b0edcd93730464190a56f9c4017b320e2f1e406c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-result.json",
+      "sha256": "3118e0d814c49dec8aef5e780200708856535aa4581d60a122bf6b9bfb1a348e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs",
+      "sha256": "f212e47e3dd56ff90a5490d0ee91a85fbd5786bc59ff17b5745a631ab6a853e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/main-integration.json",
+      "sha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-integration-result.json",
+      "sha256": "99d7981a5cbf60d8b8d6be0fa0ea7b43f15a114b9a53edc440fbd6acb81c96d8"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-main-library-result.json",
+      "sha256": "bd83815804d13c60cce2dbdc0cc9204430e1bf74074699b2e57809e7b0d3a031"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-result.json",
+      "sha256": "247788e3b9b6d08c81da3e8df928f9e185a0ed1d167480c72b9f363386af36ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-1440.png",
+      "sha256": "d189ba46cc826e5e64101ccf313b6d136558d31cb54d2be4ac962bbbf84fb5e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-390.png",
+      "sha256": "bffe12083aeef485d02afeec79889bee9d1aa649cbd629f9aa1d99ad0261f4f1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-820.png",
+      "sha256": "88147597167ae3ebb0dfc39dd52c376615b4e87f3df3a1cfd8c0b7eb93d80e7d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "c10ba168ec03ad05f333134007d68cd4f09d4b7445837e6ed56b56477bd72493"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "caaf83dd01bc6a179b3b800e1c0df68d1dce67bc28cb5de3f928125a7e2a4dd6"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "4c6d2c48df54e6a6bcdbe1b94b98bfb5a4b505777d71434e2135a47995e55dc9"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "108c5074b16baef8120278b188d11ba69042d1f73150813402f7f51ecd7f2118"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "3f48daa78744dcfd3cfbe87bf192f88f46baf8a68a50d3b3c7f6c04767d53b6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "sha256": "5ada37f633b7960bb0af21fc8d27087bd071b6f5d4bff98360b84fcdb4acfc23"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "f849445121367c97e0fe40e28b83daea1dca5d181ceae94cd3ae700cb4a1689f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/audit-media-anchors.mjs",
+      "sha256": "109cb6e61a10e9ff2c57c150d7f412f4fc976b7e5fcab434c0568bf43136d548"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/build-media-contexts.mjs",
+      "sha256": "2cd5e6a2c76f5a477ac47b269212e2132ed4b47c8244cc45215c66abf4203d96"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/approved-panel-result.json",
+      "sha256": "12b69cf117105666600faec6408d090ac30d62e3759e7e9481bac92609c19e12"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/.claude/verify/run.sh",
+      "sha256": "c8eca6713c6f0b205d7cef24a550caa4ee2d1d6f4d313597e3d995a7909347a1"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/cf-worker/src/index.js",
+      "sha256": "b3c0e6894d741b00f777e8197b9cc9a60f144452f5582cb861d9a47d08ba48e9"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/index.html",
+      "sha256": "ba7564288c3c5e004ce519d50e1f19ec1fe071c28930492d911e8fab12f81388"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/preview/build.py",
+      "sha256": "2e3e01d25dfcf7498fe671da2256b9087d2a7bbcf0e262e8cf7216e89d77f966"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/site-assets/sw.js",
+      "sha256": "5b966468baa0143aa8f9b177090011a19ccbc01d9be8ab2f1fd35b1895f9d756"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "sha256": "46bb318a1fea556651f67c76f08eaabcefc2a30dc39a1105f82c91cc99b2da34"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/check-expansion.cjs",
+      "sha256": "979695010b3b6007cf6e9354a65c9d468ecf8f0fe7074841ecf2082021da219a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/checked-source.cjs",
+      "sha256": "819451d2085c718cfbcec4df8659d84390fc40207b5bb847309cdae7336864d7"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/integration.json",
+      "sha256": "bc7addfbe87119614b263bbc386016e08601363a07e86bc14dc9a2d68d6c1cf6"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/.claude/verify/run.sh",
+      "sha256": "90f55e94bbf271cf459eaf46cc362a15ed9d3e23bcfed22647b0186e54e372f6"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/index.js",
+      "sha256": "47d5bf8c2269fa1a29a697aedbf441d753c1ef9006d919553d412ea98b2a4d9a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context-reader.mjs",
+      "sha256": "1b2211ab8825417ba4d868eefa01c2586d8247946bcdf1c94704f55a6d0b6838"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context-route.mjs",
+      "sha256": "b5f0b1ec98cb1725c73e36f18d0808093558f82ea3f5801854f8251841d34bf4"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context.mjs",
+      "sha256": "1cfa489dd4d3c154208533ae64ceb53ce781ae2a8b2859d17a51083cf7d5a88f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-images-route.mjs",
+      "sha256": "246a2a986ff51e8bf460e3734a3522fc2a8189b4381e85bfd916f7b70961f6fb"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-input.mjs",
+      "sha256": "96814eb81a7fda3b350c10967bc4fe0f43ee66ea2eb229278e9993c5300d1925"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-operation.mjs",
+      "sha256": "385989910d72a0bc7ff9ebbd8ca2f0f6ff7eb3db06db0cdceb2bb19ea53e88b3"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-route.mjs",
+      "sha256": "18fc1aa9ab4f6e3dc990fbd8963bdb1baa9201d6e51e5e1f3112f42dcfbc7020"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-service.mjs",
+      "sha256": "a451f6aa1fb3df3ed6202e23815502541b351301075f3fbb7bedd6f6eb7a7bc4"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-transport.mjs",
+      "sha256": "bd8f3ee1b2c6abf5ab3ddb0c36592fb8b279ffb596db8ce6253550a50b8d5aae"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/index.html",
+      "sha256": "7f1558a31704b9c71390907854cdf600f971e39894b8f0df46a7ca23f8ebc6b2"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/preview/build.py",
+      "sha256": "bf20cebc1574a6cf886916b984f62e979da1863dc949068be85b0b4361baaef0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/sw.js",
+      "sha256": "21733b03dc9b2a79dfe3c243e3cd32edb9363b21136ec9fae7a5b70443127d91"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-english1.json",
+      "sha256": "ff8e63917578e6e274461ad4b8e0e11044acec0f7a8472532be42a4a36008ac5"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-geography.json",
+      "sha256": "07dff1925d45fb9473cfec5ce02851842f6161703e405f0c3f968217bd7ffba1"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-history.json",
+      "sha256": "cd804a8a10b46e8845087e96905b93b26fe591338ff27ad2afa32aa9cd93a066"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-math1.json",
+      "sha256": "d4ee3d77cdef10a88c36c058c91d712ee004b5b1c9bed250b875e06e9976f743"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-science1.json",
+      "sha256": "1ba2065a76da258d48d42fd546e1da38fc149da021f9680fddfa182ed8ddb1ef"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-api.js",
+      "sha256": "e64b060f006147ee3e392ef821b850f0f435dd129494e6fb79460f42a4eec2e7"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-boot.js",
+      "sha256": "53ce1f62d7b23792b7c09489540c355a7e8d118a73370a4307f473bfd70f328f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-capture.js",
+      "sha256": "ea3c2d06e32fd22d93246550b54ce37145afd2bbdcad09caf37206e615c0ab57"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-browser.mjs",
+      "sha256": "bfd403a0e5143a2a92fe9ddf41197f615f2cc952ea12522bbdeec86a3cf79b0e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-dom.mjs",
+      "sha256": "63465d89585a8bcfa0fe8d7b9f62681180768dfa9b7c5b93d36c5fd8e2dcde75"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-model.js",
+      "sha256": "55c398dea3f896a4c0a6a6cb9c3b17a15c33539dd43dd077a8804c4b165638bd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-panel.js",
+      "sha256": "d6e6ecc5fd3278afd3bf92d41f94159de9d14fa9ce536b3f584f3b6cfbd4aedf"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision.css",
+      "sha256": "2dc683214295a6fd288048c672fe9d30071be8bac5b8568c227ae250872b6b23"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "c10ba168ec03ad05f333134007d68cd4f09d4b7445837e6ed56b56477bd72493"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "4c6d2c48df54e6a6bcdbe1b94b98bfb5a4b505777d71434e2135a47995e55dc9"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "sha256": "5ada37f633b7960bb0af21fc8d27087bd071b6f5d4bff98360b84fcdb4acfc23"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/prepared.json",
+      "sha256": "9ce0a5833f22e931a011faae5c927cff209698ae29b8640a585401214ecf2b4b"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/verify-main-book.mjs",
+      "sha256": "17d75da1fe033b87b1566f2e04d160d02fdd26742b66d1a0043e48f17ee8188e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "sha256": "e62e01ef45c4547ed17b5f52101569eb9d9da112f8a2a85859a42cd9850b6eef"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-english1.json",
+      "sha256": "ff8e63917578e6e274461ad4b8e0e11044acec0f7a8472532be42a4a36008ac5"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-geography.json",
+      "sha256": "07dff1925d45fb9473cfec5ce02851842f6161703e405f0c3f968217bd7ffba1"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-history.json",
+      "sha256": "cd804a8a10b46e8845087e96905b93b26fe591338ff27ad2afa32aa9cd93a066"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-math1.json",
+      "sha256": "d4ee3d77cdef10a88c36c058c91d712ee004b5b1c9bed250b875e06e9976f743"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-science1.json",
+      "sha256": "1ba2065a76da258d48d42fd546e1da38fc149da021f9680fddfa182ed8ddb1ef"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-client-browser.log",
+      "sha256": "40f126fec5b85239f325b30f015ea5c7c950d16453971dd5218086b94da9d6f1"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-history-route.log",
+      "sha256": "e3e3895a5d8cc7a4f1870a3cfd8966b167bf7c86759d7eb853d3757dea351081"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-images-route.log",
+      "sha256": "a3e5ba733149c97cc31f54abb68a5b412abd088d40f3f2f70be5af39eef46284"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-input.log",
+      "sha256": "f97a9a6a21bb9f0089bc10e6c51ee12565c790407235c1dc964e214109e8c856"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-media-contexts.log",
+      "sha256": "a35bae9ea560e6e26a18e9e40e4f9d1a942314ac9c59b29138371c95dcbc4f27"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-media-dom.log",
+      "sha256": "b85c70d3e27b515e96daa4d3f493a56874f60b5c52e48a1c16e17deaa7850d0c"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-operation.log",
+      "sha256": "c6c3540926fca38818d701c6dba8cca807c048f59330cfc9accadffc4c23355e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-panel-book.log",
+      "sha256": "893993d62e91486e2baee4a5c1f09c768bec936afd45af1c337bedccbfc45b0e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-service.log",
+      "sha256": "0ce49fc844cb08a09d6eee45bcee7f8a11104e4a3663115cb0e51ee99c593688"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-final-transport.log",
+      "sha256": "07b4600e7d0b369b0d4a0f3e5c071020c24b9b9e0939bb4014699816edf5ad95"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-stage-result.json",
+      "sha256": "dc80314dcda0d433027a458c10f5732b0e67e85bc2c3c91ff11e3f41f436b86a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-api.js",
+      "sha256": "e64b060f006147ee3e392ef821b850f0f435dd129494e6fb79460f42a4eec2e7"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-capture.js",
+      "sha256": "ea3c2d06e32fd22d93246550b54ce37145afd2bbdcad09caf37206e615c0ab57"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context-reader.mjs",
+      "sha256": "a0b49e02df0aa956233d9f23a3f5866f0cc01b635a5d0e286439603ebe38813a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context-route.mjs",
+      "sha256": "505ba319f61569abc9c6b70ddc52bfa7529ded3692be5d8af9d1fded2999918c"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context.mjs",
+      "sha256": "8238e8d0af0cc16e7acef94d2c9caa7e8fe4eefeac3611dceffe028551f8becd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs",
+      "sha256": "a0b5c99711f1f6354554bf2e5d6c618d33d9d09a445f1800f0efce149d341142"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "b0a1b8c710bc7d685d34a560c93575393222cfbc9817014f68ec7dba8ffdbe02"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-browser.mjs",
+      "sha256": "bfd403a0e5143a2a92fe9ddf41197f615f2cc952ea12522bbdeec86a3cf79b0e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-dom.mjs",
+      "sha256": "63465d89585a8bcfa0fe8d7b9f62681180768dfa9b7c5b93d36c5fd8e2dcde75"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-model.js",
+      "sha256": "55c398dea3f896a4c0a6a6cb9c3b17a15c33539dd43dd077a8804c4b165638bd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-route.mjs",
+      "sha256": "5385f98371b64c8c13b7298951a7f03062f6a5b9720f42c4faa71a903561203f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs",
+      "sha256": "6cae2f67af9b33622eac1c341df2c5021ce2b84825adeb6cd471b7b695152034"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-ai.js",
+      "sha256": "d6e6ecc5fd3278afd3bf92d41f94159de9d14fa9ce536b3f584f3b6cfbd4aedf"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-vision.css",
+      "sha256": "2dc683214295a6fd288048c672fe9d30071be8bac5b8568c227ae250872b6b23"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-client-browser.mjs",
+      "sha256": "8fda4fe1a15eb5890d215ca9415d5aec3a569299fd8fcf86686f1c3524cfabac"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-history-route.mjs",
+      "sha256": "40cc9e2159947d4196dc7d65dd00df6ff591133270abccc5b7aced1ab768a3b3"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-images-route.mjs",
+      "sha256": "02a0a0fa6e04f8ffa1736855b106606dd29a763d64f29e74b6dc48cc3b3d574f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-input.mjs",
+      "sha256": "e89cbde77216dcbba675eb1b7de3e9774bf3456e2d616ee80f6081580db06f96"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-contexts.mjs",
+      "sha256": "f9a6fc72986362cb4390085cf87f02dd1abf4132944d98c1e84864e119202807"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-dom.mjs",
+      "sha256": "2882077c7b6fc97ccfd5f98e986721f0c30ae5b663fe31963846102e88a8c250"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-picker-style.mjs",
+      "sha256": "461e7ee64a3fb192ae457fdf1c8db5e838fe556c977ba5c02831208579dda413"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "sha256": "d731e783d61a555e8283413b403b01963faa9dec91d0435b80affeba9e238ef0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-panel-book.mjs",
+      "sha256": "b6969a5a117371fdf54b7f17ebcdfb15208270547eeca02f0bad00feac7a2e29"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-service.mjs",
+      "sha256": "0858476a8482456b621c6c6ffaaa2111b96ece407b50d03ca131792741bb3c39"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-transport.mjs",
+      "sha256": "1e0f0787d16aa7bbaa03420a44a337598f9b64957a6a421dbab4f887ced7561b"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/auth-repair-result.json",
+      "sha256": "87ec0a8f5e1a190375f423ab27bfa605085437d3f086f83892921c17537ce5f0"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/full4-result.json",
+      "sha256": "7d4271876b50c8d15f04c87882ff07ac6a16ec50490653fcee121472026ceb47"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/full4.log",
+      "sha256": "08b3842dc48332ac41a7080a3dc5fcfe9e48d7f77a6c5cdd3d8d32bd9931e593"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/result.json",
+      "sha256": "e557c9e261a991b8b1bf64b9b724e360113cf7dddd07440cb6d0b7fa21ba9d1b"
+    },
+    {
+      "file": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+      "sha256": "38ea470d7d29a544a5a89cf0d13d037c92550d8abc1c21d5c5b39000392b2710"
+    },
+    {
+      "file": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+      "sha256": "1baced6e2ee0c18de98890b224f8f0b8bfb80c65fdf99839a43de27e0cba0b09"
+    }
+  ]
+}

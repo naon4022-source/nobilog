@@ -1,0 +1,29 @@
+{
+  "status": "read-only source findings; actual nonmath movie approval not established",
+  "sourceDirectory": "教材整理/Claude_Codex共有/教科動画",
+  "sourceSha256": {
+    "make.py": "35773a6def6b285a810be639fd85afffa52e5ca7a8d1da80e72893da41a7543d",
+    "check.mjs": "b220e64acf1c49660d12d31cec327a20a201a8991d350161fbb1d4fa297ddeee",
+    "render_fast.mjs": "6c70fd5829d205b8e0fe37d2b5667928c9acfcfa90191611d0f52b90f8e3de60",
+    "template.js": "a3a31afd076cdf05a0996d33d840a22be5a023e96e1678ca8b432df4cb2b51e9"
+  },
+  "existingSourceSceneDirectory": "教材整理/Claude_Codex共有/教科動画/場面",
+  "existingTimelineDirectory": "教材整理/Claude_Codex共有/教科動画/時間割",
+  "generationEntry": "make.py",
+  "findings": [
+    {
+      "type": "shared voice settings mismatch in generator configuration",
+      "evidence": "make.py imports shared BASE filter but hardcodes JA_RATE=205; current approved shared math voice rate is175",
+      "scope": "Generator source only; does not by itself prove which settings produced each existing movie. Do not regenerate completed movies based only on this observation. Bind current MP4/source/timeline/generation records first."
+    },
+    {
+      "type": "prior scene check is a different scope",
+      "evidence": "make.py --check builds a synthetic one-second timeline per step; check.mjs captures k+0.92 per step and WARN messages",
+      "scope": "This is source layout checking, not full actual AV decode or every1.5s actual movie review."
+    }
+  ],
+  "next": "After standalone whole12432 finishes, inventory existing nonmath proof artifacts and determine actual per-movie gap. Keep106 nonmath movie references separate from Codex75/Claude19 math. Do not duplicate completed generation. Drawing/AI/plans still pending.",
+  "newVideoGenerations": 0,
+  "newAVDecodes": 0,
+  "productionFilesEdited": false
+}

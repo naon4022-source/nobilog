@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script src="動画エンジン/engine.js"></script><script>
+const labels=['正負の数','文字式','方程式','変化と対応','平面図形','空間図形','データの活用'];
+function axes(){arrow(450,420,450,190,C.dim,3);arrow(450,420,860,420,C.dim,3)}
+window.SCENE={draw({i,p}){header('7章のつながり',i===8?'まとめ':`${Math.max(1,i)} / 7`);
+ if(i===0||i===8){labels.forEach((s,k)=>{const x=160+(k%4)*255,y=150+Math.floor(k/4)*140;rbox(x,y,225,102,16,'#fff',C.blue,2);text(`${k+1}章`,x+112,y+38,32,C.blue,'center');text(s,x+112,y+79,32,C.ink,'center')});text(i===8?'図 ↔ 式 ↔ 理由':'数と式 → 関数 → 図形 → データ',640,485,44,C.orange,'center');return}
+ const k=i-1,u=seg(p,.15,.70);rbox(210,118,860,405,22,'#fff',C.blue,3);text(labels[k],640,172,42,C.blue,'center');
+ if(k===0){arrow(370,340,920,340,C.ink,4);[-3,-2,-1,0,1,2,3].forEach(n=>{const x=640+n*75;g.fillStyle=C.ink;g.fillRect(x,327,3,26);text(n<0?'−'+(-n):''+n,x,390,36,C.ink,'center')});ring(640+150*u,340,22,22);text('0からの向きと距離',640,475,40,C.ink,'center')}
+ if(k===1){text('1個の値段 × 個数',640,280,54,C.ink,'center');text('120 ×',580,385,60,C.ink,'right');text(u<.5?'3':'x',650,385,60,C.orange,'center');ring(650,365,46,50);text('変わる数を文字へ',640,475,40,C.ink,'center')}
+ if(k===2){const y=300;g.strokeStyle=C.ink;g.lineWidth=5;g.beginPath();g.moveTo(420,y);g.lineTo(860,y);g.stroke();g.beginPath();g.moveTo(640,y);g.lineTo(600,430);g.lineTo(680,430);g.closePath();g.stroke();rbox(380,230,150,60,10,C.sky);rbox(750,230,150,60,10,C.sky);text('左辺',455,272,36,C.ink,'center');text('右辺',825,272,36,C.ink,'center');g.save();g.translate(0,-70*u);text('＋同じ量',455,390,36,C.orange,'center');text('＋同じ量',825,390,36,C.orange,'center');g.restore();text('同じ操作で、等しさを保つ',640,490,40,C.ink,'center')}
+ if(k===3){axes();g.strokeStyle=C.blue;g.lineWidth=6;g.beginPath();g.moveTo(450,420);g.lineTo(780,215);g.stroke();const x=540+90*u,y=420-(x-450)*205/330;ring(x,y,20,20);text('x が2倍 → y も2倍',640,480,42,C.ink,'center')}
+ if(k===4){g.strokeStyle=C.blue;g.lineWidth=5;g.beginPath();g.moveTo(480,400);g.lineTo(800,400);g.lineTo(640,220);g.closePath();g.stroke();const a=-Math.PI/2+2*Math.PI*u;ring(640+155*Math.cos(a),320+100*Math.sin(a),25,25);text('長さ・角度・位置関係',640,490,40,C.ink,'center')}
+ if(k===5){for(const [x,y] of [[480,290],[560,290],[640,290],[720,290],[560,210],[560,370]])rbox(x,y,80,80,0,'#eef5fc',C.blue,3);const a=u*Math.PI/2;g.save();g.translate(560,290);g.scale(1,Math.max(.06,Math.cos(a)));rbox(0,-80,80,80,0,C.sky,C.orange,4);g.restore();text('面のつながりを調べる',640,505,40,C.ink,'center')}
+ if(k===6){for(let j=0;j<5;j++)rbox(420+j*90,420-[50,125,185,130,70][j],65,[50,125,185,130,70][j],0,C.sky,C.blue,2);ring(450+360*u,260,50,50);text('多い所・散らばりを読む',640,490,40,C.ink,'center')}
+}};
+</script>

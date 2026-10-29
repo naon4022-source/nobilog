@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/explanations-20261025/before/教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py

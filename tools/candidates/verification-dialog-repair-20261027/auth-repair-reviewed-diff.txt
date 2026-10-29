@@ -1,0 +1,23 @@
+--- 
++++ 
+@@ -38,7 +38,12 @@
+  ok(!first.overlay,'normal login opens app');
+  ok(first.cash===first.base+1000000,'real money loader/save applies one million');
+  ok(first.grants.filter(id=>id==='20261018-souta-start-cash').length===1,'one grant in real money record');
++ // cloudPush can return early while an earlier automatic save is busy.
++ // Settle that save, then verify acknowledgement before triggering reload.
++ await page.waitForFunction(()=>!cloudState.busy);
+  await page.evaluate(async()=>{await cloudPush();if(cloudDirty())throw Error('synthetic save not acknowledged');});
++ await page.waitForFunction(()=>!cloudState.busy&&!cloudDirty(),null,{timeout:10000});
++ ok(await page.evaluate(()=>!cloudState.busy&&!cloudDirty()),'save acknowledgement settled before reload');
+  ok(db.keys().some(k=>k.startsWith('cloud-save:u4')),'real Worker SQL stores own record');
+  await page.reload({waitUntil:'load'});
+  await page.waitForFunction(()=>serverBootReady&&!authLeaseBlocked&&currentUserId==='u4');
+@@ -51,6 +56,6 @@
+  ok(dialogFailures.length===0,'dialog handling completes before teardown');
+  closing=true;await page.close();await drainDialogs();
+  ok(page.isClosed()&&dialogFailures.every(x=>x.duringClose&&/Not attached to an active page/.test(x.message)),'only a detached closed target may end a pending dialog');
+- await writeFile(new URL('login-flow-result.json',root),JSON.stringify({checks,passed:true,requests,realApiCalls:0,realUserData:false,source:'actual published candidate frontend and Worker, in-memory SQLite and KV'},null,2)+'\n');
++ await writeFile(new URL('login-flow-current-result.json',root),JSON.stringify({checks,passed:true,requests,realApiCalls:0,realUserData:false,source:'actual published candidate frontend and Worker, in-memory SQLite and KV'},null,2)+'\n');
+  console.log('Souta normal login:',checks,'checks passed; real cloudBoot/grant/save/session restore, memory-only SQL, both other accounts unchanged');
+ }finally{closing=true;await browser.close();await drainDialogs();server.close();db.close();}

@@ -1,0 +1,16 @@
+教材整理/Claude_Codex共有/国語全体制作/原稿/u01.py
++         'steps': ['実際に起きた出来事を述べた文をさがす（体験）。', '筆者の判断や意見を述べた文をさがす（考え）。', '体験が、考えのどんな根拠になっているかを言う。'],
++  'easy': ['文末は手がかり。実際に起きたことか、筆者の判断や意見かを、文の内容から確かめよう。', '考えを見つけたら、「なぜそう思った？」と聞き返し、その答えになる体験をさがす。', 'まとめの言葉（つまり・このように）のあとに線を引く。'],
+
+教材整理/Claude_Codex共有/国語全体制作/原稿/かいわ.py
++   ('のびー', '文末は手がかり。内容を読んで、起きた出来事と筆者の判断を分けよう。まとめ：体験が、どの考えを支えているかを結びつけるんだ。'),
++   ('のびー', 'まず、いつ・だれに・何が起きたかが書かれた文に線を引こう。'),
++   ('ソラ', '次に、筆者がどう考えているかを、文の内容から確かめるんだね。'),
+
+tools/candidates/textbook-vision-20261027/main/checked-source.cjs
++// Reviewed teaching successor; the original vision assertions remain archived and executed.
++module.exports=require('../../textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs');
+
+.claude/verify/run.sh
++node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-book-playback.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs" || fail=1

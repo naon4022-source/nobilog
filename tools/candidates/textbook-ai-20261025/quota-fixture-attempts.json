@@ -1,0 +1,10 @@
+{
+  "status": "corrected fixture failures retained in record",
+  "failures": [
+    "First ceiling fixture selected Mini, which intentionally has no chat rights: plan_required.",
+    "Second fixture selected Standard, which also intentionally has no chat rights: plan_required.",
+    "Third fixture had env(re) self-reference typo: ReferenceError."
+  ],
+  "correction": "Use actual chat-eligible Pro 500/day, assert Free/Mini/Standard are denied, correct only fixture self-reference. Product feature gates were not broadened.",
+  "final": "57 checks passed; actual quota tests exercise 505 parallel distinct requests and concurrent identical IDs/refunds."
+}

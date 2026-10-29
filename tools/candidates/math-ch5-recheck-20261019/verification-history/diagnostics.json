@@ -1,0 +1,10 @@
+{
+  "reviewerFailure": "利用上限により最初の2ブラウザ検証は自動承認レビュー未完了で未実行。後の通常申請は承認され実行成功。",
+  "verifierCorrections": [
+    "SVGはviewBoxのみで幅指定がなく、自然幅1600という検査側の誤認を修正。原本viewBoxと画像復号で検査。",
+    "候補ビルダーの--check終了箇所を候補内だけ迂回。コピー抑止を保持して候補JSONを出力。",
+    "本棚JSONは末尾改行だけ相違。データ一致を確認し元のバイトを保持。",
+    "原稿表示台帳は配列でなくunitsを持つ辞書。スキーマを確認して対象単位だけ比較。"
+  ],
+  "materialsChangedForVerifierFailures": false
+}

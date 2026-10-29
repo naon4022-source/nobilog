@@ -1,0 +1,19 @@
+--- before/教材整理/Claude_Codex共有/教科図解/hints.py
+
++++ 教材整理/Claude_Codex共有/教科図解/hints.py
+
+@@ -10,0 +11 @@
+
++from reviewed_fractions import final_svg
+@@ -21 +22 @@
+
+-    return g.done()
++    return final_svg(code+'-DQ',g.done())
+--- before/.claude/verify/run.sh
+
++++ .claude/verify/run.sh
+
+@@ -136,0 +137,2 @@
+
++python3 "$PROJECT_DIR/tools/candidates/textbook-final-20261023/verify-science-fraction-generators.py" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/verify-science-fraction-fit.mjs" --integrated || fail=1

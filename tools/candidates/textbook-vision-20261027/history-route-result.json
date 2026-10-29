@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "checks": 222,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context.mjs",
+      "sha256": "8238e8d0af0cc16e7acef94d2c9caa7e8fe4eefeac3611dceffe028551f8becd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-route.mjs",
+      "sha256": "5385f98371b64c8c13b7298951a7f03062f6a5b9720f42c4faa71a903561203f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "b0a1b8c710bc7d685d34a560c93575393222cfbc9817014f68ec7dba8ffdbe02"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs",
+      "sha256": "6cae2f67af9b33622eac1c341df2c5021ce2b84825adeb6cd471b7b695152034"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-history-route.mjs",
+      "sha256": "40cc9e2159947d4196dc7d65dd00df6ff591133270abccc5b7aced1ab768a3b3"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-history.mjs",
+      "sha256": "9d8402531af0c181743514effe1eb365d118e51eeb6363711f8d816d17849bc6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-chat-context.mjs",
+      "sha256": "e081ca4b5a242d99f9c3267743399f84bf71a65107c57ae38d891918b461129d"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-service.mjs",
+      "sha256": "621e400323979f4e2a35a13ba58946f12a95e7308ea57f63154aa8e8b379c18d"
+    },
+    {
+      "file": "site-assets/textbook-ai-context-math1.json",
+      "sha256": "23fe208271f594da410a335c556a9532322b5f56eb71cad5ed9be83febbbdcfe"
+    },
+    {
+      "file": ".claude/verify/d1-sqlite.js",
+      "sha256": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb"
+    }
+  ],
+  "scope": "Candidate history/capture/HTTP with actual SQLite and legacy text service, verified public catalog and synthetic HTTP/images only. Immutable exact compiled-policy hashes, same-ID recovery, own-anchor text+image history, unknown no resend, Free/provider-off read, synthetic historical-version fixture, no binary snapshot duplication. Main router/client/IndexedDB UI integration not yet done."
+}

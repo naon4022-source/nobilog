@@ -1,0 +1,205 @@
+{
+  "status": "passed",
+  "checks": 34,
+  "clone": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobilog-practice-successor-4wIA71",
+  "integrationChecks": 88,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/main-integration.json",
+      "sha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs",
+      "sha256": "f212e47e3dd56ff90a5490d0ee91a85fbd5786bc59ff17b5745a631ab6a853e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/build-successor.mjs",
+      "sha256": "899cf3d21c59567df2b0a9aa8e237bd5be5965b47a672d0d5d69422c2546b8fe"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-successor-clone.mjs",
+      "sha256": "aae5aa8b138c85a7dbf7b63083c9659b872d6874959abefbce6b8d73b84c3c65"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-review-practice-library.mjs",
+      "sha256": "c2143fdce5b84ac1981289620c8c551657e0abfe6e3a747c33b71fa2c0d6269d"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-content.mjs",
+      "sha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-jobs.mjs",
+      "sha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-test-review-service.mjs",
+      "sha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "sha256": "1c3d211912688f75e328937f2ffa2a9c9afb5f4f852a7a3b10c8af8ee39ab17a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/review-practice.js",
+      "sha256": "1c3d211912688f75e328937f2ffa2a9c9afb5f4f852a7a3b10c8af8ee39ab17a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/review-practice.js",
+      "sha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "sha256": "659da9c8c75318eb7be439872f0d1a634b35f1b7f58c1e60ad6a79b5ba27a0b4"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/review-practice.css",
+      "sha256": "659da9c8c75318eb7be439872f0d1a634b35f1b7f58c1e60ad6a79b5ba27a0b4"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/review-practice.css",
+      "sha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "8dccbd1e1041e098da36f1fd360f63a339a70872737361a6817a59e120bbcf6a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "8dccbd1e1041e098da36f1fd360f63a339a70872737361a6817a59e120bbcf6a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "c6b5abf156d0ea0396fa541467c155849c89ae62e3e16ec2c1f89919885f44f5"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "c6b5abf156d0ea0396fa541467c155849c89ae62e3e16ec2c1f89919885f44f5"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "f849445121367c97e0fe40e28b83daea1dca5d181ceae94cd3ae700cb4a1689f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "165db8841613e08a7aae7083876d6f5fedfa8020fa795605c670d86c93cc6aa0"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "165db8841613e08a7aae7083876d6f5fedfa8020fa795605c670d86c93cc6aa0"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "06a5139905aeebdfce98b8d8b0edcd93730464190a56f9c4017b320e2f1e406c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "88bf9aa1eacf0ceba3511a330ff5ab218980a8dfb23a08f6a886c3f243cb0864"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "88bf9aa1eacf0ceba3511a330ff5ab218980a8dfb23a08f6a886c3f243cb0864"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "0f50e50148d34751214bb9a18a903fded0c9435b466abb80bcbf35b157d1ce3e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "c34e17d5aff23da46c6b47185e1f1e48d6be0bc58f4de27f5425c6b08c6c895e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "c34e17d5aff23da46c6b47185e1f1e48d6be0bc58f4de27f5425c6b08c6c895e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "427f03597c449f2e653ef11df8fa4c32814da197d1d2d0ccf859a5db57b92d3d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "427f03597c449f2e653ef11df8fa4c32814da197d1d2d0ccf859a5db57b92d3d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "108c5074b16baef8120278b188d11ba69042d1f73150813402f7f51ecd7f2118"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "bd2e7c7d1071815a8d8641251ac5319a3e5842c6bd3769d7563c82983b354d0d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "bd2e7c7d1071815a8d8641251ac5319a3e5842c6bd3769d7563c82983b354d0d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "3f48daa78744dcfd3cfbe87bf192f88f46baf8a68a50d3b3c7f6c04767d53b6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "2877bdc821d8cda97e057179d34cfb278c3e8cfecd0027c5a1fcdca41bf45898"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verifier-before/tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "2877bdc821d8cda97e057179d34cfb278c3e8cfecd0027c5a1fcdca41bf45898"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/adapted/tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "caaf83dd01bc6a179b3b800e1c0df68d1dce67bc28cb5de3f928125a7e2a4dd6"
+    }
+  ],
+  "scope": "Isolated successor promotion only: all7 product/8 verifier deltas, full original practice/worker/client/October25 guards, source/proof/backup/delivery mutations refused, original integration conditions retained. Main untouched, no runtime/provider/data/deployment."
+}

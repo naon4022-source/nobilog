@@ -1,0 +1,11 @@
+{
+  "status": "29 actual encoded samples viewed; v3 not approved due diagram-role regression",
+  "indexSha256": "3517d3058ec31c3569355e502be02bc75fa2e7d780a4607c9da592adab88e7cb",
+  "finding": "Removing the 気をつけて prefix changed automatic role from caution to pt. Correct speech/caption became a generic card, losing reviewed red wrong/green right illustration.",
+  "repair": "V4 explicitly fixes scene5 role to caution; source say/cap, timing and all7 valid audio clips unchanged. V3 retained.",
+  "remaining": [
+    "Direct v4 preflight screenshot review before rendering",
+    "V4 fullAV/actual frames/4width playback"
+  ],
+  "mainChanged": false
+}

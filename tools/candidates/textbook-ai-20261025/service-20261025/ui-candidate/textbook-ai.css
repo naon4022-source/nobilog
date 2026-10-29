@@ -1,0 +1,12 @@
+.tb-ai-picking [data-annotation-anchor]{cursor:pointer;outline:1px dashed #3b6ba6;outline-offset:3px}
+.tb-ai-picking [data-annotation-anchor]:focus{outline:3px solid #3b6ba6}
+.tb-ai-card blockquote,.tb-ai-answer,.tb-ai-history p{white-space:pre-wrap;overflow-wrap:anywhere}
+.tb-ai-card textarea{box-sizing:border-box;width:100%;max-width:100%;font:inherit;line-height:1.7;min-height:7rem}
+.tb-ai-reference{font-size:.85em;line-height:1.6}
+.tb-ai-card .tb-btn{max-width:100%;white-space:normal}
+.tb-ai-history{min-width:0}
+.tb-ai-card{background:var(--box-bg,#fff);color:var(--text-color,#25313d);overscroll-behavior:contain}
+.tb-ai-top{position:sticky;top:-22px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--box-bg,#fff);padding:8px 0}
+.tb-ai-card button,.tb-ai-card textarea,.tb-ai-card blockquote{background:var(--box-bg,#fff);color:var(--text-color,#25313d)}
+.large-text .tb-ai-card{font-size:18px}
+.tb-ai-card :disabled{opacity:.5;cursor:not-allowed}

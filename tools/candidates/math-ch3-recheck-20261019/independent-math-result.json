@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "checks": 97,
+  "videos": [
+    {
+      "id": "M1-C3-S1-V01",
+      "status": "passed",
+      "reason": "x=1〜4の左右の値を別計算し、一致する解を検算。",
+      "scriptSha256": "e8c8fc3faf3a2dfe46fc075e5957cdf7ac32802d01ea0f08e158f7b66a11b793",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S1-V02",
+      "status": "passed",
+      "reason": "80=50+30、左右から30を除いて等しさを保つ。",
+      "scriptSha256": "e00a63fe9b926fdee83dd9f0a7b930214c912190eeb7e5814f321774d7aaa26f",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S1-V03",
+      "status": "passed",
+      "reason": "両辺から5、2xを順に引き、非零の4で割る同値変形。",
+      "scriptSha256": "47cefc8d6658be446bcf5f6c2f9658c61370126182eb893e1476f34d700f6e9a",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S1-V04",
+      "status": "passed",
+      "reason": "分母4と3の最小公倍数12を全項へ掛け、括弧と−1にも掛ける。",
+      "scriptSha256": "b5856f945ec67850f0e6c722f633173ddf33e62ba2cb3871a17eb8cddc5f253e",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S1-V05",
+      "status": "passed",
+      "reason": "x/10=2/5の分母は非零。両辺へ50を掛けた5x=20を検算。",
+      "scriptSha256": "05e9e532bf4a19932b345a83ae2b13694d95889aa43c76cd1d25dd35c804681b",
+      "spokenSteps": 5
+    },
+    {
+      "id": "M1-C3-S1-VP",
+      "status": "passed",
+      "reason": "同じ重さを除く・移項・全項への乗法・比例式の4場面は上の検算と同一。",
+      "scriptSha256": "90ee015a395418ad7b947a54dbc18e9253a0ab35c41dd48e2bd07684398e8a69",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S2-V01",
+      "status": "passed",
+      "reason": "6x+15と8x−9が同じ全体。正整数の人数と図の72/87/96の長さを検算。",
+      "scriptSha256": "5147a91913571aefac793253f3e64e6d73a64f03ba53eb1cd69ff4f6d2824eaf",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S2-V02",
+      "status": "passed",
+      "reason": "妹の先行15分・分速60と姉150の時間差、同じ道のり、動きの0.6/0.4の比を検算。",
+      "scriptSha256": "36b73ff4c193059f9fc2a6b20e4658a2c80134639dd73222135fafdecd7d9690",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S2-V03",
+      "status": "passed",
+      "reason": "白:青=2:7から白:全体=2:9。9等分・180gの関係を分数で検算。",
+      "scriptSha256": "39601dd960dd660857c312db0a9e865463d291f8e65a9dc12bd05ecdc0ef50f0",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-S2-VP",
+      "status": "passed",
+      "reason": "代金+おつり=支払い、追いつきの距離一致、部分と全体の比。再利用場面も上の数量条件と同一。",
+      "scriptSha256": "6bcbe0849fd8e5ef82e01f1017edf1c6f160cbd013bf5282d3bbd0cf57edb0bb",
+      "spokenSteps": 6
+    },
+    {
+      "id": "M1-C3-REVIEW-V01",
+      "status": "passed",
+      "reason": "同値変形・数量設定・道のり一致・単位と意味の確認。再利用場面を同じ検算に対応。",
+      "scriptSha256": "92180191866b0bbfbe67e76a8fb0d629e968a51e41cc3991c0905e567dbdfa8e",
+      "spokenSteps": 6
+    }
+  ],
+  "sceneSha256": "1e3730fcbcce6665fe8972dafbb252dbf6da7522b0350546f63f44a6b3d5fad3",
+  "scope": "11本の動画台本・既表示数式・数量と比の独立計算。本文全問/出典写真全文照合や新たな耳の確認は含まない。",
+  "learnerFacingFilesChanged": false,
+  "realUserDataUsed": false
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Only support new session creation transport in old isolated UI suites; retain all original assertions and real grading. Dedicated new browser suite uses actual session/record HTTP and SQLite.",
+  "files": [
+    {
+      "file": ".claude/verify/verify-material-browser.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/legacy-fixture-before/.claude/verify/verify-material-browser.mjs",
+      "beforeSha256": "3e3d71b04cbcf8f6bcd7369cd909e50cdfa163dd8085916a35536674693175b6",
+      "afterSha256": "1777865ff358556c5d9dba7f709da13eff662cebbecb53b01025337420bfc3c1",
+      "edits": [
+        {
+          "before": "const require=createRequire(import.meta.url);",
+          "after": "const require=createRequire(import.meta.url);\nconst {makeSessionFixture}=require('./material-test-session-fixture.cjs');"
+        },
+        {
+          "before": "var attempts=new Map(),reviewFixture=null;",
+          "after": "var attempts=new Map(),reviewFixture=null;\nconst sessionFixture=(${makeSessionFixture.toString()})(()=>crypto.randomUUID());"
+        },
+        {
+          "before": "async function cloudTry(path,options){\n if(failSave)",
+          "after": "async function cloudTry(path,options){\n if(path.startsWith('/material-test-session'))return sessionFixture(path,options,currentUserId,(await(await fetch('/material-bank.json')).json()).units,[...attempts.values()]);\n if(failSave)"
+        },
+        {
+          "before": " if(path.startsWith('/material-test-session'))return sessionFixture(path,options,currentUserId,(await(await fetch('/material-bank.json')).json()).units,[...attempts.values()]);\n if(failSave)return Response.json({error:'fixture unavailable'},{status:503});",
+          "after": " if(failSave)return Response.json({error:'fixture unavailable'},{status:503});\n if(path.startsWith('/material-test-session'))return sessionFixture(path,options,currentUserId,(await(await fetch('/material-bank.json')).json()).units,[...attempts.values()]);"
+        }
+      ]
+    },
+    {
+      "file": ".claude/verify/verify-material-review-browser.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/legacy-fixture-before/.claude/verify/verify-material-review-browser.mjs",
+      "beforeSha256": "835c303fafeb4bd9d0e1eaaab9492144ff4cdae3dfda163f9424a234fe860048",
+      "afterSha256": "36826192dbe4efef527dc7396d4a1fc9b0fbe47084d22553f7587e843f0c1d12",
+      "edits": [
+        {
+          "before": "const require=createRequire(import.meta.url),{D1SQLite}=require('./d1-sqlite.js');",
+          "after": "const require=createRequire(import.meta.url),{D1SQLite}=require('./d1-sqlite.js');\nconst {makeSessionFixture}=require('./material-test-session-fixture.cjs'),sessionFixture=makeSessionFixture(randomUUID);"
+        },
+        {
+          "before": "   const response=await materialRecordsRoute(",
+          "after": "   const response=req.url.startsWith('/api/material-test-session')?sessionFixture(req.url.slice(4),{method:req.method,body},uid,bank.units):await materialRecordsRoute("
+        }
+      ]
+    }
+  ]
+}

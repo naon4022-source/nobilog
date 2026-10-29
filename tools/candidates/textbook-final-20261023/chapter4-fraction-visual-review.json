@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24",
+  "status": "candidate reviewed; not integrated",
+  "diagrams": 8,
+  "rows": 11,
+  "reviews": [
+    {
+      "id": "M1-C4-S2-FIG03",
+      "candidateSha256": "c6108c37cc11370d7be3e364c7e719be96ad9faac22adf7d6331eb5626326932",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S2-FIG03.png",
+      "screenshotSha256": "7760f275e0c67dfab60f6fbc2c630cb18d339bce1b9e8fbae50969d6cf2b1e3c",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S2-D03",
+      "candidateSha256": "a89774425a447532bd01fde2d3b0a3f3eec5cf9800de949f9c810553103de0fb",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S2-D03.png",
+      "screenshotSha256": "a5b27867b80a5da2b67762c51ea3c619584ec3e0f60ac2b7583ec6cc435a7876",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S3-FIG01",
+      "candidateSha256": "67e765227608e5c5fe3f2534fb19871db1db47faaae5c1e0798d9f2ea4e04f6c",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S3-FIG01.png",
+      "screenshotSha256": "28a77378d2592e1e68405ba4d403544956f6e810999042f46b612f2bea45f114",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S3-FIG02",
+      "candidateSha256": "c70a17e7c1379f5416a10ef036e29d6e42cd108a091ae634d81f7dbea31820a0",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S3-FIG02.png",
+      "screenshotSha256": "a4662c23ccae5a5c09624a1cbe4ddf4215e4301415525d05a7834d44e8a711d7",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S3-D02",
+      "candidateSha256": "3ca30ac5afa751e83d01f6815e08135c9ed1042a553236a4184a9d21d22f2eca",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S3-D02.png",
+      "screenshotSha256": "320f5875191aac068d8ce7615328daf101cbab12122e4dfef40c5d511f9dbfc7",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S3-DMAP",
+      "candidateSha256": "fbd04a6d83886db5fe525c171bf8382dc6cb79baf2ab18b0a18228719f21457e",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S3-DMAP.png",
+      "screenshotSha256": "24b79a1c76b8115f1790c5fb5f246dc69c104e01eeee38209ea51f1d6fdf9c8c",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-S4-DMAP",
+      "candidateSha256": "7a466d6b1865b2c920383b9e2e491d2b2fc54725cc4389deb53cf4ed699233b9",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-S4-DMAP.png",
+      "screenshotSha256": "6d265e6c96cebe246803fbbf9c7434999941344f0d7349cec1d4192cb17f9c34",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    },
+    {
+      "id": "M1-C4-REVIEW-E01",
+      "candidateSha256": "0f78889694e7d7ca6b4d7f7170cb39d9cff17d1ddc619699e384c22cb10b9900",
+      "screenshot": "tools/candidates/textbook-final-20261023/chapter4-fraction-candidate/M1-C4-REVIEW-E01.png",
+      "screenshotSha256": "f82e62fa1dc85609e6921183ced5a71e8ee2bed7cc71af289f63381215991e3a",
+      "result": "目視範囲で分数・符号・図との関係に問題なし。元文字列と非文字図形は一致。"
+    }
+  ],
+  "mathReview": [
+    "2/3 negative slope graph passes (-3,2),(3,-2); 1/3 graph rises one per three",
+    "24 cookies: 1,2,3 people ->24,12,8 each; multipliers1/2,1/3 retained",
+    "12/x labeled points (1,12),(2,6),(3,4),(6,2),(12,1) all xy=12",
+    "6/x positive branches I/III; -6/x branches II/IV; nonzero x implicit existing graph unchanged",
+    "a/x and x doubling -> y half retain inverse proportion concepts"
+  ],
+  "initialVisualCorrection": "Two fractions reached beyond header fills. Preserved first candidates; adjusted only those two text font/position; all other six candidates byte-identical.",
+  "fitProof": "chapter4-fraction-candidate/fit-check.json",
+  "beforeIntegrationRequired": [
+    "register exact source/generator hashes and preserve unrelated outputs",
+    "bridge historical chapter4 image evidence without overwriting historical hashes",
+    "actual-book four-width checks",
+    "final required full verification"
+  ],
+  "noNewVideoGeneration": true
+}

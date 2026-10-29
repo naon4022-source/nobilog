@@ -1,0 +1,11 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:47
+ const evidence=new Set([signature.beforeFile,signature.lastAvailablePreviousResult.file]),evidenceFile=(file,digest)=>{if(path.isAbsolute(file))file=path.relative(root,file);if(!safe(file))throw Error('approved evidence path');evidence.add(file);if((assets||!media(file))&&sha(prior(file))!==digest)throw Error('approved evidence drift:'+file);};
+                                                                                                                                                                                                    ^
+
+Error: approved evidence path
+    at evidenceFile (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:47:197)
+    at validated (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:56:39)
+    at checkMainSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:71:60)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-main-integration.mjs:14:7
+
+Node.js v24.18.0

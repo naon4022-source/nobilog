@@ -1,0 +1,102 @@
+{
+  "status": "scoped tool derivatives prepared; scene refinement/validation pending",
+  "files": [
+    {
+      "file": "build-videos.py",
+      "source": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/build-videos.py",
+      "sourceSha256": "9e80a6fddfb7917e93671d0458f888b88a420d920ce21450c8ab0eb43cc62c7f",
+      "sha256": "a6bb4702b7f39a148de0d87353604430db50790ea69a16d07c7c9877224433d6",
+      "edits": [
+        {
+          "before": "{'K1-C1-S1-V01','K1-C1-S1-VP'}",
+          "after": "{'K1-C2-S5-VP'}"
+        },
+        {
+          "before": "Build two isolated chapter1 corrections",
+          "after": "Build the isolated chapter2 intonation correction"
+        },
+        {
+          "before": "two candidates generated; main unchanged",
+          "after": "one candidate generated; main unchanged"
+        }
+      ]
+    },
+    {
+      "file": "scene.js",
+      "source": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/scene.js",
+      "sourceSha256": "3b5781a8958d7331feb0288e4ff9bbed87f805a4915bcde1953baab85f5bf947",
+      "sha256": "9787d7e20400d13ad407f536b0629568f45f55475a68806268a29a865518aba8",
+      "edits": [
+        {
+          "before": "point:'文末だけで決めない'",
+          "after": "point:'この節のポイント'"
+        }
+      ]
+    },
+    {
+      "file": "verify-media.py",
+      "source": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/verify-media.py",
+      "sourceSha256": "aadd7f6a2b7a8e32921dbbed02e1c4ca4dbdfa67a5f31a9675bdddbacc32e339",
+      "sha256": "92fd73298c6026b3e500418a992c88a14ef60b69f7087c745a8c2f51237bb0bb",
+      "edits": [
+        {
+          "before": "these two candidates",
+          "after": "this chapter2 candidate"
+        },
+        {
+          "before": "['K1-C1-S1-V01','K1-C1-S1-VP']",
+          "after": "['K1-C2-S5-VP']"
+        },
+        {
+          "before": "{'K1-C1-S1-V01','K1-C1-S1-VP'}",
+          "after": "{'K1-C2-S5-VP'}"
+        }
+      ]
+    },
+    {
+      "file": "verify-scene.mjs",
+      "source": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/verify-scene.mjs",
+      "sourceSha256": "2faeba5903db3ed5d7dbc46fd5880f0ce0b31a6b186e738967419325a960d808",
+      "sha256": "5d24dcf2bb483c0a4b9e3500bcca5d4e32a03662186376708cf2f44eefcefd16",
+      "edits": [
+        {
+          "before": "['K1-C1-S1-V01','K1-C1-S1-VP']",
+          "after": "['K1-C2-S5-VP']"
+        },
+        {
+          "before": "15 logical scene screenshots",
+          "after": "all logical scene screenshots"
+        },
+        {
+          "before": "Chapter1 scene preflight:2 scenesets",
+          "after": "Chapter2 scene preflight:1 sceneset"
+        }
+      ]
+    },
+    {
+      "file": "build-book.py",
+      "source": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/build-book.py",
+      "sourceSha256": "d4eae87c93d7f8823b9a8a0330eb09f10cc6201acf89ed1a6e8d09f5f25bcd12",
+      "sha256": "59bad729032105a22a43e62b1f5d1abea3e2b8347857d157692c94c31dbee96f",
+      "edits": [
+        {
+          "before": "(HERE/'manifest.json')",
+          "after": "(HERE/'alignment-v2/manifest.json')"
+        },
+        {
+          "before": "candidate=HERE/'output'/row['file']",
+          "after": "candidate=HERE/'alignment-v2/output'/row['file']"
+        },
+        {
+          "before": "shutil.copy2(candidate,isolated/row['file'])",
+          "after": "shutil.copy2(candidate,isolated/row['file'])\n        for extra in manifest['files'][1:]:\n            extra_file=HERE/'alignment-v2/output'/extra['file'];assert sha(extra_file)==extra['afterSha256'];shutil.copy2(extra_file,isolated/extra['file'])"
+        },
+        {
+          "before": "text=value.replace(manifest['old'],manifest['new'])",
+          "after": "text=value\n                for replacement in manifest['replacements']:text=text.replace(replacement['old'],replacement['new'])"
+        }
+      ]
+    }
+  ],
+  "mainChanged": false
+}

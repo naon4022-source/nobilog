@@ -1,0 +1,40 @@
+--- a/index.html
++++ b/index.html
+@@ -1214 +1214 @@
+-            <h3>🏫 学校のテスト（2人で競争！）</h3>
++            <h3 id="st-school-title">🏫 学校のテスト（2人で競争！）</h3>
+@@ -1343 +1343 @@
+-        if(stb) stb.style.display = isFamily() ? '' : 'none';
++        if(stb) stb.style.display = isFamily() || currentUserId === 'u4' ? '' : 'none';
+@@ -17063,0 +17064 @@
++        u4: { teiki: [{ name:'第1回', total:442 }], kakunin:[] },
+@@ -17101 +17102 @@
+-        if(!isFamily()) return;
++        if(!isFamily() && currentUserId !== 'u4') return;
+@@ -17102,0 +17104 @@
++        if(!mine && !stOtherUser()) return;
+@@ -17110 +17112 @@
+-                : ST_SUBJ5.map(s => `${s} ${t.s[s]}点`).join('　');
++                : t.s ? ST_SUBJ5.map(s => `${s} ${t.s[s]}点`).join('　') : '教科別の点数は未登録です。';
+@@ -17136 +17138 @@
+-        const me = esc(stMe().name), other = esc(stOtherUser().name);
++        const me = esc(stMe().name), other = stOtherUser();
+@@ -17142 +17144 @@
+-            <circle cx="${left+plotW/2}" cy="17" r="5" fill="#b0b6bd"/><text x="${left+plotW/2+11}" y="22" fill="currentColor" font-size="13">${other}（相手）</text>
++            ${other ? `<circle cx="${left+plotW/2}" cy="17" r="5" fill="#b0b6bd"/><text x="${left+plotW/2+11}" y="22" fill="currentColor" font-size="13">${esc(other.name)}（相手）</text>` : ''}
+@@ -17148 +17150,3 @@
+-        if(!isFamily()) {
++        const title = document.getElementById('st-school-title');
++        if(title) title.textContent = currentUserId === 'u4' ? '🏫 学校のテスト' : '🏫 学校のテスト（2人で競争！）';
++        if(!isFamily() && currentUserId !== 'u4') {
+@@ -17156 +17160,4 @@
+-        const theirs = stList(stOtherUser().id, stType);
++        const other = stOtherUser();
++        const theirs = other ? stList(other.id, stType) : [];
++        const note = document.getElementById('st-chart-note');
++        if(note) note.textContent = other ? '点をタップするとくわしく見れるよ（相手の点は合計だけ）' : '点をタップするとくわしく見れるよ';
+@@ -17161,0 +17169 @@
++        if(currentUserId === 'u4' && stType === 'teiki') document.getElementById('st-list').innerHTML += '<p>9月はテストなし。次の定期テストは11月です（日付未定）。</p>';
+@@ -17185 +17193 @@
+-                    { label: stOtherUser().name + '（相手）', data: theirs.map(stTotal), borderColor: '#b0b6bd', backgroundColor: 'rgba(150,150,150,0.1)', pointBackgroundColor: '#b0b6bd', pointRadius: 5, tension: 0.25, spanGaps: true }
++                    ...(other ? [{ label: other.name + '（相手）', data: theirs.map(stTotal), borderColor: '#b0b6bd', backgroundColor: 'rgba(150,150,150,0.1)', pointBackgroundColor: '#b0b6bd', pointRadius: 5, tension: 0.25, spanGaps: true }] : [])

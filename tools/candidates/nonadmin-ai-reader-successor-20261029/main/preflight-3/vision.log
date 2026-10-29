@@ -1,0 +1,8 @@
+file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:53
+ if(file.includes('..')||path.isAbsolute(file)||!(/^(?:tools\/candidates|site-assets|cf-worker\/src|教材整理\/Claude_Codex共有)\//.test(file)||['index.html','preview/build.py','.claude/verify/run.sh','.claude/verify/d1-sqlite.js','Claude作業/20261026_ProAI類題/practice-bank.json','tools/releases/auth-repair-20261019/verify-login-flow.mjs','tools/releases/google-link-20261019/verify-login-flow.mjs'].includes(file)))throw Error('unsafe_public_fixture_path');
+                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+
+Error: unsafe_public_fixture_path
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:53:415
+
+Node.js v24.18.0

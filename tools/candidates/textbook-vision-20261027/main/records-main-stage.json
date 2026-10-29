@@ -1,0 +1,14 @@
+{
+  "status": "main integrated; final full pending",
+  "files": [
+    "AI連絡/作業連絡.md",
+    "AI連絡/現在の状況.md",
+    "IMPROVEMENT_PROGRESS.md",
+    "AI連絡/大型更新_できていることと未完了_20261017.md",
+    ".claude/HANDOFF.md",
+    "2026年10月大型アップデート.md",
+    "tools/candidates/textbook-final-20261023/進捗.md",
+    "tools/candidates/textbook-ai-20261025/進捗.md"
+  ],
+  "note": "\n### 2026-10-27 教科書画像AI・本体反映後の確認（全体検証待ち）\n- 手元本体へ既存6ファイルの限定変更＋新規27ファイルを反映。追加の既存検証2本はrunner読取のみを厳密な承認済み差分経由へ変更し、元の判定条件を保持。公開・コミット・削除・実AI有効化なし。\n- 本体6冊×390/820/1440の隔離操作103項目、ソース・改変拒否44項目、既存client61項目・practice88項目が成功。Worker dry-run終了0。18画面のうち同一11画面は既存目視を再利用し、差分7画面を直接目視。\n- 画像相談は本人確認・プラン・同意・画像参照一致・利用枠・通信不明時の再送防止・本人限定履歴を隔離確認。実モデル回答の質と速さ、実機、大きすぎる写真の送信は未確認／上限で拒否。全画像504点の内容目視完了ではない。\n- 変更後の単独全体検証はこれから実行。根拠は tools/candidates/textbook-vision-20261027/main/ の approved-panel-result.json、source-current-result.json、visual-review.json、dry-run-result.json、compat3-*.log。失敗ログも保持。\n- Claudeへは手動確認後に検定形式・残る比の採点修正を既存チャットへ1回依頼済み。本体未反映。定期監視は削除済みで再開しない。全体完了率は未確定で、検定入力修正候補16/18を全体89%とは扱わない。\n"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "sessionId": 1631,
+  "observedExitCode": 0,
+  "checks": 2719,
+  "physicalPages": 655,
+  "widths": [
+    1440,
+    1180,
+    820,
+    390
+  ],
+  "log": "/private/tmp/nobi-textbook-corrected-normal-book-20261024.log",
+  "logSha256": "f060344147e9223e3d0c16fa7e45fd46b80299bf8be9d20267193b5637b15dad",
+  "test": ".claude/verify/verify-textbook-book-browser.mjs",
+  "testSha256": "4e0b0efeb7d07c0e7b8da6da0abfb3527ba93a099210d36fe304fb23e8dc3057",
+  "inputs": {
+    "site-assets/textbook-book-math1.json": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+    "site-assets/textbook-book.js": "1f1a4bbe132abfcc2fd3cc819ec53ea49394ea29eaecef649a32b87e610e6a80",
+    "site-assets/textbook-book.css": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec",
+    "site-assets/vertical-fractions.js": "b76f506e18839038f4fd194326746204623ee4a1bdb34fecb1b4a0d60900b4a5"
+  },
+  "scope": "Corrected fixture explicitly loads production fraction renderer; navigation, answer cards, overflow and fallback across4 widths. Not full post-integration suite."
+}

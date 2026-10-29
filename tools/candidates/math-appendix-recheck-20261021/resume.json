@@ -1,0 +1,54 @@
+{
+  "status": "appendix6 and word-recorder local integration, post-change full passed; whole goal incomplete",
+  "bookCandidate": "book-candidate-result.json",
+  "changedSourcePages": [
+    "M1-P387"
+  ],
+  "originalSourcePages": 441,
+  "sourceMarkerCompatibilityRules": 9,
+  "netSpacingCandidate": "net-layout-candidate.json",
+  "annotationSupportCandidate": "candidate/annotation-support-candidate.json",
+  "renderer": "render-net-candidate.mjs",
+  "rendererExecuted": true,
+  "audioGenerated": false,
+  "waitFor": {
+    "pid": 89159,
+    "log": "/tmp/nobi-claude-nonadmin-after-20261021.log",
+    "terminal": "EXIT=0 and all passed; process absent"
+  },
+  "next": [
+    "Continue remaining nonadmin goal items; keep policy/source/real-device holds explicit",
+    "Do not repeat finished media work or publish"
+  ],
+  "testCommandsAfterSharedFull": [
+    "node tools/candidates/math-appendix-recheck-20261021/verify-candidate-markers.mjs",
+    "node tools/candidates/math-appendix-recheck-20261021/verify-closed-answer-browser.mjs",
+    "python3 tools/candidates/math-appendix-recheck-20261021/bind-unchanged-media.py",
+    "node tools/candidates/math-appendix-recheck-20261021/render-net-candidate.mjs",
+    "python3 tools/candidates/math-appendix-recheck-20261021/audit-net-candidate.py M1-APP2-V01"
+  ],
+  "mediaTeardownCandidate": "pauses embedded media on dialog close, reader render/exit, visibility loss and pagehide; not yet tested",
+  "completed": {
+    "markerContinuity": "candidate-markers-result.json:21 checks,2724 exact IDs",
+    "closedAnswer": "closed-answer-browser-result.json:137 checks,4widths+2large",
+    "unchanged5AV": "unchanged-av-result.json",
+    "correctedMovie": "candidate/M1-APP2-V01/actual-shots/実動画の点検.json:1422 frames,32actual samples viewed;AAC unchanged",
+    "all6BookPlayback": "all-media-browser-result.json:129 checks,24plays across4widths using prior APP3 proof",
+    "nearbyQuestions": "other-five-nearby-answer-review.json and answer-leak-review.json",
+    "reading": "read-aloud-source-review.json"
+  },
+  "activeFull": {
+    "status": "completed",
+    "sessionId": 64595,
+    "log": "/tmp/nobi-appendix-word-after-20261021.log",
+    "frozenInputs": "final-full-inputs.json",
+    "frozenInputCount": 1556,
+    "previousAttempt": "final-full-failed-41293.json",
+    "inputChangesAllowed": false,
+    "pid": 1514,
+    "observedExitCode": 0,
+    "proof": "post-full-verification.json"
+  },
+  "onTerminalSuccess": "Observe actual unified-session64595 exit0, then python3 tools/candidates/math-appendix-recheck-20261021/finalize-full.py 64595 0",
+  "nextNonadminCandidate": "tools/candidates/eiken-word-recording-lifecycle-20261021/resume.json"
+}

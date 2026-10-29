@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: tap: {"state":{"id":"campaign_room_2_7","revision":109,"stageId":"story_07","phase":"battle","hp":1,"maxHp":760,"members":[{"name":"検証の旅人0","self":false,"ready":true,"connected":true,"questionPending":true},{"name":"検証の旅人1","self":true,"ready":true,"connected":true,"questionPending":true}],"clear":null,"serverNow":41300,"combatOpensAt":38750,"own":{"lastSequence":48,"nextAnswerSequence":4,"question":{"challengeId":"mc_campaign_challenge_000000000052","kind":"material","subject":"理科","prompt":"いなずまが光ってから9秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。"},"lastResult":{"challengeId":"mc_campaign_challenge_000000000050","correct":true,"retrySameMeaning":false,"near":false,"empty":false,"at":40700}}},"equipment":{"body":"female","revision":9,"weapon":"工房の剣","armor":"道守りの防具","damage":8,"owned":[{"id":"bare","label":"素手","slot":"weapon"},{"id":"none","label":"装備なし","slot":"armor"},{"id":"practiceSword","label":"練習用の剣","slot":"weapon"},{"id":"travelArmor","label":"旅の防具","slot":"armor"},{"id":"guardianArmor","label":"道守りの防具","slot":"armor"},{"id":"ironSword","label":"工房の剣","slot":"weapon"}],"coins":40,"earnedCoins":180},"canHost":false,"notificationDeferred":false,"replay":false,"quizUnavailable":false,"result":null}
+
+200 !== 409
+
+    at call (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-campaign.mjs:40:45)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-campaign.mjs:72:20 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 200,
+  expected: 409,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

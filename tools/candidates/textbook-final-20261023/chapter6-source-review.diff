@@ -1,0 +1,22 @@
+--- tools/candidates/textbook-final-20261023/before-chapter6-fraction-integration/教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/図/fraction_layout.py
+
++++ 教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/図/fraction_layout.py
+
+@@ -11 +11 @@
+
+-    for name in ['縦分数_20261023', '縦分数_2章_20261023', '縦分数_3章_20261023', '縦分数_4章_20261024', '縦分数_5章_20261024']:
++    for name in ['縦分数_20261023', '縦分数_2章_20261023', '縦分数_3章_20261023', '縦分数_4章_20261024', '縦分数_5章_20261024', '縦分数_6章_20261025']:
+--- tools/candidates/textbook-final-20261023/before-chapter6-fraction-integration/tools/candidates/textbook-final-20261023/reviewed_changes.py
+
++++ tools/candidates/textbook-final-20261023/reviewed_changes.py
+
+@@ -93,0 +94 @@
+
++        ('縦分数_6章_20261025','before-chapter6-fraction-integration','chapter6-fraction-visual-review.json'),
+--- tools/candidates/textbook-final-20261023/before-chapter6-fraction-integration/.claude/verify/run.sh
+
++++ .claude/verify/run.sh
+
+@@ -134,0 +135 @@
+
++python3 "$PROJECT_DIR/tools/candidates/textbook-final-20261023/verify-chapter6-fraction-generators.py" || fail=1

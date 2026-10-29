@@ -1,0 +1,203 @@
++++ b/site-assets/material-ui.js
++// 📝 下書き（なお指定 2026-10-07：サーバー保存）：打ちかけの答えとメモを本人の記録「materialDrafts」に入れる。
++//   ほかの記録と同じしくみでサーバーへ保存され、電波がないあいだは送れるまで端末で待ち、つながったら自動で送る。別の端末でも続きから。
++//   打っている最中は1.5秒まとめてから保存（1文字ごとに記録全体を送らない）。人ごと・14日・100件・1件2000字まで。
++const DRAFT_DAYS=14,DRAFT_MAX=100,DRAFT_WAIT=1500;
++function draftClean(o,now){
++ const out=Object.create(null);
++ if(o&&typeof o==='object'&&!Array.isArray(o))for(const [k,v] of Object.entries(o))if(/^[an]:/.test(k)&&k.length<=300&&v&&typeof v.v==='string'&&v.v.length<=2000&&Number.isFinite(v.at)&&now-v.at<DRAFT_DAYS*864e5)out[k]={v:v.v,at:v.at};
++ return out;
++}
++// 📐 公式カードと道具（台帳28・2026-10-08）：数学・理科の大単元ごとの公式。「テスト」中は出さない。
++//   電卓は計算が必要な理科の単元だけ（数学は手で計算する練習なので出さない）。図を使う問題はないので定規・分度器は出さない。
++const FORMULA=[
++ ['数学',/正負|正の数|負の数/,[['符号','同じ符号の2数の積・商は＋、ちがう符号なら−'],['ひき算','ひく数の符号を変えてたす：a−(−b)＝a＋b'],['累乗','(−3)²＝9、−3²＝−9（かっこの有無で変わる）'],['計算の順','かっこの内側から、その中では累乗 → ×÷ → ＋−。同じ順位は左から'],['絶対値','数直線上で0からの距離（符号を取った数）']]],
++ ['数学',/文字式/,[['書き方','×は省く・数は文字の前・同じ文字の積は累乗（a×a＝a²）'],['わり算','÷は分数で書く：a÷3＝a/3'],['分配法則','a(b＋c)＝ab＋ac'],['項と係数','3x−5の項は3xと−5、xの係数は3'],['代入','文字に数を入れるときは、負の数にかっこをつける']]],
++ ['数学',/方程式/,[['等式の性質','両辺に同じ数をたしても・ひいても・かけても・（0でない数で）わっても等式は成り立つ'],['移項','項を反対の辺へ移すときは符号を変える'],['比例式','a:b＝c:d ならば ad＝bc'],['解き方','かっこ→分数・小数をなくす→移項→ax＝b→x＝b/a']]],
++ ['数学',/変化と対応|比例|反比例|関数/,[['比例','y＝ax（aは比例定数）。グラフは原点を通る直線'],['反比例','y＝a/x（xy＝a）。グラフは双曲線'],['比例定数','比例 a＝y/x、反比例 a＝xy'],['座標','(x, y)。xは横、yは縦']]],
++ ['数学',/平面図形/,[['円周','2πr'],['円の面積','πr²'],['おうぎ形の弧','2πr × a/360（aは中心角）'],['おうぎ形の面積','πr² × a/360 ＝ ½ℓr（ℓは弧の長さ）']]],
++ ['数学',/空間図形/,[['柱体の体積','底面積 × 高さ'],['錐体の体積','⅓ × 底面積 × 高さ'],['球','体積 ⁴⁄₃πr³、表面積 4πr²'],['円錐の側面積','πℓr（ℓは母線、rは底面の半径）'],['表面積','底面積 ×（柱は2・錐は1）＋ 側面積']]],
++ ['数学',/データ/,[['相対度数','その階級の度数 ÷ 度数の合計'],['累積相対度数','最初の階級からその階級までの相対度数の和'],['範囲','最大値 − 最小値'],['代表値','平均値・中央値（真ん中の値）・最頻値（いちばん多い値）'],['確率','多数回の実験での相対度数を、起こりやすさの目安にする']]],
++ ['理科',/物質とその性質|密度/,[['密度','密度[g/cm³] ＝ 質量[g] ÷ 体積[cm³]'],['質量','質量 ＝ 密度 × 体積'],['浮き沈み','水（約1g/cm³）より密度が小さい物は浮く']],true],
++ ['理科',/水溶液/,[['質量パーセント濃度','溶質の質量 ÷ 溶液の質量 × 100 [%]'],['溶液','溶液の質量 ＝ 溶質の質量 ＋ 溶媒の質量'],['再結晶','冷やして出てくる結晶の量 ＝ とけていた量 − その温度でとける量']],true],
++ ['理科',/光による/,[['反射','入射角 ＝ 反射角'],['屈折','空気→水・ガラスでは屈折角＜入射角'],['凸レンズ','物体が焦点距離の2倍の位置 → 同じ大きさの実像が2倍の位置にできる']]],
++ ['理科',/音による/,[['音の速さ','速さ[m/s] ＝ 距離[m] ÷ 時間[s]（空気中で約340m/s）'],['高さ','振動数[Hz]が多いほど高い音'],['大きさ','振幅が大きいほど大きい音']],true],
++ ['理科',/力による/,[['フックの法則','ばねののびは、ばねを引く力の大きさに比例する'],['重力','約100gの物体にはたらく重力が約1N'],['重さと質量','重さは場所で変わる（月では約⅙）、質量は変わらない'],['つり合い','2力が一直線上・大きさが等しい・向きが反対']],true],
++ ['理科',/ゆれる大地/,[['速さ','速さ ＝ 震源からの距離 ÷ 伝わるのにかかった時間'],['初期微動継続時間','S波が着いた時刻 − P波が着いた時刻（震源から遠いほど長い）'],['震度と規模','震度はその場所のゆれ、マグニチュードは地震そのものの規模']],true]
++];
++function formulaFor(unit){if(!unit)return null;const t=(unit.majorTitle||'')+' '+(unit.title||'');for(const [subject,re,items,calc] of FORMULA)if(unit.subject===subject&&re.test(t))return {items,calc:!!calc};return null;}
++// 電卓：数字と ＋−×÷・かっこ・小数だけ。式を自分で読んで計算する（evalは使わない）
++function calcEval(src){
++ const s=String(src).normalize('NFKC').replace(/\s/g,'').replace(/[×*]/g,'*').replace(/[÷/]/g,'/').replace(/[−ー]/g,'-');
++ if(!s||s.length>80||!/^[0-9.+\-*/()]+$/.test(s))return null;let i=0;
++ const num=()=>{const m=/^\d+(\.\d+)?/.exec(s.slice(i));if(!m)throw 0;i+=m[0].length;return Number(m[0]);};
++ const atom=()=>{if(s[i]==='-'){i++;return -atom();}if(s[i]==='('){i++;const v=expr();if(s[i]!==')')throw 0;i++;return v;}return num();};
++ const term=()=>{let v=atom();while(s[i]==='*'||s[i]==='/'){const o=s[i++],b=atom();if(o==='/'&&b===0)throw 0;v=o==='*'?v*b:v/b;}return v;};
++ const expr=()=>{let v=term();while(s[i]==='+'||s[i]==='-'){const o=s[i++],b=term();v=o==='+'?v+b:v-b;}return v;};
++ try{const v=expr();if(i!==s.length||!Number.isFinite(v))return null;return Math.round(v*1e10)/1e10;}catch(_){return null;}
++}
++ let draftMem=null,draftTimer=0;
++ function draftAll(uid){
++  if(!uid)return Object.create(null);
++  if(!draftMem||draftMem.uid!==uid){draftFlush();let saved={};try{saved=typeof bridge.drafts==='function'?bridge.drafts(uid):{};}catch(_){}draftMem={uid,data:draftClean(saved,Date.now())};}
++  return draftMem.data;
++ }
++ function draftFlush(){
++  if(draftTimer){root.clearTimeout(draftTimer);draftTimer=0;}
++  if(!draftMem||!draftMem.dirty)return;draftMem.dirty=false;
++  try{if(typeof bridge.draftsWrite==='function')bridge.draftsWrite(draftMem.data,draftMem.uid);}catch(_){}
++ }
++ function draftGet(uid,key){const d=draftAll(uid)[key];return d?d.v:undefined;}
++ function draftPut(uid,key,value){
++  if(!uid)return;const o=draftAll(uid),had=!!o[key];
++  if(typeof value==='string'&&value.trim())o[key]={v:value.slice(0,2000),at:Date.now()};else if(had)delete o[key];else return;
++  const keep=Object.keys(o).sort((a,b)=>o[b].at-o[a].at).slice(DRAFT_MAX);for(const k of keep)delete o[k];
++  draftMem.dirty=true;
++  // 消すとき（正解・保存済み）はすぐ、打っている最中はまとめて保存する
++  if(!o[key]){draftFlush();return;}
++  if(typeof root.setTimeout!=='function'){draftFlush();return;}
++  if(draftTimer)root.clearTimeout(draftTimer);draftTimer=root.setTimeout(draftFlush,DRAFT_WAIT);
++ }
++ const draftHide=()=>draftFlush();
++ try{root.addEventListener?.('pagehide',draftHide);}catch(_){}
++ const state={mode:'textbook',grade:1,subject:'国語',unit:null,index:0,tab:'問題',busy:false,sync:'loading',loadedIdentity:null,message:'',answer:'',progress:{},progressOpen:false,started:false,layout:'batch',count:15,calcCount:null,query:'',focus:'all',session:null,sessionDone:[],drafts:Object.create(null),major:null,fullscreenOnly:false,sessionSkipped:[],times:Object.create(null)};
++ // なおが「出さない」印をつけた問題（台帳28・2026-10-09）。問題は消さず、新しく作る問題の組から外すだけ
++ let pausedSet=new Set();
++ function kindOf(u){return u&&u.mode==='kentei'?'kentei':u&&u.bank==='tokkun'?'tokkun':u&&u.mode==='drill'?'drill':'textbook';}
++ function choices(){return units.filter(u=>kindOf(u)===state.mode&&(state.mode==='kentei'||u.grade===state.grade&&u.subject===state.subject));}   // 検定は学年・教科で分けない（2026-10-22）
++  marksState.open=false;state.started=false;state.session=null;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.major=null;state.unit=choices()[0]?.id||null;state.index=nextIndex(selected());state.answer='';state.message='';
++   if(typeof bridge.paused==='function'){try{const p=await bridge.paused(uid);if(alive&&epoch===loadEpoch&&uid===bridge.identity()&&Array.isArray(p))pausedSet=new Set(p.filter(x=>x&&typeof x.unitId==='string'&&typeof x.questionId==='string').map(x=>x.unitId+':'+x.questionId));}catch(_){}}
++  if(!unit||tab==='教科書')return;const at=bank(unit).indexOf(q);if(at<0||(!state.started&&!activeReview))return;state.index=at;state.resultFor=null;
++  state.answer=value;state.drafts[q.id]=value;draftPut(bridge.identity(),'a:'+q.id,value);
++    const saved=await bridge.record(pendingAttempt,uid);r=saved.result;startedAt=Date.now();
++   if(!r.correct&&!skip&&tab==='問題'&&!activeReview&&state.started&&q.origin!=='generated'&&(unit.schedule==='marks'||unit.mode==='kentei')){
++    pendingAttempt=null;state.busy=false;state.sessionSkipped.push(q.id);delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');state.index=nextIndex(unit);state.answer='';state.resultFor=q.id;
++    state.message=(r.near?'前の問題：△ ':'前の問題：× ')+r.reason+'　正解：'+expectedText(q)+(unit.mode==='kentei'?'':r.near?'（1週間後にもう一度出ます）':'（次の日の最初にもう一度出ます）')+(q.explanation?'　'+q.explanation:'');
++   if(!r.correct){pendingAttempt=null;startedAt=Date.now();state.times[unit.id+':'+tab+':'+q.id]=startedAt;state.busy=false;if(skip&&!activeReview){state.sessionSkipped.push(q.id);state.index=nextIndex(unit);state.answer='';state.resultFor=q.id;state.message='前の問題は未正解として記録しました。'+(q.explanation||'復習から解き直せます。');}else state.message=r.reason;render();return;}
++  try{await bridge.save(next,uid);if(!alive||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}
++   // ○△×で管理する小単元（×は次の日・△は1週間後に問題の順番で出る）は、3日・7日のお知らせに重ねて出さない（台帳25・2026-10-08）
++   reminder.rows=page.items.filter(row=>units.find(u=>u.id===row.unitId)?.schedule!=='marks');reminder.more=!!page.next;
++  if(!aiState.available||(bridge.aiFeature&&!bridge.aiFeature('weakness'))||typeof bridge.judge!=='function'||!attemptId)return;
++   state.session=r.ids.filter(id=>unit.questions.some(q=>q.id===id));state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';questionClock='';pendingAttempt=null;
++  try{const items=await bridge.annotate(key,note,uid);if(alive&&run===notebookState.epoch&&uid===bridge.identity()){notebookState.items=items;delete notebookState.drafts[key];draftPut(uid,'n:'+key,'');notebookState.message='メモを保存しました。';}}
++    input.id='notebook-note-'+section.children.length;label.htmlFor=input.id;input.maxLength=2000;input.disabled=state.busy;input.value=notebookState.drafts[key]??draftGet(bridge.identity(),'n:'+key)??row.note??'';
++    input.addEventListener('input',()=>{notebookState.drafts[key]=input.value;draftPut(bridge.identity(),'n:'+key,input.value);});const edit=element('div');edit.className='material-notebook-editor';edit.append(label,input,button('メモを保存',()=>void saveNote(row,input.value)));card.append(edit);
++  if(historyState.page?.window?.label)section.append(element('p','今のプランでは、直近'+historyState.page.window.label+'の回答を表示します。それより前の回答・成績・ノートは消えていません。'));
++  if(!list.children.length&&state.mode==='tokkun'){const ready=[...new Set(units.filter(u=>kindOf(u)==='tokkun').map(u=>u.subject+u.grade+'年'))];subs.append(element('p','この教科・学年の特訓は作成中です。いま解けるのは'+ready.join('・')+'です。'));}
++  else if(!list.children.length){const name={textbook:'教科書の問題',drill:'ドリル'}[state.mode],order=['国語','数学','英語','理科','社会'],ready=[...new Set(units.filter(u=>kindOf(u)===state.mode).sort((a,b)=>a.grade-b.grade||order.indexOf(a.subject)-order.indexOf(b.subject)).map(u=>u.subject+u.grade+'年'))];subs.append(element('p',name&&ready.length?'この教科・学年の'+name+'は準備中です。いま解けるのは'+ready.join('・')+'です。':'教材の見出しを確認中です。'));}subs.append(list);wrap.append(subs);   // 2年・3年など、まだ教材がないときは「準備中」と、いま解ける教科・学年を出す（2026-10-21）
++ }
++ // 計算問題か文章問題か（2026-10-21）：1行目が「次の計算をしよう」などで、2行目からが式だけなら計算。それ以外は文章
++ function questionKind(q){
++  const lines=String(q?.prompt||'').split('\n').map(x=>x.trim()).filter(Boolean);
++  if(!lines.length)return 'word';
++  const formula=/^[0-9a-zA-Z()（）+＋\-−–×÷*・=＝<>≦≧≤≥²³⁴⁵.,，、/\s|√πxyab]+$/;
++  if(lines.length===1){const body=lines[0].replace(/(を|の)?(計算|簡単に|展開|因数分解)(して|しよう|しなさい|せよ)(ください)?。?$/,'');return body!==lines[0]&&formula.test(body)||formula.test(lines[0])?'calc':'word';}   // 「(-4)＋(-3)を計算してください。」も計算
++  if(/計算|簡単に|展開|因数分解|解こう|解きなさい|求めよう|値を|式を/.test(lines[0])&&lines.slice(1).every(l=>formula.test(l)))return 'calc';
++  return 'word';
++ }
++ function kindCounts(pool){let calc=0,word=0;for(const q of pool)(questionKind(q)==='calc'?calc++:word++);return {calc,word};}
++ // 計算問題の数（スライダーで決めた数）。できる範囲に収める
++ function calcTarget(avail){const n=state.count,lo=Math.max(0,n-avail.word),hi=Math.min(n,avail.calc);if(lo>hi)return null;const want=state.calcCount===null?Math.round(n*0.6):state.calcCount;return Math.min(hi,Math.max(lo,want));}
++   pool=pool.filter(q=>!pausedSet.has(unit.id+':'+q.id));
++   if(unit.mode==='kentei'){state.session=pool.map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）
++   if(aiState.makeNew&&aiState.available&&(!bridge.aiFeature||bridge.aiFeature('weakness'))&&state.tab==='問題'&&state.focus!=='weak'&&typeof bridge.generate==='function'){
++   const avail=kindCounts(pool),target=avail.calc&&avail.word?calcTarget(avail):null;
++   if(target!==null){const calc=pool.filter(q=>questionKind(q)==='calc').slice(0,target),word=pool.filter(q=>questionKind(q)!=='calc').slice(0,state.count-target);pool=[...calc,...word];}   // 計算→文章の順に並べる
++   else pool=[...pool.filter(q=>questionKind(q)==='calc'),...pool.filter(q=>questionKind(q)!=='calc')].slice(0,state.count).sort((a,b)=>(questionKind(a)==='calc'?0:1)-(questionKind(b)==='calc'?0:1));
++   state.session=pool.slice(0,state.count).map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;
++ // 計算と文章の割合：バーの点をスワイプして決める（例：15問なら 計算9問・文章6問）
++ function renderFormula(article,card,key){
++  const box=element('details');box.className='material-formula';box.append(element('summary','📐 公式カード（'+(selected()?.subject||'')+'）'));
++  const dl=element('dl');card.items.forEach(([k,v])=>dl.append(element('dt',k),element('dd',v)));box.append(dl);
++  if(card.calc){const calc=element('div');calc.className='material-calc';const label=element('label','🧮 電卓（＋−×÷とかっこ）'),inp=element('input'),out=element('output','');
++   inp.id='material-calc-'+key;label.htmlFor=inp.id;inp.setAttribute('inputmode','decimal');inp.setAttribute('autocomplete','off');inp.maxLength=80;out.setAttribute('aria-live','polite');
++   inp.addEventListener('input',()=>{const v=calcEval(inp.value);out.textContent=inp.value.trim()?(v===null?'式を確かめてください':'＝ '+v):'';});calc.append(label,inp,out);box.append(calc);}
++  article.append(box);
++ }
++ function renderRatio(article,unit){
++  const pool=(state.tab==='テスト'?(unit.tests||[]):unit.questions).filter(q=>!pausedSet.has(unit.id+':'+q.id)),avail=kindCounts(pool);
++  if(!avail.calc||!avail.word)return;
++  const n=state.count,lo=Math.max(0,n-avail.word),hi=Math.min(n,avail.calc),value=calcTarget(avail);if(value===null)return;
++  const box=element('section');box.className='material-ratio';box.append(element('h3','計算と文章の割合'));
++  const label=element('p','計算 '+value+'問 ・ 文章 '+(n-value)+'問');label.className='material-ratio-label';label.id='material-ratio-label';
++  const range=element('input');range.type='range';range.id='material-ratio';range.min=String(lo);range.max=String(hi);range.step='1';range.value=String(value);range.disabled=state.busy||lo===hi;
++  range.setAttribute('aria-label','計算問題の数');range.setAttribute('aria-valuetext','計算 '+value+'問、文章 '+(n-value)+'問');
++  const paint=v=>{const pct=n?v/n*100:0;range.style?.setProperty?.('--calc',pct+'%');label.textContent='計算 '+v+'問 ・ 文章 '+(n-v)+'問';range.setAttribute('aria-valuetext','計算 '+v+'問、文章 '+(n-v)+'問');};
++  paint(value);range.addEventListener('input',()=>{state.calcCount=Number(range.value);paint(state.calcCount);});
++  const ends=element('div');ends.className='material-ratio-ends';ends.append(element('span','計算'),element('span','文章'));
++  box.append(label,range,ends);article.append(box);
++ }
++ function examText(unit){const e=unit.exam||{};if(Array.isArray(e.parts))return e.parts.map(p=>p.name+' '+p.count+'問・'+p.minutes+'分').join('／');return (e.count||unit.questions.length)+'問'+(e.total?'・'+e.total+'点':'')+(e.minutes?'・'+e.minutes+'分':'');}
++ // 模擬検定の結果（2026-10-22）：大問ごとの正解数と、合格のめやす。正解として保存できた問題だけを数える
++ function renderExamResult(article,unit,questions){
++  const ok=new Set(state.sessionDone),e=unit.exam||{},box=element('section');box.className='material-exam-result';box.append(element('h2','模擬検定の結果'));
++  const parts=[...new Set(questions.map(x=>x.part||x.section||''))],table=element('dl');
++  for(const t of parts){const qs=questions.filter(x=>(x.part||x.section||'')===t),n=qs.filter(x=>ok.has(x.id)).length;table.append(element('dt',t),element('dd',n+' / '+qs.length+'問'+(qs.some(x=>x.points)?'（'+qs.filter(x=>ok.has(x.id)).reduce((a,x)=>a+(x.points||0),0)+' / '+qs.reduce((a,x)=>a+(x.points||0),0)+'点）':'')));}
++  box.append(table);let pass;
++  if(Array.isArray(e.parts))pass=e.parts.every(p=>{const qs=questions.filter(x=>x.part===p.name);return qs.length&&qs.filter(x=>ok.has(x.id)).length>=Math.ceil(qs.length*p.passRate);});
++  else if(e.total&&e.pass)pass=questions.filter(x=>ok.has(x.id)).reduce((a,x)=>a+(x.points||0),0)>=e.pass;
++  else if(e.passRate)pass=questions.filter(x=>ok.has(x.id)).length>=Math.ceil(questions.length*e.passRate);
++  box.append(element('p',(pass?'合格のめやすに届きました。':'合格のめやすにはまだ届いていません。')+'（'+(e.passNote||'')+'）'));
++  article.append(box,button('もう一度',()=>void createSession(unit)),button('出題条件へ戻る',()=>{state.started=false;state.session=null;state.message='';render();}));
++ }
++  if(unit.mode==='kentei'){article.append(element('h2',unit.title),element('p',examText(unit)+'。'+(unit.exam?.passNote||'')),element('p','本番と同じ順番で全'+unit.questions.length+'問を出します。まちがえた問題はその場で正解と解説を見て、次へ進みます。時間は自分で計ってください。'));
++   article.append(button('全画面で解く',()=>{state.fullscreenOnly=!state.fullscreenOnly;render();},state.fullscreenOnly),button('模擬検定を始める',()=>void createSession(unit),false,state.sync!=='ready'));const status=element('p',state.message||'');status.setAttribute('role','status');article.append(status);return;}
++  state.layout='batch';   // 1問ずつの形はやめて、全部を並べて表示する（2026-10-21 ユーザー指示）
++  const amounts=element('nav');amounts.setAttribute('aria-label','問題数');[5,10,15,30,45,60].forEach(n=>amounts.append(button(n+'問',()=>{state.count=n;render();},state.count===n)));article.append(element('h3','問題数'),amounts);
++  renderRatio(article,unit);
++  if(aiState.available&&(!bridge.aiFeature||bridge.aiFeature('weakness'))&&state.tab==='問題'&&typeof bridge.generate==='function')article.append(button('AIで新しい問題も作る（検算できた問題だけ）',()=>{aiState.makeNew=!aiState.makeNew;render();},aiState.makeNew));
++ function rememberVisibleAnswers(){
++  if(!alive||state.busy||state.sync!=='ready'||bridge.identity()!==state.loadedIdentity)return;
++  const unit=selected();if(!unit)return;
++  const ids=new Set(bank(unit).map(q=>q.id));
++  for(const input of host.querySelectorAll('textarea[data-material-question]')){
++   const id=input.getAttribute('data-material-question');
++   if(input.getAttribute('data-material-unit')!==unit.id||!ids.has(id)||input.disabled)continue;
++   state.drafts[id]=input.value;draftPut(bridge.identity(),'a:'+id,input.value);
++  }
++ }
++   const mock=units.filter(u=>kindOf(u)==='kentei');
++   const box=element('article');box.className='material-kentei';box.append(element('h2','検定'),element('p','英検の練習800問（5級・4級・3級・準2級）と、英検の単語2,000語（5級600・4級250・3級1,150）は「英検」タブで解けます。'+(mock.length?'漢検・数検・理科検定は、本番と同じ問題数の模擬検定をここで解けます。':'漢検・数検・理科検定の問題は準備中です。')));
++   box.append(button('英検タブを開く',()=>{if(typeof root.switchView==='function')root.switchView('eiken');}),button('英検の単語を開く',()=>{if(typeof root.switchView!=='function')return;root.switchView('eiken');root.document?.getElementById('eiken-vocab')?.scrollIntoView?.({block:'start'});}));selectionHost.append(box);
++   if(!mock.length)return;
++   // 漢検・数検・理科検定の模擬検定（2026-10-22）：本番と同じ問題数・順番
++   const sec=element('section');sec.className='material-selection';sec.append(element('h3','模擬検定'));const list=element('nav');list.setAttribute('aria-label','模擬検定');
++   mock.forEach(u=>{const c=engine.completion(u,state.progress[u.id]).study;list.append(button(u.title+'　○'+c.done+'/'+c.total,()=>{closeReview();marksState.open=false;state.started=false;state.session=null;state.unit=u.id;state.tab='問題';state.index=nextIndex(u);state.answer='';state.message='';render();},state.unit===u.id));});
++   sec.append(list);selectionHost.append(sec);
++  }else{
++  }
++  if(state.started&&(unit.fullscreenRequired||state.fullscreenOnly)&&document.fullscreenElement!==host){article.append(element('h2','全画面で開く'),element('p',state.message||'この表示は全画面で解きます。終了すると、この画面へ戻ります。'),button('全画面にする',async()=>{try{if(typeof host.requestFullscreen!=='function')throw Error();await host.requestFullscreen();if(document.fullscreenElement!==host)throw Error();rememberVisibleAnswers();state.message='';render();}catch(_){state.message='全画面を開けませんでした。もう一度試すか、出題条件へ戻ってください。';render();}}),button('出題条件へ戻る',()=>{state.started=false;state.session=null;state.fullscreenOnly=false;state.message='';render();}));return;}
++  if(!q&&unit.mode==='kentei'&&state.started){renderExamResult(article,unit,questions);return;}
++   article.append(element('p',questions.length+'問。答えは各問題ごとに確かめて保存します。'));
++   const card0=state.tab==='テスト'?null:formulaFor(unit);if(card0)renderFormula(article,card0,'all');   // 公式カードは上に1つだけ
++   const groups=unit.mode==='kentei'?[...new Set(questions.map(x=>x.part||x.section||''))].map(t=>({k:'word',title:'【'+t+'】',items:questions.map((item,i)=>({item,i})).filter(x=>(x.item.part||x.item.section||'')===t)})):[['calc','【計算問題】'],['word','【文章問題】']].map(([k,title])=>({k,title,items:questions.map((item,i)=>({item,i})).filter(x=>(questionKind(x.item)==='calc')===(k==='calc'))})).filter(g=>g.items.length);   // 模擬検定は大問ごと（2026-10-22）
++   for(const g of groups){
++    const head=element('h3',g.title);head.className='material-batch-head';article.append(head);
++    const grid=element('div');grid.className='material-batch-grid material-batch-'+g.k;
++    g.items.forEach(({item,i})=>{const card=element('section');card.className='material-batch-question';card.append(element('h3','('+(i+1)+')'));if(state.sessionDone.includes(item.id))card.append(element('p','正解・保存済み'));else if(state.sessionSkipped.includes(item.id))card.append(element('p','未正解・復習に残しました'));else renderQuestion(card,unit,item,i,true);
++     if(state.resultFor===item.id&&state.message){const r=element('p',state.message);r.setAttribute('role','status');card.append(r);}   // 答えた結果は、その問題のカードに出す（2026-10-22）
++     grid.append(card);});
++    article.append(grid);
++   }
++ function renderQuestion(article,unit,q,questionIndex,compact){
++  const clockKey=unit.id+':'+state.tab+':'+q.id;if(!compact){if(!state.times[clockKey])state.times[clockKey]=Date.now();if(questionClock!==clockKey){questionClock=clockKey;startedAt=state.times[clockKey];}}   // まとめて表示では、その問題の欄に入ったときから測る（2026-10-22）
++  if(!compact){const count=element('p',(questionIndex+1)+' / '+questions.length);count.className='materials-count';article.append(count);}
++   input.id=state.layout==='batch'&&!activeReview?'material-answer-'+questionIndex:'material-answer';label.htmlFor=input.id;input.value=state.drafts[q.id]??draftGet(bridge.identity(),'a:'+q.id)??(state.index===questionIndex?state.answer:'');input.placeholder='答えを入力';input.maxLength=4000;input.disabled=state.busy;input.setAttribute('autocomplete','off');submit.type='submit';submit.disabled=state.busy;
++   input.setAttribute('data-material-question',q.id);input.setAttribute('data-material-unit',unit.id);
++   if(compact)input.addEventListener('focus',()=>{if(!state.times[clockKey])state.times[clockKey]=Date.now();});
++   input.addEventListener('input',()=>{state.drafts[q.id]=input.value;state.answer=input.value;draftPut(bridge.identity(),'a:'+q.id,input.value);});
++  const card=state.tab==='テスト'||compact?null:formulaFor(unit);
++  if(card)renderFormula(article,card,q.id);
++  const status=element('p',state.index===questionIndex&&!(compact&&state.resultFor&&(state.sessionDone.includes(state.resultFor)||state.sessionSkipped.includes(state.resultFor)))?state.message:'');status.setAttribute('role','status');article.append(status);
++ const onFullscreen=()=>{if(alive&&state.started){rememberVisibleAnswers();render();}};document.addEventListener?.('fullscreenchange',onFullscreen);
++ // 計測用の読み取り口。本人・表示段階だけを確認し、回答内容や進捗は渡さない。
++ function activity(){
++  if(!alive||state.sync!=='ready'||bridge.identity()!==state.loadedIdentity||!state.started||state.mode==='kentei'||state.tab==='教科書'||notebookState.open||reviewState.open||historyState.open||marksState.open)return null;
++  const unit=selected();if(!unit||unit.status!=='ready'||!bank(unit)[state.index])return null;
++  if((unit.fullscreenRequired||state.fullscreenOnly)&&document.fullscreenElement!==host)return null;
++  return {id:'question:'+unit.id,kind:'question',subject:unit.subject};
++ }
++ function focus(o){if(!alive||!o)return;if(typeof o.unitId==='string'){const hit=units.find(u=>u.id===o.unitId);if(!hit)return;closeReview();marksState.open=false;state.started=false;state.session=null;state.mode=kindOf(hit);state.grade=hit.grade;state.subject=hit.subject;state.major=groupTitle(hit);state.unit=hit.id;state.tab='問題';state.index=nextIndex(hit);state.answer='';state.message='';render();return;}closeReview();marksState.open=false;state.mode='textbook';if([1,2,3].includes(o.grade))state.grade=o.grade;if(typeof o.subject==='string')state.subject=o.subject;select(false);const hit=choices().find(u=>groupTitle(u)===o.major);if(hit){state.major=o.major;state.unit=hit.id;state.index=nextIndex(hit);}render();}
++ let fractionWatch=null;try{fractionWatch=root.NobiFractions?.watch(host)||null;}catch(_){}   // 分数を縦に表示（2026-10-21・vertical-fractions.js）
++ select(true);void reload();return {reload, focus, activity, destroy(){fractionWatch?.();draftFlush();try{root.removeEventListener?.('pagehide',draftHide);}catch(_){}alive=false;if(loginReview.timer!==null){root.clearTimeout(loginReview.timer);loginReview.timer=null;}document.removeEventListener?.('fullscreenchange',onFullscreen);if(document.fullscreenElement===host)document.exitFullscreen?.().catch(()=>{});reminder.epoch++;if(reminderTimer!==null)root.clearInterval(reminderTimer);document.removeEventListener?.('visibilitychange',onVisible);reminderNode?.remove?.();host.replaceChildren();}};
++root.NobiMaterialUI=Object.freeze({mount,_formulaFor:formulaFor,_calcEval:calcEval});

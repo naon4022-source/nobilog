@@ -1,0 +1,26 @@
+{
+  "file": "cf-worker/src/plans.mjs",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/cf-worker/src/plans.mjs",
+  "beforeSha256": "f3010ee06531b3259ccd11265a62709b6986799ce1fb1a333b277493f30b61af",
+  "afterSha256": "249279ffda4620f5024cd3d67d139bcd9e2ae331bcbe25eb007327083db4f04d",
+  "edits": [
+    {
+      "before": "if(!row)return {plan:'free',state:'none',row:null};",
+      "after": "if(!row)return {plan:'free',state:'none',row:null,rawContract:raw};"
+    },
+    {
+      "before": "if(now<row.start)return {plan:'free',state:'before',row};",
+      "after": "if(now<row.start)return {plan:'free',state:'before',row,rawContract:raw};"
+    },
+    {
+      "before": "return {plan,state,row};",
+      "after": "return {plan,state,row,rawContract:raw};"
+    },
+    {
+      "before": "export async function planRoute(request,env,session){",
+      "after": "// Read-only snapshot for textbook access; original date/transition logic is shared.\nexport {current as readPlanContractSnapshot, REASONS as PLAN_CHANGE_REASONS};\nexport async function planRoute(request,env,session){"
+    }
+  ],
+  "scope": "Expose read-only current-contract projection and source raw string for exact guards; existing date/plan decisions unchanged; admin handler byte-identical",
+  "verification": "pending isolated access/old-plan regression"
+}

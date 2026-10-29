@@ -1,0 +1,146 @@
+{
+  "at": "2026-10-22T17:40:25.228238+09:00",
+  "purpose": "local request/report/source reconciliation for human-forwarded Claude prompt; no new feature verification",
+  "attachment": "/Users/shimizunaotomoo/.codex/attachments/416f7cb6-cae7-4cef-b22e-a89cec9e2358/貼り付けたテキスト.txt",
+  "attachmentLines": 156,
+  "units": 216,
+  "statuses": {
+    "ready": 216
+  },
+  "tokkunBySubject": {
+    "国語": {
+      "units": 10,
+      "questions": 700
+    },
+    "英語": {
+      "units": 14,
+      "questions": 980
+    },
+    "数学": {
+      "units": 19,
+      "questions": 1330
+    },
+    "理科": {
+      "units": 6,
+      "questions": 420
+    },
+    "社会": {
+      "units": 1,
+      "questions": 70
+    }
+  },
+  "kentei": [
+    {
+      "id": "kentei-kanken-4",
+      "questions": 120,
+      "status": "ready",
+      "exam": {
+        "minutes": 60,
+        "total": 200,
+        "pass": 140,
+        "passNote": "合格のめやすは200点満点の70％程度（140点）"
+      }
+    },
+    {
+      "id": "kentei-suken-3",
+      "questions": 50,
+      "status": "ready",
+      "exam": {
+        "parts": [
+          {
+            "name": "1次（計算技能）",
+            "count": 30,
+            "minutes": 50,
+            "passRate": 0.7
+          },
+          {
+            "name": "2次（数理技能）",
+            "count": 20,
+            "minutes": 60,
+            "passRate": 0.6
+          }
+        ],
+        "passNote": "合格のめやすは1次70％・2次60％（日本数学検定協会の基準）"
+      }
+    },
+    {
+      "id": "kentei-suken-4",
+      "questions": 50,
+      "status": "ready",
+      "exam": {
+        "parts": [
+          {
+            "name": "1次（計算技能）",
+            "count": 30,
+            "minutes": 50,
+            "passRate": 0.7
+          },
+          {
+            "name": "2次（数理技能）",
+            "count": 20,
+            "minutes": 60,
+            "passRate": 0.6
+          }
+        ],
+        "passNote": "合格のめやすは1次70％・2次60％（日本数学検定協会の基準）"
+      }
+    },
+    {
+      "id": "kentei-suken-5",
+      "questions": 50,
+      "status": "ready",
+      "exam": {
+        "parts": [
+          {
+            "name": "1次（計算技能）",
+            "count": 30,
+            "minutes": 50,
+            "passRate": 0.7
+          },
+          {
+            "name": "2次（数理技能）",
+            "count": 20,
+            "minutes": 60,
+            "passRate": 0.6
+          }
+        ],
+        "passNote": "合格のめやすは1次70％・2次60％（日本数学検定協会の基準）"
+      }
+    },
+    {
+      "id": "kentei-rika-5",
+      "questions": 20,
+      "status": "ready",
+      "exam": {
+        "minutes": 50,
+        "count": 20,
+        "passRate": 0.7,
+        "passNote": "合格のめやすは70％（日本理科検定協会の基準）"
+      }
+    }
+  ],
+  "filesSha256": {
+    "site-assets/material-bank.json": "5c2f574fcbf1c0f289731456f11bc1e79b9468b8b45f02e9b826045f7e77bb13",
+    "cf-worker/src/material-bank.mjs": "6df32ee4be23cd98e7778c79239836030430f1afdefa960cf9b096329fc55854",
+    "cf-worker/src/material-engine.cjs": "5179bb9b77a11905f49a0f945fb932f79dc46b5e10b75e62ed14f244b908bf84",
+    "教材整理/実装/material-ui.js": "1089d9b6e1a32e6802a7e763d0efea59b9a10bcc78921c7bf93651b652f024df",
+    "site-assets/material-ui.js": "1089d9b6e1a32e6802a7e763d0efea59b9a10bcc78921c7bf93651b652f024df",
+    "site-assets/textbook-book-math1.json": "8f30358dc138c92470eb15993bfe05ae04feb31c36da7a7157e4a7f15fc6e858",
+    "index.html": "52eb3411e628d4373b1139d35efc53b768499c4438dd4878b065ff9f1b6b525e",
+    ".claude/verify/run.sh": "06ee547c8d4db92b7018a98ca19a8bb3fedc4b4d36288292acf18d2c7f8cfdda",
+    "Claude作業/20261022_バグ修正/見つけたバグ一覧.md": "1ca277f8d5cec6fcd134bcad49ab027e1738d031edf093381862ecaa9bb208d3",
+    "Claude作業/20261021_非admin残機能/3巡目_全部仕上げ計画.md": "2e3048db9eb043da4f0e34b90b8793a8d27ff4931c5677fa63233cbae38ee8d7",
+    "tools/candidates/kentei-full-20261022/README.md": "31cbe0415e4028a13301d75c37cdd77ba4e74d26725c512996686a5b468782af",
+    "AI連絡/サブスクAI_残件再整理_20261021.md": "815175e67258b56d9ee7453c82c19ddbca4a4a5a70df2a85ac1d616f91c0c8d4"
+  },
+  "oldReportsKnownStale": [
+    "211-unit bank replaced by current 216 units",
+    "five kentei drafts-only claim replaced by five connected ready units; content quality and actual exam accuracy still require evidence",
+    "H-VS cancellation superseded by active Codex development",
+    "H-MAIL location resolved; H-TEN cancelled; H-BACKUP destination R2; hard-star policy delegated"
+  ],
+  "ordinaryDataRead": false,
+  "secretsRead": false,
+  "published": false,
+  "allTasksComplete": false
+}

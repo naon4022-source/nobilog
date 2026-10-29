@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "checks": 143,
+  "videos": [
+    {
+      "id": "M1-C5-REVIEW-V01",
+      "scriptSha256": "60612ef42eef22a2c0ec771ce444865c8e9663da729dd2750072ecee3eaf6ea6",
+      "reason": "移動・3作図・反射最短路・円公式を上の検算と同じ座標・条件で再利用。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S1-V01",
+      "scriptSha256": "e6b17b5bc555162f0b1d3de6a7ccf63bfebaaf60da5d2a0b93a5b19ca94a46e7",
+      "reason": "線分2端・直線0端・半直線1端。矢印と端点の区別。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S1-VP",
+      "scriptSha256": "f37840301a28d85cfd6acaf4bb5418b015ad10dd0989923c3c17ffa2c904257e",
+      "reason": "頂点は角の名前の中央。点と直線・平行線間の距離は垂直に測る。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S2-V01",
+      "scriptSha256": "ec20e6a840fe14971d45a0735fb9fad757b8a889f8fe76236fd825edb0c4106f",
+      "reason": "同じベクトル、90度回転、x=4の鏡映で全辺の長さが等しい。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S2-V02",
+      "scriptSha256": "51093da36d299078b4f61d0d77db4f13502e3fdba1e5c6d05b68fc15033b4311",
+      "reason": "半径250、半底辺200、高さ150の等しい2円。4辺250と垂直な対角線。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S2-V03",
+      "scriptSha256": "7d7f35686c19f8f18bb1e9a43522f0202d5d44586935b22a92245e0d56d890b3",
+      "reason": "半径sqrt(65600)、PとQを通る2円。4辺同長、PQが直線に垂直。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S2-VP",
+      "scriptSha256": "857e750f64f523e2c07249697b2770008aecbdc59565ccc915cef337af078f24",
+      "reason": "3移動と基本3作図。角の二等分線のひし形も上下対称で等長。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S3-V01",
+      "scriptSha256": "63ddd35a8264a98a1f981a9e30f9de63fe3a213d86b61da4e41eadd5cfb55409",
+      "reason": "PB=PB′、A/P/B′が一直線。三角不等式による最短性。距離の解答数値は表示しない。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S3-VP",
+      "scriptSha256": "d619c99179aac85fde81e6d33d20c67b4202166ab1f5fad098cbd7b38b88ed38",
+      "reason": "同じ反射の幾何を池の岸という導入へ接続。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S4-V01",
+      "scriptSha256": "b4d9157e8b2022a5b3d4a085d211adfa5b384462e584b6318bf93922027da46c",
+      "reason": "r=150、中心と直線の距離dのとき交点半幅sqrt(r²−d²)。d=rで1点。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S4-V02",
+      "scriptSha256": "773409f0ff17965e499934921cd75320cc600fb7cd30fbf5ec8e983d8924347e",
+      "reason": "8/16/32等分の面積保存。有限個は長方形への近似、極限で縦r・横πr。",
+      "status": "passed"
+    },
+    {
+      "id": "M1-C5-S4-VP",
+      "scriptSha256": "d327d3ffaca2e9e35ffe7863702ce2a179688f427f3a42324826056422769ba1",
+      "reason": "a/360という割合から弧と面積。S=(1/2)ℓrとの同値性。",
+      "status": "passed"
+    }
+  ],
+  "dependencies": {
+    "数学5章_場面.js": "c883cc936bef7550257e3289ddc775a917947b7dbde9ab025ee1f20202a3a3a9",
+    "池の最短路_導入補正.js": "e0fc2335e2dd44f90bbddb78cb51f65f61faafb749e753f1a7cbcb02518d9bd4",
+    "円の面積_式の配置補正.js": "08a40a26c9b4b7ed5123588d1b9664e0abdfd08ba88014f21da67e243ebebe0d",
+    "円とおうぎ形_導入補正.js": "07d5d42ba9516f27e0c7dda6bf16a600c659877bd3444ca79206bc5ce20f5219"
+  },
+  "scope": "全12動画の既表示の幾何・数量・数式。本文全問、原資料写真全文、新たな聴取、実機確認とは別。",
+  "learnerFacingAnswersAdded": false
+}

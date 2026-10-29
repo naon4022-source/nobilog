@@ -1,0 +1,56 @@
+{
+  "status": "passed; candidate only",
+  "checks": 14,
+  "cases": [
+    {
+      "width": 320,
+      "start": 1,
+      "initial": {
+        "left": 0,
+        "max": 187,
+        "client": 304,
+        "scroll": 491
+      },
+      "end": {
+        "spread": 1,
+        "left": 187
+      },
+      "screenshot": "toolbar-320.png",
+      "sha256": "bd9c98339313509f8fc58702076ee56a73962420bbbb5d223710b3a0c8c9df38"
+    },
+    {
+      "width": 390,
+      "start": 1,
+      "initial": {
+        "left": 0,
+        "max": 117,
+        "client": 374,
+        "scroll": 491
+      },
+      "end": {
+        "spread": 1,
+        "left": 117
+      },
+      "screenshot": "toolbar-390.png",
+      "sha256": "32522d4c73c595cb57daa930e2eaf0cb9a311ba288f8d7297edaeeaafcff519f"
+    },
+    {
+      "width": 700,
+      "start": 1,
+      "initial": {
+        "left": 0,
+        "max": 0,
+        "client": 684,
+        "scroll": 684
+      },
+      "end": {
+        "spread": 1,
+        "left": 0
+      },
+      "screenshot": "toolbar-700.png",
+      "sha256": "0970644032722c8a5accca9b9d03e5be6192758b398a56b7a514de9edd3263ac"
+    }
+  ],
+  "servedJsSha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745",
+  "scope": "Actual reader/current book; real horizontal wheel events. Candidate excludes toolbar only; page gestures and exit retained. No main changes, live APIs or learner data. Earlier programmatic/native-focus failures remain separate and are not claimed fixed."
+}

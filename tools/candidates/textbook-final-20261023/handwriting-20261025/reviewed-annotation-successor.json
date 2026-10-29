@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "scope": "Only u4 private-draft eligibility and handwriting/legacy annotation mode interoperability; historical expected bytes unchanged",
+  "files": [
+    {
+      "file": "site-assets/textbook-annotation-model.js",
+      "beforeFile": "tools/candidates/textbook-final-20261023/handwriting-20261025/before/site-assets/textbook-annotation-model.js",
+      "beforeSha256": "fc06f2082baf9774a91c890c715f5a87521ae6273916eabb2ab3821abeb91106",
+      "afterSha256": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483",
+      "edits": [
+        {
+          "before": "['u1','u2','p_free'",
+          "after": "['u1','u2','u4','p_free'"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-annotations.js",
+      "beforeFile": "tools/candidates/textbook-final-20261023/handwriting-20261025/before/site-assets/textbook-annotations.js",
+      "beforeSha256": "4988bf9de1425abfd0d4b0d5ca0a3efbb45927133a35a41e54e8802096fca54b",
+      "afterSha256": "4fd5432c2598ba8b09e13f9849141f0ae8d7ded5c844c3b17973df17ea7c4e0c",
+      "edits": [
+        {
+          "before": "function reset(){controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}",
+          "after": "function reset(){root.NobiTextbookInk?.reset();controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}"
+        },
+        {
+          "before": " const live=()=>alive&&model.current();\n",
+          "after": " const live=()=>alive&&model.current();\n const ink=root.NobiTextbookInk?.mount(app,book,{...context,beforeOpen(){close();stopPick();}});\n"
+        },
+        {
+          "before": "if(!live())return;if(picking){stopPick();return;}showList();",
+          "after": "if(!live())return;root.NobiTextbookInk?.close();if(picking){stopPick();return;}showList();"
+        },
+        {
+          "before": "controller={paint,destroy(){alive=false;",
+          "after": "controller={paint,destroy(){ink?.destroy();alive=false;"
+        }
+      ]
+    }
+  ],
+  "individualProofs": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/api-result.json",
+      "sha256": "41d2aec54e686b2997e39db9d6f0c36278ac9f800021e5a618d341122deb18f8",
+      "checks": 79
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/model-result.json",
+      "sha256": "259019cf2d82fc043aca83838f9790f4c2c928c3c4275f4f8b2427f3db1072ee",
+      "checks": 37
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/book-result.json",
+      "sha256": "29fb2b8b1ecb02da9465e34a4373a62080671cef31f381376e88bad7bd5c096e",
+      "checks": 97
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "status": "16 exact content/runtime file successors prepared; not applied",
+  "files": [
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/原稿/u01.py",
+      "beforeSha256": "5e6a8b6177999cc15cdc46e65431d9136a58ce62d05f23865506acddf448beb7",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/book-alignment-v3/output/教材整理/Claude_Codex共有/国語全体制作/原稿/u01.py",
+      "afterSha256": "865084658246dad345759f03d5f6db1ff50544d8eaf282c88df4c75b11b58300",
+      "reason": "reviewed explanation only; exercise AST preserved"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/原稿/かいわ.py",
+      "beforeSha256": "809ed77cac7641749673805f68295b70a14bfe15b82569d8803f5ae764d6b1c0",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/book-alignment-v3/output/教材整理/Claude_Codex共有/国語全体制作/原稿/かいわ.py",
+      "afterSha256": "4b8787743cbd4bdb1a12c214d7844a55eed85943c7dfcf7778fdc18a845aeb02",
+      "reason": "reviewed explanation only; exercise AST preserved"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-V01.json",
+      "beforeSha256": "e9a73f80a5920715f3fed43f13ad859af2f86e8fcaeec3f14c0af39e816c14c8",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/output/教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-V01.json",
+      "afterSha256": "b52f61f8c845bd14c07c5db13b6383b45a670e26262c1efe1531b9a92744fc0b",
+      "reason": "say/cap same corrected explanation"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/メディア/K1-C1-S1-V01.mp4",
+      "beforeSha256": "4c1e668eb58d66ede79fde156fddfb768689709a5159a72e439a4059b4eda9fc",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos-caption-v2/K1-C1-S1-V01/candidate.mp4",
+      "afterSha256": "eb009b4ef394222f929f0707476c4406eb94d3741d163d8c8a7adf886d8fbeac",
+      "reason": "full AV decoded; 1.5s actual frame review; 4width playback"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-v01.mp4",
+      "beforeSha256": "4c1e668eb58d66ede79fde156fddfb768689709a5159a72e439a4059b4eda9fc",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos-caption-v2/K1-C1-S1-V01/candidate.mp4",
+      "afterSha256": "eb009b4ef394222f929f0707476c4406eb94d3741d163d8c8a7adf886d8fbeac",
+      "reason": "same reviewed movie bytes at existing book URL"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-VP.json",
+      "beforeSha256": "30474cb1811e02983de7afc5b4a3771b3f370d57d7f4f543915a8f84a94ffb28",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/output/教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C1-S1-VP.json",
+      "afterSha256": "b38aeb297dc3a1ab060cd61550ad118932eb8827cd024c7804b99c6c36574790",
+      "reason": "say/cap same corrected explanation"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/メディア/K1-C1-S1-VP.mp4",
+      "beforeSha256": "9a4287708211729405b9625e0a05a0750a662092ccc399603ac4aaccfcd2ae79",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos-caption-v2/K1-C1-S1-VP/candidate.mp4",
+      "afterSha256": "bed7a2954b047086b8db742403b9a66e4065cf6df4d542d6511f4d6ba317334d",
+      "reason": "full AV decoded; 1.5s actual frame review; 4width playback"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-vp.mp4",
+      "beforeSha256": "9a4287708211729405b9625e0a05a0750a662092ccc399603ac4aaccfcd2ae79",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos-caption-v2/K1-C1-S1-VP/candidate.mp4",
+      "afterSha256": "bed7a2954b047086b8db742403b9a66e4065cf6df4d542d6511f4d6ba317334d",
+      "reason": "same reviewed movie bytes at existing book URL"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1.json",
+      "beforeSha256": "c84dca489c1db7fd1fe264091ed6bcfcc94bfc6a9958cdf78b3fa891ad636074",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/book-alignment-v3/textbook-book-kokugo1.json",
+      "afterSha256": "4a87f48872989749128b2ccf25e44b41b63fe7c14a81cbf269d41994ebbe0d6c",
+      "reason": "six explanation leaves total; all exercises and metadata preserved"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/メディア/K1-C1-S1-DP.svg",
+      "beforeSha256": "56c0958f11658b9955dcfb373915641ce794dd64ebfd3e2cf8dc80817b4dbc24",
+      "candidateFile": "tools/candidates/textbook-final-20261023/explanation-figures-20261028/candidate/K1-C1-S1-DP.svg",
+      "afterSha256": "79d6d142b6f5a84f0e00febeed0e2fb0cd310b36b08d97e608fc11e0bff3c21d",
+      "reason": "reviewed diagram uses same clear explanation"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c1-s1-dp.svg",
+      "beforeSha256": "56c0958f11658b9955dcfb373915641ce794dd64ebfd3e2cf8dc80817b4dbc24",
+      "candidateFile": "tools/candidates/textbook-final-20261023/explanation-figures-20261028/candidate/K1-C1-S1-DP.svg",
+      "afterSha256": "79d6d142b6f5a84f0e00febeed0e2fb0cd310b36b08d97e608fc11e0bff3c21d",
+      "reason": "same reviewed figure bytes at existing URL"
+    },
+    {
+      "file": "site-assets/textbook-ai-context-kokugo1.json",
+      "beforeSha256": "7367c4849368f96a645007c13e2723d29a6b8d5080fdedf9cabe604fa97988d4",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-ai-context-kokugo1.json",
+      "afterSha256": "8c14a9b8fc4124d67594bc5e6a8a1fe38e4f412440699cca9a3d77ba9cd18bee",
+      "reason": "only kokugo1 catalog/source/signature; other5 books unchanged"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-kokugo1.json",
+      "beforeSha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-ai-media-context-kokugo1.json",
+      "afterSha256": "9aec86c9d3d39238878a9bac801ff91d91d5abcd9d32d6077614416e540706e7",
+      "reason": "only kokugo1 catalog/source/signature; other5 books unchanged"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-manifest.mjs",
+      "beforeSha256": "4109f5527d7a7105c55efdd6b7bf481820747e76c3fa5db4f6b08cb59e9472bf",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/cf-worker/src/textbook-ai-context-manifest.mjs",
+      "afterSha256": "8276d089c979026e391c78f1ac95d6ae429ff6785fa1f13a43aebb6db43ed887",
+      "reason": "only kokugo1 catalog/source/signature; other5 books unchanged"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-manifest.mjs",
+      "beforeSha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/cf-worker/src/textbook-vision-media-manifest.mjs",
+      "afterSha256": "498608a24eef33f94b883bd9da6e642a444dc9d9eadf8747b8c192bbad59f522",
+      "reason": "only kokugo1 catalog/source/signature; other5 books unchanged"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-manifest.mjs",
+      "beforeSha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186",
+      "candidateFile": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/output/site-assets/textbook-vision-media-manifest.mjs",
+      "afterSha256": "498608a24eef33f94b883bd9da6e642a444dc9d9eadf8747b8c192bbad59f522",
+      "reason": "only kokugo1 catalog/source/signature; other5 books unchanged"
+    }
+  ],
+  "evidence": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/current-stage.json",
+      "sha256": "da85d868d861848caf36c17906133868ecc726a0dbe715f7003ddeb46135db92"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/result.json",
+      "sha256": "d3ba966c54d15a8dddcd97097fc24eae7cedc6322b6e02b1842eb6e996e92fbf"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/integration-contexts/reader-result.json",
+      "sha256": "db9e96894b8f01a9b6b8130cf740709d3fb2b15bddebff4544626386ef7d179d"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/full5-result.json",
+      "sha256": "632e05acccc39379cceec3bca3457b554e76c64bf9e0422acc287ae87c51b9b3"
+    }
+  ],
+  "unchanged": [
+    "other5 books and catalogs",
+    "questions/answers/values/IDs",
+    "book catalog pageCount291",
+    "original reference photographs and source catalogs",
+    "preview builder; nonmath has no math-only release filtering",
+    "admin/auth/real learner data"
+  ],
+  "nextRequired": [
+    "Synthetic annotation model and actual UI passed; retain these proofs when checking actual main book after promotion",
+    "Prepare reproducible canonical scene/timeline successors if original scene metadata is consumed",
+    "Implement narrowly reviewed historical-verifier successor, preserving all existing assertions and immutable prior evidence",
+    "Apply exact matched files transactionally, rejecting any before-SHA drift",
+    "Actual main reader and AI panel/route binding checks, preview artifact SHA check, then one standalone whole verification"
+  ],
+  "publication": "not authorized; no publish/commit/delete/AI activation",
+  "globalCompletionPercent": null,
+  "syntheticAnnotationPreservation": {
+    "model": "passed;1433 saved notes and4 drafts retained;0 writes",
+    "actualUI": "passed;45 checks,2 widths;old quote/notice/editor retained",
+    "proofs": [
+      "note-preservation-result.json",
+      "note-ui-result.json"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "candidate only; main unchanged",
+  "file": "site-assets/review-practice.js",
+  "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/review-practice.js",
+  "candidateFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/review-practice.js",
+  "beforeSha256": "1c3d211912688f75e328937f2ffa2a9c9afb5f4f852a7a3b10c8af8ee39ab17a",
+  "afterSha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5",
+  "edits": [
+    {
+      "before": " function controls(){",
+      "after": " const fractions=node=>root.NobiFractions?.apply(node,null,{math:ref.practiceId.startsWith('review-math-')});\n function controls(){"
+    },
+    {
+      "before": "root.NobiFractions?.apply(answer);",
+      "after": "fractions(answer);"
+    },
+    {
+      "before": "root.NobiFractions?.apply(explanation);",
+      "after": "fractions(explanation);"
+    },
+    {
+      "before": "root.NobiFractions?.apply(prompt);",
+      "after": "fractions(prompt);"
+    }
+  ],
+  "stylesheet": {
+    "file": "site-assets/review-practice.css",
+    "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/review-practice.css",
+    "candidateFile": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/review-practice.css",
+    "beforeSha256": "659da9c8c75318eb7be439872f0d1a634b35f1b7f58c1e60ad6a79b5ba27a0b4",
+    "afterSha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678",
+    "addition": ".rp-result:empty{display:none}\n"
+  },
+  "scope": "Explicit mathematical fraction context only for trusted review-math IDs; empty feedback border hidden only while it has no contents. Same public shape, grading, answer storage and callbacks. Existing unit/date/counter guards retained by unchanged formatter."
+}

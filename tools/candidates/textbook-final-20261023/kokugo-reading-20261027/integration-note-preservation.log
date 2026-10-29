@@ -1,0 +1,2019 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Values have same structure but are not reference-equal:
+
+... Skipped lines
+[
+  {
+    anchor: '741f7c5467b54735b39f254134589b16666f772b12d4966a09daa63b40304d2e',
+    book: 'kokugo1',
+    color: 'yellow',
+    note: '隔離確認用メモ 0',
+    quote: '入学して間もない教室。友達どうしで話したり、本を読んだりしている場面',
+    revision: 1,
+    updatedAt: 1
+  },
+  {
+    anchor: '48869f62cc4f81da52e95bd87efa9a515106dfbaebd8e4b05c5360727c045a04',
+    book: 'kokugo1',
+    color: 'yellow',
+    note: '隔離確認用メモ 1',
+    quote: '「聞く」「読む」「話す」は、ただ受け取るだけではない',
+    revision: 1,
+    updatedAt: 1
+  },
+  {
+    anchor: 'f90926a7ee89a79b5c19c6d3e2e25a9d766b0d4ddddede7fcaa6e53cebf57306',
+    book: 'kokugo1',
+    color: 'yellow',
+    note: '隔離確認用メモ 2',
+    quote: '人の話をちゃんと聞くと、相手のことも自分のこともよくわかる。\n' +
+      '同じ出来事でも、だれの目から見るかで、ちがう物語になる。\n' +
+      'この章では、言葉を「受け取る」から「使いこなす」への一歩をふみ出そう。',
+    revision: 1,
+    updatedAt: 1
+  },
+  {
+    anchor: '7d653e46e2371f462d7491e77b62bfa6a24be037d9d4fb66cc38819c3dfe47c8',
+    book: 'kokugo1',
+    color: 'yellow',
+    note: '隔離確認用メモ 3',
+    quote: 'この章で学ぶこと',
+    revision: 1,
+    updatedAt: 1
+  },
+  {
+    anchor: 'dc2021faf7e0ec86179d35ac3f1a56b5791aea1afdd177193128eed45e6efef0',
+    book: 'kokugo1',
+    color: 'yellow',
+    note: '隔離確認用メモ 4',
+    quote: '聞くということ／桜蝶／お気に入りの一品を紹介する／言葉の単位／漢字の練習1',
+    revision: 1,
+    updatedAt: 1
+  },
+  {
+    anchor: 'fa7537532ebf3ef25801b496dc304ac6bdb9848296692fe8bd9c274cc4b20c41',
+...}
+
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/verify-note-preservation.mjs:28:8 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      book: 'kokugo1',
+      anchor: '741f7c5467b54735b39f254134589b16666f772b12d4966a09daa63b40304d2e',
+      quote: '入学して間もない教室。友達どうしで話したり、本を読んだりしている場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 0',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '48869f62cc4f81da52e95bd87efa9a515106dfbaebd8e4b05c5360727c045a04',
+      quote: '「聞く」「読む」「話す」は、ただ受け取るだけではない',
+      color: 'yellow',
+      note: '隔離確認用メモ 1',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f90926a7ee89a79b5c19c6d3e2e25a9d766b0d4ddddede7fcaa6e53cebf57306',
+      quote: '人の話をちゃんと聞くと、相手のことも自分のこともよくわかる。\n' +
+        '同じ出来事でも、だれの目から見るかで、ちがう物語になる。\n' +
+        'この章では、言葉を「受け取る」から「使いこなす」への一歩をふみ出そう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 2',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '7d653e46e2371f462d7491e77b62bfa6a24be037d9d4fb66cc38819c3dfe47c8',
+      quote: 'この章で学ぶこと',
+      color: 'yellow',
+      note: '隔離確認用メモ 3',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'dc2021faf7e0ec86179d35ac3f1a56b5791aea1afdd177193128eed45e6efef0',
+      quote: '聞くということ／桜蝶／お気に入りの一品を紹介する／言葉の単位／漢字の練習1',
+      color: 'yellow',
+      note: '隔離確認用メモ 4',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fa7537532ebf3ef25801b496dc304ac6bdb9848296692fe8bd9c274cc4b20c41',
+      quote: '「話を聞いてるの？」と言われたこと、ある？ 耳に入るのと、心で聞くのは、ちょっとちがうんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 5',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bdfcbdf2acc0367f276cbd9863e7e6afd09f5e7fa5fa6afbca563d86b5f06394',
+      quote: '二人が向かい合って話している。一人が身を乗り出して相手の話を聞いている',
+      color: 'yellow',
+      note: '隔離確認用メモ 6',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b62aa2d1ba538dfbf27892b9b4c4053cf6aa6523ed09d56e6589a9224ab77c2e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 7',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'cadf435b5b19378bd1f415a0bd88a212e749213ac703d3d6eb4deb2f38095a0c',
+      quote: '教科書 p16〜21「聞くということ」（阿川佐和子）\nワーク「聞くということ」：全文のまとめ、A 筆者の考え、B 体験と考え',
+      color: 'yellow',
+      note: '隔離確認用メモ 8',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6d4c22fbb566e71949efe9e953444f4c7b6c1fcc8d9f564323f4e8171cfe8848',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 9',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '738b2cd82c74c11e65b6c2adac8bdbf9b5a9e25b6532db7bc407fe9b820fefa8',
+      quote: '筆者は、人の話を聞く仕事をしている人。その体験から考えたことを書いている。\n' +
+        '文章には「体験（あったこと）」と「考え（筆者が思ったこと）」が混ざっている。\n' +
+        '読むときは、どこが体験で、どこが考えかを分けながら読もう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 10',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '88df79045e97d80499da76fcd2dcc4ac1e9b5297b80c3caf71a56a99db06aab6',
+      quote: 'どんな内容？',
+      color: 'yellow',
+      note: '隔離確認用メモ 11',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b8c7215c0a27ed4b7e228862b66cb758f6d33e7f53a144ff6185695d26f35196',
+      quote: '人の話を聞くのは、じつは力のいること。たいていの人は、まわりの話を都合よく選んで、適当にしか聞いていない。でも、ときには一生懸命に耳を傾けてみるのもいい、と筆者は言う。\n' +
+        '「聞く」は、ただ耳を傾けるだけでなく、「問う」ことといっしょになっている。聞くと疑問がわき、問うと話が広がって、会話がおもしろくなる。\n' +
+        '筆者は長い間、対談やテレビの司会など「聞く」仕事をしてきた。でも、聞くのが得意だったわけではない。仕事をちゃんとやりとげたい一心で続けてきた。\n' +
+        '苦手だからこそ必死になる。必死になるから相手の話が深く心に入り、いつのまにか自分が元気になっている――筆者はそう気づいた。\n' +
+        '話を聞いていると、相手の話と、自分の子どものころの気持ちの記憶が重なって、胸が熱くなる瞬間がある。それが、人に話を聞くことの何ともいえない味わい（妙味）。（児童文学者の石井桃子さんの言葉や、映画監督へのインタビューの体験が例として出てくる）\n' +
+        '正しい聞き方に正解はない。大事なのは「聞いてみたい」という気持ちと、聞いたら自分を知るきっかけになるかもしれないという好奇心。\n' +
+        '体験（〜した）と考え（〜と思う・〜が大切だ）を分けて読むと、筆者の言いたいことがはっきりする。',
+      color: 'yellow',
+      note: '隔離確認用メモ 12',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'ca1bbe11972ca3f30a5098563bda5f6d2aa05cc24b77db71ee0fc965cb308b92',
+      quote: 'ひとことで言うと… 文章の中の「あったこと」と「思ったこと」を分けて読むと、筆者の言いたいことが見えてくるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 13',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '01ca22d2514ad467f4a9782be6f3ec1332b781bcc7a3839f5b0652fcd9b46d37',
+      quote: '話を聞くって、だまって座ってればいいんでしょ？\n' +
+        'それだと「耳に入ってる」だけかも。この文章の筆者は、「聞く」は「問う」とつながっている、と考えているんだ。\n' +
+        '問う……つまり、質問するってこと？\n' +
+        'そう。「それで、どうなったの？」って聞くと、相手はもっと話してくれるよね。聞くと疑問がわいて、問うと話が広がる。\n' +
+        'でも、それって筆者の「考え」でしょ？ 本当にそうなの？\n' +
+        'いい疑問！ だから筆者は、自分の「体験」を書いているんだ。体験は、考えを支える「根拠」なんだよ。\n' +
+        '見分け方は？\n' +
+        '文の終わりを見てね。「〜た」は体験、「〜と思う」「〜が大切だ」は考え。まとめ：体験（〜た）と考え（〜と思う）を分けると、筆者の言いたいことが見える！',
+      color: 'yellow',
+      note: '隔離確認用メモ 14',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e36733d9de7262ae1d936273c7c2d21e9de43f4f75c12a4a8ee8d9eba0262c17',
+      quote: '体験と考えを分ける',
+      color: 'yellow',
+      note: '隔離確認用メモ 15',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5143e9bf66b75e30fb7a66566b27fb23ed2a134d2bdee42592edf7115971bfd3',
+      quote: '体験：いつ・どこで・だれと・何があったか。過去の形（〜た）が多い。\n' +
+        '考え：「〜と思う」「〜ではないか」「〜が大切だ」など、筆者の判断が出る文。\n' +
+        '体験は、考えを支える「根拠」として書かれている。',
+      color: 'yellow',
+      note: '隔離確認用メモ 16',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '9ebd770f83d83d6f6d4188111b9474167546accea4eb701373fff1445bdd4a23',
+      quote: '「聞く」は「問う」とつながる',
+      color: 'yellow',
+      note: '隔離確認用メモ 17',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '27537c5f07fc088b35b4b3160454ebfb872949d79a0c94ef7a7e0d575f461ea6',
+      quote: '「聞く」は、耳を傾けるだけでなく「問う」ことをともなう。聞くと疑問がわき、問うと話が広がる。\n' +
+        '筆者は聞くのが得意だったわけではない。苦手だからこそ必死になり、相手の話が深く心に入って、自分も元気になると気づいた。\n' +
+        '相手の話と自分の感情の記憶が重なって胸が熱くなる瞬間がある。それが「聞く妙味」。',
+      color: 'yellow',
+      note: '隔離確認用メモ 18',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '06f6d83a77a2002a5e81cfc895eac4d5da9cf26a90480a4d18a5c534757ab228',
+      quote: '筆者の考えのまとめ方',
+      color: 'yellow',
+      note: '隔離確認用メモ 19',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '76dafe544388ebdf9e09b704dd1b77d5931c292d188d54373e34ded04e53bffb',
+      quote: '文章の終わりの近くに、筆者の考えがまとまって書かれることが多い。\n「つまり」「だから」「このように」のあとに注目する。',
+      color: 'yellow',
+      note: '隔離確認用メモ 20',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '2a0d7085b7f349141fbe48aff7a6c112fb4ba745242a96d679e4697840a835b8',
+      quote: '例題　体験と考えを分けよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 21',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '8ccf413b96b6a44ba3fc3fa9ea71979eeaf4f8127a08837fff3f03d395ba1fc9',
+      quote: 'この短い文章、どこから手をつける？\n' +
+        'まず「〜た」で終わる文に線を引こう。それが体験。\n' +
+        '次に「〜と思う」の文をさがすんだね。\n' +
+        'そう。最後に「この考えを支えているのは、どの体験？」と矢印でつなげば完成だよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 22',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5bd687e376af2b0592261b159dfa5c50fcdce7832f4074a047c85e230a857008',
+      quote: '「〜た」で終わる文をさがす（あったこと）。\n「〜と思う」で終わる文をさがす（考え）。\n体験が、考えのどんな根拠になっているかを言う。',
+      color: 'yellow',
+      note: '隔離確認用メモ 23',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '140dfb9a28d5cd671fee82aca9e9dc228e9f4eeff6de49212212d90304eea044',
+      quote: '確認1　次の文は「体験」と「考え」のどちらですか。「人の話は、最後まで聞いてこそわかるものだ。」',
+      color: 'yellow',
+      note: '隔離確認用メモ 24',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '51ff3237421f46612dc1e07a8bff702f6a41e943772b4c0d46e82a74ef5e5649',
+      quote: '確認2　「耳に入っていた」と「聞いていた」のちがいを、自分の言葉で説明してみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 25',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '72350343f8613723a502975b1bac488e0a0b7361c72b5709eb92f419123f64ed',
+      quote: '確認3　教科書の文章で、筆者が自分の仕事の体験を書いている段落と、考えを書いている段落を一つずつ選び、最初の五字を書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 26',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c89af4819afb721b1bdbe8729148ff4147480e5ea4c92a05b0b58dd725cfcc26',
+      quote: '練習1　★ 次の文章の中で、筆者の考えが書かれている文の番号を答えよう。①先週、図書館で司書さんに本の選び方を聞いた。②司書さんは、私の好きな本を三冊たずねた。③好みを聞くことから、相手に合う提案が生まれるのだろう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 27',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '953e4e961e6e90d04ebd2d66b434372fdb7c90f37b3caa493facefb4a6c13151',
+      quote: '練習2　「相手の話に耳を傾ける」の「耳を傾ける」の意味として最も適切なものを選ぼう。ア 聞き流す　イ 注意して熱心に聞く　ウ うたがって聞く',
+      color: 'yellow',
+      note: '隔離確認用メモ 28',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'dc019cfd3015d6f2cfbe64b6096913543367c23bad7ef5367c901e6473461296',
+      quote: '練習3　人の話を聞くときに大切だと思うことを、自分の体験を一つ入れて六十字以内で書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 29',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3a119523e0e09d6a29925ca467be8ad20fcfbdd425b1c65ba6af0475ffb7512e',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 30',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd38ca9395e1a20d8f55894ae8850f755735067620b9af5816fed3fcd0ddbbf7f',
+      quote: '文章は「体験（あったこと）」と「考え（思ったこと）」に分けて読む。\n' +
+        '体験は、考えを支える根拠になっている。\n' +
+        '筆者は、心を向けて聞くことで、会話も自分も変わると考えている。\n' +
+        '文章の終わりの近くに、考えのまとめが出やすい。',
+      color: 'yellow',
+      note: '隔離確認用メモ 31',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e61d93ecf53d8464c2ec561a29be9d8962fdf4b2e4c5cfaf81101a2c0d4c6515',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 32',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '94d9af8ee848ad4828e4b0a7cc3df1e8a448a7b3dad82254c7b12326a6268bb8',
+      quote: '文の終わりを見る：「〜た」は体験、「〜と思う・〜だ・〜べきだ」は考え。\n' +
+        '考えを見つけたら、「なぜそう思った？」と聞き返し、その答えになる体験をさがす。\n' +
+        'まとめの言葉（つまり・このように）のあとに線を引く。',
+      color: 'yellow',
+      note: '隔離確認用メモ 33',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '181c11d0f8b92b238d2957ffd63195604cc61e229f5308a549ace5184fda4dbf',
+      quote: 'よくあるミス',
+      color: 'yellow',
+      note: '隔離確認用メモ 34',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c8aa59616179980606f7dbd887bcbab040f35abf6a460c0b7cc57e0402ab3114',
+      quote: '体験の文をそのまま「考え」として答えてしまう。\n自分の考えと筆者の考えを混ぜてしまう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 35',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a08c66af4b27dd30fdf5d20d36e5e0b354d19927e25c0e0527e2ebf0771071ce',
+      quote: '同じ日の同じ場面でも、Aくんの目とBさんの目では、ちがって見える。物語にも「だれの目」があるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 36',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '1b073d33c80a07b0999fbad27ed11835d111de387ebfd0f251c8af139881765f',
+      quote: '桜の木の下。花びらが舞い、蝶のように見える場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 37',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fe22513d17cc98a1ab66a326b0b76ceed75be3cc31babcba3e89859561e7e525',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 38',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '207285a9a895164aac7bb8c6d9610e82d50273e698752180ed85dda611eb6c1d',
+      quote: '教科書 p24〜29「桜蝶」（田丸雅智）、学びのカギ「視点」\nワーク「桜蝶」：A と B の文章の描かれ方を比べる',
+      color: 'yellow',
+      note: '隔離確認用メモ 39',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '79960d4b0ba61d8dd8e6dcef0a7d8630c47ee9045eb7efa87e2d55305794e1dd',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 40',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '943d8496a19569cb1c7cad5cd5959296fffeee82f40dd24f9f635c2d01e5bf08',
+      quote: 'この作品は A と B の二つの文章でできている。\n' +
+        '二つは同じ出来事を、ちがう人物の視点から描いている。\n' +
+        '視点が変わると、わかること・わからないことが変わる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 41',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5a7a2351ace5a8c349cfd1ecdd4d37d76fa0b7f7f733e499b66484b20a63bf27',
+      quote: 'どんな内容？',
+      color: 'yellow',
+      note: '隔離確認用メモ 42',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '1c30c0ebf69c7532a371f19e17864641b924e03e978335f0ad1192dbd93adb37',
+      quote: 'A と B は、同じ出来事を、ちがう人の目（視点）から書いた二つの文章。\n' +
+        'A（登場人物の外から語る）：白石さんが学校帰りに公園を通ると、同じクラスの倉橋君が桜の木の前に立っていた。倉橋君は「桜蝶」の話をする。春に南から北へ、桜の木に留まりながら旅をする蝶で、来ると桜が一斉に咲くという。そのとき、花びらのような羽の蝶が一斉に飛び立ち、ピンクのもやが北へ移っていく。白石さんは「春とはもう、お別れなんだね……」とさびしくなる。倉橋君は南の空の緑のもや（葉桜蝶）を指さし、新しい季節を運んできた、とほほえむ。\n' +
+        'B（倉橋君＝「僕」の視点）：僕は親の転勤で春先にこの町に来た。故郷の友達との別れがつらかった。そんなとき公園で桜蝶を見つけた（桜蝶のことを教えてくれたのは故郷の親友）。南の町から来た自分を桜蝶に重ねて、毎日通っていた。白石さんの「お別れなんだね」を聞いて、親友が別れぎわに言った言葉――別れは終わりではなく始まりだ――を思い出す。\n' +
+        'A だけでは、倉橋君がなぜ毎日蝶を見ていたのか、なぜ最後にほほえんだのかはわからない。B を読むと、その理由（転校のさびしさと親友の言葉）がわかる。\n' +
+        '登場人物の視点から語ると、その人の見方や気持ちがよく伝わる。でも、ほかの人の気持ちや、別の場所のことはわからない。',
+      color: 'yellow',
+      note: '隔離確認用メモ 43',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '2bb4e661478e9ec0efaa46c0a84206b2aaa79feb77a5ef8d7bbfdf83ebd6b039',
+      quote: 'ひとことで言うと… 物語には「だれの目から見ているか」がある。目が変わると、同じ出来事でも見え方が変わるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 44',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '370f5b1629c6a656bcae61220ab7f22ce1e4f9881aac3feee587e241971928be',
+      quote: '同じお話なのに、A と B で全然ちがって見える！\n' +
+        'カメラをだれが持っているか、が変わったからだよ。物語を「だれの目から」見て語っているか、それを「視点」っていうんだ。\n' +
+        'カメラを持ってる人の気持ちは、わかるの？\n' +
+        'わかるよ。「僕は〜と思った」と心の中まで書けるからね。でも、ほかの人の心の中は書けない。言葉や様子から想像するしかないんだ。\n' +
+        'だから A では、相手の気持ちがよくわからなかったんだ。\n' +
+        'そのとおり。そして B を読むと、A では見えなかった相手の気持ちがわかる。\n' +
+        '両方の気持ちを知ってるのは、読んでるぼくたちだけだね。\n' +
+        'そう、その「ずれ」がおもしろさ！ まとめ：まず「僕」「私」がだれかを決める。視点が変わると、同じ出来事でも見え方が変わる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 45',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e90f1efb3002c25b4a9f76bf21a234ed683d1ac8919375e90c9d43fffaef2b88',
+      quote: '視点とは',
+      color: 'yellow',
+      note: '隔離確認用メモ 46',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '14153dfb525928e93527680a284545f2c08639a7759eee9ded5771204b429ba4',
+      quote: '物語を「だれの目から」見て語っているか、を 視点 という。\n' +
+        '「僕は〜」と語る文章は、「僕」の視点。「僕」の心の中はわかるが、ほかの人物の心は、言葉や様子から想像するしかない。\n' +
+        '登場人物の外から語る場合は、何人もの人物の様子を語れる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 47',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a6e02e7ecb34043e48ec86ad1540d9d73b0933f8558ccc7f8b08d87c17bd5586',
+      quote: 'A と B を比べるときの手順',
+      color: 'yellow',
+      note: '隔離確認用メモ 48',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f41c29a07ffaec2ac9735452f888976f830d8b2f183b965a61b85bc49585cd88',
+      quote: '① それぞれ、語っているのはだれか。\n② 同じ場面（季節・場所・出来事）はどこか。\n③ 片方だけに書かれている気持ちや事情は何か。',
+      color: 'yellow',
+      note: '隔離確認用メモ 49',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '348f5568bd62ec9090a84ff279415d740af5082eb5745ae919473ee1204e630e',
+      quote: '二つの視点を合わせると',
+      color: 'yellow',
+      note: '隔離確認用メモ 50',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '21701d04f4df0c4dcd63532a7a2676736cc1a0a8f973adbad383483fc293a906',
+      quote: 'A だけではわからなかった相手の気持ちが、B を読むとわかる。\n読者だけが両方を知っている。その「ずれ」が、物語のおもしろさになる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 51',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c692786914b9204a86922a70d7fcfcdc61030634ff562b9c19daf50d2dbc8247',
+      quote: '例題　視点人物を見分けよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 52',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3f20afa4a0dfdbe3174d8760a84b8dab2c6a4228851e4d4797e49a00d5c3efd2',
+      quote: '「ぼく」は出てくるけど、視点人物ってどうやって決めるの？\n' +
+        '心の中が書かれている人をさがしてみて。「〜と思った」「〜気がした」はある？\n' +
+        '「彼女」は、口を開いた・言った、って様子だけだね。\n' +
+        'いい目のつけどころ！ 様子だけの人と、心の中まで書かれる人。ちがいを比べてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 53',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '053b445abfe51ec4f1e510487c1921e02778427dd74ed62ee3a419d4bdea9695',
+      quote: '語り手を表す言葉（ぼく・私）をさがす。\n心の中が書かれているのはだれかを確かめる。\n外から様子だけが書かれている人物を確かめる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 54',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4ea37da16327a11ad9654990bb124bda58c23ca5b58ef362f28ebaafcd14eee4',
+      quote: '確認1　例題の文章を「彼女」の視点で書き直すとき、新しく書けるようになることは何ですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 55',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bc767b0ed1f13c680cde0518b29a7da9708c30b3ab7e63d63f6464f413df94e7',
+      quote: '確認2　A と B のように二つの視点で書くと、読者にとってどんなよさがありますか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 56',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd8ef3748fe146502e4d908fec83128f9e68c3a35604935220a1eb778337288ad',
+      quote: '確認3　教科書の A と B で、語り手（視点人物）はそれぞれだれですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 57',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bc685765086bcaa1486fd60c00268c8db846b551ed3a48fce34e2f6667b62187',
+      quote: '練習1　★ 次の文の視点人物を答えよう。「姉は黙って窓の外を見ていた。私は、何と声をかければよいかわからなかった。」',
+      color: 'yellow',
+      note: '隔離確認用メモ 58',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'ad43913dc22789a6db9c72baecf7b097902db440fb16b635efd64cad88faaa0c',
+      quote: '練習2　視点について説明した文として正しいものを一つ選ぼう。ア 視点人物の気持ちは書かれない。　イ 視点人物以外の気持ちは、様子や言葉から想像する。　ウ 一つの物語には必ず二人の視点人物がいる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 59',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '986d10a6e6b3ce11b962d15000dba2de61c544270f2ba0f54bf48e99a2a7188f',
+      quote: '練習3　同じ出来事を二人の視点から書く作品を読むときに注意することを、二つ書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 60',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '153aa82bbd364ce9e1491b4d6652ca4e72e0958d9a2a22923d5c397a552828d6',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 61',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '310942b8191da290261ebfa4f0b950ef71ba298fc97aca86a01a8445122b6b25',
+      quote: '物語を「だれの目から」語っているかが 視点。\n' +
+        '視点人物の心の中は書けるが、ほかの人物の心は様子や言葉から想像する。\n' +
+        'A と B を比べると、片方だけではわからない気持ちが見えてくる。\n' +
+        '比べる順番：語り手 → 同じ場面 → 片方だけの気持ち。',
+      color: 'yellow',
+      note: '隔離確認用メモ 62',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '24a343dad70e6a5c51becc978f15e3905e8ad73cef88d4a14c6830548c246209',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 63',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '876b3f7c19c9f211cf3a57c0ab645d30955353635648ca25e9271d5f7b7b0159',
+      quote: '「僕」「私」に丸をつけ、それがだれかを最初に決める。\n' +
+        '心の中の言葉（〜と思った・〜気がした）に線を引く。\n' +
+        '二つの文章を表にして、同じ場面を横に並べる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 64',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '83529d6cf5c65c80a49ee7ddc5a3e292693ce3699905378cd9797a52269a0697',
+      quote: 'よくあるミス',
+      color: 'yellow',
+      note: '隔離確認用メモ 65',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '11f627c3343e0665274e6facd0352f6ace79d0a455f04ed13e1ecf29b8b2b90e',
+      quote: '「僕」が二つの文章で同じ人物だと思いこむ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 66',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b22456185708319c6eb5bf705656e81b94bc5681a15a398348aee2dd3b27b56f',
+      quote: '好きなものを話すとき、つい「すごくいい」だけで終わっていない？ 聞き手に伝わる話には、組み立てがあるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 67',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3ef8580c21d998b63c978850d608c196e6eea1497350bc75131b6db07d509ad1',
+      quote: '四人のグループで、一人が本を見せながら紹介している',
+      color: 'yellow',
+      note: '隔離確認用メモ 68',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f8ca3917b2957f9448981837d3f07858d6549618710aecb577c9ffb84104c99e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 69',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4258308780971468a38115f3024251b7851d0274ef91289da60d3b475cd84334',
+      quote: '教科書 p22〜23「読むことで意味をつくり出す」「お気に入りの一品を紹介する」',
+      color: 'yellow',
+      note: '隔離確認用メモ 70',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '584a694b9a9ac4335589f5d2b80a83c99976cf098ac570eab2d04d519c5a2317',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 71',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a89de8341a4cef6e7b9c9c8f7f972481e3b508391bacebd3f0bac58e90ad3a64',
+      quote: '紹介する「一品」は、本・道具・食べ物など何でもよい。\n話す内容を、はじめ・中・終わりに組み立てる。\n聞く側は、質問をして話を広げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 72',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f5d94e2cf0208dfadba1e9159ec115961d03e7a2b93eb6f1497249327d4655d0',
+      quote: 'ひとことで言うと… 「何を・なぜ好き・たとえばこんなこと」の順に話すと、聞く人にすっと伝わるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 73',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '9b241094eabc41614a814ba3a5e67c2f4f807991ff977c09041431b6bee8c1a6',
+      quote: 'ぼくの宝物はこのシャーペン！ すごくいいんだ！ 以上！\n' +
+        '「すごくいい」だけだと、聞く人は何がいいのかわからないよ〜。話には「はじめ・中・終わり」の組み立てがあるんだ。\n' +
+        'はじめは「何を紹介するか」を一言で言うんだよね。\n' +
+        'そう。中では「好きな理由は二つあります」と先に数を言うと、聞く人が整理しやすいよ。\n' +
+        '理由その一、書きやすい。理由その二……長持ちする！\n' +
+        'いいね！ そこに「たとえば、テストの日に……」ってエピソードを一つずつつけると、ぐっと聞きたくなるよ。\n' +
+        '終わりは？\n' +
+        '「ぜひ使ってみて」と、聞く人へのよびかけでしめよう。まとめ：はじめに一言 → 理由とエピソード → よびかけ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 74',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'adb368336eb00b986d579bdaee1c3018f3fff626567ba879f59ded148af5559d',
+      quote: '話の組み立て',
+      color: 'yellow',
+      note: '隔離確認用メモ 75',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fcf7d928589254e5a7a7ac22a36bf1f382270ad0fe475154c13299158afdc910',
+      quote: 'はじめ：何を紹介するか、一言で言う。\n' +
+        '中：好きな理由を二つ程度。それぞれにエピソードや具体例をつける。\n' +
+        '終わり：聞き手へのよびかけ（ぜひ〜してみて）でしめる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 76',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6223c5b500b229d49c01bde7b35650be57268f3bc0264b49ed8510dbc29667d2',
+      quote: '伝わる話し方',
+      color: 'yellow',
+      note: '隔離確認用メモ 77',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '393e4fba10765c7d0a5cf56f496909d09b468d797775024a4e6a49febb02b66d',
+      quote: '聞き手の顔を見て、ゆっくり、はっきり話す。\n' +
+        '実物や写真を見せると、イメージが伝わりやすい。\n' +
+        '「理由は二つあります」と先に数を言うと、聞き手が整理しやすい。',
+      color: 'yellow',
+      note: '隔離確認用メモ 78',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4d2ccd4edee36c82be73b121997e1c8026fb493cf07fe440e05cca4169910737',
+      quote: '聞き手の役割',
+      color: 'yellow',
+      note: '隔離確認用メモ 79',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6c68d6edff6714ae4af920acf813157064ae94828f4d354fd512a36679772565',
+      quote: 'うなずきながら聞く。\n「それはどうして？」「いつから？」など、話を広げる質問をする。',
+      color: 'yellow',
+      note: '隔離確認用メモ 80',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '163660629324fb30651442587f4e8fda9b86e2aa601c54ba48f328f8e371c595',
+      quote: '例題　話の中心を一文にしよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 81',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3f19b0fbc5ce23dfbcccd0f6ab2d66719f2aa7275c5664bb2932b891efffa743',
+      quote: '色えんぴつの紹介、話の中心は何にする？\n' +
+        '「何を・なぜ好きか」を一文にしてみよう。理由が二つあるね。\n' +
+        '色が多いことと、おじいちゃんとの思い出！\n' +
+        'その二つを一文にまとめれば、話の中心ができあがるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 82',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '12575ec1bc1a1d638a4b443d46eb95b6797ea226f09d4fc5c8994ab0037392de',
+      quote: '何を紹介するかを一言で言う。\n理由を「二つあります」と数で予告する。\n理由ごとにエピソードを一つずつつける。',
+      color: 'yellow',
+      note: '隔離確認用メモ 83',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '31a462a6968abce57adb488a12a40f3faa0fa748d62099a04f0f4b3b7f564314',
+      quote: '確認1　紹介スピーチの「はじめ」で言うべきことは何ですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 84',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '496c7d030a0c6fcaec569daa9bbc17a06fb471c3682031da80c4c6a9ef830e8b',
+      quote: '確認2　理由を言う前に「理由は二つあります」と言うのは、なぜですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 85',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e2cb1347c7a60870a47cb4f8942541b630416cee603a80d228dd8cb93f29a0da',
+      quote: '確認3　聞き手が話を広げるための質問を、一つ作ってみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 86',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'add9570c52119c86d4e69adf4d42457a56e6f7c23be9c4ff4e12aa63a826824c',
+      quote: '練習1　★ 次の話の組み立てのうち、「終わり」にふさわしいものを選ぼう。ア 私が紹介するのはこの本です。　イ 一つ目の理由は絵がきれいなことです。　ウ みなさんもぜひ図書室で手に取ってみてください。',
+      color: 'yellow',
+      note: '隔離確認用メモ 87',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '65925feac3d93117fcb8d25ddf140212e137bcb8822a013f3b613fdea08fb42c',
+      quote: '練習2　自分のお気に入りの一品を一つ決め、「はじめ」の一文を書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 88',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '53c6af6d8e7908e1d8cb697b8f88f12814161da349c0495a14ac1fe44016e5cc',
+      quote: '練習3　スピーチで聞き手に伝わりやすくする工夫を二つ書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 89',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4acc382b9f5cee3f4c4e2e59708a5397fff39d9ec95f5589034f422d84b0004a',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 90',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e1c66cedc9594a64cefb52034b4d55f01b9e0db8e47708605cacea78b73f42ae',
+      quote: '話は「はじめ（中心）・中（理由と例）・終わり（よびかけ）」で組み立てる。\n' +
+        '理由の数を先に言うと、聞き手が整理しやすい。\n' +
+        '実物・写真・エピソードで、具体的に伝える。\n' +
+        '聞き手は、質問で話を広げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 91',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '35763772bf25e392beba50419de8dd08c1c79dfc97d5d29251417f15a0bb1427',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 92',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6bda459c056fcf4c77d15b1dbe3ce84c3e9c399217e2bfdb96fc411a6e09f3fd',
+      quote: 'メモは文章でなく、キーワードを箇条書きにする。\n' +
+        '理由ごとに「たとえば」を一つつける。\n' +
+        '最後の一文を先に決めておくと、話が終わらなくなるのを防げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 93',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '0454fcd6c7533d4ea778c72ba3da111693972457065628bed71d59216b760526',
+      quote: '文章を分けていくと、段落 → 文 → 文節 → 単語になる。ブロックのおもちゃみたいに、言葉にも「単位」があるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 94',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c3f3e4dc86d3fa83a3d8200a635270921728696c1b11eee61ec53c8dcc34bda4',
+      quote: '「言葉の単位」の場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 95',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '16539de14c58bbbe8e4e14366cbab86a002a1c0c239ff9e424561875cea2725e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 96',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd982290dcb3fc1ad7436e65f687400151c3829c2e564e55379eadb55581008ff',
+      quote: '教科書 p30「文法の小窓1 言葉の単位」、p278〜280（解説）\nワーク「言葉の単位」：文節に区切る、文節の数',
+      color: 'yellow',
+      note: '隔離確認用メモ 97',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3764976cf182d04dcad2db804f4cd00f99524deae5175378d909e8a4f39befa6',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 98',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a501f50bdab359d910f46fec313b61852ef4c4f4afbfd2bf54a1b09129caf55c',
+      quote: '大きい単位から：文章（談話）→ 段落 → 文 → 文節 → 単語。\n' +
+        '文節は「ネ」「サ」「ヨ」を入れて自然に区切れるところ。\n' +
+        '文法の学習は、ここがすべての土台になる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 99',
+      revision: 1,
+      updatedAt: 1
+    },
+    ... 1333 more items
+  ],
+  expected: [
+    {
+      book: 'kokugo1',
+      anchor: '741f7c5467b54735b39f254134589b16666f772b12d4966a09daa63b40304d2e',
+      quote: '入学して間もない教室。友達どうしで話したり、本を読んだりしている場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 0',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '48869f62cc4f81da52e95bd87efa9a515106dfbaebd8e4b05c5360727c045a04',
+      quote: '「聞く」「読む」「話す」は、ただ受け取るだけではない',
+      color: 'yellow',
+      note: '隔離確認用メモ 1',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f90926a7ee89a79b5c19c6d3e2e25a9d766b0d4ddddede7fcaa6e53cebf57306',
+      quote: '人の話をちゃんと聞くと、相手のことも自分のこともよくわかる。\n' +
+        '同じ出来事でも、だれの目から見るかで、ちがう物語になる。\n' +
+        'この章では、言葉を「受け取る」から「使いこなす」への一歩をふみ出そう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 2',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '7d653e46e2371f462d7491e77b62bfa6a24be037d9d4fb66cc38819c3dfe47c8',
+      quote: 'この章で学ぶこと',
+      color: 'yellow',
+      note: '隔離確認用メモ 3',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'dc2021faf7e0ec86179d35ac3f1a56b5791aea1afdd177193128eed45e6efef0',
+      quote: '聞くということ／桜蝶／お気に入りの一品を紹介する／言葉の単位／漢字の練習1',
+      color: 'yellow',
+      note: '隔離確認用メモ 4',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fa7537532ebf3ef25801b496dc304ac6bdb9848296692fe8bd9c274cc4b20c41',
+      quote: '「話を聞いてるの？」と言われたこと、ある？ 耳に入るのと、心で聞くのは、ちょっとちがうんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 5',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bdfcbdf2acc0367f276cbd9863e7e6afd09f5e7fa5fa6afbca563d86b5f06394',
+      quote: '二人が向かい合って話している。一人が身を乗り出して相手の話を聞いている',
+      color: 'yellow',
+      note: '隔離確認用メモ 6',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b62aa2d1ba538dfbf27892b9b4c4053cf6aa6523ed09d56e6589a9224ab77c2e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 7',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'cadf435b5b19378bd1f415a0bd88a212e749213ac703d3d6eb4deb2f38095a0c',
+      quote: '教科書 p16〜21「聞くということ」（阿川佐和子）\nワーク「聞くということ」：全文のまとめ、A 筆者の考え、B 体験と考え',
+      color: 'yellow',
+      note: '隔離確認用メモ 8',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6d4c22fbb566e71949efe9e953444f4c7b6c1fcc8d9f564323f4e8171cfe8848',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 9',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '738b2cd82c74c11e65b6c2adac8bdbf9b5a9e25b6532db7bc407fe9b820fefa8',
+      quote: '筆者は、人の話を聞く仕事をしている人。その体験から考えたことを書いている。\n' +
+        '文章には「体験（あったこと）」と「考え（筆者が思ったこと）」が混ざっている。\n' +
+        '読むときは、どこが体験で、どこが考えかを分けながら読もう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 10',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '88df79045e97d80499da76fcd2dcc4ac1e9b5297b80c3caf71a56a99db06aab6',
+      quote: 'どんな内容？',
+      color: 'yellow',
+      note: '隔離確認用メモ 11',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b8c7215c0a27ed4b7e228862b66cb758f6d33e7f53a144ff6185695d26f35196',
+      quote: '人の話を聞くのは、じつは力のいること。たいていの人は、まわりの話を都合よく選んで、適当にしか聞いていない。でも、ときには一生懸命に耳を傾けてみるのもいい、と筆者は言う。\n' +
+        '「聞く」は、ただ耳を傾けるだけでなく、「問う」ことといっしょになっている。聞くと疑問がわき、問うと話が広がって、会話がおもしろくなる。\n' +
+        '筆者は長い間、対談やテレビの司会など「聞く」仕事をしてきた。でも、聞くのが得意だったわけではない。仕事をちゃんとやりとげたい一心で続けてきた。\n' +
+        '苦手だからこそ必死になる。必死になるから相手の話が深く心に入り、いつのまにか自分が元気になっている――筆者はそう気づいた。\n' +
+        '話を聞いていると、相手の話と、自分の子どものころの気持ちの記憶が重なって、胸が熱くなる瞬間がある。それが、人に話を聞くことの何ともいえない味わい（妙味）。（児童文学者の石井桃子さんの言葉や、映画監督へのインタビューの体験が例として出てくる）\n' +
+        '正しい聞き方に正解はない。大事なのは「聞いてみたい」という気持ちと、聞いたら自分を知るきっかけになるかもしれないという好奇心。\n' +
+        '体験（〜した）と考え（〜と思う・〜が大切だ）を分けて読むと、筆者の言いたいことがはっきりする。',
+      color: 'yellow',
+      note: '隔離確認用メモ 12',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'ca1bbe11972ca3f30a5098563bda5f6d2aa05cc24b77db71ee0fc965cb308b92',
+      quote: 'ひとことで言うと… 文章の中の「あったこと」と「思ったこと」を分けて読むと、筆者の言いたいことが見えてくるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 13',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '01ca22d2514ad467f4a9782be6f3ec1332b781bcc7a3839f5b0652fcd9b46d37',
+      quote: '話を聞くって、だまって座ってればいいんでしょ？\n' +
+        'それだと「耳に入ってる」だけかも。この文章の筆者は、「聞く」は「問う」とつながっている、と考えているんだ。\n' +
+        '問う……つまり、質問するってこと？\n' +
+        'そう。「それで、どうなったの？」って聞くと、相手はもっと話してくれるよね。聞くと疑問がわいて、問うと話が広がる。\n' +
+        'でも、それって筆者の「考え」でしょ？ 本当にそうなの？\n' +
+        'いい疑問！ だから筆者は、自分の「体験」を書いているんだ。体験は、考えを支える「根拠」なんだよ。\n' +
+        '見分け方は？\n' +
+        '文の終わりを見てね。「〜た」は体験、「〜と思う」「〜が大切だ」は考え。まとめ：体験（〜た）と考え（〜と思う）を分けると、筆者の言いたいことが見える！',
+      color: 'yellow',
+      note: '隔離確認用メモ 14',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e36733d9de7262ae1d936273c7c2d21e9de43f4f75c12a4a8ee8d9eba0262c17',
+      quote: '体験と考えを分ける',
+      color: 'yellow',
+      note: '隔離確認用メモ 15',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5143e9bf66b75e30fb7a66566b27fb23ed2a134d2bdee42592edf7115971bfd3',
+      quote: '体験：いつ・どこで・だれと・何があったか。過去の形（〜た）が多い。\n' +
+        '考え：「〜と思う」「〜ではないか」「〜が大切だ」など、筆者の判断が出る文。\n' +
+        '体験は、考えを支える「根拠」として書かれている。',
+      color: 'yellow',
+      note: '隔離確認用メモ 16',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '9ebd770f83d83d6f6d4188111b9474167546accea4eb701373fff1445bdd4a23',
+      quote: '「聞く」は「問う」とつながる',
+      color: 'yellow',
+      note: '隔離確認用メモ 17',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '27537c5f07fc088b35b4b3160454ebfb872949d79a0c94ef7a7e0d575f461ea6',
+      quote: '「聞く」は、耳を傾けるだけでなく「問う」ことをともなう。聞くと疑問がわき、問うと話が広がる。\n' +
+        '筆者は聞くのが得意だったわけではない。苦手だからこそ必死になり、相手の話が深く心に入って、自分も元気になると気づいた。\n' +
+        '相手の話と自分の感情の記憶が重なって胸が熱くなる瞬間がある。それが「聞く妙味」。',
+      color: 'yellow',
+      note: '隔離確認用メモ 18',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '06f6d83a77a2002a5e81cfc895eac4d5da9cf26a90480a4d18a5c534757ab228',
+      quote: '筆者の考えのまとめ方',
+      color: 'yellow',
+      note: '隔離確認用メモ 19',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '76dafe544388ebdf9e09b704dd1b77d5931c292d188d54373e34ded04e53bffb',
+      quote: '文章の終わりの近くに、筆者の考えがまとまって書かれることが多い。\n「つまり」「だから」「このように」のあとに注目する。',
+      color: 'yellow',
+      note: '隔離確認用メモ 20',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '2a0d7085b7f349141fbe48aff7a6c112fb4ba745242a96d679e4697840a835b8',
+      quote: '例題　体験と考えを分けよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 21',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '8ccf413b96b6a44ba3fc3fa9ea71979eeaf4f8127a08837fff3f03d395ba1fc9',
+      quote: 'この短い文章、どこから手をつける？\n' +
+        'まず「〜た」で終わる文に線を引こう。それが体験。\n' +
+        '次に「〜と思う」の文をさがすんだね。\n' +
+        'そう。最後に「この考えを支えているのは、どの体験？」と矢印でつなげば完成だよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 22',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5bd687e376af2b0592261b159dfa5c50fcdce7832f4074a047c85e230a857008',
+      quote: '「〜た」で終わる文をさがす（あったこと）。\n「〜と思う」で終わる文をさがす（考え）。\n体験が、考えのどんな根拠になっているかを言う。',
+      color: 'yellow',
+      note: '隔離確認用メモ 23',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '140dfb9a28d5cd671fee82aca9e9dc228e9f4eeff6de49212212d90304eea044',
+      quote: '確認1　次の文は「体験」と「考え」のどちらですか。「人の話は、最後まで聞いてこそわかるものだ。」',
+      color: 'yellow',
+      note: '隔離確認用メモ 24',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '51ff3237421f46612dc1e07a8bff702f6a41e943772b4c0d46e82a74ef5e5649',
+      quote: '確認2　「耳に入っていた」と「聞いていた」のちがいを、自分の言葉で説明してみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 25',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '72350343f8613723a502975b1bac488e0a0b7361c72b5709eb92f419123f64ed',
+      quote: '確認3　教科書の文章で、筆者が自分の仕事の体験を書いている段落と、考えを書いている段落を一つずつ選び、最初の五字を書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 26',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c89af4819afb721b1bdbe8729148ff4147480e5ea4c92a05b0b58dd725cfcc26',
+      quote: '練習1　★ 次の文章の中で、筆者の考えが書かれている文の番号を答えよう。①先週、図書館で司書さんに本の選び方を聞いた。②司書さんは、私の好きな本を三冊たずねた。③好みを聞くことから、相手に合う提案が生まれるのだろう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 27',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '953e4e961e6e90d04ebd2d66b434372fdb7c90f37b3caa493facefb4a6c13151',
+      quote: '練習2　「相手の話に耳を傾ける」の「耳を傾ける」の意味として最も適切なものを選ぼう。ア 聞き流す　イ 注意して熱心に聞く　ウ うたがって聞く',
+      color: 'yellow',
+      note: '隔離確認用メモ 28',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'dc019cfd3015d6f2cfbe64b6096913543367c23bad7ef5367c901e6473461296',
+      quote: '練習3　人の話を聞くときに大切だと思うことを、自分の体験を一つ入れて六十字以内で書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 29',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3a119523e0e09d6a29925ca467be8ad20fcfbdd425b1c65ba6af0475ffb7512e',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 30',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd38ca9395e1a20d8f55894ae8850f755735067620b9af5816fed3fcd0ddbbf7f',
+      quote: '文章は「体験（あったこと）」と「考え（思ったこと）」に分けて読む。\n' +
+        '体験は、考えを支える根拠になっている。\n' +
+        '筆者は、心を向けて聞くことで、会話も自分も変わると考えている。\n' +
+        '文章の終わりの近くに、考えのまとめが出やすい。',
+      color: 'yellow',
+      note: '隔離確認用メモ 31',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e61d93ecf53d8464c2ec561a29be9d8962fdf4b2e4c5cfaf81101a2c0d4c6515',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 32',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '94d9af8ee848ad4828e4b0a7cc3df1e8a448a7b3dad82254c7b12326a6268bb8',
+      quote: '文の終わりを見る：「〜た」は体験、「〜と思う・〜だ・〜べきだ」は考え。\n' +
+        '考えを見つけたら、「なぜそう思った？」と聞き返し、その答えになる体験をさがす。\n' +
+        'まとめの言葉（つまり・このように）のあとに線を引く。',
+      color: 'yellow',
+      note: '隔離確認用メモ 33',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '181c11d0f8b92b238d2957ffd63195604cc61e229f5308a549ace5184fda4dbf',
+      quote: 'よくあるミス',
+      color: 'yellow',
+      note: '隔離確認用メモ 34',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c8aa59616179980606f7dbd887bcbab040f35abf6a460c0b7cc57e0402ab3114',
+      quote: '体験の文をそのまま「考え」として答えてしまう。\n自分の考えと筆者の考えを混ぜてしまう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 35',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a08c66af4b27dd30fdf5d20d36e5e0b354d19927e25c0e0527e2ebf0771071ce',
+      quote: '同じ日の同じ場面でも、Aくんの目とBさんの目では、ちがって見える。物語にも「だれの目」があるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 36',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '1b073d33c80a07b0999fbad27ed11835d111de387ebfd0f251c8af139881765f',
+      quote: '桜の木の下。花びらが舞い、蝶のように見える場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 37',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fe22513d17cc98a1ab66a326b0b76ceed75be3cc31babcba3e89859561e7e525',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 38',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '207285a9a895164aac7bb8c6d9610e82d50273e698752180ed85dda611eb6c1d',
+      quote: '教科書 p24〜29「桜蝶」（田丸雅智）、学びのカギ「視点」\nワーク「桜蝶」：A と B の文章の描かれ方を比べる',
+      color: 'yellow',
+      note: '隔離確認用メモ 39',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '79960d4b0ba61d8dd8e6dcef0a7d8630c47ee9045eb7efa87e2d55305794e1dd',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 40',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '943d8496a19569cb1c7cad5cd5959296fffeee82f40dd24f9f635c2d01e5bf08',
+      quote: 'この作品は A と B の二つの文章でできている。\n' +
+        '二つは同じ出来事を、ちがう人物の視点から描いている。\n' +
+        '視点が変わると、わかること・わからないことが変わる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 41',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '5a7a2351ace5a8c349cfd1ecdd4d37d76fa0b7f7f733e499b66484b20a63bf27',
+      quote: 'どんな内容？',
+      color: 'yellow',
+      note: '隔離確認用メモ 42',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '1c30c0ebf69c7532a371f19e17864641b924e03e978335f0ad1192dbd93adb37',
+      quote: 'A と B は、同じ出来事を、ちがう人の目（視点）から書いた二つの文章。\n' +
+        'A（登場人物の外から語る）：白石さんが学校帰りに公園を通ると、同じクラスの倉橋君が桜の木の前に立っていた。倉橋君は「桜蝶」の話をする。春に南から北へ、桜の木に留まりながら旅をする蝶で、来ると桜が一斉に咲くという。そのとき、花びらのような羽の蝶が一斉に飛び立ち、ピンクのもやが北へ移っていく。白石さんは「春とはもう、お別れなんだね……」とさびしくなる。倉橋君は南の空の緑のもや（葉桜蝶）を指さし、新しい季節を運んできた、とほほえむ。\n' +
+        'B（倉橋君＝「僕」の視点）：僕は親の転勤で春先にこの町に来た。故郷の友達との別れがつらかった。そんなとき公園で桜蝶を見つけた（桜蝶のことを教えてくれたのは故郷の親友）。南の町から来た自分を桜蝶に重ねて、毎日通っていた。白石さんの「お別れなんだね」を聞いて、親友が別れぎわに言った言葉――別れは終わりではなく始まりだ――を思い出す。\n' +
+        'A だけでは、倉橋君がなぜ毎日蝶を見ていたのか、なぜ最後にほほえんだのかはわからない。B を読むと、その理由（転校のさびしさと親友の言葉）がわかる。\n' +
+        '登場人物の視点から語ると、その人の見方や気持ちがよく伝わる。でも、ほかの人の気持ちや、別の場所のことはわからない。',
+      color: 'yellow',
+      note: '隔離確認用メモ 43',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '2bb4e661478e9ec0efaa46c0a84206b2aaa79feb77a5ef8d7bbfdf83ebd6b039',
+      quote: 'ひとことで言うと… 物語には「だれの目から見ているか」がある。目が変わると、同じ出来事でも見え方が変わるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 44',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '370f5b1629c6a656bcae61220ab7f22ce1e4f9881aac3feee587e241971928be',
+      quote: '同じお話なのに、A と B で全然ちがって見える！\n' +
+        'カメラをだれが持っているか、が変わったからだよ。物語を「だれの目から」見て語っているか、それを「視点」っていうんだ。\n' +
+        'カメラを持ってる人の気持ちは、わかるの？\n' +
+        'わかるよ。「僕は〜と思った」と心の中まで書けるからね。でも、ほかの人の心の中は書けない。言葉や様子から想像するしかないんだ。\n' +
+        'だから A では、相手の気持ちがよくわからなかったんだ。\n' +
+        'そのとおり。そして B を読むと、A では見えなかった相手の気持ちがわかる。\n' +
+        '両方の気持ちを知ってるのは、読んでるぼくたちだけだね。\n' +
+        'そう、その「ずれ」がおもしろさ！ まとめ：まず「僕」「私」がだれかを決める。視点が変わると、同じ出来事でも見え方が変わる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 45',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e90f1efb3002c25b4a9f76bf21a234ed683d1ac8919375e90c9d43fffaef2b88',
+      quote: '視点とは',
+      color: 'yellow',
+      note: '隔離確認用メモ 46',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '14153dfb525928e93527680a284545f2c08639a7759eee9ded5771204b429ba4',
+      quote: '物語を「だれの目から」見て語っているか、を 視点 という。\n' +
+        '「僕は〜」と語る文章は、「僕」の視点。「僕」の心の中はわかるが、ほかの人物の心は、言葉や様子から想像するしかない。\n' +
+        '登場人物の外から語る場合は、何人もの人物の様子を語れる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 47',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a6e02e7ecb34043e48ec86ad1540d9d73b0933f8558ccc7f8b08d87c17bd5586',
+      quote: 'A と B を比べるときの手順',
+      color: 'yellow',
+      note: '隔離確認用メモ 48',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f41c29a07ffaec2ac9735452f888976f830d8b2f183b965a61b85bc49585cd88',
+      quote: '① それぞれ、語っているのはだれか。\n② 同じ場面（季節・場所・出来事）はどこか。\n③ 片方だけに書かれている気持ちや事情は何か。',
+      color: 'yellow',
+      note: '隔離確認用メモ 49',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '348f5568bd62ec9090a84ff279415d740af5082eb5745ae919473ee1204e630e',
+      quote: '二つの視点を合わせると',
+      color: 'yellow',
+      note: '隔離確認用メモ 50',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '21701d04f4df0c4dcd63532a7a2676736cc1a0a8f973adbad383483fc293a906',
+      quote: 'A だけではわからなかった相手の気持ちが、B を読むとわかる。\n読者だけが両方を知っている。その「ずれ」が、物語のおもしろさになる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 51',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c692786914b9204a86922a70d7fcfcdc61030634ff562b9c19daf50d2dbc8247',
+      quote: '例題　視点人物を見分けよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 52',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3f20afa4a0dfdbe3174d8760a84b8dab2c6a4228851e4d4797e49a00d5c3efd2',
+      quote: '「ぼく」は出てくるけど、視点人物ってどうやって決めるの？\n' +
+        '心の中が書かれている人をさがしてみて。「〜と思った」「〜気がした」はある？\n' +
+        '「彼女」は、口を開いた・言った、って様子だけだね。\n' +
+        'いい目のつけどころ！ 様子だけの人と、心の中まで書かれる人。ちがいを比べてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 53',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '053b445abfe51ec4f1e510487c1921e02778427dd74ed62ee3a419d4bdea9695',
+      quote: '語り手を表す言葉（ぼく・私）をさがす。\n心の中が書かれているのはだれかを確かめる。\n外から様子だけが書かれている人物を確かめる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 54',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4ea37da16327a11ad9654990bb124bda58c23ca5b58ef362f28ebaafcd14eee4',
+      quote: '確認1　例題の文章を「彼女」の視点で書き直すとき、新しく書けるようになることは何ですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 55',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bc767b0ed1f13c680cde0518b29a7da9708c30b3ab7e63d63f6464f413df94e7',
+      quote: '確認2　A と B のように二つの視点で書くと、読者にとってどんなよさがありますか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 56',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd8ef3748fe146502e4d908fec83128f9e68c3a35604935220a1eb778337288ad',
+      quote: '確認3　教科書の A と B で、語り手（視点人物）はそれぞれだれですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 57',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'bc685765086bcaa1486fd60c00268c8db846b551ed3a48fce34e2f6667b62187',
+      quote: '練習1　★ 次の文の視点人物を答えよう。「姉は黙って窓の外を見ていた。私は、何と声をかければよいかわからなかった。」',
+      color: 'yellow',
+      note: '隔離確認用メモ 58',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'ad43913dc22789a6db9c72baecf7b097902db440fb16b635efd64cad88faaa0c',
+      quote: '練習2　視点について説明した文として正しいものを一つ選ぼう。ア 視点人物の気持ちは書かれない。　イ 視点人物以外の気持ちは、様子や言葉から想像する。　ウ 一つの物語には必ず二人の視点人物がいる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 59',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '986d10a6e6b3ce11b962d15000dba2de61c544270f2ba0f54bf48e99a2a7188f',
+      quote: '練習3　同じ出来事を二人の視点から書く作品を読むときに注意することを、二つ書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 60',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '153aa82bbd364ce9e1491b4d6652ca4e72e0958d9a2a22923d5c397a552828d6',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 61',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '310942b8191da290261ebfa4f0b950ef71ba298fc97aca86a01a8445122b6b25',
+      quote: '物語を「だれの目から」語っているかが 視点。\n' +
+        '視点人物の心の中は書けるが、ほかの人物の心は様子や言葉から想像する。\n' +
+        'A と B を比べると、片方だけではわからない気持ちが見えてくる。\n' +
+        '比べる順番：語り手 → 同じ場面 → 片方だけの気持ち。',
+      color: 'yellow',
+      note: '隔離確認用メモ 62',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '24a343dad70e6a5c51becc978f15e3905e8ad73cef88d4a14c6830548c246209',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 63',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '876b3f7c19c9f211cf3a57c0ab645d30955353635648ca25e9271d5f7b7b0159',
+      quote: '「僕」「私」に丸をつけ、それがだれかを最初に決める。\n' +
+        '心の中の言葉（〜と思った・〜気がした）に線を引く。\n' +
+        '二つの文章を表にして、同じ場面を横に並べる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 64',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '83529d6cf5c65c80a49ee7ddc5a3e292693ce3699905378cd9797a52269a0697',
+      quote: 'よくあるミス',
+      color: 'yellow',
+      note: '隔離確認用メモ 65',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '11f627c3343e0665274e6facd0352f6ace79d0a455f04ed13e1ecf29b8b2b90e',
+      quote: '「僕」が二つの文章で同じ人物だと思いこむ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 66',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'b22456185708319c6eb5bf705656e81b94bc5681a15a398348aee2dd3b27b56f',
+      quote: '好きなものを話すとき、つい「すごくいい」だけで終わっていない？ 聞き手に伝わる話には、組み立てがあるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 67',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3ef8580c21d998b63c978850d608c196e6eea1497350bc75131b6db07d509ad1',
+      quote: '四人のグループで、一人が本を見せながら紹介している',
+      color: 'yellow',
+      note: '隔離確認用メモ 68',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f8ca3917b2957f9448981837d3f07858d6549618710aecb577c9ffb84104c99e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 69',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4258308780971468a38115f3024251b7851d0274ef91289da60d3b475cd84334',
+      quote: '教科書 p22〜23「読むことで意味をつくり出す」「お気に入りの一品を紹介する」',
+      color: 'yellow',
+      note: '隔離確認用メモ 70',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '584a694b9a9ac4335589f5d2b80a83c99976cf098ac570eab2d04d519c5a2317',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 71',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a89de8341a4cef6e7b9c9c8f7f972481e3b508391bacebd3f0bac58e90ad3a64',
+      quote: '紹介する「一品」は、本・道具・食べ物など何でもよい。\n話す内容を、はじめ・中・終わりに組み立てる。\n聞く側は、質問をして話を広げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 72',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'f5d94e2cf0208dfadba1e9159ec115961d03e7a2b93eb6f1497249327d4655d0',
+      quote: 'ひとことで言うと… 「何を・なぜ好き・たとえばこんなこと」の順に話すと、聞く人にすっと伝わるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 73',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '9b241094eabc41614a814ba3a5e67c2f4f807991ff977c09041431b6bee8c1a6',
+      quote: 'ぼくの宝物はこのシャーペン！ すごくいいんだ！ 以上！\n' +
+        '「すごくいい」だけだと、聞く人は何がいいのかわからないよ〜。話には「はじめ・中・終わり」の組み立てがあるんだ。\n' +
+        'はじめは「何を紹介するか」を一言で言うんだよね。\n' +
+        'そう。中では「好きな理由は二つあります」と先に数を言うと、聞く人が整理しやすいよ。\n' +
+        '理由その一、書きやすい。理由その二……長持ちする！\n' +
+        'いいね！ そこに「たとえば、テストの日に……」ってエピソードを一つずつつけると、ぐっと聞きたくなるよ。\n' +
+        '終わりは？\n' +
+        '「ぜひ使ってみて」と、聞く人へのよびかけでしめよう。まとめ：はじめに一言 → 理由とエピソード → よびかけ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 74',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'adb368336eb00b986d579bdaee1c3018f3fff626567ba879f59ded148af5559d',
+      quote: '話の組み立て',
+      color: 'yellow',
+      note: '隔離確認用メモ 75',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'fcf7d928589254e5a7a7ac22a36bf1f382270ad0fe475154c13299158afdc910',
+      quote: 'はじめ：何を紹介するか、一言で言う。\n' +
+        '中：好きな理由を二つ程度。それぞれにエピソードや具体例をつける。\n' +
+        '終わり：聞き手へのよびかけ（ぜひ〜してみて）でしめる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 76',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6223c5b500b229d49c01bde7b35650be57268f3bc0264b49ed8510dbc29667d2',
+      quote: '伝わる話し方',
+      color: 'yellow',
+      note: '隔離確認用メモ 77',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '393e4fba10765c7d0a5cf56f496909d09b468d797775024a4e6a49febb02b66d',
+      quote: '聞き手の顔を見て、ゆっくり、はっきり話す。\n' +
+        '実物や写真を見せると、イメージが伝わりやすい。\n' +
+        '「理由は二つあります」と先に数を言うと、聞き手が整理しやすい。',
+      color: 'yellow',
+      note: '隔離確認用メモ 78',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4d2ccd4edee36c82be73b121997e1c8026fb493cf07fe440e05cca4169910737',
+      quote: '聞き手の役割',
+      color: 'yellow',
+      note: '隔離確認用メモ 79',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6c68d6edff6714ae4af920acf813157064ae94828f4d354fd512a36679772565',
+      quote: 'うなずきながら聞く。\n「それはどうして？」「いつから？」など、話を広げる質問をする。',
+      color: 'yellow',
+      note: '隔離確認用メモ 80',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '163660629324fb30651442587f4e8fda9b86e2aa601c54ba48f328f8e371c595',
+      quote: '例題　話の中心を一文にしよう',
+      color: 'yellow',
+      note: '隔離確認用メモ 81',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3f19b0fbc5ce23dfbcccd0f6ab2d66719f2aa7275c5664bb2932b891efffa743',
+      quote: '色えんぴつの紹介、話の中心は何にする？\n' +
+        '「何を・なぜ好きか」を一文にしてみよう。理由が二つあるね。\n' +
+        '色が多いことと、おじいちゃんとの思い出！\n' +
+        'その二つを一文にまとめれば、話の中心ができあがるよ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 82',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '12575ec1bc1a1d638a4b443d46eb95b6797ea226f09d4fc5c8994ab0037392de',
+      quote: '何を紹介するかを一言で言う。\n理由を「二つあります」と数で予告する。\n理由ごとにエピソードを一つずつつける。',
+      color: 'yellow',
+      note: '隔離確認用メモ 83',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '31a462a6968abce57adb488a12a40f3faa0fa748d62099a04f0f4b3b7f564314',
+      quote: '確認1　紹介スピーチの「はじめ」で言うべきことは何ですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 84',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '496c7d030a0c6fcaec569daa9bbc17a06fb471c3682031da80c4c6a9ef830e8b',
+      quote: '確認2　理由を言う前に「理由は二つあります」と言うのは、なぜですか。',
+      color: 'yellow',
+      note: '隔離確認用メモ 85',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e2cb1347c7a60870a47cb4f8942541b630416cee603a80d228dd8cb93f29a0da',
+      quote: '確認3　聞き手が話を広げるための質問を、一つ作ってみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 86',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'add9570c52119c86d4e69adf4d42457a56e6f7c23be9c4ff4e12aa63a826824c',
+      quote: '練習1　★ 次の話の組み立てのうち、「終わり」にふさわしいものを選ぼう。ア 私が紹介するのはこの本です。　イ 一つ目の理由は絵がきれいなことです。　ウ みなさんもぜひ図書室で手に取ってみてください。',
+      color: 'yellow',
+      note: '隔離確認用メモ 87',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '65925feac3d93117fcb8d25ddf140212e137bcb8822a013f3b613fdea08fb42c',
+      quote: '練習2　自分のお気に入りの一品を一つ決め、「はじめ」の一文を書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 88',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '53c6af6d8e7908e1d8cb697b8f88f12814161da349c0495a14ac1fe44016e5cc',
+      quote: '練習3　スピーチで聞き手に伝わりやすくする工夫を二つ書いてみよう。',
+      color: 'yellow',
+      note: '隔離確認用メモ 89',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '4acc382b9f5cee3f4c4e2e59708a5397fff39d9ec95f5589034f422d84b0004a',
+      quote: 'この節のポイント',
+      color: 'yellow',
+      note: '隔離確認用メモ 90',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'e1c66cedc9594a64cefb52034b4d55f01b9e0db8e47708605cacea78b73f42ae',
+      quote: '話は「はじめ（中心）・中（理由と例）・終わり（よびかけ）」で組み立てる。\n' +
+        '理由の数を先に言うと、聞き手が整理しやすい。\n' +
+        '実物・写真・エピソードで、具体的に伝える。\n' +
+        '聞き手は、質問で話を広げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 91',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '35763772bf25e392beba50419de8dd08c1c79dfc97d5d29251417f15a0bb1427',
+      quote: 'かんたんにやる方法',
+      color: 'yellow',
+      note: '隔離確認用メモ 92',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '6bda459c056fcf4c77d15b1dbe3ce84c3e9c399217e2bfdb96fc411a6e09f3fd',
+      quote: 'メモは文章でなく、キーワードを箇条書きにする。\n' +
+        '理由ごとに「たとえば」を一つつける。\n' +
+        '最後の一文を先に決めておくと、話が終わらなくなるのを防げる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 93',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '0454fcd6c7533d4ea778c72ba3da111693972457065628bed71d59216b760526',
+      quote: '文章を分けていくと、段落 → 文 → 文節 → 単語になる。ブロックのおもちゃみたいに、言葉にも「単位」があるんだ。',
+      color: 'yellow',
+      note: '隔離確認用メモ 94',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'c3f3e4dc86d3fa83a3d8200a635270921728696c1b11eee61ec53c8dcc34bda4',
+      quote: '「言葉の単位」の場面',
+      color: 'yellow',
+      note: '隔離確認用メモ 95',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '16539de14c58bbbe8e4e14366cbab86a002a1c0c239ff9e424561875cea2725e',
+      quote: '教科書・ワークのどこ？',
+      color: 'yellow',
+      note: '隔離確認用メモ 96',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'd982290dcb3fc1ad7436e65f687400151c3829c2e564e55379eadb55581008ff',
+      quote: '教科書 p30「文法の小窓1 言葉の単位」、p278〜280（解説）\nワーク「言葉の単位」：文節に区切る、文節の数',
+      color: 'yellow',
+      note: '隔離確認用メモ 97',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: '3764976cf182d04dcad2db804f4cd00f99524deae5175378d909e8a4f39befa6',
+      quote: 'ここで考えること',
+      color: 'yellow',
+      note: '隔離確認用メモ 98',
+      revision: 1,
+      updatedAt: 1
+    },
+    {
+      book: 'kokugo1',
+      anchor: 'a501f50bdab359d910f46fec313b61852ef4c4f4afbfd2bf54a1b09129caf55c',
+      quote: '大きい単位から：文章（談話）→ 段落 → 文 → 文節 → 単語。\n' +
+        '文節は「ネ」「サ」「ヨ」を入れて自然に区切れるところ。\n' +
+        '文法の学習は、ここがすべての土台になる。',
+      color: 'yellow',
+      note: '隔離確認用メモ 99',
+      revision: 1,
+      updatedAt: 1
+    },
+    ... 1333 more items
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

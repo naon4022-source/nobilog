@@ -1,0 +1,39 @@
+{
+  "status": "three false positives reproduced",
+  "unitSha256": "0ca62036c848705808e121f78162dc60d857c03a78cc76d9123a14377ca2ac1a",
+  "rows": [
+    {
+      "number": 31,
+      "input": "暖流と寒流が出会うところだから",
+      "issue": "prompt requires2current names; rubric accepts warm/cold descriptions without names",
+      "id": "tokkun-social-1-geo-nihon-31",
+      "expectedCorrect": false,
+      "actualCorrect": true,
+      "ratio": 1,
+      "reproduced": true
+    },
+    {
+      "number": 37,
+      "input": "寒くないから",
+      "issue": "allowNegation true and positive cold substring matched",
+      "id": "tokkun-social-1-geo-nihon-37",
+      "expectedCorrect": false,
+      "actualCorrect": true,
+      "ratio": 1,
+      "reproduced": true
+    },
+    {
+      "number": 69,
+      "input": "水域の資源を使えるから",
+      "issue": "generic resources accepted without either specified resource term",
+      "id": "tokkun-social-1-geo-nihon-69",
+      "expectedCorrect": false,
+      "actualCorrect": true,
+      "ratio": 1,
+      "reproduced": true
+    }
+  ],
+  "realUserData": false,
+  "recordWrites": 0,
+  "network": false
+}

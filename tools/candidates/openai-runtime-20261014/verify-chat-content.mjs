@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {chatContent,chatResponse} from './openai-chat-content.mjs';
+import {requestBody} from './openai-policy.mjs';
+let n=0;const eq=(a,b)=>{assert.deepEqual(a,b);n++;},fail=f=>{assert.throws(f);n++;};
+const text='Please explain negative numbers.',body={text,images:[],uid:'PRIVATE_TEST_UID',note:'PRIVATE_TEST_NOTE',model:'client-selected-model'},before=JSON.stringify(body);
+const content=chatContent(body);
+eq(JSON.parse(content.input),{learnerInput:text});eq(JSON.stringify(body),before);eq(content.input.includes('PRIVATE_'),false);
+eq(requestBody('pro','chat',content).body.model,'gpt-6-luna');eq(requestBody('unlimit','chat',content).body.model,'gpt-6.1-sol');
+fail(()=>requestBody('mini','chat',content));
+for(const input of ['', ' '.repeat(10),'x'.repeat(3001),'synthetic@example.test','090-1234-5678','sk-proj-'+'x'.repeat(30)])fail(()=>chatContent({text:input}));
+fail(()=>chatContent({text:'Explain the photo.',images:['synthetic-image']}));
+for(const bad of [null,[],{}, {answer:9},{answer:''},{answer:' '},{answer:'x'.repeat(3001)},{answer:'https://example.test'},{answer:'<script>x</script>'},{answer:'synthetic@example.test'},{answer:'090-1234-5678'},{answer:'sk-proj-'+'x'.repeat(30)},{answer:'OK',score:100},{answer:'OK',plan:'unlimit'}])fail(()=>chatResponse(JSON.stringify(bad)));
+eq(chatResponse(JSON.stringify({answer:' One step at a time.\nExplain your reasoning. '})),{answer:'One step at a time.\nExplain your reasoning.'});
+console.log(`OpenAI chat content candidate: ${n} checks passed; no client model/private fields, explicit image rejection, strict output fields`);

@@ -1,0 +1,51 @@
+    let googleSettingsController=null,googleManagePending=null;
+    function authGoogleManageRestore(){
+        document.getElementById('login-pin').value='';authLegacyTicket='';
+        document.getElementById('login-overlay').classList.remove('on');
+        document.querySelectorAll('#login-legacy .login-link').forEach(b=>b.hidden=false);
+        const submit=document.querySelector('#login-legacy button[onclick="tryLogin()"]');if(submit)submit.textContent='ログイン';
+    }
+    function authGoogleManageCancel(){
+        const pending=googleManagePending;if(!pending)return;
+        googleManagePending=null;authGoogleManageRestore();pending.resolve({cancelled:true});
+    }
+    async function authGoogleManageVerify(action){
+        if(googleManagePending||!['link','unlink'].includes(action)||!['u1','u2','u4'].includes(currentUserId))throw Error('unavailable');
+        const who={uid:currentUserId,session:authSession()};
+        if(!who.session||authLeaseBlocked)throw Error('session');
+        if(cloudDirty()){await cloudPush();if(cloudDirty()||currentUserId!==who.uid||authSession()!==who.session)throw Error('save');}
+        return new Promise((resolve,reject)=>{
+            googleManagePending={...who,action,resolve,reject};authShowLegacy();
+            document.getElementById('login-pin').value='';document.getElementById('login-err').textContent='';
+            document.getElementById('login-title').textContent='🔐 '+currentUser.name+'のGoogle連携'+(action==='unlink'?'解除':'');
+            document.getElementById('login-sub').textContent='この本人のパスワードと本人確認で続けます。別のアカウントへの切替はしません。';
+            document.querySelectorAll('#login-legacy .login-link').forEach(b=>{if((b.getAttribute('onclick')||'').startsWith('tryLogin('))b.hidden=true;});
+            const submit=document.querySelector('#login-legacy button[onclick="tryLogin()"]');if(submit)submit.textContent='本人確認して'+(action==='unlink'?'解除する':'Googleへ進む');
+            document.getElementById('login-overlay').classList.add('on');
+        });
+    }
+    async function authGoogleManageComplete(ticket){
+        const pending=googleManagePending;if(!pending)throw Error('cancelled');
+        if(currentUserId!==pending.uid||authSession()!==pending.session||authLeaseBlocked){authGoogleManageCancel();return;}
+        const path=pending.action==='unlink'?'/auth/google/unlink':'/auth/google/link';
+        const response=await cloudFetch(cloudUrl(path),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({ticket,...(pending.action==='link'?{return:location.origin+location.pathname}:{})})},12000);
+        const data=await response.json();
+        if(googleManagePending!==pending||currentUserId!==pending.uid||authSession()!==pending.session)return;
+        if(!response.ok)throw Error(data.error==='verification_expired'?'今の本人のパスワードで、本人確認をやり直してください。':'連携の操作を確認できませんでした。もう一度本人確認してください。');
+        if(pending.action==='link'){
+            const target=new URL(data.url);if(target.origin!=='https://accounts.google.com'||target.pathname!=='/o/oauth2/v2/auth')throw Error('Googleの移動先を確認できませんでした。');
+            googleManagePending=null;authGoogleManageRestore();pending.resolve({redirecting:true});location.assign(target.href);
+        }else{
+            currentUser.googleLinked=false;googleManagePending=null;authGoogleManageRestore();pending.resolve({ok:true});noticeRefresh();
+        }
+    }
+    function authGoogleSettingsMount(){
+        googleSettingsController?.dispose();googleSettingsController=null;
+        const host=document.getElementById('google-account-settings');if(!host||!window.NobiGoogleSettings)return;
+        googleSettingsController=NobiGoogleSettings.mount(host,{
+            owner:()=>({id:currentUserId,name:currentUser?.name||'',generation:authSession()}),
+            status:async()=>{const response=await cloudFetch(cloudUrl('/auth/google'),{cache:'no-store'},10000);if(!response.ok)throw Error('status');return response.json();},
+            confirmUnlink:async name=>confirm(name+'のGoogle連携を解除しますか？\n学習記録は残ります。次にパスワードと本人確認を行います。'),
+            verifyAndApply:authGoogleManageVerify
+        });
+    }

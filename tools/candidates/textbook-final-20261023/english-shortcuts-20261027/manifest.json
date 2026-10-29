@@ -1,0 +1,70 @@
+{
+  "status": "candidate only; no main/media edits",
+  "files": [
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/原稿/u02.py",
+      "beforeSha256": "3c16d42ace9ff59ad3342ca5790059bade40ee18b2514a4bc4dfb3002a0565b6",
+      "afterSha256": "3f1d6f8ba7ec4681bb3407a8141e88aa12515ad6617cd6828b85f7ec4b06bb77",
+      "replacements": 1,
+      "old": "日本語が「〜です」で終わる→be動詞、「〜する」で終わる→一般動詞。",
+      "new": "I am a student. はbe動詞、I like music. は一般動詞。日本語の「です」だけで選ばない。",
+      "primaryReference": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/制作ソース/E1-L2-S3-V01.json",
+      "beforeSha256": "bab102151629957b39c6e8c6f22ca5b9cc24c247aed77757587fb2314d60fd3d",
+      "afterSha256": "90c27681ff4f0bc9180eff68f1fadd9b99f7e186bc7af5193e85a6eddb391de3",
+      "replacements": 2,
+      "old": "日本語が「〜です」で終わる→be動詞、「〜する」で終わる→一般動詞。",
+      "new": "I am a student. はbe動詞、I like music. は一般動詞。日本語の「です」だけで選ばない。",
+      "primaryReference": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/制作ソース/E1-L2-S3-VP.json",
+      "beforeSha256": "f2277c42b2eba693791a8e913e2e3c0460e599f76ed6b3e95515b8d6dad8b47f",
+      "afterSha256": "514726086c682ec630ffb11e598f3b7cc0c2be21dfc0d7e1fd16f748104f81e5",
+      "replacements": 2,
+      "old": "日本語が「〜です」で終わる→be動詞、「〜する」で終わる→一般動詞。",
+      "new": "I am a student. はbe動詞、I like music. は一般動詞。日本語の「です」だけで選ばない。",
+      "primaryReference": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/present-simple"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/原稿/u08.py",
+      "beforeSha256": "a83e6634380c92a560a956c08d7692b95a31332de9c4cb5e058f7570f78452ab",
+      "afterSha256": "1f81dd5c16bd938a6c221a9a257975d870be414a7cd5a41979a79161066c50f5",
+      "replacements": 1,
+      "old": "名詞があるか、指でさがす。あれば What、なければ How。",
+      "new": "What は名詞のまとまり、How は形容詞・副詞を強調。主語の名詞まで数えて判断しない。",
+      "primaryReference": "https://dictionary.cambridge.org/grammar/british-grammar/exclamations"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/制作ソース/E1-L8-S2-V01.json",
+      "beforeSha256": "895aa38ea5164fcd5b6f643a0d547932353028d9d72f2593180a1b16bb0a07f7",
+      "afterSha256": "1735d700740085d969b8cb922e76915e9be42973442c378f4f5f05b1faf6e0c2",
+      "replacements": 2,
+      "old": "名詞があるか、指でさがす。あれば What、なければ How。",
+      "new": "What は名詞のまとまり、How は形容詞・副詞を強調。主語の名詞まで数えて判断しない。",
+      "primaryReference": "https://dictionary.cambridge.org/grammar/british-grammar/exclamations"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/英語全体制作/制作ソース/E1-L8-S2-VP.json",
+      "beforeSha256": "f7cf811b2ca90e54a6b7e7e4a7696ec2c93d4ec66a9ec2f5d836e1a0ebc18732",
+      "afterSha256": "1817308f7c9b7d0d4285457c8ee7955577f373b6155130ae32d3108940aa3a8e",
+      "replacements": 2,
+      "old": "名詞があるか、指でさがす。あれば What、なければ How。",
+      "new": "What は名詞のまとまり、How は形容詞・副詞を強調。主語の名詞まで数えて判断しない。",
+      "primaryReference": "https://dictionary.cambridge.org/grammar/british-grammar/exclamations"
+    }
+  ],
+  "preserved": "Existing questions, answers, values and conditions. Say/cap changed together.",
+  "referenceLimits": "British Council page directly read. Cambridge search excerpt describes both noun phrase and How+adjective/adverb+subject+verb; direct page403. UCL direct page timeout. Do not claim full source page inspection.",
+  "counterexamples": [
+    "I like music. can translate with a Japanese desu ending while using a lexical verb.",
+    "How tall Tom is! includes a noun subject but uses How."
+  ],
+  "pending": [
+    "Original textbook scope and accessible full primary reference for exclamation explanation.",
+    "Inspect candidate layout and rebuild derived assets after terminal full5.",
+    "Only regenerate actually used affected media; E1-L2-S3-VP is an authored script not in the22 current reference index."
+  ]
+}

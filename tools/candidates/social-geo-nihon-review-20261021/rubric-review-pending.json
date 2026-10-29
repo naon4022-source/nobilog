@@ -1,0 +1,27 @@
+{
+  "status": "original three suspects reproduced; local guard fixes integrated; post-change full pending",
+  "unitSha256": "0ca62036c848705808e121f78162dc60d857c03a78cc76d9123a14377ca2ac1a",
+  "cases": [
+    {
+      "number": 31,
+      "input": "暖流と寒流が出会うところだから",
+      "issue": "prompt requires2current names; rubric accepts warm/cold descriptions without names"
+    },
+    {
+      "number": 37,
+      "input": "寒くないから",
+      "issue": "allowNegation true and positive cold substring matched"
+    },
+    {
+      "number": 69,
+      "input": "水域の資源を使えるから",
+      "issue": "generic resources accepted without either specified resource term"
+    }
+  ],
+  "mainChanged": false,
+  "subsequentEvidence": [
+    "reproduction-result.json",
+    "candidate-result.json",
+    "integrated-result.json"
+  ]
+}

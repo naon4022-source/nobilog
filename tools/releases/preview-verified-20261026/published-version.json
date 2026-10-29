@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "observedAt": "2026-10-26T15:51:37.342639+00:00",
+  "worker": "nobilog-preview",
+  "origin": "https://nobilog-preview.naon4022.workers.dev",
+  "versionId": "8b5432f2-b6f2-4243-b1a0-053742bd76ee",
+  "deploymentId": "44c47f68-96aa-477e-8ebf-d6ab79518289",
+  "release": "2.51.0",
+  "publicSwitches": {
+    "APP_ORIGIN": "https://nobilog-preview.naon4022.workers.dev",
+    "PREVIEW_RELEASE_VERSION": "2.51.0",
+    "SUBSCRIPTION_PREVIEW": "1",
+    "PREVIEW_PLAN_ACCOUNTS": "1",
+    "PLAN_CREDITS_V2": "1",
+    "GEMINI_ENABLED": "0",
+    "OPENAI_ENABLED": "1",
+    "OPENAI_BILLING_READY": "1",
+    "OPENAI_TRIAL_ONLY": "1",
+    "OPENAI_SAFETY_READY": "1",
+    "OPENAI_TERMS_READY": "1",
+    "OPENAI_MONTHLY_LIMIT_YEN": "800"
+  },
+  "secretNamesOnly": [
+    "GEMINI_API_KEY",
+    "NOTICE_VAPID_JWK",
+    "OPENAI_API_KEY",
+    "PREVIEW_ACCESS_CODES",
+    "PREVIEW_PIN_HASH",
+    "PREVIEW_PIN_PEPPER"
+  ],
+  "dedicatedDatabaseAndKV": true,
+  "productionSecretNamesAbsent": true,
+  "privateDataOrSecretValuesRead": false,
+  "reviewedPackagingInputChanges": [
+    {
+      "file": "tools/releases/preview-verified-20261026/prepare-release.py",
+      "before": "46112313de29206482cc41f86fcaa17e6334ed1f5e2395bef7009858d04b8f7a",
+      "after": "00b37a8742b5462ef55e37bfc1d23439443a538f9dc9b22a1ff5cc47187ed8df"
+    },
+    {
+      "file": "tools/releases/preview-verified-20261026/verify-package.mjs",
+      "before": "03e99cd7078d48c0f97916424ce98fbaba4bc53753081dc56599dd1ea855d015",
+      "after": "d00fe54a48b91415da6e1896dea2024f9739c49522b11d62fb1111b01094859c"
+    }
+  ],
+  "unreviewedSourceChanges": []
+}

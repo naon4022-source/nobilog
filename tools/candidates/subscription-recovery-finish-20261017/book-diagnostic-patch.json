@@ -1,0 +1,5 @@
+{
+  "path": ".claude/verify/verify-textbook-book-browser.mjs",
+  "old": "   console.log('  '+summary);",
+  "new": "   console.log('  '+summary);\n   console.log('  pictureless spreads: '+(noImage.length?noImage.join(', '):'none'));"
+}

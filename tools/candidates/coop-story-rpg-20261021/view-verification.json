@@ -1,0 +1,63 @@
+{
+  "at": "20261021T220818430019Z",
+  "status": "isolated native notifications and view checks passed; main/playthrough integration separate",
+  "checks": [
+    {
+      "file": "verify-native-rpc.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/ui-runtime-checks/20261021T220818430019Z/verify-native-rpc.mjs.log",
+      "logSha256": "0bc8389ed268374d5d9ef6d7e6a2f8f67cc42749c27dfd362d14fdb76d4eb509"
+    },
+    {
+      "file": "verify-view.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/coop-story-rpg-20261021/ui-runtime-checks/20261021T220818430019Z/verify-view.mjs.log",
+      "logSha256": "784cc77f61f2aa653d97a371dbf4e7504b53462adfb2bac1e4e4351b092f5c14"
+    }
+  ],
+  "inputsSha256": {
+    "view.mjs": "b6435321cdff763124f4fa22e093b93f83f724a1f8f3de2961ebde190dd44d62",
+    "view.css": "5a788f45e399eeaffbdf3392f47dfdc28cf3c658a63cb52ebac95244785dfb9a",
+    "verify-view.mjs": "3fd11227a8a37d394b000506e2ebdd99c23f7ecdb185e64ec460503e9af42e37",
+    "view-integration.md": "441c06174b765d371e498f4fccf9da62e9ab8531baac0275a63353f4e70c6513",
+    "runtime-fixture.mjs": "6ce7cd6f4d10f21928f134be91c2a0f498c95a5ce4ed7f74dcd75cc63ec4c359",
+    "verify-native-rpc.mjs": "1ef0328d48f1ef19de3252c6edb2706c48bebcb7b9f70e22adcedb1274355128",
+    "invalidation-do.mjs": "656071095589fe2e7b0f0a259add32d6acfcea99580a3346c0f31f0f1ab53317",
+    "invalidation-hub.mjs": "61f37cf2d4bf9d443ab1f40a0f9a454999fa39906006ac42edb777f332c6f469",
+    "story-catalog.json": "289d3f6d167c98d630194d66c235c451cd0bfd767bf8d88d6ccf399cca27fc4a"
+  },
+  "inputsUnchanged": true,
+  "mainIntegrated": false,
+  "threeClientFullGameplayVerified": false,
+  "realUserData": false,
+  "deployed": false,
+  "ownExecSession": 56007,
+  "ownObservedExitCode": 0,
+  "manualShopReview": [
+    {
+      "width": 320,
+      "file": "view-checks/shop-320.png",
+      "sha256": "62e1a3648a7d448bbaf0d616ca880a8915a5ccd621f98df972e6e188f5c4afee",
+      "observed": "visible labels, balance and enabled/disabled purchase; no clipping seen"
+    },
+    {
+      "width": 390,
+      "file": "view-checks/shop-390.png",
+      "sha256": "cbf4a7bb5e38ae76b45e004052752c4cfa77616174cdc1470ffea14b8de940ec",
+      "observed": "visible labels, balance and enabled/disabled purchase; no clipping seen"
+    },
+    {
+      "width": 820,
+      "file": "view-checks/shop-820.png",
+      "sha256": "f00a52ae8fb5bdf7b6be57bb096f64163433a2b7faadac68f13ac4fe0f31220b",
+      "observed": "visible labels, balance and enabled/disabled purchase; no clipping seen"
+    },
+    {
+      "width": 1280,
+      "file": "view-checks/shop-1280.png",
+      "sha256": "a6678cea36c34604ae9f1c2f498a579f2bb2164169162fb8fd08152cd29707c1",
+      "observed": "visible labels, balance and enabled/disabled purchase; no clipping seen"
+    }
+  ],
+  "manualOtherPhasesReviewed": false
+}

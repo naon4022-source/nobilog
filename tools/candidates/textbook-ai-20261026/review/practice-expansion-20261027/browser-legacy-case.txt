@@ -1,0 +1,49 @@
+ {
+  const startChecks=checks,f=fixture('legacy-compat','u4','pro');f.legacyMode=true;assets['review-practice.js']=globalThis.__practiceBrowserLegacy.ui;assets['review-practice.css']=globalThis.__practiceBrowserLegacy.css;
+  const context=await browser.newContext({viewport:{width:390,height:950}}),page=await context.newPage(),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await ready(page,'legacy-compat','u4');await answerAll(page);
+  await page.getByRole('button',{name:'ノビーの全問解説',exact:true}).click();
+  await page.getByRole('button',{name:'全問の解説を作る（100回分）',exact:true}).click();
+  await page.getByText('解説を作っています（0/5問）。ほかの勉強を続けられます。',{exact:true}).waitFor();
+  await f.drain();await page.evaluate(()=>NobiTestReviews.refresh());await page.locator('.notice-copy').click();
+  const oldQuestion=globalThis.__practiceBrowserLegacy.data.questions.find(q=>q.id==='review-math-order-03');
+  const oldWrong=candidateData.questions.find(q=>q.id===oldQuestion.id+'-v2').answer.accepted[0];
+  ok(!oldQuestion.answer.accepted.includes(oldWrong),'test distinguishes old letter from new version correct letter');
+  const open=async()=>{await page.getByRole('button',{name:'この問題をやってみよう',exact:true}).first().click();await page.getByRole('textbox',{name:'類題の答え',exact:true}).waitFor();};
+  const reopen=async()=>{await page.reload();await page.getByRole('button',{name:'AI解説の履歴',exact:true}).click();await page.getByRole('button',{name:'5問の解説・完了',exact:true}).click();await open();};
+  await open();
+  ok(await page.locator('.rp-prompt').textContent()===oldQuestion.prompt&&await page.locator('.rp-result').textContent()==='','actual old prompt opens with no premature answer');
+  const beforeQuota=JSON.stringify(f.db.keys().filter(k=>/^(?:plan-credit|plan-quota|ai-test-review-credit)/.test(k)).sort().map(k=>[k,f.db.get(k).v]));
+  f.practiceAfter=true;
+  await page.getByRole('textbox',{name:'類題の答え',exact:true}).fill(oldWrong);
+  await page.getByRole('button',{name:'理由を確かめる',exact:true}).click();
+  await page.getByRole('button',{name:'同じ回答で再試行',exact:true}).waitFor();
+  const saved=f.practicePosts[0],receiptKey='ai-review-practice-attempt:u4:'+saved.id,receiptBefore=f.db.get(receiptKey).v;
+  ok(await page.evaluate(async id=>{const db=await new Promise((r,j)=>{const q=indexedDB.open('nobilog-review-practice',1);q.onsuccess=()=>r(q.result);q.onerror=()=>j(q.error);});const rows=await new Promise((r,j)=>{const q=db.transaction('answers').objectStore('answers').getAll();q.onsuccess=()=>r(q.result);q.onerror=()=>j(q.error);});db.close();return JSON.stringify(rows).includes(id);},oldQuestion.id),'old uncertain answer actually persisted in real IndexedDB');
+  // Switch the server graph as an update would. Client scripts are unchanged.
+  f.legacyMode=false;assets['review-practice.js']=globalThis.__practiceBrowserCandidateUI;assets['review-practice.css']=globalThis.__practiceBrowserCandidateCSS;await reopen();
+  await page.getByText('考え方を見直してみよう',{exact:true}).waitFor();
+  ok(f.practicePosts.length===1,'updated app restores old saved receipt with GET only');
+  ok(await page.locator('.rp-prompt').textContent()===oldQuestion.prompt,'updated app keeps original option order');
+  ok(f.db.get(receiptKey).v===receiptBefore,'old server receipt remains byte-identical');
+  ok(await page.getByRole('textbox',{name:'類題の答え',exact:true}).inputValue()===oldWrong,'old entered letter retained after reload');
+  // Also keep a genuinely unissued old answer, then retry it explicitly.
+  f.legacyMode=true;assets['review-practice.js']=globalThis.__practiceBrowserLegacy.ui;assets['review-practice.css']=globalThis.__practiceBrowserLegacy.css;await reopen();await page.getByText('考え方を見直してみよう',{exact:true}).waitFor();f.practiceBefore=true;
+  await page.getByRole('textbox',{name:'類題の答え',exact:true}).fill(oldQuestion.answer.accepted[0]);
+  await page.getByRole('button',{name:'理由を確かめる',exact:true}).click();
+  await page.getByRole('button',{name:'同じ回答で再試行',exact:true}).waitFor();
+  const pending=f.practicePosts.at(-1).id;
+  f.legacyMode=false;assets['review-practice.js']=globalThis.__practiceBrowserCandidateUI;assets['review-practice.css']=globalThis.__practiceBrowserCandidateCSS;await reopen();
+  await page.getByRole('button',{name:'同じ回答で再試行',exact:true}).waitFor();
+  ok(f.practicePosts.length===2,'old unissued answer never automatically POSTs after update');
+  await page.getByRole('button',{name:'同じ回答で再試行',exact:true}).click();
+  await page.getByText('理由まで確認できました',{exact:true}).waitFor();
+  ok(f.practicePosts.length===3&&f.practicePosts.at(-1).id===pending,'explicit old-answer retry uses original ID and old correct letter');
+  ok(f.db.keys().filter(k=>k.startsWith('ai-review-practice-attempt:u4:')).length===2,'exactly two original attempts, no duplicated receipt');
+  ok(JSON.stringify(f.db.keys().filter(k=>/^(?:plan-credit|plan-quota|ai-test-review-credit)/.test(k)).sort().map(k=>[k,f.db.get(k).v]))===beforeQuota&&f.generated===1&&f.posts.length===1,'old recovery and retry add no AI debit, provider call or review creation');
+  ok(errors.length===0,'old-state browser has no page errors');
+  await page.screenshot({path:new URL('practice-screens/legacy-upgrade-390.png',here).pathname});
+  globalThis.__practiceBrowserLegacyEvidence={checks:checks-startChecks,savedOldReceipt:true,persistedUnissuedOldAnswer:true,oldWrongDiffersFromNewCorrect:true,extraProviderCalls:0,extraReviewCredits:0};
+  await context.close();
+ }

@@ -1,0 +1,22 @@
+node:fs:561
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-ai-20261025/service-20261025/ui-main/integration.json'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at read (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-ai-20261026/review/legacy-evidence-fix/checked-basic-ui.cjs:5:19)
+    at checkBasicUI (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-ai-20261026/review/legacy-evidence-fix/checked-basic-ui.cjs:5:70)
+    at Object.<anonymous> (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-ai-20261026/review/legacy-evidence-fix/checked-basic-ui.cjs:15:58)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/textbook-ai-20261025/service-20261025/ui-main/integration.json'
+}
+
+Node.js v24.18.0

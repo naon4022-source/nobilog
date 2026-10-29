@@ -1,0 +1,17 @@
+tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:11
+ const read=f=>{if(!safe(f))throw Error('successor77 path');return fs.readFileSync(path.join(root,f));};
+                            ^
+
+Error: successor77 path
+    at read (tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:11:35)
+    at validated (tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:67:125)
+    at Object.checkMainSource (tools/candidates/nonadmin-ai-reader-successor-20261029/main/checked-successor.cjs:77:60)
+    at Object.<anonymous> (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/verify-virtual-guard.cjs:9:35)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+
+Node.js v24.18.0

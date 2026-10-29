@@ -1,0 +1,5 @@
+--- a/tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs
++++ b/tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs
+@@ -26,1 +26,1 @@
+-    await page.getByRole('button',{name:'まとめて表示',exact:true}).click();await page.getByRole('button',{name:count+'問',exact:true}).click();
++    await page.getByRole('button',{name:count+'問',exact:true}).click();

@@ -1,0 +1,36 @@
+try{
+ browser=await chromium.launch({headless:true});
+ for(const width of [390,820,1440]){
+  const page=await openPage(width,900);
+  await page.evaluate(()=>{
+   window.micStops=0;Object.defineProperty(navigator,'mediaDevices',{configurable:true,value:{getUserMedia:async()=>({getTracks:()=>[{stop:()=>micStops++}]})}});
+   window.MediaRecorder=class{constructor(){this.state='inactive';this.mimeType='audio/webm';}start(){this.state='recording';}stop(){if(this.state==='inactive')return;this.state='inactive';this.ondataavailable?.({data:new Blob(['synthetic'])});this.onstop?.();}};
+  });
+  await page.getByRole('button',{name:'5級を10問はじめる'}).click();
+  ok(await page.locator('.ev-sentence-shadow').count()===0,'sentence controls hidden before answer '+width);
+  await page.getByRole('button',{name:'わからないので答えを見る'}).click();
+  ok(await page.locator('.ev-ex').textContent()===g5[0].ex,'existing sentence unchanged '+width);
+  const practice=page.locator('.ev-sentence-shadow');
+  const before=await page.evaluate(()=>__saves);
+  await practice.getByRole('button',{name:'録音する',exact:true}).click();
+  await practice.getByText('録音中です。',{exact:false}).waitFor();
+  await practice.getByRole('button',{name:'録音を止める',exact:true}).click();
+  ok(await practice.locator('audio').isVisible(),'sentence playback available '+width);
+  ok(await page.evaluate(()=>micStops===1&&__saves===1),'recording adds no learning save '+width);
+  await practice.getByRole('button',{name:'録音する',exact:true}).click();await practice.getByText('録音中です。',{exact:false}).waitFor();
+  await page.getByRole('button',{name:'次の単語へ'}).click();
+  ok(await page.evaluate(()=>micStops===2),'next question stops microphone '+width);
+  ok(await page.locator('.ev-sentence-shadow').count()===0,'next unanswered question has no previous recording '+width);
+  await page.getByRole('button',{name:'わからないので答えを見る'}).click();
+  await practice.getByRole('button',{name:'録音する',exact:true}).click();await practice.getByText('録音中です。',{exact:false}).waitFor();
+  await page.evaluate(()=>NobiEikenVocab.stopSentencePractice());
+  ok(await page.evaluate(()=>micStops===3),'screen switch teardown stops microphone '+width);
+  await page.evaluate(()=>{__uid='synthetic-other';__store=null;remount();});
+  ok(await page.locator('.ev-sentence-shadow audio').count()===0,'new owner sees no recording '+width);
+  await noOverflow(page,'sentence integration '+width);
+  ok(page.__errors.length===0,'integration no page errors '+width);
+  ok(page.__outside.length===0,'integration no outside requests '+width);
+  await page.close();
+ }
+ console.log('Sentence integration candidate:',checks,'checks passed; synthetic only');
+}finally{await browser?.close();server.close();}

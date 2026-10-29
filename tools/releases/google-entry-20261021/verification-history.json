@@ -1,0 +1,18 @@
+{
+  "firstFull": {
+    "session": 45066,
+    "observedExitCode": 143,
+    "status": "stopped after verified existing harness failure",
+    "log": "/tmp/nobi-google-settings-full-20261021.log",
+    "failure": "existing verify-pin-browser Chromium dialog auto-dismiss after fixture close; candidate gates passed"
+  },
+  "repair": {
+    "file": "tools/releases/auth-repair-20261019/verify-pin-browser.mjs",
+    "change": "handle late fixture dialogs and catch closed-target dismissal; assertions unchanged",
+    "soloSession": 62336,
+    "observedExitCode": 0,
+    "checks": 30,
+    "log": "/tmp/nobi-pin-harness-close-fix-solo-20261021.log"
+  },
+  "executionNote": "Ctrl-C on pipe did not terminate the first full handle immediately. A focused run briefly overlapped before explicit process termination. Full handle observed exit143, focused run observed exit0; then repeated focused check alone as62336."
+}

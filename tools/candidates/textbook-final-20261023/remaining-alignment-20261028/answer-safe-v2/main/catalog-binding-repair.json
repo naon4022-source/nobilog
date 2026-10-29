@@ -1,0 +1,17 @@
+{
+  "status": "fixed before global verification",
+  "cause": "Initial prefix-based candidate selection missed textbook-ai-media-context files; all7 are now selected by their explicit kind.",
+  "files": [
+    {
+      "file": "site-assets/textbook-ai-media-context-kokugo1.json",
+      "wrongSha256": "7562f470f920b62cdc5e03ad13a6f8709e2f1ae0677a8986badd72f583a0acea",
+      "correctSha256": "581898d9d18a8c723de03391acb36153692f0a7d53f5b1d3e73cefbd7d8127a0"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-english1.json",
+      "wrongSha256": "5189ec93403b72331e0da19efa9f527b8eadd0ec8a2841fe9463851e4bece4a9",
+      "correctSha256": "73142be58e597998ee96dfb6e689858fded667a7b827ea3bde97072feb4b0c0c"
+    }
+  ],
+  "originalBeforeSnapshotsRetained": true
+}

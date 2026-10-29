@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-23T07:11:35.462411+09:00",
+  "status": "not recovered: human login failed after secret update",
+  "humanReceiptSha256": "680d159aff1d99eacfb5a08e405acbf83eabe40f064921d7094bc83558fe7599",
+  "oldWorkerVersion": "bea2213e-d54d-4a1a-80f8-d4c1ee304b7f",
+  "newWorkerVersion": "a3e262f3-f817-451f-bcab-8d0c5e7fd5f1",
+  "trafficPercentage": 100,
+  "oldAndNewCodeETag": "037033e745e7a213e91ba0dd3852a7f9ac0f8a34d41089e670f636407b12cfd4",
+  "workerCodeUnchanged": true,
+  "secretValuesRead": false,
+  "plaintextSaved": false,
+  "realLoginAttemptsByAssistant": 0,
+  "v3CodePublished": false,
+  "humanLoginVerified": false,
+  "postFull": {
+    "ownSessionId": 88043,
+    "log": "/private/tmp/nobi-souta-secret-post-20261023.log",
+    "exitCode": null
+  },
+  "inputIssue": "Human confirmed the application PIN was entered in all four prompts, including the existing management pepper prompts.",
+  "nextRequirement": "Existing PIN_PEPPER must be provided privately by its owner; do not retrieve secret values or rotate other accounts.",
+  "browserObservation": "Production v2.17.1 login page opened; password login form visible; no successful Souta session verified."
+}

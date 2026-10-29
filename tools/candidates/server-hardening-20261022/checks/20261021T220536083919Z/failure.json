@@ -1,0 +1,31 @@
+{
+  "status": "failed",
+  "checks": [
+    {
+      "file": "verify-gateway.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/server-hardening-20261022/checks/20261021T220536083919Z/verify-gateway.mjs.log",
+      "logSha256": "e0e8adefd6e8e13db9d5aa5d1ec926bd9096184687ceb644c7ca714655447718"
+    },
+    {
+      "file": "verify-rpc.mjs",
+      "exitCode": 1,
+      "log": "tools/candidates/server-hardening-20261022/checks/20261021T220536083919Z/verify-rpc.mjs.log",
+      "logSha256": "fd7dd6fd9236cde25de78a0f2822e57d5969a06be5872ecf8c003f2343aae79c"
+    }
+  ],
+  "inputsBefore": {
+    "tools/candidates/server-hardening-20261022/oauth-form-body.mjs": "b5131b2edb7f60a743a37f26b7e4ece054178496881e21690dd22f23fb4a3403",
+    "tools/candidates/server-hardening-20261022/rate-policy.mjs": "ad6e3c7efa2b8f1d51f326c28f4a9495b29d07b43bb1add9606259b14e2fe305",
+    "tools/candidates/server-hardening-20261022/security-gateway.mjs": "5d12317f0b249aac24b2f85bdb064b876ddd5b95a3a9fcae103d50a9c0b7fa64",
+    "tools/candidates/server-hardening-20261022/security-rate-do.mjs": "97c0e799c789a31192e86d638098b9b8e4dcf92d44d8daa9788267f47ce5bd9f",
+    "tools/candidates/server-hardening-20261022/attach-gateway.mjs": "79b523b83feb77e6a04895814961f111247d3592ae4ae43b8f09fde479dbfc86",
+    "tools/candidates/server-hardening-20261022/main-entry.mjs": "ab811850199632774b793761f9788e04e83e24b32b4248567493fc2dbf6f89f1",
+    "tools/candidates/server-hardening-20261022/public-entry.mjs": "c6adb4cd8bb2311f78ba1b0567a12903b5ac80639073d31086726f37ed754245",
+    "tools/candidates/server-hardening-20261022/fixture-worker.mjs": "efcc5a4c8ae0d1ec241217891228e44f12381d12e040500cbc6e7b768e5f0fb8",
+    "tools/candidates/server-hardening-20261022/verify-gateway.mjs": "c4dbf92eac6395c816e0f9ed38abf58a354f6b60dd7fc89f122ba08c6053339d",
+    "tools/candidates/server-hardening-20261022/verify-rpc.mjs": "4665beda79e9cc12a19ad2e206eb261483b45f8ccb368293c4a9168aa46079ef",
+    "cf-worker/src/index.js": "a8ec7ed2ae8cc1db0a851ed8573b9cdd82f4cf5842c76a07a8271b71d37ffe4d",
+    "tools/releases/google-entry-20261021/nobilog-board/src/index.js": "e0edf233409c16232910cb36d54c6b5a1b310b2fe6610c5a22f3075946d1e07f"
+  }
+}

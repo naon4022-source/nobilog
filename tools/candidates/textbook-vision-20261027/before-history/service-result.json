@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "checks": 479,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs",
+      "sha256": "8db868f6e0427171ad3a83ae944b73847f4c76988c20253c8c94e4f1116f9187"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "7aeb7b01d9ffc462112c66568a3a131177202b22c16f63053892b37bc0efe341"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-service.mjs",
+      "sha256": "d5e539597ee534945c527d98b51cbc0b91ca342316e3f4ee5f236447f3d5481d"
+    },
+    {
+      "file": "cf-worker/src/ai-trial-control.mjs",
+      "sha256": "331b747fa055cabc7cd9959f995ad2cca6af808d3db63fe91d3fbcd40eebfd67"
+    },
+    {
+      "file": "cf-worker/src/plans.mjs",
+      "sha256": "249279ffda4620f5024cd3d67d139bcd9e2ae331bcbe25eb007327083db4f04d"
+    },
+    {
+      "file": "cf-worker/src/subscription-credits.mjs",
+      "sha256": "7557dfd3e1ec48e311357178c536f15e5e41939b86adefda0fac36d481dd3f7d"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-quota.mjs",
+      "sha256": "1510b9f42c1cdd0f1d73b258d025eda4ebbd7da940aef1d9e1e3dc4bf0ac7dfe"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-refund.mjs",
+      "sha256": "809ea6ecb183b829871dd5fe7bfbdfccdb65c93d05c0ffc00bceff230c87feec"
+    },
+    {
+      "file": "cf-worker/src/textbook-access.mjs",
+      "sha256": "888dd06324015cfd683fcde55583ce4e94b36a4767731ef781bd6a304dece89d"
+    },
+    {
+      "file": "site-assets/textbook-ai-context-math1.json",
+      "sha256": "23fe208271f594da410a335c556a9532322b5f56eb71cad5ed9be83febbbdcfe"
+    },
+    {
+      "file": ".claude/verify/d1-sqlite.js",
+      "sha256": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb"
+    }
+  ],
+  "scope": "Candidate trusted service with actual in-memory SQLite, shared trial/quota/plan implementations, real verified public catalog, synthetic images and fake provider only. No main routing, immutable multimodal history, real model semantic/latency test, UI, deployment, actual secrets/user data."
+}

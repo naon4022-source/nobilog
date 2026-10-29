@@ -1,0 +1,3145 @@
+{
+ "id": "drill-science-1-phenomena",
+ "mode": "drill",
+ "subject": "理科",
+ "grade": 1,
+ "title": "光・音・力のはたらき",
+ "majorTitle": "身のまわりの現象",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-science-1-phenomena-1",
+   "type": "input",
+   "prompt": "いなずまが光ってから、少しおくれて雷の音が聞こえるのはなぜか。「光」「音」「速さ」の語を使って答えよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "光"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "音"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "速い",
+       "はやい",
+       "遅い",
+       "おそい"
+      ]
+     }
+    ]
+   },
+   "explanation": "光の速さ（約30万km/s）は音の速さ（約340m/s）よりはるかに速いので、光が先に届く。",
+   "source": {
+    "id": "source-0005",
+    "file": "ドリル/りか/S__15581198_0.jpg",
+    "sha256": "9d8fbaaada78b0bcc7bddeec2d42ab00c05b96d7097f465fdb402bb5c17a8217",
+    "page": 12,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p12 1（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-2",
+   "type": "input",
+   "prompt": "いなずまが光ってから9秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "3060",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×9＝3060m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1530"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-3",
+   "type": "input",
+   "prompt": "次のうち、光源であるものをすべて選ぼう。\nア 太陽　イ 月　ウ ろうそくの炎　エ 鏡",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ",
+     "ア,ウ",
+     "アウ",
+     "ア ウ",
+     "ア・ウ",
+     "ウ、ア",
+     "ウ,ア",
+     "ウア",
+     "ウ ア",
+     "ウ・ア"
+    ]
+   },
+   "explanation": "月と鏡は、ほかの光源からの光を反射しているだけで、みずから光を出していない。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p2 要点1（光源）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-4",
+   "type": "input",
+   "prompt": "凸レンズによってスクリーンにうつる、実際に光が集まってできる像を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "実像",
+     "じつぞう"
+    ]
+   },
+   "explanation": "実像。物体と上下左右が逆向きになる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p4 1（実像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "虚像"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-5",
+   "type": "input",
+   "prompt": "校舎の壁に向かって手をたたいたところ、2.5秒後に反射した音が聞こえた。壁までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "425",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "音は壁まで行って帰ってくるので、往復の距離は 340×2.5＝850m。片道は 425m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "850"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-6",
+   "type": "input",
+   "prompt": "物体を凸レンズの焦点と焦点距離の2倍の位置の間に置いたとき、できる実像は物体より大きいか、小さいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きい"
+    ]
+   },
+   "explanation": "物体を焦点に近づけるほど、像はレンズから遠ざかり大きくなる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p4 3（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "小さい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-7",
+   "type": "input",
+   "prompt": "1360m離れた2地点で、一方で出した音が他方に届くまで4秒かかった。このときの音の速さは何m/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "340",
+    "units": [
+     "m/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝1360÷4＝340m/s",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-8",
+   "type": "input",
+   "prompt": "月面上で物体をはかると、地球上と比べて値が変わるのは、質量と重さのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重さ"
+    ]
+   },
+   "explanation": "月の重力は地球の約6分の1なので重さは約6分の1になる。質量はどこでも変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（重さと質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "質量"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-9",
+   "type": "input",
+   "prompt": "オシロスコープで調べると、ある音は1回の振動に0.005秒かかっていた。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1÷（1回の振動にかかる時間）＝1÷0.005＝200Hz",
+   "source": {
+    "id": "source-0005",
+    "file": "ドリル/りか/S__15581198_0.jpg",
+    "sha256": "9d8fbaaada78b0bcc7bddeec2d42ab00c05b96d7097f465fdb402bb5c17a8217",
+    "page": 13,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p13 4（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-10",
+   "type": "input",
+   "prompt": "同じ高さの音のおんさを2つ並べ、一方を鳴らすと、もう一方も鳴りだす。この現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "共鳴",
+     "きょうめい"
+    ]
+   },
+   "explanation": "共鳴。振動数が同じおんさどうしで起こる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p9 2（共鳴）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "反射"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-11",
+   "type": "input",
+   "prompt": "あるばねは、50gのおもりをつるすと2cmのびる。このばねが8cmのびたとき、つるしたおもりは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "8÷2＝4倍なので、50×4＝200g",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p16 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-12",
+   "type": "input",
+   "prompt": "物体の形を変える、物体を支える、のほかに、力にはどんなはたらきがあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "物体の運動の状態を変える",
+     "運動の状態を変える",
+     "動きを変える",
+     "物体の動きを変える"
+    ]
+   },
+   "explanation": "力のはたらき：①物体の形を変える ②物体の運動の状態（速さや向き）を変える ③物体を支える。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p14 要点1（力のはたらき）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-13",
+   "type": "input",
+   "prompt": "地球上で質量1200gの物体を月面に持っていくと、ばねばかりは何Nを示すか。地球上で100gの物体にはたらく重力を1N、月の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "地球上で 12N。月面ではその6分の1で 2N。質量は1200gのまま変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（月面での重さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "12"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-14",
+   "type": "input",
+   "prompt": "力を矢印で表すとき、矢印の長さは何を表すか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "力の大きさ",
+     "大きさ"
+    ]
+   },
+   "explanation": "矢印の長さは力の大きさに比例させてかく。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p14 要点3（力の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "力の向き"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-15",
+   "type": "input",
+   "prompt": "光が鏡に入射角60°で当たった。反射した光と鏡の面がなす角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "反射角＝入射角＝60°。鏡の面との角は 90−60＝30°",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p2 2（反射角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-16",
+   "type": "input",
+   "prompt": "容器の中の空気をぬいていくと、中のブザーの音はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さくなる",
+     "聞こえにくくなる",
+     "聞こえなくなる"
+    ]
+   },
+   "explanation": "音は空気などの物質が振動して伝わる。空気が少なくなると音は小さくなり、真空では伝わらない。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p8 1（真空と音）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "大きくなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-17",
+   "type": "input",
+   "prompt": "凸レンズを使って、物体と同じ大きさの実像をスクリーンにうつした。このとき物体とスクリーンの距離は60cmだった。この凸レンズの焦点距離は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "同じ大きさの実像は、物体・スクリーンがそれぞれ焦点距離の2倍の位置にあるときにできる。物体とスクリーンの距離は焦点距離の4倍なので 60÷4＝15cm",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p6 3（焦点距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "30"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-18",
+   "type": "input",
+   "prompt": "光が種類のちがう物質の境界面で、折れ曲がって進むことを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "屈折",
+     "光の屈折"
+    ]
+   },
+   "explanation": "光が空気から水やガラスへ（またはその逆へ）進むとき、境界面で折れ曲がる。これを屈折という。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p3 3（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "反射"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-19",
+   "type": "input",
+   "prompt": "身長156cmの人が、壁にかけた鏡で自分の全身をうつしたい。鏡の縦の長さは最低何cm必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "78",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "目に届く光の道すじを考えると、必要な鏡の長さは身長の半分。156÷2＝78cm（鏡までの距離には関係しない）",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p6 1（鏡にうつる像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "156"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-20",
+   "type": "input",
+   "prompt": "机の上に置いた物体を、机の面が垂直に押し返す力を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直抗力",
+     "すいちょくこうりょく"
+    ]
+   },
+   "explanation": "面が物体を垂直に押す力を垂直抗力という。物体にはたらく重力とつりあっている。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "摩擦力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-21",
+   "type": "input",
+   "prompt": "質量200gの物体を糸でつるして静止させた。糸が物体を引く力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "物体にはたらく重力（2N）と糸が引く力がつりあっているので、同じ大きさ 2N",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p14 2（2力のつりあい）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-22",
+   "type": "input",
+   "prompt": "次のうち、光の屈折によって起こる現象をすべて選ぼう。\nア 水を入れたコップのストローが折れて見える　イ 鏡に顔がうつる　ウ 虫めがねで日光が1点に集まる　エ 月が光って見える",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ",
+     "ア,ウ",
+     "アウ",
+     "ア ウ",
+     "ア・ウ",
+     "ウ、ア",
+     "ウ,ア",
+     "ウア",
+     "ウ ア",
+     "ウ・ア"
+    ]
+   },
+   "explanation": "鏡にうつるのは反射、月が光るのは太陽光の反射。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p3 3（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-23",
+   "type": "input",
+   "prompt": "音の大きさは、振動の何によって決まるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "振幅",
+     "しんぷく"
+    ]
+   },
+   "explanation": "振幅（振動のふれ幅）が大きいほど大きな音になる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p8 要点3（音の大きさ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "振動数"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-24",
+   "type": "input",
+   "prompt": "地球上で質量1200gの物体を月面に持っていき、上皿てんびんではかると、何gの分銅とつりあうか。",
+   "answer": {
+    "kind": "number",
+    "value": "1200",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量は場所によって変わらないので1200g。上皿てんびんは分銅（これも月の重力を受ける）とつりあわせるので値は変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（月面での質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "200"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-25",
+   "type": "input",
+   "prompt": "空気中を伝わる音の速さは、およそ秒速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "340",
+    "units": [
+     "m/s",
+     "メートル毎秒",
+     "m"
+    ]
+   },
+   "explanation": "空気中の音の速さは約340m/s（気温によって少し変わる）。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p9 4（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "300000"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-26",
+   "type": "input",
+   "prompt": "いなずまが光ってから10秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "3400",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×10＝3400m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1700"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-27",
+   "type": "input",
+   "prompt": "物体どうしがふれ合っている面で、物体の動きをさまたげる向きにはたらく力を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "摩擦力",
+     "摩擦の力",
+     "まさつりょく"
+    ]
+   },
+   "explanation": "摩擦力。動こうとする向きと反対向きにはたらく。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "弾性力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-28",
+   "type": "input",
+   "prompt": "校舎の壁に向かって手をたたいたところ、3.5秒後に反射した音が聞こえた。壁までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "595",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "音は壁まで行って帰ってくるので、往復の距離は 340×3.5＝1190m。片道は 595m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1190"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-29",
+   "type": "input",
+   "prompt": "光が水中やガラスの中から空気中へ進むとき、入射角がある大きさ以上になると、光が境界面ですべて反射する。この現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "全反射",
+     "ぜんはんしゃ"
+    ]
+   },
+   "explanation": "全反射。光ファイバーはこの性質を利用している。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p3 Guide（全反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "乱反射"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-30",
+   "type": "input",
+   "prompt": "340m離れた2地点で、一方で出した音が他方に届くまで1秒かかった。このときの音の速さは何m/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "340",
+    "units": [
+     "m/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝340÷1＝340m/s",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-31",
+   "type": "input",
+   "prompt": "光が鏡などの物体の表面ではね返ることを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "反射",
+     "光の反射"
+    ]
+   },
+   "explanation": "光が物体の表面ではね返る現象を光の反射という。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p2 要点2（光の反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "屈折"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-32",
+   "type": "input",
+   "prompt": "弦が1秒間に200回振動した。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1秒間の振動の回数＝200÷1＝200Hz",
+   "source": {
+    "id": "source-0009",
+    "file": "ドリル/りか/S__15581202_0.jpg",
+    "sha256": "ca2a6b8a57364aeade9ad9040082de04b07fbf0210c8614e95e4d0d04915859e",
+    "page": 20,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p20 2（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-33",
+   "type": "input",
+   "prompt": "表面に細かいでこぼこがある物体に光が当たり、いろいろな方向に反射することを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "乱反射",
+     "らんはんしゃ"
+    ]
+   },
+   "explanation": "乱反射によって、物体はいろいろな方向から見ることができる。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p3 Guide（乱反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "全反射"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-34",
+   "type": "input",
+   "prompt": "あるばねは、100gのおもりをつるすと4cmのびる。このばねに500gのおもりをつるすと何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ばねののびはおもりの重さに比例する（フックの法則）。4×500÷100＝20cm",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p15 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-35",
+   "type": "input",
+   "prompt": "ばねばかりではかることができるのは、物体の質量か、重さか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重さ",
+     "重力の大きさ"
+    ]
+   },
+   "explanation": "ばねばかりは物体にはたらく重力の大きさ（重さ）をはかる。月面では小さくなる。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p15 4（重さと質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "質量"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-36",
+   "type": "input",
+   "prompt": "質量900gの物体にはたらく重力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "900÷100＝9N",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（重力の大きさ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-37",
+   "type": "input",
+   "prompt": "地球が物体を中心に向かって引く力を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重力",
+     "じゅうりょく"
+    ]
+   },
+   "explanation": "重力。地球上のすべての物体にはたらく。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "磁力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-38",
+   "type": "input",
+   "prompt": "光が鏡に入射角10°で当たった。反射した光と鏡の面がなす角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "80",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "反射角＝入射角＝10°。鏡の面との角は 90−10＝80°",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p2 2（反射角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-39",
+   "type": "input",
+   "prompt": "太陽の光（白色光）をプリズムに通すと、いろいろな色の光に分かれる。これは光のどんな性質によるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "屈折",
+     "光の屈折"
+    ]
+   },
+   "explanation": "色によって屈折のしかたが少しずつちがうため、白色光は色に分かれる。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p3 Guide（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-40",
+   "type": "input",
+   "prompt": "凸レンズを使って、物体と同じ大きさの実像をスクリーンにうつした。このとき物体とスクリーンの距離は48cmだった。この凸レンズの焦点距離は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "同じ大きさの実像は、物体・スクリーンがそれぞれ焦点距離の2倍の位置にあるときにできる。物体とスクリーンの距離は焦点距離の4倍なので 48÷4＝12cm",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p6 3（焦点距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "24"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-41",
+   "type": "input",
+   "prompt": "次のうち、物体の形を変える力のはたらきの例を1つ選ぼう。\nア ボールを投げる　イ 粘土をにぎる　ウ 荷物を持ち上げたまま止める　エ 転がるボールを止める",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "アとエは運動の状態を変える、ウは物体を支えるはたらき。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p14 1（力のはたらき）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-42",
+   "type": "input",
+   "prompt": "力の大きさの単位を何というか。カタカナで答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ニュートン",
+     "N",
+     "n"
+    ]
+   },
+   "explanation": "力の大きさの単位はニュートン（記号 N）。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p14 要点3（力の単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "グラム"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-43",
+   "type": "input",
+   "prompt": "鏡に光が当たるとき、入射角と反射角の大きさにはどんな関係があるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "等しい",
+     "同じ",
+     "入射角=反射角",
+     "反射角=入射角"
+    ]
+   },
+   "explanation": "反射の法則：入射角＝反射角。どちらも鏡の面に垂直な線（法線）との角で測る。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p2 1（反射の法則）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "入射角が大きい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-44",
+   "type": "input",
+   "prompt": "机の上に置いた本が静止しているとき、本にはたらく重力とつりあっている力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直抗力",
+     "机が本を押す力"
+    ]
+   },
+   "explanation": "重力（下向き）と垂直抗力（上向き）がつりあっている。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p15 2（2力のつりあい）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "摩擦力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-45",
+   "type": "input",
+   "prompt": "地球上で質量300gの物体を月面に持っていき、上皿てんびんではかると、何gの分銅とつりあうか。",
+   "answer": {
+    "kind": "number",
+    "value": "300",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量は場所によって変わらないので300g。上皿てんびんは分銅（これも月の重力を受ける）とつりあわせるので値は変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（月面での質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "50"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-46",
+   "type": "input",
+   "prompt": "光が空気中から水中へななめに進むとき、屈折角は入射角より大きいか、小さいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さい",
+     "小さくなる"
+    ]
+   },
+   "explanation": "空気→水・ガラスでは、屈折角＜入射角。光は境界面から遠ざかるように（法線に近づくように）曲がる。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p3 3（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "大きい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-47",
+   "type": "input",
+   "prompt": "いなずまが光ってから9.5秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "3230",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×9.5＝3230m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1615"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-48",
+   "type": "input",
+   "prompt": "モノコードの弦を太いものにかえると、音の高さはどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "低くなる",
+     "低い"
+    ]
+   },
+   "explanation": "弦が太いほど振動数が少なくなり、音は低くなる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p9 3（弦と音の高さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "高くなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-49",
+   "type": "input",
+   "prompt": "船から海底に向けて音を出したところ、5秒後に海底で反射した音を受け取った。海の深さは何mか。水中の音の速さを1500m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "3750",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "往復で 1500×5＝7500m。深さは半分で 3750m",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p9 4（水中の音）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "7500"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-50",
+   "type": "input",
+   "prompt": "物体を凸レンズの焦点距離の2倍より遠くに置いたとき、できる実像は物体より大きいか、小さいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さい"
+    ]
+   },
+   "explanation": "物体を遠ざけるほど、像はレンズに近づき小さくなる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p4 3（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "大きい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-51",
+   "type": "input",
+   "prompt": "太陽や電灯のように、みずから光を出すものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "光源",
+     "こうげん"
+    ]
+   },
+   "explanation": "自分で光を出すものを光源という。月は太陽の光を反射して光って見えるので光源ではない。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p2 要点1（光源）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "発光体"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-52",
+   "type": "input",
+   "prompt": "オシロスコープで調べると、ある音は1回の振動に0.002秒かかっていた。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "500",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1÷（1回の振動にかかる時間）＝1÷0.002＝500Hz",
+   "source": {
+    "id": "source-0005",
+    "file": "ドリル/りか/S__15581198_0.jpg",
+    "sha256": "9d8fbaaada78b0bcc7bddeec2d42ab00c05b96d7097f465fdb402bb5c17a8217",
+    "page": 13,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p13 4（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-53",
+   "type": "input",
+   "prompt": "音は真空中を伝わるか。「伝わる」か「伝わらない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "伝わらない"
+    ]
+   },
+   "explanation": "音を伝える物質がないので、真空中では音は伝わらない。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p8 1（真空と音）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "伝わる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-54",
+   "type": "input",
+   "prompt": "あるばねは、100gのおもりをつるすと4cmのびる。このばねに400gのおもりをつるすと何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ばねののびはおもりの重さに比例する（フックの法則）。4×400÷100＝16cm",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p15 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-55",
+   "type": "input",
+   "prompt": "1つの物体に2つの力がはたらいてつりあうとき、2力は一直線上にあり、大きさが等しい。2力の向きはどうなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "反対",
+     "反対向き",
+     "逆向き",
+     "逆"
+    ]
+   },
+   "explanation": "2力のつりあいの条件：①一直線上にある ②大きさが等しい ③向きが反対。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点5"
+   },
+   "ref": "参考：理科ドリル p14 要点5（2力のつりあい）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "同じ向き"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-56",
+   "type": "input",
+   "prompt": "地球上で質量120gの物体を月面に持っていくと、ばねばかりは何Nを示すか。地球上で100gの物体にはたらく重力を1N、月の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "0.2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "地球上で 1.2N。月面ではその6分の1で 0.2N。質量は120gのまま変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（月面での重さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1.2"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-57",
+   "type": "input",
+   "prompt": "次のうち、物体どうしがはなれていてもはたらく力をすべて選ぼう。\nア 重力　イ 摩擦力　ウ 磁力　エ 垂直抗力　オ 電気の力",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ、オ",
+     "ア,ウ,オ",
+     "アウオ",
+     "ア ウ オ",
+     "ア・ウ・オ",
+     "ア、オ、ウ",
+     "ア,オ,ウ",
+     "アオウ",
+     "ア オ ウ",
+     "ア・オ・ウ",
+     "ウ、ア、オ",
+     "ウ,ア,オ",
+     "ウアオ",
+     "ウ ア オ",
+     "ウ・ア・オ",
+     "ウ、オ、ア",
+     "ウ,オ,ア",
+     "ウオア",
+     "ウ オ ア",
+     "ウ・オ・ア",
+     "オ、ア、ウ",
+     "オ,ア,ウ",
+     "オアウ",
+     "オ ア ウ",
+     "オ・ア・ウ",
+     "オ、ウ、ア",
+     "オ,ウ,ア",
+     "オウア",
+     "オ ウ ア",
+     "オ・ウ・ア"
+    ]
+   },
+   "explanation": "重力・磁力・電気の力ははなれていてもはたらく。摩擦力・垂直抗力・弾性力はふれ合っているときにはたらく。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "アウ"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-58",
+   "type": "input",
+   "prompt": "音は空気のほかに、水などの液体や、金属などの固体の中も伝わるか。「伝わる」か「伝わらない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "伝わる"
+    ]
+   },
+   "explanation": "音は気体・液体・固体のどれの中でも伝わる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p8 Guide（音の伝わり方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "伝わらない"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-59",
+   "type": "input",
+   "prompt": "音の高さは、振動の何によって決まるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "振動数",
+     "しんどうすう"
+    ]
+   },
+   "explanation": "振動数（1秒間に振動する回数）が多いほど高い音になる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p8 要点3（音の高さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "振幅"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-60",
+   "type": "input",
+   "prompt": "凸レンズで物体と同じ大きさの実像ができたとき、レンズから物体までの距離は24cmだった。この凸レンズの焦点距離は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "同じ大きさの実像ができるのは焦点距離の2倍の位置。24÷2＝12cm",
+   "source": {
+    "id": "source-0049",
+    "file": "ドリル/りか/S__15581246_0.jpg",
+    "sha256": "86e4fffd9702b2743bf3aa202ed68b7424e9831372a0167172fd11c1fac8e002",
+    "page": 100,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p100 1（焦点距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "24"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-61",
+   "type": "input",
+   "prompt": "物体を凸レンズの焦点より内側に置き、レンズを通して見たときに見える像を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "虚像",
+     "きょぞう"
+    ]
+   },
+   "explanation": "虚像。物体と同じ向きで、物体より大きく見える。スクリーンにはうつらない。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p4 1（虚像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "実像"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-62",
+   "type": "input",
+   "prompt": "身長176cmの人が、壁にかけた鏡で自分の全身をうつしたい。鏡の縦の長さは最低何cm必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "88",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "目に届く光の道すじを考えると、必要な鏡の長さは身長の半分。176÷2＝88cm（鏡までの距離には関係しない）",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p6 1（鏡にうつる像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "176"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-63",
+   "type": "input",
+   "prompt": "モノコードの弦を強くはじくと変わるのは、音の大きさか、高さか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きさ",
+     "音の大きさ"
+    ]
+   },
+   "explanation": "強くはじくと振幅が大きくなり、音が大きくなる。高さ（振動数）は変わらない。",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p10 1（音の大きさ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "高さ"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-64",
+   "type": "input",
+   "prompt": "質量250gの物体を糸でつるして静止させた。糸が物体を引く力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "2.5",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "物体にはたらく重力（2.5N）と糸が引く力がつりあっているので、同じ大きさ 2.5N",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p14 2（2力のつりあい）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-65",
+   "type": "input",
+   "prompt": "モノコードの弦の長さを短くすると、音の高さはどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "高くなる",
+     "高い"
+    ]
+   },
+   "explanation": "弦が短いほど振動数が多くなり、音は高くなる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p9 3（弦と音の高さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "低くなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-66",
+   "type": "input",
+   "prompt": "入射角や反射角は、鏡の面とのなす角ではなく、鏡の面に垂直な線とのなす角である。この垂直な線をふつう何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "法線",
+     "ほうせん"
+    ]
+   },
+   "explanation": "鏡の面に垂直な線を法線という。入射角・反射角は法線から測る。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p2 1（入射角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "垂線"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-67",
+   "type": "input",
+   "prompt": "物体を凸レンズの焦点距離の2倍の位置に置いたとき、スクリーンにできる実像の大きさは物体と比べてどうか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "同じ",
+     "同じ大きさ",
+     "等しい"
+    ]
+   },
+   "explanation": "焦点距離の2倍の位置に置くと、反対側の焦点距離の2倍の位置に、同じ大きさの実像ができる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p4 3（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "大きい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-68",
+   "type": "input",
+   "prompt": "凸レンズの中心から焦点までの距離を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "焦点距離",
+     "しょうてんきょり"
+    ]
+   },
+   "explanation": "焦点距離。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p2 要点3（凸レンズ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-69",
+   "type": "input",
+   "prompt": "103.5m離れた2地点で、一方で出した音が他方に届くまで0.3秒かかった。このときの音の速さは何m/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "345",
+    "units": [
+     "m/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝103.5÷0.3＝345m/s",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-70",
+   "type": "input",
+   "prompt": "上皿てんびんではかることができるのは、物体の質量か、重さか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "質量"
+    ]
+   },
+   "explanation": "上皿てんびんは分銅とつりあわせて質量をはかる。場所が変わっても同じ値になる。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p15 4（重さと質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "重さ"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-71",
+   "type": "input",
+   "prompt": "オシロスコープで調べると、ある音は1回の振動に0.01秒かかっていた。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1÷（1回の振動にかかる時間）＝1÷0.01＝100Hz",
+   "source": {
+    "id": "source-0005",
+    "file": "ドリル/りか/S__15581198_0.jpg",
+    "sha256": "9d8fbaaada78b0bcc7bddeec2d42ab00c05b96d7097f465fdb402bb5c17a8217",
+    "page": 13,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p13 4（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-72",
+   "type": "input",
+   "prompt": "次のうち、音の高さを高くする方法を1つ選ぼう（モノコード）。\nア 弦を強くはじく　イ 弦を短くする　ウ 弦を太くする　エ 弦をゆるめる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "振動数を多くすると高くなる：弦を短く・細く・強く張る。強くはじくと大きくなる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p9 3（弦と音の高さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-73",
+   "type": "input",
+   "prompt": "オシロスコープの波形で、波の山の高さが高いほど、音はどうであるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きい",
+     "大きな音"
+    ]
+   },
+   "explanation": "波の山の高さ（振幅）が大きいほど大きな音。",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p10 1（波形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "高い"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-74",
+   "type": "input",
+   "prompt": "あるばねは、40gのおもりをつるすと3cmのびる。100gの物体にはたらく重力を1Nとすると、このばねを4Nの力で引いたときののびは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "4Nは400gのおもりの重さと同じ。3×400÷40＝30cm",
+   "source": {
+    "id": "source-0008",
+    "file": "ドリル/りか/S__15581201_0.jpg",
+    "sha256": "b536eab89229e8849df396b479a37fef17efc488b608261f4f919dd7c1e98599",
+    "page": 18,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p18 4（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-75",
+   "type": "input",
+   "prompt": "凸レンズでスクリーンにできる実像は、物体と比べて上下・左右がどうなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "逆",
+     "逆向き",
+     "上下左右が逆",
+     "上下左右逆"
+    ]
+   },
+   "explanation": "実像は物体と上下左右が逆向きになる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p4 1（実像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "同じ"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-76",
+   "type": "input",
+   "prompt": "質量1200gの物体にはたらく重力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "1200÷100＝12N",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（重力の大きさ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-77",
+   "type": "input",
+   "prompt": "振動数の単位を何というか。カタカナで答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ヘルツ",
+     "Hz",
+     "hz"
+    ]
+   },
+   "explanation": "振動数の単位はヘルツ（記号 Hz）。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p8 要点3（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ニュートン"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-78",
+   "type": "input",
+   "prompt": "鏡の面と入ってくる光のなす角が10°のとき、反射角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "80",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "入射角は鏡の面に垂直な線との角なので 90−10＝80°。反射角＝入射角＝80°",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p2 2（反射角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-79",
+   "type": "input",
+   "prompt": "変形した物体が、もとにもどろうとして生じる力を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "弾性力",
+     "弾性の力",
+     "だんせいりょく"
+    ]
+   },
+   "explanation": "ばねやゴムがもとにもどろうとする力を弾性力という。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "重力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-80",
+   "type": "input",
+   "prompt": "焦点距離20cmの凸レンズの前、レンズから40cmの位置に物体を置いた。はっきりした像がうつるスクリーンは、レンズから何cmの位置か。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "焦点距離の2倍（40cm）の位置に置くと、反対側の焦点距離の2倍の位置（40cm）に同じ大きさの実像ができる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p4 1（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "20"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-81",
+   "type": "input",
+   "prompt": "光が水中から空気中へななめに進むとき、屈折角は入射角より大きいか、小さいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きい",
+     "大きくなる"
+    ]
+   },
+   "explanation": "水・ガラス→空気では、屈折角＞入射角。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p3 3（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "小さい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-82",
+   "type": "input",
+   "prompt": "身長170cmの人が、壁にかけた鏡で自分の全身をうつしたい。鏡の縦の長さは最低何cm必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "85",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "目に届く光の道すじを考えると、必要な鏡の長さは身長の半分。170÷2＝85cm（鏡までの距離には関係しない）",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p6 1（鏡にうつる像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "170"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-83",
+   "type": "input",
+   "prompt": "物体を凸レンズの焦点の上に置くと、像はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "できない",
+     "像はできない",
+     "うつらない"
+    ]
+   },
+   "explanation": "焦点上の物体から出た光はレンズを通ると平行になり、集まらないので像はできない。",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p6 3（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "実像ができる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-84",
+   "type": "input",
+   "prompt": "質量300gの物体を糸でつるして静止させた。糸が物体を引く力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "物体にはたらく重力（3N）と糸が引く力がつりあっているので、同じ大きさ 3N",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p14 2（2力のつりあい）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-85",
+   "type": "input",
+   "prompt": "凸レンズの焦点を通ってからレンズに入った光は、レンズを通ったあとどのように進むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "軸に平行に進む",
+     "光軸に平行に進む",
+     "軸に平行",
+     "平行に進む"
+    ]
+   },
+   "explanation": "焦点を通った光は、レンズを通ると軸（光軸）に平行に進む。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p3 4（凸レンズと光）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "直進する"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-86",
+   "type": "input",
+   "prompt": "磁石の極どうしが引き合ったり、しりぞけ合ったりする力を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "磁力",
+     "磁石の力",
+     "じりょく"
+    ]
+   },
+   "explanation": "磁力。はなれていてもはたらく。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p14 要点2（いろいろな力）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "電気の力"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-87",
+   "type": "input",
+   "prompt": "いなずまが光ってから7秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "2380",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×7＝2380m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1190"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-88",
+   "type": "input",
+   "prompt": "音を出しているもの（音源）は、どのような運動をしているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "振動",
+     "振動している",
+     "ふるえている"
+    ]
+   },
+   "explanation": "音源（発音体）は振動している。その振動が空気などを伝わって耳に届く。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p8 要点1（音の伝わり方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-89",
+   "type": "input",
+   "prompt": "校舎の壁に向かって手をたたいたところ、3秒後に反射した音が聞こえた。壁までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "510",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "音は壁まで行って帰ってくるので、往復の距離は 340×3＝1020m。片道は 510m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1020"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-90",
+   "type": "input",
+   "prompt": "音の振動のようすを、波の形で画面に表示する装置を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オシロスコープ",
+     "コンピュータ",
+     "おしろすこーぷ"
+    ]
+   },
+   "explanation": "オシロスコープ（またはコンピュータの音の分析ソフト）で、音の波形を見ることができる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p8 要点3（波形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ばねばかり"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-91",
+   "type": "input",
+   "prompt": "330m離れた2地点で、一方で出した音が他方に届くまで1秒かかった。このときの音の速さは何m/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "330",
+    "units": [
+     "m/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝330÷1＝330m/s",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-92",
+   "type": "input",
+   "prompt": "力を矢印で表すとき、矢印の始点は何を表すか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "作用点",
+     "さようてん",
+     "力がはたらく点"
+    ]
+   },
+   "explanation": "矢印の始点＝作用点、矢印の向き＝力の向き、矢印の長さ＝力の大きさ。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p14 要点3（力の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "力の大きさ"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-93",
+   "type": "input",
+   "prompt": "モノコードの弦を強く張ると、音の高さはどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "高くなる",
+     "高い"
+    ]
+   },
+   "explanation": "弦を強く張るほど振動数が多くなり、音は高くなる。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p9 3（弦と音の高さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "低くなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-94",
+   "type": "input",
+   "prompt": "あるばねは、100gのおもりをつるすと4cmのびる。このばねに200gのおもりをつるすと何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ばねののびはおもりの重さに比例する（フックの法則）。4×200÷100＝8cm",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 15,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p15 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-95",
+   "type": "input",
+   "prompt": "オシロスコープの波形で、一定時間に見える波の数が多いほど、音はどうであるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "高い",
+     "高い音"
+    ]
+   },
+   "explanation": "波の数が多いのは振動数が多いということで、高い音。",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p10 1（波形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "大きい"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-96",
+   "type": "input",
+   "prompt": "全反射を利用して、光を遠くまで伝える細い繊維を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "光ファイバー",
+     "ひかりファイバー"
+    ]
+   },
+   "explanation": "光ファイバーの中を光が全反射をくり返して進む。通信などに使われる。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p3 Guide（全反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-97",
+   "type": "input",
+   "prompt": "水を入れたカップの底のコインが、実際より浮き上がって見えるのは、光のどんな性質によるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "屈折",
+     "光の屈折"
+    ]
+   },
+   "explanation": "コインからの光が水面で屈折して目に届くため、浮き上がって見える。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p3 Guide（光の屈折）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "反射"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-98",
+   "type": "input",
+   "prompt": "焦点距離10cmの凸レンズの前、レンズから20cmの位置に物体を置いた。はっきりした像がうつるスクリーンは、レンズから何cmの位置か。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "焦点距離の2倍（20cm）の位置に置くと、反対側の焦点距離の2倍の位置（20cm）に同じ大きさの実像ができる。",
+   "source": {
+    "id": "source-0001",
+    "file": "ドリル/りか/S__15581194_0.jpg",
+    "sha256": "d96cef3f3f12284dc91af1bc5f2914c109fe67f1fe715fe60137ab502d4169e9",
+    "page": 4,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p4 1（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-99",
+   "type": "input",
+   "prompt": "凸レンズの軸に平行な光が、凸レンズを通ったあとに集まる点を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "焦点",
+     "しょうてん"
+    ]
+   },
+   "explanation": "焦点。レンズの中心から焦点までの距離を焦点距離という。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p2 要点3（凸レンズ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "中心"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-100",
+   "type": "input",
+   "prompt": "凸レンズの中心を通る光は、そのあとどのように進むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "直進する",
+     "まっすぐ進む",
+     "直進",
+     "そのまま直進する"
+    ]
+   },
+   "explanation": "レンズの中心を通る光は、そのまま直進する。",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 3,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p3 4（凸レンズと光）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "焦点を通る"
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-science-1-phenomena-test-1",
+   "type": "input",
+   "prompt": "ルーペで小さな物を大きく見るとき、見えている像は実像か虚像か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "虚像"
+    ]
+   },
+   "explanation": "ルーペは焦点の内側の物体を見るので、同じ向きで大きな虚像が見える。",
+   "source": {
+    "id": "source-0009",
+    "file": "ドリル/りか/S__15581202_0.jpg",
+    "sha256": "ca2a6b8a57364aeade9ad9040082de04b07fbf0210c8614e95e4d0d04915859e",
+    "page": 20,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p20 1（虚像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "実像"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-2",
+   "type": "input",
+   "prompt": "地球上で質量450gの物体を月面に持っていき、上皿てんびんではかると、何gの分銅とつりあうか。",
+   "answer": {
+    "kind": "number",
+    "value": "450",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量は場所によって変わらないので450g。上皿てんびんは分銅（これも月の重力を受ける）とつりあわせるので値は変わらない。",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（月面での質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "75"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-3",
+   "type": "input",
+   "prompt": "音を出している物体のことを、音源のほかに何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "発音体",
+     "はつおんたい"
+    ]
+   },
+   "explanation": "音を出す物体を音源または発音体という。",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 8,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p8 要点1（音の伝わり方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-4",
+   "type": "input",
+   "prompt": "ばねののびは、ばねを引く力の大きさに比例する。この関係を何の法則というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "フックの法則",
+     "ふっくのほうそく",
+     "フック"
+    ]
+   },
+   "explanation": "フックの法則。",
+   "source": {
+    "id": "source-0006",
+    "file": "ドリル/りか/S__15581199_0.jpg",
+    "sha256": "34e0b5145c90f5786970007c9ffd030dcd93dc33952b6adb1e0528fb9ac446f7",
+    "page": 14,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p14 要点4（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "オームの法則"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-5",
+   "type": "input",
+   "prompt": "船から海底に向けて音を出したところ、1.5秒後に海底で反射した音を受け取った。海の深さは何mか。水中の音の速さを1500m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "1125",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "往復で 1500×1.5＝2250m。深さは半分で 1125m",
+   "source": {
+    "id": "source-0003",
+    "file": "ドリル/りか/S__15581196_0.jpg",
+    "sha256": "45799465c31d05a5b7a6154cc83c1735ff1edd720c7a1ca0f452d6519dd89c9d",
+    "page": 9,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p9 4（水中の音）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "2250"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-6",
+   "type": "input",
+   "prompt": "凸レンズでできる実像をスクリーンにうつしているとき、物体をレンズに近づけると、像がはっきりうつるスクリーンの位置はレンズから遠ざかるか、近づくか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "遠ざかる"
+    ]
+   },
+   "explanation": "物体をレンズ（焦点）に近づけると、像の位置はレンズから遠ざかり、像は大きくなる。",
+   "source": {
+    "id": "source-0002",
+    "file": "ドリル/りか/S__15581195_0.jpg",
+    "sha256": "42793b59e8e33e7a3c122a9d27d5aac468f8b13409071b642facd25cce216c0f",
+    "page": 6,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p6 3（凸レンズの像）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "近づく"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-7",
+   "type": "input",
+   "prompt": "弦が5秒間に500回振動した。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1秒間の振動の回数＝500÷5＝100Hz",
+   "source": {
+    "id": "source-0009",
+    "file": "ドリル/りか/S__15581202_0.jpg",
+    "sha256": "ca2a6b8a57364aeade9ad9040082de04b07fbf0210c8614e95e4d0d04915859e",
+    "page": 20,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p20 2（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-8",
+   "type": "input",
+   "prompt": "あるばねは、10gのおもりをつるすと2cmのびる。このばねが4cmのびたとき、つるしたおもりは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "4÷2＝2倍なので、10×2＝20g",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p16 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-9",
+   "type": "input",
+   "prompt": "鏡の面と入ってくる光のなす角が35°のとき、反射角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "55",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "入射角は鏡の面に垂直な線との角なので 90−35＝55°。反射角＝入射角＝55°",
+   "source": {
+    "id": "source-0000",
+    "file": "ドリル/りか/S__15581193_0.jpg",
+    "sha256": "addd928f65fad2af82caa377ba07b3ecdac599b950a9655c7f4629f0a97ccba5",
+    "page": 2,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p2 2（反射角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "35"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-10",
+   "type": "input",
+   "prompt": "いなずまが光ってから8秒後に雷の音が聞こえた。雷が発生した場所までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "2720",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×8＝2720m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "1360"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-11",
+   "type": "input",
+   "prompt": "校舎の壁に向かって手をたたいたところ、1.5秒後に反射した音が聞こえた。壁までの距離は何mか。音の速さを340m/sとする。",
+   "answer": {
+    "kind": "number",
+    "value": "255",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "音は壁まで行って帰ってくるので、往復の距離は 340×1.5＝510m。片道は 255m",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の反射）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "510"
+   ]
+  },
+  {
+   "id": "drill-science-1-phenomena-test-12",
+   "type": "input",
+   "prompt": "1980m離れた2地点で、一方で出した音が他方に届くまで6秒かかった。このときの音の速さは何m/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "330",
+    "units": [
+     "m/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝1980÷6＝330m/s",
+   "source": {
+    "id": "source-0004",
+    "file": "ドリル/りか/S__15581197_0.jpg",
+    "sha256": "1f9ad96f80365711d70e68b1f60d512cfcbd52c675fb6b9d0d2d3f5707f8daa0",
+    "page": 10,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p10 2（音の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-13",
+   "type": "input",
+   "prompt": "弦が0.5秒間に100回振動した。この音の振動数は何Hzか。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "Hz",
+     "ヘルツ"
+    ]
+   },
+   "explanation": "振動数＝1秒間の振動の回数＝100÷0.5＝200Hz",
+   "source": {
+    "id": "source-0009",
+    "file": "ドリル/りか/S__15581202_0.jpg",
+    "sha256": "ca2a6b8a57364aeade9ad9040082de04b07fbf0210c8614e95e4d0d04915859e",
+    "page": 20,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p20 2（振動数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-14",
+   "type": "input",
+   "prompt": "あるばねは、10gのおもりをつるすと2cmのびる。このばねが10cmのびたとき、つるしたおもりは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "10÷2＝5倍なので、10×5＝50g",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p16 3（ばねののび）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-phenomena-test-15",
+   "type": "input",
+   "prompt": "質量60gの物体にはたらく重力の大きさは何Nか。100gの物体にはたらく重力を1Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "0.6",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "60÷100＝0.6N",
+   "source": {
+    "id": "source-0007",
+    "file": "ドリル/りか/S__15581200_0.jpg",
+    "sha256": "f35ebd3c297b5c94dcb734078b5a83422796096b44bb8420123dd586786725bb",
+    "page": 16,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p16 1（重力の大きさ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。理科ドリルp2〜21（1 光の性質とレンズ・2 音の性質・3 力とそのはたらき、標準問題①②・実力問題）とp100（総仕上げ1）を写真で目視し、数値や条件を変えた類題と、要点を確かめる問題を作った。作図は数値・用語で答える形にした。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "光の反射と屈折",
+   "body": "反射：入射角＝反射角（どちらも鏡の面に垂直な線との角）。屈折：空気→水・ガラスでは屈折角＜入射角、水・ガラス→空気では屈折角＞入射角。入射角が大きいと全反射が起こる。"
+  },
+  {
+   "title": "凸レンズの像",
+   "body": "焦点距離の2倍より遠い→小さい実像、2倍の位置→同じ大きさの実像（反対側の2倍の位置）、焦点と2倍の間→大きい実像、焦点上→像はできない、焦点の内側→同じ向きの大きい虚像。実像は上下左右が逆。"
+  },
+  {
+   "title": "音の性質",
+   "body": "音源の振動が空気などを伝わる（真空では伝わらない）。振幅が大きい→大きい音、振動数が多い→高い音。弦は短く・細く・強く張るほど高い音。空気中の音の速さは約340m/s。距離＝速さ×時間（反射は往復なので2でわる）。"
+  },
+  {
+   "title": "力のはたらきといろいろな力",
+   "body": "力のはたらき：形を変える・運動の状態を変える・支える。重力・弾性力・摩擦力・垂直抗力・磁力・電気の力。力は矢印で表す（作用点・向き・大きさ）。単位はN（100gの物体の重力が約1N）。"
+  },
+  {
+   "title": "ばね・重さと質量・つりあい",
+   "body": "ばねののびは力の大きさに比例（フックの法則）。重さ（ばねばかり、N）は場所で変わり月では約6分の1。質量（上皿てんびん、g）は変わらない。2力のつりあい：一直線上・大きさが等しい・向きが反対。"
+  }
+ ]
+}

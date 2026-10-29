@@ -1,0 +1,5 @@
+[
+ {"old":"import {reserveOperation,startOperation,completeOperation,rejectUnchargedOperation} from './openai-receipts.mjs';","new":"import {startOperation,rejectUnchargedOperation} from './openai-receipts.mjs';\nimport {reservePricedOperation,completePricedOperation} from './openai-priced-operation.mjs';"},
+ {"old":"reserveOperation(db,env,uid,requestId,hash,policy.reservation,now)","new":"reservePricedOperation(db,env,uid,requestId,hash,policy,now)"},
+ {"old":"completeOperation(db,uid,requestId,operation.token,result.value)","new":"completePricedOperation(db,uid,requestId,operation.token,result)"}
+]

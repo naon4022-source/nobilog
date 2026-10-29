@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/build-videos-v3.py", line 124, in <module>
+    if __name__=='__main__':main()
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/build-videos-v3.py", line 83, in main
+    subprocess.run(['say','-v','Kyoko','-r','175','-o',str(raw),'--data-format=LEI16@24000',reading],check=True,capture_output=True,timeout=45)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1980, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['say', '-v', 'Kyoko', '-r', '175', '-o', '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/videos-caption-v3/K1-C2-S5-VP/audio/05-00.wav', '--data-format=LEI16@24000', 'きゃ を2拍と数えるのは間違い。1拍だよ。']' timed out after 45 seconds

@@ -1,0 +1,19 @@
+{
+  "status": "candidate only; real API calls0",
+  "file": "cf-worker/src/learning-assistant.mjs",
+  "beforeSha256": "201bea9660cb47a37388c910c892fc21d3e68f56f87d2bdf67d0a4972974bdd6",
+  "candidate": "tools/candidates/real-api-trial-20261029/learning-assistant.candidate.mjs",
+  "afterSha256": "3166e87f590d62c68592f6e63d583d27c6caca5bde8467f28406bfbfd1d701a0",
+  "edits": [
+    {
+      "before": " if(url.search)return reply({error:'invalid_query'},400);",
+      "after": " const statusOnly=url.pathname==='/learning-chat'&&request.method==='GET'&&url.search==='?status=1'&&env.OPENAI_ENABLED==='1';\n if(url.search&&!statusOnly)return reply({error:'invalid_query'},400);"
+    }
+  ],
+  "publicModuleCount": 30,
+  "realKeyRegisteredNameOnly": true,
+  "deployedDiagnostics": "GET /api/learning-chat?status=1 invalid_query; AI message UI mock response warning; OPENAI plain flags absent in active metadata",
+  "requestedTrials": 3,
+  "dailySharedLimit": 10,
+  "GeminiEnabled": false
+}

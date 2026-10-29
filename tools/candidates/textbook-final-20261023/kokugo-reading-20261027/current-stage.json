@@ -1,0 +1,49 @@
+{
+  "status": "two movie candidates AV/78-frame review passed; aligned candidate book106 checks passed; main integration pending",
+  "proofs": [
+    {
+      "file": "book-alignment-v3/result.json",
+      "sha256": "60ad56e2962b126e011679293bb2287be869a2330328052d6e7dcd106ad42b81"
+    },
+    {
+      "file": "book-alignment-v3/playback-result.json",
+      "sha256": "08dd9c8f50e731aa905626bc4380c5020b7ff14d03d97613c7361c9a82aa5851"
+    },
+    {
+      "file": "book-alignment-v3/visual-review.json",
+      "sha256": "75f746cf962f1d6273c7bfc4a8a7c7c888296a49c5fac4e960f844036b006633"
+    },
+    {
+      "file": "videos-caption-v2/technical-media-result.json",
+      "sha256": "5a5a17db5cc9ee5d154212922b6dc6fa78b5e0395b2ba4b9f59cedaeba839fbb"
+    },
+    {
+      "file": "visual-caption-v2-result.json",
+      "sha256": "9c13580246fc8dab93f85d21983df4403cd52326086352ba7de06e470f94ea19"
+    },
+    {
+      "file": "build-book-alignment.py",
+      "sha256": "9697187d71f281948ae3eb67350544425d8baf3d21b67f5e6a9018336e2c0fca"
+    },
+    {
+      "file": "prepare-aligned-playback.py",
+      "sha256": "0d2f61e6c7fb671be245867109f05d9e245711b01e635cb24d388f39a837e89f"
+    },
+    {
+      "file": "verify-aligned-book-playback.mjs",
+      "sha256": "7032a05a016ff84a786c81debfb17a246c60af29a7dc89a61a877a6413a5bd2d"
+    }
+  ],
+  "mainBaseline": {
+    "file": "tools/candidates/textbook-vision-20261027/main/full5-result.json",
+    "sha256": "632e05acccc39379cceec3bca3457b554e76c64bf9e0422acc287ae87c51b9b3",
+    "status": "passed; historical main baseline; this candidate unintegrated"
+  },
+  "sourceChanges": "5 additional explanation leaves; all questions/answers/values/IDs unchanged",
+  "publications": 0,
+  "remaining": [
+    "main book/media/source/context/catalog integration",
+    "preview approval and final standalone whole verification",
+    "physical-device playback"
+  ]
+}

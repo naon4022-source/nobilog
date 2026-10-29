@@ -1,0 +1,53 @@
+--- tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/site-assets/vertical-fractions.js
+
++++ site-assets/vertical-fractions.js
+
+@@ -6,0 +7,2 @@
+
++ // 数学の本文では、ac/b など単項式の分子もひとまとまりにする。
++ const MATH_FRACTION=/(^|[^0-9A-Za-z\/.:])(\d*\([^()\/\n]+\)|\d+(?:\.\d+)?[a-z]*|[a-z]+)\/(\([^()\/\n]+\)|\d+(?:\.\d+)?|[a-z])(?![0-9\/]|\.\d)/g;
+@@ -26 +28 @@
+
+- function fragment(text,doc){
++ function fragment(text,doc,options){
+@@ -28,2 +30,2 @@
+
+-  const frag=doc.createDocumentFragment();let last=0,found=false,m;FRACTION.lastIndex=0;
+-  while((m=FRACTION.exec(text))){
++  const frag=doc.createDocumentFragment();let last=0,found=false,m;const pattern=options?.math===true?MATH_FRACTION:FRACTION;pattern.lastIndex=0;
++  while((m=pattern.exec(text))){
+@@ -31 +33,4 @@
+
+-   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1))))continue;   // m/s・3m/s・g/cm³ などの単位は分数にしない
++   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1)))){
++    const unit=/^(?:m|cm|mm|km|g|kg|mg|l|ml)\/(?:s|h|d|m|l)$/.test(top.replace(/^\d+(?:\.\d+)?/,'')+'/'+bottom);
++    if(options?.math!==true||unit||/^[A-Za-z]/.test(text.slice(end,end+1)))continue;
++   }
+@@ -41 +46 @@
+
+- function append(parent,text){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc);parent.append(frag||doc.createTextNode(text));return parent;}
++ function append(parent,text,options){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc,options);parent.append(frag||doc.createTextNode(text));return parent;}
+@@ -51 +56 @@
+
+- function apply(node,selector){
++ function apply(node,selector,options){
+@@ -57 +62 @@
+
+-   for(const t of list){const frag=fragment(t.nodeValue,doc);if(frag&&t.parentNode)t.parentNode.replaceChild(frag,t);}
++   for(const t of list){const frag=fragment(t.nodeValue,doc,options);if(frag&&t.parentNode)t.parentNode.replaceChild(frag,t);}
+--- tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/site-assets/textbook-book.js
+
++++ site-assets/textbook-book.js
+
+@@ -44 +44 @@
+
+-function fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text);else parent.append(document.createTextNode(text));return parent;}
++function fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text,{math:state.book?.meta?.subject==='数学'});else parent.append(document.createTextNode(text));return parent;}
+@@ -82 +82 @@
+
+-function block(b){const n=blockRaw(b);if(n&&window.NobiFractions)window.NobiFractions.apply(n);return n;}
++function block(b){const n=blockRaw(b);if(n&&window.NobiFractions)window.NobiFractions.apply(n,null,{math:state.book?.meta?.subject==='数学'});return n;}
+@@ -509 +509 @@
+
+-  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length+annotationSig+(big?':large':''),cacheKey='nobi-textbook-layout:'+meta.id;
++  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length+annotationSig+(meta.subject==='数学'?':fraction-variables-v1':'')+(big?':large':''),cacheKey='nobi-textbook-layout:'+meta.id;

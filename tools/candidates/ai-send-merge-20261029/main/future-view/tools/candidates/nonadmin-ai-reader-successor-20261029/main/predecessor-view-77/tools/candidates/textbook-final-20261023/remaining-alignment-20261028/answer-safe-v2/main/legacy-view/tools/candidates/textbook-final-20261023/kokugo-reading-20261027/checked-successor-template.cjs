@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view-77/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/checked-successor-template.cjs

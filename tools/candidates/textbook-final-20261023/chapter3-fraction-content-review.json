@@ -1,0 +1,36 @@
+{
+  "status": "candidate content reviewed; main not changed",
+  "bookSha256": "8f30358dc138c92470eb15993bfe05ae04feb31c36da7a7157e4a7f15fc6e858",
+  "scope": "Six candidate diagrams with immediately surrounding original worked-example/check/practice pages",
+  "independentArithmetic": [
+    "(x＋1)/4＝(2/3)x−1 gives x=3",
+    "x/2+x/3=5 gives x=6",
+    "2/5=4/10=6/15"
+  ],
+  "answerHiding": [
+    {
+      "id": "M1-C3-S1-D02",
+      "condition": "依頼どおり4行の答え欄はx＝の後を空欄のまま保持。答えの数値を追加しない。"
+    },
+    {
+      "id": "M1-C3-S1-M04",
+      "condition": "例題4標準(1)の途中式。確認4-1/4-2/4-3は別の式で、画像はその答え2、4/3、−5を表示していない。"
+    },
+    {
+      "ids": [
+        "M1-C3-S1-D06",
+        "M1-C3-S1-E02"
+      ],
+      "condition": "しくみページの整数化と等式変形。分母のない整数項にも同じ数をかける説明を維持。"
+    },
+    {
+      "ids": [
+        "M1-C3-S1-E01",
+        "M1-C3-S1-D05"
+      ],
+      "condition": "2:5、4:10、6:15の長方形の比。確認5-1/5-2の答え8、2を記載しない。"
+    }
+  ],
+  "metadataIssue": "既存D06は現行本参照と元SVGを確認したが依頼台帳に未登録。反映時に既存図の記録漏れとして補う必要。",
+  "limits": "全章の本文/全問採点/現在本内表示の承認ではない。"
+}

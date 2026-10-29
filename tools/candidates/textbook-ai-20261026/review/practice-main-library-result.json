@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": 589,
+  "inputs": [
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    },
+    {
+      "file": "cf-worker/src/material-engine.cjs",
+      "sha256": "d73351afbcc3cca84ca1c03db2dbcfefd5198fd98d472bd09384711f0646a243"
+    }
+  ],
+  "scope": "Current main server library invariants.30 questions tied to exact existing source ID/prompt/answer fingerprints, skill-local options, no arbitrary fallback, answer-free public view, existing grader, post-submit canonical answers, clone protection and source-change refusal. Authorization/route/attempt/UI are verified separately; this pure-library check alone does not prove those."
+}

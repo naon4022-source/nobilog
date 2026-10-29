@@ -1,0 +1,28 @@
+{
+  "status": "failure observed while full still running; terminal pending",
+  "session": 29160,
+  "utc": "2026-10-25T05:36:51.568672+00:00",
+  "log": "/private/tmp/nobi-handwriting-post-full-20261025.log",
+  "error": "node:internal/process/promises:394\n    triggerUncaughtException(err, true /* fromPromise */);\n    ^\n\nProtocolError: Protocol error (Page.handleJavaScriptDialog): Not attached to an active page\n    at /Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:34783:61\n    at new Promise (<anonymous>)\n    at _CRSession.send (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:34782:16)\n    at Dialog._onHandle (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:37653:32)\n    at Dialog._dismiss (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:12960:20)\n    at Dialog._close (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:12966:22)\n    at DialogManager.dialogDidOpen (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:12986:18)\n    at _FrameSession._onDialog (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:37646:49)\n    at _CRSession.<anonymous> (/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright-core/lib/coreBundle.js:37320:103)\n    at _CRSession.emit (node:events:509:28) {\n  type: 'error',\n  method: 'Page.handleJavaScriptDialog',\n  logs: undefined\n}\n\nNode.js v24.18.0",
+  "attribution": "run.sh order: after auth-repair verify-browser success, before auth-repair verify-deploy; verify-login-flow has no success line",
+  "suspectedTest": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+  "certainty": "test sequence identifies candidate; cause still unproven; isolated reproduce only after whole terminal",
+  "sourceMutationDuringWhole": false,
+  "libraryObservation": "Installed Playwright DialogManager.dialogDidOpen calls dialog._close().then(()=>{}) without rejection handler when no dialog listener. Closing target can surface ProtocolError and may mask original test assertion; this is not yet proof of original cause.",
+  "next": "After full terminal, isolated run same existing login-flow with explicit diagnostic dialog lifecycle; preserve original failure and real assertions.",
+  "additionalObservedFailure": {
+    "type": "historical appendix annotation-support SHA predecessor assertion",
+    "tests": [
+      "tools/candidates/math-ch4-recheck-20261019/verify-current-evidence.py",
+      "tools/candidates/math-ch5-recheck-20261019/verify-answer-data.py",
+      "tools/candidates/math-ch5-recheck-20261019/verify-current-evidence.py"
+    ],
+    "chain": "math-appendix-recheck-20261021/verify_appendix_chain.py:52",
+    "changedFiles": [
+      "site-assets/textbook-annotation-model.js",
+      "site-assets/textbook-annotations.js"
+    ],
+    "explanation": "Historical annotation evidence expects pre-handwriting bytes. Current exact reviewed scoped changes add u4 and handwriting interoperability. Existing reviewed_changes bridge handles later zoom/body changes but lacks the new successor. Need validate exact reviewed successor and return preserved predecessor, keeping original expected hashes/assertions intact. Cause will be checked after full terminal.",
+    "notChanged": "Original math content, videos and textbook renderer core hashes still equal passed baseline."
+  }
+}

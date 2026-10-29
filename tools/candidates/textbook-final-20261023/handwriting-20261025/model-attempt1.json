@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "session": 41067,
+  "observedExitCode": 1,
+  "failure": "exact committed reply-loss recovered by read: false instead of true",
+  "cause": "Fixture recreated a model offline, then attempted POST before a successful online capability read. Production model correctly refused unconfirmed upload; lost reply was never triggered.",
+  "fix": "After reconnect, perform the actual read/capability step before exercising lost reply; no production guard weakened, no assertion removed."
+}

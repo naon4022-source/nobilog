@@ -1,0 +1,85 @@
+{
+  "status": "chapter4 scripts manually read; not AV/content completion",
+  "scripts": [
+    {
+      "id": "K1-C4-S2-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S2-V01.json",
+      "sha256": "87afa1dbbdb9d7b79d2fd9e44580f8161d938ea70ff2aa01d5a87b0604d5a965",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S2-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S2-VP.json",
+      "sha256": "27ab560ed32afd36e2530536384b77bfa87147a8e8c061af5a590f3df7c2cd86",
+      "stepsRead": 6
+    },
+    {
+      "id": "K1-C4-S3-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S3-V01.json",
+      "sha256": "706738187ef8b1323929df540dcefa24bbb5595a1083e83821873f09dab4da1f",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S3-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S3-VP.json",
+      "sha256": "eb1c3058eeeba5dce7fb67a60e79d634120b7bbb94e9240665cb9713fa76b348",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S4-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S4-V01.json",
+      "sha256": "786ad68c2dd94fdd51a1fb4c74c29f7a2ff7cc54f56ea3d98521b2e1050548ba",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S4-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S4-VP.json",
+      "sha256": "8e36ca4a85a1dc6827fef53cf69c899d085e9f3586e65d19f2f3e1ef885a6b13",
+      "stepsRead": 6
+    },
+    {
+      "id": "K1-C4-S5-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S5-V01.json",
+      "sha256": "00eaf895fbdf191dba10b456e24d4b2e81815cb0bc0cc731d93686245d2e1be1",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S5-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S5-VP.json",
+      "sha256": "a20ab1442e9dbbf417559b0fcd45c78657803df09364706c4e5daab51261522b",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S6-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S6-V01.json",
+      "sha256": "640088c6c4cfb47edf1fbd8015cd65ef600cdd3ff41c6e99ee0c8c0f776f81fe",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C4-S6-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C4-S6-VP.json",
+      "sha256": "8969ed1ca19f0ea1aff8f7225ea1da768645f4e933096abf7b6660a30b4626a7",
+      "stepsRead": 6
+    }
+  ],
+  "findings": [
+    {
+      "id": "K1-C4-S4-V01",
+      "reading": "Argument identifies claim, reason and survey evidence;30 pupils/24 responses retained."
+    },
+    {
+      "id": "K1-C4-S5-V01",
+      "state": "clarity issue pending original grammar-definition comparison; no answer change",
+      "finding": "Example labels both the two-phrase group and its inner modifier as modifiers, mixing group-level and single-phrase analysis. Clarify which level is requested before proposing a corrected answer.",
+      "primaryReference": "https://kids.gakken.co.jp/jiten/dictionary03200819/",
+      "referenceScope": "Dictionary distinguishes multi-phrase modifying group; also notes terminology can vary. This is not sufficient to declare original answer wrong in all textbook conventions.",
+      "suggestion": "Separate phrase-by-phrase arrows from group-level modifying part; preserve question and original answer until convention confirmed."
+    }
+  ],
+  "limits": [
+    "SDG/oyster ecological statements not independently primary-source checked in this pass.",
+    "Current frames/audio/motion and answer visibility remain unreviewed."
+  ],
+  "newMediaGenerations": 0,
+  "productionEdits": false
+}

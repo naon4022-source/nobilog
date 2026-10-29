@@ -1,0 +1,47 @@
+{
+  "name": "nobilog-preview",
+  "main": "build/verified-preview-entry.mjs",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "assets": {
+    "directory": "build/assets",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "vars": {
+    "APP_ORIGIN": "https://nobilog-preview.naon4022.workers.dev",
+    "PREVIEW_RELEASE_VERSION": "2.51.0",
+    "GEMINI_ENABLED": "0",
+    "GEMINI_MOCK": "1",
+    "SUBSCRIPTION_PREVIEW": "1",
+    "PREVIEW_PLAN_ACCOUNTS": "1",
+    "PLAN_CREDITS_V2": "1",
+    "GEMINI_MONTHLY_LIMIT_YEN": "500",
+    "OPENAI_ENABLED": "1",
+    "OPENAI_BILLING_READY": "1",
+    "OPENAI_TRIAL_ONLY": "1",
+    "OPENAI_SAFETY_READY": "1",
+    "OPENAI_TERMS_READY": "1",
+    "OPENAI_MONTHLY_LIMIT_YEN": "800"
+  },
+  "d1_databases": [
+    {
+      "binding": "AUTH_DB",
+      "database_name": "nobilog-preview-store",
+      "database_id": "487d1286-3830-4e1a-ace8-b065cdf4f59b"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "BOARD",
+      "id": "093ddfc607ba4c84a69a22e03878e2b1"
+    }
+  ],
+  "account_id": "1308a2c96b67bea56de7eb4b6f307b30",
+  "preview_urls": false,
+  "triggers": {
+    "crons": [
+      "0 * * * *"
+    ]
+  }
+}

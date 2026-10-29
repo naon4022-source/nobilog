@@ -1,0 +1,31 @@
+{
+  "checkedOn": "2026-10-27",
+  "scope": "Official OpenAI documentation checked without any API credentials or paid request. User-specified models retained.",
+  "models": {
+    "pro": {
+      "id": "gpt-6-luna",
+      "imageInput": true,
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    },
+    "unlimit": {
+      "id": "gpt-6.1-sol",
+      "imageInput": true,
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+    }
+  },
+  "imageSchema": {
+    "source": "https://developers.openai.com/api/docs/guides/images-vision?api-mode=responses",
+    "contract": "Responses input accepts user content with input_text and input_image parts, including base64 data URLs. The app permits only its validated PNG data; it never accepts caller URLs or file IDs."
+  },
+  "exactImageTokenCount": {
+    "source": "https://developers.openai.com/api/docs/guides/token-counting",
+    "endpoint": "POST /v1/responses/input_tokens",
+    "contract": "The counting guide includes image inputs and returns response.input_tokens with an integer count. The app preserves a framing allowance and refuses out-of-range counts.",
+    "billing": "No assumption that preflight is free; unknown charges remain conservatively held.",
+    "referenceFetchLimitation": "The separate generated API-reference page exceeded the fetch tool's content limit; the successfully fetched official counting guide establishes the required endpoint and image schema."
+  },
+  "notEstablished": [
+    "Application account eligibility, consent, contract readiness, actual API access or production activation",
+    "Real-model semantic correctness or response latency on the user's textbook images"
+  ]
+}

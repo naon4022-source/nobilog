@@ -1,0 +1,8 @@
+国語 1：原稿と一致
+国語 1：原稿より古い
+Traceback (most recent call last):
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/build-book.py", line 68, in <module>
+    if __name__=='__main__':main()
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/build-book.py", line 57, in main
+    assert expected(old)==new and changed, 'Unrelated book content or metadata changed'
+AssertionError: Unrelated book content or metadata changed

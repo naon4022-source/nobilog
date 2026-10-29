@@ -1,0 +1,601 @@
+--- before/textbook-vision-input.mjs
++++ after/textbook-vision-input.mjs
+@@ -3,7 +3,7 @@
+ import {canonicalImage} from '../../../cf-worker/src/learning-images.mjs';
+ import {chatContent} from '../../../cf-worker/src/openai-chat-content.mjs';
+ import {textbookChatRequest,textbookReference} from '../../../cf-worker/src/textbook-ai-chat-content.mjs';
+-import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
++import {currentVisionEntry} from './textbook-vision-context-reader.mjs';
+ import {requestBody,reserveMicroYen} from '../../../cf-worker/src/openai-policy.mjs';
+ import {countedVision} from '../../../cf-worker/src/openai-vision.mjs';
+ const UID=/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/,HASH=/^[a-f0-9]{64}$/;
+@@ -12,8 +12,8 @@
+ const sha=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',value)),x=>x.toString(16).padStart(2,'0')).join('');
+ const binding=reference=>({book:reference.book,anchor:reference.anchor,annotationSignature:reference.annotationSignature,contextSha256:reference.contextSha256,sourceSha256:reference.sourceSha256});
+ function referenceFor(body,reference){
+- const ref=textbookReference(reference),entry=TEXTBOOK_AI_CONTEXTS[body.book];
+- if(!entry||ref.book!==body.book||ref.anchor!==body.anchor||ref.annotationSignature!==body.annotationSignature||ref.contextSha256!==body.contextSha256||ref.annotationSignature!==entry.annotationSignature||ref.contextSha256!==entry.sha256)fail('context_changed');
++ const ref=textbookReference(reference),entry=currentVisionEntry(body.book,body.contextSha256);
++ if(ref.book!==body.book||ref.anchor!==body.anchor||ref.annotationSignature!==body.annotationSignature||ref.contextSha256!==body.contextSha256||ref.annotationSignature!==entry.annotationSignature||ref.sourceSha256!==entry.sourceSha256)fail('context_changed');
+  return ref;
+ }
+ export function textbookVisionRequest(body){
+@@ -29,8 +29,8 @@
+ }
+ export async function textbookImageRecord(reference,pixels){
+  const ref=textbookReference(reference);
+- const entry=TEXTBOOK_AI_CONTEXTS[ref.book];
+- if(ref.annotationSignature!==entry.annotationSignature||ref.contextSha256!==entry.sha256)fail('context_changed');
++ const entry=currentVisionEntry(ref.book,ref.contextSha256);
++ if(ref.annotationSignature!==entry.annotationSignature||ref.sourceSha256!==entry.sourceSha256)fail('context_changed');
+  return {version:1,reference:binding(ref),image:await canonicalImage(pixels)};
+ }
+ function crc(bytes){let n=0xffffffff;for(const b of bytes){n^=b;for(let i=0;i<8;i++)n=(n>>>1)^((n&1)?0xedb88320:0);}return (n^0xffffffff)>>>0;}
+--- before/textbook-vision-service.mjs
++++ after/textbook-vision-service.mjs
+@@ -8,9 +8,8 @@
+ import {creditUnits,creditPolicyOn} from '../../../cf-worker/src/subscription-credits.mjs';
+ import {textbookChatQuota,reserveTextbookChat,refundTextbookChat} from '../../../cf-worker/src/textbook-ai-quota.mjs';
+ import {recoverTextbookRefund} from '../../../cf-worker/src/textbook-ai-refund.mjs';
+-import {readPublicTextbookContext} from '../../../cf-worker/src/textbook-ai-context.mjs';
++import {readVisionContext as readPublicTextbookContext,currentVisionEntry} from './textbook-vision-context-reader.mjs';
+ import {textbookVisionRequest} from './textbook-vision-input.mjs';
+-import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
+ import {capturedTextbookVision,completedVisionChat,visionOperationId} from './textbook-vision-context.mjs';
+ import {runTextbookVisionOperation} from './textbook-vision-operation.mjs';
+ const UID=/^(u[124]|p_(free|mini|standard|pro|unlimit))$/;
+@@ -71,8 +70,8 @@
+    if(prior.state==='started')return {error:'outcome_unknown',retrySafe:false};
+    if(prior.state==='rejected'&&!await recoverVisionCredits(db,uid,id))return {error:'refund_pending'};
+   }
+-  const entry=TEXTBOOK_AI_CONTEXTS[request.book];
+-  if(ref.annotationSignature!==entry.annotationSignature||ref.contextSha256!==entry.sha256)return {error:'context_changed'};
++  const entry=currentVisionEntry(request.book,request.contextSha256);
++  if(ref.annotationSignature!==entry.annotationSignature||ref.contextSha256!==entry.sha256||ref.sourceSha256!==entry.sourceSha256)return {error:'context_changed'};
+   if(snapshot.plan!==rights.plan)return {error:'plan_changed'};
+   // Read-only historical preparations cannot reach the transport. A source
+   // and plan check above authorizes this exact frozen snapshot for sending.
+--- before/textbook-vision-images-route.mjs
++++ after/textbook-vision-images-route.mjs
+@@ -1,7 +1,7 @@
+ // Candidate only: the application's authenticated router is not connected.
+ // These endpoints store pixels; they never call an AI provider or change plans.
+ import {textbookAccess,textbookWriteGuard} from '../../../cf-worker/src/textbook-access.mjs';
+-import {readPublicTextbookContext} from '../../../cf-worker/src/textbook-ai-context.mjs';
++import {readVisionContext as readPublicTextbookContext} from './textbook-vision-context-reader.mjs';
+ import {textbookChatRequest,textbookReference} from '../../../cf-worker/src/textbook-ai-chat-content.mjs';
+ import {textbookImageRecord,textbookImageKey,ownedTextbookVisionParts} from './textbook-vision-input.mjs';
+ const UID=/^(u[124]|p_(free|mini|standard|pro|unlimit))$/,HASH=/^[a-f0-9]{64}$/;
+--- before/textbook-vision-api.js
++++ after/textbook-vision-api.js
+@@ -5,6 +5,7 @@
+  if(!base||typeof base.matches!=='function'||typeof request!=='function')throw Error('vision_unavailable');
+  const call=async(path,options,owner)=>{if(!base.available()||!base.matches(owner))throw Error('account_changed');const result=await request(path,options,owner);if(!base.matches(owner))throw Error('account_changed');return result;};
+  return Object.freeze({...base,
++  visionSource:(selection,owner)=>call('/textbook-ai-vision-context?'+new URLSearchParams(selection),{},owner),
+   visionHistory:(selection,owner)=>call('/textbook-ai-vision?'+new URLSearchParams(selection),{},owner),
+   visionPost:(body,owner)=>call('/textbook-ai-vision',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},owner),
+   async uploadFigure(reference,pixels,owner){
+--- before/textbook-vision-model.js
++++ after/textbook-vision-model.js
+@@ -38,7 +38,7 @@
+   if(!row.draft.pending||!equal(row.draft.pending,body)||!item||!images(item.images)||!equal(item.images,row.images))throw Error('result_invalid');
+   return item;
+  }
+- const wrapped={snapshot:()=>owner,matches:()=>current(),source:(selection,who)=>api.source(selection,who),
++ const wrapped={snapshot:()=>owner,matches:()=>current(),source:(selection,who)=>(api.visionSource||api.source)(selection,who),
+   history:async(selection,who)=>{guard();const result=await api.visionHistory(selection,who);guard();if(selection.id&&result.state==='done'){const row=await store.row(selection.anchor);await checkItem(selection.anchor,result.item,row.draft.pending);}return result;},
+   post:async(body,who)=>{
+    guard();const row=await store.row(body.anchor);guard();if(!row.images.length||!equal(row.draft.pending,body))throw Error('draft_conflict');
+--- before/textbook-vision-capture.js
++++ after/textbook-vision-capture.js
+@@ -6,7 +6,7 @@
+ const fail=()=>{throw Error('figure_unavailable');};
+ function selected(app,anchor,signature,current){
+  if(typeof current!=='function'||!current()||!app?.isConnected||!HASH.test(anchor)||!HASH.test(signature))fail();
+- const found=[...app.querySelectorAll('[data-annotation-anchor]')].filter(n=>n.dataset.annotationAnchor===anchor);
++ const found=[...app.querySelectorAll('[data-annotation-anchor],[data-vision-anchor]')].filter(n=>n.dataset.annotationAnchor===anchor||n.dataset.visionAnchor===anchor);
+  if(found.length!==1)fail();const figure=found[0],page=figure.closest('.tb-page');
+  if(figure.tagName!=='FIGURE'||!page||!app.contains(page)||figure.closest('.tb-measure,[hidden],[aria-hidden="true"]')||figure.querySelector('video,canvas,input,textarea'))fail();
+  for(let n=figure;n&&n!==app.parentElement;n=n.parentElement){const style=getComputedStyle(n);if(style.display==='none'||style.visibility!=='visible'||Number(style.opacity)===0||style.contentVisibility==='hidden'||style.clipPath!=='none'||style.maskImage&&style.maskImage!=='none'||n.tagName==='DETAILS'&&!n.open)fail();}
+--- before/verify-input.mjs
++++ after/verify-input.mjs
+@@ -8,7 +8,7 @@
+ const copy=v=>structuredClone(v);let checks=0;
+ const ok=(v,m)=>{assert.ok(v,m);checks++;};const same=(a,b,m)=>{assert.deepEqual(a,b,m);checks++;};
+ const bad=async(fn,message)=>{await assert.rejects(fn,message);checks++;};
+-const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:'b'.repeat(64),page:2,kind:'fig',quote:'AB＝6 cm の三角形の図。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図の読み方'};
++const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:TEXTBOOK_AI_CONTEXTS.math1.sourceSha256,page:2,kind:'fig',quote:'AB＝6 cm の三角形の図。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図の読み方'};
+ const pixels=value=>({width:2,height:2,data:deflateSync(Buffer.from(Array.from({length:16},(_,i)=>i%4===3?255:value+i))).toString('base64')});
+ const images=[];for(const value of [1,21,41])images.push(await textbookImageRecord(ref,pixels(value)));
+ const request={id:'vision_request_01',text:'この図の考え方を教えて。',book:ref.book,anchor:ref.anchor,annotationSignature:ref.annotationSignature,contextSha256:ref.contextSha256,images:images.map(r=>r.image.id)};
+--- before/verify-transport.mjs
++++ after/verify-transport.mjs
+@@ -7,7 +7,7 @@
+ import {textbookImageRecord,textbookImageKey,prepareTextbookVision,textbookVisionCeiling} from './textbook-vision-input.mjs';
+ import {generateTextbookVision} from './textbook-vision-transport.mjs';
+ const here=new URL('./',import.meta.url),root=new URL('../../../',import.meta.url),sha=v=>createHash('sha256').update(v).digest('hex');
+-const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:'b'.repeat(64),page:2,kind:'fig',quote:'AB＝6 cm の三角形。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図'};
++const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:TEXTBOOK_AI_CONTEXTS.math1.sourceSha256,page:2,kind:'fig',quote:'AB＝6 cm の三角形。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図'};
+ const image=await textbookImageRecord(ref,{width:2,height:2,data:deflateSync(Buffer.from([0,0,0,255,255,255,255,255,0,0,0,255,255,255,255,255])).toString('base64')});
+ const request={id:'vision_transport_01',text:'図の見方を教えて。',book:ref.book,anchor:ref.anchor,annotationSignature:ref.annotationSignature,contextSha256:ref.contextSha256,images:[image.image.id]};
+ const db={prepare(sql){assert.equal(sql,'SELECT v FROM auth_kv WHERE k=?');return {bind(key){return {async first(){return key===textbookImageKey('u4',ref,image.image.id)?JSON.stringify(image):null;}};}};}};
+--- before/verify-operation.mjs
++++ after/verify-operation.mjs
+@@ -10,7 +10,7 @@
+ const {D1SQLite}=createRequire(import.meta.url)('../../../.claude/verify/d1-sqlite.js');
+ const here=new URL('./',import.meta.url),root=new URL('../../../',import.meta.url),dbs=[],now=Date.UTC(2026,9,27),id='vision_operation_01';let checks=0;
+ const ok=(value,message)=>{assert.ok(value,message);checks++;},same=(a,b,message)=>{assert.deepEqual(a,b,message);checks++;};
+-const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:'b'.repeat(64),page:2,kind:'fig',quote:'AB＝6 cm の三角形。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図'};
++const ref={book:'math1',anchor:'a'.repeat(64),annotationSignature:TEXTBOOK_AI_CONTEXTS.math1.annotationSignature,contextSha256:TEXTBOOK_AI_CONTEXTS.math1.sha256,sourceSha256:TEXTBOOK_AI_CONTEXTS.math1.sourceSha256,page:2,kind:'fig',quote:'AB＝6 cm の三角形。',title:'合成教科書',subject:'数学',chapter:'合成章',section:'合成節',sectionTitle:'図'};
+ const image=await textbookImageRecord(ref,{width:2,height:2,data:deflateSync(Buffer.from([0,0,0,255,255,255,255,255,0,0,0,255,255,255,255,255])).toString('base64')});
+ const request={id,text:'図の読み方を教えて。',book:ref.book,anchor:ref.anchor,annotationSignature:ref.annotationSignature,contextSha256:ref.contextSha256,images:[image.image.id]};
+ const operationKey=uid=>'openai-operation:'+uid+':'+id;
+--- before/verify-panel-book.mjs
++++ after/verify-panel-book.mjs
+@@ -13,6 +13,9 @@
+ import {publicTextbookContextReader} from '../../../cf-worker/src/textbook-ai-context.mjs';
+ import {textbookVisionAIRoute} from './textbook-vision-route.mjs';
+ import {textbookVisionImagesRoute} from './textbook-vision-images-route.mjs';
++import {textbookVisionContextRoute} from './textbook-vision-context-route.mjs';
++import {visionContextReader} from './textbook-vision-context-reader.mjs';
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
+ const require=createRequire(import.meta.url),{D1SQLite}=require('../../../.claude/verify/d1-sqlite.js'),{chromium}=require('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+ const ROOT=new URL('../../../',import.meta.url),here=new URL('./',import.meta.url),assets=new URL('site-assets/',ROOT),sha=b=>createHash('sha256').update(b).digest('hex'),db=new D1SQLite();
+ const index=await readFile(new URL('index.html',ROOT),'utf8'),start=index.indexOf('    async function textbookAnnotationRequest('),end=index.indexOf('    function appSyncSummaryHtml()',start);assert(start>=0&&end>start);
+@@ -20,6 +23,8 @@
+ for(const uid of ['u1','u2','u4']){db.seed('active-session:'+uid,owner(uid),now+7200000);db.seed('openai-access:'+uid,JSON.stringify({version:'2026-10-14',approved:true,ageBand:'13-17',guardianConsent:true}));db.seed('material-history:'+uid+':sentinel','original-grades');}
+ const catalogs=new Map(),catalogBytesByPath=new Map();for(const [book,entry]of Object.entries(TEXTBOOK_AI_CONTEXTS)){const b=await readFile(new URL('site-assets'+entry.src,ROOT));catalogBytesByPath.set(entry.src,b);catalogs.set(book,JSON.parse(b));}const catalog=catalogs.get('math1');
+ const reader=publicTextbookContextReader({fetcher:async req=>{const url=new URL(req.url);assert.equal(url.origin,'https://public-fixture.invalid');assert(catalogBytesByPath.has(url.pathname));return new Response(catalogBytesByPath.get(url.pathname),{headers:{'Content-Type':'application/json'}});}}),readContext=(_env,selection)=>reader({APP_ORIGIN:'https://public-fixture.invalid'},selection);
++const mediaCatalogs=new Map();for(const [book,entry]of Object.entries(TEXTBOOK_VISION_MEDIA)){const bytes=await readFile(new URL('media-contexts'+entry.src,here));assert.equal(sha(bytes),entry.sha256);catalogBytesByPath.set(entry.src,bytes);mediaCatalogs.set(book,JSON.parse(bytes));}
++const visionReader=visionContextReader({readText:readContext,fetcher:async request=>{const path=new URL(request.url).pathname;assert(catalogBytesByPath.has(path));return new Response(catalogBytesByPath.get(path),{headers:{'Content-Type':'application/json'}});}});
+ let origin,posts=0,uploads=0,generations=0,countCalls=0,lose=false;const outside=[],errors=[],sent=[],loadedAssets=new Map();
+ const fetcher=async(url,options)=>{
+  if(url.endsWith('/moderations'))return Response.json({results:[{flagged:false}]});const body=JSON.parse(options.body);
+@@ -28,8 +33,8 @@
+  return Response.json({status:'completed',model:body.model,service_tier:'default',usage:{input_tokens:200,output_tokens:40},output:[{type:'message',role:'assistant',content:[{type:'output_text',text:'{"answer":"図に書かれた条件を、一つずつ確かめよう。"}'}]}]});
+ };
+ const scripts=['text-settings.js','vertical-fractions.js','textbook-annotation-model.js','textbook-ink-format.js','textbook-ink-model.js','textbook-ink.js','textbook-ai-model.js','textbook-vision-model.js','textbook-vision-capture.js','textbook-vision-api.js','textbook-ai.js','textbook-annotations.js'];
+-const html='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+['textbook-book.css','textbook-annotations.css','textbook-ink.css','textbook-ai.css'].map(x=>'<link rel="stylesheet" href="/'+x+'">').join('')+scripts.map(x=>'<script src="/'+x+'"></script>').join('')+'<script>var currentUserId="u4",fixtureEpoch=0;function isTrial(){return false}function cloudIdentity(){return {uid:currentUserId,epoch:fixtureEpoch}}function cloudSame(o){return o.uid===currentUserId&&o.epoch===fixtureEpoch}function cloudUrl(p){return p}function cloudTry(p,o={}){return fetch(p,{...o,headers:{...o.headers,"X-Fixture-User":currentUserId}})}'+index.slice(start,end)+'nobiTextbookAIAPI=NobiTextbookVisionAPI.extend(nobiTextbookAIAPI,textbookAIRequest);</script><div id="textbook-app" class="tb-app"></div><script src="/textbook-book.js"></script>';
+-const routes={'textbook-ai-context':textbookAIContextRoute,'textbook-ai-chat':textbookAIRoute,'textbook-annotations':textbookAnnotationsRoute,'textbook-ink':textbookInkRoute,'textbook-ai-vision':textbookVisionAIRoute,'textbook-ai/images':textbookVisionImagesRoute,'textbook-ai/image':textbookVisionImagesRoute};
++const html='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+['textbook-book.css','textbook-annotations.css','textbook-ink.css','textbook-ai.css'].map(x=>'<link rel="stylesheet" href="/'+x+'">').join('')+scripts.map(x=>'<script src="/'+x+'"></script>').join('')+'<script type="module" src="/candidate/textbook-vision-media-browser.mjs"></script><script>var currentUserId="u4",fixtureEpoch=0;function isTrial(){return false}function cloudIdentity(){return {uid:currentUserId,epoch:fixtureEpoch}}function cloudSame(o){return o.uid===currentUserId&&o.epoch===fixtureEpoch}function cloudUrl(p){return p}function cloudTry(p,o={}){return fetch(p,{...o,headers:{...o.headers,"X-Fixture-User":currentUserId}})}'+index.slice(start,end)+'nobiTextbookAIAPI=NobiTextbookVisionAPI.extend(nobiTextbookAIAPI,textbookAIRequest);</script><div id="textbook-app" class="tb-app"></div><script src="/textbook-book.js"></script>';
++const routes={'textbook-ai-context':textbookAIContextRoute,'textbook-ai-vision-context':textbookVisionContextRoute,'textbook-ai-chat':textbookAIRoute,'textbook-annotations':textbookAnnotationsRoute,'textbook-ink':textbookInkRoute,'textbook-ai-vision':textbookVisionAIRoute,'textbook-ai/images':textbookVisionImagesRoute,'textbook-ai/image':textbookVisionImagesRoute};
+ const server=createServer(async(req,res)=>{try{
+  const name=new URL(req.url,origin||'http://local').pathname.slice(1);
+  if(routes[name]){
+@@ -37,11 +42,13 @@
+   // Loopback browser proxy constructs a production-style HTTPS request for
+   // server code. Keep the dedicated image route's HTTPS guard unchanged.
+   const endpoint='https://worker-fixture.invalid',chunks=[];for await(const c of req)chunks.push(c);const request=new Request(endpoint+req.url,{method:req.method,headers:{Origin:endpoint,'Content-Type':'application/json'},...(req.method==='POST'?{body:Buffer.concat(chunks)}:{})});
+-  const response=await routes[name](request,{...env,APP_ORIGIN:endpoint},{uid},{owner:owner(uid),fetcher,readContext});
++  const response=await routes[name](request,{...env,APP_ORIGIN:endpoint},{uid},{owner:owner(uid),fetcher,readContext:name==='textbook-ai-context'||name==='textbook-ai-chat'?readContext:visionReader});
+   if(name==='textbook-ai/images'&&req.method==='POST')uploads++;
+   if(name==='textbook-ai-vision'&&req.method==='POST'){posts++;if(lose){lose=false;res.writeHead(503,{'Content-Type':'application/json'}).end('{"error":"synthetic_response_loss"}');return;}}
+   res.writeHead(response.status,Object.fromEntries(response.headers)).end(Buffer.from(await response.arrayBuffer()));return;
+  }
++ if(name.startsWith('candidate/')){const leaf=name.slice(10);if(!['textbook-vision-media-browser.mjs','textbook-vision-media-dom.mjs','textbook-vision-media-context.mjs','textbook-vision-media-manifest.mjs'].includes(leaf)){res.writeHead(404).end();return;}const bytes=await readFile(new URL(leaf,here));loadedAssets.set('tools/candidates/textbook-vision-20261027/'+leaf,sha(bytes));res.writeHead(200,{'Content-Type':'text/javascript'}).end(bytes);return;}
++ if(catalogBytesByPath.has('/'+name)&&name.startsWith('textbook-ai-media-context-')){res.writeHead(200,{'Content-Type':'application/json'}).end(catalogBytesByPath.get('/'+name));return;}
+  if(!name){res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'}).end(html);return;}
+  const candidate={'textbook-ai.js':new URL('ui-candidate/textbook-ai.js',here),'textbook-vision-model.js':new URL('textbook-vision-model.js',here),'textbook-vision-capture.js':new URL('textbook-vision-capture.js',here),'textbook-vision-api.js':new URL('textbook-vision-api.js',here)};
+  if(!candidate[name]&&!/^(?:textbook-[a-z0-9-]+\.(?:js|css|json|svg|jpg|png|mp4)|vertical-fractions\.js|text-settings\.js|nobi-[a-z]+\.svg)$/.test(name)){res.writeHead(404).end();return;}
+@@ -51,11 +58,11 @@
+ let browser,page,checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
+ async function settled(){await page.evaluate(async()=>{for(const a of document.getAnimations())if(Number.isFinite(a.effect?.getTiming().iterations))a.finish();await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));});}
+ async function open(title='数学 1'){await page.getByRole('button',{name:'全画面で教科書を開く',exact:true}).click();await page.getByRole('button',{name:title+'を開く',exact:true}).click();await page.locator('.tb-spread').waitFor({timeout:240000});await settled();}
+-async function go(target){await page.evaluate(n=>{const form=document.querySelector('.tb-jump');form.querySelector('input').value=String(n);form.requestSubmit();},target.n);await settled();await page.locator('[data-annotation-anchor="'+target.anchor+'"] img').waitFor();await page.waitForFunction(anchor=>{const img=document.querySelector('[data-annotation-anchor="'+anchor+'"] img');return img?.complete&&img.naturalWidth>0;},target.anchor);}
+-async function select(target){await go(target);await page.evaluate(anchor=>{const fig=document.querySelector('[data-annotation-anchor="'+anchor+'"]'),img=fig.querySelector('img'),r=img.getBoundingClientRect(),rows=[];for(let n=img;n&&n!==document.body;n=n.parentElement){const s=getComputedStyle(n),q=n.getBoundingClientRect();rows.push({tag:n.tagName,cls:n.className,rect:{left:q.left,right:q.right,top:q.top,bottom:q.bottom},display:s.display,visibility:s.visibility,opacity:s.opacity,clipPath:s.clipPath,mask:s.maskImage,overflowX:s.overflowX,overflowY:s.overflowY,fit:s.objectFit});}window.capturePreflight={src:img.currentSrc,width:img.naturalWidth,height:img.naturalHeight,hit:document.elementFromPoint((r.left+r.right)/2,(r.top+r.bottom)/2)?.tagName,rows};},target.anchor);await page.getByRole('button',{name:'教科書AI',exact:true}).click();await page.locator('[data-annotation-anchor="'+target.anchor+'"]').click();await page.getByRole('textbox',{name:'教科書AIへの質問',exact:true}).waitFor();await settled();}
++async function go(target){await page.evaluate(n=>{const form=document.querySelector('.tb-jump');form.querySelector('input').value=String(n);form.requestSubmit();},target.n);await settled();await page.locator('img[src="'+target.src+'"]').waitFor();await page.waitForFunction(src=>{const img=document.querySelector('img[src="'+src+'"]');return img?.complete&&img.naturalWidth>0;},target.src);}
++async function select(target){await go(target);await page.evaluate(anchor=>{const img=document.querySelector('img[src="'+anchor+'"]'),fig=img.closest('figure'),r=img.getBoundingClientRect(),rows=[];for(let n=img;n&&n!==document.body;n=n.parentElement){const s=getComputedStyle(n),q=n.getBoundingClientRect();rows.push({tag:n.tagName,cls:n.className,rect:{left:q.left,right:q.right,top:q.top,bottom:q.bottom},display:s.display,visibility:s.visibility,opacity:s.opacity,clipPath:s.clipPath,mask:s.maskImage,overflowX:s.overflowX,overflowY:s.overflowY,fit:s.objectFit});}window.capturePreflight={src:img.currentSrc,width:img.naturalWidth,height:img.naturalHeight,hit:document.elementFromPoint((r.left+r.right)/2,(r.top+r.bottom)/2)?.tagName,rows};},target.src);await page.getByRole('button',{name:'教科書AI',exact:true}).click();await page.getByRole('button',{name:'選択を終わる',exact:true}).waitFor();await page.locator('[data-annotation-anchor="'+target.anchor+'"],[data-vision-anchor="'+target.anchor+'"]').click();await page.getByRole('textbox',{name:'教科書AIへの質問',exact:true}).waitFor();await settled();}
+ async function close(){await page.locator('.tb-ai-top').getByRole('button',{name:'閉じる',exact:true}).click();}
+ try{
+- await mkdir(new URL('panel-screens/',here),{recursive:true});browser=await chromium.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:900},serviceWorkers:'block'});page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>{if(new URL(r.request().url()).origin===origin)return r.continue();outside.push(r.request().url());return r.abort();});await page.addInitScript(()=>{Element.prototype.requestFullscreen=undefined;Element.prototype.webkitRequestFullscreen=undefined;});await page.goto(origin);await open();
++ await mkdir(new URL('panel-screens/',here),{recursive:true});await mkdir(new URL('media-panel-screens/',here),{recursive:true});browser=await chromium.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:900},serviceWorkers:'block'});page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.route('**/*',r=>{if(new URL(r.request().url()).origin===origin)return r.continue();outside.push(r.request().url());return r.abort();});await page.addInitScript(()=>{Element.prototype.requestFullscreen=undefined;Element.prototype.webkitRequestFullscreen=undefined;});await page.goto(origin);await open();
+  const anchors=catalog.contexts.filter(x=>x.kind==='fig').map(x=>x.anchor),target=await page.evaluate(anchors=>{for(const p of NobiTextbook._state.book.phys){const b=p.blocks?.find(x=>x.t==='fig'&&x.src?.endsWith('.svg')&&anchors.includes(x.annotationAnchor));if(b)return {n:p.n,anchor:b.annotationAnchor,src:b.src};}},anchors);ok(target,'actual public SVG diagram exists');
+  const photo=await page.evaluate(anchors=>{for(const p of NobiTextbook._state.book.phys){const b=p.blocks?.find(x=>x.t==='fig'&&x.src?.endsWith('.jpg')&&anchors.includes(x.annotationAnchor));if(b)return {n:p.n,anchor:b.annotationAnchor,src:b.src};}},anchors);ok(photo,'actual photo limit witness exists');await select(photo);ok(await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).isDisabled(),'oversize photo not silently compressed or sent');ok(await page.locator('.tb-ai-card [role=status]').textContent().then(s=>s.includes('サイズの上限')),'oversize reason shown accurately');ok(uploads===0&&posts===0,'oversize rejection transmits no image or AI');await close();
+  for(const width of [390,820,1440]){
+@@ -66,14 +73,17 @@
+  }
+  await page.setViewportSize({width:390,height:900});await select(target);await page.getByRole('textbox',{name:'教科書AIへの質問',exact:true}).fill('この図の読み方を短く教えてください。');lose=true;await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).click();await page.getByRole('button',{name:'送信状況を確認',exact:true}).waitFor();ok(posts===1&&uploads===1&&generations===1&&countCalls===1,'one explicit image upload and exactly one count/generation');ok(Array.isArray(sent[0].input)&&sent[0].input[0].content[1].image_url.startsWith('data:image/png;base64,'),'actual figure pixels included in multimodal request');ok(!JSON.stringify(sent[0]).includes('original-grades'),'no private grades in provider input');
+  await close();await page.reload();await open();await select(target);ok(await page.getByRole('textbox',{name:'教科書AIへの質問',exact:true}).inputValue()==='この図の読み方を短く教えてください。','actual image pending restored after reload');await page.getByRole('button',{name:'送信状況を確認',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.tb-ai-card [role=status]')?.textContent.includes('復元しました'));ok(posts===1&&uploads===1&&generations===1&&countCalls===1,'actual book GET recovery no reupload or generation');ok(await page.locator('.tb-ai-history .tb-ann-record').count()===1,'saved image result shown in actual book');await close();
+- for(const [book,title]of [['kokugo1','国語 1'],['english1','英語 1'],['science1','理科 1'],['geography','社会 地理'],['history','社会 歴史']]){
+-  await page.evaluate(()=>NobiTextbook.leave());await open(title);const allowed=catalogs.get(book).contexts.filter(x=>x.kind==='fig').map(x=>x.anchor),figure=await page.evaluate(anchors=>{for(const p of NobiTextbook._state.book.phys){const b=p.blocks?.find(x=>x.t==='fig'&&x.src?.endsWith('.svg')&&anchors.includes(x.annotationAnchor));if(b)return {n:p.n,anchor:b.annotationAnchor,src:b.src};}},allowed);ok(figure,'public diagram exists in '+book);await select(figure);await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.tb-ai-card [role=status]')?.textContent.includes('回答を保存しました'));ok(await page.locator('.tb-ai-history .tb-ann-record').count()===1,book+' actual diagram/result preserved');await close();
++ for(const [book,title]of [['math1','数学 1'],['kokugo1','国語 1'],['english1','英語 1'],['science1','理科 1'],['geography','社会 地理'],['history','社会 歴史']]){
++  await page.evaluate(()=>NobiTextbook.leave());await open(title);const allowed=mediaCatalogs.get(book).contexts,figure=await page.evaluate(rows=>{for(const p of NobiTextbook._state.book.phys){const b=p.blocks?.find(x=>x.t==='media'&&x.kind!=='video'&&x.src?.endsWith('.svg')&&rows.some(r=>r.src===x.src));if(b)return {n:p.n,anchor:rows.find(r=>r.src===b.src).anchor,src:b.src};}},allowed);ok(figure,'public diagram exists in '+book);
++  for(const width of [390,820,1440]){await page.setViewportSize({width,height:900});await settled();await select(figure);ok(await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).isEnabled(),'new media ready '+book+' '+width);ok(await page.locator('.tb-ai-card').evaluate(n=>{const r=n.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight;}),'media dialog fits '+book+' '+width);ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'media no horizontal overflow '+book+' '+width);await page.screenshot({path:new URL('media-panel-screens/'+book+'-'+width+'.png',here).pathname});await close();}
++  await page.setViewportSize({width:390,height:900});await select(figure);await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.tb-ai-card [role=status]')?.textContent.includes('回答を保存しました'));ok(await page.locator('.tb-ai-history .tb-ann-record').count()===1,book+' actual diagram/result preserved');await close();
+  }
+- ok(posts===6&&uploads===6&&generations===6&&countCalls===6,'one explicit image operation per six books; no automatic AI');
++ ok(posts===7&&uploads===7&&generations===7&&countCalls===7,'one explicit operation per six new-media books plus old math figure; no automatic AI');
+  for(const uid of ['u1','u2']){await page.evaluate(uid=>{NobiTextbook.leave();NobiTextbookAnnotations.reset();currentUserId=uid;fixtureEpoch++;},uid);await open();await select(target);ok(await page.locator('.tb-ai-history .tb-ann-record').count()===0,'other actor sees no Souta image result');await close();}
+- await page.evaluate(()=>{NobiTextbook.leave();NobiTextbookAnnotations.reset();currentUserId='u4';fixtureEpoch++;});env.TEXTBOOK_RELEASE_STAGE='v3';env.TEXTBOOK_RELEASE_EPOCH=String(now-9999);env.OPENAI_ENABLED='0';await open();await select(target);ok(await page.locator('.tb-ai-history .tb-ann-record').count()===1,'Free/provider off retains own image result in actual panel');ok(await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).isDisabled(),'Free cannot issue new image AI');ok(generations===6,'Free navigation causes no AI generation');await close();
++ await page.evaluate(()=>{NobiTextbook.leave();NobiTextbookAnnotations.reset();currentUserId='u4';fixtureEpoch++;});env.TEXTBOOK_RELEASE_STAGE='v3';env.TEXTBOOK_RELEASE_EPOCH=String(now-9999);env.OPENAI_ENABLED='0';await open();await select(target);ok(await page.locator('.tb-ai-history .tb-ann-record').count()===1,'Free/provider off retains own image result in actual panel');ok(await page.getByRole('button',{name:'図と質問をAIへ送る',exact:true}).isDisabled(),'Free cannot issue new image AI');ok(generations===7,'Free navigation causes no AI generation');await close();
+  for(const uid of ['u1','u2','u4'])ok(db.get('material-history:'+uid+':sentinel').v==='original-grades','original grades sentinel unchanged');ok(errors.length===0,'no page errors');ok(outside.length===0,'no external browser requests');
+  const inputs=[];for(const file of ['index.html','site-assets/textbook-book.js','site-assets/textbook-ai-model.js','site-assets/textbook-annotations.js','site-assets/textbook-ai.css','tools/candidates/textbook-vision-20261027/textbook-vision-api.js','tools/candidates/textbook-vision-20261027/ui-candidate/textbook-ai.js','tools/candidates/textbook-vision-20261027/textbook-vision-model.js','tools/candidates/textbook-vision-20261027/textbook-vision-capture.js','tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs','tools/candidates/textbook-vision-20261027/textbook-vision-route.mjs','tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs','tools/candidates/textbook-vision-20261027/verify-panel-book.mjs','site-assets'+TEXTBOOK_AI_CONTEXTS.math1.src])inputs.push({file,sha256:sha(await readFile(new URL(file,ROOT)))});
++ for(const file of ['textbook-vision-input.mjs','textbook-vision-context.mjs','textbook-vision-context-reader.mjs','textbook-vision-context-route.mjs','textbook-vision-media-context.mjs','textbook-vision-media-dom.mjs','textbook-vision-media-browser.mjs','textbook-vision-media-manifest.mjs'])inputs.push({file:'tools/candidates/textbook-vision-20261027/'+file,sha256:sha(await readFile(new URL(file,here)))});for(const entry of Object.values(TEXTBOOK_VISION_MEDIA))inputs.push({file:'tools/candidates/textbook-vision-20261027/media-contexts'+entry.src,sha256:sha(await readFile(new URL('media-contexts'+entry.src,here)))});
+  for(const [file,sha256]of loadedAssets){assert.equal(sha(await readFile(new URL(file,ROOT))),sha256,'loaded public asset unchanged');if(!inputs.some(x=>x.file===file))inputs.push({file,sha256});}
+- await writeFile(new URL('panel-book-result.json',here),JSON.stringify({status:'passed',checks,posts,uploads,generations,countCalls,inputs,scope:'Actual main book, index API fragment, original text model and annotations; candidate panel/API/model/capture and actual SQLite routes; real IndexedDB/reload, three widths/owners, fake provider only. HTTPS server requests built by loopback proxy; route HTTPS guard preserved. Oversize photo blocked with explicit reason; actual SVG diagram sent. No main source modified, real user data/provider or publication. Screens still require direct visual review.'},null,2)+'\n');console.log('Textbook vision actual book candidate panel: '+checks+' checks passed.');
++ await writeFile(new URL('panel-book-result.json',here),JSON.stringify({status:'passed',checks,posts,uploads,generations,countCalls,inputs,scope:'Actual main book, index API fragment, original text model and annotations; candidate panel/API/model/capture and actual SQLite routes; real IndexedDB/reload, three widths/owners, fake provider only. HTTPS server requests built by loopback proxy; route HTTPS guard preserved. Oversize photo blocked with explicit reason; actual old figure plus new-media SVG diagrams in all six books sent. Each new-media panel checked at390/820/1440px; screenshots still need direct review. No main source modified, real user data/provider or publication. Screens still require direct visual review.'},null,2)+'\n');console.log('Textbook vision actual book candidate panel: '+checks+' checks passed.');
+ }catch(error){const capture=await page?.evaluate(()=>({before:window.capturePreflight,status:document.querySelector('.tb-ai-card [role=status]')?.textContent})).catch(()=>null);await writeFile(new URL('panel-book-failure.json',here),JSON.stringify({status:'failed',checks,error:error.stack,errors,outside,posts,uploads,generations,countCalls,capture},null,2)+'\n');throw error;}finally{await browser?.close();await new Promise(r=>server.close(r));db.close();}
+--- before/textbook-ai.js
++++ after/ui-candidate/textbook-ai.js
+@@ -14,7 +14,7 @@
+  let entry=sessions.get(book);if(!entry){entry={owner:api.snapshot(),model:M.create(api,book)};sessions.set(book,entry);}
+  const model=entry.model;let alive=true,picking=false,panel=null,epoch=0,selectionEpoch=0,priorFocus;
+  const prose=(tag,text,cls)=>{const node=el(tag,text,cls);root.NobiFractions?.apply(node,null,{math:book==='math1'});return node;};
+- const live=()=>alive&&model.current(),nodes=()=>[...app.querySelectorAll('[data-annotation-anchor]')];
++ const live=()=>alive&&model.current(),nodes=()=>[...app.querySelectorAll('[data-annotation-anchor],[data-vision-anchor]')];
+  function stopPick(){picking=false;app.classList.remove('tb-ai-picking');open.textContent='教科書AI';for(const n of nodes()){n.removeAttribute('tabindex');n.removeAttribute('role');}}
+  function close(){epoch++;selectionEpoch++;panel?.remove();panel=null;stopPick();if(priorFocus?.isConnected)priorFocus.focus();}
+  function shell(){close();context.beforeOpen?.();priorFocus=document.activeElement;
+@@ -22,7 +22,10 @@
+   const top=el('div',undefined,'tb-ai-top');top.append(el('h3','教科書AI'),button('閉じる',close));card.append(top);back.append(card);app.append(back);panel=back;
+   back.addEventListener('click',e=>{if(e.target===back)close();});for(const type of ['pointerdown','pointerup'])back.addEventListener(type,e=>e.stopPropagation());card.querySelector('button').focus();return card;
+  }
+- function pick(){close();context.beforeOpen?.();picking=true;app.classList.add('tb-ai-picking');open.textContent='選択を終わる';for(const n of nodes()){n.tabIndex=0;n.setAttribute('role','button');}nodes()[0]?.focus();}
++ async function pick(){close();context.beforeOpen?.();const selected=selectionEpoch;picking=true;open.textContent='図の選択を準備中';
++  try{await root.NobiTextbookVisionMedia?.prepare(app,book,context.annotationSignature,{current:()=>live()&&picking&&selectionEpoch===selected});}catch(_){/* Existing text/figure consultations remain selectable. */}
++  if(!live()||!picking||selectionEpoch!==selected)return;
++  app.classList.add('tb-ai-picking');open.textContent='選択を終わる';for(const n of nodes()){n.tabIndex=0;n.setAttribute('role','button');}nodes()[0]?.focus();}
+  async function editor(anchor,figure=null){
+   if(!live())return;const card=shell(),run=epoch,status=el('p','本文と相談履歴を確認しています。','tb-ann-status');status.setAttribute('role','status');card.append(status);
+   const valid=()=>live()&&run===epoch;
+@@ -64,15 +67,16 @@
+    sourceLabel.textContent=shown?`${shown.title}／${shown.sectionTitle||shown.chapter}`:'';
+    send.textContent=usingVision?'図と質問をAIへ送る':'本文と質問をAIへ送る';
+    card.append(el('p',usingVision?'送信する図の説明':'送信する本文'),quote,sourceLabel,el('p',usingVision?'選んだ図1枚と、この説明・質問・同じ箇所の直近の相談を送ります。閉じた答え・成績・手書き・別ページは添付しません。':'この文章と質問、この箇所の直近の相談を送ります。図の画像・閉じた答え・成績・手書きは添付しません。'),label,send,recover,history);
+-   if(usingVision)card.append(button('文字だけの相談を開く',()=>void editor(anchor)));
++   if(usingVision&&!figure?.media)card.append(button('文字だけの相談を開く',()=>void editor(anchor)));
+    status.textContent=draft.pending?'未確認の送信があります。質問を変えず、送信状況を確認してください。':!source?'本文を取得できません。下書きは保持しています。':!canSend?'新しい相談はPro以上です。保存済みの相談は読めます。':usingVision&&!figure?.pixels?(figure?.error==='figure_size'?'この図は添付サイズの上限を超えています。画質は下げず、図の画像は送っていません。':'図全体が見えるように表示し、図を選び直してください。図は送っていません。'):model.durable?'質問は本人別の端末下書きに保存します。送信ボタンを押すまでAIに送りません。':'端末保存を使えません。下書きはこの画面内だけに保持します。';controls();
+    input.addEventListener('input',()=>{const own=++tick;controls();void model.edit(anchor,input.value).then(durable=>{if(valid()&&own===tick&&!busy)status.textContent=durable?'下書きを端末に保存しました。まだAIへ送信していません。':'下書きはこの画面内に保持しています。';}).catch(e=>{if(valid()&&own===tick)status.textContent=message(e);});});
+   }catch(e){if(valid())status.textContent=message(e);}
+  }
+  const open=button('教科書AI',()=>{if(!live())return;if(picking)stopPick();else pick();});open.classList.add('tb-ai-button');app.querySelector('.tb-bar-actions')?.append(open);
+- function select(e){if(!picking||!live())return;const n=e.target.closest?.('[data-annotation-anchor]');if(!n||!app.contains(n))return;e.preventDefault();e.stopImmediatePropagation();
+-  if(n.tagName==='FIGURE'&&api.visionHistory&&root.NobiTextbookVisionCapture){const selected=++selectionEpoch,current=()=>live()&&picking&&selected===selectionEpoch;void root.NobiTextbookVisionCapture.pixels(app,n.dataset.annotationAnchor,context.annotationSignature,{current}).then(pixels=>{if(current())void editor(n.dataset.annotationAnchor,{pixels});}).catch(error=>{if(current())void editor(n.dataset.annotationAnchor,{pixels:null,error:error.message});});}
+-  else void editor(n.dataset.annotationAnchor);
++ function select(e){if(!picking||!live())return;const n=e.target.closest?.('[data-annotation-anchor],[data-vision-anchor]');if(!n||!app.contains(n))return;e.preventDefault();e.stopImmediatePropagation();
++  const anchor=n.dataset.annotationAnchor||n.dataset.visionAnchor,media=!!n.dataset.visionAnchor;
++  if(n.tagName==='FIGURE'&&api.visionHistory&&root.NobiTextbookVisionCapture){const selected=++selectionEpoch,current=()=>live()&&picking&&selected===selectionEpoch;void root.NobiTextbookVisionCapture.pixels(app,anchor,context.annotationSignature,{current}).then(pixels=>{if(current())void editor(anchor,{pixels,media});}).catch(error=>{if(current())void editor(anchor,{pixels:null,error:error.message,media});});}
++  else if(!media)void editor(anchor);
+  }
+  function key(e){if(!live())return;if(panel){if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();close();return;}if(panel.contains(e.target)){e.stopPropagation();if(e.key==='Tab'){const targets=[...panel.querySelectorAll('button,textarea')].filter(n=>!n.disabled&&!n.hidden),at=targets.indexOf(document.activeElement);if(targets.length){e.preventDefault();targets[(at+(e.shiftKey?-1:1)+targets.length)%targets.length].focus();}}}}else if(picking&&['Enter',' '].includes(e.key))select(e);}
+  app.addEventListener('click',select,true);document.addEventListener('keydown',key,true);
+--- /dev/null
++++ after/build-media-contexts.mjs
+@@ -0,0 +1,54 @@
++// Candidate supplement only. Never overwrites books, marker IDs or old catalogs.
++import {readFile,writeFile,mkdir} from 'node:fs/promises';
++import {createHash,webcrypto} from 'node:crypto';
++import {fileURLToPath} from 'node:url';
++import vm from 'node:vm';
++import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
++const root=new URL('../../../',import.meta.url),here=new URL('./',import.meta.url);
++const sha=x=>createHash('sha256').update(x).digest('hex');
++const asset=/^\/textbook-book-[a-z0-9-]+\.(svg|jpg|png)$/;
++const plain=(s,n)=>typeof s==='string'&&s.length<=n&&!/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/.test(s);
++export async function mediaContextIndex(book,raw,prepare){
++ if(!Object.hasOwn(TEXTBOOK_AI_CONTEXTS,book))throw Error('invalid_book');
++ const entry=TEXTBOOK_AI_CONTEXTS[book];if(sha(raw)!==entry.sourceSha256)throw Error('source_changed');
++ const data=JSON.parse(raw),prepared=await prepare(data,book);
++ if(prepared.signature!==entry.annotationSignature)throw Error('source_changed');
++ const contexts=[],seen=new Set(),anchors=new Set(),pages=new Set();
++ for(const page of data.pages){
++  if(!Number.isSafeInteger(page.n)||page.n<1||page.n>2000||pages.has(page.n))throw Error('invalid_page');pages.add(page.n);
++  // Root blocks only. Never inspect or index a closed answer's body.
++  for(const [index,b]of (page.blocks||[]).entries()){
++   if(b.t!=='media'||b.kind==='video'||!asset.test(b.src||''))continue;
++   if(seen.has(b.src))throw Error('ambiguous_media_source');seen.add(b.src);
++   const quote=String(b.title||b.caption||'図').replace(/\*\*|`/g,'').trim();
++   const chapter=page.chapter||'',section=page.section||'',sectionTitle=page.sectionTitle||'';
++   if(!plain(quote,2000)||!quote||!plain(chapter,160)||!plain(section,160)||!plain(sectionTitle,200))throw Error('invalid_media_text');
++   const anchor=sha('textbook-vision-media-v1:'+book+':'+page.n+':'+index+':'+JSON.stringify(b));
++   if(anchors.has(anchor))throw Error('ambiguous_media_anchor');anchors.add(anchor);
++   const pixels=await readFile(new URL('site-assets'+b.src,root));
++   contexts.push({anchor,page:page.n,chapter,section,sectionTitle,kind:'fig',quote,src:b.src,assetSha256:sha(pixels)});
++  }
++ }
++ if(!contexts.length||contexts.length>2000)throw Error('invalid_media_count');
++ const value={version:1,book,title:data.title,subject:data.subject,sourceSha256:entry.sourceSha256,annotationSignature:prepared.signature,contexts};
++ if(!plain(value.title,120)||!plain(value.subject,30))throw Error('invalid_book');
++ const bytes=JSON.stringify(value)+'\n';if(Buffer.byteLength(bytes)>2000000)throw Error('media_catalog_size');
++ return {value,bytes,sha256:sha(bytes)};
++}
++export async function build(mode='--check'){
++ if(!['--check','--write'].includes(mode))throw Error('invalid_mode');
++ const code=await readFile(new URL('site-assets/textbook-annotation-model.js',root),'utf8'),box=vm.createContext({crypto:webcrypto,TextEncoder});vm.runInContext(code,box,{timeout:1000});
++ const outputs=[],manifest={};
++ for(const book of Object.keys(TEXTBOOK_AI_CONTEXTS)){
++  const raw=await readFile(new URL('site-assets/textbook-book-'+book+'.json',root),'utf8');
++  const {value,bytes,sha256}=await mediaContextIndex(book,raw,box.NobiTextbookAnnotationModel.prepare);
++  const src='/textbook-ai-media-context-'+book+'.json';
++  manifest[book]={src,sha256,sourceSha256:value.sourceSha256,annotationSignature:value.annotationSignature,count:value.contexts.length};
++  outputs.push({file:'media-contexts'+src,bytes});
++ }
++ outputs.push({file:'textbook-vision-media-manifest.mjs',bytes:'// Candidate public media supplement. Generated by build-media-contexts.mjs.\nexport const TEXTBOOK_VISION_MEDIA=Object.freeze('+JSON.stringify(manifest,null,2)+');\n'});
++ if(mode==='--write')await mkdir(new URL('media-contexts/',here),{recursive:true});
++ for(const o of outputs){if(mode==='--write')await writeFile(new URL(o.file,here),o.bytes);else if(await readFile(new URL(o.file,here),'utf8')!==o.bytes)throw Error('stale_media_catalog');}
++ return {status:mode==='--check'?'passed':'candidate generated',books:manifest,outputs:outputs.map(({file,bytes})=>({file,sha256:sha(bytes)}))};
++}
++if(process.argv[1]===fileURLToPath(import.meta.url))console.log(JSON.stringify(await build(process.argv[2]||'--check')));
+--- /dev/null
++++ after/textbook-vision-media-context.mjs
+@@ -0,0 +1,58 @@
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
++const HASH=/^[a-f0-9]{64}$/,ASSET=/^\/textbook-book-[a-z0-9-]+\.(svg|jpg|png)$/;
++const fail=code=>{throw Error(code);};
++const exact=(x,s)=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).sort().join(',')===s;
++const plain=(x,n)=>typeof x==='string'&&x.length<=n&&!/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/.test(x);
++const checked=new WeakSet();
++export const isCheckedMediaCatalog=value=>!!value&&checked.has(value);
++export async function checkedMediaCatalog(bytes,book){
++ if(!Object.hasOwn(TEXTBOOK_VISION_MEDIA,book)||!(bytes instanceof Uint8Array)||bytes.byteLength<1||bytes.byteLength>2000000)fail('context_unavailable');
++ const entry=TEXTBOOK_VISION_MEDIA[book],digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
++ if(digest!==entry.sha256)fail('context_changed');
++ let data;try{data=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));}catch(_){fail('context_unavailable');}
++ if(!exact(data,'annotationSignature,book,contexts,sourceSha256,subject,title,version')||data.version!==1||data.book!==book||data.sourceSha256!==entry.sourceSha256||data.annotationSignature!==entry.annotationSignature||!plain(data.title,120)||!data.title.trim()||!plain(data.subject,30)||!Array.isArray(data.contexts)||data.contexts.length!==entry.count)fail('context_unavailable');
++ const anchors=new Set(),sources=new Set();
++ for(const row of data.contexts){
++  if(!exact(row,'anchor,assetSha256,chapter,kind,page,quote,section,sectionTitle,src')||!HASH.test(row.anchor)||!HASH.test(row.assetSha256)||row.kind!=='fig'||!Number.isSafeInteger(row.page)||row.page<1||row.page>2000||!ASSET.test(row.src)||anchors.has(row.anchor)||sources.has(row.src)||!plain(row.quote,2000)||!row.quote.trim()||!plain(row.chapter,160)||!plain(row.section,160)||!plain(row.sectionTitle,200))fail('context_unavailable');
++  anchors.add(row.anchor);sources.add(row.src);Object.freeze(row);
++ }
++ Object.freeze(data.contexts);checked.add(data);return Object.freeze(data);
++}
++export function mediaReference(catalog,anchor){
++ if(!isCheckedMediaCatalog(catalog))fail('context_unavailable');
++ const row=catalog.contexts.find(r=>r.anchor===anchor);if(!row)fail('context_not_found');
++ const {src,assetSha256,...context}=row;
++ return Object.freeze({...context,book:catalog.book,title:catalog.title,subject:catalog.subject,sourceSha256:catalog.sourceSha256,contextSha256:TEXTBOOK_VISION_MEDIA[catalog.book].sha256,annotationSignature:catalog.annotationSignature});
++}
++export function publicMediaContextReader({fetcher,timeoutMs=5000}={}){
++ if(typeof fetcher!=='function'||!Number.isSafeInteger(timeoutMs)||timeoutMs<1||timeoutMs>5000)fail('invalid_context_reader');
++ const cache=new Map();
++ return async(env,selection)=>{
++  if(!exact(selection,Object.hasOwn(selection||{},'contextSha256')?'anchor,annotationSignature,book,contextSha256':'anchor,annotationSignature,book'))fail('invalid_context');
++  const {book,anchor,annotationSignature,contextSha256}=selection;
++  if(typeof book!=='string'||!Object.hasOwn(TEXTBOOK_VISION_MEDIA,book)||typeof anchor!=='string'||!HASH.test(anchor)||typeof annotationSignature!=='string'||!HASH.test(annotationSignature))fail('invalid_context');
++  const entry=TEXTBOOK_VISION_MEDIA[book];
++  if(annotationSignature!==entry.annotationSignature||contextSha256!==undefined&&contextSha256!==entry.sha256)fail('context_changed');
++  let origin;try{origin=new URL(env.APP_ORIGIN);if(origin.protocol!=='https:'||origin.origin!==env.APP_ORIGIN)throw 0;}catch(_){fail('context_unavailable');}
++  // Cache only completed immutable public data. Never retain a request's
++  // in-flight network promise for another Worker's request to await.
++  const key=origin.origin+':'+book;let data=cache.get(key);
++  if(!data){
++   if(cache.size>=12)fail('context_unavailable');
++   data=await(async()=>{
++    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
++    try{
++     const url=new URL(entry.src,origin).href,response=await fetcher(new Request(url,{method:'GET',headers:{Accept:'application/json','Cache-Control':'no-cache'},redirect:'error',cache:'no-store',signal:controller.signal}));
++     if(!response?.ok||response.redirected||response.url&&response.url!==url||!/^application\/json\b/i.test(response.headers.get('Content-Type')||'')||!response.body){await response?.body?.cancel();fail('context_unavailable');}
++     const length=response.headers.get('Content-Length');if(length!==null&&(!/^\d+$/.test(length)||Number(length)>2000000)){await response.body.cancel();fail('context_unavailable');}
++     const reader=response.body.getReader(),parts=[];let size=0;
++     try{for(;;){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>2000000){await reader.cancel();fail('context_unavailable');}parts.push(value);}}finally{reader.releaseLock();}
++     const bytes=new Uint8Array(size);let at=0;for(const p of parts){bytes.set(p,at);at+=p.length;}
++     return await checkedMediaCatalog(bytes,book);
++    }finally{clearTimeout(timer);}
++   })();
++   if(!cache.has(key)&&cache.size>=12)fail('context_unavailable');cache.set(key,data);
++  }
++  return mediaReference(data,anchor);
++ };
++}
+--- /dev/null
++++ after/textbook-vision-media-dom.mjs
+@@ -0,0 +1,23 @@
++// Separate image consultation identities. Marker/note attributes are untouched.
++// Only accept a catalog returned by checkedMediaCatalog; caller owns source load.
++import {isCheckedMediaCatalog} from './textbook-vision-media-context.mjs';
++export function attachMediaIdentities(app,catalog,{current}={}){
++ if(typeof current!=='function'||!current()||!app?.isConnected||!isCheckedMediaCatalog(catalog))throw Error('figure_unavailable');
++ const bySource=new Map(catalog.contexts.map(r=>[r.src,r])),found=new Map();
++ for(const figure of app.querySelectorAll('.tb-page figure.tb-media')){
++  if(figure.closest('.tb-measure,[hidden],[aria-hidden="true"],details')||figure.hasAttribute('data-annotation-anchor')||figure.querySelector('video,canvas,input,textarea'))continue;
++  const list=figure.querySelectorAll('img');if(list.length!==1)continue;
++  let url;try{url=new URL(list[0].currentSrc||list[0].src,location.href);}catch(_){continue;}
++  if(url.origin!==location.origin||url.search||url.hash||!bySource.has(url.pathname))continue;
++  const nodes=found.get(url.pathname)||[];nodes.push(figure);found.set(url.pathname,nodes);
++ }
++ // Clear only this supplement's attributes; never alter original annotations.
++ for(const n of app.querySelectorAll('[data-vision-anchor]')){delete n.dataset.visionAnchor;delete n.dataset.visionQuote;delete n.dataset.visionContextSha256;}
++ let count=0;
++ for(const [src,nodes]of found){
++  if(nodes.length!==1)continue;const row=bySource.get(src),n=nodes[0];
++  if(!current())throw Error('account_changed');
++  n.dataset.visionAnchor=row.anchor;n.dataset.visionQuote=row.quote;count++;
++ }
++ return count;
++}
+--- /dev/null
++++ after/textbook-vision-context-reader.mjs
+@@ -0,0 +1,19 @@
++// Fixed catalogs only. New image contexts never replace original text contexts.
++import {readPublicTextbookContext} from '../../../cf-worker/src/textbook-ai-context.mjs';
++import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
++import {publicMediaContextReader} from './textbook-vision-media-context.mjs';
++export function currentVisionEntry(book,digest){
++ if(typeof book!=='string'||!Object.hasOwn(TEXTBOOK_AI_CONTEXTS,book))throw Error('context_changed');
++ const entry=[TEXTBOOK_AI_CONTEXTS[book],TEXTBOOK_VISION_MEDIA[book]].find(e=>e.sha256===digest);
++ if(!entry)throw Error('context_changed');return entry;
++}
++export function visionContextReader({readText=readPublicTextbookContext,fetcher=fetch}={}){
++ const media=publicMediaContextReader({fetcher});
++ return async(env,selection)=>{
++  if(selection?.contextSha256===TEXTBOOK_VISION_MEDIA[selection.book]?.sha256)return media(env,selection);
++  try{return await readText(env,selection);}catch(error){if(error?.message!=='context_not_found'||selection?.contextSha256!==undefined)throw error;}
++  return media(env,selection);
++ };
++}
++export const readVisionContext=visionContextReader();
+--- /dev/null
++++ after/textbook-vision-context-route.mjs
+@@ -0,0 +1,9 @@
++// Reuse the original metadata route's session, owner, query and Origin guards.
++import {textbookAIContextRoute} from '../../../cf-worker/src/textbook-ai-context-route.mjs';
++import {readVisionContext} from './textbook-vision-context-reader.mjs';
++export function textbookVisionContextRoute(request,env,session,options={}){
++ const url=new URL(request.url);
++ if(url.pathname!=='/textbook-ai-vision-context')return Promise.resolve(Response.json({error:'not_found'},{status:404,headers:{'Cache-Control':'private, no-store'}}));
++ url.pathname='/textbook-ai-context';
++ return textbookAIContextRoute(new Request(url,request),env,session,{...options,readContext:options.readContext||readVisionContext});
++}
+--- /dev/null
++++ after/textbook-vision-media-browser.mjs
+@@ -0,0 +1,28 @@
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
++import {checkedMediaCatalog} from './textbook-vision-media-context.mjs';
++import {attachMediaIdentities} from './textbook-vision-media-dom.mjs';
++const cache=new Map();
++async function load(book){
++ if(!Object.hasOwn(TEXTBOOK_VISION_MEDIA,book))throw Error('context_unavailable');
++ let task=cache.get(book);if(!task){
++  task=(async()=>{
++   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);
++   try{
++    const r=await fetch(TEXTBOOK_VISION_MEDIA[book].src,{cache:'no-store',credentials:'omit',redirect:'error',signal:controller.signal});
++    if(!r.ok||r.redirected||!/^application\/json\b/i.test(r.headers.get('Content-Type')||'')||!r.body)throw Error('context_unavailable');
++    const reader=r.body.getReader(),chunks=[];let size=0;
++    try{for(;;){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>2000000){await reader.cancel();throw Error('context_unavailable');}chunks.push(value);}}finally{reader.releaseLock();}
++    const bytes=new Uint8Array(size);let at=0;for(const b of chunks){bytes.set(b,at);at+=b.length;}
++    return await checkedMediaCatalog(bytes,book);
++   }finally{clearTimeout(timer);}
++  })().catch(error=>{if(cache.get(book)===task)cache.delete(book);throw error;});cache.set(book,task);
++ }
++ return task;
++}
++export async function prepare(app,book,signature,{current}={}){
++ if(typeof current!=='function'||!current())throw Error('account_changed');
++ const catalog=await load(book);if(!current())throw Error('account_changed');
++ if(catalog.annotationSignature!==signature)throw Error('context_changed');
++ return attachMediaIdentities(app,catalog,{current});
++}
++globalThis.NobiTextbookVisionMedia=Object.freeze({prepare});
+--- /dev/null
++++ after/verify-media-contexts.mjs
+@@ -0,0 +1,56 @@
++import assert from 'node:assert/strict';
++import {readFile,writeFile} from 'node:fs/promises';
++import {createHash,webcrypto} from 'node:crypto';
++import vm from 'node:vm';
++import {build} from './build-media-contexts.mjs';
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
++import {checkedMediaCatalog,isCheckedMediaCatalog,mediaReference,publicMediaContextReader} from './textbook-vision-media-context.mjs';
++import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
++import {textbookReference} from '../../../cf-worker/src/textbook-ai-chat-content.mjs';
++const root=new URL('../../../',import.meta.url),here=new URL('./',import.meta.url),sha=x=>createHash('sha256').update(x).digest('hex');
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;},same=(a,b,m)=>{assert.deepEqual(a,b,m);checks++;};
++const bytesByPath=new Map(),protectedFiles=new Map(),inputs=[];
++for(const book of Object.keys(TEXTBOOK_AI_CONTEXTS))for(const file of ['site-assets/textbook-book-'+book+'.json','site-assets'+TEXTBOOK_AI_CONTEXTS[book].src])protectedFiles.set(file,sha(await readFile(new URL(file,root))));
++for(const file of ['site-assets/textbook-annotation-model.js','site-assets/textbook-ai.js','site-assets/textbook-book.js','cf-worker/src/textbook-ai-context-manifest.mjs'])protectedFiles.set(file,sha(await readFile(new URL(file,root))));
++await build('--check');checks++;
++const box=vm.createContext({crypto:webcrypto,TextEncoder});vm.runInContext(await readFile(new URL('site-assets/textbook-annotation-model.js',root),'utf8'),box);
++for(const [book,entry]of Object.entries(TEXTBOOK_VISION_MEDIA)){
++ const bytes=await readFile(new URL('media-contexts'+entry.src,here));bytesByPath.set(entry.src,bytes);
++ const catalog=await checkedMediaCatalog(bytes,book);ok(isCheckedMediaCatalog(catalog),'SHA verified catalog');ok(!isCheckedMediaCatalog(JSON.parse(bytes)),'unverified parsed copy refused');
++ assert.throws(()=>mediaReference(JSON.parse(bytes),catalog.contexts[0].anchor),/context_unavailable/);checks++;
++ same(catalog.contexts.length,entry.count,'fixed source count');
++ const raw=await readFile(new URL('site-assets/textbook-book-'+book+'.json',root),'utf8'),source=JSON.parse(raw),before=JSON.stringify(source),prepared=await box.NobiTextbookAnnotationModel.prepare(source,book);
++ same(JSON.stringify(source),before,'prepare never mutates raw source');same(prepared.signature,entry.annotationSignature,'old signature unchanged');
++ const old=JSON.parse(await readFile(new URL('site-assets'+TEXTBOOK_AI_CONTEXTS[book].src,root))),oldAnchors=new Set(old.contexts.map(x=>x.anchor));
++ const roots=new Map(source.pages.flatMap(p=>(p.blocks||[]).filter(b=>b.t==='media'&&b.kind!=='video'&&/^\/textbook-book-[a-z0-9-]+\.(svg|jpg|png)$/.test(b.src||'')).map(b=>[b.src,b])));
++ same(roots.size,entry.count,'all root media covered exactly once');
++ for(const row of catalog.contexts){
++  ok(roots.has(row.src),'root source exists');ok(!oldAnchors.has(row.anchor),'separate namespace has no marker collision');
++  same(sha(await readFile(new URL('site-assets'+row.src,root))),row.assetSha256,'actual image bytes match');
++  const ref=mediaReference(catalog,row.anchor);same(textbookReference(ref),ref,'exact original 13-field reference shape');
++  ok(!Object.hasOwn(ref,'src')&&!Object.hasOwn(ref,'assetSha256'),'public provider reference contains no extra source transport fields');
++ }
++ const changed=Buffer.from(bytes);changed[changed.length-2]^=1;await assert.rejects(()=>checkedMediaCatalog(changed,book),/context_changed/);checks++;
++ inputs.push({file:'tools/candidates/textbook-vision-20261027/media-contexts'+entry.src,sha256:sha(bytes)});
++}
++let calls=0;
++const reader=publicMediaContextReader({fetcher:async request=>{calls++;ok(request.method==='GET','public GET only');ok(!request.headers.has('Authorization')&&!request.headers.has('Cookie'),'no private header forwarding');ok(request.redirect==='error','no redirects');return new Response(bytesByPath.get(new URL(request.url).pathname),{headers:{'Content-Type':'application/json'}});}});
++for(const [book,entry]of Object.entries(TEXTBOOK_VISION_MEDIA)){
++ const row=JSON.parse(bytesByPath.get(entry.src)).contexts[0],selection={book,anchor:row.anchor,annotationSignature:entry.annotationSignature};
++ const [a,b]=await Promise.all([reader({APP_ORIGIN:'https://fixture.invalid'},selection),reader({APP_ORIGIN:'https://fixture.invalid'},selection)]);same(a,b,'concurrent immutable public cache');
++ await assert.rejects(()=>reader({APP_ORIGIN:'https://fixture.invalid'},{...selection,contextSha256:'0'.repeat(64)}),/context_changed/);checks++;
++ await assert.rejects(()=>reader({APP_ORIGIN:'https://fixture.invalid'},{...selection,anchor:'0'.repeat(64)}),/context_not_found/);checks++;
++ await assert.rejects(()=>reader({APP_ORIGIN:'https://fixture.invalid'},{...selection,url:'https://evil.invalid'}),/invalid_context/);checks++;
++ await assert.rejects(()=>reader({APP_ORIGIN:'http://fixture.invalid'},selection),/context_unavailable/);checks++;
++}
++same(calls,12,'concurrent request I/O is separate; only completed public data cached');
++const first=TEXTBOOK_VISION_MEDIA.math1,sel={book:'math1',anchor:JSON.parse(bytesByPath.get(first.src)).contexts[0].anchor,annotationSignature:first.annotationSignature};
++for(const response of [()=>Response.redirect('https://evil.invalid'),()=>new Response('x',{headers:{'Content-Type':'text/html'}}),()=>new Response('x',{headers:{'Content-Type':'application/json','Content-Length':'2000001'}}),()=>new Response('x',{headers:{'Content-Type':'application/json'}})]){
++ const bad=publicMediaContextReader({fetcher:async()=>response()});await assert.rejects(()=>bad({APP_ORIGIN:'https://fixture.invalid'},sel));checks++;
++}
++let attempts=0;const retry=publicMediaContextReader({fetcher:async()=>{if(++attempts===1)throw Error('fixture_network');return new Response(bytesByPath.get(first.src),{headers:{'Content-Type':'application/json'}});}});
++await assert.rejects(()=>retry({APP_ORIGIN:'https://fixture.invalid'},sel),/fixture_network/);checks++;ok(!!await retry({APP_ORIGIN:'https://fixture.invalid'},sel),'failed cache can recover');same(attempts,2,'no poisoned promise cache');
++for(const [file,digest]of protectedFiles){same(sha(await readFile(new URL(file,root))),digest,'main source preserved');inputs.push({file,sha256:digest});}
++for(const file of ['build-media-contexts.mjs','textbook-vision-media-context.mjs','textbook-vision-media-dom.mjs','textbook-vision-media-manifest.mjs','verify-media-contexts.mjs'])inputs.push({file:'tools/candidates/textbook-vision-20261027/'+file,sha256:sha(await readFile(new URL(file,here)))});
++await writeFile(new URL('media-context-result.json',here),JSON.stringify({status:'passed',checks,media:504,books:6,inputs,scope:'Candidate identity/reference supplement only. All root images exist and match source SHA; root-only extraction excludes closed answers/videos. Original source/catalog/marker IDs preserved. Not image content review, provider connection or main integration.'},null,2)+'\n');
++console.log('Media context supplement: '+checks+' checks passed.');
+--- /dev/null
++++ after/verify-media-dom.mjs
+@@ -0,0 +1,40 @@
++// Browser identity boundaries only; actual book/panel is verified separately.
++import assert from 'node:assert/strict';
++import {createServer} from 'node:http';
++import {createRequire} from 'node:module';
++import {readFile,writeFile} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {TEXTBOOK_VISION_MEDIA} from './textbook-vision-media-manifest.mjs';
++const require=createRequire(import.meta.url),{chromium}=require('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const here=new URL('./',import.meta.url),sha=b=>createHash('sha256').update(b).digest('hex'),sources=new Map(),inputs=[];
++for(const name of ['textbook-vision-media-context.mjs','textbook-vision-media-dom.mjs','textbook-vision-media-manifest.mjs','textbook-vision-media-browser.mjs'])sources.set('/'+name,await readFile(new URL(name,here)));
++for(const entry of Object.values(TEXTBOOK_VISION_MEDIA))sources.set(entry.src,await readFile(new URL('media-contexts'+entry.src,here)));
++const server=createServer((req,res)=>{const path=new URL(req.url,'http://fixture').pathname;if(path==='/'){res.writeHead(200,{'Content-Type':'text/html'}).end('<!doctype html><main id="app"></main>');return;}const bytes=sources.get(path);if(!bytes){res.writeHead(404).end();return;}res.writeHead(200,{'Content-Type':path.endsWith('.mjs')?'text/javascript':'application/json'}).end(bytes);});
++await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({headless:true});
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++try{
++ const page=await browser.newPage();await page.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());await page.goto(origin);
++ for(const [book,entry]of Object.entries(TEXTBOOK_VISION_MEDIA)){
++  const result=await page.evaluate(async({book,entry})=>{
++   const {checkedMediaCatalog}=await import('/textbook-vision-media-context.mjs'),{attachMediaIdentities}=await import('/textbook-vision-media-dom.mjs'),catalog=await checkedMediaCatalog(new Uint8Array(await(await fetch(entry.src)).arrayBuffer()),book),app=document.getElementById('app');app.replaceChildren();
++   const article=document.createElement('article');article.className='tb-page';app.append(article);
++   function figure(row){const n=document.createElement('figure');n.className='tb-media';const img=document.createElement('img');img.src=row.src;n.append(img);return n;}
++   for(const row of catalog.contexts)article.append(figure(row));
++   const old=document.createElement('p');old.dataset.annotationAnchor='a'.repeat(64);old.dataset.annotationQuote='original marker';article.append(old);const oldBefore=old.outerHTML;
++   const assigned=attachMediaIdentities(app,catalog,{current:()=>true}),all=catalog.contexts.every(row=>article.querySelector('[data-vision-anchor="'+row.anchor+'"]')?.querySelector('img').getAttribute('src')===row.src);
++   const first=catalog.contexts[0],duplicate=figure(first);article.append(duplicate);attachMediaIdentities(app,catalog,{current:()=>true});const ambiguous=app.querySelectorAll('[data-vision-anchor="'+first.anchor+'"]').length===0;duplicate.remove();
++   const details=document.createElement('details');details.append(figure(first));article.append(details);const hidden=document.createElement('div');hidden.hidden=true;hidden.append(figure(first));article.append(hidden);attachMediaIdentities(app,catalog,{current:()=>true});
++   const hiddenExcluded=!details.querySelector('[data-vision-anchor]')&&!hidden.querySelector('[data-vision-anchor]')&&app.querySelectorAll('[data-vision-anchor="'+first.anchor+'"]').length===1;
++   const marker=figure(first);marker.dataset.annotationAnchor='b'.repeat(64);marker.dataset.annotationQuote='old figure';article.append(marker);const markerBefore=marker.outerHTML;attachMediaIdentities(app,catalog,{current:()=>true});const oldPreserved=old.outerHTML===oldBefore&&marker.outerHTML===markerBefore;
++   let unverified=false;try{attachMediaIdentities(app,JSON.parse(JSON.stringify(catalog)),{current:()=>true});}catch(_){unverified=true;}
++   let wrongOwner=false;const before=app.innerHTML;try{attachMediaIdentities(app,catalog,{current:()=>false});}catch(_){wrongOwner=app.innerHTML===before;}
++   const {prepare}=await import('/textbook-vision-media-browser.mjs');let changed=false,stale=false,calls=0;try{await prepare(app,book,entry.annotationSignature,{current:()=>++calls===1});}catch(e){changed=e.message==='account_changed';}
++   try{await prepare(app,book,'0'.repeat(64),{current:()=>true});}catch(e){stale=e.message==='context_changed';}
++   return {assigned,all,ambiguous,hiddenExcluded,oldPreserved,unverified,wrongOwner,changed,stale};
++  },{book,entry});
++  ok(result.assigned===entry.count,'all root identities attached '+book);for(const key of ['all','ambiguous','hiddenExcluded','oldPreserved','unverified','wrongOwner','changed','stale'])ok(result[key],key+' '+book);
++ }
++ for(const [path,bytes]of sources)inputs.push({file:'tools/candidates/textbook-vision-20261027/'+(path.endsWith('.json')?'media-contexts':'')+path,sha256:sha(bytes)});
++ inputs.push({file:'tools/candidates/textbook-vision-20261027/verify-media-dom.mjs',sha256:sha(await readFile(new URL('verify-media-dom.mjs',here)))});
++ await writeFile(new URL('media-dom-result.json',here),JSON.stringify({status:'passed',checks,media:504,inputs,scope:'Real browser, synthetic root image DOM from six exact catalogs. No image content or real-book visual completion claim. Duplicate/hidden/closed-answer/old-marker/owner/source boundaries checked. No provider or main writes.'},null,2)+'\n');console.log('Media DOM identity supplement: '+checks+' checks passed.');
++}finally{await browser.close();await new Promise(r=>server.close(r));}
+--- /dev/null
++++ after/verify-media-picker-style.mjs
+@@ -0,0 +1,19 @@
++import assert from 'node:assert/strict';
++import {readFile,writeFile} from 'node:fs/promises';
++import {createHash} from 'node:crypto';
++import {createRequire} from 'node:module';
++const require=createRequire(import.meta.url),{chromium}=require('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'),here=new URL('./',import.meta.url),root=new URL('../../../',import.meta.url),sha=x=>createHash('sha256').update(x).digest('hex');
++const original=await readFile(new URL('site-assets/textbook-ai.css',root)),css=await readFile(new URL('ui-candidate/textbook-vision.css',here),'utf8'),browser=await chromium.launch({headless:true});let checks=0;
++try{for(const width of [390,820,1440]){
++ const page=await browser.newPage({viewport:{width,height:900}});await page.setContent('<!doctype html><style>'+original+'\n'+css+'</style><main class="tb-ai-picking"><figure tabindex="0" data-vision-anchor="a">公開図</figure><p tabindex="0" data-annotation-anchor="b">元の本文</p></main>');
++ assert.equal(await page.locator('figure').evaluate(n=>getComputedStyle(n).outlineStyle),'dashed');checks++;
++ await page.locator('figure').focus();assert.equal(await page.locator('figure').evaluate(n=>getComputedStyle(n).outlineWidth),'3px');checks++;
++ assert.equal(await page.locator('figure').evaluate(n=>getComputedStyle(n).outlineStyle),'solid');checks++;
++ assert.equal(await page.locator('p').evaluate(n=>getComputedStyle(n).outlineStyle),'dashed');checks++;
++ await page.locator('p').focus();assert.equal(await page.locator('p').evaluate(n=>getComputedStyle(n).outlineWidth),'3px');checks++;
++ await page.locator('figure').evaluate(n=>{n.blur();n.parentElement.classList.remove('tb-ai-picking');});assert.equal(await page.locator('figure').evaluate(n=>getComputedStyle(n).outlineStyle),'none');checks++;
++ await page.close();
++}assert.equal(sha(await readFile(new URL('site-assets/textbook-ai.css',root))),sha(original));checks++;
++const files=['tools/candidates/textbook-vision-20261027/ui-candidate/textbook-vision.css','tools/candidates/textbook-vision-20261027/verify-media-picker-style.mjs','site-assets/textbook-ai.css'],inputs=[];for(const file of files)inputs.push({file,sha256:sha(await readFile(new URL(file,root)))});
++await writeFile(new URL('media-picker-style-result.json',here),JSON.stringify({status:'passed',checks,inputs,scope:'Supplement picker outlines in real browser at390/820/1440. New and old focus remain distinguishable. Original CSS unchanged; separate candidate stylesheet, main not integrated.'},null,2)+'\n');console.log('Media picker style: '+checks+' checks passed.');
++}finally{await browser.close();}
+--- /dev/null
++++ after/ui-candidate/textbook-vision.css
+@@ -0,0 +1,3 @@
++/* Supplement selection only. Existing marker/ink styling is unchanged. */
++.tb-ai-picking [data-vision-anchor]{cursor:pointer;outline:1px dashed #3b6ba6;outline-offset:3px}
++.tb-ai-picking [data-vision-anchor]:focus{outline:3px solid #3b6ba6}

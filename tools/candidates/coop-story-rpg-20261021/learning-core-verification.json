@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-22T17:46:55.083236+09:00",
+  "command": "node tools/candidates/coop-story-rpg-20261021/verify-learning-core.mjs",
+  "observedExitCode": 0,
+  "checks": 235,
+  "inputsSha256": {
+    "learning-catalog.mjs": "c0b26b1da7e1b743dd39357f173f36d3532a90a135ffed34b02999d90c75702b",
+    "learning-core.mjs": "99fe1583b76b76194d156a53c786db81d5b6ce88bfcda27bbd49f075124d7ef3",
+    "level-core.mjs": "3a584076c113b3a6c196c1a7bb3104df9d0ff5f76670f2777efa654032f5f22a",
+    "verify-learning-core.mjs": "5b2cc6ac09207ff3fa396a9bf42b24ca6b6d9afe81a038844b5fc68244b6f284"
+  },
+  "scope": "pure isolated cooperative-learning/level core only; no persistence, onboarding UI, quests, longer story or main wiring",
+  "mounted": false,
+  "deployed": false,
+  "interruptedBy": "human request to audit prior work and prepare a Claude delegation prompt"
+}

@@ -1,0 +1,67 @@
+--- previous/読書の基準図を作る.py
+
++++ 読書の基準図を作る.py
+
+@@ -1,9 +1,9 @@
+
+ from pathlib import Path
+-s=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">読書の目標20ページを基準にする</title><desc id="desc">月から金の読書量は23、18、20、25、15ページ。目標20ページの線より上をプラス、下をマイナスと示す。各日の差の数は表示しない。</desc><defs><pattern id="stripe" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#6587ac" stroke-width="2"/></pattern></defs><rect width="1600" height="900" fill="#f6f8fc"/><g font-family="Hiragino Sans,sans-serif" fill="#203348"><rect x="45" y="35" width="1510" height="120" rx="25" fill="#e8f0fa"/><text x="90" y="114" font-size="48" font-weight="700">目標を0の基準にすると？</text><rect x="65" y="190" width="1470" height="580" rx="25" fill="white"/>']
++s=['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc"><title id="title">読書の目標20ページを基準にする</title><desc id="desc">月から水の読書量は26、17、20ページ。目標20ページの線より上をプラス、下をマイナスと示す。各日の差の数は表示しない。</desc><defs><pattern id="stripe" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 10L10 0" stroke="#6587ac" stroke-width="2"/></pattern></defs><rect width="1600" height="900" fill="#f6f8fc"/><g font-family="Hiragino Sans,sans-serif" fill="#203348"><rect x="45" y="35" width="1510" height="120" rx="25" fill="#e8f0fa"/><text x="90" y="114" font-size="48" font-weight="700">目標を0の基準にすると？</text><rect x="65" y="190" width="1470" height="580" rx="25" fill="white"/>']
+ base=670;scale=16;target=base-20*scale
+-for i,(day,n) in enumerate(zip('月火水木金',[23,18,20,25,15])):
+- x=340+i*220;top=base-n*scale
+- s.append(f'<rect x="{x}" y="{top}" width="100" height="{n*scale}" fill="#d5e1ee" stroke="#203348" stroke-width="3"/><text x="{x+50}" y="{top-24}" font-size="40" text-anchor="middle">{n}</text><text x="{x+50}" y="725" font-size="40" text-anchor="middle">{day}</text>')
++for i,(day,n) in enumerate(zip('月火水',[26,17,20])):
++ x=480+i*300;top=base-n*scale
++ s.append(f'<rect x="{x}" y="{top}" width="100" height="{n*scale}" fill="#d5e1ee" stroke="#203348" stroke-width="3"/><text x="{x+50}" y="230" font-size="40" text-anchor="middle">{n}</text><text x="{x+50}" y="725" font-size="40" text-anchor="middle">{day}</text>')
+  if n!=20:
+   low=min(top,target);h=abs(top-target);s.append(f'<rect x="{x}" y="{low}" width="100" height="{h}" fill="url(#stripe)" stroke="#1f5fa8" stroke-width="3"/><text x="{x+145}" y="{low+h/2+12}" font-size="45">{"＋" if n>20 else "−"}</text>')
+ s.append(f'<path d="M270 {target}H1450" stroke="#203348" stroke-width="5" stroke-dasharray="14 8"/><text x="110" y="{target-25}" font-size="40">目標20</text><text x="110" y="{target+20}" font-size="40">0の基準</text><path d="M270 670H1450" stroke="#203348" stroke-width="3"/><text x="800" y="838" text-anchor="middle" font-size="40">上なら＋。下なら−。同じなら、ちがいはない。</text></g></svg>')
+--- previous/正負のまちがい図を作る.py
+
++++ 正負のまちがい図を作る.py
+
+@@ -4,8 +4,8 @@
+
+ rows=[(['0 を正の数に入れる'],['0 は正でも負でもない','（さかい目）']),(['目盛りを全部1と読む'],['先に1目盛りの','大きさを出す']),(['どちらを「+」にしたか','書かない'],['最初に決めて','書いておく']),(['−5 の絶対値を','−5 とする'],['絶対値はきょりなので','「−」はつかない']),(['−8 の 8 が大きいから、','−8 > −2'],['負の数は、絶対値が','大きいほど小さい']),(['「−3大きい」で','右へ進む'],['「−3大きい」は','「3小さい」→ 左へ'])]
+ for i,(bad,good) in enumerate(rows,1):
+  s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img"><title>よくあるまちがいと正しい考え方</title><rect width="1600" height="900" fill="#f6f8fc"/><g font-family="Hiragino Sans,sans-serif" fill="#203348"><text x="90" y="100" font-size="44" font-weight="700">よくあるまちがい</text><rect x="65" y="155" width="710" height="625" rx="26" fill="white" stroke="#ac4e41" stroke-width="6" stroke-dasharray="16 8"/><rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/><text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text><text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>'
+- for j,t in enumerate(bad):s+=f'<text x="420" y="{375+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
+- s+='<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
++ for j,t in enumerate(bad):s+=f'<text x="420" y="{400+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
++ s+='<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
+  for j,t in enumerate(good):s+=f'<rect x="870" y="{318+j*150}" width="620" height="100" rx="16" fill="#edf5ef"/><text x="1180" y="{382+j*150}" font-size="40" text-anchor="middle">{escape(t)}</text>'
+  if len(good)>1:s+='<path d="M1180 425V455l-14 -17M1180 455l14 -17" fill="none" stroke="#397052" stroke-width="6"/>'
+  s+='<text x="800" y="852" font-size="40" text-anchor="middle">✗の考え方を、○の手順で直そう。</text></g></svg>'
+--- previous/計算のまちがい図を作る.py
+
++++ 計算のまちがい図を作る.py
+
+@@ -4,8 +4,8 @@
+
+ rows=[(['(+13)+(−21)＝+8'], ['符号は絶対値の大きい', '−21 のほう']), (['(−9)−(−14)＝−23'], ['ひく数の符号も変える。', '(−9)+(+14)＝5']), (['−(−9) を −9 のまま計算'], ['+9 に直してから']), (['(−6)×(−13)＝−78'], ['同じ符号は +']), (['0÷(−5)＝−5'], ['0 をわると 0']), (['−9/2 の逆数を', '2/9 とする'], ['逆数の符号は元と同じ', '→ −2/9']), (['−3² ＝ 9'], ['− は 3² の外。', '−3²＝−9']), (['(5/6−3/4)×(−24) で、', '5/6 にだけかける'], ['かっこの中のすべての項', 'にかける']), (['0 を自然数の集合に入れる'], ['0 は整数の集合には入るが、', '自然数ではない']), (['1 を素数に入れる'], ['素数は 2 から'])]
+ for i,(bad,good) in enumerate(rows,1):
+  s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img"><title>よくあるまちがいと正しい考え方</title><rect width="1600" height="900" fill="#f6f8fc"/><g font-family="Hiragino Sans,sans-serif" fill="#203348"><text x="90" y="100" font-size="44" font-weight="700">よくあるまちがい</text><rect x="65" y="155" width="710" height="625" rx="26" fill="white" stroke="#ac4e41" stroke-width="6" stroke-dasharray="16 8"/><rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/><text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text><text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>'
+- for j,t in enumerate(bad):s+=f'<text x="420" y="{375+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
+- s+='<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
++ for j,t in enumerate(bad):s+=f'<text x="420" y="{400+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
++ s+='<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
+  for j,t in enumerate(good):s+=f'<rect x="870" y="{318+j*150}" width="620" height="100" rx="16" fill="#edf5ef"/><text x="1180" y="{382+j*150}" font-size="40" text-anchor="middle">{escape(t)}</text>'
+  if len(good)>1:s+='<path d="M1180 425V455l-14 -17M1180 455l14 -17" fill="none" stroke="#397052" stroke-width="6"/>'
+  s+='<text x="800" y="852" font-size="40" text-anchor="middle">✗の考え方を、○の手順で直そう。</text></g></svg>'
+--- previous/仮平均のまちがい図を作る.py
+
++++ 仮平均のまちがい図を作る.py
+
+@@ -4,8 +4,8 @@
+
+ rows=[(['ちがいの合計を、','そのまま仮平均にたす'],['合計を 個数でわってから','たす'])]
+ for i,(bad,good) in enumerate(rows,1):
+  s='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img"><title>よくあるまちがいと正しい考え方</title><rect width="1600" height="900" fill="#f6f8fc"/><g font-family="Hiragino Sans,sans-serif" fill="#203348"><text x="90" y="100" font-size="44" font-weight="700">よくあるまちがい</text><rect x="65" y="155" width="710" height="625" rx="26" fill="white" stroke="#ac4e41" stroke-width="6" stroke-dasharray="16 8"/><rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/><text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text><text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>'
+- for j,t in enumerate(bad):s+=f'<text x="420" y="{375+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
+- s+='<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
++ for j,t in enumerate(bad):s+=f'<text x="420" y="{400+j*75}" text-anchor="middle" font-size="40">{escape(t)}</text>'
++ s+='<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/><text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>'
+  for j,t in enumerate(good):s+=f'<rect x="870" y="{318+j*150}" width="620" height="100" rx="16" fill="#edf5ef"/><text x="1180" y="{382+j*150}" font-size="40" text-anchor="middle">{escape(t)}</text>'
+  if len(good)>1:s+='<path d="M1180 425V455l-14 -17M1180 455l14 -17" fill="none" stroke="#397052" stroke-width="6"/>'
+  s+='<text x="800" y="852" font-size="40" text-anchor="middle">✗の考え方を、○の手順で直そう。</text></g></svg>'

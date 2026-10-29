@@ -1,0 +1,33 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: adapted historical integration must pass: node:internal/fs/promises:640
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open '/private/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobilog-practice-successor-LbfZ1O/tools/candidates/textbook-ai-20261026/review/practice-five-subjects-candidate.json'
+    at async open (node:internal/fs/promises:640:25)
+    at async readFile (node:internal/fs/promises:1290:14)
+    at async file:///private/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobilog-practice-successor-LbfZ1O/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs:14:226 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/private/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobilog-practice-successor-LbfZ1O/tools/candidates/textbook-ai-20261026/review/practice-five-subjects-candidate.json'
+}
+
+Node.js v24.18.0
+
+
+1 !== 0
+
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-successor-clone.mjs:43:8 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

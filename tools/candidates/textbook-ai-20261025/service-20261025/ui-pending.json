@@ -1,0 +1,24 @@
+{
+  "status": "candidate written; not tested or applied to main yet",
+  "files": [
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/api-fragment.txt",
+      "sha256": "13c369287b7caf7f6b33ea02bcf467079300d55b9efb18486a8908258cb673ae"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai-model.js",
+      "sha256": "8d6629de495f56e34c287b048d7c9a8a043bfe136fed01041582c5b33e8e3f2e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai.css",
+      "sha256": "8f4e81fceb7f94063726171167d93c894a95b79f7d13499a750ff2ac8a91048a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai.js",
+      "sha256": "a3ced0730acdb8de157e9424770778d4e489800dee15777ae1d448852ae78b51"
+    }
+  ],
+  "modelTest": "tools/candidates/textbook-ai-20261025/service-20261025/verify-ui-model.mjs",
+  "bookTest": "tools/candidates/textbook-ai-20261025/service-20261025/verify-ui-book.mjs",
+  "next": "Wait for running full1 session28028 first. Run focused fixed suites and model test after it finishes. Then apply UI/adapter/annotation lifecycle as one reviewed patch, test actual book + IndexedDB and inspect every final screenshot. Register meaningful UI checks and run one final standalone full after the connected batch. Do not insert another full between each prerequisite. No paid AI/live data."
+}

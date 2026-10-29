@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "error": "locator.fill: Timeout 30000ms exceeded; textbox コードでページへ移動 at width390",
+  "cause": "Existing CSS hides tb-jump at max-width900px; first harness wrongly assumed desktop navigation on mobile",
+  "correction": "Use existing marker-note UI to navigate at narrow widths; close answer before testing hidden state. Apply actual NobiTextSettings for large-text cases. Product code unchanged.",
+  "nextRunSession": 64453
+}

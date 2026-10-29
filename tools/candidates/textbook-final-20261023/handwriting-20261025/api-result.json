@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "checks": 81,
+  "scope": "real isolated SQLite; exact production routes/format; three users including legacy marker/memo, CAS/replay, plan/lease revocation, limits and read-only downgrade; no real records/network",
+  "routeInvocation": "Direct isolated route; actual index adapter/book integration covered separately"
+}

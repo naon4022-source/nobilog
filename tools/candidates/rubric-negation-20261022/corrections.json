@@ -1,0 +1,1534 @@
+{
+ "purpose": "natural negation in correct rubric answers (2026-10-22 Claude)",
+ "changes": [
+  {
+   "id": "workbook-english-1-l4a-56",
+   "file": "workbook-english-1-l4a.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "歌"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "歌"
+      ]
+     }
+    ],
+    "allowNegation": true
+   }
+  },
+  {
+   "id": "workbook-english-1-l5-55",
+   "file": "workbook-english-1-l5.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "宿題"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "宿題"
+      ]
+     }
+    ],
+    "allowNegation": true
+   }
+  },
+  {
+   "id": "workbook-science-1-bunrui-31",
+   "file": "workbook-science-1-bunrui.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "種子",
+       "しゅし",
+       "たね"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "種子",
+       "しゅし",
+       "たね"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "注目しない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-chisou-17",
+   "file": "workbook-science-1-chisou.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "生物",
+       "せいぶつ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "遺骸",
+       "いがい",
+       "死がい",
+       "死骸",
+       "貝がら"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "生物",
+       "せいぶつ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "遺骸",
+       "いがい",
+       "死がい",
+       "死骸",
+       "貝がら"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "堆積しない",
+      "たい積しない",
+      "積もらない",
+      "堆積せず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-chisou-65",
+   "file": "workbook-science-1-chisou.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "きれい",
+       "片づけ",
+       "片付け",
+       "かたづけ",
+       "もと"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "きれい",
+       "片づけ",
+       "片付け",
+       "かたづけ",
+       "もと"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "片づけない",
+      "片付けない",
+      "かたづけない",
+      "もどさない",
+      "戻さない",
+      "きれいにしない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-daichi-43",
+   "file": "workbook-science-1-daichi.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "大きさ",
+       "形",
+       "かたち",
+       "表面",
+       "並び"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大きさ",
+       "形",
+       "かたち",
+       "表面",
+       "並び",
+       "ならび"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "大きさ",
+       "形",
+       "かたち",
+       "表面",
+       "並び"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大きさ",
+       "形",
+       "かたち",
+       "表面",
+       "並び",
+       "ならび"
+      ]
+     }
+    ],
+    "allowNegation": true
+   }
+  },
+  {
+   "id": "workbook-science-1-futten-11",
+   "file": "workbook-science-1-futten.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ゆるやか",
+       "少しずつ",
+       "ゆっくり",
+       "すこしずつ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "上が",
+       "上昇",
+       "あが"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ゆるやか",
+       "少しずつ",
+       "ゆっくり",
+       "すこしずつ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "上が",
+       "上昇",
+       "あが"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "上がらない",
+      "上昇しない",
+      "あがらない",
+      "上がらず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-hana-64",
+   "file": "workbook-science-1-hana.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "むきだし",
+       "むき出し",
+       "露出"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "むきだし",
+       "むき出し",
+       "露出"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "むき出しではない",
+      "むき出しでない",
+      "むきだしではない",
+      "むきだしでない",
+      "露出していない",
+      "むき出しになっていない",
+      "むきだしになっていない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-hansha-33",
+   "file": "workbook-science-1-hansha.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "反射",
+       "はんしゃ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "すべて",
+       "全部",
+       "ぜんぶ",
+       "全て"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "反射",
+       "はんしゃ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "すべて",
+       "全部",
+       "ぜんぶ",
+       "全て"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "反射しない",
+      "はんしゃしない",
+      "反射せず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-joutai-20",
+   "file": "workbook-science-1-joutai.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "質量"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "体積"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大きく",
+       "ふえ",
+       "増え"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "質量"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "体積"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大きく",
+       "ふえ",
+       "増え"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "体積は変わらない",
+      "体積が変わらない",
+      "体積は変化しない",
+      "体積が小さく",
+      "体積は小さく"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-joutai-27",
+   "file": "workbook-science-1-joutai.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "間隔",
+       "すきま",
+       "かんかく",
+       "運動",
+       "動き"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "間隔",
+       "すきま",
+       "かんかく",
+       "運動",
+       "動き"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "間隔は変わらない",
+      "間隔が変わらない",
+      "間隔は変化しない",
+      "運動は変わらない",
+      "すきまは変わらない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kansatsu-11",
+   "file": "workbook-science-1-kansatsu.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "二重",
+       "2重",
+       "にじゅう",
+       "重ね"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "影",
+       "かげ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "二重",
+       "2重",
+       "にじゅう",
+       "重ね"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "影",
+       "かげ"
+      ]
+     }
+    ],
+    "allowNegation": true
+   }
+  },
+  {
+   "id": "workbook-science-1-kaseki-38",
+   "file": "workbook-science-1-kaseki.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "遠浅",
+       "とおあさ",
+       "浅い海",
+       "浅"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "遠浅",
+       "とおあさ",
+       "浅い海",
+       "浅"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "遠浅ではない",
+      "遠浅でない",
+      "浅くない",
+      "浅い海ではない",
+      "浅い海でない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kitai-1",
+   "file": "workbook-science-1-kitai.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "手"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "あお",
+       "扇",
+       "あおい",
+       "引き寄せ",
+       "ひきよせ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "手"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "あお",
+       "扇",
+       "あおい",
+       "引き寄せ",
+       "ひきよせ"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "あおがない",
+      "あおがず",
+      "扇がない",
+      "手を使わない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kitai-10",
+   "file": "workbook-science-1-kitai.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "燃や",
+       "もや"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "燃や",
+       "もや"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "燃やさない",
+      "もやさない",
+      "燃やすはたらきはない",
+      "燃やすはたらきがない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kitai-65",
+   "file": "workbook-science-1-kitai.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "消え",
+       "きえ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "消え",
+       "きえ"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "消えない",
+      "きえない",
+      "消えず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kubetsu-27",
+   "file": "workbook-science-1-kubetsu.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "水"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "とけ",
+       "溶け",
+       "とか",
+       "溶か"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "水"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "とけ",
+       "溶け",
+       "とか",
+       "溶か"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "水を使わない",
+      "水に入れない",
+      "水に入れず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kubetsu-62",
+   "file": "workbook-science-1-kubetsu.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "回",
+       "まわ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "回",
+       "まわ"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "回さない",
+      "まわさない",
+      "回さず",
+      "まわさず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-kubetsu-68",
+   "file": "workbook-science-1-kubetsu.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "火",
+       "ほのお",
+       "炎"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "そば",
+       "近く",
+       "ちかく"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "火",
+       "ほのお",
+       "炎"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "そば",
+       "近く",
+       "ちかく"
+      ]
+     }
+    ],
+    "allowNegation": true
+   }
+  },
+  {
+   "id": "workbook-science-1-noudo-14",
+   "file": "workbook-science-1-noudo.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "小さ",
+       "ちいさ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "小さ",
+       "ちいさ"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "小さくない",
+      "ちいさくない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-taisekigan-22",
+   "file": "workbook-science-1-taisekigan.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "火山",
+       "噴火",
+       "火山灰",
+       "火山噴出物"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "流水",
+       "流れる水",
+       "運搬",
+       "運ばれ",
+       "けずら",
+       "削ら"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "火山",
+       "噴火",
+       "火山灰",
+       "火山噴出物"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "流水",
+       "流れる水",
+       "運搬",
+       "運ばれ",
+       "けずら",
+       "削ら"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "required": [
+     [
+      "ない",
+      "なく",
+      "ずに",
+      "にくい",
+      "あまり"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-science-1-youkaido-15",
+   "file": "workbook-science-1-youkaido.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "蒸発",
+       "じょうはつ",
+       "加熱",
+       "かねつ"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "蒸発",
+       "じょうはつ",
+       "加熱",
+       "かねつ"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "蒸発させない",
+      "加熱しない",
+      "じょうはつさせない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-geo-asia-45",
+   "file": "workbook-social-1-geo-asia.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ASEAN",
+       "アセアン",
+       "東南アジア諸国連合"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "加盟"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ASEAN",
+       "アセアン",
+       "東南アジア諸国連合"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "加盟"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "加盟していない",
+      "加盟していません"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-geo-kikou-55",
+   "file": "workbook-social-1-geo-kikou.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "夏"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "乾燥",
+       "雨が少",
+       "降水量が少"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "冬"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "雨が多",
+       "雨が降",
+       "降水量が多"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "夏"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "乾燥",
+       "雨が少",
+       "降水量が少"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "冬"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "雨が多",
+       "雨が降",
+       "降水量が多"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "乾燥しない",
+      "乾燥せず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-geo-oceania-46",
+   "file": "workbook-social-1-geo-oceania.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "南半球"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "季節"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "反対",
+       "逆",
+       "ちが"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "南半球"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "季節"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "反対",
+       "逆",
+       "ちが"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "反対ではない",
+      "逆ではない",
+      "反対でない",
+      "ちがわない",
+      "同じ季節"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-geo-seikatsu-43",
+   "file": "workbook-social-1-geo-seikatsu.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "日差し",
+       "日光",
+       "太陽"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "反射",
+       "はね返"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "日差し",
+       "日光",
+       "太陽"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "反射",
+       "はね返"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "反射しない",
+      "はね返さない",
+      "反射せず"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-hist-kamabunka-26",
+   "file": "workbook-social-1-hist-kamabunka.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "分かりやす",
+       "わかりやす",
+       "簡単",
+       "やさし"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "実行",
+       "修行",
+       "念仏",
+       "題目",
+       "唱え"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "分かりやす",
+       "わかりやす",
+       "簡単",
+       "やさし"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "実行",
+       "修行",
+       "念仏",
+       "題目",
+       "唱え"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "わかりやすくない",
+      "分かりやすくない",
+      "簡単ではない",
+      "やさしくない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-social-1-hist-onin-18",
+   "file": "workbook-social-1-hist-onin.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "家臣",
+       "家来",
+       "武士"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "統制",
+       "取りしま",
+       "取り締ま",
+       "まとめ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "領国",
+       "国",
+       "支配"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "家臣",
+       "家来",
+       "武士"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "統制",
+       "取りしま",
+       "取り締ま",
+       "まとめ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "領国",
+       "国",
+       "支配"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "統制しない",
+      "統制せず",
+      "まとめない"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "workbook-english-1-l4a-60",
+   "file": "workbook-english-1-l4a.json",
+   "before": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "加藤",
+       "カトウ",
+       "かとう"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "車"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "運転し"
+      ]
+     }
+    ]
+   },
+   "after": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "加藤",
+       "カトウ",
+       "かとう"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "車"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "運転し"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "required": [
+     [
+      "ない",
+      "ません"
+     ]
+    ]
+   },
+   "note": "negative English sentence: the translation must be negative"
+  }
+ ],
+ "files": {
+  "workbook-english-1-l4a.json": {
+   "before": "94121c83103e119138da5de0d02d76799bf538bf0c53e4c7708de103885a4214",
+   "after": "9eae5fda236c67020e01afbe3a48b7e7432b7866b4fbda63ad8ba22e5124a81c"
+  },
+  "workbook-english-1-l5.json": {
+   "before": "1357c6a2229154afbf1f8f6f1d9cb61f8093c832cc8ef711896f2286f735cef9",
+   "after": "b8a7990e4ae55787486f114b753f8fa6031f4b751f6e6f514f482efe99b69745"
+  },
+  "workbook-science-1-bunrui.json": {
+   "before": "84d04f942670ce9e953f4cab661ccb7482cc99e5d4b81cb4dc2e78f1f0ff5ce3",
+   "after": "7a7d5d323c916fab52a16e81d520215f3f089b1d2e43d23ccb758462cfb10f0d"
+  },
+  "workbook-science-1-chisou.json": {
+   "before": "59c387712229481680fbc2b3d7938a1ce38188ad4ce3d216ace1c2f931909ef4",
+   "after": "cb306b588d2be28967ee3ced7889bda6c269bcfd28132c70244e7812861237cd"
+  },
+  "workbook-science-1-daichi.json": {
+   "before": "ebbd5acefee03c946fcf00510312f80b1f816815e427d1dfee30f1a80a847db8",
+   "after": "bb3044a9c937863935c5e6cc700b135c122aaace7e368691107ea2927685d3d3"
+  },
+  "workbook-science-1-futten.json": {
+   "before": "4a64e6c799b4e85d0ac384d2cb3ec8708e52cf9a4fc31a694d1b4cf3785dc9a4",
+   "after": "defa0a0a699568d91be4706f57d861b6976e1b6bef9d899b376226386d56e295"
+  },
+  "workbook-science-1-hana.json": {
+   "before": "8dd73d4dbd8c0249cfe86e332ca1333048dd8106808d655343daaa0159efbdd9",
+   "after": "2e84a9a5256d6e62a5626c20b164644b55a4611a048477accddb8ff036444417"
+  },
+  "workbook-science-1-hansha.json": {
+   "before": "49fad2d3426c27cf754348ae7ce2f495d03a24a661fc416237b0d1b0ef6fecc0",
+   "after": "e10ffb95ddeddeb1859b5e0fc3bcbbe497e2c5c5af3a1e44a20c34283ef819c6"
+  },
+  "workbook-science-1-joutai.json": {
+   "before": "b5942b057ca3bb8e205faeef4d51b93dbf8cf9b068b3ec26acb96536dbed2715",
+   "after": "a63a0aa416b7fbf08b9ce44c46b5068eb585ddd166cdf290ba2700c9e0b47ba2"
+  },
+  "workbook-science-1-kansatsu.json": {
+   "before": "c67dfa6d9060c35450b5678dd63f7106d41d215125902f3e3e7cd81955de2104",
+   "after": "7c6a0fdf9b0e31ba74745009acb4fb1e0efab98807aea0fa84b71db656472885"
+  },
+  "workbook-science-1-kaseki.json": {
+   "before": "387aac8313c34e533467f4a1e0f9a07a102d0ef00371955f2dd2e212d6565e1a",
+   "after": "33a7f2f9b5c9b5c5e2db74ffd8ef161991b65803f58a87d79037098cffdf3aae"
+  },
+  "workbook-science-1-kitai.json": {
+   "before": "ba43c1aff805598a6d66d7f64ed3aeba61df947e7e3079a0aa8b5d1c5a182f07",
+   "after": "8520783b9e7cc57beaaacf035f779ab98bee8cb4dc055273848a4cbfe96d5bdd"
+  },
+  "workbook-science-1-kubetsu.json": {
+   "before": "6d89c40c4b720df9528d25c93734aa737ecf9a8213a5ed099f5f58faedf8d667",
+   "after": "92145cb20c97d7de4250b523db93596696130cc3f3942e3fea68e08fe9f1f33a"
+  },
+  "workbook-science-1-noudo.json": {
+   "before": "5a4e9d8717fd2d61658fa99ab9a57cc0d23b5a7569bcfd56da9700dd882f3f3c",
+   "after": "7310286f2bfd47e056315a92160a19319d073fe675e79979530cf48e429139ce"
+  },
+  "workbook-science-1-taisekigan.json": {
+   "before": "b9c4070fd5dbbfd2088ea2b9e38a1d0584cdb001931539872c489a490ae9b4c6",
+   "after": "7e2be0841f84454e608fba0190605c3f21d26c4c3bb3efbd67de4a4eeb75bb29"
+  },
+  "workbook-science-1-youkaido.json": {
+   "before": "210f5c55bb5ed5913e422ee993f65576760125c26f67cd4cef351268280e8bc7",
+   "after": "4cc3ea5999154a7750f7bf8b1b1d4dbafb5451ee8bb928d4b6eae53b468a2568"
+  },
+  "workbook-social-1-geo-asia.json": {
+   "before": "f1766ff079686fcc8220a55b696489e7a753c8d8b492d945a4cc7a1583f18b5f",
+   "after": "981647e96314e7037cbf99c3eff2184606b594b9fb9c25da7f26bfd6e6df684e"
+  },
+  "workbook-social-1-geo-kikou.json": {
+   "before": "b759286ff41af61b5377a422ef38b1fb4cb1dced2472aa497b2707738b89bae7",
+   "after": "9f332e9846c2f383c95318e8b795e44a9da34d2cbe5933598ccac6a899f53008"
+  },
+  "workbook-social-1-geo-oceania.json": {
+   "before": "2236e9aa740af6fec71d2eb9abdf4508bafb4f30b33e94b920f7297404471964",
+   "after": "409eff48a3fcac5fc24a674355a803f02653953210d229e8e628f21f4e274ee5"
+  },
+  "workbook-social-1-geo-seikatsu.json": {
+   "before": "2778fc71d2eded17d87bf662b3565ba94cb7c4ef7529eeb36ec5a144ff87c07d",
+   "after": "f4d03ddb53b9950149546550976c19861e988e7ef0053d4ceff892587b453a48"
+  },
+  "workbook-social-1-hist-kamabunka.json": {
+   "before": "4e64468e3f6c4c08187c34a0276443bbd4ca3b6bd78bdff6e1685520a944554d",
+   "after": "25f28fc0c6f8de040ef5a312d89951e7ec25064ae1f4774575b1510a698a0178"
+  },
+  "workbook-social-1-hist-onin.json": {
+   "before": "245d46da689eb20f8550c206ee94fbf537afb3e831a94d6f8ad10e4d6594c807",
+   "after": "3de920c99e5b29a2641831ead1c4618b1f57ba22caf4ad3118a746445f56f7e3"
+  }
+ }
+}

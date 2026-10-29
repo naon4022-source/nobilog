@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/ai-send-merge-20261029/main/future-view/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view-77/tools/candidates/textbook-vision-20261027/textbook-vision-media-dom.mjs

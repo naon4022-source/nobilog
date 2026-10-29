@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "checks": 125,
+  "inputs": [
+    {
+      "file": "cf-worker/src/ai-review-practice-route.mjs",
+      "sha256": "ce0a628d884e98f19aacd2734375173ff9ce652e34be9cd96021b2d6e32e9422"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-route.mjs",
+      "sha256": "f7b2fa98e5f883bfc4771331791d7ee82de7c7ca45f708c4cca1cf89061e0520"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/route-fixture.mjs",
+      "sha256": "3360b46825383507ee1982dc165da5b75d14d9f9970d98f5631aff60c84d7322"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate-hooks.mjs",
+      "sha256": "1dfd77cb2419e0a38de1cdf6d26b8da29dac707c55bea95bcd9f7545a21ab465"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate-library.mjs",
+      "sha256": "34988f31f9e542285f14a745e8e121b841329295202646ff3aea03419446a6bd"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate.json",
+      "sha256": "8d52e7322d22ecb548f8c1a13ba8966e956fdfa25ac3c2ed6fadc11afc76aef1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/job-compat-candidate.json",
+      "sha256": "904e39adb72329c1406b3a300f57c4741f7d5286a26bffd8356e07b554c39adf"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    }
+  ],
+  "scope": "Actual canonical material session→flat100 review→shared trial/budget+synthetic provider→verified selected practice→actual private HTTP/SQLite grading and durable receipts.3 accounts×2 plans, all-answered proof, no answer before submit, exact selected ID/owner/Origin, Free retention,0 extra AI use, immutable/concurrent/lost-save recovery and write-time owner race. No real provider/data or whole claim.",
+  "candidateOnly": true,
+  "substitutions": [
+    {
+      "original": "/Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/ai-review-practice-library.mjs",
+      "candidate": "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate-library.mjs"
+    },
+    {
+      "original": "/Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/ai-review-practice-data.mjs",
+      "candidate": "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-review-practice-data.mjs"
+    },
+    {
+      "original": "/Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/ai-test-review-content.mjs",
+      "candidate": "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-content.mjs"
+    },
+    {
+      "original": "/Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/ai-test-review-jobs.mjs",
+      "candidate": "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-jobs.mjs"
+    },
+    {
+      "original": "/Users/shimizunaotomoo/Desktop/my-app/cf-worker/src/ai-test-review-service.mjs",
+      "candidate": "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-service.mjs"
+    }
+  ],
+  "fixtureEdits": "Paths/output only; correct and wrong letters are derived from canonical candidate data instead of obsolete fixed letters. All125 original HTTP/SQLite/owner/Origin/replay/quota/retention assertions retained.",
+  "originalFixtureSha256": "bd2e7c7d1071815a8d8641251ac5319a3e5842c6bd3769d7563c82983b354d0d",
+  "originalFixture": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs"
+}

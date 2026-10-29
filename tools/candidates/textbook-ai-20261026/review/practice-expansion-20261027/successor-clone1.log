@@ -1,0 +1,9 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs:52
+ for(const f of files)if(!safeFile(f))throw Error('expansion dependency path');
+                                            ^
+
+Error: expansion dependency path
+    at Object.expansionDependencyFiles (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs:52:45)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-successor-clone.mjs:12:120
+
+Node.js v24.18.0

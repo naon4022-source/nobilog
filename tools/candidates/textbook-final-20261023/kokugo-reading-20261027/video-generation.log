@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/build-videos.py", line 93, in <module>
+    if __name__=='__main__':main()
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/build-videos.py", line 80, in main
+    subprocess.run(['node',str(GENERIC/'render_fast.mjs'),str(out/'scene.html'),str(out/'timeline.json'),str(out/'silent.mp4'),str(FFMPEG),'30',''],check=True,capture_output=True,timeout=1200)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['node', '/Users/shimizunaotomoo/Desktop/my-app/教材整理/Claude_Codex共有/教科動画/render_fast.mjs', '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos/K1-C1-S1-V01/scene.html', '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos/K1-C1-S1-V01/timeline.json', '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/videos/K1-C1-S1-V01/silent.mp4', '/Users/shimizunaotomoo/Desktop/my-app/教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/制作ツール/imageio_ffmpeg/binaries/ffmpeg-macos-x86_64-v7.1', '30', '']' returned non-zero exit status 1.

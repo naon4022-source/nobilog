@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "session": 5655,
+  "observedExitCode": 0,
+  "command": "bash .claude/verify/run.sh",
+  "finishedUTC": "2026-10-25T06:52:18.234675+00:00",
+  "terminal": "✅ ぜんぶ通過",
+  "log": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt2.log",
+  "logSha256": "e37d1074f36f5bec59dd29bfb650d600ff3058cf2dca3c18ddd07cbc9a87b117",
+  "originalLog": "/private/tmp/nobi-handwriting-post-full-attempt2-20261025.log",
+  "inputSnapshot": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt2-inputs-before.json",
+  "inputSnapshotSha256": "59458f30242b2c3e6206bfeced13c9ed0863a7ef12b15b154d28ff636f2a3d83",
+  "inputsUnchanged": {
+    ".claude/verify/run.sh": "44877dbf3854df4d4174e08aab5ffa9f18cf7b5c3c52fdfbddf35a36e6e781bd",
+    ".claude/verify/verify-learning-images-cache.mjs": "765a0ceaa5a2a0da248bb68a608be3c828c3b63f7a20b5c2cb8bd768e3fb0f54",
+    "cf-worker/src/index.js": "dc13bc096932f678d2c6cac4558e4ef5edc42bab6ed36d6d56f09ae5dfec5cf5",
+    "cf-worker/src/plans.mjs": "f3010ee06531b3259ccd11265a62709b6986799ce1fb1a333b277493f30b61af",
+    "cf-worker/src/textbook-annotations.mjs": "f48cb41a92c68915348f6cd1205d1454669daf184de357641db6d23dba7ad2da",
+    "cf-worker/src/textbook-ink-format.cjs": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735",
+    "cf-worker/src/textbook-ink.mjs": "33ce7bd8b01be59a6a57151f49830b55e048e935da317300c5fd7a67e91645a0",
+    "index.html": "41ab011c4b9ab8bf455956db452d313fd683a200f5a8835a35429f2f82414081",
+    "preview/build.py": "78c96d87e7a0ae5cb810b8695d2d95d4dac2a47d4a8f22ea43aadcad2979b91c",
+    "site-assets/sw.js": "babe239f8605e9ba12a653b481c8a6217b17b4f8a8d0b03e68e66cab48e6ebe7",
+    "site-assets/textbook-annotation-model.js": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483",
+    "site-assets/textbook-annotations.js": "4fd5432c2598ba8b09e13f9849141f0ae8d7ded5c844c3b17973df17ea7c4e0c",
+    "site-assets/textbook-book-math1.json": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+    "site-assets/textbook-book.css": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec",
+    "site-assets/textbook-book.js": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7",
+    "site-assets/textbook-ink-format.js": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735",
+    "site-assets/textbook-ink-model.js": "97ef477150891fd148a2869b201f187344c472c5b6e3464bda1b1d0ad52755af",
+    "site-assets/textbook-ink.css": "f2b9ca8ce2605baf197712e0d2cdbb52c69b0eeb0e6c86d7f996fb4bfd331a95",
+    "site-assets/textbook-ink.js": "60ce37d98b1094231ef1af081ee3e7179dbb4908e6ef858d6d1b7bd926ed868d",
+    "site-assets/vertical-fractions.js": "f94d7f58a6c595c2d18f26281e63cbe3b23402cefbc43f422ad11770b2856e37",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/book-attempt1-ui.js": "ec39e0caed9784186e5ef37a6a0b9a6dc4fca2a271bd9df422753916eb596472",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/ui-before-pan.js": "a08ce35d5a5938d53504a3437a7b88623f5e05e4090ea46eef4d4373a51f1ca0",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/verify-api.mjs": "38da8467825522b5e965e85b4b5c4864426eb41909db3a8c96f7886bf7dd7940",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/verify-book.mjs": "f9d71e2c5209469bdfe1b567eab238336ad6a570e1ff490f41ce0fe47240142e",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/verify-model.mjs": "2f71bf9bef735027bd393964082643c56ab10590bf271677a0440883e2e22ba2",
+    "tools/releases/auth-repair-20261019/verify-login-flow.mjs": "cb778bbea4f7c46c4c962d036d059c9fec3df74358d8dafb39c0cea2391ce187",
+    "tools/candidates/textbook-final-20261023/reviewed_changes.py": "70bf7d4424e6dcaf7c31176ba060e46c1fe454caf5e726c8de57b71f852c326b",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/reviewed-annotation-successor.json": "5fdc764448e4a42d5ec5e986634ed139b9ec01298c2f82f11bada6fb0b9c7280",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/api-result.json": "41d2aec54e686b2997e39db9d6f0c36278ac9f800021e5a618d341122deb18f8",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/model-result.json": "259019cf2d82fc043aca83838f9790f4c2c928c3c4275f4f8b2427f3db1072ee",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/individual/book-result.json": "29fb2b8b1ecb02da9465e34a4373a62080671cef31f381376e88bad7bd5c096e"
+  },
+  "registeredGateSha256": "44877dbf3854df4d4174e08aab5ffa9f18cf7b5c3c52fdfbddf35a36e6e781bd",
+  "handwritingChecks": {
+    "api": 79,
+    "model": 37,
+    "actualBook": 97
+  },
+  "actualBookScope": "six books820; math390/820/1180/1440 and large390/1440; science390 touch/two-finger pan; synthetic users only",
+  "adminPlanRouteByteUnchanged": true,
+  "math75RuntimeAndNineFiguresUnchangedFromPassedBaseline": true,
+  "previousFailedAttempt": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt1.json",
+  "verifierFixReview": "tools/candidates/textbook-final-20261023/handwriting-20261025/verifier-fixes-review.json",
+  "screens": {
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1180.png": "bf58e46073db1b0f723d635c27c93f51b9893e4a571c5f3acdb346b50183c379",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1440-large.png": "6b50a2679289140b3c00ba53bab90875bb92e1a3d3c233ff7daf646397d5b9a5",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1440.png": "1469d8719f99a4bcd8f9f8cdf5cf8689058d3b973c3f79fcbbecafd5fd4a85e2",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-390-large.png": "c1660053f41314cfabc3efe834f8699782f7f3b59b2dbd264060c9f3366bd78c",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-390.png": "a0800f1b7f2110bb5554bad1c2038900603c27c6e2a643fb8e8348a51468e57d",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-820.png": "1754f5a56378e1e0ebd172402132273186f8cf4926feb2740f29e9a70f0587b2"
+  },
+  "screensChangedSinceReviewed": [
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1180.png",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-1440.png",
+    "tools/candidates/textbook-final-20261023/handwriting-20261025/screens/math1-820.png"
+  ],
+  "notComplete": [
+    "textbook AI and early-UNLIMIT/V3-Free integration",
+    "other-subject content/current AV evidence",
+    "P051/P052 wording approval",
+    "production Souta/Google reverse integration and actual accounts",
+    "other authorized nonadmin work"
+  ],
+  "publication": "not published/committed/deleted; no admin development, Gemini activation, real user data or credentials access",
+  "finalVisualReview": {
+    "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/final-visual-review.json",
+    "sha256": "eb600ecd44008540747342ad17dd6e46c962749d211fdd9625ca2fa3cb52c1c5"
+  },
+  "frozenIndividualProofs": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/whole-passed-proofs/api-result.json",
+      "sha256": "41d2aec54e686b2997e39db9d6f0c36278ac9f800021e5a618d341122deb18f8"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/whole-passed-proofs/model-result.json",
+      "sha256": "259019cf2d82fc043aca83838f9790f4c2c928c3c4275f4f8b2427f3db1072ee"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/handwriting-20261025/whole-passed-proofs/book-result.json",
+      "sha256": "29fb2b8b1ecb02da9465e34a4373a62080671cef31f381376e88bad7bd5c096e"
+    }
+  ],
+  "sealedUTC": "2026-10-25T06:53:29.172810+00:00"
+}

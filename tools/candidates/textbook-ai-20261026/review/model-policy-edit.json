@@ -1,0 +1,21 @@
+{
+  "approval": "User: Pro=LUNA, Unlimited=SOL for this feature",
+  "files": [
+    {
+      "file": "cf-worker/src/openai-policy.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/before/cf-worker/src/openai-policy.mjs",
+      "beforeSha256": "12bccbc0ec53fb47cc097082684c150a5e80b03442c2405080de9a19519c93d7",
+      "afterSha256": "52d1197b68e88571ea5ecdeaa3863e96d1551f406db3b3586b25ca75c565b643",
+      "before": "const solInPro = new Set(['note-analysis','image-analysis','detailed-explanation','test-review']);",
+      "after": "const solInPro = new Set(['note-analysis','image-analysis','detailed-explanation']);"
+    },
+    {
+      "file": ".claude/verify/verify-openai-policy.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/before/.claude/verify/verify-openai-policy.mjs",
+      "beforeSha256": "20be05393370616e77db8b5133ba80f4898ae8edf405977bd9e94f7610070860",
+      "afterSha256": "682d4151e347f04fb075f6064d83015778945b96d28de530d535784a9ca2ccea",
+      "before": "for(const f of ['hint','explanation','chat'])eq(selectModel('pro',f),MODELS.luna);\nfor(const f of ['note-analysis','image-analysis','detailed-explanation','test-review'])eq(selectModel('pro',f),MODELS.sol);",
+      "after": "for(const f of ['hint','explanation','chat','test-review'])eq(selectModel('pro',f),MODELS.luna);\nfor(const f of ['note-analysis','image-analysis','detailed-explanation'])eq(selectModel('pro',f),MODELS.sol);"
+    }
+  ]
+}

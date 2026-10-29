@@ -1,0 +1,257 @@
++++ b/site-assets/textbook-book.js
++ root.NobiTextbookAnnotations?.mount(app,book.meta.id,{annotationSignature:book.annotationSignature,locate(anchor){
++  state.book={meta,annotationSignature:annotationSig.slice(1),pages:data.pages,toc:data.toc||[],fillers:data.fillers||{},map:{},yomi:(data.yomi&&typeof data.yomi==='object')?data.yomi:{}};
++++ b/tools/candidates/textbook-final-20261023/reviewed_changes.py
++def before_textbook_ai_file(relative):
++    """Check the reviewed source-signature bridge before inherited media evidence."""
++    current=R/relative
++    receipt_path=R/'tools/candidates/textbook-ai-20261025/reviewed-edits.json'
++    if not receipt_path.exists():
++        return current
++    receipt=load(receipt_path)
++    row=next((r for r in receipt['files'] if r['file']==relative),None)
++    if row is None:
++        return current
++    assert receipt['version']==1
++    proof=row['verification']
++    assert proof['observedExitCode']==0 and sha(R/proof['file'])==proof['sha256']
++    result=load(R/proof['file'])
++    assert result['status']=='passed' and result['checks']==proof['checks']
++    previous=R/row['beforeFile']
++    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']
++    text=previous.read_text()
++    for edit in row['edits']:
++        assert text.count(edit['before'])==1
++        text=text.replace(edit['before'],edit['after'],1)
++    assert text.encode()==current.read_bytes(),relative+': change outside reviewed textbook AI metadata'
++    return previous
++
++
++    current=before_textbook_ai_file(relative)
++        previous,now=R/row['beforeFile'],before_handwriting_file(row['file'])
++++ b/cf-worker/src/index.js
++    if(path==='/textbook-ai-context'){
++      const {textbookAIContextRoute}=await import('./textbook-ai-context-route.mjs');
++      return scopedApiResponse(await textbookAIContextRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);
++    }
++++ b/site-assets/sw.js
++  if (/(?:^|\/)(?:textbook-(?:annotations|ink|ai-context)|learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
++++ b/.claude/verify/verify-learning-images-cache.mjs
++for(const path of ['/textbook-ai-context?book=math1','/api/textbook-ai-context?book=math1&anchor=fixture','/textbook-ink?book=math1','/api/textbook-ink?book=math1&anchor=fixture','/textbook-annotations?book=math1','/api/textbook-annotations?book=math1','/learning-review','/api/learning-review?cursor=fixture','/learning-chat','/learning-notes','/learning-time','/api/learning-time?month=2026-10','/learning-time-start','/api/learning-time-start','/learning-note-analysis?id=fixture','/api/learning-note-analysis?id=fixture','/learning-note-analysis-job?noteId=fixture','/api/learning-note-analysis-job?noteId=fixture','/plan','/api/plan']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'navigate'},respondWith(){intercepted=true;}});assert.equal(intercepted,false);checks++;}
++for(const path of ['/textbook-ai-context-math1.json','/textbook-ai-context-kokugo1.json','/textbook-ai-context-english1.json','/textbook-ai-context-science1.json','/textbook-ai-context-geography.json','/textbook-ai-context-history.json','/textbook-ink-format.js','/textbook-ink-model.js','/textbook-ink.js','/textbook-ink.css','/textbook-annotation-model.js','/textbook-annotations.js','/textbook-annotations.css','/learning-images.js','/learning-images.css','/profile-sprout.svg','/profile-photos.js','/profile-photos.css','/camera.js','/note-analysis.js','/note-analysis-api.js','/note-analysis.css']){let intercepted=false;handle({request:{method:'GET',url:'https://fixture.test'+path,mode:'cors'},respondWith(){intercepted=true;}});assert.equal(intercepted,true);checks++;}
++++ b/preview/build.py
++    for name in ['textbook-annotations.mjs', 'textbook-ink.mjs', 'textbook-ink-format.cjs', 'textbook-ai-context.mjs', 'textbook-ai-context-manifest.mjs', 'textbook-ai-context-route.mjs']:
++++ b/cf-worker/src/subscription-credits.mjs
++const UID=/^(u[124]|p_(free|mini|standard|pro|unlimit))$/;
++++ b/tools/candidates/textbook-ai-20261025/verify-book-signature.mjs
++// Actual book renderer/model; no login, grades, submissions, private records, or provider requests.
++import assert from 'node:assert/strict';
++import {readFile,writeFile} from 'node:fs/promises';
++import {createServer} from 'node:http';
++import {createRequire} from 'node:module';
++import {createHash} from 'node:crypto';
++import {TEXTBOOK_AI_CONTEXTS} from '../../../cf-worker/src/textbook-ai-context-manifest.mjs';
++const require=createRequire(import.meta.url);
++const {chromium}=require('/Users/shimizunaotomoo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
++const ROOT=new URL('../../../',import.meta.url),ASSETS=new URL('site-assets/',ROOT);
++const modelTag='<script src="/textbook-annotation-model.js"></script>';
++const html='<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/textbook-book.css">'+modelTag+'<script>window.nobiTextbookAnnotationAPI={};window.signatureBoundaries=[];window.NobiTextbookAnnotations={unmount(){},mount(app,book,context){signatureBoundaries.push({book,signature:context.annotationSignature,canLocate:typeof context.locate===\'function\'});}};</script><section id="view-textbook"><div id="textbook-app" class="tb-app"></div></section><script src="/textbook-book.js"></script>';
++const types={js:'text/javascript',css:'text/css',json:'application/json',svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg',webp:'image/webp',mp4:'video/mp4',mp3:'audio/mpeg',woff2:'font/woff2'};
++const server=createServer(async(req,res)=>{
++ const url=new URL(req.url,'http://fixture.test'),name=decodeURIComponent(url.pathname.slice(1));
++ if(!name){res.writeHead(200,{'Content-Type':'text/html;charset=utf-8'});res.end(url.searchParams.has('no-model')?html.replace(modelTag,''):html);return;}
++ if(!/^[a-zA-Z0-9._/-]+$/.test(name)||name.split('/').includes('..')){res.writeHead(404).end();return;}
++ try{const bytes=await readFile(new URL(name,ASSETS));res.writeHead(200,{'Content-Type':types[name.split('.').pop()]||'application/octet-stream'});res.end(bytes);}catch(_){res.writeHead(404).end();}
++});
++await new Promise(r=>server.listen(0,'127.0.0.1',r));
++const origin='http://127.0.0.1:'+server.address().port,errors=[],outside=[],results=[];
++let browser,checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++async function pageOf(options={}){
++ const context=await browser.newContext({viewport:{width:390,height:900}}),page=await context.newPage();
++ await page.addInitScript(noStorage=>{Element.prototype.requestFullscreen=undefined;Element.prototype.webkitRequestFullscreen=undefined;if(noStorage)Storage.prototype.setItem=function(){throw Error('synthetic storage unavailable');};},!!options.noStorage);
++ page.on('pageerror',e=>errors.push(e.message));
++ await page.route('**/*',route=>{if(route.request().url().startsWith(origin+'/'))return route.continue();outside.push(new URL(route.request().url()).origin);return route.abort();});
++ await page.goto(origin+(options.noModel?'/?no-model=1':'/'));
++ return {page,context};
++}
++async function open(page,title){
++ await page.getByRole('button',{name:'全画面で教科書を開く',exact:true}).click();
++ await page.getByRole('button',{name:title+'を開く',exact:true}).evaluate(button=>button.click());
++ await page.locator('.tb-spread').waitFor({timeout:240000});
++}
++async function snapshot(page){return page.evaluate(()=>({book:NobiTextbook._state.book.meta.id,signature:NobiTextbook._state.book.annotationSignature,boundary:signatureBoundaries.at(-1)}));}
++try{
++ browser=await chromium.launch({headless:true});
++ const {page,context}=await pageOf();
++ for(const book of Object.keys(TEXTBOOK_AI_CONTEXTS)){
++  const data=JSON.parse(await readFile(new URL('textbook-book-'+book+'.json',ASSETS),'utf8'));
++  await open(page,data.title);
++  for(const width of [390,1440]){
++   await page.setViewportSize({width,height:900});const s=await snapshot(page);
++   ok(s.book===book&&s.boundary.book===book,'selected actual book preserved');
++   ok(s.signature===TEXTBOOK_AI_CONTEXTS[book].annotationSignature&&s.boundary.signature===s.signature,'actual source signature reaches boundary at '+width);
++   ok(s.boundary.canLocate,'existing locate callback preserved');
++  }
++  results.push({book,widths:[390,1440],signature:TEXTBOOK_AI_CONTEXTS[book].annotationSignature});
++  await page.evaluate(()=>NobiTextbook.leave());
++ }
++ await context.close();
++ const noStorage=await pageOf({noStorage:true});
++ await open(noStorage.page,'理科 1');const stored=await snapshot(noStorage.page);
++ ok(stored.signature===TEXTBOOK_AI_CONTEXTS.science1.annotationSignature&&stored.boundary.signature===stored.signature,'source identity works with layout storage unavailable');
++ await noStorage.context.close();
++ const noModel=await pageOf({noModel:true});await open(noModel.page,'理科 1');const missing=await snapshot(noModel.page);
++ ok(missing.signature===''&&missing.boundary.signature==='','missing source identity is explicit; never invented from cache');
++ await noModel.context.close();ok(errors.length===0,'no renderer errors');ok(outside.length===0,'no external requests');
++ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
++ const edit=JSON.parse(await readFile(new URL('./book-signature-edit.json',import.meta.url),'utf8'));
++ let expected=await readFile(new URL(edit.beforeFile,ROOT),'utf8');for(const e of edit.edits){ok(expected.split(e.before).length===2,'unique metadata edit');expected=expected.replace(e.before,e.after);}
++ const actual=await readFile(new URL(edit.file,ROOT),'utf8');ok(expected===actual&&sha(actual)===edit.afterSha256,'entire renderer equals its predecessor plus only two metadata edits');
++ const result={status:'passed',checks,results,storageUnavailable:true,missingIdentityClosed:true,rendererSha256:sha(actual),scope:'actual six books/model/renderer at390/1440; source metadata only; no real user data, grading, provider calls or AI UI'};
++ await writeFile(new URL('./book-signature-result.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log('Actual book source signature: '+checks+' checks passed');
++}finally{await browser?.close();await new Promise(r=>server.close(r));}
++++ b/tools/candidates/textbook-ai-20261025/verify-context-api.mjs
++import assert from 'node:assert/strict';
++import {readFile,writeFile} from 'node:fs/promises';
++import {createRequire} from 'node:module';
++import {createHash} from 'node:crypto';
++const require=createRequire(import.meta.url),{D1SQLite}=require('../../../.claude/verify/d1-sqlite.js');
++let outside=0;globalThis.fetch=async()=>{outside++;throw Error('outside network forbidden');};
++const {textbookAIContextRoute}=await import('../../../cf-worker/src/textbook-ai-context-route.mjs');
++const {publicTextbookContextReader}=await import('../../../cf-worker/src/textbook-ai-context.mjs');
++const {TEXTBOOK_AI_CONTEXTS}=await import('../../../cf-worker/src/textbook-ai-context-manifest.mjs');
++const ROOT=new URL('../../../',import.meta.url),db=new D1SQLite(),origin='https://fixture.test';
++let time=1800000000000,checks=0,lookups=0,fetches=0;const sql=[];
++const ok=(v,m)=>{assert.ok(v,m);checks++;};
++const env={SUBSCRIPTION_PREVIEW:'1',APP_ORIGIN:origin,AUTH_DB:{prepare(query){sql.push(query);return db.prepare(query);}}};
++const book='math1',entry=TEXTBOOK_AI_CONTEXTS[book],bytes=await readFile(new URL('site-assets'+entry.src,ROOT)),first=JSON.parse(bytes).contexts[0];
++const selection={book,anchor:first.anchor,annotationSignature:entry.annotationSignature};
++for(const uid of ['u1','u2','u4','p_pro'])db.seed('active-session:'+uid,'fixture-owner-'+uid,time+60000);
++for(const [k,v] of [['material-history:u1:fixture','{"score":91}'],['learning-note:u2:fixture','{"text":"synthetic note"}'],['textbook-ink:u4:math1:fixture','{"revision":2}'],['plan-quota:u4:fixture','{"n":7,"daily":2}'],['ai-trial:day:2027-01-15','3']])db.seed(k,v,0);
++const protectedRows=()=>db.prepare("SELECT k,v,expires_at FROM auth_kv WHERE k NOT LIKE 'active-session:%' ORDER BY k").all();
++const before=JSON.stringify(await protectedRows());
++const reader=publicTextbookContextReader({fetcher:async request=>{
++ fetches++;ok(request.url===origin+entry.src,'only fixed public catalog fetched');ok(!request.headers.has('Authorization')&&!request.headers.has('Cookie'),'incoming synthetic credentials never forwarded');
++ return new Response(bytes,{headers:{'Content-Type':'application/json'}});
++}});
++const readContext=async(e,s)=>{lookups++;return reader(e,s);};
++const request=(params=selection,options={})=>new Request('https://api.fixture.test/textbook-ai-context'+(typeof params==='string'?params:'?'+new URLSearchParams(params)),{method:options.method||'GET',headers:{Origin:options.origin??origin,Authorization:'Bearer fixture-not-a-real-token',Cookie:'fixture-cookie=synthetic'}});
++const invoke=(req,uid='u4',extra={})=>textbookAIContextRoute(req,env,{uid},{owner:'fixture-owner-'+uid,now:()=>time,readContext,...extra});
++try{
++ for(const uid of ['u1','u2','u4']){
++  const r=await invoke(request(),uid),body=await r.json();ok(r.status===200,'authenticated '+uid+' reads public context');
++  ok(body.context.anchor===first.anchor&&body.context.quote===first.quote,'exact source excerpt returned');
++  ok(r.headers.get('Cache-Control')==='private, no-store'&&r.headers.get('X-Content-Type-Options')==='nosniff','authenticated response never cached/rendered as HTML');
++  ok(!Object.hasOwn(body,'uid')&&!Object.hasOwn(body.context,'uid'),'no account metadata mixed into public excerpt');
++ }
++ ok(fetches===1,'public data can be reused across accounts without caching their identity');
++ const previewDenied=await invoke(request(),'p_pro');ok(previewDenied.status===403,'preview identity denied without explicit preview flag');
++ const preview=await textbookAIContextRoute(request(),{...env,PREVIEW_PLAN_ACCOUNTS:'1'},{uid:'p_pro'},{owner:'fixture-owner-p_pro',now:()=>time,readContext});ok(preview.status===200,'explicit isolated preview identity accepted');
++ ok((await invoke(request(),'u3')).status===403,'unknown account denied');
++ ok((await textbookAIContextRoute(request(),env,null,{readContext})).status===401,'missing session denied');
++ ok((await invoke(request(),'u4',{owner:''})).status===401,'missing trusted lease owner denied');
++ ok((await textbookAIContextRoute(request(),{...env,SUBSCRIPTION_PREVIEW:'0'},{uid:'u4'},{owner:'fixture-owner-u4',readContext})).status===404,'feature flag off denies route');
++ ok((await textbookAIContextRoute(request(),{...env,AUTH_DB:null},{uid:'u4'},{owner:'fixture-owner-u4',readContext})).status===503,'missing DB fails closed');
++ for(const method of ['POST','PUT','DELETE','HEAD'])ok((await invoke(request(selection,{method}))).status===405,'metadata does not accept '+method);
++ ok((await invoke(request(selection,{origin:'https://attacker.invalid'}))).status===403,'wrong supplied origin denied');
++ const count=lookups;
++ for(const params of ['','?book=math1','?'+new URLSearchParams({...selection,uid:'u1'}),'?'+new URLSearchParams({...selection,url:'https://attacker.invalid'}),'?'+new URLSearchParams(selection)+'&book=math1','?'+new URLSearchParams(selection)+'&anchor='+first.anchor])ok((await invoke(request(params))).status===400,'missing/unknown/duplicate query rejected');
++ ok(lookups===count,'malformed query never reaches context reader');
++ ok((await invoke(request({...selection,annotationSignature:'0'.repeat(64)}))).status===409,'old source version rejected');
++ ok((await invoke(request({...selection,contextSha256:'0'.repeat(64)}))).status===409,'old catalog version rejected');
++ ok((await invoke(request({...selection,anchor:'f'.repeat(64)}))).status===404,'unknown public source identity rejected');
++ ok((await invoke(request({...selection,annotationSignature:''}))).status===400,'missing actual book identity cannot fall back');
++ db.seed('active-session:u4','fixture-owner-u4',time-1);const beforeDenied=lookups;
++ ok((await invoke(request())).status===409&&lookups===beforeDenied,'expired lease blocks before public lookup');
++ db.seed('active-session:u4','fixture-owner-u4',time+60000);
++ const revoked=await invoke(request(),'u4',{readContext:async(e,s)=>{const c=await reader(e,s);db.seed('active-session:u4','fixture-new-owner',time+60000);return c;}});
++ ok(revoked.status===409&&!Object.hasOwn(await revoked.json(),'context'),'lease loss during fetch never returns stale-view context');
++ db.seed('active-session:u4','fixture-owner-u4',time+60000);
++ const expired=await invoke(request(),'u4',{readContext:async(e,s)=>{const c=await reader(e,s);time+=60001;return c;}});ok(expired.status===409,'lease expiry rechecked after async source read');
++ time=1800000000000;db.seed('active-session:u4','fixture-owner-u4',time+60000);
++ const sourceFailure=await invoke(request(),'u4',{readContext:async()=>{throw Error('fixture_private_error_not_for_client');}});ok(sourceFailure.status===503&&!JSON.stringify(await sourceFailure.json()).includes('fixture_private_error'),'internal errors use bounded public error code');
++ ok(JSON.stringify(await protectedRows())===before,'no grades, notes, handwriting, quota or trial rows changed');
++ ok(sql.every(s=>s==='SELECT 1 AS x FROM auth_kv WHERE k=? AND v=? AND expires_at>?'),'only active-session rows read; no plan/history/consent/token enumeration or writes');
++ const edit=JSON.parse(await readFile(new URL('./worker-context-route-edit.json',import.meta.url),'utf8')),old=await readFile(new URL(edit.beforeFile,ROOT),'utf8');let expected=old;
++ for(const e of edit.edits){ok(expected.split(e.before).length===2,'unique authenticated route insertion');expected=expected.replace(e.before,e.after);}
++ const worker=await readFile(new URL(edit.file,ROOT),'utf8'),at=worker.indexOf("if(path==='/textbook-ai-context')");
++ ok(expected===worker,'entire Worker is predecessor plus only metadata route');
++ ok(worker.indexOf('const session = await readSession(request, env);')<at&&worker.indexOf('await claimActiveSession(env, session.uid, session.token)')<at,'new route remains after existing session and active-owner guards');
++ ok(outside===0,'no network left the isolated fixture');
++ const result={status:'passed',checks,fetches,scope:'actual metadata route/reader with isolated SQLite and generated math catalog; u1/u2/u4/explicit preview, strict queries, lease races, no protected reads/writes or AI/quota use; parent route exact insertion/guard order checked; full Worker request path/browser still separate',workerSha256:createHash('sha256').update(worker).digest('hex')};
++ await writeFile(new URL('./context-api-result.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log('Textbook AI context API: '+checks+' isolated checks passed');
++}finally{db.close();}
++++ b/tools/candidates/textbook-ai-20261025/verify-three-account-credits.mjs
++import assert from 'node:assert/strict';
++import {createRequire} from 'node:module';
++import {writeFile} from 'node:fs/promises';
++import {planStatus,planUse,planRefund} from '../../../cf-worker/src/plans.mjs';
++import {creditStatus,refundCredits} from '../../../cf-worker/src/subscription-credits.mjs';
++import {textbookInkRoute} from '../../../cf-worker/src/textbook-ink.mjs';
++const require=createRequire(import.meta.url),{D1SQLite}=require('../../../.claude/verify/d1-sqlite.js');
++const db=new D1SQLite(),time=1800000000000,origin='https://fixture.test',env={AUTH_DB:db,SUBSCRIPTION_PREVIEW:'1',PLAN_CREDITS_V2:'1',APP_ORIGIN:origin};
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++const contract={plan:'pro',start:time-86400000,end:time+30*86400000,next:null,revision:2,initializedAt:time-86400000};
++const ink=(uid,method='GET')=>textbookInkRoute(new Request(origin+'/textbook-ink'+(method==='GET'?'?book=math1':''),{method,headers:{Origin:origin,'Content-Type':'application/json'},...(method==='POST'?{body:JSON.stringify({book:'math1',anchor:'a'.repeat(64),quote:'synthetic '+uid+' excerpt',revision:0,doc:{version:1,width:1000,height:700,background:null,strokes:[]}})}:{})}),env,{uid},{owner:'fixture-owner-'+uid,now:()=>time});
++try{
++ db.seed('active-session:u4','fixture-owner-u4',time+60000);
++ const initial=await planStatus(env,'u4',time);
++ ok(initial.plan==='free'&&initial.dailyLeft===0&&initial.features.annotations===false,'new u4 remains Free under daily credits; no accidental upgrade');
++ const freeRead=await ink('u4');ok(freeRead.status===200&&(await freeRead.json()).writable===false,'u4 Free handwriting read no longer fails with daily credits');
++ ok((await ink('u4','POST')).status===403,'u4 Free still cannot write');
++ ok(await planUse(env,db,'u4',time,{})===false,'u4 Free cannot spend credits');
++ for(const uid of ['u1','u2','u4']){
++  db.seed('active-session:'+uid,'fixture-owner-'+uid,time+60000);db.seed('plan:'+uid,JSON.stringify(contract),0);
++  const before=await planStatus(env,uid,time);ok(before.plan==='pro'&&before.dailyLeft===500,'same daily Pro limit for '+uid);
++  const receipt={};ok(await planUse(env,db,uid,time,receipt,2)===true,'actual nonadmin plan charge accepts '+uid);
++  const charged=await creditStatus(db,uid,'pro',time);ok(charged.dailyUsed===1&&charged.callsToday===1,'normal call counted exactly once for '+uid);
++  const other=uid==='u1'?'u2':'u1';await assert.rejects(()=>refundCredits(db,other,receipt),/invalid credit refund/);checks++;
++  ok((await creditStatus(db,uid,'pro',time)).dailyUsed===1,'other account cannot refund owner credit');
++  ok(await planRefund(env,db,uid,time,receipt)===true,'actual failure refund restores '+uid);
++  ok(await planRefund(env,db,uid,time,receipt)===false,'same refund cannot apply twice');
++  ok((await creditStatus(db,uid,'pro',time)).dailyUsed===0,'credit total restored');
++  const r=await ink(uid);ok(r.status===200&&(await r.json()).writable===true,'paid '+uid+' can use handwriting with V2 quota');
++  ok((await ink(uid,'POST')).status===200,'private handwriting save works for '+uid);
++  ok((await creditStatus(db,uid,'pro',time)).dailyUsed===0,'handwriting does not spend AI credits');
++  ok(await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind('plan:'+uid).first('v')===JSON.stringify(contract),'contract row preserved byte-for-byte');
++ }
++ ok((await planStatus(env,'u3',time)).provisional===false,'unknown account is not initialized');
++ await assert.rejects(()=>creditStatus(db,'u3','pro',time),/invalid credit request/);checks++;
++ ok(await planUse(env,db,'u3',time,{})===false,'unknown account cannot charge');
++ ok(db.keys().filter(k=>k.startsWith('textbook-ink:')).length===3,'one isolated handwriting record per owner');
++ const result={status:'passed',checks,scope:'real nonadmin planStatus/planUse/refund and private handwriting routes with daily V2 enabled; u1/u2/u4, Free gate, identical limits, own refund once, contracts unchanged; synthetic SQLite only'};
++ await writeFile(new URL('./three-account-credit-result.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log('Three-account daily credits/book handwriting: '+checks+' checks passed');
++}finally{db.close();}
++++ b/cf-worker/src/textbook-ai-context-route.mjs
++// Metadata only. Does not start an AI operation, consume credits, or write learning records.
++import {subscriptionOn} from './plans.mjs';
++import {readPublicTextbookContext} from './textbook-ai-context.mjs';
++const reply=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
++export async function textbookAIContextRoute(request,env,session,{owner,now=()=>Date.now(),readContext=readPublicTextbookContext}={}){
++ if(!subscriptionOn(env))return reply({error:'not_found'},404);
++ if(typeof session?.uid!=='string'||typeof owner!=='string'||!owner)return reply({error:'unauthorized'},401);
++ const uid=session.uid;
++ if(!/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/.test(uid)||(uid.startsWith('p_')&&env.PREVIEW_PLAN_ACCOUNTS!=='1'))return reply({error:'forbidden'},403);
++ if(!env.AUTH_DB)return reply({error:'unavailable'},503);
++ const url=new URL(request.url);
++ if(url.pathname!=='/textbook-ai-context')return reply({error:'not_found'},404);
++ if(request.method!=='GET')return reply({error:'method_not_allowed'},405);
++ const origin=request.headers.get('Origin');
++ if(origin!==null&&origin!==env.APP_ORIGIN)return reply({error:'origin'},403);
++ const required=['book','anchor','annotationSignature'],allowed=[...required,'contextSha256'];
++ if([...url.searchParams.keys()].some(k=>!allowed.includes(k))||required.some(k=>url.searchParams.getAll(k).length!==1)||url.searchParams.getAll('contextSha256').length>1)return reply({error:'invalid_query'},400);
++ const selection=Object.fromEntries(url.searchParams);
++ const active=async()=>!!await env.AUTH_DB.prepare('SELECT 1 AS x FROM auth_kv WHERE k=? AND v=? AND expires_at>?').bind('active-session:'+uid,owner,now()).first('x');
++ try{
++  if(!await active())return reply({error:'active_session'},409);
++  const context=await readContext(env,selection);
++  if(!await active())return reply({error:'active_session'},409);
++  return reply({context});
++ }catch(error){
++  const code=error?.message;
++  if(code==='invalid_context')return reply({error:'invalid_query'},400);
++  if(code==='context_changed')return reply({error:code},409);
++  if(code==='context_not_found')return reply({error:code},404);
++  return reply({error:'context_unavailable'},503);
++ }
++}

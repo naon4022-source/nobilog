@@ -1,0 +1,28 @@
+toast debug { errors: [], ready: true, allowed: true, notices: 1 } [
+  {
+    uid: 'u1',
+    id: '4b903417-8aa0-40ae-b936-845b73617e1c',
+    value: {
+      version: 1,
+      id: '4b903417-8aa0-40ae-b936-845b73617e1c',
+      requestId: 'f2b23969-d024-4ad3-86c3-e0366a0c892f',
+      submitted: false,
+      notified: false,
+      claim: null
+    }
+  }
+] []
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.notice-toast') to be visible[22m
+
+    at /Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/verify-review-client-browser.mjs:50:683 {
+  log: [ "  - waiting for locator('.notice-toast') to be visible" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.18.0

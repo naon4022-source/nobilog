@@ -1,0 +1,13 @@
+file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs:10
+const fail=code=>{throw Error(code);};
+                        ^
+
+Error: context_changed
+    at fail (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs:10:25)
+    at textbookImageRecord (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs:33:96)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/verify-input.mjs:13:64
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.18.0

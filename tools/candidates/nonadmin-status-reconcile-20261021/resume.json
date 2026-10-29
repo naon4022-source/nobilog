@@ -1,0 +1,14 @@
+{
+  "status": "source inventory prepared while full64595 runs; global closeout not applied",
+  "activeFull": {
+    "sessionId": 64595,
+    "pid": 1514,
+    "log": "/tmp/nobi-appendix-word-after-20261021.log"
+  },
+  "afterObservedFullSuccess": [
+    "python3 tools/candidates/math-appendix-recheck-20261021/finalize-full.py 64595 0",
+    "python3 tools/candidates/nonadmin-status-reconcile-20261021/record-after-full.py"
+  ],
+  "images": "771 current references have local files;29 legacy unselected slots already referenced;15 no authored/extra mapping need specification",
+  "scope": "do not mistake inventories for all-content approval"
+}

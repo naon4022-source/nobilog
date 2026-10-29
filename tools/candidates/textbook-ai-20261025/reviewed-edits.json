@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "status": "two exact metadata changes passed actual six-book43 checks",
+      "file": "site-assets/textbook-book.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/before/site-assets/textbook-book.js",
+      "beforeSha256": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7",
+      "afterSha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1",
+      "edits": [
+        {
+          "before": "state.book={meta,pages:data.pages,",
+          "after": "state.book={meta,annotationSignature:annotationSig.slice(1),pages:data.pages,"
+        },
+        {
+          "before": "root.NobiTextbookAnnotations?.mount(app,book.meta.id,{locate(anchor){",
+          "after": "root.NobiTextbookAnnotations?.mount(app,book.meta.id,{annotationSignature:book.annotationSignature,locate(anchor){"
+        }
+      ],
+      "scope": "Only prepared source signature metadata stored and forwarded; no layout/renderer/teaching/media logic edits",
+      "preWhole": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt2.json",
+      "verification": {
+        "file": "tools/candidates/textbook-ai-20261025/access-whole-passed-proofs/book-signature-result.json",
+        "sha256": "94e1621bd15d08c25392db28cdfcda9bbaba33ac1509017fa3e8a8f6d0d1ada9",
+        "checks": 43,
+        "session": 37267,
+        "observedExitCode": 0
+      }
+    }
+  ],
+  "scope": "Only exact reviewed AI source-signature metadata; no teaching/layout/media edits"
+}

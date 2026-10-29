@@ -1,0 +1,106 @@
+FILE site-assets/material-bridge.js
+ let testPreparation=null,activeTest=null;
+ const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
+
+ async function acknowledge(attempt,uid){
+  const saved=await adapter.record(clone(attempt));guard(uid);
+  if(!object(saved)||!object(saved.result)||typeof saved.result.correct!=='boolean'||['id','questionId','unitId','mode','answer'].some(k=>saved[k]!==attempt[k]))throw Error('回答の保存を確認できませんでした。');
+  return clone(saved);
+ }
+
+  testSessionAvailable:()=>typeof adapter.testSessionCreate==='function'&&typeof adapter.testSessionStatus==='function',
+  async beginTest(selection,uid){
+   guard(uid);
+   if(!adapter.testSessionCreate||!object(selection)||Object.keys(selection).sort().join(',')!=='mode,questionIds,unitId'||!['study','test'].includes(selection.mode)||typeof selection.unitId!=='string'||!Array.isArray(selection.questionIds)||selection.questionIds.length<1||selection.questionIds.length>500||selection.questionIds.some(id=>typeof id!=='string'||!id.trim()||id.length>160)||new Set(selection.questionIds).size!==selection.questionIds.length)throw Error('テストの問題を確認してください。');
+   const signature=JSON.stringify(selection);
+   // Keep the creation ID until the server acknowledges it; a lost response
+   // must not create a second roster when the same conditions are retried.
+   if(!testPreparation||testPreparation.uid!==uid||testPreparation.signature!==signature)testPreparation={uid,signature,request:{id:root.crypto.randomUUID(),...clone(selection)}};
+   const pending=testPreparation,saved=await adapter.testSessionCreate(clone(pending.request));guard(uid);
+   if(testPreparation!==pending)throw Error('問題の組が変更されました。');
+   if(!object(saved)||!uuid.test(saved.id||'')||saved.unitId!==selection.unitId||saved.mode!==selection.mode||!Number.isSafeInteger(saved.at)||saved.at<0||saved.total!==selection.questionIds.length||typeof saved.cached!=='boolean'||!Array.isArray(saved.slots)||saved.slots.length!==saved.total||new Set(saved.slots.map(s=>s?.attemptId)).size!==saved.total||saved.slots.some((s,i)=>!object(s)||s.questionId!==selection.questionIds[i]||!uuid.test(s.attemptId||'')))throw Error('テストの保存を確認できませんでした。');
+   activeTest={uid,session:clone(saved),first:new Map()};testPreparation=null;return clone(saved);
+  },
+  async testStatus(uid){
+   guard(uid);const current=activeTest;
+   if(!current||current.uid!==uid||!adapter.testSessionStatus)throw Error('テストを確認できません。');
+   const saved=await adapter.testSessionStatus(current.session.id);guard(uid);
+   if(activeTest!==current||!object(saved)||saved.id!==current.session.id||saved.unitId!==current.session.unitId||saved.mode!==current.session.mode||saved.at!==current.session.at||saved.total!==current.session.total||!Number.isSafeInteger(saved.answered)||saved.answered<0||saved.answered>saved.total||saved.complete!==(saved.answered===saved.total))throw Error('テストの状態を確認できませんでした。');
+   return clone(saved);
+  },
+
+  async record(attempt,uid){
+   guard(uid);if(!adapter.record)throw Error('回答の保存へ接続できません。');
+   const current=activeTest,slot=current?.uid===uid&&attempt.mode===current.session.mode&&current.session.unitId===attempt.unitId?current.session.slots.find(s=>s.questionId===attempt.questionId):null;
+   if(!slot)return acknowledge(attempt,uid);
+   let first=current.first.get(attempt.questionId);
+   if(!first){first={clientId:attempt.id,attempt:{...clone(attempt),id:slot.attemptId},acknowledged:false};current.first.set(attempt.questionId,first);}
+   // If the learner edited an answer after an unknown save result, first
+   // recover that exact immutable submission, then record the new answer.
+   if(!first.acknowledged&&first.clientId!==attempt.id){await acknowledge(first.attempt,uid);if(activeTest!==current)throw Error('問題の組が変更されました。');first.acknowledged=true;}
+   const initial=first.clientId===attempt.id;
+   if(initial&&['unitId','questionId','mode','answer','elapsedMs'].some(k=>first.attempt[k]!==attempt[k]))throw Error('前の回答の保存を確認してください。');
+   const saved=await acknowledge(initial?first.attempt:attempt,uid);
+   if(activeTest!==current)throw Error('問題の組が変更されました。');
+   if(initial)first.acknowledged=true;return saved;
+  },
+
+FILE site-assets/material-entry.js
+   testSessionCreate:request=>records('/material-test-session',request),
+   testSessionStatus:id=>records('/material-test-session?id='+encodeURIComponent(id)),
+
+FILE site-assets/material-ui.js
+  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.busy=false;state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();
+
+  const uid=bridge.identity(),answerEpoch=loadEpoch;
+
+    const saved=await bridge.record(pendingAttempt,uid);if(!alive||answerEpoch!==loadEpoch)return;r=saved.result;startedAt=Date.now();
+
+  }catch(_){if(answerEpoch!==loadEpoch)return;state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}
+
+  try{await bridge.save(next,uid);if(!alive||answerEpoch!==loadEpoch||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}
+  catch(_){if(alive&&answerEpoch===loadEpoch&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}
+  finally{if(answerEpoch===loadEpoch){state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}}
+
+ async function prepareTestRoster(unit,ids,uid,run){
+  if((state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.())await bridge.beginTest({unitId:unit.id,mode:state.tab==='テスト'?'test':'study',questionIds:ids},uid);
+  return alive&&run===loadEpoch&&uid===bridge.identity()&&state.unit===unit.id;
+ }
+
+  const uid=bridge.identity(),run=loadEpoch;if(uid!==state.loadedIdentity){void reload();return;}
+
+   if(unit.mode==='kentei'){const ids=pool.map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）
+
+   const ids=pool.slice(0,state.count).map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;
+   state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;
+  }catch(error){if(run===loadEpoch&&uid===bridge.identity())state.message=error.message||'問題を準備できませんでした。';}
+  finally{if(alive&&run===loadEpoch){state.busy=false;if(uid===bridge.identity())render();else void reload();}}
+
+FILE 教材整理/実装/material-ui.js
+ ['数学',/正負|正の数|負の数/,[['符号','同じ符号の2数の積・商は＋、ちがう符号なら−'],['ひき算','ひく数の符号を変えてたす：a−(−b)＝a＋b'],['累乗','(−3)²＝9、−3²＝−9（かっこの有無で変わる）'],['計算の順','かっこの内側から、その中では累乗 → ×÷ → ＋−。同じ順位は左から'],['絶対値','数直線上で0からの距離（符号を取った数）']]],
+
+  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.busy=false;state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();
+
+  const uid=bridge.identity(),answerEpoch=loadEpoch;
+
+    const saved=await bridge.record(pendingAttempt,uid);if(!alive||answerEpoch!==loadEpoch)return;r=saved.result;startedAt=Date.now();
+
+  }catch(_){if(answerEpoch!==loadEpoch)return;state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}
+
+  try{await bridge.save(next,uid);if(!alive||answerEpoch!==loadEpoch||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}
+  catch(_){if(alive&&answerEpoch===loadEpoch&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}
+  finally{if(answerEpoch===loadEpoch){state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}}
+
+ async function prepareTestRoster(unit,ids,uid,run){
+  if((state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.())await bridge.beginTest({unitId:unit.id,mode:state.tab==='テスト'?'test':'study',questionIds:ids},uid);
+  return alive&&run===loadEpoch&&uid===bridge.identity()&&state.unit===unit.id;
+ }
+
+  const uid=bridge.identity(),run=loadEpoch;if(uid!==state.loadedIdentity){void reload();return;}
+
+   if(unit.mode==='kentei'){const ids=pool.map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）
+
+   const ids=pool.slice(0,state.count).map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;
+   state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;
+  }catch(error){if(run===loadEpoch&&uid===bridge.identity())state.message=error.message||'問題を準備できませんでした。';}
+  finally{if(alive&&run===loadEpoch){state.busy=false;if(uid===bridge.identity())render();else void reload();}}

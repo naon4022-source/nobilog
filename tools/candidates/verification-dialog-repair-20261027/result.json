@@ -1,0 +1,39 @@
+{
+  "status": "passed targeted; full rerun still required",
+  "rounds": [
+    {
+      "round": 1,
+      "exitCode": 0,
+      "log": "tools/candidates/verification-dialog-repair-20261027/round1.log"
+    },
+    {
+      "round": 2,
+      "exitCode": 0,
+      "log": "tools/candidates/verification-dialog-repair-20261027/round2.log"
+    },
+    {
+      "round": 3,
+      "exitCode": 0,
+      "log": "tools/candidates/verification-dialog-repair-20261027/round3.log"
+    }
+  ],
+  "checksEach": 10,
+  "originalChecksPreserved": 8,
+  "extraChecks": 2,
+  "sourceInputs": [
+    {
+      "file": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+      "sha256": "1baced6e2ee0c18de98890b224f8f0b8bfb80c65fdf99839a43de27e0cba0b09"
+    },
+    {
+      "file": "tools/releases/google-link-20261019/candidate/pages/index.html",
+      "sha256": "e10325c8f22ef717a54c7cacc8a265ceaff377d44c200b014ff2047e74d7d97d"
+    },
+    {
+      "file": "tools/releases/google-link-20261019/candidate/cf-worker/src/index.js",
+      "sha256": "e4e3f7b4b206675360a1764016e3d19e448f66e7a112625548453c352d2cc355"
+    }
+  ],
+  "oldReleaseProofAndResultUnchanged": true,
+  "applicationChanges": 0
+}

@@ -11,7 +11,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 OUT = ROOT / 'site-assets' / 'eiken-vocab-bank.json'
 PDF = ROOT / '英検' / '英検４級単語.pdf'
-WANT = {'5': 600, '3': 1150}
+WANT = {'5': 600, '4': 250, '3': 1150}
 LABEL = {'5': '5級', '4': '4級', '3': '3級'}
 POS = {'名': '名詞', '動': '動詞', '形': '形容詞', '副': '副詞', '前': '前置詞', '代': '代名詞', '接': '接続詞', '間': '間投詞', '助': '助動詞', '数': '数'}
 # 例文に原形が入らないときに認める変化形（不規則な形だけ）
@@ -83,7 +83,7 @@ def parse(g):
 def build():
     errs, grades, seen, exs = [], [], {}, {}
     pdfw = pdf_words()
-    want = dict(WANT, **{'4': len(pdfw)})
+    want = dict(WANT)
     for g in ['5', '4', '3']:
         rows, e = parse(g); errs += e
         if len(rows) != want[g]: errs.append(f'{LABEL[g]} の語数が {len(rows)}（ほしいのは {want[g]}）')
@@ -97,10 +97,12 @@ def build():
             exs[ek] = r['w']
         grades.append({'id': g, 'label': LABEL[g], 'words': rows})
     g4 = [r['w'] for r in grades[1]['words']]
-    if sorted(g4) != sorted(pdfw): errs.append(f'4級がPDFとちがう：PDFだけ {sorted(set(pdfw) - set(g4))}／リストだけ {sorted(set(g4) - set(pdfw))}')
+    # 4級＝PDFの語（全部入っていること）＋のびログで選んだ語（2026-10-08 なおの指示で250語に）
+    if set(pdfw) - set(g4): errs.append(f'4級にPDFの語が足りない：{sorted(set(pdfw) - set(g4))}')
+    for r in grades[1]['words']: r['src'] = 'pdf' if r['w'] in pdfw else 'nobi'
     data = {'v': 1, 'title': '英検 単語カード',
-            'note': '5級・3級の単語リストは、のびログ独自の目安です（英検の公式リストではありません）。4級は 英検/英検４級単語.pdf に書かれた単語です（' + str(len(pdfw)) + '語）。意味・例文・訳はすべてのびログ独自です。',
-            'sources': {'5': 'のびログ独自の目安（Claude が選定）', '4': '英検/英検４級単語.pdf（単語だけ。意味・例文はのびログ独自）', '3': 'のびログ独自の目安（Claude が選定）'},
+            'note': '5級・3級の単語リストは、のびログ独自の目安です（英検の公式リストではありません）。4級は 英検/英検４級単語.pdf に書かれた単語（' + str(len(set(pdfw))) + '語）に、のびログで選んだ4級程度の語を足して' + str(len(g4)) + '語です。意味・例文・訳はすべてのびログ独自です。',
+            'sources': {'5': 'のびログ独自の目安（Claude が選定）', '4': '英検/英検４級単語.pdf の単語＋のびログで選んだ4級程度の語（意味・例文はのびログ独自）', '3': 'のびログ独自の目安（Claude が選定）'},
             'counts': {g['id']: len(g['words']) for g in grades}, 'grades': grades}
     return data, errs
 def dump(d):

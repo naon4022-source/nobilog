@@ -1,0 +1,143 @@
+{
+  "id": "M1-C4-S2-VP",
+  "sha256": "e6e573a9b2d22fb21e909daee77c24f8bb57fcc5a61bbdeb7099fe7c0b8688ae",
+  "previousSha256": "d6247e2d05829c6f7d4952d6e3a692b632f217028235eac24eb93176fe80ff8f",
+  "seconds": 38.25,
+  "frames": 1148,
+  "sampleFrames": 26,
+  "decode": "all video/audio decoded with -xerror; every decoded video frame enumerated by showinfo",
+  "format": "H264・1280x720・30fps・AAC",
+  "meanDB": -18.5,
+  "peakDB": -2.0,
+  "captions": "all steps equal unchanged script",
+  "audioPreservation": {
+    "aacSha256": "a040967559cba71d7d7fe3cace1f4ad7500ef24b7ce1712c92a93788ba053b67",
+    "sameAsPrevious": true,
+    "reencoded": false
+  },
+  "videoFrameProof": [
+    {
+      "frame": 0,
+      "maxChannelRMS": 2.9379181144514943
+    },
+    {
+      "frame": 45,
+      "maxChannelRMS": 2.966170663124052
+    },
+    {
+      "frame": 90,
+      "maxChannelRMS": 2.9661787110410818
+    },
+    {
+      "frame": 135,
+      "maxChannelRMS": 2.966170663124052
+    },
+    {
+      "frame": 180,
+      "maxChannelRMS": 3.0249747114989796
+    },
+    {
+      "frame": 225,
+      "maxChannelRMS": 3.0243682622023176
+    },
+    {
+      "frame": 270,
+      "maxChannelRMS": 2.8977204582510487
+    },
+    {
+      "frame": 315,
+      "maxChannelRMS": 2.8977204582510487
+    },
+    {
+      "frame": 360,
+      "maxChannelRMS": 2.8960735062273923
+    },
+    {
+      "frame": 405,
+      "maxChannelRMS": 2.9417939213504476
+    },
+    {
+      "frame": 450,
+      "maxChannelRMS": 2.9418383669791504
+    },
+    {
+      "frame": 495,
+      "maxChannelRMS": 2.9417939213504476
+    },
+    {
+      "frame": 540,
+      "maxChannelRMS": 2.8470724257681685
+    },
+    {
+      "frame": 585,
+      "maxChannelRMS": 2.8373303990552063
+    },
+    {
+      "frame": 630,
+      "maxChannelRMS": 2.841874572367585
+    },
+    {
+      "frame": 675,
+      "maxChannelRMS": 2.8556346969753403
+    },
+    {
+      "frame": 720,
+      "maxChannelRMS": 2.8560930998724268
+    },
+    {
+      "frame": 765,
+      "maxChannelRMS": 2.992607355588471
+    },
+    {
+      "frame": 810,
+      "maxChannelRMS": 2.9926057239631856
+    },
+    {
+      "frame": 855,
+      "maxChannelRMS": 2.9926040923370105
+    },
+    {
+      "frame": 900,
+      "maxChannelRMS": 2.957013533357318
+    },
+    {
+      "frame": 945,
+      "maxChannelRMS": 2.957558583997581
+    },
+    {
+      "frame": 990,
+      "maxChannelRMS": 2.957557116476742
+    },
+    {
+      "frame": 1035,
+      "maxChannelRMS": 2.95755748335702
+    },
+    {
+      "frame": 1080,
+      "maxChannelRMS": 2.957557116476742
+    },
+    {
+      "frame": 1125,
+      "maxChannelRMS": 2.957558583997581
+    }
+  ],
+  "contactSheets": [
+    "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/math-ch4-recheck-20261019/candidate/M1-C4-S2-VP/actual-shots/全場面_1.jpg"
+  ],
+  "visualReview": {
+    "date": "2026-10-19",
+    "reviewer": "Codex",
+    "result": "全場面を目視確認済み",
+    "scope": "26場面を1.5秒ごとに実動画から抽出し全場面目視。整数の6点と原点、点は飛び飛びの説明、まとめを確認。連続した青い直線なし。承認済みAACバイト同一。新たな耳の確認と実機iPhoneは別。",
+    "contactSheetSha256": "a22fd501c55fe685ed49996b97e0f260b283faae0ddb9237f8be66c67179a583"
+  },
+  "adoption": "階段の整数条件修正候補・本体未反映",
+  "audioDurationCheck": {
+    "decodedSeconds": 38.272,
+    "timelineSeconds": 38.25,
+    "differenceSeconds": 0.021999999999998465,
+    "toleranceSeconds": 0.2,
+    "passed": true,
+    "decode": "audio-only -xerror"
+  }
+}

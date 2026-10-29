@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<title id="title">負の数の個数と積の符号の関係を表で示す</title><desc id="desc">−1を1個かけると−1、2個で1、3個で−1、4個で1。負の数が偶数個なら正、奇数個なら負。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 Z" fill="#222"/></marker></defs><rect width="1000" height="700" fill="white"/><g font-family="system-ui,sans-serif" fill="#222">
+<text x="40" y="55" font-size="28" text-anchor="start" >負の数の個数</text>
+<text x="340" y="55" font-size="28" text-anchor="start" >式</text>
+<text x="870" y="55" font-size="28" text-anchor="start" >積</text>
+<rect x="25" y="100" width="950" height="82" rx="12" fill="white" stroke="#222" stroke-width="2" />
+<rect x="830" y="110" width="110" height="62" rx="6" fill="none" stroke="#222" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="65" y="148" font-size="32" text-anchor="start" data-count="1">1</text>
+<text x="160" y="148" font-size="32" text-anchor="start" data-expression-count="1">(−1)</text>
+<text x="850" y="148" font-size="36" text-anchor="start" data-product="-1">＝−1</text>
+<line x1="930" y1="190" x2="930" y2="209" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-flip="true"/>
+<rect x="25" y="215" width="950" height="82" rx="12" fill="white" stroke="#222" stroke-width="2" />
+<rect x="830" y="225" width="110" height="62" rx="6" fill="none" stroke="#222" stroke-width="3" />
+<text x="65" y="263" font-size="32" text-anchor="start" data-count="2">2</text>
+<text x="160" y="263" font-size="32" text-anchor="start" data-expression-count="2">(−1)×(−1)</text>
+<text x="850" y="263" font-size="36" text-anchor="start" data-product="1">＝+1</text>
+<line x1="930" y1="305" x2="930" y2="324" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-flip="true"/>
+<rect x="25" y="330" width="950" height="82" rx="12" fill="white" stroke="#222" stroke-width="2" />
+<rect x="830" y="340" width="110" height="62" rx="6" fill="none" stroke="#222" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="65" y="378" font-size="32" text-anchor="start" data-count="3">3</text>
+<text x="160" y="378" font-size="32" text-anchor="start" data-expression-count="3">(−1)×(−1)×(−1)</text>
+<text x="850" y="378" font-size="36" text-anchor="start" data-product="-1">＝−1</text>
+<line x1="930" y1="420" x2="930" y2="439" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-flip="true"/>
+<rect x="25" y="445" width="950" height="82" rx="12" fill="white" stroke="#222" stroke-width="2" />
+<rect x="830" y="455" width="110" height="62" rx="6" fill="none" stroke="#222" stroke-width="3" />
+<text x="65" y="493" font-size="32" text-anchor="start" data-count="4">4</text>
+<text x="160" y="493" font-size="32" text-anchor="start" data-expression-count="4">(−1)×(−1)×(−1)×(−1)</text>
+<text x="850" y="493" font-size="36" text-anchor="start" data-product="1">＝+1</text>
+<text x="500" y="640" font-size="34" text-anchor="middle" >偶数個→+　　奇数個→−</text>
+</g></svg>

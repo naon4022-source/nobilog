@@ -1,0 +1,10 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:11
+ if(receipt.status!=='reviewed exact image consultation successor; integration progress separate'||!same(receipt.existing,spec.existing)||!same(receipt.newFiles,spec.newFiles)||!same(spec.existing.map(r=>r.file).sort(),expected)||spec.newFiles.length!==27)throw Error('vision integration whitelist');
+                                                                                                                                                                                                                                                                      ^
+
+Error: vision integration whitelist
+    at load (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:11:263)
+    at checkMainSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:15:28)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:12:77
+
+Node.js v24.18.0

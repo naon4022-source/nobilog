@@ -1,0 +1,45 @@
+{
+  "at": "20261021T161447906836Z",
+  "status": "three corrected selection checks passed; whole suite still pending",
+  "checks": [
+    {
+      "flags": [
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "log": "tools/candidates/server-hardening-20261022/selection-checks/20261021T161447906836Z/selection-smoke.log",
+      "logSha256": "a39cd03381defc65455f22961f4325029157e7f0f6d310158358675a1b725dff"
+    },
+    {
+      "flags": [
+        "--smoke",
+        "--english"
+      ],
+      "exitCode": 0,
+      "log": "tools/candidates/server-hardening-20261022/selection-checks/20261021T161447906836Z/selection-english.log",
+      "logSha256": "d5a3fc04c19d301f0df500ef6de99c4f220093fd7a0ef02d6c287b92228389eb"
+    },
+    {
+      "flags": [
+        "--smoke",
+        "--drill"
+      ],
+      "exitCode": 0,
+      "log": "tools/candidates/server-hardening-20261022/selection-checks/20261021T161447906836Z/selection-drill.log",
+      "logSha256": "5e765070b279c0a305cac214c262d38767a19ddb297dea2fc39fefb75391bca3"
+    }
+  ],
+  "inputsSha256": {
+    "tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs": "3db46fa59f32ef186086c16b71b84c7827330426aa6669a0279692e5d05adc2e",
+    "site-assets/material-bank.json": "651c2662eda0d5550f0769b2a90e5357bb30727ac130e79e6c38863fa75bb1a2",
+    "site-assets/material-engine.js": "50fdde5da17cfbb48b155c74aa6e7b6c8e072863ff246d04ce396108205c6cab",
+    "site-assets/material-ui.js": "1fa6e025a96bd16c129d2c4cebb072f4cb38db7e7968dd575405cbfab4cc8baa",
+    "site-assets/material-ui.css": "c443c8e744476d6a325cd7c72594889b2dd8f1a309c5f095f30f2c32e7051c3e",
+    "tools/candidates/japanese-tokkun-integration-20261016/integration-plan.json": "e4f29dd89740020f09a96d66f78c7bc6f8a89d9be9ff52917572131d1f7c6f9b",
+    "tools/candidates/english-tokkun-integration-20261016/integration-plan.json": "e5a5b8e1d6754b31c8b1a3712d071f307fed6d6c46728387205510ca96c268ec"
+  },
+  "inputsUnchanged": true,
+  "applicationEdited": false,
+  "wholeAppSucceeded": false,
+  "deployed": false
+}

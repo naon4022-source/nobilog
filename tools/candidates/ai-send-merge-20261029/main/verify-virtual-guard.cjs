@@ -1,0 +1,15 @@
+// Future77 source guard only; immutable main and live whole-suite inputs are untouched.
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../../../..'),base='tools/candidates/ai-send-merge-20261029/main/',canonical='tools/candidates/nonadmin-ai-reader-successor-20261029/main/';
+const mapping=JSON.parse(fs.readFileSync(path.join(root,base+'virtual-map.json'))),spec=JSON.parse(fs.readFileSync(path.join(root,base+'prepared.json'))),overlay=new Map(Object.entries(mapping).map(([target,source])=>[target,fs.readFileSync(path.join(root,source))]));
+function guard(extra=new Map()){
+ const view={...fs,existsSync(file){return extra.has(path.relative(root,path.resolve(file)))||overlay.has(path.relative(root,path.resolve(file)))||fs.existsSync(file);},readFileSync(file,options){const f=path.relative(root,path.resolve(file)),data=extra.get(f)||overlay.get(f);if(!data)return fs.readFileSync(file,options);const enc=typeof options==='string'?options:options?.encoding;return enc?data.toString(enc):Buffer.from(data);}};
+ const module={exports:{}};vm.runInNewContext(fs.readFileSync(path.join(root,base+'checked-successor.cjs'),'utf8'),{module,exports:module.exports,require:name=>name==='node:fs'?view:require(name),__dirname:path.join(root,canonical),Buffer},{filename:canonical+'checked-successor.cjs',timeout:1000});return module.exports;
+}
+let checks=0;assert.equal(guard().checkMainSource(root,{assets:false}).size,32);checks++;
+const deps=guard().mainDependencyFiles(root);
+for(const r of spec.files)for(const f of [r.file,r.beforeFile,r.candidateFile]){assert(deps.includes(f),f);checks++;}
+const batch=JSON.parse(fs.readFileSync(path.join(root,base+'batch-review.json')));
+for(const f of [...batch.applicationAndHistoryFiles,...batch.fixtureEdits.map(r=>r.file),spec.historicalMainSourceVerifier]){assert.throws(()=>guard(new Map([[f,Buffer.from('synthetic unrelated mutation')]])).checkMainSource(root,{assets:false}),error=>error.name==='SyntaxError'||/drift|scope/.test(error.message));checks++;}
+for(const f of [canonical+'prepared.json',canonical+'integration.json',canonical+'predecessor-view.mjs',...batch.proofs.map(r=>r.file)]){assert.throws(()=>guard(new Map([[f,Buffer.from('synthetic unrelated mutation')]])).checkMainSource(root,{assets:false}),error=>error.name==='SyntaxError'||/drift|scope/.test(error.message));checks++;}
+fs.writeFileSync(path.join(root,base+'dependencies.json'),JSON.stringify(deps,null,2)+'\n');fs.writeFileSync(path.join(root,base+'virtual-guard-result.json'),JSON.stringify({status:'passed virtual77 source guard; not main integration',checks,targets:77,normalizations:32,dependencies:deps.length,mainChanged:false,wholeSuiteStarted:false,scope:'All77 exact target/before/candidate paths, original positive full7 and historical failed9 snapshots, archived43/32/57/11/7 proofs and source/code/receipt tamper refusal. Current real sources remain71.'},null,2)+'\n');console.log(checks+' virtual guard checks passed;77 targets,32 normalizations, main unchanged.');

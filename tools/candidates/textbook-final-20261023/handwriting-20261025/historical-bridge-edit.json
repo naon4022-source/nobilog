@@ -1,0 +1,11 @@
+{
+  "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+  "beforeFile": "tools/candidates/textbook-final-20261023/handwriting-20261025/before/tools/candidates/textbook-final-20261023/reviewed_changes.py",
+  "beforeSha256": "322ba05dbd75e5452be03deacba838e78e6baacb8512173dd74a500fb1eed1b9",
+  "afterSha256": "70bf7d4424e6dcaf7c31176ba060e46c1fe454caf5e726c8de57b71f852c326b",
+  "exactBefore": "def before_math_fraction_file(relative):\n    current=R/relative\n",
+  "exactAfter": "def before_handwriting_file(relative):\n    \"\"\"Validate the exact reviewed annotation successor before older evidence.\"\"\"\n    current=R/relative\n    receipt_path=H/'handwriting-20261025/reviewed-annotation-successor.json'\n    if not receipt_path.exists():\n        return current\n    receipt=load(receipt_path)\n    row=next((r for r in receipt['files'] if r['file']==relative),None)\n    if row is None:\n        return current\n    assert receipt['version']==1\n    for proof in receipt['individualProofs']:\n        path=R/proof['file']\n        assert sha(path)==proof['sha256']\n        report=load(path)\n        assert report['status']=='passed' and report['checks']==proof['checks']\n    previous=R/row['beforeFile']\n    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']\n    text=previous.read_text()\n    for edit in row['edits']:\n        assert text.count(edit['before'])==1\n        text=text.replace(edit['before'],edit['after'],1)\n    assert text.encode()==current.read_bytes(),relative+': unreviewed annotation change outside handwriting integration'\n    return previous\n\n\ndef before_math_fraction_file(relative):\n    current=before_handwriting_file(relative)\n",
+  "receipt": "tools/candidates/textbook-final-20261023/handwriting-20261025/reviewed-annotation-successor.json",
+  "receiptSha256": "5fdc764448e4a42d5ec5e986634ed139b9ec01298c2f82f11bada6fb0b9c7280",
+  "historicalExpectedHashOrAssertionsChanged": false
+}

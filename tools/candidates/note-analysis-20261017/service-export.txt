@@ -1,0 +1,7 @@
+
+export function serveNoteAnalysis(env,session,selection,options){
+ return serveStudyAI(env,session,'note-analysis','notes',async()=>{
+  const snapshot=await capturedNote(env.AUTH_DB,session.uid,options.requestId,selection);
+  return noteContent(snapshot);
+ },options);
+}

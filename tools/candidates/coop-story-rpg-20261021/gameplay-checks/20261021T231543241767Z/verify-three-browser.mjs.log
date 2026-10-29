@@ -1,0 +1,17 @@
+Three-browser: three distinct contexts completed consent/approval/ready and server countdown via real route + SQLite + native DO streams.
+Three-browser: hard reload recovered the same server-authorized room with unchanged health even after its fixture-only local room hint was removed.
+Three-browser: hiding two members paused solo play; reconnecting one resumed two-player play; third rejoined without clearing progress.
+Three-browser: all three cleared, received exactly one 30-coin award and two named companions; one real post-commit network loss replayed the same tap sequence.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: TypeError: Cannot read properties of null (reading 'stageId')
+    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:30)
+    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)
+    at next (eval at evaluate (:311:30), <anonymous>:29:33)
+    at /Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-three-browser.mjs:72:147 {
+  log: []
+}
+
+Node.js v24.18.0

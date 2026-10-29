@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-vision-media-manifest.mjs

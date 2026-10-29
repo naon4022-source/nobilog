@@ -1,0 +1,125 @@
+--- tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/verification-previous/tools/candidates/math-ch5-recheck-20261019/verify-current-evidence.py
+
++++ tools/candidates/math-ch5-recheck-20261019/verify-current-evidence.py
+
+@@ -4 +4 @@
+
+-import hashlib,json,math,sys
++import hashlib,json,math,sys,runpy
+@@ -86 +86,11 @@
+
+-assert sorted(reviewed,key=lambda x:x['id'])==sorted(images,key=lambda x:x['id'])
++svg_predecessor=runpy.run_path(str(H.parent/'textbook-final-20261023/reviewed_changes.py'))['svg_predecessor']
++normalized=[]
++for current in images:
++ previous=dict(current)
++ historical=next(x for x in reviewed if x['id']==current['id'])
++ for path_field,hash_field in [('source','sourceSha256'),('copy','copySha256')]:
++  if current[hash_field]!=historical[hash_field]:
++   path=R/current[path_field] if path_field=='source' else R/'site-assets'/current[path_field][1:]
++   previous[hash_field]=sha(svg_predecessor(path,historical[hash_field]))
++ normalized.append(previous)
++assert sorted(reviewed,key=lambda x:x['id'])==sorted(normalized,key=lambda x:x['id'])
+@@ -93 +103 @@
+
+-  assert reviewed['sha256']==row['sourceSha256']==row['copySha256']
++  assert sha(svg_predecessor(R/row['source'],reviewed['sha256']))==sha(svg_predecessor(R/'site-assets'/row['copy'][1:],reviewed['sha256']))==reviewed['sha256']
+--- tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/verification-previous/tools/candidates/textbook-final-20261023/verify-chapter4-fraction-generators.py
+
++++ tools/candidates/textbook-final-20261023/verify-chapter4-fraction-generators.py
+
+@@ -19,0 +20,2 @@
+
++if integrated:
++    rows = load(S / '縦分数_4章_20261024/manifest.json')['items']
+@@ -83 +85 @@
+
+-    final = H / 'chapter4-fraction-candidate' / row['file']
++    final = (S / '縦分数_4章_20261024' if integrated else H / 'chapter4-fraction-candidate') / row['file']
+--- tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/verification-previous/tools/candidates/textbook-final-20261023/reviewed_changes.py
+
++++ tools/candidates/textbook-final-20261023/reviewed_changes.py
+
+@@ -50,0 +51,29 @@
+
++def reviewed_svg_digest(ident, reviewed_sha, final):
++    """Accept only the exact visually reviewed font-metrics successor."""
++    if sha(final)==reviewed_sha:
++        return final
++    directory=H/'font-metrics-repair-20261024'
++    receipt=load(directory/'integration.json')
++    assert sha(directory/'manifest.json')==receipt['reviewManifestSha256']
++    assert sha(directory/'visual-review.json')==receipt['visualReviewSha256']
++    row=next(x for x in receipt['items'] if x['id']==ident)
++    assert row['kind']=='integrated' and row['beforeSha256']==reviewed_sha
++    registry=load(S/row['registry']/'manifest.json')['items'][ident]
++    current=S/row['registry']/registry['file']
++    assert final.resolve() in {current.resolve(),(R/row['target']).resolve(),(R/row['copy']).resolve()}
++    assert sha(current)==sha(R/row['target'])==sha(R/row['copy'])==sha(R/row['candidate'])==row['afterSha256']
++    assert registry['afterSha256']==row['afterSha256']
++    visual=load(directory/'visual-review.json')
++    review=next(x for x in visual['items'] if x['id']==ident)
++    assert review['beforeSha256']==reviewed_sha and review['svgSha256']==row['afterSha256']
++    assert sha(R/review['screenshot'])==review['screenshotSha256']
++    assert sha(R/visual['automaticAudit'])==visual['automaticAuditSha256']
++    audit=load(R/visual['automaticAudit'])
++    audited=next(x for x in audit['results'] if x['id']==ident)
++    assert audited['sha256']==row['afterSha256'] and not any(g['issues'] for g in audited['groups'])
++    previous=R/row['beforeFile']
++    assert sha(previous)==sha(R/row['copyBeforeFile'])==reviewed_sha
++    assert semantic(E.parse(previous).getroot())==semantic(E.parse(current).getroot())
++    return previous
++
++
+@@ -54,0 +84,5 @@
+
++    repair=H/'font-metrics-repair-20261024/integration.json'
++    if repair.exists():
++        for row in load(repair)['items']:
++            if row['kind']=='integrated' and row['beforeSha256']==expected_sha and path in {(R/row['target']).resolve(),(R/row['copy']).resolve()}:
++                return reviewed_svg_digest(row['id'],expected_sha,path)
+@@ -58,0 +93 @@
+
++        ('縦分数_5章_20261024','font-metrics-repair-20261024/previous','chapter5-fraction-visual-review.json'),
+@@ -70 +105 @@
+
+-                assert item['candidateSha256']==row['afterSha256']
++                assert sha(reviewed_svg_digest(ident,item['candidateSha256'],final))==item['candidateSha256']
+@@ -74 +109 @@
+
+-                assert item['svgSha256']==row['afterSha256']
++                assert sha(reviewed_svg_digest(ident,item['svgSha256'],final))==item['svgSha256']
+--- tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/verification-previous/tools/candidates/textbook-final-20261023/audit-fraction-glyphs.mjs
+
++++ tools/candidates/textbook-final-20261023/audit-fraction-glyphs.mjs
+
+@@ -6,0 +7 @@
+
++const current=process.argv.includes('--current');
+@@ -13 +14,5 @@
+
+-for(const row of next)items.push({id:row.id,file:'tools/candidates/textbook-final-20261023/chapter5-fraction-candidate/'+row.file,kind:'candidate'});
++if(!current)for(const row of next)items.push({id:row.id,file:'tools/candidates/textbook-final-20261023/chapter5-fraction-candidate/'+row.file,kind:'candidate'});
++if(current){
++ const rows=JSON.parse(await readFile(new URL('縦分数_5章_20261024/manifest.json',S),'utf8')).items;
++ for(const [id,row]of Object.entries(rows))items.push({id,file:row.copy,kind:'integrated'});
++}
+@@ -14,0 +20 @@
+
++assert(!(current&&repaired),'choose current or candidate audit');
+@@ -41 +47 @@
+
+-await writeFile(new URL(repaired?'fraction-glyph-audit-repaired-candidates-20261024.json':'fraction-glyph-audit-20261024.json',here),JSON.stringify({status:problems.length?'repair required':'passed',scope:'Actual rendered font metrics, fragment spacing and bar coverage; read-only, all current stacked groups plus chapter5 candidates',images:results.length,groups:results.reduce((n,x)=>n+x.groups.length,0),imagesWithIssues:problems.length,results},null,2)+'\n');
++await writeFile(new URL(current?'font-metrics-repair-20261024/current-glyph-audit.json':repaired?'fraction-glyph-audit-repaired-candidates-20261024.json':'fraction-glyph-audit-20261024.json',here),JSON.stringify({status:problems.length?'repair required':'passed',scope:current?'Current27 registered SVGs, all42 stacked groups; actual glyph widths, fragment spacing and bar coverage':'Actual rendered font metrics, fragment spacing and bar coverage; read-only, all current stacked groups plus chapter5 candidates',images:results.length,groups:results.reduce((n,x)=>n+x.groups.length,0),imagesWithIssues:problems.length,results},null,2)+'\n');
+@@ -43,0 +50,2 @@
+
++
++if(process.argv.includes('--verify'))assert.equal(problems.length,0,'internal SVG glyph/bar/fragment fit');
+--- tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/verification-previous/.claude/verify/run.sh
+
++++ .claude/verify/run.sh
+
+@@ -133,0 +134,2 @@
+
++python3 "$PROJECT_DIR/tools/candidates/textbook-final-20261023/verify-chapter5-fraction-generators.py" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/audit-fraction-glyphs.mjs" --current --verify || fail=1

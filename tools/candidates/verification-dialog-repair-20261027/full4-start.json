@@ -1,0 +1,284 @@
+{
+  "status": "running",
+  "command": "bash .claude/verify/run.sh",
+  "log": "tools/candidates/verification-dialog-repair-20261027/full4.log",
+  "inputs": [
+    {
+      "file": ".claude/verify/run.sh",
+      "sha256": "c8eca6713c6f0b205d7cef24a550caa4ee2d1d6f4d313597e3d995a7909347a1"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "c2143fdce5b84ac1981289620c8c551657e0abfe6e3a747c33b71fa2c0d6269d"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "sha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "sha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "0f50e50148d34751214bb9a18a903fded0c9435b466abb80bcbf35b157d1ce3e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "sha256": "06a5139905aeebdfce98b8d8b0edcd93730464190a56f9c4017b320e2f1e406c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-result.json",
+      "sha256": "3118e0d814c49dec8aef5e780200708856535aa4581d60a122bf6b9bfb1a348e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs",
+      "sha256": "f212e47e3dd56ff90a5490d0ee91a85fbd5786bc59ff17b5745a631ab6a853e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/main-integration.json",
+      "sha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-integration-result.json",
+      "sha256": "99d7981a5cbf60d8b8d6be0fa0ea7b43f15a114b9a53edc440fbd6acb81c96d8"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-main-library-result.json",
+      "sha256": "bd83815804d13c60cce2dbdc0cc9204430e1bf74074699b2e57809e7b0d3a031"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-result.json",
+      "sha256": "247788e3b9b6d08c81da3e8df928f9e185a0ed1d167480c72b9f363386af36ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-1440.png",
+      "sha256": "d189ba46cc826e5e64101ccf313b6d136558d31cb54d2be4ac962bbbf84fb5e7"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-390.png",
+      "sha256": "bffe12083aeef485d02afeec79889bee9d1aa649cbd629f9aa1d99ad0261f4f1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-820.png",
+      "sha256": "88147597167ae3ebb0dfc39dd52c376615b4e87f3df3a1cfd8c0b7eb93d80e7d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "sha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "sha256": "caaf83dd01bc6a179b3b800e1c0df68d1dce67bc28cb5de3f928125a7e2a4dd6"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "sha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "sha256": "108c5074b16baef8120278b188d11ba69042d1f73150813402f7f51ecd7f2118"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "sha256": "3f48daa78744dcfd3cfbe87bf192f88f46baf8a68a50d3b3c7f6c04767d53b6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "sha256": "f849445121367c97e0fe40e28b83daea1dca5d181ceae94cd3ae700cb4a1689f"
+    },
+    {
+      "file": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+      "sha256": "1baced6e2ee0c18de98890b224f8f0b8bfb80c65fdf99839a43de27e0cba0b09"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/result.json",
+      "sha256": "e557c9e261a991b8b1bf64b9b724e360113cf7dddd07440cb6d0b7fa21ba9d1b"
+    },
+    {
+      "file": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+      "sha256": "38ea470d7d29a544a5a89cf0d13d037c92550d8abc1c21d5c5b39000392b2710"
+    },
+    {
+      "file": "tools/candidates/verification-dialog-repair-20261027/auth-repair-result.json",
+      "sha256": "87ec0a8f5e1a190375f423ab27bfa605085437d3f086f83892921c17537ce5f0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/audit-media-anchors.mjs",
+      "sha256": "109cb6e61a10e9ff2c57c150d7f412f4fc976b7e5fcab434c0568bf43136d548"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/build-media-contexts.mjs",
+      "sha256": "2cd5e6a2c76f5a477ac47b269212e2132ed4b47c8244cc45215c66abf4203d96"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-english1.json",
+      "sha256": "ff8e63917578e6e274461ad4b8e0e11044acec0f7a8472532be42a4a36008ac5"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-geography.json",
+      "sha256": "07dff1925d45fb9473cfec5ce02851842f6161703e405f0c3f968217bd7ffba1"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-history.json",
+      "sha256": "cd804a8a10b46e8845087e96905b93b26fe591338ff27ad2afa32aa9cd93a066"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-math1.json",
+      "sha256": "d4ee3d77cdef10a88c36c058c91d712ee004b5b1c9bed250b875e06e9976f743"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-science1.json",
+      "sha256": "1ba2065a76da258d48d42fd546e1da38fc149da021f9680fddfa182ed8ddb1ef"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-api.js",
+      "sha256": "e64b060f006147ee3e392ef821b850f0f435dd129494e6fb79460f42a4eec2e7"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-capture.js",
+      "sha256": "ea3c2d06e32fd22d93246550b54ce37145afd2bbdcad09caf37206e615c0ab57"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context-reader.mjs",
+      "sha256": "a0b49e02df0aa956233d9f23a3f5866f0cc01b635a5d0e286439603ebe38813a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context-route.mjs",
+      "sha256": "505ba319f61569abc9c6b70ddc52bfa7529ded3692be5d8af9d1fded2999918c"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-context.mjs",
+      "sha256": "8238e8d0af0cc16e7acef94d2c9caa7e8fe4eefeac3611dceffe028551f8becd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs",
+      "sha256": "a0b5c99711f1f6354554bf2e5d6c618d33d9d09a445f1800f0efce149d341142"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "b0a1b8c710bc7d685d34a560c93575393222cfbc9817014f68ec7dba8ffdbe02"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-browser.mjs",
+      "sha256": "bfd403a0e5143a2a92fe9ddf41197f615f2cc952ea12522bbdeec86a3cf79b0e"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-dom.mjs",
+      "sha256": "63465d89585a8bcfa0fe8d7b9f62681180768dfa9b7c5b93d36c5fd8e2dcde75"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-model.js",
+      "sha256": "55c398dea3f896a4c0a6a6cb9c3b17a15c33539dd43dd077a8804c4b165638bd"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-route.mjs",
+      "sha256": "5385f98371b64c8c13b7298951a7f03062f6a5b9720f42c4faa71a903561203f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs",
+      "sha256": "6cae2f67af9b33622eac1c341df2c5021ce2b84825adeb6cd471b7b695152034"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-ai.js",
+      "sha256": "d6e6ecc5fd3278afd3bf92d41f94159de9d14fa9ce536b3f584f3b6cfbd4aedf"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-client-browser.mjs",
+      "sha256": "8fda4fe1a15eb5890d215ca9415d5aec3a569299fd8fcf86686f1c3524cfabac"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-history-route.mjs",
+      "sha256": "40cc9e2159947d4196dc7d65dd00df6ff591133270abccc5b7aced1ab768a3b3"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-images-route.mjs",
+      "sha256": "02a0a0fa6e04f8ffa1736855b106606dd29a763d64f29e74b6dc48cc3b3d574f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-input.mjs",
+      "sha256": "e89cbde77216dcbba675eb1b7de3e9774bf3456e2d616ee80f6081580db06f96"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-contexts.mjs",
+      "sha256": "f9a6fc72986362cb4390085cf87f02dd1abf4132944d98c1e84864e119202807"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-dom.mjs",
+      "sha256": "2882077c7b6fc97ccfd5f98e986721f0c30ae5b663fe31963846102e88a8c250"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "sha256": "d731e783d61a555e8283413b403b01963faa9dec91d0435b80affeba9e238ef0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-panel-book.mjs",
+      "sha256": "b6969a5a117371fdf54b7f17ebcdfb15208270547eeca02f0bad00feac7a2e29"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-service.mjs",
+      "sha256": "0858476a8482456b621c6c6ffaaa2111b96ece407b50d03ca131792741bb3c39"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-transport.mjs",
+      "sha256": "1e0f0787d16aa7bbaa03420a44a337598f9b64957a6a421dbab4f887ced7561b"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-vision.css",
+      "sha256": "2dc683214295a6fd288048c672fe9d30071be8bac5b8568c227ae250872b6b23"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-media-picker-style.mjs",
+      "sha256": "461e7ee64a3fb192ae457fdf1c8db5e838fe556c977ba5c02831208579dda413"
+    },
+    {
+      "file": "site-assets/textbook-ai.css",
+      "sha256": "8ac588618a4baf1cfacda8c06ea930a6fe81d2fbcfc074259f74d4ab0bb11661"
+    }
+  ],
+  "scope": "Standalone main verification after isolated media candidate stage. Candidate4624+style19 separately verified; this main suite does not register candidate image-AI."
+}

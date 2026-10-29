@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "sourceModel": "unchanged production annotation model in isolated VM",
+  "syntheticSavedNotes": 1433,
+  "retainedAnchors": 1429,
+  "changedTextNotesPreserved": 4,
+  "syntheticDraftsPreserved": 4,
+  "apiCalls": [
+    "get"
+  ],
+  "inputs": [
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-annotation-model.js",
+      "sha256": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/site-assets/textbook-book-kokugo1.json",
+      "sha256": "c84dca489c1db7fd1fe264091ed6bcfcc94bfc6a9958cdf78b3fa891ad636074"
+    },
+    {
+      "url": "file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/book-alignment-v3/textbook-book-kokugo1.json",
+      "sha256": "4a87f48872989749128b2ccf25e44b41b63fe7c14a81cbf269d41994ebbe0d6c"
+    }
+  ],
+  "observations": [
+    "All old notes remain listed by model after preparing the revised book.",
+    "The4 changed text blocks do not receive guessed note reattachment; old quote and note remain intact.",
+    "No automatic post/migration/deletion; no IndexedDB/auth/real learner data accessed."
+  ],
+  "remaining": [
+    "Actual annotation UI list/location behavior after candidate book update",
+    "Main integration and final standalone whole verification"
+  ]
+}

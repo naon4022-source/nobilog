@@ -1,0 +1,34 @@
+{
+  "status": "exact two runner reads adapted; all assertions preserved",
+  "previousSpec": "tools/candidates/textbook-vision-20261027/main/before-runner-compat/prepared.json",
+  "previousSpecSha256": "4c4117e03464b42ef56cb9e5152d1b2840e4287a0ab805b4ae013c5a9791952d",
+  "currentSpecSha256": "9ce0a5833f22e931a011faae5c927cff209698ae29b8640a585401214ecf2b4b",
+  "edits": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "beforeSha256": "46bb318a1fea556651f67c76f08eaabcefc2a30dc39a1105f82c91cc99b2da34",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "afterSha256": "5ada37f633b7960bb0af21fc8d27087bd071b6f5d4bff98360b84fcdb4acfc23",
+      "edits": [
+        {
+          "before": "await readFile('.claude/verify/run.sh','utf8')",
+          "after": "createRequire(import.meta.url)('../../textbook-vision-20261027/main/checked-source.cjs').checkMainSource(undefined,{assets:false}).get('.claude/verify/run.sh').toString('utf8')"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "beforeSha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "afterSha256": "4c6d2c48df54e6a6bcdbe1b94b98bfb5a4b505777d71434e2135a47995e55dc9",
+      "edits": [
+        {
+          "before": "await readFile('.claude/verify/run.sh','utf8')",
+          "after": "createRequire(import.meta.url)('../../textbook-vision-20261027/main/checked-source.cjs').checkMainSource(undefined,{assets:false}).get('.claude/verify/run.sh').toString('utf8')"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": 65,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "7aeb7b01d9ffc462112c66568a3a131177202b22c16f63053892b37bc0efe341"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-transport.mjs",
+      "sha256": "549d585553a39d95406e49f43a875bcc2ac2e63a10ab61b3539f89028783c2b8"
+    },
+    {
+      "file": "cf-worker/src/openai-transport.mjs",
+      "sha256": "f693167696169dac7173eda0dd97d991afd462f8e272484c5edc4f37ace04e9f"
+    },
+    {
+      "file": "cf-worker/src/openai-policy.mjs",
+      "sha256": "52d1197b68e88571ea5ecdeaa3863e96d1551f406db3b3586b25ca75c565b643"
+    },
+    {
+      "file": "cf-worker/src/openai-vision.mjs",
+      "sha256": "85d3ed2eebbdfc4487866cfe3e38916d9b4f7b6a4b05c8e8cea562a5392d62fc"
+    }
+  ],
+  "scope": "Internal candidate only. LUNA/SOL exact models, mandatory combined preflight/generation hold, all HTTP guards, input/output moderation, identical count/generation input, token/tier/schema constraints, abort/revocation, no network retry or unsafe refund promise. Fake fetch only. Durable operation/credits/consent/entitlement/route/UI integration still required."
+}

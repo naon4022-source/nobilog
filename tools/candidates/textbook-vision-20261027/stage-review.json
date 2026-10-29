@@ -1,0 +1,25 @@
+{
+  "status": "candidate code and all patch lines reviewed; main full still pending",
+  "reviewedNewCode": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "lines": 100,
+      "sha256": "47c3705496a6af6584c09ba7f807b1545265d1c7e788d71879bb213e2890ba24"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "lines": 79,
+      "sha256": "91ecd1fff4c1fd53615c68f192ef9a70cfbe1033f2345d9ef9f705391b9df7f9"
+    }
+  ],
+  "trackedDiffAddedLines": 0,
+  "note": "Candidate files are untracked, so scoped git diff -U0 | grep additions has no lines; source patches reviewed directly. git diff --check passed for candidate scope. No real values or credentials read.",
+  "verifiedProofs": [
+    347,
+    65,
+    354
+  ],
+  "appendOnlyRecords": 8,
+  "frozenMainInputs": 27,
+  "frozenMainDrift": []
+}

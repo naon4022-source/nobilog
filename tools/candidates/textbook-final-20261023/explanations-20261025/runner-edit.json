@@ -1,0 +1,9 @@
+{
+  "file": ".claude/verify/run.sh",
+  "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/.claude/verify/run.sh",
+  "beforeSha256": "40252d560943f74ec76575da140fcfc01867b4eb8460759796df889a621b57c8",
+  "afterSha256": "a5d5cdcbfd8a72ed3d1e0f92105d79ddd5699408a8884091ebe2a0ba9e150f71",
+  "before": "node \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs\" || fail=1\n",
+  "after": "node \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/verify-preservation.cjs\" || fail=1\npython3 \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/verify-geography-builder.py\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/verify-bridge.cjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/verify-book.mjs\" || fail=1\npython3 \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/verify-current.py\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/verify-playback.mjs\" || fail=1\n",
+  "scope": "Register only six approved explanation/geography correction checks; unchanged media AV proof reused by SHA."
+}

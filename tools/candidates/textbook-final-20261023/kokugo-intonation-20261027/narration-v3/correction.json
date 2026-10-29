@@ -1,0 +1,65 @@
+{
+  "status": "replacement native Kyoko175 audio validated; scoped speech hold cleared; v3 preparation/render pending",
+  "old": "気をつけて！「きゃ」を2拍と数える。",
+  "new": "「きゃ」を2拍と数えるのは間違い。1拍だよ。",
+  "scope": "Only scene5 paired say/cap; reuse6 byte-identical audio clips. All original question/answer data and main untouched. V2 artifacts retained.",
+  "sourceBeforeSha256": "392ffb19960267c0aab4577d10364f353e7c78d6897a2b5ff89f2532843d2b29",
+  "sourceAfterSha256": "b8d027fe3226c31582a67bb3e10c7082b22d4e04c51cad505f15e34cf6c085dc",
+  "builderSha256": "24a29a21c1206862e934d6772f39bf13a8d56edfa7fb93e216b30bbd8819eb80",
+  "pending": [
+    "new scene5 speech terminal result",
+    "v3 scene preflight/render/full AV/every1.5s+tail review",
+    "v3 4width book playback",
+    "combined remaining6-topic10movie alignment/main integration"
+  ],
+  "reviewProof": "actual-review-caption-v2/visual-review.json",
+  "speechAttempt1": {
+    "exitCode": 1,
+    "result": "narration-v3/audio-attempt1-result.json"
+  },
+  "speechAttempt2": {
+    "status": "failed",
+    "exitCode": 1,
+    "reason": "zero-frame WAV rejected by length guard",
+    "result": "narration-v3/audio-attempt2-result.json"
+  },
+  "playbackV2": {
+    "status": "passed",
+    "exitCode": 0,
+    "checks": 60,
+    "widths": [
+      390,
+      820,
+      1180,
+      1440
+    ],
+    "receipt": "playback-result.json",
+    "receiptSha256": "27cd9c34b5a7be760c246e9cf281ffc6666f7f9c0aa8e3b0aaa3193aa29cb53a",
+    "visual": "4 actual playing screenshots directly viewed; inline phone subtitles small; physical fullscreen not verified; does not approve corrected v3"
+  },
+  "speechAttempt3": {
+    "status": "failed",
+    "exitCode": 1,
+    "reason": "Native AIFF conversion also yielded zero-frame WAV; no MP4 generated",
+    "log": "narration-v3/audio-prepare-attempt3.log",
+    "logSha256": "92c2a52bd77a9530cfe8f042b871fcaba8332bd1b882f2d5584e1c4c0d9f609c"
+  },
+  "voiceInventory": {
+    "command": "/usr/bin/say -v '?' | rg '^Kyoko'",
+    "exitCode": 0,
+    "result": "Kyoko ja_JP listed; inventory proves installation, not valid synthesis or restored audio",
+    "scope": "No synthesis, voice/settings edits or service restart."
+  },
+  "previousHold": {
+    "scope": "New Kyoko speech for scene5 only",
+    "reason": "Both direct PCM and native AIFF generated empty speech despite command returning; length guard rejected",
+    "needed": "Restore valid nonempty Kyoko output without changing shared approved voice/settings; retry only after cause is addressed",
+    "behavior": "Do not integrate ambiguous v2 or replace with silent/other-voice output; no repeated identical synthesis loop"
+  },
+  "nativeSpeechProof": {
+    "file": "narration-v3/native-api-attempt/audio-result.json",
+    "sha256": "562aebb48517c6d3efc260fa65a70e5359c978f2fbc0403d00c7a676c49fa82b",
+    "seconds": 3.315125,
+    "scope": "Only this native file-synthesis succeeded; does not prove the say command or all future speech is restored."
+  }
+}

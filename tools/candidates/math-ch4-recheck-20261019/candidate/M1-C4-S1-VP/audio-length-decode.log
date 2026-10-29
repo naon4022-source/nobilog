@@ -1,0 +1,41 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/math-ch4-recheck-20261019/candidate/M1-C4-S1-VP/M1-C4-S1-VP.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+  Duration: 00:00:37.04, start: 0.000000, bitrate: 157 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 63 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 24000 Hz, mono, fltp, 86 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> pcm_s16le (native))
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Audio: pcm_s16le, 24000 Hz, mono, s16, 384 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 pcm_s16le
+[out#0/null @ 0x7f7cd1805240] video:0KiB audio:1738KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:37.07 bitrate=N/A speed= 160x    
+
+bitrate=N/A
+total_size=N/A
+out_time_us=37077333
+out_time_ms=37077333
+out_time=00:00:37.077333
+dup_frames=0
+drop_frames=0
+speed= 160x
+progress=end

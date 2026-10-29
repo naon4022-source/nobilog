@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-20",
+  "scope": "local only: three existing SVG corrections; same D03 image and 75-degree table row placed in own closed answer",
+  "videosRegenerated": 0,
+  "newImagesGenerated": 0,
+  "correctedExistingImages": [
+    {
+      "id": "M1-C5-S2-D02",
+      "beforeSha256": "4027f8fb8b5da41408b1a75ae516d825832344a2d308c4a98e952555af269579",
+      "afterSha256": "e57b868b646a0504ff123021de052634f3989de0dd351c657fad4b627f21b416"
+    },
+    {
+      "id": "M1-C5-S2-FIG03",
+      "beforeSha256": "3f19fd5b8365e9beb990594eb0120fd47fd09d9d616f0fa5741d84b38ee46ff3",
+      "afterSha256": "49b9172ef08a3999d38c1876281b41edcfd7344db7f29f9b117fd49b1317c821"
+    },
+    {
+      "id": "M1-C5-S4-FIG01",
+      "beforeSha256": "1114157f088c65d34120a1d2485f660250f5f792abda54ac8746ed023ef5a812",
+      "afterSha256": "1c8434539adf016059679e3d2963c6eb7ac671f76c714dec73e47c9f87a7ed21"
+    }
+  ],
+  "answerBookBeforeSha256": "06f73d54ea10a1ee956bbabf008f35102c5cb4849ca4cd6d213b42c276c382e2",
+  "answerBookAfterSha256": "ee90db6f0792fac2810afa8abcb333e44aa334a5f51cc7353d21910f0edb45ae",
+  "allOtherAssetsUnchanged": true,
+  "postIntegrationChecks": {
+    "status": "passed",
+    "svgChecks": 145,
+    "mathChecks": 143,
+    "hiddenAnswerChecks": 78,
+    "rawPreviewChecks": 79,
+    "markerAnchors": 2724,
+    "normalImages": 37,
+    "closedAnswerImages": 1,
+    "figureChecks": 1060,
+    "videoPlays": 48,
+    "physicalPages": 652,
+    "readingCards": 923
+  },
+  "fullSuite": {
+    "status": "passed",
+    "proof": "tools/candidates/math-ch5-recheck-20261019/post-full-verification.json"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "passed isolated readonly toolbar predecessor bridge",
+  "checks": 7,
+  "oldFailureReproduced": true,
+  "completeZoomChainPassed": true,
+  "mainChanged": false,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+      "sha256": "1639146508b373dbab68ad825d29e42b52d211258170cf6a271c1ed508304d7e"
+    },
+    {
+      "file": "tools/candidates/math-history-toolbar-20261029/reviewed_changes.candidate.py",
+      "sha256": "1770292a8eb44880e1fe7bfb2142ccd6109c1af81f7013c55924cac1550b074f"
+    },
+    {
+      "file": "tools/candidates/math-history-toolbar-20261029/patch.json",
+      "sha256": "8ca0452293613d12964ce9fda5ccd53ed67cc7d0b0717ae7d9c8dd19cecbc18e"
+    },
+    {
+      "file": "site-assets/textbook-book.js",
+      "sha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/site-assets/textbook-book.js",
+      "sha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-spec.json",
+      "sha256": "27543a65e66ccfd6535ce7b4d3e20a9142a5dfdf75a743f493a7045ea2dd1447"
+    }
+  ],
+  "scope": "Original failure reproduced; candidate replays the exact approved toolbar line then all original metadata/handwriting/fraction/zoom checks. Actual bytes, reviewed predecessor and receipt tampering refused in memory. No canonical file or verification output writes."
+}

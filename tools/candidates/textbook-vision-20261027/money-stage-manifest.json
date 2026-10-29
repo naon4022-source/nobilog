@@ -1,0 +1,61 @@
+{
+  "status": "isolated candidate; not main or enabled",
+  "files": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "7aeb7b01d9ffc462112c66568a3a131177202b22c16f63053892b37bc0efe341"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "47c3705496a6af6584c09ba7f807b1545265d1c7e788d71879bb213e2890ba24"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-input.mjs",
+      "sha256": "d0166f38fdc1cbd2ea7d318338a134bd26cc509117fa29a5d93d186f5c213c44"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-transport.mjs",
+      "sha256": "549d585553a39d95406e49f43a875bcc2ac2e63a10ab61b3539f89028783c2b8"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "sha256": "91ecd1fff4c1fd53615c68f192ef9a70cfbe1033f2345d9ef9f705391b9df7f9"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/README.md",
+      "sha256": "dfed53ff4d3d59e3f898030a964290b32e5fcc32e5154d0739562174eb2972fa"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/official-contract.json",
+      "sha256": "2031e27fee864616da38976dc00ccb86ba731b4b3caba4c715890bc0bdb725f5"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/input-result.json",
+      "checks": 347,
+      "sha256": "c7548a90a9d217b66fe74bc3435f6799020107df1205444517bb083ab1616ca0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/transport-result.json",
+      "checks": 65,
+      "sha256": "8d73437b4665324b085467ff952e69db80fd0cacdde39ace3e2c78ddb60d7775"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/operation-result.json",
+      "checks": 354,
+      "sha256": "6012acfca06466ed563a8133a1913549f0d6cce08e30e25c4c5ae4d512c1b4f1"
+    }
+  ],
+  "unimplemented": [
+    "trusted route/owner/consent/entitlement",
+    "daily-trial and plan-credit receipts linked to typed monetary journal",
+    "image upload/history/receipt storage",
+    "actual textbook UI/capture integration",
+    "main and full verification"
+  ]
+}

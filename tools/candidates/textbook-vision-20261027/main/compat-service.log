@@ -1,0 +1,21 @@
+node:fs:561
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-book-service-check-3Acz6A/tools/candidates/verification-dialog-repair-20261027/full4.log'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at read (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:9:19)
+    at checkMainSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/checked-source.cjs:32:123)
+    at originalVerifier (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/check-expansion.cjs:8:15)
+    at checkExpansionSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/check-expansion.cjs:19:66)
+    at checkPracticeSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-source.cjs:7:18)
+    at checkDelta (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs:5:17)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs:26:4 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-book-service-check-3Acz6A/tools/candidates/verification-dialog-repair-20261027/full4.log'
+}
+
+Node.js v24.18.0

@@ -1,0 +1,21 @@
+{
+  "status": "preparation/validation issues corrected;not app defects",
+  "items": [
+    {
+      "attempt": 1,
+      "error": "KeyError for assumed chapter7 dialogue title;no output/source edits before failure",
+      "capture": "tool output;summary retained here"
+    },
+    {
+      "attempt": 2,
+      "log": "prepare-attempt2.log",
+      "error": "Initial TALK literal did not contain later chapter7/8 updates",
+      "fix": "Parse both literal TALK.update blocks;current source preservation includes both"
+    },
+    {
+      "attempt": "independent reference check",
+      "error": "Counting any matching video ID included NHK external-link block with src=null",
+      "fix": "Require actual .mp4 src;10 referenced local movie targets and1 unreferenced script confirmed"
+    }
+  ]
+}

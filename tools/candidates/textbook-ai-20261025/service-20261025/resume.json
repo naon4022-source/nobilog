@@ -1,0 +1,27 @@
+{
+  "status": "active; latest user feature added; no test currently running",
+  "sessionId": null,
+  "log": "tools/candidates/textbook-ai-20261025/service-20261025/post-full-attempt1.log",
+  "proofs": {
+    "service": "tools/candidates/textbook-ai-20261025/service-20261025/service-result.json",
+    "integration": "tools/candidates/textbook-ai-20261025/service-20261025/integration-result.json",
+    "exactDelta": "tools/candidates/textbook-ai-20261025/service-20261025/integration.json"
+  },
+  "next": "Implement authoritative owned test-session roster/admission,100-credit idempotent reservation/refund and resumable background job. Connect confirmed Nobi template and reviewed practice references; screen image capture/vision follows existing explicit screenshot/owned-image flow. Preserve Pro=LUNA/Unlimited=SOL,all-answered gate,70 characters,notification only true complete. Claude prompt ready but no live Claude work or new delivery confirmed. Finish connected batch then one final standalone full.",
+  "constraints": "No publish/commit/delete/admin/real Gemini/automation/real users/secrets/auth-store. Latest explicit broad permission allows grounded explanation clarity/fun corrections without repeated wording approval.",
+  "knownFullFailure": {
+    "suite": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+    "message": "synthetic save not acknowledged",
+    "evidence": "post-full-attempt1.log line50; candidate cloudPush returns false while cloudState.busy and reschedules. Test asserts dirty immediately. No app runtime change involved.",
+    "plannedFix": "After full finishes, preserve failed log and fixture source, wait actual !busy before explicit cloudPush and actual !busy&&!dirty afterwards; keep D1-write/reload/no-double-grant/other-account assertions. Run failed suite then required final standalone full. Do not silently report full1 passed.",
+    "fixApplied": "Only the test wait changed, after that suite had finished. See login-flow-wait-edit.json. Fix not rerun while standalone full1 remains running."
+  },
+  "uiCandidate": "tools/candidates/textbook-ai-20261025/service-20261025/ui-pending.json",
+  "extraFullFailures": {
+    "domainAnnotationBridge": "Chapter3 layout + Chapter5 answers: prime-only checker saw later approved math explanations. Exact explanation checked-source bridge added, old expected hashes retained. Not rerun yet.",
+    "chapter4FractionGenerator": "Old direct logical book SHA comparison replaced by already-verified logical_book_predecessor chain; raw current book SHA recorded separately. Original expected SHA retained. Not rerun yet."
+  },
+  "uiBrowserSession": null,
+  "activeSessions": [],
+  "latestResume": "tools/candidates/textbook-ai-20261026/review/resume.json"
+}

@@ -1,0 +1,4 @@
+[
+ {"old":"if(raw.status!=='completed'||raw.model!==request.body.model||!Array.isArray(raw.output))","new":"if(raw.status!=='completed'||raw.model!==request.body.model||!Array.isArray(raw.output)||(raw.service_tier!==undefined&&raw.service_tier!=='default'))"},
+ {"old":"reservedMicroYen:request.reservation};","new":"reservedMicroYen:request.reservation,...(raw.service_tier==='default'?{billingTier:'default'}:{})};"}
+]

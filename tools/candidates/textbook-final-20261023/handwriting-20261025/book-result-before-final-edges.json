@@ -1,0 +1,122 @@
+{
+  "status": "passed",
+  "checks": 61,
+  "results": [
+    {
+      "book": "math1",
+      "width": 390,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 820,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 1180,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "math1",
+      "width": 1440,
+      "saved": true,
+      "zoom": true
+    },
+    {
+      "book": "kokugo1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "english1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "science1",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "geography",
+      "width": 820,
+      "saved": true
+    },
+    {
+      "book": "history",
+      "width": 820,
+      "saved": true
+    }
+  ],
+  "posts": 12,
+  "requests": [
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 409
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u1",
+      "status": 200
+    },
+    {
+      "uid": "u2",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    },
+    {
+      "uid": "u4",
+      "status": 200
+    }
+  ],
+  "inputs": {
+    "textbook-book.js": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7",
+    "textbook-book-math1.json": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+    "textbook-annotations.js": "4fd5432c2598ba8b09e13f9849141f0ae8d7ded5c844c3b17973df17ea7c4e0c",
+    "textbook-ink.js": "6cc3900a3ef7f82c7c1a54918e6256dfb1d75b1d621336a9690d2f354d6ac51d",
+    "textbook-ink-model.js": "28e86aa42678e7de8bbc69ef12261117b99b2a35553be76e84fd30344ccd5a70",
+    "textbook-ink-format.js": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735"
+  },
+  "actualIndexAdapter": true,
+  "actualBookRenderer": true,
+  "actualSQLiteRoutes": true,
+  "noRealUserData": true,
+  "limits": [
+    "No real account login or iPhone device test; no production publication",
+    "Five nonmath books checked at820px; math checked at four widths; large-text drawing not in this test yet"
+  ]
+}

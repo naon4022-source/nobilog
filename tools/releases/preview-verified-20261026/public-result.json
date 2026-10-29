@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "origin": "https://nobilog-preview.naon4022.workers.dev",
+  "observedAt": "2026-10-26T15:51:31.975984+00:00",
+  "checks": 13,
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "privateBodyRead": false,
+      "loginPageSha256": "3c2bca4cb3f79d0987ac648c6878c5224d752dbac7b6c0b4b773fb4a06dfd548"
+    },
+    {
+      "path": "/preview-login",
+      "status": 200,
+      "expected": 200,
+      "passed": true,
+      "privateBodyRead": false,
+      "loginPageSha256": "04f2d07f08e4d9cede5f7db7e7032000841d385a309e1585524cc6b7a5ae5a05"
+    },
+    {
+      "path": "/index.html",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/plans.html",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/material-bank.json",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/textbook-book-math1.json",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/api/auth/me",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/api/plan",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/api/coop-story/meta",
+      "status": 401,
+      "expected": 401,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/admin-nao",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/preview-account-setup",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/preview-plan-setup",
+      "status": 404,
+      "expected": 404,
+      "passed": true,
+      "privateBodyRead": false
+    },
+    {
+      "path": "/api/plan",
+      "method": "POST",
+      "foreignOrigin": true,
+      "status": 403,
+      "expected": 403,
+      "passed": true,
+      "privateBodyRead": false
+    }
+  ],
+  "limits": [
+    "No real account login or per-account private data read. Actual plan boundary proof is the isolated five-account package check.",
+    "Production site was not fetched or deployed. No passwords, cookies or secret values used."
+  ]
+}

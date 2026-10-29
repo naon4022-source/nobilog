@@ -1,0 +1,53 @@
+{
+  "state": "historical-candidate-main-newer",
+  "liveCalls": 0,
+  "sources": {
+    "cf-worker/src/plans.mjs": "5c83532e0455e3bf7e1e58616f97979314116816c2988bc9219bff9a8bfecaaa",
+    "cf-worker/src/gemini-tutor.mjs": "4f8ce3757ae0a63d7415b13af71b2f017db5affa8c8ba54bef7e2fcd6477a58f",
+    "cf-worker/src/ai-trial-control.mjs": "15962f973386dba600b9fdfbe1dd68ef4e5dad20a2b08b6e71a282bcb3139e1e",
+    "cf-worker/src/openai-policy.mjs": "12bccbc0ec53fb47cc097082684c150a5e80b03442c2405080de9a19519c93d7",
+    "cf-worker/src/openai-budget.mjs": "cdad3400460570a3b5ec20c76b2b874c36345a921b0fb6c2c5680720977b9f72",
+    "cf-worker/src/openai-tutor-bridge.mjs": "434244698e59d89981fb20a585db4815c400ecbcec9d7e9d669275a80ed7d829",
+    "site-assets/material-bank.json": "d1f41daec1f3e3e2bcfb925a60fa9fffc4ee8a947535087f3de9322f4a6590d3"
+  },
+  "files": {
+    "gemini-dispatch.mjs": "f4591b5866793c3ca2c98f35331f64dd81fec72b251900635f62e1adf1c1039c",
+    "openai-budget.mjs": "cdad3400460570a3b5ec20c76b2b874c36345a921b0fb6c2c5680720977b9f72",
+    "openai-chat-content.mjs": "a31fbb3318b5c822612c2db0e96e36e844a65a91659a507905aed0d9f8758dae",
+    "openai-chat-route.mjs": "b2fec349d25faacb2471ce7c83ad34c218765028e9a11d3f1b309af086b7750d",
+    "openai-policy.mjs": "12bccbc0ec53fb47cc097082684c150a5e80b03442c2405080de9a19519c93d7",
+    "openai-receipts.mjs": "5da0b4dbac75fe463863e7a5e7855ec8b240e675850ebf382ddd0b0b86b65cd3",
+    "openai-transport.mjs": "4ac16edae0992e3f4d1f39f0cac24ef3d5ff3740a46d1806f19febe303da0d1c",
+    "openai-tutor-bridge.mjs": "e7790b1b3b6459eeb5a9229ef8f8d6335c5b142fe64c76e62fb6d63ffac101e2",
+    "openai-tutor-route.mjs": "f8c72828e37ba4e4a7b7b8d21df05904aa8542dbcd18ca456c88e892382424b2",
+    "openai-tutor-service.mjs": "7c59b7b236fe51aee0bc44c2dc67f7e34f6ba4d1f3e07c5797f90e6150fc36f8",
+    "openai-vision.mjs": "414a84918792f8b40fb1d3abee0a2a37201cc57de5c764b5c55ec4759114fe86",
+    "verify-chat-content.mjs": "bea14ef53f0cccee05ae37e24bd194a68e4234285c98dbc72fee7eb1a47f5f25",
+    "verify-chat-route.mjs": "14560c355bf0d25fa74fb334e1a9ccf5a35da14744c8900063b23aab279ea187",
+    "verify-chat-service.mjs": "f92f18016dce139c429ee7f3504895f9dd87e956ea12e9f10d3ea29c659aeded",
+    "verify-receipts-checkpoints.mjs": "d855faf676e2191d2f6c471b93391458c8650777e7cb103d42f911a979955b7e",
+    "verify-receipts.mjs": "92fa64eccd6abd61029bd8f3f966f6d66d7490312acc74d3d226d98fb62355f2",
+    "verify-transport.mjs": "affa203fdc0177d2973cb20e737244d87d76a0b8890decc90c251c693a62c25b",
+    "verify-tutor-route.mjs": "42373489018f1ad516c5ee2240d6f4d0b97fddb46bd75cc991487b2d0fe875b9",
+    "verify-tutor-service-failure.mjs": "902dc0f91853e13d647ea8f75f4f92f9282d4878d5c4ec0bdf803c5d06c1d294",
+    "verify-tutor-service.mjs": "6784620a0d3397f127b57be155eab35196eb1688b3f659bdd0d05c4d21294367",
+    "verify-vision.mjs": "79c50ebfec913578e390849ebc084dd76e38491c55df684794c523ebc170b040"
+  },
+  "isolatedChecks": 289,
+  "mainIsolatedChecks": 605,
+  "doNotCopyOverMain": true,
+  "fullVerification": "passed-92426",
+  "mainFiles": {
+    "openai-budget.mjs": "cdad3400460570a3b5ec20c76b2b874c36345a921b0fb6c2c5680720977b9f72",
+    "openai-chat-content.mjs": "a31fbb3318b5c822612c2db0e96e36e844a65a91659a507905aed0d9f8758dae",
+    "openai-chat-route.mjs": "6b75fc0053a9022c445c44d19acce1bea056c74881ba2d6f2b24461f4ed889a6",
+    "openai-policy.mjs": "12bccbc0ec53fb47cc097082684c150a5e80b03442c2405080de9a19519c93d7",
+    "openai-receipts.mjs": "ac7bce80796ca373021d0b530ad64959658b93e88a6a832aecc9054389990f2a",
+    "openai-transport.mjs": "f3f6db7450f999ba7ce5ca2634aafa86ca6788c8e8626a59535c4d5892aa0916",
+    "openai-trial.mjs": "276d6d34007b20a77dadd7cf7b1950bacd5ca63d78dfe49c30e102b6593eb07a",
+    "openai-tutor-bridge.mjs": "434244698e59d89981fb20a585db4815c400ecbcec9d7e9d669275a80ed7d829",
+    "openai-tutor-route.mjs": "f5ec8a33c6f1a4fe3243bfd5cffa510d81b8679d6ca935853d69e71470e6942d",
+    "openai-tutor-service.mjs": "2470450e389dc2099e3fd916ce5a23b7f38126891fa7eec4bd557bfcaf29df5e",
+    "openai-vision.mjs": "85d3ed2eebbdfc4487866cfe3e38916d9b4f7b6a4b05c8e8cea562a5392d62fc"
+  }
+}

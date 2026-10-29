@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/教材整理/Claude_Codex共有/教科動画/template.js

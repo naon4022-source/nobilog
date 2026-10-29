@@ -1,0 +1,53 @@
+{
+  "sourceSHA": "136ac848bd1d6d74de9bb3d65783ffa9d65026d8dd07027216fcfd903216f009",
+  "patches": [
+    {
+      "old": "gen:{open:false,busy:false,msg:'',retry:null,candidates:[]}",
+      "new": "gen:{open:false,busy:false,loading:false,ready:api.generatorReady?.()===true,msg:'',retry:null,candidates:[],status:null}"
+    },
+    {
+      "old": " async function generate(ta){",
+      "new": " async function privateCandidates(rows){\n  if(!Array.isArray(rows)||rows.length>20||typeof api.imageBlob!=='function')throw Error('candidate');\n  return Promise.all(rows.filter(c=>!c.state||c.state==='done').slice(0,6).map(async c=>{\n   const match=typeof c.src==='string'&&/^\\/learning-image\\?id=([a-f0-9]{64})$/.exec(c.src);if(!match)throw Error('candidate');\n   const blob=await api.imageBlob(match[1]);if(!live())throw Error('changed');\n   if(!blob||blob.type!=='image/png'||blob.size<57||blob.size>400*1024)throw Error('candidate');\n   const bytes=new Uint8Array(await blob.arrayBuffer());if(!live())throw Error('changed');let binary='';\n   for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));\n   return {src:'data:image/png;base64,'+btoa(binary),blob};\n  }));\n }\n async function refreshGeneration(){\n  if(!live()||S.gen.busy||S.gen.loading||typeof api.generatorStatus!=='function')return;\n  S.gen.loading=true;render();\n  try{\n   const status=await api.generatorStatus();if(!live())return;\n   const candidates=await privateCandidates(status.items||[]);if(!live())return;\n   S.gen.status=status;S.gen.ready=status.ready===true;S.gen.candidates=candidates;\n   const reasons={generator_setup:'AI\u30a2\u30a4\u30b3\u30f3\u306e\u63a5\u7d9a\u8a2d\u5b9a\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002',budget_limit:'\u4eca\u6708\u306eAI\u8cbb\u7528\u306e\u898b\u7a4d\u308a\u4e0a\u9650\u306b\u9054\u3057\u3066\u3044\u307e\u3059\u3002',plan_limit:'\u4eca\u65e5\u306eAI\u56de\u5206\u304c\u8db3\u308a\u307e\u305b\u3093\u3002',daily_limit:'\u4eca\u65e5\u306e\u5168\u4f53\u8a66\u9a1310\u56de\u3092\u4f7f\u3044\u5207\u308a\u307e\u3057\u305f\u3002',stopped:'\u5b89\u5168\u306e\u305f\u3081AI\u3092\u4e00\u6642\u505c\u6b62\u3057\u3066\u3044\u307e\u3059\u3002',consent_required:'AI\u306e\u5229\u7528\u78ba\u8a8d\u304c\u5fc5\u8981\u3067\u3059\u3002',billing_required:'AI\u63d0\u4f9b\u5143\u3078\u306e\u652f\u6255\u3044\u8a2d\u5b9a\u3092\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u3002',controls_unavailable:'\u5b89\u5168\u306a\u5229\u7528\u4e0a\u9650\u3092\u78ba\u8a8d\u3067\u304d\u306a\u3044\u305f\u3081\u505c\u6b62\u3057\u3066\u3044\u307e\u3059\u3002'};\n   S.gen.msg=status.ready?'\u30dc\u30bf\u30f3\u3092\u62bc\u3057\u305f\u3068\u304d\u3060\u30511\u679a\u4f5c\u308a\u307e\u3059\u3002':(reasons[status.reason]||'\u4eca\u306fAI\u30a2\u30a4\u30b3\u30f3\u3092\u4f5c\u308c\u307e\u305b\u3093\u3002');\n   if((status.items||[]).some(x=>x.state==='unknown'))S.gen.msg+=' \u524d\u306e\u4f5c\u6210\u7d50\u679c\u306f\u307e\u3060\u78ba\u8a8d\u3067\u304d\u307e\u305b\u3093\u3002\u300c\u4fdd\u5b58\u3057\u305f\u5019\u88dc\u3092\u78ba\u8a8d\u300d\u3067\u8aad\u307f\u76f4\u305b\u307e\u3059\u3002\u65b0\u3057\u3044\u4f5c\u6210\u306f\u5225\u306e\u4f9d\u983c\u306b\u306a\u308a\u307e\u3059\u3002';\n  }catch(_){if(live()){S.gen.ready=false;S.gen.msg='\u63a5\u7d9a\u304b\u4fdd\u5b58\u3057\u305f\u5019\u88dc\u3092\u78ba\u8a8d\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u81ea\u52d5\u3067\u4f5c\u308a\u76f4\u3057\u307e\u305b\u3093\u3002';}}\n  finally{if(live()){S.gen.loading=false;render();}}\n }\n async function generate(ta){"
+    },
+    {
+      "old": "if(api.generatorReady?.()!==true){",
+      "new": "if(S.gen.ready!==true){"
+    },
+    {
+      "old": "if(S.gen.busy||!live())return;if(!S.gen.retry",
+      "new": "if(S.gen.busy||S.gen.loading||!live())return;if(!S.gen.retry"
+    },
+    {
+      "old": "S.gen.candidates=d.candidates.filter(c=>c&&typeof c.src==='string').slice(0,4);S.gen.msg=",
+      "new": "S.gen.candidates=await privateCandidates(d.candidates);if(!live())return;S.gen.msg="
+    },
+    {
+      "old": " async function adopt(c){try{const r=await api.fetchImage(c.src);if(!live())return;await use(new File([r],'candidate.png',{type:r.type||'image/png'}));}",
+      "new": " async function adopt(c){try{if(!c.blob||!live())return;await use(new File([c.blob],'candidate.png',{type:'image/png'}));}"
+    },
+    {
+      "old": "const ready=api.generatorReady?.()===true;",
+      "new": "const ready=S.gen.ready===true;"
+    },
+    {
+      "old": "}catch(_){if(live())S.gen.msg='\u901a\u4fe1\u304c\u5207\u308c\u307e\u3057\u305f\u3002\u66f8\u3044\u305f\u81ea\u5df1\u7d39\u4ecb\u306f\u6b8b\u3063\u3066\u3044\u307e\u3059\u3002\u3082\u3046\u4e00\u5ea6\u62bc\u3059\u3068\u3001\u540c\u3058\u4f9d\u983c\u3068\u3057\u3066\u9001\u308a\u306a\u304a\u3057\u307e\u3059\u3002';}",
+      "new": "}catch(error){if(live())S.gen.msg=error?.message==='candidate'?'\u5019\u88dc\u3092\u5b89\u5168\u306b\u958b\u3051\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u65b0\u3057\u304f\u4f5c\u308a\u76f4\u3055\u305a\u300c\u4fdd\u5b58\u3057\u305f\u5019\u88dc\u3092\u78ba\u8a8d\u300d\u3067\u78ba\u8a8d\u3067\u304d\u307e\u3059\u3002':'\u901a\u4fe1\u304c\u5207\u308c\u307e\u3057\u305f\u3002\u66f8\u3044\u305f\u81ea\u5df1\u7d39\u4ecb\u306f\u6b8b\u3063\u3066\u3044\u307e\u3059\u3002\u3082\u3046\u4e00\u5ea6\u62bc\u3059\u3068\u3001\u540c\u3058\u4f9d\u983c\u3068\u3057\u3066\u9001\u308a\u306a\u304a\u3057\u307e\u3059\u3002';}"
+    },
+    {
+      "old": "ta.disabled=S.gen.busy||!ready;",
+      "new": "ta.disabled=S.gen.busy||S.gen.loading||!ready;"
+    },
+    {
+      "old": "generateButton.disabled=S.gen.busy||!ready;",
+      "new": "generateButton.disabled=S.gen.busy||S.gen.loading||!ready;"
+    },
+    {
+      "old": "g.append(ta,generateButton,gs);",
+      "new": "g.append(el('p','1\u679a\u306e\u4f5c\u6210\u306b3\u56de\u5206\u3002\u4eca\u306e\u30a2\u30a4\u30b3\u30f3\u306f\u3001\u5019\u88dc\u3092\u9078\u3093\u3067\u4fdd\u5b58\u3059\u308b\u307e\u3067\u5909\u308f\u308a\u307e\u305b\u3093\u3002','pp-note'),el('p','\u540d\u524d\u30fb\u5b66\u6821\u540d\u30fb\u9023\u7d61\u5148\u306f\u66f8\u304b\u305a\u3001\u597d\u304d\u306a\u8272\u30fb\u52d5\u7269\u30fb\u96f0\u56f2\u6c17\u3092\u6559\u3048\u3066\u304f\u3060\u3055\u3044\u3002','pp-note'),ta,generateButton,gs);if(typeof api.generatorStatus==='function'){const refresh=btn(S.gen.loading?'\u78ba\u8a8d\u3057\u3066\u3044\u307e\u3059\u2026':'\u4fdd\u5b58\u3057\u305f\u5019\u88dc\u3092\u78ba\u8a8d',()=>void refreshGeneration());refresh.disabled=S.gen.busy||S.gen.loading;g.append(refresh);}"
+    },
+    {
+      "old": " render();\n return {destroy(){S.alive=false;if(S.bitmap)",
+      "new": " render();if(api.plan()==='unlimit'&&typeof api.generatorStatus==='function')void refreshGeneration();\n return {destroy(){S.alive=false;if(S.bitmap)"
+    }
+  ]
+}

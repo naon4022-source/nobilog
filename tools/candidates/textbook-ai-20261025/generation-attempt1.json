@@ -1,0 +1,8 @@
+{
+  "status": "failed before any generated asset write",
+  "error": "invalid_source_page",
+  "reason": "Existing six books each have four legitimate blockless wrapper pages: cover/toc/guide/end; first draft incorrectly required blocks on every page.",
+  "correction": "Only known blockless wrappers excluded; unknown or malformed pages still rejected; source text unchanged.",
+  "newRegressionCases": "known wrappers positive, unknown blockless page negative",
+  "productionOutputsWritten": 0
+}

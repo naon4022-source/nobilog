@@ -1,0 +1,83 @@
+{
+  "status": "reviewed",
+  "files": [
+    {
+      "file": "cf-worker/src/index.js",
+      "sha256": "28678fd9c7cdc2913116e90edeb620a082f78b8f4015d0cc31f9f22269ef1567"
+    },
+    {
+      "file": "cf-worker/src/openai-receipts.mjs",
+      "sha256": "1780da9e3af668e8f665ff76e41b415a8cae393b08651d67063d6108511d45c6"
+    },
+    {
+      "file": "cf-worker/src/openai-priced-operation.mjs",
+      "sha256": "61971fc215de9870a207446b806d445682a9485eb4a59d7bc03bbe614db03dd6"
+    },
+    {
+      "file": "preview/build.py",
+      "sha256": "276329b25cbcab938440951efaca0fb7b4b1d1d39092831a2869724624a228a6"
+    },
+    {
+      "file": "site-assets/sw.js",
+      "sha256": "f925480f2d6bf8e31aae1f6f451dabb19abb4ebf5d69f55974ceb3dc898ae2f0"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-chat-content.mjs",
+      "sha256": "96984ec9ec8161f7911ab4005bb49cef9a151685852bf30d6295972135a793ae"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-chat-context.mjs",
+      "sha256": "e081ca4b5a242d99f9c3267743399f84bf71a65107c57ae38d891918b461129d"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-manifest.mjs",
+      "sha256": "4109f5527d7a7105c55efdd6b7bf481820747e76c3fa5db4f6b08cb59e9472bf"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-route.mjs",
+      "sha256": "7414c82daec49cd4bae0a02e83100fc65f8a01dbcdfa729c0717943cb40dac64"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context.mjs",
+      "sha256": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-history.mjs",
+      "sha256": "9d8402531af0c181743514effe1eb365d118e51eeb6363711f8d816d17849bc6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-quota.mjs",
+      "sha256": "1510b9f42c1cdd0f1d73b258d025eda4ebbd7da940aef1d9e1e3dc4bf0ac7dfe"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-refund.mjs",
+      "sha256": "809ea6ecb183b829871dd5fe7bfbdfccdb65c93d05c0ffc00bceff230c87feec"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-route.mjs",
+      "sha256": "eab0ea4a487377384d366ac62a83713b1e6405f643e5fafe40d78e63178dfce6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-service.mjs",
+      "sha256": "621e400323979f4e2a35a13ba58946f12a95e7308ea57f63154aa8e8b379c18d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/verify-service.mjs",
+      "sha256": "703d7649e9b599f42c7ce637af82e7d8ec5dcfa9e930464a8c8f13cfb62faafc"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs",
+      "sha256": "0e0a3f956dacc082ae96848da436d59b14037b8606229771660be9e5176d4298"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "sha256": "7d53466844fe9e01eb731a1be83e3c38fb40b1f33ab7640e850ade46af8751a1"
+    }
+  ],
+  "notes": [
+    "Source reviewed in tool inputs and dedicated added/source review. No credential/session-store or user database read.",
+    "Generated source excerpt remains untrusted data; no hidden answers or other learner records are attached.",
+    "No real provider requests/config changes/deploy/commit/delete.",
+    "Parent Worker preserved except dedicated textbook route; generic journal changes only u4 member acceptance; existing checks passed."
+  ]
+}

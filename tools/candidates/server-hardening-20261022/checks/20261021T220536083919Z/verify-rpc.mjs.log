@@ -1,0 +1,17 @@
+/Users/shimizunaotomoo/.npm/_npx/c943b712072b77c4/node_modules/miniflare/dist/src/index.js:133159
+      const error123 = new MiniflareCoreError(
+                       ^
+
+MiniflareCoreError [ERR_VALIDATION]: Unexpected options passed to `new Miniflare()` constructor:
+✖ Unrecognized keys: "modules", "script", "compatibilityDate", "durableObjects", "bindings", "outboundService"
+✖ Invalid input: expected array, received undefined
+  → at workers
+    at validateOptions (/Users/shimizunaotomoo/.npm/_npx/c943b712072b77c4/node_modules/miniflare/dist/src/index.js:133159:24)
+    at new _Miniflare (/Users/shimizunaotomoo/.npm/_npx/c943b712072b77c4/node_modules/miniflare/dist/src/index.js:133550:38)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/server-hardening-20261022/verify-rpc.mjs:16:10
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  code: 'ERR_VALIDATION',
+  cause: [Getter]
+}
+
+Node.js v24.18.0

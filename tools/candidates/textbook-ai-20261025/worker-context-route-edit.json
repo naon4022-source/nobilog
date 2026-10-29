@@ -1,0 +1,20 @@
+{
+  "file": "cf-worker/src/index.js",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/cf-worker/src/index.js",
+  "beforeSha256": "dc13bc096932f678d2c6cac4558e4ef5edc42bab6ed36d6d56f09ae5dfec5cf5",
+  "afterSha256": "f8f0e538d901bf8f87fa2d752100ee337deb64aceb80603f33a4ba43831a30cb",
+  "edits": [
+    {
+      "before": "    if(path==='/textbook-ink'){\n",
+      "after": "    if(path==='/textbook-ai-context'){\n      const {textbookAIContextRoute}=await import('./textbook-ai-context-route.mjs');\n      return scopedApiResponse(await textbookAIContextRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);\n    }\n    if(path==='/textbook-ink'){\n"
+    }
+  ],
+  "scope": "Only authenticated context metadata route; existing authentication/admin/other routes unchanged",
+  "verification": {
+    "status": "passed isolated metadata API48; full handler/browser separate",
+    "file": "tools/candidates/textbook-ai-20261025/context-api-result.json",
+    "sha256": "78202060bf6e853db8a1bff254d22fe253787e1ff3a9cd5af03d968d0b156491",
+    "checks": 48,
+    "observedExitCode": 0
+  }
+}

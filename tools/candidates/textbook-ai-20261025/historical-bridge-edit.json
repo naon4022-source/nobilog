@@ -1,0 +1,18 @@
+{
+  "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/tools/candidates/textbook-final-20261023/reviewed_changes.py",
+  "beforeSha256": "70bf7d4424e6dcaf7c31176ba060e46c1fe454caf5e726c8de57b71f852c326b",
+  "afterSha256": "124700160f496ff1830797dd91fb0723d93a7e999303fd023c3d21a61b9a9728",
+  "edits": [
+    {
+      "before": "def before_handwriting_file(relative):\n    \"\"\"Validate the exact reviewed annotation successor before older evidence.\"\"\"\n    current=R/relative\n",
+      "after": "def before_textbook_ai_file(relative):\n    \"\"\"Check the reviewed source-signature bridge before inherited media evidence.\"\"\"\n    current=R/relative\n    receipt_path=R/'tools/candidates/textbook-ai-20261025/reviewed-edits.json'\n    if not receipt_path.exists():\n        return current\n    receipt=load(receipt_path)\n    row=next((r for r in receipt['files'] if r['file']==relative),None)\n    if row is None:\n        return current\n    assert receipt['version']==1\n    proof=row['verification']\n    assert proof['observedExitCode']==0 and sha(R/proof['file'])==proof['sha256']\n    result=load(R/proof['file'])\n    assert result['status']=='passed' and result['checks']==proof['checks']\n    previous=R/row['beforeFile']\n    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']\n    text=previous.read_text()\n    for edit in row['edits']:\n        assert text.count(edit['before'])==1\n        text=text.replace(edit['before'],edit['after'],1)\n    assert text.encode()==current.read_bytes(),relative+': change outside reviewed textbook AI metadata'\n    return previous\n\n\ndef before_handwriting_file(relative):\n    \"\"\"Validate the exact reviewed annotation successor before older evidence.\"\"\"\n    current=before_textbook_ai_file(relative)\n"
+    },
+    {
+      "before": "previous,now=R/row['beforeFile'],R/row['file']",
+      "after": "previous,now=R/row['beforeFile'],before_handwriting_file(row['file'])"
+    }
+  ],
+  "oldExpectedHashesOrAssertionsRemoved": false,
+  "reason": "Keep strict prior body/zoom/media evidence while checking exact two reviewed source-signature metadata additions first"
+}

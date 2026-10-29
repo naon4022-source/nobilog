@@ -1,0 +1,22 @@
+# Release-time merge notes only. NOT loaded by the current Worker config.
+# Create separate production/preview queues only with explicit release authority.
+# Keep every existing provider/safety/billing flag unchanged.
+# Merge the two values below into the existing [vars] table; do not replace it.
+AI_TEST_REVIEW_ENABLED = "0"
+AI_TEST_REVIEW_QUEUE_NAME = "nobilog-ai-test-review"
+
+[[queues.producers]]
+binding = "AI_TEST_REVIEW_QUEUE"
+queue = "nobilog-ai-test-review"
+
+[[queues.consumers]]
+queue = "nobilog-ai-test-review"
+max_batch_size = 1
+max_batch_timeout = 0
+max_retries = 10
+max_concurrency = 1
+dead_letter_queue = "nobilog-ai-test-review-failed"
+
+# Preview must use its own names and bindings, never either production queue.
+# Job rows in the private SQLite store persist independently of queue retention;
+# a private explicit retry resumes the same job and monetary operation IDs.

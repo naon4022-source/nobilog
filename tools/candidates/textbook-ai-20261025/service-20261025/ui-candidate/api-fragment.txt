@@ -1,0 +1,15 @@
+    async function textbookAIRequest(path,options,who){
+        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});
+        const response=await cloudTry(cloudUrl(path),{cache:'no-store',...options},20000);
+        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});
+        const data=await response.json();
+        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});
+        if(!response.ok){const error=Error('textbook_ai_unavailable');error.status=response.status;error.code=typeof data?.error==='string'&&/^[a-z_]{1,64}$/.test(data.error)?data.error:'';throw error;}
+        return data;
+    }
+    window.nobiTextbookAIAPI={
+        available:()=>!!currentUserId&&!isTrial(),snapshot:()=>cloudIdentity(),matches:who=>cloudSame(who),
+        source:(selection,who)=>textbookAIRequest('/textbook-ai-context?'+new URLSearchParams(selection),{},who),
+        history:(selection,who)=>textbookAIRequest('/textbook-ai-chat?'+new URLSearchParams(selection),{},who),
+        post:(body,who)=>textbookAIRequest('/textbook-ai-chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)
+    };

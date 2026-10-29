@@ -1,0 +1,32 @@
+{
+ "purpose": "2026-10-21 Claude: vertical fractions in the textbook (user instruction). Only these exact edits were made to textbook-book.js after the appendix integration; applying them to the integrated candidate reproduces the current file byte for byte. Also adds the trackpad swipe/pinch handler (same date, user instruction). 2026-10-22: layout version raised again because the fraction rules changed (1/2時間, 2x/3, 3/4L become vertical).",
+ "file": "site-assets/textbook-book.js",
+ "beforeSha256": "77d6cb3eb231c317c12ee2e7f118612bc95f0194e2e76300505416d3fcf4f3ab",
+ "afterSha256": "e4825307fde3f785fa27a8c5725f984ae87dafea013574fac4a525e088fe9329",
+ "replacements": [
+  [
+   "const W=600,H=848,LAYOUT_VERSION='2026-10-07.1';",
+   "const W=600,H=848,LAYOUT_VERSION='2026-10-22.1';"
+  ],
+  [
+   "  else if(part.length>2&&part.startsWith('`')&&part.endsWith('`'))parent.append(el('code',null,part.slice(1,-1)));",
+   "  else if(part.length>2&&part.startsWith('`')&&part.endsWith('`'))parent.append(fracText(el('code'),part.slice(1,-1)));"
+  ],
+  [
+   " while((m=re.exec(text))){if(m.index>last)parent.append(document.createTextNode(text.slice(last,m.index)));",
+   " while((m=re.exec(text))){if(m.index>last)fracText(parent,text.slice(last,m.index));"
+  ],
+  [
+   " if(last<text.length)parent.append(document.createTextNode(text.slice(last)));\n}",
+   " if(last<text.length)fracText(parent,text.slice(last));\n}\n// 分数は縦に表示する（2026-10-21 ユーザー指示。組む前に入れるので、ページの高さにふくまれる）\nfunction fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text);else parent.append(document.createTextNode(text));return parent;}"
+  ],
+  [
+   "function block(b){\n if(!b||typeof b!=='object')return null;\n",
+   "// 表・箇条書きなどの中の分数も、組む前に縦にする（2026-10-21）\nfunction block(b){const n=blockRaw(b);if(n&&window.NobiFractions)window.NobiFractions.apply(n);return n;}\nfunction blockRaw(b){\n if(!b||typeof b!=='object')return null;\n"
+  ],
+  [
+   " document.addEventListener('keydown',e=>{if(!isFull())return;if(state.sheet&&e.key==='Escape'){e.preventDefault();closeSheet();return;}if(state.view!=='book'||state.sheet)return;if(e.key==='ArrowLeft'){e.preventDefault();turn(-1);}else if(e.key==='ArrowRight'){e.preventDefault();turn(1);}});\n",
+   " document.addEventListener('keydown',e=>{if(!isFull())return;if(state.sheet&&e.key==='Escape'){e.preventDefault();closeSheet();return;}if(state.view!=='book'||state.sheet)return;if(e.key==='ArrowLeft'){e.preventDefault();turn(-1);}else if(e.key==='ArrowRight'){e.preventDefault();turn(1);}});\n // MacBook のトラックパッド（2026-10-21）：2本指で左右にスワイプするとページをめくる。図の上で2本指を広げる（ピンチ）と拡大、拡大中につまむと閉じる\n let swipe=0,swipeUntil=0;\n app.addEventListener('wheel',e=>{\n  if(!isFull())return;\n  if(e.ctrlKey){e.preventDefault();if(state.sheet){if(e.deltaY>4)closeSheet();return;}if(e.deltaY<-4){const fig=e.target.closest?.('.tb-zoomable');if(fig)fig.click();}return;}\n  if(state.view!=='book'||state.sheet||Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;\n  e.preventDefault();const now=Date.now();if(now<swipeUntil){swipe=0;swipeUntil=Math.max(swipeUntil,now+300);return;}   // 指を離したあとの慣性で2ページめくらない（2026-10-22）\n  swipe+=e.deltaX;if(Math.abs(swipe)>=60){turn(swipe>0?1:-1);swipe=0;swipeUntil=now+700;}\n },{passive:false});\n"
+  ]
+ ]
+}

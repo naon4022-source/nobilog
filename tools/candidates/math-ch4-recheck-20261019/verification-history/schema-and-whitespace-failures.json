@@ -1,0 +1,13 @@
+{
+  "failures": [
+    {
+      "validator": "verify-independent-math.py",
+      "reason": "原稿の「0 以上の整数」に空白があり、文字列検査側の「0以上」と一致しなかった。原稿を変更せず検査を実際の表記に修正。"
+    },
+    {
+      "validator": "verify-current-evidence.py",
+      "reason": "既存依頼台帳の変更しない9動画にはsha256キーがない。実SHAは制作進捗・実ファイル・元の全AV報告で検証し、変更3本は依頼台帳SHAも検証。"
+    }
+  ],
+  "mediaRegeneratedForValidatorFailures": false
+}

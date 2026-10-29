@@ -1,0 +1,7 @@
+{
+  "file": ".claude/verify/run.sh",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/.claude/verify/run.sh",
+  "beforeSha256": "a5d5cdcbfd8a72ed3d1e0f92105d79ddd5699408a8884091ebe2a0ba9e150f71",
+  "afterSha256": "b11a415bb900e47448533bfd78bcdd695ced2d8a385b37100b33387cd8c6678f",
+  "addition": "node \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/service-20261025/verify-service.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs\" || fail=1\n"
+}

@@ -1,0 +1,41 @@
+--- 
+
++++ 
+
+@@ -25,3 +25,3 @@
+
+  // 文字列を、縦の分数をふくむ部品にして返す（分数がなければ null）
+- function fragment(text,doc){
++ function fragment(text,doc,options){
+   doc=doc||root.document;if(!doc||typeof text!=='string'||text.indexOf('/')<0)return null;
+@@ -30,3 +30,6 @@
+
+    const [,before,top,bottom]=m,start=m.index+before.length,end=start+top.length+1+bottom.length;
+-   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1))))continue;   // m/s・3m/s・g/cm³ などの単位は分数にしない
++   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1)))){
++    const unit=/^(?:m\/[shd]|g\/[shd]|l\/[shd])$/.test(top.replace(/^\d+(?:\.\d+)?/,'')+'/'+bottom);
++    if(options?.math!==true||unit||/^[A-Za-z]/.test(text.slice(end,end+1)))continue;
++   }
+    if(isCounter(text,start,end,top,bottom))continue;
+@@ -40,3 +43,3 @@
+
+  // 親に文字を足す（分数は縦にして）。教科書のように、組む前に同期で使う
+- function append(parent,text){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc);parent.append(frag||doc.createTextNode(text));return parent;}
++ function append(parent,text,options){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc,options);parent.append(frag||doc.createTextNode(text));return parent;}
+  function skipped(el,stop){
+--- 
+
++++ 
+
+@@ -43,3 +43,3 @@
+
+ // 分数は縦に表示する（2026-10-21 ユーザー指示。組む前に入れるので、ページの高さにふくまれる）
+-function fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text);else parent.append(document.createTextNode(text));return parent;}
++function fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text,{math:state.book?.meta?.subject==='数学'});else parent.append(document.createTextNode(text));return parent;}
+ function tint(hex,amount){
+@@ -508,3 +508,3 @@
+
+   // 一度組んだ結果は端末に覚えておき、中身が同じなら2回目からすぐ開く（覚えられない端末では毎回組む）
+-  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length+annotationSig+(big?':large':''),cacheKey='nobi-textbook-layout:'+meta.id;
++  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length+annotationSig+(meta.subject==='数学'?':fraction-variables-v1':'')+(big?':large':''),cacheKey='nobi-textbook-layout:'+meta.id;
+   let laid=null;

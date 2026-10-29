@@ -1,0 +1,36 @@
+{
+  "status": "valid nonempty Kyoko file speech; exact teaching text; listening not claimed",
+  "voice": "com.apple.voice.compact.ja-JP.Kyoko",
+  "rate": 175,
+  "profile": "clear",
+  "seconds": 3.315125,
+  "rms": 4425,
+  "say": "「きゃ」を2拍と数えるのは間違い。1拍だよ。",
+  "cap": "「きゃ」を2拍と数えるのは間違い。1拍だよ。",
+  "settingsSha256": "22b523b254eb4defd41c0479b8a90e31819b31266a56c159c37a39759fcccab3",
+  "inputs": [
+    {
+      "file": "narration-v3/native-speech.js",
+      "sha256": "986dbfba6dd067427b456ce7141b9a42de9387124d8c5dfe0cfce8cd5f59769c"
+    },
+    {
+      "file": "narration-v3/native-api-attempt/native.log",
+      "sha256": "053faa011fcd2c1a05aaefcfee83215525478b832ad1122f84ed9348703978aa"
+    },
+    {
+      "file": "narration-v3/native-api-attempt/05-00.aiff",
+      "sha256": "e4148aa5b2908dac457c8f1642d06d48e6adbe2a36e932a1aa7bd0b9832807ad"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "narration-v3/native-api-attempt/05-00.wav",
+      "sha256": "138457f29c7f8be775046af797efbf0b219eecd7a47fb3efc224c3fbe15738ae"
+    },
+    {
+      "file": "narration-v3/native-api-attempt/05-00-clear.wav",
+      "sha256": "f6928d80e4e123d7278e85a30dc0a2172c27fee070eafd280fbdcc4c43a05ff8"
+    }
+  ],
+  "scope": "One native AppKit file-synthesis instance with explicit Kyoko175. No service/default voice/settings change, no API or user audio. Other6 clips remain reusable."
+}

@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs

@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('node:assert/strict'),{aggregate}=require('./aggregate.cjs');
+let checks=0;function equal(a,b){assert.deepEqual(a,b);checks++;}function rejects(f){assert.throws(f);checks++;}
+const t=Date.parse('2026-10-13T14:59:59Z');
+const rec=(id,subject,start,end,acceptedAt=end)=>({id,subject,start,end,acceptedAt});
+equal(aggregate([]),{});
+const a=rec('a','数学',t,t+2000),days=aggregate([a]);
+equal(days['2026-10-13']['数学'],1000);equal(days['2026-10-14']['数学'],1000);
+equal(aggregate([a,a]),days);
+const b=rec('b','英語',t+500,t+1500,t+3000),mixed=aggregate([a,b]);
+equal(mixed['2026-10-13']['数学'],500);equal(mixed['2026-10-13']['英語'],500);
+equal(mixed['2026-10-14']['数学'],500);equal(mixed['2026-10-14']['英語'],500);
+equal(Object.values(mixed).flatMap(Object.values).reduce((a,b)=>a+b,0),2000);
+equal(aggregate([b,a]),mixed);
+const same=rec('c','理科',t,t+2000);equal(aggregate([same,a]),aggregate([a,same]));
+rejects(()=>aggregate([a,{...a,subject:'理科'}]));
+rejects(()=>aggregate([rec('bad','数学',t,t)]));rejects(()=>aggregate([rec('bad','数学',t,t-1)]));
+rejects(()=>aggregate([rec('bad','数学',t,t+1,t)]));rejects(()=>aggregate([rec('bad','数学',NaN,t)]));
+rejects(()=>aggregate([rec('bad','未知の教科',t,t+1)]));rejects(()=>aggregate([rec('bad','数学',t,t+4*3600000+1)]));
+const before=JSON.stringify([a,b]);aggregate([a,b]);equal(JSON.stringify([a,b]),before);
+equal(aggregate([rec('left','国語',t,t+1000),rec('right','社会',t+1000,t+2000)])['2026-10-14']['社会'],1000);
+const many=Array.from({length:10000},(_,i)=>rec('r'+i,'数学',t+i*1000,t+(i+1)*1000));
+equal(Object.values(aggregate(many)).flatMap(Object.values).reduce((a,b)=>a+b,0),10000000);
+const overlap=Array.from({length:10000},(_,i)=>rec('r'+i,'理科',t,t+1000,t+1000+i));
+equal(Object.values(aggregate(overlap)).flatMap(Object.values).reduce((a,b)=>a+b,0),1000);
+console.log('Timeline aggregate candidate: '+checks+' checks passed; JST midnight, interval union, retries, order independence, invalid intervals, 10000 sequential/concurrent records and immutable inputs; no network');

@@ -1,0 +1,64 @@
+{
+  "status": "19 locally integrated and individually verified; final whole pending",
+  "date": "2026-10-25",
+  "images": 19,
+  "sourceCopyCanonical": true,
+  "bookJsonUnchangedSha256": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+  "glyphAudit": {
+    "file": "tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/current-glyph-audit.json",
+    "sha256": "df793daabdd979d75e1e10f0f588bef0824f582c1fb96cc7fec3d54bfc6f295d",
+    "images": 27,
+    "groups": 42,
+    "issues": 0
+  },
+  "publicBook": {
+    "session": 46225,
+    "observedExitCode": 0,
+    "file": "tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/book/book-images.json",
+    "sha256": "36a223b2aa53070a89af706edd3dde25c3972c03627b6155b1a20106b284ebe7",
+    "images": 18,
+    "widths": [
+      390,
+      820,
+      1180,
+      1440
+    ],
+    "displays": 72
+  },
+  "hiddenBook": {
+    "session": 92087,
+    "observedExitCode": 0,
+    "checks": 241,
+    "widths": [
+      390,
+      820,
+      1180,
+      1440
+    ],
+    "file": "tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/answer/out-final/layout-reports.json",
+    "sha256": "829034181338f5ca42e6ed799833c1663b92a469a22b70059cd4f2c804cd680c",
+    "log": "/private/tmp/nobi-font-metrics-answer-retry2-20261024.log",
+    "logSha256": "5a6a217e2bc971168a736eec4381140681ce17dd8d5343fe60624003c82ff179"
+  },
+  "chainNegativeTests": {
+    "file": "tools/candidates/textbook-final-20261023/font-metrics-repair-20261024/chain-negative-tests.json",
+    "sha256": "154aee49c5dbc6bb9dd1280385e799fd7c54591a262b8249ce723ab1bc8c8251",
+    "cases": 4
+  },
+  "verificationHarnessAttempts": [
+    {
+      "log": "/private/tmp/nobi-font-metrics-answer-20261024.log",
+      "exitCode": 1,
+      "reason": "quote syntax error in new wrapper before browser"
+    },
+    {
+      "log": "/private/tmp/nobi-font-metrics-answer-retry1-20261024.log",
+      "exitCode": 1,
+      "reason": "rebase anchor mismatch in wrapper before browser"
+    }
+  ],
+  "remainingFractionImages": 9,
+  "remainingFractionRows": 17,
+  "fullSuite": "52565 passed beforeC4; final changed whole not run",
+  "publication": "not published"
+}

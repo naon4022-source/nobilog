@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "sessionId": 52565,
+  "log": "/private/tmp/nobi-textbook-pre-ch4-full-retry1-20261024.log",
+  "purpose": "Standalone whole rerun after exact approved-text annotation preservation repair; before chapter4 integration",
+  "observedExitCode": 0,
+  "previousAttempt": "pre-chapter4-full-verification-attempt1.json",
+  "previousAttemptSha256": "11dbc8e6758b5c383f044c1f5b623ed56d8bdbdbe6a8c93f4d2fa2ee16c2df18",
+  "repair": "prime-domain-20261024/annotation-repair.json",
+  "repairSha256": "d313a36990868f41299360a7aa6ff4b5187dc4da5acc33f6499e4fa11f29c236",
+  "bookSha256": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+  "runtimeSha256": {
+    "site-assets/textbook-book.js": "1f1a4bbe132abfcc2fd3cc819ec53ea49394ea29eaecef649a32b87e610e6a80",
+    "site-assets/textbook-book.css": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec",
+    "site-assets/vertical-fractions.js": "b76f506e18839038f4fd194326746204623ee4a1bdb34fecb1b4a0d60900b4a5",
+    "site-assets/textbook-annotation-model.js": "fc06f2082baf9774a91c890c715f5a87521ae6273916eabb2ab3821abeb91106"
+  },
+  "suiteSha256": "e95f1d83f72a6cf185eff6b2da49e139427f25d8472fb9401e3090c6454d7228",
+  "verificationInputs": {
+    "tools/candidates/math-ch3-recheck-20261019/verify-layout-candidate.mjs": "27a512ca6544470cc58ca59a009d912486298c68482c1e9f9d88d044a6b20114",
+    "tools/candidates/math-ch5-recheck-20261019/verify-answer-anchors.mjs": "e0d3961a26d5bfb2f53e9dc21e5854ba57ab33df13f56aa20fd1e534ec2b1150",
+    "tools/candidates/textbook-final-20261023/approved-domain-annotations.mjs": "99b8dab5753985e21faa607852e0db78a7fbb74d9ff85de8bd36a6f2fc0de39c"
+  },
+  "annotationComparisonsWithinFull": {
+    "passedComparisons": 2,
+    "observedOutput": [
+      "Historical layout preserves2724 marker identities; current book preserves2723 and separates the explicitly approved new hook; synthetic old note retained,8 edited quotes rejected; no real notes accessed",
+      "Historical layout preserves2724 marker identities; current book preserves2723 and separates the explicitly approved new hook; old synthetic note retained; no real notes read"
+    ],
+    "wholeResult": "still running"
+  },
+  "largeTextWithinFull": {
+    "status": "passed within ongoing full run",
+    "checks": 48,
+    "script": ".claude/verify/verify-textbook-large-browser.mjs",
+    "scriptSha256": "74a840f63b3b9822d10c81d0a0f81006361d507e29ae5a6c3d11b0b8e4570520",
+    "books": [
+      "kokugo1",
+      "math1",
+      "english1",
+      "science1",
+      "geography",
+      "history"
+    ],
+    "viewport": [
+      1280,
+      800
+    ],
+    "scope": "Production fraction module loaded. Every physical page scanned with18px body, no overflow or later double scaling, normal/large cache separation and normal restoration. Not a content/visual approval for all images or all widths."
+  },
+  "logSha256": "a3aec5664625c4712af002e88aa36f09d5ae5ad989a654ff5f555e3b027c1901",
+  "completedAt": "2026-10-24T13:14:53.040999+09:00",
+  "scope": "Required standalone suite success before chapter4 integration; legacy fixture dependency gap separately recorded and corrective candidates pending; not goal completion"
+}

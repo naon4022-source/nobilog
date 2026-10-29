@@ -1,0 +1,20 @@
+{
+  "status": "candidate only; isolates pre-send persistence failure from unknown post outcome",
+  "file": "site-assets/messages.js",
+  "beforeSha256": "6debb522093368dfbad94a34a6c460b701cca20eaaa40e717e47de530abdb0bd",
+  "candidateSha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642",
+  "edits": [
+    {
+      "before": "let req=S.ai.retry;S.ai.sending=true;",
+      "after": "let req=S.ai.retry,stage='prepare';S.ai.sending=true;"
+    },
+    {
+      "before": "   const r=await api.post('/learning-chat'",
+      "after": "   stage='post';\n   const r=await api.post('/learning-chat'"
+    },
+    {
+      "before": "S.ai.failed=req;S.ai.status='送れませんでした（通信が切れたかもしれません）。入力は残っています。「もう一度送る」で同じ相談を送りなおせます（二重には数えません）。';",
+      "after": "S.ai.failed=req;S.ai.status=stage==='prepare'?'送信前の下書きを保存・確認できませんでした。AIにはまだ送っていません。入力は残っています。保存状況を確認してから、もう一度送ってください。':'送信結果を確認できませんでした。入力と同じ送信IDは残っています。再確認する場合も同じ相談として扱い、二重には数えません。';"
+    }
+  ]
+}

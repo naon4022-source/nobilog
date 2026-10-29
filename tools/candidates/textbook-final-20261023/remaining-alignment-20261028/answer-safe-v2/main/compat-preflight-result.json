@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "currentChecks": 2609,
+  "historicalChecks": 37,
+  "mainSourceChecks": 49,
+  "candidateTamperChecks": 213,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-spec.json",
+      "sha256": "27543a65e66ccfd6535ce7b4d3e20a9142a5dfdf75a743f493a7045ea2dd1447"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/integration.json",
+      "sha256": "103f37fb13e6ff78c4dcc4d85dc7cf538e4ae1265381f7c0898796a9759e8aa4"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/checked-successor.cjs",
+      "sha256": "9ce2a858d5a948fd4688079282f32621cef84a6746d8a2c2736269fb5b70ddf4"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/verify-main-integration.mjs",
+      "sha256": "b2c9a910c2fe4d80a134dc9ace04803b9cc2eaa809ccb107afc7104c17176f3c"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/legacy-view.mjs",
+      "sha256": "e282437404388d96de22150cddae1023470aff65e94b5dea730875502f578fc5"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/candidate-guard-assets.log",
+      "sha256": "aaa55f679707618c59d900eb61089e02f46451d9d910b19444b73c9a00f3ecb7"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-integration-preflight.log",
+      "sha256": "e84532c6c69af574b012e370c384aba25d446907927d473e13ff0178dcbbf888"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-source-preflight6.log",
+      "sha256": "5f5046cf68bd42765c5c4b51877fdaac849add882f46fbea43fcf2b3ae5d0183"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/source-current-result.json",
+      "sha256": "b3bc4e8101bae350a7528e3cf091bad8281d7510986dfd6b1ad2887171080642"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/legacy-view/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/source-current-result.json",
+      "sha256": "fd4bb420183fdc94aeee15fd0ade2da79da3965b1122c09d19cce7995b4961c8"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/main/source-current-result.json",
+      "sha256": "2f067cbbe4b8356501875c66c65a59926e32540ee545782a31be230aee2cd98b"
+    }
+  ],
+  "failedPreflightsPreserved": [
+    "successor-source-preflight.log",
+    "successor-source-preflight2.log",
+    "successor-source-preflight3.log",
+    "successor-source-preflight4.log",
+    "successor-source-preflight5.log"
+  ],
+  "failureCause": "Isolated tree initially lacked explicit direct-test files and transitive module imports. Added only named public files; every original assertion retained.",
+  "scope": "Future exact67 successors verified against both current public readers and byte-identical historical assertions in private trees. No main promotion or final whole-suite success claimed."
+}

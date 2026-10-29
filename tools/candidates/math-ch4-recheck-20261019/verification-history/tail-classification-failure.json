@@ -1,0 +1,9 @@
+{
+  "status": "failed then corrected in verification only",
+  "id": "M1-C4-S2-VP",
+  "time": 37.5,
+  "previousClassification": -1,
+  "correctClassification": 5,
+  "reason": "Renderer stepAt selects the latest started step and keeps the final summary through the two-second tail. The comparison test incorrectly stopped at the step end.",
+  "mediaChangedForThisFix": false
+}

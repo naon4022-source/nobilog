@@ -1,0 +1,17 @@
+{
+  "log": "/private/tmp/nobi-claude-bugsweep-before-20261022.log",
+  "logSha256": "527ef6e0944568f269f242f22f55687df9d6e854aac9700943525350d27ae9e4",
+  "observedTerminalLogExit": 1,
+  "ownExecExitObserved": false,
+  "wholeAppSucceeded": false,
+  "failures": [
+    "verify-material-marks-ui.cjs: correct progress save",
+    "verify-gemini-ui-browser.mjs: similar AI message timeout",
+    "verify-material-auto-notebook-browser.mjs: dont-know receipt",
+    "verify-material-browser.mjs: current answer draft became empty after failed save"
+  ],
+  "candidateTestsNotYetRun": false,
+  "mainIntegrated": false,
+  "deployed": false,
+  "candidateProgress": "7 serial checks passed; final three-browser replay in progress; no main integration"
+}

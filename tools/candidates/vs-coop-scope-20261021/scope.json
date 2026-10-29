@@ -1,0 +1,46 @@
+{
+  "status": "source scope reconciliation only; no implementation or runtime tests",
+  "originalRequest": "/Users/shimizunaotomoo/.codex/attachments/86539911-509f-4ead-bf7a-0bb3d3692693/貼り付けたテキスト.txt",
+  "originalSha256": "85f890fe9319d89fc539d21fcb9509cc2d6e2d99d12f3ff492a9ce5bd4f5efa0",
+  "requirements": [
+    {
+      "line": 87,
+      "text": "リアルタイム学習対戦・協力「VS/CO-OPモード」"
+    },
+    {
+      "line": 88,
+      "text": "* なおとリラン（またはAI）で同じ問題やテストをリアルタイムで同時スタート。解答スピードと正解率を競ったり、2人の合計点でボスを倒す協力プレイ機能。"
+    }
+  ],
+  "latestAuthorization": "2026-10-21 persistent user goal and delegated nonadmin prompt explicitly include VS/cooperation; do not treat Oct16 cancellation alone as a current blanket stop",
+  "existingFeatureBoundary": "score-comparison board is separate; original asks realtime simultaneous start and cooperation defeating a boss by combined score. A plain progress gauge cannot be claimed as complete boss play.",
+  "currentFilesWithFeatureNames": "no dedicated coop/versus/battle/multiplayer/vs-room modules found in site-assets or cf-worker/src; not a full text/code completion audit",
+  "independentWorkAllowed": [
+    "server-owned room/invite/participants/readiness/start/deadline lifecycle",
+    "server-authoritative same-material selection and idempotent grading",
+    "disconnect/rejoin/account change and privacy boundaries",
+    "isolated two synthetic participants with no normal grading/learning rewards"
+  ],
+  "rulesToResolveBeforeClaimingCompletion": [
+    "duel score/accuracy/speed ordering",
+    "cooperation boss HP/combined-score rule and per-question timing",
+    "AI partner behaviour remains separate from real-provider activation"
+  ],
+  "doNotSubstitute": [
+    "do not rename existing board as realtime VS",
+    "do not omit requested boss play and claim cooperation complete",
+    "do not enable real AI to fill missing partner functionality"
+  ],
+  "constraints": [
+    "admin stopped",
+    "no publication/commit/deletion",
+    "no real-user rooms/records",
+    "no secret/auth-store reads"
+  ],
+  "activeFull": {
+    "sessionId": 52964,
+    "pid": 7018,
+    "log": "/tmp/nobi-social-geo-guards-after-20261021.log"
+  },
+  "next": "inspect current actual nonadmin routes and existing draft before independent room implementation; preserve original boss requirement"
+}

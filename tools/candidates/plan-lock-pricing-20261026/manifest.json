@@ -1,0 +1,19 @@
+{
+  "status": "candidate134 passed; one-line application change not yet applied while full29789 runs",
+  "files": [
+    {
+      "file": "site-assets/plan-study.js",
+      "beforeSha256": "88eefbd14f75c8a9a155895306a75a6ffbf8a86bd2efcb7132949587c318f7da",
+      "candidateSha256": "21e738100d58a40932710df6320a2694f709dce268b2ee4cfaa470e5d7946d80"
+    },
+    {
+      "file": ".claude/verify/verify-plan-study.mjs",
+      "beforeSha256": "741a8ca922909e27aaed0cd77074dd806d31f4863322a984e2c61da34ae6c48a",
+      "candidateSha256": "219f09edcf1952c4986ea5215ff89b490cd97224f41f68cbcc1dd25a03b78a08"
+    }
+  ],
+  "behavior": "Locked paid feature opens the existing plan pricing/comparison directly on first click. No subscription change, generation, grading, paid request, or learner record mutation. required-empty draft warnings unchanged.",
+  "checks": 134,
+  "log": "candidate-attempt2.log",
+  "previousFailure": "candidate.log: old fixture still expected second click; fixture updated to direct pricing without dropping preservation checks."
+}

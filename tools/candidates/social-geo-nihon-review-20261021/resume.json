@@ -1,0 +1,25 @@
+{
+  "status": "social3 guards locally integrated; post-change full52964 running",
+  "waitFor": null,
+  "next": [
+    "Freeze exact changed sources and run one post-change full suite",
+    "Observe same full handle until terminal; no input edits during suite",
+    "If exit0, compare frozen hashes, finalize docs/source/candidate/compiled exact guards",
+    "Continue remaining nonadmin goal; do not count rubric guards as general semantic grading"
+  ],
+  "mainChanged": false,
+  "testCommandsAfterFull": [
+    "node tools/candidates/social-geo-nihon-review-20261021/reproduce.mjs",
+    "node tools/candidates/social-geo-nihon-review-20261021/verify-candidate.mjs"
+  ],
+  "scope": "three technical answer.required/reject guards only; no authored prompt/explanation/numeric edits; no general semantic correctness claim",
+  "activeFull": {
+    "status": "running",
+    "sessionId": 52964,
+    "log": "/tmp/nobi-social-geo-guards-after-20261021.log",
+    "frozenInputCount": 1575,
+    "inputChangesAllowed": false,
+    "pid": 7018
+  },
+  "afterObservedTerminalSuccess": "python3 tools/candidates/social-geo-nihon-review-20261021/finalize-full.py 52964 0 only after actual session exit0"
+}

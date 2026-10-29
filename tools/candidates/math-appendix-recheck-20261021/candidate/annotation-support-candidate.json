@@ -1,0 +1,30 @@
+{
+  "status": "candidate validated; main not integrated",
+  "files": [
+    {
+      "file": "site-assets/textbook-annotation-model.js",
+      "beforeSha256": "81df3cd84f88fb53a79879d5faea07917d7e7f2aa3daf14ef8f3fcaaf3523150",
+      "candidate": "candidate/textbook-annotation-model.js",
+      "afterSha256": "fc06f2082baf9774a91c890c715f5a87521ae6273916eabb2ab3821abeb91106"
+    },
+    {
+      "file": "site-assets/textbook-annotations.js",
+      "beforeSha256": "76b3a7587e2316326cbf70dab5b012cab1a413dec5239718e2c5ed4195fcb4ce",
+      "candidate": "candidate/textbook-annotations.js",
+      "afterSha256": "4988bf9de1425abfd0d4b0d5ca0a3efbb45927133a35a41e54e8802096fca54b"
+    },
+    {
+      "file": "site-assets/textbook-book.js",
+      "beforeSha256": "e2fe5ce42f711f820dc2a5f0c4214d9a257bdcefd55babaf7eed2d26bfe91f88",
+      "candidate": "candidate/textbook-book.js",
+      "afterSha256": "77d6cb3eb231c317c12ee2e7f118612bc95f0194e2e76300505416d3fcf4f3ab"
+    }
+  ],
+  "scope": "preserve explicitly inherited exact source anchors inside closed explanations; render note attributes and locate matching explanation; do not create anchors for other existing answer text; embedded audio/video pauses before dialog removal/page rendering/visibility loss/pagehide",
+  "mainChanged": false,
+  "tests": {
+    "markers": "candidate-markers-result.json",
+    "closedAnswer": "closed-answer-browser-result.json",
+    "allMedia": "all-media-browser-result.json"
+  }
+}

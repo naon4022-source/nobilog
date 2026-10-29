@@ -1,0 +1,84 @@
+{
+  "status": "reviewable AI3 plus exact historical-toolbar bridge1; all main files unchanged",
+  "supersedes": "tools/candidates/real-api-trial-20261029/combined/manifest.json",
+  "priorManifestSha256": "0f714c74faf16142f5251cc81bce6104ac1759070293fa10056479005fd58cd3",
+  "files": [
+    {
+      "file": "cf-worker/src/learning-assistant.mjs",
+      "beforeFile": "tools/candidates/real-api-trial-20261029/combined/before/cf-worker/src/learning-assistant.mjs",
+      "beforeSha256": "201bea9660cb47a37388c910c892fc21d3e68f56f87d2bdf67d0a4972974bdd6",
+      "candidateFile": "tools/candidates/real-api-trial-20261029/combined/output/cf-worker/src/learning-assistant.mjs",
+      "afterSha256": "3166e87f590d62c68592f6e63d583d27c6caca5bde8467f28406bfbfd1d701a0",
+      "inCurrentScopedFull10Freeze": false
+    },
+    {
+      "file": "site-assets/messages.js",
+      "beforeFile": "tools/candidates/real-api-trial-20261029/combined/before/site-assets/messages.js",
+      "beforeSha256": "6debb522093368dfbad94a34a6c460b701cca20eaaa40e717e47de530abdb0bd",
+      "candidateFile": "tools/candidates/real-api-trial-20261029/combined/output/site-assets/messages.js",
+      "afterSha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642",
+      "inCurrentScopedFull10Freeze": false
+    },
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/real-api-trial-20261029/combined/before/index.html",
+      "beforeSha256": "7f1558a31704b9c71390907854cdf600f971e39894b8f0df46a7ca23f8ebc6b2",
+      "candidateFile": "tools/candidates/real-api-trial-20261029/combined/output/index.html",
+      "afterSha256": "5c4d9dddb63d4ed5b41eb64195d2528271203ac6d491f8f1247bef9fec4ec308",
+      "inCurrentScopedFull10Freeze": true
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+      "beforeFile": "tools/candidates/math-history-toolbar-20261029/reviewed_changes.before.py",
+      "beforeSha256": "1639146508b373dbab68ad825d29e42b52d211258170cf6a271c1ed508304d7e",
+      "candidateFile": "tools/candidates/math-history-toolbar-20261029/reviewed_changes.candidate.py",
+      "afterSha256": "1770292a8eb44880e1fe7bfb2142ccd6109c1af81f7013c55924cac1550b074f"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/real-api-trial-20261029/send-stage-result.json",
+      "sha256": "186de244573c4bea67e7ec3369c1aeeefc4959c1de51a2b3696717cc841e15e4",
+      "checks": 32
+    },
+    {
+      "file": "tools/candidates/real-api-trial-20261029/save-idle-result.json",
+      "sha256": "80f0424920615740ee706722df0c3047a050fca56b4802ce028b3f13f5ce5e7d",
+      "checks": 57
+    },
+    {
+      "file": "tools/candidates/real-api-trial-20261029/save-idle-browser-result.json",
+      "sha256": "59197128b317966aafeb69e7f3b3cce034104b9f7bc3df38cc4de0d638b77108",
+      "checks": 11
+    },
+    {
+      "file": "tools/candidates/real-api-trial-20261029/status-replay-result.json",
+      "sha256": "e2b652d6bb4533bd48c7173e1ef726da6c252aa0ef83b3461b703f1ba21c1343",
+      "checks": 43
+    },
+    {
+      "file": "tools/candidates/math-history-toolbar-20261029/result.json",
+      "sha256": "fe1527d470fcea655979b88d28067e9028efcb4329af52744cd26d007c9c8ffe",
+      "checks": 7
+    }
+  ],
+  "currentMainMode": "before",
+  "plannedSuccessorTargets": 75,
+  "plannedNormalizationCount": 32,
+  "planningOnly": true,
+  "preconditions": [
+    "Do not change fixed inputs while full10 is live; wait for actual terminal result",
+    "Preserve full10 failure; use passed full7 as existing positive baseline, not failed full10",
+    "Extend exact successor declaration/normalization for all4 targets plus existing count assertions, without weakening original source checks",
+    "Run replayable status with node --preserve-symlinks --preserve-symlinks-main and require mainMode=candidate after application",
+    "Run required whole verification after integration; no publication or real API retries until separately authorized"
+  ],
+  "old41ProofRetained": {
+    "file": "tools/candidates/real-api-trial-20261029/result.json",
+    "sha256": "df382d48b82fb3e5f3414641b25c678642775d568efa1e59457762e552a37e2b",
+    "checks": 41
+  },
+  "liveCauseConfirmed": false,
+  "realAPIRetries": 0,
+  "sourceGuardBypass": false
+}

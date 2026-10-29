@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checks": 129,
+  "inputs": [
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-credits.mjs",
+      "sha256": "8095a583275b53d337ae1ab188c8761ed3e9ab52ea07b779c1a71841c6633660"
+    }
+  ],
+  "scope": "Actual owned completed proof, shared100-credit reservation, priced journals, private chunk manifest and durable job/worker lease SQL in isolated SQLite. Three identities, partial/complete gates, verified linked results, duplicate and stale worker rejection, final owner/consent/refund races, Free retention, no provider traffic. Queue consumer/HTTP/UI notification/vision/real remediation are not connected."
+}

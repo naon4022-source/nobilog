@@ -1,0 +1,32 @@
+{
+  "status": "read-only source reconciliation; implementation pending",
+  "utc": "2026-10-25T06:21:23.017554+00:00",
+  "document": "tools/candidates/textbook-final-20261023/教科書AI_次工程の照合_20261025.md",
+  "documentSha256": "f0be143b7173ae998f0283e5dc92bf2b18cda108dbd5ffe7adff4df32c647f7d",
+  "sourceInputs": {
+    "index.html": "41ab011c4b9ab8bf455956db452d313fd683a200f5a8835a35429f2f82414081",
+    "site-assets/messages.js": "6debb522093368dfbad94a34a6c460b701cca20eaaa40e717e47de530abdb0bd",
+    "cf-worker/src/openai-chat-route.mjs": "8d2c4c8afc8b583e39f4fcda1339bb41f539f984ba96d67010552d20cece49c5",
+    "cf-worker/src/openai-chat-context.mjs": "ef2e52537a99a1ecedb7128d0a655943d9c47330e1af3ccdb40f4860f8accfc4",
+    "cf-worker/src/openai-chat-content.mjs": "8b84e42149145428f9e005b3cfdd7be04cd7906dafd0b53636d3083e244f6305",
+    "cf-worker/src/openai-tutor-service.mjs": "f7da13b04a38088db929894a85a4daafb2db7dd67bfd42aaa1a6f0ce869d0668",
+    "cf-worker/src/openai-priced-operation.mjs": "b2f80eb32b3829a642efc6cd0bf2a3f428bb3a04b0f2e59d5d936fd38c3b87f8",
+    "cf-worker/src/ai-trial-control.mjs": "8a45696d276fd25354df54557adc41e43c83f243f998686ae65f4036474997b0",
+    "cf-worker/src/plans.mjs": "f3010ee06531b3259ccd11265a62709b6986799ce1fb1a333b277493f30b61af",
+    "site-assets/textbook-annotation-model.js": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483",
+    "site-assets/textbook-annotations.js": "4fd5432c2598ba8b09e13f9849141f0ae8d7ded5c844c3b17973df17ea7c4e0c",
+    "site-assets/textbook-book.js": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7"
+  },
+  "noSecretsOrConsentRecordsRead": true,
+  "noProviderOrRuntimeChanged": true,
+  "fullRunning": 5655,
+  "officialSources": [
+    "https://developers.openai.com/api/docs/guides/safety-checks/under-18-api-guidance",
+    "https://developers.openai.com/api/docs/guides/agent-builder-safety"
+  ],
+  "additionalSourceFact": "initializePreviewPlan seeds real-member u1 as owner unlimit with no end, other real members free. UI-only stage switch cannot enforce Free; entitlement and quota need coordinated policy without rewriting learning records or editing admin.",
+  "sourceIdentityFinding": "Existing prepare IDs bind book/page/block position/source JSON. Nested closed-answer legacy IDs may survive, so public-context index must exclude details structurally rather than allow every annotated node.",
+  "lastImplementation": "tools/candidates/textbook-ai-20261025/current-result.json",
+  "paymentSourceFinding": "planRoute logs change reasons but keeps existing row.reason; payment/cutover cannot be inferred from row.reason. Source-only observation, no actual records read.",
+  "sourceInputsScope": "historical source-reading baseline before AI implementation; current modified files are pinned in lastImplementation"
+}

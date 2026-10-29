@@ -1,0 +1,71 @@
+{
+  "bankSha256": "341c6f9d3b50a4ca6c6fd14061cfb91490cea404c795acf82a30175f9d45fadf",
+  "counts": {
+    "drill": {
+      "units": 22,
+      "questions": 2200,
+      "subjects": {
+        "国語": 1,
+        "数学": 8,
+        "理科": 4,
+        "英語": 9
+      },
+      "statuses": {
+        "ready": 22
+      }
+    },
+    "workbook": {
+      "units": 189,
+      "questions": 13320,
+      "subjects": {
+        "国語": 22,
+        "数学": 79,
+        "理科": 33,
+        "社会": 26,
+        "英語": 29
+      },
+      "statuses": {
+        "ready": 189
+      }
+    }
+  },
+  "scope": "deployed local educational bank only, no student records; counts do not prove all question content reviewed",
+  "publish": false,
+  "appGroups": {
+    "教科書": {
+      "units": 139,
+      "questions": 9820,
+      "subjects": {
+        "国語": 12,
+        "数学": 60,
+        "理科": 27,
+        "社会": 25,
+        "英語": 15
+      }
+    },
+    "特訓": {
+      "units": 50,
+      "questions": 3500,
+      "subjects": {
+        "国語": 10,
+        "数学": 19,
+        "理科": 6,
+        "社会": 1,
+        "英語": 14
+      }
+    },
+    "ドリル": {
+      "units": 22,
+      "questions": 2200,
+      "subjects": {
+        "国語": 1,
+        "数学": 8,
+        "理科": 4,
+        "英語": 9
+      }
+    }
+  },
+  "classification": "exact runtime classification: bank==tokkun, else mode==drill, else textbook",
+  "beforeThreeGuardBankSha256": "8f3b0508a179a8cef14e24799120c0fc7d760d457dd9f6f7986405b33ba291d7",
+  "guardPatch": "social-geo-nihon-review-20261021/integration.json: exact one unit/three fields; counts and all other units unchanged"
+}

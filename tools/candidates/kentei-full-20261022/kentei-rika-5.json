@@ -1,0 +1,501 @@
+{
+ "id": "kentei-rika-5",
+ "bank": "kentei",
+ "kentei": "理科検定",
+ "level": "5級",
+ "title": "理科検定5級 模擬検定（独自問題）",
+ "status": "draft",
+ "exam": {
+  "minutes": 50,
+  "count": 20,
+  "passRate": 0.7,
+  "passNote": "合格のめやすは70％（日本理科検定協会の基準）"
+ },
+ "questions": [
+  {
+   "id": "kentei-rika-5-1",
+   "type": "input",
+   "section": "物理：力とばね",
+   "role": "例題",
+   "prompt": "ばねに20gのおもりをつるすと、ばねは3cmのびた。60gのおもりをつるすと、何cmのびるか。ただし、ばねののびはおもりの重さに比例する。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "60gは20gの3倍なので、のびも3倍の9cm。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-2",
+   "type": "input",
+   "section": "物理：力とばね",
+   "role": "確認",
+   "prompt": "ばねに1.5Nの力を加えると6cmのびた。このばねを10cmのばすには、何Nの力が必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "2.5",
+    "units": [
+     "N"
+    ]
+   },
+   "explanation": "1Nあたり4cmのびる。10cmのばすには10÷4＝2.5N。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-3",
+   "type": "input",
+   "section": "物理：力とばね",
+   "role": "確認",
+   "prompt": "月面上では、重力の大きさが地球の約6分の1になる。地球上で6cmのびるおもりを、同じばねで月面上でつるすと、のびはどうなるか。\nア 約1cmになる　イ 約6cmのまま　ウ 約36cmになる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "重力が6分の1になるので、ばねを引く力も6分の1。のびも約1cm。（ばねばかりで測る「重さ」は変わるが、上皿てんびんで測る「質量」は変わらない）",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-4",
+   "type": "input",
+   "section": "物理：光と音",
+   "role": "例題",
+   "prompt": "凸レンズの焦点より外側に物体を置いたとき、スクリーンにうつる像を何というか。また、その像の向きはどうなるか。正しい組み合わせを選ぼう。\nア 実像・上下左右が逆　イ 虚像・同じ向き　ウ 実像・同じ向き",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "焦点の外側に置くと、スクリーンに上下左右が逆の実像ができる。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-5",
+   "type": "input",
+   "section": "物理：光と音",
+   "role": "確認",
+   "prompt": "水中から空気中へ光が進むとき、入射角を大きくしていくと、光が空気中に出ないで、すべて水面で反射するようになる。この現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "全反射",
+     "ぜんはんしゃ"
+    ]
+   },
+   "explanation": "全反射。光ファイバーなどに利用されている。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-6",
+   "type": "input",
+   "section": "物理：光と音",
+   "role": "確認",
+   "prompt": "雷の光が見えてから音が聞こえるまで4秒かかった。音の速さを340m/sとすると、雷までの距離は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "1360",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "340×4＝1360m。光はほぼ一瞬で届くとみなす。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-7",
+   "type": "input",
+   "section": "化学：物質の性質",
+   "role": "例題",
+   "prompt": "ある金属の質量は54g、体積は20cm³だった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "2.7",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "密度＝質量÷体積＝54÷20＝2.7g/cm³。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-8",
+   "type": "input",
+   "section": "化学：物質の性質",
+   "role": "確認",
+   "prompt": "次のうち、金属に共通する性質をすべて選ぼう。\nア みがくと光る　イ 電気をよく通す　ウ 磁石につく　エ たたくとのびる",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "エ"
+     ]
+    ]
+   },
+   "explanation": "金属光沢・電気や熱をよく通す・展性と延性が共通の性質。磁石につくのは一部の金属だけ。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-9",
+   "type": "input",
+   "section": "化学：物質の性質",
+   "role": "確認",
+   "prompt": "アンモニアが上方置換法で集められるのは、アンモニアのどのような性質のためか。\nア 水にとけやすく、空気より軽い　イ 水にとけにくく、空気より重い　ウ 水にとけにくく、空気より軽い",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "水にとけやすいので水上置換法は使えず、空気より軽いので上方置換法。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-10",
+   "type": "input",
+   "section": "化学：物質の性質",
+   "role": "確認",
+   "prompt": "水100gに砂糖25gをとかした。この砂糖水の質量パーセント濃度は何％か。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "25÷(100＋25)×100＝20％。溶媒の質量だけでわらないこと。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-11",
+   "type": "input",
+   "section": "化学：状態変化",
+   "role": "確認",
+   "prompt": "液体のろうが冷えて固体になるとき、体積と質量はそれぞれどうなるか。\nア 体積は減り、質量は変わらない　イ 体積も質量も減る　ウ 体積は増え、質量は変わらない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ろうは固体になると体積が小さくなる。質量は変わらない。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-12",
+   "type": "input",
+   "section": "化学：状態変化",
+   "role": "確認",
+   "prompt": "水とエタノールの混合物を加熱して、出てきた気体を冷やして集めた。最初に集めた液体に多くふくまれているのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エタノール"
+    ]
+   },
+   "explanation": "エタノールの沸点（約78℃）は水（100℃）より低いので、先に多く出てくる（蒸留）。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-13",
+   "type": "input",
+   "section": "生物：植物と動物",
+   "role": "例題",
+   "prompt": "子葉が1枚で、葉脈が平行脈、根がひげ根の植物のなかまを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "単子葉類",
+     "たんしようるい"
+    ]
+   },
+   "explanation": "単子葉類（イネ・ユリなど）。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-14",
+   "type": "input",
+   "section": "生物：植物と動物",
+   "role": "確認",
+   "prompt": "種子をつくらず、胞子でふえ、葉・茎・根の区別がある植物のなかまを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "シダ植物",
+     "しだ植物",
+     "シダしょくぶつ"
+    ]
+   },
+   "explanation": "シダ植物（イヌワラビなど）。コケ植物は葉・茎・根の区別がない。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "type": "input",
+   "section": "生物：植物と動物",
+   "role": "確認",
+   "prompt": "顕微鏡で、10倍の接眼レンズと40倍の対物レンズを組み合わせて観察した。観察している倍率は何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "400",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "倍率＝接眼レンズの倍率×対物レンズの倍率＝10×40。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-rika-5-15"
+  },
+  {
+   "type": "input",
+   "section": "生物：植物と動物",
+   "role": "確認",
+   "prompt": "被子植物の花で、受粉したあと成長して果実になる部分はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "子房",
+     "しぼう"
+    ]
+   },
+   "explanation": "子房は果実に、胚珠は種子になる。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-rika-5-16"
+  },
+  {
+   "id": "kentei-rika-5-17",
+   "type": "input",
+   "section": "地学：大地の変化",
+   "role": "例題",
+   "prompt": "震源からの距離が60kmの地点に、P波が地震の発生から10秒後に届いた。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "60÷10＝6km/s。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-18",
+   "type": "input",
+   "section": "地学：大地の変化",
+   "role": "確認",
+   "prompt": "初期微動継続時間は、震源からの距離が遠いほどどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "長くなる",
+     "ながくなる"
+    ]
+   },
+   "explanation": "P波とS波の届く時間の差が大きくなるので長くなる。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-19",
+   "type": "input",
+   "section": "地学：大地の変化",
+   "role": "確認",
+   "prompt": "マグマが地下深くでゆっくり冷え固まってできた岩石を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "深成岩",
+     "しんせいがん"
+    ]
+   },
+   "explanation": "深成岩（等粒状組織）。地表近くで急に冷えたものは火山岩（斑状組織）。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-rika-5-20",
+   "type": "input",
+   "section": "地学：大地の変化",
+   "role": "確認",
+   "prompt": "マグマのねばりけが大きい火山の形と噴火のようすの組み合わせとして正しいものを選ぼう。\nア ドーム状・激しい噴火　イ 傾斜がゆるやか・おだやかな噴火　ウ ドーム状・おだやかな噴火",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ねばりけが大きいとドーム状になり、激しい噴火になりやすい。",
+   "source": {
+    "id": null,
+    "file": "りか検定/riken5.pdf",
+    "sha256": "b1c042e1a19e0a4a087266b76084c16ba099c1587552301dbf2cfd9b01149f24",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  }
+ ],
+ "reviewNote": "2026-10-13 Claude作成。【範囲の根拠】一般社団法人 日本理科検定協会「理科検定の出題範囲と構成」https://www.rikakentei.com/stepscore.html （2026-10-14確認：5級は中学1年。第1分野「身近な物理現象」「身の回りの物質」、第2分野「植物の生活と種類」「大地の成り立ちと変化」など。20問・50分、70%で合格・50%以上70%未満は準級合格）。この原稿の6分野はこの範囲の中にある（検定原稿・下書き）。りか検定/riken5.pdf（2ページのサンプル）の出題形式を参考に、問題文・数値はすべて独自。理科の内容は理科ワーク（台帳照合ずみ）で学ぶ中学1年の内容だけ。【資料不足】サンプルが2ページだけで、5級の出題範囲の一覧はない。図を使う問題は、図を使わずに文章で条件を示した。 2026-10-22 Claude：本番と同じ20問にした。物理6・化学6・生物4・地学4。やさしい問題（反射角・磁石につく金属など）を外し、生物を2問追加。"
+}

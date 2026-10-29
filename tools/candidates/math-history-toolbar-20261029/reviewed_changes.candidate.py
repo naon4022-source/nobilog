@@ -1,0 +1,257 @@
+"""Validate later reviewed edits before using historical predecessor evidence."""
+from pathlib import Path
+import hashlib
+import json
+import subprocess
+import xml.etree.ElementTree as E
+
+H=Path(__file__).resolve().parent
+R=H.parents[2]
+S=R/'教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース'
+load=lambda p:json.loads(p.read_text())
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def before_explanation_file(relative):
+    """Restore only a fully checked, explicitly approved explanatory successor."""
+    receipt_path=H/'explanations-20261025/receipt.json'
+    if not receipt_path.exists():
+        return R/relative
+    receipt=load(receipt_path)
+    row=next((row for row in receipt['files'] if row['file']==relative),None)
+    if row is None:
+        return R/relative
+    previous=subprocess.check_output(['node',str(H/'explanations-20261025/checked-source.cjs'),relative],text=True).strip()
+    assert previous==row['beforeFile']
+    return R/previous
+
+
+def before_basic_textbook_ai_file(relative):
+    """Validate the exact basic AI UI successor before handwriting evidence."""
+    receipt_path=R/'tools/candidates/textbook-ai-20261025/service-20261025/ui-main/integration.json'
+    if not receipt_path.exists():
+        return R/relative
+    receipt=load(receipt_path)
+    row=next((r for r in receipt['files'] if r['file']==relative),None)
+    if row is None:
+        return R/relative
+    helper=R/'tools/candidates/textbook-ai-20261026/review/legacy-evidence-fix/checked-basic-ui.cjs'
+    previous=subprocess.check_output(['node',str(helper),relative],text=True).strip()
+    assert previous==row['beforeFile']
+    return R/previous
+
+
+def before_toolbar_file(relative,current):
+    """Undo only the separately approved one-line toolbar wheel guard."""
+    if relative!='site-assets/textbook-book.js':
+        return current
+    receipt_path=H/'remaining-alignment-20261028/answer-safe-v2/main/compat-spec.json'
+    assert sha(receipt_path)=='27543a65e66ccfd6535ce7b4d3e20a9142a5dfdf75a743f493a7045ea2dd1447'
+    row=next(row for row in load(receipt_path)['files'] if row['file']==relative)
+    previous=R/row['beforeFile']
+    assert row['beforeSha256']=='074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1'
+    assert row['afterSha256']=='356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745'
+    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']
+    text=previous.read_text()
+    token='  if(!isFull())return;\n'
+    assert text.count(token)==1
+    expected=text.replace(token,token+"  if(e.target.closest?.('.tb-bar-actions'))return;\n",1)
+    assert expected.encode()==current.read_bytes(),relative+': unreviewed toolbar change'
+    return previous
+
+
+def before_textbook_ai_file(relative):
+    """Check the reviewed source-signature bridge before inherited media evidence."""
+    current=before_toolbar_file(relative,before_basic_textbook_ai_file(relative))
+    receipt_path=R/'tools/candidates/textbook-ai-20261025/reviewed-edits.json'
+    if not receipt_path.exists():
+        return current
+    receipt=load(receipt_path)
+    row=next((r for r in receipt['files'] if r['file']==relative),None)
+    if row is None:
+        return current
+    assert receipt['version']==1
+    proof=row['verification']
+    assert proof['observedExitCode']==0 and sha(R/proof['file'])==proof['sha256']
+    result=load(R/proof['file'])
+    assert result['status']=='passed' and result['checks']==proof['checks']
+    previous=R/row['beforeFile']
+    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']
+    text=previous.read_text()
+    for edit in row['edits']:
+        assert text.count(edit['before'])==1
+        text=text.replace(edit['before'],edit['after'],1)
+    assert text.encode()==current.read_bytes(),relative+': change outside reviewed textbook AI metadata'
+    return previous
+
+
+def before_handwriting_file(relative):
+    """Validate the exact reviewed annotation successor before older evidence."""
+    current=before_textbook_ai_file(relative)
+    receipt_path=H/'handwriting-20261025/reviewed-annotation-successor.json'
+    if not receipt_path.exists():
+        return current
+    receipt=load(receipt_path)
+    row=next((r for r in receipt['files'] if r['file']==relative),None)
+    if row is None:
+        return current
+    assert receipt['version']==1
+    for proof in receipt['individualProofs']:
+        path=R/proof['file']
+        assert sha(path)==proof['sha256']
+        report=load(path)
+        assert report['status']=='passed' and report['checks']==proof['checks']
+    previous=R/row['beforeFile']
+    assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']
+    text=previous.read_text()
+    for edit in row['edits']:
+        assert text.count(edit['before'])==1
+        text=text.replace(edit['before'],edit['after'],1)
+    assert text.encode()==current.read_bytes(),relative+': unreviewed annotation change outside handwriting integration'
+    return previous
+
+
+def before_math_fraction_file(relative):
+    current=before_handwriting_file(relative)
+    receipt_path=H/'body-fractions-20261025/receipt.json'
+    if not receipt_path.exists():
+        return current
+    receipt=load(receipt_path)
+    found=next((r for r in receipt['files'] if r['file']==relative),None)
+    if found is None:
+        return current
+    for row in receipt['files']:
+        previous,now=R/row['beforeFile'],before_handwriting_file(row['file'])
+        assert sha(previous)==row['beforeSha256'] and sha(now)==row['afterSha256']
+        text=previous.read_text()
+        for edit in row['edits']:
+            assert text.count(edit['before'])==1
+            text=text.replace(edit['before'],edit['after'])
+        assert text.encode()==now.read_bytes(),row['file']+': unreviewed change outside exact math-context delta'
+    for path,expected in receipt['bookJsonSha256'].items():
+        assert sha(before_explanation_file(path))==expected
+    return R/found['beforeFile']
+
+
+def before_zoom_file(relative):
+    current=before_math_fraction_file(relative)
+    row=next((r for r in load(H/'zoom-exact-edits.json')['files'] if r['file']==relative),None)
+    if row is None:
+        return current
+    previous=R/row['beforeFile']
+    assert sha(previous)==row['beforeSha256']
+    text=previous.read_text()
+    last=len(text)+1
+    for edit in reversed(row['edits']):
+        a,b=edit['start'],edit['end']
+        assert 0<=a<=b<last
+        assert text[a:b]==edit['before']
+        text=text[:a]+edit['after']+text[b:]
+        last=a
+    assert text.encode()==current.read_bytes(),relative+': unreviewed change outside exact zoom delta'
+    assert sha(current)==row['afterSha256']
+    return previous
+
+
+def semantic(root):
+    texts,shapes=[],[]
+    def walk(n):
+        if 'data-stacked-fraction' in n.attrib:
+            texts.append(n.attrib['data-stacked-fraction'])
+            return
+        tag=n.tag.rsplit('}',1)[-1]
+        if tag=='text':
+            texts.append(''.join(n.itertext()))
+            return
+        if tag in {'path','line','rect','circle','ellipse','polygon','polyline'}:
+            shapes.append((tag,sorted(n.attrib.items())))
+        for child in n:walk(child)
+    walk(root)
+    return texts,shapes
+
+
+def reviewed_svg_digest(ident, reviewed_sha, final):
+    """Accept only the exact visually reviewed font-metrics successor."""
+    if sha(final)==reviewed_sha:
+        return final
+    directory=H/'font-metrics-repair-20261024'
+    receipt=load(directory/'integration.json')
+    assert sha(directory/'manifest.json')==receipt['reviewManifestSha256']
+    assert sha(directory/'visual-review.json')==receipt['visualReviewSha256']
+    row=next(x for x in receipt['items'] if x['id']==ident)
+    assert row['kind']=='integrated' and row['beforeSha256']==reviewed_sha
+    registry=load(S/row['registry']/'manifest.json')['items'][ident]
+    current=S/row['registry']/registry['file']
+    assert final.resolve() in {current.resolve(),(R/row['target']).resolve(),(R/row['copy']).resolve()}
+    assert sha(current)==sha(R/row['target'])==sha(R/row['copy'])==sha(R/row['candidate'])==row['afterSha256']
+    assert registry['afterSha256']==row['afterSha256']
+    visual=load(directory/'visual-review.json')
+    review=next(x for x in visual['items'] if x['id']==ident)
+    assert review['beforeSha256']==reviewed_sha and review['svgSha256']==row['afterSha256']
+    assert sha(R/review['screenshot'])==review['screenshotSha256']
+    assert sha(R/visual['automaticAudit'])==visual['automaticAuditSha256']
+    audit=load(R/visual['automaticAudit'])
+    audited=next(x for x in audit['results'] if x['id']==ident)
+    assert audited['sha256']==row['afterSha256'] and not any(g['issues'] for g in audited['groups'])
+    previous=R/row['beforeFile']
+    assert sha(previous)==sha(R/row['copyBeforeFile'])==reviewed_sha
+    assert semantic(E.parse(previous).getroot())==semantic(E.parse(current).getroot())
+    return previous
+
+
+def svg_predecessor(path,expected_sha):
+    path=path.resolve()
+    if sha(path)==expected_sha:
+        return path
+    repair=H/'font-metrics-repair-20261024/integration.json'
+    if repair.exists():
+        for row in load(repair)['items']:
+            if row['kind']=='integrated' and row['beforeSha256']==expected_sha and path in {(R/row['target']).resolve(),(R/row['copy']).resolve()}:
+                return reviewed_svg_digest(row['id'],expected_sha,path)
+    for registry,backup,review_name in [
+        ('縦分数_20261023','before-fraction-integration','fraction-visual-review.json'),
+        ('縦分数_2章_20261023','before-chapter2-fraction-integration','chapter2-fraction-visual-review.json'),
+        ('縦分数_4章_20261024','before-chapter4-fraction-integration','chapter4-fraction-visual-review.json'),
+        ('縦分数_5章_20261024','font-metrics-repair-20261024/previous','chapter5-fraction-visual-review.json'),
+        ('縦分数_6章_20261025','before-chapter6-fraction-integration','chapter6-fraction-visual-review.json'),
+        ('縦分数_巻末_20261025','before-appendix-fraction-integration','appendix-fraction-visual-review.json'),
+    ]:
+        directory=S/registry
+        rows=load(directory/'manifest.json')['items']
+        for ident,row in rows.items():
+            if path not in [(R/row['target']).resolve(),(R/row['copy']).resolve()]:continue
+            assert row['beforeSha256']==expected_sha
+            final=directory/row['file']
+            assert sha(final)==sha(R/row['target'])==sha(R/row['copy'])==row['afterSha256']
+            review=load(H/review_name)
+            if registry=='縦分数_4章_20261024':
+                item=next(x for x in review['reviews'] if x['id']==ident)
+                assert sha(reviewed_svg_digest(ident,item['candidateSha256'],final))==item['candidateSha256']
+                assert sha(R/item['screenshot'])==item['screenshotSha256']
+            else:
+                item=next(x for x in review['items'] if x['id']==ident)
+                assert sha(reviewed_svg_digest(ident,item['svgSha256'],final))==item['svgSha256']
+            original=H/backup/path.relative_to(R)
+            assert sha(original)==expected_sha
+            assert semantic(E.parse(original).getroot())==semantic(E.parse(final).getroot()),ident+': changed original text/shapes'
+            return original
+    raise AssertionError(str(path)+': no reviewed successor chain for expected '+expected_sha)
+
+
+def logical_book_predecessor(path):
+    """Verify the user-approved one-sentence delta before checking older layouts."""
+    path=Path(path).resolve()
+    current=before_explanation_file(str(path.relative_to(R)))
+    receipt_path=H/'prime-domain-20261024/receipt.json'
+    if not receipt_path.exists() or path!=(R/'site-assets/textbook-book-math1.json').resolve():
+        return current
+    receipt=load(receipt_path)
+    assert receipt['approval']=='User explicitly approved this explanation only'
+    for row in receipt['files']:
+        previous,current=R/row['beforeFile'],before_explanation_file(row['file'])
+        assert sha(previous)==row['beforeSha256'] and sha(current)==row['afterSha256']
+        text=previous.read_text()
+        assert text.count(receipt['before'])==1
+        assert text.replace(receipt['before'],receipt['after']).encode()==current.read_bytes()
+    row=next(r for r in receipt['files'] if (R/r['file']).resolve()==path)
+    return R/row['beforeFile']

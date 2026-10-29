@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/教材整理/Claude_Codex共有/教科動画/template.js

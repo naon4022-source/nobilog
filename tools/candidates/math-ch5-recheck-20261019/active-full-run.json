@@ -1,0 +1,27 @@
+{
+  "session": 79323,
+  "log": "/tmp/nobi-math-ch5-after-20261020.log",
+  "command": "bash .claude/verify/run.sh",
+  "status": "completed",
+  "resume": "Poll session 79323, never restart based only on this record. After observed exit0 and final success marker, save observed-full-result.json with log SHA then run finalize-after-full.py.",
+  "next": "After observed full result: write receipt and run finalize-after-full.py; then run prepare-layout-anchors.mjs and make-layout-candidate.py. Inspect isolated layout before adoption. Reuse the one generated APPLY image; no regeneration.",
+  "lastObservedLive": {
+    "at": "2026-10-20T10:21:20.143047+00:00",
+    "session": 79323,
+    "suitePid": 46063,
+    "childPid": 49440,
+    "child": "verify-textbook-large-browser.mjs",
+    "childElapsed": "08:42",
+    "nodeCpuPercent": 6.6,
+    "rendererCpuPercent": 60.5,
+    "result": "running; terminal exit not observed"
+  },
+  "lastObservedMilestone": {
+    "at": "2026-10-20T10:26:52.717776+00:00",
+    "largeTextChecks": 48,
+    "chapter1ImageChecks": 1788,
+    "result": "both passed; full suite session 79323 still running"
+  },
+  "observedExitCode": 0,
+  "proof": "tools/candidates/math-ch5-recheck-20261019/post-full-verification.json"
+}

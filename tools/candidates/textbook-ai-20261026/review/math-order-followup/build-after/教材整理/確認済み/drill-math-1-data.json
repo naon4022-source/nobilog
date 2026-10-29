@@ -1,0 +1,2683 @@
+{
+ "id": "drill-math-1-data",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "データの整理",
+ "majorTitle": "データの活用",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-data-1",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n54、43、36、54、60、25、42、58、29、51、60、47",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "範囲＝最大値−最小値＝60−25＝35",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-2",
+   "type": "input",
+   "prompt": "次の10個のデータの平均値を求めよう。\n35、38、44、50、38、44、39、30、48、44",
+   "answer": {
+    "kind": "number",
+    "value": "41"
+   },
+   "explanation": "平均値＝合計÷個数＝410÷10＝41",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-3",
+   "type": "input",
+   "prompt": "次の7個のデータの中央値（メジアン）を求めよう。\n46、39、53、47、38、53、36",
+   "answer": {
+    "kind": "number",
+    "value": "46"
+   },
+   "explanation": "小さい順に並べると 36、38、39、46、47、53、53。まん中の4番目の値で 46",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "312/7"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-4",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n10、6、10、7、6、6、10、6、4、5",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "いちばん多く出てくる値は 6（4回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-5",
+   "type": "input",
+   "prompt": "次の度数分布表で、最頻値を求めよう。\n130以上140未満：3人\n140以上150未満：1人\n150以上160未満：2人\n160以上170未満：5人\n170以上180未満：1人",
+   "answer": {
+    "kind": "number",
+    "value": "165"
+   },
+   "explanation": "度数がいちばん多い階級は 160以上170未満。度数分布表では、その階級値 165 を最頻値とする。",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p98 1(3)（度数分布表と最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-6",
+   "type": "input",
+   "prompt": "階級の幅を5として、30以上35未満、35以上40未満、…と階級を分けた度数分布表がある。30の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "30以上35未満",
+     "30~35",
+     "30〜35",
+     "30-35"
+    ],
+    "compact": true
+   },
+   "explanation": "30は 30以上35未満 の階級に入る。「以上」は境目の値をふくむ。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-7",
+   "type": "input",
+   "prompt": "度数の合計が20人の度数分布表で、ある階級の相対度数が0.3である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝20×0.3＝6人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-8",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 4人、1人、2人、3人、10人（合計20人）である。小さい方から3番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.35"
+   },
+   "explanation": "累積度数 4＋1＋2＝7人。7÷20＝0.35",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-9",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n6、3、1、1、7、1、7、3、2、1、7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平均値"
+    ]
+   },
+   "explanation": "平均値は39/11、中央値は3、最頻値は1。最も大きいのは平均値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-10",
+   "type": "input",
+   "prompt": "データをいくつかの区間に分け、それぞれの区間に入るデータの個数を示した表を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "度数分布表",
+     "どすうぶんぷひょう"
+    ]
+   },
+   "explanation": "度数分布表。区間を階級、区間の幅を階級の幅、個数を度数という。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p96 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ヒストグラム"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-11",
+   "type": "input",
+   "prompt": "度数分布表で、データを整理するための区間を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "階級",
+     "かいきゅう"
+    ]
+   },
+   "explanation": "階級。その区間の幅を階級の幅という。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p96 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "度数"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-12",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n28、52、49、46、21、31、20、44、47、36、27、56",
+   "answer": {
+    "kind": "number",
+    "value": "36"
+   },
+   "explanation": "範囲＝最大値−最小値＝56−20＝36",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "56"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-13",
+   "type": "input",
+   "prompt": "次の10個のデータの平均値を求めよう。\n44、35、45、43、41、50、34、36、36、55",
+   "answer": {
+    "kind": "number",
+    "value": "41.9"
+   },
+   "explanation": "平均値＝合計÷個数＝419÷10＝41.9",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-14",
+   "type": "input",
+   "prompt": "次の11個のデータの中央値（メジアン）を求めよう。\n38、47、39、33、35、50、38、33、44、52、42",
+   "answer": {
+    "kind": "number",
+    "value": "39"
+   },
+   "explanation": "小さい順に並べると 33、33、35、38、38、39、42、44、47、50、52。まん中の6番目の値で 39",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "41"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-15",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n6、9、7、9、8、5、8、7、8",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "いちばん多く出てくる値は 8（3回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-16",
+   "type": "input",
+   "prompt": "次の度数分布表で、最頻値を求めよう。\n0以上10未満：6人\n10以上20未満：8人\n20以上30未満：5人\n30以上40未満：7人\n40以上50未満：6人",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "度数がいちばん多い階級は 10以上20未満。度数分布表では、その階級値 15 を最頻値とする。",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p98 1(3)（度数分布表と最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-17",
+   "type": "input",
+   "prompt": "階級の幅を5として、140以上145未満、145以上150未満、…と階級を分けた度数分布表がある。147.5の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "145以上150未満",
+     "145~150",
+     "145〜150",
+     "145-150"
+    ],
+    "compact": true
+   },
+   "explanation": "147.5は 145以上150未満 の階級に入る。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-18",
+   "type": "input",
+   "prompt": "度数の合計が40人の度数分布表で、ある階級の相対度数が0.1である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝40×0.1＝4人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-19",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 2人、2人、6人、6人、4人（合計20人）である。小さい方から2番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.2"
+   },
+   "explanation": "累積度数 2＋2＝4人。4÷20＝0.2",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-20",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n7、7、2、8、3、8、4、1、4、8、1、9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最頻値"
+    ]
+   },
+   "explanation": "平均値は31/6、中央値は5.5、最頻値は8。最も大きいのは最頻値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-21",
+   "type": "input",
+   "prompt": "度数分布表で、それぞれの階級に入るデータの個数を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "度数",
+     "どすう"
+    ]
+   },
+   "explanation": "度数。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p96 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "階級"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-22",
+   "type": "input",
+   "prompt": "次の表は、30人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：1、1、4、5、6、6、3、4",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "30人を小さい順に並べると、15番目と16番目の平均が中央値で 7点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-23",
+   "type": "input",
+   "prompt": "各階級の幅を横、度数を縦とする長方形を順に並べてかいたグラフを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ヒストグラム",
+     "柱状グラフ"
+    ]
+   },
+   "explanation": "ヒストグラム（柱状グラフ）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p96 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "度数折れ線"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-24",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n22、49、45、20、29、33、24、55、20、60",
+   "answer": {
+    "kind": "number",
+    "value": "40"
+   },
+   "explanation": "範囲＝最大値−最小値＝60−20＝40",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-25",
+   "type": "input",
+   "prompt": "次の8個のデータの平均値を求めよう。\n37、54、41、41、48、36、32、53",
+   "answer": {
+    "kind": "number",
+    "value": "42.75"
+   },
+   "explanation": "平均値＝合計÷個数＝342÷8＝42.75",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-26",
+   "type": "input",
+   "prompt": "次の7個のデータの中央値（メジアン）を求めよう。\n34、39、39、37、34、50、32",
+   "answer": {
+    "kind": "number",
+    "value": "37"
+   },
+   "explanation": "小さい順に並べると 32、34、34、37、39、39、50。まん中の4番目の値で 37",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "265/7"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-27",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n5、6、3、3、5、3、3、5、7、3",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "いちばん多く出てくる値は 3（5回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-28",
+   "type": "input",
+   "prompt": "次の表は、20人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：2、2、4、2、4、3、1、2",
+   "answer": {
+    "kind": "number",
+    "value": "6.5"
+   },
+   "explanation": "20人を小さい順に並べると、10番目と11番目の平均が中央値で 6.5点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-29",
+   "type": "input",
+   "prompt": "階級の幅を5として、30以上35未満、35以上40未満、…と階級を分けた度数分布表がある。37.5の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "35以上40未満",
+     "35~40",
+     "35〜40",
+     "35-40"
+    ],
+    "compact": true
+   },
+   "explanation": "37.5は 35以上40未満 の階級に入る。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-30",
+   "type": "input",
+   "prompt": "度数の合計が40人の度数分布表で、ある階級の相対度数が0.25である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝40×0.25＝10人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-31",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n5、7、9、1、7、9、8、5、2、9、9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最頻値"
+    ]
+   },
+   "explanation": "平均値は71/11、中央値は7、最頻値は9。最も大きいのは最頻値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-32",
+   "type": "input",
+   "prompt": "ヒストグラムの長方形の上の辺の中点を順に結んでつくったグラフを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "度数折れ線",
+     "度数分布多角形"
+    ]
+   },
+   "explanation": "度数折れ線（度数分布多角形）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p97 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ヒストグラム"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-33",
+   "type": "input",
+   "prompt": "次の表は、31人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：1、6、6、5、4、1、3、5",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "31人を小さい順に並べると、16番目が中央値で 6点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-34",
+   "type": "input",
+   "prompt": "各階級の度数の、全体に対する割合を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "相対度数",
+     "そうたいどすう"
+    ]
+   },
+   "explanation": "相対度数＝その階級の度数÷度数の合計。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p96 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "累積度数"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-35",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n53、52、27、54、60、29、52、22",
+   "answer": {
+    "kind": "number",
+    "value": "38"
+   },
+   "explanation": "範囲＝最大値−最小値＝60−22＝38",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-36",
+   "type": "input",
+   "prompt": "次の5個のデータの平均値を求めよう。\n47、55、50、43、47",
+   "answer": {
+    "kind": "number",
+    "value": "48.4"
+   },
+   "explanation": "平均値＝合計÷個数＝242÷5＝48.4",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-37",
+   "type": "input",
+   "prompt": "次の11個のデータの中央値（メジアン）を求めよう。\n39、39、34、40、47、39、52、37、44、43、54",
+   "answer": {
+    "kind": "number",
+    "value": "40"
+   },
+   "explanation": "小さい順に並べると 34、37、39、39、39、40、43、44、47、52、54。まん中の6番目の値で 40",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "468/11"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-38",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n7、3、4、3、4、5、10、4、7、9",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "いちばん多く出てくる値は 4（3回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-39",
+   "type": "input",
+   "prompt": "次の度数分布表で、145以上150未満の階級の相対度数を求めよう（小数で答える）。\n145以上150未満：7人\n150以上155未満：6人\n155以上160未満：9人\n160以上165未満：1人\n165以上170未満：5人\n合計：28人",
+   "answer": {
+    "kind": "number",
+    "value": "0.25"
+   },
+   "explanation": "相対度数＝その階級の度数÷度数の合計＝7÷28＝0.25",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-40",
+   "type": "input",
+   "prompt": "階級の幅を0.25として、2.75以上3未満、3以上3.25未満、…と階級を分けた度数分布表がある。3の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3以上3.25未満",
+     "3~3.25",
+     "3〜3.25",
+     "3-3.25"
+    ],
+    "compact": true
+   },
+   "explanation": "3は 3以上3.25未満 の階級に入る。「以上」は境目の値をふくむ。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-41",
+   "type": "input",
+   "prompt": "度数の合計が20人の度数分布表で、ある階級の相対度数が0.2である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝20×0.2＝4人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-42",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 2人、2人、5人、2人、9人（合計20人）である。小さい方から3番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.45"
+   },
+   "explanation": "累積度数 2＋2＋5＝9人。9÷20＝0.45",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-43",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n6、9、2、6、8、9、4、3、9、7、1、1",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最頻値"
+    ]
+   },
+   "explanation": "平均値は65/12、中央値は6、最頻値は9。最も大きいのは最頻値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-44",
+   "type": "input",
+   "prompt": "データの値を大きさの順に並べたとき、中央にくる値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中央値",
+     "メジアン",
+     "ちゅうおうち"
+    ]
+   },
+   "explanation": "中央値（メジアン）。データが偶数個のときは中央の2つの値の平均。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p96 要点2（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "平均値"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-45",
+   "type": "input",
+   "prompt": "データの中で、最も多く出てくる値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最頻値",
+     "モード",
+     "さいひんち"
+    ]
+   },
+   "explanation": "最頻値（モード）。度数分布表では度数が最も多い階級の階級値。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p96 要点2（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "中央値"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-46",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n26、47、27、46、57、25、53、23、46、36、44",
+   "answer": {
+    "kind": "number",
+    "value": "34"
+   },
+   "explanation": "範囲＝最大値−最小値＝57−23＝34",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "57"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-47",
+   "type": "input",
+   "prompt": "次の5個のデータの平均値を求めよう。\n32、31、31、55、52",
+   "answer": {
+    "kind": "number",
+    "value": "40.2"
+   },
+   "explanation": "平均値＝合計÷個数＝201÷5＝40.2",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-48",
+   "type": "input",
+   "prompt": "次の11個のデータの中央値（メジアン）を求めよう。\n42、33、39、41、32、54、31、43、34、52、34",
+   "answer": {
+    "kind": "number",
+    "value": "39"
+   },
+   "explanation": "小さい順に並べると 31、32、33、34、34、39、41、42、43、52、54。まん中の6番目の値で 39",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "435/11"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-49",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n4、7、7、4、7、7、8、5、6、7",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "いちばん多く出てくる値は 7（5回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-50",
+   "type": "input",
+   "prompt": "次の度数分布表で、50以上60未満の階級までの累積度数を求めよう。\n40以上50未満：9人\n50以上60未満：4人\n60以上70未満：1人\n70以上80未満：1人\n80以上90未満：8人",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "最初の階級からその階級までの度数の合計。9＋4＝13人",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p96 1(3)（累積度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-51",
+   "type": "input",
+   "prompt": "階級の幅を10として、40以上50未満、50以上60未満、…と階級を分けた度数分布表がある。70の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "70以上80未満",
+     "70~80",
+     "70〜80",
+     "70-80"
+    ],
+    "compact": true
+   },
+   "explanation": "70は 70以上80未満 の階級に入る。「以上」は境目の値をふくむ。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-52",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 4人、3人、1人、1人、11人（合計20人）である。小さい方から2番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.35"
+   },
+   "explanation": "累積度数 4＋3＝7人。7÷20＝0.35",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-53",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n1、6、1、9、7、2、3、6、5、7、1、2",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平均値"
+    ]
+   },
+   "explanation": "平均値は25/6、中央値は4、最頻値は1。最も大きいのは平均値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-54",
+   "type": "input",
+   "prompt": "平均値・中央値・最頻値のように、データ全体のようすを表す数値をまとめて何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "代表値",
+     "だいひょうち"
+    ]
+   },
+   "explanation": "代表値。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p97 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-55",
+   "type": "input",
+   "prompt": "最大値から最小値をひいた値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "範囲",
+     "レンジ",
+     "はんい"
+    ]
+   },
+   "explanation": "範囲（レンジ）＝最大値−最小値。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p96 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "階級の幅"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-56",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n39、55、59、25、46、35、27、60、49、34、41",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "範囲＝最大値−最小値＝60−25＝35",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-57",
+   "type": "input",
+   "prompt": "次の10個のデータの平均値を求めよう。\n42、48、49、44、32、32、46、31、41、41",
+   "answer": {
+    "kind": "number",
+    "value": "40.6"
+   },
+   "explanation": "平均値＝合計÷個数＝406÷10＝40.6",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-58",
+   "type": "input",
+   "prompt": "次の11個のデータの中央値（メジアン）を求めよう。\n30、48、48、49、52、35、32、42、33、30、31",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "小さい順に並べると 30、30、31、32、33、35、42、48、48、49、52。まん中の6番目の値で 35",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "430/11"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-59",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n8、8、7、10、7、10、8、10、8",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "いちばん多く出てくる値は 8（4回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-60",
+   "type": "input",
+   "prompt": "次の表は、28人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：6、2、1、1、6、5、5、2",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "28人を小さい順に並べると、14番目と15番目の平均が中央値で 7点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-61",
+   "type": "input",
+   "prompt": "次の度数分布表で、10以上20未満の階級までの累積度数を求めよう。\n0以上10未満：7人\n10以上20未満：1人\n20以上30未満：9人\n30以上40未満：7人\n40以上50未満：2人",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "最初の階級からその階級までの度数の合計。7＋1＝8人",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p96 1(3)（累積度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-62",
+   "type": "input",
+   "prompt": "階級の幅を5として、30以上35未満、35以上40未満、…と階級を分けた度数分布表がある。55の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "55以上60未満",
+     "55~60",
+     "55〜60",
+     "55-60"
+    ],
+    "compact": true
+   },
+   "explanation": "55は 55以上60未満 の階級に入る。「以上」は境目の値をふくむ。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-63",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 3人、6人、5人、4人、2人（合計20人）である。小さい方から5番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "累積度数 3＋6＋5＋4＋2＝20人。20÷20＝1",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-64",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n3、3、7、4、7、3、4、6、6",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平均値"
+    ]
+   },
+   "explanation": "平均値は43/9、中央値は4、最頻値は3。最も大きいのは平均値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-65",
+   "type": "input",
+   "prompt": "度数分布表で、階級のまん中の値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "階級値",
+     "かいきゅうち"
+    ]
+   },
+   "explanation": "階級値。例：10以上20未満の階級値は15。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p96 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-66",
+   "type": "input",
+   "prompt": "次の度数分布表で、150以上155未満の階級までの累積度数を求めよう。\n145以上150未満：5人\n150以上155未満：4人\n155以上160未満：4人\n160以上165未満：7人\n165以上170未満：2人",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "最初の階級からその階級までの度数の合計。5＋4＝9人",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p96 1(3)（累積度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-67",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n26、22、54、30、31、54、40、46、49、56、59、39",
+   "answer": {
+    "kind": "number",
+    "value": "37"
+   },
+   "explanation": "範囲＝最大値−最小値＝59−22＝37",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "59"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-68",
+   "type": "input",
+   "prompt": "次の9個のデータの中央値（メジアン）を求めよう。\n50、41、50、30、34、39、39、35、31",
+   "answer": {
+    "kind": "number",
+    "value": "39"
+   },
+   "explanation": "小さい順に並べると 30、31、34、35、39、39、41、50、50。まん中の5番目の値で 39",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "349/9"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-69",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n8、3、4、9、3、3、4、3、4、8",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "いちばん多く出てくる値は 3（4回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-70",
+   "type": "input",
+   "prompt": "次の表は、28人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：2、5、3、6、1、5、3、3",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "28人を小さい順に並べると、14番目と15番目の平均が中央値で 6点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-71",
+   "type": "input",
+   "prompt": "次の度数分布表で、最頻値を求めよう。\n40以上50未満：7人\n50以上60未満：1人\n60以上70未満：6人\n70以上80未満：1人\n80以上90未満：3人",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "度数がいちばん多い階級は 40以上50未満。度数分布表では、その階級値 45 を最頻値とする。",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p98 1(3)（度数分布表と最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-72",
+   "type": "input",
+   "prompt": "度数の合計が25人の度数分布表で、ある階級の相対度数が0.2である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝25×0.2＝5人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-73",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 2人、4人、1人、2人、11人（合計20人）である。小さい方から3番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.35"
+   },
+   "explanation": "累積度数 2＋4＋1＝7人。7÷20＝0.35",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-74",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n2、6、1、5、1、1、6、5、6、1、7、4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中央値"
+    ]
+   },
+   "explanation": "平均値は3.75、中央値は4.5、最頻値は1。最も大きいのは中央値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-75",
+   "type": "input",
+   "prompt": "度数分布表で、40点以上50点未満の階級の階級値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "階級値は階級のまん中の値。(40＋50)÷2＝45",
+   "source": {
+    "id": "source-0153",
+    "file": "ドリル/数学/S__15589440_0.jpg",
+    "sha256": "0c030b6e883d96ac69f4c91d26f61ad2d0f6e33ba753226176d33540fb5a64cb",
+    "page": 100,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p100 1(1)（階級値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-76",
+   "type": "input",
+   "prompt": "次の表は、21人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：1、2、3、2、5、6、1、1",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "21人を小さい順に並べると、11番目が中央値で 7点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-77",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n47、43、50、44、45、46、38、56、35、54",
+   "answer": {
+    "kind": "number",
+    "value": "21"
+   },
+   "explanation": "範囲＝最大値−最小値＝56−35＝21",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "56"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-78",
+   "type": "input",
+   "prompt": "次の8個のデータの平均値を求めよう。\n44、37、38、31、35、35、55、52",
+   "answer": {
+    "kind": "number",
+    "value": "40.875"
+   },
+   "explanation": "平均値＝合計÷個数＝327÷8＝40.875",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-79",
+   "type": "input",
+   "prompt": "次の9個のデータの中央値（メジアン）を求めよう。\n46、46、38、53、55、49、33、54、34",
+   "answer": {
+    "kind": "number",
+    "value": "46"
+   },
+   "explanation": "小さい順に並べると 33、34、38、46、46、49、53、54、55。まん中の5番目の値で 46",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "136/3"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-80",
+   "type": "input",
+   "prompt": "次の表は、28人のテストの得点を表したものである。最頻値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：2、3、4、6、5、3、4、1",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "人数がいちばん多い得点は 6点（6人）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-81",
+   "type": "input",
+   "prompt": "階級の幅を10として、40以上50未満、50以上60未満、…と階級を分けた度数分布表がある。50の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "50以上60未満",
+     "50~60",
+     "50〜60",
+     "50-60"
+    ],
+    "compact": true
+   },
+   "explanation": "50は 50以上60未満 の階級に入る。「以上」は境目の値をふくむ。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-82",
+   "type": "input",
+   "prompt": "度数の合計が40人の度数分布表で、ある階級の相対度数が0.05である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝40×0.05＝2人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-83",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 3人、4人、2人、5人、6人（合計20人）である。小さい方から4番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.7"
+   },
+   "explanation": "累積度数 3＋4＋2＋5＝14人。14÷20＝0.7",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-84",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n9、4、8、4、2、9、3、3、3、6、7、8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平均値"
+    ]
+   },
+   "explanation": "平均値は5.5、中央値は5、最頻値は3。最も大きいのは平均値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-85",
+   "type": "input",
+   "prompt": "次の度数分布表で、145以上150未満の階級の相対度数を求めよう（小数で答える）。\n145以上150未満：9人\n150以上155未満：3人\n155以上160未満：1人\n160以上165未満：3人\n165以上170未満：2人\n合計：18人",
+   "answer": {
+    "kind": "number",
+    "value": "0.5"
+   },
+   "explanation": "相対度数＝その階級の度数÷度数の合計＝9÷18＝0.5",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-86",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n24、44、40、38、32、54、34、55、21、33、40、40",
+   "answer": {
+    "kind": "number",
+    "value": "34"
+   },
+   "explanation": "範囲＝最大値−最小値＝55−21＝34",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "55"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-87",
+   "type": "input",
+   "prompt": "次の11個のデータの中央値（メジアン）を求めよう。\n38、52、31、32、53、42、53、53、48、53、44",
+   "answer": {
+    "kind": "number",
+    "value": "48"
+   },
+   "explanation": "小さい順に並べると 31、32、38、42、44、48、52、53、53、53、53。まん中の6番目の値で 48",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "499/11"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-88",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n4、7、4、7、7、7、3、7、5",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "いちばん多く出てくる値は 7（5回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-89",
+   "type": "input",
+   "prompt": "次の表は、31人のテストの得点を表したものである。中央値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：3、4、6、6、1、1、5、5",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "31人を小さい順に並べると、16番目が中央値で 6点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p97 3(1)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-90",
+   "type": "input",
+   "prompt": "階級の幅を5として、30以上35未満、35以上40未満、…と階級を分けた度数分布表がある。57.5の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "55以上60未満",
+     "55~60",
+     "55〜60",
+     "55-60"
+    ],
+    "compact": true
+   },
+   "explanation": "57.5は 55以上60未満 の階級に入る。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-91",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 1人、3人、5人、4人、7人（合計20人）である。小さい方から5番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "累積度数 1＋3＋5＋4＋7＝20人。20÷20＝1",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-92",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n7、3、7、1、4、1、4、6、1、3、5",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中央値"
+    ]
+   },
+   "explanation": "平均値は42/11、中央値は4、最頻値は1。最も大きいのは中央値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-93",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n48、20、45、39、48、38、41、57",
+   "answer": {
+    "kind": "number",
+    "value": "37"
+   },
+   "explanation": "範囲＝最大値−最小値＝57−20＝37",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "57"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-94",
+   "type": "input",
+   "prompt": "次の6個のデータの平均値を求めよう。\n32、47、36、48、55、43",
+   "answer": {
+    "kind": "number",
+    "value": "43.5"
+   },
+   "explanation": "平均値＝合計÷個数＝261÷6＝43.5",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-95",
+   "type": "input",
+   "prompt": "次の10個のデータの中央値（メジアン）を求めよう。\n49、35、30、54、30、47、35、55、35、30",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "小さい順に並べると 30、30、30、35、35、35、47、49、54、55。個数が偶数なので、5番目と6番目の平均で (35＋35)÷2＝35",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "40"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-96",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n3、9、8、8、8、9、10、7、6",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "いちばん多く出てくる値は 8（3回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-97",
+   "type": "input",
+   "prompt": "次の表は、32人のテストの得点を表したものである。平均値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：3、6、4、4、2、3、4、6",
+   "answer": {
+    "kind": "number",
+    "value": "6.59375"
+   },
+   "explanation": "(得点×人数)の合計 211 ÷ 32人 ＝ 6.59375点",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-98",
+   "type": "input",
+   "prompt": "階級の幅を10として、40以上50未満、50以上60未満、…と階級を分けた度数分布表がある。95の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "90以上100未満",
+     "90~100",
+     "90〜100",
+     "90-100"
+    ],
+    "compact": true
+   },
+   "explanation": "95は 90以上100未満 の階級に入る。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-99",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 1人、2人、2人、5人、10人（合計20人）である。小さい方から3番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.25"
+   },
+   "explanation": "累積度数 1＋2＋2＝5人。5÷20＝0.25",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-100",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n2、8、7、2、5、8、1、2、1、2、3、3",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平均値"
+    ]
+   },
+   "explanation": "平均値は11/3、中央値は2.5、最頻値は2。最も大きいのは平均値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-data-test-1",
+   "type": "input",
+   "prompt": "次の表は、17人のテストの得点を表したものである。最頻値を求めよう。\n得点（点）：3、4、5、6、7、8、9、10\n人数（人）：2、1、4、1、1、2、5、1",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "人数がいちばん多い得点は 9点（5人）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-2",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n25、23、49、25、32、39、40、55、37、37、37",
+   "answer": {
+    "kind": "number",
+    "value": "32"
+   },
+   "explanation": "範囲＝最大値−最小値＝55−23＝32",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "55"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-3",
+   "type": "input",
+   "prompt": "次の10個のデータの平均値を求めよう。\n46、53、38、51、39、34、50、55、30、48",
+   "answer": {
+    "kind": "number",
+    "value": "44.4"
+   },
+   "explanation": "平均値＝合計÷個数＝444÷10＝44.4",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-4",
+   "type": "input",
+   "prompt": "次の10個のデータの中央値（メジアン）を求めよう。\n46、52、37、53、54、31、48、33、31、31",
+   "answer": {
+    "kind": "number",
+    "value": "41.5"
+   },
+   "explanation": "小さい順に並べると 31、31、31、33、37、46、48、52、53、54。個数が偶数なので、5番目と6番目の平均で (37＋46)÷2＝41.5",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "208/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-5",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n4、4、10、3、3、6、4、8、4、8、3",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "いちばん多く出てくる値は 4（4回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-6",
+   "type": "input",
+   "prompt": "次の度数分布表で、最頻値を求めよう。\n40以上50未満：5人\n50以上60未満：5人\n60以上70未満：7人\n70以上80未満：9人\n80以上90未満：2人",
+   "answer": {
+    "kind": "number",
+    "value": "75"
+   },
+   "explanation": "度数がいちばん多い階級は 70以上80未満。度数分布表では、その階級値 75 を最頻値とする。",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p98 1(3)（度数分布表と最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "9"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-7",
+   "type": "input",
+   "prompt": "階級の幅を10として、40以上50未満、50以上60未満、…と階級を分けた度数分布表がある。45の記録はどの階級に入るか。「〇以上〇未満」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "40以上50未満",
+     "40~50",
+     "40〜50",
+     "40-50"
+    ],
+    "compact": true
+   },
+   "explanation": "45は 40以上50未満 の階級に入る。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p96 1(2)（階級）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-8",
+   "type": "input",
+   "prompt": "度数の合計が20人の度数分布表で、ある階級の相対度数が0.05である。この階級の度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "度数＝度数の合計×相対度数＝20×0.05＝1人",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 99,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p99 4(1)（相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-9",
+   "type": "input",
+   "prompt": "5つの階級の度数が、小さい階級から順に 1人、1人、3人、4人、11人（合計20人）である。小さい方から4番目の階級の累積相対度数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.45"
+   },
+   "explanation": "累積度数 1＋1＋3＋4＝9人。9÷20＝0.45",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p97 4（累積相対度数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-10",
+   "type": "input",
+   "prompt": "次のデータについて、平均値・中央値・最頻値のうち、最も大きいものはどれか。\n7、3、8、1、7、8、5、8、9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "最頻値"
+    ]
+   },
+   "explanation": "平均値は56/9、中央値は7、最頻値は8。最も大きいのは最頻値。",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "10(1)"
+   },
+   "ref": "参考：数学ドリル p104 10(1)（代表値の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-11",
+   "type": "input",
+   "prompt": "次の度数分布表で、最頻値を求めよう。\n130以上140未満：9人\n140以上150未満：3人\n150以上160未満：3人\n160以上170未満：3人\n170以上180未満：5人",
+   "answer": {
+    "kind": "number",
+    "value": "135"
+   },
+   "explanation": "度数がいちばん多い階級は 130以上140未満。度数分布表では、その階級値 135 を最頻値とする。",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p98 1(3)（度数分布表と最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "9"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-12",
+   "type": "input",
+   "prompt": "次のデータの範囲（レンジ）を求めよう。\n52、40、60、26、54、48、54、28、36",
+   "answer": {
+    "kind": "number",
+    "value": "34"
+   },
+   "explanation": "範囲＝最大値−最小値＝60−26＝34",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 96,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p96 1(1)（範囲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-13",
+   "type": "input",
+   "prompt": "次の8個のデータの平均値を求めよう。\n37、40、39、36、43、38、42、37",
+   "answer": {
+    "kind": "number",
+    "value": "39"
+   },
+   "explanation": "平均値＝合計÷個数＝312÷8＝39",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p97 3(3)（平均値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-data-test-14",
+   "type": "input",
+   "prompt": "次の9個のデータの中央値（メジアン）を求めよう。\n45、47、52、41、54、36、34、34、50",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "小さい順に並べると 34、34、36、41、45、47、50、52、54。まん中の5番目の値で 45",
+   "source": {
+    "id": "source-0152",
+    "file": "ドリル/数学/S__15589439_0.jpg",
+    "sha256": "f66d6ed159fb1e5eabe214e1e2d7b1fba32164260cbf79b4b89320a02601d74f",
+    "page": 98,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p98 2(3)（中央値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "131/3"
+   ]
+  },
+  {
+   "id": "drill-math-1-data-test-15",
+   "type": "input",
+   "prompt": "次のデータの最頻値（モード）を求めよう。\n4、10、5、3、6、3、6、8、3",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "いちばん多く出てくる値は 3（3回）。",
+   "source": {
+    "id": "source-0151",
+    "file": "ドリル/数学/S__15589438_0.jpg",
+    "sha256": "15bbbfca6ac5149594b765fa2321c063915084bd4e136996361d3f141348bbee",
+    "page": 97,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p97 3(2)（最頻値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp96〜101（23 データの整理、標準問題・実力問題）とp104（総仕上げ10）を写真で目視し、数値を変えた類題を作った。ヒストグラムは度数を文章で示した。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "度数分布表",
+   "body": "データを階級に分けて度数を数える。「以上」は境目の値をふくみ、「未満」はふくまない。累積度数は最初の階級からその階級までの度数の合計。"
+  },
+  {
+   "title": "ヒストグラムと度数折れ線",
+   "body": "階級の幅を横、度数を縦にした長方形を並べたグラフがヒストグラム。長方形の上の辺の中点を結ぶと度数折れ線になる。"
+  },
+  {
+   "title": "相対度数",
+   "body": "相対度数＝その階級の度数÷度数の合計。全部の相対度数の合計は1.00。度数＝度数の合計×相対度数。例：40人中12人の階級は 12÷40＝0.30"
+  },
+  {
+   "title": "代表値",
+   "body": "平均値＝合計÷個数（度数分布表では（階級値×度数）の合計÷度数の合計）。中央値は大きさの順でまん中（偶数個なら中央2つの平均）。最頻値は最も多い値（表では度数最大の階級の階級値）。範囲＝最大値−最小値。"
+  },
+  {
+   "title": "代表値の使い分け",
+   "body": "極端に大きい・小さい値があると平均値は引っぱられる。そのときは中央値も見て判断する。2つの集団を比べるときは、1つの階級だけでなく全体の傾向（代表値）で比べる。"
+  }
+ ]
+}

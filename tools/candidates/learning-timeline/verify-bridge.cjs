@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),{create}=require('./bridge.cjs');
+let n=0;const eq=(a,b)=>{assert.deepEqual(a,b);n++;},reject=async f=>{await assert.rejects(f);n++;};
+const id='00000000-0000-4000-8000-000000000001',sessionId='00000000-0000-4000-8000-000000000002';
+(async()=>{let actor=true,ready=true,calls=0,response,mutate=false;const sent=[];
+ const bridge=create({same:()=>actor,ready:()=>ready,request:async(path,body)=>{calls++;sent.push({path,body});if(mutate)actor=false;return response;}});
+ response={session:{id,startedAt:100},serverTime:200,extra:'not retained'};eq(await bridge.start({id}),{session:{id,startedAt:100},serverTime:200});eq(sent[0].path,'/learning-time-start');
+ const payload={id,sessionId,spans:[{activity:'textbook:math1',startOffset:0,endOffset:1000}]};response={id,acceptedAt:123};eq(await bridge.send(payload),response);eq(sent[1].path,'/learning-time');eq(sent[1].body===payload,false);eq(sent[1].body,payload);
+ response={id:sessionId,acceptedAt:123};await reject(()=>bridge.send(payload));response={id,acceptedAt:-1};await reject(()=>bridge.send(payload));response={session:{id,startedAt:200},serverTime:100};await reject(()=>bridge.start({id}));await reject(()=>bridge.start({id,uid:'other'}));await reject(()=>bridge.send({...payload,spans:[{...payload.spans[0],answer:'private'}]}));await reject(()=>bridge.send({...payload,spans:[{...payload.spans[0],endOffset:5001}]}));
+ ready=false;const before=calls;await reject(()=>bridge.send(payload));eq(calls,before);ready=true;mutate=true;response={id,acceptedAt:123};await reject(()=>bridge.send(payload));eq(sent.at(-1).body,payload);
+ console.log('Timeline bridge candidate: '+n+' checks passed; exact endpoints, copied metadata-only payload, receipt validation and pre/post-request identity guards; fake transport only');
+})().catch(e=>{console.error(e);process.exitCode=1;});

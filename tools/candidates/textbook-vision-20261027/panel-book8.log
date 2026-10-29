@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: loaded public asset unchanged
++ actual - expected
+
++ '40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568'
+- '2b32db63df1bbe6278c8bfae6db187d06f6cdcdda484957ec5931f3ade5f44e2'
+
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/verify-panel-book.mjs:87:49 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568',
+  expected: '2b32db63df1bbe6278c8bfae6db187d06f6cdcdda484957ec5931f3ade5f44e2',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

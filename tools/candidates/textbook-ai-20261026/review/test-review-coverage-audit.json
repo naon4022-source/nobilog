@@ -1,0 +1,119 @@
+{
+  "status": "partial scope; not all test formats connected",
+  "sources": [
+    {
+      "file": "index.html",
+      "sha256": "5fd6f7b4960ebbd1aebab7d8216ceed8def44a420c34dbb5d36b7f88e8defc68"
+    },
+    {
+      "file": "site-assets/material-ui.js",
+      "sha256": "80143f5742fd685ddb88cc3ba21c55c2d482f8cd0d4120b0b23cb4a1422e5dff"
+    }
+  ],
+  "subjects": [
+    {
+      "subject": "数学",
+      "materialTestUnits": 11,
+      "mockExamUnits": 3,
+      "candidatePracticeQuestions": 6
+    },
+    {
+      "subject": "英語",
+      "materialTestUnits": 9,
+      "mockExamUnits": 0,
+      "candidatePracticeQuestions": 6
+    },
+    {
+      "subject": "国語",
+      "materialTestUnits": 1,
+      "mockExamUnits": 1,
+      "candidatePracticeQuestions": 6
+    },
+    {
+      "subject": "理科",
+      "materialTestUnits": 4,
+      "mockExamUnits": 1,
+      "candidatePracticeQuestions": 6
+    },
+    {
+      "subject": "社会",
+      "materialTestUnits": 0,
+      "mockExamUnits": 0,
+      "candidatePracticeQuestions": 6
+    }
+  ],
+  "candidatePracticeCount": 30,
+  "currentMaterialReviewEligiblePracticeCount": 20,
+  "eligiblePractices": [
+    "review-math-order-01",
+    "review-math-order-03",
+    "review-eng-form-01",
+    "review-eng-form-02",
+    "review-eng-form-03",
+    "review-eng-change-01",
+    "review-eng-change-02",
+    "review-eng-change-03",
+    "review-jpn-reference-01",
+    "review-jpn-reference-02",
+    "review-jpn-reference-03",
+    "review-jpn-link-01",
+    "review-jpn-link-02",
+    "review-jpn-link-03",
+    "review-sci-density-01",
+    "review-sci-density-02",
+    "review-sci-density-03",
+    "review-sci-echo-01",
+    "review-sci-echo-02",
+    "review-sci-echo-03"
+  ],
+  "indexReviewReferences": [
+    {
+      "line": 1577,
+      "text": "window.NobiTestReviews?.reset();"
+    },
+    {
+      "line": 1607,
+      "text": "window.NobiTestReviews?.reset();"
+    },
+    {
+      "line": 1659,
+      "text": "window.NobiTestReviews?.reset();"
+    },
+    {
+      "line": 2500,
+      "text": "if(n.testReviewId){void window.NobiTestReviews?.open(n.testReviewId);return;}"
+    }
+  ],
+  "entrypoints": [
+    {
+      "name": "material UI test/mock exam",
+      "connected": true,
+      "evidence": "actual beginTest/testStatus bridge plus79 browser/186 service; source remains server-owned completed material session"
+    },
+    {
+      "name": "legacy submitTest",
+      "connected": false,
+      "evidence": "index has only reset/notice calls to NobiTestReviews; no completed-source or start-review hook"
+    },
+    {
+      "name": "school/term exSubmit",
+      "connected": false,
+      "evidence": "same lexical call inventory and no private owned immutable-source integration; dates/ranges/materials also need actual school data"
+    },
+    {
+      "name": "generated tests",
+      "connected": false,
+      "evidence": "review creation currently accepts only registered material-bank unit/question IDs; no server signed generated-test source"
+    },
+    {
+      "name": "separate Eiken test flow",
+      "connected": false,
+      "evidence": "English mock exams are not material-bank kentei units; current review hooks only exist in material-ui.js. Separate Eiken completed-source integration is not established."
+    }
+  ],
+  "limits": [
+    "All30 are candidates and not yet connected to review generation or practice route",
+    "Social workbook source units lack material tests; do not claim five-subject AI review coverage from30 candidate questions",
+    "No submitTest/exSubmit/startStudy call executed; no user records read or written"
+  ]
+}

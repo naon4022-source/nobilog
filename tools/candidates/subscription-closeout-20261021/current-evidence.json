@@ -1,0 +1,69 @@
+{
+  "status": "current local source and existing full-success evidence recorded",
+  "date": "2026-10-21",
+  "fullSession": 4119,
+  "observedFullExitCode": 0,
+  "fullProof": "tools/releases/google-entry-20261021/full-verification.json",
+  "fullLogSha256": "c17c7e1ba41adbcd9ed3e5cb9b59d7bfa756acd56b897b8c97273cb4f51ab081",
+  "sources": {
+    "cf-worker/src/plans.mjs": "6a6a8b1842874cf0bb32d5cadd47c32ab3ad2cfff43a4a9467ca7723141acba8",
+    "cf-worker/src/subscription-credits.mjs": "d60cd15537641c32b10f9cb5a9dc0cc485230d020c469f59b42fc74c366e2694",
+    "cf-worker/src/learning-assistant.mjs": "201bea9660cb47a37388c910c892fc21d3e68f56f87d2bdf67d0a4972974bdd6",
+    "cf-worker/src/openai-note-recovery.mjs": "1cf2a164a7a048fbcb9b887e45948bb78cb4f7652315c97de9315b904641c066",
+    "cf-worker/src/openai-note-jobs.mjs": "5705813b787d700eabca551b792f1c8b0d6faf6a78a7e81b19c6fed60cd28692",
+    "cf-worker/src/openai-note-route.mjs": "d359d4f4ede2a2aecb2483d9d39b22f95868daafdde3d6891b302a1815de6bd3",
+    "cf-worker/src/openai-tutor-service.mjs": "f7da13b04a38088db929894a85a4daafb2db7dd67bfd42aaa1a6f0ce869d0668",
+    "cf-worker/src/openai-image-service.mjs": "4d0144cb18ab791f71633a04371ecd642c612f5392ee8a3e98820fd42371a698",
+    "cf-worker/src/openai-avatar-service.mjs": "0f9b227e064db38e50c65e8bda93c7f32a1fc761222f0afa5f390ce72d12d530",
+    "cf-worker/src/openai-avatar-transport.mjs": "7a819c836d5796e50bba439fc916941ae72959192e97fde7c36d15cfcfd84c34",
+    "site-assets/note-analysis.js": "9f34c42e767ad638172fb9fd8eae13d61d3efe9a392d81fa8bce6c3747f01051",
+    "site-assets/note-analysis-api.js": "7858b89c9d9f5fbdc75f54aae7ae53c51051c01eb366f809358cb3b4e4847e38",
+    "site-assets/subscription-ui.js": "88fb671f1abcf075e74cc5e95a1828248b36d53ede572692d40110b7aaa949ac",
+    "site-assets/plans-guide.js": "b664646a005a3335c1f365e2b791fac57a3b69a5fbe6dbcf356f37506ef5ac5c"
+  },
+  "evidenceLines": [
+    "Unsent AI reservation release: 352 SQLite checks passed; text/long-note/photo-note/image, pre-send refusal/network/owner/quota, counted/issued unknown holds, rollback/lost-ack, explicit retry and cached replay; no network",
+    "Avatar unsent service: 25 SQLite checks passed; session loss at five post-start/pre-generation gates releases monthly hold and plan credits; no network",
+    "Confirmed subscription terms: 150 SQLite checks passed; start-date monthly/short months/leap years, exact 7-day grace boundary, paid-to-Free entitlement and unchanged contract/learning rows; no payment/network",
+    "Subscription terms UI: 75 checks passed; four paid plans and standalone guide, 320/390/1440px, start-date cycle/7-day grace/record retention, no overflow or network",
+    "Subscription daily-v2: 58 checks passed; daily 20/100/500/5000, half/normal/heavy, concurrency, idempotent refund, midnight, owner isolation, mock atomic commit, legacy records retained; no network",
+    "learning notes: 23 isolated checks passed; replay, CAS, concurrent capacity, owner isolation, origin and downgrade preservation",
+    "Extended note service: 115 checks passed; real candidate job/context/route/service + SQLite, whole source, photo credits, cached replay, owner isolation, consent and unknown outcome; fake HTTP only",
+    "Note recovery: 161 checks passed; actual completed operations, short/long/photo source, read-only GET, atomic metadata completion, edited revision, no extra quota/provider call, rollback, lost response, owner/source/plan guards; fake HTTP only",
+    "Note recovery browser: 29 checks passed; existing note UI/API + real candidate SQLite routes, old result after source edit and provider stop, atomic job completion, explicit new revision generation, no duplicate charge; two widths, fake provider only",
+    "AI limit notice: 89 checks passed; note API and exact photo adapter, success/error/status, one authorized POST, delayed owner change, avatar GET/429/stop forwards shared cap without provider calls; synthetic only",
+    "Subscription price: 419 checks passed; five fixed tax-inclusive payment totals, frontend/server parity, all subsidy choices/periods, payment comparison, unchanged daily credits and existing contract rows; no payment/API/network",
+    "Subscription cached catalogue: 18 checks passed; old cached catalogue plus new standalone guide/app at two widths, fixed total prices and comparison, no errors; no payment/API/network"
+  ],
+  "claudeReportPresent": false,
+  "scope": "source hashes and existing synthetic-test evidence; no new provider, payment, real-account or live-data operation",
+  "holds": [
+    {
+      "id": "AI-LIVE",
+      "reason": "actual provider responses and image quality unverified; real Gemini prohibited",
+      "needs": "approved provider contract and age/consent scope, safe authorized trial and actual response evidence"
+    },
+    {
+      "id": "AI-COST",
+      "reason": "counting/photo/icon exact cost basis absent; conservative reservations retained",
+      "needs": "applicable pricing and usage/billing breakdown; no invented zero-cost counting or automatic release"
+    },
+    {
+      "id": "PLAN-POLICY",
+      "reason": "retention/refund/proration/withdrawal conditions not confirmed",
+      "needs": "data-specific retention periods and approved commercial policy; preserve existing learning records"
+    },
+    {
+      "id": "AI-CONSENT",
+      "reason": "existing text-only privacy wording differs from local image routes",
+      "needs": "effective date and explanation/reconsent policy for selected images and generated candidates"
+    },
+    {
+      "id": "CLAUDE-REPORT",
+      "reason": "assigned independent feature-check artifact not found at designated location",
+      "needs": "Claude report with source SHA and real isolated UI evidence; do not fabricate or duplicate its report"
+    }
+  ],
+  "entireSubscriptionComplete": false,
+  "appSourcesChanged": false
+}

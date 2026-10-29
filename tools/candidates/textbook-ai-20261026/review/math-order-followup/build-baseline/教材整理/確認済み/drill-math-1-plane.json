@@ -1,0 +1,3096 @@
+{
+ "id": "drill-math-1-plane",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "平面図形",
+ "majorTitle": "平面図形",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-plane-1",
+   "type": "input",
+   "prompt": "半径5cm、中心角80°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "20/9π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×5×80/360＝20/9π（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p72 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "50/9π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-2",
+   "type": "input",
+   "prompt": "半径9cm、中心角144°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "162/5π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×9²×144/360＝162/5π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "36/5π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-3",
+   "type": "input",
+   "prompt": "半径7cm、弧の長さ14/5πcmのおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "72",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると 2π×7×x/360＝14/5π。x＝72",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-4",
+   "type": "input",
+   "prompt": "中心角60°で、面積が3/2πcm²のおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると πr²×60/360＝3/2π。r²＝9、r＝3",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(6)"
+   },
+   "ref": "参考：数学ドリル p74 1(6)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-5",
+   "type": "input",
+   "prompt": "半径5cm、弧の長さ2πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "5π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×2π×5＝5π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-6",
+   "type": "input",
+   "prompt": "半径3cm、中心角60°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "π+6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝π＋6＝π ＋ 6（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p73 6（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-7",
+   "type": "input",
+   "prompt": "2点A、Bを通り、両方向に限りなくのびたまっすぐな線を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "直線AB",
+     "直線"
+    ]
+   },
+   "explanation": "直線AB。両端があるものは線分AB、1点を端として一方にだけのびたものは半直線AB。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p64 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "線分AB"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-8",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 ℓ、m、n について、ℓ⊥m、m⊥n のとき、ℓ と n の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ℓ∥n",
+     "n∥ℓ",
+     "ℓ//n",
+     "n//ℓ",
+     "ℓ||n",
+     "n||ℓ",
+     "l∥n",
+     "n∥l",
+     "l//n",
+     "n//l",
+     "l||n",
+     "n||l"
+    ],
+    "compact": true
+   },
+   "explanation": "ℓ⊥m、m⊥n より ℓ∥n。同じ直線に平行（または垂直）な2直線は平行。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ℓ⊥n"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-9",
+   "type": "input",
+   "prompt": "長方形EFGHについて、辺EFと辺HGの位置関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "EF∥HG",
+     "HG∥EF",
+     "EF//HG",
+     "HG//EF",
+     "EF||HG",
+     "HG||EF",
+     "EF∥GH",
+     "GH∥EF",
+     "EF//GH",
+     "GH//EF",
+     "EF||GH",
+     "GH||EF",
+     "FE∥HG",
+     "HG∥FE",
+     "FE//HG",
+     "HG//FE",
+     "FE||HG",
+     "HG||FE",
+     "FE∥GH",
+     "GH∥FE",
+     "FE//GH",
+     "GH//FE",
+     "FE||GH",
+     "GH||FE"
+    ],
+    "compact": true
+   },
+   "explanation": "長方形の向かい合う辺は平行。EF∥HG",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p64 1(2)（垂直と平行）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-10",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝14cm、BC＝6cm である。線分AB、BCの中点をそれぞれM、Nとするとき、線分MNの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "MN＝MB＋BN＝4＋3＝7cm（ACの半分）",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p65 3(2)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-11",
+   "type": "input",
+   "prompt": "1辺8cmの正方形ABCDの中に、点Bを中心とする半径8cmの四分円の弧ACと、点Dを中心とする半径8cmの四分円の弧ACをかいた。2つの弧で囲まれた部分の周の長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧1本は 2π×8/4＝4πcm。2本で 8π（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p78 1(1)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-12",
+   "type": "input",
+   "prompt": "半径10cmと半径4cmの同じ中心のおうぎ形（中心角120°）で、大きいおうぎ形から小さいおうぎ形を取りのぞいた部分のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "28/3π+12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "外側の弧 2π×10×120/360、内側の弧 2π×4×120/360、まっすぐな部分 (10−4)×2。合計 28/3π ＋ 12（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p78 1(4)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-13",
+   "type": "input",
+   "prompt": "直径AB＝2cmの半円を、点Bを中心として45°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "1/2π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径2cm、中心角45°のおうぎ形と等しい。π×2²×45/360＝1/2π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-14",
+   "type": "input",
+   "prompt": "直径4cmの同じ硬貨6枚を、1辺に3枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π+24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 2×4×3＝24cm。曲がった部分は3つ合わせて円1周分の 4πcm。合計 4π ＋ 24（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-15",
+   "type": "input",
+   "prompt": "△ABCを直線ℓについて対称移動して△A'B'C'に移し、さらに直線mについて対称移動して△A\"B\"C\"に移した。直線ℓとmが点Oで交わってつくる角が55°のとき、∠AOA\"は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "110",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "2回の対称移動は、交点Oを中心とする回転移動と同じ。回転の角は直線どうしの角の2倍で 110°",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 79,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p79 6(2)（対称移動2回）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-16",
+   "type": "input",
+   "prompt": "線分ABを直線ℓについて対称移動したものを線分A'B'、それを直線mについて対称移動したものを線分A\"B\"とする。ℓ∥m で、ℓとmの距離が7cmのとき、線分ABを1回の移動で線分A\"B\"に重ねるには、どの向きに何cm平行移動すればよいか。移動する長さ（cm）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "平行な2直線について続けて対称移動すると、2直線に垂直な方向への平行移動になる。移動の長さは距離の2倍で 14cm",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 76,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p76 1（移動の組み合わせ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-17",
+   "type": "input",
+   "prompt": "半径6cm、中心角60°のおうぎ形がある。弧の長さから半径をひいた差を求めよう（π を使って答える）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π-6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さは 2πcm（約6.28cm）で半径6cmより長い。差は 2π − 6（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p75 4（おうぎ形の弧と半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-18",
+   "type": "input",
+   "prompt": "直線ABのうち、点Aから点Bまでの部分を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "線分AB",
+     "線分"
+    ]
+   },
+   "explanation": "線分AB。その長さを2点A、B間の距離という。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p64 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "直線AB"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-19",
+   "type": "input",
+   "prompt": "半径6cm、中心角45°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "3/2π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×6×45/360＝3/2π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p74 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "9/2π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-20",
+   "type": "input",
+   "prompt": "半径12cm、中心角60°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "24π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×12²×60/360＝24π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-21",
+   "type": "input",
+   "prompt": "半径5cm、中心角160°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "40/9π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×5×160/360＝40/9π（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p72 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "100/9π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-22",
+   "type": "input",
+   "prompt": "半径7cm、中心角225°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "245/8π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×7²×225/360＝245/8π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "35/4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-23",
+   "type": "input",
+   "prompt": "半径11cm、弧の長さ55/6πcmのおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると 2π×11×x/360＝55/6π。x＝150",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-24",
+   "type": "input",
+   "prompt": "中心角90°で、弧の長さが9/2πcmのおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると 2πr×90/360＝9/2π。r＝9",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p74 1(3)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-25",
+   "type": "input",
+   "prompt": "半径6cm、弧の長さ7πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "21π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×7π×6＝21π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-26",
+   "type": "input",
+   "prompt": "半径4cm、中心角72°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "8/5π+8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝8/5π＋8＝8/5π ＋ 8（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p74 1(1)（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8/5π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-27",
+   "type": "input",
+   "prompt": "図形を一定の方向に一定の長さだけずらす移動を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平行移動",
+     "へいこういどう"
+    ]
+   },
+   "explanation": "平行移動。対応する点を結ぶ線分は平行で長さが等しい。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p64 要点3（移動）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "回転移動"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-28",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 a、b、c について、a∥b、b∥c のとき、a と c の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "a∥c",
+     "c∥a",
+     "a//c",
+     "c//a",
+     "a||c",
+     "c||a"
+    ],
+    "compact": true
+   },
+   "explanation": "a∥b、b∥c より a∥c。同じ直線に平行（または垂直）な2直線は平行。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a⊥c"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-29",
+   "type": "input",
+   "prompt": "長方形KLMNについて、辺KLと辺NMの位置関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "KL∥NM",
+     "NM∥KL",
+     "KL//NM",
+     "NM//KL",
+     "KL||NM",
+     "NM||KL",
+     "KL∥MN",
+     "MN∥KL",
+     "KL//MN",
+     "MN//KL",
+     "KL||MN",
+     "MN||KL",
+     "LK∥NM",
+     "NM∥LK",
+     "LK//NM",
+     "NM//LK",
+     "LK||NM",
+     "NM||LK",
+     "LK∥MN",
+     "MN∥LK",
+     "LK//MN",
+     "MN//LK",
+     "LK||MN",
+     "MN||LK"
+    ],
+    "compact": true
+   },
+   "explanation": "長方形の向かい合う辺は平行。KL∥NM",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p64 1(2)（垂直と平行）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-30",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝8cm、BC＝6cm である。線分ABの中点をMとするとき、線分AMの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AB＝8−6＝2cm。AM＝2÷2＝1cm",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p65 3(1)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-31",
+   "type": "input",
+   "prompt": "1辺10cmの正方形ABCDの中に、点Bを中心とする半径10cmの四分円の弧ACと、点Dを中心とする半径10cmの四分円の弧ACをかいた。2つの弧で囲まれた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "50π-100",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "四分円 π×10²/4 から直角二等辺三角形 10×10/2 をひいた部分の2つ分。(25π−50)×2＝50π − 100（cm²）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p78 1(1)（色のついた部分の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-32",
+   "type": "input",
+   "prompt": "直径AB＝10cmの半円を、点Bを中心として60°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "50/3π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径10cm、中心角60°のおうぎ形と等しい。π×10²×60/360＝50/3π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-33",
+   "type": "input",
+   "prompt": "直径2cmの同じ硬貨6枚を、1辺に3枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π+12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 2×2×3＝12cm。曲がった部分は3つ合わせて円1周分の 2πcm。合計 2π ＋ 12（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-34",
+   "type": "input",
+   "prompt": "線分ABを直線ℓについて対称移動したものを線分A'B'、それを直線mについて対称移動したものを線分A\"B\"とする。ℓ∥m で、ℓとmの距離が6cmのとき、線分ABを1回の移動で線分A\"B\"に重ねるには、どの向きに何cm平行移動すればよいか。移動する長さ（cm）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "平行な2直線について続けて対称移動すると、2直線に垂直な方向への平行移動になる。移動の長さは距離の2倍で 12cm",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 76,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p76 1（移動の組み合わせ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-35",
+   "type": "input",
+   "prompt": "半径9cm、中心角60°のおうぎ形がある。弧の長さから半径をひいた差を求めよう（π を使って答える）。",
+   "answer": {
+    "kind": "expr",
+    "value": "3π-9",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さは 3πcm（約9.42cm）で半径9cmより長い。差は 3π − 9（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p75 4（おうぎ形の弧と半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-36",
+   "type": "input",
+   "prompt": "図形を1つの点を中心として一定の角度だけ回す移動を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "回転移動",
+     "かいてんいどう"
+    ]
+   },
+   "explanation": "回転移動。中心にした点を回転の中心という。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p64 要点3（移動）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "平行移動"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-37",
+   "type": "input",
+   "prompt": "半径5cm、中心角150°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "25/6π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×5×150/360＝25/6π（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p72 1（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "125/12π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-38",
+   "type": "input",
+   "prompt": "半径3cm、中心角150°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "15/4π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×3²×150/360＝15/4π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5/2π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-39",
+   "type": "input",
+   "prompt": "半径11cm、中心角40°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "22/9π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×11×40/360＝22/9π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p74 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "121/9π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-40",
+   "type": "input",
+   "prompt": "半径8cm、中心角160°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "256/9π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×8²×160/360＝256/9π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "64/9π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-41",
+   "type": "input",
+   "prompt": "半径8cm、面積16πcm²のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると π×8²×x/360＝16π。x＝90",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-42",
+   "type": "input",
+   "prompt": "中心角60°で、弧の長さが5/3πcmのおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると 2πr×60/360＝5/3π。r＝5",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p74 1(3)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-43",
+   "type": "input",
+   "prompt": "半径7cm、弧の長さ5πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "35/2π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×5π×7＝35/2π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-44",
+   "type": "input",
+   "prompt": "半径9cm、中心角80°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π+18",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝4π＋18＝4π ＋ 18（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p73 1(1)（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-45",
+   "type": "input",
+   "prompt": "180°の回転移動を、とくに何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "点対称移動",
+     "てんたいしょういどう"
+    ]
+   },
+   "explanation": "点対称移動。対応する点を結ぶ線分の中点が回転の中心になる。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p64 要点3（移動）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "対称移動"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-46",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 ℓ、m、n について、ℓ⊥m、m∥n のとき、ℓ と n の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ℓ⊥n",
+     "n⊥ℓ",
+     "l⊥n",
+     "n⊥l"
+    ],
+    "compact": true
+   },
+   "explanation": "ℓ⊥m、m∥n より ℓ⊥n。平行な直線の一方に垂直な直線は、もう一方にも垂直。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ℓ//n"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-47",
+   "type": "input",
+   "prompt": "長方形KLMNについて、辺KLと辺LMの位置関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "KL⊥LM",
+     "LM⊥KL",
+     "LK⊥LM",
+     "KL⊥ML",
+     "LK⊥ML",
+     "ML⊥KL",
+     "LM⊥LK",
+     "ML⊥LK"
+    ],
+    "compact": true
+   },
+   "explanation": "長方形のとなり合う辺は垂直に交わる。KL⊥LM",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p64 1(1)（垂直と平行）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-48",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝8cm、BC＝2cm である。線分ABの中点をMとするとき、線分AMの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AB＝8−2＝6cm。AM＝6÷2＝3cm",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p65 3(1)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-49",
+   "type": "input",
+   "prompt": "1辺20cmの正方形ABCDの中に、点Bを中心とする半径20cmの四分円の弧ACと、点Dを中心とする半径20cmの四分円の弧ACをかいた。2つの弧で囲まれた部分の周の長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "20π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧1本は 2π×20/4＝10πcm。2本で 20π（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p78 1(1)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-50",
+   "type": "input",
+   "prompt": "半径6cmと半径3cmの同じ中心のおうぎ形（中心角270°）で、大きいおうぎ形から小さいおうぎ形を取りのぞいた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "81/4π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "π×6²×270/360 − π×3²×270/360＝81/4π（cm²）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p78 1(4)（色のついた部分の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-51",
+   "type": "input",
+   "prompt": "直径AB＝4cmの半円を、点Bを中心として30°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "4/3π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径4cm、中心角30°のおうぎ形と等しい。π×4²×30/360＝4/3π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-52",
+   "type": "input",
+   "prompt": "直径2cmの同じ硬貨15枚を、1辺に5枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π+24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 4×2×3＝24cm。曲がった部分は3つ合わせて円1周分の 2πcm。合計 2π ＋ 24（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-53",
+   "type": "input",
+   "prompt": "△ABCを直線ℓについて対称移動して△A'B'C'に移し、さらに直線mについて対称移動して△A\"B\"C\"に移した。直線ℓとmが点Oで交わってつくる角が40°のとき、∠AOA\"は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "80",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "2回の対称移動は、交点Oを中心とする回転移動と同じ。回転の角は直線どうしの角の2倍で 80°",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 79,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p79 6(2)（対称移動2回）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-54",
+   "type": "input",
+   "prompt": "半径12cm、中心角60°のおうぎ形がある。弧の長さから半径をひいた差を求めよう（π を使って答える）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π-12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さは 4πcm（約12.56cm）で半径12cmより長い。差は 4π − 12（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p75 4（おうぎ形の弧と半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-55",
+   "type": "input",
+   "prompt": "図形を1つの直線を折り目として折り返す移動を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "対称移動",
+     "たいしょういどう"
+    ]
+   },
+   "explanation": "対称移動。折り目の直線を対称の軸という。",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p64 要点3（移動）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "点対称移動"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-56",
+   "type": "input",
+   "prompt": "半径10cm、中心角270°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "15π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×10×270/360＝15π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p74 1（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "75π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-57",
+   "type": "input",
+   "prompt": "半径5cm、中心角90°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "25/4π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×5²×90/360＝25/4π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5/2π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-58",
+   "type": "input",
+   "prompt": "半径4cm、中心角120°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8/3π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×4×120/360＝8/3π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p74 1（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "16/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-59",
+   "type": "input",
+   "prompt": "半径5cm、中心角150°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "125/12π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×5²×150/360＝125/12π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "25/6π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-60",
+   "type": "input",
+   "prompt": "半径3cm、弧の長さ6/5πcmのおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "72",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると 2π×3×x/360＝6/5π。x＝72",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-61",
+   "type": "input",
+   "prompt": "中心角240°で、面積が32/3πcm²のおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると πr²×240/360＝32/3π。r²＝16、r＝4",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(6)"
+   },
+   "ref": "参考：数学ドリル p74 1(6)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-62",
+   "type": "input",
+   "prompt": "半径3cm、弧の長さ8πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×8π×3＝12π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-63",
+   "type": "input",
+   "prompt": "半径7cm、中心角80°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "28/9π+14",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝28/9π＋14＝28/9π ＋ 14（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p74 1(1)（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "28/9π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-64",
+   "type": "input",
+   "prompt": "対称移動で、対応する点を結ぶ線分と対称の軸はどのような関係にあるか。「対称の軸によって〜」に続く形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直に二等分される",
+     "垂直二等分される",
+     "垂直に2等分される"
+    ]
+   },
+   "explanation": "対応する点を結ぶ線分は、対称の軸によって垂直に二等分される。例：AH＝A'H、AA'⊥ℓ",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p65 Guide（対称移動の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "平行"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-65",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 a、b、c について、a⊥b、b∥c のとき、a と c の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "a⊥c",
+     "c⊥a"
+    ],
+    "compact": true
+   },
+   "explanation": "a⊥b、b∥c より a⊥c。平行な直線の一方に垂直な直線は、もう一方にも垂直。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a//c"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-66",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝8cm、BC＝4cm である。線分AB、BCの中点をそれぞれM、Nとするとき、線分MNの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "MN＝MB＋BN＝2＋2＝4cm（ACの半分）",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p65 3(2)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-67",
+   "type": "input",
+   "prompt": "半径12cmと半径6cmの同じ中心のおうぎ形（中心角270°）で、大きいおうぎ形から小さいおうぎ形を取りのぞいた部分のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "27π+12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "外側の弧 2π×12×270/360、内側の弧 2π×6×270/360、まっすぐな部分 (12−6)×2。合計 27π ＋ 12（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p78 1(4)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-68",
+   "type": "input",
+   "prompt": "直径AB＝2cmの半円を、点Bを中心として90°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径2cm、中心角90°のおうぎ形と等しい。π×2²×90/360＝π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-69",
+   "type": "input",
+   "prompt": "直径4cmの同じ硬貨15枚を、1辺に5枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π+48",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 4×4×3＝48cm。曲がった部分は3つ合わせて円1周分の 4πcm。合計 4π ＋ 48（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-70",
+   "type": "input",
+   "prompt": "線分ABを直線ℓについて対称移動したものを線分A'B'、それを直線mについて対称移動したものを線分A\"B\"とする。ℓ∥m で、ℓとmの距離が5cmのとき、線分ABを1回の移動で線分A\"B\"に重ねるには、どの向きに何cm平行移動すればよいか。移動する長さ（cm）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "平行な2直線について続けて対称移動すると、2直線に垂直な方向への平行移動になる。移動の長さは距離の2倍で 10cm",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 76,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p76 1（移動の組み合わせ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-71",
+   "type": "input",
+   "prompt": "線分ABの中点を通り、ABに垂直な直線を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直二等分線",
+     "すいちょくにとうぶんせん"
+    ]
+   },
+   "explanation": "垂直二等分線。この直線上の点は2点A、Bから等しい距離にある。",
+   "source": {
+    "id": "source-0137",
+    "file": "ドリル/数学/S__15589423_0.jpg",
+    "sha256": "ae3ebf924320fcf3a742574d287b2e5bde87cccafc0f9791c1467932a071192c",
+    "page": 68,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p68 要点1（作図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "角の二等分線"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-72",
+   "type": "input",
+   "prompt": "半径8cm、中心角300°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "40/3π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×8×300/360＝40/3π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p74 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "160/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-73",
+   "type": "input",
+   "prompt": "半径10cm、中心角72°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "20π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×10²×72/360＝20π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-74",
+   "type": "input",
+   "prompt": "半径8cm、中心角90°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×8×90/360＝4π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p74 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "16π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-75",
+   "type": "input",
+   "prompt": "半径2cm、中心角144°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8/5π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×2²×144/360＝8/5π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-76",
+   "type": "input",
+   "prompt": "半径9cm、面積27/4πcm²のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると π×9²×x/360＝27/4π。x＝30",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-77",
+   "type": "input",
+   "prompt": "中心角120°で、弧の長さが20/3πcmのおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると 2πr×120/360＝20/3π。r＝10",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p74 1(3)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-78",
+   "type": "input",
+   "prompt": "半径11cm、弧の長さ2πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "11π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×2π×11＝11π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-79",
+   "type": "input",
+   "prompt": "半径12cm、中心角60°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π+24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝4π＋24＝4π ＋ 24（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p73 1(1)（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-80",
+   "type": "input",
+   "prompt": "2点A、Bから等しい距離にある点は、どんな直線上にあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "線分ABの垂直二等分線",
+     "垂直二等分線",
+     "ABの垂直二等分線"
+    ]
+   },
+   "explanation": "線分ABの垂直二等分線上にある。",
+   "source": {
+    "id": "source-0137",
+    "file": "ドリル/数学/S__15589423_0.jpg",
+    "sha256": "ae3ebf924320fcf3a742574d287b2e5bde87cccafc0f9791c1467932a071192c",
+    "page": 69,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p69 Guide（作図の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "角の二等分線"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-81",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 a、b、c について、a∥b、b⊥c のとき、a と c の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "a⊥c",
+     "c⊥a"
+    ],
+    "compact": true
+   },
+   "explanation": "a∥b、b⊥c より a⊥c。平行な直線の一方に垂直な直線は、もう一方にも垂直。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a//c"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-82",
+   "type": "input",
+   "prompt": "長方形EFGHについて、辺EFと辺FGの位置関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "EF⊥FG",
+     "FG⊥EF",
+     "FE⊥FG",
+     "EF⊥GF",
+     "FE⊥GF",
+     "GF⊥EF",
+     "FG⊥FE",
+     "GF⊥FE"
+    ],
+    "compact": true
+   },
+   "explanation": "長方形のとなり合う辺は垂直に交わる。EF⊥FG",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p64 1(1)（垂直と平行）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-83",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝20cm、BC＝18cm である。線分ABの中点をMとするとき、線分AMの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "AB＝20−18＝2cm。AM＝2÷2＝1cm",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p65 3(1)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-84",
+   "type": "input",
+   "prompt": "1辺12cmの正方形ABCDの中に、点Bを中心とする半径12cmの四分円の弧ACと、点Dを中心とする半径12cmの四分円の弧ACをかいた。2つの弧で囲まれた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "72π-144",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "四分円 π×12²/4 から直角二等辺三角形 12×12/2 をひいた部分の2つ分。(36π−72)×2＝72π − 144（cm²）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p78 1(1)（色のついた部分の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-85",
+   "type": "input",
+   "prompt": "半径8cmと半径4cmの同じ中心のおうぎ形（中心角120°）で、大きいおうぎ形から小さいおうぎ形を取りのぞいた部分のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π+8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "外側の弧 2π×8×120/360、内側の弧 2π×4×120/360、まっすぐな部分 (8−4)×2。合計 8π ＋ 8（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p78 1(4)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-86",
+   "type": "input",
+   "prompt": "直径AB＝10cmの半円を、点Bを中心として90°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "25π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径10cm、中心角90°のおうぎ形と等しい。π×10²×90/360＝25π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-87",
+   "type": "input",
+   "prompt": "直径2cmの同じ硬貨10枚を、1辺に4枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π+18",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 3×2×3＝18cm。曲がった部分は3つ合わせて円1周分の 2πcm。合計 2π ＋ 18（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-88",
+   "type": "input",
+   "prompt": "半径3cm、中心角60°のおうぎ形がある。弧の長さから半径をひいた差を求めよう（π を使って答える）。",
+   "answer": {
+    "kind": "expr",
+    "value": "π-3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さは πcm（約3.14cm）で半径3cmより長い。差は π − 3（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p75 4（おうぎ形の弧と半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-89",
+   "type": "input",
+   "prompt": "角の2辺から等しい距離にある点は、どんな直線上にあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "角の二等分線",
+     "その角の二等分線"
+    ]
+   },
+   "explanation": "角の二等分線上にある。",
+   "source": {
+    "id": "source-0137",
+    "file": "ドリル/数学/S__15589423_0.jpg",
+    "sha256": "ae3ebf924320fcf3a742574d287b2e5bde87cccafc0f9791c1467932a071192c",
+    "page": 69,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p69 Guide（作図の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "垂直二等分線"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-90",
+   "type": "input",
+   "prompt": "半径7cm、中心角120°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "14/3π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×7×120/360＝14/3π（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p72 1（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "49/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-91",
+   "type": "input",
+   "prompt": "半径3cm、中心角180°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "9/2π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×3²×180/360＝9/2π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-92",
+   "type": "input",
+   "prompt": "半径10cm、中心角180°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "10π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×10×180/360＝10π（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p74 2（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "50π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-93",
+   "type": "input",
+   "prompt": "半径4cm、中心角150°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "20/3π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×4²×150/360＝20/3π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "10/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-94",
+   "type": "input",
+   "prompt": "半径6cm、弧の長さ9/2πcmのおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると 2π×6×x/360＝9/2π。x＝135",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-95",
+   "type": "input",
+   "prompt": "中心角60°で、弧の長さが11/3πcmのおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると 2πr×60/360＝11/3π。r＝11",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p74 1(3)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-96",
+   "type": "input",
+   "prompt": "半径12cm、弧の長さ4πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "24π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×4π×12＝24π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-97",
+   "type": "input",
+   "prompt": "半径11cm、中心角240°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "44/3π+22",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝44/3π＋22＝44/3π ＋ 22（cm）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p74 6（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "44/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-98",
+   "type": "input",
+   "prompt": "円の接線は、接点を通る半径とどのような位置関係にあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直",
+     "垂直である",
+     "垂直に交わる"
+    ]
+   },
+   "explanation": "円の接線は、接点を通る半径に垂直である。",
+   "source": {
+    "id": "source-0137",
+    "file": "ドリル/数学/S__15589423_0.jpg",
+    "sha256": "ae3ebf924320fcf3a742574d287b2e5bde87cccafc0f9791c1467932a071192c",
+    "page": 69,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p69 Guide（円と接線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "平行"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-99",
+   "type": "input",
+   "prompt": "同じ平面上の3つの直線 ℓ、m、n について、ℓ∥m、m⊥n のとき、ℓ と n の関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ℓ⊥n",
+     "n⊥ℓ",
+     "l⊥n",
+     "n⊥l"
+    ],
+    "compact": true
+   },
+   "explanation": "ℓ∥m、m⊥n より ℓ⊥n。平行な直線の一方に垂直な直線は、もう一方にも垂直。",
+   "source": {
+    "id": "source-0136",
+    "file": "ドリル/数学/S__15589422_0.jpg",
+    "sha256": "332bdaf8c83b658790d3acb08c9515a52ee3a304c55784d71f9678b19025aa52",
+    "page": 66,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p66 1（平行と垂直）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ℓ//n"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-100",
+   "type": "input",
+   "prompt": "長方形ABCDについて、辺ABと辺DCの位置関係を記号を使って表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "AB∥DC",
+     "DC∥AB",
+     "AB//DC",
+     "DC//AB",
+     "AB||DC",
+     "DC||AB",
+     "AB∥CD",
+     "CD∥AB",
+     "AB//CD",
+     "CD//AB",
+     "AB||CD",
+     "CD||AB",
+     "BA∥DC",
+     "DC∥BA",
+     "BA//DC",
+     "DC//BA",
+     "BA||DC",
+     "DC||BA",
+     "BA∥CD",
+     "CD∥BA",
+     "BA//CD",
+     "CD//BA",
+     "BA||CD",
+     "CD||BA"
+    ],
+    "compact": true
+   },
+   "explanation": "長方形の向かい合う辺は平行。AB∥DC",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 64,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p64 1(2)（垂直と平行）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-plane-test-1",
+   "type": "input",
+   "prompt": "1辺4cmの正方形ABCDの中に、点Bを中心とする半径4cmの四分円の弧ACと、点Dを中心とする半径4cmの四分円の弧ACをかいた。2つの弧で囲まれた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π-16",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "四分円 π×4²/4 から直角二等辺三角形 4×4/2 をひいた部分の2つ分。(4π−8)×2＝8π − 16（cm²）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p78 1(1)（色のついた部分の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-2",
+   "type": "input",
+   "prompt": "半径8cmと半径4cmの同じ中心のおうぎ形（中心角90°）で、大きいおうぎ形から小さいおうぎ形を取りのぞいた部分のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π+8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "外側の弧 2π×8×90/360、内側の弧 2π×4×90/360、まっすぐな部分 (8−4)×2。合計 6π ＋ 8（cm）",
+   "source": {
+    "id": "source-0142",
+    "file": "ドリル/数学/S__15589428_0.jpg",
+    "sha256": "18c7090b49157868064cad149fc19475ffcd7ad39631fab91470ca402851d893",
+    "page": 78,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p78 1(4)（色のついた部分の周の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-3",
+   "type": "input",
+   "prompt": "直径AB＝6cmの半円を、点Bを中心として30°回転させた。半円が通過した部分（回転前の半円と回転後の半円、その間のおうぎ形を合わせた図形）から、回転前の半円を除いた部分の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "3π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "回転後の半円と回転前の半円は同じ面積なので、求める面積は半径6cm、中心角30°のおうぎ形と等しい。π×6²×30/360＝3π（cm²）",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 75,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p75 5（図形の移動と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-4",
+   "type": "input",
+   "prompt": "直径3cmの同じ硬貨6枚を、1辺に3枚ずつ並ぶ三角形の形にすきまなく並べ、その周囲を1まわり、ひもで結んだ。ひもの長さを求めよう（ひもの太さは考えない）。",
+   "answer": {
+    "kind": "expr",
+    "value": "3π+18",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まっすぐな部分は外側の円の中心を結ぶ三角形の辺と同じで 2×3×3＝18cm。曲がった部分は3つ合わせて円1周分の 3πcm。合計 3π ＋ 18（cm）",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 77,
+    "number": "9"
+   },
+   "ref": "参考：数学ドリル p77 9（ひもの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-5",
+   "type": "input",
+   "prompt": "線分ABを直線ℓについて対称移動したものを線分A'B'、それを直線mについて対称移動したものを線分A\"B\"とする。ℓ∥m で、ℓとmの距離が4cmのとき、線分ABを1回の移動で線分A\"B\"に重ねるには、どの向きに何cm平行移動すればよいか。移動する長さ（cm）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "平行な2直線について続けて対称移動すると、2直線に垂直な方向への平行移動になる。移動の長さは距離の2倍で 8cm",
+   "source": {
+    "id": "source-0141",
+    "file": "ドリル/数学/S__15589427_0.jpg",
+    "sha256": "185d135cee94b91fcbece24a76ff6a8895b99f289b77e042a3b38a31015bc02b",
+    "page": 76,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p76 1（移動の組み合わせ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-6",
+   "type": "input",
+   "prompt": "3点A、B、Cを通る円の中心Oを作図するには、線分AB、BCの何を作図して、その交点を求めればよいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直二等分線",
+     "線分AB、BCの垂直二等分線",
+     "それぞれの垂直二等分線"
+    ]
+   },
+   "explanation": "円の中心は3点から等しい距離にあるので、線分AB、BCの垂直二等分線の交点。",
+   "source": {
+    "id": "source-0138",
+    "file": "ドリル/数学/S__15589424_0.jpg",
+    "sha256": "0426feb64cd99b91d32edbf93ffbc1aa24b96605d07fdce16411d5e92a4f9dab",
+    "page": 71,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p71 7（作図の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "角の二等分線"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-7",
+   "type": "input",
+   "prompt": "半径6cm、中心角240°のおうぎ形の弧の長さを求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ℓ＝2π×6×240/360＝8π（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p72 1（おうぎ形の弧の長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "24π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-8",
+   "type": "input",
+   "prompt": "半径6cm、中心角150°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "15π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×6²×150/360＝15π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-9",
+   "type": "input",
+   "prompt": "半径3cm、中心角160°のおうぎ形の面積を求めよう（円周率はπ）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝π×3²×160/360＝4π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 72,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p72 3（おうぎ形の面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8/3π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-10",
+   "type": "input",
+   "prompt": "半径8cm、面積64/9πcm²のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "中心角を x° とすると π×8²×x/360＝64/9π。x＝40",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p73 5（おうぎ形の中心角）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-11",
+   "type": "input",
+   "prompt": "中心角135°で、弧の長さが9πcmのおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "半径を r cm とすると 2πr×135/360＝9π。r＝12",
+   "source": {
+    "id": "source-0140",
+    "file": "ドリル/数学/S__15589426_0.jpg",
+    "sha256": "d961b921dc67bb581d83a05e93d0966dcd8f934d3a5ecb6c06de9761c1faba24",
+    "page": 74,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p74 1(3)（おうぎ形の半径）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-12",
+   "type": "input",
+   "prompt": "半径10cm、弧の長さ9πcmのおうぎ形の面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "45π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "S＝1/2ℓr を使うと 1/2×9π×10＝45π（cm²）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p73 4（おうぎ形の面積（S＝1/2ℓr））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-plane-test-13",
+   "type": "input",
+   "prompt": "半径11cm、中心角225°のおうぎ形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "55/4π+22",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "まわりの長さ＝弧の長さ＋半径×2＝55/4π＋22＝55/4π ＋ 22（cm）",
+   "source": {
+    "id": "source-0139",
+    "file": "ドリル/数学/S__15589425_0.jpg",
+    "sha256": "ed994ca31d1519afba9eefc5962ec7b559808feb820e8c586c2593b55884253a",
+    "page": 73,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p73 6（おうぎ形のまわりの長さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "55/4π"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-14",
+   "type": "input",
+   "prompt": "作図で∠ABC＝30°をつくるには、正三角形をかいてできる60°の角に、何を作図すればよいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "角の二等分線",
+     "二等分線"
+    ]
+   },
+   "explanation": "60°の角の二等分線をひくと30°になる。",
+   "source": {
+    "id": "source-0138",
+    "file": "ドリル/数学/S__15589424_0.jpg",
+    "sha256": "0426feb64cd99b91d32edbf93ffbc1aa24b96605d07fdce16411d5e92a4f9dab",
+    "page": 70,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p70 3(2)（作図の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "垂線"
+   ]
+  },
+  {
+   "id": "drill-math-1-plane-test-15",
+   "type": "input",
+   "prompt": "一直線上に点A、B、Cがこの順に並び、AC＝10cm、BC＝8cm である。線分AB、BCの中点をそれぞれM、Nとするとき、線分MNの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "MN＝MB＋BN＝1＋4＝5cm（ACの半分）",
+   "source": {
+    "id": "source-0135",
+    "file": "ドリル/数学/S__15589421_0.jpg",
+    "sha256": "f515cd6c52d9a904a26aa0588b98a3397c773e70fdc2b66f4fcefed366c84c8c",
+    "page": 65,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p65 3(2)（中点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp64〜79（16 図形の移動・17 いろいろな作図・18 おうぎ形、標準問題・実力問題①②）を写真で目視し、数や条件を変えた類題を作った。作図そのものは画面で採点できないため、作図の考え方・用語・計算を答える形にした。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "直線・線分・半直線と記号",
+   "body": "直線ABは両方向に限りなくのびる線、線分ABは両端のある部分、半直線ABはAを端としてBの方向にのびる線。垂直は AB⊥CD、平行は AB∥CD、角は∠ABC、三角形は△ABC と書く。"
+  },
+  {
+   "title": "3つの移動",
+   "body": "平行移動：対応する点を結ぶ線分は平行で長さが等しい。回転移動：対応する点は回転の中心から等しい距離、回転の角はすべて等しい。対称移動：対応する点を結ぶ線分は対称の軸で垂直に二等分される。"
+  },
+  {
+   "title": "基本の作図",
+   "body": "垂直二等分線（2点から等しい距離）、角の二等分線（2辺から等しい距離）、垂線。円の接線は接点を通る半径に垂直。3点を通る円の中心は垂直二等分線の交点。"
+  },
+  {
+   "title": "おうぎ形の公式",
+   "body": "半径 r、中心角 a° のとき、弧の長さ ℓ＝2πr×a/360、面積 S＝πr²×a/360＝1/2ℓr。例：半径6cm、中心角60° → ℓ＝2π、S＝6π"
+  },
+  {
+   "title": "色のついた部分の面積",
+   "body": "全体からいらない部分をひく、移動して形を変える、のどちらかで考える。まわりの長さは、曲線部分（弧）とまっすぐな部分（半径など）を分けて足す。"
+  }
+ ]
+}

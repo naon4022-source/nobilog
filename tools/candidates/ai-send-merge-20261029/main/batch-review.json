@@ -1,0 +1,179 @@
+{
+  "status": "reviewed six exact changes; combined runtime preflight pending",
+  "applicationAndHistoryFiles": [
+    "cf-worker/src/learning-assistant.mjs",
+    "site-assets/messages.js",
+    "index.html",
+    "tools/candidates/textbook-final-20261023/reviewed_changes.py"
+  ],
+  "fixtureEdits": [
+    {
+      "file": ".claude/verify/verify-openai-chat-retry-browser.mjs",
+      "edits": [
+        {
+          "before": "  window.remote=initial;window.posts=[];window.owner='pro';window.saveFail=false;window.next=0;",
+          "after": "  window.remote=initial;window.posts=[];window.owner='pro';window.saveFail=false;window.next=0;\n  window.cloudState={busy:false};window.authLeaseBlocked=false;window.cloudConflict=()=>false;"
+        }
+      ]
+    },
+    {
+      "file": ".claude/verify/verify-messages-browser.mjs",
+      "edits": [
+        {
+          "before": "let remoteRecords={};async function cloudPush()",
+          "after": "let cloudState={busy:false},authLeaseBlocked=false;function cloudConflict(){return false;}\nlet remoteRecords={};async function cloudPush()"
+        },
+        {
+          "before": "getByText(/送れませんでした（通信が切れたかもしれません）/)",
+          "after": "getByText(/送信結果を確認できませんでした/)"
+        }
+      ]
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/ai-send-merge-20261029/main/proofs/real-api-trial-20261029-status-replay-result.json",
+      "sha256": "e2b652d6bb4533bd48c7173e1ef726da6c252aa0ef83b3461b703f1ba21c1343",
+      "checks": 43,
+      "inputs": [
+        {
+          "file": "cf-worker/src/learning-assistant.mjs",
+          "sha256": "201bea9660cb47a37388c910c892fc21d3e68f56f87d2bdf67d0a4972974bdd6",
+          "mode": "prior"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/view-before/cf-worker/src/learning-assistant.mjs",
+          "sha256": "201bea9660cb47a37388c910c892fc21d3e68f56f87d2bdf67d0a4972974bdd6",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/learning-assistant.candidate.mjs",
+          "sha256": "3166e87f590d62c68592f6e63d583d27c6caca5bde8467f28406bfbfd1d701a0",
+          "mode": "current"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/ai-send-merge-20261029/main/proofs/real-api-trial-20261029-send-stage-result.json",
+      "sha256": "186de244573c4bea67e7ec3369c1aeeefc4959c1de51a2b3696717cc841e15e4",
+      "checks": 32,
+      "inputs": [
+        {
+          "file": "tools/candidates/real-api-trial-20261029/messages.before.js",
+          "sha256": "6debb522093368dfbad94a34a6c460b701cca20eaaa40e717e47de530abdb0bd",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/messages.candidate.js",
+          "sha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/messages-patch.json",
+          "sha256": "fdcde00d90d6544e53521b95ee0bebfdfefe0f7d6ef644997999275c0c87ce4b",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/verify-send-stage.mjs",
+          "sha256": "7f3d01fdab525300c01789f620b89d6d4527aa7f0ff1376a4d2a160ad4a1a476",
+          "mode": "current"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/ai-send-merge-20261029/main/proofs/real-api-trial-20261029-save-idle-result.json",
+      "sha256": "80f0424920615740ee706722df0c3047a050fca56b4802ce028b3f13f5ce5e7d",
+      "checks": 57,
+      "inputs": [
+        {
+          "file": "tools/candidates/real-api-trial-20261029/retry-adapter.before.js",
+          "sha256": "28e76031e9a5603296cd0b0b9529dafd56f431aa5ffb0f289da4696849715233",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/retry-adapter.candidate.js",
+          "sha256": "d41ed5cf3bf2a5fe589097690a27d06afabe0050e05071b0b8bbf42ca0db8a45",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/retry-adapter-patch.json",
+          "sha256": "a992a295beed223eb0c22d79a5da6bbf74f75305961dcc554037512f07db1882",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/verify-save-idle.mjs",
+          "sha256": "9417b405ffaf05334ccaec4f89dbdb3860525b31a201789a4240d8173f4e34c3",
+          "mode": "current"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/ai-send-merge-20261029/main/proofs/real-api-trial-20261029-save-idle-browser-result.json",
+      "sha256": "59197128b317966aafeb69e7f3b3cce034104b9f7bc3df38cc4de0d638b77108",
+      "checks": 11,
+      "inputs": [
+        {
+          "file": "tools/candidates/real-api-trial-20261029/messages.candidate.js",
+          "sha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/retry-adapter.before.js",
+          "sha256": "28e76031e9a5603296cd0b0b9529dafd56f431aa5ffb0f289da4696849715233",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/retry-adapter.candidate.js",
+          "sha256": "d41ed5cf3bf2a5fe589097690a27d06afabe0050e05071b0b8bbf42ca0db8a45",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/real-api-trial-20261029/verify-save-idle-browser.mjs",
+          "sha256": "66e78c22141f840e4c9de3586690dfdfc76f8ce7377c0e5f80061f081b188b3e",
+          "mode": "current"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/ai-send-merge-20261029/main/proofs/math-history-toolbar-20261029-result.json",
+      "sha256": "fe1527d470fcea655979b88d28067e9028efcb4329af52744cd26d007c9c8ffe",
+      "checks": 7,
+      "inputs": [
+        {
+          "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+          "sha256": "1639146508b373dbab68ad825d29e42b52d211258170cf6a271c1ed508304d7e",
+          "mode": "prior"
+        },
+        {
+          "file": "tools/candidates/math-history-toolbar-20261029/reviewed_changes.candidate.py",
+          "sha256": "1770292a8eb44880e1fe7bfb2142ccd6109c1af81f7013c55924cac1550b074f",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/math-history-toolbar-20261029/patch.json",
+          "sha256": "8ca0452293613d12964ce9fda5ccd53ed67cc7d0b0717ae7d9c8dd19cecbc18e",
+          "mode": "current"
+        },
+        {
+          "file": "site-assets/textbook-book.js",
+          "sha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/site-assets/textbook-book.js",
+          "sha256": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1",
+          "mode": "current"
+        },
+        {
+          "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-spec.json",
+          "sha256": "27543a65e66ccfd6535ce7b4d3e20a9142a5dfdf75a743f493a7045ea2dd1447",
+          "mode": "current"
+        }
+      ]
+    }
+  ],
+  "realProviderCallsInPreparation": 0,
+  "liveFailureCauseConfirmed": false,
+  "sourceScopePlanned": 77,
+  "normalizationsPlanned": 32
+}

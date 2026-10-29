@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-21T16:08:31.648918+00:00",
+  "status": "pre-full failed; do not certify security layer or new RPG UI",
+  "ownExecSession": 56548,
+  "ownObservedExitCode": 1,
+  "terminal": true,
+  "log": "/tmp/nobi-security-before-20261022.log",
+  "logSha256": "2dab74a941e297f0521ae0369d58dcbab20d3c6815fc7477a6af0eb18f30bfc7",
+  "observedFailureFile": "tools/candidates/japanese-tokkun-integration-20261016/verify-selection-browser.mjs:26:63",
+  "sameFailureOccurrences": 3,
+  "wholeAppSucceeded": false,
+  "fullSuiteAllInputsFrozen": false,
+  "existingWorkerShaMatches": {
+    "cf-worker/src/index.js": true,
+    "tools/releases/google-entry-20261021/nobilog-board/src/index.js": true
+  },
+  "preparedLayerInputShaMatches": {
+    "oauth-form-body.mjs": true,
+    "rate-policy.mjs": true,
+    "security-gateway.mjs": true,
+    "security-rate-do.mjs": true,
+    "attach-gateway.mjs": true,
+    "main-entry.mjs": true,
+    "public-entry.mjs": true,
+    "fixture-worker.mjs": true,
+    "verify-gateway.mjs": true,
+    "verify-rpc.mjs": true
+  },
+  "existingPassedBackendInputsUnchanged": 34,
+  "newViewInputsUnchanged": 9,
+  "securityAndNewViewTestsRun": false,
+  "oneLineVerifierPatchApplied": false,
+  "correctionAuthorizationPending": true,
+  "applicationEditedByThisSecurityTask": false,
+  "deployed": false,
+  "postChangeWholeSuitePassed": false
+}

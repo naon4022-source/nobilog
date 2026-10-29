@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import bank from '../../../../../cf-worker/src/material-bank.mjs';
+import {createTestSession} from '../../../../../cf-worker/src/ai-test-session.mjs';
+import {admitTestReview,processTestReviewMessage} from '../../../../../cf-worker/src/ai-test-review-service.mjs';
+import {finishedTestReviewResult} from '../../../../../cf-worker/src/ai-test-review-jobs.mjs';
+import {reviewPracticeRoute} from '../../../../../cf-worker/src/ai-review-practice-route.mjs';
+import {reviewPracticeOptions} from '../../../../../cf-worker/src/ai-review-practice-library.mjs';
+const {D1SQLite}=createRequire(import.meta.url)('../../../../../.claude/verify/d1-sqlite.js'),here=new URL('./',import.meta.url),dbs=[],unit=bank.units.find(u=>u.id==='drill-math-1-signedcalc');let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
+const fixture=async(uid='u4',plan='pro',large=false)=>{
+ const db=new D1SQLite();dbs.push(db);const now=Date.now(),owner='fixture-practice-owner',queue=[],consent={version:'2026-10-14',approved:true,ageBand:'13-17',guardianConsent:true};let generated=0;
+ db.seed('active-session:'+uid,owner,now+3600000);db.seed('plan:'+uid,JSON.stringify({plan,start:now-86400000,end:now+30*86400000,next:null,revision:2,initializedAt:now-86400000}));db.seed('openai-access:'+uid,JSON.stringify(consent));db.seed('material-history:'+uid+':sentinel','preserve-original-grades');
+ const env={AUTH_DB:db,APP_ORIGIN:'https://fixture.invalid',SUBSCRIPTION_PREVIEW:'1',PLAN_CREDITS_V2:'1',OPENAI_MONTHLY_LIMIT_YEN:'800',AI_TEST_REVIEW_ENABLED:'1',OPENAI_ENABLED:'1',OPENAI_TRIAL_ONLY:'1',OPENAI_SAFETY_READY:'1',OPENAI_TERMS_READY:'1',OPENAI_BILLING_READY:'1',OPENAI_API_KEY:'fixture-only-not-a-real-key',AI_TEST_REVIEW_QUEUE:{send:async m=>queue.push(m)}};
+ const roster=await createTestSession(env,uid,{id:crypto.randomUUID(),unitId:unit.id,mode:'test',questionIds:unit.tests.slice(0,large?15:5).map(q=>q.id)},{owner,now});for(const [i,slot]of roster.slots.entries())db.seed('material-attempt:'+uid+':'+slot.attemptId,JSON.stringify({id:slot.attemptId,unitId:unit.id,questionId:slot.questionId,mode:'test',at:now+1,answer:large?'synthetic wrong '.repeat(150):'synthetic wrong',prompt:unit.tests[i].prompt,expected:unit.tests[i].answer,result:{correct:false}}));
+ const admitted=await admitTestReview(env,{uid},{id:crypto.randomUUID(),testSessionId:roster.id},{owner,now:Date.now()});assert.ok(!admitted.error,JSON.stringify(admitted));
+ const fetcher=async(url,options)=>{if(url.endsWith('/moderations'))return Response.json({results:[{flagged:false}]});assert.equal(url,'https://api.openai.com/v1/responses');generated++;const body=JSON.parse(options.body),content=JSON.parse(body.input);return Response.json({status:'completed',model:body.model,service_tier:'default',output:[{type:'message',role:'assistant',content:[{type:'output_text',text:JSON.stringify({items:content.questions.map(q=>({questionId:q.questionId,comment:'先に計算するところを、理由と一緒に確かめよう。',purpose:'計算順の確認',practiceId:q.practices[0]?.id||null}))})}]}],usage:{input_tokens:100,output_tokens:100}});};
+ const drain=async()=>{while(queue.length){const result=await processTestReviewMessage(env,queue.shift(),{now:Date.now(),fetcher,canRun:async()=>true});assert.equal(result.job?.state,'done',JSON.stringify(result));}};
+ const result=()=>finishedTestReviewResult(env,uid,roster.id,{owner,now:Date.now()});
+ const call=async(selection,{method='GET',actor=uid,activeOwner=owner,origin=env.APP_ORIGIN,raw}={})=>{const path='/material-test-review/practice',request=new Request(env.APP_ORIGIN+path+(method==='GET'?'?'+new URLSearchParams(selection):''),{method,headers:{'Content-Type':'application/json',...(origin===null?{}:{Origin:origin})},...(method==='POST'?{body:raw??JSON.stringify(selection)}:{})});const response=await reviewPracticeRoute(request,env,{uid:actor},{owner:activeOwner});return {response,value:await response.json()};};
+ return {db,env,uid,owner,roster,drain,result,call,queue,fetcher,generated:()=>generated};
+};
+const quotas=f=>JSON.stringify(f.db.keys().filter(k=>/^(?:plan-credit|plan-quota|ai-test-review-credit|ai-trial)/.test(k)).sort().map(k=>[k,f.db.get(k).v]));
+export {fixture,dbs,unit,quotas,processTestReviewMessage,finishedTestReviewResult};

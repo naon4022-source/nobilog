@@ -1,0 +1,30 @@
+{
+  "status": "locally integrated and narrow checks passed; post-change full pending",
+  "source": "教材整理/確認済み/tokkun-social-1-geo-nihon.json",
+  "beforeSha256": "0ca62036c848705808e121f78162dc60d857c03a78cc76d9123a14377ca2ac1a",
+  "candidateSha256": "d97d0ea0b10190e46a1cc77aed8ac439d9d95ef96cc2ce5792994847f9110d0a",
+  "changes": [
+    {
+      "number": 31,
+      "field": "answer.required",
+      "reason": "require the two named currents, preserving the warm/cold proper-name variants rather than accepting generic warm/cold words"
+    },
+    {
+      "number": 37,
+      "field": "answer.reject",
+      "reason": "reject explicit negation of the same low-temperature reason; keep current positive criteria and existing negation policy"
+    },
+    {
+      "number": 69,
+      "field": "answer.required",
+      "reason": "enforce either explicitly required resource term"
+    }
+  ],
+  "learnerVisibleContentChanged": false,
+  "limits": "mechanical keyword constraints only, not complete semantic grading or real AI; do not claim all possible paraphrases or negations handled",
+  "mainChanged": true,
+  "authoredPromptsExplanationsNumericFactsAndExistingPositiveCriteriaUnchanged": true,
+  "gradingAnswerObjectChanged": true,
+  "formatRestoration": "format-restoration.json; initial verified candidate preserved as rubric-candidate-verified-indent2.json",
+  "mainChangedScope": "three mechanical grading guards only; authored prompts/explanations/numbers unchanged"
+}

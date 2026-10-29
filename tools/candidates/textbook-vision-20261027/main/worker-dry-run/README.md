@@ -1,0 +1,1 @@
+This folder contains the built output assets for the worker "nobilog-board" generated at 2026-10-27T13:39:27.768Z.

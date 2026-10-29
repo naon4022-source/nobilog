@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/verify-aligned-book-playback.mjs

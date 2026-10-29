@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/site-assets/textbook-book.js

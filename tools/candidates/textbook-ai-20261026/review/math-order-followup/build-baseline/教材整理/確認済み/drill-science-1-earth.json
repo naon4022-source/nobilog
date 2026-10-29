@@ -1,0 +1,3005 @@
+{
+ "id": "drill-science-1-earth",
+ "mode": "drill",
+ "subject": "理科",
+ "grade": 1,
+ "title": "火山・地震・地層と大地の変化",
+ "majorTitle": "大地の変化",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-science-1-earth-1",
+   "type": "input",
+   "prompt": "地震のゆれで、地面が急にやわらかくなり、建物が傾いたり地下の水や砂がふき出したりする現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "液状化",
+     "液状化現象",
+     "えきじょうか"
+    ]
+   },
+   "explanation": "液状化。うめ立て地など、水をふくんだ砂の地盤で起こりやすい。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p94 2（地震災害）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "津波"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-2",
+   "type": "input",
+   "prompt": "震源からの距離が40kmの地点で、初期微動継続時間が10秒だった。同じ地震で、震源からの距離が60kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。10×60÷40＝15秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-3",
+   "type": "input",
+   "prompt": "火成岩をつくっている粒で、結晶になっているものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉱物",
+     "こうぶつ",
+     "造岩鉱物"
+    ]
+   },
+   "explanation": "鉱物（造岩鉱物）。無色鉱物（セキエイ・チョウ石）と有色鉱物（クロウンモ・カクセン石・キ石・カンラン石）がある。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点5"
+   },
+   "ref": "参考：理科ドリル p74 要点5（鉱物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "化石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-4",
+   "type": "input",
+   "prompt": "ある地震で、震源から60kmの地点Aと96kmの地点Bでは、初期微動が始まった時刻が9秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "96−60＝36km を9秒で伝わったので、36÷9＝4km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-5",
+   "type": "input",
+   "prompt": "火山灰などの火山噴出物が堆積して固まった岩石を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "凝灰岩",
+     "ぎょうかいがん"
+    ]
+   },
+   "explanation": "凝灰岩。粒は角ばっている。離れた地層の比較（かぎ層）に使われる。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p89 2（堆積岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "石灰岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-6",
+   "type": "input",
+   "prompt": "P波の速さが8km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は6秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "48",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/8 ＝ 6。これを解いて x ＝ 48km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-7",
+   "type": "input",
+   "prompt": "日本列島付近で、海洋プレートは大陸プレートの下に沈みこんでいるか、上に乗り上げているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "下に沈みこんでいる",
+     "沈みこんでいる",
+     "下"
+    ]
+   },
+   "explanation": "海洋プレート（太平洋プレートなど）が大陸プレートの下に沈みこみ、ひずみがたまって地震が起こる。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "6"
+   },
+   "ref": "参考：理科ドリル p81 6（プレート）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "上に乗り上げている"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-8",
+   "type": "input",
+   "prompt": "標高80mの地点Aでボーリング調査をしたところ、地表からの深さ5mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝80−5＝75m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-9",
+   "type": "input",
+   "prompt": "震源の真上の地表の地点を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震央",
+     "しんおう"
+    ]
+   },
+   "explanation": "震央。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p80 要点4（震源と震央）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "震源"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-10",
+   "type": "input",
+   "prompt": "P波の速さが8km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は4秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/8 ＝ 4。これを解いて x ＝ 32km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-11",
+   "type": "input",
+   "prompt": "火山の噴火で、高温の火山ガスや火山灰などが一体となって高速で山の斜面を流れ下る現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "火砕流",
+     "かさいりゅう"
+    ]
+   },
+   "explanation": "火砕流。時速100km以上になることもあり、大きな被害をもたらす。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p94 要点1（火山災害）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "土石流"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-12",
+   "type": "input",
+   "prompt": "サンゴの化石が見つかった地層は、どんな環境でできたと考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "あたたかく浅い海",
+     "暖かく浅い海",
+     "あたたかくて浅い海"
+    ]
+   },
+   "explanation": "サンゴはあたたかく浅い海にすむので、示相化石になる。",
+   "source": {
+    "id": "source-0044",
+    "file": "ドリル/りか/S__15581241_0.jpg",
+    "sha256": "113c7cbbd247b0f62830e7e31985551a7d85c1d41364be7dc54856bed715feac",
+    "page": 90,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p90 1（示相化石）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "冷たく深い海"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-13",
+   "type": "input",
+   "prompt": "P波の速さが6km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は10秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/6 ＝ 10。これを解いて x ＝ 120km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-14",
+   "type": "input",
+   "prompt": "火山岩のうち、最も白っぽいものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "流紋岩",
+     "りゅうもんがん"
+    ]
+   },
+   "explanation": "火山岩は白っぽい順に流紋岩・安山岩・玄武岩。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p75 4（火山岩の種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "玄武岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-15",
+   "type": "input",
+   "prompt": "ある地震で、震源から24kmの地点Aと84kmの地点Bでは、初期微動が始まった時刻が10秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "84−24＝60km を10秒で伝わったので、60÷10＝6km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-16",
+   "type": "input",
+   "prompt": "マグニチュードが1大きくなると、地震のエネルギーは約何倍になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "約32倍（2大きくなると約1000倍）。",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p82 2（マグニチュード）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-17",
+   "type": "input",
+   "prompt": "ある地震で、震源から32km離れた地点に主要動が始まったのは10時43分40秒だった。S波の速さを4km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時43分32秒",
+     "10:43:32"
+    ]
+   },
+   "explanation": "S波が届くまで 32÷4＝8秒。10時43分40秒の8秒前で10時43分32秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-18",
+   "type": "input",
+   "prompt": "地震のゆれのうち、はじめに起こる小さなゆれを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "初期微動",
+     "しょきびどう"
+    ]
+   },
+   "explanation": "初期微動。P波によって起こる。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p80 要点1（地震のゆれ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "主要動"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-19",
+   "type": "input",
+   "prompt": "標高75mの地点Aでボーリング調査をしたところ、地表からの深さ2mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "73",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝75−2＝73m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-20",
+   "type": "input",
+   "prompt": "日本付近の震源の深さは、太平洋側から日本海側に向かってどうなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "深くなる",
+     "だんだん深くなる"
+    ]
+   },
+   "explanation": "海洋プレートが大陸プレートの下に沈みこんでいるので、日本海側ほど震源が深い。",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 83,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p83 3（震源の分布）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "浅くなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-21",
+   "type": "input",
+   "prompt": "地下の深いところで、岩石が高温のためにどろどろにとけたものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "マグマ"
+    ]
+   },
+   "explanation": "マグマ。地表に流れ出たものを溶岩という。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p74 要点1（マグマ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "溶岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-22",
+   "type": "input",
+   "prompt": "主要動を起こす、P波よりおそく伝わる波を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "S波",
+     "s波",
+     "Ｓ波"
+    ]
+   },
+   "explanation": "S波（速さ約3〜5km/s）。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p80 1（地震の波）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "P波"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-23",
+   "type": "input",
+   "prompt": "地層に上下の逆転がないとき、ふつう下にある地層と上にある地層のどちらが古いか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "下にある地層",
+     "下",
+     "下の地層"
+    ]
+   },
+   "explanation": "地層は下から順に積み重なるので、下の地層ほど古い。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p89 Guide（地層の重なり）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "上にある地層"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-24",
+   "type": "input",
+   "prompt": "ある地震で、震源から96kmの地点Aと120kmの地点Bでは、初期微動が始まった時刻が3秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "120−96＝24km を3秒で伝わったので、24÷3＝8km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-25",
+   "type": "input",
+   "prompt": "火山岩の石基の中に散らばっている、比較的大きな鉱物を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "斑晶",
+     "はんしょう"
+    ]
+   },
+   "explanation": "斑晶。マグマが地下にあるときにすでにできていた結晶。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p74 要点3（斑状組織）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "石基"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-26",
+   "type": "input",
+   "prompt": "ある地震で、震源から72km離れた地点に主要動が始まったのは10時50分2秒だった。S波の速さを3km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時49分38秒",
+     "10:49:38"
+    ]
+   },
+   "explanation": "S波が届くまで 72÷3＝24秒。10時50分2秒の24秒前で10時49分38秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-27",
+   "type": "input",
+   "prompt": "大きな鉱物がすき間なく組み合わさった深成岩のつくりを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "等粒状組織",
+     "とうりゅうじょうそしき"
+    ]
+   },
+   "explanation": "等粒状組織。ゆっくり冷えたため、どの鉱物も大きく成長した。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p74 要点4（等粒状組織）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "斑状組織"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-28",
+   "type": "input",
+   "prompt": "標高90mの地点Aでボーリング調査をしたところ、地表からの深さ3mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "87",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝90−3＝87m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-29",
+   "type": "input",
+   "prompt": "マグマが地表や地表付近で急に冷えて固まった火成岩を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "火山岩",
+     "かざんがん"
+    ]
+   },
+   "explanation": "火山岩（流紋岩・安山岩・玄武岩）。斑状組織。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p74 要点2（火山岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "深成岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-30",
+   "type": "input",
+   "prompt": "ある地震で、震源から120km離れた地点に主要動が始まったのは10時35分14秒だった。S波の速さを5km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時34分50秒",
+     "10:34:50"
+    ]
+   },
+   "explanation": "S波が届くまで 120÷5＝24秒。10時35分14秒の24秒前で10時34分50秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-31",
+   "type": "input",
+   "prompt": "マグマのねばりけが強い火山は、どのような形になりやすいか。「おわんをふせた形」「円すいの形」「傾斜がゆるやかな形」から答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "おわんをふせた形",
+     "ドーム状",
+     "おわん形"
+    ]
+   },
+   "explanation": "ねばりけが強い→おわんをふせた形（昭和新山・平成新山）、中間→円すい形（富士山）、弱い→傾斜がゆるやか（マウナロア）。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p74 1（火山の形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "傾斜がゆるやかな形"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-32",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高70mの地点Aでは地表から10mの深さに凝灰岩の層がある。標高85mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "25",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 70−10＝60m。地点Bでは 85−60＝25m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-33",
+   "type": "input",
+   "prompt": "地震が発生した地下の場所を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震源",
+     "しんげん"
+    ]
+   },
+   "explanation": "震源。その真上の地表の地点を震央という。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p80 要点4（震源と震央）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "震央"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-34",
+   "type": "input",
+   "prompt": "震源からの距離が40kmの地点で、初期微動継続時間が10秒だった。同じ地震で、震源からの距離が120kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。10×120÷40＝30秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-35",
+   "type": "input",
+   "prompt": "地層ができた当時の環境を知る手がかりになる化石を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "示相化石",
+     "しそうかせき"
+    ]
+   },
+   "explanation": "示相化石。サンゴ→あたたかく浅い海、シジミ→河口や湖、ブナ→やや寒い気候。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点6"
+   },
+   "ref": "参考：理科ドリル p88 要点6（示相化石）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "示準化石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-36",
+   "type": "input",
+   "prompt": "ある地震で、震源から84kmの地点Aと120kmの地点Bでは、初期微動が始まった時刻が9秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "120−84＝36km を9秒で伝わったので、36÷9＝4km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-37",
+   "type": "input",
+   "prompt": "離れた地点の地層を比べるとき、目印として使いやすい、火山灰でできた層を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かぎ層",
+     "鍵層"
+    ]
+   },
+   "explanation": "かぎ層。火山灰の層は短い期間に広い範囲に積もるので、同じ時期の目印になる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（地層の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "示準化石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-38",
+   "type": "input",
+   "prompt": "震源からの距離が60kmの地点で、初期微動継続時間が4秒だった。同じ地震で、震源からの距離が180kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。4×180÷60＝12秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-39",
+   "type": "input",
+   "prompt": "深成岩のうち、最も黒っぽいものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "はんれい岩",
+     "斑れい岩",
+     "はんれいがん"
+    ]
+   },
+   "explanation": "はんれい岩。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p75 4（深成岩の種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "花こう岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-40",
+   "type": "input",
+   "prompt": "標高60mの地点Aでボーリング調査をしたところ、地表からの深さ8mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "52",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝60−8＝52m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-41",
+   "type": "input",
+   "prompt": "マンモスやナウマンゾウの化石が見つかった地層は、どの地質年代にできたと考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "新生代",
+     "しんせいだい"
+    ]
+   },
+   "explanation": "新生代の示準化石：マンモス・ナウマンゾウ・ビカリア。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p89 4（地質年代）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "中生代"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-42",
+   "type": "input",
+   "prompt": "富士山のように円すいの形をした火山は、マグマのねばりけが強い・中間・弱いのどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中間",
+     "中くらい"
+    ]
+   },
+   "explanation": "円すい形の火山はねばりけが中間程度。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p74 1（火山の形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "強い"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-43",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高65mの地点Aでは地表から15mの深さに凝灰岩の層がある。標高70mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 65−15＝50m。地点Bでは 70−50＝20m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-44",
+   "type": "input",
+   "prompt": "初期微動のあとに続く大きなゆれを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "主要動",
+     "しゅようどう"
+    ]
+   },
+   "explanation": "主要動。S波によって起こる。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p80 要点2（地震のゆれ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "初期微動"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-45",
+   "type": "input",
+   "prompt": "ある地震で、震源から36km離れた地点に主要動が始まったのは10時34分37秒だった。S波の速さを3km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時34分25秒",
+     "10:34:25"
+    ]
+   },
+   "explanation": "S波が届くまで 36÷3＝12秒。10時34分37秒の12秒前で10時34分25秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-46",
+   "type": "input",
+   "prompt": "マグマが冷えて固まってできた岩石をまとめて何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "火成岩",
+     "かせいがん"
+    ]
+   },
+   "explanation": "火成岩（火山岩と深成岩）。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p74 要点2（火成岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "堆積岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-47",
+   "type": "input",
+   "prompt": "ある地震で、震源から72kmの地点Aと120kmの地点Bでは、初期微動が始まった時刻が8秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "120−72＝48km を8秒で伝わったので、48÷8＝6km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-48",
+   "type": "input",
+   "prompt": "れき・砂・泥は何によって区別されるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "粒の大きさ",
+     "大きさ",
+     "粒の大きさのちがい"
+    ]
+   },
+   "explanation": "粒の大きさ：れき2mm以上、砂0.06〜2mm、泥0.06mm未満。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p88 1（堆積岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "色"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-49",
+   "type": "input",
+   "prompt": "P波の速さが6km/s、S波の速さが3km/sの地震で、ある地点の初期微動継続時間は4秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/3 − x/6 ＝ 4。これを解いて x ＝ 24km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-50",
+   "type": "input",
+   "prompt": "海底で起こった地震によって海水がもち上げられ、大きな波が押し寄せる現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "津波",
+     "つなみ"
+    ]
+   },
+   "explanation": "津波。海溝型地震で発生しやすい。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p94 2（地震災害）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "高潮"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-51",
+   "type": "input",
+   "prompt": "標高75mの地点Aでボーリング調査をしたところ、地表からの深さ10mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "65",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝75−10＝65m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-52",
+   "type": "input",
+   "prompt": "岩石が気温の変化や水のはたらきなどで、長い間にぼろぼろにくずれていくことを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "風化",
+     "ふうか"
+    ]
+   },
+   "explanation": "風化。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p88 要点1（風化）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "侵食"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-53",
+   "type": "input",
+   "prompt": "震源からの距離が60kmの地点で、初期微動継続時間が10秒だった。同じ地震で、震源からの距離が180kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。10×180÷60＝30秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-54",
+   "type": "input",
+   "prompt": "流れる水のはたらきのうち、土砂を運ぶはたらきを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "運搬",
+     "うんぱん"
+    ]
+   },
+   "explanation": "運搬。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p88 要点2（流水のはたらき）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "堆積"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-55",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高75mの地点Aでは地表から15mの深さに凝灰岩の層がある。標高85mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "25",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 75−15＝60m。地点Bでは 85−60＝25m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-56",
+   "type": "input",
+   "prompt": "黒色で、うすくはがれる鉱物は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "クロウンモ",
+     "くろうんも",
+     "黒雲母"
+    ]
+   },
+   "explanation": "クロウンモは黒色の板状で、うすくはがれる。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p75 2（鉱物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "カクセン石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-57",
+   "type": "input",
+   "prompt": "P波の速さが8km/sの地震で、震源から80km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "80÷8＝10秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-58",
+   "type": "input",
+   "prompt": "プレートの境界で起こる地震に対して、内陸のプレート内部の活断層がずれて起こる地震を何型地震というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "内陸型",
+     "内陸型地震",
+     "直下型",
+     "直下型地震"
+    ]
+   },
+   "explanation": "内陸型（直下型）地震。震源が浅く、狭い範囲で大きなゆれになりやすい。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p94 要点2（地震の種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "海溝型"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-59",
+   "type": "input",
+   "prompt": "ある地震で、震源から24kmの地点Aと96kmの地点Bでは、初期微動が始まった時刻が18秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "96−24＝72km を18秒で伝わったので、72÷18＝4km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-60",
+   "type": "input",
+   "prompt": "震源からの距離が遠いほど、初期微動継続時間はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "長くなる",
+     "長い"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "短くなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-61",
+   "type": "input",
+   "prompt": "ある地震で、震源から40km離れた地点に主要動が始まったのは10時41分15秒だった。S波の速さを5km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時41分7秒",
+     "10:41:7"
+    ]
+   },
+   "explanation": "S波が届くまで 40÷5＝8秒。10時41分15秒の8秒前で10時41分7秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-62",
+   "type": "input",
+   "prompt": "火山の地下の熱を利用した発電を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "地熱発電",
+     "ちねつはつでん"
+    ]
+   },
+   "explanation": "地熱発電。火山の恵みの1つ。温泉や美しい景観も恵み。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p94 3（火山の恵み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "火力発電"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-63",
+   "type": "input",
+   "prompt": "標高70mの地点Aでボーリング調査をしたところ、地表からの深さ12mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "58",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝70−12＝58m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-64",
+   "type": "input",
+   "prompt": "流れる水のはたらきのうち、岩石をけずるはたらきを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "侵食",
+     "しんしょく"
+    ]
+   },
+   "explanation": "流水のはたらき：侵食（けずる）・運搬（運ぶ）・堆積（積もる）。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p88 要点2（流水のはたらき）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "運搬"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-65",
+   "type": "input",
+   "prompt": "震源からの距離が30kmの地点で、初期微動継続時間が5秒だった。同じ地震で、震源からの距離が90kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。5×90÷30＝15秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-66",
+   "type": "input",
+   "prompt": "地層に大きな力がはたらいて、波打つように曲がったものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しゅう曲",
+     "褶曲",
+     "しゅうきょく"
+    ]
+   },
+   "explanation": "しゅう曲。両側から押す力がはたらいてできる。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p88 要点4（しゅう曲）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "断層"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-67",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高65mの地点Aでは地表から20mの深さに凝灰岩の層がある。標高90mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 65−20＝45m。地点Bでは 90−45＝45m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-68",
+   "type": "input",
+   "prompt": "同じ震源の地震で、マグニチュードが大きいほど、ゆれが伝わる範囲はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "広くなる",
+     "広い"
+    ]
+   },
+   "explanation": "マグニチュードが大きいほど、強いゆれの範囲が広くなる。",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p82 2（マグニチュード）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "せまくなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-69",
+   "type": "input",
+   "prompt": "P波の速さが7km/sの地震で、震源から42km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "42÷7＝6秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-70",
+   "type": "input",
+   "prompt": "日本で、およそ過去1万年以内に噴火した火山や、現在も活発な活動をしている火山を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "活火山",
+     "かっかざん"
+    ]
+   },
+   "explanation": "活火山。日本には100以上ある。",
+   "source": {
+    "id": "source-0047",
+    "file": "ドリル/りか/S__15581244_0.jpg",
+    "sha256": "34f4761e9f18141b8c7790767e2e9ec64d71e4c787b57e60f2b8b4b52766c75f",
+    "page": 96,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p96 2（活火山）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "休火山"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-71",
+   "type": "input",
+   "prompt": "れき・砂・泥のうち、河口から最も遠い沖まで運ばれて堆積するものはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "泥",
+     "どろ"
+    ]
+   },
+   "explanation": "粒が小さいほど沈みにくく、遠くまで運ばれる。河口付近にれき、沖に泥が積もる。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p89 1（堆積のしかた）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "れき"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-72",
+   "type": "input",
+   "prompt": "P波の速さが6km/sの地震で、震源から90km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "90÷6＝15秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-73",
+   "type": "input",
+   "prompt": "日本で、地震や火山が多い理由として最も適当なものはどれか。「プレートの境界に近いから」か「海に囲まれているから」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "プレートの境界に近いから",
+     "プレートの境界に近い"
+    ]
+   },
+   "explanation": "日本列島は複数のプレートの境界付近にあるため、地震や火山活動が活発。",
+   "source": {
+    "id": "source-0046",
+    "file": "ドリル/りか/S__15581243_0.jpg",
+    "sha256": "5f46db58fee2fdd4034293bd1c1ddd78580b9e9dcca6f937130692c870916be7",
+    "page": 94,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p94 1（プレート）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "海に囲まれているから"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-74",
+   "type": "input",
+   "prompt": "初期微動を起こす、速く伝わる波を何というか。アルファベット1字を使って答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "P波",
+     "p波",
+     "Ｐ波"
+    ]
+   },
+   "explanation": "P波（速さ約6〜8km/s）。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p80 1（地震の波）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "S波"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-75",
+   "type": "input",
+   "prompt": "P波の速さが6km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は8秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "96",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/6 ＝ 8。これを解いて x ＝ 96km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-76",
+   "type": "input",
+   "prompt": "地震などによって土地が沈むことを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈降",
+     "ちんこう"
+    ]
+   },
+   "explanation": "沈降。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p81 5（隆起と沈降）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "隆起"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-77",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高75mの地点Aでは地表から20mの深さに凝灰岩の層がある。標高90mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "35",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 75−20＝55m。地点Bでは 90−55＝35m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-78",
+   "type": "input",
+   "prompt": "火山岩に見られる、細かい粒やガラス質の部分を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "石基",
+     "せっき"
+    ]
+   },
+   "explanation": "石基。その中に散らばる大きな鉱物を斑晶という。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p74 要点3（斑状組織）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "斑晶"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-79",
+   "type": "input",
+   "prompt": "地震そのものの規模（エネルギーの大きさ）を表す値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "マグニチュード",
+     "M"
+    ]
+   },
+   "explanation": "マグニチュード（記号M）。1大きくなるとエネルギーは約32倍。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点6"
+   },
+   "ref": "参考：理科ドリル p80 要点6（マグニチュード）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "震度"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-80",
+   "type": "input",
+   "prompt": "ある地震で、震源から72kmの地点Aと120kmの地点Bでは、初期微動が始まった時刻が12秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "120−72＝48km を12秒で伝わったので、48÷12＝4km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-81",
+   "type": "input",
+   "prompt": "地層や岩盤に大きな力がはたらいてできた、ずれを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "断層",
+     "だんそう"
+    ]
+   },
+   "explanation": "断層。今後もずれる可能性がある断層を活断層という。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p81 5（断層）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "しゅう曲"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-82",
+   "type": "input",
+   "prompt": "P波の速さが5km/sの地震で、震源から75km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "75÷5＝15秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-83",
+   "type": "input",
+   "prompt": "サンヨウチュウやフズリナの化石が見つかった地層は、どの地質年代にできたと考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "古生代",
+     "こせいだい"
+    ]
+   },
+   "explanation": "古生代の示準化石：サンヨウチュウ・フズリナ。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p89 4（地質年代）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "中生代"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-84",
+   "type": "input",
+   "prompt": "地層ができた時代を知る手がかりになる化石を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "示準化石",
+     "しじゅんかせき"
+    ]
+   },
+   "explanation": "示準化石。限られた時代に広い範囲で栄えた生物の化石。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 88,
+    "number": "要点7"
+   },
+   "ref": "参考：理科ドリル p88 要点7（示準化石）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "示相化石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-85",
+   "type": "input",
+   "prompt": "ある地震で、震源から100km離れた地点に主要動が始まったのは10時34分48秒だった。S波の速さを5km/sとすると、地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時34分28秒",
+     "10:34:28"
+    ]
+   },
+   "explanation": "S波が届くまで 100÷5＝20秒。10時34分48秒の20秒前で10時34分28秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 85,
+    "number": "4(1)"
+   },
+   "ref": "参考：理科ドリル p85 4(1)（地震の発生時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-86",
+   "type": "input",
+   "prompt": "マグマのねばりけが強い火山の噴火は、激しく爆発的か、比較的おだやかか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "激しく爆発的",
+     "爆発的",
+     "激しい",
+     "激しく爆発的な噴火"
+    ]
+   },
+   "explanation": "ねばりけが強いと激しく爆発的に噴火し、溶岩は白っぽい。ねばりけが弱いとおだやかで、溶岩は黒っぽい。",
+   "source": {
+    "id": "source-0037",
+    "file": "ドリル/りか/S__15581233_0.jpg",
+    "sha256": "4335c2697a577a23b83bd7215a486ecdbfa83fafc8607cf5807db1826298eca8",
+    "page": 76,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p76 1（火山の噴火）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "おだやか"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-87",
+   "type": "input",
+   "prompt": "うすい塩酸をかけると二酸化炭素が発生する堆積岩はどれか。「石灰岩」か「チャート」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "石灰岩",
+     "せっかいがん"
+    ]
+   },
+   "explanation": "石灰岩（炭酸カルシウム）。チャートは塩酸と反応せず、とてもかたい。",
+   "source": {
+    "id": "source-0044",
+    "file": "ドリル/りか/S__15581241_0.jpg",
+    "sha256": "113c7cbbd247b0f62830e7e31985551a7d85c1d41364be7dc54856bed715feac",
+    "page": 90,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p90 1（石灰岩とチャート）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "チャート"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-88",
+   "type": "input",
+   "prompt": "P波の速さが6km/sの地震で、震源から120km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "120÷6＝20秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-89",
+   "type": "input",
+   "prompt": "斑晶と石基からなる火山岩のつくりを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "斑状組織",
+     "はんじょうそしき"
+    ]
+   },
+   "explanation": "斑状組織。急に冷えたため結晶が大きく成長できなかった部分（石基）がある。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p74 要点3（斑状組織）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "等粒状組織"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-90",
+   "type": "input",
+   "prompt": "ある地震で、震源から24kmの地点Aと72kmの地点Bでは、初期微動が始まった時刻が6秒ちがった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "72−24＝48km を6秒で伝わったので、48÷6＝8km/s",
+   "source": {
+    "id": "source-0051",
+    "file": "ドリル/りか/S__15581249_0.jpg",
+    "sha256": "1a66477209cddca775547666d8ba81089c51a74888b6079d2dd9872798053b6b",
+    "page": 104,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p104 5（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-91",
+   "type": "input",
+   "prompt": "日本の震度は、何段階に分けられているか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "段階"
+    ]
+   },
+   "explanation": "震度0・1・2・3・4・5弱・5強・6弱・6強・7の10段階。",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p82 2（震度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "8"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-92",
+   "type": "input",
+   "prompt": "震源からの距離が80kmの地点で、初期微動継続時間が8秒だった。同じ地震で、震源からの距離が120kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。8×120÷80＝12秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-93",
+   "type": "input",
+   "prompt": "粒の直径が2mm以上の土砂が固まってできた堆積岩を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "れき岩",
+     "礫岩",
+     "れきがん"
+    ]
+   },
+   "explanation": "れき岩。堆積岩の粒は流水で運ばれる間に角がとれて丸みをおびている。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p89 2（堆積岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "砂岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-94",
+   "type": "input",
+   "prompt": "標高80mの地点Aでボーリング調査をしたところ、地表からの深さ2mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "78",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝80−2＝78m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-95",
+   "type": "input",
+   "prompt": "粒の直径が0.06mm未満の泥が固まってできた堆積岩を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "泥岩",
+     "でいがん"
+    ]
+   },
+   "explanation": "泥岩。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p89 2（堆積岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "砂岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-96",
+   "type": "input",
+   "prompt": "P波の速さが8km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は8秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "64",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/8 ＝ 8。これを解いて x ＝ 64km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-97",
+   "type": "input",
+   "prompt": "マグマが地下深くでゆっくり冷えて固まった火成岩を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "深成岩",
+     "しんせいがん"
+    ]
+   },
+   "explanation": "深成岩（花こう岩・閃緑岩・はんれい岩）。等粒状組織。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 74,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p74 要点2（深成岩）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "火山岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-98",
+   "type": "input",
+   "prompt": "地層が水平に広がっている地域で、標高75mの地点Aでは地表から20mの深さに凝灰岩の層がある。標高60mの地点Bでは、凝灰岩の層は地表から何mの深さにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "凝灰岩の層の標高は 75−20＝55m。地点Bでは 60−55＝5m の深さ。",
+   "source": {
+    "id": "source-0045",
+    "file": "ドリル/りか/S__15581242_0.jpg",
+    "sha256": "7eb329348dcd79128910b714d7430ef3727875f1cc24bd8c42b7cc31639bae23",
+    "page": 92,
+    "number": "1(2)"
+   },
+   "ref": "参考：理科ドリル p92 1(2)（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-99",
+   "type": "input",
+   "prompt": "P波が届いてからS波が届くまでの時間（初期微動が続く時間）を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "初期微動継続時間",
+     "しょきびどうけいぞくじかん"
+    ]
+   },
+   "explanation": "初期微動継続時間。震源からの距離に比例して長くなる。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p80 要点3（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "主要動"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-100",
+   "type": "input",
+   "prompt": "震源からの距離が30kmの地点で、初期微動継続時間が8秒だった。同じ地震で、震源からの距離が60kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。8×60÷30＝16秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-science-1-earth-test-1",
+   "type": "input",
+   "prompt": "火山灰などが雨で流されて、土砂が川を一気に流れ下る現象を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "土石流",
+     "どせきりゅう"
+    ]
+   },
+   "explanation": "土石流。噴火のあとも長い間起こることがある。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p98 2（火山災害）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "火砕流"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-2",
+   "type": "input",
+   "prompt": "火山岩のうち、最も黒っぽいものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "玄武岩",
+     "げんぶがん"
+    ]
+   },
+   "explanation": "玄武岩。深成岩で最も黒っぽいのははんれい岩。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p75 4（火山岩の種類）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "流紋岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-3",
+   "type": "input",
+   "prompt": "P波の速さが6km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は2秒だった。この地点の震源からの距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "距離を x km とすると x/4 − x/6 ＝ 2。これを解いて x ＝ 24km",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "4(2)"
+   },
+   "ref": "参考：理科ドリル p81 4(2)（震源までの距離）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-test-4",
+   "type": "input",
+   "prompt": "鉄のハンマーでたたくと火花が出るほどかたい堆積岩はどれか。「石灰岩」か「チャート」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "チャート"
+    ]
+   },
+   "explanation": "チャート（二酸化ケイ素）。",
+   "source": {
+    "id": "source-0044",
+    "file": "ドリル/りか/S__15581241_0.jpg",
+    "sha256": "113c7cbbd247b0f62830e7e31985551a7d85c1d41364be7dc54856bed715feac",
+    "page": 90,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p90 1（石灰岩とチャート）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "石灰岩"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-5",
+   "type": "input",
+   "prompt": "標高90mの地点Aでボーリング調査をしたところ、地表からの深さ12mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "78",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝90−12＝78m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-test-6",
+   "type": "input",
+   "prompt": "無色・白色で不規則な形に割れる鉱物は、セキエイとチョウ石のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "セキエイ",
+     "せきえい",
+     "石英"
+    ]
+   },
+   "explanation": "セキエイは無色・白色で不規則に割れる。チョウ石は白色・うす桃色で、決まった方向に割れる。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p75 2（鉱物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "チョウ石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-7",
+   "type": "input",
+   "prompt": "アンモナイトや恐竜の化石が見つかった地層は、どの地質年代にできたと考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中生代",
+     "ちゅうせいだい"
+    ]
+   },
+   "explanation": "中生代の示準化石：アンモナイト・恐竜。",
+   "source": {
+    "id": "source-0043",
+    "file": "ドリル/りか/S__15581240_0.jpg",
+    "sha256": "9d6523aa40b0bde7ece32c33672986d43d5d8ac1273788f4c249a48da94d71c1",
+    "page": 89,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p89 4（地質年代）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "新生代"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-8",
+   "type": "input",
+   "prompt": "黄緑色〜褐色で、丸みのある短い柱状の有色鉱物は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "カンラン石",
+     "かんらんせき"
+    ]
+   },
+   "explanation": "カンラン石。玄武岩やはんれい岩に多くふくまれる。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p75 2（鉱物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "キ石"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-9",
+   "type": "input",
+   "prompt": "震源からの距離が40kmの地点で、初期微動継続時間が8秒だった。同じ地震で、震源からの距離が120kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源からの距離に比例する。8×120÷40＝24秒",
+   "source": {
+    "id": "source-0041",
+    "file": "ドリル/りか/S__15581238_0.jpg",
+    "sha256": "3fdb7429ea2c52004913f939b419e76b2bf29493e747ec9bcc6a93f57b7a3173",
+    "page": 84,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p84 1（初期微動継続時間）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-test-10",
+   "type": "input",
+   "prompt": "地震などによって土地が盛り上がることを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "隆起",
+     "りゅうき"
+    ]
+   },
+   "explanation": "隆起。反対に土地が沈むことを沈降という。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 81,
+    "number": "5"
+   },
+   "ref": "参考：理科ドリル p81 5（隆起と沈降）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "沈降"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-11",
+   "type": "input",
+   "prompt": "ある地点での地震のゆれの大きさを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震度",
+     "しんど"
+    ]
+   },
+   "explanation": "震度。日本では0〜7の10段階（5と6は弱・強に分ける）。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点5"
+   },
+   "ref": "参考：理科ドリル p80 要点5（震度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "マグニチュード"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-12",
+   "type": "input",
+   "prompt": "P波の速さが8km/sの地震で、震源から96km離れた地点にP波が届くのは、地震発生の何秒後か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "96÷8＝12秒後",
+   "source": {
+    "id": "source-0040",
+    "file": "ドリル/りか/S__15581237_0.jpg",
+    "sha256": "b7d3566376a8138bff11b16825afb3ef87af8b2df167564a80a601db2d26e988",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p82 1（地震の波の速さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-test-13",
+   "type": "input",
+   "prompt": "地球の表面をおおう、厚さ100kmほどの岩盤を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "プレート"
+    ]
+   },
+   "explanation": "プレート。日本付近では4枚のプレートが集まっている。",
+   "source": {
+    "id": "source-0039",
+    "file": "ドリル/りか/S__15581235_0.jpg",
+    "sha256": "5068dcb45dc77938e6d5697d049e553e2dad7cf9e2ba455ed42561542d4f6f56",
+    "page": 80,
+    "number": "要点8"
+   },
+   "ref": "参考：理科ドリル p80 要点8（プレート）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "マントル"
+   ]
+  },
+  {
+   "id": "drill-science-1-earth-test-14",
+   "type": "input",
+   "prompt": "標高70mの地点Aでボーリング調査をしたところ、地表からの深さ10mのところに凝灰岩の層の上面があった。この凝灰岩の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "標高＝地表の標高−深さ＝70−10＝60m。地層が水平なら、ほかの地点でも同じ標高に凝灰岩が現れる。",
+   "source": {
+    "id": "source-0048",
+    "file": "ドリル/りか/S__15581245_0.jpg",
+    "sha256": "58c34b5a4f502ff644ffbed68295d4950cfef7029a46c4dc89dbcb7537b1fa1b",
+    "page": 98,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p98 1（柱状図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-earth-test-15",
+   "type": "input",
+   "prompt": "白っぽい火成岩には、有色鉱物と無色鉱物のどちらが多くふくまれるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "無色鉱物"
+    ]
+   },
+   "explanation": "無色鉱物が多いと白っぽく、有色鉱物が多いと黒っぽくなる。",
+   "source": {
+    "id": "source-0036",
+    "file": "ドリル/りか/S__15581232_0.jpg",
+    "sha256": "49579ed04f59d4ce06cf07fc8b8d4523ea06b3510a22e0b4696a5843319510d1",
+    "page": 75,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p75 4（火成岩の色）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "有色鉱物"
+   ]
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。理科ドリルp74〜99（12 火山活動と火成岩・13 地震と大地・14 地層と過去のようす・15 自然の恵みと火山・地震災害、標準問題・実力問題①②）とp104（総仕上げ）を写真で目視し、数値や条件を変えた類題と要点の問題を作った。図や柱状図は数値で示した。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "火山と火成岩",
+   "body": "マグマのねばりけ：強い→おわん形・爆発的・白っぽい、弱い→ゆるやか・おだやか・黒っぽい。火山岩（急冷・斑状組織＝斑晶＋石基）：流紋岩・安山岩・玄武岩。深成岩（徐冷・等粒状組織）：花こう岩・閃緑岩・はんれい岩。無色鉱物が多いと白っぽい。"
+  },
+  {
+   "title": "地震のゆれ",
+   "body": "P波→初期微動、S波→主要動。初期微動継続時間は震源からの距離に比例。速さ＝距離÷時間。震度（ゆれの大きさ、0〜7の10段階）とマグニチュード（規模、1大きいと約32倍）。"
+  },
+  {
+   "title": "プレートと大地の変化",
+   "body": "日本付近では海洋プレートが大陸プレートの下に沈みこみ、太平洋側から日本海側へ震源が深くなる。断層・しゅう曲・隆起・沈降。内陸型地震は活断層、海溝型地震は津波を起こしやすい。"
+  },
+  {
+   "title": "地層と堆積岩",
+   "body": "風化→侵食→運搬→堆積。粒が大きいれきは河口近く、泥は沖へ。堆積岩：れき岩・砂岩・泥岩（粒の大きさ）、石灰岩（塩酸で二酸化炭素）、チャート（かたい）、凝灰岩（火山灰・かぎ層）。下の地層ほど古い。"
+  },
+  {
+   "title": "化石と災害・恵み",
+   "body": "示相化石（環境：サンゴ＝あたたかく浅い海）と示準化石（時代：古生代＝サンヨウチュウ・フズリナ、中生代＝アンモナイト・恐竜、新生代＝マンモス・ナウマンゾウ）。災害：火砕流・土石流・液状化・津波。恵み：温泉・地熱発電・景観。"
+  }
+ ]
+}

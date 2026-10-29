@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "status": "preservation and actual book display passed; connected-batch full pending",
+  "approval": "User explicitly authorized all evidence-backed corrections to confusing/incorrect explanations and improvements to clarity/fun; not only the geography sentence.",
+  "scope": "Math chapter1 explanatory text/order/goal and geography climate tip only. All other JSON fields and all problems/answers/example numbers preserved.",
+  "files": [
+    {
+      "file": "教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本文.md",
+      "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本文.md",
+      "beforeSha256": "ec97c90ce9d5dab11545c477c1aff20abb8efa9aca131f034ebd2f438c6d0558",
+      "afterSha256": "e157e150fe4516511e2e27ff37b9ab078d1e15100c56120155db23cd2b85d3f8",
+      "edits": [
+        {
+          "before": "1. 累乗\n2. かっこの中\n3. 乗法・除法\n4. 加法・減法",
+          "after": "1. かっこの中（内側から。その中でも、累乗 → 乗除 → 加減の順）\n2. 累乗\n3. 乗法・除法（左から）\n4. 加法・減法（左から）"
+        },
+        {
+          "before": "1. 累乗があれば、先に計算する（かっこの有無を確認）。",
+          "after": "1. かっこの内側を先に計算する。その中でも累乗 → 乗除 → 加減の順を守り、かっこが外れたら同じ順で計算する。"
+        },
+        {
+          "before": "**確かめる**：途中の式で、先に計算した部分に下線を引く。下線の順が「累乗 → 乗除 → 加減」になっているか。",
+          "after": "**確かめる**：途中の式で、先に計算した部分に下線を引く。かっこの内側から、その中でも「累乗 → 乗除 → 加減」の順になっているか。"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-book-math1.json",
+      "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/site-assets/textbook-book-math1.json",
+      "beforeSha256": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+      "afterSha256": "685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd",
+      "jsonChanges": [
+        {
+          "path": [
+            "pages",
+            69,
+            "blocks",
+            7,
+            "items",
+            0,
+            "x"
+          ],
+          "before": "累乗",
+          "after": "かっこの中（内側から。その中でも、累乗 → 乗除 → 加減の順）"
+        },
+        {
+          "path": [
+            "pages",
+            69,
+            "blocks",
+            7,
+            "items",
+            1,
+            "x"
+          ],
+          "before": "かっこの中",
+          "after": "累乗"
+        },
+        {
+          "path": [
+            "pages",
+            69,
+            "blocks",
+            7,
+            "items",
+            2,
+            "x"
+          ],
+          "before": "乗法・除法",
+          "after": "乗法・除法（左から）"
+        },
+        {
+          "path": [
+            "pages",
+            69,
+            "blocks",
+            7,
+            "items",
+            3,
+            "x"
+          ],
+          "before": "加法・減法",
+          "after": "加法・減法（左から）"
+        },
+        {
+          "path": [
+            "pages",
+            70,
+            "blocks",
+            1,
+            "items",
+            0,
+            "x"
+          ],
+          "before": "累乗があれば、先に計算する（かっこの有無を確認）。",
+          "after": "かっこの内側を先に計算する。その中でも累乗 → 乗除 → 加減の順を守り、かっこが外れたら同じ順で計算する。"
+        },
+        {
+          "path": [
+            "pages",
+            70,
+            "blocks",
+            2,
+            "x"
+          ],
+          "before": "**確かめる**：途中の式で、先に計算した部分に下線を引く。下線の順が「累乗 → 乗除 → 加減」になっているか。",
+          "after": "**確かめる**：途中の式で、先に計算した部分に下線を引く。かっこの内側から、その中でも「累乗 → 乗除 → 加減」の順になっているか。"
+        },
+        {
+          "path": [
+            "pages",
+            69,
+            "blocks",
+            1,
+            "x"
+          ],
+          "before": "累乗の意味と、計算の順序（累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。",
+          "after": "累乗の意味と、計算の順序（かっこの中→累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本の追加.json",
+      "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本の追加.json",
+      "beforeSha256": "8d3dfbee39e5f9e16c795f4dd08010454e64bdb619a7d7e0f7bf03b74e6a9bfc",
+      "afterSha256": "b7fafed2c29d5f71ca32506da294ddfa9ebe4df4f463cdb3fb00c39c86c27d2b",
+      "edits": [
+        {
+          "before": "累乗の意味と、計算の順序（累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。",
+          "after": "累乗の意味と、計算の順序（かっこの中→累乗→乗除→加減）がわかり、正しい順で計算できるようになろう。"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-book-geography.json",
+      "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/site-assets/textbook-book-geography.json",
+      "beforeSha256": "0edf29a5db80411f57a133c75cbab3ab626ca5b1ee86442e52032e43c2759598",
+      "afterSha256": "5e8e314dfe44ab31b0c6fa80cc3ed0d1cab45873759afda880623cd4b390a9bc",
+      "jsonChanges": [
+        {
+          "path": [
+            "pages",
+            22,
+            "blocks",
+            3,
+            "items",
+            0,
+            "x"
+          ],
+          "before": "赤道から極に向かって「熱→乾→温→冷→寒」の順に並ぶイメージ。",
+          "after": "赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py",
+      "beforeFile": "tools/candidates/textbook-final-20261023/explanations-20261025/before/教材整理/Claude_Codex共有/地理全体制作/原稿/u02.py",
+      "beforeSha256": "52ef99e1670083310ea44f7c21c5eef4246e1a72e1e821ce1350f1c00f3f5646",
+      "afterSha256": "45d53b35cb96a168e1b039d649ad86a7f87cd58097d81b8e83c2991a2b64a355",
+      "edits": [
+        {
+          "before": "赤道から極に向かって「熱→乾→温→冷→寒」の順に並ぶイメージ。",
+          "after": "赤道付近は暑く、極に近づくほど寒くなる傾向があります。乾燥帯は雨の少なさにも注目して見分けましょう。"
+        }
+      ]
+    }
+  ],
+  "mathVideo": "Existing V07 already puts brackets first; no regeneration.",
+  "geographyVideo": "Confirmed old actual MP4 at17.7s, corrected only VP and integrated locally; fullAV/30fps/7 audio/caption checks and27 actual1.5s+tail samples directly reviewed. Current source/copy/reference48 and actual book4width playback55 passed. See geography-video/integration.json; no public deploy.",
+  "wholeBefore": "tools/candidates/textbook-ai-20261025/post-access-full-attempt1.json",
+  "references": [
+    "https://hosho.ees.hokudai.ac.jp/tsuyu/top/dct/climate-j.html"
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/explanations-20261025/preservation-result.json",
+      "sha256": "c2f9f8fb60d22133abd7675f0bdb66f51ec704a1205345f01154de79b9de4b11",
+      "checks": 15,
+      "observedExitCode": 0,
+      "session": null
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/explanations-20261025/book-result.json",
+      "sha256": "eb752d9a0cde16a6629af9c56297c4fb26c2a830c1f14e3f9b52a498ded280fb",
+      "checks": 152,
+      "observedExitCode": 0,
+      "session": 48688
+    }
+  ],
+  "visualReview": {
+    "status": "all10 corrected screenshots directly viewed; earlier transitional screens rejected and preserved",
+    "screens": {
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/math1-390-large.png": "8d3f9ad356092daff2ffbfd0f6e855ad5e2b13b7a9caf2c0947c5f6ee0636dd0",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/geography-390-large.png": "77cb7c0e77814cac8e01213323ff0d62b8fb8f8f77a1f59b62f5859ef9102c69",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/math1-390.png": "524cc02d2f8f2c86dc2e382dd95bfd3f69acb0eef2aebe0db1a8cd5fa55daeec",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/geography-820.png": "deb992bceece21110bffa04897044c5b66a00ef574e62631f1ed673bf287f06f",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/math1-1180.png": "f5bcf6e7d5342630b55754f2c64043354d9ceac7638b222894ac67d83f151990",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/geography-390.png": "fd2e859861e267ddc3358e73c24df88590a4b272506203f55f0ec1705eaafd32",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/geography-1440.png": "fb87f931e4435070d8d09903c1dee0f118c8fb85f7dcdac6007f95d00aaf4454",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/math1-820.png": "8603a5bade4fb1cddaa817f4ef1a3f6399b26630be5527ae70c7f992a430d242",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/geography-1180.png": "9f61ab964b78290e75bd81441ec6e1d50170dd7bdf8df00f700fe240119c5c59",
+      "tools/candidates/textbook-final-20261023/explanations-20261025/screens/math1-1440.png": "3a4184f5e341419eadb206ac284b21f5b54ad44f47ca00b02e9019928c68316b"
+    },
+    "limits": "Text layout/source/closed-answer checks only; media playback/actual devices not newly certified."
+  }
+}

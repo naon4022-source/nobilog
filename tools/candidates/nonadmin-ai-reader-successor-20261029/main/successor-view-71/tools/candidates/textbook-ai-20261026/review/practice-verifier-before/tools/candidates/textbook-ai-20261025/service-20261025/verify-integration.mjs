@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs

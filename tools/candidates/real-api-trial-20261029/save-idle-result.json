@@ -1,0 +1,26 @@
+{
+  "status": "passed isolated save-idle adapter",
+  "checks": 57,
+  "liveCauseConfirmed": false,
+  "mainChanged": false,
+  "realAPICalls": 0,
+  "scope": "Actual before/candidate retry adapters with synthetic durable store and deterministic clock. Original busy failure reproduced; bounded wait, owner/lease/conflict changes, deadline, failed save/readback/stale data and no additional model retries checked.",
+  "inputs": [
+    {
+      "file": "retry-adapter.before.js",
+      "sha256": "28e76031e9a5603296cd0b0b9529dafd56f431aa5ffb0f289da4696849715233"
+    },
+    {
+      "file": "retry-adapter.candidate.js",
+      "sha256": "d41ed5cf3bf2a5fe589097690a27d06afabe0050e05071b0b8bbf42ca0db8a45"
+    },
+    {
+      "file": "retry-adapter-patch.json",
+      "sha256": "a992a295beed223eb0c22d79a5da6bbf74f75305961dcc554037512f07db1882"
+    },
+    {
+      "file": "verify-save-idle.mjs",
+      "sha256": "9417b405ffaf05334ccaec4f89dbdb3860525b31a201789a4240d8173f4e34c3"
+    }
+  ]
+}

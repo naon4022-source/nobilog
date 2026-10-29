@@ -1,0 +1,8 @@
+file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:55
+ if(file.includes('..')||path.isAbsolute(file)||!(/^(?:tools\/candidates|site-assets|cf-worker\/src)\//.test(file)||['index.html','preview/build.py','.claude/verify/run.sh','.claude/verify/d1-sqlite.js','Claude作業/20261026_ProAI類題/practice-bank.json'].includes(file)))throw Error('unsafe_public_fixture_path');
+                                                                                                                                                                                                                                                                                 ^
+
+Error: unsafe_public_fixture_path
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:55:274
+
+Node.js v24.18.0

@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view/tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-boot.js

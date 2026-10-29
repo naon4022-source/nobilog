@@ -1,0 +1,21 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: no second100-credit charge
++ actual - expected
+
++ '{"version":1,"uid":"u1","sessionId":"4c661d64-2bc7-4a81-9fee-d74af225700d","fingerprint":"8a639df656f412026f0b894ecb793a29cf45cd8d44644758699bbbd78a84fd30","token":"abf60050-2189-418f-9c2d-be84b7c79d3c","state":"charged","plan":"unlimit","model":"gpt-6.1-sol","credits":100,"units":200,"mode":"daily-v2","key":"plan-credit-day:u1:20753","day":20753,"periodFrom":null,"operations":[{"id":"c2bdebdb5561d6e025eeedf9586fa55eb0f883aa4cd73f2ec44a7593e3e22cc0","token":"fa20c5a0-ef09-4fca-bef0-7459178dd1dd","digest":"b5655d139e14ce8ddad098a97f70508e38b85244ed268cf50ceaefe7b5b6e901"}]}'
+- '{"version":1,"uid":"u1","sessionId":"4c661d64-2bc7-4a81-9fee-d74af225700d","fingerprint":"8a639df656f412026f0b894ecb793a29cf45cd8d44644758699bbbd78a84fd30","token":"abf60050-2189-418f-9c2d-be84b7c79d3c","state":"charged","plan":"unlimit","model":"gpt-6.1-sol","credits":100,"units":200,"mode":"daily-v2","key":"plan-credit-day:u1:20753","day":20753,"periodFrom":null,"operations":[]}'
+
+    at same (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-legacy-jobs.mjs:20:29)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-legacy-jobs.mjs:76:104 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '{"version":1,"uid":"u1","sessionId":"4c661d64-2bc7-4a81-9fee-d74af225700d","fingerprint":"8a639df656f412026f0b894ecb793a29cf45cd8d44644758699bbbd78a84fd30","token":"abf60050-2189-418f-9c2d-be84b7c79d3c","state":"charged","plan":"unlimit","model":"gpt-6.1-sol","credits":100,"units":200,"mode":"daily-v2","key":"plan-credit-day:u1:20753","day":20753,"periodFrom":null,"operations":[{"id":"c2bdebdb5561d6e025eeedf9586fa55eb0f883aa4cd73f2ec44a7593e3e22cc0","token":"fa20c5a0-ef09-4fca-bef0-7459178dd1dd","digest":"b5655d139e14ce8ddad098a97f70508e38b85244ed268cf50ceaefe7b5b6e901"}]}',
+  expected: '{"version":1,"uid":"u1","sessionId":"4c661d64-2bc7-4a81-9fee-d74af225700d","fingerprint":"8a639df656f412026f0b894ecb793a29cf45cd8d44644758699bbbd78a84fd30","token":"abf60050-2189-418f-9c2d-be84b7c79d3c","state":"charged","plan":"unlimit","model":"gpt-6.1-sol","credits":100,"units":200,"mode":"daily-v2","key":"plan-credit-day:u1:20753","day":20753,"periodFrom":null,"operations":[]}',
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

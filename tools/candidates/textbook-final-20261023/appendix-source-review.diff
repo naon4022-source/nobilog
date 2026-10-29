@@ -1,0 +1,46 @@
+--- tools/candidates/textbook-final-20261023/before-appendix-fraction-integration/教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/図/fraction_layout.py
+
++++ 教材整理/Claude_Codex共有/数学全体制作/メディア/制作ソース/図/fraction_layout.py
+
+@@ -11 +11 @@
+
+-    for name in ['縦分数_20261023', '縦分数_2章_20261023', '縦分数_3章_20261023', '縦分数_4章_20261024', '縦分数_5章_20261024', '縦分数_6章_20261025']:
++    for name in ['縦分数_20261023', '縦分数_2章_20261023', '縦分数_3章_20261023', '縦分数_4章_20261024', '縦分数_5章_20261024', '縦分数_6章_20261025', '縦分数_巻末_20261025']:
+--- tools/candidates/textbook-final-20261023/before-appendix-fraction-integration/tools/candidates/textbook-final-20261023/reviewed_changes.py
+
++++ tools/candidates/textbook-final-20261023/reviewed_changes.py
+
+@@ -94,0 +95 @@
+
++        ('縦分数_巻末_20261025','before-appendix-fraction-integration','appendix-fraction-visual-review.json'),
+--- tools/candidates/textbook-final-20261023/before-appendix-fraction-integration/tools/candidates/textbook-final-20261023/verify-chapter4-fraction-generators.py
+
++++ tools/candidates/textbook-final-20261023/verify-chapter4-fraction-generators.py
+
+@@ -61,0 +62,3 @@
+
++later_path = S / '縦分数_巻末_20261025/manifest.json'
++later_rows = {i:r for i,r in load(later_path)['items'].items() if i in before and i not in rows} if later_path.exists() else {}
++predecessor = runpy.run_path(str(H / 'reviewed_changes.py'))['svg_predecessor']
+@@ -66,0 +70,5 @@
+
++    elif ident in later_rows:
++        approved = later_rows[ident]
++        assert sha(value.encode()) == approved['beforeSha256']
++        assert sha(after[ident].encode()) == approved['afterSha256']
++        assert sha(predecessor(R / approved['target'], approved['beforeSha256']).read_bytes()) == approved['beforeSha256']
+@@ -101 +109 @@
+
+-          'reviewedOutputs': 8, 'unrelatedByteIdentical': len(before) - 8,
++          'reviewedOutputs': 8, 'unrelatedByteIdentical': len(before) - 8 - len(later_rows), 'laterReviewedOutputsRetained':len(later_rows),
+@@ -107 +115 @@
+
+-print(f'Chapter4 {result["mode"]}: 8 reviewed outputs reproduced; {len(before)-8} unrelated outputs byte-identical; exact source strings/shapes retained. No generated asset files written.')
++print(f'Chapter4 {result["mode"]}: 8 reviewed outputs reproduced; {len(later_rows)} later approved outputs retained; {len(before)-8-len(later_rows)} unrelated outputs byte-identical; exact source strings/shapes retained. No generated asset files written.')
+--- tools/candidates/textbook-final-20261023/before-appendix-fraction-integration/.claude/verify/run.sh
+
++++ .claude/verify/run.sh
+
+@@ -135,0 +136 @@
+
++python3 "$PROJECT_DIR/tools/candidates/textbook-final-20261023/verify-appendix-fraction-generators.py" || fail=1

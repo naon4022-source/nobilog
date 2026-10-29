@@ -1,0 +1,13 @@
+{
+  "status": "terminal confirmed",
+  "sessionId": 87773,
+  "reason": "Two confirmed assertion failures caused by approved one-sentence annotation identity delta; stop already-failing full run to repair and rerun sooner",
+  "rootPid": 44356,
+  "descendantCount": 6,
+  "scope": "Only exact bash .claude/verify/run.sh process and its descendants; no unrelated process",
+  "knownFailureFiles": [
+    "math-ch3-recheck-20261019/verify-layout-candidate.mjs",
+    "math-ch5-recheck-20261019/verify-answer-anchors.mjs"
+  ],
+  "observedExitCode": 143
+}

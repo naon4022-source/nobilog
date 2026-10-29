@@ -1,0 +1,15 @@
+node:internal/fs/promises:640
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs'
+    at async open (node:internal/fs/promises:640:25)
+    at async readFile (node:internal/fs/promises:1290:14)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs:15:54 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs'
+}
+
+Node.js v24.18.0

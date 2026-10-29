@@ -1,0 +1,149 @@
+{
+  "status": "passed current full reader M05/M06 verification",
+  "checks": 144,
+  "widths": [
+    390,
+    820,
+    1180,
+    1440
+  ],
+  "largeTextWidths": [
+    390,
+    1440
+  ],
+  "controllers": "Actual14 reader/fraction/marker/ink/AI dependencies; all APIs synthetic readonly fixtures",
+  "media": [
+    {
+      "id": "M1-C1-S2-M05",
+      "sourcePagePID": "M1-P046",
+      "bookAsset": "site-assets/textbook-book-math1-m1-c1-s2-m05.svg",
+      "sourceAsset": "教材整理/Claude_Codex共有/数学全体制作/メディア/M1-C1-S2-M05.svg",
+      "sha256": "3cfc0c3a14a8f23347dbe82a33ec4ef526a501c5232fe473c5dd6df2c97cf89c"
+    },
+    {
+      "id": "M1-C1-S2-M06",
+      "sourcePagePID": "M1-P050",
+      "bookAsset": "site-assets/textbook-book-math1-m1-c1-s2-m06.svg",
+      "sourceAsset": "教材整理/Claude_Codex共有/数学全体制作/メディア/M1-C1-S2-M06.svg",
+      "sha256": "5c6b25df80c963fe4cc818b5502b03af10bc6437763261686223351e1a2bc381"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "site-assets/textbook-book.js",
+      "sha256": "356583f3f3be75d3cca4bb4b28c2b8cc3c9c1ccd8c0d44b5503f06878d50d745"
+    },
+    {
+      "file": "site-assets/textbook-book.css",
+      "sha256": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec"
+    },
+    {
+      "file": "site-assets/vertical-fractions.js",
+      "sha256": "f94d7f58a6c595c2d18f26281e63cbe3b23402cefbc43f422ad11770b2856e37"
+    },
+    {
+      "file": "site-assets/textbook-book-math1.json",
+      "sha256": "685fa2d87542ce6dfff0d07758dee757a581456f3f4042d2e3b1b5f4001eaddd"
+    },
+    {
+      "file": "site-assets/textbook-annotation-model.js",
+      "sha256": "6c27becb88a9875e55c3d1b87f3ebd8460d28fb2a6ea15f93aaf3787f2a82483"
+    },
+    {
+      "file": "site-assets/textbook-annotations.js",
+      "sha256": "a58c96e5d01ede825f39a4bc6e29fea94337b34b0b89da628fd0843b29d9ba63"
+    },
+    {
+      "file": "site-assets/textbook-annotations.css",
+      "sha256": "8e01e6a48dfd7ccc35a8dcd11946e3d4b2adc52de09d5818d2903b508b2ef649"
+    },
+    {
+      "file": "site-assets/textbook-ink-format.js",
+      "sha256": "cdcfc4e04b06187fe1ca5c3dd2f8c550c27de8781d6134a9fbd35556fc161735"
+    },
+    {
+      "file": "site-assets/textbook-ink-model.js",
+      "sha256": "97ef477150891fd148a2869b201f187344c472c5b6e3464bda1b1d0ad52755af"
+    },
+    {
+      "file": "site-assets/textbook-ink.js",
+      "sha256": "60ce37d98b1094231ef1af081ee3e7179dbb4908e6ef858d6d1b7bd926ed868d"
+    },
+    {
+      "file": "site-assets/textbook-ink.css",
+      "sha256": "f2b9ca8ce2605baf197712e0d2cdbb52c69b0eeb0e6c86d7f996fb4bfd331a95"
+    },
+    {
+      "file": "site-assets/textbook-ai-model.js",
+      "sha256": "9af9d612c51dcfe92c029d40f09f22fb0192b2706c377e4aee20b82af57e055e"
+    },
+    {
+      "file": "site-assets/textbook-ai.js",
+      "sha256": "49b4744c71b0792abfaee93d211ef9de2a4f021df2be888c621ca23aeceba8c4"
+    },
+    {
+      "file": "site-assets/textbook-ai.css",
+      "sha256": "8ac588618a4baf1cfacda8c06ea930a6fe81d2fbcfc074259f74d4ab0bb11661"
+    }
+  ],
+  "screens": [
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/390-M1-P046-closed.png",
+      "sha256": "3727b72d4234cf943af2311c307d82bd9a316b19ca902889e6b305e90f291cb7",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/390-M1-P046-open.png",
+      "sha256": "3b4a92d31a1c470e05c75a7d26fcf089148647a09b35021f6b2062bd466700b8",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/390-M1-P050-closed.png",
+      "sha256": "dcb98ac0d7daa0e3c63bdeeca32390f799c3d5e364d6e9cdeae64ae59eb5ccfd",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/390-M1-P050-open.png",
+      "sha256": "5e027d8691abbf56afae92956f56ee54bf24b1361169d488f41f960ca9056ee6",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/1440-M1-P046-closed.png",
+      "sha256": "a2578ac2c1346c06a3bf328724368eba7a173f5631864d2a783c744bb9ddb30c",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/1440-M1-P046-open.png",
+      "sha256": "52a0d0205c8ca44e504598a95c60dc31284a092ceff25872c85ba15a522ded2e",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/1440-M1-P050-closed.png",
+      "sha256": "09df19296f20148f40d53dcb4ad6d4b2af2ca7f56c69421b8fc97cff3045f29f",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    },
+    {
+      "file": "tools/candidates/math-m05-m06-current-20261029/full/screens/1440-M1-P050-open.png",
+      "sha256": "3416bbc3cd1c94085525e10080430840dbdd0877fd23b0072e87edc6b3de965d",
+      "manuallyReviewed": true,
+      "finding": "own answer rows/figure absent when closed; correct own answer and original figure displayed when opened; no visible overlap or clipped answer dialog"
+    }
+  ],
+  "browserResultSha256": "20a5cbe91dff0ef233a8d8c51ea2d364f284d98c2cab51f93dbc350240166941",
+  "verifierSha256": "f2605f8da13b6341b729cf0cc3b75e4cc34dbdbedcf5e2bd0eb5ab29e4d3a76b",
+  "sourceChanged": false,
+  "ledgerChanged": false,
+  "mainLedgerMetadataUpdate": "deferred while full10 freezes current ledger",
+  "published": false,
+  "realDevice": "iPhone hardware not tested",
+  "realUserData": false,
+  "networkPolicy": "all non-loopback requests aborted; no grading, user records or provider calls",
+  "scopeCorrection": "The separate96 reader checks were Chapter2 P087/P094. This dedicated144 run covers only actual M05/M06. Earlier minimal132 evidence omitted fraction/controllers and is retained as limited diagnostic evidence, not this final layout proof."
+}

@@ -1,0 +1,395 @@
+{
+  "files": [
+    {
+      "file": "cf-worker/src/index.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-before/cf-worker/src/index.js",
+      "beforeSha256": "3daee873a0771e60d7985b38c965088b64128d1f7b347d9783f9362685ca712b",
+      "afterSha256": "b3c0e6894d741b00f777e8197b9cc9a60f144452f5582cb861d9a47d08ba48e9",
+      "edits": [
+        {
+          "start": 311334,
+          "end": 311334,
+          "before": "",
+          "after": "    if(path==='/material-test-review/practice'){\n      const {reviewPracticeRoute}=await import('./ai-review-practice-route.mjs');\n      return scopedApiResponse(await reviewPracticeRoute(request,env,session,{owner:await opaqueKey(session.token)}));\n    }\n"
+        }
+      ]
+    },
+    {
+      "file": "preview/build.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-before/preview/build.py",
+      "beforeSha256": "be2242be78b6f41f1a2d5bcdfcb59ea3eaf254a85daaf5aba3e18eed483290d8",
+      "afterSha256": "2e3e01d25dfcf7498fe671da2256b9087d2a7bbcf0e262e8cf7216e89d77f966",
+      "edits": [
+        {
+          "start": 7159,
+          "end": 7159,
+          "before": "",
+          "after": "    for name in ['ai-review-practice-data.mjs','ai-review-practice-library.mjs','ai-review-practice-route.mjs']:\n        shutil.copyfile(ROOT / 'cf-worker/src' / name, DEST / name)\n"
+        }
+      ]
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-before/cf-worker/src/ai-test-review-content.mjs",
+      "beforeSha256": "05c56fb3cc7725f4a0b161ca2323cfb543ce37bc3c379556150c3b611dc84ebe",
+      "afterSha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf",
+      "edits": [
+        {
+          "start": 431,
+          "end": 431,
+          "before": "",
+          "after": "import {reviewPracticeOptions} from './ai-review-practice-library.mjs';\n"
+        },
+        {
+          "start": 1112,
+          "end": 1489,
+          "before": " testReviewModel(plan);const source=completedTestData(proof,uid),rows=source.session.questions.map((slot,index)=>({questionId:slot.question.id,question:slot.question.prompt,officialAnswer:slot.question.answer,officialExplanation:slot.question.explanation||'',learnerAnswer:learnerText(source.records[index].answer),correct:source.records[index].result.correct,practices:[]}));\n",
+          "after": " testReviewModel(plan);const source=completedTestData(proof,uid),rows=await Promise.all(source.session.questions.map(async(slot,index)=>({questionId:slot.question.id,question:slot.question.prompt,officialAnswer:slot.question.answer,officialExplanation:slot.question.explanation||'',learnerAnswer:learnerText(source.records[index].answer),correct:source.records[index].result.correct,practices:await reviewPracticeOptions(slot.question)})));\n"
+        },
+        {
+          "start": 2376,
+          "end": 2522,
+          "before": "  chunks.push({id,digest,questionIds:items.map(r=>r.questionId),practices:items.map(r=>({questionId:r.questionId,ids:[]})),content:body,policy});\n",
+          "after": "  chunks.push({id,digest,questionIds:items.map(r=>r.questionId),practices:items.map(r=>({questionId:r.questionId,ids:r.practices.map(p=>p.id)})),content:body,policy});\n"
+        }
+      ]
+    },
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-before/index.html",
+      "beforeSha256": "5fd6f7b4960ebbd1aebab7d8216ceed8def44a420c34dbb5d36b7f88e8defc68",
+      "afterSha256": "ba7564288c3c5e004ce519d50e1f19ec1fe071c28930492d911e8fab12f81388",
+      "edits": [
+        {
+          "start": 3511,
+          "end": 3511,
+          "before": "",
+          "after": "    <link rel=\"stylesheet\" href=\"/review-practice.css\">\n    <script src=\"/review-practice.js\" defer></script>\n"
+        },
+        {
+          "start": 206219,
+          "end": 206219,
+          "before": "",
+          "after": "    };\n    window.nobiReviewPracticeAPI={\n        available:()=>testReviewReady(),snapshot:()=>cloudIdentity(),matches:who=>testReviewReady(who),\n        get:(selection,who)=>testReviewRequest('/material-test-review/practice?'+new URLSearchParams(selection),{},who),\n        post:(body,who)=>testReviewRequest('/material-test-review/practice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/test-review.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-before/site-assets/test-review.js",
+      "beforeSha256": "03d2cfeba5cbd939c49fc28a73f3083bce665ff693fe114f37a606d4a1b94727",
+      "afterSha256": "efdb34ebd49cdd1963ad86aa3ed939b7268b6778231acf177e1ad251f38eda8d",
+      "edits": [
+        {
+          "start": 1434,
+          "end": 1509,
+          "before": "function reset(){close();model?.destroy();model=null;api=null;owner=null;}\n",
+          "after": "function reset(){root.NobiReviewPractice?.reset();close();model?.destroy();model=null;api=null;owner=null;}\n"
+        },
+        {
+          "start": 3867,
+          "end": 4021,
+          "before": " const cardHost=el('div');p.body.append(cardHost);p.cards=root.NobiTestReviewCards.mount(cardHost,{imageSrc:'/nobi-point.svg',onGenerate:()=>submit(p)});\n",
+          "after": " const cardHost=el('div');p.body.append(cardHost);p.cards=root.NobiTestReviewCards.mount(cardHost,{imageSrc:'/nobi-point.svg',onGenerate:()=>submit(p),onPractice:ref=>{if(model?.current())void root.NobiReviewPractice?.open(ref);}});\n"
+        }
+      ]
+    }
+  ],
+  "newFiles": [
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-route.mjs",
+      "sha256": "f8bbf7914b0881418366fc20132e410eb0b47ea4d37372c6fc85c0e319872984"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "sha256": "544899c0aa0c9953cc97af6377dbe627007ff3e83730607bfde45be053c1295f"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "sha256": "659da9c8c75318eb7be439872f0d1a634b35f1b7f58c1e60ad6a79b5ba27a0b4"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-result.json",
+      "sha256": "6a12cadef3b3bcd6fd4ccd28e21bbca025bb9b210daa97fae08ad94e0ef14cff",
+      "checks": 125
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-result.json",
+      "sha256": "8a7ece9894e654f03fbbb4747a859e56e0e1e291fc98c80c059af7ee6365df07",
+      "checks": 136
+    }
+  ],
+  "visuals": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-reviewed-screens/practice-390.png",
+      "sha256": "bffe12083aeef485d02afeec79889bee9d1aa649cbd629f9aa1d99ad0261f4f1",
+      "width": 390
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-reviewed-screens/practice-820.png",
+      "sha256": "88147597167ae3ebb0dfc39dd52c376615b4e87f3df3a1cfd8c0b7eb93d80e7d",
+      "width": 820
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-reviewed-screens/practice-1440.png",
+      "sha256": "d189ba46cc826e5e64101ccf313b6d136558d31cb54d2be4ac962bbbf84fb5e7",
+      "width": 1440
+    }
+  ],
+  "verifierEdits": [
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "beforeSha256": "afc2f23a217314c7861b81cb719b906dd3cf55d34ccdef1a51b03b8d84fe778b",
+      "afterSha256": "88bf9aa1eacf0ceba3511a330ff5ab218980a8dfb23a08f6a886c3f243cb0864",
+      "edits": [
+        {
+          "start": 197,
+          "end": 197,
+          "before": "",
+          "after": "const {checkPracticeSource}=require('../../textbook-ai-20261026/review/practice-source.cjs');\n"
+        },
+        {
+          "start": 228,
+          "end": 228,
+          "before": "",
+          "after": "\n const practice=checkPracticeSource(root),read=f=>practice.has(f)?Buffer.from(practice.get(f)):fs.readFileSync(path.join(root,f));"
+        },
+        {
+          "start": 1059,
+          "end": 1062,
+          "before": "fs.",
+          "after": ""
+        },
+        {
+          "start": 1066,
+          "end": 1074,
+          "before": "FileSync",
+          "after": ""
+        },
+        {
+          "start": 1075,
+          "end": 1090,
+          "before": "path.join(root,",
+          "after": ""
+        },
+        {
+          "start": 1099,
+          "end": 1102,
+          "before": ",'u",
+          "after": "."
+        },
+        {
+          "start": 1103,
+          "end": 1106,
+          "before": "f8'",
+          "after": "oString("
+        },
+        {
+          "start": 1535,
+          "end": 1538,
+          "before": "fs.",
+          "after": ""
+        },
+        {
+          "start": 1542,
+          "end": 1550,
+          "before": "FileSync",
+          "after": ""
+        },
+        {
+          "start": 1551,
+          "end": 1566,
+          "before": "path.join(root,",
+          "after": ""
+        },
+        {
+          "start": 1574,
+          "end": 1575,
+          "before": ")",
+          "after": ""
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "beforeSha256": "574d7f91df27960e4d4e57a8f4a0573c71af9a95d28064afd6b990900b7aa06a",
+      "afterSha256": "c6b5abf156d0ea0396fa541467c155849c89ae62e3e16ec2c1f89919885f44f5",
+      "edits": [
+        {
+          "start": 194,
+          "end": 194,
+          "before": "",
+          "after": "const {checkPracticeSource}=require('./practice-source.cjs');\n"
+        },
+        {
+          "start": 232,
+          "end": 232,
+          "before": "",
+          "after": "\n const practice=checkPracticeSource(root),read=f=>practice.has(f)?Buffer.from(practice.get(f)):fs.readFileSync(path.join(root,f));"
+        },
+        {
+          "start": 1791,
+          "end": 1794,
+          "before": "fs.",
+          "after": ""
+        },
+        {
+          "start": 1798,
+          "end": 1806,
+          "before": "FileSync",
+          "after": ""
+        },
+        {
+          "start": 1807,
+          "end": 1822,
+          "before": "path.join(root,",
+          "after": ""
+        },
+        {
+          "start": 1831,
+          "end": 1834,
+          "before": ",'u",
+          "after": "."
+        },
+        {
+          "start": 1835,
+          "end": 1838,
+          "before": "f8'",
+          "after": "oString("
+        },
+        {
+          "start": 2275,
+          "end": 2278,
+          "before": "fs.",
+          "after": ""
+        },
+        {
+          "start": 2282,
+          "end": 2290,
+          "before": "FileSync",
+          "after": ""
+        },
+        {
+          "start": 2291,
+          "end": 2306,
+          "before": "path.join(root,",
+          "after": ""
+        },
+        {
+          "start": 2314,
+          "end": 2315,
+          "before": ")",
+          "after": ""
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "beforeSha256": "8c621be6b66c6ee21c66988a80cd5bbb46f5884a7415982d717df24f053d0a41",
+      "afterSha256": "165db8841613e08a7aae7083876d6f5fedfa8020fa795605c670d86c93cc6aa0",
+      "edits": [
+        {
+          "start": 247,
+          "end": 247,
+          "before": "",
+          "after": "const {checkPracticeSource}=require('./practice-source.cjs');\n"
+        },
+        {
+          "start": 293,
+          "end": 293,
+          "before": "",
+          "after": "practice=checkPracticeSource(root);\n const "
+        },
+        {
+          "start": 301,
+          "end": 301,
+          "before": "",
+          "after": "practice.has(f)?Buffer.from(practice.get(f)):"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/verify-integration.mjs",
+      "beforeSha256": "8fa66ab3ca537e9cd7d665b1227d1d06c352dfe57c4ec9ee11734c4d3829a201",
+      "afterSha256": "4a9799dd79bdda38dfcc474b5f5b97f6f1ebcbb8167cf53d9450e12e2b5dd77e",
+      "edits": [
+        {
+          "start": 2596,
+          "end": 2596,
+          "before": "",
+          "after": "f of createRequire(import.meta.url)('../../textbook-ai-20261026/review/practice-source.cjs').practiceDependencyFiles())names.add(f);for(const "
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-worker-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-review-worker-integration.mjs",
+      "beforeSha256": "d242f5097c9515e68492b4b2160cc4bb75b216bbb99e8bb9ce9b12d06cda096d",
+      "afterSha256": "1b0fab86feb7fa865c1a83b79d285969a9f6b780f28fef48a14f58f4e93f705c",
+      "edits": [
+        {
+          "start": 4099,
+          "end": 4099,
+          "before": "",
+          "after": " of createRequire(import.meta.url)('./practice-source.cjs').practiceDependencyFiles())files.add(f);for(const f"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-review-client-integration.mjs",
+      "beforeSha256": "0f944061423846e56bc2945303d075cdda774ae390557a59a10b498c8645fb0b",
+      "afterSha256": "46bb318a1fea556651f67c76f08eaabcefc2a30dc39a1105f82c91cc99b2da34",
+      "edits": [
+        {
+          "start": 3916,
+          "end": 3916,
+          "before": "",
+          "after": " of createRequire(import.meta.url)('./practice-source.cjs').practiceDependencyFiles())files.add(f);for(const f"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-service.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-review-service.mjs",
+      "beforeSha256": "e0ef70a14a9d585c0dbf9555362434619d0ea9ba76d8b2ca723c690873a5eb9e",
+      "afterSha256": "4aa21c0c16b71ff2bbf19a4a9b7a5df8cc9a53d587740cedd0a3d682a9ae90a0",
+      "edits": [
+        {
+          "start": 25045,
+          "end": 25045,
+          "before": "",
+          "after": "current-"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-review-client-browser.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/practice-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-review-client-browser.mjs",
+      "beforeSha256": "df71726a400599ad7259e5e396ec6bce036e25890919a5e07db186d4d6d8088d",
+      "afterSha256": "e9e454bc2f8a95e69f9f3952b01ff03c3f7fc0d1210193e22dd2bd9089daffd4",
+      "edits": [
+        {
+          "start": 17404,
+          "end": 17404,
+          "before": "",
+          "after": "current-"
+        }
+      ]
+    }
+  ]
+}

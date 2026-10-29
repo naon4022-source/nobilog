@@ -1,0 +1,189 @@
+{
+  "status": "main applied;741 preservation/normal-build+1585 independent arithmetic+76 actual browser checks passed; final whole pending",
+  "files": [
+    {
+      "file": "教材整理/実装/mathbank/bank.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/実装/mathbank/bank.py",
+      "beforeSha256": "77886bc48628f90894280c2b7add970426f4c22f480c1afd40112c8be66a52ac",
+      "afterSha256": "a51b7e228d16090365eb877a528be1844f2716f0d66c974ae3682f15d9730f3b"
+    },
+    {
+      "file": "教材整理/実装/mathbank/expr.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/実装/mathbank/expr.py",
+      "beforeSha256": "09310215786f3562f624d61836aff876a09dea08071b94bb9b7900433746726f",
+      "afterSha256": "dd3f60f22069dc67d0aa6b5406e55282ce4928e8ef937d41ac08134c2b3eb273"
+    },
+    {
+      "file": "教材整理/実装/drillbank/mdrill_a.py",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/実装/drillbank/mdrill_a.py",
+      "beforeSha256": "439f40bd52414dbf05f9612189cf7ebc363c718ccc197d339596fd28f769542d",
+      "afterSha256": "a87c02cacabfcefab44bfef5fc0597c2b0ab1043f1f8aa6a77c361bca74c533f"
+    },
+    {
+      "file": "教材整理/確認済み/drill-math-1-signedcalc.json",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/確認済み/drill-math-1-signedcalc.json",
+      "beforeSha256": "500fb31b9f3457a6f07e6e06ce0320dc0b84905c0a10d41d5e97d46ce2b2a8a4",
+      "afterSha256": "e5c162a9845328b3817b3917f72d82be768e3f44e122efcca466bc251efca10f"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-calc1.json",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/確認済み/workbook-math-1-calc1.json",
+      "beforeSha256": "909e935371202c96c077ffcadb00e9d36f3729c135d5ce036bc20f5b782b0a40",
+      "afterSha256": "86ddaad2a51ef24a6d39510c59eadba8cacdac1a1a35331766c208edb4c45777"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-calc2.json",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/確認済み/workbook-math-1-calc2.json",
+      "beforeSha256": "45322297087e16ee4ad999c7f13bc9cab03793bb75b56c2957eea4b7955b3b2b",
+      "afterSha256": "5e4b18cc1d7ce8821666601a9d42af6a1089c7ddc7b1baa95dcc1c862cfa6447"
+    },
+    {
+      "file": "教材整理/確認済み/workbook-math-1-review.json",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/教材整理/確認済み/workbook-math-1-review.json",
+      "beforeSha256": "d259235fcfe3f513374a1b55a6c8bdfbd339bd9d56f4e2fa3bd928710da03273",
+      "afterSha256": "eced3bfa1c057474a207a018d8138f57e857566bb3e19d38887e2f255a9c2b32"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/site-assets/material-bank.json",
+      "beforeSha256": "cda189685dd39868150fcc79fccb2844e0d4ec8dd5f2945f6b896897b40f7e36",
+      "afterSha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/math-order-followup/main-before/cf-worker/src/material-bank.mjs",
+      "beforeSha256": "ead41c78f047691ece39ac0a7f4d774c6f746cc5b39d684235abdd31e7db0932",
+      "afterSha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    }
+  ],
+  "units": [
+    "drill-math-1-signedcalc",
+    "workbook-math-1-calc1",
+    "workbook-math-1-calc2",
+    "workbook-math-1-review"
+  ],
+  "expectedQuestionCount": 325,
+  "expectedExplanationChanges": 132,
+  "expectedGuideChanges": 1,
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/accepted-proofs/main-result.json",
+      "sha256": "56d01092c2f2c2d605bba8a3f791e91acffb075f9aa69e45d8fbab0443826f0b",
+      "checks": 741
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/accepted-proofs/current-arithmetic-result.json",
+      "sha256": "6921cb115fd371f56390b00e7b1673b4088e627948595cb5d9a365a97522e1f5",
+      "checks": 1585
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/accepted-proofs/browser-result.json",
+      "sha256": "0d69c0483a986f6a122e6bc5793c394cad38d9451aee7a4b6e4cffc548e8b306",
+      "checks": 76
+    }
+  ],
+  "visuals": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/drill-math-1-signedcalc-390.png",
+      "width": 390,
+      "unitId": "drill-math-1-signedcalc",
+      "questionId": "drill-math-1-signedcalc-8",
+      "sha256": "9994ceea94fcc164d9f719f73102b4d5e68843d160ab35a0a5aec95c30bcaa6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc1-390.png",
+      "width": 390,
+      "unitId": "workbook-math-1-calc1",
+      "questionId": "workbook-math-1-calc1-1",
+      "sha256": "8d951d53cf1d45580bbf017da7662c0e74813b07901473b396d0c25c59d9edcd"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc2-390.png",
+      "width": 390,
+      "unitId": "workbook-math-1-calc2",
+      "questionId": "workbook-math-1-calc2-1",
+      "sha256": "ce70a126f3c301265fe26175e621bfbc339c26eb2d72ca01ecd2c0adf50a3deb"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-review-390.png",
+      "width": 390,
+      "unitId": "workbook-math-1-review",
+      "questionId": "workbook-math-1-review-31",
+      "sha256": "fdc8240f72ca05351788d316b02ecaa74f2cb01d5aa8373748fd373859c03b18"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/drill-math-1-signedcalc-820.png",
+      "width": 820,
+      "unitId": "drill-math-1-signedcalc",
+      "questionId": "drill-math-1-signedcalc-8",
+      "sha256": "2b2f4f6faff9f98e7c9cc4976d655c870625fa0e117310a09a9ec95b200e8b09"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc1-820.png",
+      "width": 820,
+      "unitId": "workbook-math-1-calc1",
+      "questionId": "workbook-math-1-calc1-1",
+      "sha256": "8ff29f1ae4d325182f583394bc955ee8082156ead2022a5d984e71f2447141fd"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc2-820.png",
+      "width": 820,
+      "unitId": "workbook-math-1-calc2",
+      "questionId": "workbook-math-1-calc2-1",
+      "sha256": "fe36f64cbc01ac4301590187b6172bacd6eb40d1a2e37c53d0cfbd7c95bb903f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-review-820.png",
+      "width": 820,
+      "unitId": "workbook-math-1-review",
+      "questionId": "workbook-math-1-review-31",
+      "sha256": "28f7d740ce6fd67f29ef4337e8551b332d0e3732af9b070a95a9a97795aca476"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/drill-math-1-signedcalc-1440.png",
+      "width": 1440,
+      "unitId": "drill-math-1-signedcalc",
+      "questionId": "drill-math-1-signedcalc-8",
+      "sha256": "869b1ed50c75e88956c631d7968b054006cc615f1abc00902a077db852216908"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc1-1440.png",
+      "width": 1440,
+      "unitId": "workbook-math-1-calc1",
+      "questionId": "workbook-math-1-calc1-1",
+      "sha256": "c4f0029b527453da2e359bb8f560b65131626fbfe4278d7d7d9f889c71255909"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-calc2-1440.png",
+      "width": 1440,
+      "unitId": "workbook-math-1-calc2",
+      "questionId": "workbook-math-1-calc2-1",
+      "sha256": "7bbef70cb885fcd737944fa9da878f561e040ff468f3e953b80194cb5733ff23"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/reviewed-screens/workbook-math-1-review-1440.png",
+      "width": 1440,
+      "unitId": "workbook-math-1-review",
+      "questionId": "workbook-math-1-review-31",
+      "sha256": "8618c1a9de29f3588b9f2f471aa9b3e57e25ea7db9c38a2696f05ad8f729e1db"
+    }
+  ],
+  "visualReview": {
+    "status": "directly reviewed all12 at native-resolution contact sheets",
+    "sheets": [
+      {
+        "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/contact-390.png",
+        "sha256": "51832695fca811c38c01a36aad6a233cbd985fd8037e77d6e114bb3eda6e2496"
+      },
+      {
+        "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/contact-820.png",
+        "sha256": "94c2067ded3cd7e2491cd812585a4b84897d29a52c88c172757bdfa698ddc094"
+      },
+      {
+        "file": "tools/candidates/textbook-ai-20261026/review/math-order-followup/contact-1440.png",
+        "sha256": "ef177968322305b9f4633644248008eaa177166c5bb140e8df4825c3b0f4d44a"
+      }
+    ],
+    "observations": "All four changed unit feedback cards fit at390/820/1440; correct grouping/power/left-to-right wording and vertical fractions readable. Desktop/tablet same-height blank card space is existing batch layout, unchanged. No pre-submit guide opening or real data used."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "status": "all six replaced; all71 final hashes match",
+  "specSha256": "c331dfec3e592fcba458be0ec67b95e4b6d7ce80b1b2aeda8fef51645fff6953",
+  "preflightSha256": "b6ed097da0224315a5cb758beceaae903fd5af75f5326e3a6ad7f8068e1b9170",
+  "files": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs",
+      "beforeFile": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs",
+      "beforeSha256": "1cd541cbb272fb12580bfde967b5171fa9a63d67cdb5159846c90380a1939e3e",
+      "candidateFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/output/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs",
+      "afterSha256": "71eaea813a1a510ac78c4bca78aebf26cf3695f6ddba064149c61d65211d7f62"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before-compat/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs",
+      "beforeSha256": "75cb735b623c9b807c5272cefe230ec5aa54696054b550055b5fef5105dfa76d",
+      "candidateFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/output/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs",
+      "afterSha256": "6181e27cc4d4ccba104d86fe3400ac42e94e92068f8995577ccd84a4255ed7b3"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "beforeFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/before/cf-worker/src/ai-review-practice-data.mjs",
+      "beforeSha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535",
+      "candidateFile": "tools/candidates/review-practice-choice-order-20261029/clarity/ai-review-practice-data.mjs",
+      "afterSha256": "14a73beae94745a3d924ac9b53a3925d67f2906ed73c398de428fabdf4f179c2"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "beforeFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/before/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "beforeSha256": "00f7588244c9ce2c3a462cd7ad19ea3984b5130b1c60a78ee76ae19376be2fb0",
+      "edits": [
+        {
+          "before": "same(before.size,27,",
+          "after": "same(before.size,29,"
+        },
+        {
+          "before": "same(checkMainSource(sandbox,{assets:false}).size,27,",
+          "after": "same(checkMainSource(sandbox,{assets:false}).size,29,"
+        },
+        {
+          "before": "'Claude作業/20261026_ProAI類題/practice-bank.json'",
+          "after": "'Claude作業/20261026_ProAI類題/practice-bank.json','Claude作業/20261028_類題拡大_残10/候補/ai-review-practice-data.mjs'"
+        }
+      ],
+      "candidateFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/output/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "afterSha256": "c6148f80933f4ca373f954d99a7be68b4f2354702b99c86b97adbdd1f8fce996"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/book-signature-edit.json",
+      "beforeFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/before/tools/candidates/textbook-ai-20261025/book-signature-edit.json",
+      "beforeSha256": "8408d1771d9abddb71743c0a437a899917515c83906d510aa64575d5b58cb578",
+      "candidateFile": "tools/candidates/reader-signature-compat-20261029/candidate.json",
+      "afterSha256": "537a930034f31b6bef786767736c7ef6fc0b782207acb7578cb3714d4bddcd27"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "beforeFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/before/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "beforeSha256": "4c6d2c48df54e6a6bcdbe1b94b98bfb5a4b505777d71434e2135a47995e55dc9",
+      "candidateFile": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/output/tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "afterSha256": "44f1ca02cc03ac6c0dbeed5095d7e1a25614c79feba0d3acee9fc6bb488ad0fb",
+      "edits": [
+        {
+          "before": "const current=(await import('../../../../cf-worker/src/ai-review-practice-data.mjs')).default;",
+          "after": "const successor=createRequire(import.meta.url)('../../textbook-vision-20261027/main/checked-source.cjs').checkMainSource(undefined,{assets:false}).get('cf-worker/src/ai-review-practice-data.mjs');const current=successor?JSON.parse(successor.toString().replace(/^export default /,'').replace(/;\\s*$/,'')):(await import('../../../../cf-worker/src/ai-review-practice-data.mjs')).default;"
+        },
+        {
+          "before": "'current default48'",
+          "after": "'preserved48 defaults after strict current-source validation'"
+        },
+        {
+          "before": "'current16 patterns'",
+          "after": "'preserved16 patterns after strict current-source validation'"
+        },
+        {
+          "before": "Current48 defaults/30 legacy/16 patterns,",
+          "after": "Preserved48 defaults/30 legacy/16 patterns; actual96/new48 separately verified by current successor,"
+        }
+      ]
+    }
+  ],
+  "completed": [
+    "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs",
+    "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs",
+    "cf-worker/src/ai-review-practice-data.mjs",
+    "tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+    "tools/candidates/textbook-ai-20261025/book-signature-edit.json",
+    "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs"
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "status": "reviewed exact image consultation successor; integration progress separate",
+  "existing": [
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/index.html",
+      "beforeSha256": "ba7564288c3c5e004ce519d50e1f19ec1fe071c28930492d911e8fab12f81388",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/index.html",
+      "afterSha256": "7f1558a31704b9c71390907854cdf600f971e39894b8f0df46a7ca23f8ebc6b2",
+      "edits": [
+        {
+          "before": "    <script src=\"/textbook-ai.js\" defer></script>",
+          "after": "    <script src=\"/textbook-ai.js\" defer></script>\n    <link rel=\"stylesheet\" href=\"/textbook-vision.css\">\n    <script src=\"/textbook-vision-model.js\" defer></script>\n    <script src=\"/textbook-vision-capture.js\" defer></script>\n    <script src=\"/textbook-vision-api.js\" defer></script>\n    <script src=\"/textbook-vision-panel.js\" defer></script>\n    <script src=\"/textbook-vision-boot.js\" defer></script>\n    <script type=\"module\" src=\"/textbook-vision-media-browser.mjs\"></script>"
+        }
+      ]
+    },
+    {
+      "file": "cf-worker/src/index.js",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/cf-worker/src/index.js",
+      "beforeSha256": "b3c0e6894d741b00f777e8197b9cc9a60f144452f5582cb861d9a47d08ba48e9",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/index.js",
+      "afterSha256": "47d5bf8c2269fa1a29a697aedbf441d753c1ef9006d919553d412ea98b2a4d9a",
+      "edits": [
+        {
+          "before": "    if(path==='/textbook-ai-chat'){",
+          "after": "    if(path==='/textbook-ai-vision-context'){\n      const {textbookVisionContextRoute}=await import('./textbook-vision-context-route.mjs');\n      return scopedApiResponse(await textbookVisionContextRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);\n    }\n    if(path==='/textbook-ai/images'||path==='/textbook-ai/image'){\n      const {textbookVisionImagesRoute}=await import('./textbook-vision-images-route.mjs');\n      return scopedApiResponse(await textbookVisionImagesRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);\n    }\n    if(path==='/textbook-ai-vision'){\n      const {textbookVisionAIRoute}=await import('./textbook-vision-route.mjs');\n      return scopedApiResponse(await textbookVisionAIRoute(request,env,session,{owner:await opaqueKey(session.token),fetcher:fetch}),env);\n    }\n    if(path==='/textbook-ai-chat'){"
+        }
+      ]
+    },
+    {
+      "file": "preview/build.py",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/preview/build.py",
+      "beforeSha256": "2e3e01d25dfcf7498fe671da2256b9087d2a7bbcf0e262e8cf7216e89d77f966",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/preview/build.py",
+      "afterSha256": "bf20cebc1574a6cf886916b984f62e979da1863dc949068be85b0b4361baaef0",
+      "edits": [
+        {
+          "before": "    for name in ['textbook-annotations.mjs',",
+          "after": "    for name in [\"textbook-vision-input.mjs\",\"textbook-vision-transport.mjs\",\"textbook-vision-operation.mjs\",\"textbook-vision-images-route.mjs\",\"textbook-vision-service.mjs\",\"textbook-vision-context.mjs\",\"textbook-vision-route.mjs\",\"textbook-vision-media-context.mjs\",\"textbook-vision-media-manifest.mjs\",\"textbook-vision-context-reader.mjs\",\"textbook-vision-context-route.mjs\"]:\n        shutil.copyfile(ROOT / 'cf-worker/src' / name, DEST / name)\n    for name in ['textbook-annotations.mjs',"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/sw.js",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/site-assets/sw.js",
+      "beforeSha256": "5b966468baa0143aa8f9b177090011a19ccbc01d9be8ab2f1fd35b1895f9d756",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/sw.js",
+      "afterSha256": "21733b03dc9b2a79dfe3c243e3cd32edb9363b21136ec9fae7a5b70443127d91",
+      "edits": [
+        {
+          "before": "textbook-(?:annotations|ink|ai-context|ai-chat)",
+          "after": "textbook-(?:annotations|ink|ai-context|ai-chat|ai-vision(?:-context)?|ai)"
+        }
+      ]
+    },
+    {
+      "file": ".claude/verify/run.sh",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/.claude/verify/run.sh",
+      "beforeSha256": "c8eca6713c6f0b205d7cef24a550caa4ee2d1d6f4d313597e3d995a7909347a1",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/.claude/verify/run.sh",
+      "afterSha256": "90f55e94bbf271cf459eaf46cc362a15ed9d3e23bcfed22647b0186e54e372f6",
+      "edits": [
+        {
+          "before": "node \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-contexts.mjs\" || fail=1",
+          "after": "node \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-contexts.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-vision-20261027/main/verify-main-book.mjs\" || fail=1"
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "beforeFile": "tools/candidates/textbook-vision-20261027/main/before/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "beforeSha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "afterSha256": "c10ba168ec03ad05f333134007d68cd4f09d4b7445837e6ed56b56477bd72493",
+      "edits": [
+        {
+          "before": "const {checkExpansionSource,expansionDependencyFiles}=require(expansionHelper);",
+          "after": "const {checkExpansionSource,expansionDependencyFiles}=require('../../textbook-vision-20261027/main/check-expansion.cjs');"
+        }
+      ]
+    }
+  ],
+  "newFiles": [
+    {
+      "file": "cf-worker/src/textbook-vision-input.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-input.mjs",
+      "sha256": "96814eb81a7fda3b350c10967bc4fe0f43ee66ea2eb229278e9993c5300d1925",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-transport.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-transport.mjs",
+      "sha256": "bd8f3ee1b2c6abf5ab3ddb0c36592fb8b279ffb596db8ce6253550a50b8d5aae",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-operation.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-operation.mjs",
+      "sha256": "385989910d72a0bc7ff9ebbd8ca2f0f6ff7eb3db06db0cdceb2bb19ea53e88b3",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-images-route.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-images-route.mjs",
+      "sha256": "246a2a986ff51e8bf460e3734a3522fc2a8189b4381e85bfd916f7b70961f6fb",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-service.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-service.mjs",
+      "sha256": "a451f6aa1fb3df3ed6202e23815502541b351301075f3fbb7bedd6f6eb7a7bc4",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-service.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context.mjs",
+      "sha256": "1cfa489dd4d3c154208533ae64ceb53ce781ae2a8b2859d17a51083cf7d5a88f",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-context.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-route.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-route.mjs",
+      "sha256": "18fc1aa9ab4f6e3dc990fbd8963bdb1baa9201d6e51e5e1f3112f42dcfbc7020",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-route.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-context.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-context.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-media-manifest.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-manifest.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context-reader.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context-reader.mjs",
+      "sha256": "1b2211ab8825417ba4d868eefa01c2586d8247946bcdf1c94704f55a6d0b6838",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-context-reader.mjs"
+    },
+    {
+      "file": "cf-worker/src/textbook-vision-context-route.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/cf-worker/src/textbook-vision-context-route.mjs",
+      "sha256": "b5f0b1ec98cb1725c73e36f18d0808093558f82ea3f5801854f8251841d34bf4",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-context-route.mjs"
+    },
+    {
+      "file": "site-assets/textbook-vision-model.js",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-model.js",
+      "sha256": "55c398dea3f896a4c0a6a6cb9c3b17a15c33539dd43dd077a8804c4b165638bd",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-model.js"
+    },
+    {
+      "file": "site-assets/textbook-vision-capture.js",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-capture.js",
+      "sha256": "ea3c2d06e32fd22d93246550b54ce37145afd2bbdcad09caf37206e615c0ab57",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-capture.js"
+    },
+    {
+      "file": "site-assets/textbook-vision-api.js",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-api.js",
+      "sha256": "e64b060f006147ee3e392ef821b850f0f435dd129494e6fb79460f42a4eec2e7",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-api.js"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-browser.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-browser.mjs",
+      "sha256": "bfd403a0e5143a2a92fe9ddf41197f615f2cc952ea12522bbdeec86a3cf79b0e",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-browser.mjs"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-context.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-context.mjs",
+      "sha256": "40b23ba6edd08cbccd50a4e7c797dd3cb18a0b525c0c8f608a1792d086ef7568",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-context.mjs"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-dom.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-dom.mjs",
+      "sha256": "63465d89585a8bcfa0fe8d7b9f62681180768dfa9b7c5b93d36c5fd8e2dcde75",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-dom.mjs"
+    },
+    {
+      "file": "site-assets/textbook-vision-media-manifest.mjs",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-media-manifest.mjs",
+      "sha256": "a86277f62abf15cfe316648871cb32fb851d4503beb74a97b4fa98d39936a186",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/textbook-vision-media-manifest.mjs"
+    },
+    {
+      "file": "site-assets/textbook-vision-panel.js",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-panel.js",
+      "sha256": "d6e6ecc5fd3278afd3bf92d41f94159de9d14fa9ce536b3f584f3b6cfbd4aedf",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-ai.js"
+    },
+    {
+      "file": "site-assets/textbook-vision.css",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision.css",
+      "sha256": "2dc683214295a6fd288048c672fe9d30071be8bac5b8568c227ae250872b6b23",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/ui-candidate/textbook-vision.css"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-math1.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-math1.json",
+      "sha256": "d4ee3d77cdef10a88c36c058c91d712ee004b5b1c9bed250b875e06e9976f743",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-math1.json"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-kokugo1.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-kokugo1.json",
+      "sha256": "ada7f2f8a59cd9e9684c37e9b7680a997a1e7ec34496d2e585f2f33c2831b62e",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-kokugo1.json"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-english1.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-english1.json",
+      "sha256": "ff8e63917578e6e274461ad4b8e0e11044acec0f7a8472532be42a4a36008ac5",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-english1.json"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-science1.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-science1.json",
+      "sha256": "1ba2065a76da258d48d42fd546e1da38fc149da021f9680fddfa182ed8ddb1ef",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-science1.json"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-geography.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-geography.json",
+      "sha256": "07dff1925d45fb9473cfec5ce02851842f6161703e405f0c3f968217bd7ffba1",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-geography.json"
+    },
+    {
+      "file": "site-assets/textbook-ai-media-context-history.json",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-ai-media-context-history.json",
+      "sha256": "cd804a8a10b46e8845087e96905b93b26fe591338ff27ad2afa32aa9cd93a066",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/media-contexts/textbook-ai-media-context-history.json"
+    },
+    {
+      "file": "site-assets/textbook-vision-boot.js",
+      "candidateFile": "tools/candidates/textbook-vision-20261027/main/output/site-assets/textbook-vision-boot.js",
+      "sha256": "53ce1f62d7b23792b7c09489540c355a7e8d118a73370a4307f473bfd70f328f",
+      "sourceFile": "tools/candidates/textbook-vision-20261027/main/prepare-main.mjs"
+    }
+  ],
+  "previousFull": {
+    "file": "tools/candidates/verification-dialog-repair-20261027/full4-result.json",
+    "sha256": "7d4271876b50c8d15f04c87882ff07ac6a16ec50490653fcee121472026ceb47"
+  },
+  "mainProof": {
+    "file": "tools/candidates/textbook-vision-20261027/main/approved-panel-result.json",
+    "sha256": "12b69cf117105666600faec6408d090ac30d62e3759e7e9481bac92609c19e12"
+  },
+  "guards": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/checked-source.cjs",
+      "sha256": "017506518cfc2008cf0ac3107819c791c0176428caa3cf698380ea29054dbf62"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/check-expansion.cjs",
+      "sha256": "979695010b3b6007cf6e9354a65c9d468ecf8f0fe7074841ecf2082021da219a"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "sha256": "c9298a5ddf7e8b2a717a3fb50d2b438dde16427d959c56424984c6e9aae73c35"
+    }
+  ],
+  "scope": "Exact reviewed6-file edits and27 new components. Local only, no publish, no flags/secrets/user-data changes."
+}

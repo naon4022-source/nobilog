@@ -1,0 +1,24 @@
+{
+  "status": "preparation only; handwriting not implemented",
+  "baselineWhole": "tools/candidates/textbook-final-20261023/post-current75-full-verification.json",
+  "existingPrivateStorage": "cf-worker/src/textbook-annotations.mjs uses owner-scoped auth_kv keys, prepared statements, CAS and replay; no new cloud resource is needed merely to store bounded drawing records",
+  "thirdAccountSource": "SECURITY.md identifies Souta as u4; no PIN/secret/store/user data read",
+  "thirdAccountGap": {
+    "browser": "site-assets/textbook-annotation-model.js localDrafts allowlist includes u1/u2 and preview profiles, omits u4",
+    "route": "cf-worker/src/textbook-annotations.mjs authenticated UID guard accepts u1/u2 and preview profiles, omits u4",
+    "plans": "cf-worker/src/plans.mjs nonadmin people allowlist also includes only u1/u2 and preview profiles",
+    "scope": "Large local update source only; do not claim the separate current public release has this bug without checking its source. Include u4 ownership/draft/plan cases when completing textbook integration, without modifying owner-only admin."
+  },
+  "skillsRead": [
+    "/Users/shimizunaotomoo/.agents/skills/cloudflare/SKILL.md",
+    "/Users/shimizunaotomoo/.agents/skills/workers-best-practices/SKILL.md"
+  ],
+  "referencesRead": [
+    "https://developers.cloudflare.com/workers/best-practices/workers-best-practices/",
+    "https://developers.cloudflare.com/d1/worker-api/prepared-statements/",
+    "https://developers.cloudflare.com/d1/worker-api/d1-database/"
+  ],
+  "latestTypesEvidence": "tools/candidates/textbook-final-20261023/workers-types-reference-20261025.json",
+  "next": "Implement usable in-book drawing with private save/reload and durable per-owner drafts, explicit conflict recovery/plan downgrade retention, source/answer safety and actual multi-width interaction. Preserve existing markers and private records; complete integration and required changed validation before calling finished.",
+  "runtimeFilesChanged": 0
+}

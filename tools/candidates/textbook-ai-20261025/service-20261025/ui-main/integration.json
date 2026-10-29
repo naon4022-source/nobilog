@@ -1,0 +1,64 @@
+{
+  "status": "main locally integrated; model31/book84 and direct six-screen review passed; final whole pending",
+  "files": [
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/ui-main/before/index.html",
+      "beforeSha256": "41ab011c4b9ab8bf455956db452d313fd683a200f5a8835a35429f2f82414081",
+      "afterSha256": "1ddb1fc1df9a3829840b1aeaa313923118a790599f93c1e1c0a66546c4c479c2",
+      "edits": [
+        {
+          "before": "    <script src=\"/ai-hub.js\" defer></script>\n    <script src=\"/profile-photos.js\" onerror=\"if(location.hostname==='127.0.0.1'||location.hostname==='localhost')this.src='/site-assets/profile-photos.js'\" defer></script>\n    <script src=\"/textbook-annotations.js\" defer></script>\n    <script src=\"/textbook-book.js\" defer></script>\n",
+          "after": "    <script src=\"/ai-hub.js\" defer></script>\n    <script src=\"/profile-photos.js\" onerror=\"if(location.hostname==='127.0.0.1'||location.hostname==='localhost')this.src='/site-assets/profile-photos.js'\" defer></script>\n    <link rel=\"stylesheet\" href=\"/textbook-ai.css\">\n    <script src=\"/textbook-ai-model.js\" defer></script>\n    <script src=\"/textbook-ai.js\" defer></script>\n    <script src=\"/textbook-annotations.js\" defer></script>\n    <script src=\"/textbook-book.js\" defer></script>\n"
+        },
+        {
+          "before": "        get:(book,anchor,who)=>textbookAnnotationRequest('/textbook-ink?book='+encodeURIComponent(book)+'&anchor='+encodeURIComponent(anchor),{cache:'no-store'},who),\n        post:(body,who)=>textbookAnnotationRequest('/textbook-ink',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)\n    };\n    function appSyncSummaryHtml() {\n",
+          "after": "        get:(book,anchor,who)=>textbookAnnotationRequest('/textbook-ink?book='+encodeURIComponent(book)+'&anchor='+encodeURIComponent(anchor),{cache:'no-store'},who),\n        post:(body,who)=>textbookAnnotationRequest('/textbook-ink',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)\n    };\n    async function textbookAIRequest(path,options,who){\n        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});\n        const response=await cloudTry(cloudUrl(path),{cache:'no-store',...options},20000);\n        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});\n        const data=await response.json();\n        if(!cloudSame(who))throw Object.assign(Error('account_changed'),{code:'session_changed'});\n        if(!response.ok){const error=Error('textbook_ai_unavailable');error.status=response.status;error.code=typeof data?.error==='string'&&/^[a-z_]{1,64}$/.test(data.error)?data.error:'';throw error;}\n        return data;\n    }\n    window.nobiTextbookAIAPI={\n        available:()=>!!currentUserId&&!isTrial(),snapshot:()=>cloudIdentity(),matches:who=>cloudSame(who),\n        source:(selection,who)=>textbookAIRequest('/textbook-ai-context?'+new URLSearchParams(selection),{},who),\n        history:(selection,who)=>textbookAIRequest('/textbook-ai-chat?'+new URLSearchParams(selection),{},who),\n        post:(body,who)=>textbookAIRequest('/textbook-ai-chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who)\n    };\n    function appSyncSummaryHtml() {\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-annotations.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/ui-main/before/site-assets/textbook-annotations.js",
+      "beforeSha256": "4fd5432c2598ba8b09e13f9849141f0ae8d7ded5c844c3b17973df17ea7c4e0c",
+      "afterSha256": "a58c96e5d01ede825f39a4bc6e29fea94337b34b0b89da628fd0843b29d9ba63",
+      "edits": [
+        {
+          "before": "const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};\nconst btn=(text,fn)=>{const b=el('button',text,'tb-btn');b.type='button';b.addEventListener('click',fn);return b;};\nfunction reset(){root.NobiTextbookInk?.reset();controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}\nfunction mount(app,book,context={}){\n controller?.destroy();controller=null;\n",
+          "after": "const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};\nconst btn=(text,fn)=>{const b=el('button',text,'tb-btn');b.type='button';b.addEventListener('click',fn);return b;};\nfunction reset(){root.NobiTextbookAI?.reset();root.NobiTextbookInk?.reset();controller?.destroy();controller=null;for(const x of books.values())x.model.destroy();books.clear();for(const node of document.querySelectorAll('[data-annotation-anchor]')){node.dataset.annotationColor='none';node.classList.remove('tb-ann-noted','tb-ann-locate');}}\nfunction mount(app,book,context={}){\n controller?.destroy();controller=null;\n"
+        },
+        {
+          "before": " const model=entry.model;let alive=true,picking=false,panel=null,priorFocus=null,uiEpoch=0;\n const live=()=>alive&&model.current();\n const ink=root.NobiTextbookInk?.mount(app,book,{...context,beforeOpen(){close();stopPick();}});\n const nodes=()=>[...app.querySelectorAll('[data-annotation-anchor]')];\n function paint(){if(!live())return;button.hidden=false;const saved=new Map(model.state().items.map(r=>[r.anchor,r]));for(const node of nodes()){\n",
+          "after": " const model=entry.model;let alive=true,picking=false,panel=null,priorFocus=null,uiEpoch=0;\n const live=()=>alive&&model.current();\n const ink=root.NobiTextbookInk?.mount(app,book,{...context,beforeOpen(){close();stopPick();root.NobiTextbookAI?.close();}});\n const ai=root.NobiTextbookAI?.mount(app,book,{...context,beforeOpen(){close();stopPick();root.NobiTextbookInk?.close();}});\n const nodes=()=>[...app.querySelectorAll('[data-annotation-anchor]')];\n function paint(){if(!live())return;button.hidden=false;const saved=new Map(model.state().items.map(r=>[r.anchor,r]));for(const node of nodes()){\n"
+        },
+        {
+          "before": "   if(sending||!live())return;retain();retainTick++;sending=true;save.disabled=true;note.disabled=true;color.disabled=true;status.textContent='保存しています。';\n   try{const r=await model.save({anchor,quote,color:color.value,note:note.value,revision});if(!live())return;revision=r.revision;status.textContent='オンラインに保存しました。';paint();}\n   catch(e){if(!live())return;status.textContent=e.code==='annotation_limit'?'この本の保存上限に達しました。入力は残っています。':e.status===409?'別の端末で更新されています。入力は残っています。最新のメモを確認してください。':e.status===403?'プランが変わったため保存できません。入力は残っています。':'保存できませんでした。入力を残したまま、もう一度保存できます。';\n    if(e.status===409&&e.code!=='annotation_limit'&&!card.querySelector('.tb-ann-conflict')){const compare=btn('最新のメモを確認する',async()=>{try{await load();if(!live())return;const latest=model.state().items.find(r=>r.anchor===anchor);if(!latest)return;revision=latest.revision;card.append(el('p','最新のメモ：'),el('blockquote',latest.note||'（メモなし）'));status.textContent='入力は残っています。内容を比べ、置き換えてよければ保存してください。';}catch(_){if(live())status.textContent='最新のメモを読み込めませんでした。入力は残っています。';}});compare.classList.add('tb-ann-conflict');card.append(compare);}\n   }finally{if(live()){sending=false;save.disabled=false;note.disabled=false;color.disabled=false;}}\n  });card.append(save);note.focus();\n }\n const button=btn('マーカー・メモ',()=>{\n  if(!live())return;root.NobiTextbookInk?.close();if(picking){stopPick();return;}showList();const run=uiEpoch;void load().then(()=>{if(run===uiEpoch)showList();}).catch(()=>{if(run===uiEpoch)showList('読み込めませんでした。保存済みの表示は消していません。');});\n });button.classList.add('tb-ann-button');app.querySelector('.tb-bar-actions')?.append(button);\n function select(e){if(!picking||!live())return;const n=e.target.closest?.('[data-annotation-anchor]');if(!n||!app.contains(n))return;e.preventDefault();e.stopImmediatePropagation();editor(n.dataset.annotationAnchor,n.dataset.annotationQuote);}\n",
+          "after": "   if(sending||!live())return;retain();retainTick++;sending=true;save.disabled=true;note.disabled=true;color.disabled=true;status.textContent='保存しています。';\n   try{const r=await model.save({anchor,quote,color:color.value,note:note.value,revision});if(!live())return;revision=r.revision;status.textContent='オンラインに保存しました。';paint();}\n   catch(e){if(!live())return;status.textContent=e.code==='active_session'?'ログイン状態が変わりました。下書きは残しています。':e.code==='plan_changed'?'プランの利用状態が変わりました。下書きを残したまま利用状態を確認してください。':e.code==='annotation_limit'?'この本の保存上限に達しました。入力は残っています。':e.status===409?'別の端末で更新されています。入力は残っています。最新のメモを確認してください。':e.status===403?'プランが変わったため保存できません。入力は残っています。':'保存できませんでした。入力を残したまま、もう一度保存できます。';\n    if(e.status===409&&!['annotation_limit','plan_changed','active_session'].includes(e.code)&&!card.querySelector('.tb-ann-conflict')){const compare=btn('最新のメモを確認する',async()=>{try{await load();if(!live())return;const latest=model.state().items.find(r=>r.anchor===anchor);if(!latest)return;revision=latest.revision;card.append(el('p','最新のメモ：'),el('blockquote',latest.note||'（メモなし）'));status.textContent='入力は残っています。内容を比べ、置き換えてよければ保存してください。';}catch(_){if(live())status.textContent='最新のメモを読み込めませんでした。入力は残っています。';}});compare.classList.add('tb-ann-conflict');card.append(compare);}\n   }finally{if(live()){sending=false;save.disabled=false;note.disabled=false;color.disabled=false;}}\n  });card.append(save);note.focus();\n }\n const button=btn('マーカー・メモ',()=>{\n  if(!live())return;root.NobiTextbookInk?.close();root.NobiTextbookAI?.close();if(picking){stopPick();return;}showList();const run=uiEpoch;void load().then(()=>{if(run===uiEpoch)showList();}).catch(()=>{if(run===uiEpoch)showList('読み込めませんでした。保存済みの表示は消していません。');});\n });button.classList.add('tb-ann-button');app.querySelector('.tb-bar-actions')?.append(button);\n function select(e){if(!picking||!live())return;const n=e.target.closest?.('[data-annotation-anchor]');if(!n||!app.contains(n))return;e.preventDefault();e.stopImmediatePropagation();editor(n.dataset.annotationAnchor,n.dataset.annotationQuote);}\n"
+        },
+        {
+          "before": "  }}else if(picking&&(e.key==='Enter'||e.key===' '))select(e);}\n app.addEventListener('click',select,true);document.addEventListener('keydown',key,true);\n controller={paint,destroy(){ink?.destroy();alive=false;close();stopPick();button.remove();app.removeEventListener('click',select,true);document.removeEventListener('keydown',key,true);}};\n if(model.state().loaded)paint();else void load().catch(e=>{if(live()&&e.status===404)button.hidden=true;});\n }\n",
+          "after": "  }}else if(picking&&(e.key==='Enter'||e.key===' '))select(e);}\n app.addEventListener('click',select,true);document.addEventListener('keydown',key,true);\n controller={paint,destroy(){ai?.destroy();ink?.destroy();alive=false;close();stopPick();button.remove();app.removeEventListener('click',select,true);document.removeEventListener('keydown',key,true);}};\n if(model.state().loaded)paint();else void load().catch(e=>{if(live()&&e.status===404)button.hidden=true;});\n }\n"
+        }
+      ]
+    }
+  ],
+  "newFiles": [
+    {
+      "file": "site-assets/textbook-ai-model.js",
+      "candidate": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai-model.js",
+      "sha256": "9af9d612c51dcfe92c029d40f09f22fb0192b2706c377e4aee20b82af57e055e"
+    },
+    {
+      "file": "site-assets/textbook-ai.js",
+      "candidate": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai.js",
+      "sha256": "49b4744c71b0792abfaee93d211ef9de2a4f021df2be888c621ca23aeceba8c4"
+    },
+    {
+      "file": "site-assets/textbook-ai.css",
+      "candidate": "tools/candidates/textbook-ai-20261025/service-20261025/ui-candidate/textbook-ai.css",
+      "sha256": "8ac588618a4baf1cfacda8c06ea930a6fe81d2fbcfc074259f74d4ab0bb11661"
+    }
+  ],
+  "uiResult": "tools/candidates/textbook-ai-20261025/service-20261025/ui-book-result.json",
+  "modelResult": "tools/candidates/textbook-ai-20261025/service-20261025/ui-model-result.json"
+}

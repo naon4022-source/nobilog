@@ -1,0 +1,22 @@
+node:fs:561
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/review-practice-choice-order-20261029/clarity/ui-review/screens/review-sector-03-c1-390.png'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.readFileSync (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-candidate-guard.cjs:8:149)
+    at read (evalmachine.<anonymous>:10:71)
+    at prior (evalmachine.<anonymous>:28:69)
+    at evidenceFile (evalmachine.<anonymous>:47:279)
+    at validated (evalmachine.<anonymous>:57:115)
+    at Object.checkMainSource (evalmachine.<anonymous>:71:60)
+    at Object.<anonymous> (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-candidate-guard.cjs:14:22)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/review-practice-choice-order-20261029/clarity/ui-review/screens/review-sector-03-c1-390.png'
+}
+
+Node.js v24.18.0

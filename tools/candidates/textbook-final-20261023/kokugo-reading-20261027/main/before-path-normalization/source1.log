@@ -1,0 +1,15 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs:12
+ const read=f=>{if(!safe(f))throw Error('teaching successor path');return fs.readFileSync(path.join(root,f));};
+                                  ^
+
+Error: teaching successor path
+    at read (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs:12:35)
+    at old (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs:26:30)
+    at validated (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs:27:80)
+    at checkMainSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/checked-successor.cjs:41:14)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/verify-main-integration.mjs:8:14
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.18.0

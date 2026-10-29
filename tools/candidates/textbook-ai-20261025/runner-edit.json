@@ -1,0 +1,8 @@
+{
+  "file": ".claude/verify/run.sh",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/.claude/verify/run.sh",
+  "beforeSha256": "44877dbf3854df4d4174e08aab5ffa9f18cf7b5c3c52fdfbddf35a36e6e781bd",
+  "afterSha256": "40252d560943f74ec76575da140fcfc01867b4eb8460759796df889a621b57c8",
+  "before": "node \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-book.mjs\" || fail=1\n",
+  "after": "node \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-book.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-contexts.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-reader.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-book-signature.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-api.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-three-account-credits.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-access.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-access-ink.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs\" || fail=1\n"
+}

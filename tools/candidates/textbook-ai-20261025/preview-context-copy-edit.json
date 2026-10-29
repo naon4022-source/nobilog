@@ -1,0 +1,18 @@
+{
+  "file": "preview/build.py",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/preview/build.py",
+  "beforeSha256": "78c96d87e7a0ae5cb810b8695d2d95d4dac2a47d4a8f22ea43aadcad2979b91c",
+  "afterSha256": "7dde8516cc4f22983514011cb95b5a2c107fec0ab7240304dad28cac1108aea3",
+  "edits": [
+    {
+      "before": "['textbook-annotations.mjs', 'textbook-ink.mjs', 'textbook-ink-format.cjs']",
+      "after": "['textbook-annotations.mjs', 'textbook-ink.mjs', 'textbook-ink-format.cjs', 'textbook-ai-context.mjs', 'textbook-ai-context-manifest.mjs', 'textbook-ai-context-route.mjs']"
+    },
+    {
+      "before": "'textbook-ai-context-route.mjs']",
+      "after": "'textbook-ai-context-route.mjs', 'textbook-access.mjs']"
+    }
+  ],
+  "scope": "copy four nonadmin context/access modules; no origin/binding/admin/deploy changes",
+  "buildVerification": "deferred until connected-batch full; no repeated intermediate rebuild"
+}

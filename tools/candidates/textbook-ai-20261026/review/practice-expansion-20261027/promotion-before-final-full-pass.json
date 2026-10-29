@@ -1,0 +1,145 @@
+{
+  "status": "individual main checks passed; final standalone full pending",
+  "products": [
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "beforeSha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219",
+      "afterSha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "beforeSha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f",
+      "afterSha256": "c2143fdce5b84ac1981289620c8c551657e0abfe6e3a747c33b71fa2c0d6269d"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "beforeSha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf",
+      "afterSha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "beforeSha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec",
+      "afterSha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "beforeSha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a",
+      "afterSha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "site-assets/review-practice.js",
+      "beforeSha256": "1c3d211912688f75e328937f2ffa2a9c9afb5f4f852a7a3b10c8af8ee39ab17a",
+      "afterSha256": "c7a04f79e42505522dd35f8687ce2c1d052cbdceaeacc594ffb2d3aeb2f435b5"
+    },
+    {
+      "file": "site-assets/review-practice.css",
+      "beforeSha256": "659da9c8c75318eb7be439872f0d1a634b35f1b7f58c1e60ad6a79b5ba27a0b4",
+      "afterSha256": "85fdaf45d06cd76b7e7d3a715efd80fa5b85b6beff8477af4d5511ec76f77678"
+    }
+  ],
+  "verifiers": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-source.cjs",
+      "beforeSha256": "8dccbd1e1041e098da36f1fd360f63a339a70872737361a6817a59e120bbcf6a",
+      "afterSha256": "e5b79b73687069ebcacfba37773f2d00966097f9bb03cc7424facfecb8811601"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/worker-service-source.cjs",
+      "beforeSha256": "c6b5abf156d0ea0396fa541467c155849c89ae62e3e16ec2c1f89919885f44f5",
+      "afterSha256": "f849445121367c97e0fe40e28b83daea1dca5d181ceae94cd3ae700cb4a1689f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/client-source.cjs",
+      "beforeSha256": "165db8841613e08a7aae7083876d6f5fedfa8020fa795605c670d86c93cc6aa0",
+      "afterSha256": "06a5139905aeebdfce98b8d8b0edcd93730464190a56f9c4017b320e2f1e406c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/checked-source.cjs",
+      "beforeSha256": "88bf9aa1eacf0ceba3511a330ff5ab218980a8dfb23a08f6a886c3f243cb0864",
+      "afterSha256": "0f50e50148d34751214bb9a18a903fded0c9435b466abb80bcbf35b157d1ce3e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-integration.mjs",
+      "beforeSha256": "c34e17d5aff23da46c6b47185e1f1e48d6be0bc58f4de27f5425c6b08c6c895e",
+      "afterSha256": "de3a3ce8a13b3bd0d84bfae7d6fd1dcbc797f487bbac92872b8d3bcc960411da"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-main-library.mjs",
+      "beforeSha256": "427f03597c449f2e653ef11df8fa4c32814da197d1d2d0ccf859a5db57b92d3d",
+      "afterSha256": "108c5074b16baef8120278b188d11ba69042d1f73150813402f7f51ecd7f2118"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-route.mjs",
+      "beforeSha256": "bd2e7c7d1071815a8d8641251ac5319a3e5842c6bd3769d7563c82983b354d0d",
+      "afterSha256": "3f48daa78744dcfd3cfbe87bf192f88f46baf8a68a50d3b3c7f6c04767d53b6c"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-practice-browser.mjs",
+      "beforeSha256": "2877bdc821d8cda97e057179d34cfb278c3e8cfecd0027c5a1fcdca41bf45898",
+      "afterSha256": "caaf83dd01bc6a179b3b800e1c0df68d1dce67bc28cb5de3f928125a7e2a4dd6"
+    }
+  ],
+  "receiptSha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9",
+  "isolatedProofSha256": "9b56516151d983a1fa46f1037159c8227edc27437bbc72416640418b85ec80a9",
+  "protected": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-result.json",
+      "sha256": "247788e3b9b6d08c81da3e8df928f9e185a0ed1d167480c72b9f363386af36ec"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-result.json",
+      "sha256": "3118e0d814c49dec8aef5e780200708856535aa4581d60a122bf6b9bfb1a348e"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-main-library-result.json",
+      "sha256": "bd83815804d13c60cce2dbdc0cc9204430e1bf74074699b2e57809e7b0d3a031"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-integration-result.json",
+      "sha256": "99d7981a5cbf60d8b8d6be0fa0ea7b43f15a114b9a53edc440fbd6acb81c96d8"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-390.png",
+      "sha256": "bffe12083aeef485d02afeec79889bee9d1aa649cbd629f9aa1d99ad0261f4f1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-820.png",
+      "sha256": "88147597167ae3ebb0dfc39dd52c376615b4e87f3df3a1cfd8c0b7eb93d80e7d"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-screens/practice-1440.png",
+      "sha256": "d189ba46cc826e5e64101ccf313b6d136558d31cb54d2be4ac962bbbf84fb5e7"
+    },
+    {
+      "file": "site-assets/material-bank.json",
+      "sha256": "0f2c7c4fd4a84311e755d7d22d7f55968966cd321c62b253c0a30c2e7dffab57"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    }
+  ],
+  "scope": "Local main only. Seven reviewed product files and eight exact verifier successors; no bank/grades/auth/admin/provider flags/schedules/publication/commit/deletion changes.",
+  "mainChecks": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-main-library-current-result.json",
+      "checks": 1007,
+      "sha256": "a26f78f38dfcdc9a4b0db18b53c26e647601a92ff4fc4e79ac8f1414b7e81935"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-route-current-result.json",
+      "checks": 125,
+      "sha256": "cc205016a3b1ad29d75b6e42b43d734e2430cebbe63ddeac48379a69b6d0d431"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-integration-current-result.json",
+      "checks": 88,
+      "sha256": "de15c830664c447d729935f41b06415de9ff61834ab27abab79bf2908c730bb6"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-browser-current-result.json",
+      "checks": 199,
+      "sha256": "475527cc41dfccd0bf61c14db1105f0e6be36f652f367f04d07422a6792e821c"
+    }
+  ]
+}

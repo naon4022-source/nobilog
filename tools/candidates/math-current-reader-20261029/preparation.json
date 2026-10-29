@@ -1,0 +1,25 @@
+{
+  "scope": "Reuse complete historical75 movie/AV/scene evidence and actual current public reader. No media generation/decoding or prior proof overwrite. Binder changes only original evidence-root and output-root paths; playback verifier is byte-identical at same directory depth.",
+  "sources": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/bind-current-math-playback.py",
+      "sha256": "9838dd8ee84fe56240ce8e94276f07e77b505bba85341884c2f4847be00e8adf"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/verify-current-math-playback.mjs",
+      "sha256": "13622c3ed98538e0f91c7a5edf038618a49ce7f5f7b5bf595e5561ef13227d8b"
+    }
+  ],
+  "binderEdits": [
+    {
+      "before": "H=Path(__file__).resolve().parent;R=H.parents[2];S=",
+      "after": "OUT=Path(__file__).resolve().parent;R=OUT.parents[2];H=R/'tools/candidates/textbook-final-20261023';S="
+    },
+    {
+      "before": "(H/'current-math-playback-manifest.json').write_text",
+      "after": "(OUT/'current-math-playback-manifest.json').write_text"
+    }
+  ],
+  "binderSha256": "d5f257de803cdff6c5b69d637801ba0b834da03c7045ab24ef6693b70c072edd",
+  "playbackSha256": "13622c3ed98538e0f91c7a5edf038618a49ce7f5f7b5bf595e5561ef13227d8b"
+}

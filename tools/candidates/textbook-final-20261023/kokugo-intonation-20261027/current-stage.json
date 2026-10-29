@@ -1,0 +1,84 @@
+{
+  "status": "one corrected chapter2 video candidate AV/frame/book checks passed; main not integrated",
+  "id": "K1-C2-S5-VP",
+  "group": "videos-caption-v4",
+  "seconds": 40.666,
+  "fps": 30,
+  "frames": 1220,
+  "visualSamples": 29,
+  "playbackChecks": 64,
+  "widths": [
+    390,
+    820,
+    1180,
+    1440
+  ],
+  "movieSha256": "aac93107d5ddc6bf8ec3a6a0456ee369a1e8f8ae56d1d1c62cc50751faa8109e",
+  "combinedBookSha256": "664e3d8358646b695f1c232d545435afda6a00a3e42ddd3e47d726c129237c67",
+  "bookReference": "/textbook-book-kokugo1-k1-c2-s5-vp.mp4",
+  "proofs": [
+    {
+      "file": "v4-display-repair.json",
+      "sha256": "9a1d83a8667306cfd4f082c20476c813a76bf6240a0e395ed24e283c9fc49d90"
+    },
+    {
+      "file": "scene-caption-v4-result.json",
+      "sha256": "3afb77b028b454189ce1077c5a21a941e22f94122c035ed2f51ba1682d44db44"
+    },
+    {
+      "file": "videos-caption-v4/K1-C2-S5-VP/technical-media-result.json",
+      "sha256": "67eac8b18d52bd461ccd27f296e3eb29eae969d039eab94291aca8d5a8f00ed5"
+    },
+    {
+      "file": "actual-review-caption-v4/visual-review.json",
+      "sha256": "d46c1ea131f5bf02acd4e6ae73acee8e8fd03432804eb53d3a53fc635dc5ae18"
+    },
+    {
+      "file": "playback-v4-result.json",
+      "sha256": "0d9fdaa01c322a5bcba6797220ec5a845cd4f1613742e43b0e9c78ec3b382dc4"
+    }
+  ],
+  "directlyViewedPlayingScreenshots": [
+    {
+      "width": 390,
+      "file": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/playback-v4-screens/K1-C2-S5-VP-390-playing.png",
+      "sha256": "4178e68fe2180cdaf1438456bdc44b322ff2cfb3f3ce2a582a3c3111f563c19a"
+    },
+    {
+      "width": 820,
+      "file": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/playback-v4-screens/K1-C2-S5-VP-820-playing.png",
+      "sha256": "695f6fa5b55e42596c59fac39576c91a847981a884e589f8848f4356feb4757e"
+    },
+    {
+      "width": 1180,
+      "file": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/playback-v4-screens/K1-C2-S5-VP-1180-playing.png",
+      "sha256": "97a4704ada6372cfca4986aebbe4c66ab80ef11f52958d37ee267f069cff4bb4"
+    },
+    {
+      "width": 1440,
+      "file": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/playback-v4-screens/K1-C2-S5-VP-1440-playing.png",
+      "sha256": "60153173dcb8828048473c0d56ae8ff2eef22d67ad4bda6a1023407323adca51"
+    }
+  ],
+  "pendingMainBindings": [
+    {
+      "file": "教材整理/Claude_Codex共有/国語全体制作/メディア/K1-C2-S5-VP.mp4",
+      "beforeSha256": "109674567656e0718254997b2c1be79a5cb681507ae9bd764dec60362ca7d738",
+      "candidate": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/videos-caption-v4/K1-C2-S5-VP/candidate.mp4",
+      "afterSha256": "aac93107d5ddc6bf8ec3a6a0456ee369a1e8f8ae56d1d1c62cc50751faa8109e"
+    },
+    {
+      "file": "site-assets/textbook-book-kokugo1-k1-c2-s5-vp.mp4",
+      "beforeSha256": "109674567656e0718254997b2c1be79a5cb681507ae9bd764dec60362ca7d738",
+      "candidate": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/videos-caption-v4/K1-C2-S5-VP/candidate.mp4",
+      "afterSha256": "aac93107d5ddc6bf8ec3a6a0456ee369a1e8f8ae56d1d1c62cc50751faa8109e"
+    }
+  ],
+  "previousV3": "retained; AV/functional checks passed but generic-card role regression not approved",
+  "remaining": [
+    "Source/runtime promotion after complete remaining6-topic group",
+    "Post-integration standalone global verification",
+    "Physical-device/fullscreen and human listening not claimed"
+  ],
+  "scope": "Exact source candidate binds to both planned media paths with same SHA. Current main still old movie; no publishing/commit/deletion/API/user records."
+}

@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/nonadmin-ai-reader-successor-20261029/main/predecessor-view/教材整理/Claude_Codex共有/国語全体制作/原稿/u01.py

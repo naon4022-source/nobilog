@@ -1,0 +1,19 @@
+node:fs:561
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-review-practice-data.mjs'
+    at Object.openSync (node:fs:561:18)
+    at Object.readFileSync (node:fs:445:35)
+    at Object.readFileSync (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/main/check-expansion.cjs:12:23)
+    at readAt (tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs:12:93)
+    at Object.checkExpansionSource (tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/checked-source.cjs:21:15)
+    at Object.checkExpansionSource (/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/main/check-expansion.cjs:19:127)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:14:25 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/before/ai-review-practice-data.mjs'
+}
+
+Node.js v24.18.0

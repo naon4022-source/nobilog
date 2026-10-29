@@ -1,0 +1,31 @@
+{
+ "status": "published and verified",
+ "version": "2.17.1",
+ "publicBaseline": "2.17.0",
+ "workerVersionId": "bea2213e-d54d-4a1a-80f8-d4c1ee304b7f",
+ "pagesDeployment": "https://bd516e7b.nobilog.pages.dev",
+ "changes": [
+  "のびログ・ガード（guard.mjs）：攻撃パターン403・未知パス404・スキャン/攻撃/大量アクセスのIPを1時間ブロック（IPはHMACで記録）・PUT/DELETE等405・大きすぎる送信413・回数制限（ログイン入口20/分・全体600/分。Cloudflare部品＋メモリ）",
+  "全返事に守りのヘッダー・CORSを本物のアプリだけに",
+  "本番でlocalhostからの呼び出しを拒否",
+  "古い版のURL（preview_urls）を閉じた",
+  "Googleからメールアドレスを受け取らない（scope openid profile）",
+  "Google/LINEのIDはHMACで保存。前の形はログイン時に移して行ごと削除",
+  "画面：Chart.jsを外部CDNから読まず、npm公式と照合したv4.4.1を同梱しSRI付きで読む。CSPでスクリプトの読み込み先をアプリ自身とTurnstileに限定"
+ ],
+ "failedAttempts": [
+  "1・2回目：Cloudflareの回数制限の部品が本番で数えず、公開後確認で429が出なかったため自動で2.17.0へ戻した（本番への影響は数分の強化版の稼働のみ）。メモリでの数えを追加して3回目で成功"
+ ],
+ "files": {
+  "candidate/cf-worker/src/index.js": "157b6212d5a6ea440647c3f2e546745067659cb8020a1830f1cb2aed784d3ed6",
+  "candidate/cf-worker/src/guard.mjs": "8f42b711c63b28b15a107c09c92af4d429c3ca927eb14b63beb019007a361296",
+  "candidate/cf-worker/wrangler.jsonc": "da5f99a46a07d086ad2430e8add3e6042b3a6ed2d401ec77c583b0872fb15347",
+  "candidate/pages/index.html": "a4ebb2e7945e8e66e3f59b074e6200762930441b95de0e2687a1fb5e77e4684a",
+  "candidate/pages/_headers": "e5c994af751bd38c34b29b5ac26d1b2bd04a45fe5212f0f3d38f5a4eddf287a7",
+  "candidate/pages/vendor/chart-4.4.1.umd.js": "74401d738dd3e03ee5dfb3b6841210fe2c4ead8a960c4011ca4ba0b78a9fd8f3"
+ },
+ "notInBigUpdateYet": "手元の大型更新（2.51.0）にはまだ入っていない。大型更新を公開する前に取り込む必要がある",
+ "logs": [
+  "/tmp/nobi-security-deploy3-20261022.log"
+ ]
+}

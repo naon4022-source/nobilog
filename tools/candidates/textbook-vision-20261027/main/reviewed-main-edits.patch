@@ -1,0 +1,81 @@
+--- before/index.html
++++ candidate/index.html
+@@ -51,6 +51,13 @@
+     <link rel="stylesheet" href="/textbook-ai.css">
+     <script src="/textbook-ai-model.js" defer></script>
+     <script src="/textbook-ai.js" defer></script>
++    <link rel="stylesheet" href="/textbook-vision.css">
++    <script src="/textbook-vision-model.js" defer></script>
++    <script src="/textbook-vision-capture.js" defer></script>
++    <script src="/textbook-vision-api.js" defer></script>
++    <script src="/textbook-vision-panel.js" defer></script>
++    <script src="/textbook-vision-boot.js" defer></script>
++    <script type="module" src="/textbook-vision-media-browser.mjs"></script>
+     <link rel="stylesheet" href="/test-review.css">
+     <script src="/test-review-model.js" defer></script>
+     <script src="/test-review-cards.js" defer></script>
+--- before/cf-worker/src/index.js
++++ candidate/cf-worker/src/index.js
+@@ -1792,6 +1792,18 @@
+     if(path==='/material-test-session'){
+       const {testSessionRoute}=await import('./ai-test-session-route.mjs');
+       return scopedApiResponse(await testSessionRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);
++    }
++    if(path==='/textbook-ai-vision-context'){
++      const {textbookVisionContextRoute}=await import('./textbook-vision-context-route.mjs');
++      return scopedApiResponse(await textbookVisionContextRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);
++    }
++    if(path==='/textbook-ai/images'||path==='/textbook-ai/image'){
++      const {textbookVisionImagesRoute}=await import('./textbook-vision-images-route.mjs');
++      return scopedApiResponse(await textbookVisionImagesRoute(request,env,session,{owner:await opaqueKey(session.token)}),env);
++    }
++    if(path==='/textbook-ai-vision'){
++      const {textbookVisionAIRoute}=await import('./textbook-vision-route.mjs');
++      return scopedApiResponse(await textbookVisionAIRoute(request,env,session,{owner:await opaqueKey(session.token),fetcher:fetch}),env);
+     }
+     if(path==='/textbook-ai-chat'){
+       const {textbookAIRoute}=await import('./textbook-ai-route.mjs');
+--- before/preview/build.py
++++ candidate/preview/build.py
+@@ -100,6 +100,8 @@
+     shutil.copyfile(ROOT / 'site-assets/problem-pdf.mjs', DEST / 'problem-pdf.mjs')
+     shutil.copyfile(ROOT / 'cf-worker/src/achievements.mjs', DEST / 'achievements.mjs')
+     shutil.copyfile(ROOT / 'cf-worker/src/subscription-credits.mjs', DEST / 'subscription-credits.mjs')
++    for name in ["textbook-vision-input.mjs","textbook-vision-transport.mjs","textbook-vision-operation.mjs","textbook-vision-images-route.mjs","textbook-vision-service.mjs","textbook-vision-context.mjs","textbook-vision-route.mjs","textbook-vision-media-context.mjs","textbook-vision-media-manifest.mjs","textbook-vision-context-reader.mjs","textbook-vision-context-route.mjs"]:
++        shutil.copyfile(ROOT / 'cf-worker/src' / name, DEST / name)
+     for name in ['textbook-annotations.mjs', 'textbook-ink.mjs', 'textbook-ink-format.cjs', 'textbook-ai-context.mjs', 'textbook-ai-context-manifest.mjs', 'textbook-ai-context-route.mjs', 'textbook-access.mjs', 'textbook-ai-chat-content.mjs', 'textbook-ai-chat-context.mjs', 'textbook-ai-service.mjs', 'textbook-ai-quota.mjs', 'textbook-ai-refund.mjs', 'textbook-ai-history.mjs', 'textbook-ai-route.mjs', 'ai-test-session.mjs', 'ai-test-session-route.mjs', 'ai-test-review-format.mjs', 'ai-test-review-content.mjs', 'ai-test-review-credits.mjs', 'ai-test-review-jobs.mjs', 'ai-test-review-service.mjs', 'ai-test-review-route.mjs', 'openai-priced-operation.mjs']:
+         shutil.copyfile(ROOT / 'cf-worker/src' / name, DEST / name)
+     for name in ['ai-review-practice-data.mjs','ai-review-practice-library.mjs','ai-review-practice-route.mjs']:
+--- before/site-assets/sw.js
++++ candidate/site-assets/sw.js
+@@ -72,7 +72,7 @@
+   let url;
+   try { url = new URL(req.url); } catch (err) { return; }
+   // 本人の添付画像は、独自ドメインや同一オリジンでも端末キャッシュに入れない。
+-  if (/(?:^|\/)(?:material-test-(?:session|review)|textbook-(?:annotations|ink|ai-context|ai-chat)|learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
++  if (/(?:^|\/)(?:material-test-(?:session|review)|textbook-(?:annotations|ink|ai-context|ai-chat|ai-vision(?:-context)?|ai)|learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
+ 
+   // ★同期サーバーには一切さわらない（古い記録・古いDMを出さないため）
+   if (url.hostname.endsWith('workers.dev')) return;
+--- before/.claude/verify/run.sh
++++ candidate/.claude/verify/run.sh
+@@ -170,6 +170,8 @@
+ node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-model.mjs" || fail=1
+ node "$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-book.mjs" || fail=1
+ node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-contexts.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-vision-20261027/main/verify-main-book.mjs" || fail=1
+ node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-reader.mjs" || fail=1
+ node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-book-signature.mjs" || fail=1
+ node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-api.mjs" || fail=1
+--- before/tools/candidates/textbook-ai-20261026/review/practice-source.cjs
++++ candidate/tools/candidates/textbook-ai-20261026/review/practice-source.cjs
+@@ -2,7 +2,7 @@
+ const ROOT=path.resolve(__dirname,'../../../..'),base='tools/candidates/textbook-ai-20261026/review/',sha=v=>crypto.createHash('sha256').update(v).digest('hex');
+ const expansionHelper='./practice-expansion-20261027/checked-source.cjs';
+ if(sha(fs.readFileSync(path.join(__dirname,expansionHelper)))!=='f212e47e3dd56ff90a5490d0ee91a85fbd5786bc59ff17b5745a631ab6a853e7')throw Error('expansion helper drift');
+-const {checkExpansionSource,expansionDependencyFiles}=require(expansionHelper);
++const {checkExpansionSource,expansionDependencyFiles}=require('../../textbook-vision-20261027/main/check-expansion.cjs');
+ function checkPracticeSource(root=ROOT){
+  const expansion=checkExpansionSource(root),read=f=>expansion.get(f)||fs.readFileSync(path.join(root,f)),receipt=JSON.parse(read(base+'practice-integration.json')),map=new Map();
+  const files=['cf-worker/src/index.js','preview/build.py','cf-worker/src/ai-test-review-content.mjs','index.html','site-assets/test-review.js'];

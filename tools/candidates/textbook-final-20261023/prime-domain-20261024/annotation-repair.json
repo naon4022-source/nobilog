@@ -1,0 +1,58 @@
+{
+  "status": "two targeted annotation checks and three negative checks passed; full rerun pending",
+  "reason": "Approved one-sentence correction changes one marker quote/identity. Preserve historical2724 layout comparison and separately prove actual2723 stability, correct new identity and retained synthetic old note. Runtime model intentionally rejects changed quotes; do not weaken it.",
+  "files": [
+    {
+      "file": "tools/candidates/math-ch3-recheck-20261019/verify-layout-candidate.mjs",
+      "beforeSha256": "9ca22559fce3f1272b976e415fed9c56086ac8f6d326213717bf817a60142f9b",
+      "candidate": "tools/candidates/textbook-final-20261023/prime-domain-20261024/annotation-candidate/verify-layout-candidate.mjs",
+      "afterSha256": "27a512ca6544470cc58ca59a009d912486298c68482c1e9f9d88d044a6b20114"
+    },
+    {
+      "file": "tools/candidates/math-ch5-recheck-20261019/verify-answer-anchors.mjs",
+      "beforeSha256": "a1795b08fcbb897c84c78fa2ebba07e0da284088c983abc59716bb793e5a41db",
+      "candidate": "tools/candidates/textbook-final-20261023/prime-domain-20261024/annotation-candidate/verify-answer-anchors.mjs",
+      "afterSha256": "e0d3961a26d5bfb2f53e9dc21e5854ba57ab33df13f56aa20fd1e534ec2b1150"
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/approved-domain-annotations.mjs",
+      "beforeSha256": null,
+      "candidate": "tools/candidates/textbook-final-20261023/prime-domain-20261024/annotation-candidate/approved-domain-annotations.mjs",
+      "afterSha256": "99b8dab5753985e21faa607852e0db78a7fbb74d9ff85de8bd36a6f2fc0de39c"
+    }
+  ],
+  "failedFullSession": 87773,
+  "observedFullExit": 143,
+  "runtimeChanged": false,
+  "targetedResults": [
+    {
+      "path": "tools/candidates/math-ch3-recheck-20261019/layout-candidate/annotation-integrated-result.json",
+      "sha256": "1811fa9a001c97e01470a1220c1f554d325090c18195a346d6d7b10c9635016a",
+      "status": "passed"
+    },
+    {
+      "path": "tools/candidates/math-ch5-recheck-20261019/answer-anchors-integrated-result.json",
+      "sha256": "f72487273f5216c7ba804588bc5138b21dad34f9ece532438a814418cf36e51a",
+      "status": "passed"
+    },
+    {
+      "path": "tools/candidates/textbook-final-20261023/prime-domain-20261024/annotation-negative-result.json",
+      "sha256": "39eefca2d56866195d0c3efa4b772aacbc88b18a7d40f58e83f7566f7f0d3bfb",
+      "status": "passed"
+    }
+  ],
+  "annotationModelSha256Unchanged": "fc06f2082baf9774a91c890c715f5a87521ae6273916eabb2ab3821abeb91106",
+  "scopedChecks": {
+    "chapter3": {
+      "observedExit": 0,
+      "session": 63885
+    },
+    "chapter5": {
+      "observedExit": 0
+    },
+    "negative": {
+      "observedExit": 0,
+      "checks": 3
+    }
+  }
+}

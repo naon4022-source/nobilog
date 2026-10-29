@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.textContent: Error: strict mode violation: locator('.tb-ann-record').filter({ hasText: 'Synthetic retained note 1' }).locator('blockquote') resolved to 4 elements:
+    1) <blockquote>「誕生日はいつ？」は、どう聞くの？↵When is your birthday? 答えは It's…</blockquote> aka getByText('「誕生日はいつ？」は、どう聞くの？ When is')
+    2) <blockquote>名詞があるか確かめる：①apple あり、②なし。↵名詞あり→ What a 〜!、なし→ How…</blockquote> aka getByText('名詞があるか確かめる：①apple')
+    3) <blockquote>名詞があるか、指でさがす。あれば What、なければ How。↵最後は「!」で終わる。</blockquote> aka getByText('名詞があるか、指でさがす。あれば What、なければ')
+    4) <blockquote>新しい教室で、Aya・Kenta・Mei・Bob と先生たちが笑顔であいさつしている</blockquote> aka getByLabel('教科書のマーカー・メモ').getByText('新しい教室で、Aya・Kenta・Mei・Bob')
+
+Call log:
+[2m  - waiting for locator('.tb-ann-record').filter({ hasText: 'Synthetic retained note 1' }).locator('blockquote')[22m
+
+    at /Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/verify-note-ui.mjs:55:42 {
+  log: [
+    "  - waiting for locator('.tb-ann-record').filter({ hasText: 'Synthetic retained note 1' }).locator('blockquote')"
+  ]
+}
+
+Node.js v24.18.0

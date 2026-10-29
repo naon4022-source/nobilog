@@ -1,0 +1,139 @@
+--- build-textbook-book.py before
++++ build-textbook-book.py candidate
+@@ -79,7 +79,7 @@
+     caption = re.sub(r'（[^）]*）', '', clean(caption or ''))
+     return {'t': 'fig', 'kind': 'scene' if kind == '絵' else 'diagram', 'src': ('/' + out) if out else None, 'caption': caption}
+ 
+-def parse_blocks(lines):
++def parse_blocks(lines, in_answer=False):
+     blocks, para, i = [], [], 0
+     def flush():
+         if para: blocks.append({'t': 'p', 'x': clean(' '.join(para))}); para.clear()
+@@ -90,14 +90,17 @@
+             flush(); i += 1; continue
+         m = FIG.match(s)
+         if m:
+-            flush(); blocks.append(figure(m.group(1), m.group(2), m.group(3))); i += 1; continue
++            flush()
++            # An authored answer figure reuses its media identity and specification.
++            authored = next((item for ex in extras.values() for item in ex.get('media', []) if item['id'] == m.group(2)), None) if in_answer else None
++            blocks.append(media_block(authored) if authored else figure(m.group(1), m.group(2), m.group(3))); i += 1; continue
+         if s.startswith('<details>'):
+             flush(); buf = [s]
+             while '</details>' not in buf[-1] and i + 1 < len(lines):
+                 i += 1; buf.append(lines[i].rstrip())
+             raw = '\n'.join(buf)
+             mm = re.match(r'<details><summary>(.*?)</summary>(.*)</details>', raw, re.S)
+-            body = parse_blocks(mm.group(2).strip().split('\n')) if mm else []
++            body = parse_blocks(mm.group(2).strip().split('\n'), in_answer=True) if mm else []
+             blocks.append({'t': 'details', 'summary': clean(mm.group(1)) if mm else '答え', 'body': body}); i += 1; continue
+         if s.startswith('#### '):
+             flush(); blocks.append({'t': 'h4', 'x': clean(s[5:])}); i += 1; continue
+@@ -181,6 +184,9 @@
+         elif f.exists():
+             src = '/textbook-book-' + BOOK + '-' + m['id'].lower() + '.' + ('jpg' if ext == 'png' else ext); break
+     return {'t': 'media', 'kind': m['kind'], 'id': m['id'], 'title': m['title'], 'src': src}
++def contains_media(blocks, slot):
++    return any((b.get('t') == 'media' and b.get('id') == slot) or contains_media(b.get('body', []), slot) for b in blocks)
++
+ def apply_extras(unit, page):
+     ex = extras.get(unit)
+     if not ex: return
+@@ -190,6 +196,8 @@
+     for h in ex.get('hooks', []):
+         if h['pid'] == pid: page['blocks'].insert(0, {'t': 'hook', 'x': h['x']})
+     for m in ex.get('media', []):
++        # A figure explicitly placed inside an answer must not also appear outside it.
++        if contains_media(page['blocks'], m['id']): continue
+         if m['pid'] == pid or (m['pid'] == 'POINTS' and page.get('kind') == 'points'):
+             # "at": "top" の枠は、めあて・吹き出しのすぐ後ろ（ページの最初のほう）に置く
+             if m.get('at') == 'top': page['blocks'].insert(next((i for i, b in enumerate(page['blocks']) if b.get('t') not in ('goal', 'hook')), len(page['blocks'])), media_block(m))
+--- 本文.md before
++++ 本文.md candidate
+@@ -366,16 +366,32 @@
+ ### つまずきの比較
+ | まちがい | 正しい考え方 |
+ |---|---|
++| 5÷0＝0 | 0 でわることはできない |
++
++### 考え方付き確認
++**確認5-1**　(−4.8)÷0.6
++<details><summary>答えと解説</summary>
++
++−8。ちがう符号で −。4.8÷0.6＝8。
++
++| まちがい | 正しい考え方 |
++|---|---|
++| (−4.8)÷0.6＝8 | ちがう符号なので − |
++
++</details>
++
++**確認5-2**　0÷(−5)
++<details><summary>答えと解説</summary>
++
++0。
++
++| まちがい | 正しい考え方 |
++|---|---|
+ | 0÷(−5)＝−5 | 0 をわると 0 |
+-| 5÷0＝0 | 0 でわることはできない |
+-| (−4.8)÷0.6＝8 | ちがう符号なので − |
+-
+-### 考え方付き確認
+-**確認5-1**　(−4.8)÷0.6
+-<details><summary>答えと解説</summary>−8。ちがう符号で −。4.8÷0.6＝8。</details>
+-
+-**確認5-2**　0÷(−5)
+-<details><summary>答えと解説</summary>0。</details>
++
++［図 M1-C1-S2-M05（よくあるまちがい）をここに表示］
++
++</details>
+ 
+ **確認5-3**　(−3/8)×(−4/9)
+ <details><summary>ヒント1</summary>3 と 9、8 と 4 で約分してから。</details>
+@@ -440,12 +456,21 @@
+ ### つまずきの比較
+ | まちがい | 正しい考え方 |
+ |---|---|
++| 48÷(−4)÷2 を、先に (−4)÷2 から計算する | 左から順に、または全部をかけ算に直す |
++
++### 考え方付き確認
++**確認6-1**　次の数の逆数を答えなさい。（1）−9/2　（2）1
++<details><summary>答えと解説</summary>
++
++（1）−2/9　（2）1。1×1＝1 なので、1 の逆数は 1。
++
++| まちがい | 正しい考え方 |
++|---|---|
+ | −9/2 の逆数を 2/9 とする | 逆数の符号は元と同じ → −2/9 |
+-| 48÷(−4)÷2 を、先に (−4)÷2 から計算する | 左から順に、または全部をかけ算に直す |
+-
+-### 考え方付き確認
+-**確認6-1**　次の数の逆数を答えなさい。（1）−9/2　（2）1
+-<details><summary>答えと解説</summary>（1）−2/9　（2）1。1×1＝1 なので、1 の逆数は 1。</details>
++
++［図 M1-C1-S2-M06（よくあるまちがい）をここに表示］
++
++</details>
+ 
+ **確認6-2**　(−2)×(−3)×(−5)×(−1)
+ <details><summary>答えと解説</summary>30。負の数4個（偶数）→ +。2×3×5×1＝30。</details>
+--- media-pages.mjs before
++++ media-pages.mjs candidate
+@@ -11,8 +11,13 @@
+  const p=await browser.newPage({viewport:{width:1440,height:900}});
+  await p.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());
+  await p.goto('http://127.0.0.1:'+server.address().port+'/');await p.getByRole('button',{name:'全画面で教科書を開く'}).click();await p.getByRole('button',{name:'数学 1を開く'}).click();await p.locator('.tb-spread').waitFor({timeout:180000});
+- const map=await p.evaluate(()=>{const out={},ph=NobiTextbook._state.book.phys;ph.forEach(d=>{for(const b of d.blocks||[])if(b&&b.t==='media'&&b.id){const n=d.n,a=n%2===0?n:n-1;out[b.id]={page:n,spread:n===1?'数1':'数'+a+'-'+Math.min(a+1,ph.length)};}});return {pages:ph.length,media:out};});
+- map.generatedAt=new Date().toISOString().slice(0,10);
++ const map=await p.evaluate(()=>{const out={},ph=NobiTextbook._state.book.phys;
++  function walk(blocks,page,inAnswer=false){for(const b of blocks||[]){
++   if(b&&b.t==='media'&&b.id){const n=page.n,a=n%2===0?n:n-1;out[b.id]={page:n,spread:n===1?'数1':'数'+a+'-'+Math.min(a+1,ph.length),...(inAnswer?{inAnswer:true}:{})};}
++   if(b&&Array.isArray(b.body))walk(b.body,page,inAnswer||b.t==='details');
++  }}
++  for(const page of ph)walk(page.blocks,page);return {pages:ph.length,media:out};});
++ map.generatedAt=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'});
+  await writeFile(new URL('教材整理/Claude_Codex共有/数学全体制作/メディアの置き場所.json',root),JSON.stringify(map,null,1));
+  console.log('media placed:',Object.keys(map.media).length,'pages:',map.pages);
+ }finally{await browser.close();server.close();}

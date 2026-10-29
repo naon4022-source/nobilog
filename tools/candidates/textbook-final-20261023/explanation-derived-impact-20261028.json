@@ -1,0 +1,148 @@
+{
+  "status": "read-only source dependency map; no rendering/approval",
+  "topics": [
+    {
+      "unit": "K1-C1-S1",
+      "title": "聞くということ",
+      "author": "教材整理/Claude_Codex共有/国語全体制作/原稿/u01.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": false,
+      "affectedDP": "K1-C1-S1-DP",
+      "authoredScriptCandidates": [
+        "K1-C1-S1-V01",
+        "K1-C1-S1-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "K1-C1-S1-V01",
+        "K1-C1-S1-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "K1-C2-S5",
+      "title": "構成を考えて話す・日本語の音声",
+      "author": "教材整理/Claude_Codex共有/国語全体制作/原稿/u02.py",
+      "changedFields": [
+        "sum"
+      ],
+      "dpUsesTable": false,
+      "affectedDP": null,
+      "authoredScriptCandidates": [
+        "K1-C2-S5-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "K1-C2-S5-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "K1-C6-S1",
+      "title": "河童と蛙",
+      "author": "教材整理/Claude_Codex共有/国語全体制作/原稿/u06.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": false,
+      "affectedDP": "K1-C6-S1-DP",
+      "authoredScriptCandidates": [
+        "K1-C6-S1-V01",
+        "K1-C6-S1-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "K1-C6-S1-V01",
+        "K1-C6-S1-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "K1-C7-S3",
+      "title": "漢字の音と訓",
+      "author": "教材整理/Claude_Codex共有/国語全体制作/原稿/u07.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": true,
+      "affectedDP": null,
+      "authoredScriptCandidates": [
+        "K1-C7-S3-V01",
+        "K1-C7-S3-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "K1-C7-S3-V01",
+        "K1-C7-S3-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "K1-C8-S4",
+      "title": "単語のいろいろ",
+      "author": "教材整理/Claude_Codex共有/国語全体制作/原稿/u08.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": true,
+      "affectedDP": null,
+      "authoredScriptCandidates": [
+        "K1-C8-S4-V01",
+        "K1-C8-S4-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "K1-C8-S4-V01",
+        "K1-C8-S4-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "E1-L2-S3",
+      "title": "When 〜? と be動詞・一般動詞の整理",
+      "author": "教材整理/Claude_Codex共有/英語全体制作/原稿/u02.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": true,
+      "affectedDP": null,
+      "authoredScriptCandidates": [
+        "E1-L2-S3-V01",
+        "E1-L2-S3-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "E1-L2-S3-V01"
+      ],
+      "unreferencedScriptCandidates": [
+        "E1-L2-S3-VP"
+      ],
+      "skipCompletedUnrelatedFigures": true
+    },
+    {
+      "unit": "E1-L8-S2",
+      "title": "What 〜! / How 〜!（感嘆文）",
+      "author": "教材整理/Claude_Codex共有/英語全体制作/原稿/u08.py",
+      "changedFields": [
+        "easy"
+      ],
+      "dpUsesTable": false,
+      "affectedDP": "E1-L8-S2-DP",
+      "authoredScriptCandidates": [
+        "E1-L8-S2-V01",
+        "E1-L8-S2-VP"
+      ],
+      "currentlyReferencedScripts": [
+        "E1-L8-S2-V01",
+        "E1-L8-S2-VP"
+      ],
+      "unreferencedScriptCandidates": [],
+      "skipCompletedUnrelatedFigures": true
+    }
+  ],
+  "source": "hints.py dp uses compact table when present, otherwise easy or sum; worked videos use easy tip, summary videos use sum/easy. Main book/context signatures must be rebuilt from current sources after final verification.",
+  "affectedDPCount": 3,
+  "currentlyReferencedMovieCount": 12,
+  "noMainWrites": true
+}

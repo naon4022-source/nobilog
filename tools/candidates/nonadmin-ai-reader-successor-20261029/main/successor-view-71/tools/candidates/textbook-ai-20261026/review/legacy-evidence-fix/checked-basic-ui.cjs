@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-ai-20261026/review/legacy-evidence-fix/checked-basic-ui.cjs

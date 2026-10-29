@@ -1,0 +1,303 @@
+{
+  "status": "current scoped evidence and remaining work; not whole-project completion",
+  "evidence": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/approved-panel-result.json",
+      "sha256": "12b69cf117105666600faec6408d090ac30d62e3759e7e9481bac92609c19e12",
+      "status": "passed",
+      "checks": 103
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/source-current-result.json",
+      "sha256": "2b2b9fb2ce818512d7ab412eae1b06ab6bae9bfdf469a1b7bed6ce7f5f0cf17f",
+      "status": "passed",
+      "checks": 44
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/dry-run-result.json",
+      "sha256": "7b7bf0f53a1161bb7d2b64143ba32d01b4802fbdd3a433faa24577ce5e33be0e",
+      "status": "passed",
+      "checks": null
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/main-integration.json",
+      "sha256": "3cedfa793b2c372dd1bfcfbcb59d624e211f17e389dba570ca4ec962e2436af9",
+      "status": "reviewed successor; current integration status recorded separately",
+      "checks": null
+    },
+    {
+      "file": "AI連絡/Claude連携_20261027_検定修正依頼.json",
+      "sha256": "0e95bdd0d5520c293c545a62442d921a007b966eb475a018c9eea415346f4390",
+      "status": "previous evidence matched; new correction task sent once and executing visibly",
+      "checks": null
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/current-panel-result.json",
+      "sha256": "e51961b86066f0ad83d424daebb1a488adaea6eb51ac8cc7a089217bd961f62f",
+      "status": "passed",
+      "checks": 103,
+      "note": "Current proof from canonical source-repair/full7 cycle; earlier entries retained as history."
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/main/source-current-result.json",
+      "sha256": "9e45a80c171433c6bcc7073be96c7cb6363c726a526229dc6054dd54a567ea37",
+      "status": "passed",
+      "checks": 49,
+      "note": "Current proof from canonical source-repair/full7 cycle; earlier entries retained as history."
+    },
+    {
+      "file": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/full7-result.json",
+      "sha256": "4df294a7ed14ada0d19ff0bd37c84b7c264369564747f1e288636b1349f0a933",
+      "status": "passed",
+      "checks": null
+    }
+  ],
+  "next": [
+    {
+      "id": "VISION-FULL",
+      "owner": "Codex",
+      "state": "passed exit0;1161 frozen inputs unchanged",
+      "next": "Keep full5 as completed main image-AI baseline; later candidate integration needs final standalone whole verification.",
+      "receipt": "tools/candidates/textbook-vision-20261027/main/full5-result.json"
+    },
+    {
+      "id": "KENTEI-CANDIDATE",
+      "owner": "Claude existing chat",
+      "state": "candidate report complete;47 manifest artifacts match; main integration pending",
+      "next": "Compare current candidate engine diff/IDs and actual213-input evidence before integration; new candidate versions preserve old learner IDs."
+    },
+    {
+      "id": "SUBSCRIPTION-REAL",
+      "owner": "Codex",
+      "state": "pending external evidence",
+      "next": "Actual provider answer quality/latency/settlement and contractual consent wording need explicit permitted real-provider validation; fake provider success is insufficient."
+    },
+    {
+      "id": "TEXTBOOK-OTHER-MEDIA",
+      "owner": "Codex",
+      "state": "9 native speech candidates/61 scene preflight complete; two render lanes active, completed outputs need AV/frame/book approval",
+      "next": "Keep2 current render lanes; do not remake completed math75 or Claude math19; exact final6-topic integration remains pending."
+    },
+    {
+      "id": "MATH-DRILL-CANDIDATE",
+      "owner": "Claude existing chat",
+      "state": "previous5units350 questions candidate complete;175 artifacts hash matched;next batch26 executing",
+      "next": "Claude now works hist1/hist2/hist3 then geometry15 in new isolated folder; do not interrupt or duplicate.",
+      "receipt": "AI連絡/Claude連携_20261028_数学残18依頼.json"
+    },
+    {
+      "id": "NONMATH-SOURCE-CORRECTIONS",
+      "owner": "Codex",
+      "state": "first topic integrated; full7 passed exit0 with1381 fixed inputs drift0; other6 topics remain candidate-only",
+      "next": "Continue9 remaining movies after approved61-scene preflight;1 chapter2 corrected candidate already AV/29frames/4width passed. Main group promotion pending.",
+      "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/progress.json"
+    },
+    {
+      "id": "TEACHING-FULL6",
+      "owner": "Codex",
+      "state": "historical failed exit1; frozenDrift0; exact source-identity adapter repaired and verified41/37/49",
+      "session": 59354,
+      "pid": 8426,
+      "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/full6-result.json",
+      "next": "Retain failure history; completed successor full7 is authoritative main verification."
+    },
+    {
+      "id": "TEACHING-FULL7",
+      "owner": "Codex",
+      "state": "passed exit0;1381 fixed inputs unchanged;current main only",
+      "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/full7-result.json",
+      "sha256": "4df294a7ed14ada0d19ff0bd37c84b7c264369564747f1e288636b1349f0a933",
+      "next": "No repeat whole suite for unchanged main; run required post-integration whole verification after actual next approved source changes."
+    }
+  ],
+  "historicalDocument": "AI連絡/サブスクAI_残件再整理_20261021.md",
+  "historicalCaution": "20261021 table is historical. New image routes/panel/credit handling exist in current main; do not reimplement based on old missing status. Original missing Claude folder is not proof of current unfinished code.",
+  "globalCompletionPercent": null,
+  "history": [
+    {
+      "atUTC": "2026-10-28T13:54:26.986232+00:00",
+      "nextBeforeUpdate": [
+        {
+          "id": "VISION-FULL",
+          "owner": "Codex",
+          "state": "passed exit0;1161 frozen inputs unchanged",
+          "next": "Keep full5 as completed main image-AI baseline; later candidate integration needs final standalone whole verification.",
+          "receipt": "tools/candidates/textbook-vision-20261027/main/full5-result.json"
+        },
+        {
+          "id": "KENTEI-CANDIDATE",
+          "owner": "Claude existing chat",
+          "state": "candidate report complete;47 manifest artifacts match; main integration pending",
+          "next": "Compare current candidate engine diff/IDs and actual213-input evidence before integration; new candidate versions preserve old learner IDs."
+        },
+        {
+          "id": "SUBSCRIPTION-REAL",
+          "owner": "Codex",
+          "state": "pending external evidence",
+          "next": "Actual provider answer quality/latency/settlement and contractual consent wording need explicit permitted real-provider validation; fake provider success is insufficient."
+        },
+        {
+          "id": "TEXTBOOK-OTHER-MEDIA",
+          "owner": "Codex",
+          "state": "9 native speech candidates/61 scene preflight complete; two render lanes active, completed outputs need AV/frame/book approval",
+          "next": "Keep2 current render lanes; do not remake completed math75 or Claude math19; exact final6-topic integration remains pending."
+        },
+        {
+          "id": "MATH-DRILL-CANDIDATE",
+          "owner": "Claude existing chat",
+          "state": "previous5units350 questions candidate complete;175 artifacts hash matched;next batch26 executing",
+          "next": "Claude now works hist1/hist2/hist3 then geometry15 in new isolated folder; do not interrupt or duplicate.",
+          "receipt": "AI連絡/Claude連携_20261028_数学残18依頼.json"
+        },
+        {
+          "id": "NONMATH-SOURCE-CORRECTIONS",
+          "owner": "Codex",
+          "state": "first topic integrated; full7 passed exit0 with1381 fixed inputs drift0; other6 topics remain candidate-only",
+          "next": "Continue9 remaining movies after approved61-scene preflight;1 chapter2 corrected candidate already AV/29frames/4width passed. Main group promotion pending.",
+          "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/progress.json"
+        },
+        {
+          "id": "TEACHING-FULL6",
+          "owner": "Codex",
+          "state": "historical failed exit1; frozenDrift0; exact source-identity adapter repaired and verified41/37/49",
+          "session": 59354,
+          "pid": 8426,
+          "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/full6-result.json",
+          "next": "Retain failure history; completed successor full7 is authoritative main verification."
+        },
+        {
+          "id": "TEACHING-FULL7",
+          "owner": "Codex",
+          "state": "passed exit0;1381 fixed inputs unchanged;current main only",
+          "receipt": "tools/candidates/textbook-final-20261023/kokugo-reading-20261027/main/full7-result.json",
+          "sha256": "4df294a7ed14ada0d19ff0bd37c84b7c264369564747f1e288636b1349f0a933",
+          "next": "No repeat whole suite for unchanged main; run required post-integration whole verification after actual next approved source changes."
+        }
+      ]
+    },
+    {
+      "latestTextbookIntegration": {
+        "mainPromoted": true,
+        "files": 64,
+        "unpublished": true,
+        "appliedProof": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/applied.json",
+        "sha256": "f8672f32630ad5c5356719e30aee4937c65ec0f2b3dcbceeabf1b95425f35aee",
+        "full8": "running; not completion",
+        "remainingMobileToolbarIssue": true
+      }
+    }
+  ],
+  "latestMovieStage": {
+    "file": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/ten-movies-stage.json",
+    "sha256": "d0988fe1ed6a38d58e426ba87ef25a1a45884d45a14510a02cf5cc6babe5bb18",
+    "movies": 10,
+    "samples": 292,
+    "bookCases": 40,
+    "checks": 565,
+    "mainPromoted": false,
+    "bodyAnswerPlacementPending": true
+  },
+  "latestTextbookIntegration": {
+    "mainPromoted": true,
+    "files": 67,
+    "unpublished": true,
+    "appliedProof": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-applied.json",
+    "sha256": "bc8aade8af843d6ce0b985ee8be946422ae5338dba6f0a83df9c37c204c2c897",
+    "full8": "failed exit1; frozen drift0; preserved",
+    "full9": "running with detected basic UI and English historical-source failures; not success",
+    "mobileToolbarWheel": "one-line main fix applied, byte-identical to14-check reviewed candidate; keyboard/physical touch separate",
+    "newPracticeCandidate": "tools/candidates/review-practice-choice-order-20261029/result.json;2665 checks, main not integrated"
+  },
+  "latestPracticeCandidate": {
+    "mainIntegrated": false,
+    "approval": "tools/candidates/review-practice-choice-order-20261029/clarity/approval.json",
+    "sha256": "2fd11be858316c0db544d29377662e75c2d9250a57ea9b965a8e02e0479de382",
+    "newQuestions": 48,
+    "serverChecks": 2667,
+    "layoutChecks": 1451,
+    "layoutCases": 240,
+    "representativeViews": 16,
+    "remaining": [
+      "current main integration",
+      "owned HTTP route integration confirmation",
+      "required whole verification after integration"
+    ],
+    "preservedReferenceRows": 58,
+    "legacyArraysPreserved": true
+  },
+  "latestMathReader": {
+    "status": "passed actual current reader75 movies/300 plays; reused same-SHA AV1805 scenes",
+    "report": "tools/candidates/math-current-reader-20261029/progress.json",
+    "sha256": "4e8e088d5cef1cd152e7fa6df550dc77ec9af875ad0dea6e1a174474da46f72f",
+    "main": 69,
+    "appendix": 6,
+    "physicalDevice": false,
+    "newListening": false,
+    "rawLedgerStatusAlignment": "pending full9 terminal"
+  },
+  "latestBasicUICompatibility": {
+    "mainApplied": false,
+    "knownFailure": "old basic UI proof compares previous reader SHA directly; approved one-line toolbar change is the only drift",
+    "candidate": "tools/candidates/basic-ui-reader-compat-20261029/candidate-result.json",
+    "checks": 14,
+    "next": "after full9 terminal, combine exact70 teaching/AI/legacy-verifier successor; preserve positive full7 baseline and execute old assertions unchanged; failed full9 snapshot is not passed evidence"
+  },
+  "latestEnglishSourceCompatibility": {
+    "mainApplied": false,
+    "candidate": "tools/candidates/english-source-compat-20261029/candidate-result.json",
+    "checks": 41,
+    "books": 6,
+    "normalizedFutureScope": 29,
+    "current70Successor": "tools/candidates/nonadmin-ai-reader-successor-20261029/README.md",
+    "status": "full9 running with two known historical-source failures; final terminal audit pending"
+  },
+  "latestCombinedSuccessor": {
+    "folder": "tools/candidates/nonadmin-ai-reader-successor-20261029/main",
+    "files": 70,
+    "changesFromCurrentMain": 5,
+    "legacyNormalizations": 29,
+    "guardChecks": 228,
+    "currentPublicAndHistoricalChecks": 2627,
+    "actualLibraryChecks": 2667,
+    "actualNew48HTTPChecks": 1394,
+    "actualNew48HTTPStatus": "passed in preflight3; final complete preflight still pending",
+    "mainAIQuestions": 48,
+    "candidateAIQuestions": 96,
+    "remaining": "final6-book context check and complete preflight binding,5-file local application, single final whole suite"
+  },
+  "latestGoalStatus": {
+    "status": "67 local teaching files remain integrated; AI70 successor isolated preflight; current75 math metadata locally applied; no publication",
+    "full9": {
+      "status": "failed",
+      "exitCode": 1,
+      "fixedInputs": 1715,
+      "frozenDrift": [],
+      "result": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/full9-result.json",
+      "logSha256": "adc1e9e4abdf8ca5aa1fb7dc0af622f374c38872f1ab346764985175c67b1aa4",
+      "failureKinds": [
+        "old basic UI proof drift, now original CLI passes with fresh84 proof",
+        "English historical source identity",
+        "renderer edit register missing approved toolbar line"
+      ]
+    },
+    "latestSuccessor": {
+      "folder": "tools/candidates/nonadmin-ai-reader-successor-20261029/main",
+      "files": 70,
+      "changesFromCurrentMain": 5,
+      "legacyNormalizations": 29,
+      "guardChecks": 228,
+      "currentPublicAndHistoricalChecks": 2627,
+      "actualLibraryChecks": 2667,
+      "actualNew48HTTPChecks": 1394,
+      "actualNew48HTTPStatus": "passed in preflight3; final complete preflight still pending",
+      "mainAIQuestions": 48,
+      "candidateAIQuestions": 96,
+      "remaining": "final6-book context check and complete preflight binding,5-file local application, single final whole suite"
+    },
+    "mathLedgerApplied": "tools/candidates/math-current-reader-20261029/ledger-applied.json",
+    "mathMovies": 75,
+    "mathPlays": 300,
+    "Claude19Unchanged": true,
+    "observedAtUTC": "2026-10-29T08:50:29.639523+00:00"
+  }
+}

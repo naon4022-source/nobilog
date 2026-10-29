@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checks": 213,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-images-route.mjs",
+      "sha256": "f4be600795a0d5604d68cb95cf0171f309e8a865b66a9d62de15cde8ef47d0e4"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-images-route.mjs",
+      "sha256": "02a0a0fa6e04f8ffa1736855b106606dd29a763d64f29e74b6dc48cc3b3d574f"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "0212c0cf62f6cdedd0d2fe765b24e99d75c8efa7b7c03075d7922b55cb351bf3"
+    },
+    {
+      "file": "cf-worker/src/textbook-access.mjs",
+      "sha256": "888dd06324015cfd683fcde55583ce4e94b36a4767731ef781bd6a304dece89d"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context.mjs",
+      "sha256": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-context-manifest.mjs",
+      "sha256": "4109f5527d7a7105c55efdd6b7bf481820747e76c3fa5db4f6b08cb59e9472bf"
+    },
+    {
+      "file": ".claude/verify/d1-sqlite.js",
+      "sha256": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb"
+    },
+    {
+      "file": "site-assets/textbook-ai-context-math1.json",
+      "sha256": "23fe208271f594da410a335c556a9532322b5f56eb71cad5ed9be83febbbdcfe"
+    }
+  ],
+  "scope": "Candidate route invoked with actual Request/Response and in-memory SQLite, verified real public textbook catalog, synthetic image pixels/identities only. Save-time owner/consent/entitlement SQL, Free owned read, capacity/idempotency/corruption/Origin/body/schema/source guards. No main routing/client capture, real user data, provider or public deployment."
+}

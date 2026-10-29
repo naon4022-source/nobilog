@@ -1,0 +1,84 @@
+{
+  "status": "scripts manually read; not AV approval",
+  "chapter": 8,
+  "scripts": [
+    {
+      "id": "K1-C8-S1-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S1-V01.json",
+      "sha256": "bc65b07fa677f1ec668a5b3aee8831fc67260b691d9ec753e414a965c6d92d9e",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C8-S1-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S1-VP.json",
+      "sha256": "024de842dc82d5d31646602dd8921ddd9f076295717e7d47462d6423a566297a",
+      "stepsRead": 6
+    },
+    {
+      "id": "K1-C8-S2-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S2-V01.json",
+      "sha256": "11f5eefaa36507f68d3c1e4a730b6e61847fd33ef78497fc068e3b7884b43b4c",
+      "stepsRead": 6
+    },
+    {
+      "id": "K1-C8-S2-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S2-VP.json",
+      "sha256": "992f5b84f7d342352fb31d70c61d6ff922ef315fc16d31ce46674a7bc749513e",
+      "stepsRead": 5
+    },
+    {
+      "id": "K1-C8-S3-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S3-V01.json",
+      "sha256": "79379af88808cb688b812b6bc920f4d34a8ba08c4bb63c5fa0eb9ebf803d050c",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C8-S3-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S3-VP.json",
+      "sha256": "48b74c28d885347cae2b160fa637696682dd501c6a204e1831582d6f6e8eb478",
+      "stepsRead": 6
+    },
+    {
+      "id": "K1-C8-S4-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S4-V01.json",
+      "sha256": "800958ae7c4dc3b1ba812d64176e26dd71845949b54ad2a2c77ecb0ef029f0d0",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C8-S4-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S4-VP.json",
+      "sha256": "796252b1e5ad73597ffcf4ea3ddc690c83eb373fe1cff8b368de8527744a2466",
+      "stepsRead": 8
+    },
+    {
+      "id": "K1-C8-S5-V01",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S5-V01.json",
+      "sha256": "0611c789cf6011084e0dfa0e1866be04c3c62d0bbfd93b0faec3fc2f979a210c",
+      "stepsRead": 7
+    },
+    {
+      "id": "K1-C8-S5-VP",
+      "file": "教材整理/Claude_Codex共有/国語全体制作/制作ソース/K1-C8-S5-VP.json",
+      "sha256": "275d8f92b738b37fcb3c13620e509df15c06dc6501b87a5e699d151585ba7cfe",
+      "stepsRead": 6
+    }
+  ],
+  "findings": [
+    {
+      "id": "K1-C8-S2-VP",
+      "state": "clarification pending",
+      "finding": "Quoted speech occurred vs truth of its content must not be conflated; source-text comparison needed."
+    },
+    {
+      "id": "K1-C8-S3-V01",
+      "state": "potential unsupported answer strengthening; no answer edit",
+      "finding": "Prompt says lack of time is a frequent reason; answer upgrades to the most frequent reason. Ranking data are absent in this worked example. Need original source comparison before modifying the answer."
+    },
+    {
+      "id": "K1-C8-S4-VP",
+      "candidate": "tools/candidates/textbook-final-20261023/kokugo-pos-20261027/manifest.json"
+    }
+  ],
+  "limits": "Source classic-text matching, actual frames/audio/motion and exercise-answer visibility remain pending.",
+  "productionEdits": false
+}

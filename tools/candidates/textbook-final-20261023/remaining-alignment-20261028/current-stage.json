@@ -1,0 +1,52 @@
+{
+  "status": "combined source/book/figure/context candidates prepared and scoped checks passed;not main-integrated",
+  "proofs": [
+    {
+      "file": "book-result.json",
+      "sha256": "f306449f540544c7b4867462422ed7b1f4e73a51e20f148c2105d6647dc01deb"
+    },
+    {
+      "file": "figures/selected-visual-result.json",
+      "sha256": "d2a86dbc3e257f549a1edace7a4530b04f27703b3200a3e90a03d602da5b5ce8"
+    },
+    {
+      "file": "integration-contexts/result.json",
+      "sha256": "e4b6904cc294e60f802826ed660d7ff9d577324d05bab75ebf897e51d31ceb77"
+    },
+    {
+      "file": "integration-contexts/reader-result.json",
+      "sha256": "cc11e36278c41de8cbf4b6a72ee7e30e5edc71172bb5bfac0c80fec20c438a22"
+    },
+    {
+      "file": "integration-contexts/closed-answer-result.json",
+      "sha256": "b2f3911ac410603af48b17f7d9fd834cdf21a022a74b6b2735ad1d11f8426f79"
+    },
+    {
+      "file": "prepare-contexts.mjs",
+      "sha256": "d5d2554d0c27a89c62384579d2b8d52d85042bee01fd30187a335cabc297ed34"
+    },
+    {
+      "file": "verify-contexts.mjs",
+      "sha256": "fdc4a6665bbf3885e6cf63d5c10424e6fcbaf6d991fcb13ea252611b0469eb77"
+    },
+    {
+      "file": "verify-closed-answers.mjs",
+      "sha256": "caef84da12dc34862bb25211cf18cd70d2f02302fa3ae66ec2063bf56af047f3"
+    }
+  ],
+  "counts": {
+    "textRows": 2129,
+    "imageRows": 198,
+    "readerChecks": 5320,
+    "closedAnswerChecks": 8,
+    "closedAnswerBodies": 497,
+    "selectedFigures": 8
+  },
+  "scope": "Two books only; original questions/answers unchanged. Actual reader modules and source builder used with isolated candidates. Closed-answer bodies replaced by unique markers only in memory. No real AI/API/auth/user data/main writes.",
+  "remaining": [
+    "4width selected figure placement/zoom",
+    "10 corrected referenced videos; chapter2 new speech currently unavailable",
+    "Actual UI/reference/note compatibility for combined candidates",
+    "Main integration and postchange global verification"
+  ]
+}

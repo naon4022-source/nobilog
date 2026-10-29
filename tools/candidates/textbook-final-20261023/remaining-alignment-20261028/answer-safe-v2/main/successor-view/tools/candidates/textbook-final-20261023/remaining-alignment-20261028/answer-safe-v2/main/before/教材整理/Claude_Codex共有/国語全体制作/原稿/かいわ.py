@@ -1,0 +1,1 @@
+/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/before/教材整理/Claude_Codex共有/国語全体制作/原稿/かいわ.py

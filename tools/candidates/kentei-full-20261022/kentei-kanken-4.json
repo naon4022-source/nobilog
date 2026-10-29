@@ -1,0 +1,2918 @@
+{
+ "id": "kentei-kanken-4",
+ "bank": "kentei",
+ "kentei": "漢検",
+ "level": "4級",
+ "title": "漢検4級 模擬検定（独自問題）",
+ "status": "draft",
+ "exam": {
+  "minutes": 60,
+  "total": 200,
+  "pass": 140,
+  "passNote": "合格のめやすは200点満点の70％程度（140点）"
+ },
+ "questions": [
+  {
+   "id": "kentei-kanken-4-1",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "例題",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n彼はたびたび［矛盾］した説明をする。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "むじゅん"
+    ]
+   },
+   "explanation": "「矛盾」はつじつまが合わないこと。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-2",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "確認",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n地震で古い橋が［破壊］された。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "はかい"
+    ]
+   },
+   "explanation": "「破壊」はこわすこと。「壊」は4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-3",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "確認",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n朝は［濃霧］で遠くが見えなかった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "のうむ"
+    ]
+   },
+   "explanation": "「濃霧」はこい霧。「濃」「霧」はどちらも4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-4",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "確認",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n古いつぼの値打ちを［鑑定］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かんてい"
+    ]
+   },
+   "explanation": "「鑑定」はものの価値などを見きわめること。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-5",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "確認",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n母は子どもの［健］やかな成長を願う。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "すこ"
+    ]
+   },
+   "explanation": "「健やか」は「すこやか」。送りがなは「やか」なので、［　］の部分は「すこ」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-6",
+   "type": "input",
+   "section": "（一）読み",
+   "role": "確認",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n洗たく物を水に［浸］す。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ひた"
+    ]
+   },
+   "explanation": "「浸す」は「ひたす」。送りがな「す」の前の部分を答える。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n敵の陣地に［侵入］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しんにゅう"
+    ]
+   },
+   "explanation": "侵＝おかす。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-7",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n飼い犬を［獣医］にみてもらう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "じゅうい"
+    ]
+   },
+   "explanation": "獣＝けもの。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-8",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n夕焼けで空が［紫色］に染まる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "むらさきいろ"
+    ]
+   },
+   "explanation": "紫は訓読みで「むらさき」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-9",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n規則の各［項目］を読み返す。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "こうもく"
+    ]
+   },
+   "explanation": "項＝ことがらの一つ一つ。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-10",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n書記と会計を［兼任］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "けんにん"
+    ]
+   },
+   "explanation": "兼＝かねる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-11",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n現地の［状況］を調べる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "じょうきょう"
+    ]
+   },
+   "explanation": "況＝ありさま。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-12",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n全国大会で［輝］かしい成績をあげた。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かがや"
+    ]
+   },
+   "explanation": "輝く（かがやく）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-13",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n二つの案を［比較］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ひかく"
+    ]
+   },
+   "explanation": "較＝くらべる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-14",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n台風の被災地を［援助］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えんじょ"
+    ]
+   },
+   "explanation": "援＝たすける。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-15",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n事故はほんの［瞬間］の出来事だった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しゅんかん"
+    ]
+   },
+   "explanation": "瞬＝まばたき。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-16",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n作文の［原稿］を書き直す。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "げんこう"
+    ]
+   },
+   "explanation": "稿＝下書き。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-17",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n部屋が［狭］くて動きにくい。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "せま"
+    ]
+   },
+   "explanation": "狭い（せまい）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-18",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n卒業の［儀式］が始まる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ぎしき"
+    ]
+   },
+   "explanation": "儀＝作法。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-19",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\nタヌキが［獲物］をねらう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えもの"
+    ]
+   },
+   "explanation": "獲は訓読みで「え（る）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-20",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n工場の［煙突］から白いけむりが出る。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えんとつ"
+    ]
+   },
+   "explanation": "煙＝けむり。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-21",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n季節の［旬］の野菜を食べる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しゅん"
+    ]
+   },
+   "explanation": "旬＝いちばんおいしい時期。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-22",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n［豪雨］で電車が止まった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ごうう"
+    ]
+   },
+   "explanation": "豪＝はげしい・大きい。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-23",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n失敗を［恐］れずに前へ進む。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "おそ"
+    ]
+   },
+   "explanation": "恐れる（おそれる）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-24",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n［鉛筆］をけずる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えんぴつ"
+    ]
+   },
+   "explanation": "鉛＝なまり。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-25",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n祖母は［寝室］で休んでいる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しんしつ"
+    ]
+   },
+   "explanation": "寝＝ねる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-26",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n警察官が町を［巡回］する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "じゅんかい"
+    ]
+   },
+   "explanation": "巡＝めぐる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-27",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n遠くでカミナリの音が［響］く。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ひび"
+    ]
+   },
+   "explanation": "響く（ひびく）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-28",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n［縁側］でお茶を飲む。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えんがわ"
+    ]
+   },
+   "explanation": "縁は「えん」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-29",
+   "points": 1
+  },
+  {
+   "section": "（一）読み",
+   "prompt": "次の文の［　］の漢字の読みをひらがなで書こう。\n王の［威厳］が感じられる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "いげん"
+    ]
+   },
+   "explanation": "威＝人をおそれさせる力。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-30",
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-31",
+   "type": "input",
+   "section": "（二）同音・同訓異字",
+   "role": "例題",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n水不足がシン刻になる。\nア 深　イ 新　ウ 真　エ 信",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "「深刻」は重大で、ことが深いようす。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-32",
+   "type": "input",
+   "section": "（二）同音・同訓異字",
+   "role": "確認",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n選手のシン念に感動した。\nア 深　イ 新　ウ 真　エ 信",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "「信念」はかたく信じている考え。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-33",
+   "type": "input",
+   "section": "（二）同音・同訓異字",
+   "role": "確認",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n店のソウ飾をくふうする。\nア 装　イ 創　ウ 想　エ 送",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "「装飾」はかざること。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-34",
+   "type": "input",
+   "section": "（二）同音・同訓異字",
+   "role": "確認",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n寺は五百年前にソウ建された。\nア 装　イ 創　ウ 想　エ 送",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "「創建」は初めて建てること。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n駅にカン視カメラを取りつける。\nア 監　イ 歓　ウ 勧　エ 環",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "監視＝見はること。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-35",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n専門家のカン告に従う。\nア 監　イ 歓　ウ 勧　エ 環",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "勧告＝すすめること。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-36",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n地球カン境を守る。\nア 監　イ 歓　ウ 勧　エ 環",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "環境＝まわりのようす。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-37",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\nキ跡が起きて全員が助かった。\nア 輝　イ 奇　ウ 祈　エ 鬼",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "奇跡＝ふしぎなできごと。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-38",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n平和をキ願する。\nア 輝　イ 奇　ウ 祈　エ 鬼",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "祈願＝いのりねがうこと。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-39",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n待ちに待った春がトウ来した。\nア 踏　イ 盗　ウ 倒　エ 到",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "到来＝やってくること。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-40",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n相手を圧トウする強さだった。\nア 踏　イ 盗　ウ 倒　エ 到",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "圧倒＝力でおしたおすこと。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-41",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n城から大ホウを撃つ。\nア 砲　イ 抱　ウ 峰　エ 豊",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "大砲。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-42",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n新年のホウ負を語る。\nア 砲　イ 抱　ウ 峰　エ 豊",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "抱負＝心にいだく決意。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-43",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n雪をかぶった連ホウが見える。\nア 砲　イ 抱　ウ 峰　エ 豊",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "連峰＝つらなった山々。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-44",
+   "points": 2
+  },
+  {
+   "section": "（二）同音・同訓異字",
+   "prompt": "次の文のカタカナにあてはまる漢字を選ぼう。\n極タンな意見にかたよらない。\nア 端　イ 淡　ウ 嘆　エ 丹",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "極端＝いちばんはし。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-45",
+   "points": 2
+  },
+  {
+   "section": "（三）漢字識別",
+   "prompt": "次の三つの□に共通して入る漢字を、ア〜コから選ぼう。\n（ア 濃　イ 振　ウ 範　エ 雄　オ 腕　カ 端　キ 越　ク 抵　ケ 鮮　コ 傾）\n□厚・□度・□霧",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "濃厚・濃度・濃霧。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-46",
+   "points": 2
+  },
+  {
+   "section": "（三）漢字識別",
+   "prompt": "次の三つの□に共通して入る漢字を、ア〜コから選ぼう。\n（ア 濃　イ 振　ウ 範　エ 雄　オ 腕　カ 端　キ 越　ク 抵　ケ 鮮　コ 傾）\n□囲・□例・規□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "範囲・範例・規範。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-47",
+   "points": 2
+  },
+  {
+   "section": "（三）漢字識別",
+   "prompt": "次の三つの□に共通して入る漢字を、ア〜コから選ぼう。\n（ア 濃　イ 振　ウ 範　エ 雄　オ 腕　カ 端　キ 越　ク 抵　ケ 鮮　コ 傾）\n□明・新□・□魚",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ケ"
+    ]
+   },
+   "explanation": "鮮明・新鮮・鮮魚。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-48",
+   "points": 2
+  },
+  {
+   "section": "（三）漢字識別",
+   "prompt": "次の三つの□に共通して入る漢字を、ア〜コから選ぼう。\n（ア 濃　イ 振　ウ 範　エ 雄　オ 腕　カ 端　キ 越　ク 抵　ケ 鮮　コ 傾）\n□向・□斜・右□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "コ"
+    ]
+   },
+   "explanation": "傾向・傾斜・右傾。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-49",
+   "points": 2
+  },
+  {
+   "section": "（三）漢字識別",
+   "prompt": "次の三つの□に共通して入る漢字を、ア〜コから選ぼう。\n（ア 濃　イ 振　ウ 範　エ 雄　オ 腕　カ 端　キ 越　ク 抵　ケ 鮮　コ 傾）\n□章・□力・手□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オ"
+    ]
+   },
+   "explanation": "腕章・腕力・手腕。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-50",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-51",
+   "type": "input",
+   "section": "（四）熟語の構成",
+   "role": "例題",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n増減",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "増える⇔減る。反対の意味の組み合わせ。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-52",
+   "type": "input",
+   "section": "（四）熟語の構成",
+   "role": "確認",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n救助",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "救う＝助ける。同じような意味。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-53",
+   "type": "input",
+   "section": "（四）熟語の構成",
+   "role": "確認",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n握手",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "手を握る。下の字が上の字の目的語。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-54",
+   "type": "input",
+   "section": "（四）熟語の構成",
+   "role": "確認",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n未完",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オ"
+    ]
+   },
+   "explanation": "「まだ完成していない」。上の字が打ち消し。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-55",
+   "type": "input",
+   "section": "（四）熟語の構成",
+   "role": "確認",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n濃霧",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "濃い霧。上の字が下の字を修飾。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（四）熟語の構成",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n送迎",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "送る⇔迎える（反対の意味）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-56",
+   "points": 2
+  },
+  {
+   "section": "（四）熟語の構成",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n越境",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "境を越える（下が上の目的語）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-57",
+   "points": 2
+  },
+  {
+   "section": "（四）熟語の構成",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n不朽",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オ"
+    ]
+   },
+   "explanation": "朽ちない（打ち消し）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-58",
+   "points": 2
+  },
+  {
+   "section": "（四）熟語の構成",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n鋭利",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "鋭い・利い（どちらも「するどい」）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-59",
+   "points": 2
+  },
+  {
+   "section": "（四）熟語の構成",
+   "prompt": "次の熟語の構成を、ア〜オから選ぼう。（ア 同じような意味の漢字を重ねたもの　イ 反対の意味の漢字を重ねたもの　ウ 上の字が下の字を修飾しているもの　エ 下の字が上の字の目的語・補語になっているもの　オ 上の字が下の字の意味を打ち消しているもの）\n濁流",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "濁った流れ（上が下を修飾）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-60",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-61",
+   "type": "input",
+   "section": "（五）部首",
+   "role": "例題",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n疲\nア 广　イ 疒　ウ 皮　エ 又",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "「疲」の部首はやまいだれ（疒）。体の不調に関係する。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-62",
+   "type": "input",
+   "section": "（五）部首",
+   "role": "確認",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n鑑\nア 金　イ 臣　ウ 皿　エ 一",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "「鑑」の部首はかねへん（金）。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-63",
+   "type": "input",
+   "section": "（五）部首",
+   "role": "確認",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n芝\nア 艹　イ 人　ウ 勹　エ 木",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "「芝」の部首はくさかんむり（艹）。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-64",
+   "type": "input",
+   "section": "（五）部首",
+   "role": "確認",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n聞\nア 門　イ 耳　ウ 日　エ 十",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "「聞」の部首は耳（みみ）。「門」がまえに見えるがまちがえやすい。「間」「開」の部首は門。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n趣\nア 走　イ 耳　ウ 又　エ 土",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "部首は「走（そうにょう）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-65",
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n殿\nア 尸　イ 共　ウ 殳　エ 又",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "部首は「殳（ほこづくり・るまた）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-66",
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n載\nア 土　イ 戈　ウ 車　エ 十",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "部首は「車（くるま）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-67",
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n歳\nア 止　イ 戈　ウ 小　エ 示",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "部首は「止（とめる）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-68",
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n畳\nア 冖　イ 田　ウ 目　エ 一",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "部首は「田（た）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-69",
+   "points": 1
+  },
+  {
+   "section": "（五）部首",
+   "prompt": "次の漢字の部首を、ア〜エから選ぼう。\n彩\nア 木　イ 米　ウ 彡　エ ノ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "部首は「彡（さんづくり）」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-70",
+   "points": 1
+  },
+  {
+   "id": "kentei-kanken-4-71",
+   "type": "input",
+   "section": "（六）対義語・類義語",
+   "role": "確認",
+   "prompt": "次の語の対義語（反対の意味の語）を完成させよう（□に入る漢字一字）。\n濃厚 ― 淡□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "白",
+     "泊"
+    ]
+   },
+   "explanation": "「濃厚」の対義語は「淡白（淡泊）」。「濃」「淡」は4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-72",
+   "type": "input",
+   "section": "（六）対義語・類義語",
+   "role": "確認",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n曇天 ― □天",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "晴"
+    ]
+   },
+   "explanation": "「曇天」の対義語は「晴天」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-73",
+   "type": "input",
+   "section": "（六）対義語・類義語",
+   "role": "確認",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n被告 ― 原□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "告"
+    ]
+   },
+   "explanation": "裁判で、うったえられた側が「被告」、うったえた側が「原告」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-74",
+   "type": "input",
+   "section": "（六）対義語・類義語",
+   "role": "確認",
+   "prompt": "次の語の類義語（似た意味の語）を完成させよう（□に入る漢字一字）。\n詳細 ― □細",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "委"
+    ]
+   },
+   "explanation": "「詳細」の類義語は「委細」。どちらも「くわしいこと」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-75",
+   "type": "input",
+   "section": "（六）対義語・類義語",
+   "role": "確認",
+   "prompt": "次の語の類義語を完成させよう（□に入る漢字一字）。\n互角 ― 五□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "分"
+    ]
+   },
+   "explanation": "「互角」と「五分」は、どちらも力が同じくらいであること。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（六）対義語・類義語",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n冷静 ― 興□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "奮"
+    ]
+   },
+   "explanation": "興奮。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-76",
+   "points": 2
+  },
+  {
+   "section": "（六）対義語・類義語",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n需要 ― □給",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "供"
+    ]
+   },
+   "explanation": "供給。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-77",
+   "points": 2
+  },
+  {
+   "section": "（六）対義語・類義語",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n拡大 ― □小",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "縮"
+    ]
+   },
+   "explanation": "縮小。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-78",
+   "points": 2
+  },
+  {
+   "section": "（六）対義語・類義語",
+   "prompt": "次の語の類義語を完成させよう（□に入る漢字一字）。\n推量 ― 推□",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "測"
+    ]
+   },
+   "explanation": "推測。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-79",
+   "points": 2
+  },
+  {
+   "section": "（六）対義語・類義語",
+   "prompt": "次の語の対義語を完成させよう（□に入る漢字一字）。\n長所 ― □所",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "短"
+    ]
+   },
+   "explanation": "短所。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-80",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-81",
+   "type": "input",
+   "section": "（七）漢字と送りがな",
+   "role": "例題",
+   "prompt": "次の文のカタカナを、漢字一字と送りがな（ひらがな）に直そう。\n夜空をアオグ。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "仰ぐ"
+    ]
+   },
+   "explanation": "「仰ぐ」。送りがなは「ぐ」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-82",
+   "type": "input",
+   "section": "（七）漢字と送りがな",
+   "role": "確認",
+   "prompt": "次の文のカタカナを、漢字一字と送りがなに直そう。\nヤワラカイ毛布にくるまる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "柔らかい"
+    ]
+   },
+   "explanation": "「柔らかい」。送りがなは「らかい」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-83",
+   "type": "input",
+   "section": "（七）漢字と送りがな",
+   "role": "確認",
+   "prompt": "次の文のカタカナを、漢字一字と送りがなに直そう。\n遠くの友達に向かって大声でサケブ。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "叫ぶ"
+    ]
+   },
+   "explanation": "「叫ぶ」。送りがなは「ぶ」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-84",
+   "type": "input",
+   "section": "（七）漢字と送りがな",
+   "role": "確認",
+   "prompt": "次の文のカタカナを、漢字一字と送りがなに直そう。\n自分の町をホコリに思う。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "誇り"
+    ]
+   },
+   "explanation": "「誇り」。名詞でも送りがな「り」をつける。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（七）漢字と送りがな",
+   "prompt": "次の文のカタカナを、漢字一字と送りがなに直そう。\n夜中に外でサワグ声がする。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "騒ぐ"
+    ]
+   },
+   "explanation": "騒ぐ（さわぐ）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-85",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-86",
+   "type": "input",
+   "section": "（八）四字熟語",
+   "role": "例題",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n危機一□（あと少しで危険になる、ぎりぎりの状態）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "髪"
+    ]
+   },
+   "explanation": "「危機一髪」。髪の毛一本ほどのわずかな差で危機になるところ。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-87",
+   "type": "input",
+   "section": "（八）四字熟語",
+   "role": "確認",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n疑心暗□（疑う心があると、何でもないことまでこわく思える）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鬼"
+    ]
+   },
+   "explanation": "「疑心暗鬼」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-88",
+   "type": "input",
+   "section": "（八）四字熟語",
+   "role": "確認",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n温故知□（古いことを学んで新しいことを知る）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "新"
+    ]
+   },
+   "explanation": "「温故知新」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-89",
+   "type": "input",
+   "section": "（八）四字熟語",
+   "role": "確認",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n七転八□（苦しみのあまり、ころげまわること）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "倒"
+    ]
+   },
+   "explanation": "「七転八倒」。「倒」は4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n前代未□（今までに一度も聞いたことがない）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "聞"
+    ]
+   },
+   "explanation": "前代未聞。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-90",
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n驚天動□（世の中をひどくおどろかせる）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "地"
+    ]
+   },
+   "explanation": "驚天動地。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-91",
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n針小□大（小さなことを大げさに言う）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "棒"
+    ]
+   },
+   "explanation": "針小棒大。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-92",
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n無我□中（ほかのことを忘れるほど熱中する）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "夢"
+    ]
+   },
+   "explanation": "無我夢中。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-93",
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n起死回□（だめになりそうな状態を立て直す）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "生"
+    ]
+   },
+   "explanation": "起死回生。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-94",
+   "points": 2
+  },
+  {
+   "section": "（八）四字熟語",
+   "prompt": "次の四字熟語の□に入る漢字一字を書こう。\n大□晩成（大人物はおそくなってから大成する）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "器"
+    ]
+   },
+   "explanation": "大器晩成。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-95",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-96",
+   "type": "input",
+   "section": "（九）誤字訂正",
+   "role": "確認",
+   "prompt": "次の文にまちがって使われている漢字が一字ある。まちがった字と正しい字を順に書こう（読点で区切る）。\n専門家に絵画の価値を感定してもらった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "感、鑑",
+     "感,鑑",
+     "感 鑑",
+     "感・鑑",
+     "感→鑑"
+    ]
+   },
+   "explanation": "「鑑定」。「鑑」は4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-97",
+   "type": "input",
+   "section": "（九）誤字訂正",
+   "role": "確認",
+   "prompt": "次の文のまちがった字と正しい字を順に書こう（読点で区切る）。\n出発の時刻を前の日に確任しておく。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "任、認",
+     "任,認",
+     "任 認",
+     "任・認",
+     "任→認"
+    ]
+   },
+   "explanation": "「確認」。たしかにみとめること。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-98",
+   "type": "input",
+   "section": "（九）誤字訂正",
+   "role": "確認",
+   "prompt": "次の文のまちがった字と正しい字を順に書こう（読点で区切る）。\n事件の洋細を報告書にまとめた。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "洋、詳",
+     "洋,詳",
+     "洋 詳",
+     "洋・詳",
+     "洋→詳"
+    ]
+   },
+   "explanation": "「詳細」。ごんべんの「詳」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-99",
+   "type": "input",
+   "section": "（九）誤字訂正",
+   "role": "確認",
+   "prompt": "次の文のまちがった字と正しい字を順に書こう（読点で区切る）。\n大雨で川があふれ、提防がこわれた。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "提、堤",
+     "提,堤",
+     "提 堤",
+     "提・堤",
+     "提→堤"
+    ]
+   },
+   "explanation": "「堤防」。土を盛った「堤（つつみ）」なので、つちへんの「堤」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（九）誤字訂正",
+   "prompt": "次の文のまちがった字と正しい字を順に書こう（読点で区切る）。\n工場から出る水による川の汚洗が問題になった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "洗、染",
+     "洗,染",
+     "洗 染",
+     "洗・染",
+     "洗→染"
+    ]
+   },
+   "explanation": "汚染（おせん）。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-100",
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-101",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "例題",
+   "prompt": "次の文のカタカナを漢字に直そう。\n弟は新しい自転車をジマンした。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "自慢"
+    ]
+   },
+   "explanation": "「自慢」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-102",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "確認",
+   "prompt": "次の文のカタカナを漢字に直そう。\n大雨の日は川のゾウスイに気をつけよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "増水"
+    ]
+   },
+   "explanation": "「増水」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-103",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "確認",
+   "prompt": "次の文のカタカナを漢字に直そう。\n発表が終わると大きなハクシュが起こった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "拍手"
+    ]
+   },
+   "explanation": "「拍手」。「拍」は4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-104",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "確認",
+   "prompt": "次の文のカタカナを漢字に直そう。\nイナカの祖母に手紙を書く。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "田舎"
+    ]
+   },
+   "explanation": "「田舎」は熟字訓（言葉全体で特別な読み）。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-105",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "確認",
+   "prompt": "次の文のカタカナを漢字に直そう。\nゲンカンでくつをぬぐ。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "玄関"
+    ]
+   },
+   "explanation": "「玄関」。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "id": "kentei-kanken-4-106",
+   "type": "input",
+   "section": "（十）書き取り",
+   "role": "確認",
+   "prompt": "次の文のカタカナを漢字に直そう。\n新入生のカンゲイ会を開く。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "歓迎"
+    ]
+   },
+   "explanation": "「歓迎」。「歓」「迎」はどちらも4級の漢字。",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 2,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n景気がよくなって町がハンエイする。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "繁栄"
+    ]
+   },
+   "explanation": "繁＝しげる、栄＝さかえる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-107",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\nかぜが治り、体調がカイフクした。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "回復"
+    ]
+   },
+   "explanation": "回復。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-108",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n春になると桜がマンカイになる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "満開"
+    ]
+   },
+   "explanation": "満開。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-109",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n部活動のセンパイに相談する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "先輩"
+    ]
+   },
+   "explanation": "輩＝なかま。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-110",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n港にキテキが鳴りひびく。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "汽笛"
+    ]
+   },
+   "explanation": "汽笛。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-111",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\nハクシンの演技に見とれた。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "迫真"
+    ]
+   },
+   "explanation": "迫＝せまる。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-112",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n雨で試合がエンキになった。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "延期"
+    ]
+   },
+   "explanation": "延期。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-113",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n冬は空気がカンソウしやすい。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "乾燥"
+    ]
+   },
+   "explanation": "乾・燥ともに「かわく」。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-114",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n選手のトウシに感動した。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "闘志"
+    ]
+   },
+   "explanation": "闘＝たたかう。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-115",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n本のカンマツに解説がある。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "巻末"
+    ]
+   },
+   "explanation": "巻末。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-116",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n料理の味をチョウセイする。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "調整"
+    ]
+   },
+   "explanation": "調整。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-117",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n寒さにドンカンな人。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鈍感"
+    ]
+   },
+   "explanation": "鈍＝にぶい。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-118",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n朝早くギョセンが港を出る。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "漁船"
+    ]
+   },
+   "explanation": "漁船。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-119",
+   "points": 2
+  },
+  {
+   "section": "（十）書き取り",
+   "prompt": "次の文のカタカナを漢字に直そう。\n母はシュミで絵をかく。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "趣味"
+    ]
+   },
+   "explanation": "趣＝おもむき。",
+   "type": "input",
+   "role": "確認",
+   "source": {
+    "id": null,
+    "file": "漢検/outline_degree_example_4m_3.pdf",
+    "sha256": "47c3b579994562bb795d4ea26b7e1dff8a757c193c0a284e2ec7c9e8047886cc",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true,
+   "id": "kentei-kanken-4-120",
+   "points": 2
+  }
+ ],
+ "reviewNote": "2026-10-13 Claude作成、2026-10-14 公式の級別漢字表で範囲を点検して修正（検定原稿・下書き）。漢検/outline_degree_example_4m_3.pdf の大問の形式を参考に、語と文はすべて独自（試験問題に出た語は使っていない）。【範囲の根拠】日本漢字能力検定協会「級別漢字表（10級〜2級）2020年2月発表」https://www.kanken.or.jp/kanken/outline/data/outline_degree_national_list20200217.pdf （2026-10-14確認、SHA-256 8c7513a4…）。4級は313字・5級まで1026字・累計1339字。答えと問題文に使う漢字を、この表の4級以下（小学校の漢字＋4級の313字）にそろえた。3級以上の漢字を使っていた20問を入れかえた。 2026-10-22 Claude：本番と同じ10大問・120問・200点に組み直した（読み30・同音同訓異字15・漢字識別5・熟語の構成10・部首10・対義語類義語10・漢字と送りがな5・四字熟語10・誤字訂正5・書き取り20）。前の42問は文を変えず、78問を独自に追加。使った漢字はすべて小学校1026字＋4級313字（累計1339字）の中にあることを自動で確認。"
+}

@@ -1,0 +1,1310 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中1数学・Claude原稿の確認用表示</title><style>*{box-sizing:border-box}html{font:18px/1.85 system-ui,-apple-system,"Hiragino Sans",sans-serif;color:#25372e;background:#f4f7f4}body{margin:0}main{max-width:1440px;margin:auto;padding:24px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px}header{grid-column:1/-1}header,article,nav{background:white;border:1px solid #d5dfd6;border-radius:16px;padding:24px}article{margin-bottom:24px;scroll-margin-top:20px}.content{min-width:0}aside.sidebar{position:sticky;top:16px;align-self:start}nav{padding:12px;max-height:85dvh;overflow:auto}nav a{display:block;min-height:44px;padding:8px;color:#265c3d;font-size:15px;overflow-wrap:anywhere}.source{font-size:14px;color:#59685d}p,li,td,h2,h3{overflow-wrap:anywhere}h2{font-size:24px}h3{font-size:21px}details{border:1px solid #d5dfd6;padding:12px;margin:16px 0;border-radius:10px}summary{min-height:44px;cursor:pointer}a:focus-visible,summary:focus-visible{outline:3px solid #af7720;outline-offset:3px}.unready{border:1px dashed #7b897f;background:#fafafa;padding:16px;font-size:15px}.table-scroll{overflow-x:auto}.diagram-scroll{overflow-x:auto;max-width:100%}.selected-diagram{display:block;width:100%;min-width:600px;max-width:1000px;height:auto}.selected-scene{display:block;width:100%;max-width:900px;height:auto;margin:auto}figure{margin:18px 0}figcaption{font-size:14px;color:#59685d}.diagram-open{display:inline-flex;align-items:center;min-height:44px}table{width:100%;border-collapse:collapse}td{padding:8px;border-bottom:1px solid #ddd}article ul{padding-left:24px}@media(max-width:999px){main{grid-template-columns:minmax(0,1fr);padding:18px}aside.sidebar{position:static}nav{max-height:28dvh}}@media(max-width:500px){html{font-size:17px}main{padding:10px}article,header{padding:16px}}@media print{html{color:black;background:white;font-size:12pt}main{display:block;padding:0}.sidebar{display:none}article,header{border-color:black}h2,h3{break-after:avoid}.table-scroll{overflow:visible}.selected-diagram{min-width:0;filter:grayscale(1)}.selected-scene{filter:grayscale(1)}.diagram-open{display:none}}</style><main><header><h1>中1数学：説明を小さく区切って読む</h1><p>Claudeの原稿をそのまま表示した確認用資料。アプリへ公開していません。解答・ヒントは押すまで閉じています。採用済みの図を表示し、その他の図は準備中としています。</p></header><aside class="sidebar"><details open><summary>節と説明の目次</summary><nav><a href="#M1-C1-OPEN-reading-1">M1-C1-OPEN 「0より下」を、数で言えるかな？</a><a href="#M1-C1-OPEN-reading-2">M1-C1-OPEN この章で考えること</a><a href="#M1-C1-OPEN-reading-3">M1-C1-OPEN 考えておこう（答えはこの章の中で見つかる）</a><a href="#M1-C1-S1-reading-1">M1-C1-S1 海面より上と、海面より下</a><a href="#M1-C1-S1-reading-2">M1-C1-S1 小学校で学んだこと（使うもの）</a><a href="#M1-C1-S1-reading-3">M1-C1-S1 この節でできるようになること</a><a href="#M1-C1-S1-reading-4">M1-C1-S1 「−」は「0より小さい」のしるし</a><a href="#M1-C1-S1-reading-5">M1-C1-S1 なぜ「−」を使うと便利なの？</a><a href="#M1-C1-S1-reading-6">M1-C1-S1 正の数・負の数・0</a><a href="#M1-C1-S1-reading-7">M1-C1-S1 整数と自然数</a><a href="#M1-C1-S1-reading-8">M1-C1-S1 どこを見る</a><a href="#M1-C1-S1-reading-9">M1-C1-S1 解く順番（「〜をすべて選びなさい」）</a><a href="#M1-C1-S1-reading-10">M1-C1-S1 例題1-基本　0℃より9℃低い温度を、「−」を使って表しなさい。</a><a href="#M1-C1-S1-reading-11">M1-C1-S1 例題1-標準　次の数の中から、（1）負の数、（2）整数、（3）自然数を、すべて選びなさい。</a><a href="#M1-C1-S1-reading-12">M1-C1-S1 例題1-応用　「0 より大きく、整数ではない負の数」はありますか。理由も答えなさい。</a><a href="#M1-C1-S1-reading-13">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-14">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-15">M1-C1-S1 なぜ数直線を使うの？</a><a href="#M1-C1-S1-reading-16">M1-C1-S1 目盛りは「1」とはかぎらない</a><a href="#M1-C1-S1-reading-17">M1-C1-S1 解く順番（目盛りを読む）</a><a href="#M1-C1-S1-reading-18">M1-C1-S1 解く順番（数を置く）</a><a href="#M1-C1-S1-reading-19">M1-C1-S1 例題2-基本　1目盛りが1の数直線で、0 から左へ4目盛りの点が表す数は？</a><a href="#M1-C1-S1-reading-20">M1-C1-S1 例題2-標準（FIG02）　点P、点Qが表す数を答えなさい。</a><a href="#M1-C1-S1-reading-21">M1-C1-S1 例題2-応用　1目盛りが 1/3 の数直線で、0 から左へ5目盛りの点は？</a><a href="#M1-C1-S1-reading-22">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-23">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-24">M1-C1-S1 なぜ正の数・負の数で量を表せるの？</a><a href="#M1-C1-S1-reading-25">M1-C1-S1 基準とのちがい</a><a href="#M1-C1-S1-reading-26">M1-C1-S1 1つのことばで言いかえる</a><a href="#M1-C1-S1-reading-27">M1-C1-S1 解く順番（反対の量）</a><a href="#M1-C1-S1-reading-28">M1-C1-S1 解く順番（基準とのちがい）</a><a href="#M1-C1-S1-reading-29">M1-C1-S1 解く順番（言いかえ）</a><a href="#M1-C1-S1-reading-30">M1-C1-S1 例題3-基本　東へ300m進むことを +300m と表すとき、西へ200m進むことはどう表せますか。</a><a href="#M1-C1-S1-reading-31">M1-C1-S1 例題3-標準　1日の読書の目標を20ページとし、目標とのちがいを正の数・負の数で表します。月曜26ページ、火曜17ページ、水曜20ページのちがいは？</a><a href="#M1-C1-S1-reading-32">M1-C1-S1 例題3-応用（1）「3日おそい」ことを、「早い」ということばを使って表しなさい。</a><a href="#M1-C1-S1-reading-33">M1-C1-S1 例題3-応用（2）基準の50点とのちがいが「−8点」の人は、何点ですか。</a><a href="#M1-C1-S1-reading-34">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-35">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-36">M1-C1-S1 符号を変えた数</a><a href="#M1-C1-S1-reading-37">M1-C1-S1 絶対値</a><a href="#M1-C1-S1-reading-38">M1-C1-S1 解く順番（絶対値を答える）</a><a href="#M1-C1-S1-reading-39">M1-C1-S1 解く順番（絶対値が○の数をさがす）</a><a href="#M1-C1-S1-reading-40">M1-C1-S1 解く順番（絶対値が○より小さい／○以下の整数）</a><a href="#M1-C1-S1-reading-41">M1-C1-S1 例題4-基本　−11 の絶対値と、−11 の符号を変えた数を答えなさい。</a><a href="#M1-C1-S1-reading-42">M1-C1-S1 例題4-標準　絶対値が 4 になる数を、すべて答えなさい。</a><a href="#M1-C1-S1-reading-43">M1-C1-S1 例題4-応用　絶対値が3より小さい整数を、すべて答えなさい。</a><a href="#M1-C1-S1-reading-44">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-45">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-46">M1-C1-S1 数の大小</a><a href="#M1-C1-S1-reading-47">M1-C1-S1 不等号</a><a href="#M1-C1-S1-reading-48">M1-C1-S1 解く順番（大小をくらべる）</a><a href="#M1-C1-S1-reading-49">M1-C1-S1 例題5-基本　−3.5 と −2 の大小を、不等号で表しなさい。</a><a href="#M1-C1-S1-reading-50">M1-C1-S1 例題5-標準　−1、−4/3、0.5 の大小を、1つの式で表しなさい。</a><a href="#M1-C1-S1-reading-51">M1-C1-S1 例題5-応用　−5/6 と −0.8 の大小を、不等号で表しなさい。</a><a href="#M1-C1-S1-reading-52">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-53">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-54">M1-C1-S1 「〜より○大きい数」は、数直線の移動</a><a href="#M1-C1-S1-reading-55">M1-C1-S1 なぜこれが大事？</a><a href="#M1-C1-S1-reading-56">M1-C1-S1 解く順番（〜より○大きい・小さい数）</a><a href="#M1-C1-S1-reading-57">M1-C1-S1 解く順番（□を求める：□より○大きい数が△）</a><a href="#M1-C1-S1-reading-58">M1-C1-S1 例題6-基本　−3より5大きい数</a><a href="#M1-C1-S1-reading-59">M1-C1-S1 例題6-標準　−2より−4大きい数</a><a href="#M1-C1-S1-reading-60">M1-C1-S1 例題6-応用　□より4大きい数は1です。□にあてはまる数を答えなさい。</a><a href="#M1-C1-S1-reading-61">M1-C1-S1 つまずきの比較</a><a href="#M1-C1-S1-reading-62">M1-C1-S1 考え方付き確認</a><a href="#M1-C1-S1-reading-63">M1-C1-S1 気温で考える大小</a><a href="#M1-C1-S1-reading-64">M1-C1-S1 判断の根拠を言えるようにしよう</a><a href="#M1-C1-S1-reading-65">M1-C1-S1 検算のしかた</a><a href="#M1-C1-S1-reading-66">M1-C1-S1 まとめ</a><a href="#M1-C1-S1-reading-67">M1-C1-S1 自分のことばで説明しよう</a><a href="#M1-C1-S1-reading-68">M1-C1-S1 振り返りの問題</a><a href="#M1-C1-S2-reading-1">M1-C1-S2 M1-P026｜身近な導入・既習事項・今回のつながり</a><a href="#M1-C1-S2-reading-2">M1-C1-S2 この節で使う、前に学んだこと</a><a href="#M1-C1-S2-reading-3">M1-C1-S2 この節でできるようになること</a><a href="#M1-C1-S2-reading-4">M1-C1-S2 たし算を数直線で考える</a><a href="#M1-C1-S2-reading-5">M1-C1-S2 気づくこと（なぜ）</a><a href="#M1-C1-S2-reading-6">M1-C1-S2 打ち消し合いで見る</a><a href="#M1-C1-S2-reading-7">M1-C1-S2 きまり</a><a href="#M1-C1-S2-reading-8">M1-C1-S2 どこを見る・解く順番</a><a href="#M1-C1-S2-reading-9">M1-C1-S2 例題1-基本　(−6)+(−9)</a><a href="#M1-C1-S2-reading-10">M1-C1-S2 例題1-標準　(+13)+(−21)</a><a href="#M1-C1-S2-reading-11">M1-C1-S2 例題1-応用　(−5/6)+(+3/8)</a><a href="#M1-C1-S2-reading-12">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-13">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-14">M1-C1-S2 なぜ「ひく」は「符号を変えてたす」になるの？</a><a href="#M1-C1-S2-reading-15">M1-C1-S2 きまり</a><a href="#M1-C1-S2-reading-16">M1-C1-S2 「+」を書かない式</a><a href="#M1-C1-S2-reading-17">M1-C1-S2 解く順番</a><a href="#M1-C1-S2-reading-18">M1-C1-S2 どこを見る</a><a href="#M1-C1-S2-reading-19">M1-C1-S2 例題2-基本　(+4)−(+11)</a><a href="#M1-C1-S2-reading-20">M1-C1-S2 例題2-標準　(−9)−(−14)</a><a href="#M1-C1-S2-reading-21">M1-C1-S2 例題2-応用　(−1/4)−(+5/6)</a><a href="#M1-C1-S2-reading-22">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-23">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-24">M1-C1-S2 項</a><a href="#M1-C1-S2-reading-25">M1-C1-S2 なぜ順番を入れかえてよいの？</a><a href="#M1-C1-S2-reading-26">M1-C1-S2 解く順番</a><a href="#M1-C1-S2-reading-27">M1-C1-S2 どこを見る</a><a href="#M1-C1-S2-reading-28">M1-C1-S2 例題3-基本　7−12+5−3 の正の項と負の項を、それぞれすべて答えなさい。</a><a href="#M1-C1-S2-reading-29">M1-C1-S2 例題3-標準　−8+15−11+3</a><a href="#M1-C1-S2-reading-30">M1-C1-S2 例題3-応用　6−(−9)+(−13)−4</a><a href="#M1-C1-S2-reading-31">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-32">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-33">M1-C1-S2 負の数×正の数</a><a href="#M1-C1-S2-reading-34">M1-C1-S2 なぜ「負×負」は正になるの？（FIG04）</a><a href="#M1-C1-S2-reading-35">M1-C1-S2 きまり</a><a href="#M1-C1-S2-reading-36">M1-C1-S2 解く順番</a><a href="#M1-C1-S2-reading-37">M1-C1-S2 □を求める（(−8)×□＝56 の形）</a><a href="#M1-C1-S2-reading-38">M1-C1-S2 例題4-基本　(−7)×5</a><a href="#M1-C1-S2-reading-39">M1-C1-S2 例題4-標準　(−6)×(−13)</a><a href="#M1-C1-S2-reading-40">M1-C1-S2 例題4-応用　(−8)×□＝56 のとき、□にあてはまる数</a><a href="#M1-C1-S2-reading-41">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-42">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-43">M1-C1-S2 なぜわり算の符号のきまりは、かけ算と同じなの？</a><a href="#M1-C1-S2-reading-44">M1-C1-S2 0 のわり算</a><a href="#M1-C1-S2-reading-45">M1-C1-S2 小数・分数の乗除</a><a href="#M1-C1-S2-reading-46">M1-C1-S2 解く順番</a><a href="#M1-C1-S2-reading-47">M1-C1-S2 例題5-基本　(−91)÷(−7)</a><a href="#M1-C1-S2-reading-48">M1-C1-S2 例題5-標準　63÷(−9)</a><a href="#M1-C1-S2-reading-49">M1-C1-S2 例題5-応用　（1）(−0.4)×(−1.5)　（2）(−5/9)×(9/10)</a><a href="#M1-C1-S2-reading-50">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-51">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-52">M1-C1-S2 逆数</a><a href="#M1-C1-S2-reading-53">M1-C1-S2 わり算をかけ算に直す</a><a href="#M1-C1-S2-reading-54">M1-C1-S2 3つ以上の数の乗除</a><a href="#M1-C1-S2-reading-55">M1-C1-S2 解く順番（乗除の混じった式）</a><a href="#M1-C1-S2-reading-56">M1-C1-S2 どこを見る</a><a href="#M1-C1-S2-reading-57">M1-C1-S2 例題6-基本　0.25 の逆数と、−7 の逆数</a><a href="#M1-C1-S2-reading-58">M1-C1-S2 例題6-標準（1）(−3/4)÷(9/10)</a><a href="#M1-C1-S2-reading-59">M1-C1-S2 例題6-標準（2）(−3)×(−5)×(−4)</a><a href="#M1-C1-S2-reading-60">M1-C1-S2 例題6-応用　18÷(−4)×(−2/3)</a><a href="#M1-C1-S2-reading-61">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-62">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-63">M1-C1-S2 累乗</a><a href="#M1-C1-S2-reading-64">M1-C1-S2 四則の順序</a><a href="#M1-C1-S2-reading-65">M1-C1-S2 解く順番</a><a href="#M1-C1-S2-reading-66">M1-C1-S2 例題7-基本　(−1/2)³</a><a href="#M1-C1-S2-reading-67">M1-C1-S2 例題7-標準（1）7−(−4)×3</a><a href="#M1-C1-S2-reading-68">M1-C1-S2 例題7-標準（2）(−24)÷(−2)³+5</a><a href="#M1-C1-S2-reading-69">M1-C1-S2 例題7-応用　−2²×(−3)−(−5)²</a><a href="#M1-C1-S2-reading-70">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-71">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-72">M1-C1-S2 かっこのある式</a><a href="#M1-C1-S2-reading-73">M1-C1-S2 分配法則</a><a href="#M1-C1-S2-reading-74">M1-C1-S2 解く順番（かっこ）</a><a href="#M1-C1-S2-reading-75">M1-C1-S2 解く順番（分配法則）</a><a href="#M1-C1-S2-reading-76">M1-C1-S2 どちらを使うか</a><a href="#M1-C1-S2-reading-77">M1-C1-S2 例題8-基本　10−{6−(−2)}×2</a><a href="#M1-C1-S2-reading-78">M1-C1-S2 例題8-標準（1）(−3)×{8−(−2)²}÷6</a><a href="#M1-C1-S2-reading-79">M1-C1-S2 例題8-標準（2）(5/6−3/4)×(−24)</a><a href="#M1-C1-S2-reading-80">M1-C1-S2 例題8-応用　47×(−8)+53×(−8)</a><a href="#M1-C1-S2-reading-81">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-82">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-83">M1-C1-S2 計算はいつでもできる？</a><a href="#M1-C1-S2-reading-84">M1-C1-S2 集合</a><a href="#M1-C1-S2-reading-85">M1-C1-S2 「いつでもできるか」の調べ方</a><a href="#M1-C1-S2-reading-86">M1-C1-S2 例題9-基本　3、−8、0.5、0、−2/7、14 のうち、整数をすべて答えなさい。</a><a href="#M1-C1-S2-reading-87">M1-C1-S2 例題9-標準　整数の集合で、わり算がいつでもできるとは言えない例を1つ書きなさい。</a><a href="#M1-C1-S2-reading-88">M1-C1-S2 例題9-応用　「自然数どうしの差は、いつも整数になる」は正しいですか。</a><a href="#M1-C1-S2-reading-89">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-90">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-91">M1-C1-S2 素数</a><a href="#M1-C1-S2-reading-92">M1-C1-S2 素因数分解</a><a href="#M1-C1-S2-reading-93">M1-C1-S2 解く順番（素因数分解）</a><a href="#M1-C1-S2-reading-94">M1-C1-S2 どこを見る（素数かどうか）</a><a href="#M1-C1-S2-reading-95">M1-C1-S2 2乗の数・共通の約数</a><a href="#M1-C1-S2-reading-96">M1-C1-S2 例題10-基本　23、27、37、49、87 のうち、素数をすべて答えなさい。</a><a href="#M1-C1-S2-reading-97">M1-C1-S2 例題10-標準　180 を素因数分解しなさい。</a><a href="#M1-C1-S2-reading-98">M1-C1-S2 例題10-応用（1）98 にできるだけ小さい自然数をかけて、ある自然数の2乗にします。何をかければよいですか。</a><a href="#M1-C1-S2-reading-99">M1-C1-S2 例題10-応用（2）66 と 110 を、どちらもわり切るいちばん大きい自然数</a><a href="#M1-C1-S2-reading-100">M1-C1-S2 つまずきの比較</a><a href="#M1-C1-S2-reading-101">M1-C1-S2 考え方付き確認</a><a href="#M1-C1-S2-reading-102">M1-C1-S2 別の見方：「変化」は、あとの値−前の値</a><a href="#M1-C1-S2-reading-103">M1-C1-S2 判断の根拠を言えるようにしよう</a><a href="#M1-C1-S2-reading-104">M1-C1-S2 検算のしかた</a><a href="#M1-C1-S2-reading-105">M1-C1-S2 まとめ</a><a href="#M1-C1-S2-reading-106">M1-C1-S2 よくあるまちがい（この節のまとめ）</a><a href="#M1-C1-S2-reading-107">M1-C1-S2 振り返りの問題</a><a href="#M1-C1-S3-reading-1">M1-C1-S3 M1-P065｜身近な導入・既習事項・今回のつながり</a><a href="#M1-C1-S3-reading-2">M1-C1-S3 使う、前に学んだこと</a><a href="#M1-C1-S3-reading-3">M1-C1-S3 仮平均</a><a href="#M1-C1-S3-reading-4">M1-C1-S3 なぜうまくいくの？</a><a href="#M1-C1-S3-reading-5">M1-C1-S3 仮平均はどの値でもよい</a><a href="#M1-C1-S3-reading-6">M1-C1-S3 どこを見る（仮平均の決め方）</a><a href="#M1-C1-S3-reading-7">M1-C1-S3 解く順番</a><a href="#M1-C1-S3-reading-8">M1-C1-S3 確かめる</a><a href="#M1-C1-S3-reading-9">M1-C1-S3 例題1-基本　通学時間 18、23、20、17、27（分）の平均を、20分を仮平均として求めなさい。</a><a href="#M1-C1-S3-reading-10">M1-C1-S3 例題1-標準　6個のかぼちゃの重さ 2.4、2.1、2.7、2.2、2.6、1.8（kg）の平均を、仮平均を使って求めなさい。</a><a href="#M1-C1-S3-reading-11">M1-C1-S3 例題1-応用　4人のジャンプの記録を、ある基準とのちがいで表しました。A +4cm、B −6cm、C +1cm、D は消えて読めません。4人の平均は基準より 1cm 長いことが分かっています。D のちがいを求めなさい。</a><a href="#M1-C1-S3-reading-12">M1-C1-S3 つまずきの比較</a><a href="#M1-C1-S3-reading-13">M1-C1-S3 考え方付き確認</a><a href="#M1-C1-S3-reading-14">M1-C1-S3 別の見方：「ならす」と平均</a><a href="#M1-C1-S3-reading-15">M1-C1-S3 判断の根拠を言えるようにしよう</a><a href="#M1-C1-S3-reading-16">M1-C1-S3 まとめ</a><a href="#M1-C1-S3-reading-17">M1-C1-S3 振り返りの問題</a><a href="#M1-C1-REVIEW-reading-1">M1-C1-REVIEW 1章の地図</a><a href="#M1-C1-REVIEW-reading-2">M1-C1-REVIEW 計算で迷ったときの順番</a><a href="#M1-C1-REVIEW-reading-3">M1-C1-REVIEW まとめの問題</a><a href="#M1-C1-REVIEW-reading-4">M1-C1-REVIEW 思い出しカード（1週間後にもう一度）</a><a href="#M1-C1-REVIEW-reading-5">M1-C1-REVIEW 別の方法で確かめる（検算）</a><a href="#M1-C1-REVIEW-reading-6">M1-C1-REVIEW 考え方付き確認　〔参考：教科書p44 分配法則〕</a><a href="#M1-C2-OPEN-reading-1">M1-C2-OPEN 何個ならんでいる？</a><a href="#M1-C2-OPEN-reading-2">M1-C2-OPEN この章で考えること</a><a href="#M1-C2-OPEN-reading-3">M1-C2-OPEN 考えておこう</a><a href="#M1-C2-S1-reading-1">M1-C2-S1 買う数が変わっても、計算のしかたは同じ</a><a href="#M1-C2-S1-reading-2">M1-C2-S1 使う、前に学んだこと</a><a href="#M1-C2-S1-reading-3">M1-C2-S1 この節でできるようになること</a><a href="#M1-C2-S1-reading-4">M1-C2-S1 なぜ文字を使うの？</a><a href="#M1-C2-S1-reading-5">M1-C2-S1 書き方のきまり（積）</a><a href="#M1-C2-S1-reading-6">M1-C2-S1 書き方のきまり（商）</a><a href="#M1-C2-S1-reading-7">M1-C2-S1 はぶけないもの</a><a href="#M1-C2-S1-reading-8">M1-C2-S1 数量を文字式で表す順番</a><a href="#M1-C2-S1-reading-9">M1-C2-S1 書き方を直す順番</a><a href="#M1-C2-S1-reading-10">M1-C2-S1 どこを見る</a><a href="#M1-C2-S1-reading-11">M1-C2-S1 例題1-基本　1個 x 円のパンを5個と、120円の牛乳を1本買ったときの代金を、文字式で表しなさい。</a><a href="#M1-C2-S1-reading-12">M1-C2-S1 例題1-標準　n×(−3)×m×n を、文字式の書き方にしたがって書きなさい。</a><a href="#M1-C2-S1-reading-13">M1-C2-S1 例題1-応用　2×a÷b×5 を、記号 ×、÷ を使わずに書きなさい。</a><a href="#M1-C2-S1-reading-14">M1-C2-S1 逆向き：3a²b を、記号 × を使って表しなさい。</a><a href="#M1-C2-S1-reading-15">M1-C2-S1 つまずきの比較</a><a href="#M1-C2-S1-reading-16">M1-C2-S1 考え方付き確認</a><a href="#M1-C2-S1-reading-17">M1-C2-S1 代金とおつり</a><a href="#M1-C2-S1-reading-18">M1-C2-S1 速さ・時間・道のり</a><a href="#M1-C2-S1-reading-19">M1-C2-S1 割合</a><a href="#M1-C2-S1-reading-20">M1-C2-S1 式の意味を読む</a><a href="#M1-C2-S1-reading-21">M1-C2-S1 解く順番（数量を式にする）</a><a href="#M1-C2-S1-reading-22">M1-C2-S1 解く順番（割合）</a><a href="#M1-C2-S1-reading-23">M1-C2-S1 解く順番（式の意味を読む）</a><a href="#M1-C2-S1-reading-24">M1-C2-S1 例題2-基本　2000円を出して、1冊 a 円のノートを3冊買ったときのおつり</a><a href="#M1-C2-S1-reading-25">M1-C2-S1 例題2-標準（1）時速 x km で4時間歩いた道のり　（2）y m を分速70m で歩いたときにかかる時間</a><a href="#M1-C2-S1-reading-26">M1-C2-S1 例題2-応用（1）x 円の品物を2割5分引きで買ったときの値段</a><a href="#M1-C2-S1-reading-27">M1-C2-S1 例題2-応用（2）大人1人 a 円、子ども1人 b 円のとき、a−2b≧500 という式は、どんなことを表していますか。（関係の式は2節でくわしく学ぶ。ここでは a−2b の意味を読む。）</a><a href="#M1-C2-S1-reading-28">M1-C2-S1 つまずきの比較</a><a href="#M1-C2-S1-reading-29">M1-C2-S1 考え方付き確認</a><a href="#M1-C2-S1-reading-30">M1-C2-S1 代入と式の値</a><a href="#M1-C2-S1-reading-31">M1-C2-S1 なぜかっこをつけるの？</a><a href="#M1-C2-S1-reading-32">M1-C2-S1 −x の値</a><a href="#M1-C2-S1-reading-33">M1-C2-S1 解く順番</a><a href="#M1-C2-S1-reading-34">M1-C2-S1 どこを見る</a><a href="#M1-C2-S1-reading-35">M1-C2-S1 例題3-基本　x＝−3 のとき、5−2x の値</a><a href="#M1-C2-S1-reading-36">M1-C2-S1 例題3-標準（1）a＝−4 のとき、a² と −a² の値</a><a href="#M1-C2-S1-reading-37">M1-C2-S1 例題3-標準（2）x＝2、y＝−3 のとき、4x−5y の値</a><a href="#M1-C2-S1-reading-38">M1-C2-S1 例題3-応用　x＝−1/2 のとき、6x²−x の値</a><a href="#M1-C2-S1-reading-39">M1-C2-S1 つまずきの比較</a><a href="#M1-C2-S1-reading-40">M1-C2-S1 考え方付き確認</a><a href="#M1-C2-S1-reading-41">M1-C2-S1 式の値で予想する</a><a href="#M1-C2-S1-reading-42">M1-C2-S1 根拠を言えるようにしよう</a><a href="#M1-C2-S1-reading-43">M1-C2-S1 まとめ</a><a href="#M1-C2-S1-reading-44">M1-C2-S1 自分のことばで説明しよう</a><a href="#M1-C2-S1-reading-45">M1-C2-S1 振り返りの問題</a><a href="#M1-C2-S2-reading-1">M1-C2-S2 袋の数をまとめる</a><a href="#M1-C2-S2-reading-2">M1-C2-S2 使う、前に学んだこと</a><a href="#M1-C2-S2-reading-3">M1-C2-S2 この節でできるようになること</a><a href="#M1-C2-S2-reading-4">M1-C2-S2 項と係数</a><a href="#M1-C2-S2-reading-5">M1-C2-S2 なぜ同じ文字の項はまとめられるの？（FIG01）</a><a href="#M1-C2-S2-reading-6">M1-C2-S2 どこを見る</a><a href="#M1-C2-S2-reading-7">M1-C2-S2 解く順番</a><a href="#M1-C2-S2-reading-8">M1-C2-S2 例題1-基本　5−3a+b/2 の項を答えなさい。また、a の係数、b の係数を答えなさい。</a><a href="#M1-C2-S2-reading-9">M1-C2-S2 例題1-標準　4x−9x</a><a href="#M1-C2-S2-reading-10">M1-C2-S2 例題1-応用（1）0.3a−1.1a+2.5−0.9</a><a href="#M1-C2-S2-reading-11">M1-C2-S2 例題1-応用（2）(2/3)y−(5/6)y</a><a href="#M1-C2-S2-reading-12">M1-C2-S2 つまずきの比較</a><a href="#M1-C2-S2-reading-13">M1-C2-S2 考え方付き確認</a><a href="#M1-C2-S2-reading-14">M1-C2-S2 かっこの外し方</a><a href="#M1-C2-S2-reading-15">M1-C2-S2 なぜ −( ) は符号が全部変わるの？（FIG02）</a><a href="#M1-C2-S2-reading-16">M1-C2-S2 式と式の加減</a><a href="#M1-C2-S2-reading-17">M1-C2-S2 解く順番</a><a href="#M1-C2-S2-reading-18">M1-C2-S2 どこを見る</a><a href="#M1-C2-S2-reading-19">M1-C2-S2 例題2-基本　5x+(2x−9)</a><a href="#M1-C2-S2-reading-20">M1-C2-S2 例題2-標準　6a−(4a−7)</a><a href="#M1-C2-S2-reading-21">M1-C2-S2 例題2-応用　3x−8 と −5x+2 について、（1）2つの式の和　（2）左の式から右の式をひいた差</a><a href="#M1-C2-S2-reading-22">M1-C2-S2 つまずきの比較</a><a href="#M1-C2-S2-reading-23">M1-C2-S2 考え方付き確認</a><a href="#M1-C2-S2-reading-24">M1-C2-S2 文字式×数、文字式÷数</a><a href="#M1-C2-S2-reading-25">M1-C2-S2 項が2つの式に数をかける（分配法則）</a><a href="#M1-C2-S2-reading-26">M1-C2-S2 項が2つの式を数でわる</a><a href="#M1-C2-S2-reading-27">M1-C2-S2 解く順番</a><a href="#M1-C2-S2-reading-28">M1-C2-S2 どこを見る</a><a href="#M1-C2-S2-reading-29">M1-C2-S2 例題3-基本（1）−4a×6　（2）15y÷(−5)　（3）4x÷(2/3)</a><a href="#M1-C2-S2-reading-30">M1-C2-S2 例題3-標準（1）−3(5x−2)　（2）(12a−20)÷4</a><a href="#M1-C2-S2-reading-31">M1-C2-S2 例題3-応用　(9x−6)÷(−3/2)</a><a href="#M1-C2-S2-reading-32">M1-C2-S2 つまずきの比較</a><a href="#M1-C2-S2-reading-33">M1-C2-S2 考え方付き確認</a><a href="#M1-C2-S2-reading-34">M1-C2-S2 分数の形の式に数をかける</a><a href="#M1-C2-S2-reading-35">M1-C2-S2 かっこがある式の計算</a><a href="#M1-C2-S2-reading-36">M1-C2-S2 解く順番（分数の形×数）</a><a href="#M1-C2-S2-reading-37">M1-C2-S2 解く順番（かっこがある式）</a><a href="#M1-C2-S2-reading-38">M1-C2-S2 例題4-基本　(3x−1)/4×8</a><a href="#M1-C2-S2-reading-39">M1-C2-S2 例題4-標準　2(3a+4)−5(a−1)</a><a href="#M1-C2-S2-reading-40">M1-C2-S2 例題4-応用　(1/3)(6x−9)−(1/2)(4x+2)</a><a href="#M1-C2-S2-reading-41">M1-C2-S2 つまずきの比較</a><a href="#M1-C2-S2-reading-42">M1-C2-S2 考え方付き確認</a><a href="#M1-C2-S2-reading-43">M1-C2-S2 等式</a><a href="#M1-C2-S2-reading-44">M1-C2-S2 不等式</a><a href="#M1-C2-S2-reading-45">M1-C2-S2 なぜ式で表すの？</a><a href="#M1-C2-S2-reading-46">M1-C2-S2 解く順番（関係を式に表す）</a><a href="#M1-C2-S2-reading-47">M1-C2-S2 どの記号を使うか</a><a href="#M1-C2-S2-reading-48">M1-C2-S2 式の意味を読む順番</a><a href="#M1-C2-S2-reading-49">M1-C2-S2 例題5-基本　1本 x 円の鉛筆6本の代金は y 円です。この関係を等式に表しなさい。</a><a href="#M1-C2-S2-reading-50">M1-C2-S2 例題5-標準（1）長さ a cm のテープから、b cm ずつ7本切り取ると、残りは c cm です。</a><a href="#M1-C2-S2-reading-51">M1-C2-S2 例題5-標準（2）x 円のノート3冊と、y 円のペン1本の代金は、1000円以下です。</a><a href="#M1-C2-S2-reading-52">M1-C2-S2 例題5-応用　大人1人 a 円、子ども1人 b 円の入場料について、a−2b≧500 はどんなことを表していますか。</a><a href="#M1-C2-S2-reading-53">M1-C2-S2 つまずきの比較</a><a href="#M1-C2-S2-reading-54">M1-C2-S2 考え方付き確認</a><a href="#M1-C2-S2-reading-55">M1-C2-S2 2つの式が同じになる理由</a><a href="#M1-C2-S2-reading-56">M1-C2-S2 根拠を言えるようにしよう</a><a href="#M1-C2-S2-reading-57">M1-C2-S2 まとめ</a><a href="#M1-C2-S2-reading-58">M1-C2-S2 振り返りの問題</a><a href="#M1-C2-S3-reading-1">M1-C2-S3 数あてゲーム</a><a href="#M1-C2-S3-reading-2">M1-C2-S3 使う、前に学んだこと</a><a href="#M1-C2-S3-reading-3">M1-C2-S3 なぜ文字で説明できるの？</a><a href="#M1-C2-S3-reading-4">M1-C2-S3 いくつか試すことと、文字で説明することのちがい</a><a href="#M1-C2-S3-reading-5">M1-C2-S3 解く順番（「いつも○になる」ことの説明）</a><a href="#M1-C2-S3-reading-6">M1-C2-S3 規則を式で表す順番（ならべる図形など）</a><a href="#M1-C2-S3-reading-7">M1-C2-S3 例題1-基本　P113 の数あてで、思いうかべた数が −4 のとき、答えが 2 になることを確かめなさい。</a><a href="#M1-C2-S3-reading-8">M1-C2-S3 例題1-標準　次の手順で計算すると、答えはいつも同じ数になります。その数を求め、そうなる理由を文字式で説明しなさい。</a><a href="#M1-C2-S3-reading-9">M1-C2-S3 例題1-応用　正六角形を、辺を1本ずつ共有しながら横につなげていきます。正六角形を n 個つなげたときに使う棒の本数を、n を使った式で表しなさい。</a><a href="#M1-C2-S3-reading-10">M1-C2-S3 つまずきの比較</a><a href="#M1-C2-S3-reading-11">M1-C2-S3 考え方付き確認</a><a href="#M1-C2-S3-reading-12">M1-C2-S3 自分で数あてゲームを作る</a><a href="#M1-C2-S3-reading-13">M1-C2-S3 根拠を言えるようにしよう</a><a href="#M1-C2-S3-reading-14">M1-C2-S3 まとめ</a><a href="#M1-C2-S3-reading-15">M1-C2-S3 振り返りの問題</a><a href="#M1-C2-REVIEW-reading-1">M1-C2-REVIEW 2章の地図</a><a href="#M1-C2-REVIEW-reading-2">M1-C2-REVIEW 迷ったときの順番</a><a href="#M1-C2-REVIEW-reading-3">M1-C2-REVIEW まとめの問題</a><a href="#M1-C2-REVIEW-reading-4">M1-C2-REVIEW 思い出しカード</a><a href="#M1-C2-REVIEW-reading-5">M1-C2-REVIEW 別の方法で確かめる</a><a href="#M1-C2-REVIEW-reading-6">M1-C2-REVIEW 考え方付き確認</a><a href="#M1-C3-OPEN-reading-1">M1-C3-OPEN 何回乗ったら、同じ料金になる？</a><a href="#M1-C3-OPEN-reading-2">M1-C3-OPEN 2章との ちがい</a><a href="#M1-C3-OPEN-reading-3">M1-C3-OPEN この章で考えること</a><a href="#M1-C3-OPEN-reading-4">M1-C3-OPEN 考えておこう</a><a href="#M1-C3-S1-reading-1">M1-C3-S1 つりあいを、式で表す</a><a href="#M1-C3-S1-reading-2">M1-C3-S1 使う、前に学んだこと</a><a href="#M1-C3-S1-reading-3">M1-C3-S1 この節でできるようになること</a><a href="#M1-C3-S1-reading-4">M1-C3-S1 方程式と解</a><a href="#M1-C3-S1-reading-5">M1-C3-S1 なぜ「成り立たせる値」をさがすの？</a><a href="#M1-C3-S1-reading-6">M1-C3-S1 ある数が解かどうかを確かめる順番</a><a href="#M1-C3-S1-reading-7">M1-C3-S1 どこを見る</a><a href="#M1-C3-S1-reading-8">M1-C3-S1 例題1-基本　4 は、方程式 3x−5＝x+3 の解ですか。</a><a href="#M1-C3-S1-reading-9">M1-C3-S1 例題1-標準　−2、0、2 のうち、方程式 5−x＝3x+13 の解はどれですか。</a><a href="#M1-C3-S1-reading-10">M1-C3-S1 例題1-応用　方程式 2x+□＝5x−4 の解が 3 のとき、□にあてはまる数を求めなさい。</a><a href="#M1-C3-S1-reading-11">M1-C3-S1 つまずきの比較</a><a href="#M1-C3-S1-reading-12">M1-C3-S1 考え方付き確認</a><a href="#M1-C3-S1-reading-13">M1-C3-S1 等式の性質</a><a href="#M1-C3-S1-reading-14">M1-C3-S1 なぜ成り立つの？（FIG02）</a><a href="#M1-C3-S1-reading-15">M1-C3-S1 方程式を解くとは</a><a href="#M1-C3-S1-reading-16">M1-C3-S1 どの性質を使うかの見分け方（左辺が x と数だけのとき）</a><a href="#M1-C3-S1-reading-17">M1-C3-S1 解く順番</a><a href="#M1-C3-S1-reading-18">M1-C3-S1 例題2-基本（1）x−8＝−3　（2）x+15＝6</a><a href="#M1-C3-S1-reading-19">M1-C3-S1 例題2-標準（1）x/6＝−2　（2）−9x＝63</a><a href="#M1-C3-S1-reading-20">M1-C3-S1 例題2-応用　(3/4)x＝−9 を2通りの方法で解きなさい。</a><a href="#M1-C3-S1-reading-21">M1-C3-S1 つまずきの比較</a><a href="#M1-C3-S1-reading-22">M1-C3-S1 考え方付き確認</a><a href="#M1-C3-S1-reading-23">M1-C3-S1 移項</a><a href="#M1-C3-S1-reading-24">M1-C3-S1 なぜ符号が変わるの？</a><a href="#M1-C3-S1-reading-25">M1-C3-S1 文字の項も移項できる</a><a href="#M1-C3-S1-reading-26">M1-C3-S1 解く順番</a><a href="#M1-C3-S1-reading-27">M1-C3-S1 どこを見る</a><a href="#M1-C3-S1-reading-28">M1-C3-S1 確かめる</a><a href="#M1-C3-S1-reading-29">M1-C3-S1 例題3-基本　5x−7＝18</a><a href="#M1-C3-S1-reading-30">M1-C3-S1 例題3-標準　4x＝7x−9</a><a href="#M1-C3-S1-reading-31">M1-C3-S1 例題3-応用　6x+5＝2x−11</a><a href="#M1-C3-S1-reading-32">M1-C3-S1 つまずきの比較</a><a href="#M1-C3-S1-reading-33">M1-C3-S1 考え方付き確認</a><a href="#M1-C3-S1-reading-34">M1-C3-S1 かっこがある方程式</a><a href="#M1-C3-S1-reading-35">M1-C3-S1 分数をふくむ方程式：分母をはらう</a><a href="#M1-C3-S1-reading-36">M1-C3-S1 小数をふくむ方程式</a><a href="#M1-C3-S1-reading-37">M1-C3-S1 一次方程式</a><a href="#M1-C3-S1-reading-38">M1-C3-S1 一次方程式を解く順番</a><a href="#M1-C3-S1-reading-39">M1-C3-S1 どこを見る</a><a href="#M1-C3-S1-reading-40">M1-C3-S1 例題4-基本　4(x+3)＝x−6</a><a href="#M1-C3-S1-reading-41">M1-C3-S1 例題4-標準（1）(x+1)/4＝(2/3)x−1</a><a href="#M1-C3-S1-reading-42">M1-C3-S1 例題4-標準（2）0.6x−1.5＝0.1x+1</a><a href="#M1-C3-S1-reading-43">M1-C3-S1 例題4-応用　(2x−1)/3−(x−2)/2＝1</a><a href="#M1-C3-S1-reading-44">M1-C3-S1 つまずきの比較</a><a href="#M1-C3-S1-reading-45">M1-C3-S1 考え方付き確認</a><a href="#M1-C3-S1-reading-46">M1-C3-S1 比の値と比例式</a><a href="#M1-C3-S1-reading-47">M1-C3-S1 比例式の性質</a><a href="#M1-C3-S1-reading-48">M1-C3-S1 解く順番</a><a href="#M1-C3-S1-reading-49">M1-C3-S1 どこを見る</a><a href="#M1-C3-S1-reading-50">M1-C3-S1 例題5-基本　x：10＝2：5</a><a href="#M1-C3-S1-reading-51">M1-C3-S1 例題5-標準　14：x＝7：3</a><a href="#M1-C3-S1-reading-52">M1-C3-S1 例題5-応用　(x−2)：x＝3：5</a><a href="#M1-C3-S1-reading-53">M1-C3-S1 つまずきの比較</a><a href="#M1-C3-S1-reading-54">M1-C3-S1 考え方付き確認</a><a href="#M1-C3-S1-reading-55">M1-C3-S1 てんびんで解き方を説明する</a><a href="#M1-C3-S1-reading-56">M1-C3-S1 根拠を言えるようにしよう</a><a href="#M1-C3-S1-reading-57">M1-C3-S1 まとめ</a><a href="#M1-C3-S1-reading-58">M1-C3-S1 振り返りの問題</a><a href="#M1-C3-S2-reading-1">M1-C3-S2 値段が分からないノート</a><a href="#M1-C3-S2-reading-2">M1-C3-S2 使う、前に学んだこと</a><a href="#M1-C3-S2-reading-3">M1-C3-S2 方程式を使って問題を解く3つの手順</a><a href="#M1-C3-S2-reading-4">M1-C3-S2 なぜ③が必要なの？</a><a href="#M1-C3-S2-reading-5">M1-C3-S2 過不足の問題の見方（FIG01）</a><a href="#M1-C3-S2-reading-6">M1-C3-S2 等しい関係の見つけ方（よく出る形）</a><a href="#M1-C3-S2-reading-7">M1-C3-S2 何を x にする？</a><a href="#M1-C3-S2-reading-8">M1-C3-S2 解く順番</a><a href="#M1-C3-S2-reading-9">M1-C3-S2 例題1-基本（P146 のノート）</a><a href="#M1-C3-S2-reading-10">M1-C3-S2 例題1-標準（〜倍）　ペン3本と200円のノート1冊の代金は、ペン1本と40円の消しゴム1個の代金の4倍です。ペン1本の値段は？</a><a href="#M1-C3-S2-reading-11">M1-C3-S2 例題1-応用（過不足・FIG01）　折り紙を何人かに配ります。1人6枚ずつだと15枚余り、8枚ずつだと9枚足りません。人数と折り紙の枚数は？</a><a href="#M1-C3-S2-reading-12">M1-C3-S2 つまずきの比較</a><a href="#M1-C3-S2-reading-13">M1-C3-S2 考え方付き確認</a><a href="#M1-C3-S2-reading-14">M1-C3-S2 追いつく問題の見方</a><a href="#M1-C3-S2-reading-15">M1-C3-S2 割合の問題の見方</a><a href="#M1-C3-S2-reading-16">M1-C3-S2 速さの問題を解く順番</a><a href="#M1-C3-S2-reading-17">M1-C3-S2 割合の問題を解く順番</a><a href="#M1-C3-S2-reading-18">M1-C3-S2 例題2-基本（速さ）　妹が分速60mで家を出発しました。15分後に、姉が分速150mで同じ道を追いかけました。姉は出発してから何分後に追いつきますか。</a><a href="#M1-C3-S2-reading-19">M1-C3-S2 例題2-標準（解が問題に合うか）　例題2-基本で、駅が家から 1.2km のところにあり、妹は駅まで行きます。姉は、妹が駅に着く前に追いつけますか。</a><a href="#M1-C3-S2-reading-20">M1-C3-S2 例題2-応用（割合）　ある中学校の1年生は170人です。男子の人数は、女子の人数の80%より8人多いです。女子は何人ですか。</a><a href="#M1-C3-S2-reading-21">M1-C3-S2 つまずきの比較</a><a href="#M1-C3-S2-reading-22">M1-C3-S2 考え方付き確認</a><a href="#M1-C3-S2-reading-23">M1-C3-S2 比が等しい関係を見つける</a><a href="#M1-C3-S2-reading-24">M1-C3-S2 比例式の利用の手順</a><a href="#M1-C3-S2-reading-25">M1-C3-S2 解く順番</a><a href="#M1-C3-S2-reading-26">M1-C3-S2 どこを見る</a><a href="#M1-C3-S2-reading-27">M1-C3-S2 例題3-基本　白と青の絵の具を 2：7 の割合で混ぜて、180g の水色を作ります。白は何 g 必要ですか。</a><a href="#M1-C3-S2-reading-28">M1-C3-S2 例題3-標準　箱Aに玉が30個、箱Bに18個あります。それぞれに同じ数ずつ玉を加えたら、AとBの個数の比が 5：4 になりました。何個ずつ加えましたか。</a><a href="#M1-C3-S2-reading-29">M1-C3-S2 例題3-応用　びんAに水が 500mL、びんBに 300mL 入っています。Aから何 mL かをBに移したら、AとBの量の比が 3：5 になりました。移した量は？</a><a href="#M1-C3-S2-reading-30">M1-C3-S2 つまずきの比較</a><a href="#M1-C3-S2-reading-31">M1-C3-S2 考え方付き確認</a><a href="#M1-C3-S2-reading-32">M1-C3-S2 「解が問題に合わない」ことに気づく</a><a href="#M1-C3-S2-reading-33">M1-C3-S2 根拠を言えるようにしよう</a><a href="#M1-C3-S2-reading-34">M1-C3-S2 まとめ</a><a href="#M1-C3-S2-reading-35">M1-C3-S2 振り返りの問題</a></nav></details></aside><div class="content"><article id="M1-C1-OPEN-reading-1"><p class="source">M1-C1-OPEN／原稿区分 M1-P002｜章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「0より下」を、数で言えるかな？</h2><figure><div class="diagram-scroll"><img class="selected-scene" src="画像候補/M1-C1-OPEN-SCENE-A.jpg" alt="章の導入場面"></div><figcaption>章の導入場面</figcaption><a class="diagram-open" href="画像候補/M1-C1-OPEN-SCENE-A.jpg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>雪の朝。外の温度計の液は、0の線より下にある。</li>
+<li>冷凍庫の中は、もっと冷たい。</li>
+<li>「0より3℃低い」「0より18℃低い」。毎回こう言うのは長い。</li>
+<li>「0より低い」ことを、短く・正確に表す方法がある。それがこの章で学ぶ <strong>負の数</strong> だ。</li>
+</ul></article><article id="M1-C1-OPEN-reading-2"><p class="source">M1-C1-OPEN／原稿区分 M1-P002｜章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この章で考えること</h2><p>1. 0より小さい数は、どう書いて、どこに置けるか。（1節）</p>
+<p>2. 0より小さい数を使っても、たし算・ひき算・かけ算・わり算はできるか。（2節）</p>
+<p>3. 負の数を使うと、身のまわりのどんな計算が楽になるか。（3節）</p></article><article id="M1-C1-OPEN-reading-3"><p class="source">M1-C1-OPEN／原稿区分 M1-P002｜章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考えておこう（答えはこの章の中で見つかる）</h2><ul>
+<li>「0より3小さい数」と「0より8小さい数」では、どちらが大きい？</li>
+<li>温度が「3℃下がった」ことを、「上がった」ということばだけで言えるかな？</li>
+</ul>
+<p>（ここは読むページ。入力する問題はない。）</p></article><article id="M1-C1-S1-reading-1"><p class="source">M1-C1-S1／原稿区分 M1-P003｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>海面より上と、海面より下</h2><figure><div class="diagram-scroll"><img class="selected-scene" src="画像候補/M1-C1-S1-INTRO-C.png" alt="山の上と海の中。海面が「0」の場面"></div><figcaption>山の上と海の中。海面が「0」の場面</figcaption><a class="diagram-open" href="画像候補/M1-C1-S1-INTRO-C.png" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>山の高さは「海面から何mか」で表す。では、海の中の深い所はどう表す？</li>
+<li>海面を <strong>0</strong> と決めると、上と下を <strong>同じものさし</strong> で言える。</li>
+<li>0より上は「+」、0より下は「−」を使う。温度も同じで、0℃より下を「−」で表す。</li>
+</ul></article><article id="M1-C1-S1-reading-2"><p class="source">M1-C1-S1／原稿区分 M1-P003｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>小学校で学んだこと（使うもの）</h2><ul>
+<li>数直線：0 から右へ、1、2、3、……と数がならぶ。</li>
+<li>小数・分数も数直線の上に置ける。</li>
+<li>大きさくらべ：数直線で右にあるほど大きい。</li>
+</ul></article><article id="M1-C1-S1-reading-3"><p class="source">M1-C1-S1／原稿区分 M1-P003｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節でできるようになること</h2><p>1. 0より小さい数を書き、読み、なかま分けできる。</p>
+<p>2. 数直線で、0より左の数を読んだり置いたりできる。</p>
+<p>3. 反対の意味の量を、+と−で表せる。</p>
+<p>4. 絶対値を使って、数の大小をくらべられる。</p></article><article id="M1-C1-S1-reading-4"><p class="source">M1-C1-S1／原稿区分 M1-P004｜正負の符号・数の分類・整数と自然数／しくみ　（教科書 p14〜15・ワーク p2〜3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「−」は「0より小さい」のしるし</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG01/M1-C1-S1-FIG01-A.svg" alt="正の数と負の数の数直線"></div><figcaption>正の数と負の数の数直線</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG01/M1-C1-S1-FIG01-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>0℃より4℃低い温度は <strong>−4℃</strong> と書いて、「<strong>マイナス</strong>4度」と読む。</li>
+<li>0より小さい数は、数の前に「−」をつける。0より6小さい数は −6、0より1/3小さい数は −1/3。</li>
+</ul></article><article id="M1-C1-S1-reading-5"><p class="source">M1-C1-S1／原稿区分 M1-P004｜正負の符号・数の分類・整数と自然数／しくみ　（教科書 p14〜15・ワーク p2〜3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ「−」を使うと便利なの？</h2><p>「0より6低い」とことばで書くと、ほかの数とならべてくらべにくい。「−6」と1つの数にすると、数直線に置けるし、計算もできるようになる（2節）。</p></article><article id="M1-C1-S1-reading-6"><p class="source">M1-C1-S1／原稿区分 M1-P004｜正負の符号・数の分類・整数と自然数／しくみ　（教科書 p14〜15・ワーク p2〜3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>正の数・負の数・0</h2><div class="table-scroll"><table><tbody>
+<tr><td>なかま</td><td>意味</td><td>例</td></tr>
+<tr><td>正の数</td><td>0より大きい数</td><td>4、0.5、1/3、+2</td></tr>
+<tr><td>負の数</td><td>0より小さい数</td><td>−4、−0.5、−1/3</td></tr>
+<tr><td>0</td><td>どちらでもない（さかい目）</td><td>0</td></tr>
+</tbody></table></div>
+<ul>
+<li>正の数には「+」をつけることもある。4 と +4 は同じ数。+4 は「<strong>プラス</strong>4」と読む。</li>
+<li>「+」を <strong>正の符号</strong>、「−」を <strong>負の符号</strong> という。</li>
+</ul></article><article id="M1-C1-S1-reading-7"><p class="source">M1-C1-S1／原稿区分 M1-P004｜正負の符号・数の分類・整数と自然数／しくみ　（教科書 p14〜15・ワーク p2〜3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>整数と自然数</h2><ul>
+<li>これからは、……、−3、−2、−1、0、1、2、3、…… をすべて <strong>整数</strong> という。</li>
+<li>そのうち 1、2、3、…… を <strong>自然数</strong>（正の整数）という。</li>
+</ul>
+<p>図で見ると（FIG01）、0 の右に正の数、左に負の数。整数は目盛りの上の数、自然数はそのうち 0 より右の目盛りの数。</p></article><article id="M1-C1-S1-reading-8"><p class="source">M1-C1-S1／原稿区分 M1-P005｜正負の符号・数の分類・整数と自然数／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><p>1. <strong>符号</strong>：「−」がついているか。ついていれば負の数。</p>
+<p>2. <strong>値が整数になるか</strong>：2.5 や −1/2 は整数ではない。+6/3 は 2 と同じなので整数。</p>
+<p>3. <strong>0 かどうか</strong>：0 は整数には入る。正の数・負の数・自然数には入らない。</p></article><article id="M1-C1-S1-reading-9"><p class="source">M1-C1-S1／原稿区分 M1-P005｜正負の符号・数の分類・整数と自然数／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（「〜をすべて選びなさい」）</h2><p>1. まず、数を1つずつ「正・0・負」に分ける。</p>
+<p>2. 次に、それぞれ「整数か、整数でないか」を調べる。</p>
+<p>3. 問われているなかまを、表から読みとる。</p>
+<p>4. <strong>確かめる</strong>：選んだ数をもう一度見て、0 を入れた・入れ忘れたがないか。</p>
+<div class="table-scroll"><table><tbody>
+<tr><td>数</td><td>正・0・負</td><td>整数？</td><td>自然数？</td></tr>
+<tr><td>−7</td><td>負</td><td>○</td><td>×</td></tr>
+<tr><td>0.4</td><td>正</td><td>×</td><td>×</td></tr>
+<tr><td>0</td><td>0</td><td>○</td><td>×</td></tr>
+<tr><td>+3</td><td>正</td><td>○</td><td>○</td></tr>
+</tbody></table></div>
+<p>（表は、例題で使う数の一部。この表をつくる順番そのものが解き方になる。）</p></article><article id="M1-C1-S1-reading-10"><p class="source">M1-C1-S1／原稿区分 M1-P006｜正負の符号・数の分類・整数と自然数／例題　〔参考：教科書p14〜15・ワークp2〜3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　0℃より9℃低い温度を、「−」を使って表しなさい。</h2><p>1. 「0℃より低い」→ 負の数。</p>
+<p>2. 0℃から9℃はなれている → 9。</p>
+<p>3. 答え：<strong>−9℃</strong>。</p>
+<p><strong>確かめる</strong>：数直線で 0 より左にあるか → ある。</p></article><article id="M1-C1-S1-reading-11"><p class="source">M1-C1-S1／原稿区分 M1-P006｜正負の符号・数の分類・整数と自然数／例題　〔参考：教科書p14〜15・ワークp2〜3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　次の数の中から、（1）負の数、（2）整数、（3）自然数を、すべて選びなさい。</h2><p>−7、0.4、0、+3、−2/5、15、−1、1.2</p>
+<p>1. 正・0・負に分ける：負は −7、−2/5、−1。0 は 0。残りは正。</p>
+<p>2. 整数か調べる：−7、0、+3、15、−1 が整数。0.4、−2/5、1.2 は整数でない。</p>
+<p>3. 答え：（1）<strong>−7、−2/5、−1</strong>　（2）<strong>−7、0、+3、15、−1</strong>　（3）<strong>+3、15</strong></p>
+<p><strong>確かめる</strong>：0 は（2）だけに入っているか → 入っている。</p></article><article id="M1-C1-S1-reading-12"><p class="source">M1-C1-S1／原稿区分 M1-P006｜正負の符号・数の分類・整数と自然数／例題　〔参考：教科書p14〜15・ワークp2〜3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　「0 より大きく、整数ではない負の数」はありますか。理由も答えなさい。</h2><p>1. 「0 より大きい」数は、正の数。</p>
+<p>2. 正の数は、負の数ではない。</p>
+<p>3. 答え：<strong>ない</strong>。0 より大きい数は正の数なので、負の数になることはない。</p>
+<p>（「条件が同時に成り立つか」を考える問題。条件を1つずつ確かめる。）</p></article><article id="M1-C1-S1-reading-13"><p class="source">M1-C1-S1／原稿区分 M1-P007｜正負の符号・数の分類・整数と自然数／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>0 を正の数に入れる</td><td>0 は正でも負でもない（さかい目）</td></tr>
+<tr><td>0 を自然数に入れる</td><td>自然数は 1 から</td></tr>
+<tr><td>−2/5 を整数に入れる</td><td>値が整数にならないので整数ではない</td></tr>
+<tr><td>+3 と 3 を別の数と考える</td><td>同じ数。+ はつけてもつけなくてもよい</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-14"><p class="source">M1-C1-S1／原稿区分 M1-P007｜正負の符号・数の分類・整数と自然数／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　0より1.25小さい数を、符号をつけて書きなさい。　〔参考：教科書p14〜15・ワークp2 A2〕</p>
+<details><summary>考え方</summary><p>「0より小さい」→ 負の符号をつける。</p></details>
+<details><summary>答えと解説</summary><p>−1.25。0 から 1.25 だけ小さいので、「−」をつけて −1.25。</p></details>
+<p><strong>確認1-2</strong>　−3、0、+5 のうち、「整数だが、自然数ではない」ものをすべて答えなさい。　〔参考：教科書p15・ワークp3 B1〕</p>
+<details><summary>ヒント1</summary><p>3つとも整数かどうかを、先に確かめよう。</p></details>
+<details><summary>ヒント2</summary><p>自然数は 1、2、3、…… だけ。</p></details>
+<details><summary>答えと解説</summary><p>−3 と 0。+5 は自然数なので外す。0 を落とさないように。</p></details></article><article id="M1-C1-S1-reading-15"><p class="source">M1-C1-S1／原稿区分 M1-P008｜数直線と目盛りの読み方／しくみ　（教科書 p16・ワーク p2）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ数直線を使うの？</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG02/M1-C1-S1-FIG02-A.svg" alt="1目盛り0.2の数直線と点P・Q"></div><figcaption>1目盛り0.2の数直線と点P・Q</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG02/M1-C1-S1-FIG02-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<p>数を「位置」で見られるから。</p>
+<ul>
+<li>0 より右は正の数、0 より左は負の数。</li>
+<li><strong>右にあるほど大きい</strong>。</li>
+<li>0 から同じ遠さで右と左にある数（3 と −3 など）は、0 をはさんで向かい合う。</li>
+</ul></article><article id="M1-C1-S1-reading-16"><p class="source">M1-C1-S1／原稿区分 M1-P008｜数直線と目盛りの読み方／しくみ　（教科書 p16・ワーク p2）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>目盛りは「1」とはかぎらない</h2><ul>
+<li>0 と 1 のあいだを5つに区切ると、1目盛りは 1÷5＝0.2。</li>
+<li>点 P は 0 から左へ3目盛り → 0.2×3＝0.6 だけ小さい → −0.6。</li>
+<li>点 Q は 0 から右へ2目盛り → +0.4。</li>
+</ul></article><article id="M1-C1-S1-reading-17"><p class="source">M1-C1-S1／原稿区分 M1-P009｜数直線と目盛りの読み方／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（目盛りを読む）</h2><p>1. <strong>1目盛りの大きさ</strong> を出す：となりの2つの数のあいだが何等分されているかを数え、そのはばを等分の数でわる。</p>
+<p>2. <strong>0 からの目盛りの数</strong> と <strong>向き</strong>（右・左）を数える。</p>
+<p>3. 「1目盛り × 目盛りの数」で 0 からのはなれ方を出す。</p>
+<p>4. 右なら「+」、左なら「−」をつける。</p></article><article id="M1-C1-S1-reading-18"><p class="source">M1-C1-S1／原稿区分 M1-P009｜数直線と目盛りの読み方／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（数を置く）</h2><p>1. 数が 0 より右か左かを決める。</p>
+<p>2. 0 からのはなれ方 ÷ 1目盛り で、何目盛りか出す。</p>
+<p>3. 割り切れないとき（例：1目盛り0.5 で 1.2）は、目盛りと目盛りのあいだに置く。</p>
+<p><strong>確かめる</strong>：置いた点を、もう一度「読む」手順で読み直して、元の数になるか。</p></article><article id="M1-C1-S1-reading-19"><p class="source">M1-C1-S1／原稿区分 M1-P010｜数直線と目盛りの読み方／例題　〔参考：教科書p16・ワークp2 A3〜A4〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本　1目盛りが1の数直線で、0 から左へ4目盛りの点が表す数は？</h2><p>1. 1目盛りは 1。2. 左へ4目盛り。3. 答え：<strong>−4</strong>。</p></article><article id="M1-C1-S1-reading-20"><p class="source">M1-C1-S1／原稿区分 M1-P010｜数直線と目盛りの読み方／例題　〔参考：教科書p16・ワークp2 A3〜A4〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準（FIG02）　点P、点Qが表す数を答えなさい。</h2><p>1. 0 から 1 までが5等分 → 1目盛り 0.2。</p>
+<p>2. P は左へ3目盛り → 0.6 小さい → <strong>−0.6</strong>。</p>
+<p>3. Q は右へ2目盛り → <strong>+0.4</strong>。</p>
+<p><strong>確かめる</strong>：P は −1 と 0 のあいだにあるか → −0.6 はそのあいだ。</p></article><article id="M1-C1-S1-reading-21"><p class="source">M1-C1-S1／原稿区分 M1-P010｜数直線と目盛りの読み方／例題　〔参考：教科書p16・ワークp2 A3〜A4〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用　1目盛りが 1/3 の数直線で、0 から左へ5目盛りの点は？</h2><p>1. 1/3 × 5 ＝ 5/3。</p>
+<p>2. 左なので <strong>−5/3</strong>。</p>
+<p>3. <strong>確かめる</strong>：5/3 は 1 と 2 のあいだ（1 と 2/3）。点は −1 と −2 のあいだにあるはず。</p></article><article id="M1-C1-S1-reading-22"><p class="source">M1-C1-S1／原稿区分 M1-P011｜数直線と目盛りの読み方／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>目盛りを全部1と読む</td><td>先に1目盛りの大きさを出す</td></tr>
+<tr><td>左へ進んだのに「+」をつける</td><td>0 より左は負の数</td></tr>
+<tr><td>−0.6 を −1 より左に置く</td><td>−0.6 は −1 と 0 のあいだ</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-23"><p class="source">M1-C1-S1／原稿区分 M1-P011｜数直線と目盛りの読み方／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　1目盛りが0.5の数直線で、0から左へ9目盛りの点は、どんな数を表しますか。　〔参考：教科書p16・ワークp2 A4〕</p>
+<details><summary>ヒント1</summary><p>0.5 が9つ分で、いくつ？</p></details>
+<details><summary>答えと解説</summary><p>−4.5。0.5×9＝4.5。左なので負の数。</p></details>
+<p><strong>確認2-2</strong>　1目盛りが0.25の数直線に −1.5 を置くと、0 から何目盛り、どちら向きですか。</p>
+<details><summary>ヒント1</summary><p>1.5 ÷ 0.25 は？</p></details>
+<details><summary>答えと解説</summary><p>左へ6目盛り。1.5÷0.25＝6。負の数なので左。</p></details></article><article id="M1-C1-S1-reading-24"><p class="source">M1-C1-S1／原稿区分 M1-P012｜反対の量・基準・言葉の言い換え／しくみ　（教科書 p17〜18・ワーク p3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ正の数・負の数で量を表せるの？</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG03/M1-C1-S1-FIG03-A.svg" alt="目標20ページとのちがい"></div><figcaption>目標20ページとのちがい</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG03/M1-C1-S1-FIG03-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<p>「東・西」「高い・低い」「多い・少ない」のように、反対の意味の組がある。</p>
+<ul>
+<li>片方を「+」と決めると、もう片方は「−」で表せる。</li>
+<li><strong>はじめに、どちらを「+」にするかを決めておく</strong>。決めないと、数だけでは意味が伝わらない。</li>
+</ul></article><article id="M1-C1-S1-reading-25"><p class="source">M1-C1-S1／原稿区分 M1-P012｜反対の量・基準・言葉の言い換え／しくみ　（教科書 p17〜18・ワーク p3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>基準とのちがい</h2><ul>
+<li>目標などの数を <strong>基準</strong> にして、それを 0 とみる。</li>
+<li>基準より多ければ「+」、少なければ「−」、同じなら「0」。</li>
+<li>図（FIG03）では、上の棒が「多い」、下の斜線の棒が「少ない」を表す。</li>
+</ul></article><article id="M1-C1-S1-reading-26"><p class="source">M1-C1-S1／原稿区分 M1-P012｜反対の量・基準・言葉の言い換え／しくみ　（教科書 p17〜18・ワーク p3）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>1つのことばで言いかえる</h2><ul>
+<li>「7本少ない」は「−7本多い」と言える。</li>
+<li>ことばを反対にしたら、符号も反対にする。2つの反対が組になって、同じ意味にもどる。</li>
+</ul></article><article id="M1-C1-S1-reading-27"><p class="source">M1-C1-S1／原稿区分 M1-P013｜反対の量・基準・言葉の言い換え／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（反対の量）</h2><p>1. どちらのことばを「+」にしたかを確かめる。</p>
+<p>2. 問われたことばが同じなら「+」、反対なら「−」。</p>
+<p>3. 数の大きさはそのまま。</p></article><article id="M1-C1-S1-reading-28"><p class="source">M1-C1-S1／原稿区分 M1-P013｜反対の量・基準・言葉の言い換え／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（基準とのちがい）</h2><p>1. 基準の数を書く。</p>
+<p>2. 「実際の数 − 基準」を計算する（大きいほうから小さいほうをひいて、多いか少ないかで符号を決めてもよい）。</p>
+<p>3. 多いなら「+」、少ないなら「−」、同じなら「0」。</p></article><article id="M1-C1-S1-reading-29"><p class="source">M1-C1-S1／原稿区分 M1-P013｜反対の量・基準・言葉の言い換え／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（言いかえ）</h2><p>1. ことばを反対にする（少ない→多い）。</p>
+<p>2. 符号を反対にする（+→−）。</p>
+<p>3. <strong>確かめる</strong>：言いかえた文を、もう一度元のことばにもどして、同じ意味になるか。</p></article><article id="M1-C1-S1-reading-30"><p class="source">M1-C1-S1／原稿区分 M1-P014｜反対の量・基準・言葉の言い換え／例題　〔参考：教科書p17〜18・ワークp3 A5・B2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本　東へ300m進むことを +300m と表すとき、西へ200m進むことはどう表せますか。</h2><p>1. 「+」は東。西は反対。2. 答え：<strong>−200m</strong>。</p></article><article id="M1-C1-S1-reading-31"><p class="source">M1-C1-S1／原稿区分 M1-P014｜反対の量・基準・言葉の言い換え／例題　〔参考：教科書p17〜18・ワークp3 A5・B2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準　1日の読書の目標を20ページとし、目標とのちがいを正の数・負の数で表します。月曜26ページ、火曜17ページ、水曜20ページのちがいは？</h2><p>1. 基準は 20。</p>
+<p>2. 月：26 は 20 より 6 多い → <strong>+6</strong>。火：17 は 3 少ない → <strong>−3</strong>。水：同じ → <strong>0</strong>。</p>
+<p><strong>確かめる</strong>：20+6＝26、20−3＝17。元の数にもどる。</p></article><article id="M1-C1-S1-reading-32"><p class="source">M1-C1-S1／原稿区分 M1-P014｜反対の量・基準・言葉の言い換え／例題　〔参考：教科書p17〜18・ワークp3 A5・B2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用（1）「3日おそい」ことを、「早い」ということばを使って表しなさい。</h2><p>1. ことばを反対にする：おそい→早い。2. 符号を反対にする：+3→−3。3. 答え：<strong>−3日早い</strong>。</p></article><article id="M1-C1-S1-reading-33"><p class="source">M1-C1-S1／原稿区分 M1-P014｜反対の量・基準・言葉の言い換え／例題　〔参考：教科書p17〜18・ワークp3 A5・B2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用（2）基準の50点とのちがいが「−8点」の人は、何点ですか。</h2><p>1. −8 は「50 より 8 少ない」。2. 50−8＝<strong>42点</strong>。</p></article><article id="M1-C1-S1-reading-34"><p class="source">M1-C1-S1／原稿区分 M1-P015｜反対の量・基準・言葉の言い換え／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>どちらを「+」にしたか書かない</td><td>最初に決めて書いておく</td></tr>
+<tr><td>「7本少ない」を「7本多い」とする</td><td>ことばを反対にしたら、符号も反対</td></tr>
+<tr><td>基準と同じとき、何も書かない</td><td>「0」と書く</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-35"><p class="source">M1-C1-S1／原稿区分 M1-P015｜反対の量・基準・言葉の言い換え／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　「2kg重い」ことを +2kg と表すとき、「0.5kg軽い」ことはどう表せますか。　〔参考：教科書p18・ワークp3 A5〕</p>
+<details><summary>考え方</summary><p>軽いは重いの反対。</p></details>
+<details><summary>答えと解説</summary><p>−0.5kg。</p></details>
+<p><strong>確認3-2</strong>　基準を100点として、ちがいが +7点の人は何点ですか。　〔参考：教科書p18・ワークp3 B2〕</p>
+<details><summary>答えと解説</summary><p>107点。+7点は「100点より7点多い」。</p></details></article><article id="M1-C1-S1-reading-36"><p class="source">M1-C1-S1／原稿区分 M1-P016｜符号を変えた数と絶対値／しくみ　（教科書 p19・ワーク p4）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>符号を変えた数</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG04/M1-C1-S1-FIG04-A.svg" alt="−3 と 3 はどちらも0からきょり3"></div><figcaption>−3 と 3 はどちらも0からきょり3</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG04/M1-C1-S1-FIG04-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>+5 の符号を変えると −5。数直線では、0 をはさんで反対がわの、同じ遠さの点。</li>
+</ul></article><article id="M1-C1-S1-reading-37"><p class="source">M1-C1-S1／原稿区分 M1-P016｜符号を変えた数と絶対値／しくみ　（教科書 p19・ワーク p4）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>絶対値</h2><ul>
+<li>数直線で、0 からその数までの <strong>きょり</strong> を <strong>絶対値</strong> という。</li>
+<li>−3 も 3 も、0 から3目盛り → 絶対値はどちらも 3。0 の絶対値は 0。</li>
+<li><strong>なぜ「−」がつかない？</strong> きょり（長さ）はマイナスにならないから。</li>
+<li>正の数・負の数から符号をとった数が、絶対値になる。</li>
+</ul></article><article id="M1-C1-S1-reading-38"><p class="source">M1-C1-S1／原稿区分 M1-P017｜符号を変えた数と絶対値／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（絶対値を答える）</h2><p>1. 符号をとる。2. 残った数が絶対値。</p></article><article id="M1-C1-S1-reading-39"><p class="source">M1-C1-S1／原稿区分 M1-P017｜符号を変えた数と絶対値／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（絶対値が○の数をさがす）</h2><p>1. 0 から右へ○の点と、左へ○の点を考える。</p>
+<p>2. 答えは2つ（○ と −○）。ただし ○ が 0 なら、0 の1つだけ。</p></article><article id="M1-C1-S1-reading-40"><p class="source">M1-C1-S1／原稿区分 M1-P017｜符号を変えた数と絶対値／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（絶対値が○より小さい／○以下の整数）</h2><p>1. 右がわ：0 から ○ のほうへ、整数を順にならべる。</p>
+<p>2. 左がわも同じようにならべる。</p>
+<p>3. 0 を入れる。</p>
+<p>4. 「より小さい」はちょうど ○ をふくまない。「以下」はふくむ。</p>
+<p><strong>確かめる</strong>：右と左で同じ数ずつあるか（0 を除いて対称）。</p></article><article id="M1-C1-S1-reading-41"><p class="source">M1-C1-S1／原稿区分 M1-P018｜符号を変えた数と絶対値／例題　〔参考：教科書p19・22・ワークp4 A1・p5 B1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-基本　−11 の絶対値と、−11 の符号を変えた数を答えなさい。</h2><p>1. 符号をとる → <strong>11</strong>。2. 符号を変える → <strong>+11</strong>。</p></article><article id="M1-C1-S1-reading-42"><p class="source">M1-C1-S1／原稿区分 M1-P018｜符号を変えた数と絶対値／例題　〔参考：教科書p19・22・ワークp4 A1・p5 B1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-標準　絶対値が 4 になる数を、すべて答えなさい。</h2><p>1. 0 から右へ4 → 4。左へ4 → −4。2. 答え：<strong>4 と −4</strong>。</p></article><article id="M1-C1-S1-reading-43"><p class="source">M1-C1-S1／原稿区分 M1-P018｜符号を変えた数と絶対値／例題　〔参考：教科書p19・22・ワークp4 A1・p5 B1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-応用　絶対値が3より小さい整数を、すべて答えなさい。</h2><p>1. 右がわ：1、2（3 は「より小さい」に入らない）。</p>
+<p>2. 左がわ：−1、−2。</p>
+<p>3. 0 を入れる。</p>
+<p>4. 答え：<strong>−2、−1、0、1、2</strong>（5個）。</p>
+<p><strong>確かめる</strong>：0 を除いて、右と左に2個ずつ → 対称。</p></article><article id="M1-C1-S1-reading-44"><p class="source">M1-C1-S1／原稿区分 M1-P019｜符号を変えた数と絶対値／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−5 の絶対値を −5 とする</td><td>絶対値はきょりなので「−」はつかない</td></tr>
+<tr><td>絶対値が4の数を 4 だけ答える</td><td>左がわの −4 もある</td></tr>
+<tr><td>「3より小さい」に 3 を入れる</td><td>ちょうど3は入らない（「3以下」なら入る）</td></tr>
+<tr><td>0 を数え忘れる</td><td>0 の絶対値は 0 で、条件に合う</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-45"><p class="source">M1-C1-S1／原稿区分 M1-P019｜符号を変えた数と絶対値／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認4-1</strong>　−6.3 の絶対値を答えなさい。</p>
+<details><summary>答えと解説</summary><p>6.3。符号をとった数。</p></details>
+<p><strong>確認4-2</strong>　絶対値が2以下の整数は何個ありますか。</p>
+<details><summary>ヒント1</summary><p>「以下」は、ちょうど2も入る。</p></details>
+<details><summary>答えと解説</summary><p>5個（−2、−1、0、1、2）。</p></details></article><article id="M1-C1-S1-reading-46"><p class="source">M1-C1-S1／原稿区分 M1-P020｜数の大小・不等号／しくみ　（教科書 p20・ワーク p4〜5）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>数の大小</h2><p>数直線では <strong>右にあるほど大きい</strong>。ここから、</p>
+<p>1. 正の数は、負の数より大きい。</p>
+<p>2. 正の数は、絶対値が大きいほど大きい。</p>
+<p>3. 負の数は、<strong>絶対値が大きいほど小さい</strong>（0 から左へ遠いほど小さい）。</p>
+<p><strong>別の見方</strong>：気温で考えると、−8℃ は −2℃ より寒い。だから −8 は −2 より小さい。</p></article><article id="M1-C1-S1-reading-47"><p class="source">M1-C1-S1／原稿区分 M1-P020｜数の大小・不等号／しくみ　（教科書 p20・ワーク p4〜5）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>不等号</h2><ul>
+<li>「&lt;」「&gt;」の口が開いているほうが大きい。例：−6 &lt; −1。</li>
+<li>3つ以上の数は、向きをそろえて1本の式にする（−5 &lt; −2 &lt; 4）。</li>
+</ul></article><article id="M1-C1-S1-reading-48"><p class="source">M1-C1-S1／原稿区分 M1-P021｜数の大小・不等号／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（大小をくらべる）</h2><p>1. 正の数・0・負の数に分ける。</p>
+<p>2. 負の数どうしは、絶対値の大きいほうが小さい。</p>
+<p>3. 分数と小数がまじるときは、どちらかにそろえる（分母をそろえる・小数にする）。</p>
+<p>4. 小さい順にならべて、不等号の向きをそろえて書く。</p>
+<p><strong>確かめる</strong>：答えの数を数直線に置いたとき、左から順にならんでいるか。</p></article><article id="M1-C1-S1-reading-49"><p class="source">M1-C1-S1／原稿区分 M1-P022｜数の大小・不等号／例題　〔参考：教科書p20・ワークp4〜5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-基本　−3.5 と −2 の大小を、不等号で表しなさい。</h2><p>1. どちらも負の数。2. 絶対値は 3.5 と 2 → 3.5 が大きい。3. 答え：<strong>−3.5 &lt; −2</strong>。</p></article><article id="M1-C1-S1-reading-50"><p class="source">M1-C1-S1／原稿区分 M1-P022｜数の大小・不等号／例題　〔参考：教科書p20・ワークp4〜5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-標準　−1、−4/3、0.5 の大小を、1つの式で表しなさい。</h2><p>1. 0.5 は正の数でいちばん大きい。</p>
+<p>2. 負の数どうし：4/3 は 1 より大きい → −4/3 は −1 より小さい。</p>
+<p>3. 答え：<strong>−4/3 &lt; −1 &lt; 0.5</strong>。</p></article><article id="M1-C1-S1-reading-51"><p class="source">M1-C1-S1／原稿区分 M1-P022｜数の大小・不等号／例題　〔参考：教科書p20・ワークp4〜5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-応用　−5/6 と −0.8 の大小を、不等号で表しなさい。</h2><p>1. どちらも負の数。絶対値をくらべる。</p>
+<p>2. 5/6 を小数にすると 0.833…。0.8 より大きい。</p>
+<p>3. 絶対値が大きい −5/6 のほうが小さい。答え：<strong>−5/6 &lt; −0.8</strong>。</p>
+<p><strong>確かめる</strong>：分数にそろえても、5/6＝25/30、0.8＝24/30 で同じ結果。</p></article><article id="M1-C1-S1-reading-52"><p class="source">M1-C1-S1／原稿区分 M1-P023｜数の大小・不等号／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−8 の 8 が大きいから、−8 &gt; −2</td><td>負の数は、絶対値が大きいほど小さい</td></tr>
+<tr><td>−5 &lt; 4 &gt; −2 と書く</td><td>向きをそろえて、−5 &lt; −2 &lt; 4</td></tr>
+<tr><td>小数のけた数が多いほうを大きいと考える</td><td>位をそろえてくらべる（0.70 と 0.08）</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-53"><p class="source">M1-C1-S1／原稿区分 M1-P023｜数の大小・不等号／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認5-1</strong>　−0.7 と −0.08 の大小を、不等号で表しなさい。　〔参考：教科書p20・ワークp5 B1〕</p>
+<details><summary>ヒント1</summary><p>0.7 と 0.08 は、どちらが大きい？ 位をそろえてくらべよう。</p></details>
+<details><summary>答えと解説</summary><p>−0.7 &lt; −0.08。0.70 は 0.08 より大きいので、−0.7 のほうが小さい。</p></details>
+<p><strong>確認5-2</strong>　2、−3、0、−2.5 を、小さい順に不等号でつなぎなさい。</p>
+<details><summary>ヒント1</summary><p>負の数どうし（−3 と −2.5）を先にくらべよう。</p></details>
+<details><summary>答えと解説</summary><p>−3 &lt; −2.5 &lt; 0 &lt; 2。</p></details></article><article id="M1-C1-S1-reading-54"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023a｜数直線での移動／しくみ　（教科書 p21〜22・ワーク p5）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「〜より○大きい数」は、数直線の移動</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG05/M1-C1-S1-FIG05-A.svg" alt="1から右へ3、1から左へ3"></div><figcaption>1から右へ3、1から左へ3</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG05/M1-C1-S1-FIG05-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>「1より3大きい数」は、1 から右へ3 → 4。</li>
+<li>「1より3小さい数」は、1 から左へ3 → −2。</li>
+<li>「1より−3大きい数」は、「3大きい」の反対の向き → 左へ3 → −2。つまり「1より3小さい数」と同じ。</li>
+<li>「−○大きい」は「○小さい」、「−○小さい」は「○大きい」。</li>
+</ul></article><article id="M1-C1-S1-reading-55"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023a｜数直線での移動／しくみ　（教科書 p21〜22・ワーク p5）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜこれが大事？</h2><p>この「右へ・左へ」は、2節のたし算・ひき算そのものになる（1＋3＝4、1＋(−3)＝−2）。</p></article><article id="M1-C1-S1-reading-56"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023b｜数直線での移動／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（〜より○大きい・小さい数）</h2><p>1. 「−○大きい」「−○小さい」なら、先に言いかえる。</p>
+<p>2. 「大きい」なら右へ、「小さい」なら左へ、○目盛り進む。</p>
+<p>3. 着いた点の数を読む。</p></article><article id="M1-C1-S1-reading-57"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023b｜数直線での移動／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（□を求める：□より○大きい数が△）</h2><p>1. □から右へ○進むと △。</p>
+<p>2. 逆に、△ から左へ○もどった所が □。</p>
+<p><strong>確かめる</strong>：答えから、問題の言い方どおりに進んで、元の数になるか。</p></article><article id="M1-C1-S1-reading-58"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023c｜数直線での移動／例題　〔参考：教科書p21〜22・ワークp5 A4・B3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-基本　−3より5大きい数</h2><p>1. −3 から右へ5 → <strong>2</strong>。</p></article><article id="M1-C1-S1-reading-59"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023c｜数直線での移動／例題　〔参考：教科書p21〜22・ワークp5 A4・B3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-標準　−2より−4大きい数</h2><p>1. 「−4大きい」→「4小さい」。2. −2 から左へ4 → <strong>−6</strong>。</p>
+<p><strong>確かめる</strong>：−6 から右へ4 進むと −2 にもどる。</p></article><article id="M1-C1-S1-reading-60"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023c｜数直線での移動／例題　〔参考：教科書p21〜22・ワークp5 A4・B3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-応用　□より4大きい数は1です。□にあてはまる数を答えなさい。</h2><p>1. □ から右へ4 で 1。2. 1 から左へ4 → <strong>−3</strong>。</p>
+<p><strong>確かめる</strong>：−3 から右へ4 進むと 1。</p></article><article id="M1-C1-S1-reading-61"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023d｜数直線での移動／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>「−3大きい」で右へ進む</td><td>「−3大きい」は「3小さい」→ 左へ</td></tr>
+<tr><td>□を求めるとき、□ と同じ向きに進む</td><td>□ からの向きと、答えを出すときの向きは反対</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-62"><p class="source">M1-C1-S1／原稿区分 追加提案 M1-P023d｜数直線での移動／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認6-1</strong>　−6より2大きい数を答えなさい。</p>
+<details><summary>答えと解説</summary><p>−4。−6 から右へ2目盛り。</p></details>
+<p><strong>確認6-2</strong>　4より−6小さい数を答えなさい。</p>
+<details><summary>ヒント1</summary><p>「−6小さい」を言いかえると？</p></details>
+<details><summary>答えと解説</summary><p>10。「−6小さい」は「6大きい」。4 から右へ6目盛り。</p></details></article><article id="M1-C1-S1-reading-63"><p class="source">M1-C1-S1／原稿区分 M1-P024｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>気温で考える大小</h2><aside class="unready">［絵 M1-C1-S1-APPLY（未生成。制作指示は画像選定.md）：寒い朝の2つの町の温度計。数字はなし］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>2つの町の朝の気温が −8℃ と −2℃。どちらが寒い？</li>
+<li>温度計の液は、0 の線から下へ、−8℃ のほうが遠い。だから −8℃ のほうが寒い（小さい）。</li>
+<li>これは「負の数は、絶対値が大きいほど小さい」と同じこと。</li>
+</ul></article><article id="M1-C1-S1-reading-64"><p class="source">M1-C1-S1／原稿区分 M1-P024｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>判断の根拠を言えるようにしよう</h2><p>次の文の空らんを、自分のことばでうめてみよう（答えは閉じてある）。</p>
+<p>「−8 は −2 より小さい。なぜなら、どちらも（ア）の数で、（イ）が大きいほうが小さいから。」</p>
+<details><summary>答え</summary><p>（ア）負　（イ）絶対値</p></details></article><article id="M1-C1-S1-reading-65"><p class="source">M1-C1-S1／原稿区分 M1-P024｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>検算のしかた</h2><ul>
+<li>大小の答えは、数直線に置いて、左から順にならんでいるかで確かめる。</li>
+<li>「〜より○大きい数」の答えは、逆向きに進んで元の数になるかで確かめる。</li>
+</ul></article><article id="M1-C1-S1-reading-66"><p class="source">M1-C1-S1／原稿区分 M1-P025｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S1-FIG06/M1-C1-S1-FIG06-A.svg" alt="確認問題4の数直線"></div><figcaption>確認問題4の数直線</figcaption><a class="diagram-open" href="図候補/M1-C1-S1-FIG06/M1-C1-S1-FIG06-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<div class="table-scroll"><table><tbody>
+<tr><td>ことば</td><td>意味</td></tr>
+<tr><td>正の数・負の数</td><td>0より大きい数・0より小さい数。0はどちらでもない</td></tr>
+<tr><td>符号</td><td>正の符号「+」、負の符号「−」</td></tr>
+<tr><td>自然数</td><td>正の整数 1、2、3、……。0は入らない</td></tr>
+<tr><td>絶対値</td><td>数直線で、0からのきょり</td></tr>
+<tr><td>不等号</td><td>「&lt;」「&gt;」。3つ以上は向きをそろえる</td></tr>
+</tbody></table></div></article><article id="M1-C1-S1-reading-67"><p class="source">M1-C1-S1／原稿区分 M1-P025｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>自分のことばで説明しよう</h2><p>「0 は自然数ではない」理由を、1文で説明してみよう。</p>
+<details><summary>説明の例</summary><p>自然数は正の整数で、0 は正の数ではないから。</p></details></article><article id="M1-C1-S1-reading-68"><p class="source">M1-C1-S1／原稿区分 M1-P025｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の12問に取り組む。答えは入力のあとに表示し、1問ずつ解説を読む。</p>
+<p><strong>次につながる</strong>：2節では、正の数・負の数のたし算を、数直線の「右へ・左へ」で考える。P023a〜P023d の考え方がそのまま使える。</p></article><article id="M1-C1-S2-reading-1"><p class="source">M1-C1-S2／原稿区分 M1-P026｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>M1-P026｜身近な導入・既習事項・今回のつながり</h2><aside class="unready">［絵 M1-C1-S2-INTRO（未生成。制作指示は画像選定.md）：一本道のすごろく］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>すごろくで「3マス進む」のあとに「5マスもどる」。最初の場所から見て、どこにいる？</p>
+<ul>
+<li>進むを「+」、もどるを「−」とすると、(+3)+(−5) という式になる。答えは −2（2マスもどった所）。</li>
+<li>1節の「〜より○大きい数」（右へ・左へ）が、そのまま計算になる。</li>
+</ul></article><article id="M1-C1-S2-reading-2"><p class="source">M1-C1-S2／原稿区分 M1-P026｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節で使う、前に学んだこと</h2><ul>
+<li>絶対値（0からのきょり）、数直線の右へ・左へ（1節 P016〜P023）</li>
+<li>小数・分数の計算、通分・約分（小学校）</li>
+</ul></article><article id="M1-C1-S2-reading-3"><p class="source">M1-C1-S2／原稿区分 M1-P026｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節でできるようになること</h2><p>加法・減法・乗法・除法、累乗、計算の順序、分配法則、素因数分解。</p></article><article id="M1-C1-S2-reading-4"><p class="source">M1-C1-S2／原稿区分 M1-P027｜加法、減法①（2数の和）／しくみ　（教科書 p24〜27・ワーク p6〜7）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>たし算を数直線で考える</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S2-FIG01/M1-C1-S2-FIG01-C.svg" alt="加法を数直線の移動で表す4つの式"></div><figcaption>加法を数直線の移動で表す4つの式</figcaption><a class="diagram-open" href="図候補/M1-C1-S2-FIG01/M1-C1-S2-FIG01-C.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>(−4)+6 は「−4 より 6 大きい数」。1節で、これは「−4 から右へ6」だと学んだ。</li>
+<li>たす数が負の数なら、反対の左へ進む。5+(−6) は「5 から左へ6」。</li>
+</ul>
+<div class="table-scroll"><table><tbody>
+<tr><td>式</td><td>動き</td><td>答え</td></tr>
+<tr><td>(+2)+(+3)</td><td>2 から右へ3</td><td>+5</td></tr>
+<tr><td>(−2)+(−3)</td><td>−2 から左へ3</td><td>−5</td></tr>
+<tr><td>(+2)+(−3)</td><td>2 から左へ3</td><td>−1</td></tr>
+<tr><td>(−2)+(+3)</td><td>−2 から右へ3</td><td>+1</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-5"><p class="source">M1-C1-S2／原稿区分 M1-P027｜加法、減法①（2数の和）／しくみ　（教科書 p24〜27・ワーク p6〜7）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>気づくこと（なぜ）</h2><ul>
+<li>同じ符号どうしは、同じ向きに進むので遠くへ行く → 絶対値は <strong>たし算</strong>。</li>
+<li>ちがう符号どうしは、行って、もどる → 絶対値は <strong>ひき算</strong>。残るのは、遠くへ進んだほう（絶対値の大きいほう）の向き。</li>
+</ul></article><article id="M1-C1-S2-reading-6"><p class="source">M1-C1-S2／原稿区分 M1-P027｜加法、減法①（2数の和）／しくみ　（教科書 p24〜27・ワーク p6〜7）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>打ち消し合いで見る</h2><p>+1 と −1 が1組で 0。(+2)+(−5) では、2組が消えて −1 が3つ残る → −3。</p></article><article id="M1-C1-S2-reading-7"><p class="source">M1-C1-S2／原稿区分 M1-P028｜加法、減法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>きまり</h2><ul>
+<li><strong>同じ符号の2数の和</strong>：符号は2数と同じ。絶対値は、絶対値の <strong>和</strong>。</li>
+<li><strong>ちがう符号の2数の和</strong>：符号は絶対値の <strong>大きいほう</strong>。絶対値は、大きいほうから小さいほうを <strong>ひいた差</strong>。</li>
+<li>絶対値が等しく、符号がちがう2数の和は 0。ある数に 0 をたしても、元のまま。</li>
+</ul></article><article id="M1-C1-S2-reading-8"><p class="source">M1-C1-S2／原稿区分 M1-P028｜加法、減法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る・解く順番</h2><p>1. 2数の符号は同じ？ ちがう？</p>
+<p>2. <strong>答えの符号を先に書く</strong>。</p>
+<p>3. 絶対値の和、または差を計算する。</p>
+<p>4. 小数・分数のときは、位や分母をそろえてから。</p>
+<p><strong>確かめる</strong>：答えの符号が、絶対値の大きいほうの符号と合っているか。答えを数直線で「行って・もどって」想像して、向きが合うか。</p></article><article id="M1-C1-S2-reading-9"><p class="source">M1-C1-S2／原稿区分 M1-P029｜加法、減法①／例題　〔参考：教科書p26〜27・ワークp6〜7 ポイント1-7〜1-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　(−6)+(−9)</h2><p>1. 同じ符号 → 符号は −。</p>
+<p>2. 絶対値の和 6+9＝15。</p>
+<p>3. 答え <strong>−15</strong>。</p></article><article id="M1-C1-S2-reading-10"><p class="source">M1-C1-S2／原稿区分 M1-P029｜加法、減法①／例題　〔参考：教科書p26〜27・ワークp6〜7 ポイント1-7〜1-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　(+13)+(−21)</h2><p>1. ちがう符号。絶対値は 13 と 21 → 21 が大きい → 符号は −。</p>
+<p>2. 差 21−13＝8。</p>
+<p>3. 答え <strong>−8</strong>。</p>
+<p><strong>確かめる</strong>：13 から左へ21 → 0 をこえて 8 進む → −8。</p></article><article id="M1-C1-S2-reading-11"><p class="source">M1-C1-S2／原稿区分 M1-P029｜加法、減法①／例題　〔参考：教科書p26〜27・ワークp6〜7 ポイント1-7〜1-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　(−5/6)+(+3/8)</h2><p>1. 分母を 24 にそろえる：−20/24 と +9/24。</p>
+<p>2. ちがう符号。絶対値は 20/24 のほうが大きい → 符号は −。</p>
+<p>3. 差 20/24−9/24＝11/24。</p>
+<p>4. 答え <strong>−11/24</strong>（これ以上約分できない）。</p></article><article id="M1-C1-S2-reading-12"><p class="source">M1-C1-S2／原稿区分 M1-P030｜加法、減法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(+13)+(−21)＝+8</td><td>符号は絶対値の大きい −21 のほう</td></tr>
+<tr><td>(−6)+(−9)＝−3</td><td>同じ符号は絶対値をたす</td></tr>
+<tr><td>分数で分母どうしもたす</td><td>分母をそろえて、分子だけを計算する</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-13"><p class="source">M1-C1-S2／原稿区分 M1-P030｜加法、減法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　(+4)+(−7) を、数直線の動きで説明して、答えを求めなさい。</p>
+<details><summary>考え方</summary><p>+4 の点に立つ。−7 は左へ7。</p></details>
+<details><summary>答えと解説</summary><p>−3。4 から左へ7進むと、0 を3つこえて −3。</p></details>
+<p><strong>確認1-2</strong>　(−0.7)+(−2.6)　〔参考：ワークp7 A3〕</p>
+<details><summary>答えと解説</summary><p>−3.3。同じ符号なので −、絶対値は 0.7+2.6＝3.3。</p></details>
+<p><strong>確認1-3</strong>　(−2.25)+(+2.25)</p>
+<details><summary>答えと解説</summary><p>0。絶対値が等しく符号がちがうので、打ち消し合って 0。</p></details></article><article id="M1-C1-S2-reading-14"><p class="source">M1-C1-S2／原稿区分 M1-P031｜加法、減法②（減法）／しくみ　（教科書 p28〜30・ワーク p8〜9）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ「ひく」は「符号を変えてたす」になるの？</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S2-FIG02/M1-C1-S2-FIG02-C.svg" alt="(+3)−(+5) と (+3)+(−5) が同じ動きになる数直線"></div><figcaption>(+3)−(+5) と (+3)+(−5) が同じ動きになる数直線</figcaption><a class="diagram-open" href="図候補/M1-C1-S2-FIG02/M1-C1-S2-FIG02-C.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>3−5 は「3 より 5 小さい数」→ 3 から左へ5 → −2。</li>
+<li>(+3)+(−5) も「3 から左へ5」→ −2。動きがまったく同じ（FIG02）。</li>
+<li>「−(−4)」は「−4 小さい」＝「4 大きい」なので、+(+4) と同じ。</li>
+</ul></article><article id="M1-C1-S2-reading-15"><p class="source">M1-C1-S2／原稿区分 M1-P031｜加法、減法②（減法）／しくみ　（教科書 p28〜30・ワーク p8〜9）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>きまり</h2><p><strong>正の数・負の数をひくには、符号を変えた数をたせばよい。</strong></p></article><article id="M1-C1-S2-reading-16"><p class="source">M1-C1-S2／原稿区分 M1-P031｜加法、減法②（減法）／しくみ　（教科書 p28〜30・ワーク p8〜9）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「+」を書かない式</h2><p>正の数の「+」は省いてよい。(+5)−(+8) は 5−8、(−3)+(−4) は −3−4 と書ける。</p></article><article id="M1-C1-S2-reading-17"><p class="source">M1-C1-S2／原稿区分 M1-P032｜加法、減法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 「−( )」を見つける。</p>
+<p>2. 「−」を「+」に変え、かっこの中の数の符号も変える。</p>
+<p>3. たし算のきまり（P028）で計算する。</p></article><article id="M1-C1-S2-reading-18"><p class="source">M1-C1-S2／原稿区分 M1-P032｜加法、減法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>「−」が2つある所（−(−4)）は、+4 になる。</li>
+<li>かっこのない式（−5−8）は、「−5 と −8 の和」と読みかえる。</li>
+</ul>
+<p><strong>確かめる</strong>：答え ＋ ひいた数 が、ひかれる数にもどるか。</p></article><article id="M1-C1-S2-reading-19"><p class="source">M1-C1-S2／原稿区分 M1-P033｜加法、減法②／例題　〔参考：教科書p28〜30・ワークp8〜9 ポイント1-10〜1-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本　(+4)−(+11)</h2><p>1. −(+11) → +(−11)。</p>
+<p>2. (+4)+(−11)。ちがう符号、絶対値は 11 が大きい → −。11−4＝7。</p>
+<p>3. 答え <strong>−7</strong>。</p>
+<p><strong>確かめる</strong>：(−7)+(+11)＝+4。</p></article><article id="M1-C1-S2-reading-20"><p class="source">M1-C1-S2／原稿区分 M1-P033｜加法、減法②／例題　〔参考：教科書p28〜30・ワークp8〜9 ポイント1-10〜1-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準　(−9)−(−14)</h2><p>1. −(−14) → +(+14)。</p>
+<p>2. (−9)+(+14)＝<strong>+5</strong>。</p></article><article id="M1-C1-S2-reading-21"><p class="source">M1-C1-S2／原稿区分 M1-P033｜加法、減法②／例題　〔参考：教科書p28〜30・ワークp8〜9 ポイント1-10〜1-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用　(−1/4)−(+5/6)</h2><p>1. (−1/4)+(−5/6)。</p>
+<p>2. 分母を 12 に：−3/12 と −10/12。同じ符号なので、−13/12。</p>
+<p>3. 答え <strong>−13/12</strong>。</p></article><article id="M1-C1-S2-reading-22"><p class="source">M1-C1-S2／原稿区分 M1-P034｜加法、減法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(−9)−(−14)＝−23</td><td>ひく数の符号も変える。(−9)+(+14)＝5</td></tr>
+<tr><td>0−(+6)＝6</td><td>0 から 6 ひくと −6</td></tr>
+<tr><td>−5−8＝3</td><td>−5 と −8 の和なので −13</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-23"><p class="source">M1-C1-S2／原稿区分 M1-P034｜加法、減法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　(−2.5)−(−4.1)　〔参考：ワークp9 B1〕</p>
+<details><summary>考え方</summary><p>−(−4.1) を +(+4.1) に。</p></details>
+<details><summary>答えと解説</summary><p>1.6。(−2.5)+(+4.1)。絶対値の大きい +4.1 の符号で +。4.1−2.5＝1.6。</p></details>
+<p><strong>確認2-2</strong>　0−(−7)</p>
+<details><summary>答えと解説</summary><p>7。0+(+7)。</p></details>
+<p><strong>確認2-3</strong>　−5−8</p>
+<details><summary>答えと解説</summary><p>−13。(−5)+(−8)。同じ符号で絶対値の和。</p></details></article><article id="M1-C1-S2-reading-24"><p class="source">M1-C1-S2／原稿区分 M1-P035｜加法、減法③（項・3数以上）／しくみ　（教科書 p30〜32・ワーク p10〜11）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>項</h2><aside class="unready">［図 M1-C1-S2-FIG03：式の項を、正の項と負の項の2つの箱に分ける図］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>加法だけの式に直したときの、1つ1つの数を <strong>項</strong> という。</li>
+<li>正の数の項を <strong>正の項</strong>、負の数の項を <strong>負の項</strong> という。</li>
+<li>例：7−12+5−3 ＝ (+7)+(−12)+(+5)+(−3)。正の項は 7、5。負の項は −12、−3。</li>
+</ul></article><article id="M1-C1-S2-reading-25"><p class="source">M1-C1-S2／原稿区分 M1-P035｜加法、減法③（項・3数以上）／しくみ　（教科書 p30〜32・ワーク p10〜11）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ順番を入れかえてよいの？</h2><p>加法では、<strong>交換法則</strong>（a＋b＝b＋a）と <strong>結合法則</strong>（(a＋b)＋c＝a＋(b＋c)）が、負の数があっても成り立つ。だから、正の項・負の項を別々に集めてから計算してよい（FIG03）。</p></article><article id="M1-C1-S2-reading-26"><p class="source">M1-C1-S2／原稿区分 M1-P036｜加法、減法③／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. かっこがあれば外して、項のならびに直す（−(−9) → +9）。</p>
+<p>2. 正の項の和、負の項の和を、それぞれ出す。</p>
+<p>3. 最後に2つをたす。</p></article><article id="M1-C1-S2-reading-27"><p class="source">M1-C1-S2／原稿区分 M1-P036｜加法、減法③／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>項の前の符号は、項といっしょに動かす（−12 は「−12」のまま移動）。</li>
+<li>小数・分数がまじるときは、小数どうし・分数どうしを先にまとめると楽。</li>
+</ul>
+<p><strong>確かめる</strong>：項の数が、最初の式と同じか（1つ落としていないか）。</p></article><article id="M1-C1-S2-reading-28"><p class="source">M1-C1-S2／原稿区分 M1-P037｜加法、減法③／例題　〔参考：教科書p30〜31・ワークp10〜11 ポイント1-13〜1-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本　7−12+5−3 の正の項と負の項を、それぞれすべて答えなさい。</h2><p>1. 項のならびに直す：(+7)+(−12)+(+5)+(−3)。</p>
+<p>2. 正の項 <strong>7、5</strong>　負の項 <strong>−12、−3</strong>。</p></article><article id="M1-C1-S2-reading-29"><p class="source">M1-C1-S2／原稿区分 M1-P037｜加法、減法③／例題　〔参考：教科書p30〜31・ワークp10〜11 ポイント1-13〜1-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準　−8+15−11+3</h2><p>1. 正の項：15+3＝18。2. 負の項：−8−11＝−19。3. 18+(−19)＝<strong>−1</strong>。</p></article><article id="M1-C1-S2-reading-30"><p class="source">M1-C1-S2／原稿区分 M1-P037｜加法、減法③／例題　〔参考：教科書p30〜31・ワークp10〜11 ポイント1-13〜1-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用　6−(−9)+(−13)−4</h2><p>1. かっこを外す：6+9−13−4。</p>
+<p>2. 正の項 15、負の項 −17。</p>
+<p>3. 15−17＝<strong>−2</strong>。</p></article><article id="M1-C1-S2-reading-31"><p class="source">M1-C1-S2／原稿区分 M1-P038｜加法、減法③／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−(−9) を −9 のまま計算</td><td>+9 に直してから</td></tr>
+<tr><td>項を動かすとき符号を置いていく</td><td>符号は項といっしょに動かす</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-32"><p class="source">M1-C1-S2／原稿区分 M1-P038｜加法、減法③／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　−1.8+0.5−2.2+3.5　〔参考：ワークp11 B1〕</p>
+<details><summary>ヒント1</summary><p>小数どうしで、足しやすい組を見つけよう。</p></details>
+<details><summary>答えと解説</summary><p>0。正の項 0.5+3.5＝4、負の項 −1.8−2.2＝−4。4−4＝0。</p></details>
+<p><strong>確認3-2</strong>　−4+9−1 の負の項をすべて答えなさい。</p>
+<details><summary>答えと解説</summary><p>−4、−1。</p></details></article><article id="M1-C1-S2-reading-33"><p class="source">M1-C1-S2／原稿区分 M1-P039｜乗法、除法①（乗法）／しくみ　（教科書 p33〜35・ワーク p12〜13）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>負の数×正の数</h2><aside class="unready">［図 M1-C1-S2-FIG04：かける数を1ずつ減らすと積が規則正しく変わる表］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>(−3)×2 は、(−3) を2つたすこと → (−3)+(−3)＝−6。</p></article><article id="M1-C1-S2-reading-34"><p class="source">M1-C1-S2／原稿区分 M1-P039｜乗法、除法①（乗法）／しくみ　（教科書 p33〜35・ワーク p12〜13）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ「負×負」は正になるの？（FIG04）</h2><ul>
+<li>(−3)×3、(−3)×2、(−3)×1、(−3)×0 は −9、−6、−3、0。</li>
+<li>かける数が1減るたびに、積は <strong>3ずつ増える</strong>。</li>
+<li>このきまりを続けると、(−3)×(−1)＝3、(−3)×(−2)＝6。</li>
+<li>だから「負の数×負の数」は正の数になる。</li>
+</ul></article><article id="M1-C1-S2-reading-35"><p class="source">M1-C1-S2／原稿区分 M1-P039｜乗法、除法①（乗法）／しくみ　（教科書 p33〜35・ワーク p12〜13）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>きまり</h2><ul>
+<li>同じ符号の2数の積：符号は <strong>+</strong>、絶対値は絶対値の積。</li>
+<li>ちがう符号の2数の積：符号は <strong>−</strong>、絶対値は絶対値の積。</li>
+<li>どんな数に 0 をかけても、0。</li>
+</ul></article><article id="M1-C1-S2-reading-36"><p class="source">M1-C1-S2／原稿区分 M1-P040｜乗法、除法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 2数の符号を見る：同じなら +、ちがえば −。</p>
+<p>2. 絶対値どうしをかける。</p>
+<p>3. 符号と絶対値を組み合わせる。</p></article><article id="M1-C1-S2-reading-37"><p class="source">M1-C1-S2／原稿区分 M1-P040｜乗法、除法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>□を求める（(−8)×□＝56 の形）</h2><p>1. 積の符号と、わかっている数の符号から、□の符号を決める。</p>
+<p>2. 絶対値は、積の絶対値 ÷ わかっている数の絶対値。</p>
+<p><strong>確かめる</strong>：答えを元の式に入れて、積になるか。</p></article><article id="M1-C1-S2-reading-38"><p class="source">M1-C1-S2／原稿区分 M1-P041｜乗法、除法①／例題　〔参考：教科書p33〜35・ワークp12〜13 ポイント1-16〜1-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-基本　(−7)×5</h2><p>1. ちがう符号 → −。2. 7×5＝35。3. <strong>−35</strong>。</p></article><article id="M1-C1-S2-reading-39"><p class="source">M1-C1-S2／原稿区分 M1-P041｜乗法、除法①／例題　〔参考：教科書p33〜35・ワークp12〜13 ポイント1-16〜1-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-標準　(−6)×(−13)</h2><p>1. 同じ符号 → +。2. 6×13＝78。3. <strong>78</strong>。</p></article><article id="M1-C1-S2-reading-40"><p class="source">M1-C1-S2／原稿区分 M1-P041｜乗法、除法①／例題　〔参考：教科書p33〜35・ワークp12〜13 ポイント1-16〜1-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-応用　(−8)×□＝56 のとき、□にあてはまる数</h2><p>1. 積 56 は正。(−8) と同じ符号の数をかけたことになる → □は負。</p>
+<p>2. 絶対値は 56÷8＝7。</p>
+<p>3. □＝<strong>−7</strong>。</p>
+<p><strong>確かめる</strong>：(−8)×(−7)＝56。</p></article><article id="M1-C1-S2-reading-41"><p class="source">M1-C1-S2／原稿区分 M1-P042｜乗法、除法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(−6)×(−13)＝−78</td><td>同じ符号は +</td></tr>
+<tr><td>(−3)×0＝−3</td><td>0 をかけると 0</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-42"><p class="source">M1-C1-S2／原稿区分 M1-P042｜乗法、除法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認4-1</strong>　(−11)×(−4)</p>
+<details><summary>答えと解説</summary><p>44。同じ符号で +、11×4＝44。</p></details>
+<p><strong>確認4-2</strong>　(−15)×6</p>
+<details><summary>答えと解説</summary><p>−90。ちがう符号で −。</p></details>
+<p><strong>確認4-3</strong>　0×(−9)</p>
+<details><summary>答えと解説</summary><p>0。どんな数に 0 をかけても 0。</p></details></article><article id="M1-C1-S2-reading-43"><p class="source">M1-C1-S2／原稿区分 M1-P043｜乗法、除法②（除法・小数分数）／しくみ　（教科書 p36〜37・ワーク p14〜15）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜわり算の符号のきまりは、かけ算と同じなの？</h2><aside class="unready">［図 M1-C1-S2-FIG05：かけ算とわり算の対応（□×(−4)＝−12 と −12÷(−4)＝□）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>わり算は、かけ算の逆。(−12)÷(−4) は「□×(−4)＝−12」の □ を求めること（FIG05）。</li>
+<li>□＝3 だから、(−12)÷(−4)＝3。同じ符号 → +。</li>
+<li>(−12)÷4 は「□×4＝−12」で □＝−3。ちがう符号 → −。</li>
+</ul></article><article id="M1-C1-S2-reading-44"><p class="source">M1-C1-S2／原稿区分 M1-P043｜乗法、除法②（除法・小数分数）／しくみ　（教科書 p36〜37・ワーク p14〜15）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>0 のわり算</h2><ul>
+<li>0 を正の数・負の数でわると 0。</li>
+<li><strong>どんな数も 0 でわることはできない</strong>（□×0＝5 になる □ はないから）。</li>
+</ul></article><article id="M1-C1-S2-reading-45"><p class="source">M1-C1-S2／原稿区分 M1-P043｜乗法、除法②（除法・小数分数）／しくみ　（教科書 p36〜37・ワーク p14〜15）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>小数・分数の乗除</h2><p>符号の決め方は同じ。そのあと、小数・分数の計算をする。</p></article><article id="M1-C1-S2-reading-46"><p class="source">M1-C1-S2／原稿区分 M1-P044｜乗法、除法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 符号を決める（同じ→+、ちがう→−）。</p>
+<p>2. 絶対値どうしで、わり算（またはかけ算）をする。</p>
+<p>3. 分数は約分してから計算する。</p>
+<p><strong>確かめる</strong>：わり算の答えは、「答え × わる数 ＝ わられる数」で確かめる。</p></article><article id="M1-C1-S2-reading-47"><p class="source">M1-C1-S2／原稿区分 M1-P045｜乗法、除法②／例題　〔参考：教科書p36〜37・ワークp14〜15 ポイント1-19〜1-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-基本　(−91)÷(−7)</h2><p>1. 同じ符号 → +。2. 91÷7＝13。3. <strong>13</strong>。</p>
+<p><strong>確かめる</strong>：13×(−7)＝−91。</p></article><article id="M1-C1-S2-reading-48"><p class="source">M1-C1-S2／原稿区分 M1-P045｜乗法、除法②／例題　〔参考：教科書p36〜37・ワークp14〜15 ポイント1-19〜1-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-標準　63÷(−9)</h2><p>1. ちがう符号 → −。2. 63÷9＝7。3. <strong>−7</strong>。</p></article><article id="M1-C1-S2-reading-49"><p class="source">M1-C1-S2／原稿区分 M1-P045｜乗法、除法②／例題　〔参考：教科書p36〜37・ワークp14〜15 ポイント1-19〜1-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-応用　（1）(−0.4)×(−1.5)　（2）(−5/9)×(9/10)</h2><p>1. （1）同じ符号 → +。0.4×1.5＝0.6。答え <strong>0.6</strong>。</p>
+<p>2. （2）ちがう符号 → −。5/9×9/10＝(5×9)/(9×10)＝45/90＝1/2。答え <strong>−1/2</strong>。</p>
+<p>（分数は、かける前に約分すると楽：9 と 9、5 と 10。）</p></article><article id="M1-C1-S2-reading-50"><p class="source">M1-C1-S2／原稿区分 M1-P046｜乗法、除法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>0÷(−5)＝−5</td><td>0 をわると 0</td></tr>
+<tr><td>5÷0＝0</td><td>0 でわることはできない</td></tr>
+<tr><td>(−4.8)÷0.6＝8</td><td>ちがう符号なので −</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-51"><p class="source">M1-C1-S2／原稿区分 M1-P046｜乗法、除法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認5-1</strong>　(−4.8)÷0.6</p>
+<details><summary>答えと解説</summary><p>−8。ちがう符号で −。4.8÷0.6＝8。</p></details>
+<p><strong>確認5-2</strong>　0÷(−5)</p>
+<details><summary>答えと解説</summary><p>0。</p></details>
+<p><strong>確認5-3</strong>　(−3/8)×(−4/9)</p>
+<details><summary>ヒント1</summary><p>3 と 9、8 と 4 で約分してから。</p></details>
+<details><summary>答えと解説</summary><p>1/6。同じ符号で +。(3×4)/(8×9)＝12/72＝1/6。</p></details></article><article id="M1-C1-S2-reading-52"><p class="source">M1-C1-S2／原稿区分 M1-P047｜乗法、除法③（逆数・3数以上）／しくみ　（教科書 p38〜41・ワーク p16〜17）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>逆数</h2><aside class="unready">［図 M1-C1-S2-FIG06：負の符号の個数と、積の符号の表］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>2つの数の積が 1 になるとき、一方を他方の <strong>逆数</strong> という。</li>
+<li>−5/8 の逆数は −8/5（(−5/8)×(−8/5)＝1）。<strong>逆数の符号は元の数と同じ</strong>（積が +1 になるには同じ符号が必要）。</li>
+</ul></article><article id="M1-C1-S2-reading-53"><p class="source">M1-C1-S2／原稿区分 M1-P047｜乗法、除法③（逆数・3数以上）／しくみ　（教科書 p38〜41・ワーク p16〜17）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>わり算をかけ算に直す</h2><p><strong>正の数・負の数でわるには、その数の逆数をかければよい。</strong></p>
+<p>5÷(−3/4)＝5×(−4/3)。</p></article><article id="M1-C1-S2-reading-54"><p class="source">M1-C1-S2／原稿区分 M1-P047｜乗法、除法③（逆数・3数以上）／しくみ　（教科書 p38〜41・ワーク p16〜17）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>3つ以上の数の乗除</h2><ul>
+<li>かけ算だけの式の符号は、負の数が <strong>偶数個なら +、奇数個なら −</strong>（FIG06）。</li>
+<li>なぜ？：負の数を2つかけるたびに、符号が + にもどるから。</li>
+<li>乗法でも、交換法則・結合法則が成り立つ。かけやすい組から計算してよい（例：25×4）。</li>
+</ul></article><article id="M1-C1-S2-reading-55"><p class="source">M1-C1-S2／原稿区分 M1-P048｜乗法、除法③／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（乗除の混じった式）</h2><p>1. ÷ を × に直す（わる数を逆数にする）。</p>
+<p>2. 負の数の個数を数えて、符号を決める。</p>
+<p>3. 絶対値の積を、約分しながら計算する。</p></article><article id="M1-C1-S2-reading-56"><p class="source">M1-C1-S2／原稿区分 M1-P048｜乗法、除法③／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>0 がふくまれていないか（ふくまれていれば積は 0）。</li>
+<li>わり算が2つ以上続くとき、右から先にわらない。全部をかけ算に直せば、順番を気にしなくてよい。</li>
+</ul>
+<p><strong>確かめる</strong>：符号を、負の数の個数でもう一度数え直す。</p></article><article id="M1-C1-S2-reading-57"><p class="source">M1-C1-S2／原稿区分 M1-P049｜乗法、除法③／例題　〔参考：教科書p38〜41・ワークp16〜17 ポイント1-22〜1-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-基本　0.25 の逆数と、−7 の逆数</h2><p>1. 0.25＝1/4 → 逆数は <strong>4</strong>。2. −7＝−7/1 → 逆数は <strong>−1/7</strong>。</p></article><article id="M1-C1-S2-reading-58"><p class="source">M1-C1-S2／原稿区分 M1-P049｜乗法、除法③／例題　〔参考：教科書p38〜41・ワークp16〜17 ポイント1-22〜1-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-標準（1）(−3/4)÷(9/10)</h2><p>1. ×(10/9) に直す。2. ちがう符号 → −。3. 3×10＝30、4×9＝36、30/36＝5/6。4. <strong>−5/6</strong>。</p></article><article id="M1-C1-S2-reading-59"><p class="source">M1-C1-S2／原稿区分 M1-P049｜乗法、除法③／例題　〔参考：教科書p38〜41・ワークp16〜17 ポイント1-22〜1-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-標準（2）(−3)×(−5)×(−4)</h2><p>1. 負の数3個（奇数）→ −。2. 3×5×4＝60。3. <strong>−60</strong>。</p></article><article id="M1-C1-S2-reading-60"><p class="source">M1-C1-S2／原稿区分 M1-P049｜乗法、除法③／例題　〔参考：教科書p38〜41・ワークp16〜17 ポイント1-22〜1-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題6-応用　18÷(−4)×(−2/3)</h2><p>1. 18×(−1/4)×(−2/3)。</p>
+<p>2. 負の数2個（偶数）→ +。</p>
+<p>3. 18×1/4×2/3＝36/12＝3。答え <strong>3</strong>。</p></article><article id="M1-C1-S2-reading-61"><p class="source">M1-C1-S2／原稿区分 M1-P050｜乗法、除法③／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−9/2 の逆数を 2/9 とする</td><td>逆数の符号は元と同じ → −2/9</td></tr>
+<tr><td>48÷(−4)÷2 を、先に (−4)÷2 から計算する</td><td>左から順に、または全部をかけ算に直す</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-62"><p class="source">M1-C1-S2／原稿区分 M1-P050｜乗法、除法③／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認6-1</strong>　次の数の逆数を答えなさい。（1）−9/2　（2）1</p>
+<details><summary>答えと解説</summary><p>（1）−2/9　（2）1。1×1＝1 なので、1 の逆数は 1。</p></details>
+<p><strong>確認6-2</strong>　(−2)×(−3)×(−5)×(−1)</p>
+<details><summary>答えと解説</summary><p>30。負の数4個（偶数）→ +。2×3×5×1＝30。</p></details>
+<p><strong>確認6-3</strong>　48÷(−4)÷2</p>
+<details><summary>考え方</summary><p>48×(−1/4)×(1/2) に直す。</p></details>
+<details><summary>答えと解説</summary><p>−6。負の数1個 → −。48÷4÷2＝6。</p></details></article><article id="M1-C1-S2-reading-63"><p class="source">M1-C1-S2／原稿区分 M1-P051｜いろいろな計算①（累乗・四則の順序）／しくみ　（教科書 p42〜43・ワーク p18〜19）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>累乗</h2><ul>
+<li>同じ数をいくつかかけたものを <strong>累乗</strong> という。5×5＝5²（5の2乗）、5×5×5＝5³（5の3乗）。右上の小さい数を <strong>指数</strong> という。</li>
+<li><strong>(−3)⁴ と −3⁴ はちがう</strong>。</li>
+<li>(−3)⁴＝(−3)×(−3)×(−3)×(−3)＝81（かっこの中の −3 を4回かける）。</li>
+<li>−3⁴＝−(3×3×3×3)＝−81（3⁴ に − がついたもの）。</li>
+<li>指数は、すぐ左の数（かっこがあればかっこ全体）だけにかかる。</li>
+</ul></article><article id="M1-C1-S2-reading-64"><p class="source">M1-C1-S2／原稿区分 M1-P051｜いろいろな計算①（累乗・四則の順序）／しくみ　（教科書 p42〜43・ワーク p18〜19）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>四則の順序</h2><p>加法・減法・乗法・除法をまとめて <strong>四則</strong> という。</p>
+<p>1. 累乗</p>
+<p>2. かっこの中</p>
+<p>3. 乗法・除法</p>
+<p>4. 加法・減法</p>
+<p><strong>なぜ？</strong>：順序を決めておかないと、同じ式から人によってちがう答えが出てしまうから。</p></article><article id="M1-C1-S2-reading-65"><p class="source">M1-C1-S2／原稿区分 M1-P052｜いろいろな計算①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 累乗があれば、先に計算する（かっこの有無を確認）。</p>
+<p>2. 乗除を左から計算する。</p>
+<p>3. 加減を計算する（項に分けてもよい）。</p>
+<p><strong>確かめる</strong>：途中の式で、先に計算した部分に下線を引く。下線の順が「累乗 → 乗除 → 加減」になっているか。</p></article><article id="M1-C1-S2-reading-66"><p class="source">M1-C1-S2／原稿区分 M1-P053｜いろいろな計算①／例題　〔参考：教科書p42〜43・ワークp18〜19 ポイント1-25〜1-27〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題7-基本　(−1/2)³</h2><p>1. (−1/2)×(−1/2)×(−1/2)。2. 負の数3個 → −。3. <strong>−1/8</strong>。</p></article><article id="M1-C1-S2-reading-67"><p class="source">M1-C1-S2／原稿区分 M1-P053｜いろいろな計算①／例題　〔参考：教科書p42〜43・ワークp18〜19 ポイント1-25〜1-27〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題7-標準（1）7−(−4)×3</h2><p>1. 乗法が先：(−4)×3＝−12。2. 7−(−12)＝7+12＝<strong>19</strong>。</p></article><article id="M1-C1-S2-reading-68"><p class="source">M1-C1-S2／原稿区分 M1-P053｜いろいろな計算①／例題　〔参考：教科書p42〜43・ワークp18〜19 ポイント1-25〜1-27〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題7-標準（2）(−24)÷(−2)³+5</h2><p>1. 累乗：(−2)³＝−8。2. (−24)÷(−8)＝3。3. 3+5＝<strong>8</strong>。</p></article><article id="M1-C1-S2-reading-69"><p class="source">M1-C1-S2／原稿区分 M1-P053｜いろいろな計算①／例題　〔参考：教科書p42〜43・ワークp18〜19 ポイント1-25〜1-27〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題7-応用　−2²×(−3)−(−5)²</h2><p>1. 累乗：−2²＝−4、(−5)²＝25。</p>
+<p>2. 乗法：(−4)×(−3)＝12。</p>
+<p>3. 12−25＝<strong>−13</strong>。</p></article><article id="M1-C1-S2-reading-70"><p class="source">M1-C1-S2／原稿区分 M1-P054｜いろいろな計算①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−3² ＝ 9</td><td>− は 3² の外。−3²＝−9</td></tr>
+<tr><td>6+(−18)÷3×2 を左から順に</td><td>乗除が先：(−18)÷3×2＝−12、6−12＝−6</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-71"><p class="source">M1-C1-S2／原稿区分 M1-P054｜いろいろな計算①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認7-1</strong>　(−1)□ が負の数になるのは、□がどんな自然数のときですか。　〔参考：教科書p42 説明しよう・ワークp19 B2〕</p>
+<details><summary>ヒント1</summary><p>□＝1、2、3、4 で順に計算してみよう。</p></details>
+<details><summary>答えと解説</summary><p>□が奇数のとき。−1 を奇数個かけると、負の数が奇数個なので −。</p></details>
+<p><strong>確認7-2</strong>　2³−3²</p>
+<details><summary>答えと解説</summary><p>−1。8−9＝−1。</p></details>
+<p><strong>確認7-3</strong>　−5+12÷(−4)</p>
+<details><summary>答えと解説</summary><p>−8。除法が先：12÷(−4)＝−3。−5+(−3)＝−8。</p></details></article><article id="M1-C1-S2-reading-72"><p class="source">M1-C1-S2／原稿区分 M1-P055｜いろいろな計算②（かっこ・分配法則）／しくみ　（教科書 p43〜44・ワーク p20〜21）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>かっこのある式</h2><p>かっこの中を先に計算する。かっこが二重のときは、内側から。</p></article><article id="M1-C1-S2-reading-73"><p class="source">M1-C1-S2／原稿区分 M1-P055｜いろいろな計算②（かっこ・分配法則）／しくみ　（教科書 p43〜44・ワーク p20〜21）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>分配法則</h2><p>(a＋b)×c＝a×c＋b×c、c×(a＋b)＝c×a＋c×b。</p>
+<p><strong>なぜ成り立つ？</strong>：たとえば (2+3)×4 は、「2 が4つと 3 が4つ」を合わせたもの。2×4＋3×4 と同じ。負の数でも同じように成り立つ。</p>
+<p><strong>使うと楽になる場面</strong>：分数のかっこに整数をかけるとき、通分しなくてよい。</p></article><article id="M1-C1-S2-reading-74"><p class="source">M1-C1-S2／原稿区分 M1-P056｜いろいろな計算②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（かっこ）</h2><p>1. いちばん内側のかっこの中から（中に累乗があれば先に）。</p>
+<p>2. かっこが外れたら、乗除 → 加減。</p></article><article id="M1-C1-S2-reading-75"><p class="source">M1-C1-S2／原稿区分 M1-P056｜いろいろな計算②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（分配法則）</h2><p>1. かっこの外の数を、中の <strong>それぞれの項</strong> にかける（符号ごと）。</p>
+<p>2. 出てきた項をたす。</p></article><article id="M1-C1-S2-reading-76"><p class="source">M1-C1-S2／原稿区分 M1-P056｜いろいろな計算②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どちらを使うか</h2><ul>
+<li>かっこの中がすぐ計算できる（整数どうしなど）→ かっこの中から。</li>
+<li>かっこの中が分数で、外が分母の倍数 → 分配法則。</li>
+</ul>
+<p><strong>確かめる</strong>：2つのやり方の両方で計算して、同じ答えになるか。</p></article><article id="M1-C1-S2-reading-77"><p class="source">M1-C1-S2／原稿区分 M1-P057｜いろいろな計算②／例題　〔参考：教科書p43〜44・ワークp20〜21 ポイント1-28〜1-30〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題8-基本　10−{6−(−2)}×2</h2><p>1. かっこの中：6−(−2)＝8。2. 8×2＝16。3. 10−16＝<strong>−6</strong>。</p></article><article id="M1-C1-S2-reading-78"><p class="source">M1-C1-S2／原稿区分 M1-P057｜いろいろな計算②／例題　〔参考：教科書p43〜44・ワークp20〜21 ポイント1-28〜1-30〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題8-標準（1）(−3)×{8−(−2)²}÷6</h2><p>1. 累乗：(−2)²＝4。2. {8−4}＝4。3. (−3)×4＝−12。4. −12÷6＝<strong>−2</strong>。</p></article><article id="M1-C1-S2-reading-79"><p class="source">M1-C1-S2／原稿区分 M1-P057｜いろいろな計算②／例題　〔参考：教科書p43〜44・ワークp20〜21 ポイント1-28〜1-30〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題8-標準（2）(5/6−3/4)×(−24)</h2><p>1. 分配法則：5/6×(−24)＝−20、3/4×(−24)＝−18。</p>
+<p>2. −20−(−18)＝−20+18＝<strong>−2</strong>。</p>
+<p><strong>確かめる</strong>：かっこの中から計算すると 5/6−3/4＝1/12。1/12×(−24)＝−2。同じ。</p></article><article id="M1-C1-S2-reading-80"><p class="source">M1-C1-S2／原稿区分 M1-P057｜いろいろな計算②／例題　〔参考：教科書p43〜44・ワークp20〜21 ポイント1-28〜1-30〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題8-応用　47×(−8)+53×(−8)</h2><p>1. 分配法則を逆に使う：(47+53)×(−8)。</p>
+<p>2. 100×(−8)＝<strong>−800</strong>。</p></article><article id="M1-C1-S2-reading-81"><p class="source">M1-C1-S2／原稿区分 M1-P058｜いろいろな計算②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(5/6−3/4)×(−24) で、5/6 にだけかける</td><td>かっこの中のすべての項にかける</td></tr>
+<tr><td>分配したあと、符号をつけ忘れる</td><td>符号ごとかける：−3/4×(−24)＝+18</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-82"><p class="source">M1-C1-S2／原稿区分 M1-P058｜いろいろな計算②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認8-1</strong>　(1/4−2/3)×12</p>
+<details><summary>考え方</summary><p>分配法則：1/4×12、2/3×12。</p></details>
+<details><summary>答えと解説</summary><p>−5。3−8＝−5。</p></details>
+<p><strong>確認8-2</strong>　15×(−7)+15×(−3)</p>
+<details><summary>考え方</summary><p>15×{(−7)+(−3)} にまとめる。</p></details>
+<details><summary>答えと解説</summary><p>−150。15×(−10)＝−150。</p></details></article><article id="M1-C1-S2-reading-83"><p class="source">M1-C1-S2／原稿区分 M1-P059｜数の世界のひろがり（数の集合と四則）／しくみ　（教科書 p46〜47・ワーク p24）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>計算はいつでもできる？</h2><aside class="unready">［図 M1-C1-S2-FIG07（追加提案）：自然数・整数・数全体の集合の包含図］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>自然数どうしのたし算・かけ算は、答えがいつも自然数になる。</li>
+<li>でも、ひき算は自然数にならないことがある（2−5＝−3）。わり算も（2÷5＝2/5）。</li>
+<li>負の数まで広げて <strong>整数</strong> にすると、ひき算はいつでもできる。</li>
+<li>小数・分数までふくめた <strong>数全体</strong> にすると、わり算もいつでもできる（0 でわることは除く）。</li>
+</ul></article><article id="M1-C1-S2-reading-84"><p class="source">M1-C1-S2／原稿区分 M1-P059｜数の世界のひろがり（数の集合と四則）／しくみ　（教科書 p46〜47・ワーク p24）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>集合</h2><ul>
+<li>自然数全体の集まりを <strong>自然数の集合</strong>、整数全体の集まりを <strong>整数の集合</strong> という。</li>
+<li>自然数 ⊂ 整数 ⊂ 数全体 の順に、外側ほど広い（FIG07）。</li>
+</ul></article><article id="M1-C1-S2-reading-85"><p class="source">M1-C1-S2／原稿区分 M1-P060｜数の集合と四則／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「いつでもできるか」の調べ方</h2><p>1. その集合の数を2つ選んで、計算してみる。</p>
+<p>2. 答えがその集合からはみ出す例が <strong>1つでも</strong> 見つかれば「いつでもできる」とは言えない。</p>
+<p>3. はみ出す例が作れないことを、理由で確かめる。</p>
+<div class="table-scroll"><table><tbody>
+<tr><td>集合</td><td>加法</td><td>減法</td><td>乗法</td><td>除法</td></tr>
+<tr><td>自然数</td><td>いつでも</td><td>できないことがある（2−5）</td><td>いつでも</td><td>できないことがある（2÷5）</td></tr>
+<tr><td>整数</td><td>いつでも</td><td>いつでも</td><td>いつでも</td><td>できないことがある（2÷5）</td></tr>
+<tr><td>数全体</td><td>いつでも</td><td>いつでも</td><td>いつでも</td><td>いつでも（0でわる以外）</td></tr>
+</tbody></table></div>
+<p><strong>確かめる</strong>：「できないことがある」には、はみ出す例を1つ書けるか。</p></article><article id="M1-C1-S2-reading-86"><p class="source">M1-C1-S2／原稿区分 M1-P061｜数の集合と四則／例題　〔参考：教科書p46〜47・ワークp24 ポイント1-31〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題9-基本　3、−8、0.5、0、−2/7、14 のうち、整数をすべて答えなさい。</h2><p>答え：<strong>3、−8、0、14</strong>。</p></article><article id="M1-C1-S2-reading-87"><p class="source">M1-C1-S2／原稿区分 M1-P061｜数の集合と四則／例題　〔参考：教科書p46〜47・ワークp24 ポイント1-31〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題9-標準　整数の集合で、わり算がいつでもできるとは言えない例を1つ書きなさい。</h2><p>答え（例）：<strong>3÷4＝3/4</strong>（整数にならない）。ほかにも、わり切れない組ならよい。</p></article><article id="M1-C1-S2-reading-88"><p class="source">M1-C1-S2／原稿区分 M1-P061｜数の集合と四則／例題　〔参考：教科書p46〜47・ワークp24 ポイント1-31〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題9-応用　「自然数どうしの差は、いつも整数になる」は正しいですか。</h2><p>1. 自然数から自然数をひくと、正の整数・0・負の整数のどれか。</p>
+<p>2. 小数や分数にはならない。</p>
+<p>3. 答え：<strong>正しい</strong>。</p></article><article id="M1-C1-S2-reading-89"><p class="source">M1-C1-S2／原稿区分 M1-P062｜数の集合と四則／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>0 を自然数の集合に入れる</td><td>0 は整数の集合には入るが、自然数ではない</td></tr>
+<tr><td>1つうまくいった例で「いつでもできる」とする</td><td>1つでもはみ出す例があれば、いつでもとは言えない</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-90"><p class="source">M1-C1-S2／原稿区分 M1-P062｜数の集合と四則／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認9-1</strong>　自然数の集合の中で「いつでもできる」計算を、加法・減法・乗法・除法から選びなさい。</p>
+<details><summary>ヒント1</summary><p>2−5 や 2÷5 は自然数になる？</p></details>
+<details><summary>答えと解説</summary><p>加法と乗法。</p></details></article><article id="M1-C1-S2-reading-91"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062a｜素数と素因数分解／しくみ　（教科書 p48〜50・ワーク p24〜25）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>素数</h2><aside class="unready">［図 M1-C1-S2-FIG08（追加提案）：60 の素因数分解の木（2通りの分け方）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>1 とその数のほかに約数がない自然数を <strong>素数</strong> という。2、3、5、7、11、13、……</li>
+<li><strong>1 は素数ではない</strong>。2 は、ただ1つの偶数の素数。</li>
+</ul></article><article id="M1-C1-S2-reading-92"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062a｜素数と素因数分解／しくみ　（教科書 p48〜50・ワーク p24〜25）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>素因数分解</h2><ul>
+<li>自然数を素数だけの積で表すことを <strong>素因数分解</strong> という。60＝2²×3×5。</li>
+<li><strong>なぜ大事？</strong>：分け方を変えても、最後にできる素数の組は同じ（FIG08）。だから、数の「つくり」がはっきり分かる。</li>
+<li>素因数分解すると、約数や倍数、2乗になる数かどうかが分かる。</li>
+</ul></article><article id="M1-C1-S2-reading-93"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062b｜素数と素因数分解／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（素因数分解）</h2><p>1. 小さい素数（2、3、5、7、……）で、われるだけわる。</p>
+<p>2. 商が素数になったら終わり。</p>
+<p>3. 同じ素数は累乗でまとめる。</p></article><article id="M1-C1-S2-reading-94"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062b｜素数と素因数分解／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る（素数かどうか）</h2><ul>
+<li>一の位が偶数 → 2 でわれる。</li>
+<li>各位の数の和が 3 の倍数 → 3 でわれる。</li>
+<li>一の位が 0 か 5 → 5 でわれる。</li>
+<li>7 や 11 でわれるかも確かめる（49＝7²、77＝7×11）。</li>
+</ul></article><article id="M1-C1-S2-reading-95"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062b｜素数と素因数分解／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>2乗の数・共通の約数</h2><ul>
+<li>ある自然数の2乗は、素因数分解すると <strong>どの素数も指数が偶数</strong>。</li>
+<li>2つの数の共通の約数は、<strong>両方に共通する素数</strong> の積でつくる。</li>
+</ul>
+<p><strong>確かめる</strong>：かけ直して元の数になるか。最後の数が本当に素数か。</p></article><article id="M1-C1-S2-reading-96"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062c｜素数と素因数分解／例題　〔参考：教科書p48〜50・ワークp24〜25 ポイント1-32・1-33〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題10-基本　23、27、37、49、87 のうち、素数をすべて答えなさい。</h2><p>1. 27：2+7＝9 → 3 でわれる（27＝3³）。</p>
+<p>2. 49＝7×7。87：8+7＝15 → 3 でわれる（87＝3×29）。</p>
+<p>3. 答え <strong>23、37</strong>。</p></article><article id="M1-C1-S2-reading-97"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062c｜素数と素因数分解／例題　〔参考：教科書p48〜50・ワークp24〜25 ポイント1-32・1-33〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題10-標準　180 を素因数分解しなさい。</h2><p>1. 180÷2＝90、90÷2＝45、45÷3＝15、15÷3＝5。</p>
+<p>2. 答え <strong>2²×3²×5</strong>。</p>
+<p><strong>確かめる</strong>：4×9×5＝180。</p></article><article id="M1-C1-S2-reading-98"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062c｜素数と素因数分解／例題　〔参考：教科書p48〜50・ワークp24〜25 ポイント1-32・1-33〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題10-応用（1）98 にできるだけ小さい自然数をかけて、ある自然数の2乗にします。何をかければよいですか。</h2><p>1. 98＝2×7²。</p>
+<p>2. 2 の指数が1（奇数）なので、2 をかけて指数を2にする。</p>
+<p>3. 答え <strong>2</strong>（98×2＝196＝14²）。</p></article><article id="M1-C1-S2-reading-99"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062c｜素数と素因数分解／例題　〔参考：教科書p48〜50・ワークp24〜25 ポイント1-32・1-33〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題10-応用（2）66 と 110 を、どちらもわり切るいちばん大きい自然数</h2><p>1. 66＝2×3×11、110＝2×5×11。</p>
+<p>2. 共通する素数は 2 と 11。</p>
+<p>3. 答え <strong>22</strong>。</p></article><article id="M1-C1-S2-reading-100"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062d｜素数と素因数分解／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>1 を素数に入れる</td><td>素数は 2 から</td></tr>
+<tr><td>196＝14² と答える</td><td>素数の積にする：2²×7²</td></tr>
+<tr><td>51 を素数とする</td><td>5+1＝6 → 3 でわれる（51＝3×17）</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-101"><p class="source">M1-C1-S2／原稿区分 追加提案 M1-P062d｜素数と素因数分解／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認10-1</strong>　132 を素因数分解しなさい。</p>
+<details><summary>答えと解説</summary><p>2²×3×11。132÷2＝66、÷2＝33、÷3＝11。</p></details>
+<p><strong>確認10-2</strong>　45 にできるだけ小さい自然数をかけて、ある自然数の2乗にします。何をかければよいですか。</p>
+<details><summary>ヒント1</summary><p>45 を素因数分解して、指数が奇数の素数をさがそう。</p></details>
+<details><summary>答えと解説</summary><p>5。45＝3²×5。5 をかけると 3²×5²＝225＝15²。</p></details></article><article id="M1-C1-S2-reading-102"><p class="source">M1-C1-S2／原稿区分 M1-P063｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>別の見方：「変化」は、あとの値−前の値</h2><aside class="unready">［絵 M1-C1-S2-APPLY（未生成。制作指示は画像選定.md）：水位を測る目盛りの柱がある池］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>池の水位を、ある目盛りを 0 として測る。朝 −12cm、夕方 +7cm なら、上がった量は 7−(−12)＝19cm。</li>
+<li>ひき算で「どれだけ変わったか」を出せる。負の数をひくと、たし算になる理由がここにある。</li>
+</ul></article><article id="M1-C1-S2-reading-103"><p class="source">M1-C1-S2／原稿区分 M1-P063｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>判断の根拠を言えるようにしよう</h2><p>「7−(−12) が 19 になる」理由を、数直線を使って1文で説明してみよう。</p>
+<details><summary>説明の例</summary><p>−12 から 7 まで、数直線で右へ 12+7＝19 目盛り進むから。</p></details></article><article id="M1-C1-S2-reading-104"><p class="source">M1-C1-S2／原稿区分 M1-P063｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>検算のしかた</h2><ul>
+<li>加減：答え ＋ ひいた数 ＝ ひかれる数。</li>
+<li>乗除：答え × わる数 ＝ わられる数。</li>
+<li>分配法則：かっこの中から計算した答えと一致するか。</li>
+</ul></article><article id="M1-C1-S2-reading-105"><p class="source">M1-C1-S2／原稿区分 M1-P064｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><ul>
+<li>加法・減法は「数直線の動き」。ひき算は符号を変えてたす。</li>
+<li>乗法・除法は「まず符号、次に絶対値」。符号は負の数の個数で決まる。</li>
+<li>計算の順序は「累乗 → かっこ → 乗除 → 加減」。</li>
+<li>素因数分解で、数を素数の積に分けられる。</li>
+</ul></article><article id="M1-C1-S2-reading-106"><p class="source">M1-C1-S2／原稿区分 M1-P064｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>よくあるまちがい（この節のまとめ）</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>どこを見直す</td></tr>
+<tr><td>−3² を 9 とする</td><td>− は 3² の外</td></tr>
+<tr><td>乗除より先に加減をする</td><td>計算の順序</td></tr>
+<tr><td>負の数3個の積を + にする</td><td>負の数の個数</td></tr>
+<tr><td>1 を素数に入れる</td><td>素数は 2 から</td></tr>
+</tbody></table></div></article><article id="M1-C1-S2-reading-107"><p class="source">M1-C1-S2／原稿区分 M1-P064｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の16問に取り組む。答えは入力のあとに表示し、1問ずつ解説を読む。</p>
+<p><strong>次につながる</strong>：3節では、平均などの身近な計算を、負の数を使って楽にする。</p></article><article id="M1-C1-S3-reading-1"><p class="source">M1-C1-S3／原稿区分 M1-P065｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>M1-P065｜身近な導入・既習事項・今回のつながり</h2><aside class="unready">［絵 M1-C1-S3-INTRO（未生成。制作指示は画像選定.md）：通学路を歩く5人］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>5人の通学時間は、18分、23分、20分、17分、27分。平均は何分？</p>
+<ul>
+<li>ふつうは、全部たして 105分、5でわって 21分。</li>
+<li>でも、数が大きかったり多かったりすると、全部たすのは大変。</li>
+<li>「だいたい20分くらい」に見える。この「20」をうまく使うと、計算がぐっと楽になる。</li>
+</ul></article><article id="M1-C1-S3-reading-2"><p class="source">M1-C1-S3／原稿区分 M1-P065｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>平均＝合計÷個数（小学校）</li>
+<li>基準とのちがいを正の数・負の数で表す（1節 P012〜P015）</li>
+<li>正の数・負の数の加法と除法（2節）</li>
+</ul></article><article id="M1-C1-S3-reading-3"><p class="source">M1-C1-S3／原稿区分 M1-P066｜仮平均／しくみ　（教科書 p52〜53・ワーク p26 ポイント1-34）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>仮平均</h2><figure><div class="diagram-scroll"><img class="selected-diagram" src="図候補/M1-C1-S3-FIG01/M1-C1-S3-FIG01-A.svg" alt="20分を基準にしたちがいの棒グラフ"></div><figcaption>20分を基準にしたちがいの棒グラフ</figcaption><a class="diagram-open" href="図候補/M1-C1-S3-FIG01/M1-C1-S3-FIG01-A.svg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<p>平均を求めるときに、基準にする値を <strong>仮平均</strong> という。</p></article><article id="M1-C1-S3-reading-4"><p class="source">M1-C1-S3／原稿区分 M1-P066｜仮平均／しくみ　（教科書 p52〜53・ワーク p26 ポイント1-34）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜうまくいくの？</h2><ul>
+<li>各値は「基準 ＋ ちがい」と書ける。18＝20+(−2)、23＝20+(+3)……</li>
+<li>全部たすと、「基準×個数」と「ちがいの合計」に分かれる。</li>
+<li>個数でわると、<strong>平均＝仮平均＋（ちがいの合計÷個数）</strong>。</li>
+<li>図（FIG01）でいうと、上に出た部分と下にへこんだ部分をならした高さが、基準からのずれの平均になる。</li>
+</ul></article><article id="M1-C1-S3-reading-5"><p class="source">M1-C1-S3／原稿区分 M1-P066｜仮平均／しくみ　（教科書 p52〜53・ワーク p26 ポイント1-34）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>仮平均はどの値でもよい</h2><p>どの値を仮平均にしても、平均は同じになる。計算が楽になる値を選べばよい。</p></article><article id="M1-C1-S3-reading-6"><p class="source">M1-C1-S3／原稿区分 M1-P067｜仮平均／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る（仮平均の決め方）</h2><ul>
+<li>データの真ん中あたりにある、計算しやすい数を選ぶ。</li>
+<li>ちがいが小さくなるほど、計算が楽になる。</li>
+</ul></article><article id="M1-C1-S3-reading-7"><p class="source">M1-C1-S3／原稿区分 M1-P067｜仮平均／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 仮平均を決める。</p>
+<p>2. 各値と仮平均のちがいを、正の数・負の数で書く（値が大きければ +、小さければ −、同じなら 0）。</p>
+<p>3. ちがいの合計を出す（正の項・負の項に分けると楽）。</p>
+<p>4. 個数でわって、ちがいの平均を出す。</p>
+<p>5. 仮平均にたす。</p></article><article id="M1-C1-S3-reading-8"><p class="source">M1-C1-S3／原稿区分 M1-P067｜仮平均／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>確かめる</h2><ul>
+<li>平均は、いちばん小さい値といちばん大きい値のあいだにあるか。</li>
+<li>仮平均を別の値にしても、同じ答えになるか。</li>
+<li>ちがいの数が、データの個数と同じか（0 のちがいも1個に数える）。</li>
+</ul></article><article id="M1-C1-S3-reading-9"><p class="source">M1-C1-S3／原稿区分 M1-P068｜仮平均／例題　〔参考：教科書p52〜53・ワークp26〜27 ポイント1-34〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　通学時間 18、23、20、17、27（分）の平均を、20分を仮平均として求めなさい。</h2><p>1. ちがい：−2、+3、0、−3、+7。</p>
+<p>2. 合計：正の項 10、負の項 −5 → +5。</p>
+<p>3. 5÷5＝1。</p>
+<p>4. 20+1＝<strong>21分</strong>。</p>
+<p><strong>確かめる</strong>：17〜27 のあいだにある。直接 105÷5＝21 とも一致。</p></article><article id="M1-C1-S3-reading-10"><p class="source">M1-C1-S3／原稿区分 M1-P068｜仮平均／例題　〔参考：教科書p52〜53・ワークp26〜27 ポイント1-34〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　6個のかぼちゃの重さ 2.4、2.1、2.7、2.2、2.6、1.8（kg）の平均を、仮平均を使って求めなさい。</h2><p>1. 仮平均を 2.4kg にする。</p>
+<p>2. ちがい：0、−0.3、+0.3、−0.2、+0.2、−0.6。</p>
+<p>3. 合計 −0.6。</p>
+<p>4. −0.6÷6＝−0.1。</p>
+<p>5. 2.4+(−0.1)＝<strong>2.3kg</strong>。</p></article><article id="M1-C1-S3-reading-11"><p class="source">M1-C1-S3／原稿区分 M1-P068｜仮平均／例題　〔参考：教科書p52〜53・ワークp26〜27 ポイント1-34〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　4人のジャンプの記録を、ある基準とのちがいで表しました。A +4cm、B −6cm、C +1cm、D は消えて読めません。4人の平均は基準より 1cm 長いことが分かっています。D のちがいを求めなさい。</h2><p>1. ちがいの平均が +1 なので、ちがいの合計は 1×4＝4。</p>
+<p>2. A、B、C の合計：4−6+1＝−1。</p>
+<p>3. D＝4−(−1)＝<strong>+5cm</strong>。</p>
+<p><strong>確かめる</strong>：4−6+1+5＝4、4÷4＝1。</p></article><article id="M1-C1-S3-reading-12"><p class="source">M1-C1-S3／原稿区分 M1-P069｜仮平均／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>ちがいの合計を、そのまま仮平均にたす</td><td>合計を <strong>個数でわってから</strong> たす</td></tr>
+<tr><td>ちがいの符号をつけ忘れる</td><td>仮平均より小さい値は「−」</td></tr>
+<tr><td>0 のちがいを個数に数えない</td><td>ちがいが 0 の値も1個として数える</td></tr>
+</tbody></table></div></article><article id="M1-C1-S3-reading-13"><p class="source">M1-C1-S3／原稿区分 M1-P069｜仮平均／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　4回のテスト 63、58、70、61（点）の平均を、60点を仮平均として求めなさい。　〔参考：ワークp27 B1〕</p>
+<details><summary>ヒント1</summary><p>ちがいは +3、−2、+10、+1。</p></details>
+<details><summary>答えと解説</summary><p>63点。合計 12、12÷4＝3、60+3＝63。</p></details>
+<p><strong>確認1-2</strong>　仮平均を 70 として、ちがいの合計が −15、データが5個のとき、平均はいくつですか。</p>
+<details><summary>答えと解説</summary><p>67。−15÷5＝−3、70+(−3)＝67。</p></details></article><article id="M1-C1-S3-reading-14"><p class="source">M1-C1-S3／原稿区分 M1-P070｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>別の見方：「ならす」と平均</h2><aside class="unready">［絵 M1-C1-S3-APPLY（未生成。制作指示は画像選定.md）：高さのちがう積み木を、低いほうへ分けてならす手］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>高い積み木の山から、低い山へ少しずつ移して、全部の高さをそろえる。そろった高さが平均。</li>
+<li>仮平均は「とりあえずの高さ」。そこから、出っぱり（+）とへこみ（−）を合わせて調整する。</li>
+</ul></article><article id="M1-C1-S3-reading-15"><p class="source">M1-C1-S3／原稿区分 M1-P070｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>判断の根拠を言えるようにしよう</h2><p>「ちがいの合計が 0 なら、平均は仮平均と同じ」になる理由を、1文で説明してみよう。</p>
+<details><summary>説明の例</summary><p>ちがいの平均が 0÷個数＝0 になり、仮平均に 0 をたしても変わらないから。</p></details></article><article id="M1-C1-S3-reading-16"><p class="source">M1-C1-S3／原稿区分 M1-P071｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><p>平均＝仮平均＋（ちがいの合計÷個数）。ちがいは正の数・負の数で表す。</p></article><article id="M1-C1-S3-reading-17"><p class="source">M1-C1-S3／原稿区分 M1-P071｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の6問に取り組む。答えは入力のあとに表示し、1問ずつ解説を読む。</p></article><article id="M1-C1-REVIEW-reading-1"><p class="source">M1-C1-REVIEW／原稿区分 M1-P072｜解法のつながり・理由を解説しながら振り返る（1）章のつながりと計算の見通し<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>1章の地図</h2><div class="table-scroll"><table><tbody>
+<tr><td>1節</td><td>→</td><td>2節</td><td>→</td><td>3節</td></tr>
+<tr><td>負の数・符号・数直線・絶対値・大小</td><td></td><td>加法・減法（数直線の動き）／乗法・除法（符号→絶対値）／累乗・順序・分配法則／素因数分解</td><td></td><td>仮平均（基準とのちがい）</td></tr>
+</tbody></table></div>
+<p><strong>つながり</strong></p>
+<ul>
+<li>1節の「〜より○大きい数」は、2節のたし算そのもの。</li>
+<li>2節の「ひく＝符号を変えてたす」は、1節の「−○大きい＝○小さい」と同じ考え。</li>
+<li>3節の「ちがい」は、1節の「基準とのちがい」と2節の計算を組み合わせたもの。</li>
+</ul></article><article id="M1-C1-REVIEW-reading-2"><p class="source">M1-C1-REVIEW／原稿区分 M1-P072｜解法のつながり・理由を解説しながら振り返る（1）章のつながりと計算の見通し<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>計算で迷ったときの順番</h2><p>1. 累乗 → かっこ → 乗除 → 加減の順を確認する。</p>
+<p>2. 乗除は「符号を先に」。負の数の個数を数える。</p>
+<p>3. 加減は「項に分けて、正の項・負の項をまとめる」。</p>
+<p>4. 最後に、答えの大きさがおかしくないか見積もる。</p></article><article id="M1-C1-REVIEW-reading-3"><p class="source">M1-C1-REVIEW／原稿区分 M1-P072｜解法のつながり・理由を解説しながら振り返る（1）章のつながりと計算の見通し<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめの問題</h2><p><code>確認問題.md</code> の R1〜R8。入力して答え合わせを押すと、1問ずつ解説が開く。</p></article><article id="M1-C1-REVIEW-reading-4"><p class="source">M1-C1-REVIEW／原稿区分 M1-P073｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>思い出しカード（1週間後にもう一度）</h2><p>1. 0 は正の数？ 負の数？ 自然数？</p>
+<details><summary>答え</summary><p>どれでもない。0 は正でも負でもなく、自然数（1、2、3、……）にも入らない。整数には入る。</p></details>
+<p>2. (−2)² と −2² のちがいは？</p>
+<details><summary>答え</summary><p>(−2)²＝4（−2 を2回かける）。−2²＝−4（2² に − がつく）。</p></details>
+<p>3. わり算をかけ算に直すには？</p>
+<details><summary>答え</summary><p>わる数の逆数をかける。逆数の符号は元の数と同じ。</p></details>
+<p>4. 1 は素数？</p>
+<details><summary>答え</summary><p>素数ではない。素数は 2、3、5、7、…… で、2 だけが偶数の素数。</p></details></article><article id="M1-C1-REVIEW-reading-5"><p class="source">M1-C1-REVIEW／原稿区分 M1-P073｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>別の方法で確かめる（検算）</h2><p><strong>例</strong>　25×(−7)×4</p>
+<ul>
+<li>方法1：左から順に。25×(−7)＝−175、−175×4＝−700。</li>
+<li>方法2：交換法則で 25×4 を先に。100×(−7)＝−700。</li>
+<li>2つの方法で同じ答え → 自信をもてる。</li>
+</ul>
+<p><strong>例</strong>　(−36)÷(−4)＝9 は、9×(−4)＝−36 になるかで確かめられる。</p></article><article id="M1-C1-REVIEW-reading-6"><p class="source">M1-C1-REVIEW／原稿区分 M1-P073｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認　〔参考：教科書p44 分配法則〕</h2><p>99×(−6) を、分配法則を使って計算しなさい。また、ふつうに計算した答えと同じか確かめなさい。</p>
+<details><summary>ヒント1</summary><p>99＝100−1 と考えよう。</p></details>
+<details><summary>答えと解説</summary><p>−594。(100−1)×(−6)＝−600+6＝−594。ふつうに 99×6＝594 で、符号は − なので同じ。</p></details></article><article id="M1-C2-OPEN-reading-1"><p class="source">M1-C2-OPEN／原稿区分 M1-P074｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>何個ならんでいる？</h2><figure><div class="diagram-scroll"><img class="selected-scene" src="画像候補/M1-C2-OPEN-SCENE-D.jpg" alt="机の上でブロックを2列にならべている"></div><figcaption>机の上でブロックを2列にならべている</figcaption><a class="diagram-open" href="画像候補/M1-C2-OPEN-SCENE-D.jpg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>ブロックを2列にならべる。1列に 6 個なら、全部で 2×6＝12 個。</li>
+<li>1列に 10 個なら 2×10、1列に 25 個なら 2×25。</li>
+<li>1列の個数が変わっても、「2×（1列の個数）」という <strong>計算のしかた</strong> は変わらない。</li>
+<li>変わる数を、1つの <strong>文字</strong>（たとえば n）で表すと、どんなときも「2×n」の1つの式で言える。</li>
+</ul></article><article id="M1-C2-OPEN-reading-2"><p class="source">M1-C2-OPEN／原稿区分 M1-P074｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この章で考えること</h2><p>1. 数量を、文字を使った式で表すには？（1節）</p>
+<p>2. 文字の式どうしは、計算できる？（2節）</p>
+<p>3. 文字の式を使うと、どんな「しくみ」が説明できる？（3節）</p></article><article id="M1-C2-OPEN-reading-3"><p class="source">M1-C2-OPEN／原稿区分 M1-P074｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考えておこう</h2><ul>
+<li>1列の個数を n 個として、3列にならべたときの全部の個数を式で表すと？</li>
+</ul>
+<details><summary>答え</summary><p>3×n（文字式の書き方では 3n）。1節で、書き方のきまりを学ぶ。</p></details>
+<p>（ここは読むページ。入力する問題は「考えておこう」の1つだけ。）</p></article><article id="M1-C2-S1-reading-1"><p class="source">M1-C2-S1／原稿区分 M1-P075｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>買う数が変わっても、計算のしかたは同じ</h2><aside class="unready">［絵 M1-C2-S1-INTRO（未生成。制作指示は画像選定.md）：パン屋のレジで、同じパンをいくつか買う場面］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>1個 x 円のパンを5個と、120円の牛乳を1本買う。</p>
+<ul>
+<li>パンが150円なら 150×5+120、180円なら 180×5+120。</li>
+<li>毎回「（パン1個の値段）×5+120」と同じ形。</li>
+<li>パン1個の値段を x とおくと、<strong>x×5+120（円）</strong> の1つの式で表せる。</li>
+</ul></article><article id="M1-C2-S1-reading-2"><p class="source">M1-C2-S1／原稿区分 M1-P075｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>小学校の「□を使った式」「ことばの式」（代金＝1個の値段×個数）。</li>
+<li>1章の正の数・負の数の計算。</li>
+</ul></article><article id="M1-C2-S1-reading-3"><p class="source">M1-C2-S1／原稿区分 M1-P075｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節でできるようになること</h2><p>1. 数量を文字を使った式（<strong>文字式</strong>）で表す。</p>
+<p>2. 文字式の書き方のきまりに合わせて書く。</p>
+<p>3. 文字に数を入れて、式の値を求める。</p></article><article id="M1-C2-S1-reading-4"><p class="source">M1-C2-S1／原稿区分 M1-P076｜数量を文字で表すこと・文字式の表し方①／しくみ　（教科書 p60〜63・ワーク p32〜33）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ文字を使うの？</h2><aside class="unready">［図 M1-C2-S1-FIG01：パン5個（x円の帯5つ）と牛乳120円の帯をつないだテープ図］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>値が決まっていない数（まだ分からない、または、いろいろ変わる数）も、まとめて1つの式で表せるから。</li>
+<li>文字を使った式を <strong>文字式</strong> という。式 x×5+120 は、代金の <strong>求め方</strong> と、代金 <strong>そのもの</strong> の両方を表している。</li>
+</ul></article><article id="M1-C2-S1-reading-5"><p class="source">M1-C2-S1／原稿区分 M1-P076｜数量を文字で表すこと・文字式の表し方①／しくみ　（教科書 p60〜63・ワーク p32〜33）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>書き方のきまり（積）</h2><p>1. かけ算の記号 × をはぶく。　a×b → ab</p>
+<p>2. 数と文字の積では、数を文字の前に書く。　x×5 → 5x</p>
+<p>3. 同じ文字の積は、指数を使う。　a×a → a²、a×a×a → a³</p>
+<p>4. 1 や −1 と文字の積は、1 を書かない。　1×a → a、(−1)×a → −a</p>
+<p>5. 文字はふつうアルファベット順に書く。　b×a → ab</p>
+<p>6. かっこのある式に数をかけるときは、数をかっこの前に書く。　(a+b)×3 → 3(a+b)</p></article><article id="M1-C2-S1-reading-6"><p class="source">M1-C2-S1／原稿区分 M1-P076｜数量を文字で表すこと・文字式の表し方①／しくみ　（教科書 p60〜63・ワーク p32〜33）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>書き方のきまり（商）</h2><ul>
+<li>わり算は ÷ を使わず、<strong>分数の形</strong> で書く。　a÷5 → a/5、(x+y)÷3 → (x+y)/3</li>
+<li>a/5 は (1/5)a と書いてもよい（÷5 は ×1/5 と同じだから）。</li>
+</ul></article><article id="M1-C2-S1-reading-7"><p class="source">M1-C2-S1／原稿区分 M1-P076｜数量を文字で表すこと・文字式の表し方①／しくみ　（教科書 p60〜63・ワーク p32〜33）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>はぶけないもの</h2><p><strong>+ と − の記号は、はぶけない</strong>。　x×5+120 → 5x+120（+ は残す）</p></article><article id="M1-C2-S1-reading-8"><p class="source">M1-C2-S1／原稿区分 M1-P077｜数量を文字で表すこと・文字式の表し方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>数量を文字式で表す順番</h2><p>1. <strong>ことばの式</strong> を書く（代金＝1個の値段×個数、など）。</p>
+<p>2. ことばの部分に、数や文字を入れる。</p>
+<p>3. 書き方のきまりで整える。</p>
+<p>4. 単位をつける（円、cm、g など）。</p></article><article id="M1-C2-S1-reading-9"><p class="source">M1-C2-S1／原稿区分 M1-P077｜数量を文字で表すこと・文字式の表し方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>書き方を直す順番</h2><p>1. まず、かけ算の部分ごとに、数と文字を集める（数は数どうしで先に計算する）。</p>
+<p>2. 数 → 文字（アルファベット順）の順にならべ、同じ文字は指数にする。</p>
+<p>3. わり算の部分は分数にする。</p>
+<p>4. 最後に + − でつなぐ。</p></article><article id="M1-C2-S1-reading-10"><p class="source">M1-C2-S1／原稿区分 M1-P077｜数量を文字で表すこと・文字式の表し方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>「−1」をかけているか（符号は − だけ残る）。</li>
+<li>わり算の後ろに、かけ算が続いていないか（a÷b×c は (a/b)×c → ac/b）。</li>
+</ul>
+<p><strong>確かめる</strong>：書き直した式に、たとえば a＝2、b＝3 などを入れて、元の式と同じ値になるか。</p></article><article id="M1-C2-S1-reading-11"><p class="source">M1-C2-S1／原稿区分 M1-P078｜数量を文字で表すこと・文字式の表し方①／例題　〔参考：教科書p60〜63・ワークp32〜33 ポイント2-1〜2-3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　1個 x 円のパンを5個と、120円の牛乳を1本買ったときの代金を、文字式で表しなさい。</h2><p>1. ことばの式：（パンの代金）＋（牛乳の代金）。</p>
+<p>2. パンの代金は x×5、牛乳は 120。</p>
+<p>3. 書き方：x×5+120 → <strong>5x+120（円）</strong>。</p></article><article id="M1-C2-S1-reading-12"><p class="source">M1-C2-S1／原稿区分 M1-P078｜数量を文字で表すこと・文字式の表し方①／例題　〔参考：教科書p60〜63・ワークp32〜33 ポイント2-1〜2-3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　n×(−3)×m×n を、文字式の書き方にしたがって書きなさい。</h2><p>1. 数どうし：(−3)。</p>
+<p>2. 文字：m、n、n → アルファベット順、n は2つで n²。</p>
+<p>3. 答え <strong>−3mn²</strong>。</p>
+<p><strong>確かめる</strong>：m＝1、n＝2 を入れると、元の式は 2×(−3)×1×2＝−12。−3mn²＝−3×1×4＝−12。同じ。</p></article><article id="M1-C2-S1-reading-13"><p class="source">M1-C2-S1／原稿区分 M1-P078｜数量を文字で表すこと・文字式の表し方①／例題　〔参考：教科書p60〜63・ワークp32〜33 ポイント2-1〜2-3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　2×a÷b×5 を、記号 ×、÷ を使わずに書きなさい。</h2><p>1. ÷b は ×(1/b)。2×a×(1/b)×5。</p>
+<p>2. 数どうし：2×5＝10。</p>
+<p>3. 答え <strong>10a/b</strong>。</p>
+<p><strong>確かめる</strong>：a＝3、b＝2 で、元は 2×3÷2×5＝15。10a/b＝30/2＝15。</p></article><article id="M1-C2-S1-reading-14"><p class="source">M1-C2-S1／原稿区分 M1-P078｜数量を文字で表すこと・文字式の表し方①／例題　〔参考：教科書p60〜63・ワークp32〜33 ポイント2-1〜2-3〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>逆向き：3a²b を、記号 × を使って表しなさい。</h2><ul>
+<li>答え：<strong>3×a×a×b</strong>。</li>
+</ul></article><article id="M1-C2-S1-reading-15"><p class="source">M1-C2-S1／原稿区分 M1-P079｜数量を文字で表すこと・文字式の表し方①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>1×a を 1a と書く</td><td>1 は書かない → a</td></tr>
+<tr><td>(−1)×x を −1x と書く</td><td>−x</td></tr>
+<tr><td>a×a を 2a と書く</td><td>同じ文字の積は指数 → a²（2a は a+a）</td></tr>
+<tr><td>x×5+120 を 5x120 と書く</td><td>+ ははぶけない</td></tr>
+<tr><td>a÷b×c を a/(bc) とする</td><td>×c は分子にかかる → ac/b</td></tr>
+</tbody></table></div></article><article id="M1-C2-S1-reading-16"><p class="source">M1-C2-S1／原稿区分 M1-P079｜数量を文字で表すこと・文字式の表し方①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　x×7×y を、文字式の書き方にしたがって書きなさい。</p>
+<details><summary>ヒント1</summary><p>数を前に、文字はアルファベット順。</p></details>
+<details><summary>答えと解説</summary><p>7xy。</p></details>
+<p><strong>確認1-2</strong>　m÷(−6) を、分数の形で書きなさい。</p>
+<details><summary>答えと解説</summary><p>−m/6。−(m/6)、(−1/6)m と書いてもよい。</p></details>
+<p><strong>確認1-3</strong>　1×p+q×(−1) を、文字式の書き方にしたがって書きなさい。</p>
+<details><summary>ヒント1</summary><p>1×p と q×(−1) を、それぞれ書き直す。</p></details>
+<details><summary>答えと解説</summary><p>p−q。1×p→p、q×(−1)→−q。</p></details></article><article id="M1-C2-S1-reading-17"><p class="source">M1-C2-S1／原稿区分 M1-P080｜文字式の表し方②（いろいろな数量）／しくみ　（教科書 p64〜65・ワーク p34〜35）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>代金とおつり</h2><aside class="unready">［図 M1-C2-S1-FIG02：道のり x km を4時間で歩く線分図（1時間ごとの区切り）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>おつり＝出したお金−代金。2000円で1冊 a 円のノートを3冊買うと、おつりは <strong>2000−3a（円）</strong>。</p></article><article id="M1-C2-S1-reading-18"><p class="source">M1-C2-S1／原稿区分 M1-P080｜文字式の表し方②（いろいろな数量）／しくみ　（教科書 p64〜65・ワーク p34〜35）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>速さ・時間・道のり</h2><ul>
+<li>道のり＝速さ×時間、速さ＝道のり÷時間、時間＝道のり÷速さ。</li>
+<li>時速 x km で4時間歩いた道のりは 4x km。</li>
+<li>y m を分速70mで歩いた時間は y/70 分。</li>
+<li><strong>単位に注意</strong>：時速の「時間」と、問題の「分」がそろっているか。</li>
+</ul></article><article id="M1-C2-S1-reading-19"><p class="source">M1-C2-S1／原稿区分 M1-P080｜文字式の表し方②（いろいろな数量）／しくみ　（教科書 p64〜65・ワーク p34〜35）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>割合</h2><ul>
+<li>1% は 1/100、1割 は 1/10。</li>
+<li>a 円の 25% は (25/100)a＝(1/4)a 円。</li>
+<li>x 円の品物の2割引きの値段は、x の (1−2/10)＝8/10 → (4/5)x 円（0.8x 円）。</li>
+</ul></article><article id="M1-C2-S1-reading-20"><p class="source">M1-C2-S1／原稿区分 M1-P080｜文字式の表し方②（いろいろな数量）／しくみ　（教科書 p64〜65・ワーク p34〜35）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>式の意味を読む</h2><p>大人1人 a 円、子ども1人 b 円のとき、3a+2b（円）は「大人3人と子ども2人の料金の合計」。</p></article><article id="M1-C2-S1-reading-21"><p class="source">M1-C2-S1／原稿区分 M1-P081｜文字式の表し方②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（数量を式にする）</h2><p>1. ことばの式を書く（おつり＝出したお金−代金 など）。</p>
+<p>2. 単位をそろえる（時間と分、m と km、g と kg）。</p>
+<p>3. 文字・数を入れて、書き方のきまりで整える。</p></article><article id="M1-C2-S1-reading-22"><p class="source">M1-C2-S1／原稿区分 M1-P081｜文字式の表し方②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（割合）</h2><p>1. 「もとにする量」を見つける（a 円の〜、x 人の〜）。</p>
+<p>2. 割合を分数か小数にする（25% → 25/100、2割 → 2/10）。</p>
+<p>3. 「〜引き」は 1 から割合をひく。「〜増し」は 1 にたす。</p></article><article id="M1-C2-S1-reading-23"><p class="source">M1-C2-S1／原稿区分 M1-P081｜文字式の表し方②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（式の意味を読む）</h2><p>1. 文字が何を表しているかを確かめる。</p>
+<p>2. 係数（文字の前の数）が何を表すかを考える（3a → a 円の3つ分＝3人分）。</p>
+<p>3. +、−、×、÷ がどんな場面の計算かをことばにする。</p>
+<p><strong>確かめる</strong>：文字に分かりやすい数（a＝100 など）を入れて、式の答えが場面に合うか。</p></article><article id="M1-C2-S1-reading-24"><p class="source">M1-C2-S1／原稿区分 M1-P082｜文字式の表し方②／例題　〔参考：教科書p64〜65・ワークp34〜35 ポイント2-4〜2-6〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本　2000円を出して、1冊 a 円のノートを3冊買ったときのおつり</h2><p>1. おつり＝出したお金−代金。代金は 3a。</p>
+<p>2. 答え <strong>2000−3a（円）</strong>。</p>
+<p><strong>確かめる</strong>：a＝100 なら 2000−300＝1700円。場面に合う。</p></article><article id="M1-C2-S1-reading-25"><p class="source">M1-C2-S1／原稿区分 M1-P082｜文字式の表し方②／例題　〔参考：教科書p64〜65・ワークp34〜35 ポイント2-4〜2-6〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準（1）時速 x km で4時間歩いた道のり　（2）y m を分速70m で歩いたときにかかる時間</h2><p>1. （1）道のり＝速さ×時間 → <strong>4x（km）</strong>。</p>
+<p>2. （2）時間＝道のり÷速さ → y÷70 → <strong>y/70（分）</strong>。</p></article><article id="M1-C2-S1-reading-26"><p class="source">M1-C2-S1／原稿区分 M1-P082｜文字式の表し方②／例題　〔参考：教科書p64〜65・ワークp34〜35 ポイント2-4〜2-6〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用（1）x 円の品物を2割5分引きで買ったときの値段</h2><p>1. 2割5分＝0.25。引いたあとは 1−0.25＝0.75。</p>
+<p>2. 答え <strong>(3/4)x 円</strong>（0.75x 円でもよい）。</p></article><article id="M1-C2-S1-reading-27"><p class="source">M1-C2-S1／原稿区分 M1-P082｜文字式の表し方②／例題　〔参考：教科書p64〜65・ワークp34〜35 ポイント2-4〜2-6〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用（2）大人1人 a 円、子ども1人 b 円のとき、a−2b≧500 という式は、どんなことを表していますか。（関係の式は2節でくわしく学ぶ。ここでは a−2b の意味を読む。）</h2><p>1. 2b は子ども2人分の料金。a−2b は「大人1人分と子ども2人分の差」。</p>
+<p>2. 答え：<strong>大人1人の料金は、子ども2人の料金より500円以上高い。</strong></p></article><article id="M1-C2-S1-reading-28"><p class="source">M1-C2-S1／原稿区分 M1-P083｜文字式の表し方②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>y m を分速70m → 70y</td><td>時間＝道のり÷速さ → y/70</td></tr>
+<tr><td>2割引きを 0.2x</td><td>引いたあとの値段は (1−0.2)x＝0.8x</td></tr>
+<tr><td>時速 x km で 30分 → 30x</td><td>30分＝1/2時間 → (1/2)x km</td></tr>
+</tbody></table></div></article><article id="M1-C2-S1-reading-29"><p class="source">M1-C2-S1／原稿区分 M1-P083｜文字式の表し方②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　a L の水を、1本 0.5L のびん x 本に入れたときの残りの水の量を、式で表しなさい。</p>
+<details><summary>ヒント1</summary><p>入れた水の量は 0.5×x。</p></details>
+<details><summary>答えと解説</summary><p>a−0.5x（L）。入れた量 0.5x を、はじめの a からひく。</p></details>
+<p><strong>確認2-2</strong>　時速 x km で 20分 進んだ道のりを、式で表しなさい。</p>
+<details><summary>ヒント1</summary><p>20分は何時間？</p></details>
+<details><summary>答えと解説</summary><p>(1/3)x km（x/3 km）。20分＝20/60＝1/3時間。</p></details>
+<p><strong>確認2-3</strong>　b 人の 15% は何人か、式で表しなさい。</p>
+<details><summary>答えと解説</summary><p>(3/20)b 人（0.15b 人、15b/100 人も可。約分した形を推奨）。</p></details></article><article id="M1-C2-S1-reading-30"><p class="source">M1-C2-S1／原稿区分 M1-P084｜式の値／しくみ　（教科書 p66〜68・ワーク p36〜37）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>代入と式の値</h2><ul>
+<li>式の中の文字を数におきかえることを <strong>代入する</strong> という。</li>
+<li>代入する数を <strong>文字の値</strong>、代入して計算した結果を <strong>式の値</strong> という。</li>
+<li>例：a＝28 のとき、a−18 の値は 28−18＝10。</li>
+</ul></article><article id="M1-C2-S1-reading-31"><p class="source">M1-C2-S1／原稿区分 M1-P084｜式の値／しくみ　（教科書 p66〜68・ワーク p36〜37）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜかっこをつけるの？</h2><ul>
+<li>負の数を代入するときは、<strong>かっこをつけて</strong> 入れる。</li>
+<li>x＝−3 のとき 5−2x は 5−2×(−3)。かっこがないと「5−2×−3」となり、記号が2つならんで、計算をまちがえやすい。</li>
+<li>a² に a＝−4 を入れると (−4)²＝16。かっこがないと −4²＝−16 になってしまう。</li>
+</ul></article><article id="M1-C2-S1-reading-32"><p class="source">M1-C2-S1／原稿区分 M1-P084｜式の値／しくみ　（教科書 p66〜68・ワーク p36〜37）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>−x の値</h2><p>−x は (−1)×x。x＝−3 なら (−1)×(−3)＝3。</p></article><article id="M1-C2-S1-reading-33"><p class="source">M1-C2-S1／原稿区分 M1-P085｜式の値／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. かけ算の記号 × をもどして、式を書き直す（2x → 2×x、x² → x×x）。</p>
+<p>2. 文字のところに、かっこつきで数を入れる。</p>
+<p>3. 1章の計算の順序（累乗 → 乗除 → 加減）で計算する。</p></article><article id="M1-C2-S1-reading-34"><p class="source">M1-C2-S1／原稿区分 M1-P085｜式の値／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>分数の形 12/x は 12÷x。</li>
+<li>文字が2つあるときは、どの文字にどの数を入れるか、取りちがえない。</li>
+</ul>
+<p><strong>確かめる</strong>：かっこを入れ忘れていないか、代入した数の符号をもう一度見る。</p></article><article id="M1-C2-S1-reading-35"><p class="source">M1-C2-S1／原稿区分 M1-P086｜式の値／例題　〔参考：教科書p66〜68・ワークp36〜37 ポイント2-7〜2-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本　x＝−3 のとき、5−2x の値</h2><p>1. 5−2×(−3)。2. 2×(−3)＝−6。3. 5−(−6)＝<strong>11</strong>。</p></article><article id="M1-C2-S1-reading-36"><p class="source">M1-C2-S1／原稿区分 M1-P086｜式の値／例題　〔参考：教科書p66〜68・ワークp36〜37 ポイント2-7〜2-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準（1）a＝−4 のとき、a² と −a² の値</h2><p>1. a²＝(−4)²＝16。</p>
+<p>2. −a²＝−(−4)²＝−16。</p>
+<p>3. 答え <strong>16 と −16</strong>。</p></article><article id="M1-C2-S1-reading-37"><p class="source">M1-C2-S1／原稿区分 M1-P086｜式の値／例題　〔参考：教科書p66〜68・ワークp36〜37 ポイント2-7〜2-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準（2）x＝2、y＝−3 のとき、4x−5y の値</h2><p>1. 4×2−5×(−3)。2. 8−(−15)＝8+15＝<strong>23</strong>。</p></article><article id="M1-C2-S1-reading-38"><p class="source">M1-C2-S1／原稿区分 M1-P086｜式の値／例題　〔参考：教科書p66〜68・ワークp36〜37 ポイント2-7〜2-9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用　x＝−1/2 のとき、6x²−x の値</h2><p>1. 6×(−1/2)²−(−1/2)。</p>
+<p>2. (−1/2)²＝1/4。6×1/4＝3/2。</p>
+<p>3. 3/2+1/2＝<strong>2</strong>。</p></article><article id="M1-C2-S1-reading-39"><p class="source">M1-C2-S1／原稿区分 M1-P087｜式の値／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>a＝−4 で a²＝−16</td><td>かっこをつけて (−4)²＝16</td></tr>
+<tr><td>x＝−3 で −x＝−3</td><td>−x＝(−1)×(−3)＝3</td></tr>
+<tr><td>20/x で x＝−4 を 20−4 とする</td><td>20/x は 20÷x → −5</td></tr>
+</tbody></table></div></article><article id="M1-C2-S1-reading-40"><p class="source">M1-C2-S1／原稿区分 M1-P087｜式の値／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　a＝−2 のとき、−a+3 の値</p>
+<details><summary>答えと解説</summary><p>5。−(−2)+3＝2+3＝5。</p></details>
+<p><strong>確認3-2</strong>　x＝−4 のとき、20/x の値</p>
+<details><summary>答えと解説</summary><p>−5。20÷(−4)＝−5。</p></details>
+<p><strong>確認3-3</strong>　x＝−5、y＝4 のとき、x²−2y の値</p>
+<details><summary>ヒント1</summary><p>(−5)² を先に。</p></details>
+<details><summary>答えと解説</summary><p>17。25−8＝17。</p></details></article><article id="M1-C2-S1-reading-41"><p class="source">M1-C2-S1／原稿区分 M1-P088｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>式の値で予想する</h2><aside class="unready">［絵 M1-C2-S1-APPLY（未生成。制作指示は画像選定.md）：山小屋のふもとと山の上の温度計（数字なし）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>ふもとの気温を a℃ とすると、ある山の上の気温は a−12（℃）くらいになるとする。（この 12 は、この教材で決めた例の数）</li>
+<li>ふもとが 25℃ なら 13℃、ふもとが 5℃ なら −7℃。</li>
+<li>式があれば、どんな日の気温でも、すぐ予想できる。</li>
+</ul></article><article id="M1-C2-S1-reading-42"><p class="source">M1-C2-S1／原稿区分 M1-P088｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>根拠を言えるようにしよう</h2><p>「ふもとが −3℃ の日の山の上の気温」を求める式を書き、答えを出してみよう。</p>
+<details><summary>答えと解説</summary><p>(−3)−12＝−15。答え −15℃。負の数を代入するときはかっこをつける。</p></details></article><article id="M1-C2-S1-reading-43"><p class="source">M1-C2-S1／原稿区分 M1-P089｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><div class="table-scroll"><table><tbody>
+<tr><td>ことば</td><td>意味・きまり</td></tr>
+<tr><td>文字式</td><td>文字を使った式。数量そのものと、求め方の両方を表す</td></tr>
+<tr><td>積の書き方</td><td>× をはぶく、数を前、同じ文字は指数、1は書かない</td></tr>
+<tr><td>商の書き方</td><td>分数の形</td></tr>
+<tr><td>代入・式の値</td><td>文字に数を入れる。負の数はかっこつき</td></tr>
+</tbody></table></div></article><article id="M1-C2-S1-reading-44"><p class="source">M1-C2-S1／原稿区分 M1-P089｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>自分のことばで説明しよう</h2><p>「a×a と 2a はちがう」ことを、a＝3 を使って説明してみよう。</p>
+<details><summary>説明の例</summary><p>a×a＝3×3＝9、2a＝2×3＝6 で、値がちがう。a×a は a²。</p></details></article><article id="M1-C2-S1-reading-45"><p class="source">M1-C2-S1／原稿区分 M1-P089｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の12問。答えは入力のあとに表示する。</p></article><article id="M1-C2-S2-reading-1"><p class="source">M1-C2-S2／原稿区分 M1-P090｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>袋の数をまとめる</h2><aside class="unready">［絵 M1-C2-S2-INTRO（未生成。制作指示は画像選定.md）：同じ袋に同じ数ずつ入ったあめ］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>あめが x 個ずつ入った袋を、たけるさんは4袋、まいさんは3袋もっている。</li>
+<li>2人合わせると、x 個入りの袋が 4+3＝7袋 → <strong>7x 個</strong>。</li>
+<li>「x が何個でも、袋の数だけたせばよい」。これが文字式の計算のもとになる。</li>
+</ul></article><article id="M1-C2-S2-reading-2"><p class="source">M1-C2-S2／原稿区分 M1-P090｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>文字式の書き方（1節）、正の数・負の数の計算、分配法則（1章 P055）。</li>
+</ul></article><article id="M1-C2-S2-reading-3"><p class="source">M1-C2-S2／原稿区分 M1-P090｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節でできるようになること</h2><p>1. 項と係数が分かり、同じ文字の項をまとめる。</p>
+<p>2. かっこを外して計算し、式どうしをたしたりひいたりする。</p>
+<p>3. 文字式に数をかけたり、数でわったりする。</p>
+<p>4. 数量の関係を、等式・不等式で表す。</p></article><article id="M1-C2-S2-reading-4"><p class="source">M1-C2-S2／原稿区分 M1-P091｜文字式の加法、減法①（項と係数・同じ文字の項をまとめる）／しくみ　（教科書 p70〜72・ワーク p38〜39）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>項と係数</h2><aside class="unready">［図 M1-C2-S2-FIG01：x 個入りの袋と、ばらのあめで表した 4x+2 と 3x+5］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>式 5x−3 は、5x と −3 の和とみる。このときの 5x、−3 を <strong>項</strong> という。</li>
+<li>文字をふくむ項 5x の、数の部分 5 を <strong>x の係数</strong> という。</li>
+<li>x は 1×x なので係数は 1。−y は (−1)×y なので係数は −1。a/3 は (1/3)a なので係数は 1/3。</li>
+<li>文字が1つだけの項（5x、−4y）を <strong>1次の項</strong>、1次の項だけ、または1次の項と数の項の和でできた式を <strong>1次式</strong> という。</li>
+</ul></article><article id="M1-C2-S2-reading-5"><p class="source">M1-C2-S2／原稿区分 M1-P091｜文字式の加法、減法①（項と係数・同じ文字の項をまとめる）／しくみ　（教科書 p70〜72・ワーク p38〜39）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ同じ文字の項はまとめられるの？（FIG01）</h2><ul>
+<li>4x は「x 個入りの袋が4つ」、3x は「袋が3つ」。合わせると袋7つ → 7x。</li>
+<li>5x−3x は、袋5つから3つを取って2つ → 2x。</li>
+<li>式で書くと <strong>mx＋nx＝(m＋n)x</strong>（分配法則を逆に使っている）。</li>
+<li>一方、4x と 2（ばらのあめ）は、ものがちがうのでまとめられない。</li>
+</ul></article><article id="M1-C2-S2-reading-6"><p class="source">M1-C2-S2／原稿区分 M1-P092｜文字式の加法、減法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li><strong>文字の部分がまったく同じか</strong>：3x と 5x は同じ。3x と 3y、x と x² はちがう。</li>
+<li>項の符号は、項といっしょに動かす（−4x は「−4x」のまま）。</li>
+</ul></article><article id="M1-C2-S2-reading-7"><p class="source">M1-C2-S2／原稿区分 M1-P092｜文字式の加法、減法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 項に分けて、文字の部分が同じ項に印をつける（下線など）。</p>
+<p>2. 文字の項どうし、数の項どうしを集める（交換法則）。</p>
+<p>3. 係数どうしを計算する（1章の計算）。</p>
+<p>4. 文字の項 → 数の項 の順に書く。</p>
+<p><strong>確かめる</strong>：x に何か数（たとえば 2）を入れて、計算の前と後で値が同じか。</p></article><article id="M1-C2-S2-reading-8"><p class="source">M1-C2-S2／原稿区分 M1-P093｜文字式の加法、減法①／例題　〔参考：教科書p70〜72・ワークp38〜39 ポイント2-10〜2-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　5−3a+b/2 の項を答えなさい。また、a の係数、b の係数を答えなさい。</h2><p>1. 加法の式に直す：5+(−3a)+(b/2)。</p>
+<p>2. 項は <strong>5、−3a、b/2</strong>。</p>
+<p>3. a の係数は <strong>−3</strong>、b の係数は <strong>1/2</strong>（b/2＝(1/2)b）。</p></article><article id="M1-C2-S2-reading-9"><p class="source">M1-C2-S2／原稿区分 M1-P093｜文字式の加法、減法①／例題　〔参考：教科書p70〜72・ワークp38〜39 ポイント2-10〜2-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　4x−9x</h2><p>1. 文字の部分が同じ。2. 係数どうし：4−9＝−5。3. <strong>−5x</strong>。</p></article><article id="M1-C2-S2-reading-10"><p class="source">M1-C2-S2／原稿区分 M1-P093｜文字式の加法、減法①／例題　〔参考：教科書p70〜72・ワークp38〜39 ポイント2-10〜2-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用（1）0.3a−1.1a+2.5−0.9</h2><p>1. a の項：0.3−1.1＝−0.8 → −0.8a。2. 数の項：2.5−0.9＝1.6。3. <strong>−0.8a+1.6</strong>。</p>
+<p><strong>確かめる</strong>：a＝10 を入れる。元：3−11+2.5−0.9＝−6.4。答え：−8+1.6＝−6.4。</p></article><article id="M1-C2-S2-reading-11"><p class="source">M1-C2-S2／原稿区分 M1-P093｜文字式の加法、減法①／例題　〔参考：教科書p70〜72・ワークp38〜39 ポイント2-10〜2-12〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用（2）(2/3)y−(5/6)y</h2><p>1. 係数どうし：4/6−5/6＝−1/6。2. <strong>−(1/6)y</strong>（−y/6 でもよい）。</p></article><article id="M1-C2-S2-reading-12"><p class="source">M1-C2-S2／原稿区分 M1-P094｜文字式の加法、減法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>4x+2 を 6x とする</td><td>文字の項と数の項はまとめられない</td></tr>
+<tr><td>7y−y を 7 とする</td><td>y は 1y。7y−1y＝6y</td></tr>
+<tr><td>−2a−a を −2a² とする</td><td>加法なので係数をたす：−3a</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-13"><p class="source">M1-C2-S2／原稿区分 M1-P094｜文字式の加法、減法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　7y−y</p>
+<details><summary>答えと解説</summary><p>6y。y の係数は 1。</p></details>
+<p><strong>確認1-2</strong>　3a+5−8a−2</p>
+<details><summary>ヒント1</summary><p>a の項どうし、数の項どうしを集める。</p></details>
+<details><summary>答えと解説</summary><p>−5a+3。3a−8a＝−5a、5−2＝3。</p></details>
+<p><strong>確認1-3</strong>　−x/4+2y の項と、x の係数を答えなさい。</p>
+<details><summary>答えと解説</summary><p>項は −x/4 と 2y。x の係数は −1/4。</p></details></article><article id="M1-C2-S2-reading-14"><p class="source">M1-C2-S2／原稿区分 M1-P095｜文字式の加法、減法②（かっこを外す・式の加減）／しくみ　（教科書 p72〜74・ワーク p40〜41）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>かっこの外し方</h2><aside class="unready">［図 M1-C2-S2-FIG02：a から b と c を順にひく動きと、(b+c) をまとめてひく動きが同じになる数直線］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li><strong>+( ) はそのまま外す</strong>：a+(b+c)＝a+b+c。</li>
+<li><strong>−( ) は、中の各項の符号を変えて外す</strong>：a−(b+c)＝a−b−c、a−(b−c)＝a−b+c。</li>
+</ul></article><article id="M1-C2-S2-reading-15"><p class="source">M1-C2-S2／原稿区分 M1-P095｜文字式の加法、減法②（かっこを外す・式の加減）／しくみ　（教科書 p72〜74・ワーク p40〜41）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ −( ) は符号が全部変わるの？（FIG02）</h2><ul>
+<li>「a から、b と c をまとめてひく」のと「a から b をひいて、さらに c をひく」のは、同じ所に着く。</li>
+<li>だから a−(b+c)＝a−b−c。かっこの中に「−c」があれば、それをひくことは「+c」になる（1章：負の数をひくと、たし算）。</li>
+</ul></article><article id="M1-C2-S2-reading-16"><p class="source">M1-C2-S2／原稿区分 M1-P095｜文字式の加法、減法②（かっこを外す・式の加減）／しくみ　（教科書 p72〜74・ワーク p40〜41）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>式と式の加減</h2><ul>
+<li>2つの式をたす・ひくときは、<strong>それぞれの式にかっこをつけて</strong> から計算する。</li>
+<li>(3x−8)−(−5x+2) のように、ひく式全体にかっこをつけるのが大切。</li>
+</ul></article><article id="M1-C2-S2-reading-17"><p class="source">M1-C2-S2／原稿区分 M1-P096｜文字式の加法、減法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 式どうしの加減なら、それぞれにかっこをつけ、+ か − でつなぐ。</p>
+<p>2. かっこの前の符号を見る：+ ならそのまま外す、− なら中の <strong>すべての項</strong> の符号を変えて外す。</p>
+<p>3. 同じ文字の項・数の項をまとめる（P092）。</p></article><article id="M1-C2-S2-reading-18"><p class="source">M1-C2-S2／原稿区分 M1-P096｜文字式の加法、減法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>−( ) の中の <strong>2つめ以降の項</strong> の符号を変え忘れやすい。</li>
+<li>かっこを外した直後の式を1行書いてから、まとめる。</li>
+</ul>
+<p><strong>確かめる</strong>：x＝1 など簡単な数を入れて、計算の前と後の値をくらべる。</p></article><article id="M1-C2-S2-reading-19"><p class="source">M1-C2-S2／原稿区分 M1-P097｜文字式の加法、減法②／例題　〔参考：教科書p72〜74・ワークp40〜41 ポイント2-13〜2-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本　5x+(2x−9)</h2><p>1. +( ) なのでそのまま：5x+2x−9。2. <strong>7x−9</strong>。</p></article><article id="M1-C2-S2-reading-20"><p class="source">M1-C2-S2／原稿区分 M1-P097｜文字式の加法、減法②／例題　〔参考：教科書p72〜74・ワークp40〜41 ポイント2-13〜2-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準　6a−(4a−7)</h2><p>1. −( ) なので符号を変える：6a−4a+7。2. <strong>2a+7</strong>。</p>
+<p><strong>確かめる</strong>：a＝1 → 元は 6−(4−7)＝9。答え 2+7＝9。</p></article><article id="M1-C2-S2-reading-21"><p class="source">M1-C2-S2／原稿区分 M1-P097｜文字式の加法、減法②／例題　〔参考：教科書p72〜74・ワークp40〜41 ポイント2-13〜2-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用　3x−8 と −5x+2 について、（1）2つの式の和　（2）左の式から右の式をひいた差</h2><p>1. （1）(3x−8)+(−5x+2)＝3x−8−5x+2＝<strong>−2x−6</strong>。</p>
+<p>2. （2）(3x−8)−(−5x+2)＝3x−8+5x−2＝<strong>8x−10</strong>。</p></article><article id="M1-C2-S2-reading-22"><p class="source">M1-C2-S2／原稿区分 M1-P098｜文字式の加法、減法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>6a−(4a−7)＝6a−4a−7</td><td>−( ) は中の <strong>すべて</strong> の符号を変える：+7</td></tr>
+<tr><td>差を 3x−8−5x+2 とする</td><td>ひく式にかっこをつけてから外す</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-23"><p class="source">M1-C2-S2／原稿区分 M1-P098｜文字式の加法、減法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　2y−(−y+4)</p>
+<details><summary>答えと解説</summary><p>3y−4。2y+y−4。</p></details>
+<p><strong>確認2-2</strong>　4a+1 から 6a−3 をひいた差</p>
+<details><summary>ヒント1</summary><p>(4a+1)−(6a−3) と書いてから。</p></details>
+<details><summary>答えと解説</summary><p>−2a+4。4a+1−6a+3。</p></details></article><article id="M1-C2-S2-reading-24"><p class="source">M1-C2-S2／原稿区分 M1-P099｜文字式と数の乗法、除法①／しくみ　（教科書 p75〜76・ワーク p42〜43）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>文字式×数、文字式÷数</h2><aside class="unready">［図 M1-C2-S2-FIG03：5(2x+3) を、たて5・横が 2x と 3 に分かれた長方形の面積で示す図］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>−4a×6 は、(−4)×6×a（交換法則）→ −24a。</li>
+<li>15y÷(−5) は、15y/(−5)＝−3y。</li>
+<li>4x÷(2/3) は、逆数をかける：4x×(3/2)＝6x。</li>
+</ul></article><article id="M1-C2-S2-reading-25"><p class="source">M1-C2-S2／原稿区分 M1-P099｜文字式と数の乗法、除法①／しくみ　（教科書 p75〜76・ワーク p42〜43）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>項が2つの式に数をかける（分配法則）</h2><ul>
+<li>5(2x+3)＝5×2x+5×3＝10x+15。</li>
+<li><strong>なぜ？</strong>（FIG03）：たて5、横 2x+3 の長方形は、横 2x の部分と横3の部分に分けられる。面積は 5×2x と 5×3 の和。</li>
+</ul></article><article id="M1-C2-S2-reading-26"><p class="source">M1-C2-S2／原稿区分 M1-P099｜文字式と数の乗法、除法①／しくみ　（教科書 p75〜76・ワーク p42〜43）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>項が2つの式を数でわる</h2><ul>
+<li>(12a−20)÷4＝12a/4−20/4＝3a−5（<strong>各項を</strong> 4 でわる）。</li>
+<li>分数でわるときは、逆数をかける：(9x−6)÷(−3/2)＝(9x−6)×(−2/3)。</li>
+</ul></article><article id="M1-C2-S2-reading-27"><p class="source">M1-C2-S2／原稿区分 M1-P100｜文字式と数の乗法、除法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. わり算は、かけ算（逆数をかける）か、分数の形に直す。</p>
+<p>2. かっこの外の数を、中の <strong>各項</strong> にかける（符号ごと）。</p>
+<p>3. 係数を計算する。約分を忘れない。</p></article><article id="M1-C2-S2-reading-28"><p class="source">M1-C2-S2／原稿区分 M1-P100｜文字式と数の乗法、除法①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>かける数が負なら、すべての項の符号が変わる。</li>
+<li>(ax+b)÷c では、b も c でわる（ax だけをわらない）。</li>
+</ul>
+<p><strong>確かめる</strong>：x＝2 などを入れて、計算の前と後の値をくらべる。</p></article><article id="M1-C2-S2-reading-29"><p class="source">M1-C2-S2／原稿区分 M1-P101｜文字式と数の乗法、除法①／例題　〔参考：教科書p75〜76・ワークp42〜43 ポイント2-16〜2-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本（1）−4a×6　（2）15y÷(−5)　（3）4x÷(2/3)</h2><p>1. （1）(−4)×6＝−24 → <strong>−24a</strong>。</p>
+<p>2. （2）15÷(−5)＝−3 → <strong>−3y</strong>。</p>
+<p>3. （3）4x×(3/2)＝<strong>6x</strong>。</p></article><article id="M1-C2-S2-reading-30"><p class="source">M1-C2-S2／原稿区分 M1-P101｜文字式と数の乗法、除法①／例題　〔参考：教科書p75〜76・ワークp42〜43 ポイント2-16〜2-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準（1）−3(5x−2)　（2）(12a−20)÷4</h2><p>1. （1）−3×5x＋(−3)×(−2)＝<strong>−15x+6</strong>。</p>
+<p>2. （2）12a/4−20/4＝<strong>3a−5</strong>。</p></article><article id="M1-C2-S2-reading-31"><p class="source">M1-C2-S2／原稿区分 M1-P101｜文字式と数の乗法、除法①／例題　〔参考：教科書p75〜76・ワークp42〜43 ポイント2-16〜2-18〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用　(9x−6)÷(−3/2)</h2><p>1. 逆数 −2/3 をかける：(9x−6)×(−2/3)。</p>
+<p>2. 9x×(−2/3)＝−6x、(−6)×(−2/3)＝4。</p>
+<p>3. 答え <strong>−6x+4</strong>。</p>
+<p><strong>確かめる</strong>：x＝2 → 元は (18−6)÷(−3/2)＝12×(−2/3)＝−8。答え −12+4＝−8。</p></article><article id="M1-C2-S2-reading-32"><p class="source">M1-C2-S2／原稿区分 M1-P102｜文字式と数の乗法、除法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>−3(5x−2)＝−15x−6</td><td>−3×(−2)＝+6</td></tr>
+<tr><td>(12a−20)÷4＝3a−20</td><td>数の項も4でわる</td></tr>
+<tr><td>4x÷(2/3)＝(8/3)x</td><td>わり算は逆数をかける：4x×3/2</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-33"><p class="source">M1-C2-S2／原稿区分 M1-P102｜文字式と数の乗法、除法①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　(−2/5)x×15</p>
+<details><summary>答えと解説</summary><p>−6x。(−2/5)×15＝−6。</p></details>
+<p><strong>確認3-2</strong>　(−8y+12)÷(−4)</p>
+<details><summary>答えと解説</summary><p>2y−3。−8y÷(−4)＝2y、12÷(−4)＝−3。</p></details></article><article id="M1-C2-S2-reading-34"><p class="source">M1-C2-S2／原稿区分 M1-P103｜文字式と数の乗法、除法②（分数の形の式・かっこのある式）／しくみ　（教科書 p76〜77・ワーク p44〜45）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>分数の形の式に数をかける</h2><ul>
+<li>(3x−1)/4×8：分母 4 と 8 で約分して、(3x−1)×2＝6x−2。</li>
+<li><strong>なぜ約分してよい？</strong>：(3x−1)/4×8 は (3x−1)×8/4。8/4＝2 だから。</li>
+</ul></article><article id="M1-C2-S2-reading-35"><p class="source">M1-C2-S2／原稿区分 M1-P103｜文字式と数の乗法、除法②（分数の形の式・かっこのある式）／しくみ　（教科書 p76〜77・ワーク p44〜45）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>かっこがある式の計算</h2><ul>
+<li>2(3a+4)−5(a−1) は、それぞれ分配法則で外してから、同じ文字の項をまとめる。</li>
+<li>2(3a+4)＝6a+8、−5(a−1)＝−5a+5。合わせて a+13。</li>
+</ul></article><article id="M1-C2-S2-reading-36"><p class="source">M1-C2-S2／原稿区分 M1-P104｜文字式と数の乗法、除法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（分数の形×数）</h2><p>1. かける数と分母で約分する。</p>
+<p>2. 残った数を、分子の <strong>かっこ全体</strong> にかける（分子にかっこをつける）。</p></article><article id="M1-C2-S2-reading-37"><p class="source">M1-C2-S2／原稿区分 M1-P104｜文字式と数の乗法、除法②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（かっこがある式）</h2><p>1. 1つめのかっこを分配法則で外す。</p>
+<p>2. 2つめのかっこは、前の符号（−5 なら −5 ごと）をかける。</p>
+<p>3. 同じ文字の項・数の項をまとめる。</p>
+<p><strong>確かめる</strong>：a＝1 など簡単な数で、計算の前と後をくらべる。</p></article><article id="M1-C2-S2-reading-38"><p class="source">M1-C2-S2／原稿区分 M1-P105｜文字式と数の乗法、除法②／例題　〔参考：教科書p76〜77・ワークp44〜45 ポイント2-19〜2-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-基本　(3x−1)/4×8</h2><p>1. 8 と 4 で約分 → 2。2. (3x−1)×2＝<strong>6x−2</strong>。</p></article><article id="M1-C2-S2-reading-39"><p class="source">M1-C2-S2／原稿区分 M1-P105｜文字式と数の乗法、除法②／例題　〔参考：教科書p76〜77・ワークp44〜45 ポイント2-19〜2-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-標準　2(3a+4)−5(a−1)</h2><p>1. 6a+8−5a+5。2. <strong>a+13</strong>。</p></article><article id="M1-C2-S2-reading-40"><p class="source">M1-C2-S2／原稿区分 M1-P105｜文字式と数の乗法、除法②／例題　〔参考：教科書p76〜77・ワークp44〜45 ポイント2-19〜2-21〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-応用　(1/3)(6x−9)−(1/2)(4x+2)</h2><p>1. (1/3)(6x−9)＝2x−3。</p>
+<p>2. −(1/2)(4x+2)＝−2x−1。</p>
+<p>3. 2x−3−2x−1＝<strong>−4</strong>（x の項が消える）。</p>
+<p><strong>確かめる</strong>：x＝0 → (1/3)(−9)−(1/2)(2)＝−3−1＝−4。x＝3 → (1/3)(9)−(1/2)(14)＝3−7＝−4。どんな x でも −4。</p></article><article id="M1-C2-S2-reading-41"><p class="source">M1-C2-S2／原稿区分 M1-P106｜文字式と数の乗法、除法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(3x−1)/4×8 を 3x−1×2 とする</td><td>分子のかっこを残す：(3x−1)×2</td></tr>
+<tr><td>−5(a−1) を −5a−5 とする</td><td>(−5)×(−1)＝+5</td></tr>
+<tr><td>答えが数だけになったので計算ミスと思う</td><td>文字の項が消えて数だけ残ることもある</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-42"><p class="source">M1-C2-S2／原稿区分 M1-P106｜文字式と数の乗法、除法②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認4-1</strong>　12×(2x+5)/6</p>
+<details><summary>答えと解説</summary><p>4x+10。12 と 6 で約分 → 2(2x+5)。</p></details>
+<p><strong>確認4-2</strong>　3(x−2)−(2x−7)</p>
+<details><summary>答えと解説</summary><p>x+1。3x−6−2x+7。</p></details></article><article id="M1-C2-S2-reading-43"><p class="source">M1-C2-S2／原稿区分 M1-P107｜関係を表す式（等式・不等式）／しくみ　（教科書 p78〜81・ワーク p48〜49）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>等式</h2><ul>
+<li>等号「＝」で、2つの数量が <strong>等しい</strong> ことを表した式を <strong>等式</strong> という。</li>
+<li>左がわを <strong>左辺</strong>、右がわを <strong>右辺</strong>、両方を <strong>両辺</strong> という。</li>
+<li>A＝B と B＝A は同じ関係。</li>
+</ul></article><article id="M1-C2-S2-reading-44"><p class="source">M1-C2-S2／原稿区分 M1-P107｜関係を表す式（等式・不等式）／しくみ　（教科書 p78〜81・ワーク p48〜49）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>不等式</h2><ul>
+<li>不等号で、2つの数量の <strong>大小</strong> を表した式を <strong>不等式</strong> という。</li>
+<li>「a は b より大きい」a&gt;b、「a は b より小さい（未満）」a&lt;b。</li>
+<li>「a は b 以上」a≧b（a&gt;b または a＝b）、「a は b 以下」a≦b。</li>
+</ul></article><article id="M1-C2-S2-reading-45"><p class="source">M1-C2-S2／原稿区分 M1-P107｜関係を表す式（等式・不等式）／しくみ　（教科書 p78〜81・ワーク p48〜49）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ式で表すの？</h2><p>ことばの関係を式にすると、短く正確に書ける。あとで方程式（3章）として解くことにもつながる。</p></article><article id="M1-C2-S2-reading-46"><p class="source">M1-C2-S2／原稿区分 M1-P108｜関係を表す式／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（関係を式に表す）</h2><p>1. <strong>等しい（または大小をくらべる）2つの数量</strong> を見つける。</p>
+<p>2. それぞれを文字式で表す。</p>
+<p>3. 等号か不等号でつなぐ。</p></article><article id="M1-C2-S2-reading-47"><p class="source">M1-C2-S2／原稿区分 M1-P108｜関係を表す式／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どの記号を使うか</h2><div class="table-scroll"><table><tbody>
+<tr><td>ことば</td><td>記号</td></tr>
+<tr><td>等しい、〜になる</td><td>＝</td></tr>
+<tr><td>より大きい、をこえる</td><td>&gt;</td></tr>
+<tr><td>より小さい、未満</td><td>&lt;</td></tr>
+<tr><td>以上</td><td>≧</td></tr>
+<tr><td>以下</td><td>≦</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-48"><p class="source">M1-C2-S2／原稿区分 M1-P108｜関係を表す式／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>式の意味を読む順番</h2><p>1. 各文字・各項が何を表すか、ことばにする。</p>
+<p>2. 記号（＝、&gt;、≦ など）をことばにする。</p>
+<p><strong>確かめる</strong>：文字に具体的な数を入れて、ことばの関係どおりになるか。</p></article><article id="M1-C2-S2-reading-49"><p class="source">M1-C2-S2／原稿区分 M1-P109｜関係を表す式／例題　〔参考：教科書p78〜81・ワークp48〜49 ポイント2-22〜2-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-基本　1本 x 円の鉛筆6本の代金は y 円です。この関係を等式に表しなさい。</h2><p>1. 等しい2つの数量：代金 6x と y。2. <strong>6x＝y</strong>。</p></article><article id="M1-C2-S2-reading-50"><p class="source">M1-C2-S2／原稿区分 M1-P109｜関係を表す式／例題　〔参考：教科書p78〜81・ワークp48〜49 ポイント2-22〜2-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-標準（1）長さ a cm のテープから、b cm ずつ7本切り取ると、残りは c cm です。</h2><p>1. 残り＝a−7b。これが c。2. <strong>a−7b＝c</strong>。</p></article><article id="M1-C2-S2-reading-51"><p class="source">M1-C2-S2／原稿区分 M1-P109｜関係を表す式／例題　〔参考：教科書p78〜81・ワークp48〜49 ポイント2-22〜2-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-標準（2）x 円のノート3冊と、y 円のペン1本の代金は、1000円以下です。</h2><p>1. 代金 3x+y。2. 「以下」→ ≦。3. <strong>3x+y≦1000</strong>。</p></article><article id="M1-C2-S2-reading-52"><p class="source">M1-C2-S2／原稿区分 M1-P109｜関係を表す式／例題　〔参考：教科書p78〜81・ワークp48〜49 ポイント2-22〜2-24〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-応用　大人1人 a 円、子ども1人 b 円の入場料について、a−2b≧500 はどんなことを表していますか。</h2><p>1. 2b は子ども2人分。a−2b は「大人1人分 − 子ども2人分」。</p>
+<p>2. ≧500 は「500円以上」。</p>
+<p>3. 答え：<strong>大人1人の料金は、子ども2人の料金より500円以上高い。</strong></p></article><article id="M1-C2-S2-reading-53"><p class="source">M1-C2-S2／原稿区分 M1-P110｜関係を表す式／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>「以下」に &lt; を使う</td><td>以下は ≦（等しいときもふくむ）</td></tr>
+<tr><td>「未満」に ≦ を使う</td><td>未満は &lt;（等しいときはふくまない）</td></tr>
+<tr><td>代金と出したお金の大小を逆に書く</td><td>何が何より大きいかを、ことばで先に書く</td></tr>
+</tbody></table></div></article><article id="M1-C2-S2-reading-54"><p class="source">M1-C2-S2／原稿区分 M1-P110｜関係を表す式／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認5-1</strong>　ある数 x の3倍に2をたすと、10以上になります。この関係を不等式で表しなさい。</p>
+<details><summary>答えと解説</summary><p>3x+2≧10。</p></details>
+<p><strong>確認5-2</strong>　a km の道を時速5kmで歩くと、2時間より長くかかります。この関係を不等式で表しなさい。</p>
+<details><summary>ヒント1</summary><p>かかる時間は a/5 時間。</p></details>
+<details><summary>答えと解説</summary><p>a/5&gt;2。</p></details>
+<p><strong>確認5-3</strong>　x 人から1人300円ずつ集めると、合計は y 円より多くなります。この関係を不等式で表しなさい。</p>
+<details><summary>答えと解説</summary><p>300x&gt;y（y&lt;300x でもよい）。</p></details></article><article id="M1-C2-S2-reading-55"><p class="source">M1-C2-S2／原稿区分 M1-P111｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>2つの式が同じになる理由</h2><aside class="unready">［絵 M1-C2-S2-APPLY（未生成。制作指示は画像選定.md）：おなじ形のタイルを横に並べて、2人が別の数え方をしている場面］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>正方形のタイルを、長いテープで囲むように横にならべる。タイルの数を n として、まわりのテープの長さ（1辺 1m）を、2人が別々に式にした。</p>
+<ul>
+<li>Aさん：上と下に n m ずつ、左右に 1m ずつ → n+n+1+1</li>
+<li>Bさん：2(n+1)</li>
+<li>計算すると、どちらも <strong>2n+2</strong>。式がちがっても、同じ数量を表している。</li>
+</ul></article><article id="M1-C2-S2-reading-56"><p class="source">M1-C2-S2／原稿区分 M1-P111｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>根拠を言えるようにしよう</h2><p>n＝5 のとき、2つの式の値を求めて、同じになることを確かめよう。</p>
+<details><summary>答えと解説</summary><p>どちらも 12。5+5+1+1＝12、2×(5+1)＝12。</p></details></article><article id="M1-C2-S2-reading-57"><p class="source">M1-C2-S2／原稿区分 M1-P112｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><ul>
+<li>同じ文字の項は、係数どうしを計算してまとめる。文字の項と数の項はまとめない。</li>
+<li>−( ) は、中のすべての項の符号を変えて外す。式どうしの加減は、かっこをつけてから。</li>
+<li>数をかける・わるときは、各項にかける・わる。わり算は逆数をかけてもよい。</li>
+<li>等式・不等式：等しい2つの数量、大小をくらべる2つの数量を見つけて、記号でつなぐ。</li>
+</ul></article><article id="M1-C2-S2-reading-58"><p class="source">M1-C2-S2／原稿区分 M1-P112｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の14問。答えは入力のあとに表示する。</p></article><article id="M1-C2-S3-reading-1"><p class="source">M1-C2-S3／原稿区分 M1-P113｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>数あてゲーム</h2><aside class="unready">［絵 M1-C2-S3-INTRO（未生成。制作指示は画像選定.md）：数あてをする2人の中学生］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>ゆうきさんが、友だちにこう言った。</p>
+<p>1. 好きな整数を1つ思いうかべて。</p>
+<p>2. それを3倍して。</p>
+<p>3. 6をたして。</p>
+<p>4. 3でわって。</p>
+<p>5. 最初に思いうかべた数をひいて。</p>
+<p>「答えは、2 でしょう！」</p>
+<ul>
+<li>5 で試すと：15 → 21 → 7 → 7−5＝2。−4 で試すと：−12 → −6 → −2 → −2−(−4)＝2。</li>
+<li>どんな数でも本当に 2 になるの？ 何回試しても、すべての数を試すことはできない。</li>
+<li><strong>文字を使うと、すべての数についての説明ができる</strong>。これがこの節のテーマ。</li>
+</ul></article><article id="M1-C2-S3-reading-2"><p class="source">M1-C2-S3／原稿区分 M1-P113｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>文字式の計算（2節）：かっこを外す、同じ文字の項をまとめる、各項をわる。</li>
+</ul></article><article id="M1-C2-S3-reading-3"><p class="source">M1-C2-S3／原稿区分 M1-P114｜文字式の利用／しくみ　（教科書 p82〜83）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ文字で説明できるの？</h2><aside class="unready">［図 M1-C2-S3-FIG01：数あての手順を、式の変化の表で示す（n → 3n → 3n+6 → n+2 → 2）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>思いうかべた数を n とおく。n には、どんな整数も入る。</li>
+<li>手順どおりに計算すると、</li>
+<li>3倍：3n</li>
+<li>6をたす：3n+6</li>
+<li>3でわる：(3n+6)/3＝n+2</li>
+<li>n をひく：(n+2)−n＝<strong>2</strong></li>
+<li>最後の式に n が残らない。だから、n がどんな整数でも、答えはいつも 2。</li>
+</ul></article><article id="M1-C2-S3-reading-4"><p class="source">M1-C2-S3／原稿区分 M1-P114｜文字式の利用／しくみ　（教科書 p82〜83）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>いくつか試すことと、文字で説明することのちがい</h2><div class="table-scroll"><table><tbody>
+<tr><td></td><td>数で試す</td><td>文字で説明する</td></tr>
+<tr><td>分かること</td><td>試した数で成り立つ</td><td>すべての数で成り立つ</td></tr>
+<tr><td>数の個数</td><td>試した分だけ</td><td>1つの式で全部</td></tr>
+</tbody></table></div></article><article id="M1-C2-S3-reading-5"><p class="source">M1-C2-S3／原稿区分 M1-P115｜文字式の利用／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番（「いつも○になる」ことの説明）</h2><p>1. 決めた数を文字で表す（n とおく）。</p>
+<p>2. 手順を1つずつ文字式にする（かっこを使って、前の式全体に計算する）。</p>
+<p>3. 式を計算して、いちばん簡単な形にする。</p>
+<p>4. 結果から、言いたいこと（いつも○、いつも〜の倍数など）を導く。</p></article><article id="M1-C2-S3-reading-6"><p class="source">M1-C2-S3／原稿区分 M1-P115｜文字式の利用／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>規則を式で表す順番（ならべる図形など）</h2><p>1. 1番目、2番目、3番目……の数を表にする。</p>
+<p>2. 1つ増えるごとに、いくつ増えるかを見る。</p>
+<p>3. 「はじめの数 ＋ 増える数 ×（いくつ増えたか）」の形で、n を使って表す。</p>
+<p><strong>確かめる</strong>：できた式に n＝1、2、3 を入れて、表の数と一致するか。</p></article><article id="M1-C2-S3-reading-7"><p class="source">M1-C2-S3／原稿区分 M1-P116｜文字式の利用／例題　〔参考：教科書p82〜83・p87 9・ワークp51 章のまとめ9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　P113 の数あてで、思いうかべた数が −4 のとき、答えが 2 になることを確かめなさい。</h2><p>1. 3倍：−12。2. 6をたす：−6。3. 3でわる：−2。4. −4 をひく：−2−(−4)＝<strong>2</strong>。</p></article><article id="M1-C2-S3-reading-8"><p class="source">M1-C2-S3／原稿区分 M1-P116｜文字式の利用／例題　〔参考：教科書p82〜83・p87 9・ワークp51 章のまとめ9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　次の手順で計算すると、答えはいつも同じ数になります。その数を求め、そうなる理由を文字式で説明しなさい。</h2><p>「整数を1つ決める → 4倍する → 8をひく → 4でわる → 決めた数をひく」</p>
+<p>1. 決めた数を n とする。</p>
+<p>2. 4n → 4n−8 → (4n−8)/4＝n−2 → (n−2)−n＝<strong>−2</strong>。</p>
+<p>3. 説明：最後の式に n が残らないので、どんな整数を決めても −2 になる。</p></article><article id="M1-C2-S3-reading-9"><p class="source">M1-C2-S3／原稿区分 M1-P116｜文字式の利用／例題　〔参考：教科書p82〜83・p87 9・ワークp51 章のまとめ9〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　正六角形を、辺を1本ずつ共有しながら横につなげていきます。正六角形を n 個つなげたときに使う棒の本数を、n を使った式で表しなさい。</h2><p>1. 表をつくる：1個 6本、2個 11本、3個 16本。</p>
+<p>2. 1個増えるごとに 5本増える（共有する1本の分だけ少ない）。</p>
+<p>3. 1個目の 6本に、あと (n−1) 個 × 5本：6+5(n−1)＝<strong>5n+1（本）</strong>。</p>
+<p><strong>確かめる</strong>：n＝1 → 6、n＝2 → 11、n＝3 → 16。表と一致。</p></article><article id="M1-C2-S3-reading-10"><p class="source">M1-C2-S3／原稿区分 M1-P117｜文字式の利用／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>いくつかの数で試して「いつも成り立つ」とする</td><td>試した数でしか分からない。文字で説明する</td></tr>
+<tr><td>3でわるとき 3n+6/3 と書く</td><td>前の式全体をわる：(3n+6)/3</td></tr>
+<tr><td>規則の式を 6n とする（共有する辺を数えない）</td><td>n＝2 で確かめると 12 で、表の 11 と合わない</td></tr>
+</tbody></table></div></article><article id="M1-C2-S3-reading-11"><p class="source">M1-C2-S3／原稿区分 M1-P117｜文字式の利用／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　「整数を決める → 2倍する → 10をたす → 2でわる → 決めた数をひく」の答えは、いつもいくつになりますか。</p>
+<details><summary>ヒント1</summary><p>決めた数を n として、手順どおりに式を変えていこう。</p></details>
+<details><summary>答えと解説</summary><p>5。2n → 2n+10 → n+5 → 5。</p></details>
+<p><strong>確認1-2</strong>　正方形を、辺を1本ずつ共有しながら横に n 個つなげるとき、使う棒の本数を n の式で表しなさい。</p>
+<details><summary>ヒント1</summary><p>1個 4本、2個 7本、3個 10本。</p></details>
+<details><summary>答えと解説</summary><p>3n+1（本）。1個増えるごとに3本増える。4+3(n−1)＝3n+1。</p></details></article><article id="M1-C2-S3-reading-12"><p class="source">M1-C2-S3／原稿区分 M1-P118｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>自分で数あてゲームを作る</h2><aside class="unready">［絵 M1-C2-S3-APPLY（未生成。制作指示は画像選定.md）：自分で数あてゲームを作っている中学生のノート（数字なし）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>最後に「決めた数をひく」と、n が消える。そのためには、とちゅうで n の係数を 1 にもどしておく。</li>
+<li>例：「決めた数を5倍 → 15をたす → 5でわる → 決めた数をひく」→ 5n → 5n+15 → n+3 → <strong>3</strong>。</li>
+</ul></article><article id="M1-C2-S3-reading-13"><p class="source">M1-C2-S3／原稿区分 M1-P118｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>根拠を言えるようにしよう</h2><p>答えがいつも 7 になる数あてを1つ作り、文字で確かめよう。</p>
+<details><summary>作り方の例</summary><p>2倍 → 14をたす → 2でわる → 決めた数をひく。2n+14 → n+7 → 7。（ほかにも、4倍 → 28をたす → 4でわる → ひく、など。最後に7が残る手順なら正しい。）</p></details></article><article id="M1-C2-S3-reading-14"><p class="source">M1-C2-S3／原稿区分 M1-P119｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><ul>
+<li>文字を使うと、「すべての数で成り立つこと」を1つの式で説明できる。</li>
+<li>規則は、表をつくって増え方を見て、n の式にする。式は n＝1、2、3 で確かめる。</li>
+</ul></article><article id="M1-C2-S3-reading-15"><p class="source">M1-C2-S3／原稿区分 M1-P119｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の5問。答えは入力のあとに表示する。</p></article><article id="M1-C2-REVIEW-reading-1"><p class="source">M1-C2-REVIEW／原稿区分 M1-P120｜解法のつながり・理由を解説しながら振り返る（1）式をつくる・計算する<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>2章の地図</h2><div class="table-scroll"><table><tbody>
+<tr><td>1節</td><td>→</td><td>2節</td><td>→</td><td>3節</td></tr>
+<tr><td>数量を文字式で表す・書き方・式の値</td><td></td><td>1次式の加減・数との乗除・等式と不等式</td><td></td><td>文字式で説明する・規則を式にする</td></tr>
+</tbody></table></div></article><article id="M1-C2-REVIEW-reading-2"><p class="source">M1-C2-REVIEW／原稿区分 M1-P120｜解法のつながり・理由を解説しながら振り返る（1）式をつくる・計算する<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>迷ったときの順番</h2><p>1. <strong>式をつくる</strong>：ことばの式 → 文字を入れる → 書き方のきまり → 単位。</p>
+<p>2. <strong>計算する</strong>：かっこを外す（−( ) は全部の符号を変える）→ 同じ文字の項・数の項をまとめる。</p>
+<p>3. <strong>確かめる</strong>：文字に簡単な数を入れて、計算の前と後の値が同じか。</p></article><article id="M1-C2-REVIEW-reading-3"><p class="source">M1-C2-REVIEW／原稿区分 M1-P120｜解法のつながり・理由を解説しながら振り返る（1）式をつくる・計算する<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめの問題</h2><p><code>確認問題.md</code> の R1〜R8。</p></article><article id="M1-C2-REVIEW-reading-4"><p class="source">M1-C2-REVIEW／原稿区分 M1-P121｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>思い出しカード</h2><p>1. a×a と 2a のちがいは？</p>
+<details><summary>答え</summary><p>a×a は a²（a を2回かける）。2a は a+a（a を2つたす）。</p></details>
+<p>2. 6a−(4a−7) で、7 の符号はどうなる？</p>
+<details><summary>答え</summary><p>+7。−( ) は中のすべての項の符号を変える。</p></details>
+<p>3. 「以上」「未満」の記号は？</p>
+<details><summary>答え</summary><p>以上は ≧、未満は &lt;。</p></details></article><article id="M1-C2-REVIEW-reading-5"><p class="source">M1-C2-REVIEW／原稿区分 M1-P121｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>別の方法で確かめる</h2><p><strong>例</strong>　(1/3)(6x−9)−(1/2)(4x+2)＝−4</p>
+<ul>
+<li>方法1：分配法則で計算する（2節 例題4-応用）。</li>
+<li>方法2：x＝0 と x＝3 を入れて、どちらも −4 になるか調べる。</li>
+<li>文字の項が消えて数だけ残る式は、どんな x を入れても同じ値になる。2つの値で同じなら、計算が合っている見込みが高い。</li>
+</ul></article><article id="M1-C2-REVIEW-reading-6"><p class="source">M1-C2-REVIEW／原稿区分 M1-P121｜解法のつながり・理由を解説しながら振り返る（2）思い出す・別の方法で確かめる<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p>x＝−2 のとき、3(x+4)−2(x−1) の値を、（1）そのまま代入、（2）式を計算してから代入、の2つの方法で求め、同じになることを確かめなさい。</p>
+<details><summary>ヒント1</summary><p>（2）3x+12−2x+2＝x+14。</p></details>
+<details><summary>答えと解説</summary><p>12。（1）3×2−2×(−3)＝6+6＝12。（2）x+14 に x＝−2 → 12。</p></details></article><article id="M1-C3-OPEN-reading-1"><p class="source">M1-C3-OPEN／原稿区分 M1-P122｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>何回乗ったら、同じ料金になる？</h2><figure><div class="diagram-scroll"><img class="selected-scene" src="画像候補/M1-C3-OPEN-SCENE-D-v2.jpg" alt="バスとバス停、乗り放題のカード"></div><figcaption>バスとバス停、乗り放題のカード</figcaption><a class="diagram-open" href="画像候補/M1-C3-OPEN-SCENE-D-v2.jpg" target="_blank" rel="noopener">図を大きく見る</a></figure>
+<ul>
+<li>バスは1回 170円。1日乗り放題のカードは 850円。</li>
+<li>2回なら 340円、3回なら 510円……。乗る回数がふえると、どこかでカードのほうが得になる。</li>
+<li>乗る回数を x 回とすると、「170x と 850 が等しくなる x はいくつ？」という問いになる。</li>
+</ul></article><article id="M1-C3-OPEN-reading-2"><p class="source">M1-C3-OPEN／原稿区分 M1-P122｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>2章との ちがい</h2><ul>
+<li>2章では、文字に数を <strong>入れて</strong> 式の値を求めた。</li>
+<li>3章では反対に、式が成り立つように <strong>文字の値をさがす</strong>。</li>
+<li>さがし方には、すぐに見つかる「きまり」がある。それを学ぶのがこの章。</li>
+</ul></article><article id="M1-C3-OPEN-reading-3"><p class="source">M1-C3-OPEN／原稿区分 M1-P122｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この章で考えること</h2><p>1. 等式を成り立たせる文字の値（解）と、その求め方。（1節）</p>
+<p>2. 比が等しいことを表す式（比例式）。（1節）</p>
+<p>3. 身のまわりの問題を、方程式で解く。（2節）</p></article><article id="M1-C3-OPEN-reading-4"><p class="source">M1-C3-OPEN／原稿区分 M1-P122｜生活と学習内容を結ぶ章の導入<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考えておこう</h2><p>170x＝850 を成り立たせる x を、x に 1、2、3、…… を入れて調べてみよう。</p>
+<details><summary>答え</summary><p>x＝5。170×5＝850。1節で、入れて調べなくても求められる方法を学ぶ。</p></details></article><article id="M1-C3-S1-reading-1"><p class="source">M1-C3-S1／原稿区分 M1-P123｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つりあいを、式で表す</h2><aside class="unready">［絵 M1-C3-S1-INTRO（未生成。制作指示は画像選定.md）：つりあったてんびん］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>てんびんの左に、重さの分からない箱1個と 30g のおもり1個。右に 80g のおもり。ちょうどつりあった。</li>
+<li>箱の重さを x g とすると、<strong>x+30＝80</strong>。</li>
+<li>左右から 30g ずつ取っても、つりあいはくずれない → x＝50。</li>
+<li>「両方に同じことをしても、等しいまま」。これが方程式を解くときの考え方の土台になる。</li>
+</ul></article><article id="M1-C3-S1-reading-2"><p class="source">M1-C3-S1／原稿区分 M1-P123｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>等式（2章 P107）、式の値・代入（2章 P084）、文字式の計算（2章2節）、分配法則。</li>
+</ul></article><article id="M1-C3-S1-reading-3"><p class="source">M1-C3-S1／原稿区分 M1-P123｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>この節でできるようになること</h2><p>1. 方程式とその解の意味が分かる。ある数が解かどうか確かめられる。</p>
+<p>2. 等式の性質を使って、方程式を解く。</p>
+<p>3. 移項を使い、かっこ・分数・小数のある方程式も解く。</p>
+<p>4. 比例式を解く。</p></article><article id="M1-C3-S1-reading-4"><p class="source">M1-C3-S1／原稿区分 M1-P124｜方程式とその解①／しくみ　（教科書 p90・ワーク p54）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>方程式と解</h2><aside class="unready">［図 M1-C3-S1-FIG01：x に 1〜6 を入れて、左辺と右辺の値をくらべる表］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>まだ分かっていない数を表す文字をふくむ等式を <strong>方程式</strong> という。例：3x−5＝x+3</li>
+<li>方程式を成り立たせる文字の値を、その方程式の <strong>解</strong> という。</li>
+<li>解を求めることを、<strong>方程式を解く</strong> という。</li>
+</ul></article><article id="M1-C3-S1-reading-5"><p class="source">M1-C3-S1／原稿区分 M1-P124｜方程式とその解①／しくみ　（教科書 p90・ワーク p54）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ「成り立たせる値」をさがすの？</h2><ul>
+<li>3x−5＝x+3 は、x の値によって、正しくなったり正しくなくなったりする。</li>
+<li>FIG01 の表で、x＝1 から順に左辺と右辺を計算すると、x＝4 のときだけ両方が 7 になる。</li>
+<li>このとき「4 はこの方程式の解」という。</li>
+</ul></article><article id="M1-C3-S1-reading-6"><p class="source">M1-C3-S1／原稿区分 M1-P125｜方程式とその解①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>ある数が解かどうかを確かめる順番</h2><p>1. 文字にその数を、かっこをつけて代入する。</p>
+<p>2. <strong>左辺</strong> と <strong>右辺</strong> を、別々に計算する。</p>
+<p>3. 2つの値が等しければ解、ちがえば解ではない。</p></article><article id="M1-C3-S1-reading-7"><p class="source">M1-C3-S1／原稿区分 M1-P125｜方程式とその解①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>左辺と右辺の両方に文字があるときは、両方に代入する（片方だけに入れない）。</li>
+<li>負の数を代入するときは、かっこをつける（2章 P084）。</li>
+</ul>
+<p><strong>確かめる</strong>：計算した左辺と右辺の値を、それぞれ書いておく。どちらかを書き忘れると判定できない。</p></article><article id="M1-C3-S1-reading-8"><p class="source">M1-C3-S1／原稿区分 M1-P126｜方程式とその解①／例題　〔参考：教科書p90・ワークp54 ポイント3-1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本　4 は、方程式 3x−5＝x+3 の解ですか。</h2><p>1. 左辺：3×4−5＝7。2. 右辺：4+3＝7。3. 等しいので、<strong>解である</strong>。</p></article><article id="M1-C3-S1-reading-9"><p class="source">M1-C3-S1／原稿区分 M1-P126｜方程式とその解①／例題　〔参考：教科書p90・ワークp54 ポイント3-1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準　−2、0、2 のうち、方程式 5−x＝3x+13 の解はどれですか。</h2><p>1. x＝−2：左辺 5−(−2)＝7、右辺 3×(−2)+13＝7 → 等しい。</p>
+<p>2. x＝0：左辺 5、右辺 13 → ちがう。</p>
+<p>3. x＝2：左辺 3、右辺 19 → ちがう。</p>
+<p>4. 答え <strong>−2</strong>。</p></article><article id="M1-C3-S1-reading-10"><p class="source">M1-C3-S1／原稿区分 M1-P126｜方程式とその解①／例題　〔参考：教科書p90・ワークp54 ポイント3-1〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用　方程式 2x+□＝5x−4 の解が 3 のとき、□にあてはまる数を求めなさい。</h2><p>1. 解が 3 なので、x＝3 を入れると成り立つ：2×3+□＝5×3−4。</p>
+<p>2. 6+□＝11。</p>
+<p>3. □＝<strong>5</strong>。</p>
+<p><strong>確かめる</strong>：2x+5＝5x−4 に x＝3 → 左辺 11、右辺 11。</p></article><article id="M1-C3-S1-reading-11"><p class="source">M1-C3-S1／原稿区分 M1-P127｜方程式とその解①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>左辺だけ計算して「7 になったから解」とする</td><td>右辺も計算して、等しいかを見る</td></tr>
+<tr><td>x＝−2 を 3x−2 に入れて 3−2−2 とする</td><td>かっこをつける：3×(−2)−2</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-12"><p class="source">M1-C3-S1／原稿区分 M1-P127｜方程式とその解①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　−1 は、方程式 4x+9＝x+6 の解ですか。</p>
+<details><summary>ヒント1</summary><p>左辺と右辺に −1 を入れて、別々に計算しよう。</p></details>
+<details><summary>答えと解説</summary><p>解である。左辺 4×(−1)+9＝5、右辺 −1+6＝5。</p></details>
+<p><strong>確認1-2</strong>　1、2、3 のうち、方程式 7−2x＝x−2 の解はどれですか。</p>
+<details><summary>答えと解説</summary><p>3。x＝3：左辺 1、右辺 1。</p></details></article><article id="M1-C3-S1-reading-13"><p class="source">M1-C3-S1／原稿区分 M1-P128｜方程式とその解②・等式の性質／しくみ　（教科書 p91〜93・ワーク p55）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>等式の性質</h2><aside class="unready">［図 M1-C3-S1-FIG02：てんびんの両方から同じ重さを取る（x+30＝80 → x＝50）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>A＝B ならば、</p>
+<p>1. A＋C＝B＋C（両辺に同じ数をたしても等しい）</p>
+<p>2. A−C＝B−C（両辺から同じ数をひいても等しい）</p>
+<p>3. A×C＝B×C（両辺に同じ数をかけても等しい）</p>
+<p>4. A÷C＝B÷C（両辺を同じ数でわっても等しい。<strong>ただし C は 0 ではない</strong>）</p>
+<p>5. A＝B ならば B＝A（左右を入れかえてもよい）</p></article><article id="M1-C3-S1-reading-14"><p class="source">M1-C3-S1／原稿区分 M1-P128｜方程式とその解②・等式の性質／しくみ　（教科書 p91〜93・ワーク p55）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ成り立つの？（FIG02）</h2><ul>
+<li>つりあったてんびんの、左右に同じ重さを乗せても、取っても、つりあいはくずれない。</li>
+<li>左右の重さを両方2倍・両方半分にしても、つりあう。</li>
+</ul></article><article id="M1-C3-S1-reading-15"><p class="source">M1-C3-S1／原稿区分 M1-P128｜方程式とその解②・等式の性質／しくみ　（教科書 p91〜93・ワーク p55）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>方程式を解くとは</h2><p>等式の性質を使って、方程式を <strong>x＝（数）</strong> の形に変えていくこと。</p></article><article id="M1-C3-S1-reading-16"><p class="source">M1-C3-S1／原稿区分 M1-P129｜方程式とその解②・等式の性質／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どの性質を使うかの見分け方（左辺が x と数だけのとき）</h2><div class="table-scroll"><table><tbody>
+<tr><td>方程式の形</td><td>x だけにするには</td><td>使う性質</td></tr>
+<tr><td>x＋a＝b</td><td>両辺から a をひく</td><td>②</td></tr>
+<tr><td>x−a＝b</td><td>両辺に a をたす</td><td>①</td></tr>
+<tr><td>x/a＝b</td><td>両辺に a をかける</td><td>③</td></tr>
+<tr><td>ax＝b</td><td>両辺を a でわる</td><td>④</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-17"><p class="source">M1-C3-S1／原稿区分 M1-P129｜方程式とその解②・等式の性質／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. x のとなりにある数と、つながり方（+、−、×、÷）を見る。</p>
+<p>2. その反対の計算を、<strong>両辺に</strong> する。</p>
+<p>3. x＝（数）になったら終わり。</p>
+<p><strong>確かめる</strong>：求めた x を元の方程式に代入して、左辺と右辺が等しいか（P125）。</p></article><article id="M1-C3-S1-reading-18"><p class="source">M1-C3-S1／原稿区分 M1-P130｜方程式とその解②・等式の性質／例題　〔参考：教科書p92〜93・ワークp55 ポイント3-2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本（1）x−8＝−3　（2）x+15＝6</h2><p>1. （1）両辺に 8 をたす：x＝−3+8＝<strong>5</strong>。</p>
+<p>2. （2）両辺から 15 をひく：x＝6−15＝<strong>−9</strong>。</p></article><article id="M1-C3-S1-reading-19"><p class="source">M1-C3-S1／原稿区分 M1-P130｜方程式とその解②・等式の性質／例題　〔参考：教科書p92〜93・ワークp55 ポイント3-2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準（1）x/6＝−2　（2）−9x＝63</h2><p>1. （1）両辺に 6 をかける：x＝<strong>−12</strong>。</p>
+<p>2. （2）両辺を −9 でわる：x＝63÷(−9)＝<strong>−7</strong>。</p></article><article id="M1-C3-S1-reading-20"><p class="source">M1-C3-S1／原稿区分 M1-P130｜方程式とその解②・等式の性質／例題　〔参考：教科書p92〜93・ワークp55 ポイント3-2〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用　(3/4)x＝−9 を2通りの方法で解きなさい。</h2><ul>
+<li>方法1：両辺に 4 をかけて 3x＝−36、両辺を 3 でわって x＝<strong>−12</strong>。</li>
+<li>方法2：両辺に 4/3（3/4 の逆数）をかけて、x＝−9×(4/3)＝<strong>−12</strong>。</li>
+<li>どちらも同じ。逆数をかけると1回で済む。</li>
+</ul></article><article id="M1-C3-S1-reading-21"><p class="source">M1-C3-S1／原稿区分 M1-P131｜方程式とその解②・等式の性質／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>x−8＝−3 で「両辺から8をひく」</td><td>x のとなりは −8。反対の +8 をする</td></tr>
+<tr><td>−9x＝63 で両辺を 9 でわる</td><td>係数は −9。−9 でわる</td></tr>
+<tr><td>左辺だけに計算する</td><td>両辺に同じことをする</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-22"><p class="source">M1-C3-S1／原稿区分 M1-P131｜方程式とその解②・等式の性質／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　x+2.5＝1</p>
+<details><summary>答えと解説</summary><p>x＝−1.5。両辺から 2.5 をひく。</p></details>
+<p><strong>確認2-2</strong>　−x/3＝4</p>
+<details><summary>ヒント1</summary><p>−x/3 は (−1/3)x。両辺に −3 をかける。</p></details>
+<details><summary>答えと解説</summary><p>x＝−12。</p></details>
+<p><strong>確認2-3</strong>　10x＝−4</p>
+<details><summary>答えと解説</summary><p>x＝−2/5（−0.4 でもよい）。両辺を 10 でわって約分。</p></details></article><article id="M1-C3-S1-reading-23"><p class="source">M1-C3-S1／原稿区分 M1-P132｜方程式の解き方①（移項）／しくみ　（教科書 p94〜95・ワーク p56〜57）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>移項</h2><aside class="unready">［図 M1-C3-S1-FIG03：5x−7＝18 で、−7 が右辺へ移ると +7 になる様子（両辺に 7 をたす式と並べる）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>5x−7＝18 の両辺に 7 をたすと、5x＝18+7。</li>
+<li>くらべると、左辺の <strong>−7</strong> が、符号が変わって右辺の <strong>+7</strong> になっている。</li>
+<li>このように、等式の一方の辺の項を、<strong>符号を変えて</strong> 他方の辺に移すことを <strong>移項</strong> という。</li>
+</ul></article><article id="M1-C3-S1-reading-24"><p class="source">M1-C3-S1／原稿区分 M1-P132｜方程式の解き方①（移項）／しくみ　（教科書 p94〜95・ワーク p56〜57）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ符号が変わるの？</h2><p>移項は「両辺に同じ数をたす（ひく）」を短く書いたもの。−7 を消すために +7 をたすので、右辺には +7 が出てくる。</p></article><article id="M1-C3-S1-reading-25"><p class="source">M1-C3-S1／原稿区分 M1-P132｜方程式の解き方①（移項）／しくみ　（教科書 p94〜95・ワーク p56〜57）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>文字の項も移項できる</h2><p>4x＝7x−9 なら、7x を左辺へ移項して 4x−7x＝−9。</p></article><article id="M1-C3-S1-reading-26"><p class="source">M1-C3-S1／原稿区分 M1-P133｜方程式の解き方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 文字の項を左辺、数の項を右辺に集める（移項するものは符号を変える）。</p>
+<p>2. 両辺をそれぞれ計算して、ax＝b の形にする。</p>
+<p>3. 両辺を x の係数 a でわる。</p></article><article id="M1-C3-S1-reading-27"><p class="source">M1-C3-S1／原稿区分 M1-P133｜方程式の解き方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>移項する項に印をつける。移す項だけ符号が変わる（移さない項は変えない）。</li>
+<li>右辺に x の項があれば左辺へ、左辺に数の項があれば右辺へ。</li>
+</ul></article><article id="M1-C3-S1-reading-28"><p class="source">M1-C3-S1／原稿区分 M1-P133｜方程式の解き方①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>確かめる</h2><p>答えを元の方程式に代入する。左辺と右辺が等しくなるか。</p></article><article id="M1-C3-S1-reading-29"><p class="source">M1-C3-S1／原稿区分 M1-P134｜方程式の解き方①／例題　〔参考：教科書p94〜95・ワークp56〜57 ポイント3-3〜3-5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本　5x−7＝18</h2><p>1. −7 を移項：5x＝18+7。2. 5x＝25。3. <strong>x＝5</strong>。</p>
+<p><strong>確かめる</strong>：左辺 25−7＝18。</p></article><article id="M1-C3-S1-reading-30"><p class="source">M1-C3-S1／原稿区分 M1-P134｜方程式の解き方①／例題　〔参考：教科書p94〜95・ワークp56〜57 ポイント3-3〜3-5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準　4x＝7x−9</h2><p>1. 7x を移項：4x−7x＝−9。2. −3x＝−9。3. <strong>x＝3</strong>。</p></article><article id="M1-C3-S1-reading-31"><p class="source">M1-C3-S1／原稿区分 M1-P134｜方程式の解き方①／例題　〔参考：教科書p94〜95・ワークp56〜57 ポイント3-3〜3-5〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用　6x+5＝2x−11</h2><p>1. 2x を左辺へ、5 を右辺へ：6x−2x＝−11−5。</p>
+<p>2. 4x＝−16。</p>
+<p>3. <strong>x＝−4</strong>。</p>
+<p><strong>確かめる</strong>：左辺 6×(−4)+5＝−19、右辺 2×(−4)−11＝−19。</p></article><article id="M1-C3-S1-reading-32"><p class="source">M1-C3-S1／原稿区分 M1-P135｜方程式の解き方①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>6x+5＝2x−11 → 6x−2x＝−11+5</td><td>5 を移すと −5</td></tr>
+<tr><td>−3x＝−9 → x＝−3</td><td>−9÷(−3)＝3</td></tr>
+<tr><td>移項しない項の符号まで変える</td><td>移す項だけ変える</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-33"><p class="source">M1-C3-S1／原稿区分 M1-P135｜方程式の解き方①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　9−2x＝15</p>
+<details><summary>答えと解説</summary><p>x＝−3。−2x＝15−9、−2x＝6。</p></details>
+<p><strong>確認3-2</strong>　8x−3＝5x+12</p>
+<details><summary>答えと解説</summary><p>x＝5。8x−5x＝12+3、3x＝15。</p></details>
+<p><strong>確認3-3</strong>　次の解き方で、はじめにまちがえた行を答え、正しく解きなさい。</p>
+<p>2x+6＝−x−9 → 2x+x＝−9+6 → 3x＝−3 → x＝−1</p>
+<details><summary>ヒント1</summary><p>移項した項の符号を、1つずつ確かめよう。</p></details>
+<details><summary>答えと解説</summary><p>2行目がまちがい。+6 を移項すると −6：2x+x＝−9−6、3x＝−15、x＝−5。</p></details></article><article id="M1-C3-S1-reading-34"><p class="source">M1-C3-S1／原稿区分 M1-P136｜方程式の解き方②（かっこ・分数・小数）／しくみ　（教科書 p96〜97・ワーク p58〜59）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>かっこがある方程式</h2><p>分配法則でかっこを外してから、移項して解く。</p></article><article id="M1-C3-S1-reading-35"><p class="source">M1-C3-S1／原稿区分 M1-P136｜方程式の解き方②（かっこ・分数・小数）／しくみ　（教科書 p96〜97・ワーク p58〜59）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>分数をふくむ方程式：分母をはらう</h2><ul>
+<li>両辺に <strong>分母の公倍数</strong>（ふつうは最小公倍数）をかけて、分数のない方程式にする。これを <strong>分母をはらう</strong> という。</li>
+<li><strong>なぜかけてよい？</strong>：等式の性質③（両辺に同じ数をかけても等しい）だから。</li>
+<li>分数の項だけでなく、<strong>すべての項</strong> にかける。</li>
+</ul></article><article id="M1-C3-S1-reading-36"><p class="source">M1-C3-S1／原稿区分 M1-P136｜方程式の解き方②（かっこ・分数・小数）／しくみ　（教科書 p96〜97・ワーク p58〜59）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>小数をふくむ方程式</h2><p>両辺に 10、100 などをかけて、係数を整数にする。</p></article><article id="M1-C3-S1-reading-37"><p class="source">M1-C3-S1／原稿区分 M1-P136｜方程式の解き方②（かっこ・分数・小数）／しくみ　（教科書 p96〜97・ワーク p58〜59）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>一次方程式</h2><p>移項して整理すると ax＝b（a は 0 でない）の形になる方程式を <strong>一次方程式</strong> という。</p></article><article id="M1-C3-S1-reading-38"><p class="source">M1-C3-S1／原稿区分 M1-P137｜方程式の解き方②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>一次方程式を解く順番</h2><p>1. かっこを外す。分数・小数があれば、両辺に同じ数をかけて整数の係数にする。</p>
+<p>2. 文字の項を左辺、数の項を右辺に移項する。</p>
+<p>3. ax＝b の形にする。</p>
+<p>4. 両辺を a でわる。</p></article><article id="M1-C3-S1-reading-39"><p class="source">M1-C3-S1／原稿区分 M1-P137｜方程式の解き方②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>分母をはらうとき：<strong>分母がない項</strong>（整数の項）にもかける。</li>
+<li>分子が式のとき：かけたあと、分子にかっこをつける（(x+1)/4×12 → 3(x+1)）。</li>
+<li>小数のとき：小数第2位まであれば 100 をかける。</li>
+</ul>
+<p><strong>確かめる</strong>：答えを <strong>元の</strong> 方程式（分母をはらう前）に代入する。</p></article><article id="M1-C3-S1-reading-40"><p class="source">M1-C3-S1／原稿区分 M1-P138｜方程式の解き方②／例題　〔参考：教科書p96〜97・ワークp58〜59 ポイント3-6〜3-8〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-基本　4(x+3)＝x−6</h2><p>1. かっこを外す：4x+12＝x−6。2. 4x−x＝−6−12。3. 3x＝−18。4. <strong>x＝−6</strong>。</p></article><article id="M1-C3-S1-reading-41"><p class="source">M1-C3-S1／原稿区分 M1-P138｜方程式の解き方②／例題　〔参考：教科書p96〜97・ワークp58〜59 ポイント3-6〜3-8〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-標準（1）(x+1)/4＝(2/3)x−1</h2><p>1. 4 と 3 の最小公倍数 12 を両辺にかける：3(x+1)＝8x−12。</p>
+<p>2. 3x+3＝8x−12。3. 3x−8x＝−12−3。4. −5x＝−15。5. <strong>x＝3</strong>。</p>
+<p><strong>確かめる</strong>：左辺 (3+1)/4＝1、右辺 (2/3)×3−1＝1。</p></article><article id="M1-C3-S1-reading-42"><p class="source">M1-C3-S1／原稿区分 M1-P138｜方程式の解き方②／例題　〔参考：教科書p96〜97・ワークp58〜59 ポイント3-6〜3-8〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-標準（2）0.6x−1.5＝0.1x+1</h2><p>1. 両辺に 10 をかける：6x−15＝x+10。2. 5x＝25。3. <strong>x＝5</strong>。</p></article><article id="M1-C3-S1-reading-43"><p class="source">M1-C3-S1／原稿区分 M1-P138｜方程式の解き方②／例題　〔参考：教科書p96〜97・ワークp58〜59 ポイント3-6〜3-8〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題4-応用　(2x−1)/3−(x−2)/2＝1</h2><p>1. 両辺に 6：2(2x−1)−3(x−2)＝6。</p>
+<p>2. 4x−2−3x+6＝6。</p>
+<p>3. x+4＝6。4. <strong>x＝2</strong>。</p>
+<p><strong>確かめる</strong>：(4−1)/3−(2−2)/2＝1−0＝1。</p></article><article id="M1-C3-S1-reading-44"><p class="source">M1-C3-S1／原稿区分 M1-P139｜方程式の解き方②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>(x+1)/4＝(2/3)x−1 に12をかけて 3(x+1)＝8x−1</td><td>−1 にも12をかける：−12</td></tr>
+<tr><td>2(2x−1)−3(x−2) を 4x−2−3x−6 とする</td><td>−3×(−2)＝+6</td></tr>
+<tr><td>0.6x−1.5＝0.1x+1 に10をかけて 6x−15＝x+1</td><td>1 にも10をかける：10</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-45"><p class="source">M1-C3-S1／原稿区分 M1-P139｜方程式の解き方②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認4-1</strong>　5−2(x−4)＝3x+3</p>
+<details><summary>答えと解説</summary><p>x＝2。5−2x+8＝3x+3、−5x＝−10。</p></details>
+<p><strong>確認4-2</strong>　x/2+1＝(x+7)/5</p>
+<details><summary>ヒント1</summary><p>両辺に 10 をかける。1 にもかけるのを忘れずに。</p></details>
+<details><summary>答えと解説</summary><p>x＝4/3。両辺に10をかけると 5x+10＝2(x+7)。5x+10＝2x+14、3x＝4、x＝4/3。確かめ：左辺 (4/3)/2+1＝5/3、右辺 (4/3+7)/5＝(25/3)/5＝5/3。</p></details>
+<p><strong>確認4-3</strong>　0.05x−0.2＝0.15x+0.3</p>
+<details><summary>答えと解説</summary><p>x＝−5。両辺に100：5x−20＝15x+30、−10x＝50。</p></details></article><article id="M1-C3-S1-reading-46"><p class="source">M1-C3-S1／原稿区分 M1-P140｜比と比例式／しくみ　（教科書 p99〜100・ワーク p60〜61）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>比の値と比例式</h2><ul>
+<li>比 a：b で、a/b を <strong>比の値</strong> という。</li>
+<li>a：b と c：d の比の値が等しいとき、a：b＝c：d と書く。これを <strong>比例式</strong> という。</li>
+<li>比例式の文字の値を求めることを、<strong>比例式を解く</strong> という。</li>
+</ul></article><article id="M1-C3-S1-reading-47"><p class="source">M1-C3-S1／原稿区分 M1-P140｜比と比例式／しくみ　（教科書 p99〜100・ワーク p60〜61）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>比例式の性質</h2><p><strong>a：b＝c：d ならば ad＝bc</strong>（外側の項の積と内側の項の積は等しい）</p>
+<ul>
+<li><strong>なぜ？</strong>：a/b＝c/d の両辺に bd をかけると、ad＝bc になるから。</li>
+</ul></article><article id="M1-C3-S1-reading-48"><p class="source">M1-C3-S1／原稿区分 M1-P141｜比と比例式／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 外側どうし・内側どうしをかけて、等式をつくる（ad＝bc）。</p>
+<p>2. できた方程式を解く。</p>
+<p>3. 文字をふくむ項がかっこ（x+3 など）なら、かっこごとかける。</p></article><article id="M1-C3-S1-reading-49"><p class="source">M1-C3-S1／原稿区分 M1-P141｜比と比例式／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>外側：いちばん左といちばん右。内側：真ん中の2つ。</li>
+<li>数が大きいときは、先に比を簡単にしてもよい（12：18 → 2：3）。</li>
+</ul>
+<p><strong>確かめる</strong>：答えを入れた2つの比の値が等しいか。</p></article><article id="M1-C3-S1-reading-50"><p class="source">M1-C3-S1／原稿区分 M1-P142｜比と比例式／例題　〔参考：教科書p100・ワークp60〜61 ポイント3-9〜3-11〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-基本　x：10＝2：5</h2><p>1. 5x＝10×2。2. 5x＝20。3. <strong>x＝4</strong>。</p>
+<p><strong>確かめる</strong>：4/10＝2/5。</p></article><article id="M1-C3-S1-reading-51"><p class="source">M1-C3-S1／原稿区分 M1-P142｜比と比例式／例題　〔参考：教科書p100・ワークp60〜61 ポイント3-9〜3-11〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-標準　14：x＝7：3</h2><p>1. 14×3＝7x。2. 42＝7x。3. <strong>x＝6</strong>。</p></article><article id="M1-C3-S1-reading-52"><p class="source">M1-C3-S1／原稿区分 M1-P142｜比と比例式／例題　〔参考：教科書p100・ワークp60〜61 ポイント3-9〜3-11〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題5-応用　(x−2)：x＝3：5</h2><p>1. 5(x−2)＝3x。2. 5x−10＝3x。3. 2x＝10。4. <strong>x＝5</strong>。</p>
+<p><strong>確かめる</strong>：(5−2)：5＝3：5。</p></article><article id="M1-C3-S1-reading-53"><p class="source">M1-C3-S1／原稿区分 M1-P143｜比と比例式／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>x：10＝2：5 → 2x＝50</td><td>外側どうし（x と 5）、内側どうし（10 と 2）</td></tr>
+<tr><td>(x−2)：x＝3：5 → 5x−2＝3x</td><td>かっこごとかける：5(x−2)</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-54"><p class="source">M1-C3-S1／原稿区分 M1-P143｜比と比例式／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認5-1</strong>　6：x＝9：12</p>
+<details><summary>答えと解説</summary><p>x＝8。6×12＝9x、72＝9x。</p></details>
+<p><strong>確認5-2</strong>　x：(x+6)＝1：4</p>
+<details><summary>答えと解説</summary><p>x＝2。4x＝x+6、3x＝6。</p></details></article><article id="M1-C3-S1-reading-55"><p class="source">M1-C3-S1／原稿区分 M1-P144｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>てんびんで解き方を説明する</h2><aside class="unready">［絵 M1-C3-S1-APPLY（未生成。制作指示は画像選定.md）：天びんに同じ形の箱がいくつかと、おもり］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>てんびんの左に同じ箱3個とおもり 20g、右に同じ箱1個とおもり 60g。つりあっている。箱1個は何 g？</p>
+<ul>
+<li>式：3x+20＝x+60。</li>
+<li>両方から箱1個を取る → 2x+20＝60（x を移項したのと同じ）。</li>
+<li>両方から 20g を取る → 2x＝40（20 を移項したのと同じ）。</li>
+<li>両方を半分にする → x＝20。</li>
+</ul></article><article id="M1-C3-S1-reading-56"><p class="source">M1-C3-S1／原稿区分 M1-P144｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>根拠を言えるようにしよう</h2><p>「3x+20＝x+60 から 2x+20＝60 にしてよい理由」を、等式の性質で説明してみよう。</p>
+<details><summary>説明の例</summary><p>両辺から x をひいても等式は成り立つ（等式の性質②）から。</p></details></article><article id="M1-C3-S1-reading-57"><p class="source">M1-C3-S1／原稿区分 M1-P145｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><div class="table-scroll"><table><tbody>
+<tr><td>ことば</td><td>意味・きまり</td></tr>
+<tr><td>方程式・解</td><td>文字の値によって成り立ったり成り立たなかったりする等式。成り立たせる値が解</td></tr>
+<tr><td>等式の性質</td><td>両辺に同じ数をたす・ひく・かける・わる（0でわらない）</td></tr>
+<tr><td>移項</td><td>項を符号を変えて他方の辺へ</td></tr>
+<tr><td>一次方程式の解き方</td><td>かっこ・分母・小数を整理 → 移項 → ax＝b → a でわる</td></tr>
+<tr><td>比例式</td><td>a：b＝c：d ならば ad＝bc</td></tr>
+</tbody></table></div></article><article id="M1-C3-S1-reading-58"><p class="source">M1-C3-S1／原稿区分 M1-P145｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の14問。答えは入力のあとに表示する。</p></article><article id="M1-C3-S2-reading-1"><p class="source">M1-C3-S2／原稿区分 M1-P146｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>値段が分からないノート</h2><aside class="unready">［絵 M1-C3-S2-INTRO（未生成。制作指示は画像選定.md）：文房具店のレジで、おつりを受け取る中学生］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>1000円を出して、同じノート4冊と150円の消しゴム1個を買ったら、おつりが90円だった。ノート1冊はいくら？</p>
+<ul>
+<li>分かっていること：出したお金 1000円、消しゴム 150円、おつり 90円、ノートは4冊。</li>
+<li>分からないこと：ノート1冊の値段 → これを x 円とおく。</li>
+<li>「出したお金 − 代金の合計 ＝ おつり」から、1000−(4x+150)＝90。</li>
+<li>1節で学んだ方法で解ける。答えは、この節の P149 で確かめる。</li>
+</ul></article><article id="M1-C3-S2-reading-2"><p class="source">M1-C3-S2／原稿区分 M1-P146｜身近な導入・既習事項・今回のつながり<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>使う、前に学んだこと</h2><ul>
+<li>数量を文字式で表す（2章1節）、一次方程式の解き方（3章1節）、比例式（3章1節）。</li>
+</ul></article><article id="M1-C3-S2-reading-3"><p class="source">M1-C3-S2／原稿区分 M1-P147｜方程式の利用①（代金・〜倍・過不足）／しくみ　（教科書 p102〜105・ワーク p64〜65）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>方程式を使って問題を解く3つの手順</h2><aside class="unready">［図 M1-C3-S2-FIG01：折り紙の過不足を、2本の線分図で表す（6枚ずつ→15枚余り、8枚ずつ→9枚足りない）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<p>1. <strong>数量の関係を見つける</strong>：問題の中の数量に注目して、等しい関係をことばの式にする。</p>
+<p>2. <strong>方程式をつくって解く</strong>：分からない数量のうち、適当なものを x とおく。</p>
+<p>3. <strong>解を確かめる</strong>：方程式の解が、問題に合っているか調べて、答えを書く。</p></article><article id="M1-C3-S2-reading-4"><p class="source">M1-C3-S2／原稿区分 M1-P147｜方程式の利用①（代金・〜倍・過不足）／しくみ　（教科書 p102〜105・ワーク p64〜65）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>なぜ③が必要なの？</h2><ul>
+<li>方程式の解が、人数なのに分数になったり、負の数になったりすることがある。</li>
+<li>問題の条件（人数は自然数、時間は0以上など）に合わなければ、答えにできない。</li>
+</ul></article><article id="M1-C3-S2-reading-5"><p class="source">M1-C3-S2／原稿区分 M1-P147｜方程式の利用①（代金・〜倍・過不足）／しくみ　（教科書 p102〜105・ワーク p64〜65）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>過不足の問題の見方（FIG01）</h2><ul>
+<li>配り方を変えても、<strong>はじめにある折り紙の枚数は変わらない</strong>。</li>
+<li>6枚ずつ配ると15枚余る → 枚数＝6×人数+15。</li>
+<li>8枚ずつ配ると9枚足りない → 枚数＝8×人数−9。</li>
+<li>2つが等しいので、方程式ができる。</li>
+</ul></article><article id="M1-C3-S2-reading-6"><p class="source">M1-C3-S2／原稿区分 M1-P148｜方程式の利用①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>等しい関係の見つけ方（よく出る形）</h2><div class="table-scroll"><table><tbody>
+<tr><td>場面</td><td>ことばの式</td></tr>
+<tr><td>買い物</td><td>出したお金 − 代金の合計 ＝ おつり</td></tr>
+<tr><td>「○は□の4倍」</td><td>○ ＝ □ × 4</td></tr>
+<tr><td>配る（過不足）</td><td>配り方1でのもとの数 ＝ 配り方2でのもとの数</td></tr>
+<tr><td>2人の残金</td><td>（Aの残金）＝（Bの残金）× ○</td></tr>
+</tbody></table></div></article><article id="M1-C3-S2-reading-7"><p class="source">M1-C3-S2／原稿区分 M1-P148｜方程式の利用①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>何を x にする？</h2><ul>
+<li>多くの場合、<strong>求めるもの</strong> を x にすると式が作りやすい。</li>
+<li>過不足では、ふつう <strong>人数</strong> を x にする（もとの数は、配り方ごとに式で表せる）。</li>
+</ul></article><article id="M1-C3-S2-reading-8"><p class="source">M1-C3-S2／原稿区分 M1-P148｜方程式の利用①／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 分かっていること・分からないことを書き出す。</p>
+<p>2. ことばの式をつくる。</p>
+<p>3. x を決めて、方程式にする。</p>
+<p>4. 解く。</p>
+<p>5. 問題に合うか確かめて、単位をつけて答える。</p></article><article id="M1-C3-S2-reading-9"><p class="source">M1-C3-S2／原稿区分 M1-P149｜方程式の利用①／例題　〔参考：教科書p102〜105・ワークp64〜65 ポイント3-12・3-13〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-基本（P146 のノート）</h2><p>1. ことばの式：出したお金−代金＝おつり。</p>
+<p>2. ノート1冊を x 円：1000−(4x+150)＝90。</p>
+<p>3. 1000−4x−150＝90、−4x＝90−850、−4x＝−760、x＝190。</p>
+<p>4. 確かめ：代金 4×190+150＝910、1000−910＝90。合っている。</p>
+<p>5. 答え <strong>190円</strong>。</p></article><article id="M1-C3-S2-reading-10"><p class="source">M1-C3-S2／原稿区分 M1-P149｜方程式の利用①／例題　〔参考：教科書p102〜105・ワークp64〜65 ポイント3-12・3-13〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-標準（〜倍）　ペン3本と200円のノート1冊の代金は、ペン1本と40円の消しゴム1個の代金の4倍です。ペン1本の値段は？</h2><p>1. ことばの式：（ペン3本とノート）＝（ペン1本と消しゴム）×4。</p>
+<p>2. ペン1本を x 円：3x+200＝4(x+40)。</p>
+<p>3. 3x+200＝4x+160、−x＝−40、x＝40。</p>
+<p>4. 確かめ：左 120+200＝320、右 (40+40)×4＝320。</p>
+<p>5. 答え <strong>40円</strong>。</p></article><article id="M1-C3-S2-reading-11"><p class="source">M1-C3-S2／原稿区分 M1-P149｜方程式の利用①／例題　〔参考：教科書p102〜105・ワークp64〜65 ポイント3-12・3-13〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題1-応用（過不足・FIG01）　折り紙を何人かに配ります。1人6枚ずつだと15枚余り、8枚ずつだと9枚足りません。人数と折り紙の枚数は？</h2><p>1. 人数を x 人とする。</p>
+<p>2. 枚数を2通りで表す：6x+15、8x−9。</p>
+<p>3. 6x+15＝8x−9、−2x＝−24、x＝12。</p>
+<p>4. 枚数：6×12+15＝87。確かめ：8×12−9＝87。</p>
+<p>5. 答え <strong>12人、87枚</strong>。</p></article><article id="M1-C3-S2-reading-12"><p class="source">M1-C3-S2／原稿区分 M1-P150｜方程式の利用①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>過不足で「足りない」のに +9 とする</td><td>足りない分は、配る数より少ない → −9</td></tr>
+<tr><td>x を求めたところで終わる（人数だけ答える）</td><td>問われたもの（枚数も）を全部答える</td></tr>
+<tr><td>確かめをしない</td><td>解が問題に合うか、元の文章で確かめる</td></tr>
+</tbody></table></div></article><article id="M1-C3-S2-reading-13"><p class="source">M1-C3-S2／原稿区分 M1-P150｜方程式の利用①／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認1-1</strong>　2000円を出して、1個 x 円のケーキ5個と300円の飲み物1本を買ったら、おつりは200円でした。ケーキ1個の値段を求めなさい。</p>
+<details><summary>ヒント1</summary><p>2000−(5x+300)＝200。</p></details>
+<details><summary>答えと解説</summary><p>300円。−5x＝200−1700、x＝300。確かめ：5×300+300＝1800、2000−1800＝200。</p></details>
+<p><strong>確認1-2</strong>　あめを何人かに配ります。1人4個ずつだと10個余り、6個ずつだと4個足りません。人数を求めなさい。</p>
+<details><summary>ヒント1</summary><p>4x+10＝6x−4。</p></details>
+<details><summary>答えと解説</summary><p>7人。−2x＝−14。確かめ：4×7+10＝38、6×7−4＝38。</p></details></article><article id="M1-C3-S2-reading-14"><p class="source">M1-C3-S2／原稿区分 M1-P151｜方程式の利用②（速さ・割合）／しくみ　（教科書 p106〜108・ワーク p66〜67）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>追いつく問題の見方</h2><aside class="unready">［図 M1-C3-S2-FIG02：妹（先に出発）と姉（15分後に出発）の進んだ道のりを、表と線分図で対応させる］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>「追いついた」＝ <strong>同じ地点にいる</strong> ＝ 家から進んだ道のりが等しい。</li>
+<li>道のり＝速さ×時間。2人の時間を、同じ x を使って表す。</li>
+<li>姉が出発してから x 分後 → 姉は x 分、妹は (15+x) 分歩いている。</li>
+</ul></article><article id="M1-C3-S2-reading-15"><p class="source">M1-C3-S2／原稿区分 M1-P151｜方程式の利用②（速さ・割合）／しくみ　（教科書 p106〜108・ワーク p66〜67）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>割合の問題の見方</h2><ul>
+<li>「Aは Bの80%より8人多い」→ A＝0.8B+8（または (80/100)B+8）。</li>
+<li>合計が分かっていれば、Aを B の式で表して、合計の式をつくる。</li>
+</ul></article><article id="M1-C3-S2-reading-16"><p class="source">M1-C3-S2／原稿区分 M1-P152｜方程式の利用②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>速さの問題を解く順番</h2><p>1. 2人（または2つの動き）の、速さ・時間・道のりを <strong>表</strong> にする。</p>
+<p>2. 分からない時間を x とおき、もう一方の時間を x の式で表す。</p>
+<p>3. 等しい道のりから、方程式をつくる。</p>
+<p>4. 解いて、<strong>問題に合うか</strong>（道のりが目的地までの距離をこえていないか）を確かめる。</p></article><article id="M1-C3-S2-reading-17"><p class="source">M1-C3-S2／原稿区分 M1-P152｜方程式の利用②／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>割合の問題を解く順番</h2><p>1. もとにする量を x とおく。</p>
+<p>2. 割合を小数か分数にして、もう一方の量を x の式で表す。</p>
+<p>3. 合計などの等しい関係から方程式をつくる。</p>
+<p><strong>確かめる</strong>：単位（分と時間、m と km）がそろっているか。</p></article><article id="M1-C3-S2-reading-18"><p class="source">M1-C3-S2／原稿区分 M1-P153｜方程式の利用②／例題　〔参考：教科書p106〜108・ワークp66〜67 ポイント3-14・3-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-基本（速さ）　妹が分速60mで家を出発しました。15分後に、姉が分速150mで同じ道を追いかけました。姉は出発してから何分後に追いつきますか。</h2><div class="table-scroll"><table><tbody>
+<tr><td></td><td>姉</td><td>妹</td></tr>
+<tr><td>速さ（m/分）</td><td>150</td><td>60</td></tr>
+<tr><td>時間（分）</td><td>x</td><td>15+x</td></tr>
+<tr><td>道のり（m）</td><td>150x</td><td>60(15+x)</td></tr>
+</tbody></table></div>
+<p>1. 150x＝60(15+x)。</p>
+<p>2. 150x＝900+60x、90x＝900、x＝10。</p>
+<p>3. 確かめ：姉 150×10＝1500m、妹 60×25＝1500m。</p>
+<p>4. 答え <strong>10分後</strong>。</p></article><article id="M1-C3-S2-reading-19"><p class="source">M1-C3-S2／原稿区分 M1-P153｜方程式の利用②／例題　〔参考：教科書p106〜108・ワークp66〜67 ポイント3-14・3-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-標準（解が問題に合うか）　例題2-基本で、駅が家から 1.2km のところにあり、妹は駅まで行きます。姉は、妹が駅に着く前に追いつけますか。</h2><p>1. 追いつく地点は家から 1500m。</p>
+<p>2. 駅は 1200m。1500m は駅より先。</p>
+<p>3. 答え <strong>追いつけない</strong>（妹は先に駅に着く）。</p>
+<ul>
+<li>方程式の解（x＝10）は計算として正しいが、<strong>この問題の条件には合わない</strong>。だから③の確かめが必要。</li>
+</ul></article><article id="M1-C3-S2-reading-20"><p class="source">M1-C3-S2／原稿区分 M1-P153｜方程式の利用②／例題　〔参考：教科書p106〜108・ワークp66〜67 ポイント3-14・3-15〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題2-応用（割合）　ある中学校の1年生は170人です。男子の人数は、女子の人数の80%より8人多いです。女子は何人ですか。</h2><p>1. 女子を x 人とすると、男子は 0.8x+8（人）。</p>
+<p>2. x+(0.8x+8)＝170。</p>
+<p>3. 1.8x＝162、x＝90。</p>
+<p>4. 確かめ：男子 0.8×90+8＝80、90+80＝170。</p>
+<p>5. 答え <strong>90人</strong>。</p></article><article id="M1-C3-S2-reading-21"><p class="source">M1-C3-S2／原稿区分 M1-P154｜方程式の利用②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>妹の時間を x、姉を 15+x とする</td><td>先に出たのは妹。妹のほうが長く歩いている</td></tr>
+<tr><td>単位をそろえない（km と m）</td><td>どちらかにそろえてから式にする</td></tr>
+<tr><td>解が出たら、すぐ答えにする</td><td>道のりや人数が、問題の条件に合うか確かめる</td></tr>
+</tbody></table></div></article><article id="M1-C3-S2-reading-22"><p class="source">M1-C3-S2／原稿区分 M1-P154｜方程式の利用②／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認2-1</strong>　兄が分速70mで家を出発し、10分後に弟が分速210mで追いかけました。弟は出発してから何分後に追いつきますか。</p>
+<details><summary>ヒント1</summary><p>210x＝70(10+x)。</p></details>
+<details><summary>答えと解説</summary><p>5分後。210x＝700+70x、140x＝700、x＝5。確かめ：弟 1050m、兄 70×15＝1050m。</p></details>
+<p><strong>確認2-2</strong>　あるクラブの部員は 58人です。2年生の人数は、1年生の人数の 75% より 5人少ないです。1年生は何人ですか。</p>
+<details><summary>ヒント1</summary><p>1年生を x 人とすると、2年生は 0.75x−5。</p></details>
+<details><summary>答えと解説</summary><p>36人。x+0.75x−5＝58、1.75x＝63、x＝36。確かめ：2年生 0.75×36−5＝22、36+22＝58。</p></details></article><article id="M1-C3-S2-reading-23"><p class="source">M1-C3-S2／原稿区分 M1-P155｜比例式の利用／しくみ　（教科書 p109・ワーク p68）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>比が等しい関係を見つける</h2><aside class="unready">［図 M1-C3-S2-FIG03（追加提案）：白と青の絵の具を 2：7 で混ぜる帯グラフ（全体 180g）］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>「同じ割合で混ぜる」「比が○：△になった」→ 比例式で表せる。</li>
+<li>全体の量が分かっているときは、「一部：全体」の比も使える。2：7 で混ぜると、白：全体＝2：(2+7)＝2：9。</li>
+</ul></article><article id="M1-C3-S2-reading-24"><p class="source">M1-C3-S2／原稿区分 M1-P155｜比例式の利用／しくみ　（教科書 p109・ワーク p68）<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>比例式の利用の手順</h2><p>方程式の利用と同じ3つの手順。等しい関係が「比」のとき、比例式をつくる。</p></article><article id="M1-C3-S2-reading-25"><p class="source">M1-C3-S2／原稿区分 M1-P156｜比例式の利用／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>解く順番</h2><p>1. 比で表されている2つの量を見つける。</p>
+<p>2. 分からない量を x とおく。もう一方を x の式で表す（全体−x など）。</p>
+<p>3. 比例式をつくり、外側の積＝内側の積で解く。</p>
+<p>4. 問題に合うか確かめる（量が負になっていないか、合計が合うか）。</p></article><article id="M1-C3-S2-reading-26"><p class="source">M1-C3-S2／原稿区分 M1-P156｜比例式の利用／解き方<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>どこを見る</h2><ul>
+<li>「それぞれに同じ量を加える」→ 両方に +x。</li>
+<li>「Aから取り出してBに入れる」→ Aは −x、Bは +x（合計は変わらない）。</li>
+</ul></article><article id="M1-C3-S2-reading-27"><p class="source">M1-C3-S2／原稿区分 M1-P157｜比例式の利用／例題　〔参考：教科書p109・ワークp68 ポイント3-16〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-基本　白と青の絵の具を 2：7 の割合で混ぜて、180g の水色を作ります。白は何 g 必要ですか。</h2><p>1. 白を x g とすると、x：180＝2：9。</p>
+<p>2. 9x＝360、x＝40。</p>
+<p>3. 確かめ：青は 140g、40：140＝2：7。</p>
+<p>4. 答え <strong>40g</strong>。</p></article><article id="M1-C3-S2-reading-28"><p class="source">M1-C3-S2／原稿区分 M1-P157｜比例式の利用／例題　〔参考：教科書p109・ワークp68 ポイント3-16〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-標準　箱Aに玉が30個、箱Bに18個あります。それぞれに同じ数ずつ玉を加えたら、AとBの個数の比が 5：4 になりました。何個ずつ加えましたか。</h2><p>1. x 個ずつ加えたとする。(30+x)：(18+x)＝5：4。</p>
+<p>2. 4(30+x)＝5(18+x)、120+4x＝90+5x、x＝30。</p>
+<p>3. 確かめ：60：48＝5：4。</p>
+<p>4. 答え <strong>30個ずつ</strong>。</p></article><article id="M1-C3-S2-reading-29"><p class="source">M1-C3-S2／原稿区分 M1-P157｜比例式の利用／例題　〔参考：教科書p109・ワークp68 ポイント3-16〕<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>例題3-応用　びんAに水が 500mL、びんBに 300mL 入っています。Aから何 mL かをBに移したら、AとBの量の比が 3：5 になりました。移した量は？</h2><p>1. x mL 移したとする。A は 500−x、B は 300+x。</p>
+<p>2. (500−x)：(300+x)＝3：5。</p>
+<p>3. 5(500−x)＝3(300+x)、2500−5x＝900+3x、−8x＝−1600、x＝200。</p>
+<p>4. 確かめ：A 300、B 500、300：500＝3：5。合計 800 は変わらない。</p>
+<p>5. 答え <strong>200mL</strong>。</p></article><article id="M1-C3-S2-reading-30"><p class="source">M1-C3-S2／原稿区分 M1-P158｜比例式の利用／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>つまずきの比較</h2><div class="table-scroll"><table><tbody>
+<tr><td>まちがい</td><td>正しい考え方</td></tr>
+<tr><td>移したのに、Aにも +x とする</td><td>取り出した方は −x、入れた方は +x</td></tr>
+<tr><td>x：180＝2：7 とする</td><td>180 は全体。全体の比は 2+7＝9</td></tr>
+</tbody></table></div></article><article id="M1-C3-S2-reading-31"><p class="source">M1-C3-S2／原稿区分 M1-P158｜比例式の利用／つまずきと確認<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>考え方付き確認</h2><p><strong>確認3-1</strong>　しょうゆとみりんを 3：2 で混ぜて、たれを 250mL 作ります。しょうゆは何 mL 必要ですか。</p>
+<details><summary>ヒント1</summary><p>しょうゆ：全体＝3：5。</p></details>
+<details><summary>答えと解説</summary><p>150mL。x：250＝3：5、5x＝750。</p></details>
+<p><strong>確認3-2</strong>　姉は60枚、妹は20枚のカードを持っています。姉が妹に何枚かあげたら、姉と妹の枚数の比が 3：2 になりました。何枚あげましたか。</p>
+<details><summary>ヒント1</summary><p>(60−x)：(20+x)＝3：2。</p></details>
+<details><summary>答えと解説</summary><p>12枚。2(60−x)＝3(20+x)、120−2x＝60+3x、−5x＝−60。確かめ：48：32＝3：2。</p></details></article><article id="M1-C3-S2-reading-32"><p class="source">M1-C3-S2／原稿区分 M1-P159｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>「解が問題に合わない」ことに気づく</h2><aside class="unready">［絵 M1-C3-S2-APPLY（未生成。制作指示は画像選定.md）：駅へ向かう道を自転車で追いかける場面］<br>画像候補は未生成・未選定。条件を変えず制作する。</aside>
+<ul>
+<li>方程式を正しく解いても、答えが <strong>問題の条件</strong> に合わないことがある。</li>
+<li>例：人数が 7.5人、時間が −3分、追いつく地点が目的地より先。</li>
+<li>そのときは「この条件では起こらない」と答える。</li>
+</ul></article><article id="M1-C3-S2-reading-33"><p class="source">M1-C3-S2／原稿区分 M1-P159｜別の場面へ使う・立式や判断の根拠・検算<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>根拠を言えるようにしよう</h2><p>例題2-標準で「追いつけない」と言える理由を、1文で説明してみよう。</p>
+<details><summary>説明の例</summary><p>追いつくのは家から1500mの地点だが、妹は1200mの駅で止まるので、その前に追いつくことはないから。</p></details></article><article id="M1-C3-S2-reading-34"><p class="source">M1-C3-S2／原稿区分 M1-P160｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>まとめ</h2><p>1. 数量の関係を見つける（ことばの式・線分図・表）。</p>
+<p>2. 分からない数量を x にして方程式（比例式）をつくり、解く。</p>
+<p>3. 解が問題に合うか確かめて、単位をつけて答える。</p></article><article id="M1-C3-S2-reading-35"><p class="source">M1-C3-S2／原稿区分 M1-P160｜全体のつながり・自分の言葉で整理・解説付き振り返り<br>正式なページ割当は未確定（原稿の提案を表示）</p><h2>振り返りの問題</h2><p><code>確認問題.md</code> の8問。答えは入力のあとに表示する。</p></article></div></main></html>

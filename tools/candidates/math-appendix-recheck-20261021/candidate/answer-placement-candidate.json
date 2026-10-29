@@ -1,0 +1,36 @@
+{
+  "status": "candidate validated; main not integrated",
+  "files": [
+    {
+      "file": "教材整理/実装/build-textbook-book.py",
+      "beforeSha256": "554ac9947c5954e176757f95dc28ce2eb476d826451b5533dbd78f197a95069e",
+      "candidate": "candidate/build-textbook-book.py",
+      "afterSha256": "d07252cc74ef40174d505f5c3ab593dec312713563f424e6a5473da38cfa1e56"
+    },
+    {
+      "file": "教材整理/Claude_Codex共有/数学全体制作/原稿表示を更新.py",
+      "beforeSha256": "935135ae8d1644dcf4074369195c6d8e9ace44db19e9354ef2916bbe00a6157b",
+      "candidate": "candidate/原稿表示を更新.py",
+      "afterSha256": "ec12a28fdcbecead80708f81d160e43ead5417194153c15eec1f9872586d7d51"
+    }
+  ],
+  "sourceBefore": {
+    "本文.md": "ad54c25c9e743ff552ed491bb109693024a856b6f3f147175b5fb6ca7302aa65",
+    "本の追加.json": "3570a0ff3c2c6c167ea95d2365ec8216750dff20e93ca0e8d98f3a33374e415d"
+  },
+  "moved": [
+    "unchanged FIG07",
+    "unchanged 手順 heading and three original list items",
+    "unchanged APP3-V03 into its matching question1 closed answer"
+  ],
+  "unchangedQuestionAnswerNumbers": true,
+  "compatibilityRules": 9,
+  "mainChanged": false,
+  "annotationModelSupport": "candidate/annotation-support-candidate.json; pending actual-model and browser validation",
+  "tests": {
+    "markers": "candidate-markers-result.json",
+    "closedAnswer": "closed-answer-browser-result.json",
+    "allMedia": "all-media-browser-result.json"
+  },
+  "previewHeadingFix": "Closed details headings remain inside the same answer card; preview verification pending"
+}

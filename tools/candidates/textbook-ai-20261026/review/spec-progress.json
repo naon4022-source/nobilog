@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-26",
+  "purpose": "間違えた理由を確かめ、似た問題を自力で解けるようにする。",
+  "confirmed": {
+    "plans": [
+      "pro",
+      "unlimit"
+    ],
+    "models": {
+      "pro": "gpt-6-luna",
+      "unlimit": "gpt-6.1-sol"
+    },
+    "fullReviewCredits": 100,
+    "costMeaning": "AI usage units, not100 questions or100 practice sets",
+    "commentMaxCharacters": 70,
+    "purposeMaxCharacters": 20,
+    "allAnsweredRequired": true,
+    "backgroundStudyContinues": true,
+    "toast": "テストの解答とコメントができました",
+    "newNobiConfirmed": true
+  },
+  "items": [
+    {
+      "requirement": "基本の教科書相談・本人の履歴",
+      "status": "verified",
+      "evidence": "service260/book84"
+    },
+    {
+      "requirement": "本人別下書き・再試行ID保全",
+      "status": "verified",
+      "evidence": "model31/book84 actual IndexedDB"
+    },
+    {
+      "requirement": "Pro=LUNA/Unlimited=SOLのモデル設定",
+      "status": "verified",
+      "evidence": "policy83/new format34"
+    },
+    {
+      "requirement": "既存の共通10回・費用上限・不明結果保全",
+      "status": "verified",
+      "evidence": "existing dedicated service260; new 100-credit job remains separate"
+    },
+    {
+      "requirement": "見えている教科書画面/画像と質問の読み取り",
+      "status": "pending",
+      "evidence": "basic UI still text-excerpt only"
+    },
+    {
+      "requirement": "全問解答をサーバーの固定テストから確認",
+      "status": "verified",
+      "evidence": "owned roster89+HTTP145+main31,actual entry/bridge/UI/SQL115+browser55+strict delta70; mock qualification all20 included"
+    },
+    {
+      "requirement": "全問解説100回分の原子的予約・返却",
+      "status": "verified",
+      "evidence": "normal ledger126 + actual provider/job/HTTP186 and main37; one active flat100 across queue/retries/periods, no UI or live-provider claim"
+    },
+    {
+      "requirement": "画面を離れても進む処理・復旧",
+      "status": "verified",
+      "evidence": "actual main UI/API/SQLite/provider fixture browser79, durable IndexedDB client41, exact integration61, three direct visual reviews; queue resources and real provider remain offline"
+    },
+    {
+      "requirement": "完了した本人だけへの上部通知",
+      "status": "verified",
+      "evidence": "actual main UI/API/SQLite/provider fixture browser79, durable IndexedDB client41, exact integration61, three direct visual reviews; queue resources and real provider remain offline"
+    },
+    {
+      "requirement": "70文字のノビー枠を本体へ接続",
+      "status": "verified",
+      "evidence": "actual main UI/API/SQLite/provider fixture browser79, durable IndexedDB client41, exact integration61, three direct visual reviews; queue resources and real provider remain offline"
+    },
+    {
+      "requirement": "原因別類題を本体から開く",
+      "status": "main_connected_subset",
+      "evidence": "main source-pinned30 library589, owned completion/selected-ID/HTTP/SQLite125, actual main+IDB145, strict delta80; current material test UI reaches20/30. Broader source formats remain pending."
+    },
+    {
+      "requirement": "正しいノビー正本の確定",
+      "status": "verified",
+      "evidence": "user confirmed right-hand new image;7 poses match master"
+    },
+    {
+      "requirement": "変更後の全体検証成功",
+      "status": "pending",
+      "evidence": "first attempt interrupted143 after4 known failures; focused fixes passed; final full not run"
+    },
+    {
+      "requirement": "旧・定期・生成・英検テストなどの全問解説への接続",
+      "status": "pending",
+      "evidence": "test-review-coverage-audit.json: current implementation covers material test/mock source only. Social has no material test units. Need actual owned immutable completion and UI adapters; no browser grading on real data."
+    }
+  ],
+  "verifiedItems": 10,
+  "totalItems": 14,
+  "approxItemProgressPercent": 71,
+  "progressLimits": "Unweighted14-item checklist for new AI feature only. Cause practice is main-connected for existing source subset, not all formats/coverage. Whole not passed; no whole-app/time percentage.",
+  "roughRemainingEstimate": {
+    "implementationAndFocusedChecksHours": [
+      3,
+      6
+    ],
+    "finalWholeMinutes": [
+      40,
+      60
+    ],
+    "confidence": "provisional; based on remaining job/admission/vision work and first whole run still incomplete after about27minutes; failures or missing source material can increase it",
+    "currentStatus": "No current time estimate. Prior range is stale; full suite and vision/practice remain."
+  },
+  "claudePrompt": "AI連絡/Claudeへ_ProAI解説と類題の並行制作_20261026.md",
+  "claudeCurrentWork": "Current live Claude activity not confirmed;10/22 deliverables and remaining items are distinguished in prompt",
+  "noPublishCommitDelete": true
+}

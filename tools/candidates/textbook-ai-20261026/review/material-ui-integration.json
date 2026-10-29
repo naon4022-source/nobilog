@@ -1,0 +1,215 @@
+{
+  "status": "individual bridge115/browser55/integration70 passed; paid job and final whole pending",
+  "files": [
+    {
+      "file": "site-assets/material-bridge.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/material-ui-before/site-assets/material-bridge.js",
+      "beforeSha256": "2386eba27b2ba684828d9753cbd10790f1a288ce63dacd60f2ccc2f0bcce0738",
+      "afterSha256": "c5f4e057e517f5094eef847c605212892b7f077dd3e56bcc9cd6768410236bad",
+      "edits": [
+        {
+          "start": 904,
+          "end": 904,
+          "before": "",
+          "after": " let testPreparation=null,activeTest=null;\n const uuid=/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;\n"
+        },
+        {
+          "start": 1115,
+          "end": 1115,
+          "before": "",
+          "after": " async function acknowledge(attempt,uid){\n  const saved=await adapter.record(clone(attempt));guard(uid);\n  if(!object(saved)||!object(saved.result)||typeof saved.result.correct!=='boolean'||['id','questionId','unitId','mode','answer'].some(k=>saved[k]!==attempt[k]))throw Error('回答の保存を確認できませんでした。');\n  return clone(saved);\n }\n"
+        },
+        {
+          "start": 1174,
+          "end": 1174,
+          "before": "",
+          "after": "  testSessionAvailable:()=>typeof adapter.testSessionCreate==='function'&&typeof adapter.testSessionStatus==='function',\n  async beginTest(selection,uid){\n   guard(uid);\n   if(!adapter.testSessionCreate||!object(selection)||Object.keys(selection).sort().join(',')!=='mode,questionIds,unitId'||!['study','test'].includes(selection.mode)||typeof selection.unitId!=='string'||!Array.isArray(selection.questionIds)||selection.questionIds.length<1||selection.questionIds.length>500||selection.questionIds.some(id=>typeof id!=='string'||!id.trim()||id.length>160)||new Set(selection.questionIds).size!==selection.questionIds.length)throw Error('テストの問題を確認してください。');\n   const signature=JSON.stringify(selection);\n   // Keep the creation ID until the server acknowledges it; a lost response\n   // must not create a second roster when the same conditions are retried.\n   if(!testPreparation||testPreparation.uid!==uid||testPreparation.signature!==signature)testPreparation={uid,signature,request:{id:root.crypto.randomUUID(),...clone(selection)}};\n   const pending=testPreparation,saved=await adapter.testSessionCreate(clone(pending.request));guard(uid);\n   if(testPreparation!==pending)throw Error('問題の組が変更されました。');\n   if(!object(saved)||!uuid.test(saved.id||'')||saved.unitId!==selection.unitId||saved.mode!==selection.mode||!Number.isSafeInteger(saved.at)||saved.at<0||saved.total!==selection.questionIds.length||typeof saved.cached!=='boolean'||!Array.isArray(saved.slots)||saved.slots.length!==saved.total||new Set(saved.slots.map(s=>s?.attemptId)).size!==saved.total||saved.slots.some((s,i)=>!object(s)||s.questionId!==selection.questionIds[i]||!uuid.test(s.attemptId||'')))throw Error('テストの保存を確認できませんでした。');\n   activeTest={uid,session:clone(saved),first:new Map()};testPreparation=null;return clone(saved);\n  },\n  async testStatus(uid){\n   guard(uid);const current=activeTest;\n   if(!current||current.uid!==uid||!adapter.testSessionStatus)throw Error('テストを確認できません。');\n   const saved=await adapter.testSessionStatus(current.session.id);guard(uid);\n   if(activeTest!==current||!object(saved)||saved.id!==current.session.id||saved.unitId!==current.session.unitId||saved.mode!==current.session.mode||saved.at!==current.session.at||saved.total!==current.session.total||!Number.isSafeInteger(saved.answered)||saved.answered<0||saved.answered>saved.total||saved.complete!==(saved.answered===saved.total))throw Error('テストの状態を確認できませんでした。');\n   return clone(saved);\n  },\n"
+        },
+        {
+          "start": 6124,
+          "end": 6561,
+          "before": "  async record(attempt,uid){guard(uid);if(!adapter.record)throw Error('回答の保存へ接続できません。');const saved=await adapter.record(clone(attempt));guard(uid);if(!object(saved)||!object(saved.result)||typeof saved.result.correct!=='boolean'||saved.id!==attempt.id||saved.questionId!==attempt.questionId||saved.unitId!==attempt.unitId||saved.mode!==attempt.mode||saved.answer!==attempt.answer)throw Error('回答の保存を確認できませんでした。');return clone(saved);},\n",
+          "after": "  async record(attempt,uid){\n   guard(uid);if(!adapter.record)throw Error('回答の保存へ接続できません。');\n   const current=activeTest,slot=current?.uid===uid&&attempt.mode===current.session.mode&&current.session.unitId===attempt.unitId?current.session.slots.find(s=>s.questionId===attempt.questionId):null;\n   if(!slot)return acknowledge(attempt,uid);\n   let first=current.first.get(attempt.questionId);\n   if(!first){first={clientId:attempt.id,attempt:{...clone(attempt),id:slot.attemptId},acknowledged:false};current.first.set(attempt.questionId,first);}\n   // If the learner edited an answer after an unknown save result, first\n   // recover that exact immutable submission, then record the new answer.\n   if(!first.acknowledged&&first.clientId!==attempt.id){await acknowledge(first.attempt,uid);if(activeTest!==current)throw Error('問題の組が変更されました。');first.acknowledged=true;}\n   const initial=first.clientId===attempt.id;\n   if(initial&&['unitId','questionId','mode','answer','elapsedMs'].some(k=>first.attempt[k]!==attempt[k]))throw Error('前の回答の保存を確認してください。');\n   const saved=await acknowledge(initial?first.attempt:attempt,uid);\n   if(activeTest!==current)throw Error('問題の組が変更されました。');\n   if(initial)first.acknowledged=true;return saved;\n  },\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/material-entry.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/material-ui-before/site-assets/material-entry.js",
+      "beforeSha256": "47f5012261c64287ff92eda29b0add5e6a6378045865cd70cc28ed26df053b79",
+      "afterSha256": "acf3667d8f1cc3a65313f7e84ba842f5f5233bf7a7956a542ddf31a26ff536af",
+      "edits": [
+        {
+          "start": 4650,
+          "end": 4650,
+          "before": "",
+          "after": "   testSessionCreate:request=>records('/material-test-session',request),\n   testSessionStatus:id=>records('/material-test-session?id='+encodeURIComponent(id)),\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/material-ui-before/site-assets/material-ui.js",
+      "beforeSha256": "8ac6e90c7713f963522960f91b97b736b308d1f8244a94047ba0f39013fab7af",
+      "afterSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "edits": [
+        {
+          "start": 8989,
+          "end": 10089,
+          "before": "  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();\n",
+          "after": "  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.busy=false;state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();\n"
+        },
+        {
+          "start": 12336,
+          "end": 12367,
+          "before": "  const uid=bridge.identity();\n",
+          "after": "  const uid=bridge.identity(),answerEpoch=loadEpoch;\n"
+        },
+        {
+          "start": 12931,
+          "end": 13024,
+          "before": "    const saved=await bridge.record(pendingAttempt,uid);r=saved.result;startedAt=Date.now();\n",
+          "after": "    const saved=await bridge.record(pendingAttempt,uid);if(!alive||answerEpoch!==loadEpoch)return;r=saved.result;startedAt=Date.now();\n"
+        },
+        {
+          "start": 14308,
+          "end": 14439,
+          "before": "  }catch(_){state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}\n",
+          "after": "  }catch(_){if(answerEpoch!==loadEpoch)return;state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}\n"
+        },
+        {
+          "start": 14848,
+          "end": 15573,
+          "before": "  try{await bridge.save(next,uid);if(!alive||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}\n  catch(_){if(alive&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}\n  finally{state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}\n",
+          "after": "  try{await bridge.save(next,uid);if(!alive||answerEpoch!==loadEpoch||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}\n  catch(_){if(alive&&answerEpoch===loadEpoch&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}\n  finally{if(answerEpoch===loadEpoch){state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}}\n"
+        },
+        {
+          "start": 50878,
+          "end": 50878,
+          "before": "",
+          "after": " async function prepareTestRoster(unit,ids,uid,run){\n  if((state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.())await bridge.beginTest({unitId:unit.id,mode:state.tab==='テスト'?'test':'study',questionIds:ids},uid);\n  return alive&&run===loadEpoch&&uid===bridge.identity()&&state.unit===unit.id;\n }\n"
+        },
+        {
+          "start": 50961,
+          "end": 51045,
+          "before": "  const uid=bridge.identity();if(uid!==state.loadedIdentity){void reload();return;}\n",
+          "after": "  const uid=bridge.identity(),run=loadEpoch;if(uid!==state.loadedIdentity){void reload();return;}\n"
+        },
+        {
+          "start": 51228,
+          "end": 51584,
+          "before": "   if(unit.mode==='kentei'){state.session=pool.map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）\n",
+          "after": "   if(unit.mode==='kentei'){const ids=pool.map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）\n"
+        },
+        {
+          "start": 53977,
+          "end": 54453,
+          "before": "   state.session=pool.slice(0,state.count).map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;\n  }catch(error){state.message=error.message||'問題を準備できませんでした。';}\n  finally{state.busy=false;if(alive&&uid===bridge.identity())render();else if(alive)void reload();}\n",
+          "after": "   const ids=pool.slice(0,state.count).map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;\n   state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;\n  }catch(error){if(run===loadEpoch&&uid===bridge.identity())state.message=error.message||'問題を準備できませんでした。';}\n  finally{if(alive&&run===loadEpoch){state.busy=false;if(uid===bridge.identity())render();else void reload();}}\n"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/実装/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/material-ui-before/教材整理/実装/material-ui.js",
+      "beforeSha256": "1089d9b6e1a32e6802a7e763d0efea59b9a10bcc78921c7bf93651b652f024df",
+      "afterSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "edits": [
+        {
+          "start": 745,
+          "end": 934,
+          "before": " ['数学',/正負|正の数|負の数/,[['符号','同じ符号の2数の積・商は＋、ちがう符号なら−'],['ひき算','ひく数の符号を変えてたす：a−(−b)＝a＋b'],['累乗','(−3)²＝9、−3²＝−9（かっこの有無で変わる）'],['計算の順','累乗 → かっこの中 → ×÷ → ＋−'],['絶対値','数直線上で0からの距離（符号を取った数）']]],\n",
+          "after": " ['数学',/正負|正の数|負の数/,[['符号','同じ符号の2数の積・商は＋、ちがう符号なら−'],['ひき算','ひく数の符号を変えてたす：a−(−b)＝a＋b'],['累乗','(−3)²＝9、−3²＝−9（かっこの有無で変わる）'],['計算の順','かっこの内側から、その中では累乗 → ×÷ → ＋−。同じ順位は左から'],['絶対値','数直線上で0からの距離（符号を取った数）']]],\n"
+        },
+        {
+          "start": 8974,
+          "end": 10074,
+          "before": "  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();\n",
+          "after": "  const uid=bridge.identity(),epoch=++loadEpoch;rewardMessage='学習報酬を確認中です。';state.busy=false;state.started=false;state.session=null;state.sync='loading';notebookState.open=false;notebookState.items=[];notebookState.auto=[];notebookState.autoNext=null;notebookState.autoBusy=false;notebookState.autoMessage='';notebookState.drafts=Object.create(null);notebookState.epoch++;aiState.epoch++;aiState.available=false;aiState.explain=Object.create(null);aiState.hints=Object.create(null);aiState.explainFor=null;aiState.judge=Object.create(null);aiState.similar=Object.create(null);aiState.generated=Object.create(null);notebookState.busy=false;reminder.epoch++;reminder.busy=false;reminder.rows=[];reminder.key='';reminder.dismissed.clear();activeReview=null;reviewState.open=false;reviewState.page=null;reviewState.epoch++;historyState.open=false;historyState.page=null;historyState.epoch++;marksState.unitId=null;marksState.items=null;marksState.open=false;marksState.busy=false;marksState.epoch++;pendingAttempt=null;questionClock='';state.loadedIdentity=null;state.progress={};state.message='進み具合を読み込んでいます。';render();\n"
+        },
+        {
+          "start": 12321,
+          "end": 12352,
+          "before": "  const uid=bridge.identity();\n",
+          "after": "  const uid=bridge.identity(),answerEpoch=loadEpoch;\n"
+        },
+        {
+          "start": 12916,
+          "end": 13009,
+          "before": "    const saved=await bridge.record(pendingAttempt,uid);r=saved.result;startedAt=Date.now();\n",
+          "after": "    const saved=await bridge.record(pendingAttempt,uid);if(!alive||answerEpoch!==loadEpoch)return;r=saved.result;startedAt=Date.now();\n"
+        },
+        {
+          "start": 14293,
+          "end": 14424,
+          "before": "  }catch(_){state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}\n",
+          "after": "  }catch(_){if(answerEpoch!==loadEpoch)return;state.busy=false;if(alive&&uid===bridge.identity()){state.message='保存できませんでした。接続を確認して、もう一度押してください。';render();}return;}\n"
+        },
+        {
+          "start": 14833,
+          "end": 15558,
+          "before": "  try{await bridge.save(next,uid);if(!alive||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}\n  catch(_){if(alive&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}\n  finally{state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}\n",
+          "after": "  try{await bridge.save(next,uid);if(!alive||answerEpoch!==loadEpoch||uid!==bridge.identity())return;pendingAttempt=null;state.progress=next;if(!activeReview&&!state.sessionDone.includes(q.id)){state.sessionDone.push(q.id);state.resultFor=q.id;}delete state.drafts[q.id];draftPut(uid,'a:'+q.id,'');void updateDaily();state.index=nextIndex(selected());state.answer='';state.message=q.explanation?'前の問題：正解です。'+q.explanation:'前の問題：正解です。';}\n  catch(_){if(alive&&answerEpoch===loadEpoch&&uid===bridge.identity())state.message='保存できませんでした。接続を確認して、もう一度押してください。';}\n  finally{if(answerEpoch===loadEpoch){state.busy=false;if(alive){if(uid===bridge.identity()){if(activeReview&&state.answer===''){activeReview=null;reminder.rows=[];void loadReview('all');void checkReminder();}else render();}else void reload();}}}\n"
+        },
+        {
+          "start": 50863,
+          "end": 50863,
+          "before": "",
+          "after": " async function prepareTestRoster(unit,ids,uid,run){\n  if((state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.())await bridge.beginTest({unitId:unit.id,mode:state.tab==='テスト'?'test':'study',questionIds:ids},uid);\n  return alive&&run===loadEpoch&&uid===bridge.identity()&&state.unit===unit.id;\n }\n"
+        },
+        {
+          "start": 50946,
+          "end": 51030,
+          "before": "  const uid=bridge.identity();if(uid!==state.loadedIdentity){void reload();return;}\n",
+          "after": "  const uid=bridge.identity(),run=loadEpoch;if(uid!==state.loadedIdentity){void reload();return;}\n"
+        },
+        {
+          "start": 51213,
+          "end": 51569,
+          "before": "   if(unit.mode==='kentei'){state.session=pool.map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）\n",
+          "after": "   if(unit.mode==='kentei'){const ids=pool.map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;return;}   // 模擬検定は全問を本番の順番で（2026-10-22）\n"
+        },
+        {
+          "start": 53962,
+          "end": 54438,
+          "before": "   state.session=pool.slice(0,state.count).map(q=>q.id);state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;\n  }catch(error){state.message=error.message||'問題を準備できませんでした。';}\n  finally{state.busy=false;if(alive&&uid===bridge.identity())render();else if(alive)void reload();}\n",
+          "after": "   const ids=pool.slice(0,state.count).map(q=>q.id);if(!await prepareTestRoster(unit,ids,uid,run))return;\n   state.session=ids;state.resultFor=null;state.sessionDone=[];state.sessionSkipped=[];state.times=Object.create(null);state.drafts=Object.create(null);state.started=true;state.index=0;state.answer='';state.message='';questionClock='';startedAt=Date.now();pendingAttempt=null;\n  }catch(error){if(run===loadEpoch&&uid===bridge.identity())state.message=error.message||'問題を準備できませんでした。';}\n  finally{if(alive&&run===loadEpoch){state.busy=false;if(uid===bridge.identity())render();else void reload();}}\n"
+        }
+      ]
+    }
+  ],
+  "visuals": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/material-test-reviewed-screens/test-390.png",
+      "width": 390,
+      "sha256": "34eb74324994f7a4cbd175b717733aca6f88c3de026b776b151a28cefeb9eca3",
+      "review": "Directly inspected all five rendered questions after finite animations completed; vertical fractions, readable text and no horizontal overflow."
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/material-test-reviewed-screens/test-820.png",
+      "width": 820,
+      "sha256": "7941868130942ab706952f5947f8c0e27a43c8a5dffa4cc6725b523049aa958f",
+      "review": "Directly inspected all five rendered questions after finite animations completed; vertical fractions, readable text and no horizontal overflow."
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/material-test-reviewed-screens/test-1440.png",
+      "width": 1440,
+      "sha256": "ece136a41957c6ff5b7497cd6bedc83c44a3c4a516fe83f0e7af5f84ef3bcc6b",
+      "review": "Directly inspected all five rendered questions after finite animations completed; vertical fractions, readable text and no horizontal overflow."
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/material-test-bridge-result.json",
+      "sha256": "82e4f8f0b4db66916479b40c6c5b34b88b8a0797b9a74d0fb4967b806d14c8ec",
+      "checks": 115
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/material-test-browser-result.json",
+      "sha256": "458d97edb3dae0cfd353d27c8c77a97cc49475e3450cb582ded33aa3200d47c9",
+      "checks": 55
+    }
+  ],
+  "scope": "Four runtime files: entry transport, bridge fixed slots/recovery, UI roster preparation and stale same-user reply guard, matching UI generator source. Canonical question bank and grading engine untouched.",
+  "coordinateEncoding": "UTF-16 code units, matching JavaScript String.slice"
+}

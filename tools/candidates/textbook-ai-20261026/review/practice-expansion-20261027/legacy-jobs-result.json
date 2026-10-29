@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "checks": 38,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/verify-legacy-jobs.mjs",
+      "sha256": "b1c1b5dc6309c6bc48ea49a9e926256ac8104abf9af60189f5bd3e93aa7eac7f"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/legacy-fixture.mjs",
+      "sha256": "cabfb17bda6e57e063aab5f031a64e0271f25d6a7d7d7068940ad90719e94ada"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate-hooks.mjs",
+      "sha256": "1dfd77cb2419e0a38de1cdf6d26b8da29dac707c55bea95bcd9f7545a21ab465"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate.json",
+      "sha256": "8d52e7322d22ecb548f8c1a13ba8966e956fdfa25ac3c2ed6fadc11afc76aef1"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/job-compat-candidate.json",
+      "sha256": "904e39adb72329c1406b3a300f57c4741f7d5286a26bffd8356e07b554c39adf"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/candidate-library.mjs",
+      "sha256": "34988f31f9e542285f14a745e8e121b841329295202646ff3aea03419446a6bd"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-review-practice-data.mjs",
+      "sha256": "963f50fc9bb4aafe358df2c3b2798b6d795b611560251436b2b16b991b259535"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-content.mjs",
+      "sha256": "bfa8319feddb8458f184be99a510cb5498dfa1ac6b9f503fecbbbb0183be4860"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-jobs.mjs",
+      "sha256": "a411e5f10d836a864e25d36f05c3a1813ddffc2fe32dd09f22aafc0d311d0d23"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/practice-expansion-20261027/ai-test-review-service.mjs",
+      "sha256": "0fbd00bcb52b3314197299dc5efaa3a801c5d9c536528ce8a9db9105b0db2f62"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-data.mjs",
+      "sha256": "2cafbeb0ed7099f6fd66285dd6523006404074baa59fa4ccf552dff77deb3219"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-library.mjs",
+      "sha256": "83c0b0af44932e88a16df6ecff764a48a33dae95a0dd96583ceaf36d83e8e18f"
+    },
+    {
+      "file": "cf-worker/src/ai-review-practice-route.mjs",
+      "sha256": "ce0a628d884e98f19aacd2734375173ff9ce652e34be9cd96021b2d6e32e9422"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-content.mjs",
+      "sha256": "dec914f63bb3891e23c421ee04ee2b594ddd70935c097bb3ff350b3652b27adf"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-jobs.mjs",
+      "sha256": "48abfa0ce623262aa357ed8bea447a57741f4b1ad2ad25f9c95324ac545ef4ec"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-service.mjs",
+      "sha256": "65184a5bde52318ccf5d9233df70e995eb8c58e7680088b129a0c086850e962a"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session.mjs",
+      "sha256": "db3e69a708300b58bd388ccb321cd67b44458b6493b88b0efde14cc5ef2ecd08"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-credits.mjs",
+      "sha256": "8095a583275b53d337ae1ab188c8761ed3e9ab52ea07b779c1a71841c6633660"
+    },
+    {
+      "file": "cf-worker/src/ai-test-review-format.mjs",
+      "sha256": "158be1c534d2cf0becb4205354797c35d7cca397f196405a4c728a843b64561d"
+    },
+    {
+      "file": "cf-worker/src/material-bank.mjs",
+      "sha256": "5e412d9fa358cf3fc512023bdbecee639f437c9dfe04a1db147c16aa33a273ae"
+    },
+    {
+      "file": "cf-worker/src/material-engine.cjs",
+      "sha256": "d73351afbcc3cca84ca1c03db2dbcfefd5198fd98d472bd09384711f0646a243"
+    },
+    {
+      "file": ".claude/verify/d1-sqlite.js",
+      "sha256": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb"
+    }
+  ],
+  "originalFixtureSha256": "bd2e7c7d1071815a8d8641251ac5319a3e5842c6bd3769d7563c82983b354d0d",
+  "scope": "Old real main graph creates completed receipt, queued admission, genuinely partial multi-chunk job, ambiguous operation and altered manifest. Candidate graph reads/replays exact old receipts and finishes old queued/partial work with no second100 credits, no completed paid regeneration, no unknown resend and no unmatched-manifest provider call. Synthetic SQLite/fetch only; no main/browser/live proof."
+}

@@ -1,0 +1,3059 @@
+{
+ "id": "drill-science-1-substance",
+ "mode": "drill",
+ "subject": "理科",
+ "grade": 1,
+ "title": "身のまわりの物質と密度・水溶液",
+ "majorTitle": "身のまわりの物質",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-science-1-substance-1",
+   "type": "input",
+   "prompt": "液体を加熱して沸騰させ、出てくる気体を冷やして再び液体として集める方法を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "蒸留",
+     "じょうりゅう"
+    ]
+   },
+   "explanation": "蒸留。沸点のちがいを利用して混合物を分けることができる。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p42 要点4（蒸留）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ろ過"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-2",
+   "type": "input",
+   "prompt": "体積2cm³、質量17.92gの金属がある。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "8.96",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "密度＝質量÷体積＝17.92÷2＝8.96g/cm³（銅）",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 23,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p23 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-3",
+   "type": "input",
+   "prompt": "アンモニアの集め方として最も適当なものはどれか。「水上置換法」「上方置換法」「下方置換法」から答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "上方置換法",
+     "上方置換"
+    ]
+   },
+   "explanation": "アンモニアは水に非常によく溶け、空気より軽いので上方置換法で集める。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 28,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p28 要点2（気体の集め方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "下方置換法"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-4",
+   "type": "input",
+   "prompt": "ある金属の体積は5cm³、質量は56.75gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉛"
+    ]
+   },
+   "explanation": "密度は 56.75÷5＝11.35g/cm³ なので鉛。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-5",
+   "type": "input",
+   "prompt": "いったん溶かした物質を、水溶液を冷やしたり水を蒸発させたりして再び結晶として取り出すことを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "再結晶",
+     "さいけっしょう"
+    ]
+   },
+   "explanation": "再結晶。純粋な物質を取り出すことができる。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p36 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "蒸留"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-6",
+   "type": "input",
+   "prompt": "水を60.0cm³入れたメスシリンダーに、質量42gの金属を沈めたところ、水面の目盛りが64.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "10.5",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 64.0−60.0＝4cm³。密度＝42÷4＝10.5g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-7",
+   "type": "input",
+   "prompt": "1種類の物質だけでできているものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "純粋な物質",
+     "純物質",
+     "じゅんすいなぶっしつ"
+    ]
+   },
+   "explanation": "純粋な物質（純物質）。水・酸素・鉄など。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p42 要点4（純粋な物質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "混合物"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-8",
+   "type": "input",
+   "prompt": "氷（密度0.92g/cm³）の小片を水（密度1g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "浮く"
+    ]
+   },
+   "explanation": "物体の密度が液体の密度より小さいので浮く。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "沈む"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-9",
+   "type": "input",
+   "prompt": "ろ過をするとき、液を注ぐのに使う器具は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ガラス棒",
+     "がらすぼう"
+    ]
+   },
+   "explanation": "ガラス棒を伝わらせて静かに注ぐ。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p36 2（ろ過）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ピペット"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-10",
+   "type": "input",
+   "prompt": "5％の砂糖水を300gつくりたい。砂糖は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "溶質の質量＝溶液の質量×濃度÷100＝300×5÷100＝15g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-11",
+   "type": "input",
+   "prompt": "上皿てんびんで薬品の質量をはかるとき、薬包紙はどの皿にのせるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "両方",
+     "両方の皿",
+     "左右両方",
+     "両方の皿にのせる"
+    ]
+   },
+   "explanation": "薬包紙の質量を打ち消すため、両方の皿に薬包紙をのせる。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 26,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p26 1（上皿てんびん）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "薬品をのせる皿だけ"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-12",
+   "type": "input",
+   "prompt": "ミョウバンは100gの水に、20℃で11g、40℃で24g、60℃で57gまで溶ける。水50gにミョウバンを60℃で溶けるだけ溶かした飽和水溶液を40℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "16.5",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水50gでは溶ける量も0.5倍。(57−24)×0.5＝16.5g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p40 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-13",
+   "type": "input",
+   "prompt": "砂糖・食塩・デンプンのうち、水にほとんど溶けないものはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "デンプン",
+     "でんぷん"
+    ]
+   },
+   "explanation": "デンプンは水にほとんど溶けない。砂糖と食塩はよく溶ける。",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p24 1（白い粉末の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "食塩"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-14",
+   "type": "input",
+   "prompt": "硝酸カリウムは20℃の水100gに32gまで溶ける。20℃の硝酸カリウムの飽和水溶液の質量パーセント濃度は何％か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "32÷(100＋32)×100＝24.24…→ 約24％（水100gではなく溶液132gでわる）",
+   "source": {
+    "id": "source-0018",
+    "file": "ドリル/りか/S__15581212_0.jpg",
+    "sha256": "00b0333f6b5c82e9e6b9269335d8d4ce767463ea8e23f371cb32f05510f1098e",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p38 2（飽和水溶液の濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "32"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-15",
+   "type": "input",
+   "prompt": "マッチの火を近づけると、ポンと音を立てて燃える気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水素",
+     "すいそ"
+    ]
+   },
+   "explanation": "水素は燃える気体で、燃えると水ができる。物質の中で最も密度が小さい。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 28,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p28 要点3（水素の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "酸素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-16",
+   "type": "input",
+   "prompt": "100mLのメスシリンダーで、液面のへこんだ部分が目盛りの32と33の間で、32から10分の5ぐらいの位置にあった。体積は何cm³と読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "32.5",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL"
+    ]
+   },
+   "explanation": "最小目盛り（1cm³）の10分の1まで目分量で読む。32.5cm³",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-17",
+   "type": "input",
+   "prompt": "石灰石（または貝がら）にうすい塩酸を加えると発生する気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "二酸化炭素",
+     "にさんかたんそ",
+     "CO2"
+    ]
+   },
+   "explanation": "二酸化炭素。石灰水を白くにごらせる。",
+   "source": {
+    "id": "source-0014",
+    "file": "ドリル/りか/S__15581208_0.jpg",
+    "sha256": "5ab501a61169b2704556f959f1c5d714b747ac096aa1d3785a4ab81f322add78",
+    "page": 30,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p30 2（二酸化炭素の発生）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "水素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-18",
+   "type": "input",
+   "prompt": "18gの氷をすべてとかして水にした。できた水の質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "状態変化では質量は変わらないので18g。体積は少し小さくなる。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p44 1（状態変化と質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-19",
+   "type": "input",
+   "prompt": "炭素をふくみ、加熱すると焦げて炭になったり、燃えて二酸化炭素を出したりする物質を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "有機物",
+     "ゆうきぶつ"
+    ]
+   },
+   "explanation": "有機物（砂糖・デンプン・木・プラスチックなど）。燃えると二酸化炭素と水ができる。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p22 要点3（有機物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "無機物"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-20",
+   "type": "input",
+   "prompt": "10％の砂糖水を100gつくりたい。砂糖は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "溶質の質量＝溶液の質量×濃度÷100＝100×10÷100＝10g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-21",
+   "type": "input",
+   "prompt": "上皿てんびんで物体の質量をはかるとき、分銅は重いものと軽いもののどちらからのせていくか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重いもの",
+     "重いほう",
+     "重い分銅"
+    ]
+   },
+   "explanation": "分銅は重いものから順にのせ、重すぎたら次に軽いものにかえる。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 26,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p26 1（上皿てんびん）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "軽いもの"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-22",
+   "type": "input",
+   "prompt": "密度7.87g/cm³の鉄が20cm³ある。質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "157.4",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量＝密度×体積＝7.87×20＝157.4g",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-23",
+   "type": "input",
+   "prompt": "塩化ナトリウム（食塩）の水溶液から結晶を取り出すのに適した方法は、水溶液を冷やすことと水を蒸発させることのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水を蒸発させる",
+     "蒸発させる",
+     "水を蒸発させること"
+    ]
+   },
+   "explanation": "塩化ナトリウムは温度による溶解度の変化が小さいので、冷やしてもほとんど結晶が出てこない。",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p40 2（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "冷やす"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-24",
+   "type": "input",
+   "prompt": "ある金属の体積は2cm³、質量は5.4gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アルミニウム"
+    ]
+   },
+   "explanation": "密度は 5.4÷2＝2.7g/cm³ なのでアルミニウム。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-25",
+   "type": "input",
+   "prompt": "空気中に体積の割合で最も多くふくまれる気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "窒素",
+     "ちっそ",
+     "N2"
+    ]
+   },
+   "explanation": "空気は窒素が約78％、酸素が約21％。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 29,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p29 Guide（空気の成分）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "酸素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-26",
+   "type": "input",
+   "prompt": "水を60.0cm³入れたメスシリンダーに、質量71.68gの金属を沈めたところ、水面の目盛りが68.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "8.96",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 68.0−60.0＝8cm³。密度＝71.68÷8＝8.96g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-27",
+   "type": "input",
+   "prompt": "火のついた線香を入れると、線香が炎を上げて激しく燃える気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "酸素",
+     "さんそ"
+    ]
+   },
+   "explanation": "酸素にはものを燃やすはたらき（助燃性）がある。酸素自体は燃えない。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 28,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p28 要点3（酸素の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "二酸化炭素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-28",
+   "type": "input",
+   "prompt": "100gの水に溶ける物質の最大の質量を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "溶解度",
+     "ようかいど"
+    ]
+   },
+   "explanation": "溶解度。物質の種類と水の温度によって決まる。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p36 要点3（溶解度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "密度"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-29",
+   "type": "input",
+   "prompt": "15％の食塩水100gに水を50g加えると、何％の食塩水になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "食塩は 100×15÷100＝15g のまま。全体は150g。15÷150×100＝10％",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-30",
+   "type": "input",
+   "prompt": "エタノールの沸点は約何℃か。整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "78",
+    "units": [
+     "℃",
+     "度"
+    ]
+   },
+   "explanation": "エタノールの沸点は約78℃で、水より低い。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 43,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p43 4（沸点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "100"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-31",
+   "type": "input",
+   "prompt": "硝酸カリウムは100gの水に、20℃で32g、40℃で64g、60℃で109gまで溶ける。水100gに硝酸カリウムを60℃で溶けるだけ溶かした飽和水溶液を40℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水100gでは溶ける量も1倍。(109−64)×1＝45g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p40 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-32",
+   "type": "input",
+   "prompt": "酸素の集め方として最も適当なものはどれか。「水上置換法」「上方置換法」「下方置換法」から答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水上置換法",
+     "水上置換"
+    ]
+   },
+   "explanation": "酸素は水に溶けにくいので水上置換法で集める。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 28,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p28 要点2（気体の集め方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "下方置換法"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-33",
+   "type": "input",
+   "prompt": "ホウ酸は40℃の水100gに9gまで溶ける。40℃のホウ酸の飽和水溶液の質量パーセント濃度は何％か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "9÷(100＋9)×100＝8.26…→ 約8％（水100gではなく溶液109gでわる）",
+   "source": {
+    "id": "source-0018",
+    "file": "ドリル/りか/S__15581212_0.jpg",
+    "sha256": "00b0333f6b5c82e9e6b9269335d8d4ce767463ea8e23f371cb32f05510f1098e",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p38 2（飽和水溶液の濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "9"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-34",
+   "type": "input",
+   "prompt": "ガスバーナーに火をつけるとき、マッチに火をつけてから先に開くのは、ガス調節ねじと空気調節ねじのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ガス調節ねじ"
+    ]
+   },
+   "explanation": "元栓とコックを開き、マッチに火をつけてからガス調節ねじを開いて点火する。そのあと空気調節ねじで炎を調節する。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p26 3（ガスバーナー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "空気調節ねじ"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-35",
+   "type": "input",
+   "prompt": "100mLのメスシリンダーで、液面のへこんだ部分が目盛りの45と46の間で、45から10分の8ぐらいの位置にあった。体積は何cm³と読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "45.8",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL"
+    ]
+   },
+   "explanation": "最小目盛り（1cm³）の10分の1まで目分量で読む。45.8cm³",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-36",
+   "type": "input",
+   "prompt": "金属に共通する性質ではないものを1つ選ぼう。\nア 電気をよく通す　イ 熱をよく伝える　ウ 磁石につく　エ みがくと光る",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "磁石につくのは鉄などの一部の金属だけ。アルミニウムや銅は磁石につかない。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 23,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p23 1（金属の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-37",
+   "type": "input",
+   "prompt": "100gの氷をすべてとかして水にした。できた水の質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "状態変化では質量は変わらないので100g。体積は少し小さくなる。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p44 1（状態変化と質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-38",
+   "type": "input",
+   "prompt": "ろ紙を使って、液体と固体を分ける操作を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ろ過",
+     "ろか"
+    ]
+   },
+   "explanation": "ろ過。液はガラス棒を伝わらせて注ぎ、ろうとのあしのとがったほうをビーカーの壁につける。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p36 2（ろ過）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "蒸留"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-39",
+   "type": "input",
+   "prompt": "10％の砂糖水を300gつくりたい。砂糖は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "溶質の質量＝溶液の質量×濃度÷100＝300×10÷100＝30g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-40",
+   "type": "input",
+   "prompt": "液体を加熱するとき、急に沸騰する（突沸する）のを防ぐために入れるものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沸騰石",
+     "ふっとうせき"
+    ]
+   },
+   "explanation": "沸騰石を入れて突沸を防ぐ。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 45,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p45 3（蒸留）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "温度計"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-41",
+   "type": "input",
+   "prompt": "密度19.32g/cm³の金が193.2gある。体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "体積＝質量÷密度＝193.2÷19.32＝10cm³",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-42",
+   "type": "input",
+   "prompt": "二酸化炭素を通すと白くにごる液体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "石灰水",
+     "せっかいすい"
+    ]
+   },
+   "explanation": "二酸化炭素の確認に使う。",
+   "source": {
+    "id": "source-0015",
+    "file": "ドリル/りか/S__15581209_0.jpg",
+    "sha256": "37b7373bd19632637cb126e3fc6baa7c835e58ff3ac8f2e768f9fcde0a19948a",
+    "page": 32,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p32 1（二酸化炭素の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ヨウ素液"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-43",
+   "type": "input",
+   "prompt": "ある金属の体積は20cm³、質量は227gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉛"
+    ]
+   },
+   "explanation": "密度は 227÷20＝11.35g/cm³ なので鉛。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-44",
+   "type": "input",
+   "prompt": "有機物以外の物質（食塩・ガラス・金属など）を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "無機物",
+     "むきぶつ"
+    ]
+   },
+   "explanation": "無機物。炭素や二酸化炭素は炭素をふくむが無機物に分類する。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p22 要点3（無機物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "有機物"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-45",
+   "type": "input",
+   "prompt": "水を50.0cm³入れたメスシリンダーに、質量44.8gの金属を沈めたところ、水面の目盛りが55.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "8.96",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 55.0−50.0＝5cm³。密度＝44.8÷5＝8.96g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-46",
+   "type": "input",
+   "prompt": "1気圧のもとで、水の沸点は何℃か。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "℃",
+     "度"
+    ]
+   },
+   "explanation": "水の沸点は100℃、融点は0℃。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 43,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p43 3（沸点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "0"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-47",
+   "type": "input",
+   "prompt": "氷（密度0.92g/cm³）の小片をエタノール（密度0.79g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む"
+    ]
+   },
+   "explanation": "物体の密度が液体の密度より大きいので沈む。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "浮く"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-48",
+   "type": "input",
+   "prompt": "液体が沸騰して気体に変化するときの温度を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沸点",
+     "ふってん"
+    ]
+   },
+   "explanation": "沸点。純粋な物質では決まった温度になる。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p42 要点3（沸点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "融点"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-49",
+   "type": "input",
+   "prompt": "水120gに食塩30gを溶かした。この食塩水の質量パーセント濃度は何％か。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "溶液の質量は 120＋30＝150g。30÷150×100＝20％",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "25"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-50",
+   "type": "input",
+   "prompt": "いくつかの物質が混ざり合ったものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "混合物",
+     "こんごうぶつ"
+    ]
+   },
+   "explanation": "混合物。空気・海水・食塩水など。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p42 要点4（混合物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "純粋な物質"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-51",
+   "type": "input",
+   "prompt": "硝酸カリウムは100gの水に、20℃で32g、40℃で64g、60℃で109gまで溶ける。水100gに硝酸カリウムを40℃で溶けるだけ溶かした飽和水溶液を20℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水100gでは溶ける量も1倍。(64−32)×1＝32g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p40 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-52",
+   "type": "input",
+   "prompt": "水溶液に共通する性質として正しくないものを1つ選ぼう。\nア 透明である　イ 濃さはどこでも同じ　ウ 必ず無色である　エ 時間がたっても溶質は分かれてこない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "硫酸銅水溶液のように色がついていても、透明なら水溶液。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p36 要点1（水溶液の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-53",
+   "type": "input",
+   "prompt": "ミョウバンは20℃の水100gに11gまで溶ける。20℃のミョウバンの飽和水溶液の質量パーセント濃度は何％か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "11÷(100＋11)×100＝9.91…→ 約10％（水100gではなく溶液111gでわる）",
+   "source": {
+    "id": "source-0018",
+    "file": "ドリル/りか/S__15581212_0.jpg",
+    "sha256": "00b0333f6b5c82e9e6b9269335d8d4ce767463ea8e23f371cb32f05510f1098e",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p38 2（飽和水溶液の濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "11"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-54",
+   "type": "input",
+   "prompt": "純粋な物質を加熱したときのグラフで、沸騰している間の温度はどうなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "一定",
+     "変わらない",
+     "一定になる",
+     "上がらない"
+    ]
+   },
+   "explanation": "純粋な物質は沸騰している間、温度が一定（沸点）になる。混合物は一定にならない。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 44,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p44 2（沸点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "上がり続ける"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-55",
+   "type": "input",
+   "prompt": "100mLのメスシリンダーで、液面のへこんだ部分が目盛りの28と29の間で、28から10分の6ぐらいの位置にあった。体積は何cm³と読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "28.6",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL"
+    ]
+   },
+   "explanation": "最小目盛り（1cm³）の10分の1まで目分量で読む。28.6cm³",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-56",
+   "type": "input",
+   "prompt": "砂糖・食塩・デンプンのうち、加熱しても焦げないものはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "食塩",
+     "しょくえん"
+    ]
+   },
+   "explanation": "食塩は無機物なので焦げない。砂糖とデンプンは有機物で、焦げて炭になる。",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p24 1（白い粉末の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "砂糖"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-57",
+   "type": "input",
+   "prompt": "50gの氷をすべてとかして水にした。できた水の質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "状態変化では質量は変わらないので50g。体積は少し小さくなる。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p44 1（状態変化と質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-58",
+   "type": "input",
+   "prompt": "固体がとけて液体に変化するときの温度を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "融点",
+     "ゆうてん"
+    ]
+   },
+   "explanation": "融点。純粋な物質では決まった温度になる。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p42 要点3（融点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "沸点"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-59",
+   "type": "input",
+   "prompt": "溶質を12g使って25％の水溶液をつくるとき、水は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水溶液全体は 12÷25×100＝48g。水は 48−12＝36g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "48"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-60",
+   "type": "input",
+   "prompt": "亜鉛や鉄にうすい塩酸を加えると発生する気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水素",
+     "すいそ",
+     "H2"
+    ]
+   },
+   "explanation": "水素。火を近づけると音を立てて燃え、水ができる。",
+   "source": {
+    "id": "source-0014",
+    "file": "ドリル/りか/S__15581208_0.jpg",
+    "sha256": "5ab501a61169b2704556f959f1c5d714b747ac096aa1d3785a4ab81f322add78",
+    "page": 30,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p30 2（水素の発生）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "酸素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-61",
+   "type": "input",
+   "prompt": "密度7.87g/cm³の鉄が78.7gある。体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "体積＝質量÷密度＝78.7÷7.87＝10cm³",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-62",
+   "type": "input",
+   "prompt": "溶液に溶けている物質を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "溶質",
+     "ようしつ"
+    ]
+   },
+   "explanation": "溶質。食塩水では食塩が溶質、水が溶媒。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p36 要点1（溶質・溶媒）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "溶媒"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-63",
+   "type": "input",
+   "prompt": "ある金属の体積は10cm³、質量は105gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "銀"
+    ]
+   },
+   "explanation": "密度は 105÷10＝10.5g/cm³ なので銀。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-64",
+   "type": "input",
+   "prompt": "水が氷になると、体積はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "増える",
+     "大きくなる",
+     "増加する"
+    ]
+   },
+   "explanation": "水は例外で、固体（氷）になると体積が増える。そのため氷は水に浮く。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p42 1（状態変化と体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "減る"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-65",
+   "type": "input",
+   "prompt": "水を40.0cm³入れたメスシリンダーに、質量52.5gの金属を沈めたところ、水面の目盛りが45.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "10.5",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 45.0−40.0＝5cm³。密度＝52.5÷5＝10.5g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-66",
+   "type": "input",
+   "prompt": "金属をみがくと出る、特有のかがやきを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "金属光沢",
+     "きんぞくこうたく"
+    ]
+   },
+   "explanation": "金属の共通の性質：金属光沢がある、電気をよく通す、熱をよく伝える、たたくと広がる（展性）・引っぱるとのびる（延性）。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p22 要点2（金属の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-67",
+   "type": "input",
+   "prompt": "ポリエチレンテレフタラート（密度1.38g/cm³）の小片をエタノール（密度0.79g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む"
+    ]
+   },
+   "explanation": "物体の密度が液体の密度より大きいので沈む。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "浮く"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-68",
+   "type": "input",
+   "prompt": "物質がそれ以上溶けることができなくなった水溶液を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "飽和水溶液",
+     "ほうわすいようえき"
+    ]
+   },
+   "explanation": "飽和水溶液。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p36 要点3（飽和水溶液）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-69",
+   "type": "input",
+   "prompt": "1気圧のもとで、水の融点は何℃か。",
+   "answer": {
+    "kind": "number",
+    "value": "0",
+    "units": [
+     "℃",
+     "度"
+    ]
+   },
+   "explanation": "水の融点（氷がとける温度）は0℃。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 43,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p43 3（融点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "100"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-70",
+   "type": "input",
+   "prompt": "ミョウバンは100gの水に、20℃で11g、40℃で24g、60℃で57gまで溶ける。40℃の水100gにミョウバンを15g溶かし、20℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "20℃では11gまでしか溶けないので、15−11＝4g が結晶になる。",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 41,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p41 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-71",
+   "type": "input",
+   "prompt": "砂糖・食塩・デンプンのうち、ヨウ素液を加えると青紫色になるものはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "デンプン",
+     "でんぷん"
+    ]
+   },
+   "explanation": "ヨウ素液はデンプンに反応して青紫色になる。",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p24 1（白い粉末の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "砂糖"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-72",
+   "type": "input",
+   "prompt": "物質1cm³あたりの質量を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "密度",
+     "みつど"
+    ]
+   },
+   "explanation": "密度[g/cm³]＝質量[g]÷体積[cm³]。物質の種類によって決まっている。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点4"
+   },
+   "ref": "参考：理科ドリル p22 要点4（密度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "質量"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-73",
+   "type": "input",
+   "prompt": "ドライアイスのように、固体から直接気体に変化することがある。ドライアイスは何という物質の固体か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "二酸化炭素",
+     "にさんかたんそ"
+    ]
+   },
+   "explanation": "ドライアイスは二酸化炭素の固体。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 43,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p43 2（状態変化）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "水"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-74",
+   "type": "input",
+   "prompt": "液体のろうを冷やして固体にすると、体積はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "減る",
+     "小さくなる",
+     "減少する"
+    ]
+   },
+   "explanation": "ろうは固体になると体積が減り、表面の中央がへこむ。質量は変わらない。",
+   "source": {
+    "id": "source-0021",
+    "file": "ドリル/りか/S__15581216_0.jpg",
+    "sha256": "a22404d3f195c6752dddae72eb080d32381007876469374de56e7eef27601774",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p44 1（状態変化と体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "増える"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-75",
+   "type": "input",
+   "prompt": "溶質を30g使って5％の水溶液をつくるとき、水は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "570",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水溶液全体は 30÷5×100＝600g。水は 600−30＝570g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "600"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-76",
+   "type": "input",
+   "prompt": "ガスバーナーで、炎の色を青色にするためには、どちらのねじを開いて空気の量を調節するか。「空気調節ねじ」か「ガス調節ねじ」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "空気調節ねじ"
+    ]
+   },
+   "explanation": "空気が足りないと炎はオレンジ色。空気調節ねじを開いて青い炎にする。",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p24 3（ガスバーナー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "ガス調節ねじ"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-77",
+   "type": "input",
+   "prompt": "密度2.7g/cm³のアルミニウムが27gある。体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "体積＝質量÷密度＝27÷2.7＝10cm³",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-78",
+   "type": "input",
+   "prompt": "物質を溶かしている液体（水など）を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "溶媒",
+     "ようばい"
+    ]
+   },
+   "explanation": "溶媒。溶けている物質を溶質、溶質が溶媒に溶けた液全体を溶液という。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p36 要点1（溶質・溶媒）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "溶質"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-79",
+   "type": "input",
+   "prompt": "ある金属の体積は10cm³、質量は78.7gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉄"
+    ]
+   },
+   "explanation": "密度は 78.7÷10＝7.87g/cm³ なので鉄。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-80",
+   "type": "input",
+   "prompt": "水とエタノールの混合物を蒸留したとき、はじめに集めた液体に多くふくまれているのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エタノール"
+    ]
+   },
+   "explanation": "沸点の低いエタノールが先に多く出てくる。はじめの液にマッチの火を近づけると燃える。",
+   "source": {
+    "id": "source-0022",
+    "file": "ドリル/りか/S__15581217_0.jpg",
+    "sha256": "c79138cbc14a18691cb5cdafabc2a5092d5126a4e40543cf1cb7281b89158ff5",
+    "page": 46,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p46 3（蒸留）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "水"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-81",
+   "type": "input",
+   "prompt": "水を60.0cm³入れたメスシリンダーに、質量56.75gの金属を沈めたところ、水面の目盛りが65.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "11.35",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 65.0−60.0＝5cm³。密度＝56.75÷5＝11.35g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-82",
+   "type": "input",
+   "prompt": "アンモニアの噴水の実験で水が吹き上がるのは、アンモニアのどんな性質によるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水に非常によく溶ける",
+     "水によく溶ける",
+     "水にとけやすい",
+     "水に溶けやすい"
+    ]
+   },
+   "explanation": "アンモニアがスポイトの水に溶けてフラスコ内の圧力が下がり、水が吸い上げられる。",
+   "source": {
+    "id": "source-0016",
+    "file": "ドリル/りか/S__15581210_0.jpg",
+    "sha256": "d9b32e7f7dec2794bc324573126c889e0341991f7b912c3f0a6567d561e21e39",
+    "page": 34,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p34 2（アンモニアの噴水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "空気より軽い"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-83",
+   "type": "input",
+   "prompt": "ポリプロピレン（密度0.9g/cm³）の小片をエタノール（密度0.79g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む"
+    ]
+   },
+   "explanation": "物体の密度が液体の密度より大きいので沈む。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "浮く"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-84",
+   "type": "input",
+   "prompt": "密度が水（1.0g/cm³）より小さい物体を水に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "浮く",
+     "うく"
+    ]
+   },
+   "explanation": "液体より密度が小さい物体は浮き、大きい物体は沈む。",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "沈む"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-85",
+   "type": "input",
+   "prompt": "溶媒が水である溶液を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水溶液",
+     "すいようえき"
+    ]
+   },
+   "explanation": "水溶液。",
+   "source": {
+    "id": "source-0017",
+    "file": "ドリル/りか/S__15581211_0.jpg",
+    "sha256": "b45b405da21befe9c70148eff3a3518cd384c602a43f6c262577384ae4955453",
+    "page": 36,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p36 要点1（水溶液）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-86",
+   "type": "input",
+   "prompt": "ミョウバンは100gの水に、20℃で11g、40℃で24g、60℃で57gまで溶ける。水50gにミョウバンを60℃で溶けるだけ溶かした飽和水溶液を20℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "23",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水50gでは溶ける量も0.5倍。(57−11)×0.5＝23g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p40 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-87",
+   "type": "input",
+   "prompt": "状態変化では、物質の体積は変化するが、質量はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "変わらない",
+     "変化しない",
+     "同じ"
+    ]
+   },
+   "explanation": "粒子の数は変わらないので質量は変わらない。粒子の間隔が変わるので体積は変わる。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p42 要点2（状態変化と質量）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "増える"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-88",
+   "type": "input",
+   "prompt": "ホウ酸は60℃の水100gに15gまで溶ける。60℃のホウ酸の飽和水溶液の質量パーセント濃度は何％か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "15÷(100＋15)×100＝13.04…→ 約13％（水100gではなく溶液115gでわる）",
+   "source": {
+    "id": "source-0018",
+    "file": "ドリル/りか/S__15581212_0.jpg",
+    "sha256": "00b0333f6b5c82e9e6b9269335d8d4ce767463ea8e23f371cb32f05510f1098e",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p38 2（飽和水溶液の濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "15"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-89",
+   "type": "input",
+   "prompt": "使う目的や形などに注目したときの「もの」を物体というのに対し、物体をつくっている材料に注目したときの「もの」を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "物質",
+     "ぶっしつ"
+    ]
+   },
+   "explanation": "コップ（物体）をつくるガラス（物質）のように区別する。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p22 要点1（物体と物質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "物体"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-90",
+   "type": "input",
+   "prompt": "100mLのメスシリンダーで、液面のへこんだ部分が目盛りの74と75の間で、74から10分の1ぐらいの位置にあった。体積は何cm³と読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "74.1",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL"
+    ]
+   },
+   "explanation": "最小目盛り（1cm³）の10分の1まで目分量で読む。74.1cm³",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-91",
+   "type": "input",
+   "prompt": "塩化アンモニウムと水酸化カルシウムの混合物を加熱すると発生する、刺激臭のある気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アンモニア",
+     "あんもにあ",
+     "NH3"
+    ]
+   },
+   "explanation": "アンモニア。水に非常によく溶け、水溶液はアルカリ性。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 29,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p29 2（アンモニアの発生）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "塩素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-92",
+   "type": "input",
+   "prompt": "水に溶けやすく、空気より重い気体を集めるのに適した方法は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "下方置換法",
+     "下方置換"
+    ]
+   },
+   "explanation": "下方置換法。二酸化炭素は水に少し溶けるが空気より重いので、下方置換法でも集められる。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 28,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p28 要点2（気体の集め方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "上方置換法"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-93",
+   "type": "input",
+   "prompt": "物質が気体になると、粒子の間隔は固体や液体のときと比べてどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きくなる",
+     "広くなる",
+     "大きい",
+     "広い"
+    ]
+   },
+   "explanation": "気体では粒子が自由に飛び回り、粒子どうしの間隔が大きくなるので体積が大きくなる。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点2"
+   },
+   "ref": "参考：理科ドリル p42 要点2（粒子のモデル）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "小さくなる"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-94",
+   "type": "input",
+   "prompt": "密度2.7g/cm³のアルミニウムが50cm³ある。質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量＝密度×体積＝2.7×50＝135g",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-95",
+   "type": "input",
+   "prompt": "アンモニアの噴水の実験で、水を入れたフラスコ内にフェノールフタレイン溶液を加えた水が吹き上がると、何色に変わるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "赤色",
+     "赤",
+     "あか"
+    ]
+   },
+   "explanation": "アンモニアが溶けた水はアルカリ性になり、フェノールフタレイン溶液が赤色になる。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 29,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p29 2（アンモニアの噴水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "青色"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-96",
+   "type": "input",
+   "prompt": "ある金属の体積は10cm³、質量は27gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アルミニウム"
+    ]
+   },
+   "explanation": "密度は 27÷10＝2.7g/cm³ なのでアルミニウム。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-97",
+   "type": "input",
+   "prompt": "有機物を燃やしたときに発生し、石灰水を白くにごらせる気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "二酸化炭素",
+     "にさんかたんそ",
+     "CO2"
+    ]
+   },
+   "explanation": "有機物は炭素をふくむので、燃えると二酸化炭素ができる。水も発生する。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "要点3"
+   },
+   "ref": "参考：理科ドリル p22 要点3（有機物）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "酸素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-98",
+   "type": "input",
+   "prompt": "水を60.0cm³入れたメスシリンダーに、質量96.6gの金属を沈めたところ、水面の目盛りが65.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "19.32",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 65.0−60.0＝5cm³。密度＝96.6÷5＝19.32g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-99",
+   "type": "input",
+   "prompt": "メスシリンダーの目盛りを読むとき、液面のどの部分を、どの方向から見て読むか。「〜の部分を〜から」の形で答えよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "平ら",
+       "低い",
+       "へこんだ",
+       "くぼんだ",
+       "下"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "真横",
+       "水平",
+       "まよこ"
+      ]
+     }
+    ]
+   },
+   "explanation": "液面のへこんだ（平らな）部分を、真横（目の高さを液面にそろえて）から読む。最小目盛りの10分の1まで目分量で読む。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-100",
+   "type": "input",
+   "prompt": "物質が温度によって固体・液体・気体とすがたを変えることを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "状態変化",
+     "じょうたいへんか"
+    ]
+   },
+   "explanation": "状態変化。物質そのものは変わらない（化学変化ではない）。",
+   "source": {
+    "id": "source-0020",
+    "file": "ドリル/りか/S__15581215_0.jpg",
+    "sha256": "d3e2bb1d4c75bed74d48cdcb1ac309c7bf74391a7f9f59ab799ed47f68619993",
+    "page": 42,
+    "number": "要点1"
+   },
+   "ref": "参考：理科ドリル p42 要点1（状態変化）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "化学変化"
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-science-1-substance-test-1",
+   "type": "input",
+   "prompt": "溶質を20g使って10％の水溶液をつくるとき、水は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水溶液全体は 20÷10×100＝200g。水は 200−20＝180g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "200"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-2",
+   "type": "input",
+   "prompt": "空気中に体積の割合で約21％ふくまれる気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "酸素",
+     "さんそ"
+    ]
+   },
+   "explanation": "酸素は空気の約21％（約5分の1）。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 29,
+    "number": "Guide"
+   },
+   "ref": "参考：理科ドリル p29 Guide（空気の成分）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "窒素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-3",
+   "type": "input",
+   "prompt": "気体を発生させる実験で、はじめに出てくる気体は集めずに捨てるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "空気"
+      ]
+     }
+    ]
+   },
+   "explanation": "はじめに出てくる気体には、装置の中にあった空気が多くふくまれているため。",
+   "source": {
+    "id": "source-0015",
+    "file": "ドリル/りか/S__15581209_0.jpg",
+    "sha256": "37b7373bd19632637cb126e3fc6baa7c835e58ff3ac8f2e768f9fcde0a19948a",
+    "page": 32,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p32 2（気体の集め方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-4",
+   "type": "input",
+   "prompt": "二酸化マンガンにうすい過酸化水素水（オキシドール）を加えると発生する気体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "酸素",
+     "さんそ",
+     "O2"
+    ]
+   },
+   "explanation": "酸素。二酸化マンガンは自身は変化せず、反応を進めるはたらきをする。",
+   "source": {
+    "id": "source-0013",
+    "file": "ドリル/りか/S__15581207_0.jpg",
+    "sha256": "891609d8afe52551d8df4094b79df0fb2a905b4ab8df7edeb1888957c467714d",
+    "page": 29,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p29 3（酸素の発生）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "水素"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-5",
+   "type": "input",
+   "prompt": "100mLのメスシリンダーで、液面のへこんだ部分が目盛りの55と56の間で、55から10分の2ぐらいの位置にあった。体積は何cm³と読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "55.2",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL"
+    ]
+   },
+   "explanation": "最小目盛り（1cm³）の10分の1まで目分量で読む。55.2cm³",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p22 2（メスシリンダー）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-6",
+   "type": "input",
+   "prompt": "溶質を15g使って20％の水溶液をつくるとき、水は何g必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水溶液全体は 15÷20×100＝75g。水は 75−15＝60g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "75"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-7",
+   "type": "input",
+   "prompt": "密度19.32g/cm³の金が5cm³ある。質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "96.6",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量＝密度×体積＝19.32×5＝96.6g",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-8",
+   "type": "input",
+   "prompt": "ある金属の体積は10cm³、質量は89.6gだった。次の表（密度 g/cm³）から、この金属は何か答えよう。\n金 19.32、鉛 11.35、銀 10.5、銅 8.96、鉄 7.87、アルミニウム 2.7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "銅"
+    ]
+   },
+   "explanation": "密度は 89.6÷10＝8.96g/cm³ なので銅。",
+   "source": {
+    "id": "source-0010",
+    "file": "ドリル/りか/S__15581204_0.jpg",
+    "sha256": "fe53a57b77a099953ca027a09445c6fefec784024c938881ca604c1f8af1c684",
+    "page": 22,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p22 3（物質の区別）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-9",
+   "type": "input",
+   "prompt": "密度10.5g/cm³の銀が8cm³ある。質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "84",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量＝密度×体積＝10.5×8＝84g",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-10",
+   "type": "input",
+   "prompt": "水を50.0cm³入れたメスシリンダーに、質量5.4gの金属を沈めたところ、水面の目盛りが52.0cm³になった。この金属の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "2.7",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "金属の体積は 52.0−50.0＝2cm³。密度＝5.4÷2＝2.7g/cm³",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p24 2（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-11",
+   "type": "input",
+   "prompt": "ポリスチレン（密度1.05g/cm³）の小片をエタノール（密度0.79g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む"
+    ]
+   },
+   "explanation": "物体の密度が液体の密度より大きいので沈む。",
+   "source": {
+    "id": "source-0012",
+    "file": "ドリル/りか/S__15581206_0.jpg",
+    "sha256": "022288fe6e7a993bcc9e76d9c16d89ff5f13d0413c9a2549176fb2bb17e6f05b",
+    "page": 27,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p27 4（浮き沈み）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "浮く"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-12",
+   "type": "input",
+   "prompt": "ホウ酸は100gの水に、20℃で5g、40℃で9g、60℃で15gまで溶ける。水100gにホウ酸を40℃で溶けるだけ溶かした飽和水溶液を20℃まで冷やすと、何gの結晶が出てくるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "水100gでは溶ける量も1倍。(9−5)×1＝4g",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "3"
+   },
+   "ref": "参考：理科ドリル p40 3（再結晶）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  },
+  {
+   "id": "drill-science-1-substance-test-13",
+   "type": "input",
+   "prompt": "硝酸カリウムは40℃の水100gに64gまで溶ける。40℃の硝酸カリウムの飽和水溶液の質量パーセント濃度は何％か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "39",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "64÷(100＋64)×100＝39.02…→ 約39％（水100gではなく溶液164gでわる）",
+   "source": {
+    "id": "source-0018",
+    "file": "ドリル/りか/S__15581212_0.jpg",
+    "sha256": "00b0333f6b5c82e9e6b9269335d8d4ce767463ea8e23f371cb32f05510f1098e",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：理科ドリル p38 2（飽和水溶液の濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "64"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-14",
+   "type": "input",
+   "prompt": "水60gに食塩40gを溶かした。この食塩水の質量パーセント濃度は何％か。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "溶液の質量は 60＋40＝100g。40÷100×100＝40％",
+   "source": {
+    "id": "source-0019",
+    "file": "ドリル/りか/S__15581213_0.jpg",
+    "sha256": "f7f7af38833e44dfcc5c140bfba3a57c78c97e8d7490c741ebf380e5303d606b",
+    "page": 40,
+    "number": "1"
+   },
+   "ref": "参考：理科ドリル p40 1（質量パーセント濃度）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard",
+   "near": [
+    "66.6667"
+   ]
+  },
+  {
+   "id": "drill-science-1-substance-test-15",
+   "type": "input",
+   "prompt": "密度10.5g/cm³の銀が10cm³ある。質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "質量＝密度×体積＝10.5×10＝105g",
+   "source": {
+    "id": "source-0011",
+    "file": "ドリル/りか/S__15581205_0.jpg",
+    "sha256": "11a1fc80b3aba6a3cfb37a01b38d48a893e914ac0bc2dcc43d96a4afdbe0619a",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：理科ドリル p25 4（密度の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "standard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。理科ドリルp22〜49（4 身のまわりの物質・5 気体とその性質・6 水溶液・7 物質の状態変化、標準問題・実力問題①②）を写真で目視し、数値や条件を変えた類題と要点の問題を作った。溶解度は問題文に示した値だけで解ける形にした。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "物質の区別と密度",
+   "body": "有機物（炭素をふくむ・燃えると二酸化炭素と水）と無機物。金属は光沢・電気・熱・展性延性（磁石につくのは一部）。密度＝質量÷体積。液体より密度が小さい物体は浮く。"
+  },
+  {
+   "title": "器具の使い方",
+   "body": "メスシリンダーは液面のへこんだ部分を真横から最小目盛りの10分の1まで読む。ガスバーナーはガス調節ねじで点火→空気調節ねじで青い炎に。上皿てんびんは分銅を重いものから、薬包紙は両方の皿に。"
+  },
+  {
+   "title": "気体の性質と集め方",
+   "body": "酸素：二酸化マンガン＋過酸化水素水、ものを燃やす、水上置換。二酸化炭素：石灰石＋塩酸、石灰水が白くにごる。水素：亜鉛＋塩酸、燃えて水ができる。アンモニア：水に非常によく溶ける・空気より軽い→上方置換、水溶液はアルカリ性。"
+  },
+  {
+   "title": "水溶液・濃度・再結晶",
+   "body": "質量パーセント濃度＝溶質÷(溶質＋溶媒)×100。溶解度＝100gの水に溶ける最大の質量。冷やして出てくる結晶の量＝溶けていた量−冷やした温度の溶解度。食塩は温度で溶解度がほとんど変わらないので水を蒸発させて取り出す。"
+  },
+  {
+   "title": "状態変化と蒸留",
+   "body": "状態変化で体積は変わるが質量は変わらない（水は凍ると体積が増える）。純粋な物質は沸点・融点が決まっている（水100℃・0℃、エタノール約78℃）。蒸留は沸点のちがいで混合物を分ける。沸騰石で突沸を防ぐ。"
+  }
+ ]
+}

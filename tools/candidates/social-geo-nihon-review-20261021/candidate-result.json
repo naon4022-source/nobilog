@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "checks": 40,
+  "cases": [
+    {
+      "number": 31,
+      "input": "暖流と寒流が出会うところだから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 31,
+      "input": "対馬海流と寒流がぶつかるため",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 31,
+      "input": "暖流とリマン海流がぶつかるため",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 31,
+      "input": "対馬海流とリマン海流",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 31,
+      "input": "対馬海流とリマン海流は出会わないから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 31,
+      "input": "対馬海流とリマン海流がぶつかる潮目に近いから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 31,
+      "input": "寒流のリマン海流と暖流の対馬海流が出会う海だから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 31,
+      "input": "対馬暖流とリマン寒流がぶつかるため",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 37,
+      "input": "寒くないから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 37,
+      "input": "寒くはありません",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 37,
+      "input": "一年中低温ではないから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 37,
+      "input": "低温とは言えないから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 37,
+      "input": "一年を通して気温が低いから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 37,
+      "input": "寒い気候だから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 37,
+      "input": "気温の低い場所だから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 69,
+      "input": "水域の資源を使えるから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 69,
+      "input": "水産資源があるから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    },
+    {
+      "number": 69,
+      "input": "排他的経済水域が広がり水産資源を利用できるから",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 69,
+      "input": "鉱産資源を利用できる広い排他的経済水域を確保できるため",
+      "expectedCorrect": true,
+      "actualCorrect": true
+    },
+    {
+      "number": 69,
+      "input": "広い排他的経済水域で水産資源や鉱産資源を利用できないから",
+      "expectedCorrect": false,
+      "actualCorrect": false
+    }
+  ],
+  "candidateSha256": "b03694fe6ed153994e31a9c92766355b97f2e2ff8f09558f769e2dd4c90e0615",
+  "sourceContentPreserved": true,
+  "scope": "these explicit mechanical input cases only; not general semantic grading",
+  "realUserData": false,
+  "network": false
+}

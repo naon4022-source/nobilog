@@ -1,0 +1,180 @@
+{
+  "status": "67 local teaching files remain integrated; AI70 successor isolated preflight; current75 math metadata locally applied; no publication",
+  "approvedMovieCandidate": {
+    "id": "K1-C2-S5-VP",
+    "stage": "tools/candidates/textbook-final-20261023/kokugo-intonation-20261027/current-stage.json",
+    "sha256": "9e929dd441c8cb1dadd57d03cb4ea09b83a8dbe323b589f9a9a48d3e87ccc4db"
+  },
+  "remainingAudio": {
+    "status": "all9 speech candidates prepared; not movies",
+    "result": "audio-candidates/result.json",
+    "sha256": "e9841c8fa7de3a1dab3de571ef24bcb3980e598ece00324ab9b9ad305fad238f"
+  },
+  "scriptClaritySuccessors": {
+    "file": "narration-clarity-v2/manifest.json",
+    "sha256": "7bc6d0cd0e6333bb4e854e39a605cf548d27471c96dff61deb2990b035dde04b",
+    "notes": "Three caution successors retain classifier prefix; C8 uses existing worked-example instead of later exercise word."
+  },
+  "fullVerification": {
+    "status": "failed",
+    "exitCode": 1,
+    "fixedInputs": 1715,
+    "frozenDrift": [],
+    "result": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/full9-result.json",
+    "logSha256": "adc1e9e4abdf8ca5aa1fb7dc0af622f374c38872f1ab346764985175c67b1aa4",
+    "failureKinds": [
+      "old basic UI proof drift, now original CLI passes with fresh84 proof",
+      "English historical source identity",
+      "renderer edit register missing approved toolbar line"
+    ]
+  },
+  "mainPromotionReady": true,
+  "promotionPlan": "preliminary44 draft needs3 caution successors and20 exact movie entries before apply",
+  "remaining": [
+    "Observe full9 terminal/log/frozen drift and fix any failures",
+    "AI new48 candidate approved; main/owned-route integration and post-integration whole verification pending",
+    "Align old mathematics ledger status fields after frozen verification",
+    "Reader keyboard focus and physical touch remain unverified",
+    "Physical-device and new listening evidence absent",
+    "Other whole-project and Claude intake remain"
+  ],
+  "snapshotAtUTC": "2026-10-28T23:13:02.989464+00:00",
+  "sceneRequirement": "Chapter2 scene.js hardcodes mora diagrams and must not be reused for the other9 movies. Build unit-specific rain/onomatopoeia, on-kun compounds, parts-of-speech, date and exclamation illustrations; direct scene QA before encoding.",
+  "sceneCandidate": "scene-final.js / movies-final",
+  "sceneApproval": {
+    "file": "scene-approval-result.json",
+    "sha256": "7ce51fefca38baf43c0ca6da2dab6380d9ea11309341c1ac1748b4af5c44abcc",
+    "logicalScenes": 61,
+    "captionChunks": 69
+  },
+  "renderLanes": [
+    {
+      "session": 88139,
+      "status": "terminal exit0 observed; nine movies generated"
+    },
+    {
+      "session": 70588,
+      "status": "terminal exit0 observed; nine movies generated"
+    }
+  ],
+  "AVPassedPendingFrames": [
+    "K1-C8-S4-VP",
+    "K1-C6-S1-V01"
+  ],
+  "actualEncodedVisualReviews": [
+    "K1-C8-S4-VP",
+    "K1-C6-S1-V01"
+  ],
+  "approvedMovieCandidates": 10,
+  "movieStage": {
+    "file": "ten-movies-stage.json",
+    "sha256": "d0988fe1ed6a38d58e426ba87ef25a1a45884d45a14510a02cf5cc6babe5bb18"
+  },
+  "mainPromoted": true,
+  "published": false,
+  "verificationHistory": [
+    {
+      "status": "full8 running; terminal not observed",
+      "session": 13404,
+      "pid": 35035,
+      "fixedInputs": 1480,
+      "result": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/full8-result.json",
+      "knownFailures": [
+        "Historical20-file teaching successor rejects newly reviewed64-file teaching update; canonical chain must validate new successor before running unchanged historical assertions."
+      ]
+    }
+  ],
+  "latestApplied": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-applied.json",
+  "latestPracticeCandidate": {
+    "mainIntegrated": false,
+    "approval": "tools/candidates/review-practice-choice-order-20261029/clarity/approval.json",
+    "sha256": "2fd11be858316c0db544d29377662e75c2d9250a57ea9b965a8e02e0479de382",
+    "newQuestions": 48,
+    "serverChecks": 2667,
+    "layoutChecks": 1451,
+    "layoutCases": 240,
+    "representativeViews": 16,
+    "remaining": [
+      "current main integration",
+      "owned HTTP route integration confirmation",
+      "required whole verification after integration"
+    ],
+    "preservedReferenceRows": 58,
+    "legacyArraysPreserved": true
+  },
+  "latestMathReader": {
+    "status": "passed actual current reader75 movies/300 plays; reused same-SHA AV1805 scenes",
+    "report": "tools/candidates/math-current-reader-20261029/progress.json",
+    "sha256": "4e8e088d5cef1cd152e7fa6df550dc77ec9af875ad0dea6e1a174474da46f72f",
+    "main": 69,
+    "appendix": 6,
+    "physicalDevice": false,
+    "newListening": false,
+    "rawLedgerStatusAlignment": "pending full9 terminal"
+  },
+  "latestBasicUICompatibility": {
+    "mainApplied": false,
+    "knownFailure": "old basic UI proof compares previous reader SHA directly; approved one-line toolbar change is the only drift",
+    "candidate": "tools/candidates/basic-ui-reader-compat-20261029/candidate-result.json",
+    "checks": 14,
+    "next": "after full9 terminal, combine exact70 teaching/AI/legacy-verifier successor; preserve positive full7 baseline and execute old assertions unchanged; failed full9 snapshot is not passed evidence"
+  },
+  "latestEnglishSourceCompatibility": {
+    "mainApplied": false,
+    "candidate": "tools/candidates/english-source-compat-20261029/candidate-result.json",
+    "checks": 41,
+    "books": 6,
+    "normalizedFutureScope": 29,
+    "current70Successor": "tools/candidates/nonadmin-ai-reader-successor-20261029/README.md",
+    "status": "full9 running with two known historical-source failures; final terminal audit pending"
+  },
+  "latestCombinedSuccessor": {
+    "folder": "tools/candidates/nonadmin-ai-reader-successor-20261029/main",
+    "files": 70,
+    "changesFromCurrentMain": 5,
+    "legacyNormalizations": 29,
+    "guardChecks": 228,
+    "currentPublicAndHistoricalChecks": 2627,
+    "actualLibraryChecks": 2667,
+    "actualNew48HTTPChecks": 1394,
+    "actualNew48HTTPStatus": "passed in preflight3; final complete preflight still pending",
+    "mainAIQuestions": 48,
+    "candidateAIQuestions": 96,
+    "remaining": "final6-book context check and complete preflight binding,5-file local application, single final whole suite"
+  },
+  "latestGoalStatus": {
+    "status": "67 local teaching files remain integrated; AI70 successor isolated preflight; current75 math metadata locally applied; no publication",
+    "full9": {
+      "status": "failed",
+      "exitCode": 1,
+      "fixedInputs": 1715,
+      "frozenDrift": [],
+      "result": "tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/full9-result.json",
+      "logSha256": "adc1e9e4abdf8ca5aa1fb7dc0af622f374c38872f1ab346764985175c67b1aa4",
+      "failureKinds": [
+        "old basic UI proof drift, now original CLI passes with fresh84 proof",
+        "English historical source identity",
+        "renderer edit register missing approved toolbar line"
+      ]
+    },
+    "latestSuccessor": {
+      "folder": "tools/candidates/nonadmin-ai-reader-successor-20261029/main",
+      "files": 70,
+      "changesFromCurrentMain": 5,
+      "legacyNormalizations": 29,
+      "guardChecks": 228,
+      "currentPublicAndHistoricalChecks": 2627,
+      "actualLibraryChecks": 2667,
+      "actualNew48HTTPChecks": 1394,
+      "actualNew48HTTPStatus": "passed in preflight3; final complete preflight still pending",
+      "mainAIQuestions": 48,
+      "candidateAIQuestions": 96,
+      "remaining": "final6-book context check and complete preflight binding,5-file local application, single final whole suite"
+    },
+    "mathLedgerApplied": "tools/candidates/math-current-reader-20261029/ledger-applied.json",
+    "mathMovies": 75,
+    "mathPlays": 300,
+    "Claude19Unchanged": true,
+    "observedAtUTC": "2026-10-29T08:50:29.639523+00:00"
+  }
+}

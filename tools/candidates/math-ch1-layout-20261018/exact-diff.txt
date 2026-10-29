@@ -1,0 +1,268 @@
+--- M1-C1-S2-D07 before
++++ M1-C1-S2-D07 after
+@@ -6,16 +6,25 @@
+ <text x="90" y="113" font-size="48" font-weight="700">(−3)² と −3² のちがい</text>
+ <rect x="65" y="205" width="710" height="555" rx="25" fill="white"/>
+ <rect x="825" y="205" width="710" height="555" rx="25" fill="white"/>
+-<text x="420" y="330" font-size="64" text-anchor="middle">(−3)²</text>
+-<rect x="317" y="267" width="156" height="82" rx="14" fill="none" stroke="#1f5fa8" stroke-width="5"/>
++<text x="420" y="330" font-size="64" text-anchor="middle">
++<tspan>(−3)</tspan>
++<tspan dx="24">²</tspan>
++</text>
++<rect x="320.587" y="264.304" width="149.608" height="85.872" rx="14" fill="none" stroke="#1f5fa8" stroke-width="5"/>
+ <path d="M420 390V455l-17 -20M420 455l17 -20" stroke="#1f5fa8" stroke-width="6" fill="none"/>
+ <text x="420" y="552" font-size="51" text-anchor="middle">(−3)×(−3)</text>
+-<rect x="262" y="491" width="318" height="80" rx="15" fill="none" stroke="#1f5fa8" stroke-width="5"/>
+-<text x="1180" y="330" font-size="64" text-anchor="middle">−3²</text>
+-<rect x="1160" y="267" width="102" height="82" rx="14" fill="none" stroke="#397052" stroke-width="5" stroke-dasharray="12 8"/>
++<rect x="289.994" y="497.696" width="260.012" height="72.413" rx="15" fill="none" stroke="#1f5fa8" stroke-width="5"/>
++<text x="1180" y="330" font-size="64" text-anchor="middle">
++<tspan>−</tspan>
++<tspan dx="24">3²</tspan>
++</text>
++<rect x="1169.362" y="264.304" width="87.267" height="83.291" rx="14" fill="none" stroke="#397052" stroke-width="5" stroke-dasharray="12 8"/>
+ <path d="M1180 390V455l-17 -20M1180 455l17 -20" stroke="#397052" stroke-width="6" fill="none"/>
+-<text x="1180" y="552" font-size="51" text-anchor="middle">−(3×3)</text>
+-<rect x="1114" y="491" width="205" height="80" rx="15" fill="none" stroke="#397052" stroke-width="5" stroke-dasharray="12 8"/>
++<text x="1180" y="552" font-size="51" text-anchor="middle">
++<tspan>−</tspan>
++<tspan dx="24">(3×3)</tspan>
++</text>
++<rect x="1130.339" y="497.696" width="156.788" height="72.413" rx="15" fill="none" stroke="#397052" stroke-width="5" stroke-dasharray="12 8"/>
+ <text x="420" y="680" font-size="40" text-anchor="middle">負の数全体を、2回かける</text>
+ <text x="1180" y="680" font-size="40" text-anchor="middle">3の2乗に、−をつける</text>
+ <text x="800" y="850" font-size="42" text-anchor="middle">かっこが囲む範囲を、先に確かめよう。</text>
+--- M1-C1-S2-E02 before
++++ M1-C1-S2-E02 after
+@@ -7,11 +7,11 @@
+ <text x="800" y="250" font-size="50" text-anchor="middle">10−{6−(−2)}×2</text>
+ <rect x="400" y="340" width="745" height="310" rx="24" fill="white" stroke="#1f5fa8" stroke-width="6"/>
+ <text x="525" y="530" font-size="60" text-anchor="middle">6−</text>
+-<rect x="640" y="405" width="400" height="180" rx="20" fill="#edf5ef" stroke="#397052" stroke-width="5" stroke-dasharray="14 8"/>
++<rect x="640" y="425" width="400" height="180" rx="20" fill="#edf5ef" stroke="#397052" stroke-width="5" stroke-dasharray="14 8"/>
+ <text x="840" y="518" font-size="60" text-anchor="middle">−2</text>
+ <text x="260" y="530" font-size="60" text-anchor="middle">10−</text>
+ <text x="1280" y="530" font-size="60" text-anchor="middle">×2</text>
+-<text x="840" y="373" font-size="48" text-anchor="middle">① ( )</text>
++<text x="840" y="400" font-size="48" text-anchor="middle">① ( )</text>
+ <text x="460" y="321" font-size="48" text-anchor="middle">② { }</text>
+ <text x="800" y="758" font-size="42" text-anchor="middle">① 内側の( ) → ② 外側の{ }</text>
+ <text x="800" y="853" font-size="40" text-anchor="middle">内側の箱から、中身を確かめていこう。</text>
+--- M1-C1-S3-DMAP before
++++ M1-C1-S3-DMAP after
+@@ -11,7 +11,7 @@
+ <rect x="90" y="700" width="1410" height="100" rx="20" fill="white" stroke="#386a9a" stroke-width="4"/>
+ <text x="795.0" y="765" text-anchor="middle">④ 平均＝基準＋ちがいの平均</text>
+ <path d="M560 270H655l-20 -14m20 14l-20 14M1090 330V445l-14 -20m14 20l14 -20M1090 570V680l-14 -20m14 20l14 -20" fill="none" stroke="#386a9a" stroke-width="6"/>
+-<text x="1090" y="392" text-anchor="middle">＋と−を合わせる</text>
++<text x="1030" y="392" text-anchor="end">＋と−を合わせる</text>
+ <text x="485" y="630" text-anchor="middle">合計を、そのままたさない</text>
+ </g>
+ </svg>--- M1-C1-S1-M01 before
++++ M1-C1-S1-M01 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">0 を正の数に入れる</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">0 を正の数に入れる</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">0 は正でも負でもない</text>
+--- M1-C1-S1-M02 before
++++ M1-C1-S1-M02 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">目盛りを全部1と読む</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">目盛りを全部1と読む</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">先に1目盛りの</text>
+--- M1-C1-S1-M03 before
++++ M1-C1-S1-M03 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">どちらを「+」にしたか</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">書かない</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">どちらを「+」にしたか</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">書かない</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">最初に決めて</text>
+--- M1-C1-S1-M04 before
++++ M1-C1-S1-M04 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">−5 の絶対値を</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">−5 とする</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">−5 の絶対値を</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">−5 とする</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">絶対値はきょりなので</text>
+--- M1-C1-S1-M05 before
++++ M1-C1-S1-M05 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">−8 の 8 が大きいから、</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">−8 &gt; −2</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">−8 の 8 が大きいから、</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">−8 &gt; −2</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">負の数は、絶対値が</text>
+--- M1-C1-S1-M06 before
++++ M1-C1-S1-M06 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">「−3大きい」で</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">右へ進む</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">「−3大きい」で</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">右へ進む</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">「−3大きい」は</text>
+--- M1-C1-S2-M01 before
++++ M1-C1-S2-M01 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">(+13)+(−21)＝+8</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">(+13)+(−21)＝+8</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">符号は絶対値の大きい</text>
+--- M1-C1-S2-M02 before
++++ M1-C1-S2-M02 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">(−9)−(−14)＝−23</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">(−9)−(−14)＝−23</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">ひく数の符号も変える。</text>
+--- M1-C1-S2-M03 before
++++ M1-C1-S2-M03 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">−(−9) を −9 のまま計算</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">−(−9) を −9 のまま計算</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">+9 に直してから</text>
+--- M1-C1-S2-M04 before
++++ M1-C1-S2-M04 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">(−6)×(−13)＝−78</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">(−6)×(−13)＝−78</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">同じ符号は +</text>
+--- M1-C1-S2-M07 before
++++ M1-C1-S2-M07 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">−3² ＝ 9</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">−3² ＝ 9</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">− は 3² の外。</text>
+--- M1-C1-S2-M08 before
++++ M1-C1-S2-M08 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">(5/6−3/4)×(−24) で、</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">5/6 にだけかける</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">(5/6−3/4)×(−24) で、</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">5/6 にだけかける</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">かっこの中のすべての項</text>
+--- M1-C1-S2-M09 before
++++ M1-C1-S2-M09 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">0 を自然数の集合に入れる</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">0 を自然数の集合に入れる</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">0 は整数の集合には入るが、</text>
+--- M1-C1-S2-M10 before
++++ M1-C1-S2-M10 after
+@@ -7,8 +7,8 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">1 を素数に入れる</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">1 を素数に入れる</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">素数は 2 から</text>
+--- M1-C1-S3-M01 before
++++ M1-C1-S3-M01 after
+@@ -7,9 +7,9 @@
+ <rect x="825" y="155" width="710" height="625" rx="26" fill="white" stroke="#397052" stroke-width="6"/>
+ <text x="420" y="265" font-size="65" fill="#ac4e41" text-anchor="middle">✗</text>
+ <text x="1180" y="265" font-size="65" fill="#397052" text-anchor="middle">○</text>
+-<text x="420" y="375" text-anchor="middle" font-size="40">ちがいの合計を、</text>
+-<text x="420" y="450" text-anchor="middle" font-size="40">そのまま仮平均にたす</text>
+-<ellipse cx="420" cy="422" rx="295" ry="113" stroke="#ac4e41" stroke-width="5" fill="none"/>
++<text x="420" y="400" text-anchor="middle" font-size="40">ちがいの合計を、</text>
++<text x="420" y="475" text-anchor="middle" font-size="40">そのまま仮平均にたす</text>
++<ellipse cx="420" cy="422" rx="315" ry="125" stroke="#ac4e41" stroke-width="5" fill="none"/>
+ <text x="420" y="595" font-size="44" fill="#ac4e41" text-anchor="middle">ここ！</text>
+ <rect x="870" y="318" width="620" height="100" rx="16" fill="#edf5ef"/>
+ <text x="1180" y="382" font-size="40" text-anchor="middle">合計を 個数でわってから</text>

@@ -1,0 +1,338 @@
++++ cf-worker/src/textbook-ink.mjs
+
++import {textbookAccessOn,textbookAccess,textbookWriteGuard} from './textbook-access.mjs';
++ if(!textbookAccessOn(env))return reply({error:'not_found'},404);
++   const status=await textbookAccess(env,uid,now()),prefix='textbook-ink:'+uid+':'+book+':';
++  const status=await textbookAccess(env,uid,now());
++  // The final write pins the actual owner and textbook release/contract/approval snapshot.
++  const writeGuard=textbookWriteGuard(status,{uid,owner,feature:'annotations',now:now()});
++   ?await db.prepare('INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,0 WHERE '+writeGuard.sql+' AND (SELECT COUNT(*) FROM auth_kv WHERE k>=? AND k<?)<? ON CONFLICT(k) DO NOTHING RETURNING v').bind(key,JSON.stringify(item),...writeGuard.values,prefix,prefix+'\uffff',capacity).first('v')
++   :await db.prepare("UPDATE auth_kv SET v=? WHERE k=? AND CAST(json_extract(v,'$.revision') AS INTEGER)=? AND "+writeGuard.sql+' RETURNING v').bind(JSON.stringify(item),key,b.revision,...writeGuard.values).first('v');
++  const latest=await textbookAccess(env,uid,now());
++  if(latest.accessVersion!==status.accessVersion||!latest.features.annotations)return reply({error:'plan_changed'},409);
++ }catch(error){if(['release_changed','plan_changed'].includes(error?.message))return reply({error:'plan_changed'},409);return reply({error:request.method==='GET'?'load_failed':'save_failed'},503);}
++++ cf-worker/src/plans.mjs
+
++ if(!row)return {plan:'free',state:'none',row:null,rawContract:raw};
++ if(now<row.start)return {plan:'free',state:'before',row,rawContract:raw};
++ return {plan,state,row,rawContract:raw};
++// Read-only snapshot for textbook access; original date/transition logic is shared.
++export {current as readPlanContractSnapshot, REASONS as PLAN_CHANGE_REASONS};
++++ .claude/verify/run.sh
+
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-contexts.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-reader.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-book-signature.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-context-api.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-three-account-credits.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-access.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-access-ink.mjs" || fail=1
++node "$PROJECT_DIR/tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs" || fail=1
++++ tools/candidates/textbook-final-20261023/handwriting-20261025/verify-api.mjs
+
++function interceptWrite(action){let fired=false;return {get fired(){return fired;},prepare(sql){let statement=db.prepare(sql),args=[];const wrap=()=>({bind(...values){args=values;statement=statement.bind(...values);return wrap();},async first(col){if(!fired&&sql.includes('RETURNING v')&&sql.includes('EXISTS')&&args.some(v=>typeof v==='string'&&v.startsWith('textbook-ink:'))){fired=true;action();}return statement.first(col);},all(){return statement.all();},run(){return statement.run();},_run(){return statement._run();}});return wrap();},batch:s=>db.batch(s)};}
++ eq((await post('u1',{...body,revision:1,quote:'not saved'}, {AUTH_DB:revoke})).status,409);ok(revoke.fired);eq(db.get(firstKey).v,unchanged);
++ eq((await post('u1',{...body,revision:1,quote:'not saved'}, {AUTH_DB:reduce})).status,409);ok(reduce.fired);eq(db.get(firstKey).v,unchanged);
++++ cf-worker/src/textbook-access.mjs
++// Textbook-only release rights. Never upgrades a normal plan or changes learning records.
++import {PLANS,PREVIEW_PROFILES,SUBSCRIPTION_TERMS,PLAN_CHANGE_REASONS,planStatus,planFeatures,readPlanContractSnapshot,subscriptionOn} from './plans.mjs';
++import {CREDIT_LIMITS} from './subscription-credits.mjs';
++const POLICY='textbook-release-policy',DAY=86400000,KEY=Symbol('server-textbook-access');
++const sameKeys=(v,s)=>!!v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).sort().join(',')===s;
++const integer=x=>Number.isSafeInteger(x)&&x>=0;
++const error=code=>{throw Error(code);};
++const member=(env,uid)=>typeof uid==='string'&&(/^(?:u1|u2|u4)$/.test(uid)||(env?.PREVIEW_PLAN_ACCOUNTS==='1'&&Object.hasOwn(PREVIEW_PROFILES,uid)));
++const configured=env=>env?.TEXTBOOK_RELEASE_STAGE!==undefined||env?.TEXTBOOK_RELEASE_EPOCH!==undefined;
++export const textbookAccessOn=env=>configured(env)||subscriptionOn(env);
++function configuration(env,now){
++ if(!configured(env))return null;
++ const stage=env.TEXTBOOK_RELEASE_STAGE,raw=env.TEXTBOOK_RELEASE_EPOCH;
++ if(!['early','v3'].includes(stage)||typeof raw!=='string'||!/^\d{13}$/.test(raw))error('book_access_unavailable');
++ const epoch=Number(raw);if(!integer(epoch)||epoch<946684800000||epoch>now)error('book_access_unavailable');
++ return {version:1,stage,epoch};
++}
++function parsePolicy(row){
++ if(!row)return null;
++ let v;try{v=JSON.parse(row.v);}catch(_){error('book_access_unavailable');}
++ if(row.expires_at!==0||!sameKeys(v,'epoch,stage,version')||v.version!==1||!['early','v3'].includes(v.stage)||!integer(v.epoch)||v.epoch<946684800000)error('book_access_unavailable');
++ return {...v,raw:row.v};
++}
++const policyRow=db=>db.prepare('SELECT v,expires_at FROM auth_kv WHERE k=?').bind(POLICY).first();
++async function release(db,cfg){
++ const previous=parsePolicy(await policyRow(db));
++ if(!cfg){if(previous)error('release_changed');return null;}
++ if(previous){
++  if(previous.epoch>cfg.epoch||(previous.epoch===cfg.epoch&&previous.stage!==cfg.stage)||(previous.stage==='v3'&&cfg.stage==='early'))error('release_changed');
++  if(previous.epoch===cfg.epoch)return previous;
++ }
++ const raw=JSON.stringify(cfg),write=previous
++  ?db.prepare('UPDATE auth_kv SET v=? WHERE k=? AND v=? AND expires_at=0').bind(raw,POLICY,previous.raw)
++  :db.prepare('INSERT INTO auth_kv(k,v,expires_at) VALUES(?,?,0) ON CONFLICT(k) DO NOTHING').bind(POLICY,raw);
++ // Version change and its public audit record commit together. A stale Worker cannot roll back rights.
++ await db.batch([write,db.prepare('INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,0 WHERE EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND v=? AND expires_at=0) ON CONFLICT(k) DO NOTHING').bind('textbook-release-log:'+cfg.epoch,raw,POLICY,raw)]);
++ const current=parsePolicy(await policyRow(db));
++ if(!current||current.epoch!==cfg.epoch||current.stage!==cfg.stage)error('release_changed');
++ return current;
++}
++function deadline(c){
++ if(!c.row)return null;
++ let until=null;
++ if(c.row.end!==null){until=c.row.end+SUBSCRIPTION_TERMS.graceDays*DAY;if(!integer(until))error('book_access_unavailable');}
++ if(c.row.next){
++  const n=c.row.next;
++  if(!Object.hasOwn(PLANS,n.plan)||!integer(n.from)||!integer(n.start)||!integer(n.end)||n.end<=n.start)error('book_access_unavailable');
++  until=Math.min(until??Number.MAX_SAFE_INTEGER,n.from);
++ }
++ return until;
++}
++async function confirmation(db,uid,c,epoch,now){
++ if(c.plan==='free'||!c.row||!['active','grace'].includes(c.state))return null;
++ const lower='plan-log:'+String(epoch).padStart(15,'0')+':';
++ const found=await db.prepare("SELECT k,v,expires_at FROM auth_kv WHERE k>=? AND k<? AND json_valid(v) AND json_extract(v,'$.uid')=? AND json_extract(v,'$.to')=? AND json_extract(v,'$.start')=? AND json_extract(v,'$.end') IS ? ORDER BY k DESC LIMIT 1").bind(lower,'plan-log:\uffff',uid,c.plan,c.row.start,c.row.end).first();
++ if(!found)return null;
++ let log;try{log=JSON.parse(found.v);}catch(_){error('book_access_unavailable');}
++ if(found.expires_at!==0||!sameKeys(log,'applies,at,by,end,from,reason,start,to,uid')||log.by!=='admin（なお）'||log.uid!==uid||!Object.hasOwn(PLANS,log.from)||log.to!==c.plan||log.start!==c.row.start||log.end!==c.row.end||!PLAN_CHANGE_REASONS.includes(log.reason)||!integer(log.at)||log.at<epoch||log.at>now||!integer(log.applies)||log.applies<log.at||!new RegExp('^plan-log:'+String(log.at).padStart(15,'0')+':[a-f0-9]{12}$').test(found.k))error('book_access_unavailable');
++ return log.applies<=now?found:null;
++}
++class AccessSnapshot {
++ #guard;
++ constructor(key,fields,guard){if(key!==KEY)error('invalid_entitlement');Object.assign(this,fields);this.#guard=guard;Object.freeze(this);}
++ sql(key,{uid,owner,feature,now}){
++  if(key!==KEY||uid!==this.#guard.uid||typeof owner!=='string'||!owner||!integer(now))error('invalid_entitlement');
++  if(!['annotations','chat'].includes(feature)||!this.enabled||!this.features[feature])error('plan_required');
++  if(this.#guard.deadline!==null&&now>=this.#guard.deadline)error('plan_changed');
++  const parts=['EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND v=? AND expires_at>?)'],values=['active-session:'+uid,owner,now];
++  for(const [key,value] of this.#guard.required){parts.push('EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND v=? AND expires_at=0)');values.push(key,value);}
++  for(const key of this.#guard.absent){parts.push('NOT EXISTS(SELECT 1 FROM auth_kv WHERE k=?)');values.push(key);}
++  if(this.#guard.deadline!==null){parts.push('?<?');values.push(now,this.#guard.deadline);}
++  return Object.freeze({sql:parts.join(' AND '),values:Object.freeze(values)});
++ }
++}
++async function snapshot(uid,{enabled,mode,epoch,plan,state,activation,dailyLimit},guard){
++ const f=planFeatures(plan),features=Object.freeze({annotations:enabled&&f.annotations,chat:enabled&&f.chat});
++ const material=JSON.stringify({uid,enabled,mode,epoch,plan,features,guard});
++ const accessVersion=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(material))),v=>v.toString(16).padStart(2,'0')).join('');
++ return new AccessSnapshot(KEY,{enabled,scope:'textbook',mode,epoch,plan,label:PLANS[plan].label,state,activation,features,dailyLimit,quotaMode:mode==='legacy'?'legacy':'textbook-daily-v1',accessVersion},{uid,...guard});
++}
++export async function textbookAccess(env,uid,now=Date.now()){
++ if(!member(env,uid)||!integer(now))error('invalid_member');
++ if(!textbookAccessOn(env))return snapshot(uid,{enabled:false,mode:'off',epoch:null,plan:'free',state:'off',activation:'off',dailyLimit:0},{required:[],absent:[],deadline:null});
++ if(!env.AUTH_DB)error('book_access_unavailable');
++ try{
++  const cfg=configuration(env,now),db=env.AUTH_DB,policy=await release(db,cfg);
++  if(!cfg){
++   const s=await planStatus(env,uid,now),c=await readPlanContractSnapshot(db,uid,now);
++   if(!s.provisional||s.plan!==c.plan||s.revision!==(c.row?.revision||0))error('plan_changed');
++   const required=c.rawContract===null?[]:[['plan:'+uid,c.rawContract]],absent=[POLICY];if(c.rawContract===null)absent.push('plan:'+uid);
++   return snapshot(uid,{enabled:true,mode:'legacy',epoch:null,plan:s.plan,state:s.state,activation:'contract',dailyLimit:s.dailyLimit},{required,absent,deadline:deadline(c)});
++  }
++  const required=[[POLICY,policy.raw]],profile=Object.hasOwn(PREVIEW_PROFILES,uid);let plan='free',state='none',activation='initial-free',until=null;
++  if(profile){plan=PREVIEW_PROFILES[uid];state='preview';activation='profile';}
++  else if(cfg.stage==='early'){plan='unlimit';state='early';activation='early-access';}
++  else{
++   const c=await readPlanContractSnapshot(db,uid,now);
++   if(c.rawContract!==null&&!c.row)error('book_access_unavailable');
++   const log=await confirmation(db,uid,c,cfg.epoch,now);
++   if(log){plan=c.plan;state=c.state;activation='operator-confirmed';required.push(['plan:'+uid,c.rawContract],[log.k,log.v]);until=deadline(c);}
++   else if(c.plan!=='free')state='confirmation-needed';
++  }
++  return snapshot(uid,{enabled:true,mode:cfg.stage,epoch:cfg.epoch,plan,state,activation,dailyLimit:CREDIT_LIMITS[plan]},{required,absent:[],deadline:until});
++ }catch(e){if(['release_changed','plan_changed','book_access_unavailable'].includes(e?.message))throw e;error('book_access_unavailable');}
++}
++export function textbookWriteGuard(access,options){if(!(access instanceof AccessSnapshot))error('invalid_entitlement');return access.sql(KEY,options);}
++++ cf-worker/src/textbook-ai-quota.mjs
++// Internal textbook chat quota. Independent of the global subscription preview switch.
++// A reservation is retained when the provider outcome is unknown; only a known safe failure refunds.
++import {textbookWriteGuard} from './textbook-access.mjs';
++const DAY=86400000,JST=9*3600000,RETENTION=400*DAY;
++const fail=()=>{throw Error('invalid_textbook_quota');};
++const sha=x=>typeof x==='string'&&/^[a-f0-9]{64}$/.test(x);
++function identity(access,uid,owner,now){
++ const guard=textbookWriteGuard(access,{uid,owner,feature:'chat',now});
++ if(!['early','v3'].includes(access.mode)||!Number.isSafeInteger(access.epoch)||!Number.isSafeInteger(access.dailyLimit)||access.dailyLimit<1||access.dailyLimit>5000)fail();
++ const day=Math.floor((now+JST)/DAY),prefix='textbook-ai-quota:'+uid+':'+access.epoch+':';
++ return {guard,day,key:prefix+day,limit:access.dailyLimit,resetAt:(day+1)*DAY-JST,prefix};
++}
++function ledger(raw){
++ if(!raw)return {version:1,used:0};
++ let row;try{row=JSON.parse(raw);}catch{fail();}
++ if(row.version!==1||!Number.isSafeInteger(row.used)||row.used<0)fail();
++ return row;
++}
++function receiptRow(raw){
++ let row;try{row=JSON.parse(raw);}catch{fail();}
++ if(!row||row.version!==1||!['charged','refunded'].includes(row.state)||!sha(row.fingerprint)||typeof row.token!=='string'||!/^[a-f0-9-]{36}$/.test(row.token)||!Number.isSafeInteger(row.day)||row.day<0||typeof row.key!=='string')fail();
++ return row;
++}
++export async function textbookChatQuota(db,access,{uid,owner,now}){
++ const id=identity(access,uid,owner,now),row=ledger(await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(id.key).first('v'));
++ return {dailyLimit:id.limit,dailyUsed:row.used,dailyLeft:Math.max(0,id.limit-row.used),resetAt:id.resetAt};
++}
++export async function reserveTextbookChat(db,access,{uid,owner,now,requestId,fingerprint}){
++ const id=identity(access,uid,owner,now);
++ if(typeof requestId!=='string'||!/^[a-zA-Z0-9_-]{8,64}$/.test(requestId)||!sha(fingerprint))fail();
++ const receiptKey=id.prefix+'request:'+requestId;
++ const prior=await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(receiptKey).first('v');
++ if(prior){const row=receiptRow(prior);return row.fingerprint!==fingerprint?{error:'id_conflict'}:{error:row.state==='charged'?'request_outcome_unknown':'request_refunded'};}
++ ledger(await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(id.key).first('v'));
++ const token=crypto.randomUUID(),expires=id.resetAt+RETENTION;
++ const value=JSON.stringify({version:1,state:'charged',token,fingerprint,key:id.key,day:id.day});
++ const guard=' AND '+id.guard.sql+' AND NOT EXISTS(SELECT 1 FROM auth_kv WHERE k=?)';
++ const args=[...id.guard.values,receiptKey];
++ const results=await db.batch([
++  db.prepare("INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,? WHERE 1<=?"+guard+" ON CONFLICT(k) DO UPDATE SET v=json_object('version',1,'used',CAST(json_extract(auth_kv.v,'$.used') AS INTEGER)+1,'lastCharge',?) WHERE json_valid(auth_kv.v) AND json_extract(auth_kv.v,'$.version')=1 AND json_type(auth_kv.v,'$.used')='integer' AND json_extract(auth_kv.v,'$.used')>=0 AND json_extract(auth_kv.v,'$.used')<?"+guard).bind(id.key,JSON.stringify({version:1,used:1,lastCharge:token}),expires,id.limit,...args,token,id.limit,...args),
++  db.prepare("INSERT INTO auth_kv(k,v,expires_at) SELECT ?,?,? WHERE EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND json_extract(v,'$.lastCharge')=?) ON CONFLICT(k) DO NOTHING").bind(receiptKey,value,expires,id.key,token)
++ ]);
++ if(results[0]?.meta?.changes===1&&results[1]?.meta?.changes===1)return {receipt:{receiptKey,token}};
++ const raced=await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(receiptKey).first('v');
++ if(raced){const row=receiptRow(raced);return {error:row.fingerprint!==fingerprint?'id_conflict':row.state==='charged'?'request_outcome_unknown':'request_refunded'};}
++ return {error:'quota_or_access_changed'};
++}
++export async function refundTextbookChat(db,uid,receipt){
++ if(typeof uid!=='string'||!/^(?:u[124]|p_(?:free|mini|standard|pro|unlimit))$/.test(uid)||!receipt||typeof receipt.receiptKey!=='string'||!new RegExp('^textbook-ai-quota:'+uid+':\\d{13}:request:[a-zA-Z0-9_-]{8,64}$').test(receipt.receiptKey)||typeof receipt.token!=='string'||!/^[a-f0-9-]{36}$/.test(receipt.token))fail();
++ const raw=await db.prepare('SELECT v FROM auth_kv WHERE k=?').bind(receipt.receiptKey).first('v');if(!raw)return false;
++ const row=receiptRow(raw),prefix=receipt.receiptKey.slice(0,receipt.receiptKey.indexOf(':request:'));
++ if(row.token!==receipt.token||row.key!==prefix+':'+row.day)fail();
++ if(row.state==='refunded')return false;
++ const next=JSON.stringify({...row,state:'refunded'});
++ const result=await db.batch([
++  db.prepare("UPDATE auth_kv SET v=json_set(v,'$.used',CAST(json_extract(v,'$.used') AS INTEGER)-1,'$.lastRefund',?) WHERE k=? AND json_valid(v) AND json_extract(v,'$.version')=1 AND json_type(v,'$.used')='integer' AND json_extract(v,'$.used')>0 AND EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND v=?)").bind(row.token,row.key,receipt.receiptKey,raw),
++  db.prepare("UPDATE auth_kv SET v=? WHERE k=? AND v=? AND EXISTS(SELECT 1 FROM auth_kv WHERE k=? AND json_extract(v,'$.lastRefund')=?)").bind(next,receipt.receiptKey,raw,row.key,row.token)
++ ]);
++ return result[0]?.meta?.changes===1&&result[1]?.meta?.changes===1;
++}
++++ tools/candidates/textbook-ai-20261025/verify-access-ink.mjs
++import assert from 'node:assert/strict';
++import {createRequire} from 'node:module';
++import {writeFile} from 'node:fs/promises';
++import {textbookAccess} from '../../../cf-worker/src/textbook-access.mjs';
++import {textbookInkRoute} from '../../../cf-worker/src/textbook-ink.mjs';
++const require=createRequire(import.meta.url),{D1SQLite}=require('../../../.claude/verify/d1-sqlite.js');
++const time=1800000000000,epoch=time-10000,origin='https://fixture.test',databases=[];
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++const make=()=>{const db=new D1SQLite();databases.push(db);return db;};
++const config=(db,stage='early',at=epoch)=>({AUTH_DB:db,APP_ORIGIN:origin,SUBSCRIPTION_PREVIEW:'0',TEXTBOOK_RELEASE_STAGE:stage,TEXTBOOK_RELEASE_EPOCH:String(at)});
++const anchor='a'.repeat(64),key=uid=>'textbook-ink:'+uid+':math1:'+anchor;
++const draft=(revision=0)=>({book:'math1',anchor,quote:'Synthetic public textbook excerpt',revision,doc:{version:1,width:1000,height:700,background:null,strokes:[]}});
++const active=(db,uid)=>db.seed('active-session:'+uid,'fixture-owner-'+uid,time+86400000);
++async function call(env,uid,method='GET',body=draft()){
++ const request=new Request(origin+'/textbook-ink'+(method==='GET'?'?book=math1&anchor='+anchor:''),{method,headers:{Origin:origin,'Content-Type':'application/json'},...(method==='POST'?{body:JSON.stringify(body)}:{})});
++ const response=await textbookInkRoute(request,env,{uid},{owner:'fixture-owner-'+uid,now:()=>time});
++ ok(response.headers.get('Cache-Control')==='no-store','private response never cached');
++ return {status:response.status,body:await response.json()};
++}
++function beforeWrite(db,action){
++ let fired=false;
++ return {get fired(){return fired;},prepare(sql){let values=[];const prepared=db.prepare(sql);const wrap=statement=>({bind(...next){values=next;return wrap(statement.bind(...next));},async first(column){if(!fired&&sql.includes('RETURNING v')&&values.some(v=>typeof v==='string'&&v.startsWith('textbook-ink:'))){fired=true;await action();}return statement.first(column);},all:()=>statement.all(),run:()=>statement.run(),_run:()=>statement._run()});return wrap(prepared);},batch:statements=>db.batch(statements)};
++}
++const originalFetch=globalThis.fetch;globalThis.fetch=async()=>{throw Error('unexpected network');};
++try{
++ const db=make(),early=config(db),v3=config(db,'v3',epoch+1);
++ db.seed('synthetic-grades','keep grades unchanged',0);db.seed('synthetic-calendar','keep calendar unchanged',0);
++ for(const uid of ['u1','u2','u4']){
++  active(db,uid);const read=await call(early,uid);
++  ok(read.status===200&&read.body.writable&&read.body.item===null,'early own empty notebook writable: '+uid);
++  const saved=await call(early,uid,'POST');ok(saved.status===200&&saved.body.item.revision===1,'early actual SQL save: '+uid);
++  ok(!db.get('plan:'+uid),'book-only access never initializes normal subscription: '+uid);
++ }
++ const saved=new Map(['u1','u2','u4'].map(uid=>[uid,db.get(key(uid)).v]));
++ for(const uid of ['u1','u2','u4']){
++  const read=await call(v3,uid);ok(read.status===200&&!read.body.writable&&read.body.item.revision===1,'V3 Free preserves and reads own saved note: '+uid);
++  const denied=await call(v3,uid,'POST',draft(1));ok(denied.status===403&&denied.body.error==='plan_required','V3 unconfirmed write denied: '+uid);
++  ok(db.get(key(uid)).v===saved.get(uid),'denial preserves exact saved bytes: '+uid);
++ }
++ const stale=await call(early,'u4','POST',draft(1));ok(stale.status===409&&stale.body.error==='plan_changed','stale early worker cannot revive writes');
++ ok(db.get(key('u4')).v===saved.get('u4'),'stale release leaves note unchanged');
++ const contract={plan:'pro',start:time-86400000,end:time+30*86400000,next:null,revision:2,initializedAt:time-86400000};
++ db.seed('plan:u4',JSON.stringify(contract),0);
++ const at=time-1000,entry={by:'admin（なお）',uid:'u4',from:'free',to:'pro',start:contract.start,end:contract.end,at,reason:'支払い確認（なお）',applies:at};
++ db.seed('plan-log:'+String(at).padStart(15,'0')+':aabbccddeeff',JSON.stringify(entry),0);
++ const confirmed=await call(v3,'u4');ok(confirmed.status===200&&confirmed.body.writable,'post-cutover operator approval unlocks actual route');
++ const updated=await call(v3,'u4','POST',draft(1));ok(updated.status===200&&updated.body.item.revision===2,'approved own note updates');
++ ok(db.get('plan:u4').v===JSON.stringify(contract),'handwriting preserves exact contract bytes');
++ const other=await call(v3,'u2');ok(other.body.item.revision===1&&!other.body.writable,'approval does not cross to another account');
++ ok(!db.keys().some(k=>/^(?:credits:|plan-credits|ai-|openai|trial:)/.test(k)),'handwriting never consumes provider/trial/AI credits');
++ ok(db.get('synthetic-grades').v==='keep grades unchanged'&&db.get('synthetic-calendar').v==='keep calendar unchanged','unrelated learning data preserved');
++ const race=make(),re=config(race);active(race,'u4');await call(re,'u4','POST');const before=race.get(key('u4')).v;
++ const crossing=beforeWrite(race,()=>textbookAccess(config(race,'v3',epoch+1),'u4',time));
++ const conflict=await call({...re,AUTH_DB:crossing},'u4','POST',draft(1));
++ ok(crossing.fired,'cutover race actually fires immediately before guarded SQL write');
++ ok(conflict.status===409&&conflict.body.error==='plan_changed','cutover wins in-flight old save');
++ ok(race.get(key('u4')).v===before,'in-flight denial preserves previous note bytes');
++ const invalid=await call({...v3,TEXTBOOK_RELEASE_STAGE:'invalid'},'u4','POST',draft(2));ok(invalid.status===503,'invalid release fails closed');
++ ok((await call(v3,'u3')).status===403,'unknown account denied');
++ ok((await call(v3,'p_pro')).status===403,'preview account requires explicit preview flag');
++ const result={status:'passed',checks,scope:'Actual textbookInkRoute and real in-memory SQLite: three-account early access with global subscription off, V3 read preservation/write denial, explicit operator approval, stale and in-flight cutover, ownership, unrelated records and no provider calls. Synthetic data only.'};
++ await writeFile(new URL('./access-ink-result.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log('Textbook release/handwriting integration: '+checks+' checks passed');
++}finally{globalThis.fetch=originalFetch;for(const db of databases)db.close();}
++++ tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs
++import assert from 'node:assert/strict';
++import {createRequire} from 'node:module';
++import {writeFile} from 'node:fs/promises';
++import {textbookAccess} from '../../../cf-worker/src/textbook-access.mjs';
++import {textbookChatQuota,reserveTextbookChat,refundTextbookChat} from '../../../cf-worker/src/textbook-ai-quota.mjs';
++const require=createRequire(import.meta.url),{D1SQLite}=require('../../../.claude/verify/d1-sqlite.js');
++const now=1800000000000,epoch=now-10000,dbs=[];
++let checks=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};
++const make=()=>{const db=new D1SQLite();dbs.push(db);return db;};
++const env=db=>({AUTH_DB:db,SUBSCRIPTION_PREVIEW:'0',PREVIEW_PLAN_ACCOUNTS:'1',TEXTBOOK_RELEASE_STAGE:'early',TEXTBOOK_RELEASE_EPOCH:String(epoch)});
++const options=(uid='u4',requestId='request_0001',time=now)=>({uid,owner:'fixture-owner-'+uid,now:time,requestId,fingerprint:'a'.repeat(64)});
++const active=(db,uid)=>db.seed('active-session:'+uid,'fixture-owner-'+uid,now+3*86400000);
++async function rejected(fn){await assert.rejects(fn,/invalid_textbook_quota|invalid_entitlement|plan_required/);checks++;}
++try{
++ const db=make(),e=env(db);
++ for(const uid of ['u1','u2','u4']){
++  active(db,uid);const access=await textbookAccess(e,uid,now),o=options(uid);
++  ok((await textbookChatQuota(db,access,o)).dailyLeft===5000,'full early book quota even when global subscription disabled: '+uid);
++  const r=await reserveTextbookChat(db,access,o);ok(!!r.receipt,'actual atomic reserve: '+uid);
++  ok((await textbookChatQuota(db,access,o)).dailyUsed===1,'one textbook chat charged: '+uid);
++  ok((await reserveTextbookChat(db,access,o)).error==='request_outcome_unknown','same request cannot dispatch twice');
++  ok((await reserveTextbookChat(db,access,{...o,fingerprint:'b'.repeat(64)})).error==='id_conflict','same id different content rejected');
++  await rejected(()=>refundTextbookChat(db,uid==='u1'?'u2':'u1',r.receipt));
++  ok(await refundTextbookChat(db,uid,r.receipt),'known safe failure refunded');
++  ok(!await refundTextbookChat(db,uid,r.receipt),'refund only once');
++  ok((await textbookChatQuota(db,access,o)).dailyUsed===0,'refund restores own day');
++  ok((await reserveTextbookChat(db,access,o)).error==='request_refunded','refunded id remains terminal');
++  ok(!db.get('plan:'+uid),'book charges never initialize normal plans');
++ }
++ for(const uid of ['p_free','p_mini','p_standard']){
++  active(db,uid);const denied=await textbookAccess(e,uid,now);
++  await rejected(()=>reserveTextbookChat(db,denied,options(uid)));
++ }
++ const mini=make(),me=env(mini),uid='p_pro';active(mini,uid);const ma=await textbookAccess(me,uid,now);
++ const results=await Promise.all(Array.from({length:505},(_,i)=>reserveTextbookChat(mini,ma,options(uid,'parallel_'+String(i).padStart(4,'0')))));
++ ok(results.filter(r=>r.receipt).length===500,'parallel requests enforce exact Pro 500/day ceiling');
++ ok((await textbookChatQuota(mini,ma,options(uid))).dailyUsed===500,'quota ledger matches all successful reservations');
++ const reset=(await textbookChatQuota(mini,ma,options(uid))).resetAt;
++ ok(reset%86400000===15*3600000,'daily reset is midnight Japan time');
++ const tomorrow=await textbookAccess(me,uid,reset);
++ ok((await textbookChatQuota(mini,tomorrow,options(uid,'next_day_0001',reset))).dailyUsed===0,'next Japan day starts independently');
++ const old=results.find(r=>r.receipt).receipt;
++ ok(await refundTextbookChat(mini,uid,old),'late refund addresses original day');
++ ok((await textbookChatQuota(mini,tomorrow,options(uid,'next_day_0001',reset))).dailyUsed===0,'late refund does not decrease new day');
++ const retry=make(),re=env(retry);active(retry,'u4');const ra=await textbookAccess(re,'u4',now),ro=options();
++ const duplicate=await Promise.all(Array.from({length:5},()=>reserveTextbookChat(retry,ra,ro)));
++ ok(duplicate.filter(r=>r.receipt).length===1,'concurrent identical id reserves once');
++ ok((await textbookChatQuota(retry,ra,ro)).dailyUsed===1,'concurrent duplicate counts one');
++ const own=duplicate.find(r=>r.receipt).receipt;
++ await rejected(()=>refundTextbookChat(retry,'u4',{...own,token:crypto.randomUUID()}));
++ const refunds=await Promise.all(Array.from({length:5},()=>refundTextbookChat(retry,'u4',own)));
++ ok(refunds.filter(Boolean).length===1,'concurrent refunds restore exactly one call');
++ ok((await textbookChatQuota(retry,ra,ro)).dailyUsed===0,'concurrent refunds cannot make usage negative');
++ retry.seed('active-session:u4','rotated-owner',now+60000);
++ ok((await reserveTextbookChat(retry,ra,{...ro,requestId:'revoked_0001'})).error==='quota_or_access_changed','revoked owner rejected by final SQL');
++ active(retry,'u4');await textbookAccess({...re,TEXTBOOK_RELEASE_STAGE:'v3',TEXTBOOK_RELEASE_EPOCH:String(epoch+1)},'u4',now);
++ ok((await reserveTextbookChat(retry,ra,{...ro,requestId:'cutover_0001'})).error==='quota_or_access_changed','old early snapshot cannot charge after V3');
++ const rollback=make(),be=env(rollback);active(rollback,'u4');const ba=await textbookAccess(be,'u4',now);rollback.failBatchAt=1;
++ await assert.rejects(()=>reserveTextbookChat(rollback,ba,options()),/Synthetic transaction failure/);checks++;
++ ok(!rollback.keys().some(k=>k.startsWith('textbook-ai-quota:')),'receipt transaction failure rolls back charge');
++ rollback.failBatchAt=-1;const real=rollback.batch.bind(rollback);let lost=true;rollback.batch=async statements=>{const value=await real(statements);if(lost){lost=false;throw Error('synthetic lost response');}return value;};
++ await assert.rejects(()=>reserveTextbookChat(rollback,ba,options()),/synthetic lost response/);checks++;
++ ok((await reserveTextbookChat(rollback,ba,options())).error==='request_outcome_unknown','lost reply cannot reserve or dispatch again');
++ ok((await textbookChatQuota(rollback,ba,options())).dailyUsed===1,'unknown outcome retains charge');
++ const broken=make(),ce=env(broken);active(broken,'u4');const ca=await textbookAccess(ce,'u4',now),day=Math.floor((now+9*3600000)/86400000),k='textbook-ai-quota:u4:'+epoch+':'+day;
++ broken.seed(k,'broken quota',0);await rejected(()=>reserveTextbookChat(broken,ca,options()));ok(broken.get(k).v==='broken quota','corrupt quota never reset to free usage');
++ await rejected(()=>reserveTextbookChat(db,JSON.parse(JSON.stringify(ra)),options()));
++ const report={status:'passed',checks,scope:'Synthetic real SQLite: textbook chat quota with global subscriptions off, three users, exact Pro ceiling/concurrency, JST midnight, one-time own refund, stale release/session, corrupt records, rollback and unknown commit outcome. No provider or user data.'};
++ await writeFile(new URL('./chat-quota-result.json',import.meta.url),JSON.stringify(report,null,2)+'\n');console.log('Textbook chat quota: '+checks+' checks passed');
++}finally{for(const db of dbs)db.close();}

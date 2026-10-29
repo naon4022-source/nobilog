@@ -1,0 +1,18 @@
+Three-browser: three distinct contexts completed consent/approval/ready and server countdown via real route + SQLite + native DO streams.
+Three-browser: hard reload recovered the same server-authorized room with unchanged health even after its fixture-only local room hint was removed.
+Three-browser: hiding two members paused solo play; reconnecting one resumed two-player play; third rejoined without clearing progress.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('textarea')[22m
+
+    at /Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-three-browser.mjs:54:67
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-three-browser.mjs:51:16 {
+  log: [ "  - waiting for locator('textarea')" ],
+  name: 'TimeoutError'
+}
+
+Node.js v24.18.0

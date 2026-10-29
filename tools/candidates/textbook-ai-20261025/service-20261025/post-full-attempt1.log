@@ -1,0 +1,321 @@
+Souta dedicated key: 71 isolated auth checks passed; three users, legacy compatibility, duplicate/configuration rejection, one-use tickets, origin, Turnstile and attempt limits preserved.
+Souta public preservation: 70 checks passed; production baseline plus auth/version only.
+Souta registration: 63 checks passed; hidden inputs, fullwidth normalization, generated key, two-secret bulk only, CSRF/loopback/size guards, race/replay/unknown-result stop, no plaintext files or logs.
+Souta deployment: 24 checks passed; ordering, response loss, conditional rollback and proof guards; fake CLI/HTTP only.
+Google settings public preservation: 63 checks passed
+Google explicit entry: 43 isolated checks passed
+Google entry browser: 14 checks passed; synthetic only
+Google settings cancellation: 10 checks passed
+Google account management candidate: 57 isolated checks passed
+Google settings Worker: 30 isolated checks passed
+Google proof and OAuth races: 30 checks passed
+Google linking API: 56 checks passed in two fresh SQLite rounds; owner/state/identity races, cancel, failure, existing link and no learning-record changes; fake provider only
+Google settings candidate: 48 checks passed
+Settings flow passed u1 390
+Settings flow passed u1 1440
+Settings flow passed u2 390
+Settings flow passed u2 1440
+Settings flow passed u4 390
+Settings flow passed u4 1440
+Google settings full isolated flow: 72 checks passed
+Secure deploy wrapper: 20 checks passed; no real deployment
+Authentication repair: 80 checks passed; actual reset SQL, no old Google resurrection, correct Souta PIN/Google identity, Nao re-link, unrelated data and retry preservation; synthetic only
+Actual PIN form + fake challenge/Worker passed at width 390
+Actual PIN form + fake challenge/Worker passed at width 1440
+PIN/browser recovery: 30 checks passed
+Google linking API: 56 checks passed in two fresh SQLite rounds; owner/state/identity races, cancel, failure, existing link and no learning-record changes; fake provider only
+Browser round 1 width 390
+Browser round 1 width 1440
+Browser round 2 width 390
+Browser round 2 width 1440
+Google notice browser: 96 checks passed; two rounds at 390/1440, study prompt/bell/later/save failure/cancel/conflict/success/reload/late-account response; real frontend and memory-only Worker; fake provider only
+Souta release: 44 isolated checks passed; synthetic SQLite/auth/providers/grants only; no live secrets or data
+Public baseline preservation: 43 checks passed; only 3 reviewed files changed; large local update excluded
+Souta browser: 28 checks passed; real published app candidate, two widths, school separation, audience labels, contest, account switching; synthetic API only
+Souta normal login: 10 checks passed; real cloudBoot/grant/save/session restore, memory-only SQL, both other accounts unchanged
+Deploy wrapper: 14 checks passed; exact Worker→Pages ordering, response loss, safe rollback, unknown state, secret/origin guards; fake CLIs only
+Google linking API: 56 checks passed in two fresh SQLite rounds; owner/state/identity races, cancel, failure, existing link and no learning-record changes; fake provider only
+Browser round 1 width 390
+Browser round 1 width 1440
+Browser round 2 width 390
+Browser round 2 width 1440
+Google notice browser: 96 checks passed; two rounds at 390/1440, study prompt/bell/later/save failure/cancel/conflict/success/reload/late-account response; real frontend and memory-only Worker; fake provider only
+Souta release: 44 isolated checks passed; synthetic SQLite/auth/providers/grants only; no live secrets or data
+Public baseline preservation: 39 checks passed; only 3 reviewed files changed; large local update excluded
+Souta browser: 28 checks passed; real published app candidate, two widths, school separation, audience labels, contest, account switching; synthetic API only
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Error: synthetic save not acknowledged
+    at eval (eval at evaluate (:311:30), <anonymous>:1:51)
+    at async <anonymous>:337:30
+    at /Users/shimizunaotomoo/Desktop/my-app/tools/releases/google-link-20261019/verify-login-flow.mjs:34:13 {
+  log: []
+}
+
+Node.js v24.18.0
+Deploy wrapper: 14 checks passed; exact Worker→Pages ordering, response loss, safe rollback, unknown state, secret/origin guards; fake CLIs only
+Souta release: 44 isolated checks passed; synthetic SQLite/auth/providers/grants only; no live secrets or data
+Public baseline preservation: 39 checks passed; only 3 reviewed files changed; large local update excluded
+Souta browser: 28 checks passed; real published app candidate, two widths, school separation, audience labels, contest, account switching; synthetic API only
+verify3.js   追加チェック こみ　✅ 67　❌ 0（ぜんぶで 67件）
+verify6.js   チェック 76件　✅ 76　❌ 0
+verify8.js   チェック 59件　✅ 59　❌ 0
+verify9.js   チェック 43件　✅ 43　❌ 0
+verify12.js  チェック 154件　✅ 154　❌ 0
+verify15.js  チェック 95件　✅ 95　❌ 0
+verify16.js  チェック 39099件　✅ 39099　❌ 0
+verify17.js  チェック 27件　✅ 27　❌ 0
+verify18.js  チェック 25件　✅ 25　❌ 0
+verify19.js  チェック 70件　✅ 70　❌ 0
+verify20.js  チェック 517件　✅ 517　❌ 0
+verify21.js  チェック 115件　✅ 115　❌ 0
+verify22.js  チェック 14件　✅ 14　❌ 0　（新規アカウントの生活費）
+verify23.js  チェック 13件　✅ 13　❌ 0　（次の試験まで）
+verify24.js  チェック 6件　✅ 6　❌ 0　（サーバー時刻）
+verify-ui280.js チェック 22件　✅ 22　❌ 0
+verify-client-sync.js チェック 18件　✅ 18　❌ 0
+verify-unit-guides.js チェック 197件　✅ 197　❌ 0
+verify-session-security.js チェック 63件　✅ 63　❌ 0
+verify-migration-security.js ✅ 85 / ❌ 0 — migration and backup security
+verify-september.js チェック 474件　✅ 474　❌ 0
+verify-september-ui.js チェック 15件　✅ 15　❌ 0
+verify-september-flow.js チェック 28件　✅ 28　❌ 0
+verify-review-pdf.js チェック 12件　✅ 12　❌ 0
+verify-notice-history.js チェック 22件　✅ 22　❌ 0
+verify-login-days.js チェック 8件　✅ 8　❌ 0
+verify-server-storage.js チェック 16件　✅ 16　❌ 0
+verify-record-archive.js チェック 12件　✅ 12　❌ 0
+verify-notice-kinds.js チェック 47件　✅ 47　❌ 0
+verify-school-calendar.js チェック 256件　✅ 256　❌ 0
+verify-september-archive.js チェック 20件　✅ 20　❌ 0
+verify-ai-judge.js チェック 216件　✅ 216　❌ 0
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.035s
+
+OK
+変更なし: 956件を確認。台帳は書き換えていません。
+未登録の教材: 0件（画像・台帳は無変更）
+教材台帳OK: 956件 / SHA-256照合 956件 / OCR元画像照合 292件
+分類: drill/国語 52、drill/数学 52、drill/理科 52、drill/英語 66、kentei/国語 1、kentei/数学 6、kentei/理科 1、textbook/数学 17、textbook/理科 51、textbook/社会 274、workbook/保健体育 45、workbook/国語 70、workbook/数学 72、workbook/理科 60、workbook/社会 77、workbook/英語 60
+人手確認済み: 637件（OCRだけで確認済みにしない）
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+参考資料台帳OK: 323枚 / 人手確認済み 0枚
+55 checks passed
+material-ui: textbook gate, independent test progress, resume, save and load failure passed
+Material marks UI: ○n/70 on small units, 70-row list with ○△× and view counts and sources, schedule order (oldest × → due △ → unseen → ○ → not due), wrong/near answers move on with the correct answer, correct answers saved (20 checks) passed
+Material login review: 10 checks — 古い順に2問・解決ずみと3問目は出さない・同じ問題は1回・20秒後にヒントの入口・あとで解く
+Material drafts (server): 19 checks ❌ 0 — 本人の記録へ保存（自動同期）・1.5秒まとめ・閉じるとき保存・開きなおしで戻る・人ごと・正解で消える・14日・100件・2000字
+Material tokkun: 25 checks ❌ 0 — 特訓68小単元（各70問）・出典の厳しい検査・特訓だけ教科書ページを出典にできる・特訓の一覧と出題・教科書に混ざらない
+Social3 rubric guards: 45 integrated checks passed; authored text and other curricula preserved
+Material formula cards: 24 checks ❌ 0 — 数学7章・理科の公式カード、電卓は理科の計算単元だけ、テストでは出さない、電卓の計算（evalなし）
+Material reminder: 5 checks ❌ 0 — ○△×の単元は3日・7日のお知らせに重ねない・ほかは今までどおり・「出さない」問題は組から外れる
+material-tts: 8 checks passed
+problem-share: 問題本文・選択肢・分数・表を維持し、回答・採点・個人情報を除外しました
+problem-pdf: grayscale pages, exact image bytes, PDF offsets, limits, privacy and immutable input passed
+problem-pages: safe whitespace breaks, intact questions, exact row recovery, independent pixels and bounded memory passed
+problem-share-api: server-generated PDF, bounded inflation, ownership, rate limit, public link, expiry and immediate revocation passed
+achievements: validation, owner-only requests, pending isolation, nao-only approval, rejection, immutable review and limits passed
+achievement-ui: pending vs approved, escaped titles, owner controls, notices and logout isolation passed
+Preview built: production sync, fixed personal results, grants and resets removed
+preview: isolated account, private assets, origin checks, attempt limits, save/reload, ownership and logout passed
+preview plans: 16 isolated checks passed; four identities, distinct PIN hashes, no owner lease
+Preview automatic access: 41 isolated checks passed
+Gemini registration: 14 synthetic checks, AQ.-format accepted, preview-only, no key arguments/files/output, non-TTY refusal, pre-input connection/name guards, no overwrite and sanitized failure passed
+Gemini window: 7 GUI-to-registration checks passed; fake input only, no network
+OpenAI registration: 38 synthetic checks passed; loopback/origin/CSRF, stdin only, no overwrite, no key output/files, no API calls
+OpenAI registration browser: 31 checks passed; masked/cleared input, one send, no false activation, unknown-result stop, 3 widths; synthetic only
+Gemini context: verified source, fresh deterministic grade, minimized input, privacy exclusions, bounded request and strict non-grading output passed; no API calls
+Gemini tutor: 69 synthetic checks — disabled by default, own saved mistakes only, key in header only, minimal input, cache reuse, 10s interval and global 10-real-trial daily limit, pre-call budget reservation incl. concurrent requests, failure/rejection accounting, strict output, answer-leak filter, ordered hints, account isolation; no network
+AI trial control: 47 checks passed; in-memory SQLite, no network
+OpenAI policy: 83 isolated checks passed; no keys, network or runtime activation
+OpenAI transport: 50 isolated checks passed; synthetic fetch only, no live API
+OpenAI budget: 33 isolated SQLite checks passed; global monthly concurrent cap, corrupt counters closed, JST month, no real data
+OpenAI billing: 94 isolated checks passed; five official refusal codes, safe same-ID retry, no false circuit latch, no output-stage refund, lost-release recovery; no network
+OpenAI uncharged release: 30 isolated checks passed; concurrent release once, rollback, lost acknowledgement, stale token, corrupted counter closed
+OpenAI trial: 42 isolated checks passed; actual shared daily gate, concurrency, circuit stop, budget, no network
+OpenAI tutor bridge: 24 checks passed; actual curriculum validators, deterministic grade, private fields excluded, leaked answers rejected; no API
+OpenAI receipt candidate: 35 isolated checks passed; no API, keys, user data or runtime import
+Lost OpenAI checkpoints: 10 isolated checks passed; retry never starts a second paid operation
+OpenAI tutor service candidate: 21 isolated checks passed; real plan/gates/validators, fake provider only
+OpenAI service failure candidate: 20 checks passed; invalid hints, lost-save recovery, account switch, no paid replay
+OpenAI tutor API candidate: 47 isolated checks passed; original request shape, ordered/cached hints, own attempts, immutable grades, no network
+OpenAI chat content candidate: 28 checks passed; no client model/private fields, explicit image rejection, strict output fields
+OpenAI chat context: 21 isolated checks passed; own real history, chronology, fixed retry snapshot, concurrent capture, private rejection and bounded prompt
+OpenAI text chat service: 31 isolated checks passed; plan routing, paid save/replay, strict source extraction, no network
+OpenAI chat API candidate: 50 isolated checks passed; Origin/body/plan/owner gates, real labels, saved-history loss/replay, fake API only
+OpenAI connection status: 72 checks passed; no secrets, network or activation
+AI pre-context gates candidate: 16 checks passed; exhausted quota, daily trial, stop latch and corrupt counters reject before snapshot writes or API
+OpenAI vision preparation: 30 isolated checks passed; canonical synthetic PNG, owner-only, Sol policy, exact-count reservation, no API
+Multi-image credit candidate: 35 checks passed; 3/6/9 credits, one call per send, atomic quota/commit, no partial charge, one-time receipt refund and JST reset; real isolated SQLite only
+Vision transport candidate: 96 checks passed; canonical synthetic image, multimodal safety, exact input count, reservation before calls, strict model/usage/output, abort/owner loss and fixed errors; fake fetch only
+Image consultation service: 53 checks passed; actual owned-image reader, plans/consent, shared trial/budget/journal, 3/6/9 credits, lost completion replay and circuit stop; synthetic SQLite/provider only
+Image chat API: 38 checks passed; actual route/wrapper with isolated SQLite, owned images, 3-per-photo, blank image question, transcript and receipt replay, malformed/other-owner inputs and shared tenth-call stop; no live API
+Image chat browser: 38 checks passed; actual message UI at 390/1280, synthetic attachment selection and API, 3/6/9 credits, explicit send, persisted image IDs, response-loss retry identity, capability change and account separation; no live API
+AI trial integration: 27 checks passed; real tutor/records/plans with fake provider, no network
+Budget settlement candidate: 144 SQLite checks passed; conservative validated usage, concurrent/lost-ack completion once, rollback, corrupt-counter stop, old-month isolation; no API
+Budget settlement service: 28 checks passed; actual text/note service with fake provider, normal usage estimate, lost-save replay and unknown reservation retained; no live API
+Generated avatar PNG candidate: 38 checks passed; RGB/RGBA filters, metadata removal, CRC/limits/animation rejection, smooth bounded downsample; no provider or learner data
+Avatar transport candidate: 279 checks passed; fixed one-image request, reserve before HTTP, input/output moderation, session loss, abort, response limits, invalid PNG/URL rejection, private error handling; fake provider only
+Avatar shared trial candidate: 36 SQLite checks passed; one shared lease/day/stop circuit, text 12s unchanged, image 60s bounded, abort and cleanup; no API
+Avatar service candidate: 74 SQLite checks passed; UNLIMIT/consent/owner gates, shared trial/budget, 3 credits, private candidate storage, replay, downgrade/rejoin, lost commit/rollback/revocation/capacity; fake provider only
+Avatar route candidate: 51 SQLite/API checks passed; private metadata/history, explicit POST only, own results, replay, downgrade/rejoin, origin/size/session/consent/budget/daily gates; no live API
+Avatar UI candidate: 42 browser checks passed; private authenticated image adapter, explicit generation, 3-credit notice, manual crop/save, reopening without generation, hostile URL rejection, two widths; no API
+AI trial notice: 48 checks passed; four widths, limit/stop, stale response, drafts; no network
+Unsent AI reservation release: 352 SQLite checks passed; text/long-note/photo-note/image, pre-send refusal/network/owner/quota, counted/issued unknown holds, rollback/lost-ack, explicit retry and cached replay; no network
+Avatar last-guard reservation: 15 checks passed; four pre-send authorization gates never mark generation issued, actual generation network failure stays issued; no network
+Avatar unsent service: 25 SQLite checks passed; session loss at five post-start/pre-generation gates releases monthly hold and plan credits; no network
+Confirmed subscription terms: 150 SQLite checks passed; start-date monthly/short months/leap years, exact 7-day grace boundary, paid-to-Free entitlement and unchanged contract/learning rows; no payment/network
+Subscription terms UI: 75 checks passed; four paid plans and standalone guide, 320/390/1440px, start-date cycle/7-day grace/record retention, no overflow or network
+Gemini mock: 20 checks — 模擬AIの表示、外部送信0回、費用0円、本人の記録だけ、10秒・1日40回の制限、ヒントに数字なし、確認版は模擬だけ
+Gemini more: 39 checks — exact rational checker, generated problems kept only when answer=expression=prompt and new, practice-only recording without rewards, similar questions (AI ids filtered to the unit, fallback without AI, cache, account isolation), descriptive judging decided by the server from every required element; no network
+Gemini UI: 62 checks — hidden when unavailable, ordered hints without answers, explanation after a wrong answer and from the notebook, failure/budget messages without blocking study, drafts kept, no progress change, 390/820/1180/1440px; fake Gemini only
+Auto notebook: 79 checks — wrong and dont-know answers recorded from immutable attempts, one row per question, grouped by subject/grade/major/minor, hidden answers, text-only display, failed load keeps records, no overlap with bookmarks, account isolation at 390/820/1180/1440px passed
+Material UI: 320/390/1280px, reviewed input questions, save acknowledgement/failure/retry, separate practice tests, server resume and account isolation passed
+Review: real SQLite + real UI/entry/bridge, automatic reminder, input preservation, dismissal, due3 -> waiting7, before/after, notebook bookmarks/memos/reload/print, retry and account race at 320/390/1280px passed
+Problem creation: explicit gate, five subjects, hierarchy, 15/30/45/60 unique questions, grouped layout, weakness/search, save failure, draft retention, unknown records, fullscreen denial/re-entry and four viewports passed
+Textbook book data: up to date with the drafts
+Hidden math answers: 39 generated教材 checks passed; five rows and two images only in their own closed explanations, unrelated rows and image/source/ledger identity retained. No user data or network.
+390: both rows hidden/open/close, original answers and navigation passed
+820: both rows hidden/open/close, original answers and navigation passed
+1180: both rows hidden/open/close, original answers and navigation passed
+1440: both rows hidden/open/close, original answers and navigation passed
+390 large: both rows hidden/open/close, original answers and navigation passed
+1440 large: both rows hidden/open/close, original answers and navigation passed
+Chapter 2 hidden rows: 96 checks passed at four widths and two large-text widths; real book code and local教材 only
+Manuscript preview 390px: five exact answer rows and two source figures stay closed
+Manuscript preview 1440px: five exact answer rows and two source figures stay closed
+Manuscript answer rendering: 63 checks passed
+Chapter 2 current bytes: 13 videos / 273 reviewed scenes / 25 diagrams / one adopted scene match full AV, source, captions, copy/reference/request and visual evidence; no redundant regeneration or decode.
+Chapter3: 11 current videos / 272 visual samples / 38 image sources and book copies match; AV, Kyoko, captions, 30fps, hidden-answer review evidence bound; listening/device/full suite separate
+Chapter3 independent mathematics: 97 checks passed; all 11 scripts and scene quantities; source photos/full manuscript/listening separate
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'b7fafed2c29d5f71ca32506da294ddfa9ebe4df4f463cdb3fb00c39c86c27d2b'
+- '8d3dfbee39e5f9e16c795f4dd08010454e64bdb619a7d7e0f7bf03b74e6a9bfc'
+
+    at approvedDomainPredecessor (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/approved-domain-annotations.mjs:21:54)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/math-ch3-recheck-20261019/verify-layout-candidate.mjs:10:67 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'b7fafed2c29d5f71ca32506da294ddfa9ebe4df4f463cdb3fb00c39c86c27d2b',
+  expected: '8d3dfbee39e5f9e16c795f4dd08010454e64bdb619a7d7e0f7bf03b74e6a9bfc',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0
+5 source anchor cases passed: exact match only; edited block, wrong page, duplicate and invalid key cannot rebind notes
+Chapter4 correction canvas: 18 checks passed; discrete stair graph, parking open zero, unchanged narration and other scenes
+Chapter4 independent mathematics: 179 checks passed; all twelve scripts, quantities and domain conditions
+Chapter4: 12 current videos / 290 visual samples / 36 image sources and book copies match; AV, Kyoko, captions, 30fps evidence bound; listening/device/full suite separate
+Three SVG corrections: 145 checks passed; drawn tangent perpendicular and no mathematical text/quantity changes
+Chapter5 independent geometry: 143 checks passed; all twelve scripts and scene conditions
+Closed answer data: exact original chapter5 proof plus later exact appendix chain; 441 sources / 651 physical / 922 cards; all words/numbers preserved
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'b7fafed2c29d5f71ca32506da294ddfa9ebe4df4f463cdb3fb00c39c86c27d2b'
+- '8d3dfbee39e5f9e16c795f4dd08010454e64bdb619a7d7e0f7bf03b74e6a9bfc'
+
+    at approvedDomainPredecessor (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/approved-domain-annotations.mjs:21:54)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/math-ch5-recheck-20261019/verify-answer-anchors.mjs:11:67 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'b7fafed2c29d5f71ca32506da294ddfa9ebe4df4f463cdb3fb00c39c86c27d2b',
+  expected: '8d3dfbee39e5f9e16c795f4dd08010454e64bdb619a7d7e0f7bf03b74e6a9bfc',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0
+Chapter5: 12 current videos / 302 visual samples / 39 image sources and book copies match; AV, Kyoko, captions, 30fps, hidden-answer and exact later layout evidence bound; listening/device/full suite separate
+  656 pages, 328 spreads, spreads without any picture or picture frame: 6, oversized single blocks: 0
+  pictureless spreads: 52-53, 312-313, 332-333, 452-453, 502-503, 654-655
+Textbook book: 2723 checks — fullscreen gate, back to のびログ, shelf (7 books, preparing locked), opens at p.2-3, ＜＞/keys/swipe, cover alone, toc jump to laid-out pages, answer cards, no in-page scrolling, fallback, 4 viewports; 656 pages, 328 spreads, spreads without any picture or picture frame: 6, oversized single blocks: 0
+8
+8
+Fraction generators: 3 reviewed outputs reproduced; 1 later reviewed outputs retained; 14 unrelated outputs byte-identical; altered-content rejection, 7 source/copy/ledger hashes, exact semantic text/geometry and approved one-sentence logical-book chain passed. No output files written.
+Chapter2: 3 reviewed generator outputs reproduced; 9 other outputs byte-identical; semantic strings/shapes, sources/copies/ledger hashes and approved one-sentence logical-book chain passed. No files generated.
+25
+8
+25
+8
+Chapter3: 6 reviewed outputs reproduced; 1 prior reviewed outputs retained; 26 unrelated outputs byte-identical. Exact semantics/shapes, 6 source/copy/ledger SHA, four blank answer cells and approved one-sentence logical-book chain passed. No output files written.
+31
+31
+Traceback (most recent call last):
+  File "/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/verify-chapter4-fraction-generators.py", line 107, in <module>
+    assert book_sha == expected_book['bookSha256MustRemain']
+AssertionError
+32
+32
+Chapter5:3 reviewed outputs reproduced; 29 unrelated outputs byte-identical; source/copy/ledger, semantic preservation and rejection checks passed
+33
+33
+Chapter6:3 reviewed outputs reproduced; 30 unrelated outputs byte-identical; source/copy/ledger, semantic preservation and rejection checks passed
+31
+21
+31
+21
+Appendix:5 reviewed outputs reproduced; 47 current other outputs unchanged; source/copy/ledger, exact text/shapes and source-change rejection passed
+Science: exact reviewed fraction/2-row unit wrap reproduced; 213 other existing hint outputs unchanged; original text/geometry and source-change rejection passed
+Science fraction: neighbor gaps >=2px, no overlapping glyph rows, cm³ unit unbroken and in original box; integrated
+Audited 36 SVGs; 0 require typography review; no teaching asset writes.
+Textbook zoom: 48 checks passed at 320/390/820/1440; actual functions/CSS, bounded zoom, reset, two-axis pan, visible close, reopening and stale-button isolation; synthetic image only.
+verify-eiken-practice: 6703 checks — 800問（穴うめ400・並べかえ160・読解200・作文40）の見本の答え・選択肢・語句カード・読解の根拠、空欄と無関係な答え、惜しい判定、PDF80リンクの維持
+verify-eiken-practice-browser: 84 checks — 390/1280px、正解・不正解・惜しい、1問ずつ保存と続きから、結果、まちがいだけの解き直し、最高点と回数、作文の自己採点、保存失敗の知らせ、アカウント切替、横はみ出しなし
+verify-eiken-vocab: 33919 checks — 5級600・4級250（PDF127＋のびログ123）・3級1150＝2000、重なりなし、全語に意味と例文、意味のどれでも正解・かな/カタカナ・する省略・1文字ちがいは惜しい・同じ意味の別の単語、1か月ルール（日本時間・月末）、苦手→まだ→復習の順、ランダム
+verify-eiken-vocab-browser: 102 checks — 390/1280px、級ごとの語数、英→日（読み・別の意味・わからない・Enter）、日→英（苦手が先・ヒント・惜しい＝不正解・大文字/空白）、1か月ルール（日本時間）、同じ意味の別の単語、ランダムで級がまざる、結果、保存失敗の知らせとあとでまとめて保存、アカウント切替、横はみ出しなし、ページエラーなし
+assignments API: 137 checks ❌ 0 — 入口（401/403/405/415/400）、x_は空、配る内容の検査34種、見本は生徒に出ない、配る前は見えない、下書き・回数制限、提出1回と同じ送り直し、同時提出、締め切り・時間制限、返却の下書きと確定・確定後は変更不可、通知の中身、活動記録は文章なし、取引失敗で何も残らない
+verify-assignments-browser: 95 checks ❌ 0 — 390/1280px、x_は空、配る（入力の検査・今より前は選べない・問題の追加と削除・確認で取り消し）、見本は生徒に出ない、下書きの自動保存と失敗表示、提出の確認と読みとり専用、提出箱・コメント下書き・返却、返却の表示、時間制限は始めるまで問題を出さない、期限切れ、動きをへらす設定、アカウント切替、横はみ出しなし
+verify-admin: 62 checks ❌ 0 — u1だけ・集計（今日・7日・単元）・活動の記録（50件ずつ・種類で絞る・答えの文章なし）・開いた記録は30分に1回
+verify-admin-browser: チェック 39件　✅ 39　❌ 0
+verify-plans: 28 checks ❌ 0 — 確認版の仮ルール（更新日・上は即時/下は次から・猶予7日・回数は繰り越さない・8項目の記録）／本番では何もしない
+plan daily: 16 checks passed; isolated SQLite, no network
+Subscription daily-v2: 58 checks passed; daily 20/100/500/5000, half/normal/heavy, concurrency, idempotent refund, midnight, owner isolation, mock atomic commit, legacy records retained; no network
+learning notes: 23 isolated checks passed; replay, CAS, concurrent capacity, owner isolation, origin and downgrade preservation
+learning images: 43 isolated checks passed; canonical pixel PNG, metadata-free, ownership, limits, note/chat links, replay and quota once; no external network
+learning images browser: 84 checks passed; actual note/chat code, picker/paste, previews, replay/quota, 3-image cap, private access, profile icon and 4 widths; localhost only
+learning image cache: 55 checks passed; private image/textbook APIs never cached, including navigation/custom origin; static icons/scripts remain cached
+チェック 54件　✅ 54　❌ 0　（アイコン・保存した写真・アイコン生成の受付）
+チェック 225件　✅ 225　❌ 0　（アイコン・カメラ・保存した写真・画像の選び方・アイコン生成・丸み／390・820・1280px・大きい文字）
+Screenshot candidate: 72 checks passed; three widths, first-use consent, pointer crop pixels, keyboard/cancel, preview-only File return, immediate track stop, delayed permission cancellation and owner loss; synthetic media only
+Screenshot save adapter: 42 checks passed; two widths, plan lock, owner-bound post, stable retry payload, per-owner introduction, late pixel conversion cannot cross accounts, logout and native fullscreen portal; fake capture/storage only
+AI hub entry: 38 checks passed; actual index adapter + hub, plan/chat metadata-only GET, explicit existing flows, owner/trial teardown and two widths; fake API only
+Japanese selection: 204 checks passed; actual bank/engine/UI with 10 unchanged reviewed units, 15/30/45/60 unique questions after explicit create, correct unit IDs, two widths and zero answer submissions; synthetic-only local page
+English selection: 236 checks passed; actual bank/engine/UI with 12 unchanged reviewed units, 15/30/45/60 unique questions after explicit create, correct unit IDs, two widths and zero answer submissions; synthetic-only local page
+Japanese drill selection: 72 checks passed; actual bank/engine/UI with 1 unchanged reviewed units, 15/30/45/60 unique questions after explicit create, independent 15-question test, correct unit IDs, two widths and zero answer submissions; synthetic-only local page
+textbook annotations: 49 isolated SQLite checks passed; ownership, plans, CAS, retry, limits, downgrade preservation; no network
+textbook annotation model: 24 checks passed; real source stability, SQLite save, loss/retry, conflict draft, account isolation
+Textbook caption compatibility: 15 synthetic checks passed; exact old anchor only for a valid ID and unchanged quote, new layout signature, changed-caption/invalid-key rejection; no real saved notes
+textbook annotations browser: 49 checks passed; 4 widths, selection, save failure/loss/retry, conflict comparison, keyboard, downgrade, account isolation, real browser restart, offline draft restore, no stored credential, disabled backend hidden; localhost only
+kokugo1: actual book marker/memo at 4 viewports passed
+math1: actual book marker/memo at 4 viewports passed
+english1: actual book marker/memo at 4 viewports passed
+science1: actual book marker/memo at 4 viewports passed
+geography: actual book marker/memo at 4 viewports passed
+history: actual book marker/memo at 4 viewports passed
+textbook annotations actual books: 125 checks passed; 6 real books × 4 widths, original adapter + SQLite, large-text relocation, cache; no external network
+Textbook handwriting API: 81 isolated checks passed
+Textbook handwriting model: 37 checks passed, real IndexedDB and browser restart
+kokugo1 actual book drawing/save passed
+english1 actual book drawing/save passed
+science1 actual book drawing/save passed
+geography actual book drawing/save passed
+history actual book drawing/save passed

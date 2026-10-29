@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": 55,
+  "inputs": [
+    {
+      "file": "site-assets/material-entry.js",
+      "sha256": "acf3667d8f1cc3a65313f7e84ba842f5f5233bf7a7956a542ddf31a26ff536af"
+    },
+    {
+      "file": "site-assets/material-bridge.js",
+      "sha256": "c5f4e057e517f5094eef847c605212892b7f077dd3e56bcc9cd6768410236bad"
+    },
+    {
+      "file": "site-assets/material-ui.js",
+      "sha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6"
+    },
+    {
+      "file": "cf-worker/src/material-records.mjs",
+      "sha256": "4f3708b4cc21afeae2513026b14dc5cdee29258500a187794b403bf9ab4b7c0a"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session.mjs",
+      "sha256": "db3e69a708300b58bd388ccb321cd67b44458b6493b88b0efde14cc5ef2ecd08"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session-route.mjs",
+      "sha256": "a2b246182bcd4fb6de8851fc28535793e12c29f4376b0787dbb24f72a68dd055"
+    }
+  ],
+  "scope": "Actual entry/bridge/UI with real private HTTP handlers and SQLite, public canonical five-question selection. Three widths, lost creation/answer acknowledgement, editing/recovery, initial wrong-answer proof, distinct later tests, no AI debits or real data. Screens require direct review; no paid job/vision/toast completion claim."
+}

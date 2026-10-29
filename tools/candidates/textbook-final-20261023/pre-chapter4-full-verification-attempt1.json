@@ -1,0 +1,20 @@
+{
+  "status": "failed; stopped after two confirmed assertions",
+  "sessionId": 87773,
+  "log": "/private/tmp/nobi-textbook-pre-ch4-full-20261024.log",
+  "purpose": "Required standalone whole verification after historical-chain repairs and approved hook, before chapter4 integration",
+  "observedExitCode": 143,
+  "bookSha256": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+  "runtimeSha256": {
+    "site-assets/textbook-book.js": "1f1a4bbe132abfcc2fd3cc819ec53ea49394ea29eaecef649a32b87e610e6a80",
+    "site-assets/textbook-book.css": "93320398530f1e9290276244a1a412f64519f4eb545dd7b40695053ce5f120ec",
+    "site-assets/vertical-fractions.js": "b76f506e18839038f4fd194326746204623ee4a1bdb34fecb1b4a0d60900b4a5"
+  },
+  "suiteSha256": "e95f1d83f72a6cf185eff6b2da49e139427f25d8472fb9401e3090c6454d7228",
+  "lastObservation": "87773 terminal143 after intentional scoped stop of known-failing suite; not a success or timeout",
+  "knownFailuresWhileRunning": [
+    "math-ch3 verify-layout-candidate: approved prime hook changes one annotation quote and anchor",
+    "math-ch5 verify-answer-anchors: same approved prime hook difference"
+  ],
+  "logSha256": "f62a1744de17db1a500065f9e1eccad513972e02867652c9d5447cd146ac07f0"
+}

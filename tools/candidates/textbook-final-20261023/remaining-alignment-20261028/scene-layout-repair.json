@@ -1,0 +1,23 @@
+{
+  "status": "layout-only successor prepared; no MP4 rendered yet",
+  "beforeSceneSha256": "d891e55bd225d8ccf29f2562d68d6ab2afd0742cab078a1340eedea687c8d5be",
+  "afterSceneSha256": "5eda7079d8c094884a401f57399f7da1e0797d309d1be551286123be2967840a",
+  "changes": [
+    "Keep ASCII punctuation with preceding text; shrink text if any line exceeds its own box.",
+    "Prefer Japanese middle dot / space as natural wrap points; keep word 歩い intact.",
+    "Shorten figure-only Chinese-origin description without changing caption/narration.",
+    "Move2 bottom notes8px up for space inside the panel."
+  ],
+  "preserved": [
+    "all9 source scripts and captions",
+    "all native speech clips/timelines",
+    "original scene.js/movies/preflight evidence",
+    "main books/questions/answers/root files"
+  ],
+  "reason": "Direct61-scene review found孤字 and a lone exclamation mark despite frame-bound checks passing. Fix before any rendering.",
+  "remaining": [
+    "All9 mechanical preflight for v2",
+    "Review changed screenshot pixels against already reviewed61 originals",
+    "Pinned per-movie approval then encode"
+  ]
+}

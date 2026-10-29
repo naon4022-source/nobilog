@@ -1,0 +1,303 @@
+{
+  "files": [
+    {
+      "file": "index.html",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/index.html",
+      "beforeSha256": "1ddb1fc1df9a3829840b1aeaa313923118a790599f93c1e1c0a66546c4c479c2",
+      "afterSha256": "5fd6f7b4960ebbd1aebab7d8216ceed8def44a420c34dbb5d36b7f88e8defc68",
+      "edits": [
+        {
+          "start": 3297,
+          "end": 3297,
+          "before": "",
+          "after": "    <link rel=\"stylesheet\" href=\"/test-review.css\">\n    <script src=\"/test-review-model.js\" defer></script>\n    <script src=\"/test-review-cards.js\" defer></script>\n    <script src=\"/test-review.js\" defer></script>\n"
+        },
+        {
+          "start": 135398,
+          "end": 135398,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 137545,
+          "end": 137545,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 141154,
+          "end": 141154,
+          "before": "",
+          "after": "        window.NobiTestReviews?.reset();\n"
+        },
+        {
+          "start": 204310,
+          "end": 204310,
+          "before": "",
+          "after": "    function testReviewNotice(job){return {id:'test-review:'+job.id,testReviewId:job.id,category:'exam',title:'テストの解答とコメントができました',body:'ノビーと解説を確認して、次の一問につなげよう。',at:job.completedAt};}\n    function testReviewReady(who){return !!currentUserId&&serverBootReady&&!authLeaseBlocked&&!isTrial()&&(!who||cloudSame(who));}\n    async function testReviewRequest(path,options,who){\n        if(!testReviewReady(who))throw Object.assign(Error('session_changed'),{code:'session_changed'});\n        const result=await textbookAIRequest(path,options,who);\n        if(!testReviewReady(who))throw Object.assign(Error('session_changed'),{code:'session_changed'});\n        return result;\n    }\n    window.nobiTestReviewAPI={\n        available:()=>testReviewReady(),snapshot:()=>cloudIdentity(),matches:who=>testReviewReady(who),\n        list:who=>testReviewRequest('/material-test-review',{},who),\n        get:(id,who)=>testReviewRequest('/material-test-review?id='+encodeURIComponent(id),{},who),\n        post:(body,who)=>testReviewRequest('/material-test-review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)},who),\n        status:(id,who)=>testReviewRequest('/material-test-session?id='+encodeURIComponent(id),{},who),\n        plan:who=>testReviewRequest('/plan',{},who),\n        canNotify:()=>testReviewReady()&&noticeAllowed(testReviewNotice({id:'',completedAt:0})),\n        notify:(job,who)=>{if(!testReviewReady(who)||document.hidden)return false;const before=noticeToastSerial;noticeToast(testReviewNotice(job));return noticeToastSerial>before;}\n    };\n"
+        },
+        {
+          "start": 236999,
+          "end": 236999,
+          "before": "",
+          "after": "        if(n.testReviewId){void window.NobiTestReviews?.open(n.testReviewId);return;}\n"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/site-assets/material-ui.js",
+      "beforeSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "afterSha256": "80143f5742fd685ddb88cc3ba21c55c2d482f8cd0d4120b0b23cb4a1422e5dff",
+      "edits": [
+        {
+          "start": 65206,
+          "end": 65206,
+          "before": "",
+          "after": "  if(root.NobiTestReviews&&bridge.testSessionAvailable?.())wrap.append(button('AI解説の履歴',()=>void root.NobiTestReviews.openHistory()));\n"
+        },
+        {
+          "start": 67603,
+          "end": 67603,
+          "before": "",
+          "after": "  if(state.started&&!activeReview&&(state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.()&&root.NobiTestReviews)article.append(button('ノビーの全問解説',()=>void root.NobiTestReviews.openForCurrent(bridge,bridge.identity()),false,state.busy));\n"
+        }
+      ]
+    },
+    {
+      "file": "教材整理/実装/material-ui.js",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-before/教材整理/実装/material-ui.js",
+      "beforeSha256": "7c178dccb1958ba90ce02085e0b668d357881ab2bf3d4666d84968eb93ac4ba6",
+      "afterSha256": "80143f5742fd685ddb88cc3ba21c55c2d482f8cd0d4120b0b23cb4a1422e5dff",
+      "edits": [
+        {
+          "start": 65206,
+          "end": 65206,
+          "before": "",
+          "after": "  if(root.NobiTestReviews&&bridge.testSessionAvailable?.())wrap.append(button('AI解説の履歴',()=>void root.NobiTestReviews.openHistory()));\n"
+        },
+        {
+          "start": 67603,
+          "end": 67603,
+          "before": "",
+          "after": "  if(state.started&&!activeReview&&(state.tab==='テスト'||unit.mode==='kentei')&&bridge.testSessionAvailable?.()&&root.NobiTestReviews)article.append(button('ノビーの全問解説',()=>void root.NobiTestReviews.openForCurrent(bridge,bridge.identity()),false,state.busy));\n"
+        }
+      ]
+    }
+  ],
+  "newFiles": [
+    {
+      "file": "site-assets/test-review-model.js",
+      "sha256": "5a4a423416ab308adf799cd741c3ff10c3d8fd9e9f2b2b360349c51a2867d759"
+    },
+    {
+      "file": "site-assets/test-review-cards.js",
+      "sha256": "e8b9bd908ab351713f27ec36497c6f3c79623884ca969eb38b68308d8385918b"
+    },
+    {
+      "file": "site-assets/test-review.js",
+      "sha256": "03d2cfeba5cbd939c49fc28a73f3083bce665ff693fe114f37a606d4a1b94727"
+    },
+    {
+      "file": "site-assets/test-review.css",
+      "sha256": "d68380b830c89f207e34f9fa9b92191b8d7b1fead4946cc4236db1118c005647"
+    }
+  ],
+  "proofs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/review-client-model-result.json",
+      "sha256": "52aa3bc5c193f10ad8f18076480c3e4e133606e1bf5def8d613841cbb73f0c77",
+      "checks": 41
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/review-client-browser-result.json",
+      "sha256": "8762adca26e387537f7ba133eb6c0fd5c7733d650ecec470574dd43e0055f3ef",
+      "checks": 79
+    }
+  ],
+  "visuals": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/review-client-reviewed-screens/review-390.png",
+      "sha256": "41abfa866b8ba05ee06dd0ae11198ce0dbd64d6a3b4635efd1e7e31b561d0770",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/review-client-reviewed-screens/review-820.png",
+      "sha256": "c3e073f5ed4334d3260843ca938ad60b294146f0397c04541a853244c6c57f25",
+      "width": 820,
+      "theme": "dark/large text"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/review-client-reviewed-screens/review-1440.png",
+      "sha256": "bcf796c226438fd12976e1fad1ca9a7131926db1510641e5f6db6e60f0a0f406",
+      "width": 1440,
+      "theme": "light"
+    }
+  ],
+  "verifierEdits": [
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-material-ui-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-material-ui-integration.mjs",
+      "beforeSha256": "aa0db59d9c6edca6a7df878f9794d677216dfe1408674dfd8b89867881cf409d",
+      "afterSha256": "9aee0eda00de07751ccb56e0e93ab8e7c66cce3a137302148861052e72b69c54",
+      "edits": [
+        {
+          "start": 39,
+          "end": 39,
+          "before": "",
+          "after": ";\nimport {createRequire} from 'node:module';\nconst {clientBeforeSource}=createRequire(import.meta.url)('./client-source.cjs')"
+        },
+        {
+          "start": 823,
+          "end": 826,
+          "before": "awa",
+          "after": "cl"
+        },
+        {
+          "start": 827,
+          "end": 827,
+          "before": "",
+          "after": "en"
+        },
+        {
+          "start": 828,
+          "end": 829,
+          "before": " ",
+          "after": "Befo"
+        },
+        {
+          "start": 831,
+          "end": 836,
+          "before": "adFil",
+          "after": "Sourc"
+        },
+        {
+          "start": 846,
+          "end": 853,
+          "before": ",'utf8'",
+          "after": ""
+        },
+        {
+          "start": 2309,
+          "end": 2312,
+          "before": "awa",
+          "after": "cl"
+        },
+        {
+          "start": 2313,
+          "end": 2313,
+          "before": "",
+          "after": "en"
+        },
+        {
+          "start": 2314,
+          "end": 2315,
+          "before": " ",
+          "after": "Befo"
+        },
+        {
+          "start": 2317,
+          "end": 2322,
+          "before": "adFil",
+          "after": "Sourc"
+        },
+        {
+          "start": 2811,
+          "end": 2814,
+          "before": "awa",
+          "after": "cl"
+        },
+        {
+          "start": 2815,
+          "end": 2815,
+          "before": "",
+          "after": "en"
+        },
+        {
+          "start": 2816,
+          "end": 2817,
+          "before": " ",
+          "after": "Befo"
+        },
+        {
+          "start": 2819,
+          "end": 2824,
+          "before": "adFil",
+          "after": "Sourc"
+        },
+        {
+          "start": 2834,
+          "end": 2841,
+          "before": ",'utf8'",
+          "after": ""
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/service-20261025/verify-ui-integration.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-verifier-before/tools/candidates/textbook-ai-20261025/service-20261025/verify-ui-integration.mjs",
+      "beforeSha256": "179c89f3bf807cefbb37817c20d889707ba4cbeb86704a18e499622191b9b1c2",
+      "afterSha256": "6edb6c97243871521eb729a5106ae8b53e40cf624c6ed4727b747dabaf92cd2b",
+      "edits": [
+        {
+          "start": 39,
+          "end": 39,
+          "before": "",
+          "after": ";\nimport {createRequire} from 'node:module';\nconst {clientBeforeSource}=createRequire(import.meta.url)('../../textbook-ai-20261026/review/client-source.cjs')"
+        },
+        {
+          "start": 679,
+          "end": 682,
+          "before": "awa",
+          "after": "cl"
+        },
+        {
+          "start": 683,
+          "end": 683,
+          "before": "",
+          "after": "en"
+        },
+        {
+          "start": 684,
+          "end": 685,
+          "before": " ",
+          "after": "Befo"
+        },
+        {
+          "start": 687,
+          "end": 692,
+          "before": "adFil",
+          "after": "Sourc"
+        },
+        {
+          "start": 693,
+          "end": 701,
+          "before": "(new URL",
+          "after": ""
+        },
+        {
+          "start": 710,
+          "end": 723,
+          "before": ",ROOT),'utf8'",
+          "after": ""
+        }
+      ]
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261026/review/verify-material-test-browser.mjs",
+      "beforeFile": "tools/candidates/textbook-ai-20261026/review/client-verifier-before/tools/candidates/textbook-ai-20261026/review/verify-material-test-browser.mjs",
+      "beforeSha256": "d2ada329be992ed5422b9b78ca84c6cd577115d8fd94a3f7ee87214b1bab59e3",
+      "afterSha256": "23752e2294d1d05fb0d3b423349ff26a7b0e265761c9c7f52885da82d30cbdc3",
+      "edits": [
+        {
+          "start": 12717,
+          "end": 12717,
+          "before": "",
+          "after": "current-"
+        }
+      ]
+    }
+  ],
+  "status": "79 actual browser checks and41 client model checks passed; visual inspection recorded separately; production AI remains disabled"
+}

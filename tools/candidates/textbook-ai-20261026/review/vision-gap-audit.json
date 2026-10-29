@@ -1,0 +1,53 @@
+{
+  "status": "next implementation requirements; no provider activation",
+  "files": [
+    {
+      "file": "cf-worker/src/learning-images.mjs",
+      "sha256": "f619796ecf0b210dd92ead41a3b2ef68d4138e68036e22a30ba97c5a6abdd230"
+    },
+    {
+      "file": "cf-worker/src/openai-vision.mjs",
+      "sha256": "85d3ed2eebbdfc4487866cfe3e38916d9b4f7b6a4b05c8e8cea562a5392d62fc"
+    },
+    {
+      "file": "cf-worker/src/openai-image-service.mjs",
+      "sha256": "4d0144cb18ab791f71633a04371ecd642c612f5392ee8a3e98820fd42371a698"
+    },
+    {
+      "file": "cf-worker/src/openai-policy.mjs",
+      "sha256": "52d1197b68e88571ea5ecdeaa3863e96d1551f406db3b3586b25ca75c565b643"
+    },
+    {
+      "file": "cf-worker/src/openai-priced-operation.mjs",
+      "sha256": "61971fc215de9870a207446b806d445682a9485eb4a59d7bc03bbe614db03dd6"
+    },
+    {
+      "file": "cf-worker/src/textbook-ai-service.mjs",
+      "sha256": "621e400323979f4e2a35a13ba58946f12a95e7308ea57f63154aa8e8b379c18d"
+    },
+    {
+      "file": "site-assets/textbook-ai.js",
+      "sha256": "49b4744c71b0792abfaee93d211ef9de2a4f021df2be888c621ca23aeceba8c4"
+    },
+    {
+      "file": "site-assets/screenshot.js",
+      "sha256": "790fca634db54964cd26dd3b5fb84fe609e73a718e904ff85aaf00da3941dc0b"
+    }
+  ],
+  "gaps": [
+    "Current textbook chat sends excerpt/text only.",
+    "Generic image modules currently use u[12], excluding Souta/u4.",
+    "Existing image-analysis purpose selects SOL in Pro; user requires LUNA for new textbook AI.",
+    "Generic image plan rules do not substitute for textbook-only early entitlements.",
+    "Current priced text operation explicitly rejects array input; do not bypass the journal for multimodal calls.",
+    "Generic image service refunds plan units on every generation error; verify unknown-outcome conservation before reuse."
+  ],
+  "safeNext": "Use existing bounded metadata-free pixel/capture components where appropriate, but verify owned textbook image context, model contract, consent/early entitlement, durable identities/quota and monetary reservations. No secrets/actual learner records/live provider.",
+  "officialDocsChecked20261026": {
+    "lunaImageInput": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "modelModalities": "https://developers.openai.com/api/docs/models",
+    "imageTokenCount": "https://developers.openai.com/api/reference/resources/responses/subresources/input_tokens/methods/count",
+    "tokenCountGuide": "https://developers.openai.com/api/docs/guides/token-counting",
+    "contract": "Preserve Pro=gpt-6-luna and Unlimited=gpt-6.1-sol. Official model list supports image input and token-count endpoint accepts image inputs. No live provider call or API key access used. Existing image-analysis purpose selecting SOL in Pro is not the requested textbook policy."
+  }
+}

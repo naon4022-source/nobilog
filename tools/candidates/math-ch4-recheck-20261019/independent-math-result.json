@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "checks": 179,
+  "videos": [
+    {
+      "id": "M1-C4-S1-V01",
+      "scriptSha256": "ab45e55ca3277d89393dc01dea310c1d49253e5f90cad689d36696e5512fb8ea",
+      "status": "passed",
+      "reason": "正方形の周4xと一意性。身長だけでは体重を決められない。"
+    },
+    {
+      "id": "M1-C4-S1-VP",
+      "scriptSha256": "ef5513931ab8f9fd6dfbf91b5e66e214211be9f0811a931c80f1fd8e11b03ae3",
+      "status": "passed",
+      "reason": "既存採用図D02の正の利用時間に合わせ0分を除く。30分以下100円、30分超60分以下200円。本文や料金規則を変更しない。"
+    },
+    {
+      "id": "M1-C4-S2-V01",
+      "scriptSha256": "cd453a9cc4b98616b22d46c6f0b06666978e83af282176c32c349ef081a910d4",
+      "status": "passed",
+      "reason": "段数1〜5を独立計算。y/xの説明はx≠0、原点はy=16xで確認。"
+    },
+    {
+      "id": "M1-C4-S2-V02",
+      "scriptSha256": "5de7a7d485583a8ab29271bd2e351e61e4ac57592f7421c932bbd47032d75dd8",
+      "status": "passed",
+      "reason": "P(4,3)、Q(−2,−3)を原点から横・縦の順で確認。"
+    },
+    {
+      "id": "M1-C4-S2-V03",
+      "scriptSha256": "2660722068bb136051a2abd0d2ce1fa56489118e90464f11c25ef70c0582c1f2",
+      "status": "passed",
+      "reason": "制限のないy=2xでは整数・0.5刻み・0.1刻みと全実数が同一直線上。階段の離散条件と区別。"
+    },
+    {
+      "id": "M1-C4-S2-VP",
+      "scriptSha256": "d21fc17711d50db76276da27ac596119f4310ca48147c3e418dd75c2f35f0f57",
+      "status": "passed",
+      "reason": "表とy=16xを一致させ、実物の段数は0以上の整数の点だけを描く。"
+    },
+    {
+      "id": "M1-C4-S3-V01",
+      "scriptSha256": "e210e05ae56ac55a4b8301bc540ca9eb47ef4e8a436fc839d9a761abd064ad41",
+      "status": "passed",
+      "reason": "2/3/4/6人で分ける24個を別計算。描画するクッキー総数は24個。"
+    },
+    {
+      "id": "M1-C4-S3-V02",
+      "scriptSha256": "1237b9d658390335de5c5b55da5c60e83669dcfccd74b1cd5e05100efe51fa1f",
+      "status": "passed",
+      "reason": "y=12/xの正負の枝・積12・正の枝の単調減少・軸との非交差。拡大図は既存の別縮尺表示。"
+    },
+    {
+      "id": "M1-C4-S3-VP",
+      "scriptSha256": "e06291cdf9a9c77b0681296d34ed445a8521c57beca17401e4f609be7482eb81",
+      "status": "passed",
+      "reason": "クッキーの分配と一般の反比例曲線を区別。24歯と12歯は逆方向、回転数の比は1:2。"
+    },
+    {
+      "id": "M1-C4-S4-V01",
+      "scriptSha256": "d011bef0360f427ce0cb1e80ea5533e3f7ab3f3c3ef7a74f8f5a70b9f3506425",
+      "status": "passed",
+      "reason": "1枚4g。250枚1000g、1800gで450枚。実物の層は紙束の模式図。"
+    },
+    {
+      "id": "M1-C4-S4-VP",
+      "scriptSha256": "d810f3d5a6e9dc25171523db3b431185b8ada9b22c6f5bf5b0b9c59a31996fae",
+      "status": "passed",
+      "reason": "同じ紙は質量/枚数一定。道のり一定、同じ1人当たり作業量で仕事量一定という反比例の条件を確認。"
+    },
+    {
+      "id": "M1-C4-REVIEW-V01",
+      "scriptSha256": "a9293a99948ffb4c1c2092329b19cf163be725db5d95b2edf0d303cc265dc48b",
+      "status": "passed",
+      "reason": "駐車料金、階段、クッキー、紙束は上の独立計算と同じ数量条件で再利用。"
+    }
+  ],
+  "dependencies": {
+    "数学4章_場面.js": "40b95a160d47e1ddfbc307809368aab7fa873ff12793325f4e876865b2732461",
+    "関数の箱_入出力補正.js": "81bf3df0a33cf9482d3fd9430d19ba924bc534b27eb0d39a0d311b6e24fe2a97",
+    "4章_補足アニメーション.js": "86fa4423e995172afacdd45506b529d9a1587635cd402ecda40d8fb3d4717857",
+    "重さで数える_紙束補正.js": "fcb8be59c290a670123a18c2206009dfdb44309de56e3c8c45edf26960dde435",
+    "階段グラフ_整数条件補正.js": "c3061ede6dccc69b4945f6669f9a617dde1cbe778635b7a176c4d441268c3d0f",
+    "駐車料金_境界補正.js": "8975187afe30933958f2f94e9656bae1b503a51827c6d9007d92887208d97bb1"
+  },
+  "sourceIntegerDomainSha256": "3d33fde52f407b93e5b995f6f0dd6fae52495f7caeb04f02106ee1ce6613d9df",
+  "scope": "12本の動画台本・描画数量と図条件の独立計算。本文全問・出典写真全文・新たな聴取・実機は別。",
+  "learnerFacingAnswersAdded": false,
+  "realUserDataUsed": false
+}

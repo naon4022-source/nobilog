@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checks": 354,
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-operation.mjs",
+      "sha256": "ba01ca43167b797ae7d2cc91fe90b5b00cbce673c90586984088774bb87f3570"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/verify-operation.mjs",
+      "sha256": "d731e783d61a555e8283413b403b01963faa9dec91d0435b80affeba9e238ef0"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-input.mjs",
+      "sha256": "b0a1b8c710bc7d685d34a560c93575393222cfbc9817014f68ec7dba8ffdbe02"
+    },
+    {
+      "file": "tools/candidates/textbook-vision-20261027/textbook-vision-transport.mjs",
+      "sha256": "0e45b084af3d51d89f334cadaa17a32069dd79acd2b07d134e0dfaa99d131d92"
+    },
+    {
+      "file": "cf-worker/src/openai-receipts.mjs",
+      "sha256": "1780da9e3af668e8f665ff76e41b415a8cae393b08651d67063d6108511d45c6"
+    },
+    {
+      "file": "cf-worker/src/openai-priced-operation.mjs",
+      "sha256": "61971fc215de9870a207446b806d445682a9485eb4a59d7bc03bbe614db03dd6"
+    },
+    {
+      "file": "cf-worker/src/openai-policy.mjs",
+      "sha256": "52d1197b68e88571ea5ecdeaa3863e96d1551f406db3b3586b25ca75c565b643"
+    },
+    {
+      "file": ".claude/verify/d1-sqlite.js",
+      "sha256": "3a412bd34aeed69ca1ee30077866805421fb25357a05ef3c259e4ad6cb0078eb"
+    }
+  ],
+  "scope": "Candidate typed monetary journal, actual in-memory SQLite and fake HTTP. No provider, actual learner data, trusted route, daily trial/plan-credit integration, or UI. Count/generation issuance pinned before HTTP; unknowns held, only proven unissued money released, successful preflight ceiling retained, text-only settlement rejects image operations. Credit-hook behavior is verified separately."
+}

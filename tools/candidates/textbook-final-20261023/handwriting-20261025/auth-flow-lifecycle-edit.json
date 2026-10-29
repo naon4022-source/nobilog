@@ -1,0 +1,31 @@
+{
+  "file": "tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+  "beforeFile": "tools/candidates/textbook-final-20261023/handwriting-20261025/before/tools/releases/auth-repair-20261019/verify-login-flow.mjs",
+  "beforeSha256": "82d85f2d8c59adb9b344dfc86d460226229e61742b8d7bd798f0ef7a93892173",
+  "afterSha256": "cb778bbea4f7c46c4c962d036d059c9fec3df74358d8dafb39c0cea2391ce187",
+  "edits": [
+    {
+      "before": "const browser=await chromium.launch({headless:true});let checks=0,requests=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};",
+      "after": "const browser=await chromium.launch({headless:true});let checks=0,requests=0;const ok=(v,m)=>{assert.ok(v,m);checks++;};\nconst dialogTasks=new Set(),dialogFailures=[];let closing=false;\nconst drainDialogs=async()=>{while(dialogTasks.size)await Promise.all([...dialogTasks]);};"
+    },
+    {
+      "before": " const page=await browser.newPage({viewport:{width:390,height:900}});",
+      "after": " const page=await browser.newPage({viewport:{width:390,height:900}});\n // Match Playwright's default handling, but await it so target teardown cannot hide the original assertion.\n page.on('dialog',dialog=>{\n  const task=(dialog.type()==='beforeunload'?dialog.accept():dialog.dismiss()).catch(error=>{dialogFailures.push({duringClose:closing,message:String(error?.message||error)});}).finally(()=>dialogTasks.delete(task));\n  dialogTasks.add(task);\n });"
+    },
+    {
+      "before": " await page.close();",
+      "after": " await drainDialogs();\n ok(dialogFailures.length===0,'dialog handling completes before teardown');\n closing=true;await page.close();await drainDialogs();\n ok(page.isClosed()&&dialogFailures.every(x=>x.duringClose&&/Not attached to an active page/.test(x.message)),'only a detached closed target may end a pending dialog');"
+    },
+    {
+      "before": "}finally{await browser.close();server.close();db.close();}",
+      "after": "}finally{closing=true;await browser.close();await drainDialogs();server.close();db.close();}"
+    }
+  ],
+  "reason": "full29160 uncaught Playwright automatic dialog teardown rejection; original8 semantic assertions preserved; explicit equivalent handling and tracked/drained promises; unknown errors fail",
+  "diagnostic": {
+    "session": 78979,
+    "observedExitCode": 0,
+    "warningOutput": false,
+    "status": "original flow isolated with warnings tracing passed8; no reproduction, not accepted as strict final"
+  }
+}

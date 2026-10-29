@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-21T15:24:31.382570+00:00",
+  "status": "superseded: latest user requires the existing application code untouched; do not apply inline candidates",
+  "helperSha256": "b5131b2edb7f60a743a37f26b7e4ece054178496881e21690dd22f23fb4a3403",
+  "targets": {
+    "main-worker.js": {
+      "base": "cf-worker/src/index.js",
+      "baseSha256": "a8ec7ed2ae8cc1db0a851ed8573b9cdd82f4cf5842c76a07a8271b71d37ffe4d",
+      "candidateSha256": "08d381aad0ecc115e46e8acd46f1156327bc9723424330a4547fbeda72b67083",
+      "onlyOAuthFormAndHelperChanged": true
+    },
+    "public-worker.js": {
+      "base": "tools/releases/google-entry-20261021/nobilog-board/src/index.js",
+      "baseSha256": "e0edf233409c16232910cb36d54c6b5a1b310b2fe6610c5a22f3075946d1e07f",
+      "candidateSha256": "3fcc49d09b3e81f4cc6ed817ff42bdb75d28c5f5d71e95efe285bb720df77a22",
+      "onlyOAuthFormAndHelperChanged": true
+    }
+  },
+  "mainApplied": false,
+  "publicBaseApplied": false,
+  "deployed": false,
+  "supersededBy": "layer-preparation.json"
+}

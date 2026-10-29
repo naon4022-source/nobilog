@@ -1,0 +1,83 @@
+{
+  "status": "mechanical preflight passed; direct scene review required",
+  "id": "K1-C8-S4-V01",
+  "preparedSha256": "e05cb81e1a2d64a9c4cc219d1547842d080094b832a3a184ebc04f57aece2442",
+  "sceneSha256": "69ce36c38f03aea475809a0bbe038914c6bb1be310ed35ff551ca9caa81b206f",
+  "logicalScenes": 7,
+  "captionChunks": 8,
+  "roles": [
+    {
+      "role": "intro",
+      "say": "きょうは「単語のいろいろ」の例題だよ。いっしょに考えよう！"
+    },
+    {
+      "role": "problem",
+      "say": "問題はこれ。例文：小さな 犬が ゆっくり 歩いた。"
+    },
+    {
+      "role": "step",
+      "say": "単語に区切る：小さな／犬／が／ゆっくり／歩い／た。"
+    },
+    {
+      "role": "step",
+      "say": "自立語か付属語かを分ける。"
+    },
+    {
+      "role": "step",
+      "say": "活用とはたらきで品詞を決める。"
+    },
+    {
+      "role": "answer",
+      "say": "答えは、小さな：連体詞　犬：名詞　が：助詞　ゆっくり：副詞　歩い：動詞　た：助動詞"
+    },
+    {
+      "role": "point",
+      "say": "ポイントは、まず活用する自立語かを確かめる。そのうえで言い切りの形を見る。動詞はウ段、形容詞は「い」、形容動詞は「だ」。"
+    }
+  ],
+  "screens": [
+    {
+      "scene": 0,
+      "time": 4.056,
+      "file": "scene-screens/s00.png",
+      "sha256": "b3a10582ed2438e57fdc1e6e73a29bc87992f39ea40a5a65b45f456a2fbe9b12"
+    },
+    {
+      "scene": 1,
+      "time": 9.42825,
+      "file": "scene-screens/s01.png",
+      "sha256": "98c7ccfa956b8416167734187d2450cc7420ae6832a0a3221dfb974826aa312d"
+    },
+    {
+      "scene": 2,
+      "time": 14.5107,
+      "file": "scene-screens/s02.png",
+      "sha256": "6b38dd0085f685ab09c6feef9fbd3289306a6a70249a3707e753dce2f328cb8f"
+    },
+    {
+      "scene": 3,
+      "time": 18.27235,
+      "file": "scene-screens/s03.png",
+      "sha256": "197741b0dcf0e9b870dd1d6b3f702f229fe48679f0c9967da8bd8c244e63f11a"
+    },
+    {
+      "scene": 4,
+      "time": 21.68735,
+      "file": "scene-screens/s04.png",
+      "sha256": "c50a15525b272df8550c15a8ca1d3d97d76185fec0308cee0b9fc1438da2bfaa"
+    },
+    {
+      "scene": 5,
+      "time": 28.170749999999998,
+      "file": "scene-screens/s05.png",
+      "sha256": "558f325d1bb3a9723d18866ba5792acdae13c54f4597602f4a58bad8566c0e82"
+    },
+    {
+      "scene": 6,
+      "time": 38.00575,
+      "file": "scene-screens/s06.png",
+      "sha256": "8cb1c1be1d31ce63cd555d806ca4d58fca0f9b44b960cd54ad92f64020024641"
+    }
+  ],
+  "scope": "Actual canvas at every caption start/end; exact source captions, quote boundaries, text frame bounds, caution-role identity and logical-scene screenshots. No MP4, main changes or final approval."
+}

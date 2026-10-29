@@ -1,0 +1,176 @@
+{
+  "status": "partial local implementation; approved explanations and corrected geography movie integrated/individually verified. AI service/UI and connected-batch whole pending.",
+  "utc": "2026-10-25T08:47:35.333158+00:00",
+  "preWhole": "tools/candidates/textbook-final-20261023/handwriting-20261025/post-full-attempt2.json",
+  "preWholeSha256": "ccfd5c7d158b5eb72a37d3ec87495e49843e5d07b5995c6d11de05f484537b1e",
+  "contextCounts": {
+    "math1": 2721,
+    "kokugo1": 1433,
+    "english1": 696,
+    "science1": 437,
+    "geography": 341,
+    "history": 381
+  },
+  "contextTotal": 6009,
+  "checks": {
+    "source": 41,
+    "reader": 67,
+    "bookSignature": 43,
+    "contextAPI": 49,
+    "privateCache": 55,
+    "threeAccountDailyCredits": 44,
+    "strictHistoricalBridge": 5,
+    "textbookAccess": 71,
+    "releaseInkIntegration": 53,
+    "legacyInkAPI": 81,
+    "textbookChatQuota": 57
+  },
+  "privateSourceAnchorCounts": {
+    "math1": 3,
+    "kokugo1": 0,
+    "english1": 0,
+    "science1": 0,
+    "geography": 0,
+    "history": 0
+  },
+  "inputsAndOutputs": {
+    ".claude/verify/verify-learning-images-cache.mjs": "cae81331031e35a163067e46f0fba1cf92c6fc45317efe2fbe410c9126927c5c",
+    "cf-worker/src/index.js": "f8f0e538d901bf8f87fa2d752100ee337deb64aceb80603f33a4ba43831a30cb",
+    "cf-worker/src/subscription-credits.mjs": "7557dfd3e1ec48e311357178c536f15e5e41939b86adefda0fac36d481dd3f7d",
+    "cf-worker/src/textbook-ai-context-manifest.mjs": "4109f5527d7a7105c55efdd6b7bf481820747e76c3fa5db4f6b08cb59e9472bf",
+    "cf-worker/src/textbook-ai-context-route.mjs": "7414c82daec49cd4bae0a02e83100fc65f8a01dbcdfa729c0717943cb40dac64",
+    "cf-worker/src/textbook-ai-context.mjs": "7e73cc11761f8b22a5ecfce848a50e82c0e5f7ad0ffb152a4245e01639eb07c6",
+    "preview/build.py": "7dde8516cc4f22983514011cb95b5a2c107fec0ab7240304dad28cac1108aea3",
+    "site-assets/sw.js": "edb419362ad9ce73235ffee164fd96b7c6ab916d51338d7a22bc89263e0a5368",
+    "site-assets/textbook-ai-context-english1.json": "be374f30f054a4971b9d9701afbade94a72cca27044bd78df476887094b1aac7",
+    "site-assets/textbook-ai-context-geography.json": "1ce0b35ecaca9a7aec23127d47ae15b54951094ef41c80317e27e05b5423101f",
+    "site-assets/textbook-ai-context-history.json": "f94ee43387cd54f3db30802788bf356857f20f13063d1b5e05dc344f7e39a6b0",
+    "site-assets/textbook-ai-context-kokugo1.json": "7367c4849368f96a645007c13e2723d29a6b8d5080fdedf9cabe604fa97988d4",
+    "site-assets/textbook-ai-context-math1.json": "23fe208271f594da410a335c556a9532322b5f56eb71cad5ed9be83febbbdcfe",
+    "site-assets/textbook-ai-context-science1.json": "540926a2cf8e0ea7f4544eed3cdda4f793f9d8229b20c9c83ee02f449c1e5260",
+    "site-assets/textbook-book.js": "074e74171666d5e24eeefd05ea8adcb7c914a9670511d51a3abe6a95390c32d1",
+    "tools/candidates/textbook-ai-20261025/build-contexts.mjs": "2ad993020e33e0d74ab58a97f3f4deacecfd4461aae6a8c67fa286883d52500e",
+    "tools/candidates/textbook-ai-20261025/verify-book-signature.mjs": "6be19bee5be1a26256ef1f535e1d4e2b366ee0b85dd84e791207c33135598327",
+    "tools/candidates/textbook-ai-20261025/verify-context-api.mjs": "dba29566bb9a3415dbc06688f33adeb53f2a52cc88a623a5ab39c6ece3339d4f",
+    "tools/candidates/textbook-ai-20261025/verify-context-reader.mjs": "da6bfeee10e81b7e1611313e45f5d27593d52923d4ce99823fca44acc6f7e91d",
+    "tools/candidates/textbook-ai-20261025/verify-contexts.mjs": "a37f13fc9607911e93a9a594f0858cdbec4d8fe376ae3a8a5ac142740798b989",
+    "tools/candidates/textbook-ai-20261025/verify-three-account-credits.mjs": "38279e5b38402bcbf755949225d765c5d60235c8887da4a666d258f0f70a1d5b",
+    "tools/candidates/textbook-final-20261023/reviewed_changes.py": "bf8d390c54be1346dfb74373feb662d2b72ef8fe54853f75285c0408d7ffb926",
+    "cf-worker/src/plans.mjs": "249279ffda4620f5024cd3d67d139bcd9e2ae331bcbe25eb007327083db4f04d",
+    "cf-worker/src/textbook-access.mjs": "888dd06324015cfd683fcde55583ce4e94b36a4767731ef781bd6a304dece89d",
+    "cf-worker/src/textbook-ink.mjs": "c61c28bb36bb7c68d7d269141216c850db6a7d7d3569333ca51ed9661dadb4ad",
+    "cf-worker/src/textbook-ai-quota.mjs": "1510b9f42c1cdd0f1d73b258d025eda4ebbd7da940aef1d9e1e3dc4bf0ac7dfe",
+    ".claude/verify/run.sh": "a5d5cdcbfd8a72ed3d1e0f92105d79ddd5699408a8884091ebe2a0ba9e150f71",
+    "tools/candidates/textbook-ai-20261025/verify-access.mjs": "2c2b26a5ca80b4b5487e7d6e79ed7cbe8e78742ddb9aedc25bf19b69d70d7385",
+    "tools/candidates/textbook-ai-20261025/verify-access-ink.mjs": "ea8bddd0f795c3485f198a3d4505d3038f00436dd0a8a1b3d718412135ff53ba",
+    "tools/candidates/textbook-ai-20261025/verify-chat-quota.mjs": "5492a9ee9dec8a967460d52ebb38d7b14ff6889687d500f5d42df09e6c6d9a27"
+  },
+  "sourceBooksUnchanged": false,
+  "annotationModelUnchanged": true,
+  "addedCodeReview": {
+    "file": "tools/candidates/textbook-ai-20261025/added-code-review.txt",
+    "sha256": "256b3040be4ddb269a6ab4d136d1996111a563bf9da41d71b95ea4b1d2f5080d",
+    "lines": 308,
+    "status": "all owned code additions inspected; whitespace clean; generated JSON exact reproducible projection with only public fields"
+  },
+  "failureHistory": "tools/candidates/textbook-ai-20261025/generation-attempt1.json",
+  "notComplete": [
+    "browser excerpt-selection/own draft/send/retry UI",
+    "dedicated textbook AI service and three-account provider authorization",
+    "Connect completed book-only entitlement/handwriting cutover and independent quota to AI service and browser UI; release flags remain unset",
+    "preview compilation and full request-path/browser integration after batch stable",
+    "register new checks and required changed whole after connected feature",
+    "current75 renderer evidence binding after final AI integration; no unchanged AV regeneration",
+    "other textbook content/AV, wording holds, and original nonadmin goal"
+  ],
+  "runtimeIntegration": "Authenticated public context49, book-only access71, actual handwriting release integration53 and legacy81, independent textbook chat quota57 implemented locally. No browser AI send/draft/provider adapter yet; new quota is not yet used by live AI routes. Normal subscription framework/contract is not upgraded. No deployment.",
+  "existingDailyCreditRegression": {
+    "checks": 58,
+    "observedExitCode": 0
+  },
+  "reports": {
+    "source": {
+      "file": "tools/candidates/textbook-ai-20261025/context-verification-result.json",
+      "sha256": "e3a2a56b4123a82b02d5e6d41b483bc2dbd1fc64f5a45dc88278271c92d8ea3b"
+    },
+    "reader": {
+      "file": "tools/candidates/textbook-ai-20261025/context-reader-result.json",
+      "sha256": "c22ce6b1a42df7efca7403e9b60fb864daaca2a0c6f7184948f4e0790e41caf2"
+    },
+    "bookSignature": {
+      "file": "tools/candidates/textbook-ai-20261025/book-signature-result.json",
+      "sha256": "4d418e41403fce1975afdb5caa43918886e8294f4365feef08d93e18b47cd016"
+    },
+    "contextAPI": {
+      "file": "tools/candidates/textbook-ai-20261025/context-api-result.json",
+      "sha256": "019c93d0d7638d8e8297064115dcc0f599b4e60f6594cdbbc8c099a21acba2f5"
+    },
+    "privateCache": {
+      "file": "tools/candidates/textbook-ai-20261025/context-cache.log",
+      "sha256": "bfb7abb30dfec698a86f227c91c61d4a9ebd1bfb005164c0c161230cf397aec3"
+    },
+    "threeAccountDailyCredits": {
+      "file": "tools/candidates/textbook-ai-20261025/three-account-credit-result.json",
+      "sha256": "0647baf5d241ba49209706ec3e6a031ade4d3bcfecb334690ab550901c833427"
+    },
+    "strictHistoricalBridge": {
+      "file": "tools/candidates/textbook-ai-20261025/historical-bridge-result.json",
+      "sha256": "1f677a0086e66a9d2ba50f9bf295af5ea9f813ba4f6b9d3ca19178c13ffcf6b3"
+    },
+    "textbookAccess": {
+      "file": "tools/candidates/textbook-ai-20261025/access-result.json",
+      "sha256": "5793d36a4fc6807cdce3541e47ab5ef54a9aadc24107aa361f56820fb00baa85"
+    },
+    "releaseInkIntegration": {
+      "file": "tools/candidates/textbook-ai-20261025/access-ink-result.json",
+      "sha256": "020c42dedcc5221c0bdaeb6d722d0f671838b4993a012de8fb785b0e9b6bedb5"
+    },
+    "textbookChatQuota": {
+      "file": "tools/candidates/textbook-ai-20261025/chat-quota-result.json",
+      "sha256": "b9942784b1773a20e9bbde56318edc4cd63afcefc9707c2a18ee065bc21ceb1a"
+    }
+  },
+  "metadataSourceBinding": "two exact book renderer metadata edits; actual six-book390/1440, no-layout-storage and missing-model behavior passed43; no layout/teaching/video logic changes",
+  "lastFullScope": "Whole8305 terminal success marker sealed before current explanation/media corrections; exit code unobserved. This is not post-explanation whole success.",
+  "metadataRouteEdit": "tools/candidates/textbook-ai-20261025/worker-context-route-edit.json",
+  "creditBugReproduction": "tools/candidates/textbook-ai-20261025/u4-credit-reproduction.json",
+  "sourceBridge": "tools/candidates/textbook-ai-20261025/historical-bridge-result.json",
+  "currentWhole": {
+    "file": "tools/candidates/textbook-ai-20261025/post-access-full-attempt1.json",
+    "sha256": "423cb19a295bb36dc8dae2077f49f733fbf1c42474908dddd748c9718f926007",
+    "status": "passed by terminal success marker and unchanged inputs; process handle expired before exit code retrieval",
+    "observedExitCode": null,
+    "logSha256": "9983fdd91490f05e89490c0030b1a37842447fa9b1df375aa09ca2af1082beb5"
+  },
+  "accessQuotaAddedReview": {
+    "file": "tools/candidates/textbook-ai-20261025/access-quota-added-review.txt",
+    "sha256": "0455bec1d59a726d5af3630c305bd64329f48f7e0a396335c92d33573b9de635",
+    "status": "Owned new modules/tests and exact predecessor diffs inspected; tracked git diff check clean. Ignored source checked against preserved predecessor; no unrelated changes."
+  },
+  "failureHistoryAccessQuota": "tools/candidates/textbook-ai-20261025/quota-fixture-attempts.json",
+  "sourceBooksChangedOnlyByApprovedExplanations": true,
+  "approvedExplanationDelta": {
+    "file": "tools/candidates/textbook-final-20261023/explanations-20261025/receipt.json",
+    "sha256": "7abc3da9975a3e124c46443ba9ed8b0a6ecc5381f4049e3825af8f91d550e5da",
+    "preservation": 15,
+    "bookDisplay": 152,
+    "clonedSourceBridge": 8
+  },
+  "correctedGeographyMovie": {
+    "file": "tools/candidates/textbook-final-20261023/explanations-20261025/geography-video/integration.json",
+    "sha256": "79a9b6da73535bc2acb35f7816db2c9b910c601d407d1154a0b603658cc8c71a",
+    "technicalCurrentChecks": 48,
+    "actualVisualSamples": 27,
+    "actualBookPlayback": 55,
+    "published": false
+  },
+  "currentOwnedReview": {
+    "status": "owned additions inspected; five source deltas exact, source tooling/reproduction/playback failures corrected, old proofs/values preserved",
+    "file": "tools/candidates/textbook-final-20261023/explanations-20261025/owned-added-review.txt",
+    "sha256": "af3f6fe283a566924c37926c2b4f1ff0a817d4cfb6f4e12cdc8aae43ace8229a",
+    "lines": 745,
+    "sourceDeltaReceiptSha256": "7abc3da9975a3e124c46443ba9ed8b0a6ecc5381f4049e3825af8f91d550e5da",
+    "movieIntegrationSha256": "79a9b6da73535bc2acb35f7816db2c9b910c601d407d1154a0b603658cc8c71a",
+    "fullAfterLatestChanges": "pending final connected AI batch, not certified"
+  }
+}

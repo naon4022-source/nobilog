@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": 115,
+  "inputs": [
+    {
+      "file": "site-assets/material-bridge.js",
+      "sha256": "c5f4e057e517f5094eef847c605212892b7f077dd3e56bcc9cd6768410236bad"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session.mjs",
+      "sha256": "db3e69a708300b58bd388ccb321cd67b44458b6493b88b0efde14cc5ef2ecd08"
+    },
+    {
+      "file": "cf-worker/src/ai-test-session-route.mjs",
+      "sha256": "a2b246182bcd4fb6de8851fc28535793e12c29f4376b0787dbb24f72a68dd055"
+    },
+    {
+      "file": "cf-worker/src/material-records.mjs",
+      "sha256": "4f3708b4cc21afeae2513026b14dc5cdee29258500a187794b403bf9ab4b7c0a"
+    }
+  ],
+  "scope": "Actual material bridge, owned session HTTP, server grading/immutable records and completed proof against public canonical questions in isolated SQLite. Three users, first wrong answers, lost acknowledgements, changed-answer recovery, new test separation, malformed reply/actor/current-test rejection, zero AI/contract changes. No browser/paid job proof."
+}

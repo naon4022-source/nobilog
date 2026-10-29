@@ -1,0 +1,4 @@
+{
+  "status": "failed then corrected in receipt builder",
+  "reason": "Python counted Unicode codepoints but JavaScript String.slice uses UTF16 code units; earlier emoji in source shifted offsets. Rebuilt exact offsets in UTF16 without changing source, expected bytes or verification assertions. App bridge/browser were already passing."
+}

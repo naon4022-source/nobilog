@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": 41,
+  "inputs": [
+    {
+      "file": "site-assets/test-review-model.js",
+      "sha256": "5a4a423416ab308adf799cd741c3ff10c3d8fd9e9f2b2b360349c51a2867d759"
+    }
+  ],
+  "scope": "Actual receipt/client model with injected atomic store. Persist-before-POST, same ID on response loss/reload/two clients, GET-only polling, validated complete payload before one own notification, notification preference/visibility, stale owner rejection and no stored session/answers. Real IndexedDB/browser integration still required."
+}

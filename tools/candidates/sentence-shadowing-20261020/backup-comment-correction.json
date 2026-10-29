@@ -1,0 +1,15 @@
+{
+  "status": "prepared; not applied",
+  "scope": "comments only; no storage or recovery behavior change",
+  "file": "index.html",
+  "replacements": [
+    {
+      "before": "autoBackupInit(); // 🛟 全自動バックアップ開始（保存のたびに裏で二重保存・消えていたら自動復元）",
+      "after": "autoBackupInit(); // 本人の記録変更をサーバー同期へ通知。端末バックアップ・自動復元は無効。"
+    },
+    {
+      "before": "    // ===== 🛟 自動バックアップ（ボタン無し・全自動）。記録が変わるたびにIndexedDBへ裏で丸ごとコピーし、\n    //       起動時にrecordStorageが消えていたら自動で復元する。IndexedDBが使えない環境では何もしない（アプリは通常どおり動く） =====",
+      "after": "    // ===== 記録変更のサーバー同期通知と、旧端末バックアップの本人限定取り込み用処理。\n    // 通常の端末バックアップ作成・自動復元は無効。サーバーの記録を正本とする。 ====="
+    }
+  ]
+}

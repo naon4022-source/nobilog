@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-21T15:46:15.898771+00:00",
+  "status": "isolated gateway/native checks passed; existing application/configuration untouched; not deployed",
+  "existingApplicationInputs": {
+    "cf-worker/src/index.js": "a8ec7ed2ae8cc1db0a851ed8573b9cdd82f4cf5842c76a07a8271b71d37ffe4d",
+    "tools/releases/google-entry-20261021/nobilog-board/src/index.js": "e0edf233409c16232910cb36d54c6b5a1b310b2fe6610c5a22f3075946d1e07f"
+  },
+  "files": {
+    "oauth-form-body.mjs": "b5131b2edb7f60a743a37f26b7e4ece054178496881e21690dd22f23fb4a3403",
+    "rate-policy.mjs": "ad6e3c7efa2b8f1d51f326c28f4a9495b29d07b43bb1add9606259b14e2fe305",
+    "security-gateway.mjs": "5d12317f0b249aac24b2f85bdb064b876ddd5b95a3a9fcae103d50a9c0b7fa64",
+    "security-rate-do.mjs": "97c0e799c789a31192e86d638098b9b8e4dcf92d44d8daa9788267f47ce5bd9f",
+    "attach-gateway.mjs": "79b523b83feb77e6a04895814961f111247d3592ae4ae43b8f09fde479dbfc86",
+    "main-entry.mjs": "ab811850199632774b793761f9788e04e83e24b32b4248567493fc2dbf6f89f1",
+    "public-entry.mjs": "c6adb4cd8bb2311f78ba1b0567a12903b5ac80639073d31086726f37ed754245",
+    "fixture-worker.mjs": "efcc5a4c8ae0d1ec241217891228e44f12381d12e040500cbc6e7b768e5f0fb8",
+    "verify-gateway.mjs": "c4dbf92eac6395c816e0f9ed38abf58a354f6b60dd7fc89f122ba08c6053339d",
+    "verify-rpc.mjs": "2609bfdf8a20e70e3452703f62dfdf606f8b5efb7d3fa7c6d68c2cdd6cdd3934"
+  },
+  "applicationCodeChanged": false,
+  "configurationChanged": false,
+  "deployed": false,
+  "realUserData": false,
+  "testsRun": true,
+  "preFull": {
+    "execSession": 26912,
+    "log": "/tmp/nobi-security-preflight-repaired-20261022.log",
+    "terminalKnown": true,
+    "observedExitCode": 0,
+    "proof": "repaired-pre-full-result.json"
+  },
+  "resumeOriginalWorkAfterSecurityChecks": true,
+  "verificationRunnerSha256": "3427853a2291bf284f44bdab0f35e73e84fa874cb05d41ccfa660867480194b4",
+  "runnerRequiresOwnSuccessfulPreFullAndUnchangedLog": true,
+  "latestVerification": "verification.json"
+}

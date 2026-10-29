@@ -1,0 +1,8 @@
+{
+  "file": ".claude/verify/run.sh",
+  "beforeFile": "tools/candidates/textbook-final-20261023/handwriting-20261025/before/.claude/verify/run.sh",
+  "beforeSha256": "b7ec02cf6c99bf1ce7fc784252edebb840cf11cea1091c1c748e376e4d663729",
+  "afterSha256": "44877dbf3854df4d4174e08aab5ffa9f18cf7b5c3c52fdfbddf35a36e6e781bd",
+  "anchor": "node \"$VERIFY_DIR/verify-textbook-annotations-book-browser.mjs\" || fail=1\n",
+  "added": "node \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-api.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-model.mjs\" || fail=1\nnode \"$PROJECT_DIR/tools/candidates/textbook-final-20261023/handwriting-20261025/verify-book.mjs\" || fail=1\n"
+}

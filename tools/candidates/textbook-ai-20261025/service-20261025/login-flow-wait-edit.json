@@ -1,0 +1,10 @@
+{
+  "status": "test-only fix applied after failed suite finished; not tested yet while standalone full remains running",
+  "file": "tools/releases/google-link-20261019/verify-login-flow.mjs",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/service-20261025/before/tools/releases/google-link-20261019/verify-login-flow.mjs",
+  "beforeSha256": "82d85f2d8c59adb9b344dfc86d460226229e61742b8d7bd798f0ef7a93892173",
+  "afterSha256": "5bc9673ecec6764ff29e737f836a45daa79993f620a391a2dfe56ce68b969e26",
+  "before": " await page.evaluate(async()=>{await cloudPush();if(cloudDirty())throw Error('synthetic save not acknowledged');});",
+  "after": " await page.waitForFunction(()=>!cloudState.busy);\n await page.evaluate(()=>cloudPush());\n await page.waitForFunction(()=>!cloudState.busy&&!cloudDirty(),null,{timeout:10000});\n await page.evaluate(()=>{if(cloudDirty()||cloudState.busy)throw Error('synthetic save not acknowledged');});",
+  "scope": "Wait for actual busy/dirty completion; retain actual D1 write, reload, one-time grant and other-account byte equality. No candidate or main runtime change. Full1 remains failed."
+}

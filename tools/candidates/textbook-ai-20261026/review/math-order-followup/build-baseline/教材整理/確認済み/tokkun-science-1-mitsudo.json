@@ -1,0 +1,1934 @@
+{
+ "id": "tokkun-science-1-mitsudo",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "重さ・体積と密度（特訓）",
+ "majorTitle": "いろいろな物質とその性質",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-mitsudo-1",
+   "type": "input",
+   "prompt": "1辺が2 cmの銅の立方体がある。銅の密度を8.96 g/cm³として、この立方体の質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "71.68",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "体積は 2×2×2＝8 cm³。質量＝密度×体積＝8.96×8＝71.68 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-2",
+   "type": "input",
+   "prompt": "縦5 cm、横4 cm、高さ2.5 cmの直方体の金属がある。質量をはかると135 gだった。この金属は何と考えられるか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アルミニウム",
+     "あるみにうむ",
+     "アルミ"
+    ]
+   },
+   "explanation": "体積は 5×4×2.5＝50 cm³。密度＝135÷50＝2.70 g/cm³ なので、表からアルミニウム。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-3",
+   "type": "input",
+   "prompt": "縦2 cm、横2 cm、高さ3 cmの鉛のかたまりがある。鉛の密度を11.3 g/cm³として、質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "135.6",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "体積は 2×2×3＝12 cm³。質量＝11.3×12＝135.6 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-4",
+   "type": "input",
+   "prompt": "長さ20 cm、幅5 cmの鉄の板の質量は393.5 gだった。鉄の密度を7.87 g/cm³として、この板の厚さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "体積＝393.5÷7.87＝50 cm³。体積＝縦×横×厚さ なので、厚さ＝50÷(20×5)＝0.5 cm。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-5",
+   "type": "input",
+   "prompt": "縦10 cm、横10 cm、厚さ0.002 cmのアルミニウムはくがある。アルミニウムの密度を2.70 g/cm³として、質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.54",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "体積は 10×10×0.002＝0.2 cm³。質量＝2.70×0.2＝0.54 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-6",
+   "type": "input",
+   "prompt": "縦25 cm、横20 cmのアルミニウムはくの質量は1.35 gだった。アルミニウムの密度を2.70 g/cm³として、このはくの厚さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.001",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "体積＝1.35÷2.70＝0.5 cm³。厚さ＝0.5÷(25×20)＝0.001 cm。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-7",
+   "type": "input",
+   "prompt": "銅の針金の質量は44.8 gで、針金の切り口の面積は0.25 cm²だった。銅の密度を8.96 g/cm³として、針金の長さは何cmか（体積＝切り口の面積×長さ）。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "体積＝44.8÷8.96＝5 cm³。長さ＝5÷0.25＝20 cm。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-8",
+   "type": "input",
+   "prompt": "1辺が3 cmの氷の立方体がある。氷の密度を0.917 g/cm³として、質量は何gか。小数第2位を四捨五入して、小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24.8",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "体積は 3×3×3＝27 cm³。質量＝0.917×27＝24.759 g → 24.8 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-9",
+   "type": "input",
+   "prompt": "質量1.575 kg、体積200 cm³の金属の密度は何g/cm³か。小数第3位を四捨五入して、小数第2位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7.88",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "1.575 kg＝1575 g。密度＝1575÷200＝7.875 → 7.88 g/cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-10",
+   "type": "input",
+   "prompt": "エタノール250 mLの質量は何gか。エタノールの密度を0.79 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "197.5",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "1 mL＝1 cm³ なので体積は250 cm³。質量＝0.79×250＝197.5 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-11",
+   "type": "input",
+   "prompt": "エタノール1 Lの質量は何kgか。エタノールの密度を0.79 g/cm³とする（1 L＝1000 cm³）。",
+   "answer": {
+    "kind": "number",
+    "value": "0.79",
+    "units": [
+     "kg"
+    ]
+   },
+   "explanation": "質量＝0.79×1000＝790 g＝0.79 kg。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-12",
+   "type": "input",
+   "prompt": "銅1 kgの体積は何cm³か。銅の密度を8.96 g/cm³として、小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "112",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "1 kg＝1000 g。体積＝1000÷8.96＝111.6… → 112 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-13",
+   "type": "input",
+   "prompt": "食用油0.5 Lの質量は何gか。食用油の密度を0.92 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "460",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "0.5 L＝500 cm³。質量＝0.92×500＝460 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-14",
+   "type": "input",
+   "prompt": "水1 m³の質量は何kgか。水の密度を1.00 g/cm³とする（1 m³＝1000000 cm³）。",
+   "answer": {
+    "kind": "number",
+    "value": "1000",
+    "units": [
+     "kg"
+    ]
+   },
+   "explanation": "質量＝1.00×1000000＝1000000 g＝1000 kg。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-15",
+   "type": "input",
+   "prompt": "水銀20 mLの質量は何gか。水銀の密度を13.5 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "270",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "20 mL＝20 cm³。質量＝13.5×20＝270 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-16",
+   "type": "input",
+   "prompt": "アルミニウムでできた質量540 gのなべの体積は何cm³か。アルミニウムの密度を2.70 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "体積＝質量÷密度＝540÷2.70＝200 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-17",
+   "type": "input",
+   "prompt": "水を50.0 cm³入れたメスシリンダーに、質量55.09 gの金属球を静かに沈めると、水面は57.0 cm³の目盛りになった。この金属は何と考えられるか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉄",
+     "てつ"
+    ]
+   },
+   "explanation": "体積＝57.0−50.0＝7.0 cm³。密度＝55.09÷7.0＝7.87 g/cm³ なので鉄。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-18",
+   "type": "input",
+   "prompt": "水を40.0 cm³入れたメスシリンダーに、金属球Aと金属球Bを両方沈めると、水面は52.0 cm³になった。Aは鉄でできていて質量は31.48 gである。鉄の密度を7.87 g/cm³として、Bの体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "2つ合わせた体積は 52.0−40.0＝12.0 cm³。Aの体積＝31.48÷7.87＝4 cm³。Bの体積＝12−4＝8 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-19",
+   "type": "input",
+   "prompt": "水を45.0 cm³入れたメスシリンダーに、質量71.68 gの銅の球を沈める。銅の密度を8.96 g/cm³として、水面は何cm³の目盛りを示すか。",
+   "answer": {
+    "kind": "number",
+    "value": "53",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "球の体積＝71.68÷8.96＝8 cm³。水面は 45.0＋8＝53.0 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-20",
+   "type": "input",
+   "prompt": "水を50.0 cm³入れたメスシリンダーに、1個15.74 gの鉄の球を3個沈める。鉄の密度を7.87 g/cm³として、水面は何cm³の目盛りを示すか。",
+   "answer": {
+    "kind": "number",
+    "value": "56",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "3個の質量は 47.22 g。体積＝47.22÷7.87＝6 cm³。水面は 50.0＋6＝56.0 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-21",
+   "type": "input",
+   "prompt": "水に浮いてしまう物体を、水に沈んでいる部分だけの水面の上がり方で体積を読むと、本当の体積より大きく出るか、小さく出るか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さく",
+     "ちいさく",
+     "小さく出る",
+     "小さい"
+    ]
+   },
+   "explanation": "水面より上に出ている部分の体積が入らないので、本当の体積より小さく出る。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-22",
+   "type": "input",
+   "prompt": "金属のかたまりをメスシリンダーに入れるとき、メスシリンダーをかたむけて、かたまりを静かにすべらせて入れる。その理由を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "割れ",
+       "われ",
+       "こわ",
+       "壊",
+       "破損",
+       "はね",
+       "飛び",
+       "とび"
+      ]
+     }
+    ]
+   },
+   "explanation": "かたまりを上から落とすと、メスシリンダーの底が割れたり、水がはねたりするから。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-23",
+   "type": "input",
+   "prompt": "メスシリンダーの目盛りを、液面より上から見下ろして読むと、正しい値より大きく読むか、小さく読むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きく",
+     "おおきく",
+     "大きく読む",
+     "大きい"
+    ]
+   },
+   "explanation": "上から見下ろすと視線がななめになり、液面の位置を実際より高い目盛りで読んでしまう。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-24",
+   "type": "input",
+   "prompt": "最小目盛りが2 cm³のメスシリンダーで体積を読むとき、目分量で何cm³のけたまで読むか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.2",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "最小目盛りの10分の1まで目分量で読む。2 cm³の10分の1は0.2 cm³。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-25",
+   "type": "input",
+   "prompt": "質量がどちらも100 gのアルミニウムのかたまりと鉄のかたまりがある。体積の差は何cm³か。アルミニウム2.70 g/cm³、鉄7.87 g/cm³として、小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24.3",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "アルミニウム 100÷2.70＝37.03…cm³、鉄 100÷7.87＝12.70…cm³。差は 24.33… → 24.3 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-26",
+   "type": "input",
+   "prompt": "体積がどちらも10 cm³の銅とアルミニウムがある。質量の差は何gか。銅8.96 g/cm³、アルミニウム2.70 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "62.6",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "銅 89.6 g、アルミニウム 27.0 g。差は 62.6 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-27",
+   "type": "input",
+   "prompt": "体積が同じ鉄とアルミニウムでは、鉄の質量はアルミニウムの質量の何倍か。鉄7.87 g/cm³、アルミニウム2.70 g/cm³として、小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2.9",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "体積が同じなら、質量の比は密度の比。7.87÷2.70＝2.91… → 2.9倍。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-28",
+   "type": "input",
+   "prompt": "質量が同じ銅と鉄では、鉄の体積は銅の体積の何倍か。銅8.96 g/cm³、鉄7.87 g/cm³として、小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1.1",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "質量が同じなら、体積は密度に反比例する。8.96÷7.87＝1.13… → 1.1倍。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-29",
+   "type": "input",
+   "prompt": "同じ質量の水銀・銅・アルミニウムで、体積がいちばん大きいのはどれか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アルミニウム",
+     "あるみにうむ",
+     "アルミ"
+    ]
+   },
+   "explanation": "同じ質量なら、密度が小さいほど体積が大きい。いちばん密度が小さいのはアルミニウム。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-30",
+   "type": "input",
+   "prompt": "水・氷・エタノール・食用油を同じ体積ずつとったとき、質量がいちばん小さいのはどれか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エタノール",
+     "えたのーる"
+    ]
+   },
+   "explanation": "同じ体積なら、密度が小さいほど質量が小さい。いちばん密度が小さいのはエタノール（0.79）。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-31",
+   "type": "input",
+   "prompt": "水100 cm³と同じ質量になるエタノールの体積は何cm³か。水1.00 g/cm³、エタノール0.79 g/cm³として、小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "126.6",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "水100 cm³の質量は100 g。エタノールの体積＝100÷0.79＝126.58… → 126.6 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-32",
+   "type": "input",
+   "prompt": "鉄の球を水に沈めると、体積は12.0 cm³だった。この球と同じ質量の銅の体積は何cm³か。鉄7.87 g/cm³、銅8.96 g/cm³として、小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10.5",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "球の質量＝7.87×12＝94.44 g。銅の体積＝94.44÷8.96＝10.54… → 10.5 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-33",
+   "type": "input",
+   "prompt": "密度が大きい物質ほど、同じ質量で比べたときの体積は大きくなるか、小さくなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さく",
+     "ちいさく",
+     "小さくなる",
+     "小さい"
+    ]
+   },
+   "explanation": "体積＝質量÷密度。質量が同じなら、密度が大きいほど体積は小さい。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-34",
+   "type": "input",
+   "prompt": "物体Aは質量30 g・体積12 cm³、物体Bは質量45 g・体積20 cm³である。密度が大きいのはA・Bのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "A",
+     "Ａ",
+     "物体A",
+     "物体Ａ"
+    ]
+   },
+   "explanation": "A：30÷12＝2.5 g/cm³、B：45÷20＝2.25 g/cm³。質量はBのほうが大きいが、密度はAのほうが大きい。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-35",
+   "type": "input",
+   "prompt": "物体Pは54 g・20 cm³、物体Qは63 g・8 cm³、物体Rは39.5 g・50 cm³である。密度が大きい順にP・Q・Rをならべよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "QPR",
+     "Q,P,R",
+     "Q、P、R",
+     "Q→P→R"
+    ]
+   },
+   "explanation": "P：2.70、Q：7.875、R：0.79 g/cm³。大きい順に Q→P→R。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-36",
+   "type": "input",
+   "prompt": "質量56.5 g、体積5.0 cm³の金属がある。この金属は何と考えられるか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉛",
+     "なまり"
+    ]
+   },
+   "explanation": "密度＝56.5÷5.0＝11.3 g/cm³ なので鉛。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-37",
+   "type": "input",
+   "prompt": "空の容器の質量は200 gで、水を満たすと全体で300 g、ある液体を満たすと全体で1550 gになった。この液体は何と考えられるか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水銀",
+     "すいぎん"
+    ]
+   },
+   "explanation": "水の質量100 g → 容器の容積は100 cm³。液体の質量は1350 gなので、密度＝1350÷100＝13.5 g/cm³。表から水銀。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-38",
+   "type": "input",
+   "prompt": "空の容器の質量は120 gで、水を満たすと全体で680 gになった。同じ容器にエタノールを満たすと全体は何gか。エタノールの密度を0.79 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "562.4",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "水560 g → 容積560 cm³。エタノールの質量＝0.79×560＝442.4 g。全体は 442.4＋120＝562.4 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-39",
+   "type": "input",
+   "prompt": "電子てんびんに容器をのせて表示を0にしてから液体を入れると、表示は39.5 gになった。液体の体積は50.0 cm³だった。この液体は何と考えられるか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エタノール",
+     "えたのーる"
+    ]
+   },
+   "explanation": "表示は液体だけの質量。密度＝39.5÷50.0＝0.79 g/cm³ なのでエタノール。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-40",
+   "type": "input",
+   "prompt": "電子てんびんで、空の容器は25.0 g、液体70.0 cm³を入れると全体で88.0 gだった。この液体の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "0.9",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "液体の質量＝88.0−25.0＝63.0 g。密度＝63.0÷70.0＝0.90 g/cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-41",
+   "type": "input",
+   "prompt": "同じ物質でできた物体では、質量と体積は比例する。体積15 cm³で質量40.5 gの物質があるとき、同じ物質25 cm³の質量は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "67.5",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "密度＝40.5÷15＝2.7 g/cm³（一定）。質量＝2.7×25＝67.5 g。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-42",
+   "type": "input",
+   "prompt": "ある物質の密度は8.0 g/cm³である。この物質でできた物体を半分に切ったとき、切った片方の密度は何g/cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "g/cm³",
+     "g/cm3"
+    ]
+   },
+   "explanation": "密度は物質の種類で決まり、大きさ（量）には関係しない。半分に切っても8.0 g/cm³のまま。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-43",
+   "type": "input",
+   "prompt": "同じ物質のかたまりの体積を2倍にすると、密度はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "変わらない",
+     "かわらない",
+     "同じ",
+     "おなじ",
+     "変化しない"
+    ]
+   },
+   "explanation": "質量も2倍になるので、質量÷体積の値は変わらない。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-44",
+   "type": "input",
+   "prompt": "質量405 gのアルミニウムのかたまりから、質量の3分の1を切りとった。残りの体積は何cm³か。アルミニウムの密度を2.70 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "残りの質量＝405×2/3＝270 g。体積＝270÷2.70＝100 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-45",
+   "type": "input",
+   "prompt": "鉄のくぎ1本の質量は3.148 gである。同じくぎ50本の体積は何cm³か。鉄の密度を7.87 g/cm³とする。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm³",
+     "cm3",
+     "mL",
+     "ml"
+    ]
+   },
+   "explanation": "50本の質量＝3.148×50＝157.4 g。体積＝157.4÷7.87＝20 cm³。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 57,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p57（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-46",
+   "type": "input",
+   "prompt": "電子てんびんがないので、メスシリンダーで水を250 gはかりとりたい。水の密度を1.00 g/cm³として、何mLはかればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "250",
+    "units": [
+     "mL",
+     "ml",
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "体積＝250÷1.00＝250 cm³＝250 mL。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-47",
+   "type": "input",
+   "prompt": "銅の立方体を水銀に入れると、浮くか、沈むか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "浮く",
+     "うく"
+    ]
+   },
+   "explanation": "銅（8.96）は水銀（13.5）より密度が小さいので浮く。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-48",
+   "type": "input",
+   "prompt": "鉄の球・アルミニウムの板・氷を、それぞれ水銀に入れる。このうち沈むものはどれか。沈むものがなければ「ない」と答えよう。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ない",
+     "なし",
+     "無い"
+    ]
+   },
+   "explanation": "鉄（7.87）・アルミニウム（2.70）・氷（0.917）は、どれも水銀（13.5）より密度が小さいので、すべて浮く。沈むものはない。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-49",
+   "type": "input",
+   "prompt": "密度0.90 g/cm³のプラスチック片を、水とエタノールにそれぞれ入れた。結果として正しいものを選ぼう。\nア 両方に浮く　イ 水に浮き、エタノールに沈む　ウ 水に沈み、エタノールに浮く　エ 両方に沈む",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "0.90は水（1.00）より小さく、エタノール（0.79）より大きい。だから水には浮き、エタノールには沈む。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-50",
+   "type": "input",
+   "prompt": "質量24 g、体積30 cm³の物体を、エタノール（0.79 g/cm³）に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む",
+     "しずむ"
+    ]
+   },
+   "explanation": "密度＝24÷30＝0.80 g/cm³。エタノールの0.79よりわずかに大きいので沈む。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-51",
+   "type": "input",
+   "prompt": "水・エタノール・水銀のうち、氷を入れると沈む液体はどれか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エタノール",
+     "えたのーる"
+    ]
+   },
+   "explanation": "氷（0.917）より密度が小さい液体はエタノール（0.79）だけ。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-52",
+   "type": "input",
+   "prompt": "水銀・水・食用油・エタノールのうち、表の値だけでは、氷が浮くか沈むかをはっきり決められない液体はどれか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "食用油",
+     "しょくようあぶら",
+     "しょくようゆ"
+    ]
+   },
+   "explanation": "食用油は0.91〜0.92と幅があり、氷の0.917がその間に入るので、表だけでは決められない。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-53",
+   "type": "input",
+   "prompt": "水と食用油を同じ容器に静かに入れると、上にたまるのはどちらか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "食用油",
+     "しょくようあぶら",
+     "しょくようゆ"
+    ]
+   },
+   "explanation": "密度の小さい食用油が上、密度の大きい水が下にたまる。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-54",
+   "type": "input",
+   "prompt": "水に浮く木片を水銀に入れると、浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "浮く",
+     "うく"
+    ]
+   },
+   "explanation": "水に浮く木片の密度は1.00より小さい。水銀（13.5）よりもっと小さいので浮く。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-55",
+   "type": "input",
+   "prompt": "密度0.90 g/cm³の液体（水とまざらないもの）に、水を1てき静かに落とすと、水のつぶは浮くか、沈むか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈む",
+     "しずむ"
+    ]
+   },
+   "explanation": "水（1.00）は0.90の液体より密度が大きいので沈む。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-56",
+   "type": "input",
+   "prompt": "ある物体は、水には沈み、水銀には浮いた。表の物質のうち、この物体の材料として考えられるものをすべて書こう。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "鉛",
+      "なまり"
+     ],
+     [
+      "銅",
+      "どう"
+     ],
+     [
+      "鉄",
+      "てつ"
+     ],
+     [
+      "アルミニウム",
+      "あるみにうむ",
+      "アルミ"
+     ]
+    ]
+   },
+   "explanation": "密度が水（1.00）より大きく、水銀（13.5）より小さい物質：鉛・銅・鉄・アルミニウム。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-57",
+   "type": "input",
+   "prompt": "表の物質のうち、水には浮き、エタノールには沈む固体はどれか。（ワークの表：水銀13.5、鉛11.3、銅8.96、鉄7.87、アルミニウム2.70、水1.00、氷0.917、食用油0.91〜0.92、エタノール0.79〔単位はg/cm³〕）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "氷",
+     "こおり"
+    ]
+   },
+   "explanation": "密度が0.79より大きく1.00より小さい固体は氷（0.917）。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-58",
+   "type": "input",
+   "prompt": "鉄のくぎは水に沈むが、鉄でできた大きな船は水に浮く。船が浮く理由として正しいものを選ぼう。\nア 鉄の密度が船では小さくなるから　イ 船の中に空気の部分が多く、船全体として水より密度が小さいから　ウ 船は鉄でないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "鉄そのものの密度は変わらない。中の空気の部分をふくめた船全体の「質量÷体積」が水より小さいので浮く。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 53,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p53（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-59",
+   "type": "input",
+   "prompt": "上皿てんびんで物体の質量をはかる。正しい順にならべよう。\nア 物体を一方の皿にのせる　イ 針が左右に等しくふれるように調節ねじで調節する　ウ 水平な台の上に置く　エ 物体より少し重いと思われる分銅からのせる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウイアエ",
+     "ウ→イ→ア→エ",
+     "ウ、イ、ア、エ",
+     "ウ,イ,ア,エ"
+    ]
+   },
+   "explanation": "水平な台に置く → 調節ねじで調節 → 物体をのせる → 重い分銅から順にのせる。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-60",
+   "type": "input",
+   "prompt": "上皿てんびんで、のせた分銅が物体より重すぎたとき、次にどうするか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "軽い",
+       "かるい",
+       "小さい",
+       "ちいさい",
+       "次に重い",
+       "つぎにおもい"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "とりかえ",
+       "取りかえ",
+       "取り替え",
+       "かえる",
+       "替え",
+       "換え",
+       "おろ",
+       "取",
+       "のせ"
+      ]
+     }
+    ]
+   },
+   "explanation": "その分銅をおろし、1つ軽い分銅にとりかえてのせる。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-61",
+   "type": "input",
+   "prompt": "上皿てんびんの針が、左右に等しくふれていれば、針が止まるのを待たなくても、つり合っていると判断してよい。正しいか、誤りか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正しい",
+     "ただしい",
+     "○",
+     "まる"
+    ]
+   },
+   "explanation": "針が左右に等しくふれていれば、つり合っていると判断してよい。止まるまで待つ必要はない。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-62",
+   "type": "input",
+   "prompt": "電子てんびんで薬品を5.0 gはかりとりたい。容器をのせて表示を0にしてから薬品を入れると、表示が5.3 gになった。このあとどうするか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "減ら",
+       "へら",
+       "取り",
+       "とり",
+       "もど",
+       "戻",
+       "すくい",
+       "0.3"
+      ]
+     }
+    ]
+   },
+   "explanation": "薬品を少しずつ取り除いて（減らして）、表示が5.0 gになるようにする。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-63",
+   "type": "input",
+   "prompt": "電子てんびんで、表示を0にしないまま容器ごと液体の質量をはかってしまった。液体だけの質量を求めるには、何をすればよいか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "容器",
+       "ようき",
+       "入れ物",
+       "いれもの"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "引",
+       "ひく",
+       "ひいて",
+       "差",
+       "さ"
+      ]
+     }
+    ]
+   },
+   "explanation": "容器だけの質量を別にはかり、全体の質量から容器の質量を引く。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-64",
+   "type": "input",
+   "prompt": "電子てんびんの表示が0になっていない状態ではかり始めると、はかった値は正しくなるか。「正しくならない」「正しくなる」のどちらかで答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正しくならない",
+     "ただしくならない"
+    ]
+   },
+   "explanation": "0でないまま始めると、そのずれの分だけ値がずれる。水平な場所に置き、0に合わせてからはかる。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-65",
+   "type": "input",
+   "prompt": "上皿てんびんを片づけるとき、皿はどのようにしておくか。次から選ぼう。\nア 両方の皿をのせたままにする　イ 皿を一方に重ねておく　ウ 皿をはずして別の場所にしまう",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "皿を一方に重ねておくと、うでがふれて支点をいためるのを防げる。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-66",
+   "type": "input",
+   "prompt": "密度・質量・体積のうち、2つがわかれば残りの1つを求められる。体積を求める式を、言葉で書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "質量",
+       "しつりょう"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "密度",
+       "みつど"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "÷",
+       "/",
+       "わる",
+       "割る"
+      ]
+     }
+    ]
+   },
+   "explanation": "体積＝質量÷密度。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-67",
+   "type": "input",
+   "prompt": "密度の単位 g/cm³ を見ると、密度を求める計算のしかたがわかる。「g」と「cm³」のあいだの「/」は、どの計算を表しているか。「たし算」「ひき算」「かけ算」「わり算」から選ぼう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "わり算",
+     "わりざん",
+     "割り算"
+    ]
+   },
+   "explanation": "g/cm³ は「g÷cm³」、つまり質量を体積でわった値であることを表す。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-68",
+   "type": "input",
+   "prompt": "同じ体積の水とエタノールの質量を比べると水のほうが大きい。このことから、密度が大きいのは水とエタノールのどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "水",
+     "みず"
+    ]
+   },
+   "explanation": "同じ体積で質量が大きいほうが、密度が大きい。",
+   "source": {
+    "id": "source-0526",
+    "file": "理科ワーク/S__16252959_0.jpg",
+    "sha256": "d185d5a597f1d7e4edbe52c13b3157bf2f529bb90b677bf24bad4f7b8d1f50bd",
+    "page": 52,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p52（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-69",
+   "type": "input",
+   "prompt": "ある金属のかたまりの密度を求めたら、表のどの金属とも合わなかった。考えられる理由として正しいものを選ぼう。\nア 金属の種類にかかわらず密度は同じだから　イ 表にない物質や、いくつかの物質がまざったものだったから　ウ 質量が大きすぎたから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "密度は物質ごとに決まった値。表のどれとも合わないなら、表にない物質か、まざったものと考えられる。大きさ（質量の大小）では密度は変わらない。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-mitsudo-70",
+   "type": "input",
+   "prompt": "質量が同じでも、体積がちがえば物質の種類はちがうと考えられる。正しいか、誤りか（中にすき間がないものとする）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正しい",
+     "ただしい",
+     "○",
+     "まる"
+    ]
+   },
+   "explanation": "質量が同じで体積がちがえば、密度（質量÷体積）がちがうので、ちがう物質と考えられる。",
+   "source": {
+    "id": "source-0528",
+    "file": "理科ワーク/S__16252961_0.jpg",
+    "sha256": "794745c6080c25c504e9a65a21d99d388386dedcf7550d088df231fbf0eb93bc",
+    "page": 56,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p56（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）。理科ワーク p52〜59（教科書チェック・計算 密度・○×・力だめし）を写真で確認し、その範囲で一段難しいオリジナル問題を作った。表の密度はワーク p52・p53 の値。混合物の密度・状態変化による体積変化・浮力の計算は範囲外として使っていない。数値の答えは build_tokkun_science_mitsudo.py で分数により正確に計算して確認。ワーク・ドリルの問題との類似度0.9未満。"
+}

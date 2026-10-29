@@ -1,0 +1,31 @@
+{
+  "status": "Broad explicit user approval received; explanation/goal applied locally and preservation15/actual book152 checked",
+  "source": "教材整理/Claude_Codex共有/数学全体制作/Claude原稿/M1-C1-S2/本文.md",
+  "pages": [
+    "M1-P051",
+    "M1-P052"
+  ],
+  "reason": "The numbered text puts powers before bracket contents, while the reference page43 and the existing video summary put brackets first. Expressions with an exponent on an entire parenthesized sum need inner evaluation first.",
+  "proofExamples": [
+    "(−2+5)² = 3² = 9",
+    "2×(1+3²) = 2×(1+9) = 20"
+  ],
+  "replacements": [
+    [
+      "1. 累乗\n2. かっこの中\n3. 乗法・除法\n4. 加法・減法",
+      "1. かっこの中（内側から。その中でも、累乗 → 乗除 → 加減の順）\n2. 累乗\n3. 乗法・除法（左から）\n4. 加法・減法（左から）"
+    ],
+    [
+      "1. 累乗があれば、先に計算する（かっこの有無を確認）。",
+      "1. かっこの内側を先に計算する。その中でも累乗 → 乗除 → 加減の順を守り、かっこが外れたら同じ順で計算する。"
+    ],
+    [
+      "**確かめる**：途中の式で、先に計算した部分に下線を引く。下線の順が「累乗 → 乗除 → 加減」になっているか。",
+      "**確かめる**：途中の式で、先に計算した部分に下線を引く。かっこの内側から、その中でも「累乗 → 乗除 → 加減」の順になっているか。"
+    ]
+  ],
+  "preservation": "Do not change original worked examples, problems, answers, numerical conditions or video. Current V07 summary already brackets→powers→multiplication/division→addition/subtraction.",
+  "neededInformation": "No additional wording permission needed; latest explicit user authorization supersedes former wording hold.",
+  "sourceSha256": "ec97c90ce9d5dab11545c477c1aff20abb8efa9aca131f034ebd2f438c6d0558",
+  "currentReceipt": "tools/candidates/textbook-final-20261023/explanations-20261025/receipt.json"
+}

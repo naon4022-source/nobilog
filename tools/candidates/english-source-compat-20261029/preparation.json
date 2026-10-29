@@ -1,0 +1,26 @@
+{
+  "status": "isolated verifier proposal; actual canonical normalization not yet changed",
+  "inputs": [
+    {
+      "file": "tools/candidates/textbook-ai-20261025/verify-contexts.mjs",
+      "sha256": "acbc538ec88024b4277b9735a1e1593966dd2b3d036cced41411b4083ab5f178"
+    },
+    {
+      "file": "tools/candidates/textbook-ai-20261025/baseline.json",
+      "sha256": "872c2be0034215b8d4e1bdd64e2aef57f39e50b20cf9224a8a4be6407c678a9d"
+    }
+  ],
+  "sourceSha256": "acbc538ec88024b4277b9735a1e1593966dd2b3d036cced41411b4083ab5f178",
+  "candidateSha256": "d7cf6d099a5ae8b66b167416fcccda78122922d73e57ba390b66229ccfa2a98a",
+  "edits": [
+    {
+      "before": "from './build-contexts.mjs'",
+      "after": "from '../textbook-ai-20261025/build-contexts.mjs'"
+    },
+    {
+      "before": "const approvedBefore=checkMainSource(require('node:url').fileURLToPath(ROOT),{assets:false});",
+      "after": "const approvedBefore=checkMainSource(require('node:url').fileURLToPath(ROOT),{assets:false});\n// Validate the exact current successor first, then give the unchanged historical assertion its exact previous English source.\nconst specBytes=await readFile(new URL('tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/compat-spec.json',ROOT));\nassert.equal(sha(specBytes),'27543a65e66ccfd6535ce7b4d3e20a9142a5dfdf75a743f493a7045ea2dd1447');\nconst englishRow=JSON.parse(specBytes).files.find(r=>r.file==='site-assets/textbook-book-english1.json'),englishBefore=await readFile(new URL(englishRow.beforeFile,ROOT));\nassert.equal(sha(await readFile(new URL(englishRow.file,ROOT))),englishRow.afterSha256);\nassert.equal(sha(englishBefore),englishRow.beforeSha256);\nassert.equal(englishRow.beforeSha256,'d52f9a1f1532121af8f13e651a6f04cbe3f800cd34ad15a7fa72a0fdc3b416fd');\napprovedBefore.set(englishRow.file,englishBefore);\n"
+    }
+  ],
+  "scope": "All original content-index assertions remain. Only builder import relocation and exact already-approved before-English view added after validating current67. No main/fixture writes."
+}

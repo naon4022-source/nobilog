@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: heartbeat: {"error":"presence_unavailable"}
+
+409 !== 200
+
+    at call (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-campaign.mjs:40:45)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/coop-story-rpg-20261021/verify-campaign.mjs:56:45 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 409,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

@@ -1,0 +1,42 @@
+{
+  "status": "real API not executed; preview remains mock; status-query candidate passed41 isolated checks",
+  "observedAtUTC": "2026-10-29T09:35:59.491925+00:00",
+  "preview": "https://nobilog-preview.naon4022.workers.dev/",
+  "humanLoginConfirmed": true,
+  "testProfile": "Pro",
+  "secretNameCheck": {
+    "OPENAI_API_KEY": true,
+    "valuesRead": false
+  },
+  "activeDeploymentMetadata": {
+    "activeVersions": 1,
+    "visiblePlainFlags": {
+      "GEMINI_ENABLED": "0",
+      "GEMINI_MOCK": "1"
+    },
+    "OpenAIPlainFlags": "not present in returned metadata; no secret values inspected"
+  },
+  "publicReadOnlyStatus": {
+    "path": "/api/learning-chat?status=1",
+    "responseError": "invalid_query"
+  },
+  "UIProviderState": "explicit warning: real AI not connected; mock response only",
+  "newChatPosts": 0,
+  "realProviderCalls": 0,
+  "requestedTrials": 3,
+  "dailyLimit": 10,
+  "dailyUsed": "not read: status route rejected before safe counter response",
+  "candidateResult": "result.json",
+  "candidateChecks": 41,
+  "currentBlockers": [
+    "real-OpenAI trial configuration not active in deployed preview",
+    "parent route rejects exact read-only status query before actual chat controller",
+    "global post-integration verification and separately authorized preview publication pending"
+  ],
+  "noMockSuccessClaim": true,
+  "learningHistoryRead": false,
+  "keysCopied": false,
+  "published": false,
+  "supersededBy": "live-attempt-result.json",
+  "laterObservation": "The authenticated Pro UI advertises OpenAI trial. Missing plain flags in version metadata alone does not prove OpenAI disabled. No deployment/config changes were made in this work. One synthetic UI attempt failed; provider outcome remains unknown."
+}

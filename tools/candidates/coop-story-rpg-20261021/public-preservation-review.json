@@ -1,0 +1,22 @@
+{
+  "source": "local release record only; no live verification in this task",
+  "reportedStatus": "published and verified",
+  "reportedVersion": "2.17.1",
+  "notInBigUpdateYet": true,
+  "inputsSha256": {
+    "tools/releases/security-hardening-20261022/deployment-receipt.json": "1e34eafcb98faec96a253848c4ce877edfac31018c5841f417a4e8eea212492d",
+    "tools/releases/security-hardening-20261022/candidate/cf-worker/src/guard.mjs": "8f42b711c63b28b15a107c09c92af4d429c3ca927eb14b63beb019007a361296",
+    "tools/releases/security-hardening-20261022/candidate/cf-worker/src/index.js": "157b6212d5a6ea440647c3f2e546745067659cb8020a1830f1cb2aed784d3ed6",
+    "tools/releases/security-hardening-20261022/candidate/pages/index.html": "a4ebb2e7945e8e66e3f59b074e6200762930441b95de0e2687a1fb5e77e4684a",
+    "tools/releases/security-hardening-20261022/candidate/pages/_headers": "e5c994af751bd38c34b29b5ac26d1b2bd04a45fe5212f0f3d38f5a4eddf287a7"
+  },
+  "integrationRequired": [
+    "preserve published Souta and Google settings in V3",
+    "preserve security checks and self-hosted Chart CSP",
+    "explicitly allow authenticated cooperation routes and all existing V3 APIs",
+    "verify same-IP legitimate 3-player traffic against RL_ALL600/min and RL_HEAVY3000/min; do not blanket-exempt unauthenticated requests"
+  ],
+  "mainChanged": false,
+  "liveRequestsMade": false,
+  "deployedByThisTask": false
+}

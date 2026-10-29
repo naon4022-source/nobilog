@@ -1,0 +1,15 @@
+node:internal/fs/promises:640
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/ui-candidate/before-textbook-ai.js'
+    at async open (node:internal/fs/promises:640:25)
+    at async readFile (node:internal/fs/promises:1290:14)
+    at async file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs:24:98 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/shimizunaotomoo/Desktop/my-app/tools/candidates/textbook-final-20261023/remaining-alignment-20261028/answer-safe-v2/main/successor-view/tools/candidates/textbook-vision-20261027/ui-candidate/before-textbook-ai.js'
+}
+
+Node.js v24.18.0

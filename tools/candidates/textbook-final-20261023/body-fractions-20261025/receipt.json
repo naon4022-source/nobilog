@@ -1,0 +1,87 @@
+{
+  "status": "locally integrated; targeted parser/reader/legacy/marker/chain checks passed; final whole pending",
+  "reason": "Explicit math context reaches append and completed blocks (including bold), preserving all original text, units and other-book/default formatting; math-only cache signature.",
+  "files": [
+    {
+      "file": "site-assets/vertical-fractions.js",
+      "beforeFile": "tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/site-assets/vertical-fractions.js",
+      "beforeSha256": "b76f506e18839038f4fd194326746204623ee4a1bdb34fecb1b4a0d60900b4a5",
+      "candidate": "tools/candidates/textbook-final-20261023/body-fractions-20261025/candidate/vertical-fractions.js",
+      "afterSha256": "f94d7f58a6c595c2d18f26281e63cbe3b23402cefbc43f422ad11770b2856e37",
+      "edits": [
+        {
+          "before": " const FRACTION=/(^|[^0-9A-Za-z\\/.:])(\\d*\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?[a-z]?|[a-z])\\/(\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?|[a-z])(?![0-9\\/]|\\.\\d)/g;",
+          "after": " const FRACTION=/(^|[^0-9A-Za-z\\/.:])(\\d*\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?[a-z]?|[a-z])\\/(\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?|[a-z])(?![0-9\\/]|\\.\\d)/g;\n // 数学の本文では、ac/b など単項式の分子もひとまとまりにする。\n const MATH_FRACTION=/(^|[^0-9A-Za-z\\/.:])(\\d*\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?[a-z]*|[a-z]+)\\/(\\([^()\\/\\n]+\\)|\\d+(?:\\.\\d+)?|[a-z])(?![0-9\\/]|\\.\\d)/g;"
+        },
+        {
+          "before": "function fragment(text,doc){",
+          "after": "function fragment(text,doc,options){"
+        },
+        {
+          "before": "FRACTION.lastIndex=0;\n  while((m=FRACTION.exec(text))){",
+          "after": "const pattern=options?.math===true?MATH_FRACTION:FRACTION;pattern.lastIndex=0;\n  while((m=pattern.exec(text))){"
+        },
+        {
+          "before": "   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1))))continue;   // m/s・3m/s・g/cm³ などの単位は分数にしない",
+          "after": "   if(/^[a-z]$/.test(bottom)&&(/[a-z]$/.test(top)||/^[A-Za-z]/.test(text.slice(end,end+1)))){\n    const unit=/^(?:m|cm|mm|km|g|kg|mg|l|ml)\\/(?:s|h|d|m|l)$/.test(top.replace(/^\\d+(?:\\.\\d+)?/,'')+'/'+bottom);\n    if(options?.math!==true||unit||/^[A-Za-z]/.test(text.slice(end,end+1)))continue;\n   }"
+        },
+        {
+          "before": "function append(parent,text){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc);",
+          "after": "function append(parent,text,options){const doc=parent.ownerDocument||root.document,frag=fragment(text,doc,options);"
+        },
+        {
+          "before": "function apply(node,selector){",
+          "after": "function apply(node,selector,options){"
+        },
+        {
+          "before": "const frag=fragment(t.nodeValue,doc);",
+          "after": "const frag=fragment(t.nodeValue,doc,options);"
+        }
+      ]
+    },
+    {
+      "file": "site-assets/textbook-book.js",
+      "beforeFile": "tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/site-assets/textbook-book.js",
+      "beforeSha256": "1f1a4bbe132abfcc2fd3cc819ec53ea49394ea29eaecef649a32b87e610e6a80",
+      "candidate": "tools/candidates/textbook-final-20261023/body-fractions-20261025/candidate/textbook-book.js",
+      "afterSha256": "a80a285c59bd69e6cdf6212952d36f5f6f5ac09cc1770c88a994f3c2a38abbc7",
+      "edits": [
+        {
+          "before": "window.NobiFractions.append(parent,text);",
+          "after": "window.NobiFractions.append(parent,text,{math:state.book?.meta?.subject==='数学'});"
+        },
+        {
+          "before": "+annotationSig+(big?':large':'')",
+          "after": "+annotationSig+(meta.subject==='数学'?':fraction-variables-v1':'')+(big?':large':'')"
+        },
+        {
+          "before": "window.NobiFractions.apply(n);",
+          "after": "window.NobiFractions.apply(n,null,{math:state.book?.meta?.subject==='数学'});"
+        }
+      ]
+    }
+  ],
+  "bookJsonSha256": {
+    "site-assets/textbook-book-math1.json": "cda8ab922a04e847edc0cdd1a086101f700940e556c48473672ca5f1d245b0af",
+    "site-assets/textbook-book-science1.json": "7c8177a234e4443c24f74cfa0c9bf9d8739c9e820cff23d6ab6cb6c532a0e892"
+  },
+  "candidateTestsSha256": "e8d8300a15738cea73c16d3601211d4120611c0a3e81ac1a79d9142a1abf0b9f",
+  "wholeGateSha256": "1a6c893e7573564a617219410160d198ed3b40c9fd8f80dcd9e34567e91314b7",
+  "priorScienceEvidenceSha256": "b0e74730dac06af054b25a4a6b26b9b2ef8a317c11d2fef06f0abfc6f249d6b8",
+  "verificationEdits": [
+    {
+      "file": "tools/candidates/textbook-final-20261023/reviewed_changes.py",
+      "beforeFile": "tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/tools/candidates/textbook-final-20261023/reviewed_changes.py",
+      "beforeSha256": "97d4cdadcaf737fcecfa6cabce0f06ec72ba199bc1295fa5c3f4053b5177c2b5",
+      "afterSha256": "322ba05dbd75e5452be03deacba838e78e6baacb8512173dd74a500fb1eed1b9"
+    },
+    {
+      "file": ".claude/verify/run.sh",
+      "beforeFile": "tools/candidates/textbook-final-20261023/body-fractions-20261025/previous/.claude/verify/run.sh",
+      "beforeSha256": "b24c0aeff721e3c37cedfc1f3ed11ca5b013009ad426e770f39741ee7f7a2991",
+      "afterSha256": "b7ec02cf6c99bf1ce7fc784252edebb840cf11cea1091c1c748e376e4d663729"
+    }
+  ],
+  "refinement": "Pass math context through apply on completed blocks; bold/other nested inline variable fractions must format before pagination. Earlier exact snapshot retained in attempt2.",
+  "visualProofStatus": "Settled rerun33373 exit0:442 assertions, normal4 widths/large2 widths,6 screenshots. All source-input SHA unchanged. Early animation screenshots preserved as limited structural evidence only."
+}

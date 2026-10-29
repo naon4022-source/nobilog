@@ -1,0 +1,62 @@
+{
+  "status": "candidate visual review passed; integration pending",
+  "items": [
+    {
+      "id": "M1-C1-S1-D07",
+      "svgSha256": "4a18aec4bf8214f2ae36fda0393b4feec5fd19a79ee5d9970ed3a384becbcf44",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S1-D07.png",
+      "screenshotSha256": "f44e336f15e7050ff4b9fc6c73a47d5409cec8ccd168eb7cab0ebadaffa97757"
+    },
+    {
+      "id": "M1-C1-S1-D02",
+      "svgSha256": "a4ba6276d7dc33dbb104dbff3f607d8b6094a6f46aae6309bcfde5cc19b2b043",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S1-D02.png",
+      "screenshotSha256": "40b7f0e9611f27d654af97e32636da65aff46b76414eddcbb497b0fa5c001872"
+    },
+    {
+      "id": "M1-C1-S1-D05",
+      "svgSha256": "988effa92397114a7d424618145faf996cfbbaccb8073cf80a24624bcfa697c0",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S1-D05.png",
+      "screenshotSha256": "096d04b3dc85e382f2dc8783d48d8acce2d477bb08bbde2e8d8702e43e87ae92"
+    },
+    {
+      "id": "M1-C1-S2-D06",
+      "svgSha256": "8626bb8d0dc7d20cde4bbcce9c6c677b323cded5afe1b7eee852bb3201a1f77c",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S2-D06.png",
+      "screenshotSha256": "df46bab04f3b0b58920a9d6de9a7fea9e34b744231702690dcd353b79c219b7c"
+    },
+    {
+      "id": "M1-C1-S2-M06",
+      "svgSha256": "854d9015b89aa11f5297c05e3c2c5848b126123804693f32ad442da7950c9e40",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S2-M06.png",
+      "screenshotSha256": "85ccb42caab05b842ed6faf8e86892cb48344b5a4147560a72ae0fdbf952a327"
+    },
+    {
+      "id": "M1-C1-S2-M08",
+      "svgSha256": "a01e2f79c12653da33396ff1b270845b04ccf5a8687251a968a7ca85c86df1c8",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S2-M08.png",
+      "screenshotSha256": "768a72e4fe6ccf891e8f150e152692b5e0ed2b0ba095ad525d43c5be6f400067"
+    },
+    {
+      "id": "M1-C1-S2-FIG07",
+      "svgSha256": "c9ce56793b392cc866fe87613c4cbbe6fb5e3ba9affdc1cb646dfe9c8ddcb9e2",
+      "screenshot": "tools/candidates/textbook-final-20261023/fraction-candidate/M1-C1-S2-FIG07.png",
+      "screenshotSha256": "8bda8fe7edfcd6f234dcff04f85ef1224f4942ae7b90e39a16c72afab7134435"
+    }
+  ],
+  "reviewedAllSevenFinalScreens": true,
+  "changes": [
+    "numeric and Unicode fractions stacked",
+    "glyph/bar clearance measured",
+    "muted text darkened and fraction footnote enlarged",
+    "non-text diagram geometry preserved"
+  ],
+  "initialVisualIssue": "Initial denominator was too close to the bar. Corrected using actual glyph bounds and re-reviewed.",
+  "notDone": [
+    "source generator and selected original integration",
+    "book-copy and request/selection SHA update",
+    "actual-book normal/zoom checks of replacement images",
+    "post-change full suite",
+    "publication"
+  ]
+}

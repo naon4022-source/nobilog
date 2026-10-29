@@ -1,0 +1,21 @@
+Choice-order candidate: 2667 checks passed; all96 reachable/graded; main48 unchanged.
+New48 actual owned practice routes: 1394 checks passed.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: actual legacy practice integration preserves48 assertions with actual96 installed
+
+1 !== 0
+
+    at equal (file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-main-integration.mjs:12:43)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/tools/candidates/nonadmin-ai-reader-successor-20261029/main/successor-view-71/tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-main-integration.mjs:56:385 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.18.0

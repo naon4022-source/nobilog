@@ -1,0 +1,19 @@
+--- public-baseline/cf-worker/src/index.js
++++ proposed/cf-worker/src/index.js
+@@ -692,8 +692,14 @@
+   const failKey = "legacy-fail:" + ipKey;
+   if (!await reservePinAttempt(env, failKey)) return json({ error: "\u307E\u3061\u304C\u3044\u304C\u591A\u3059\u304E\u307E\u3059\u300215\u5206\u5F85\u3063\u3066\u306D" }, 429);
+   const verifier = await keyedDigest(pin, env.PIN_PEPPER);
+-  if (env.LEGACY_SOUTA_PIN_HASH && constantEqual(verifier, env.LEGACY_SOUTA_PIN_HASH) && (constantEqual(verifier, env.LEGACY_NAO_PIN_HASH) || constantEqual(verifier, env.LEGACY_RIRAN_PIN_HASH))) return serviceUnavailable();
+-  const uid = constantEqual(verifier, env.LEGACY_NAO_PIN_HASH) ? "u1" : constantEqual(verifier, env.LEGACY_RIRAN_PIN_HASH) ? "u2" : env.LEGACY_SOUTA_PIN_HASH && constantEqual(verifier, env.LEGACY_SOUTA_PIN_HASH) ? "u4" : "";
++  // Optional account-specific pepper: keep existing users and OAuth identities unchanged.
++  if (env.PIN_PEPPER_SOUTA !== undefined && (!/^[a-f0-9]{64}$/.test(env.PIN_PEPPER_SOUTA) || !env.LEGACY_SOUTA_PIN_HASH)) return serviceUnavailable();
++  const soutaVerifier = env.PIN_PEPPER_SOUTA !== undefined ? await keyedDigest(pin, env.PIN_PEPPER_SOUTA) : verifier;
++  const naoMatch = constantEqual(verifier, env.LEGACY_NAO_PIN_HASH);
++  const riranMatch = constantEqual(verifier, env.LEGACY_RIRAN_PIN_HASH);
++  const soutaMatch = !!env.LEGACY_SOUTA_PIN_HASH && constantEqual(soutaVerifier, env.LEGACY_SOUTA_PIN_HASH);
++  if (soutaMatch && (naoMatch || riranMatch)) return serviceUnavailable();
++  const uid = naoMatch ? "u1" : riranMatch ? "u2" : soutaMatch ? "u4" : "";
+   if (!uid) {
+     return json({ error: "\u30D1\u30B9\u30B3\u30FC\u30C9\u304C\u3061\u304C\u3046\u3088" }, 401);
+   }

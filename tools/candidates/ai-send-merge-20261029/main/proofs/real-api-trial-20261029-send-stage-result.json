@@ -1,0 +1,62 @@
+{
+  "status": "passed isolated UI stage classification",
+  "checks": 32,
+  "realAPICalls": 0,
+  "mainChanged": false,
+  "observations": [
+    {
+      "version": "before",
+      "failure": "save",
+      "posts": 0,
+      "status": "送れませんでした（通信が切れたかもしれません）。入力は残っています。「もう一度送る」で同じ相談を送りなおせます（二重には数えません）。"
+    },
+    {
+      "version": "before",
+      "failure": "post",
+      "posts": 1,
+      "status": "送れませんでした（通信が切れたかもしれません）。入力は残っています。「もう一度送る」で同じ相談を送りなおせます（二重には数えません）。"
+    },
+    {
+      "version": "before",
+      "failure": "success",
+      "posts": 1,
+      "status": "送信しました。1回分を使いました。"
+    },
+    {
+      "version": "candidate",
+      "failure": "save",
+      "posts": 0,
+      "status": "送信前の下書きを保存・確認できませんでした。AIにはまだ送っていません。入力は残っています。保存状況を確認してから、もう一度送ってください。"
+    },
+    {
+      "version": "candidate",
+      "failure": "post",
+      "posts": 1,
+      "status": "送信結果を確認できませんでした。入力と同じ送信IDは残っています。再確認する場合も同じ相談として扱い、二重には数えません。"
+    },
+    {
+      "version": "candidate",
+      "failure": "success",
+      "posts": 1,
+      "status": "送信しました。1回分を使いました。"
+    }
+  ],
+  "inputs": [
+    {
+      "file": "messages.before.js",
+      "sha256": "6debb522093368dfbad94a34a6c460b701cca20eaaa40e717e47de530abdb0bd"
+    },
+    {
+      "file": "messages.candidate.js",
+      "sha256": "72b83bc1cd5bb71cd4be01728e09f4ef541c72a03307f36eb80fa6b77f95d642"
+    },
+    {
+      "file": "messages-patch.json",
+      "sha256": "fdcde00d90d6544e53521b95ee0bebfdfefe0f7d6ef644997999275c0c87ce4b"
+    },
+    {
+      "file": "verify-send-stage.mjs",
+      "sha256": "7f3d01fdab525300c01789f620b89d6d4527aa7f0ff1376a4d2a160ad4a1a476"
+    }
+  ]
+}

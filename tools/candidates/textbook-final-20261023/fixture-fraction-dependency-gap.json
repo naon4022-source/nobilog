@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-24",
+  "status": "source-inspected coverage gap; corrective candidates unexecuted/unapplied",
+  "evidence": [
+    {
+      "file": ".claude/verify/verify-textbook-book-browser.mjs",
+      "beforeSha256": "4a30b08018d714f0e34300cbcc7bbb0160c70d149806d50049dda22a5fe7af21",
+      "htmlReferencesFractionModule": true,
+      "oldServerRejectsReferencedModule": true,
+      "correction": "allow only exact vertical-fractions.js and known textbook/nobi/webp assets; assert module exists after every fixture navigation",
+      "candidate": "tools/candidates/textbook-final-20261023/chapter4-verification-candidate/verify-textbook-book-browser.mjs",
+      "assertionSites": 2
+    },
+    {
+      "file": ".claude/verify/verify-math-figures-browser.mjs",
+      "beforeSha256": "6cffa05166b58847874cfab25599071b0d260b9c66ad87b18d93395303001fc5",
+      "htmlReferencesFractionModule": true,
+      "oldServerRejectsReferencedModule": true,
+      "correction": "allow only exact vertical-fractions.js and known textbook/nobi/webp assets; assert module exists after every fixture navigation",
+      "candidate": "tools/candidates/textbook-final-20261023/chapter4-verification-candidate/verify-math-figures-browser.mjs",
+      "assertionSites": 1
+    }
+  ],
+  "priorEvidenceLimit": "Old normal/figure fixture results did not include loaded production fraction renderer despite script tag. Existing AV/source SHA checks and separate production-dependency chapter4 playback remain valid in their scopes.",
+  "requiredAfterApply": [
+    "corrected normal book four-width validation",
+    "corrected chapter1/2 figures four-width validation",
+    "remaining chapter playback with explicit module-loaded assertion",
+    "final full verification after textbook batch"
+  ],
+  "appRuntimeChanged": false
+}

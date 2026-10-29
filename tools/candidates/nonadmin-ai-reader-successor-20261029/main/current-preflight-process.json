@@ -1,0 +1,43 @@
+{
+  "status": "finished; passed preflight9; local integration completed",
+  "pid": null,
+  "unifiedSession": 83846,
+  "timeUTC": "2026-10-29T09:55:53.598168+00:00",
+  "attempt": 9,
+  "sourceFiles": 71,
+  "normalizations": 29,
+  "mainChangesPlanned": 6,
+  "sourceIntegrated": true,
+  "wholeVerificationStarted": true,
+  "steps": [
+    {
+      "name": "vision",
+      "entry": "tools/candidates/textbook-vision-20261027/main/verify-main-source.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/preflight-9/vision.log",
+      "sha256": "5f5046cf68bd42765c5c4b51877fdaac849add882f46fbea43fcf2b3ae5d0183"
+    },
+    {
+      "name": "contexts",
+      "entry": "tools/candidates/textbook-ai-20261025/verify-contexts.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/preflight-9/contexts.log",
+      "sha256": "4d2d6fd0cd1db37d377faa8fa9bf3c19fb8020937c4b2c5ea7fb97aa72cf4244"
+    },
+    {
+      "name": "current",
+      "entry": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/verify-main-integration.mjs",
+      "exitCode": 0,
+      "log": "tools/candidates/nonadmin-ai-reader-successor-20261029/main/preflight-9/current.log",
+      "sha256": "cea0949bd2e63b2998e007b32c8d777934b254fc23ddcedbd7c530324dda88fa"
+    }
+  ],
+  "guardChecks": 231,
+  "APIUIStageCandidateChecks": 32,
+  "realAPITrial": "one synthetic UI send failed; provider outcome unknown; no automatic retry",
+  "exitCode": 0,
+  "reason": "All current/historical/legacy runtime checks passed with complete direct dependency closure",
+  "wholePID": 76891,
+  "wholeSession": 19827,
+  "wholeStatus": "running; terminal result pending"
+}

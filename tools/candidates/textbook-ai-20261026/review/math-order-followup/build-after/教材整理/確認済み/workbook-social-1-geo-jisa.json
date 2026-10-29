@@ -1,0 +1,2077 @@
+{
+ "id": "workbook-social-1-geo-jisa",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "時差と日付変更線",
+ "majorTitle": "地理",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "workbook-social-1-geo-jisa-1",
+   "type": "input",
+   "prompt": "地球が1日に1回転することを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "自転",
+     "じてん"
+    ]
+   },
+   "explanation": "地球の自転によって、太陽の光が当たる地域（昼）と当たらない地域（夜）ができる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "公転"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-2",
+   "type": "input",
+   "prompt": "地球は何時間で360度回転するか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "地球は24時間で1回転（360度）する。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "12",
+    "360"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-3",
+   "type": "input",
+   "prompt": "経度何度ごとに1時間の時差が生じるか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "360÷24＝15で、経度15度で1時間の時差。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "24",
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-4",
+   "type": "input",
+   "prompt": "経度が15度ちがうと1時間の時差が生じるのはなぜか。「〜から。」の形で書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "24時間"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "360度"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "回転",
+       "自転",
+       "まわる",
+       "回る"
+      ]
+     }
+    ]
+   },
+   "explanation": "地球が24時間で360度回転するから（360÷24＝15）。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①(2)"
+   },
+   "ref": "参考：地理ワーク p28 その①(2)（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-5",
+   "type": "input",
+   "prompt": "各国が時刻の基準として決めている経線を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "標準時子午線",
+     "ひょうじゅんじしごせん"
+    ]
+   },
+   "explanation": "標準時子午線の真上に太陽がくる時刻を正午として、その国の標準時を決める。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "本初子午線",
+    "日付変更線"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-6",
+   "type": "input",
+   "prompt": "標準時子午線の真上に太陽がくる時刻を、何時とするか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正午",
+     "12時",
+     "午後0時",
+     "昼の12時"
+    ]
+   },
+   "explanation": "太陽が真上（南中）にくる時刻を正午とする。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午前0時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-7",
+   "type": "input",
+   "prompt": "日本の標準時子午線は東経何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "日本は東経135度の経線を標準時子午線にしている。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "140",
+    "120"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-8",
+   "type": "input",
+   "prompt": "日本の標準時子午線が通る、兵庫県の市はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "明石市",
+     "明石",
+     "あかしし"
+    ]
+   },
+   "explanation": "兵庫県明石市。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "神戸市"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-9",
+   "type": "input",
+   "prompt": "日本は国内で、いくつの標準時を使っているか。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "つ",
+     "個"
+    ]
+   },
+   "explanation": "日本全体で1つの標準時を使っている。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-10",
+   "type": "input",
+   "prompt": "1つの国の中に複数の標準時を設けている国を、次から2つ選ぼう。\nア アメリカ合衆国　イ イタリア　ウ 中国　エ ロシア",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、エ",
+     "ア,エ",
+     "アエ",
+     "ア エ",
+     "ア・エ",
+     "アとエ",
+     "エ、ア",
+     "エ,ア",
+     "エア",
+     "エ ア",
+     "エ・ア",
+     "エとア"
+    ]
+   },
+   "explanation": "アメリカ合衆国やロシアは東西に長いので複数の標準時がある。中国は1つ。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(1)"
+   },
+   "ref": "参考：地理ワーク p13 ③(1)（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "エ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-11",
+   "type": "input",
+   "prompt": "複数の標準時をもつ国には、国土についてどのような特徴があるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "東西"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "広い",
+       "長い",
+       "大きい"
+      ]
+     }
+    ]
+   },
+   "explanation": "国土が東西に広く、経度差が大きいので、1つの標準時では不便になる。",
+   "source": {
+    "id": "source-0371",
+    "file": "地理ワーク/S__15982604_0.jpg",
+    "sha256": "fda3d9d230dd45d32d3d8c0838948041a9b3f5efef25958838e1fe27724504da",
+    "page": 16,
+    "number": "C①(3)"
+   },
+   "ref": "参考：地理ワーク p16 C①(3)（標準時）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-12",
+   "type": "input",
+   "prompt": "同じ標準時を使う地域を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "等時帯",
+     "とうじたい"
+    ]
+   },
+   "explanation": "同じ標準時を使う地域を等時帯という。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "ポイント"
+   },
+   "ref": "参考：地理ワーク p13 ポイント（等時帯）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "時差"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-13",
+   "type": "input",
+   "prompt": "ほぼ180度の経線に沿って引かれ、ここを境に日付を変える線を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "日付変更線",
+     "ひづけへんこうせん"
+    ]
+   },
+   "explanation": "日付変更線。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "本初子午線",
+    "標準時子午線"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-14",
+   "type": "input",
+   "prompt": "新しい1日は、日付変更線のすぐ西側と東側のどちらから始まるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "西側",
+     "西",
+     "にしがわ"
+    ]
+   },
+   "explanation": "1日は日付変更線のすぐ西側から始まり、東側で終わる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "東側",
+    "東"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-15",
+   "type": "input",
+   "prompt": "日付変更線を西から東へこえるとき、日付をどうするか。次から選ぼう。\nア 1日進める　イ 1日おくらせる　ウ 変えない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "西から東へこえるときは1日おくらせ、東から西へこえるときは1日進める。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-16",
+   "type": "input",
+   "prompt": "日付変更線を東から西へこえるとき、日付をどうするか。次から選ぼう。\nア 1日進める　イ 1日おくらせる　ウ 変えない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "東から西へこえるときは1日進める。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-17",
+   "type": "input",
+   "prompt": "東京とロンドンでは、どちらの時刻が進んでいるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "東京",
+     "とうきょう"
+    ]
+   },
+   "explanation": "日付変更線の西側に近い（東にある）国ほど、時刻が進んでいる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（時刻の進み方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ロンドン"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-18",
+   "type": "input",
+   "prompt": "キャンベラ（オーストラリア）とペキン（中国）のうち、東京より時刻が進んでいるのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "キャンベラ",
+     "きゃんべら"
+    ]
+   },
+   "explanation": "キャンベラは東京より東（東経150度の標準時）なので進んでいる。ペキンはおくれている。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(3)"
+   },
+   "ref": "参考：地理ワーク p13 ③(3)（時刻の進み方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ペキン"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-19",
+   "type": "input",
+   "prompt": "東経の地域では、東へ行くほど時刻はどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "進む",
+     "進んでいる",
+     "すすむ",
+     "早くなる"
+    ]
+   },
+   "explanation": "東にある地域ほど早く朝をむかえるので、時刻が進んでいる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（時刻の進み方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "おくれる",
+    "おくれている"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-20",
+   "type": "input",
+   "prompt": "東京（東経135度）とカイロ（標準時子午線は東経30度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は105度。105÷15＝7時間。同じ東経どうしは引き算。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "105",
+    "11"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-21",
+   "type": "input",
+   "prompt": "東京（東経135度）とニューヨーク（標準時子午線は西経75度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "14",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は210度。210÷15＝14時間。東経と西経にまたがるときは経度を足す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "210",
+    "4"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-22",
+   "type": "input",
+   "prompt": "東京（東経135度）とロサンゼルス（標準時子午線は西経120度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "17",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は255度。255÷15＝17時間。東経と西経にまたがるときは経度を足す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1",
+    "255"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-23",
+   "type": "input",
+   "prompt": "東京（東経135度）とペキン（標準時子午線は東経120度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は15度。15÷15＝1時間。同じ東経どうしは引き算。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "17",
+    "15"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-24",
+   "type": "input",
+   "prompt": "東京（東経135度）とサンパウロ（標準時子午線は西経45度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は180度。180÷15＝12時間。東経と西経にまたがるときは経度を足す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "180",
+    "6"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-25",
+   "type": "input",
+   "prompt": "東京（東経135度）とバンコク（標準時子午線は東経105度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は30度。30÷15＝2時間。同じ東経どうしは引き算。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "16",
+    "30"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-26",
+   "type": "input",
+   "prompt": "東京（東経135度）とホノルル（標準時子午線は西経150度）の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "19",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "経度差は285度。285÷15＝19時間。東経と西経にまたがるときは経度を足す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "285",
+    "-1"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-27",
+   "type": "input",
+   "prompt": "2つの地点の時差を求める式として正しいものを選ぼう。\nア 経度差×15　イ 経度差÷15　ウ 経度差÷24",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "時差＝経度差÷15。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の求め方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-28",
+   "type": "input",
+   "prompt": "東経135度の東京と西経75度のニューヨークの経度差は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "210",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "東経と西経にまたがるので足す：135＋75＝210度。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（経度差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "60",
+    "150"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-29",
+   "type": "input",
+   "prompt": "東京が2月10日午前2時のとき、ロンドン（経度0度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2月9日午後5時",
+     "2月9日 午後5時",
+     "2月9日の午後5時",
+     "2月9日17時",
+     "2月9日 17時",
+     "2月9日の17時"
+    ]
+   },
+   "explanation": "時差は9時間で、ロンドンは9時間おくれている。午前2時の9時間前＝2月9日午後5時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2月10日午前11時",
+    "2月9日午前5時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-30",
+   "type": "input",
+   "prompt": "東京が7月10日午後3時のとき、カイロ（東経30度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "7月10日午前8時",
+     "7月10日 午前8時",
+     "7月10日の午前8時",
+     "7月10日8時",
+     "7月10日 8時",
+     "7月10日の8時"
+    ]
+   },
+   "explanation": "時差は7時間（カイロがおくれている）。午後3時の7時間前＝午前8時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7月10日午後10時",
+    "7月10日午前10時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-31",
+   "type": "input",
+   "prompt": "東京が3月1日午前10時のとき、ニューヨーク（西経75度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2月28日午後8時",
+     "2月28日 午後8時",
+     "2月28日の午後8時",
+     "2月28日20時",
+     "2月28日 20時",
+     "2月28日の20時"
+    ]
+   },
+   "explanation": "時差14時間。午前10時の14時間前は前日の午後8時。（うるう年でない年とする）",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3月2日午前0時",
+    "2月28日午前8時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-32",
+   "type": "input",
+   "prompt": "東京を3月20日午後5時に出発した飛行機が、ペキン（東経120度）に現地時間の3月20日午後8時に着いた。飛行時間は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "ペキンは東京より1時間おくれ。到着を東京時間にすると午後9時。午後9時−午後5時＝4時間。",
+   "source": {
+    "id": "source-0371",
+    "file": "地理ワーク/S__15982604_0.jpg",
+    "sha256": "fda3d9d230dd45d32d3d8c0838948041a9b3f5efef25958838e1fe27724504da",
+    "page": 16,
+    "number": "D①(4)"
+   },
+   "ref": "参考：地理ワーク p16 D①(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3",
+    "2"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-33",
+   "type": "input",
+   "prompt": "ロンドン（経度0度）が5月5日午前6時のとき、東京は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "5月5日午後3時",
+     "5月5日 午後3時",
+     "5月5日の午後3時",
+     "5月5日15時",
+     "5月5日 15時",
+     "5月5日の15時"
+    ]
+   },
+   "explanation": "東京は9時間進んでいる。午前6時＋9時間＝午後3時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5月4日午後9時",
+    "5月5日午後9時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-34",
+   "type": "input",
+   "prompt": "サンフランシスコが西経120度を標準時子午線にしているとき、東京との時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "17",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "135＋120＝255度、255÷15＝17時間。",
+   "source": {
+    "id": "source-0399",
+    "file": "地理ワーク/S__15982635_0.jpg",
+    "sha256": "070f280d4211d009a2ef12346c14db1fb3bd4397a07560da9b39ffbf1e11bc95",
+    "page": 72,
+    "number": "1(3)"
+   },
+   "ref": "参考：地理ワーク p72 1(3)（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1",
+    "15"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-35",
+   "type": "input",
+   "prompt": "東京を1月1日午前11時に出発し、10時間かかってロサンゼルス（西経120度）に着いた。到着したのは現地時間で何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "1月1日午前4時",
+     "1月1日 午前4時",
+     "1月1日の午前4時",
+     "1月1日4時",
+     "1月1日 4時",
+     "1月1日の4時"
+    ]
+   },
+   "explanation": "東京時間で午後9時に着く。ロサンゼルスは17時間おくれているので、午後9時−17時間＝1月1日午前4時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1月1日午後9時",
+    "12月31日午前4時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-36",
+   "type": "input",
+   "prompt": "バンコク（東経105度）を現地時間の午後10時に出発し、6時間かかって東京に着いた。東京の時刻で何時に着いたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午前6時",
+     "6時"
+    ]
+   },
+   "explanation": "バンコクの午後10時は東京の午前0時。6時間後は午前6時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午前4時",
+    "午前2時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-37",
+   "type": "input",
+   "prompt": "東京のゆうこさんが午前9時に、外国のたつやさんとオンラインで話した。たつやさんの都市は午後4時で、東京より時刻が進んでいないとすると、時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "17",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "たつやさんの都市は前日の午後4時。前日午後4時から当日午前9時までは17時間。",
+   "source": {
+    "id": "source-0371",
+    "file": "地理ワーク/S__15982604_0.jpg",
+    "sha256": "fda3d9d230dd45d32d3d8c0838948041a9b3f5efef25958838e1fe27724504da",
+    "page": 16,
+    "number": "C①(2)"
+   },
+   "ref": "参考：地理ワーク p16 C①(2)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7",
+    "5"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-38",
+   "type": "input",
+   "prompt": "東京が12月25日午前0時のとき、ベルリン（東経15度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "12月24日午後4時",
+     "12月24日 午後4時",
+     "12月24日の午後4時",
+     "12月24日16時",
+     "12月24日 16時",
+     "12月24日の16時"
+    ]
+   },
+   "explanation": "135−15＝120度、120÷15＝8時間おくれ。12月24日午後4時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "12月25日午前8時",
+    "12月24日午前8時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-39",
+   "type": "input",
+   "prompt": "ベルリン（東経15度）が午後2時のとき、ニューヨーク（西経75度）は何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午前8時",
+     "8時"
+    ]
+   },
+   "explanation": "経度差90度、90÷15＝6時間。ニューヨークは西にあるのでおくれている。午後2時−6時間＝午前8時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午後8時",
+    "午前2時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-40",
+   "type": "input",
+   "prompt": "国によって標準時子午線が異なることで生じる、国や地域の間の時刻のずれを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "時差",
+     "じさ"
+    ]
+   },
+   "explanation": "時差。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（時差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "経度差"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-41",
+   "type": "input",
+   "prompt": "東経135度の経線を基準とした日本の時刻を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "日本標準時",
+     "標準時",
+     "にほんひょうじゅんじ"
+    ]
+   },
+   "explanation": "日本標準時。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "㉞"
+   },
+   "ref": "参考：地理ワーク p74 ㉞（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "世界標準時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-42",
+   "type": "input",
+   "prompt": "地球の自転によって、太陽の光が当たる地域と当たらない地域ができる。これによって生まれる、時間のちがいの例として正しいものを選ぼう。\nア 東京が昼のとき、ニューヨークは夜　イ 世界中が同時に昼になる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "自転により、東京が昼のとき地球の反対側は夜になる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-43",
+   "type": "input",
+   "prompt": "ドイツのベルリンにいるお父さんが「今お昼ご飯を食べたところ」と電話してきた。このとき日本はおよそ何時ごろか。次から選ぼう。\nア 朝の4時ごろ　イ 夜の8時ごろ　ウ 昼の12時ごろ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "日本はベルリンより8時間進んでいる。正午＋8時間＝午後8時ごろ。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "まんが"
+   },
+   "ref": "参考：地理ワーク p12 まんが（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-44",
+   "type": "input",
+   "prompt": "等時帯の地図で、日本との時差が「−」で示されている地域は、日本と比べて時刻がどうなっていることを表すか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "おくれている",
+     "おくれる",
+     "遅れている",
+     "遅れる"
+    ]
+   },
+   "explanation": "＋は進んでいる、−はおくれていることを表す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "ポイント"
+   },
+   "ref": "参考：地理ワーク p13 ポイント（等時帯の見方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "進んでいる"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-45",
+   "type": "input",
+   "prompt": "東京とロンドン、東京とサンパウロ（西経45度）の時差をそれぞれ求めよう。「〇時間、〇時間」の順で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "9時間、12時間",
+     "9時間,12時間",
+     "9、12",
+     "9時間 12時間",
+     "9,12"
+    ]
+   },
+   "explanation": "ロンドン：135÷15＝9時間。サンパウロ：（135＋45）÷15＝12時間。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(2)"
+   },
+   "ref": "参考：地理ワーク p13 ③(2)（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "9時間、6時間",
+    "12時間、9時間"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-46",
+   "type": "input",
+   "prompt": "明石市を通る日本の標準時子午線の経度を、東経・西経をつけて答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "東経135度",
+     "東経135°",
+     "とうけい135ど"
+    ]
+   },
+   "explanation": "東経135度。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 11,
+    "number": "B①(2)"
+   },
+   "ref": "参考：地理ワーク p11 B①(2)（標準時子午線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "西経135度",
+    "東経140度"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-47",
+   "type": "input",
+   "prompt": "経度が30度ちがう2つの都市の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "30÷15＝2時間。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "30",
+    "15"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-48",
+   "type": "input",
+   "prompt": "時差が5時間ある2つの都市の経度差は何度か（同じ側の経度とする）。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "5×15＝75度。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5",
+    "3"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-49",
+   "type": "input",
+   "prompt": "モスクワ（標準時子午線を東経45度とする）が午前6時のとき、東京は何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午後0時",
+     "12時",
+     "正午"
+    ]
+   },
+   "explanation": "135−45＝90度、6時間。東京は進んでいるので午前6時＋6時間＝正午（午後0時）。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午前0時",
+    "午後6時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-50",
+   "type": "input",
+   "prompt": "東京が午後11時のとき、シドニー（標準時子午線を東経150度とする）は何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午前0時",
+     "0時"
+    ]
+   },
+   "explanation": "150−135＝15度、1時間。シドニーは東にあるので進んでいる。午後11時＋1時間＝午前0時（翌日）。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午後10時",
+    "午後11時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-51",
+   "type": "input",
+   "prompt": "「日付変更線のすぐ西側の国は、世界で最も早く新年をむかえる。」この文は正しいか。〇か×で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "〇",
+     "o",
+     "○",
+     "まる",
+     "マル",
+     "正しい"
+    ]
+   },
+   "explanation": "1日は日付変更線のすぐ西側から始まるので、正しい。",
+   "source": {
+    "id": "source-0377",
+    "file": "地理ワーク/S__15982611_0.jpg",
+    "sha256": "a4150784a01e2aafc1f4fd181838f4f69489a491043143932be3e810e9faae44",
+    "page": 28,
+    "number": "その①(2)"
+   },
+   "ref": "参考：地理ワーク p28 その①(2)（時差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "×",
+    "x"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-52",
+   "type": "input",
+   "prompt": "日付変更線は、ほぼ何度の経線に沿って引かれているか。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "ほぼ180度の経線に沿って引かれている（陸地や島をさけるため曲がっている）。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "0",
+    "135"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-53",
+   "type": "input",
+   "prompt": "日付変更線が、一部で曲がって引かれているのはなぜか。次から選ぼう。\nア 1つの国や島々の中で日付がちがわないようにするため　イ 海流に合わせるため　ウ 山脈に沿わせるため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "同じ国の中で日付が変わると不便なので、陸地や島々をさけて引かれている。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-54",
+   "type": "input",
+   "prompt": "東京を午後1時に出発し、8時間かかってバンコク（東経105度）に着いた。到着は現地時間で何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午後7時",
+     "19時"
+    ]
+   },
+   "explanation": "東京時間で午後9時に着く。バンコクは2時間おくれなので午後7時。",
+   "source": {
+    "id": "source-0371",
+    "file": "地理ワーク/S__15982604_0.jpg",
+    "sha256": "fda3d9d230dd45d32d3d8c0838948041a9b3f5efef25958838e1fe27724504da",
+    "page": 16,
+    "number": "D①(4)"
+   },
+   "ref": "参考：地理ワーク p16 D①(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午後9時",
+    "午後11時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-55",
+   "type": "input",
+   "prompt": "ニューヨーク（西経75度）とロサンゼルス（西経120度）では、どちらの時刻が何時間進んでいるか。「〇〇が〇時間」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ニューヨークが3時間",
+     "ニューヨーク3時間",
+     "ニューヨークが3時間進んでいる",
+     "ニューヨーク、3時間"
+    ]
+   },
+   "explanation": "経度差45度で3時間。東にあるニューヨークが進んでいる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ロサンゼルスが3時間",
+    "ニューヨークが5時間"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-56",
+   "type": "input",
+   "prompt": "日本の標準時子午線は兵庫県明石市を通る。この経線を基準にした時刻を、北海道から沖縄まで使っているのはなぜか。次から選ぼう。\nア 日本の東西の経度差が比較的小さいから　イ 日本は南北に長いから　ウ 法律で禁止されているから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "日本は東西の経度差が約30度で、1つの標準時でも大きな不便がない。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 75,
+    "number": "④"
+   },
+   "ref": "参考：地理ワーク p75 ④（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ",
+    "ウ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-57",
+   "type": "input",
+   "prompt": "地球の自転の向きは、西から東、東から西のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "西から東",
+     "西→東",
+     "にしからひがし"
+    ]
+   },
+   "explanation": "地球は西から東へ自転している。このため東の地域から先に朝になる。",
+   "source": {
+    "id": "source-0400",
+    "file": "地理ワーク/S__15982636_0.jpg",
+    "sha256": "bc40de938f368b217f0325e9a4dd01ebc1963479b9fa94112a339bcb5e8c5a5c",
+    "page": 74,
+    "number": "㉟"
+   },
+   "ref": "参考：地理ワーク p74 ㉟（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "東から西"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-58",
+   "type": "input",
+   "prompt": "地球が西から東へ自転しているため、太陽はどの方角からのぼるように見えるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "東",
+     "ひがし",
+     "東の方角"
+    ]
+   },
+   "explanation": "西から東へ自転するので、太陽は東からのぼり西にしずむ。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "①"
+   },
+   "ref": "参考：地理ワーク p12 ①（時差のしくみ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "西"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-59",
+   "type": "input",
+   "prompt": "東京から12時間かけて飛んだ飛行機が、ロンドン（経度0度）に現地時間の午後4時に着いた。東京を出発したのは東京の時刻で何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午後1時",
+     "13時"
+    ]
+   },
+   "explanation": "ロンドンの午後4時は東京の午前1時（翌日）。その12時間前は前日の午後1時。",
+   "source": {
+    "id": "source-0371",
+    "file": "地理ワーク/S__15982604_0.jpg",
+    "sha256": "fda3d9d230dd45d32d3d8c0838948041a9b3f5efef25958838e1fe27724504da",
+    "page": 17,
+    "number": "D①(4)"
+   },
+   "ref": "参考：地理ワーク p17 D①(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午前4時",
+    "午前1時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-60",
+   "type": "input",
+   "prompt": "東京が4月1日午前5時のとき、ロサンゼルス（西経120度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3月31日午後0時",
+     "3月31日 午後0時",
+     "3月31日の午後0時",
+     "3月31日12時",
+     "3月31日 12時",
+     "3月31日の12時",
+     "3月31日正午",
+     "3月31日 正午",
+     "3月31日の正午"
+    ]
+   },
+   "explanation": "17時間おくれているので、午前5時の17時間前＝3月31日の正午（午後0時）。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4月1日午後10時",
+    "3月31日午前0時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-61",
+   "type": "input",
+   "prompt": "東京とホノルル（西経150度）では、どちらが先に新しい日をむかえるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "東京",
+     "とうきょう"
+    ]
+   },
+   "explanation": "東京は日付変更線の西側にあり、ホノルルより19時間進んでいる。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（時差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ホノルル"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-62",
+   "type": "input",
+   "prompt": "日本より時刻がおくれている国を、次からすべて選ぼう。\nア イギリス　イ ニュージーランド　ウ アメリカ合衆国　エ 中国",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、ウ、エ",
+     "ア,ウ,エ",
+     "アウエ",
+     "ア ウ エ",
+     "ア・ウ・エ",
+     "アとウとエ",
+     "ア、エ、ウ",
+     "ア,エ,ウ",
+     "アエウ",
+     "ア エ ウ",
+     "ア・エ・ウ",
+     "アとエとウ",
+     "ウ、ア、エ",
+     "ウ,ア,エ",
+     "ウアエ",
+     "ウ ア エ",
+     "ウ・ア・エ",
+     "ウとアとエ",
+     "ウ、エ、ア",
+     "ウ,エ,ア",
+     "ウエア",
+     "ウ エ ア",
+     "ウ・エ・ア",
+     "ウとエとア",
+     "エ、ア、ウ",
+     "エ,ア,ウ",
+     "エアウ",
+     "エ ア ウ",
+     "エ・ア・ウ",
+     "エとアとウ",
+     "エ、ウ、ア",
+     "エ,ウ,ア",
+     "エウア",
+     "エ ウ ア",
+     "エ・ウ・ア",
+     "エとウとア"
+    ]
+   },
+   "explanation": "ニュージーランドは日本より東（日付変更線の近く）で進んでいる。ほかはおくれている。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（時刻の進み方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アウ",
+    "アエ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-63",
+   "type": "input",
+   "prompt": "2地点がどちらも東経にあるとき、経度差はどのように求めるか。次から選ぼう。\nア 経度を足す　イ 大きいほうから小さいほうを引く",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "同じ東経（または同じ西経）どうしは引き算、東経と西経にまたがるときは足し算。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（経度差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-64",
+   "type": "input",
+   "prompt": "一方が東経、もう一方が西経にあるとき、経度差はどのように求めるか（日付変更線をまたがない場合）。次から選ぼう。\nア 経度を足す　イ 大きいほうから小さいほうを引く",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "本初子午線をはさむので、2つの経度を足す。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（経度差）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-65",
+   "type": "input",
+   "prompt": "ドバイ（標準時子午線を東経60度とする）と東京の時差は何時間か。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "135−60＝75度、75÷15＝5時間。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 11,
+    "number": "B①(3)"
+   },
+   "ref": "参考：地理ワーク p11 B①(3)（時差の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "13",
+    "75"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-66",
+   "type": "input",
+   "prompt": "標準時子午線が東経120度の国で正午のとき、東京は何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "午後1時",
+     "13時"
+    ]
+   },
+   "explanation": "経度差15度で1時間。東京は東にあるので進んでいる。正午＋1時間＝午後1時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "トライ"
+   },
+   "ref": "参考：地理ワーク p13 トライ（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "午前11時",
+    "午後3時"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-67",
+   "type": "input",
+   "prompt": "ハワイから日本に向かう飛行機が日付変更線をこえた。日付はどうするか。次から選ぼう。\nア 1日進める　イ 1日おくらせる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ハワイから日本へは東から西へこえるので、日付を1日進める。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-68",
+   "type": "input",
+   "prompt": "日本からアメリカ合衆国へ向かう飛行機が日付変更線をこえると、出発した日よりも前の日付で到着することがある。その理由として正しいものを選ぼう。\nア 西から東へこえて日付を1日おくらせるから　イ 飛行機が光より速いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "西から東へこえると日付を1日おくらせる。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 12,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p12 ②（日付変更線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "イ"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-69",
+   "type": "input",
+   "prompt": "日本の東端（東経約154度）と西端（東経約123度）の経度差は約30度ある。太陽が真上にくる時刻は、東端と西端でおよそ何時間ずれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "30÷15＝2時間。東端のほうが約2時間早く太陽が真上にくる。",
+   "source": {
+    "id": "source-0368",
+    "file": "地理ワーク/S__15982601_0.jpg",
+    "sha256": "a9ca4d573320bd4a521eb8a91b1adb88257c85a5afaeeffefefb8f2d711466b4",
+    "page": 10,
+    "number": "②"
+   },
+   "ref": "参考：地理ワーク p10 ②（日本の範囲と時刻）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "30",
+    "1"
+   ]
+  },
+  {
+   "id": "workbook-social-1-geo-jisa-70",
+   "type": "input",
+   "prompt": "東京が8月15日午前3時のとき、カイロ（東経30度）は何月何日の何時か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "8月14日午後8時",
+     "8月14日 午後8時",
+     "8月14日の午後8時",
+     "8月14日20時",
+     "8月14日 20時",
+     "8月14日の20時"
+    ]
+   },
+   "explanation": "135−30＝105度、105÷15＝7時間おくれ。午前3時の7時間前は前日の午後8時。",
+   "source": {
+    "id": "source-0369",
+    "file": "地理ワーク/S__15982602_0.jpg",
+    "sha256": "59769e0586a17220905c625b669135fa0fce32c50a84ba97d65d7d04536670a9",
+    "page": 13,
+    "number": "③(4)"
+   },
+   "ref": "参考：地理ワーク p13 ③(4)（時刻の計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8月15日午前10時",
+    "8月14日午前8時"
+   ]
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成。地理ワークp10〜11（時差から見た日本の位置）、p12〜13（地理の補強 時差のしくみ・等時帯・時差の計算）、p16〜17（重要資料・確かめ問題）、p28（書きトレ）、p72（総合問題）、p74〜75（重要用語マスター）を写真で確認し、都市・時刻・問い方を変えて作り直した。計算に使う都市の経度は、各都市の標準時子午線の経度とする。手書きの答えは使っていない。"
+}

@@ -1,0 +1,24 @@
+{
+  "file": "cf-worker/src/subscription-credits.mjs",
+  "beforeFile": "tools/candidates/textbook-ai-20261025/before/cf-worker/src/subscription-credits.mjs",
+  "beforeSha256": "d60cd15537641c32b10f9cb5a9dc0cc485230d020c469f59b42fc74c366e2694",
+  "afterSha256": "7557dfd3e1ec48e311357178c536f15e5e41939b86adefda0fac36d481dd3f7d",
+  "edits": [
+    {
+      "before": "const UID=/^(u[12]|p_",
+      "after": "const UID=/^(u[124]|p_"
+    }
+  ],
+  "scope": "Add existing authenticated u4 to nonadmin credit validation; quota amounts, charge/refund SQL, unknown-account rejection and admin code unchanged",
+  "reproduction": "tools/candidates/textbook-ai-20261025/u4-credit-reproduction.json",
+  "verification": {
+    "status": "passed",
+    "file": "tools/candidates/textbook-ai-20261025/three-account-credit-result.json",
+    "sha256": "0647baf5d241ba49209706ec3e6a031ade4d3bcfecb334690ab550901c833427",
+    "checks": 44,
+    "existingDailyV2Regression": {
+      "checks": 58,
+      "observedExitCode": 0
+    }
+  }
+}
