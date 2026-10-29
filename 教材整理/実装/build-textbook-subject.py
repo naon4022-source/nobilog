@@ -71,7 +71,11 @@ def build(book_id):
               "■構図：横長16:9。主役の動きが一目でわかるように中央に。背景は場面がわかる程度にシンプルに。\n"
               "■タッチ：明るくやわらかい色、太めの線のやさしい手描き風イラスト。読んでいてクスッと笑える小さな遊び心（表情・小物）を1つ入れる。\n"
               "■入れないもの：文字・数字・ロゴ・吹き出しの中の文字・教科書の本文。暴力的・こわい表現。")
-        imgs.append((i, '絵', cap, where, pr)); return {'t': 'fig', 'kind': 'scene', 'id': uid(i), 'src': None, 'caption': cap, 'maker': 'ChatGPT Images', 'prompt': pr}
+        imgs.append((i, '絵', cap, where, pr))
+        png = WORK / 'メディア' / (i + '.png')
+        out = f'textbook-book-{book_id}-{i.lower()}.png'
+        if png.exists() and '--check' not in sys.argv: shutil.copyfile(png, OUT / out)
+        return {'t': 'fig', 'kind': 'scene', 'id': uid(i), 'src': '/' + out if png.exists() else None, 'caption': cap, 'maker': 'ChatGPT Images', 'prompt': pr}
     def diagram(i, title, where):
         L = CUR.get('L'); items = [x for _, it in (L['keys'] if L else []) for x in it][:6]
         pr = (f"【ChatGPT Images への依頼】{S['title']}の教科書にのせる「図解」を1枚作ってください。\n"

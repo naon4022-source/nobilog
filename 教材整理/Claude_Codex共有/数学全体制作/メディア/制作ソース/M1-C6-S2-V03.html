@@ -1,0 +1,38 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S2-V03 おうぎ形の面積が πℓr になるまで（Claude）。形は r：ℓ＝1：3（数値は出さず文字で説明）
+const r=4,l=12,TH=2*Math.PI*r/l;
+function coneMesh(f){const R=r/f,h=Math.sqrt(Math.max(0,l*l-R*R)),NR=8,NP=60,verts=[],faces=[];
+ for(let i=0;i<=NR;i++){const q=i/NR;for(let k=0;k<=NP;k++){const ps=2*Math.PI*f*k/NP-Math.PI*f+Math.PI;verts.push([q*R*Math.sin(ps),h/2-q*h,q*R*Math.cos(ps)])}}
+ for(let i=0;i<NR;i++)for(let k=0;k<NP;k++){const a=i*(NP+1)+k;faces.push([a,a+1,a+NP+2,a+NP+1])}return {verts,faces,NP,NR}}
+const O3={cx:440,cy:300,s:30};
+function cone3D(f,yaw,alpha=1){const P=coneMesh(f),M=view(yaw,-0.42),o={...O3,M,alpha};surf(P,{...o,color:'#c9a7e8'});const rim=[];for(let k=0;k<=P.NP;k++)rim.push(pt3(P.verts[P.NR*(P.NP+1)+k],o));
+ g.globalAlpha=alpha;g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();rim.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();const ap=pt3(P.verts[0],o),e0=pt3(P.verts[P.NR*(P.NP+1)],o);g.beginPath();g.moveTo(ap[0],ap[1]);g.lineTo(e0[0],e0[1]);g.stroke();g.globalAlpha=1;return {ap,e0,o}}
+const A={x:470,y:262},S2=12,RS=l*S2,RC=r*S2,CC={x:A.x,y:A.y+RS+RC};
+function net2D(alpha,o={}){g.globalAlpha=alpha;const a0=Math.PI/2-TH/2,a1=Math.PI/2+TH/2;
+ if(o.full){g.globalAlpha=alpha*o.full;g.fillStyle=hexA(C.blue,.08);g.beginPath();g.arc(A.x,A.y,RS,0,Math.PI*2);g.fill();g.setLineDash([12,10]);g.strokeStyle=C.blue;g.lineWidth=3;g.stroke();g.setLineDash([]);g.globalAlpha=alpha}
+ g.fillStyle='#c9a7e8';g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.moveTo(A.x,A.y);g.arc(A.x,A.y,RS,a0,a1);g.closePath();g.fill();g.stroke();
+ if(o.base!==false){g.fillStyle='#f2c48d';g.beginPath();g.arc(CC.x,CC.y,RC,0,Math.PI*2);g.fill();g.stroke()}
+ if(o.trace>0){g.strokeStyle=C.orange;g.lineWidth=10;g.lineCap='round';g.beginPath();g.arc(A.x,A.y,RS,a0,a0+(a1-a0)*o.trace);g.stroke();if(o.base!==false){g.beginPath();g.arc(CC.x,CC.y,RC,-Math.PI/2,-Math.PI/2+2*Math.PI*o.trace);g.stroke()}g.lineCap='butt'}
+ g.strokeStyle=C.ink;g.lineWidth=3;const e=[A.x+RS*Math.cos(a1),A.y+RS*Math.sin(a1)];g.beginPath();g.moveTo(A.x,A.y);g.lineTo(e[0],e[1]);g.stroke();text('ℓ',(A.x+e[0])/2-26,(A.y+e[1])/2,40,C.ink,'center',800);
+ if(o.base!==false){g.beginPath();g.moveTo(CC.x,CC.y);g.lineTo(CC.x+RC,CC.y);g.stroke();text('r',CC.x+RC/2,CC.y-10,34,C.ink,'center',800)}g.globalAlpha=1}
+function card(x,y,w,h,a){g.globalAlpha=a;rbox(x,y,w,h,24,'#fffdf8',C.orange,4);g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('おうぎ形の面積が πℓr になるまで');const yaw=0.6+t*0.3;
+ if(i===0){const c=cone3D(1,yaw);g.globalAlpha=seg(p,.3,.5);g.strokeStyle=C.orange;g.lineWidth=7;g.beginPath();g.moveTo(c.ap[0],c.ap[1]);g.lineTo(c.e0[0],c.e0[1]);g.stroke();text('母線 ℓ',800,260,40,C.orange,'left',800);
+  g.globalAlpha=seg(p,.5,.7);text('底面の半径 r',800,450,40,C.ink,'left',800);g.globalAlpha=1;return}
+ if(i===1){const u=seg(p,.05,.6),f=1-(1-r/l)*u;if(p<.75)cone3D(f,yaw*(1-u),1-seg(p,.6,.75));if(p>.6)net2D(seg(p,.6,.8),{});return}
+ if(i===2){net2D(1,{trace:seg(p,.1,.6)});g.globalAlpha=seg(p,.55,.75);text('弧の長さ ＝ 底面の円周 ＝ 2πr',900,330,34,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===3){net2D(1,{trace:1,full:seg(p,0,.3),base:false});g.globalAlpha=seg(p,.3,.5);text('半径 ℓ の円',900,200,36,C.blue,'center',800);text('面積 πℓ²',900,260,40,C.blue,'center',800);text('まわり 2πℓ',900,320,40,C.blue,'center',800);g.globalAlpha=1;return}
+ if(i===4){net2D(1,{trace:1,full:1,base:false});card(720,170,500,280,seg(p,0,.2));g.globalAlpha=seg(p,.1,.3);text('円全体の何分の1？',970,230,34,C.ink,'center',800);
+  g.globalAlpha=seg(p,.3,.5);frac('2πr','2πℓ',880,300,44,C.orange);text('＝',990,316,46,C.ink,'center',800);g.globalAlpha=seg(p,.55,.75);frac('r','ℓ',1080,300,48,C.orange);g.globalAlpha=1;return}
+ if(i===5){net2D(.3,{trace:1,full:1,base:false});card(150,140,980,370,seg(p,0,.15));g.globalAlpha=seg(p,.05,.2);text('おうぎ形の面積',640,215,40,C.ink,'center',800);
+  // 1行目：＝ π × ℓ × ℓ × r/ℓ（文字を1つずつ置き、消す ℓ の位置を覚える）
+  g.globalAlpha=seg(p,.15,.35);let x=390;const y=320,pos={};const put=(s,key,col=C.ink)=>{text(s,x,y,56,col,'left',800);pos[key]=[x,tw(s,56,800)];x+=tw(s,56,800)+14};
+  put('＝','eq');put('π','pi');put('×','m1');put('ℓ','l1');put('×','m2');put('ℓ','l2');put('×','m3');const fx=x+30;frac('r','ℓ',fx,y-18,50,C.orange);
+  const k=seg(p,.45,.6);if(k>0){g.strokeStyle=C.red;g.lineWidth=6;const [lx,lw]=pos.l2;g.beginPath();g.moveTo(lx-4,y+6);g.lineTo(lx-4+(lw+8)*k,y-46*k);g.stroke();g.beginPath();g.moveTo(fx-20,y+50);g.lineTo(fx-20+40*k,y+50-42*k);g.stroke()}
+  g.globalAlpha=seg(p,.65,.85);text('＝ πℓr',640,440,72,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===6){card(150,130,980,360,seg(p,0,.15));g.globalAlpha=seg(p,.05,.25);text('円錐の側面積 ＝ π × 母線 × 底面の半径',640,230,44,C.ink,'center',800);
+  g.globalAlpha=seg(p,.4,.6);text('例：母線 12cm、半径 4cm',640,320,38,C.blue,'center',800);text('π × 12 × 4 ＝ 48π cm²',640,400,48,C.orange,'center',800);g.globalAlpha=1;return}
+ card(150,150,980,300,seg(p,0,.15));g.globalAlpha=seg(p,.05,.25);text('表面積 ＝ 側面積 ＋ 底面積',640,250,48,C.ink,'center',800);g.globalAlpha=seg(p,.3,.5);text('＝ πℓr ＋ πr²',640,350,56,C.orange,'center',800);g.globalAlpha=1}};
+</script>

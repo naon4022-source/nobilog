@@ -1,0 +1,41 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S3-V01 ひもを展開図でまっすぐに（Claude）。母線 12cm、底面の半径 2cm → 中心角 60°
+const r=2,l=12,TH=2*Math.PI*r/l,F0=r/l;
+// 側面上の点 (q：頂点からの割合, s：1周のうちの位置 0〜1) を、開き具合 f の形の3D座標へ
+function onCone(q,s,f){const R=r/f,h=Math.sqrt(Math.max(0,l*l-R*R)),ps=2*Math.PI*f*s-Math.PI*f+Math.PI;return [q*R*Math.sin(ps),h/2-q*h,q*R*Math.cos(ps)]}
+function mesh(f){const NR=8,NP=60,verts=[],faces=[];for(let i=0;i<=NR;i++)for(let k=0;k<=NP;k++)verts.push(onCone(i/NR,k/NP,f));for(let i=0;i<NR;i++)for(let k=0;k<NP;k++){const a=i*(NP+1)+k;faces.push([a,a+1,a+NP+2,a+NP+1])}return {verts,faces,NP,NR}}
+// ひもの通り道：(q,s) の列。0＝底面のふち、1＝ななめにまっすぐ（最短）、2＝少し上を通る道
+const flat=(q,s)=>{const a=TH*s-TH/2;return [q*l*Math.sin(a),q*l*Math.cos(a)]};
+function chordQS(u){const A=flat(1,0),B=flat(1,1),x=A[0]+(B[0]-A[0])*u,y=A[1]+(B[1]-A[1])*u;const rho=Math.hypot(x,y),a=Math.atan2(x,y);return [rho/l,(a+TH/2)/TH]}
+const PATHS=[u=>[1,u],chordQS,u=>[1-0.08*Math.sin(Math.PI*u),u]];const PCOL=[C.blue,C.orange,C.green];
+const O3={cx:460,cy:300,s:36};
+function cone3D(f,yaw,alpha,paths,cutCol){const P=mesh(f),M=view(yaw,-0.85),o={...O3,M,alpha};surf(P,{...o,color:'#d8e6f5'});
+ const rim=[];for(let k=0;k<=P.NP;k++)rim.push(pt3(P.verts[P.NR*(P.NP+1)+k],o));g.globalAlpha=alpha;g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();rim.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();
+ const ap=pt3(onCone(0,0,f),o),e0=pt3(onCone(1,0,f),o);g.strokeStyle=cutCol||C.ink;g.lineWidth=cutCol?6:3;g.beginPath();g.moveTo(ap[0],ap[1]);g.lineTo(e0[0],e0[1]);g.stroke();if(f<0.999){const e1=pt3(onCone(1,1,f),o);g.beginPath();g.moveTo(ap[0],ap[1]);g.lineTo(e1[0],e1[1]);g.stroke()}
+ (paths||[]).forEach(([k,frac])=>{const n=60;for(let j=0;j<n*frac;j++){const a=PATHS[k](j/n),b=PATHS[k](Math.min(1,(j+1)/n));const pa=onCone(a[0],a[1],f),pb=onCone(b[0],b[1],f);const za=R3.mul(M,pa)[2]-R3.mul(M,[0,pa[1],0])[2];
+  g.strokeStyle=PCOL[k];g.lineWidth=za>=-0.05||f<0.999?7:3;g.globalAlpha=alpha*(za>=-0.05||f<0.999?1:.45);const p1=pt3(pa,o),p2=pt3(pb,o);g.beginPath();g.moveTo(p1[0],p1[1]);g.lineTo(p2[0],p2[1]);g.stroke()}g.globalAlpha=alpha});
+ g.globalAlpha=1;return {ap,e0,o}}
+// 2D の展開図（頂点 O、中心角 60°）
+const O={x:600,y:120},S2=30;
+const F2=(q,s)=>{const [x,y]=flat(q,s);return [O.x+x*S2,O.y+y*S2]};
+function net2D(alpha,o={}){g.globalAlpha=alpha;g.fillStyle='#d8e6f5';g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.moveTo(O.x,O.y);for(let j=0;j<=40;j++){const p=F2(1,j/40);g.lineTo(p[0],p[1])}g.closePath();g.fill();g.stroke();
+ (o.paths||[]).forEach(([k,frac])=>{g.strokeStyle=PCOL[k];g.lineWidth=k===1?9:6;g.beginPath();for(let j=0;j<=60*frac;j++){const [q,s]=PATHS[k](j/60),p=F2(q,s);j?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1])}g.stroke()});
+ const A=F2(1,0),B=F2(1,1);text('O',O.x,O.y-14,34,C.ink,'center',800);text('A',A[0]-28,A[1]+14,34,C.ink,'center',800);text("A'",B[0]+30,B[1]+14,34,C.ink,'center',800);
+ if(o.angle){g.strokeStyle=C.orange;g.lineWidth=5;g.beginPath();g.arc(O.x,O.y,48,Math.PI/2-TH/2,Math.PI/2+TH/2);g.stroke();text('60°',O.x,O.y+96,34,C.orange,'center',800)}
+ if(o.eq){g.strokeStyle=C.red;g.lineWidth=4;const tick=(P,Q)=>{const mx=(P[0]+Q[0])/2,my=(P[1]+Q[1])/2,dx=Q[0]-P[0],dy=Q[1]-P[1],d=Math.hypot(dx,dy);g.beginPath();g.moveTo(mx-dy/d*14,my+dx/d*14);g.lineTo(mx+dy/d*14,my-dx/d*14);g.stroke()};tick([O.x,O.y],A);tick([O.x,O.y],B);tick(A,B)}
+ g.globalAlpha=1}
+function legend(al,len){[['ふちを1周',0,'約12.6cm'],['少し上',2,'約12.1cm'],['ななめ',1,'12cm']].forEach(([n,pi,v],k)=>{if(al[k]<=0)return;g.globalAlpha=al[k];const y=180+k*80;g.strokeStyle=PCOL[pi];g.lineWidth=8;g.beginPath();g.moveTo(840,y);g.lineTo(890,y);g.stroke();text(n,902,y+11,30,C.ink,'left',800);if(len)text(v,1255,y+12,32,PCOL[pi],'right',800);g.globalAlpha=1})}
+window.SCENE={draw({i,p,t}){
+ header('ひもを展開図でまっすぐに');const yaw=0.4+t*0.25;
+ if(i===0){const c=cone3D(1,yaw,1,[[0,seg(p,.3,.8)]]);const a=pt3(onCone(1,0,1),c.o);g.fillStyle=C.red;g.beginPath();g.arc(a[0],a[1],9,0,7);g.fill();text('A',a[0]-24,a[1]+24,34,C.ink,'center',800);return}
+ if(i===1){cone3D(1,yaw,1,[[0,1],[2,seg(p,.1,.5)],[1,seg(p,.4,.85)]]);legend([seg(p,0,.2),seg(p,.1,.4),seg(p,.4,.7)],false);g.globalAlpha=seg(p,.75,.9);text('どの道が いちばん短い？',1010,460,38,C.ink,'center',800);g.globalAlpha=1;return}
+ if(i===2){const u=seg(p,.2,.8),f=1-(1-F0)*u;if(p<.85)cone3D(f,yaw*(1-u),1-seg(p,.75,.85),[[0,1],[2,1],[1,1]],p>.05?C.red:null);if(p>.75)net2D(seg(p,.75,.9),{paths:[[0,1],[2,1],[1,1]]});
+  if(p<.25){g.globalAlpha=seg(p,.05,.15);text('母線 OA で切る',900,220,36,C.red,'center',800);g.globalAlpha=1}return}
+ if(i===3){net2D(1,{paths:[[0,1],[2,1],[1,1]]});legend([1,1,1],p>.3);g.globalAlpha=seg(p,.55,.75);text('いちばん短いのは 線分 AA\'',1040,480,34,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===4){net2D(1,{paths:[[1,1]],angle:p>.2});g.globalAlpha=seg(p,.3,.5);rbox(820,170,420,140,22,'#fffdf8',C.orange,4);text('中心角 ＝ 360° ×',1000,225,32,C.ink,'center',800);text('2 ÷ 12 ＝ 60°',1000,280,36,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===5){net2D(1,{paths:[[1,1]],angle:true,eq:p>.25});g.globalAlpha=seg(p,.45,.65);text('OA ＝ OA\' ＝ 12cm',980,230,34,C.ink,'center',800);text('→ 正三角形',980,290,40,C.red,'center',800);g.globalAlpha=1;return}
+ if(i===6){net2D(1,{paths:[[1,1]],angle:true,eq:true});g.globalAlpha=seg(p,.2,.4);rbox(800,190,440,120,22,C.orange);text('ひもの長さ ＝ 12cm',1020,265,40,'#fff','center',800);g.globalAlpha=1;return}
+ // 組み立てなおす
+ const u=1-seg(p,.05,.7),f=1-(1-F0)*u;if(p<.15)net2D(1-seg(p,0,.15),{paths:[[1,1]]});cone3D(f,yaw*(1-u),seg(p,0,.15),[[1,1]]);}};
+</script>

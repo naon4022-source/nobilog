@@ -1,0 +1,689 @@
+{
+  "date": "2026-10-18T09:56:19.240933+09:00",
+  "status": "passed",
+  "scope": "Technical re-decode; existing visual review retained. No new listening review, source generation or book playback in this command.",
+  "voiceSettings": {
+    "engine": "say",
+    "voice": "Kyoko",
+    "rate": 175,
+    "head": 1.0,
+    "tail": 2.0,
+    "gap": 0.35,
+    "filter": "highpass=f=70,equalizer=f=350:t=q:w=0.8:g=-2,equalizer=f=2600:t=q:w=0.8:g=1.8,acompressor=threshold=0.1:ratio=1.5:attack=15:release=150:makeup=1,loudnorm=I=-18:TP=-2:LRA=7",
+    "voiceDecision": "ユーザーがKyokoを選択",
+    "filterDecision": "ユーザーが「めちゃいい」と承認したKyoko・clear補正を採用",
+    "sharedEngineChanged": false,
+    "revision": 2,
+    "profile": "clear",
+    "pronunciationStatus": "文脈ごとに別点検。全発音確認済みとはしない"
+  },
+  "results": [
+    {
+      "id": "M1-C1-REVIEW-V01",
+      "sha256": "fbea446b382291540b855dea9e2c556e2065972d1b610fa9709936ef899c7654",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1196,
+      "fps": 30,
+      "seconds": 39.879,
+      "audioSeconds": 39.893333,
+      "meanDB": -18.5,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 27,
+      "allReviewedFramesMatchVideo": {
+        "frames": 27,
+        "maxChannelRMS": 3.7175260590882213,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-REVIEW-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-REVIEW-V01_69本_第2稿/全場面_1.jpg",
+          "sha256": "e608765177b25d9244885f6105e7c936f3466da3d5641f2793883f56877545cb"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-REVIEW-V01_69本_第2稿/全場面_2.jpg",
+          "sha256": "59074bd87ff6b0e947c6d8bbbc8322f8d54f2c95b74b1eeaa219b5f3f9566d65"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おき全27場面2枚を表示",
+        "notes": "0を基準とする温度と数直線、−3.5と−2の大小、−3から右へ5、符号を変える減法、合計105を保って棒を均す動きを確認。平均の答えの文字は出さず、字幕・配置・はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V01",
+      "sha256": "3f4d396fdbb983c8a174ecad3f85633aed3c0d554dbd3b4d8e6f9cf7173efa8a",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1386,
+      "fps": 30,
+      "seconds": 46.206,
+      "audioSeconds": 46.208,
+      "meanDB": -18.5,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 31,
+      "allReviewedFramesMatchVideo": {
+        "frames": 31,
+        "maxChannelRMS": 3.8052595180880897,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V01_69本_第2稿/全場面_1.jpg",
+          "sha256": "fefadb0d6e200d1b8bb5be6258a6847a37202808203cb466a6749047f3c131ce"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V01_69本_第2稿/全場面_2.jpg",
+          "sha256": "ec461d5fc04fd0dde673d6caf2efe255931e520192bf5c08f743b005fabbbee5"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "元の目視記録を形式統一。動画SHAが一致し、内容不変を確認。今回の新たな目視ではない。",
+        "notes": "全ての1.5秒間隔の場面を目視確認：分類・目盛り・東西の移動、数値と字幕、文字配置"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V02",
+      "sha256": "ed6219a7172df2384abc4e90ad1b146fded066085d3bb62b5a99e31002f94982",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1024,
+      "fps": 30,
+      "seconds": 34.136,
+      "audioSeconds": 34.176,
+      "meanDB": -18.8,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 23,
+      "allReviewedFramesMatchVideo": {
+        "frames": 23,
+        "maxChannelRMS": 3.7815340802378077,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V02.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V02_69本_第1稿/全場面_1.jpg",
+          "sha256": "bca185d0b596ac0dd92bb2a8a69f2835ea8b624fc290d427d1ea69cf200b7082"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "元の目視記録を形式統一。動画SHAが一致し、内容不変を確認。今回の新たな目視ではない。",
+        "notes": "全ての1.5秒間隔の場面を目視確認：分類・目盛り・東西の移動、数値と字幕、文字配置"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V03",
+      "sha256": "2ac57ad6372e47b62b7e8331bb68347f5b60da49faf22354ec1f49cab1c4aae3",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 950,
+      "fps": 30,
+      "seconds": 31.667,
+      "audioSeconds": 31.701333,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 22,
+      "allReviewedFramesMatchVideo": {
+        "frames": 22,
+        "maxChannelRMS": 3.8223029707232783,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V03.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V03_69本_第1稿/全場面_1.jpg",
+          "sha256": "3533525d872ffa04cd25b5fcc5e10e4f704d3c7ed645d03e6276785b419d28f9"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "元の目視記録を形式統一。動画SHAが一致し、内容不変を確認。今回の新たな目視ではない。",
+        "notes": "全ての1.5秒間隔の場面を目視確認：分類・目盛り・東西の移動、数値と字幕、文字配置"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V04",
+      "sha256": "94a0c912387fbb71c5ef56398221ec14dd49b59f385c30afe0c3bc47129148cd",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 803,
+      "fps": 30,
+      "seconds": 26.763,
+      "audioSeconds": 26.794667,
+      "meanDB": -19.0,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 18,
+      "allReviewedFramesMatchVideo": {
+        "frames": 18,
+        "maxChannelRMS": 3.3555923471125033,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V04.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V04_69本_第1稿/全場面_1.jpg",
+          "sha256": "0a58dc618d5f54affd85a7ad43b78abd6bed4ad4d0a8c08733ef15ffc0042759"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全18場面一覧",
+        "notes": "全18場面の目視確認済み。0から±4までの同距離と絶対値の説明・字幕・余白を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V05",
+      "sha256": "d04a4e3e417ca0e100e29b08d326e9ca6e73b940bb7cbaec3e5a4fbe6ad69687",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1005,
+      "fps": 30,
+      "seconds": 33.489,
+      "audioSeconds": 33.493333,
+      "meanDB": -18.9,
+      "peakDB": -2.3,
+      "captions": "all steps equal script",
+      "sampleFrames": 23,
+      "allReviewedFramesMatchVideo": {
+        "frames": 23,
+        "maxChannelRMS": 3.3000000000000003,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V05.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V05_69本_第2稿/全場面_1.jpg",
+          "sha256": "1379030c4642ca3e16cd742cdb620afc6b04c22dd75fbd76b36f9035c436ecc2"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全23場面一覧",
+        "notes": "第2稿：数の位置・符号の打ち消し・文字配置を確認。重なりなし。"
+      }
+    },
+    {
+      "id": "M1-C1-S1-V06",
+      "sha256": "f104a3be260cec2d51749462ca583c6f85bf4c10dc56c864e96d1db02636fbce",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1040,
+      "fps": 30,
+      "seconds": 34.66,
+      "audioSeconds": 34.688,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 24,
+      "allReviewedFramesMatchVideo": {
+        "frames": 24,
+        "maxChannelRMS": 3.81051177665153,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-V06.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-V06_69本_第1稿/全場面_1.jpg",
+          "sha256": "b68daf1fb681976a6613bb80c236d5ed6a3a228184493d7a0448d1ef7cfdf501"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数直線の位置・移動方向・字幕・文字配置に問題なし。"
+      }
+    },
+    {
+      "id": "M1-C1-S1-VP",
+      "sha256": "b8c903605e7ab3f4e0bba8b2834302705f730d21b1c19a680e2d765c1c87cec3",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1131,
+      "fps": 30,
+      "seconds": 37.692,
+      "audioSeconds": 37.717333,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 26,
+      "allReviewedFramesMatchVideo": {
+        "frames": 26,
+        "maxChannelRMS": 3.9319206502675,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S1-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-VP_69本_第1稿/全場面_1.jpg",
+          "sha256": "72464b8ca50aaf4758097c840463ec1e1470577e46ea31389ae3949dace48724"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S1-VP_69本_第1稿/全場面_2.jpg",
+          "sha256": "ea71162cab43033fc514939205b4647d8d9146da28a850a43948f94434ca6e37"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数直線の位置・移動方向・字幕・文字配置に問題なし。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V01",
+      "sha256": "7ee96b3becc27e6e3049dd140f25d323516d2b275ddab93c9470397a6ed95d1f",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 800,
+      "fps": 30,
+      "seconds": 26.673,
+      "audioSeconds": 26.709333,
+      "meanDB": -19.0,
+      "peakDB": -2.1,
+      "captions": "all steps equal script",
+      "sampleFrames": 18,
+      "allReviewedFramesMatchVideo": {
+        "frames": 18,
+        "maxChannelRMS": 3.518522417151836,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V01_69本_第2稿/全場面_1.jpg",
+          "sha256": "05a353ffc31435b938dbc361868f4b4f825d6f49ec0cf6e4963ff7ab925e654b"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全18場面一覧",
+        "notes": "第2稿：数の位置・符号の打ち消し・文字配置を確認。重なりなし。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V02",
+      "sha256": "5aff3c901c31aada4eceb81347c12e2385cb9da45dc3a1d552d81a9ab8e7430d",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1028,
+      "fps": 30,
+      "seconds": 34.26,
+      "audioSeconds": 34.261333,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 23,
+      "allReviewedFramesMatchVideo": {
+        "frames": 23,
+        "maxChannelRMS": 4.684015371452148,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V02.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V02_69本_第2稿/全場面_1.jpg",
+          "sha256": "9f1b54f0c9580a2288c7d2187aabba055a07a4ba85f0caf3418dbd10a5322eb6"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全23場面一覧",
+        "notes": "両項の括弧と符号変換、右への14移動を確認。文字の重なりなし。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V03",
+      "sha256": "d6beaeba2a3894ed23eeec3c9d5311d5b3d9026f9a5bc625f88f6f732ecb5172",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1183,
+      "fps": 30,
+      "seconds": 39.436,
+      "audioSeconds": 39.466667,
+      "meanDB": -18.9,
+      "peakDB": -2.1,
+      "captions": "all steps equal script",
+      "sampleFrames": 27,
+      "allReviewedFramesMatchVideo": {
+        "frames": 27,
+        "maxChannelRMS": 4.172529209005013,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V03.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V03_69本_第1稿/全場面_1.jpg",
+          "sha256": "be58a6aa67bb757e935a655ffec2e99a02be3b5cea760ad3c8363c910ee999e2"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V03_69本_第1稿/全場面_2.jpg",
+          "sha256": "f18384b30bd06ceecece24759c6d89a674b61d8ccdcd0f449f37a9dd9c279be8"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数値・符号・操作順・字幕・文字配置を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V04",
+      "sha256": "7e64ac35d0de7ba61dec971f900740471c269a66e61081fd63c99eb1ed1817f4",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1038,
+      "fps": 30,
+      "seconds": 34.594,
+      "audioSeconds": 34.602667,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 24,
+      "allReviewedFramesMatchVideo": {
+        "frames": 24,
+        "maxChannelRMS": 4.716990566028302,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V04.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V04_69本_第1稿/全場面_1.jpg",
+          "sha256": "161698ee1026bcb086eff3693ebfc13471fe7f3dd89dad7c3e7888918a2bc68e"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数値・符号・操作順・字幕・文字配置を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V05",
+      "sha256": "f433599a4e5f01a002b5ec49a22df8e69c2dad4edc604be032479154fcc4af0e",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 880,
+      "fps": 30,
+      "seconds": 29.34,
+      "audioSeconds": 29.354667,
+      "meanDB": -19.0,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 20,
+      "allReviewedFramesMatchVideo": {
+        "frames": 20,
+        "maxChannelRMS": 3.478505426185217,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V05.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V05_69本_第1稿/全場面_1.jpg",
+          "sha256": "9b23d9ff4aee7945d7535e18374e94f4b8f7135fc5c6db7456f50e26eb12465d"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数値・符号・操作順・字幕・文字配置を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V06",
+      "sha256": "ffd9029641bcceb358c0bd99c08a903c3f7ec9a5ebeddc90e814859988e17de2",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1110,
+      "fps": 30,
+      "seconds": 36.993,
+      "audioSeconds": 37.034667,
+      "meanDB": -18.8,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 25,
+      "allReviewedFramesMatchVideo": {
+        "frames": 25,
+        "maxChannelRMS": 3.7828560638755477,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V06.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V06_69本_第1稿/全場面_1.jpg",
+          "sha256": "70db8a8d5dcb2aea4db2b61c4cbd2e1713e7a300d46d0a9cd7e8e0be801c6807"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V06_69本_第1稿/全場面_2.jpg",
+          "sha256": "49cf2ae681d52332a813da7cffb17738b24ccca31cc9fd469bbc0665b35b5b6b"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数値・符号・操作順・字幕・文字配置を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V07",
+      "sha256": "96e6fb3ef2dbbe5c49119f3d6632b487d26e456b6a37e6c178203852436b5b47",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 905,
+      "fps": 30,
+      "seconds": 30.163,
+      "audioSeconds": 30.165333,
+      "meanDB": -18.8,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 21,
+      "allReviewedFramesMatchVideo": {
+        "frames": 21,
+        "maxChannelRMS": 4.009987531152684,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V07.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V07_69本_第1稿/全場面_1.jpg",
+          "sha256": "790b89737812d77e6bcb03dea9a83484f82e351f319f3cde51a23c1671fb7d46"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全場面一覧",
+        "notes": "数値・符号・操作順・字幕・文字配置を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V08",
+      "sha256": "fde028c9a96d6ef55ed1730b4041b48241a9870c06df4a8a04ef250fbb14bb95",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 965,
+      "fps": 30,
+      "seconds": 32.181,
+      "audioSeconds": 32.213333,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 22,
+      "allReviewedFramesMatchVideo": {
+        "frames": 22,
+        "maxChannelRMS": 4.0274061131204535,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V08.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V08_69本_第2稿/全場面_1.jpg",
+          "sha256": "d73100c1b6be4af6ae5d1189429ee17a6e8d7cf9098bb3032762b30d9dccd270"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全22場面一覧",
+        "notes": "共通因子の丸の位置、まとめた式、最終答えを隠すことを確認。文字の重なりなし。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V09",
+      "sha256": "161851436309817549f93386d6390a6f9b0639e7dc99ac027e8cf76f7064d5b5",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 984,
+      "fps": 30,
+      "seconds": 32.806,
+      "audioSeconds": 32.810667,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 22,
+      "allReviewedFramesMatchVideo": {
+        "frames": 22,
+        "maxChannelRMS": 4.019950248448356,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V09.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V09_69本_第2稿/全場面_1.jpg",
+          "sha256": "f02ecbce234a0c077433f45ca49d1b76e028a9ffae107d7b4588b23fd0dd90e2"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全22場面一覧",
+        "notes": "整数−2の位置が保たれること、1.5が整数の枠から出ることを確認。文字の重なりなし。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-V10",
+      "sha256": "171c29548f92163c56f2eff844f27b38f5649d7a4e4439e5a83e99fd9954a358",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1197,
+      "fps": 30,
+      "seconds": 39.897,
+      "audioSeconds": 39.936,
+      "meanDB": -18.8,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 27,
+      "allReviewedFramesMatchVideo": {
+        "frames": 27,
+        "maxChannelRMS": 3.420526275297414,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-V10.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V10_69本_第1稿/全場面_1.jpg",
+          "sha256": "c62efc91569711bae05c76e7e5432859702f58099bd4195ca898cba5a2a572fd"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-V10_69本_第1稿/全場面_2.jpg",
+          "sha256": "44329b7c764449e5c792b28f6cfa378fb9b7af12a65b9904f23f16785f0fb228"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全27場面一覧",
+        "notes": "すだれ算の商・素因数・累乗表記・字幕の対応を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S2-VP",
+      "sha256": "9e1596d44ea3a85337db1a2858d3f80353eb91b4ab40077092c6d5ea381bd8e0",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1329,
+      "fps": 30,
+      "seconds": 44.289,
+      "audioSeconds": 44.330667,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 30,
+      "allReviewedFramesMatchVideo": {
+        "frames": 30,
+        "maxChannelRMS": 4.703190406521939,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S2-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-VP_69本_第1稿/全場面_1.jpg",
+          "sha256": "82dd8c35de9e48c73427f26db0f0f91b81e3faaa363a2218c701f6a7ff01d1e3"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S2-VP_69本_第1稿/全場面_2.jpg",
+          "sha256": "c4fad97945dd3bb4756f98e4650447c2627cb876486c7a206421f40eff68ed71"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全30場面一覧",
+        "notes": "加減乗除・計算順の操作と字幕対応を確認。修正済みの消去・括弧表記が反映されている。"
+      }
+    },
+    {
+      "id": "M1-C1-S3-V01",
+      "sha256": "4eb5c0018fed76d844b396d8c74c3d9426a0a04af2baa32ebb055c9a970e02c2",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1364,
+      "fps": 30,
+      "seconds": 45.463,
+      "audioSeconds": 45.482667,
+      "meanDB": -18.7,
+      "peakDB": -2.1,
+      "captions": "all steps equal script",
+      "sampleFrames": 31,
+      "allReviewedFramesMatchVideo": {
+        "frames": 31,
+        "maxChannelRMS": 4.4362146025637665,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S3-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S3-V01_69本_第1稿/全場面_1.jpg",
+          "sha256": "d49861d72a04137cd079210a057ae6792dbcae6a51446c947d0f0c1806193c2e"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S3-V01_69本_第1稿/全場面_2.jpg",
+          "sha256": "11221700bb5cf3f6f86efc1505ebe55af39314f0328ea688f6444d889f8d80ed"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全31場面一覧",
+        "notes": "棒の移動量3・1・2・2と合計の保持、字幕、答えを隠す条件を確認。"
+      }
+    },
+    {
+      "id": "M1-C1-S3-VP",
+      "sha256": "d2edbd8d7c6a3f20868cebc79b0a35afacafe86b30ccdaa00c8a9e0884b9d0c3",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1112,
+      "fps": 30,
+      "seconds": 37.068,
+      "audioSeconds": 37.077333,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 25,
+      "allReviewedFramesMatchVideo": {
+        "frames": 25,
+        "maxChannelRMS": 4.264973622427225,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch1-frames-20261018-aiogxojz/M1-C1-S3-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S3-VP_69本_第1稿/全場面_1.jpg",
+          "sha256": "23fc80b07f62396fdf961969c892dfb7fa8665b2d68abcf01ade5610352949b1"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C1-S3-VP_69本_第1稿/全場面_2.jpg",
+          "sha256": "722b07d555dcb98b925ca3051f8b06a1235e7659ffcdef5837a65aed605870da"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全25場面一覧",
+        "notes": "平均へのならし・仮平均との差−2,+3,0,−3,+7・平均21の計算と字幕を確認。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+ "unitId": "M1-C5-S1",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C5-S1-FIG01",
+   "unitId": "M1-C5-S1",
+   "purpose": "直線・線分・半直線のちがいを、端があるかないかで見せる",
+   "sourceReferences": [
+    "教科書p150",
+    "ワークp94 ポイント5-1"
+   ],
+   "confirmedConcept": "直線 AB は両方向にかぎりなく、線分 AB は A から B まで、半直線 AB は A を端に B の方へかぎりなく",
+   "labels": [
+    "直線 AB",
+    "線分 AB",
+    "半直線 AB",
+    "A",
+    "B"
+   ],
+   "coordinates": [
+    "3本を上下に並べ、A と B の位置をそろえる",
+    "直線は両はしを紙のはしまでのばし、線分は A・B に黒丸、半直線は A に黒丸・B 側を紙のはしまで"
+   ],
+   "numericConditions": [
+    "A、B の位置は3本とも同じ",
+    "端の黒丸は線分2つ、半直線1つ、直線0"
+   ],
+   "units": [],
+   "arrows": [
+    "のびる方向を示す小さな矢じるし（直線は両方、半直線は片方）"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "A・B の位置",
+    "端の数"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "直線・線分・半直線を上下に並べた図。直線は両方向へ、半直線は B の方向だけへかぎりなくのび、線分は A と B の間だけ。",
+   "verification": {
+    "calculation": "検算.py 練習1（直線の本数）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C5-S1-FIG02",
+   "unitId": "M1-C5-S1",
+   "purpose": "平行な2直線では、どこで垂線をひいても長さが同じことを見せる",
+   "sourceReferences": [
+    "教科書p153",
+    "ワークp94 ポイント5-2"
+   ],
+   "confirmedConcept": "平行な2直線 ℓ、m。ℓ 上の3点から m へ垂線。3本とも同じ長さ",
+   "labels": [
+    "ℓ",
+    "m",
+    "直角の印",
+    "同じ長さの印"
+   ],
+   "coordinates": [
+    "ℓ と m を横に平行に",
+    "ℓ 上の左・中・右の3点から m へ垂線"
+   ],
+   "numericConditions": [
+    "3本の垂線は同じ長さ（同じ印）",
+    "距離の数値（30m）は図に書かない"
+   ],
+   "units": [
+    "m"
+   ],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "平行",
+    "3本が同じ長さ"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "平行な2本の直線と、上の直線の3か所から下の直線へひいた3本の垂線。3本とも長さが等しい。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

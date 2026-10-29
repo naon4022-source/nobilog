@@ -1,0 +1,3301 @@
+{
+ "id": "drill-math-1-space",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "空間図形",
+ "majorTitle": "空間図形",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-space-1",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺ABと平行な辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "GH",
+      "HG"
+     ]
+    ]
+   },
+   "explanation": "辺ABと平行な辺は 辺CD、辺EF、辺GH。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p80 1(1)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-2",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺ABと平行な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EFGH",
+      "HGFE",
+      "FGHE",
+      "EHGF",
+      "GHEF",
+      "FEHG",
+      "HEFG",
+      "GFEH"
+     ],
+     [
+      "CDHG",
+      "GHDC",
+      "DHGC",
+      "CGHD",
+      "HGCD",
+      "DCGH",
+      "GCDH",
+      "HDCG"
+     ]
+    ]
+   },
+   "explanation": "辺ABをふくまず、交わらない面は 面EFGH、面CDHG",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p81 3(2)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-3",
+   "type": "input",
+   "prompt": "正四面体の頂点の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "正四面体：面の形は正三角形、面の数4、頂点の数4、辺の数6。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-4",
+   "type": "input",
+   "prompt": "直角をはさむ2辺が2cmと9cmの直角三角形を、9cmの辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径2cm、高さ9cmの円錐ができる。1/3×π×2²×9＝12π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p87 6(2)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "36π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-5",
+   "type": "input",
+   "prompt": "底面が直角をはさむ2辺5cm、3cmの直角三角形で、高さが6cmの三角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積 5×3÷2＝15/2cm²。×6＝45（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p86 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-6",
+   "type": "input",
+   "prompt": "底面の半径が7cm、高さが11cmの円柱の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "539π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "π×7²×11＝539π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p86 1(2)（円柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-7",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが13cmの円錐の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "78π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面積＝π×母線×半径＝π×13×6＝78π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p87 Guide（円錐の側面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "169π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-8",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の半径が6cm、中心角が180°のとき、底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さ 2π×6×180/360 が底面の円周 2π×r と等しい。r＝6×180/360＝3cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 89,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p89 3(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-9",
+   "type": "input",
+   "prompt": "半径4cmの球の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "256/3π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "V＝4/3πr³＝4/3π×4³＝256/3π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p87 4（球の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "64π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-10",
+   "type": "input",
+   "prompt": "底面が1辺6cmの正方形で、側面の二等辺三角形の高さが8cmの正四角錐の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "132",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面 6×6＝36、側面 6×8÷2×4＝96。合計 132（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p88 2(1)（角錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-11",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に12cmの深さまで水が入っている。そこに半径3cmの球（鉄球）を入れて完全に沈めたとき、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水面は 球の体積 4/3π×3³ ÷ 底面積 π×6² ＝ 1cm 上がる。12＋1＝13cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p93 4(2)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-12",
+   "type": "input",
+   "prompt": "1辺12cmの立方体の各面の対角線の交点（6つ）を頂点とする正八面体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "288",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "正八面体は、底面が対角線12cmの正方形（面積72cm²）、高さ6cmの四角錐2つ分。1/3×72×6×2＝288（cm³）",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 95,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p95 5（正八面体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-13",
+   "type": "input",
+   "prompt": "空間内で、平行でなく交わらない2つの直線の位置関係を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ねじれの位置",
+     "ねじれ"
+    ]
+   },
+   "explanation": "ねじれの位置にあるという。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p80 Guide（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "平行"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-14",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺GHとねじれの位置にある辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "BF",
+      "FB"
+     ]
+    ]
+   },
+   "explanation": "辺GHとねじれの位置にある辺は 辺BC、辺DA、辺AE、辺BF。平行でなく交わらない辺がねじれの位置にある。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p80 1(3)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-15",
+   "type": "input",
+   "prompt": "次のうち、1つの平面に決まるものをすべて選ぼう。\nア 平行な2直線　イ 交わる2直線　ウ ねじれの位置にある2直線　エ 一直線上にない3点",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア、イ、エ",
+     "ア,イ,エ",
+     "アイエ",
+     "ア イ エ",
+     "ア・イ・エ",
+     "ア、エ、イ",
+     "ア,エ,イ",
+     "アエイ",
+     "ア エ イ",
+     "ア・エ・イ",
+     "イ、ア、エ",
+     "イ,ア,エ",
+     "イアエ",
+     "イ ア エ",
+     "イ・ア・エ",
+     "イ、エ、ア",
+     "イ,エ,ア",
+     "イエア",
+     "イ エ ア",
+     "イ・エ・ア",
+     "エ、ア、イ",
+     "エ,ア,イ",
+     "エアイ",
+     "エ ア イ",
+     "エ・ア・イ",
+     "エ、イ、ア",
+     "エ,イ,ア",
+     "エイア",
+     "エ イ ア",
+     "エ・イ・ア"
+    ]
+   },
+   "explanation": "ねじれの位置にある2直線は同じ平面上にないので、平面は決まらない。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p80 2（平面の決定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "アイ"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-16",
+   "type": "input",
+   "prompt": "半径1cmの半球の形をした容器Aと、底面の半径が1cm、高さが2cmの円柱の形をした容器Bがある。容器Aに水をいっぱいに入れて容器Bに移すとき、容器Aの何杯分で容器Bがいっぱいになるか。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "容器A：2/3π×1³、容器B：π×1²×2＝2π×1³。2÷2/3＝3杯",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 95,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p95 6（体積の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-17",
+   "type": "input",
+   "prompt": "底面の1辺の長さと高さが等しい正四角錐がある。1辺の長さがこの正四角錐の高さの2倍の立方体の体積は、正四角錐の体積の何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "正四角錐の1辺と高さを a とすると、体積は 1/3×a²×a＝a³/3。立方体は (2a)³＝8a³。8a³÷(a³/3)＝24倍",
+   "source": {
+    "id": "source-0155",
+    "file": "ドリル/数学/S__15589443_0.jpg",
+    "sha256": "f93425bdf41ca222137b2e7b43f4cc134fa7ee243fe747d7807b349b8f9e20ef",
+    "page": 104,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p104 7（体積の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-18",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺FGとねじれの位置にある辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "辺FGとねじれの位置にある辺は 辺AB、辺CD、辺AE、辺DH。平行でなく交わらない辺がねじれの位置にある。",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 92,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p92 1(3)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-19",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺GHと平行な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABCD",
+      "DCBA",
+      "BCDA",
+      "ADCB",
+      "CDAB",
+      "BADC",
+      "DABC",
+      "CBAD"
+     ],
+     [
+      "ABFE",
+      "EFBA",
+      "BFEA",
+      "AEFB",
+      "FEAB",
+      "BAEF",
+      "EABF",
+      "FBAE"
+     ]
+    ]
+   },
+   "explanation": "辺GHをふくまず、交わらない面は 面ABCD、面ABFE",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p81 3(2)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-20",
+   "type": "input",
+   "prompt": "正六面体の頂点の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "正六面体：面の形は正方形、面の数6、頂点の数8、辺の数12。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-21",
+   "type": "input",
+   "prompt": "縦12cm、横4cmの長方形を、縦の辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "192π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径4cm、高さ12cmの円柱ができる。π×4²×12＝192π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(1)"
+   },
+   "ref": "参考：数学ドリル p87 6(1)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "576π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-22",
+   "type": "input",
+   "prompt": "底面積が45cm²、高さが8cmの角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "360",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "角柱の体積＝底面積×高さ＝45×8＝360（cm³）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p88 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "120"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-23",
+   "type": "input",
+   "prompt": "底面の半径が4cm、高さが5cmの円柱の表面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "72π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面積 π×4²×2＝32π、側面積 2π×4×5＝40π。合計 72π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p86 2(2)（円柱の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "56π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-24",
+   "type": "input",
+   "prompt": "底面の半径が3cm、母線の長さが15cmの円錐の展開図で、側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "72",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "おうぎ形の弧の長さ＝底面の円周。中心角＝360×3/15＝72°",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 92,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p92 5(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-25",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の半径が10cm、中心角が216°のとき、底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さ 2π×10×216/360 が底面の円周 2π×r と等しい。r＝10×216/360＝6cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 89,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p89 3(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-26",
+   "type": "input",
+   "prompt": "半径5cmの球の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "500/3π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "V＝4/3πr³＝4/3π×5³＝500/3π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p87 4（球の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "100π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-27",
+   "type": "input",
+   "prompt": "底面が1辺8cmの正方形で、側面の二等辺三角形の高さが10cmの正四角錐の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "224",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面 8×8＝64、側面 8×10÷2×4＝160。合計 224（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p88 2(1)（角錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-28",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に11cmの深さまで水が入っている。そこに半径6cmの球（鉄球）を入れて完全に沈めたとき、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "19",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水面は 球の体積 4/3π×6³ ÷ 底面積 π×6² ＝ 8cm 上がる。11＋8＝19cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p93 4(2)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-29",
+   "type": "input",
+   "prompt": "平面だけで囲まれた立体を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "多面体",
+     "ためんたい"
+    ]
+   },
+   "explanation": "多面体。どの面も合同な正多角形で、どの頂点にも面が同じ数だけ集まるへこみのない多面体を正多面体という。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p82 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "正多面体"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-30",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺BCと平行な辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "辺BCと平行な辺は 辺DA、辺FG、辺HE。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p80 1(1)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-31",
+   "type": "input",
+   "prompt": "1つの平面図形を1つの直線を軸として1回転させてできる立体を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "回転体",
+     "かいてんたい"
+    ]
+   },
+   "explanation": "回転体。側面をえがく線分を母線という。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p82 要点2（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-32",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺GHと垂直に交わる辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "HE",
+      "EH"
+     ],
+     [
+      "CG",
+      "GC"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "辺GHと垂直に交わる辺は 辺FG、辺HE、辺CG、辺DH。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p80 1(2)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-33",
+   "type": "input",
+   "prompt": "正四面体の面の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "正四面体：面の形は正三角形、面の数4、頂点の数4、辺の数6。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-34",
+   "type": "input",
+   "prompt": "縦8cm、横4cmの長方形を、縦の辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "128π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径4cm、高さ8cmの円柱ができる。π×4²×8＝128π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(1)"
+   },
+   "ref": "参考：数学ドリル p87 6(1)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "256π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-35",
+   "type": "input",
+   "prompt": "底面積が45cm²、高さが12cmの角錐の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "角錐の体積＝1/3×底面積×高さ＝1/3×45×12＝180（cm³）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p88 1(2)（角錐の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "540"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-36",
+   "type": "input",
+   "prompt": "底面の半径が6cm、高さが10cmの円柱の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "120π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面の展開図は縦10cm、横（底面の円周）2π×6cmの長方形。120π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p86 2（円柱の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-37",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが9cmの円錐の表面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "90π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面積 π×6²＝36π、側面積 π×9×6＝54π。合計 90π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p87 5(2)（円錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "54π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-38",
+   "type": "input",
+   "prompt": "底面の半径が5cm、表面積が85πcm²の円錐の母線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "π×5² ＋ π×5×母線 ＝ 85π。5×母線＝60、母線＝12cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p88 1(4)（円錐の母線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "17"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-39",
+   "type": "input",
+   "prompt": "底面が1辺4cmの正方形で、側面の二等辺三角形の高さが5cmの正四角錐の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "56",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面 4×4＝16、側面 4×5÷2×4＝40。合計 56（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p88 2(1)（角錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-40",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に8cmの深さまで水を入れた。この水を底面の半径が3cmの円柱の容器に移すと、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水の体積は π×6²×8＝288πcm³。これを π×3²＝9π でわって 32cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p93 4(1)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-41",
+   "type": "input",
+   "prompt": "1辺3cmの立方体ABCD－EFGHを、3点D、E、Gを通る平面で切断した。点Hをふくむ方の立体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9/2",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "点Hをふくむ立体は三角錐D－EGH。底面△EGH＝3×3÷2、高さDH＝3。1/3×9/2×3＝9/2（cm³）",
+   "source": {
+    "id": "source-0148",
+    "file": "ドリル/数学/S__15589435_0.jpg",
+    "sha256": "2a47fd32e222e598d6e907e1d7d9e8c74621ed7b00727c7df9e1b9f15e336854",
+    "page": 91,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p91 3(1)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "45/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-42",
+   "type": "input",
+   "prompt": "立体を正面から見た図と真上から見た図を組にして表した図を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "投影図",
+     "とうえいず"
+    ]
+   },
+   "explanation": "投影図。正面から見た図を立面図、真上から見た図を平面図という。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p82 要点3（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "展開図"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-43",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺FGと垂直に交わる辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "BF",
+      "FB"
+     ],
+     [
+      "CG",
+      "GC"
+     ]
+    ]
+   },
+   "explanation": "辺FGと垂直に交わる辺は 辺EF、辺GH、辺BF、辺CG。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p80 1(2)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-44",
+   "type": "input",
+   "prompt": "投影図で、立面図が三角形、平面図が円である立体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円錐",
+     "えんすい"
+    ]
+   },
+   "explanation": "真上から見て円、正面から見て三角形なのは円錐。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 83,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p83 3（投影図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "円柱"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-45",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺EFと垂直に交わる辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "FG",
+      "GF"
+     ],
+     [
+      "HE",
+      "EH"
+     ],
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "BF",
+      "FB"
+     ]
+    ]
+   },
+   "explanation": "辺EFと垂直に交わる辺は 辺FG、辺HE、辺AE、辺BF。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p80 1(2)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-46",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺FGと平行な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABCD",
+      "DCBA",
+      "BCDA",
+      "ADCB",
+      "CDAB",
+      "BADC",
+      "DABC",
+      "CBAD"
+     ],
+     [
+      "DAEH",
+      "HEAD",
+      "AEHD",
+      "DHEA",
+      "EHDA",
+      "ADHE",
+      "HDAE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "辺FGをふくまず、交わらない面は 面ABCD、面DAEH",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p81 3(2)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-47",
+   "type": "input",
+   "prompt": "直角三角形（直角をはさむ辺の1つを軸にする）を、1本の直線を軸として1回転させるとどんな立体ができるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円錐"
+    ]
+   },
+   "explanation": "円錐ができる。このような立体を回転体という。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p82 2（回転体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-48",
+   "type": "input",
+   "prompt": "底面が直角をはさむ2辺8cm、6cmの直角三角形で、高さが7cmの三角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "168",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積 8×6÷2＝24cm²。×7＝168（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p86 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-49",
+   "type": "input",
+   "prompt": "底面の半径が7cm、高さが8cmの円柱の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "392π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "π×7²×8＝392π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p86 1(2)（円柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-50",
+   "type": "input",
+   "prompt": "底面の半径が2cm、母線の長さが9cmの円錐の表面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "22π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面積 π×2²＝4π、側面積 π×9×2＝18π。合計 22π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p87 5(2)（円錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "18π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-51",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の半径が10cm、中心角が240°のとき、底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20/3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さ 2π×10×240/360 が底面の円周 2π×r と等しい。r＝10×240/360＝20/3cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 89,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p89 3(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-52",
+   "type": "input",
+   "prompt": "半径4cmの球を、中心を通る平面で切った半球の表面積（切り口もふくむ）を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "48π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "曲面 4π×4²÷2＝32π、切り口の円 π×4²＝16π。合計 48π（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p88 2(3)（半球の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "32π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-53",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に11cmの深さまで水が入っている。そこに半径3cmの球（鉄球）を入れて完全に沈めたとき、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水面は 球の体積 4/3π×3³ ÷ 底面積 π×6² ＝ 1cm 上がる。11＋1＝12cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p93 4(2)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-54",
+   "type": "input",
+   "prompt": "1辺9cmの立方体の各面の対角線の交点（6つ）を頂点とする正八面体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "243/2",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "正八面体は、底面が対角線9cmの正方形（面積81/2cm²）、高さ9/2cmの四角錐2つ分。1/3×81/2×9/2×2＝243/2（cm³）",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 95,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p95 5（正八面体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-55",
+   "type": "input",
+   "prompt": "投影図で、立面図が長方形、平面図が円である立体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円柱",
+     "えんちゅう"
+    ]
+   },
+   "explanation": "真上から見て円、正面から見て長方形なのは円柱。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 83,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p83 3（投影図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "円錐"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-56",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺DHと垂直に交わる辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "GH",
+      "HG"
+     ],
+     [
+      "HE",
+      "EH"
+     ]
+    ]
+   },
+   "explanation": "辺DHと垂直に交わる辺は 辺CD、辺DA、辺GH、辺HE。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p80 1(2)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-57",
+   "type": "input",
+   "prompt": "投影図で、立面図が三角形、平面図が正方形（対角線入り）である立体は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正四角錐",
+     "四角錐"
+    ]
+   },
+   "explanation": "真上から見て正方形、正面から見て三角形なのは正四角錐。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "要点3"
+   },
+   "ref": "参考：数学ドリル p82 要点3（投影図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "三角柱"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-58",
+   "type": "input",
+   "prompt": "正八面体の面の形を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正三角形"
+    ]
+   },
+   "explanation": "正八面体：面の形は正三角形、面の数8、頂点の数6、辺の数12。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-59",
+   "type": "input",
+   "prompt": "縦6cm、横7cmの長方形を、縦の辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "294π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径7cm、高さ6cmの円柱ができる。π×7²×6＝294π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(1)"
+   },
+   "ref": "参考：数学ドリル p87 6(1)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "252π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-60",
+   "type": "input",
+   "prompt": "底面が直角をはさむ2辺3cm、5cmの直角三角形で、高さが5cmの三角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "75/2",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積 3×5÷2＝15/2cm²。×5＝75/2（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p86 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-61",
+   "type": "input",
+   "prompt": "底面の半径が2cm、高さが5cmの円柱の表面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "28π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面積 π×2²×2＝8π、側面積 2π×2×5＝20π。合計 28π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p86 2(2)（円柱の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "24π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-62",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが36cmの円錐の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "216π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面積＝π×母線×半径＝π×36×6＝216π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p87 Guide（円錐の側面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1296π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-63",
+   "type": "input",
+   "prompt": "半径9cmの球を、中心を通る平面で切った半球の表面積（切り口もふくむ）を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "243π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "曲面 4π×9²÷2＝162π、切り口の円 π×9²＝81π。合計 243π（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p88 2(3)（半球の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "162π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-64",
+   "type": "input",
+   "prompt": "底面が1辺10cmの正方形で、側面の二等辺三角形の高さが16cmの正四角錐の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "420",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面 10×10＝100、側面 10×16÷2×4＝320。合計 420（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p88 2(1)（角錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-65",
+   "type": "input",
+   "prompt": "底面の半径が3cmの円柱の容器に9cmの深さまで水が入っている。そこに半径3cmの球（鉄球）を入れて完全に沈めたとき、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水面は 球の体積 4/3π×3³ ÷ 底面積 π×3² ＝ 4cm 上がる。9＋4＝13cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p93 4(2)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "4"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-66",
+   "type": "input",
+   "prompt": "1辺9cmの立方体ABCD－EFGHを、3点D、E、Gを通る平面で切断した。点Hをふくむ方の立体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "243/2",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "点Hをふくむ立体は三角錐D－EGH。底面△EGH＝9×9÷2、高さDH＝9。1/3×81/2×9＝243/2（cm³）",
+   "source": {
+    "id": "source-0148",
+    "file": "ドリル/数学/S__15589435_0.jpg",
+    "sha256": "2a47fd32e222e598d6e907e1d7d9e8c74621ed7b00727c7df9e1b9f15e336854",
+    "page": 91,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p91 3(1)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1215/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-67",
+   "type": "input",
+   "prompt": "円柱を、軸をふくむ平面で切ると、切り口はどんな形になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "長方形",
+     "ちょうほうけい"
+    ]
+   },
+   "explanation": "軸をふくむ平面で切ると長方形、軸に垂直な平面で切ると円になる。",
+   "source": {
+    "id": "source-0145",
+    "file": "ドリル/数学/S__15589432_0.jpg",
+    "sha256": "ca0e142d6f05414c64eb99942afa28bdaba120650d233b96c3482204946ba86c",
+    "page": 84,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p84 1(1)（回転体の切り口）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "円"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-68",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺BFと垂直に交わる辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "FG",
+      "GF"
+     ]
+    ]
+   },
+   "explanation": "辺BFと垂直に交わる辺は 辺AB、辺BC、辺EF、辺FG。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p80 1(2)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-69",
+   "type": "input",
+   "prompt": "円柱を、軸に垂直な平面で切ると、切り口はどんな形になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円",
+     "えん"
+    ]
+   },
+   "explanation": "軸に垂直な平面で切ると、どこで切っても底面と合同な円になる。",
+   "source": {
+    "id": "source-0145",
+    "file": "ドリル/数学/S__15589432_0.jpg",
+    "sha256": "ca0e142d6f05414c64eb99942afa28bdaba120650d233b96c3482204946ba86c",
+    "page": 84,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p84 1(2)（回転体の切り口）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "長方形"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-70",
+   "type": "input",
+   "prompt": "半径6cmの半球の形をした容器Aと、底面の半径が6cm、高さが12cmの円柱の形をした容器Bがある。容器Aに水をいっぱいに入れて容器Bに移すとき、容器Aの何杯分で容器Bがいっぱいになるか。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "容器A：2/3π×6³、容器B：π×6²×12＝2π×6³。2÷2/3＝3杯",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 95,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p95 6（体積の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-71",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺BFと平行な辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AE",
+      "EA"
+     ],
+     [
+      "CG",
+      "GC"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "辺BFと平行な辺は 辺AE、辺CG、辺DH。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p80 1(1)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-72",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺DAと垂直な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABFE",
+      "EFBA",
+      "BFEA",
+      "AEFB",
+      "FEAB",
+      "BAEF",
+      "EABF",
+      "FBAE"
+     ],
+     [
+      "CDHG",
+      "GHDC",
+      "DHGC",
+      "CGHD",
+      "HGCD",
+      "DCGH",
+      "GCDH",
+      "HDCG"
+     ]
+    ]
+   },
+   "explanation": "辺DAと垂直な面は 面ABFE、面CDHG",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p81 3(1)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-73",
+   "type": "input",
+   "prompt": "正八面体の頂点の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "正八面体：面の形は正三角形、面の数8、頂点の数6、辺の数12。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-74",
+   "type": "input",
+   "prompt": "直角をはさむ2辺が3cmと7cmの直角三角形を、7cmの辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "21π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径3cm、高さ7cmの円錐ができる。1/3×π×3²×7＝21π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p87 6(2)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "63π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-75",
+   "type": "input",
+   "prompt": "底面積が29cm²、高さが6cmの角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "174",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "角柱の体積＝底面積×高さ＝29×6＝174（cm³）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p88 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "58"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-76",
+   "type": "input",
+   "prompt": "底面の半径が8cm、高さが4cmの円錐の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "256/3π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "1/3×π×8²×4＝256/3π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p87 3(2)（円錐の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "256π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-77",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが18cmの円錐の表面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "144π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面積 π×6²＝36π、側面積 π×18×6＝108π。合計 144π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p87 5(2)（円錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "108π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-78",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の半径が15cm、中心角が144°のとき、底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "弧の長さ 2π×15×144/360 が底面の円周 2π×r と等しい。r＝15×144/360＝6cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 89,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p89 3(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-79",
+   "type": "input",
+   "prompt": "半径6cmの球を、中心を通る平面で切った半球の表面積（切り口もふくむ）を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "108π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "曲面 4π×6²÷2＝72π、切り口の円 π×6²＝36π。合計 108π（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p88 2(3)（半球の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "72π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-80",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に8cmの深さまで水が入っている。そこに半径3cmの球（鉄球）を入れて完全に沈めたとき、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水面は 球の体積 4/3π×3³ ÷ 底面積 π×6² ＝ 1cm 上がる。8＋1＝9cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p93 4(2)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-81",
+   "type": "input",
+   "prompt": "次のうち、正しいものを1つ選ぼう。\nア 1つの平面に平行な2つの直線は平行である　イ 1つの平面に垂直な2つの平面は垂直である　ウ 1つの直線に平行な2つの直線は平行である　エ 1つの直線に垂直な2つの平面は垂直である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "アはねじれの位置や交わることもある。イは平行なこともある。エの2平面は平行になる。",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 94,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p94 1（空間の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ア"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-82",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺CDと平行な辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "EF",
+      "FE"
+     ],
+     [
+      "GH",
+      "HG"
+     ]
+    ]
+   },
+   "explanation": "辺CDと平行な辺は 辺AB、辺EF、辺GH。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p80 1(1)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-83",
+   "type": "input",
+   "prompt": "正四面体ABCDで、辺ABとねじれの位置にある辺を答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CD",
+      "DC"
+     ]
+    ]
+   },
+   "explanation": "辺ABと交わらず、平行でもないのは辺CD。",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 94,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p94 2(1)（ねじれの位置）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-84",
+   "type": "input",
+   "prompt": "半径2cmの半球の形をした容器Aと、底面の半径が2cm、高さが4cmの円柱の形をした容器Bがある。容器Aに水をいっぱいに入れて容器Bに移すとき、容器Aの何杯分で容器Bがいっぱいになるか。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "容器A：2/3π×2³、容器B：π×2²×4＝2π×2³。2÷2/3＝3杯",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 95,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p95 6（体積の比較）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-85",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺GHと平行な辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "AB",
+      "BA"
+     ],
+     [
+      "CD",
+      "DC"
+     ],
+     [
+      "EF",
+      "FE"
+     ]
+    ]
+   },
+   "explanation": "辺GHと平行な辺は 辺AB、辺CD、辺EF。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p80 1(1)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-86",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺FGと垂直な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABFE",
+      "EFBA",
+      "BFEA",
+      "AEFB",
+      "FEAB",
+      "BAEF",
+      "EABF",
+      "FBAE"
+     ],
+     [
+      "CDHG",
+      "GHDC",
+      "DHGC",
+      "CGHD",
+      "HGCD",
+      "DCGH",
+      "GCDH",
+      "HDCG"
+     ]
+    ]
+   },
+   "explanation": "辺FGと垂直な面は 面ABFE、面CDHG",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p81 3(1)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-87",
+   "type": "input",
+   "prompt": "正六面体の辺の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "正六面体：面の形は正方形、面の数6、頂点の数8、辺の数12。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-88",
+   "type": "input",
+   "prompt": "直角をはさむ2辺が6cmと5cmの直角三角形を、5cmの辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "60π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径6cm、高さ5cmの円錐ができる。1/3×π×6²×5＝60π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p87 6(2)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "180π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-89",
+   "type": "input",
+   "prompt": "底面が直角をはさむ2辺3cm、5cmの直角三角形で、高さが6cmの三角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積 3×5÷2＝15/2cm²。×6＝45（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p86 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-90",
+   "type": "input",
+   "prompt": "底面の半径が4cm、高さが7cmの円柱の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "56π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面の展開図は縦7cm、横（底面の円周）2π×4cmの長方形。56π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p86 2（円柱の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-91",
+   "type": "input",
+   "prompt": "底面の半径が4cm、母線の長さが16cmの円錐の展開図で、側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "おうぎ形の弧の長さ＝底面の円周。中心角＝360×4/16＝90°",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p87 5(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-92",
+   "type": "input",
+   "prompt": "底面の半径が4cm、表面積が68πcm²の円錐の母線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "π×4² ＋ π×4×母線 ＝ 68π。4×母線＝52、母線＝13cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p88 1(4)（円錐の母線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "17"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-93",
+   "type": "input",
+   "prompt": "半径3cmの球の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "36π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "V＝4/3πr³＝4/3π×3³＝36π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p87 4（球の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-94",
+   "type": "input",
+   "prompt": "底面が1辺12cmの正方形で、側面の二等辺三角形の高さが9cmの正四角錐の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "360",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "底面 12×12＝144、側面 12×9÷2×4＝216。合計 360（cm²）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p88 2(1)（角錐の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-95",
+   "type": "input",
+   "prompt": "底面の半径が6cmの円柱の容器に4cmの深さまで水を入れた。この水を底面の半径が4cmの円柱の容器に移すと、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水の体積は π×6²×4＝144πcm³。これを π×4²＝16π でわって 9cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p93 4(1)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-96",
+   "type": "input",
+   "prompt": "三角柱ABC－DEF（Aの真下がD、Bの真下がE、Cの真下がF）で、辺ABとねじれの位置にある辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "CF",
+      "FC"
+     ],
+     [
+      "DF",
+      "FD"
+     ],
+     [
+      "EF",
+      "FE"
+     ]
+    ]
+   },
+   "explanation": "辺ABと平行なのはDE。交わるのはBC、CA、AD、BE。残りのCF、DF、EFがねじれの位置。",
+   "source": {
+    "id": "source-0150",
+    "file": "ドリル/数学/S__15589437_0.jpg",
+    "sha256": "1b2afa48b871ee1ce0f53be8c13c02deb66a226efe16e4dbc3e9c7059d95240a",
+    "page": 94,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p94 2(2)（ねじれの位置）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-97",
+   "type": "input",
+   "prompt": "立方体ABCD－EFGHを、3点A、C、Fを通る平面で切ると、切り口はどんな形になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正三角形",
+     "せいさんかくけい"
+    ]
+   },
+   "explanation": "AC、CF、FA はどれも立方体の面の対角線で長さが等しいので、正三角形。",
+   "source": {
+    "id": "source-0148",
+    "file": "ドリル/数学/S__15589435_0.jpg",
+    "sha256": "2a47fd32e222e598d6e907e1d7d9e8c74621ed7b00727c7df9e1b9f15e336854",
+    "page": 90,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p90 1(1)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "二等辺三角形"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-98",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺HEと垂直な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABFE",
+      "EFBA",
+      "BFEA",
+      "AEFB",
+      "FEAB",
+      "BAEF",
+      "EABF",
+      "FBAE"
+     ],
+     [
+      "CDHG",
+      "GHDC",
+      "DHGC",
+      "CGHD",
+      "HGCD",
+      "DCGH",
+      "GCDH",
+      "HDCG"
+     ]
+    ]
+   },
+   "explanation": "辺HEと垂直な面は 面ABFE、面CDHG",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p81 3(1)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-99",
+   "type": "input",
+   "prompt": "正八面体の面の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "正八面体：面の形は正三角形、面の数8、頂点の数6、辺の数12。（頂点の数）−（辺の数）＋（面の数）＝2 になっている。",
+   "source": {
+    "id": "source-0144",
+    "file": "ドリル/数学/S__15589431_0.jpg",
+    "sha256": "4f8a622cf9b78b2d597f576b99c5c7511294e1f32a25bb38e3814e2c3d33ade1",
+    "page": 82,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p82 1（正多面体）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-100",
+   "type": "input",
+   "prompt": "直角をはさむ2辺が7cmと8cmの直角三角形を、8cmの辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "392/3π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径7cm、高さ8cmの円錐ができる。1/3×π×7²×8＝392/3π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(2)"
+   },
+   "ref": "参考：数学ドリル p87 6(2)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "392π"
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-space-test-1",
+   "type": "input",
+   "prompt": "底面積が34cm²、高さが3cmの角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "102",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "角柱の体積＝底面積×高さ＝34×3＝102（cm³）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p88 1(1)（角柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "34"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-2",
+   "type": "input",
+   "prompt": "底面の半径が3cm、高さが8cmの円柱の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "48π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面の展開図は縦8cm、横（底面の円周）2π×3cmの長方形。48π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p86 2（円柱の表面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-test-3",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが7cmの円錐の側面積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "42π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "側面積＝π×母線×半径＝π×7×6＝42π（cm²）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p87 Guide（円錐の側面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "49π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-4",
+   "type": "input",
+   "prompt": "底面の半径が2cm、表面積が20πcm²の円錐の母線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "π×2² ＋ π×2×母線 ＝ 20π。2×母線＝16、母線＝8cm",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p88 1(4)（円錐の母線）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "10"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-5",
+   "type": "input",
+   "prompt": "半径6cmの球の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "288π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "V＝4/3πr³＝4/3π×6³＝288π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p87 4（球の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "144π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-6",
+   "type": "input",
+   "prompt": "底面の半径が4cmの円柱の容器に9cmの深さまで水を入れた。この水を底面の半径が6cmの円柱の容器に移すと、水の深さは何cmになるか（容器の深さは十分にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "水の体積は π×4²×9＝144πcm³。これを π×6²＝36π でわって 4cm",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 93,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p93 4(1)（水の深さ）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-test-7",
+   "type": "input",
+   "prompt": "1辺6cmの立方体ABCD－EFGHを、3点D、E、Gを通る平面で切断した。点Hをふくむ方の立体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "点Hをふくむ立体は三角錐D－EGH。底面△EGH＝6×6÷2、高さDH＝6。1/3×18×6＝36（cm³）",
+   "source": {
+    "id": "source-0148",
+    "file": "ドリル/数学/S__15589435_0.jpg",
+    "sha256": "2a47fd32e222e598d6e907e1d7d9e8c74621ed7b00727c7df9e1b9f15e336854",
+    "page": 91,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p91 3(1)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "180"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-8",
+   "type": "input",
+   "prompt": "立方体ABCD－EFGHを、3点A、E、Gを通る平面で切ると、切り口はどんな形になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "長方形",
+     "ちょうほうけい"
+    ]
+   },
+   "explanation": "切り口は A、E、G、C を頂点とする長方形（AE と CG は平行で、AC は面の対角線）。",
+   "source": {
+    "id": "source-0148",
+    "file": "ドリル/数学/S__15589435_0.jpg",
+    "sha256": "2a47fd32e222e598d6e907e1d7d9e8c74621ed7b00727c7df9e1b9f15e336854",
+    "page": 90,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p90 1(3)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "正方形"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-9",
+   "type": "input",
+   "prompt": "立方体を1つの平面で切ったとき、切り口として実際にはできないものを1つ選ぼう。\nア 正三角形　イ 長方形　ウ 正五角形　エ 正六角形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "立方体の面は平行な3組。切り口の辺は平行な面に平行な組で現れるので、正五角形はできない（五角形はできるが正五角形にはならない）。",
+   "source": {
+    "id": "source-0149",
+    "file": "ドリル/数学/S__15589436_0.jpg",
+    "sha256": "035eb88514afa7a93cd6571b37f9482c914ca459ad6785a9e33c65c4bcb61b26",
+    "page": 92,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p92 1(3)（立体の切断）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "エ"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-10",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺EFとねじれの位置にある辺をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "BC",
+      "CB"
+     ],
+     [
+      "DA",
+      "AD"
+     ],
+     [
+      "CG",
+      "GC"
+     ],
+     [
+      "DH",
+      "HD"
+     ]
+    ]
+   },
+   "explanation": "辺EFとねじれの位置にある辺は 辺BC、辺DA、辺CG、辺DH。平行でなく交わらない辺がねじれの位置にある。",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 80,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p80 1(3)（2直線の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-test-11",
+   "type": "input",
+   "prompt": "直方体ABCD－EFGH（上の面がABCD、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH）で、辺CGと平行な面をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ABFE",
+      "EFBA",
+      "BFEA",
+      "AEFB",
+      "FEAB",
+      "BAEF",
+      "EABF",
+      "FBAE"
+     ],
+     [
+      "DAEH",
+      "HEAD",
+      "AEHD",
+      "DHEA",
+      "EHDA",
+      "ADHE",
+      "HDAE",
+      "EADH"
+     ]
+    ]
+   },
+   "explanation": "辺CGをふくまず、交わらない面は 面ABFE、面DAEH",
+   "source": {
+    "id": "source-0143",
+    "file": "ドリル/数学/S__15589429_0.jpg",
+    "sha256": "731c173cf6da7830fde9dea62005b735f73e1efea5b8903c30c880204a9ec706",
+    "page": 81,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p81 3(2)（直線と平面の位置関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-test-12",
+   "type": "input",
+   "prompt": "縦9cm、横8cmの長方形を、縦の辺を軸として1回転させてできる立体の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "576π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面の半径8cm、高さ9cmの円柱ができる。π×8²×9＝576π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "6(1)"
+   },
+   "ref": "参考：数学ドリル p87 6(1)（回転体の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "648π"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-13",
+   "type": "input",
+   "prompt": "底面積が53cm²、高さが12cmの角錐の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "212",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "角錐の体積＝1/3×底面積×高さ＝1/3×53×12＝212（cm³）",
+   "source": {
+    "id": "source-0147",
+    "file": "ドリル/数学/S__15589434_0.jpg",
+    "sha256": "34dfc61ab3a7b01b9c9a6f459c524651e5b0fcb0eed260b3506360e30470ea35",
+    "page": 88,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p88 1(2)（角錐の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "636"
+   ]
+  },
+  {
+   "id": "drill-math-1-space-test-14",
+   "type": "input",
+   "prompt": "底面の半径が7cm、高さが3cmの円柱の体積を求めよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "147π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "π×7²×3＝147π（cm³）",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 86,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p86 1(2)（円柱の体積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-space-test-15",
+   "type": "input",
+   "prompt": "底面の半径が6cm、母線の長さが12cmの円錐の展開図で、側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "おうぎ形の弧の長さ＝底面の円周。中心角＝360×6/12＝180°",
+   "source": {
+    "id": "source-0146",
+    "file": "ドリル/数学/S__15589433_0.jpg",
+    "sha256": "97dff05f5ddb82b5de871d6dd466e214eee25a6c6b287ba9f570e48287080bb6",
+    "page": 87,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p87 5(1)（円錐の展開図）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp80〜95（19 直線や平面の位置関係・20 立体のいろいろな見方・21 立体の表面積と体積・22 立体の切断、標準問題・実力問題①②）とp104（総仕上げ7）を写真で目視し、数や条件を変えた類題を作った。見取図や展開図は文章で条件を示した。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "2直線・直線と平面の位置関係",
+   "body": "2直線は「交わる」「平行」「ねじれの位置（平行でなく交わらない）」の3通り。直線と平面は「交わる」「平行」「平面上にある」。直方体では、辺と面の垂直・平行を見取図で1つずつ確かめる。"
+  },
+  {
+   "title": "正多面体と回転体",
+   "body": "正多面体は5種類（正四・正六・正八・正十二・正二十面体）。長方形を回転→円柱、直角三角形→円錐、半円→球。投影図は立面図（正面）と平面図（真上）で立体を表す。"
+  },
+  {
+   "title": "体積の公式",
+   "body": "角柱・円柱：底面積×高さ。角錐・円錐：1/3×底面積×高さ。球：4/3πr³。例：底面の半径3cm、高さ4cmの円錐は 1/3×π×9×4＝12π cm³"
+  },
+  {
+   "title": "表面積と円錐の展開図",
+   "body": "表面積＝底面積×2＋側面積（柱）、底面積＋側面積（錐）。円錐の側面のおうぎ形は、中心角＝360×（底面の半径）÷（母線）、側面積＝π×母線×底面の半径。球の表面積は 4πr²。"
+  },
+  {
+   "title": "切断と水の深さ",
+   "body": "立方体の切り口は、同じ面上の2点を直線で結び、平行な面には平行な線をひいて求める。容器の水を移す問題は、水の体積が変わらないことを使う（深さ＝体積÷底面積）。"
+  }
+ ]
+}

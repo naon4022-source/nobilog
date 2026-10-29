@@ -1,0 +1,366 @@
+{
+ "id": "tokkun-math-1-funcreview",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ふりかえりドリル（特訓）",
+ "majorTitle": "変化と対応",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-funcreview-1",
+   "type": "input",
+   "prompt": "y は x に比例し、z は x に反比例する。x ＝ 2 のとき y ＝ 6、z ＝ 24 である。x が正の数で、y と z の値が等しくなる x を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①y ＝ 3x、z ＝ 48/x　②3x ＝ 48/x より x × x ＝ 16　③x ＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-2",
+   "type": "input",
+   "prompt": "比例 y ＝ 3x と反比例 y ＝ 12/x のグラフの交点のうち x 座標が正のものをA、反比例のグラフ上で x 座標が 4 の点をBとする。原点O、A、B を頂点とする三角形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①A(2, 6)、B(4, 3)　②かこむ長方形（横 4、縦 6）24 から、まわりの三角形 6、6、3 をひく　③24 − 15 ＝ 9。答え 9cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-3",
+   "type": "input",
+   "prompt": "比例 y ＝ ax のグラフと反比例 y ＝ 18/x のグラフが点 (3, 6) で交わる。もう1つの交点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-3,-6)",
+     "(-3、-6)",
+     "-3,-6",
+     "-3、-6"
+    ],
+    "compact": true
+   },
+   "explanation": "①a ＝ 2、2x ＝ 18/x より x × x ＝ 9　②x ＝ −3 のとき y ＝ −6　③答え (−3, −6)（原点について対称な点）",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-4",
+   "type": "input",
+   "prompt": "反比例 y ＝ a/x（a ＞ 0）で、x の変域が 2 ≦ x ≦ 6 のとき、y の変域は b ≦ y ≦ 9 である。b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①a ＞ 0 なので、x が小さいほど y は大きい：x ＝ 2 で 9、a ＝ 18　②x ＝ 6 で y ＝ 3　③b ＝ 3。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-5",
+   "type": "input",
+   "prompt": "反比例 y ＝ 12/x のグラフ上の点Pと原点Oを結ぶ線分のまん中の点Mは、Pがどこにあっても、ある反比例 y ＝ k/x のグラフ上にある。k の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①P(a, 12/a) とすると M(a/2, 6/a)　②M の x 座標 × y 座標 ＝ (a/2) × (6/a) ＝ 3　③k ＝ 3。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-6",
+   "type": "input",
+   "prompt": "比例 y ＝ x/2 と反比例 y ＝ 8/x のグラフの交点のうち x 座標が正のものをPとし、Pから x 軸に垂線をひいた交点をHとする。三角形 OPH の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①x/2 ＝ 8/x より x × x ＝ 16、x ＝ 4、P(4, 2)　②OH ＝ 4、PH ＝ 2　③4 × 2 ÷ 2 ＝ 4。答え 4cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-7",
+   "type": "input",
+   "prompt": "x と y の値が、x ＝ 1、2、3、4、6 のとき y ＝ 24、12、8、6、4 と対応している。x ＝ 0.5 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "48"
+   },
+   "explanation": "①どの組も xy ＝ 24 で、y は x に反比例　②y ＝ 24/x　③x ＝ 0.5 で y ＝ 48。答え 48",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-8",
+   "type": "input",
+   "prompt": "反比例 y ＝ a/x（a ＜ 0）で、x が 2 から 4 にふえると、y は 3 ふえる。a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-12"
+   },
+   "explanation": "①a/4 − a/2 ＝ 3　②−a/4 ＝ 3　③a ＝ −12（−6 から −3 へ 3 ふえる）。答え −12",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-9",
+   "type": "input",
+   "prompt": "点A(2, 3)、点B(−4, −6) と原点Oがある。三角形 OAB の面積を求めよう（3点の位置に注意しよう）。",
+   "answer": {
+    "kind": "number",
+    "value": "0"
+   },
+   "explanation": "①A、B はどちらも比例のグラフ y ＝ 3x/2 の上にある（3/2 ＝ −6/(−4)）　②O、A、B は一直線上にあり、三角形はできない　③面積は 0。答え 0",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-10",
+   "type": "input",
+   "prompt": "反比例 xy ＝ 12 のグラフ上で、x 座標と y 座標がどちらも自然数である点のうち、x 座標と y 座標の和がもっとも小さくなる点の、その和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①自然数の組：(1, 12)、(2, 6)、(3, 4)、(4, 3)、(6, 2)、(12, 1)　②和は 13、8、7、7、8、13　③最小 7。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-11",
+   "type": "input",
+   "prompt": "比例 y ＝ ax のグラフが、反比例 y ＝ 6/x のグラフと x 座標が 3 の点で交わる。このとき、比例のグラフ上で y 座標が 10 の点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①交点 (3, 2)、a ＝ 2/3　②(2/3)x ＝ 10　③x ＝ 15。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-12",
+   "type": "input",
+   "prompt": "反比例 y ＝ 24/x のグラフ上の2点 A(2, 12)、B(6, 4) がある。直線 AB 上で x 座標が 4 の点の y 座標と、反比例のグラフ上で x 座標が 4 の点の y 座標の差を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①直線 AB：x が 4 ふえると y が 8 へるので、x ＝ 4 で y ＝ 8　②反比例上 x ＝ 4 で y ＝ 6　③8 − 6 ＝ 2。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcreview-13",
+   "type": "input",
+   "prompt": "y は x に反比例し、そのグラフは点 (−2, 6) を通る。x の変域が 1 ≦ x ≦ 4 のとき、y のもっとも小さい値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-12"
+   },
+   "explanation": "①比例定数 −12、y ＝ −12/x　②x ＞ 0 では y は負で、x が小さいほど y は小さい　③x ＝ 1 で −12。答え −12",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜143（4章 変化と対応 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。比例と反比例を組み合わせる、入試の形の一段難しい問題（グラフの交点・図形の面積・変域）。答えは check.py で、座標の計算と総当たりで検算。【保留】4章のほかの小単元の特訓と重ならない総合問題は 13 問まで。70問にしていない。"
+}

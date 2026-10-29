@@ -1,0 +1,673 @@
+{
+ "id": "kentei-suken-3",
+ "bank": "kentei",
+ "kentei": "数検",
+ "level": "3級",
+ "title": "数検3級（独自問題・先取り）",
+ "status": "draft",
+ "questions": [
+  {
+   "id": "kentei-suken-3-1",
+   "type": "input",
+   "section": "式の計算（中1・中2の復習）",
+   "role": "例題",
+   "prompt": "次の計算をしよう。\n5(2x − 3y) − 3(4x − 6y)",
+   "answer": {
+    "kind": "expr",
+    "value": "-2x+3y"
+   },
+   "explanation": "10x−15y−12x＋18y＝−2x＋3y。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-2",
+   "type": "input",
+   "section": "式の計算（中1・中2の復習）",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n(5x − 2y)/6 − (x − 4y)/9",
+   "answer": {
+    "kind": "expr",
+    "value": "(13x+2y)/18"
+   },
+   "explanation": "18で通分。(3(5x−2y)−2(x−4y))/18＝(15x−6y−2x＋8y)/18＝(13x＋2y)/18。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-3",
+   "type": "input",
+   "section": "式の計算（中1・中2の復習）",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n12x²y ÷ (−3xy) × 2y",
+   "answer": {
+    "kind": "expr",
+    "value": "-8xy"
+   },
+   "explanation": "12÷(−3)×2＝−8。x²÷x＝x、y÷y×y＝y。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-4",
+   "type": "input",
+   "section": "式の展開【中3】",
+   "role": "例題",
+   "prompt": "次の式を展開しよう。\n(x + 5)(x − 3)",
+   "answer": {
+    "kind": "expr",
+    "value": "x^2+2x-15"
+   },
+   "explanation": "(x＋a)(x＋b)＝x²＋(a＋b)x＋ab。a＋b＝2、ab＝−15。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-5",
+   "type": "input",
+   "section": "式の展開【中3】",
+   "role": "確認",
+   "prompt": "次の式を展開しよう。\n(2x − 3)²",
+   "answer": {
+    "kind": "expr",
+    "value": "4x^2-12x+9"
+   },
+   "explanation": "(a−b)²＝a²−2ab＋b²。(2x)²−2×2x×3＋9。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-6",
+   "type": "input",
+   "section": "式の展開【中3】",
+   "role": "確認",
+   "prompt": "次の式を計算しよう。\n(x + 4)² − (x + 2)(x − 2)",
+   "answer": {
+    "kind": "expr",
+    "value": "8x+20"
+   },
+   "explanation": "x²＋8x＋16−(x²−4)＝8x＋20。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-7",
+   "type": "input",
+   "section": "因数分解【中3】",
+   "role": "例題",
+   "prompt": "次の式を因数分解しよう。\nx² − 2x − 24",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(x-6)(x+4)",
+     "(x+4)(x-6)"
+    ]
+   },
+   "explanation": "かけて−24、たして−2になる2数は−6と4。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-8",
+   "type": "input",
+   "section": "因数分解【中3】",
+   "role": "確認",
+   "prompt": "次の式を因数分解しよう。\nx² − 49",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(x+7)(x-7)",
+     "(x-7)(x+7)"
+    ]
+   },
+   "explanation": "a²−b²＝(a＋b)(a−b)。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-9",
+   "type": "input",
+   "section": "因数分解【中3】",
+   "role": "確認",
+   "prompt": "次の式を因数分解しよう。\n3x² − 12x + 12",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3(x-2)^2",
+     "3(x-2)²",
+     "3(x-2)(x-2)"
+    ]
+   },
+   "explanation": "共通因数3をくくり出して3(x²−4x＋4)＝3(x−2)²。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-10",
+   "type": "input",
+   "section": "平方根【中3】",
+   "role": "例題",
+   "prompt": "√48 × √3 を計算しよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "√48×√3＝√144＝12。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-11",
+   "type": "input",
+   "section": "平方根【中3】",
+   "role": "確認",
+   "prompt": "√(2²×3²) の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "√36＝6。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-12",
+   "type": "input",
+   "section": "平方根【中3】",
+   "role": "確認",
+   "prompt": "√(120n) が自然数になるような、もっとも小さい自然数nを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30"
+   },
+   "explanation": "120＝2³×3×5＝2²×30。2²はそのまま平方なので、残りの30をかければ平方数（3600＝60²）になる。n＝30。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-13",
+   "type": "input",
+   "section": "平方根【中3】",
+   "role": "確認",
+   "prompt": "x＝5＋√3、y＝5−√3 のとき、x² − y² の値は 20√3 になる。では x² + 2xy + y² の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "100"
+   },
+   "explanation": "x²＋2xy＋y²＝(x＋y)²。x＋y＝10なので100。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-14",
+   "type": "input",
+   "section": "方程式",
+   "role": "例題",
+   "prompt": "次の2次方程式を解こう（解を読点で区切って書こう）。\nx² − 7x + 12 = 0",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3、4",
+     "4、3",
+     "3,4",
+     "4,3",
+     "x=3、4",
+     "x=3,4"
+    ]
+   },
+   "explanation": "因数分解して(x−3)(x−4)＝0。x＝3、4。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-15",
+   "type": "input",
+   "section": "方程式",
+   "role": "確認",
+   "prompt": "次の2次方程式を解こう（解を読点で区切って書こう）。\nx² = 3x",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0、3",
+     "3、0",
+     "0,3",
+     "3,0",
+     "x=0、3",
+     "x=0,3"
+    ]
+   },
+   "explanation": "x²−3x＝0、x(x−3)＝0。x＝0、3。xでわると解が1つなくなるので注意。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-16",
+   "type": "input",
+   "section": "方程式",
+   "role": "確認",
+   "prompt": "次の連立方程式を解こう。x、yの順に読点で区切って答えよう。\n3x − 2y = 16\n0.5x + 0.3y = 1.4",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "4",
+     "-2"
+    ],
+    "ordered": true
+   },
+   "explanation": "下を10倍して5x＋3y＝14。上を3倍、下を2倍して9x−6y＝48、10x＋6y＝28。たして19x＝76、x＝4。12−2y＝16、y＝−2。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-17",
+   "type": "input",
+   "section": "関数y＝ax²【中3】",
+   "role": "例題",
+   "prompt": "yはxの2乗に比例し、x＝3のときy＝18である。x＝−4のときのyの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "32"
+   },
+   "explanation": "y＝ax²で18＝9a、a＝2。y＝2×16＝32。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-18",
+   "type": "input",
+   "section": "関数y＝ax²【中3】",
+   "role": "確認",
+   "prompt": "関数 y＝x² で、xの変域が −2≦x≦3 のとき、yの変域を「〇≦y≦〇」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0≦y≦9",
+     "0<=y<=9"
+    ]
+   },
+   "explanation": "xが0をふくむので、最小値は0。最大はx＝3のとき9。x＝−2のとき4は最大ではない。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-19",
+   "type": "input",
+   "section": "関数y＝ax²【中3】",
+   "role": "確認",
+   "prompt": "関数 y＝2x² で、xが1から3まで増加するときの変化の割合を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "(18−2)÷(3−1)＝8。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-20",
+   "type": "input",
+   "section": "図形【中2・中3】",
+   "role": "例題",
+   "prompt": "正十角形の1つの内角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "144",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "内角の和は180×(10−2)＝1440°。1440÷10＝144°。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-21",
+   "type": "input",
+   "section": "図形【中2・中3】",
+   "role": "確認",
+   "prompt": "円Oの周上に3点A、B、Cがある。弧ABに対する円周角∠ACBが35°のとき、中心角∠AOBは何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "70",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "中心角は円周角の2倍。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-22",
+   "type": "input",
+   "section": "図形【中2・中3】",
+   "role": "確認",
+   "prompt": "直角をはさむ2辺が6cmと8cmの直角三角形の斜辺は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "三平方の定理。6²＋8²＝100＝10²。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-23",
+   "type": "input",
+   "section": "図形【中2・中3】",
+   "role": "確認",
+   "prompt": "相似な2つの三角形の相似比が2:3で、小さい三角形の面積が12cm²のとき、大きい三角形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "27",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "面積比は相似比の2乗で4:9。12×9/4＝27cm²。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-24",
+   "type": "input",
+   "section": "図形【中2・中3】",
+   "role": "確認",
+   "prompt": "底面が1辺6cmの正方形、高さが10cmの正四角すいの体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積36×高さ10÷3＝120cm³。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-25",
+   "type": "input",
+   "section": "確率・データ",
+   "role": "例題",
+   "prompt": "2枚の硬貨を同時に投げるとき、2枚とも表が出る確率を分数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/4"
+   },
+   "explanation": "出方は（表表）（表裏）（裏表）（裏裏）の4通り。2枚とも表は1通り。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_1ji.pdf",
+    "sha256": "2542bf6843d889f0d0893d92d5614b905ed38b8a1d13f38b9d24b3fb53473b34",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-26",
+   "type": "input",
+   "section": "確率・データ",
+   "role": "確認",
+   "prompt": "赤球2個、白球3個が入った袋から1個取り出すとき、白球が出る確率を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3/5"
+   },
+   "explanation": "全部で5個、白球は3個。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-27",
+   "type": "input",
+   "section": "確率・データ",
+   "role": "確認",
+   "prompt": "赤球2個、白球3個が入った袋から同時に2個取り出すとき、2個とも白球である確率を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3/10"
+   },
+   "explanation": "2個の取り出し方は5×4÷2＝10通り。白2個は3×2÷2＝3通り。3/10。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-28",
+   "type": "input",
+   "section": "確率・データ",
+   "role": "確認",
+   "prompt": "大小2つのさいころを投げるとき、出た目の和が7になる確率を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/6"
+   },
+   "explanation": "和が7は(1,6)(2,5)(3,4)(4,3)(5,2)(6,1)の6通り。6/36＝1/6。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-3-29",
+   "type": "input",
+   "section": "確率・データ",
+   "role": "確認",
+   "prompt": "ある学校の1年30人の平均は14分、2年20人の平均は19分だった。2つの学年全体の平均は何分か。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "(420＋380)÷50＝16分。",
+   "source": {
+    "id": null,
+    "file": "数検/3q_que_2ji.pdf",
+    "sha256": "c9670850a38c1be9c915d113e3b95f31aca7f15fa1536663c6cc21c306b29a20",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  }
+ ],
+ "reviewNote": "2026-10-13 Claude作成。【範囲の根拠】日本数学検定協会 数学検定3級 https://www.su-gaku.net/suken/examination/summary/3q/ （2026-10-14確認：目安は中学3年程度。平方根・展開と因数分解・2次方程式・三平方の定理・円の性質・相似・2次関数・簡単な統計など）。中学1年の生徒には、【中3】と書いた分野はすべて先取り。三平方の定理と√をふくむ答えは採点器で扱えないので入れていない（検定原稿・下書き）。数検/3q_que_1ji.pdf・3q_que_2ji.pdf の出題分野と難しさを参考に、問題文・数値はすべて独自。中学3年の内容（展開・因数分解・平方根・2次方程式・y＝ax²・円周角・三平方の定理・相似・確率）は中学1年には先取り。因数分解は、途中までの形（3(x²−4x＋4) など）を正解にしないよう、完成した形の書き方だけを登録した。平方根をふくむ答え（例：2√3）は採点器で扱えないため、答えが整数・分数になる問題だけにした。作図・証明の全文は手書きで別に必要。"
+}

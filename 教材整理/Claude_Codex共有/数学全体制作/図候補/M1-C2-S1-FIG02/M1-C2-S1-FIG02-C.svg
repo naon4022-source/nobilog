@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc"><title id="title">時速 x km で4時間歩いた道のりを、1時間ごとに区切った線分図で示す</title><desc id="desc">線分を4つに等しく区切る。1区間は1時間で x km。4区間で4時間、4x km。</desc><rect width="1000" height="700" fill="white"/><g font-family="system-ui,sans-serif" fill="#222">
+<line x1="100" y1="310" x2="900" y2="310" stroke="#222" stroke-width="3"/>
+<line x1="100" y1="285" x2="100" y2="335" stroke="#222" stroke-width="3" data-tick="0"/>
+<line x1="300" y1="285" x2="300" y2="335" stroke="#222" stroke-width="3" data-tick="1"/>
+<line x1="500" y1="285" x2="500" y2="335" stroke="#222" stroke-width="3" data-tick="2"/>
+<line x1="700" y1="285" x2="700" y2="335" stroke="#222" stroke-width="3" data-tick="3"/>
+<line x1="900" y1="285" x2="900" y2="335" stroke="#222" stroke-width="3" data-tick="4"/>
+<text x="200" y="260" font-size="34" text-anchor="middle" data-distance="0">x km</text>
+<text x="200" y="385" font-size="34" text-anchor="middle" data-time="0">1時間</text>
+<text x="400" y="260" font-size="34" text-anchor="middle" data-distance="1">x km</text>
+<text x="400" y="385" font-size="34" text-anchor="middle" data-time="1">1時間</text>
+<text x="600" y="260" font-size="34" text-anchor="middle" data-distance="2">x km</text>
+<text x="600" y="385" font-size="34" text-anchor="middle" data-time="2">1時間</text>
+<text x="800" y="260" font-size="34" text-anchor="middle" data-distance="3">x km</text>
+<text x="800" y="385" font-size="34" text-anchor="middle" data-time="3">1時間</text>
+<path d="M100 195 v-18 H900 v18" stroke="#222" fill="none" stroke-width="2" data-bracket="4x km"/><text x="500.0" y="150" font-size="34" text-anchor="middle" >4x km</text>
+<path d="M100 450 v18 H900 v-18" stroke="#222" fill="none" stroke-width="2" data-bracket="4時間"/><text x="500.0" y="515" font-size="34" text-anchor="middle" >4時間</text>
+<rect x="45" y="60" width="910" height="590" rx="18" fill="none" stroke="#222" stroke-dasharray="7 5"/>
+</g></svg>

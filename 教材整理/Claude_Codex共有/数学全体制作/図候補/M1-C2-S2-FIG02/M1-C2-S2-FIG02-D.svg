@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc"><title id="title">a−(b+c)＝a−b−c を、数直線上の移動で示す</title><desc id="desc">上の数直線は a から b ひき、さらに c ひく。下は a から b+c をまとめてひく。どちらも同じ点に着く。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#222"/></marker></defs><rect width="1000" height="700" fill="white"/><g font-family="system-ui,sans-serif" fill="#222">
+<rect x="31" y="31" width="940" height="650" rx="16" fill="#ddd"/>
+<rect x="25" y="25" width="940" height="650" rx="16" fill="white" stroke="#222"/>
+<g data-row="0"><line x1="230" y1="270" x2="920" y2="270" stroke="#222" stroke-width="2"/>
+<line x1="270" y1="262" x2="270" y2="278" stroke="#222" data-tick="true"/>
+<line x1="360" y1="262" x2="360" y2="278" stroke="#222" data-tick="true"/>
+<line x1="450" y1="262" x2="450" y2="278" stroke="#222" data-tick="true"/>
+<line x1="540" y1="262" x2="540" y2="278" stroke="#222" data-tick="true"/>
+<line x1="630" y1="262" x2="630" y2="278" stroke="#222" data-tick="true"/>
+<line x1="720" y1="262" x2="720" y2="278" stroke="#222" data-tick="true"/>
+<line x1="810" y1="262" x2="810" y2="278" stroke="#222" data-tick="true"/>
+<line x1="900" y1="262" x2="900" y2="278" stroke="#222" data-tick="true"/>
+<circle cx="810" cy="270" r="6" fill="#222"/><text x="810" y="330" font-size="32" text-anchor="middle" >a</text>
+<circle cx="360" cy="270" r="6" fill="#222"/><text x="360" y="330" font-size="32" text-anchor="middle" >a−b−c</text>
+<circle cx="540" cy="270" r="6" fill="#222"/><text x="540" y="330" font-size="32" text-anchor="middle" >a−b</text>
+<line x1="810" y1="220" x2="540" y2="220" stroke="#222" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)" data-move="b"/>
+<text x="675.0" y="190" font-size="36" text-anchor="middle" >b</text>
+<line x1="540" y1="220" x2="360" y2="220" stroke="#222" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)" data-move="c"/>
+<text x="450.0" y="190" font-size="36" text-anchor="middle" >c</text>
+</g>
+<g data-row="1"><line x1="230" y1="550" x2="920" y2="550" stroke="#222" stroke-width="2"/>
+<line x1="270" y1="542" x2="270" y2="558" stroke="#222" data-tick="true"/>
+<line x1="360" y1="542" x2="360" y2="558" stroke="#222" data-tick="true"/>
+<line x1="450" y1="542" x2="450" y2="558" stroke="#222" data-tick="true"/>
+<line x1="540" y1="542" x2="540" y2="558" stroke="#222" data-tick="true"/>
+<line x1="630" y1="542" x2="630" y2="558" stroke="#222" data-tick="true"/>
+<line x1="720" y1="542" x2="720" y2="558" stroke="#222" data-tick="true"/>
+<line x1="810" y1="542" x2="810" y2="558" stroke="#222" data-tick="true"/>
+<line x1="900" y1="542" x2="900" y2="558" stroke="#222" data-tick="true"/>
+<circle cx="810" cy="550" r="6" fill="#222"/><text x="810" y="610" font-size="32" text-anchor="middle" >a</text>
+<circle cx="360" cy="550" r="6" fill="#222"/><text x="360" y="610" font-size="32" text-anchor="middle" >a−b−c</text>
+<line x1="810" y1="500" x2="360" y2="500" stroke="#222" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)" data-move="b+c"/>
+<text x="585.0" y="470" font-size="36" text-anchor="middle" >b+c</text>
+</g>
+<line x1="360" y1="270" x2="360" y2="285" stroke="#222" stroke-width="2" stroke-dasharray="6 6" data-arrival="true"/><line x1="360" y1="350" x2="360" y2="550" stroke="#222" stroke-width="2" stroke-dasharray="6 6" data-arrival="true"/>
+</g></svg>

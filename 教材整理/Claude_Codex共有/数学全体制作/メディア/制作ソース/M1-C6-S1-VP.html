@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script src="動画エンジン/c67vp.js"></script><script>
+// M1-C6-S1-VP 1分でわかる 6章1節（Claude）
+const T=['多面体','展開図','位置関係','回転体'],TC=[C.blue,C.green,C.orange,'#8a5cc2'];
+window.SCENE={draw({i,p,t}){
+ header('1分でわかる　6章1節 立体と空間図形');
+ if(i===0){T.forEach((s,k)=>{const a=seg(p,.1+k*.15,.25+k*.15),x=70+k*290;card4(x,170,260,300,`${k+1}. ${s}`,TC[k],a);if(a<=0)return;g.globalAlpha=a;const cx=x+130,cy=345;
+   if(k===0)poly(SOLIDS.icosa,{cx,cy,s:80,M:view(t*.6,-0.35),color:SOLIDCOL.icosa,edge:2.5});if(k===1)netCone(cx,cy-95,130,43,a);if(k===2)miniBox(cx,cy,62,.55,3);if(k===3)miniSweep('tri',cx,cy,62,2*Math.PI*((t*.3)%1));g.globalAlpha=1});return}
+ if(i===1){['tetra','cube','octa','dodeca','icosa'].forEach((n,k)=>{const x=150+k*245,a=seg(p,.1+k*.1,.25+k*.1);g.globalAlpha=a;poly(SOLIDS[n],{cx:x,cy:300,s:85,M:view(t*.6+k,-0.35),color:SOLIDCOL[n],edge:3});text(SOLIDNAME[n].replace('（立方体）',''),x,430,30,C.ink,'center',800);g.globalAlpha=1});
+  g.globalAlpha=seg(p,.65,.8);rbox(390,470,500,62,18,C.blue);text('正多面体は 5種類だけ',640,513,34,'#fff','center',800);g.globalAlpha=1;return}
+ if(i===2){netCyl(340,320,52,seg(p,.1,.3));netCone(890,140,190,63,seg(p,.4,.6));g.globalAlpha=seg(p,.2,.35);text('円柱 → 長方形',340,560,34,C.green,'center',800);g.globalAlpha=seg(p,.55,.7);text('円錐 → おうぎ形',890,560,34,C.green,'center',800);g.globalAlpha=1;return}
+ if(i===3){const k=p<.25?0:p<.45?1:p<.65?2:3;miniBox(520,330,150,.55+t*.1,k);[['交わる',C.red],['平行',C.blue],['ねじれ',C.orange]].forEach(([s,c],j)=>{g.globalAlpha=k>j?1:0;rbox(900,190+j*90,280,66,18,'#fff',c,4);text(s,1040,236+j*90,34,c,'center',800);g.globalAlpha=1});return}
+ if(i===4){['rect','tri','semi'].forEach((k,j)=>{const th=2*Math.PI*seg(p,.1+j*.2,.35+j*.2);miniSweep(k,250+j*390,320,100,th);g.globalAlpha=seg(p,.35+j*.2,.45+j*.2);text(['円柱','円錐','球'][j],250+j*390,530,40,C.ink,'center',800);g.globalAlpha=1});return}
+ g.globalAlpha=seg(p,0,.2);rbox(160,180,960,260,28,'#fffdf8',C.orange,5);text('見取図・展開図・投影図で',640,280,46,C.ink,'center',800);text('立体を平面に表して考える',640,370,46,C.orange,'center',800);g.globalAlpha=1}};
+</script>

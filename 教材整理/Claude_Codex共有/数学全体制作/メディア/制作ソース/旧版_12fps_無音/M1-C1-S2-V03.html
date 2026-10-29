@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(29,raw));g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('項をチームに分ける',65,88,42,blue);box(45,147,1190,425,'white');text('−8+15−11+3',640,219,42,ink,'center');box(140,405,440,140,'#e8f0fa');box(700,405,440,140,'#edf1f4');text('正のチーム',360,532,34,blue,'center');text('負のチーム',920,532,34,ink,'center');const vals=[-8,15,-11,3];if(t<15){vals.forEach((v,j)=>{const u=Math.max(0,Math.min(1,(t-1-j*2.5)/4)),sx=220+280*j,tx=v>0?(j===1?270:450):(j===0?820:1020),px=sx+(tx-sx)*u,py=305+155*u-50*Math.sin(Math.PI*u);box(px-68,py-35,136,70,'white');text(v>0?'+'+v:String(v).replace('-','−'),px,py+14,38,v>0?blue:ink,'center')})}else{const k=Math.min(1,Math.max(0,(t-22)/7));text('+18',360+210*k,363+90*k,48,blue,'center');text('−19',920-210*k,363+90*k,48,ink,'center');if(k>0)text('+',640,465,40,ink,'center')}
+text(t<15?'符号を項につけて、チームに分ける':'正どうし・負どうしをまとめてから、合わせる',640,640,34,ink,'center');return {time:t};};renderAt(0);</script>

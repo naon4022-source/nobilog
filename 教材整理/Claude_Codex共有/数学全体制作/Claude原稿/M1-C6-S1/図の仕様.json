@@ -1,0 +1,234 @@
+{
+ "unitId": "M1-C6-S1",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C6-S1-FIG01",
+   "unitId": "M1-C6-S1",
+   "purpose": "角錐・円錐の「頂点・側面・底面」を、角柱・円柱とくらべて見せる",
+   "sourceReferences": [
+    "教科書p184"
+   ],
+   "confirmedConcept": "三角錐・四角錐・円錐（底面1つ）と三角柱・円柱（底面2つ）",
+   "labels": [
+    "頂点",
+    "側面",
+    "底面",
+    "三角錐",
+    "四角錐",
+    "円錐",
+    "三角柱",
+    "円柱"
+   ],
+   "coordinates": [
+    "上の段に錐3つ、下の段に柱2つ",
+    "見えない辺は破線"
+   ],
+   "numericConditions": [
+    "錐は底面1つ、柱は底面2つ"
+   ],
+   "units": [],
+   "arrows": [
+    "ラベルへの引き出し線"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "見えない辺は破線",
+    "底面の数"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "上の段に三角錐・四角錐・円錐、下の段に三角柱・円柱。錐には頂点・側面・底面のラベル。",
+   "verification": {
+    "calculation": "検算.py 例1標準（五角錐）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S1-FIG02",
+   "unitId": "M1-C6-S1",
+   "purpose": "展開図で、組み立てたときに重なる辺を見せる",
+   "sourceReferences": [
+    "教科書p187〜191"
+   ],
+   "confirmedConcept": "三角柱・四角錐・円柱・円錐の展開図。円柱の側面の横＝円周、円錐の側面の弧＝円周",
+   "labels": [
+    "三角柱",
+    "四角錐",
+    "円柱",
+    "円錐",
+    "2πr"
+   ],
+   "coordinates": [
+    "2×2に並べる",
+    "重なる辺どうしに同じ記号（○、△、□）"
+   ],
+   "numericConditions": [
+    "円柱：長方形の横と底面の円周に同じ記号",
+    "円錐：おうぎ形の弧と底面の円周に同じ記号"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "重なる辺の記号が一致"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "4つの立体の展開図。組み立てたときに重なる辺どうしに同じ記号をつけてある。",
+   "verification": {
+    "calculation": "検算.py 例2基本・例2標準",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S1-FIG03",
+   "unitId": "M1-C6-S1",
+   "purpose": "直方体で、辺 AB と交わる辺・平行な辺・ねじれの位置にある辺を区別する",
+   "sourceReferences": [
+    "教科書p194〜195"
+   ],
+   "confirmedConcept": "直方体 ABCD-EFGH（上 ABCD、A の真下が E）。AB と交わる：AD、BC、AE、BF。平行：DC、EF、HG。ねじれ：CG、DH、EH、FG",
+   "labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+   ],
+   "coordinates": [
+    "見取図",
+    "AB を最も太い線"
+   ],
+   "numericConditions": [
+    "交わる＝太線、平行＝二重線、ねじれ＝点線の3種類で区別"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "線の種類の凡例"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "直方体の見取図。辺 AB と交わる辺、平行な辺、ねじれの位置にある辺を、線の種類で区別してある。",
+   "verification": {
+    "calculation": "検算.py R3",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S1-FIG04",
+   "unitId": "M1-C6-S1",
+   "purpose": "面の回転・平行移動で立体ができることを見せる",
+   "sourceReferences": [
+    "教科書p200〜201"
+   ],
+   "confirmedConcept": "左：長方形を直線 ℓ のまわりに1回転→円柱。右：三角形を面に垂直に平行移動→三角柱",
+   "labels": [
+    "ℓ",
+    "回転",
+    "平行移動",
+    "円柱",
+    "三角柱"
+   ],
+   "coordinates": [
+    "左右2つの図",
+    "回転は弧の矢印、平行移動はまっすぐな矢印"
+   ],
+   "numericConditions": [
+    "動いたあとの形を点線で重ねる"
+   ],
+   "units": [],
+   "arrows": [
+    "回転の矢印",
+    "移動の矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "もとの図形と立体の対応"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "長方形が直線のまわりを回って円柱になるようすと、三角形が平行移動して三角柱になるようす。",
+   "verification": {
+    "calculation": "検算.py 例4基本",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S1-FIG05",
+   "unitId": "M1-C6-S1",
+   "purpose": "見取図・展開図・投影図の3つで同じ立体を表し、使い分けを見せる",
+   "sourceReferences": [
+    "教科書p192"
+   ],
+   "confirmedConcept": "同じ三角柱を3通りで表す",
+   "labels": [
+    "見取図",
+    "展開図",
+    "投影図",
+    "立面図",
+    "平面図"
+   ],
+   "coordinates": [
+    "横に3つ並べる",
+    "投影図は立面図の下に平面図"
+   ],
+   "numericConditions": [
+    "3つとも同じ三角柱"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "3つが同じ立体"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "同じ三角柱を、見取図・展開図・投影図の3通りで並べた図。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

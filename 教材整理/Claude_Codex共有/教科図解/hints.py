@@ -8,6 +8,7 @@ import sys
 from svg import SVG, COL, W, H
 from layouts import compare, table, flow
 from common import lessons, media, answer_tokens, Masker, soft
+from reviewed_fractions import final_svg
 
 def footer(g, s):
     g.rect(20, 492, W - 40, 40, COL['lemon'], COL['yellow'], 2, r=12); g.text(s, 70, 519, 18, COL['ink'], 'start', 700); g.sprout(40, 520, .5)
@@ -18,7 +19,7 @@ def dq(code, L):
     m = Masker(toks); cols = [(h.replace('**', ''), [m(soft(x)) for x in items[:4]]) for h, items in L['keys'][:3]]
     compare(g, cols, top + 6, 482)
     footer(g, '（？）に入る言葉が、確認問題の答えにつながるよ。本文で見つけよう。')
-    return g.done()
+    return final_svg(code+'-DQ',g.done())
 
 def dp(code, L):
     toks = answer_tokens(L['p']); g = SVG('練習問題の手がかり：' + L['title'])

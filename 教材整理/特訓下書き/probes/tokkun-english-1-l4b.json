@@ -1,0 +1,26 @@
+{
+ "unit": "tokkun-english-1-l4b.json",
+ "cases": [
+  {
+   "n": 55,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I don't have any T-shirts.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 55,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I do not have any T-shirts.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 55,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I don't have some T-shirts.",
+   "expect": false,
+   "why": "some/anyの誤り"
+  }
+ ]
+}

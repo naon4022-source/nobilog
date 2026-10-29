@@ -1,0 +1,91 @@
+{
+ "unitId": "M1-C7-S2",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C7-S2-FIG01",
+   "unitId": "M1-C7-S2",
+   "purpose": "投げる回数がふえると、相対度数が一定の値に近づくことを見せる",
+   "sourceReferences": [
+    "教科書p240〜241"
+   ],
+   "confirmedConcept": "回数 100、200、500、1000、2000 で上向きの相対度数 0.22、0.205、0.216、0.214、0.213",
+   "labels": [
+    "投げた回数",
+    "上向きの相対度数",
+    "0.21"
+   ],
+   "coordinates": [
+    "横軸 0〜2000回、縦軸 0.15〜0.30",
+    "0.21 に横の点線"
+   ],
+   "numericConditions": [
+    "点は表の5つの値",
+    "折れ線で結ぶ"
+   ],
+   "units": [
+    "回"
+   ],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "0.21 の点線"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "紙コップが上向きになった相対度数の折れ線グラフ。回数がふえると 0.21 付近に落ちつく。",
+   "verification": {
+    "calculation": "検算.py 紙コップ",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C7-S2-FIG02",
+   "unitId": "M1-C7-S2",
+   "purpose": "降水確率 30% の意味を、100 マスで見せる",
+   "sourceReferences": [
+    "教科書p245（ライブラリーの話題）"
+   ],
+   "confirmedConcept": "100回の予報のうち、およそ30回は 1mm 以上の降水",
+   "labels": [
+    "降水確率 30%",
+    "100回",
+    "およそ30回"
+   ],
+   "coordinates": [
+    "10×10 のます目",
+    "30 マスに雨の印"
+   ],
+   "numericConditions": [
+    "印は 30 マス"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "30／100"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "100 マスのうち 30 マスに雨の印。降水確率 30% は、同じような予報 100回のうち およそ 30回 雨が降るという意味。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

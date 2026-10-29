@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script src="動画エンジン/c67vp.js"></script><script>
+// M1-C6-S3-VP 1分でわかる 6章3節（Claude）
+function sector(cx,cy,R,deg,a,chord){g.globalAlpha=a;const th=deg*Math.PI/180;g.fillStyle='#d8e6f5';g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();g.moveTo(cx,cy);g.arc(cx,cy,R,Math.PI/2-th/2,Math.PI/2+th/2);g.closePath();g.fill();g.stroke();
+ if(chord>0){const A=[cx+R*Math.cos(Math.PI/2+th/2),cy+R*Math.sin(Math.PI/2+th/2)],B=[cx+R*Math.cos(Math.PI/2-th/2),cy+R*Math.sin(Math.PI/2-th/2)];g.strokeStyle=C.orange;g.lineWidth=8;g.beginPath();g.moveTo(A[0],A[1]);g.lineTo(A[0]+(B[0]-A[0])*chord,A[1]+(B[1]-A[1])*chord);g.stroke()}g.globalAlpha=1}
+function tank(x,y,w,h,lv,a=1){g.globalAlpha=a;g.fillStyle=C.sky;g.fillRect(x,y+h*(1-lv),w,h*lv);g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.moveTo(x,y);g.lineTo(x,y+h);g.lineTo(x+w,y+h);g.lineTo(x+w,y);g.stroke();g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('1分でわかる　6章3節 空間図形の利用');
+ if(i===0){miniCone(400,330,95,1,'#f2c48d');const o={cx:400,cy:330,s:95,M:view(.3,-.35)};const n=48,k=seg(p,.2,.9);g.strokeStyle=C.red;g.lineWidth=6;g.beginPath();for(let j=0;j<=n*k;j++){const u=j/n,a=2*Math.PI*u,q=0.86+0.14*Math.cos(2*Math.PI*u),pp=pt3([q*Math.cos(a),1-2*q,q*Math.sin(a)],o);j?g.lineTo(pp[0],pp[1]):g.moveTo(pp[0],pp[1])}g.stroke();
+  g.globalAlpha=seg(p,.5,.7);text('帽子に リボンを1周',880,300,40,C.ink,'center',800);g.globalAlpha=1;return}
+ if(i===1){sector(560,120,330,60,1,seg(p,.3,.8));g.globalAlpha=seg(p,.7,.9);text('展開図では まっすぐ',1000,300,38,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===2){sector(560,120,330,60,1,1);g.globalAlpha=seg(p,.2,.4);text('60°',560,215,36,C.orange,'center',800);rbox(860,250,330,120,20,'#fffdf8',C.red,4);text('正三角形',1025,300,40,C.red,'center',800);text('ひも ＝ 母線',1025,350,34,C.ink,'center',800);g.globalAlpha=1;return}
+ if(i===3){const o={cx:430,cy:330,s:120,M:view(.6,-.4)};poly({verts:[[-1,1,1],[1,1,1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,-1,-1],[-1,-1,-1]],faces:[[0,1,2,3],[4,7,6,5],[0,4,5,1],[1,5,6,2],[2,6,7,3],[3,7,4,0]]},{...o,color:'#dfe9f5',faceAlpha:.5});
+  const k=seg(p,.2,.8);const A=[-1,1,1],G=[1,-1,-1],M=[1,0,1];const pa=pt3(A,o),pm=pt3(M,o),pg=pt3(G,o);g.strokeStyle=C.orange;g.lineWidth=7;g.beginPath();g.moveTo(pa[0],pa[1]);const u=Math.min(1,k*2),v=Math.max(0,k*2-1);g.lineTo(pa[0]+(pm[0]-pa[0])*u,pa[1]+(pm[1]-pa[1])*u);if(v>0)g.lineTo(pm[0]+(pg[0]-pm[0])*v,pm[1]+(pg[1]-pm[1])*v);g.stroke();
+  g.globalAlpha=seg(p,.6,.8);text('2つの面を開いて まっすぐ',900,300,36,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===4){const lv=0.4+0.2*seg(p,.3,.8);tank(260,200,420,300,lv);const sy=120+260*seg(p,.05,.3);g.fillStyle='#b8b0a0';g.strokeStyle=C.ink;g.lineWidth=3;g.fillRect(420,Math.min(sy,500-100),100,100);g.strokeRect(420,Math.min(sy,500-100),100,100);
+  g.globalAlpha=seg(p,.5,.7);rbox(760,240,440,120,20,'#fffdf8',C.blue,4);text('上がった高さ',980,290,34,C.ink,'center',800);text('＝ 体積 ÷ 底面積',980,340,36,C.blue,'center',800);g.globalAlpha=1;return}
+ [['円柱',3,miniCyl],['球',2,miniBall],['円錐',1,miniCone]].forEach(([n,v,f],k)=>{const x=260+k*380,a=seg(p,.05+k*.15,.25+k*.15);g.globalAlpha=a;f(x,270,85,a);text(n,x,420,36,C.ink,'center',800);text(String(v),x,500,60,C.orange,'center',800);if(k<2)text('：',x+190,500,60,C.orange,'center',800);g.globalAlpha=1})}};
+</script>

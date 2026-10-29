@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S2-V02 側面を1枚の長方形に（Claude）。底面は直角三角形（4cm・3cm・5cm）、高さ 4cm
+const h=4,EC=[C.orange,C.green,'#8a5cc2'];   // 辺 4・5・3 の色
+const P0=[0,0,0],P1=[4,0,0],P2=[0,0,-3];
+function ang(v){return Math.atan2(v[2],v[0])}
+const a1_0=ang(R3.sub(P2,P1)),a2_0=ang(R3.sub(P0,P2));let tau0=a2_0-a1_0;while(tau0>Math.PI)tau0-=2*Math.PI;while(tau0<-Math.PI)tau0+=2*Math.PI;
+// u：側面を開く（0〜1）、w：上下の三角形を開く（0〜1）。中心をずらして画面の中央に
+function net(u,w){const a1=a1_0*(1-u),a2=a1+tau0*(1-u);const Q1=P1,Q2=R3.add(Q1,[5*Math.cos(a1),0,5*Math.sin(a1)]),Q3=R3.add(Q2,[3*Math.cos(a2),0,3*Math.sin(a2)]);
+ const up=v=>R3.add(v,[0,h,0]);const rects=[[P0,P1,up(P1),up(P0)],[Q1,Q2,up(Q2),up(Q1)],[Q2,Q3,up(Q3),up(Q2)]];
+ const th=w*Math.PI/2,tri=(y,s)=>[[0,y,0],[4,y,0],[0,y+s*3*Math.sin(th),-3*Math.cos(th)]];
+ return {rects,top:tri(h,1),bot:tri(0,-1),Q:[P0,P1,Q2,Q3]}}
+function draw(u,w,o,hl){const N=net(u,w),sh=v=>R3.sub(v,[u*6+(1-u)*2,h/2,(1-u)*-1.5]);
+ const faces=[...N.rects.map((r,k)=>({pts:r,col:'#8ec1ec',k})),{pts:N.top,col:'#f2c48d',k:'t'},{pts:N.bot,col:'#f2c48d',k:'b'}];
+ const pr=faces.map(F=>({...F,sc:F.pts.map(v=>R3.mul(o.M,sh(v)))}));pr.forEach(F=>F.z=F.sc.reduce((s,v)=>s+v[2],0)/F.sc.length);pr.sort((a,b)=>a.z-b.z);
+ pr.forEach(F=>{const q=F.sc.map(v=>proj(v,o.cx,o.cy,o.s));let fill=F.col;if(hl&&hl.rect&&typeof F.k==='number')fill=hexA(C.blue,.55);if(hl&&hl.tri&&typeof F.k==='string')fill=hexA(C.orange,.65);
+  g.fillStyle=fill;g.globalAlpha=.93;g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();q.forEach((p,j)=>j?g.lineTo(p[0],p[1]):g.moveTo(p[0],p[1]));g.closePath();g.fill();g.globalAlpha=1;g.stroke()});
+ return {N,P:v=>proj(R3.mul(o.M,sh(v)),o.cx,o.cy,o.s)}}
+function edgeMark(a,b,col,P,w=9){const p=P(a),q=P(b);g.strokeStyle=col;g.lineWidth=w;g.lineCap='round';g.beginPath();g.moveTo(p[0],p[1]);g.lineTo(q[0],q[1]);g.stroke();g.lineCap='butt'}
+window.SCENE={draw({i,p,t}){
+ header('側面を1枚の長方形に');
+ const u=i===1?seg(p,.1,.85):i>=2?1:0,w=i===2?seg(p,.1,.7):i>=3?1:0;
+ const yaw=i===0?0.7+Math.sin(t*0.5)*0.3:(1-u)*0.7,pitch=-0.45+0.35*u;const o={cx:i===0?560:560-50*u,cy:320+15*u,s:i===0?62:62-20*u,M:view(yaw,pitch)};
+ const {N,P}=draw(u,w,o,{rect:i===4,tri:i===5});
+ if(i===0){const U=v=>R3.add(v,[0,h,0]),cen=P(U([4/3,0,-1]));const lab=(a,b,s,col)=>{const p=P(U(a)),q=P(U(b)),mx=(p[0]+q[0])/2,my=(p[1]+q[1])/2,d=Math.hypot(mx-cen[0],my-cen[1])||1;edgeMark(U(a),U(b),col,P,7);text(s,mx+(mx-cen[0])/d*44,my+(my-cen[1])/d*44+12,32,col,'center',800)};g.globalAlpha=seg(p,.3,.5);lab(P0,P1,'4cm',EC[0]);lab(P1,P2,'5cm',EC[1]);lab(P2,P0,'3cm',EC[2]);
+  const a=P(P1),b=P([4,h,0]);text('高さ 4cm',a[0]+90,(a[1]+b[1])/2,32,C.ink,'center',800);g.globalAlpha=1}
+ if(i>=3){const [A,B,C2,D]=N.Q;const k=i===3?[seg(p,.15,.35),seg(p,.35,.55),seg(p,.55,.75)]:[1,1,1];
+  [[A,B],[B,C2],[C2,D]].forEach(([a,b],j)=>{if(k[j]>0){g.globalAlpha=k[j];edgeMark(a,b,EC[j],P);g.globalAlpha=1}});
+  const T=N.bot;[[T[0],T[1]],[T[1],T[2]],[T[2],T[0]]].forEach(([a,b],j)=>{if(k[j]>0){g.globalAlpha=k[j];edgeMark(a,b,EC[j],P,7);g.globalAlpha=1}});
+  if(i===3){g.globalAlpha=seg(p,.75,.95);const a=P(R3.add(B,[0,h,0])),d=P(R3.add(D,[0,h,0]));text('4 ＋ 5 ＋ 3 ＝ 12cm',(a[0]+d[0])/2,a[1]-26,40,C.ink,'center',800);g.globalAlpha=1}}
+ const card=(lines,a)=>{g.globalAlpha=a;rbox(850,120,410,60+lines.length*56,22,'#fffdf8',C.orange,4);lines.forEach((l,k)=>text(l[0],1055,170+k*56,l[1]||32,l[2]||C.ink,'center',800));g.globalAlpha=1};
+ if(i===4)card([['側面積'],['＝ 高さ × まわり'],['＝ 4 × 12'],['＝ 48 cm²',40,C.blue]],seg(p,.1,.3));
+ if(i===5)card([['底面積'],['＝ 4 × 3 ÷ 2'],['＝ 6 cm²'],['2つで 12 cm²',36,C.orange]],seg(p,.1,.3));
+ if(i===6){g.globalAlpha=.25;g.globalAlpha=1;card([['表面積'],['＝ 側面積 ＋ 底面積×2'],['＝ 48 ＋ 12'],['＝ 60 cm²',44,C.orange]],seg(p,0,.25))}
+}};
+</script>

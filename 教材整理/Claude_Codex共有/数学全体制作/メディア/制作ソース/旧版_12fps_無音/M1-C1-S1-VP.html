@@ -1,0 +1,16 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(59,raw));g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('1分でわかる 正の数・負の数',65,88,42,blue);box(45,147,1190,425,'white');const x=n=>650+n*98,y=440;line(x(-5),y,x(5),y);for(let n=-5;n<=5;n++){line(x(n),y-10,x(n),y+10,ink,n===0?6:3);text(String(n).replace('-','−'),x(n),496,32,ink,'center')}
+if(raw<1){['温度計','数直線','絶対値','大小','移動'].forEach((s,i)=>text(s,190+i*225,240,34,blue,'center'));line(230,300,230,390,blue,15);dot(230,400,blue,20);dot(x(0),y,ink,14);arrow(x(0),345,x(4),345);text('0を基準にして、数を見よう',640,640,36,ink,'center');return {intro:true};}
+if(t<13){const u=(t-1)/12;line(270,245,270,480,'#b7c9dd',25);line(270,480,270,355+u*70,blue,13);dot(270,500,blue,22);line(235,355,305,355,ink,5);text('0℃',338,365,34);text('＋',338,284,42);text('−',338,460,42);dot(x(-3.5*u),y,blue,14);text('温度計：0℃より上は＋、下は−',640,640,34,ink,'center')}
+else if(t<24){const u=(t-13)/11;dot(x(-3.5+u*5),y,blue,15);arrow(x(-4),310,x(4),310);text('左は負の数　｜　右は正の数',640,240,38,blue,'center');text('数直線：0が、正と負のさかい目',640,640,36,ink,'center')}
+else if(t<36){const u=Math.min(1,(t-24)/9);line(x(0),340,x(-4*u),340,blue,8,[12,8]);line(x(0),340,x(4*u),340,blue,8);dot(x(0),y,ink,12);dot(x(-4*u),y,blue,14);dot(x(4*u),y,blue,14);if(u===1){text('4',x(-2),302,40,blue,'center');text('4',x(2),302,40,blue,'center')}text('絶対値：0からのきょり。符号にはよらない',640,640,34,ink,'center')}
+else if(t<47){dot(x(-3.5),y,blue,14);dot(x(-2),y,ink,14);text('−3.5',x(-3.5),370,36,blue,'center');text('−2',x(-2),370,36,ink,'center');arrow(x(-4),280,x(4),280);text('大きくなる',640,230,38,blue,'center');text('大小：右にある数ほど大きい',640,640,36,ink,'center')}
+else{const u=Math.min(5,(t-47)/2);dot(x(-3),y,ink,10);arrow(x(-3),330,x(-3+u),330,blue);dot(x(-3+u),y,blue,14);text('−3より5大きい数',640,230,40,blue,'center');text('移動：大きいなら右へ、目盛りを数える',640,640,34,ink,'center')}return {time:t};};renderAt(0);</script>

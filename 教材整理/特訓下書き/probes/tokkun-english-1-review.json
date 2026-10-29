@@ -1,0 +1,110 @@
+{
+ "unit": "tokkun-english-1-review.json",
+ "cases": [
+  {
+   "n": 46,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "Pardon?",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 46,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "pardon",
+   "expect": true,
+   "why": "小文字・記号なし"
+  },
+  {
+   "n": 46,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "Excuse me.",
+   "expect": false,
+   "why": "場面ちがい"
+  },
+  {
+   "n": 47,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "I have a question.",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 47,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "I have a question",
+   "expect": true,
+   "why": "ピリオドなし"
+  },
+  {
+   "n": 47,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "I have question.",
+   "expect": false,
+   "why": "aの欠落"
+  },
+  {
+   "n": 49,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "Here you are.",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 49,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "Here are you.",
+   "expect": false,
+   "why": "語順の誤り"
+  },
+  {
+   "n": 50,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "I’m sorry.",
+   "expect": true,
+   "why": "’の表記"
+  },
+  {
+   "n": 50,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "I am sorry.",
+   "expect": true,
+   "why": "短縮しない形"
+  },
+  {
+   "n": 50,
+   "head": "次の場面で、英語で何と言うとよいか。教科",
+   "input": "Thank you.",
+   "expect": false,
+   "why": "場面ちがい"
+  },
+  {
+   "n": 51,
+   "head": "「制服」は英語で何と言うのかを、先生にた",
+   "input": "How do you say \"seifuku\" in English?",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 51,
+   "head": "「制服」は英語で何と言うのかを、先生にた",
+   "input": "How do you say “seifuku” in English?",
+   "expect": true,
+   "why": "全角の引用符"
+  },
+  {
+   "n": 52,
+   "head": "先生が黒板に書いた単語のつづりが分からな",
+   "input": "How do you spell that word?",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 52,
+   "head": "先生が黒板に書いた単語のつづりが分からな",
+   "input": "How do you spell this word?",
+   "expect": true,
+   "why": "thisでも自然"
+  }
+ ]
+}

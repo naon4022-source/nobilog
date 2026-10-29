@@ -1,0 +1,26 @@
+{
+ "unit": "tokkun-science-1-yure.json",
+ "cases": [
+  {
+   "n": 15,
+   "head": "マグニチュードが3ふえると、地震のエネル",
+   "input": "32000",
+   "expect": true,
+   "why": "数値"
+  },
+  {
+   "n": 15,
+   "head": "マグニチュードが3ふえると、地震のエネル",
+   "input": "32000倍",
+   "expect": true,
+   "why": "単位つき"
+  },
+  {
+   "n": 15,
+   "head": "マグニチュードが3ふえると、地震のエネル",
+   "input": "3000",
+   "expect": false,
+   "why": "誤り"
+  }
+ ]
+}

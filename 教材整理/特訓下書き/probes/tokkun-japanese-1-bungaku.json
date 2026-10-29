@@ -1,0 +1,26 @@
+{
+ "unit": "tokkun-japanese-1-bungaku.json",
+ "cases": [
+  {
+   "n": 2,
+   "head": "次の文章（Claudeが作った物語「腕時",
+   "input": "小学四年の",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 2,
+   "head": "次の文章（Claudeが作った物語「腕時",
+   "input": "「小学四年の」",
+   "expect": true,
+   "why": "かぎかっこつき（修正済み）"
+  },
+  {
+   "n": 2,
+   "head": "次の文章（Claudeが作った物語「腕時",
+   "input": "小学四年",
+   "expect": false,
+   "why": "字数不足"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "engine": "say",
+  "voice": "Kyoko",
+  "rate": 175,
+  "head": 1.0,
+  "tail": 2.0,
+  "gap": 0.35,
+  "filter": "highpass=f=70,equalizer=f=350:t=q:w=0.8:g=-2,equalizer=f=2600:t=q:w=0.8:g=1.8,acompressor=threshold=0.1:ratio=1.5:attack=15:release=150:makeup=1,loudnorm=I=-18:TP=-2:LRA=7",
+  "voiceDecision": "ユーザーがKyokoを選択",
+  "filterDecision": "ユーザーが「めちゃいい」と承認したKyoko・clear補正を採用",
+  "sharedEngineChanged": false,
+  "revision": 2,
+  "profile": "clear",
+  "pronunciationStatus": "文脈ごとに別点検。全発音確認済みとはしない"
+}

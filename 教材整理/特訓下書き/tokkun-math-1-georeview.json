@@ -1,0 +1,99 @@
+{
+ "id": "tokkun-math-1-georeview",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ふりかえりドリル（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 90° のおうぎ形を、その中心のまわりに 90° 回転移動させた。おうぎ形が通過した部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18π"
+   },
+   "explanation": "①回転すると、中心角 90 + 90 ＝ 180° のおうぎ形（半円）の部分を通る　②π × 36 × (180/360) ＝ 18π　③答え 18π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-2",
+   "type": "input",
+   "prompt": "1辺 10 cm の正三角形の1つの角の二等分線をひいた。二等分線と、その角をはさむ辺がつくる角は何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①正三角形の1つの角は 60°　②二等分して 30°　③答え 30度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "type": "input",
+   "prompt": "半径 4 cm の円を、その中心が直線上を 10 cm 動くように平行移動させた。円が通過した部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "80+16π",
+    "form": "nosign"
+   },
+   "explanation": "①両はしの半円 2 つで円1つ分：16π　②まん中は、縦 8 cm（直径）、横 10 cm の長方形：80　③80 + 16π。答え 80+16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。移動とおうぎ形を組み合わせる問題。答えは check.py で計算し直して検算。【保留】図なしで伝えられ、5章のほかの特訓と重ならない問題は 3 問まで。70問にしていない。"
+}

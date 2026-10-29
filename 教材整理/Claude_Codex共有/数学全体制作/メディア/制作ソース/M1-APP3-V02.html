@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script src="動画エンジン/engine.js"></script><script>
+const origins=[[490,150],[790,150],[790,450],[490,450]];
+function wedge(k,x,y,a){g.save();g.translate(x,y);g.rotate(a);g.fillStyle=['#a9cee9','#c4dfc6','#eed0a7','#c8c3e0'][k];g.strokeStyle=C.blue;g.lineWidth=3;g.beginPath();g.moveTo(0,0);g.arc(0,0,125,k*Math.PI/2,(k+1)*Math.PI/2);g.closePath();g.fill();g.stroke();g.restore()}
+window.SCENE={draw({i,p}){header('おうぎ形を集めると円',i===7?'まとめ':'');g.strokeStyle=C.dim;g.lineWidth=3;g.strokeRect(490,150,300,300);
+ for(let k=0;k<4;k++){let u=0;if(i>k+2)u=1;else if(i===k+2)u=seg(p,.10,.70);if(i>=6)u=1;const [x,y]=origins[k];wedge(k,x+(640-x)*u,y+(300-y)*u,Math.PI*u);if(i===k+2){ring(x+(640-x)*u,y+(300-y)*u,15,15)}}
+ if(i===0)text('4枚を動かして考えよう',640,510,44,C.orange,'center');
+ if(i===1){text('半径は同じ',280,250,40,C.ink,'center');text('中心角 90°',280,330,44,C.orange,'center');arrow(350,300,485,165);}
+ if(i>=2&&i<=5)text(`${i-1}枚目：中心を合わせる`,640,510,44,C.ink,'center');
+ if(i===6){text('90° × 4 ＝ 360°',640,510,54,C.ink,'center');}
+ if(i===7){text('同じ半径・90°のおうぎ形4枚',640,495,42,C.ink,'center');text('1つの円になる',640,550,44,C.orange,'center');}
+}};
+</script>

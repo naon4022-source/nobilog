@@ -1,0 +1,2709 @@
+{
+ "id": "drill-math-1-equation",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "1次方程式",
+ "majorTitle": "方程式",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-equation-1",
+   "type": "input",
+   "prompt": "方程式 5x − 5 ＝ 25 について、x ＝ 7 はこの方程式の解か。解なら「○」、解でないなら「×」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "×",
+     "ばつ",
+     "バツ"
+    ]
+   },
+   "explanation": "x ＝ 7 を左辺に代入すると 30。右辺は 25 なので、等しくならないので、解ではない。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p34 1（方程式の解）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-2",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\nx ＋ 11 ＝ 15.6",
+   "answer": {
+    "kind": "number",
+    "value": "4.6"
+   },
+   "explanation": "両辺から 11 をひく（移項する）と、x ＝ 15.6 − (11) ＝ 4.6",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p35 3（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-3",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n−2x ＝ 2",
+   "answer": {
+    "kind": "number",
+    "value": "-1"
+   },
+   "explanation": "両辺を −2 でわると x ＝ 2 ÷ (−2) ＝ −1",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p35 4（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-4",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−1.1x − 2.4 ＝ 3.1",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "両辺を10倍して −11x − 24 ＝ 31。これを解いて x ＝ −5",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p35 5（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-5",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−8x ＋ 4 ＝ −9x − 5",
+   "answer": {
+    "kind": "number",
+    "value": "-9"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると x ＝ −9。両辺を 1 でわって x ＝ −9",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-6",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n(x ＋ 4) ＝ −4(x − 5) − 56",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "分配法則でかっこをはずすと x ＋ 4 ＝ −4x − 36。x をふくむ項を左辺、数の項を右辺に移項すると 5x ＝ −40。両辺を 5 でわって x ＝ −8",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p37 2（かっこのある方程式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-7",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n1.4x ＋ 1.5 ＝ 1.2x ＋ 2.7",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "両辺を10倍すると 14x ＋ 15 ＝ 12x ＋ 27。x をふくむ項を左辺、数の項を右辺に移項すると 2x ＝ 12。両辺を 2 でわって x ＝ 6",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p38 3（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-8",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n(3x − 9)/3 ＝ (−x − 53)/6",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "両辺に分母の最小公倍数 6 をかけて分母をはらうと 2(3x − 9) ＝ 1(−x − 53)。これを解いて x ＝ −5",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p44 1（係数が分数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-9",
+   "type": "input",
+   "prompt": "次の比例式を解こう。\n4 : 10 ＝ x : 2",
+   "answer": {
+    "kind": "number",
+    "value": "4/5"
+   },
+   "explanation": "10 × x ＝ 4 × 2。x ＝ 4/5",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 39,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p39 5（比例式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-10",
+   "type": "input",
+   "prompt": "ある数を2倍して3をたしたあと、2倍したところ10になった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "ある数を x とすると (2x ＋ 3) × 2 ＝ 10。これを解いて x ＝ 1",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-11",
+   "type": "input",
+   "prompt": "連続する3つの整数の和が48であるとき、この3つの整数を小さい順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "15",
+     "16",
+     "17"
+    ],
+    "ordered": true
+   },
+   "explanation": "まん中の数を x とすると、3つの和は 3x と表せる。3x ＝ 48 より x ＝ 16。答え 15、16、17",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p42 2（連続する数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-12",
+   "type": "input",
+   "prompt": "1冊50円のノートと1冊84円のノートを合わせて23冊買ったところ、代金の合計が1660円だった。50円のノートを何冊買ったか。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "50円のものを x 冊とすると、84円のものは (23−x)冊。50x ＋ 84(23−x) ＝ 1660 を解いて x ＝ 8",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p42 3（個数と代金）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "15"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-13",
+   "type": "input",
+   "prompt": "1周1980mの池のまわりを、兄と弟が同じ地点から反対方向に同時に進んだところ、11分後に出会った。弟の速さが分速80mのとき、兄の速さは分速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "兄の速さを分速 x m とすると 80×11 ＋ 11x ＝ 1980。これを解いて x ＝ 100",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p43 5(1)（速さ（出会う））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-14",
+   "type": "input",
+   "prompt": "家から学校まで、行きは分速100mで、帰りは分速75mで歩いたところ、帰りのほうが5分多くかかった。家から学校までの道のりは何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "1500",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "道のりを x m とすると x/75 − x/100 ＝ 5。両辺に300をかけて解くと x ＝ 1500",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(4)"
+   },
+   "ref": "参考：数学ドリル p43 5(4)（速さ（行き帰り））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-15",
+   "type": "input",
+   "prompt": "2けたの正の整数がある。一の位の数は十の位の数より3大きい。また、十の位と一の位を入れかえた数は、もとの整数の2倍より13大きい。もとの整数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "十の位を x とすると、もとの数は 10x＋(x＋3)、入れかえた数は 10(x＋3)＋x。式を立てて解くと x ＝ 1、もとの整数は 14",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p43 6（2けたの整数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "41"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-16",
+   "type": "input",
+   "prompt": "ある店で定価が同じ2枚のハンカチを4割引きで買い、10000円を払ったところ、おつりは7720円だった。ハンカチ1枚の定価は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1900",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "定価を x 円とすると 2 × (1 − 4/10)x ＝ 10000 − 7720。これを解いて x ＝ 1900",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p45 6（割合）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-17",
+   "type": "input",
+   "prompt": "1％の食塩水160gに食塩を加えて、4％の食塩水をつくりたい。食塩を何g加えればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "加える食塩を x g とすると、食塩の重さで式をつくる。160×1/100 ＋ x ＝ (160＋x)×4/100 を解いて x ＝ 5",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p45 7（食塩水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-18",
+   "type": "input",
+   "prompt": "長机に作品を並べる。長机1台に6個ずつ並べると、作品を14個並べることができなかった。そこで1台に7個ずつ並べなおしたところ、最後の1台には作品が6個だけになった。長机は何台あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "長机を x 台とすると 6x ＋ 14 ＝ 7(x − 1) ＋ 6。これを解いて x ＝ 15。作品は 104 個",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "8"
+   },
+   "ref": "参考：数学ドリル p45 8（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "104"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-19",
+   "type": "input",
+   "prompt": "1辺の長さが x cm の正方形がある。縦の長さを6cm、横の長さを3cm長くした長方形は、もとの正方形より面積が144cm²大きくなった。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "(x＋6)(x＋3) − x² ＝ 144。x² が消えて 9x ＋ 18 ＝ 144、x ＝ 14",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p44 4（図形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-20",
+   "type": "input",
+   "prompt": "ある数を7倍して4をひいた数と、ある数を3倍して52をたした数は等しくなった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "ある数を x とすると 7x − 4 ＝ 3x ＋ 52。x をふくむ項を左辺、数の項を右辺に移項すると 4x ＝ 56。両辺を 4 でわって x ＝ 14",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-21",
+   "type": "input",
+   "prompt": "102本のマッチ棒を使って、正方形を右方向にのみつないでつくっていく（1個目は4本、1個ふえるごとに3本ずつふえる）。正方形は最大で何個つくれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "33",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "x 個つくるのに 4＋3(x−1) 本いる。4＋3(x−1) ≦ 102 を満たす最大の x は 33",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-22",
+   "type": "input",
+   "prompt": "880円を兄と弟で 5:3 の比に分ける。兄の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "550",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "兄の分を x 円とすると x : (880−x) ＝ 5 : 3。これを解いて x ＝ 550",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p37 4（比例式の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "330"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-23",
+   "type": "input",
+   "prompt": "まだわかっていない数を表す文字をふくむ等式を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "方程式",
+     "ほうていしき"
+    ]
+   },
+   "explanation": "文字に特別な値を代入したときだけ成り立つ等式を方程式という。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p34 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "等式"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-24",
+   "type": "input",
+   "prompt": "方程式 −3x − 1 ＝ −22 について、x ＝ 7 はこの方程式の解か。解なら「○」、解でないなら「×」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "○",
+     "まる",
+     "〇"
+    ]
+   },
+   "explanation": "x ＝ 7 を左辺に代入すると −22。右辺は −22 なので、等しくなり、解である。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p34 1（方程式の解）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-25",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\nx − 8 ＝ −57/8",
+   "answer": {
+    "kind": "number",
+    "value": "7/8"
+   },
+   "explanation": "両辺から −8 をひく（移項する）と、x ＝ −57/8 − (−8) ＝ 7/8",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p35 3（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-26",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n6x ＝ 66",
+   "answer": {
+    "kind": "number",
+    "value": "11"
+   },
+   "explanation": "両辺を 6 でわると x ＝ 66 ÷ (6) ＝ 11",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p35 4（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-27",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n0.9x ＋ 2.1 ＝ 6.6",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "両辺を10倍して 9x ＋ 21 ＝ 66。これを解いて x ＝ 5",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p35 5（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-28",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n3x ＋ 7 ＝ −6x ＋ 34",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 9x ＝ 27。両辺を 9 でわって x ＝ 3",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-29",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−5(x − 1) ＝ −(x − 3) ＋ 34",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "分配法則でかっこをはずすと −5x ＋ 5 ＝ −x ＋ 37。x をふくむ項を左辺、数の項を右辺に移項すると −4x ＝ 32。両辺を −4 でわって x ＝ −8",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p37 2（かっこのある方程式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-30",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−1.9x ＋ 0.6 ＝ −1.4x ＋ 5.1",
+   "answer": {
+    "kind": "number",
+    "value": "-9"
+   },
+   "explanation": "両辺を10倍すると −19x ＋ 6 ＝ −14x ＋ 51。x をふくむ項を左辺、数の項を右辺に移項すると −5x ＝ 45。両辺を −5 でわって x ＝ −9",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p37 3（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-31",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n(x ＋ 8)/4 ＝ (−x − 3)/6",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "両辺に分母の最小公倍数 12 をかけて分母をはらうと 3(x ＋ 8) ＝ 2(−x − 3)。これを解いて x ＝ −6",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p44 1（係数が分数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-32",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n2x ＋ 17 ＝ −9x − 93",
+   "answer": {
+    "kind": "number",
+    "value": "-10"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 11x ＝ −110。両辺を 11 でわって x ＝ −10",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-33",
+   "type": "input",
+   "prompt": "ある数を6倍して2をたしたあと、2倍したところ−68になった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "ある数を x とすると (6x ＋ 2) × 2 ＝ −68。これを解いて x ＝ −6",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-34",
+   "type": "input",
+   "prompt": "連続する5つの整数の和が155であるとき、この5つの整数を小さい順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "29",
+     "30",
+     "31",
+     "32",
+     "33"
+    ],
+    "ordered": true
+   },
+   "explanation": "まん中の数を x とすると、5つの和は 5x と表せる。5x ＝ 155 より x ＝ 31。答え 29、30、31、32、33",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p44 3（連続する数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-35",
+   "type": "input",
+   "prompt": "1冊90円のノートと1冊150円のノートを合わせて11冊買ったところ、代金の合計が1410円だった。90円のノートを何冊買ったか。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "90円のものを x 冊とすると、150円のものは (11−x)冊。90x ＋ 150(11−x) ＝ 1410 を解いて x ＝ 4",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p42 3（個数と代金）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-36",
+   "type": "input",
+   "prompt": "カードを何人かの子どもに分けるのに、1人に11枚ずつ分けると171枚足りず、1人に4枚ずつ分けると4枚余る。カードは全部で何枚あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "104",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "子どもを x 人とすると 11x − 171 ＝ 4x ＋ 4 より x ＝ 25。カードは 4×25＋4 ＝ 104枚",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p42 4(2)（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "25"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-37",
+   "type": "input",
+   "prompt": "弟が家を出発して分速60mで歩いて行った。その10分後に、兄が同じ道を分速80mで追いかけた。兄は出発してから何分後に弟に追いつくか。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "兄が x 分後に追いつくとすると、弟は (x＋10) 分歩いている。60(x＋10) ＝ 80x を解いて x ＝ 30",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p41 3（速さ（追いつく））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "40"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-38",
+   "type": "input",
+   "prompt": "1周2160mの池のまわりを、兄と弟が同じ地点から反対方向に同時に進んだところ、12分後に出会った。弟の速さが分速75mのとき、兄の速さは分速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "兄の速さを分速 x m とすると 75×12 ＋ 12x ＝ 2160。これを解いて x ＝ 105",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p43 5(1)（速さ（出会う））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-39",
+   "type": "input",
+   "prompt": "家から学校まで、行きは分速80mで、帰りは分速60mで歩いたところ、帰りのほうが7分多くかかった。家から学校までの道のりは何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "1680",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "道のりを x m とすると x/60 − x/80 ＝ 7。両辺に240をかけて解くと x ＝ 1680",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(4)"
+   },
+   "ref": "参考：数学ドリル p43 5(4)（速さ（行き帰り））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-40",
+   "type": "input",
+   "prompt": "2けたの正の整数がある。一の位の数は十の位の数より2大きい。また、十の位と一の位を入れかえた数は、もとの整数の2倍より17小さい。もとの整数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "十の位を x とすると、もとの数は 10x＋(x＋2)、入れかえた数は 10(x＋2)＋x。式を立てて解くと x ＝ 3、もとの整数は 35",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p43 6（2けたの整数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "53"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-41",
+   "type": "input",
+   "prompt": "3500円を姉妹2人で分けるのに、姉の分は妹の分の2倍よりも400円少なくなるようにしたい。妹の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1300",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "妹の分を x 円とすると、姉は (2x−400) 円。x ＋ 2x − 400 ＝ 3500 を解いて x ＝ 1300",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p41 5（お金の分配）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2200"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-42",
+   "type": "input",
+   "prompt": "ある店で定価が同じ3枚のハンカチを4割引きで買い、5000円を払ったところ、おつりは1940円だった。ハンカチ1枚の定価は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1700",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "定価を x 円とすると 3 × (1 − 4/10)x ＝ 5000 − 1940。これを解いて x ＝ 1700",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p45 6（割合）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-43",
+   "type": "input",
+   "prompt": "4％の食塩水80gに食塩を加えて、20％の食塩水をつくりたい。食塩を何g加えればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "加える食塩を x g とすると、食塩の重さで式をつくる。80×4/100 ＋ x ＝ (80＋x)×20/100 を解いて x ＝ 16",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p45 7（食塩水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-44",
+   "type": "input",
+   "prompt": "長机に作品を並べる。長机1台に4個ずつ並べると、作品を6個並べることができなかった。そこで1台に5個ずつ並べなおしたところ、最後の1台には作品が3個だけになった。長机は何台あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "長机を x 台とすると 4x ＋ 6 ＝ 5(x − 1) ＋ 3。これを解いて x ＝ 8。作品は 38 個",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "8"
+   },
+   "ref": "参考：数学ドリル p45 8（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "38"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-45",
+   "type": "input",
+   "prompt": "1辺の長さが x cm の正方形がある。縦の長さを7cm、横の長さを2cm長くした長方形は、もとの正方形より面積が113cm²大きくなった。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11"
+   },
+   "explanation": "(x＋7)(x＋2) − x² ＝ 113。x² が消えて 9x ＋ 14 ＝ 113、x ＝ 11",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p44 4（図形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-46",
+   "type": "input",
+   "prompt": "ある数を5倍して5をたした数と、ある数を9倍して19をひいた数は等しくなった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "ある数を x とすると 5x ＋ 5 ＝ 9x − 19。x をふくむ項を左辺、数の項を右辺に移項すると −4x ＝ −24。両辺を −4 でわって x ＝ 6",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-47",
+   "type": "input",
+   "prompt": "102本のマッチ棒を使って、正三角形を右方向にのみつないでつくっていく（1個目は3本、1個ふえるごとに2本ずつふえる）。正三角形は最大で何個つくれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "x 個つくるのに 3＋2(x−1) 本いる。3＋2(x−1) ≦ 102 を満たす最大の x は 50",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-48",
+   "type": "input",
+   "prompt": "640円を兄と弟で 5:3 の比に分ける。兄の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "400",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "兄の分を x 円とすると x : (640−x) ＝ 5 : 3。これを解いて x ＝ 400",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p37 4（比例式の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "240"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-49",
+   "type": "input",
+   "prompt": "方程式を成り立たせる文字の値を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "解",
+     "方程式の解",
+     "かい"
+    ]
+   },
+   "explanation": "方程式を成り立たせる文字の値を方程式の解といい、解を求めることを方程式を解くという。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p34 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "答え"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-50",
+   "type": "input",
+   "prompt": "方程式 −5x ＋ 6 ＝ 36 について、x ＝ −6 はこの方程式の解か。解なら「○」、解でないなら「×」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "○",
+     "まる",
+     "〇"
+    ]
+   },
+   "explanation": "x ＝ −6 を左辺に代入すると 36。右辺は 36 なので、等しくなり、解である。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p34 2（方程式の解）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-51",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n−1 ＋ x ＝ −7",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "両辺から −1 をひく（移項する）と、x ＝ −7 − (−1) ＝ −6",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p35 3（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-52",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n−0.4x ＝ −1.2",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "両辺を −0.4 でわる（両辺を10倍して整数にしてもよい）。x ＝ 3",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p35 4（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-53",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n1.6x − 1.3 ＝ 3.5",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "両辺を10倍して 16x − 13 ＝ 35。これを解いて x ＝ 3",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p35 5（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-54",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n9x ＋ 12 ＝ 2x − 23",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 7x ＝ −35。両辺を 7 でわって x ＝ −5",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 36,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p36 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-55",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n5(x ＋ 1) ＝ −2(x ＋ 1) ＋ 28",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "分配法則でかっこをはずすと 5x ＋ 5 ＝ −2x ＋ 26。x をふくむ項を左辺、数の項を右辺に移項すると 7x ＝ 21。両辺を 7 でわって x ＝ 3",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p37 2（かっこのある方程式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-56",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n0.4x ＋ 1.5 ＝ 1.3x − 6.6",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "両辺を10倍すると 4x ＋ 15 ＝ 13x − 66。x をふくむ項を左辺、数の項を右辺に移項すると −9x ＝ −81。両辺を −9 でわって x ＝ 9",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p38 3（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-57",
+   "type": "input",
+   "prompt": "x についての1次方程式 ax ＋ 2 ＝ 6x − 7 の解が 1 のとき、a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3"
+   },
+   "explanation": "x ＝ 1 を代入すると 1a ＋ 2 ＝ −1。a についての方程式として解いて a ＝ −3",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 39,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p39 6（解から係数を求める）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-58",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n2x ＋ 2 ＝ −3x − 23",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 5x ＝ −25。両辺を 5 でわって x ＝ −5",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-59",
+   "type": "input",
+   "prompt": "ある数を4倍して5をたしたあと、2倍したところ82になった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "ある数を x とすると (4x ＋ 5) × 2 ＝ 82。これを解いて x ＝ 9",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-60",
+   "type": "input",
+   "prompt": "連続する3つの整数の和が33であるとき、この3つの整数を小さい順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "10",
+     "11",
+     "12"
+    ],
+    "ordered": true
+   },
+   "explanation": "まん中の数を x とすると、3つの和は 3x と表せる。3x ＝ 33 より x ＝ 11。答え 10、11、12",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p42 2（連続する数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-61",
+   "type": "input",
+   "prompt": "1個50円のお菓子と1個84円のお菓子を合わせて22個買ったところ、代金の合計が1576円だった。50円のお菓子を何個買ったか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "50円のものを x 個とすると、84円のものは (22−x)個。50x ＋ 84(22−x) ＝ 1576 を解いて x ＝ 8",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p42 3（個数と代金）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "14"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-62",
+   "type": "input",
+   "prompt": "鉛筆を何人かの子どもに分けるのに、1人に9本ずつ分けると81本足りず、1人に5本ずつ分けると7本余る。鉛筆は全部で何本あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "117",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "子どもを x 人とすると 9x − 81 ＝ 5x ＋ 7 より x ＝ 22。鉛筆は 5×22＋7 ＝ 117本",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p42 4(2)（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "22"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-63",
+   "type": "input",
+   "prompt": "弟が家を出発して分速80mで歩いて行った。その8分後に、兄が同じ道を分速120mで追いかけた。兄は出発してから何分後に弟に追いつくか。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "兄が x 分後に追いつくとすると、弟は (x＋8) 分歩いている。80(x＋8) ＝ 120x を解いて x ＝ 16",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p41 3（速さ（追いつく））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "24"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-64",
+   "type": "input",
+   "prompt": "1周1200mの池のまわりを、兄と弟が同じ地点から反対方向に同時に進んだところ、10分後に出会った。弟の速さが分速50mのとき、兄の速さは分速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "70",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "兄の速さを分速 x m とすると 50×10 ＋ 10x ＝ 1200。これを解いて x ＝ 70",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p43 5(1)（速さ（出会う））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-65",
+   "type": "input",
+   "prompt": "家から学校まで、行きは分速60mで、帰りは分速40mで歩いたところ、帰りのほうが5分多くかかった。家から学校までの道のりは何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "600",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "道のりを x m とすると x/40 − x/60 ＝ 5。両辺に120をかけて解くと x ＝ 600",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(4)"
+   },
+   "ref": "参考：数学ドリル p43 5(4)（速さ（行き帰り））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-66",
+   "type": "input",
+   "prompt": "2けたの正の整数がある。一の位の数は十の位の数より2大きい。また、十の位と一の位を入れかえた数は、もとの整数の2倍より5大きい。もとの整数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "十の位を x とすると、もとの数は 10x＋(x＋2)、入れかえた数は 10(x＋2)＋x。式を立てて解くと x ＝ 1、もとの整数は 13",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p43 6（2けたの整数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "31"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-67",
+   "type": "input",
+   "prompt": "2400円を姉妹2人で分けるのに、姉の分は妹の分の3倍よりも100円少なくなるようにしたい。妹の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "625",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "妹の分を x 円とすると、姉は (3x−100) 円。x ＋ 3x − 100 ＝ 2400 を解いて x ＝ 625",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p41 5（お金の分配）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1775"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-68",
+   "type": "input",
+   "prompt": "2％の食塩水190gに食塩を加えて、5％の食塩水をつくりたい。食塩を何g加えればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "加える食塩を x g とすると、食塩の重さで式をつくる。190×2/100 ＋ x ＝ (190＋x)×5/100 を解いて x ＝ 6",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p45 7（食塩水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-69",
+   "type": "input",
+   "prompt": "長机に作品を並べる。長机1台に5個ずつ並べると、作品を11個並べることができなかった。そこで1台に6個ずつ並べなおしたところ、最後の1台には作品が4個だけになった。長机は何台あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "長机を x 台とすると 5x ＋ 11 ＝ 6(x − 1) ＋ 4。これを解いて x ＝ 13。作品は 76 個",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "8"
+   },
+   "ref": "参考：数学ドリル p45 8（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "76"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-70",
+   "type": "input",
+   "prompt": "1辺の長さが x cm の正方形がある。縦の長さを2cm、横の長さを8cm長くした長方形は、もとの正方形より面積が76cm²大きくなった。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "(x＋2)(x＋8) − x² ＝ 76。x² が消えて 10x ＋ 16 ＝ 76、x ＝ 6",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p44 4（図形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-71",
+   "type": "input",
+   "prompt": "ある数を8倍して8をひいた数と、ある数を6倍して24をひいた数は等しくなった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "ある数を x とすると 8x − 8 ＝ 6x − 24。x をふくむ項を左辺、数の項を右辺に移項すると 2x ＝ −16。両辺を 2 でわって x ＝ −8",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-72",
+   "type": "input",
+   "prompt": "116本のマッチ棒を使って、正三角形を右方向にのみつないでつくっていく（1個目は3本、1個ふえるごとに2本ずつふえる）。正三角形は最大で何個つくれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "57",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "x 個つくるのに 3＋2(x−1) 本いる。3＋2(x−1) ≦ 116 を満たす最大の x は 57",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-73",
+   "type": "input",
+   "prompt": "550円を兄と弟で 3:2 の比に分ける。兄の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "330",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "兄の分を x 円とすると x : (550−x) ＝ 3 : 2。これを解いて x ＝ 330",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p37 4（比例式の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "220"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-74",
+   "type": "input",
+   "prompt": "等式の一方の辺にある項を、符号を変えて他方の辺に移すことを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "移項",
+     "いこう"
+    ]
+   },
+   "explanation": "移項。例：2x＋6＝4 → 2x＝4−6",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 36,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p36 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "移動"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-75",
+   "type": "input",
+   "prompt": "方程式 −4x ＋ 7 ＝ −21 について、x ＝ 7 はこの方程式の解か。解なら「○」、解でないなら「×」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "○",
+     "まる",
+     "〇"
+    ]
+   },
+   "explanation": "x ＝ 7 を左辺に代入すると −21。右辺は −21 なので、等しくなり、解である。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p34 1（方程式の解）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-76",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\nx ＋ 8 ＝ −1",
+   "answer": {
+    "kind": "number",
+    "value": "-9"
+   },
+   "explanation": "両辺から 8 をひく（移項する）と、x ＝ −1 − (8) ＝ −9",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p35 3（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-77",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n3x ＝ 24",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "両辺を 3 でわると x ＝ 24 ÷ (3) ＝ 8",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p35 4（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-78",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n5x ＋ 1 ＝ 26",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 5x ＝ 25。両辺を 5 でわって x ＝ 5",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p35 5（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-79",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n7x − 3 ＝ −6x ＋ 10",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 13x ＝ 13。両辺を 13 でわって x ＝ 1",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-80",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n4(x ＋ 6) ＝ −(x ＋ 6) ＋ 55",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "分配法則でかっこをはずすと 4x ＋ 24 ＝ −x ＋ 49。x をふくむ項を左辺、数の項を右辺に移項すると 5x ＝ 25。両辺を 5 でわって x ＝ 5",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p38 2（かっこのある方程式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-81",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n1.8x ＋ 2.1 ＝ 0.5x − 4.4",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "両辺を10倍すると 18x ＋ 21 ＝ 5x − 44。x をふくむ項を左辺、数の項を右辺に移項すると 13x ＝ −65。両辺を 13 でわって x ＝ −5",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p37 3（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-82",
+   "type": "input",
+   "prompt": "次の比例式を解こう。\n(x − 4) : 2 ＝ (x ＋ 4) : 3",
+   "answer": {
+    "kind": "number",
+    "value": "20"
+   },
+   "explanation": "3(x − 4) ＝ 2(x ＋ 4)。3x − 12 ＝ 2x ＋ 8 を解いて x ＝ 20",
+   "source": {
+    "id": "source-0126",
+    "file": "ドリル/数学/S__15589411_0.jpg",
+    "sha256": "80684a160c192868e9fa84c8b17ca42c18f1ce88979c84af300aa36a10637cf3",
+    "page": 46,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p46 2（比例式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-83",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−7x − 1 ＝ 7x − 57",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると −14x ＝ −56。両辺を −14 でわって x ＝ 4",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-84",
+   "type": "input",
+   "prompt": "ある数を2倍して1をたしたあと、2倍したところ14になった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "ある数を x とすると (2x ＋ 1) × 2 ＝ 14。これを解いて x ＝ 3",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-85",
+   "type": "input",
+   "prompt": "連続する5つの偶数の和が20であるとき、この5つの偶数を小さい順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "0",
+     "2",
+     "4",
+     "6",
+     "8"
+    ],
+    "ordered": true
+   },
+   "explanation": "まん中の数を x とすると、5つの和は 5x と表せる。5x ＝ 20 より x ＝ 4。答え 0、2、4、6、8",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p44 3（連続する数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-86",
+   "type": "input",
+   "prompt": "1個50円のお菓子と1個84円のお菓子を合わせて21個買ったところ、代金の合計が1254円だった。50円のお菓子を何個買ったか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "50円のものを x 個とすると、84円のものは (21−x)個。50x ＋ 84(21−x) ＝ 1254 を解いて x ＝ 15",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p42 3（個数と代金）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "6"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-87",
+   "type": "input",
+   "prompt": "あめを何人かの子どもに分けるのに、1人に9個ずつ分けると79個足りず、1人に6個ずつ分けると5個余る。あめは全部で何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "173",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "子どもを x 人とすると 9x − 79 ＝ 6x ＋ 5 より x ＝ 28。あめは 6×28＋5 ＝ 173個",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p42 4(2)（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "28"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-88",
+   "type": "input",
+   "prompt": "1周1320mの池のまわりを、兄と弟が同じ地点から反対方向に同時に進んだところ、11分後に出会った。弟の速さが分速50mのとき、兄の速さは分速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "70",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "兄の速さを分速 x m とすると 50×11 ＋ 11x ＝ 1320。これを解いて x ＝ 70",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p43 5(1)（速さ（出会う））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-89",
+   "type": "input",
+   "prompt": "家から学校まで、行きは分速90mで、帰りは分速60mで歩いたところ、帰りのほうが6分多くかかった。家から学校までの道のりは何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "1080",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "道のりを x m とすると x/60 − x/90 ＝ 6。両辺に180をかけて解くと x ＝ 1080",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(4)"
+   },
+   "ref": "参考：数学ドリル p43 5(4)（速さ（行き帰り））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-90",
+   "type": "input",
+   "prompt": "4400円を姉妹2人で分けるのに、姉の分は妹の分の3倍よりも800円少なくなるようにしたい。妹の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1300",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "妹の分を x 円とすると、姉は (3x−800) 円。x ＋ 3x − 800 ＝ 4400 を解いて x ＝ 1300",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p41 5（お金の分配）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3100"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-91",
+   "type": "input",
+   "prompt": "ある店で定価が同じ2枚のハンカチを2割引きで買い、5000円を払ったところ、おつりは840円だった。ハンカチ1枚の定価は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "2600",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "定価を x 円とすると 2 × (1 − 2/10)x ＝ 5000 − 840。これを解いて x ＝ 2600",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p45 6（割合）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-92",
+   "type": "input",
+   "prompt": "2％の食塩水235gに食塩を加えて、6％の食塩水をつくりたい。食塩を何g加えればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "加える食塩を x g とすると、食塩の重さで式をつくる。235×2/100 ＋ x ＝ (235＋x)×6/100 を解いて x ＝ 10",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p45 7（食塩水）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-93",
+   "type": "input",
+   "prompt": "長机に作品を並べる。長机1台に5個ずつ並べると、作品を11個並べることができなかった。そこで1台に6個ずつ並べなおしたところ、最後の1台には作品が5個だけになった。長机は何台あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "長机を x 台とすると 5x ＋ 11 ＝ 6(x − 1) ＋ 5。これを解いて x ＝ 12。作品は 71 個",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 45,
+    "number": "8"
+   },
+   "ref": "参考：数学ドリル p45 8（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "71"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-94",
+   "type": "input",
+   "prompt": "1辺の長さが x cm の正方形がある。縦の長さを7cm、横の長さを8cm長くした長方形は、もとの正方形より面積が146cm²大きくなった。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "(x＋7)(x＋8) − x² ＝ 146。x² が消えて 15x ＋ 56 ＝ 146、x ＝ 6",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p44 4（図形）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-95",
+   "type": "input",
+   "prompt": "ある数を6倍して10をたした数と、ある数を8倍して26をたした数は等しくなった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "ある数を x とすると 6x ＋ 10 ＝ 8x ＋ 26。x をふくむ項を左辺、数の項を右辺に移項すると −2x ＝ 16。両辺を −2 でわって x ＝ −8",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-96",
+   "type": "input",
+   "prompt": "124本のマッチ棒を使って、正三角形を右方向にのみつないでつくっていく（1個目は3本、1個ふえるごとに2本ずつふえる）。正三角形は最大で何個つくれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "61",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "x 個つくるのに 3＋2(x−1) 本いる。3＋2(x−1) ≦ 124 を満たす最大の x は 61",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-97",
+   "type": "input",
+   "prompt": "600円を兄と弟で 3:2 の比に分ける。兄の分は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "360",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "兄の分を x 円とすると x : (600−x) ＝ 3 : 2。これを解いて x ＝ 360",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p37 4（比例式の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "240"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-98",
+   "type": "input",
+   "prompt": "比例式 a : b ＝ c : d が成り立つとき、ad と bc の間にはどんな関係があるか。等式で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ad=bc",
+     "bc=ad",
+     "ad＝bc"
+    ],
+    "compact": true
+   },
+   "explanation": "比例式の外項の積と内項の積は等しい。ad＝bc",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 36,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p36 要点2（比例式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-99",
+   "type": "input",
+   "prompt": "方程式 −2x − 7 ＝ −3 について、x ＝ −3 はこの方程式の解か。解なら「○」、解でないなら「×」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "×",
+     "ばつ",
+     "バツ"
+    ]
+   },
+   "explanation": "x ＝ −3 を左辺に代入すると −1。右辺は −3 なので、等しくならないので、解ではない。",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 34,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p34 2（方程式の解）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-100",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n8 ＋ x ＝ 33/4",
+   "answer": {
+    "kind": "number",
+    "value": "1/4"
+   },
+   "explanation": "両辺から 8 をひく（移項する）と、x ＝ 33/4 − (8) ＝ 1/4",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p35 3（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-equation-test-1",
+   "type": "input",
+   "prompt": "等式の性質を使って、次の方程式を解こう。\n−x/5 ＝ 9",
+   "answer": {
+    "kind": "number",
+    "value": "-45"
+   },
+   "explanation": "両辺に −5 をかけると x ＝ 9 × (−5) ＝ −45",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p35 4（等式の性質）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-9/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-test-2",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n1/2x − 1/2 ＝ −9/2",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "−1/2 を移項して 1/2x ＝ −4。両辺に 2 をかけて x ＝ −8",
+   "source": {
+    "id": "source-0120",
+    "file": "ドリル/数学/S__15589404_0.jpg",
+    "sha256": "5a3e2255b26bd4f1fe6e8cdb77045b9711ffa75f2557c06113e976c69a51562e",
+    "page": 35,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p35 5（係数が分数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-3",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n9x − 10 ＝ 7x − 22",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると 2x ＝ −12。両辺を 2 でわって x ＝ −6",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 36,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p36 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-4",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n3(x − 1) ＝ −2(x ＋ 6) ＋ 49",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "分配法則でかっこをはずすと 3x − 3 ＝ −2x ＋ 37。x をふくむ項を左辺、数の項を右辺に移項すると 5x ＝ 40。両辺を 5 でわって x ＝ 8",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p37 2（かっこのある方程式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-5",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n−1.7x − 1.8 ＝ −0.6x ＋ 0.4",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "両辺を10倍すると −17x − 18 ＝ −6x ＋ 4。x をふくむ項を左辺、数の項を右辺に移項すると −11x ＝ 22。両辺を −11 でわって x ＝ −2",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p37 3（係数が小数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-6",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n(−3x − 9)/6 ＝ (2x ＋ 6)/3",
+   "answer": {
+    "kind": "number",
+    "value": "-3"
+   },
+   "explanation": "両辺に分母の最小公倍数 6 をかけて分母をはらうと 1(−3x − 9) ＝ 2(2x ＋ 6)。これを解いて x ＝ −3",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p44 1（係数が分数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-7",
+   "type": "input",
+   "prompt": "次の比例式を解こう。\nx : 10 ＝ 5 : 5",
+   "answer": {
+    "kind": "number",
+    "value": "10"
+   },
+   "explanation": "外項の積と内項の積は等しいので、5x ＝ 10 × 5。x ＝ 10",
+   "source": {
+    "id": "source-0121",
+    "file": "ドリル/数学/S__15589405_0.jpg",
+    "sha256": "94aa3abcb37cff6a8fd33a82045e77083354841350fc9661e65f97b4fefb42aa",
+    "page": 37,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p37 4（比例式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-8",
+   "type": "input",
+   "prompt": "x についての1次方程式 ax ＋ 1 ＝ −3x ＋ 4 の解が −3 のとき、a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "x ＝ −3 を代入すると −3a ＋ 1 ＝ 13。a についての方程式として解いて a ＝ −4",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 39,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p39 6（解から係数を求める）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-9",
+   "type": "input",
+   "prompt": "次の方程式を解こう。\n3x − 15 ＝ 5x − 5",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "x をふくむ項を左辺、数の項を右辺に移項すると −2x ＝ 10。両辺を −2 でわって x ＝ −5",
+   "source": {
+    "id": "source-0122",
+    "file": "ドリル/数学/S__15589406_0.jpg",
+    "sha256": "11b2efab5dabad95ab430ba91301207e97c55220c02edf4b9ae9f2dd9470d293",
+    "page": 38,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p38 1（移項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-10",
+   "type": "input",
+   "prompt": "ある数を4倍して1をたしたあと、4倍したところ−60になった。ある数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "ある数を x とすると (4x ＋ 1) × 4 ＝ −60。これを解いて x ＝ −4",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p42 1（ある数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-11",
+   "type": "input",
+   "prompt": "連続する5つの奇数の和が155であるとき、この5つの奇数を小さい順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "27",
+     "29",
+     "31",
+     "33",
+     "35"
+    ],
+    "ordered": true
+   },
+   "explanation": "まん中の数を x とすると、5つの和は 5x と表せる。5x ＝ 155 より x ＝ 31。答え 27、29、31、33、35",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p44 3（連続する数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-12",
+   "type": "input",
+   "prompt": "1冊50円のノートと1冊84円のノートを合わせて25冊買ったところ、代金の合計が1624円だった。50円のノートを何冊買ったか。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "50円のものを x 冊とすると、84円のものは (25−x)冊。50x ＋ 84(25−x) ＝ 1624 を解いて x ＝ 14",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 42,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p42 3（個数と代金）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "11"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-test-13",
+   "type": "input",
+   "prompt": "折り紙を何人かの子どもに分けるのに、1人に8枚ずつ分けると53枚足りず、1人に3枚ずつ分けると12枚余る。子どもの人数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "子どもを x 人とすると 8x − 53 ＝ 3x ＋ 12。これを解いて x ＝ 13",
+   "source": {
+    "id": "source-0123",
+    "file": "ドリル/数学/S__15589407_0.jpg",
+    "sha256": "88a0e881ce1dfce0ea75b8811d0d1e0942ab806d2cd938efedafe781f56ddb4c",
+    "page": 41,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p41 4(1)（過不足）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "51"
+   ]
+  },
+  {
+   "id": "drill-math-1-equation-test-14",
+   "type": "input",
+   "prompt": "1周1260mの池のまわりを、兄と弟が同じ地点から反対方向に同時に進んだところ、7分後に出会った。弟の速さが分速75mのとき、兄の速さは分速何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "105",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "兄の速さを分速 x m とすると 75×7 ＋ 7x ＝ 1260。これを解いて x ＝ 105",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p43 5(1)（速さ（出会う））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-equation-test-15",
+   "type": "input",
+   "prompt": "2けたの正の整数がある。一の位の数は十の位の数より2大きい。また、十の位と一の位を入れかえた数は、もとの整数の3倍より74小さい。もとの整数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "46"
+   },
+   "explanation": "十の位を x とすると、もとの数は 10x＋(x＋2)、入れかえた数は 10(x＋2)＋x。式を立てて解くと x ＝ 4、もとの整数は 46",
+   "source": {
+    "id": "source-0124",
+    "file": "ドリル/数学/S__15589409_0.jpg",
+    "sha256": "9b3c949c225b03f08d213f0025907c8ac9950f0dc7346804032e6eb49ee64e75",
+    "page": 43,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p43 6（2けたの整数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "64"
+   ]
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp34〜47（10 1次方程式の解き方・11 いろいろな1次方程式・12 1次方程式の利用、標準問題・実力問題①②）を写真で目視し、数・場面を変えた類題を作った。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "等式の性質",
+   "body": "A＝B ならば A＋C＝B＋C、A−C＝B−C、AC＝BC、A/C＝B/C（C≠0）。両辺に同じ操作をして x＝（数）の形にする。例：x/3＝−4 → 両辺に3をかけて x＝−12"
+  },
+  {
+   "title": "移項して ax＝b の形に",
+   "body": "x をふくむ項を左辺、数の項を右辺に、符号を変えて移す。例：3x−6＝5x−10 → 3x−5x＝−10＋6 → −2x＝−4 → x＝2"
+  },
+  {
+   "title": "かっこ・小数・分数のある方程式",
+   "body": "かっこは分配法則ではずす（後ろの項の符号に注意）。小数は両辺を10倍・100倍、分数は分母の最小公倍数を両辺にかけて、係数を整数にしてから解く。"
+  },
+  {
+   "title": "比例式",
+   "body": "a：b＝c：d ならば ad＝bc（外側どうしの積＝内側どうしの積）。例：x：6＝3：2 → 2x＝18 → x＝9"
+  },
+  {
+   "title": "文章題の手順",
+   "body": "①何を x にするか決める ②等しい数量に注目して方程式をつくる ③解く ④答えが問題に合うか確かめる（人数・個数は自然数）。速さは「道のり＝速さ×時間」、過不足は「全体の数」を2通りに表す。"
+  }
+ ]
+}

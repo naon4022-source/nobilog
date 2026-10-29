@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script>
+const NAMES=['Kyoko','Eddy','Flo','Reed','Rocko','Sandy','Shelley','Grandma','Grandpa'];
+window.SCENE={draw({i}){header('Macの声くらべ（9種類）');text((i+1)+'番',640,300,120,C.orange,'center',800);text(NAMES[i],640,420,90,C.blue,'center',800);
+ NAMES.forEach((n,k)=>{rbox(80+k*126,500,110,40,12,k===i?C.orange:'#e8f0fa');text((k+1)+'',135+k*126,530,26,k===i?'#fff':C.ink,'center',800)})}};
+</script>

@@ -1,0 +1,1829 @@
+{
+ "id": "tokkun-science-1-hana",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "花のつくり（特訓）",
+ "majorTitle": "植物の特徴と分類",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-hana-1",
+   "type": "input",
+   "prompt": "ある植物の花を調べると、受粉したあと子房が成長して果実になった。この植物は、被子植物と裸子植物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "被子植物",
+     "ひし植物",
+     "ひししょくぶつ"
+    ]
+   },
+   "explanation": "子房があるのは被子植物。裸子植物には子房がないので果実ができない。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 4,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p4（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-2",
+   "type": "input",
+   "prompt": "被子植物の花で、めしべの柱頭に花粉がつかなかった（受粉しなかった）。このとき、胚珠は種子になるか。「なる」「ならない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ならない",
+     "ならない。"
+    ]
+   },
+   "explanation": "胚珠が種子になるのは受粉したあと。受粉しなければ種子はできない。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 4,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p4（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-3",
+   "type": "input",
+   "prompt": "図6のアブラナの花から果実への変化を、起こる順に並べよう（読点で区切る）。ア 果実　イ つぼみ　ウ 種子　エ 花",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イエアウ",
+     "イ、エ、ア、ウ",
+     "イ,エ,ア,ウ",
+     "イ・エ・ア・ウ",
+     "イ→エ→ア→ウ",
+     "イ エ ア ウ",
+     "イ　エ　ア　ウ"
+    ]
+   },
+   "explanation": "つぼみ→花→果実→（果実の中の）種子の順。受粉の後、花弁などは散り、子房が果実になり、中に種子ができる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-4",
+   "type": "input",
+   "prompt": "ヘチマの雄花だけを観察し続けても、果実はできない。その理由を花のつくりから説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "子房がある",
+      "めしべがある"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "めしべ",
+       "子房"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "ない",
+       "なく"
+      ]
+     }
+    ]
+   },
+   "explanation": "雄花にはめしべ（子房）がないので、受粉して子房が果実になることがないから。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-5",
+   "type": "input",
+   "prompt": "トマトの果実を輪切りにすると、中に種子がたくさん見られる。このことから、トマトの花の子房の中にあった胚珠の数について言えることを選ぼう。\nア たくさんあった　イ 1つだけあった　ウ なかった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "種子は胚珠が成長したもの。種子がたくさんあるので、子房の中には胚珠がたくさん並んでいたと考えられる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-6",
+   "type": "input",
+   "prompt": "マツの花の観察の写真で、すでにまつかさになっていて種子がついているのはどれか。次から選ぼう。\nア 2年前の雌花　イ 今年の雌花　ウ 雄花",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "マツの雌花は受粉してから1年以上かかってまつかさになる。写真では2年前の雌花がまつかさになっている。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-7",
+   "type": "input",
+   "prompt": "「マツは目立つ花びらがないから花はない」という意見に対して、マツにも花があることを、アブラナやツツジとの共通点を示して説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "花粉をつくらない",
+      "種子をつくらない"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "胚珠"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "花粉"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "種子"
+      ]
+     }
+    ]
+   },
+   "explanation": "マツにも雌花と雄花があり、雌花には胚珠、雄花には花粉があって、受粉すると胚珠が種子になる。アブラナやツツジと同じように花で種子をつくってふえる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-8",
+   "type": "input",
+   "prompt": "観察2で、花を分解するとき、はずしたおしべやがくはセロハンテープでどうするとよいとされているか。次から選ぼう。\nア セロハンテープの裏側にはりつけてから台紙にはる　イ 水につけておく　ウ 捨てる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "セロハンテープの裏側にはりつけてから、台紙にはりつけるとよい。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 21,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p21（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-9",
+   "type": "input",
+   "prompt": "小学校で「花びら」とよんでいたものを、中学校では何とよぶか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "花弁",
+     "かべん"
+    ]
+   },
+   "explanation": "中学校からは花弁（かべん）とよぶ。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 20,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p20（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-10",
+   "type": "input",
+   "prompt": "観察2で、ルーペを使うときにしてはいけないことはどれか。次から選ぼう。\nア ルーペで太陽を見る　イ ルーペを目に近づけて持つ　ウ 花を動かしてピントを合わせる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ルーペで太陽を見ると目をいためるので、ぜったいにしてはいけない。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 21,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p21（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-11",
+   "type": "input",
+   "prompt": "観察2で、花を分解するとき、どこから1つずつとりはずしていくか。次から選ぼう。\nア 花の外側にあるものから　イ 中心のめしべから　ウ どこからでもよい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ピンセットで、花の外側にあるものから1つずつとりはずし、台紙にはる。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 21,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p21（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-12",
+   "type": "input",
+   "prompt": "観察2で、めしべの根もとのふくらんだ部分の中を見るとき、何を使って切るか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "カッターナイフ",
+     "カッター"
+    ]
+   },
+   "explanation": "カッターナイフで切ってルーペや双眼実体顕微鏡で観察する。手を切らないように注意する。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 21,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p21（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-13",
+   "type": "input",
+   "prompt": "観察2で使う花として、教科書の準備物にあげられているものをすべて選ぼう（読点で区切る）。\nア アブラナ　イ ツツジ　ウ エンドウ　エ マツ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "アブラナ・ツツジ・エンドウなどの花を観察する。マツは別の「ためしてみよう」で観察する。",
+   "source": {
+    "id": "source-0644",
+    "file": "理科の教科書/S__16629774_0.jpg",
+    "sha256": "47da7d9ae44a02561fe8e3bd07cf3acd5ae6b2948affb3c98b8e9b3743ba73ae",
+    "page": 21,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p21（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-14",
+   "type": "input",
+   "prompt": "花のつくりを、外側から順に並べよう（読点で区切る）。\nア おしべ　イ 花弁　ウ めしべ　エ がく",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ、イ、ア、ウ",
+     "エ,イ,ア,ウ",
+     "エイアウ"
+    ]
+   },
+   "explanation": "外側から、がく→花弁→おしべ→めしべの順についている。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-15",
+   "type": "input",
+   "prompt": "おしべの先端にある小さな袋の中には、何が入っているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "花粉",
+     "かふん"
+    ]
+   },
+   "explanation": "おしべの先端の袋（やく）には花粉が入っている。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-16",
+   "type": "input",
+   "prompt": "めしべの先端の部分（柱頭）にねばりけがあるのは、何のためか。次から選ぼう。\nア 花粉がつきやすくするため　イ 虫を追いはらうため　ウ 水をためるため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "柱頭はねばりけがあり、花粉がつきやすくなっている。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-17",
+   "type": "input",
+   "prompt": "ふつう、1つの花にあるめしべの数はいくつか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "1",
+     "1つ",
+     "一つ"
+    ]
+   },
+   "explanation": "ふつう1つの花にめしべは1つ。おしべの数や花弁などは種類によってちがう。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-18",
+   "type": "input",
+   "prompt": "花のつくりのうち、植物の種類によって数がちがうものとして教科書にあげられているものを選ぼう。\nア おしべの数や花弁　イ めしべの数（ふつうはどの花も3つ）　ウ どれも同じ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "めしべはふつう1つだが、おしべの数や花弁などは種類によってちがう。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-19",
+   "type": "input",
+   "prompt": "ヘチマの花のように、1つの花にめしべかおしべの片方しかない花がある。めしべだけがある花を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "雌花",
+     "めばな"
+    ]
+   },
+   "explanation": "ヘチマには雌花と雄花がある。めしべだけの花が雌花、おしべだけの花が雄花。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-20",
+   "type": "input",
+   "prompt": "イネの花には、花弁やがくがない。かわりに、おしべとめしべをおおっているものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えい",
+     "エイ",
+     "穎"
+    ]
+   },
+   "explanation": "イネの花は、花弁やがくがなく、おしべとめしべが「えい」という殻のようなものでおおわれている。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-21",
+   "type": "input",
+   "prompt": "アブラナの花粉の大きさとして、図1に示されているものに近いのはどれか。次から選ぼう。\nア 0.03 mm　イ 3 mm　ウ 3 cm",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "花粉は0.03 mmほどのとても小さな粒で、双眼実体顕微鏡などで観察する。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-22",
+   "type": "input",
+   "prompt": "次の花のうち、合弁花をすべて選ぼう（読点で区切る）。\nア ツツジ　イ サクラ　ウ アサガオ　エ エンドウ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "ツツジ・アサガオは合弁花。サクラ・エンドウは離弁花。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-23",
+   "type": "input",
+   "prompt": "次の花のうち、離弁花をすべて選ぼう（読点で区切る）。\nア アブラナ　イ タンポポ　ウ サクラ　エ アサガオ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "アブラナ・サクラは離弁花。タンポポ・アサガオは合弁花。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-24",
+   "type": "input",
+   "prompt": "タンポポの「1つの花」に見えるものは、実際にはどうなっているか。次から選ぼう。\nア 小さな花がたくさん集まったもの　イ とても大きな1つの花　ウ 葉が集まったもの",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "タンポポやシロツメクサは、小さい花が集まって1つの花のように見える。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-25",
+   "type": "input",
+   "prompt": "タンポポの小さな1つの花を拡大すると、花弁の先端が浅く分かれていた。タンポポは離弁花と合弁花のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "合弁花",
+     "ごうべんか"
+    ]
+   },
+   "explanation": "花弁の先が浅く分かれているだけで、根もとはつながっているので合弁花。ツツジと同じ。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-26",
+   "type": "input",
+   "prompt": "離弁花と合弁花は、花のどの部分に注目して分けたものか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "花弁",
+     "かべん"
+    ]
+   },
+   "explanation": "花弁のつくり（離れているか、くっついているか）に注目して分ける。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-27",
+   "type": "input",
+   "prompt": "おしべのやくから出た花粉は、何によってめしべへと運ばれるか。教科書にあげられているものを2つ選ぼう（読点で区切る）。\nア 動物　イ 風　ウ 地下水　エ 光",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "花粉は、動物や風などによってめしべへ運ばれる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-28",
+   "type": "input",
+   "prompt": "あざやかな花弁や蜜、においのある花は、花粉が何によって運ばれることが多いか。次から選ぼう。\nア 昆虫や鳥　イ 風　ウ 水",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "あざやかな花弁やにおいは、昆虫や鳥をひきつける。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-29",
+   "type": "input",
+   "prompt": "受粉する前の花から花弁とがくをとりのぞき、めしべの柱頭に花粉をつけた。このあと子房が果実になるか。「なる」「ならない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "なる"
+    ]
+   },
+   "explanation": "果実になるのは子房。花弁やがくがなくても、受粉すれば子房は果実になり、胚珠は種子になる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-30",
+   "type": "input",
+   "prompt": "受粉したあと、花弁はどうなることが多いか。次から選ぼう。\nア 散ってしまう　イ 大きくなって果実になる　ウ 種子になる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "受粉の後、花弁などは散ってしまうが、子房は果実になり、中に種子ができる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-31",
+   "type": "input",
+   "prompt": "ピーマンの「花の変化の観察」で見られる順に並べよう（読点で区切る）。\nア 若い果実　イ 花　ウ 果実　エ 断面に種子",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ、ア、ウ、エ",
+     "イ,ア,ウ,エ",
+     "イアウエ"
+    ]
+   },
+   "explanation": "花→若い果実→果実と変化し、果実の断面には種子が見られる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-32",
+   "type": "input",
+   "prompt": "花の変化を継続観察するとき、選んだ花にしておくとよいこととして教科書にあげられているものを選ぼう。\nア ビニールひもなどで印をつけておく　イ 花をつみとる　ウ 水をかけ続ける",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "同じ花の変化を毎日記録できるように、ビニールひもなどで印をつけておく。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-33",
+   "type": "input",
+   "prompt": "1つの果実の中にある種子の数から、子房の中にあった胚珠の数がわかるのはなぜか。次から選ぼう。\nア 胚珠1つが種子1つになるから　イ 子房1つが種子1つになるから　ウ 花弁の数と同じだから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "胚珠が種子になるので、種子の数は子房の中にあった胚珠の数（受粉したもの）と考えられる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-34",
+   "type": "input",
+   "prompt": "種子が運ばれる方法として、教科書にあげられているものをすべて選ぼう（読点で区切る）。\nア 風　イ 水　ウ 動物　エ 地震",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "種子は、風や水、動物によって運ばれるなど、いろいろな方法で散布される。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-35",
+   "type": "input",
+   "prompt": "ウリハダカエデの果実にはプロペラのようなつくりがある。このつくりは何に役立つか。次から選ぼう。\nア 風に乗って遠くへ運ばれる　イ 水にしずむ　ウ 動物を追いはらう",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "プロペラのようなつくりで、風によって運ばれる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-36",
+   "type": "input",
+   "prompt": "カタバミは、どのようにして種子を遠くへ飛ばすか。次から選ぼう。\nア 果実がさけて種子をはじき飛ばす　イ 鳥に食べられる　ウ 川に流される",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "カタバミは果実がさけて、種子を遠くへ飛ばす。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-37",
+   "type": "input",
+   "prompt": "野菜のエンドウのさやは、花のどの部分が変化したものか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "子房",
+     "しぼう"
+    ]
+   },
+   "explanation": "さやに柱頭のあとが観察できるので、さやは子房が変化した果実。中の豆が種子。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-38",
+   "type": "input",
+   "prompt": "花は、植物にとってどのようなはたらきをしているか。次から選ぼう。\nア 子孫を残すはたらき　イ 光合成をするはたらき　ウ 水を吸いあげるはたらき",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "受粉して種子をつくり、種子が発芽すると若い植物に成長する。花は子孫を残すはたらきをしている。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-39",
+   "type": "input",
+   "prompt": "種子が発芽すると、何に成長するか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "若い植物",
+     "植物",
+     "新しい植物"
+    ]
+   },
+   "explanation": "種子は発芽すると若い植物へと成長する。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-40",
+   "type": "input",
+   "prompt": "「果実」とは、果物だけのことか。教科書の会話をもとに正しいものを選ぼう。\nア 野菜のエンドウのさやなども果実である　イ 甘い果物だけが果実である　ウ 種子のことを果実という",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "子房が変化したものはすべて果実。野菜のエンドウのさやも果実。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-41",
+   "type": "input",
+   "prompt": "マツの種子についている、うすいはねのようなつくりは何に役立つと考えられるか。次から選ぼう。\nア 風で運ばれる　イ 水にしずむ　ウ 土にもぐる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "はねがあることで、風によって運ばれやすい。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-42",
+   "type": "input",
+   "prompt": "マツの雌花と雄花に共通してないものを、2つ選ぼう（読点で区切る）。\nア 花弁　イ がく　ウ りん片　エ 胚珠",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "マツの雌花と雄花には、花弁やがくがない。りん片が多数集まったつくり。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-43",
+   "type": "input",
+   "prompt": "マツの雌花のりん片には、子房があるか。「ある」「ない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ない"
+    ]
+   },
+   "explanation": "マツの雌花のりん片には子房がなく、胚珠がむきだしになっている。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-44",
+   "type": "input",
+   "prompt": "マツの花粉が遠くまで運ばれるのはなぜか。次から選ぼう。\nア 空気袋がついていて、風で運ばれるから　イ 昆虫の体につくから　ウ 水に流されるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "空気袋がついているので風で遠くまで移動できる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-45",
+   "type": "input",
+   "prompt": "マツの受粉は、花粉が雌花の何に直接つくことで起こるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "胚珠",
+     "はいしゅ"
+    ]
+   },
+   "explanation": "マツには柱頭がなく、花粉がむきだしの胚珠に直接ついて受粉する。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-46",
+   "type": "input",
+   "prompt": "マツで、受粉した雌花がまつかさになるまでにかかる時間はどれくらいか。次から選ぼう。\nア 1年以上　イ 1日　ウ 1週間",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "受粉し、1年以上かかって雌花はまつかさになり、胚珠は種子になる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-47",
+   "type": "input",
+   "prompt": "マツの花の観察で、雌花と雄花のりん片をはがすのに使う器具は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ピンセット"
+    ]
+   },
+   "explanation": "ピンセットでりん片をはがし、双眼実体顕微鏡（またはルーペ）で観察する。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-48",
+   "type": "input",
+   "prompt": "マツのように胚珠がむきだしになっている植物を、ほかに教科書からすべて選ぼう（読点で区切る）。\nア スギ　イ イチョウ　ウ ソテツ　エ アブラナ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "マツのほか、スギ・イチョウ・ソテツも胚珠がむきだしの裸子植物。アブラナは被子植物。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-49",
+   "type": "input",
+   "prompt": "裸子植物では、受粉後に果実ができない。その理由を選ぼう。\nア 子房がないから　イ 胚珠がないから　ウ 花粉がないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "果実は子房が成長したもの。裸子植物には子房がないので果実はできない。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-50",
+   "type": "input",
+   "prompt": "被子植物と裸子植物で共通していることは何か。次から選ぼう。\nア どちらも種子でふえる　イ どちらも子房がある　ウ どちらも果実ができる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "胚珠が子房の中にあるかどうかがちがうが、どちらも種子でふえる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-51",
+   "type": "input",
+   "prompt": "図12の種子植物のまとめで、被子植物の例としてかかれている植物はどれか。次から選ぼう。\nア アブラナ　イ マツ　ウ スギ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "図12では、被子植物の例にアブラナ、裸子植物の例にマツがかかれている。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-52",
+   "type": "input",
+   "prompt": "被子植物と裸子植物のちがいは、何によって分けられているか。次から選ぼう。\nア 胚珠が子房の中にあるかどうか　イ 花の色　ウ 葉の大きさ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "胚珠が子房の中にあれば被子植物、むきだしなら裸子植物。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-53",
+   "type": "input",
+   "prompt": "イチョウの「ぎんなん」は種子である。イチョウは被子植物と裸子植物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "裸子植物",
+     "らししょくぶつ"
+    ]
+   },
+   "explanation": "イチョウは胚珠がむきだしの裸子植物。ぎんなんは果実ではなく種子。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-54",
+   "type": "input",
+   "prompt": "花のつくりで、受粉したあとに果実となる部分と種子となる部分の組み合わせとして正しいものを選ぼう。\nア 子房→果実、胚珠→種子　イ 胚珠→果実、子房→種子　ウ 柱頭→果実、花柱→種子",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "子房が果実に、胚珠が種子になる。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 4,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p4（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-55",
+   "type": "input",
+   "prompt": "ある植物の花を調べると、花弁がなく、りん片が集まった雌花と雄花があった。雌花のりん片には、むきだしの胚珠が2つついていた。この植物は被子植物と裸子植物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "裸子植物",
+     "らししょくぶつ"
+    ]
+   },
+   "explanation": "胚珠がむきだし（子房がない）なので裸子植物。マツと同じなかま。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 5,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p5（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-56",
+   "type": "input",
+   "prompt": "ある植物の花のめしべを切ると、子房の中に胚珠が見られた。花弁は根もとでくっついていた。この植物について正しいものを選ぼう。\nア 被子植物の合弁花　イ 被子植物の離弁花　ウ 裸子植物",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "胚珠が子房の中にあるので被子植物、花弁がくっついているので合弁花。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 5,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p5（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-57",
+   "type": "input",
+   "prompt": "アブラナとマツに共通していることを選ぼう。\nア 花粉をつくり、受粉して種子をつくる　イ 子房がある　ウ 花弁がある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "どちらも花粉をつくり、受粉すると胚珠が種子になる。マツには子房や花弁がない。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 5,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p5（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-58",
+   "type": "input",
+   "prompt": "めしべの柱頭に花粉をつけないようにふくろをかけておいたら、果実ができなかった。このことから、果実ができるのに必要なことは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "受粉",
+     "じゅふん"
+    ]
+   },
+   "explanation": "受粉しなければ子房は果実にならず、胚珠も種子にならない。",
+   "source": {
+    "id": "source-0502",
+    "file": "理科ワーク/S__16252933_0.jpg",
+    "sha256": "f4fdf9e81578b3b431bb154ef2a8b96dc0eac4a7ef35d49774b5def3e807737d",
+    "page": 4,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p4（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-59",
+   "type": "input",
+   "prompt": "ツツジとエンドウの花粉を顕微鏡で観察すると、形や大きさがちがっていた。このことからいえることを選ぼう。\nア 花粉の形や大きさは、植物の種類によってちがう　イ どの植物の花粉も同じ　ウ 花粉は観察できない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "花粉の大きさや形は植物によってちがう。図ではツツジ約0.03 mm、エンドウ約0.05 mm。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-60",
+   "type": "input",
+   "prompt": "図の花粉の大きさで、ツツジ（約0.03 mm）とエンドウ（約0.05 mm）では、どちらの花粉が大きいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エンドウ"
+    ]
+   },
+   "explanation": "0.05 mmのエンドウの方が大きい。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-61",
+   "type": "input",
+   "prompt": "アブラナの花で、おしべの根もとにあって、蜜を出す部分を何というか（図1）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "蜜腺",
+     "みつせん"
+    ]
+   },
+   "explanation": "蜜腺から蜜を出し、昆虫などをひきつける。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-62",
+   "type": "input",
+   "prompt": "アブラナの花に来て、蜜を吸いながら花粉を運んでいる昆虫として、図5の写真に写っているものはどれか。次から選ぼう。\nア ミツバチ　イ トンボ　ウ セミ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ミツバチなどの昆虫が、体についた花粉をほかの花のめしべに運ぶ。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 24,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-63",
+   "type": "input",
+   "prompt": "めしべを上から順に3つの部分に分けたとき、その名前を順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "柱頭、花柱、子房",
+     "柱頭,花柱,子房",
+     "ちゅうとう、かちゅう、しぼう"
+    ]
+   },
+   "explanation": "めしべは、先端の柱頭、その下の細い花柱、根もとのふくらんだ子房からできている。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 22,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p22（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-64",
+   "type": "input",
+   "prompt": "サクラとアサガオを、花弁のつくりで分けたとき、サクラはどちらのなかまか。「離弁花」「合弁花」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "離弁花"
+    ]
+   },
+   "explanation": "サクラは花弁が1枚1枚離れている離弁花。アサガオは合弁花。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-65",
+   "type": "input",
+   "prompt": "ツツジの花を分解して花弁をはずそうとすると、花弁はどのようになっていたか。次から選ぼう。\nア 根もとでつながっていて、1つにまとまってはずれた　イ 5枚がばらばらにはずれた　ウ 花弁がなかった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ツツジは合弁花なので、花弁が根もとでくっついていて、1つにまとまってはずれる。",
+   "source": {
+    "id": "source-0645",
+    "file": "理科の教科書/S__16629776_0.jpg",
+    "sha256": "614c640f574eebdfffbc789f4f93d2de185764f35dfd9de2a0f80e8cbeac315d",
+    "page": 23,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-66",
+   "type": "input",
+   "prompt": "サクラの花のどの部分が、サクランボ（果実）になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "子房",
+     "しぼう"
+    ]
+   },
+   "explanation": "図7のように、サクラの子房が成長して果実になり、胚珠が種子になる。",
+   "source": {
+    "id": "source-0646",
+    "file": "理科の教科書/S__16629777_0.jpg",
+    "sha256": "b3221a53447262a86f423ef9057b76fc159375001e34a814a1838a4f21a6c8ed",
+    "page": 25,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p25（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-67",
+   "type": "input",
+   "prompt": "まつかさは、マツの雌花と雄花のどちらが変化したものか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "雌花",
+     "めばな"
+    ]
+   },
+   "explanation": "受粉した雌花が、1年以上かかってまつかさになる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-68",
+   "type": "input",
+   "prompt": "マツの雄花のりん片についている袋を開くと、中から何が出てくるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "花粉",
+     "かふん"
+    ]
+   },
+   "explanation": "雄花のりん片の袋（花粉のう）の中には花粉が入っている。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 26,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-69",
+   "type": "input",
+   "prompt": "スギの花粉は春に大量に飛び、遠くまで運ばれる。スギは、花粉が何によって運ばれる植物と考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "風",
+     "かぜ"
+    ]
+   },
+   "explanation": "スギは目立つ花弁がなく、大量の花粉が風で運ばれる。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-hana-70",
+   "type": "input",
+   "prompt": "ソテツは、被子植物と裸子植物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "裸子植物",
+     "らししょくぶつ"
+    ]
+   },
+   "explanation": "ソテツは胚珠がむきだしの裸子植物（図11）。",
+   "source": {
+    "id": "source-0647",
+    "file": "理科の教科書/S__16629778_0.jpg",
+    "sha256": "a69bc7106318397f408d8688b859f4bc807de08e70ff21c3180e4e04f941b9d2",
+    "page": 27,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）、2026-10-14 理科の教科書 p20〜27（台帳登録案・本文まで確認）の内容で問題を追加。理科ワークp4〜5（教科書チェック：花のつくり・花の変化・マツのなかま・種子でふえる植物、まとめ対話）を写真で確認して作った。ワーク版70問が花の各部分・順番・マツのつくり・被子と裸子をほぼ出しきっているので、子房があるかどうかで被子植物を判断する問題と、受粉の役割を考える問題だけを作った。エンドウのさやの問題はワーク版にあるので外した。"
+}

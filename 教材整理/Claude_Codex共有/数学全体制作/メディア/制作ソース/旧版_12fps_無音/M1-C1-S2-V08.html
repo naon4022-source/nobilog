@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(24,raw));g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('分配法則で計算を楽にする',65,88,42,blue);box(45,147,1190,425,'white');const u=Math.min(1,(t-1)/12);if(t<14){const ax=350+290*u,bx=930-290*u,ay=330-100*u,by=330+100*u;[[ax,ay,'47×(−8)'],[bx,by,'53×(−8)']].forEach(([x,y,v])=>{box(x-215,y-48,430,96,'#e8f0fa');text(v,x,y+15,42,blue,'center')});text('+',640,347,44,ink,'center');text('同じ ×(−8) を、ひとつにまとめる',640,530,34,blue,'center')}else{text(t<19?'(47+53)×(−8)':'100×(−8)',640,330,56,blue,'center');text('先に47+53をまとめる',640,470,38,ink,'center')}text('共通のかける数を、かっこの外へ',640,640,36,ink,'center');return {time:t};};renderAt(0);</script>

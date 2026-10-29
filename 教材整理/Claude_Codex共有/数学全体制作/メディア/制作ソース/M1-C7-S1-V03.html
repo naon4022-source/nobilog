@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C7-S1-V03 平均が同じでも形はちがう（Claude）。2クラス各20人、10点満点の小テスト（架空）。どちらも平均 6点
+const A=[0,0,0,0,1,4,10,4,1,0,0],B=[0,0,4,3,3,0,0,0,2,5,3];   // 0〜10点の人数
+const mean=h=>h.reduce((s,c,k)=>s+c*k,0)/h.reduce((s,c)=>s+c,0);
+const BW=44,U=20;
+function hist(h,x0,y0,col,alpha,label,showMean,hiRange){g.globalAlpha=alpha;
+ h.forEach((c,k)=>{if(c){g.fillStyle=col;g.strokeStyle=C.ink;g.lineWidth=2;g.fillRect(x0+k*BW,y0-c*U,BW,c*U);g.strokeRect(x0+k*BW,y0-c*U,BW,c*U)}});
+ g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(x0-6,y0);g.lineTo(x0+11*BW+6,y0);g.stroke();for(let k=0;k<=10;k+=2)text(String(k),x0+k*BW+BW/2,y0+30,24,C.ink,'center',700);
+ text(label,x0+5.5*BW,y0-258,40,col===C.orange?C.orange:C.blue,'center',800);
+ if(showMean>0){const x=x0+mean(h)*BW+BW/2;g.globalAlpha=alpha*showMean;g.strokeStyle=C.red;g.lineWidth=4;g.setLineDash([10,7]);g.beginPath();g.moveTo(x,y0+6);g.lineTo(x,y0-222);g.stroke();g.setLineDash([]);text('平均 6点',x+74,y0-214,28,C.red,'center',800)}
+ if(hiRange>0){const lo=h.findIndex(c=>c>0),hi=10-[...h].reverse().findIndex(c=>c>0);g.globalAlpha=alpha*hiRange;g.strokeStyle=C.green;g.lineWidth=6;const yy=y0+50;g.beginPath();g.moveTo(x0+lo*BW+6,yy);g.lineTo(x0+hi*BW+BW-6,yy);g.stroke();text(`範囲 ${hi-lo}点`,x0+(lo+hi+1)/2*BW,yy+36,30,C.green,'center',800)}
+ g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('平均が同じでも形はちがう');const XA=70,XB=680,Y=455;
+ if(i===0){g.globalAlpha=seg(p,.2,.4);rbox(250,140,780,220,26,'#fffdf8',C.ink,3);text('1組 平均 6点',640,230,56,C.blue,'center',800);text('2組 平均 6点',640,320,56,C.orange,'center',800);g.globalAlpha=seg(p,.6,.8);text('同じような点数のクラス？',640,440,44,C.ink,'center',800);g.globalAlpha=1;return}
+ const sa=i===1?seg(p,.05,.4):1,sb=i===1?seg(p,.45,.8):1;
+ hist(A,XA,Y,'#8ec1ec',sa,'1組',i>=2?(i===2?seg(p,.1,.4):1):0,i>=3?(i===3?seg(p,.2,.45):1):0);
+ hist(B,XB,Y,C.orange,sb,'2組',i>=2?(i===2?seg(p,.3,.6):1):0,i>=3?(i===3?seg(p,.5,.75):1):0);
+ if(i===4){g.globalAlpha=seg(p,.1,.3);ring(XA+6.5*BW,Y-95,90,115,C.blue,5);g.globalAlpha=seg(p,.45,.65);ring(XB+3.5*BW,Y-45,90,65,C.orange,5);ring(XB+9.5*BW,Y-58,90,78,C.orange,5);g.globalAlpha=1}
+ if(i===5){g.globalAlpha=seg(p,0,.25);rbox(180,88,920,62,20,C.ink);text('代表値だけでなく、グラフと範囲も見る',640,132,34,'#fff','center',800);g.globalAlpha=1}
+}};
+</script>

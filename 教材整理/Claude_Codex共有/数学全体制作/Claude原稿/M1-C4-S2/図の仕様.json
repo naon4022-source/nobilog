@@ -1,0 +1,160 @@
+{
+ "unitId": "M1-C4-S2",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C4-S2-FIG01",
+   "unitId": "M1-C4-S2",
+   "purpose": "比例では x が2倍・3倍になると y も2倍・3倍になり、y÷x が一定であることを表で見せる",
+   "sourceReferences": [
+    "教科書p119〜121",
+    "ワークp76 ポイント4-4"
+   ],
+   "confirmedConcept": "1段16cmの階段：x＝1,2,3,4,5 → y＝16,32,48,64,80。y÷x＝16",
+   "labels": [
+    "段数 x（段）",
+    "高さ y（cm）",
+    "×2",
+    "×3",
+    "y÷x＝16"
+   ],
+   "coordinates": [
+    "2行×5列の表",
+    "x の行の上に「×2」（1→2）「×3」（1→3）の矢印",
+    "y の行の下に同じ「×2」「×3」の矢印",
+    "表の右に y÷x の列"
+   ],
+   "numericConditions": [
+    "x：1〜5",
+    "y：16〜80（16ずつ）",
+    "y÷x はすべて16"
+   ],
+   "units": [
+    "段",
+    "cm"
+   ],
+   "arrows": [
+    "×2・×3 の弧の矢印（上下で同じ位置）"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "上下の矢印が同じ列をつなぐ",
+    "y÷x＝16"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "階段の段数と高さの表。段数が2倍・3倍になると高さも2倍・3倍。高さ÷段数はいつも16。",
+   "verification": {
+    "calculation": "検算.py 導入 階段",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C4-S2-FIG02",
+   "unitId": "M1-C4-S2",
+   "purpose": "座標を、原点から「横に何、縦に何」と進んで表すことを見せる",
+   "sourceReferences": [
+    "教科書p124〜125",
+    "ワークp78 ポイント4-8"
+   ],
+   "confirmedConcept": "P(4, 3)：右へ4、上へ3。Q(−2, −3)：左へ2、下へ3",
+   "labels": [
+    "x 軸",
+    "y 軸",
+    "O",
+    "P(4, 3)",
+    "Q(−2, −3)"
+   ],
+   "coordinates": [
+    "−5〜5 の目盛りの座標平面",
+    "原点から x 軸に沿った矢印→そこから縦の矢印で点へ"
+   ],
+   "numericConditions": [
+    "P は第1の部分（右上）",
+    "Q は左下",
+    "目盛りは1ずつ"
+   ],
+   "units": [],
+   "arrows": [
+    "原点からの横の矢印",
+    "そこからの縦の矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "座標の順（x, y）",
+    "P・Q の位置"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "座標平面。原点から右へ4・上へ3で点P(4, 3)。左へ2・下へ3で点Q(−2, −3)。",
+   "verification": {
+    "calculation": "検算.py 確認3-2（座標の移動）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C4-S2-FIG03",
+   "unitId": "M1-C4-S2",
+   "purpose": "比例のグラフは原点を通る直線で、a の符号で右上がり・右下がりが決まることを見せる",
+   "sourceReferences": [
+    "教科書p126〜129",
+    "ワークp80 ポイント4-9・4-10"
+   ],
+   "confirmedConcept": "y＝2x は (1, 2)(2, 4) を通る右上がり。y＝−(2/3)x は (3, −2)(−3, 2) を通る右下がり。どちらも (0, 0) を通る",
+   "labels": [
+    "y＝2x",
+    "y＝−(2/3)x",
+    "O",
+    "(1, 2)",
+    "(3, −2)"
+   ],
+   "coordinates": [
+    "−5〜5 の座標平面",
+    "2本の直線を原点で交わるように描く",
+    "整数の点に小さな黒丸"
+   ],
+   "numericConditions": [
+    "y＝2x は右上がり",
+    "y＝−(2/3)x は右下がり",
+    "両方とも原点を通る"
+   ],
+   "units": [],
+   "arrows": [
+    "原点を示す矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "2本とも原点を通る",
+    "傾きの向き"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "座標平面に2本の直線。y＝2x は右上がり、y＝−(2/3)x は右下がり。どちらも原点を通る。",
+   "verification": {
+    "calculation": "検算.py 例3標準・確認4-1",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

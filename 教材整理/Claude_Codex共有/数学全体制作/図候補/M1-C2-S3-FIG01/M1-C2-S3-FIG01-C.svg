@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc"><title id="title">数あての手順で、式がどう変わるかを表にして、n が消えることを示す</title><desc id="desc">思いうかべた数をnとすると、3n、3n+6、n+2と変わり、最後にnをひくと2になる。n＝5でもn＝−4でも最後は2。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#222"/></marker></defs><rect width="1000" height="700" fill="white"/><g fill="#222" font-family="system-ui,sans-serif">
+<rect x="30" y="30" width="930" height="620" rx="18" fill="white" stroke="#222"/>
+<text x="230" y="90" font-size="34" text-anchor="middle" >手順</text>
+<text x="500" y="90" font-size="34" text-anchor="middle" >式</text>
+<text x="700" y="90" font-size="34" text-anchor="middle" >n＝5</text>
+<text x="870" y="90" font-size="34" text-anchor="middle" >n＝−4</text>
+<line x1="400" y1="45" x2="400" y2="635" stroke="#777" stroke-width="1"/>
+<line x1="600" y1="45" x2="600" y2="635" stroke="#777" stroke-width="1"/>
+<line x1="795" y1="45" x2="795" y2="635" stroke="#777" stroke-width="1"/>
+<g data-row="0">
+<text x="230" y="165" font-size="30" text-anchor="middle" data-col="0">はじめの数</text>
+<text x="500" y="165" font-size="36" text-anchor="middle" data-col="1">n</text>
+<text x="700" y="165" font-size="36" text-anchor="middle" data-col="2">5</text>
+<text x="870" y="165" font-size="36" text-anchor="middle" data-col="3">−4</text>
+</g>
+<line x1="70" y1="177" x2="70" y2="235" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-step="0"/>
+<line x1="95" y1="200" x2="945" y2="200" stroke="#aaa" stroke-width="1"/>
+<g data-row="1">
+<text x="230" y="270" font-size="30" text-anchor="middle" data-col="0">3倍する</text>
+<text x="500" y="270" font-size="36" text-anchor="middle" data-col="1">3n</text>
+<text x="700" y="270" font-size="36" text-anchor="middle" data-col="2">15</text>
+<text x="870" y="270" font-size="36" text-anchor="middle" data-col="3">−12</text>
+</g>
+<line x1="70" y1="282" x2="70" y2="340" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-step="1"/>
+<line x1="95" y1="305" x2="945" y2="305" stroke="#aaa" stroke-width="1"/>
+<g data-row="2">
+<text x="230" y="375" font-size="30" text-anchor="middle" data-col="0">6をたす</text>
+<text x="500" y="375" font-size="36" text-anchor="middle" data-col="1">3n+6</text>
+<text x="700" y="375" font-size="36" text-anchor="middle" data-col="2">21</text>
+<text x="870" y="375" font-size="36" text-anchor="middle" data-col="3">−6</text>
+</g>
+<line x1="70" y1="387" x2="70" y2="445" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-step="2"/>
+<line x1="95" y1="410" x2="945" y2="410" stroke="#aaa" stroke-width="1"/>
+<g data-row="3">
+<text x="230" y="480" font-size="30" text-anchor="middle" data-col="0">3でわる</text>
+<text x="500" y="480" font-size="36" text-anchor="middle" data-col="1">n+2</text>
+<text x="700" y="480" font-size="36" text-anchor="middle" data-col="2">7</text>
+<text x="870" y="480" font-size="36" text-anchor="middle" data-col="3">−2</text>
+</g>
+<line x1="70" y1="492" x2="70" y2="550" stroke="#222" stroke-width="2" marker-end="url(#arrow)" data-step="3"/>
+<line x1="95" y1="515" x2="945" y2="515" stroke="#aaa" stroke-width="1"/>
+<rect x="410" y="540" width="535" height="65" rx="12" fill="#eee" stroke="#222" stroke-dasharray="6 5"/>
+<g data-row="4">
+<text x="230" y="585" font-size="30" text-anchor="middle" data-col="0" font-weight="700">はじめの数をひく</text>
+<text x="500" y="585" font-size="36" text-anchor="middle" data-col="1" font-weight="700">2</text>
+<text x="700" y="585" font-size="36" text-anchor="middle" data-col="2" font-weight="700">2</text>
+<text x="870" y="585" font-size="36" text-anchor="middle" data-col="3" font-weight="700">2</text>
+</g>
+<line x1="95" y1="620" x2="945" y2="620" stroke="#aaa" stroke-width="1"/>
+</g></svg>

@@ -1,0 +1,43 @@
+{
+ "unitId": "M1-C2-OPEN",
+ "choices": [
+  {
+   "slotId": "M1-C2-OPEN-SCENE",
+   "candidateId": "M1-C2-OPEN-SCENE-D",
+   "decision": "採用",
+   "reason": "ブロックが2列に同じ数ずつならび、1個を足している。「1列の個数が変わっても2×（1列の個数）」という導入の文に一番合う。白い背景で、白黒でも形が分かる。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C2-OPEN-SCENE",
+   "candidateId": "M1-C2-OPEN-SCENE-A",
+   "decision": "不採用",
+   "reason": "3列×6個で、本文の「2列」と合わない。木目が濃く、白黒印刷で背景がうるさい。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C2-OPEN-SCENE",
+   "candidateId": "M1-C2-OPEN-SCENE-B",
+   "decision": "不採用",
+   "reason": "鉛筆画で白黒に強いが、ブロックではなく箱で、5個×2列。本文の数え方とずれる。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C2-OPEN-SCENE",
+   "candidateId": "M1-C2-OPEN-SCENE-C",
+   "decision": "不採用",
+   "reason": "3列で、まん中の列がとちゅう。本文の「2列に同じ数ずつ」と合わない。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  }
+ ],
+ "updatedBy": "Claude",
+ "status": "選定済み（D）。4候補を同じ一覧画像で比較"
+}

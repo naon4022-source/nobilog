@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S1-V01 正多面体は5つだけ（Claude）。台本は M1-C6-S1-V01.json
+const FX=390,FY=290,FS=190,SX=930,SY=280;
+// ステップごとの扇：[n角形, 個数, 折る先の立体（なければ平らのまま）, 右に出す立体]
+const CASE={2:[3,3,null],3:[3,3,'tetra'],4:[3,3,'tetra'],5:[3,4,'octa'],6:[3,5,'icosa'],7:[3,6,null],8:[4,3,'cube'],9:[4,4,null],10:[5,3,'dodeca'],11:[5,4,null],12:[6,3,null]};
+window.SCENE={draw({i,p,t}){
+ header('正多面体は5つだけ');const yaw=t*0.5;
+ if(i===0){const pp=seg(p,0,.15);solidPanel('cube',640,300,165,yaw,pp,false);
+  if(p>.45){g.globalAlpha=seg(p,.45,.6);text('どの面も 同じ正方形',640,120,40,C.blue,'center',800);g.globalAlpha=1}
+  if(p>.7){g.globalAlpha=seg(p,.7,.85);text('どの頂点にも 面が3つ',640,520,40,C.orange,'center',800);g.globalAlpha=1}return}
+ if(i===1){const names=['tetra','cube','octa','dodeca','icosa'];names.forEach((n,k)=>{const a=seg(p,.35+k*.08,.5+k*.08);const x=180+k*230;rbox(x-95,170,190,240,24,'#ffffff','#c9d6e8',3);
+   if(a<1){g.globalAlpha=1-a;text('？',x,320,110,C.dim,'center',800)}g.globalAlpha=a;poly(SOLIDS[n],{cx:x,cy:290,s:72,M:view(yaw+k,-0.35),color:SOLIDCOL[n],edge:3});g.globalAlpha=1});
+  g.globalAlpha=seg(p,.75,.9);text('5種類だけ！',640,500,64,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===13){['tetra','cube','octa','dodeca','icosa'].forEach((n,k)=>{const x=150+k*245,a=seg(p,k*.08,.2+k*.08);g.globalAlpha=a;poly(SOLIDS[n],{cx:x,cy:270,s:82,M:view(yaw+k,-0.35),color:SOLIDCOL[n],edge:3});text(SOLIDNAME[n].replace('（立方体）',''),x,400,30,C.ink,'center',800);text(['3×3','4×3','4×3','3×3','5×3'][k]&&['三角形3つ','正方形3つ','三角形4つ','五角形3つ','三角形5つ'][k],x,440,26,C.blue,'center',700);g.globalAlpha=1});
+  g.globalAlpha=seg(p,.55,.7);rbox(240,470,800,64,18,C.orange);text('頂点の角の合計が 360° より小さい 5通りだけ',640,514,32,'#fff','center',800);g.globalAlpha=1;return}
+ const [n,m,solid]=CASE[i];
+ // 折り曲げ：3〜6・8・10 で、ステップの前半に折る（2 は平らなまま）
+ let tf=0;if(i===3)tf=seg(p,.25,.85);else if([4].includes(i))tf=1;else if(solid)tf=seg(p,.2,.65);
+ drawFan(n,m,{cx:FX,cy:FY,s:FS,yaw:0.3+Math.sin(t*0.4)*0.15,t:tf,solid,gap:(n-2)*180/n*m<360,gapAlpha:1-tf*0.9,over:(n-2)*180/n*m>360});
+ angleLine(n,m,FX,560,seg(p,0,.2));
+ if(i===2){g.globalAlpha=seg(p,.3,.5);text('すきま',FX+150,FY-40,36,C.orange,'center',800);arrow(FX+110,FY-30,FX+40,FY+10,C.orange,5);g.globalAlpha=1}
+ if(i===3){g.globalAlpha=seg(p,.85,1);text('立体の頂点ができた！',SX,SY+20,44,C.green,'center',800);g.globalAlpha=1}
+ const show=solid&&i!==3?seg(p,.55,.8):0;if(show>0)solidPanel(solid,SX,SY,135,t*0.6,show);
+ if(!solid&&i!==2){bigX(SX,SY,90,seg(p,.4,.6));g.globalAlpha=seg(p,.5,.7);text('立体にならない',SX,SY+150,40,C.red,'center',800);g.globalAlpha=1}
+}};
+</script>

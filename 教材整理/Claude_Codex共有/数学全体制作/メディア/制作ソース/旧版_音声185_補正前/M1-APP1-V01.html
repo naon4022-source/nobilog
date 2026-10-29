@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script>
+// Codex担当。声に同期した一文一場面。声を確認するまで完成MP4として納品しない。
+function formula(a,b,c){text(a,220,310,60,C.ink,'center',800);text('＝',410,310,60,C.ink,'center',800);text(b,595,310,60,C.blue,'center',800);text('×',755,310,60,C.ink,'center',800);text(c,930,310,60,C.ink,'center',800)}
+function quotient(left,den,p){text(left,250,325,64,C.blue,'center',800);text('＝',445,325,64,C.ink,'center',800);text('道のり',785,250,64,C.ink,'center',800);g.fillStyle=C.ink;g.fillRect(610,277,350,5);text(den,785,355,64,C.ink,'center',800);ring(785,335,110,42,C.orange,5);arrow(1080,360-100*seg(p,.1,.7),1005,315,C.orange,6);text('かけた量でわる',640,490,40,C.ink,'center',700)}
+window.SCENE={draw({i,p}){
+ header('速さ・時間・道のり',i===6?'まとめ':'');
+ if(i===0){formula('道のり','速さ','時間');text('速さは？  時間は？',640,465,46,C.orange,'center',800);return}
+ if(i===1){formula('道のり','速さ','時間');const x=595+335*seg(p,.15,.65);ring(x,292,110,47);text('速さ × 時間',640,465,44,C.ink,'center',700);return}
+ if(i===2){quotient('速さ','時間',p);return}
+ if(i===3){quotient('時間','速さ',p);return}
+ if(i===4){text('時速',245,320,64,C.ink,'center',800);text('＝',435,320,64,C.ink,'center',800);text('分速',625,320,64,C.blue,'center',800);text('×',810,320,64,C.ink,'center',800);text('60',950,320,64,C.orange,'center',800);ring(950,297,85,48);text('1分ぶん → 60分ぶん',640,465,44,C.ink,'center',700);arrow(650,405,650+220*seg(p,.1,.7),405);return}
+ if(i===5){text('1時間 ＝ 60分',640,215,64,C.ink,'center',800);rbox(220,295,840,92,15,'#ffffff',C.blue,3);const u=seg(p,.1,.7);rbox(220,295,Math.max(1,840*u),92,15,C.sky);text('分速 × 60 ＝ 時速',640,475,56,C.ink,'center',800);return}
+ // 動く主役はオレンジの印だけ。最終フレームも同じ画面を残す。
+ rbox(125,140,1030,380,25,'#fff',C.orange,4);text('道のり ＝ 速さ × 時間',640,245,56,C.ink,'center',800);text('速さ ＝ 道のり ÷ 時間',640,330,56,C.ink,'center',800);text('時間 ＝ 道のり ÷ 速さ',640,415,56,C.ink,'center',800);text('単位をそろえる',640,492,40,C.blue,'center',800);
+}};
+</script>

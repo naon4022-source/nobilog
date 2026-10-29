@@ -1,0 +1,43 @@
+{
+ "unitId": "M1-C1-OPEN",
+ "choices": [
+  {
+   "slotId": "M1-C1-OPEN-SCENE",
+   "candidateId": "M1-C1-OPEN-SCENE-A",
+   "decision": "採用",
+   "reason": "屋外の温度計（数字なし）と冷凍庫の2つだけで「0より下の冷たさ」に絞れている。白い余白が多く、白黒印刷でも形が分かる。本文の導入文と一致。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-OPEN-SCENE",
+   "candidateId": "M1-C1-OPEN-SCENE-B",
+   "decision": "不採用",
+   "reason": "室内の温度計が中ほどを指し、部屋が暖かい印象。「0より下」の話とずれる。背景の雪景色・マグなど情報が多い。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-OPEN-SCENE",
+   "candidateId": "M1-C1-OPEN-SCENE-C",
+   "decision": "不採用",
+   "reason": "眠る猫やマグなど主題外の要素が目立つ。室内の温度計で、寒さの焦点がぼける。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-OPEN-SCENE",
+   "candidateId": "M1-C1-OPEN-SCENE-D",
+   "decision": "不採用",
+   "reason": "室内の温度計の液が高く、暖かい部屋に見える。冷凍庫との対比は弱い。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  }
+ ],
+ "updatedBy": "Claude",
+ "status": "選定済み（A）。4候補を同じ一覧画像で比較。スマホ幅の実機表示はCodexの組み込み時に確認"
+}

@@ -1,0 +1,40 @@
+{
+ "unit": "tokkun-english-1-l4a.json",
+ "cases": [
+  {
+   "n": 39,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "My brother doesn't eat fish.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 39,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "My brother does not eat fish.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 39,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "My brother don't eat fish.",
+   "expect": false,
+   "why": "3単現の誤り"
+  },
+  {
+   "n": 44,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "Mai doesn't read magazines.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 44,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "Mai doesn't reads magazines.",
+   "expect": false,
+   "why": "動詞の形の誤り"
+  }
+ ]
+}

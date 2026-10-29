@@ -1,0 +1,117 @@
+{
+ "unit": "tokkun-japanese-1-setsumei.json",
+ "cases": [
+  {
+   "n": 61,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "ツバメは人の近くに巣を作ることで、天敵から身を守り、ひなを安全に育てている。",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 61,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "ツバメは天敵をさけるため人の家に巣を作り、ひなを育てる。",
+   "expect": true,
+   "why": "言いかえ"
+  },
+  {
+   "n": 61,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "ツバメは天敵がいるので人から離れてひなを育てる。",
+   "expect": false,
+   "why": "逆（修正済み）"
+  },
+  {
+   "n": 62,
+   "head": "次の文章（Claudeが作った説明文「方",
+   "input": "方言は大切に受けつぐべき言葉である。",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 62,
+   "head": "次の文章（Claudeが作った説明文「方",
+   "input": "方言を大切にして受け継ぐべきだ。",
+   "expect": true,
+   "why": "漢字ちがい"
+  },
+  {
+   "n": 62,
+   "head": "次の文章（Claudeが作った説明文「方",
+   "input": "方言はなくして共通語を大切に受けつぐべきだ。",
+   "expect": false,
+   "why": "逆（否定・共通語）"
+  },
+  {
+   "n": 62,
+   "head": "次の文章（Claudeが作った説明文「方",
+   "input": "方言より共通語を大切に受けつぐべきだ。",
+   "expect": false,
+   "why": "逆（修正済み）"
+  },
+  {
+   "n": 63,
+   "head": "次の文章（Claudeが作った説明文「本",
+   "input": "同じ分野の本が同じ棚に集まっているので、早く見つけられるから。",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 63,
+   "head": "次の文章（Claudeが作った説明文「本",
+   "input": "分野ごとに本がまとまっていて、すぐに探せるから。",
+   "expect": true,
+   "why": "言いかえ"
+  },
+  {
+   "n": 63,
+   "head": "次の文章（Claudeが作った説明文「本",
+   "input": "本が多いから。",
+   "expect": false,
+   "why": "理由不足"
+  },
+  {
+   "n": 68,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "カラス、ヘビ",
+   "expect": true,
+   "why": "区切りあり"
+  },
+  {
+   "n": 68,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "ヘビ、カラス",
+   "expect": true,
+   "why": "順不同"
+  },
+  {
+   "n": 68,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "カラス",
+   "expect": false,
+   "why": "1つだけ"
+  },
+  {
+   "n": 7,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "用心棒",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 7,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "「用心棒」",
+   "expect": true,
+   "why": "かぎかっこつき"
+  },
+  {
+   "n": 7,
+   "head": "次の文章（Claudeが作った説明文「ツ",
+   "input": "用心",
+   "expect": false,
+   "why": "字数不足"
+  }
+ ]
+}

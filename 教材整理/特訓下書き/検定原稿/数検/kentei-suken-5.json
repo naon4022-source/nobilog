@@ -1,0 +1,1125 @@
+{
+ "id": "kentei-suken-5",
+ "bank": "kentei",
+ "kentei": "数検",
+ "level": "5級",
+ "title": "数検5級（独自問題）",
+ "status": "draft",
+ "questions": [
+  {
+   "id": "kentei-suken-5-1",
+   "type": "input",
+   "section": "小数・分数の計算",
+   "role": "例題",
+   "prompt": "次の計算をしよう。\n26.04 ÷ 6.2",
+   "answer": {
+    "kind": "number",
+    "value": "4.2"
+   },
+   "explanation": "小数点を同じだけ右にうつして260.4÷62＝4.2。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-2",
+   "type": "input",
+   "section": "小数・分数の計算",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n3.6 × 2.05",
+   "answer": {
+    "kind": "number",
+    "value": "7.38"
+   },
+   "explanation": "36×205＝7380。小数点以下は1＋2＝3けたなので7.380＝7.38。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-3",
+   "type": "input",
+   "section": "小数・分数の計算",
+   "role": "確認",
+   "prompt": "次の計算をしよう。答えが分数のときは約分しよう。\n2 1/3 − 5/6 + 1/4",
+   "answer": {
+    "kind": "number",
+    "value": "7/4"
+   },
+   "explanation": "通分して28/12−10/12＋3/12＝21/12＝7/4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-4",
+   "type": "input",
+   "section": "小数・分数の計算",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n15/28 × 14/45 ÷ 5/9",
+   "answer": {
+    "kind": "number",
+    "value": "3/10"
+   },
+   "explanation": "わる数の逆数をかけて15/28×14/45×9/5。分母と分子を約分すると3/10。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-5",
+   "type": "input",
+   "section": "正負の数・文字式（中学1年）",
+   "role": "例題",
+   "prompt": "次の計算をしよう。\n9 + (−17) − (−4)",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "9−17＋4＝−4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-6",
+   "type": "input",
+   "section": "正負の数・文字式（中学1年）",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n−2² × 6 ÷ (−8)",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "−2²＝−4。−4×6＝−24。−24÷(−8)＝3。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-7",
+   "type": "input",
+   "section": "正負の数・文字式（中学1年）",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n4(2x − 5) − 3(3x − 7)",
+   "answer": {
+    "kind": "expr",
+    "value": "-x+1"
+   },
+   "explanation": "8x−20−9x＋21＝−x＋1。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-8",
+   "type": "input",
+   "section": "正負の数・文字式（中学1年）",
+   "role": "確認",
+   "prompt": "次の計算をしよう。\n0.3(4x − 2) + 0.5(2x + 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "2.2x+2.4"
+   },
+   "explanation": "1.2x−0.6＋1.0x＋3＝2.2x＋2.4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-9",
+   "type": "input",
+   "section": "最大公約数・最小公倍数",
+   "role": "例題",
+   "prompt": "（18、30）の最大公約数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "18の約数1,2,3,6,9,18、30の約数1,2,3,5,6,10,15,30。共通で最大は6。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-10",
+   "type": "input",
+   "section": "最大公約数・最小公倍数",
+   "role": "確認",
+   "prompt": "（24、36、60）の最大公約数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "3つすべてをわり切れる最大の数は12。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-11",
+   "type": "input",
+   "section": "最大公約数・最小公倍数",
+   "role": "確認",
+   "prompt": "（8、12）の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24"
+   },
+   "explanation": "8の倍数8,16,24…、12の倍数12,24…。最小の共通の倍数は24。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-12",
+   "type": "input",
+   "section": "最大公約数・最小公倍数",
+   "role": "確認",
+   "prompt": "（6、10、15）の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30"
+   },
+   "explanation": "6＝2×3、10＝2×5、15＝3×5。2×3×5＝30。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-13",
+   "type": "input",
+   "section": "比と比の値",
+   "role": "例題",
+   "prompt": "次の比を、もっとも簡単な整数の比にしよう（読点で区切る）。\n42 : 56",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "3",
+     "4"
+    ],
+    "ordered": true
+   },
+   "explanation": "14でわって3:4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-14",
+   "type": "input",
+   "section": "比と比の値",
+   "role": "確認",
+   "prompt": "次の比を、もっとも簡単な整数の比にしよう（読点で区切る）。\n2/3 : 4/5",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "5",
+     "6"
+    ],
+    "ordered": true
+   },
+   "explanation": "15をかけて10:12、2でわって5:6。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-15",
+   "type": "input",
+   "section": "比と比の値",
+   "role": "確認",
+   "prompt": "次の式の□にあてはまる数を求めよう。\n5 : 8 ＝ □ : 56",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "8×7＝56なので、5×7＝35。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-16",
+   "type": "input",
+   "section": "比と比の値",
+   "role": "確認",
+   "prompt": "次の式の□にあてはまる数を求めよう。\n1.5 : 2 ＝ □ : 14",
+   "answer": {
+    "kind": "number",
+    "value": "10.5"
+   },
+   "explanation": "2×7＝14なので、1.5×7＝10.5。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-17",
+   "type": "input",
+   "section": "1次方程式（中学1年）",
+   "role": "例題",
+   "prompt": "次の方程式を解こう。「x＝」をつけて答えよう。\n6x + 5 = 2x − 11",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "x=-4",
+     "x＝-4",
+     "x=−4",
+     "x＝−4",
+     "-4",
+     "−4"
+    ]
+   },
+   "explanation": "6x−2x＝−11−5、4x＝−16、x＝−4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-18",
+   "type": "input",
+   "section": "1次方程式（中学1年）",
+   "role": "確認",
+   "prompt": "次の方程式を解こう。「x＝」をつけて答えよう。\n(x + 2)/3 = (2x − 1)/5",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "x=13",
+     "x＝13",
+     "13"
+    ]
+   },
+   "explanation": "両辺に15をかけて5(x＋2)＝3(2x−1)、5x＋10＝6x−3、x＝13。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-19",
+   "type": "input",
+   "section": "比例・反比例・式の値",
+   "role": "例題",
+   "prompt": "yはxに比例し、x＝4のときy＝−12である。x＝−3のときのyの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "y＝axで a＝−12÷4＝−3。y＝−3×(−3)＝9。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-20",
+   "type": "input",
+   "section": "比例・反比例・式の値",
+   "role": "確認",
+   "prompt": "yはxに反比例し、x＝−5のときy＝4である。yをxの式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=-20/x"
+   },
+   "explanation": "a＝xy＝−5×4＝−20。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-21",
+   "type": "input",
+   "section": "比例・反比例・式の値",
+   "role": "確認",
+   "prompt": "x＝−3のとき、−4x＋5 の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "17"
+   },
+   "explanation": "−4×(−3)＋5＝12＋5＝17。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-22",
+   "type": "input",
+   "section": "データ・図形",
+   "role": "例題",
+   "prompt": "次の5つの記録の平均を求めよう。\n52g、47g、55g、50g、46g",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "合計250g÷5＝50g。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-23",
+   "type": "input",
+   "section": "データ・図形",
+   "role": "確認",
+   "prompt": "次のデータの中央値を求めよう。\n4, 9, 2, 7, 6, 3, 8",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "小さい順に2,3,4,6,7,8,9。7個なので4番目の6。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-24",
+   "type": "input",
+   "section": "データ・図形",
+   "role": "確認",
+   "prompt": "五角柱の辺の数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "上の面5本、下の面5本、側面の辺5本で15本。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-25",
+   "type": "input",
+   "section": "データ・図形",
+   "role": "確認",
+   "prompt": "八角柱の面の数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "面",
+     "つ"
+    ]
+   },
+   "explanation": "底面2つと側面8つで10。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-26",
+   "type": "input",
+   "section": "データ・図形",
+   "role": "確認",
+   "prompt": "三角すいの頂点の数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "こ",
+     "個"
+    ]
+   },
+   "explanation": "底面の三角形の頂点3つと、上の頂点1つで4。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-27",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "例題",
+   "prompt": "えんぴつ36本と消しゴム24個を、何人かの子どもに、それぞれ同じ数ずつ余りなく配る。できるだけ多くの子どもに配るとき、何人に配れるか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "36と24の最大公約数12。12人に、えんぴつ3本・消しゴム2個ずつ。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-28",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "ノートのセットが、4冊520円と6冊750円の2種類ある。1冊あたりの値段が安いほうのセットは、1冊何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "125",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "520÷4＝130円、750÷6＝125円。6冊セットのほうが安く125円。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-29",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "ボールは、落とした高さの3/5の高さまではね上がる。2.5mの高さから落とすと、何mはね上がるか。",
+   "answer": {
+    "kind": "number",
+    "value": "1.5",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "2.5×3/5＝1.5m。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-30",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "ボールは、落とした高さの3/5の高さまではね上がる。はね上がった高さが1.2mだったとき、何mの高さから落としたか。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1.2÷3/5＝1.2×5/3＝2m。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-31",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "家から公園まで、分速60mで歩くと15分かかる。同じ道を分速90mで走ると、何分かかるか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "道のりは60×15＝900m。900÷90＝10分。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-32",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "次の図形のうち、線対称だが点対称ではないものを選ぼう。\nア 二等辺三角形　イ 長方形　ウ 平行四辺形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "二等辺三角形は線対称だけ。長方形は両方、平行四辺形は点対称だけ。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-33",
+   "type": "input",
+   "section": "文章題（2次：数理技能）",
+   "role": "確認",
+   "prompt": "ある中学校の1年生60人のうち、通学に自転車を使う人は15人だった。自転車を使う人の割合（相対度数）を小数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.25"
+   },
+   "explanation": "15÷60＝0.25。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-34",
+   "type": "input",
+   "section": "図形の移動（中学1年）",
+   "role": "例題",
+   "prompt": "点Oを中心に、三角形ABCを時計の針と反対の向きに90°回転移動した。辺ABと、移った先の辺A′B′がつくる角の大きさを答えよう（単位はつけずに数だけ）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "90",
+     "90°",
+     "90度"
+    ]
+   },
+   "explanation": "回転移動では、どの辺も回転の角度と同じだけ向きが変わる。90°回転したので、ABとA′B′は90°の角をつくる（垂直になる）。まちがえやすい点：回転の中心から遠い辺ほど大きく回ると考えがちだが、向きの変わり方はどの辺も同じ。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-35",
+   "type": "input",
+   "section": "図形の移動（中学1年）",
+   "role": "確認",
+   "prompt": "三角形を、ある直線を折り目として裏返すように動かす移動を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "対称移動",
+     "たいしょういどう"
+    ]
+   },
+   "explanation": "直線（対称の軸）を折り目にして折り返す移動は対称移動。平行移動・回転移動とのちがいは、図形が裏返しになること。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-36",
+   "type": "input",
+   "section": "図形の移動（中学1年）",
+   "role": "確認",
+   "prompt": "点Aを、点Oを中心に180°回転移動した点をA′とする。点Oは線分AA′のどこにあるか。次から選ぼう。\nア 中点　イ 端の点　ウ 線分の外",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "180°回転（点対称移動）では、OA＝OA′で、A・O・A′は一直線上に並ぶ。だからOはAA′の中点。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-37",
+   "type": "input",
+   "section": "おうぎ形（中学1年）",
+   "role": "例題",
+   "prompt": "半径6cm、中心角120°のおうぎ形の弧の長さを、πを使って答えよう（単位はつけずに）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "4π",
+     "4 π",
+     "4×π",
+     "4× π"
+    ]
+   },
+   "explanation": "①円周は2×π×6＝12π。②中心角120°は360°の120/360＝1/3。③弧の長さは12π×1/3＝4π（cm）。まちがえやすい点：円周の公式は「直径×π」なので、半径のときは2倍する。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-38",
+   "type": "input",
+   "section": "おうぎ形（中学1年）",
+   "role": "確認",
+   "prompt": "半径6cm、中心角120°のおうぎ形の面積を、πを使って答えよう（単位はつけずに）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "12π",
+     "12 π",
+     "12×π",
+     "12× π"
+    ]
+   },
+   "explanation": "①円の面積はπ×6×6＝36π。②36π×1/3＝12π（cm²）。弧の長さと面積で、使う公式がちがう。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-39",
+   "type": "input",
+   "section": "おうぎ形（中学1年）",
+   "role": "確認",
+   "prompt": "半径9cm、弧の長さが6πcmのおうぎ形の中心角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "°",
+     "度"
+    ]
+   },
+   "explanation": "①円周は2×π×9＝18π。②弧は円周の6π/18π＝1/3。③中心角は360°×1/3＝120°。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-40",
+   "type": "input",
+   "section": "直角座標（中学1年）",
+   "role": "例題",
+   "prompt": "点A(3, −2)と、x軸について対称な点の座標を答えよう。「(〇, 〇)」の形で書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,2)",
+     "(3, 2)",
+     "（3,2）",
+     "（3, 2）"
+    ]
+   },
+   "explanation": "x軸について対称な点は、x座標はそのままで、y座標の符号が反対になる。(3, 2)。まちがえやすい点：x軸について対称なのに、x座標の符号を変えてしまう。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-41",
+   "type": "input",
+   "section": "直角座標（中学1年）",
+   "role": "確認",
+   "prompt": "点B(−4, 5)と、原点について対称な点の座標を答えよう。「(〇, 〇)」の形で書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,-5)",
+     "(4, -5)",
+     "(4,−5)",
+     "(4, −5)",
+     "（4,−5）",
+     "（4, −5）"
+    ]
+   },
+   "explanation": "原点について対称な点は、x座標もy座標も符号が反対になる。(4, −5)。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-42",
+   "type": "input",
+   "section": "直角座標（中学1年）",
+   "role": "確認",
+   "prompt": "座標平面上の3点 A(1, 1)、B(5, 1)、C(5, 4) を結んでできる三角形ABCの面積を求めよう（1目もりを1cmとする）。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①ABはx軸に平行で長さ5−1＝4。②BCはy軸に平行で長さ4−1＝3。③直角三角形なので4×3÷2＝6（cm²）。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_1ji.pdf",
+    "sha256": "6f7ddee5e48e3dc40b5229682ef4aec9d4ef6d598a2c5d1fdf7e6fe3a82fd807",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-43",
+   "type": "input",
+   "section": "空間図形（中学1年）",
+   "role": "例題",
+   "prompt": "三角柱の辺の数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "底面の三角形の辺が上と下で3×2＝6本、側面のたての辺が3本で、合わせて9本。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-44",
+   "type": "input",
+   "section": "空間図形（中学1年）",
+   "role": "確認",
+   "prompt": "底面が1辺4cmの正方形で、高さ9cmの正四角錐の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "48",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①底面積は4×4＝16cm²。②角錐の体積は「底面積×高さ×1/3」なので16×9×1/3＝48（cm³）。まちがえやすい点：角柱と同じように1/3をかけ忘れる。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-45",
+   "type": "input",
+   "section": "空間図形（中学1年）",
+   "role": "確認",
+   "prompt": "立方体の展開図で、向かい合う面どうしは、展開図の上でとなり合うことがあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ない",
+     "ありません",
+     "となり合わない"
+    ]
+   },
+   "explanation": "向かい合う面は組み立てると重ならず平行になる面なので、展開図の上では1つとばしの位置にあり、となり合わない。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-46",
+   "type": "input",
+   "section": "度数分布と割合（中学1年・小学5年）",
+   "role": "例題",
+   "prompt": "ある学級30人の通学時間を調べた。10分以上15分未満の階級の度数は9人だった。この階級の相対度数を小数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.3"
+   },
+   "explanation": "相対度数＝その階級の度数÷度数の合計＝9÷30＝0.3。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-47",
+   "type": "input",
+   "section": "度数分布と割合（中学1年・小学5年）",
+   "role": "確認",
+   "prompt": "度数分布表で、10分以上15分未満の階級の階級値は何分か。",
+   "answer": {
+    "kind": "number",
+    "value": "12.5",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "階級値は階級のまん中の値。(10＋15)÷2＝12.5（分）。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  },
+  {
+   "id": "kentei-suken-5-48",
+   "type": "input",
+   "section": "度数分布と割合（中学1年・小学5年）",
+   "role": "確認",
+   "prompt": "ある店では、定価2400円の品物を15%引きで売っている。売り値は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "2040",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①15%引きは、定価の100−15＝85%で売ること。②2400×0.85＝2040（円）。まちがえやすい点：2400×0.15＝360を答えにしてしまう（それは値引きの額）。",
+   "source": {
+    "id": null,
+    "file": "数検/5q_que_2ji.pdf",
+    "sha256": "ee5f4c699b4a1c51367c3b8d51a1ad4b8049ebcfa29566ba60cb1e63e2aabaac",
+    "page": 1,
+    "number": "形式とレベルの参考（問題はClaudeの独自作成）"
+   },
+   "origin": "original",
+   "reviewed": true
+  }
+ ],
+ "reviewNote": "2026-10-13 Claude作成、2026-10-14 公式の5級の内容（中学1年程度）と照合して不足分野を追加（検定原稿・下書き）。【範囲の根拠】日本数学検定協会 数学検定5級 https://www.su-gaku.net/suken/examination/summary/5q/ （2026-10-14確認：目安は中学1年程度、小学5・6年の内容もふくむ。1次30問・2次20問）。作図は採点器で扱えないので入れていない。数検/5q_que_1ji.pdf・5q_que_2ji.pdf の出題分野と難しさを参考に、問題文・数値はすべて独自。数の答えは分数で計算して一致を確認、式は代入で確認。図・展開図を使う問題は、図を使わずに数で答える形にした（展開図・作図の練習は手書きで別に必要）。"
+}

@@ -1,0 +1,40 @@
+{
+ "unit": "tokkun-science-1-jishin.json",
+ "cases": [
+  {
+   "n": 28,
+   "head": "実習1の兵庫県南部地震は5時46分52秒",
+   "input": "12",
+   "expect": true,
+   "why": "数値"
+  },
+  {
+   "n": 28,
+   "head": "実習1の兵庫県南部地震は5時46分52秒",
+   "input": "12秒",
+   "expect": true,
+   "why": "単位つき"
+  },
+  {
+   "n": 28,
+   "head": "実習1の兵庫県南部地震は5時46分52秒",
+   "input": "72",
+   "expect": false,
+   "why": "繰り上げ忘れ"
+  },
+  {
+   "n": 30,
+   "head": "実習1の色分けで、ゆれはじめるまでに45",
+   "input": "青",
+   "expect": true,
+   "why": "模範"
+  },
+  {
+   "n": 30,
+   "head": "実習1の色分けで、ゆれはじめるまでに45",
+   "input": "黄",
+   "expect": false,
+   "why": "誤り"
+  }
+ ]
+}

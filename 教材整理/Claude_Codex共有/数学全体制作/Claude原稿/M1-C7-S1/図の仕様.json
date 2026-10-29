@@ -1,0 +1,206 @@
+{
+ "unitId": "M1-C7-S1",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C7-S1-FIG01",
+   "unitId": "M1-C7-S1",
+   "purpose": "紙飛行機 A の記録を、度数分布表とヒストグラムで見せる",
+   "sourceReferences": [
+    "教科書p224〜225"
+   ],
+   "confirmedConcept": "階級 4〜6：2、6〜8：6、8〜10：8、10〜12：3、12〜14：1（合計20）",
+   "labels": [
+    "距離（m）",
+    "度数（回）",
+    "4",
+    "6",
+    "8",
+    "10",
+    "12",
+    "14"
+   ],
+   "coordinates": [
+    "左に度数分布表、右にヒストグラム",
+    "横軸 4〜14m（2m ごと）、縦軸 0〜10回"
+   ],
+   "numericConditions": [
+    "柱の高さ 2、6、8、3、1",
+    "柱はすきまなく並べる"
+   ],
+   "units": [
+    "m",
+    "回"
+   ],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "柱の高さが表と一致",
+    "すきまなし"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "紙飛行機 A の度数分布表と、それを柱にしたヒストグラム。8m 以上 10m 未満の柱がいちばん高い。",
+   "verification": {
+    "calculation": "検算.py 度数分布表",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C7-S1-FIG02",
+   "unitId": "M1-C7-S1",
+   "purpose": "A と B の度数分布多角形を、縦軸を相対度数にして重ねる",
+   "sourceReferences": [
+    "教科書p232〜233"
+   ],
+   "confirmedConcept": "A：0.10、0.30、0.40、0.15、0.05。B：0.04、0.16、0.32、0.36、0.12。両はしは 0",
+   "labels": [
+    "A",
+    "B",
+    "相対度数",
+    "距離（m）"
+   ],
+   "coordinates": [
+    "横軸 2〜16m（階級値 3、5、7、9、11、13、15）",
+    "縦軸 0〜0.50"
+   ],
+   "numericConditions": [
+    "点は階級値の位置",
+    "両はしの 3 と 15 は 0"
+   ],
+   "units": [
+    "m"
+   ],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "A は実線、B は破線"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "紙飛行機 A と B の度数分布多角形を、相対度数で重ねた図。B の山の方が右（遠く）にある。",
+   "verification": {
+    "calculation": "検算.py 相対度数",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C7-S1-FIG03",
+   "unitId": "M1-C7-S1",
+   "purpose": "平均値が同じでも、散らばりがちがう2つの分布を見せる",
+   "sourceReferences": [
+    "教科書p236"
+   ],
+   "confirmedConcept": "どちらも平均 50。上は 40〜60 に集まった山、下は 10〜90 に広がった形",
+   "labels": [
+    "平均値",
+    "範囲"
+   ],
+   "coordinates": [
+    "上下に2つのヒストグラム",
+    "同じ横軸（0〜100）",
+    "平均値の位置に縦の点線"
+   ],
+   "numericConditions": [
+    "平均値の線の位置は上下で同じ"
+   ],
+   "units": [],
+   "arrows": [
+    "範囲を示す両向き矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "平均値の線が同じ位置"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "平均値が同じで、散らばり方がちがう2つのヒストグラム。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C7-S1-FIG04",
+   "unitId": "M1-C7-S1",
+   "purpose": "表計算ソフトの関数で代表値を求めるようすを見せる",
+   "sourceReferences": [
+    "教科書p238"
+   ],
+   "confirmedConcept": "A の20個のデータ。MAX 12.6、MIN 4.2、AVERAGE 8.38、MEDIAN 8.35",
+   "labels": [
+    "MAX",
+    "MIN",
+    "AVERAGE",
+    "MEDIAN",
+    "MODE"
+   ],
+   "coordinates": [
+    "左にデータの列、右に関数と結果",
+    "特定のソフトのロゴ・画面をまねしない"
+   ],
+   "numericConditions": [
+    "MODE は「求まらない」表示"
+   ],
+   "units": [
+    "m"
+   ],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "関数名と結果の対応"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "表計算ソフトのイメージ。データの列の横に、最大値・最小値・平均値・中央値を求める関数と結果が並ぶ。",
+   "verification": {
+    "calculation": "検算.py 表計算",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C7-S1-FIG05",
+   "unitId": "M1-C7-S1",
+   "purpose": "範囲＝最大値−最小値を数直線で見せる",
+   "confirmedConcept": "A の20個の記録。最小値 4.2、最大値 12.6、範囲 8.4m",
+   "labels": [],
+   "coordinates": [],
+   "numericConditions": [
+    "—"
+   ],
+   "units": [],
+   "arrows": [],
+   "print": "白黒。色以外（線種・ラベル）でも区別",
+   "altText": "範囲＝最大値−最小値を数直線で見せる",
+   "file": "メディア/M1-C7-S1-FIG05.svg"
+  }
+ ]
+}

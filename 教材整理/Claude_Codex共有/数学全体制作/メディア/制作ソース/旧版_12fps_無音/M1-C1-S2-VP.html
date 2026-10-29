@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+function chip(x,y,s,a=1){g.save();g.globalAlpha=a;dot(x,y,'white',26);g.strokeStyle=s==='+'?blue:ink;g.lineWidth=3;g.setLineDash(s==='+'?[]:[7,5]);g.beginPath();g.arc(x,y,26,0,7);g.stroke();g.setLineDash([]);text(s,x,y+12,35,ink,'center');g.restore()}
+window.renderAt=function(raw){const t=Math.max(1,Math.min(59,raw));g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('1分でわかる 正負の数の計算',65,88,42,blue);box(45,147,1190,425,'white');const x=n=>640+n*49,y=485;line(120,y,1160,y);for(let n=-10;n<=10;n++){line(x(n),y-8,x(n),y+8,ink,n===0?5:2);if(n%5===0)text(String(n).replace('-','−'),x(n),538,32,ink,'center')}
+if(raw<1){['たし算','ひき算','かけ算','わり算','順番'].forEach((v,j)=>{box(65+j*230,220,210,160,'#e8f0fa');text(v,170+j*230,285,32,blue,'center');text(['＋と−','符号を変える','負の個数','逆数','①→②'][j],170+j*230,347,32,ink,'center')});text('符号と計算の順番を、先に確かめる',640,645,36,ink,'center');return {intro:true};}
+if(t<13){const a=1-Math.min(1,Math.max(0,(t-5)/6));for(let j=0;j<2;j++)chip(500+j*180,265,'+',a);for(let j=0;j<5;j++)chip(350+j*145,362,'−',j<2?a:1);text('(+2)+(−5)',640,207,38,blue,'center');if(t>11)dot(x(-3),y,blue,12);text('たし算：＋と−の1組は0',640,645,36,ink,'center')}
+else if(t<24){const u=Math.min(1,(t-13)/10);text(t<16?'(−9)−(−14)':'(−9)+(+14)',640,295,50,blue,'center');arrow(x(-9),405,x(-9+14*u),405,blue);dot(x(-9+14*u),y,blue,12);text('ひき算：ひく数の符号を変えて、たす',640,645,34,ink,'center')}
+else if(t<36){text('(−3)×(−1)',640,295,54,blue,'center');text('負の数が2個 → 符号は+',640,398,37,ink,'center');if(t>=31)dot(x(3),y,blue,12);text('かけ算：負の数の個数で、符号を決める',640,645,34,ink,'center')}
+else if(t<47){text(t<40?'18÷(−4)×(−2/3)':'18×(−1/4)×(−2/3)',640,295,45,blue,'center');text('÷ → 逆数をかける',640,398,40,ink,'center');text('わり算：逆数にして、かけ算へ直す',640,645,34,ink,'center')}
+else{const first=t<53;text(first?'7−(−4)×3':'7−(−12)',640,315,52,blue,'center');text(first?'① かけ算を先に':'② そのあとひき算',640,413,40,ink,'center');text('計算順序：かっこ・累乗 → ×÷ → ＋−',640,645,34,ink,'center')}return {time:t};};renderAt(0);</script>

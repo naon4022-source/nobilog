@@ -1,0 +1,152 @@
+{
+ "unitId": "M1-C2-S2",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C2-S2-FIG01",
+   "unitId": "M1-C2-S2",
+   "purpose": "同じ文字の項はまとめられ、文字の項と数の項はまとめられないことを、袋とばらのあめで示す",
+   "sourceReferences": [
+    "教科書p71",
+    "ワークp38 ポイント2-11"
+   ],
+   "confirmedConcept": "4x+2 と 3x+5 を合わせると、袋（x個入り）が7つとばらが7個 → 7x+7",
+   "labels": [
+    "x（袋それぞれ）",
+    "4x+2",
+    "3x+5",
+    "7x+7"
+   ],
+   "coordinates": [
+    "上段：袋4つ＋ばら2個（4x+2）。中段：袋3つ＋ばら5個（3x+5）。下段：袋7つ＋ばら7個（7x+7）",
+    "袋とばらは左右に分けて置き、同じ種類どうしを縦にそろえる"
+   ],
+   "numericConditions": [
+    "袋 4+3＝7",
+    "ばら 2+5＝7"
+   ],
+   "units": [
+    "個"
+   ],
+   "arrows": [
+    "上2段から下段へ、袋は袋へ・ばらはばらへ矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "袋とばらの数",
+    "袋の中の数（x）を描かない",
+    "袋とばらを別々に集めること"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "x個入りの袋4つとばら2個、袋3つとばら5個。合わせると袋7つとばら7個で、7x+7。",
+   "verification": {
+    "calculation": "検算.py（4x+2+3x+5＝7x+7）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C2-S2-FIG02",
+   "unitId": "M1-C2-S2",
+   "purpose": "a−(b+c)＝a−b−c を、数直線上の移動で示す",
+   "sourceReferences": [
+    "教科書p72〜73",
+    "ワークp40 ポイント2-13"
+   ],
+   "confirmedConcept": "a から b と c を順にひいた点と、b+c をまとめてひいた点は同じ",
+   "labels": [
+    "a",
+    "a−b",
+    "a−b−c",
+    "b",
+    "c",
+    "b+c"
+   ],
+   "coordinates": [
+    "2本の数直線を上下に置き、目盛り位置をそろえる。具体的な数は書かない",
+    "上：a から左へ b、続けて左へ c",
+    "下：a から左へ（b+c）"
+   ],
+   "numericConditions": [
+    "b と c は正の長さ（図ではbを3目盛り、cを2目盛り相当）"
+   ],
+   "units": [],
+   "arrows": [
+    "上は2本の左向き矢印、下は1本の左向き矢印。到着点を縦の点線でつなぐ"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "上下の到着点が同じ位置",
+    "矢印の長さ b、c、b+c の関係"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "上の数直線は a から b ひき、さらに c ひく。下は a から b+c をまとめてひく。どちらも同じ点に着く。",
+   "verification": {
+    "calculation": "a−(b+c)＝a−b−c（検算.pyの例）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C2-S2-FIG03",
+   "unitId": "M1-C2-S2",
+   "purpose": "分配法則 5(2x+3)＝10x+15 を、長方形の面積で示す",
+   "sourceReferences": [
+    "教科書p76 例3",
+    "ワークp42 ポイント2-17"
+   ],
+   "confirmedConcept": "たて5、横 2x+3 の長方形を、横 2x と 3 に分けると、面積 5×2x＋5×3",
+   "labels": [
+    "5（たて）",
+    "2x（横の左部分）",
+    "3（横の右部分）",
+    "5×2x＝10x",
+    "5×3＝15"
+   ],
+   "coordinates": [
+    "長方形を縦の線で左右に分ける。左の横が 2x、右の横が 3",
+    "x の長さは決めないので、左右の幅の比で値を読ませない（注記）"
+   ],
+   "numericConditions": [
+    "たて5",
+    "横 2x と 3"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "たて5",
+    "横の分け方 2x と 3",
+    "2つの面積の式"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "たて5、横2x+3の長方形。左の部分の面積は10x、右の部分は15。全体は10x+15。",
+   "verification": {
+    "calculation": "5(2x+3)＝10x+15",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

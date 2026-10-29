@@ -1,0 +1,358 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-09-27",
+  "title": "中学校5教科・3学年カリキュラム地図",
+  "purpose": "文部科学省の学習指導要領を範囲の基準にし、ユーザー提供のドリル・ワークで確認できた内容から独自教科書レッスンを作るための台帳。",
+  "rules": [
+    "ここにあるのはカリキュラムの範囲地図で、教科書本文や学校の単元順を確定したものではない。",
+    "ワーク原本が未提供・未照合の単元は、レッスン本文・例題・問題を空欄のままにする。推測で穴埋めしない。",
+    "教科書の学校別の並び・ページ・問題番号は、受領した原本を目視照合してから記録する。",
+    "各セルの教材状態はすべて準備中。既存の試作データは別記し、完成レッスンとして扱わない。"
+  ],
+  "officialReferences": [
+    {
+      "id": "mext-course-of-study-2017",
+      "title": "中学校学習指導要領（平成29年告示・本文）",
+      "url": "https://www.mext.go.jp/content/20230120-mxt_kyoiku02-100002604_02.pdf",
+      "usedFor": "5教科の目標と学年・分野・領域の公式範囲。"
+    },
+    {
+      "id": "mext-guides-2017",
+      "title": "中学校学習指導要領解説（教科別）",
+      "url": "https://www.mext.go.jp/a_menu/shotou/new-cs/1387016.htm",
+      "usedFor": "各教科の目標・内容の趣旨を確認。社会編は2024年掲載版、理科編は2026年掲載版も確認対象。"
+    },
+    {
+      "id": "mext-guideline-basics",
+      "title": "文部科学省「学習指導要領」とは？",
+      "url": "https://www.mext.go.jp/a_menu/shotou/new-cs/idea/index.htm",
+      "usedFor": "指導要領は全国共通の教育課程基準であり、各校の教科書・年間指導計画そのものではないことの確認。"
+    }
+  ],
+  "providedMaterialInventory": {
+    "drill": {
+      "国語": {
+        "imageCount": 52,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "数学": {
+        "imageCount": 52,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "英語": {
+        "imageCount": 66,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "理科": {
+        "imageCount": 52,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "社会": {
+        "imageCount": 0,
+        "gradeAndPageVerifiedForAll": false
+      }
+    },
+    "workbook": {
+      "国語": {
+        "imageCount": 70,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "数学": {
+        "imageCount": 72,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "英語": {
+        "imageCount": 0,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "理科": {
+        "imageCount": 0,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "社会": {
+        "imageCount": 77,
+        "gradeAndPageVerifiedForAll": false,
+        "divisionImageCounts": {
+          "地理": 43,
+          "歴史": 34
+        }
+      },
+      "保健体育": {
+        "imageCount": 0,
+        "gradeAndPageVerifiedForAll": false
+      },
+      "gradeScope": [
+        1
+      ],
+      "gradeScopeNote": "ユーザー指定: ワークはすべて中学1年生。中2・中3向けのワーク教材は作らない。"
+    },
+    "note": "台帳の分類件数。ワークはユーザー指定で中1のみ。数学・地理・歴史の単元・ページ・問題の対応は確認途中で、空欄を推測で埋めない。"
+  },
+  "existingDraftAssets": [
+    {
+      "subject": "数学",
+      "grade": 1,
+      "title": "正負の数",
+      "state": "question-data-draft",
+      "note": "100問データとテスト15問がある。独自教科書レッスン完成を意味しない。"
+    },
+    {
+      "subject": "理科",
+      "grade": 1,
+      "title": "光の性質とレンズ",
+      "state": "draft",
+      "note": "9問の試作。全単元確認・公開基準を満たしていない。"
+    },
+    {
+      "subject": "国語",
+      "grade": null,
+      "title": "材料を整理して案内文を書く",
+      "state": "draft",
+      "note": "ワーク項目に対応する説明原稿の初稿。学年・ワークページは未確認。"
+    },
+    {
+      "subject": "英語",
+      "grade": null,
+      "title": "現在進行形",
+      "state": "source-partially-checked",
+      "note": "p46〜47の一部を確認。音声がないと成立しない設問は未確定。"
+    }
+  ],
+  "curriculumMap": [
+    {
+      "id": "japanese-1",
+      "subject": "国語",
+      "grade": 1,
+      "officialDomains": [
+        "話すこと・聞くこと",
+        "書くこと",
+        "読むこと",
+        "伝統的な言語文化",
+        "言葉の特徴・きまり",
+        "漢字",
+        "書写"
+      ],
+      "gradeFocus": "身近な話題から材料を集め、段落や根拠を意識して伝える。文章の中心・描写・語句を捉え、古典の音読や言葉の基本を学ぶ。",
+      "localUnitOrder": "未確認。作品名・単元名・ページはワークと学校資料を受領してから記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "japanese-2",
+      "subject": "国語",
+      "grade": 2,
+      "officialDomains": [
+        "話すこと・聞くこと",
+        "書くこと",
+        "読むこと",
+        "伝統的な言語文化",
+        "言葉の特徴・きまり",
+        "漢字",
+        "書写"
+      ],
+      "gradeFocus": "社会生活に関わる話題で立場の違いを踏まえて話し合う。構成・根拠を工夫して書き、複数の情報や表現を比べて読む。古典や語彙の理解を広げる。",
+      "localUnitOrder": "未確認。作品名・単元名・ページはワークと学校資料を受領してから記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "japanese-3",
+      "subject": "国語",
+      "grade": 3,
+      "officialDomains": [
+        "話すこと・聞くこと",
+        "書くこと",
+        "読むこと",
+        "伝統的な言語文化",
+        "言葉の特徴・きまり",
+        "漢字",
+        "書写"
+      ],
+      "gradeFocus": "目的や立場に応じて論点を整理し、根拠を吟味して論述・討論する。複数の文章や資料を統合して読み、古典の歴史的背景や言語文化への理解を深める。",
+      "localUnitOrder": "未確認。作品名・単元名・ページはワークと学校資料を受領してから記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "math-1",
+      "subject": "数学",
+      "grade": 1,
+      "officialDomains": [
+        "数と式：正の数・負の数、文字式、一元一次方程式",
+        "図形：平面図形、作図、空間図形",
+        "関数：比例・反比例",
+        "データの活用：データの分布、代表値"
+      ],
+      "gradeFocus": "数の範囲を広げ、式・図・表・グラフで表し、具体的な場面の関係を説明する。",
+      "localUnitOrder": "未確認。既存の正負の数問題データはあるが、ワークの単元順・ページを受領後に照合する。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "math-2",
+      "subject": "数学",
+      "grade": 2,
+      "officialDomains": [
+        "数と式：多項式の計算、式による説明、連立二元一次方程式",
+        "図形：平行線と角、三角形・四角形の性質、合同と証明",
+        "関数：一次関数",
+        "データの活用：確率"
+      ],
+      "gradeFocus": "式の変形と連立方程式を使い、図形の性質を根拠立てて証明する。一次関数や確率を具体的な事象に結び付ける。",
+      "localUnitOrder": "未確認。ワーク・学校の進度表を受領後に記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "math-3",
+      "subject": "数学",
+      "grade": 3,
+      "officialDomains": [
+        "数と式：平方根、多項式の展開・因数分解、二次方程式",
+        "図形：相似、円周角、三平方の定理",
+        "関数：関数 y=ax²",
+        "データの活用：標本調査"
+      ],
+      "gradeFocus": "数や関数の範囲を広げ、図形・式・データを統合して論理的に解決し、根拠を説明する。",
+      "localUnitOrder": "未確認。ワーク・学校の進度表を受領後に記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "english-1",
+      "subject": "英語",
+      "grade": 1,
+      "officialDomains": [
+        "聞くこと",
+        "読むこと",
+        "話すこと［やり取り］",
+        "話すこと［発表］",
+        "書くこと",
+        "音声・語彙・表現・文法・言語の働き"
+      ],
+      "gradeFocus": "身近な話題を中心に、基本的な語句・文を聞いて理解し、短いやり取りや発表・文で自分の情報を伝える段階を設計する。これは教材受領前の大枠で、文法単元の学年配当を確定しない。",
+      "localUnitOrder": "未確認。語句・文法の範囲とページはドリル・ワークを受領後に確定。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "english-2",
+      "subject": "英語",
+      "grade": 2,
+      "officialDomains": [
+        "聞くこと",
+        "読むこと",
+        "話すこと［やり取り］",
+        "話すこと［発表］",
+        "書くこと",
+        "音声・語彙・表現・文法・言語の働き"
+      ],
+      "gradeFocus": "日常的な話題を広げ、複数の情報をつないで概要・要点を捉え、理由を含むやり取り・発表・文章へ進む段階を設計する。具体的な文法の学年配当は学校教材確認後に決める。",
+      "localUnitOrder": "未確認。未来表現、不定詞、動名詞、比較、接続詞などの扱う学年・順序はワークと教科書で照合する。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "english-3",
+      "subject": "英語",
+      "grade": 3,
+      "officialDomains": [
+        "聞くこと",
+        "読むこと",
+        "話すこと［やり取り］",
+        "話すこと［発表］",
+        "書くこと",
+        "音声・語彙・表現・文法・言語の働き"
+      ],
+      "gradeFocus": "日常的・社会的な話題について、短い説明の要点や文章の概要を捉え、根拠を持って考えを伝え合う段階を設計する。現在完了形など個々の文法の時期は学校教材で確定する。",
+      "localUnitOrder": "未確認。文法項目の学年配当・順序はワークと教科書を受領後に記入。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "science-1",
+      "subject": "理科",
+      "grade": 1,
+      "officialDomains": [
+        "身近な物理現象：光・音・力・圧力",
+        "身の回りの物質：物質の性質、気体、水溶液、状態変化",
+        "いろいろな生物とその共通点",
+        "大地の成り立ちと変化"
+      ],
+      "gradeFocus": "観察・実験から規則性を見つけ、物質・生物・大地の特徴をモデルや資料と結び付けて説明する。",
+      "localUnitOrder": "未確認。光とレンズの試作問題はあるが、学年・ページを含む全体のワーク対応は未確定。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "science-2",
+      "subject": "理科",
+      "grade": 2,
+      "officialDomains": [
+        "電流とその利用",
+        "化学変化と原子・分子",
+        "生物の体のつくりとはたらき",
+        "気象とその変化"
+      ],
+      "gradeFocus": "回路・化学反応・体の働き・気象を観察や実験で調べ、数量関係や因果関係を説明する。",
+      "localUnitOrder": "未確認。ワーク・ドリルを受領してから単元名・ページを対応付ける。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "science-3",
+      "subject": "理科",
+      "grade": 3,
+      "officialDomains": [
+        "運動とエネルギー",
+        "化学変化とイオン",
+        "生命の連続性",
+        "地球と宇宙",
+        "自然と人間"
+      ],
+      "gradeFocus": "規則性やモデルを用いて自然現象を説明し、実験・資料から根拠を整理して持続可能性や自然との関係を考える。",
+      "localUnitOrder": "未確認。ワーク・ドリルを受領してから単元名・ページを対応付ける。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "social-1",
+      "subject": "社会",
+      "grade": 1,
+      "officialDomains": [
+        "地理的分野：世界と日本の地域構成・地域的特色",
+        "歴史的分野：歴史資料・地域の歴史・各時代の特色"
+      ],
+      "gradeFocus": "学年別の分野配当は学校の年間指導計画で確認する。地図・統計・年表を使い、位置や分布、時期・変化に着目する。",
+      "localUnitOrder": "空欄。社会のドリル・ワーク原本が未提供のため、学年・単元・ページを割り当てない。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "social-2",
+      "subject": "社会",
+      "grade": 2,
+      "officialDomains": [
+        "地理的分野：世界の諸地域・日本の諸地域・地域調査",
+        "歴史的分野：古代から近世・近代までの歴史の大きな流れ"
+      ],
+      "gradeFocus": "どの地域・時代をどの学年で扱うかは学校の年間指導計画で確認する。資料を比べ、自然・産業・文化や出来事の背景と変化を説明する。",
+      "localUnitOrder": "空欄。社会のドリル・ワーク原本が未提供のため、学年・単元・ページを割り当てない。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    },
+    {
+      "id": "social-3",
+      "subject": "社会",
+      "grade": 3,
+      "officialDomains": [
+        "地理的分野・歴史的分野のまとめと探究",
+        "公民的分野：現代社会、経済、政治、国際社会と諸課題"
+      ],
+      "gradeFocus": "公民的分野では、政治と経済を別の概念・領域として理解した上で、相互の関係や社会課題を資料に基づいて考察する。各分野の具体的な配置は学校計画で確認する。",
+      "localUnitOrder": "空欄。社会のドリル・ワーク原本が未提供のため、学年・単元・ページを割り当てない。",
+      "lessonContent": "",
+      "lessonStatus": "blank_pending_source_review"
+    }
+  ]
+}

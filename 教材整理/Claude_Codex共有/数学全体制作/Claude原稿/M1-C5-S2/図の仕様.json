@@ -1,0 +1,201 @@
+{
+ "unitId": "M1-C5-S2",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C5-S2-FIG01",
+   "unitId": "M1-C5-S2",
+   "purpose": "平行移動・回転移動・対称移動の3つを見くらべる",
+   "sourceReferences": [
+    "教科書p156〜159",
+    "ワークp96〜97"
+   ],
+   "confirmedConcept": "同じ三角形（方眼で頂点 (2,1)(5,1)(2,4)）を、右へ6上へ1の平行移動・点 O 中心 90° の回転移動・直線 ℓ での対称移動",
+   "labels": [
+    "平行移動",
+    "回転移動",
+    "対称移動",
+    "O",
+    "ℓ"
+   ],
+   "coordinates": [
+    "3つの小さな方眼を横に並べる",
+    "どれも、もとの三角形を薄く、移動後を濃くかく",
+    "対応する頂点を点線で結ぶ"
+   ],
+   "numericConditions": [
+    "平行移動：点線3本が平行で同じ長さ",
+    "回転移動：O から対応点までの長さが等しい",
+    "対称移動：点線が ℓ と垂直で ℓ で2等分"
+   ],
+   "units": [],
+   "arrows": [
+    "平行移動の矢印",
+    "回転の弧の矢印",
+    "折り返しの矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "3つの移動の性質の印",
+    "形と大きさが変わらない"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "同じ三角形を、ずらす・まわす・折り返すの3通りに動かした図。それぞれ、対応する点を点線で結んである。",
+   "verification": {
+    "calculation": "検算.py 例1基本（方眼の平行移動）",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C5-S2-FIG02",
+   "unitId": "M1-C5-S2",
+   "purpose": "垂直二等分線の作図が、ひし形の対角線であることを見せる",
+   "sourceReferences": [
+    "教科書p162〜163",
+    "ワークp98〜99"
+   ],
+   "confirmedConcept": "線分 AB。A、B を中心に同じ半径の円の一部。交点 P、Q。直線 PQ が AB の垂直二等分線。APBQ はひし形",
+   "labels": [
+    "A",
+    "B",
+    "P",
+    "Q",
+    "M（中点）"
+   ],
+   "coordinates": [
+    "AB を横に",
+    "円の一部（弧）を上下に",
+    "APBQ を点線で結んでひし形に"
+   ],
+   "numericConditions": [
+    "PA＝PB＝QA＝QB（同じ印）",
+    "PQ⊥AB、AM＝MB"
+   ],
+   "units": [],
+   "arrows": [
+    "作図の順番①②③"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "円の半径が同じ",
+    "ひし形になる"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "線分 AB の両はしから同じ半径の円をかき、2つの交点を結んだ直線が AB の垂直二等分線。4点を結ぶとひし形になる。",
+   "verification": {
+    "calculation": "検算.py 例2基本",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C5-S2-FIG03",
+   "unitId": "M1-C5-S2",
+   "purpose": "直線上の点・直線外の点を通る垂線の作図を、ひし形とともに見せる",
+   "sourceReferences": [
+    "教科書p164〜165",
+    "ワークp100〜101"
+   ],
+   "confirmedConcept": "左：直線 XY 上の点 P。P から等しい A、B をとり、垂直二等分線。右：直線外の点 P。P 中心の円で A、B、A・B から半径 PA の円で Q。PQ⊥XY",
+   "labels": [
+    "X",
+    "Y",
+    "P",
+    "A",
+    "B",
+    "Q"
+   ],
+   "coordinates": [
+    "左右に2つの図",
+    "どちらも XY を横に",
+    "ひし形を点線で"
+   ],
+   "numericConditions": [
+    "左：PA＝PB",
+    "右：PA＝PB＝QA＝QB"
+   ],
+   "units": [],
+   "arrows": [
+    "作図の順番①②③"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "ひし形の点線",
+    "PQ⊥XY"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "直線上の点を通る垂線と、直線の外の点を通る垂線の作図を並べた図。どちらもひし形の対角線を使っている。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C5-S2-FIG04",
+   "unitId": "M1-C5-S2",
+   "purpose": "模様が、もとになる図形の移動でできていることを見せる",
+   "sourceReferences": [
+    "教科書p161"
+   ],
+   "confirmedConcept": "正方形2枚の組の平行移動でできる市松模様と、正三角形の回転移動・対称移動でできる模様",
+   "labels": [
+    "もとになる図形",
+    "平行移動",
+    "回転移動",
+    "対称移動"
+   ],
+   "coordinates": [
+    "左に市松模様、右に三角形の模様",
+    "もとになる図形を太線で囲む"
+   ],
+   "numericConditions": [
+    "移動の種類を矢印のそばに書く"
+   ],
+   "units": [],
+   "arrows": [
+    "移動を示す矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "もとの図形が太線"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "市松模様と三角形の模様。もとになる図形を、平行移動・回転移動・対称移動してできていることを矢印で示す。",
+   "verification": {
+    "calculation": "—",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

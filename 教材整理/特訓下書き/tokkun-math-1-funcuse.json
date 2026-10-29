@@ -1,0 +1,771 @@
+{
+ "id": "tokkun-math-1-funcuse",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "比例、反比例の利用（特訓）",
+ "majorTitle": "変化と対応",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-funcuse-1",
+   "type": "input",
+   "prompt": "ある自動車は、ガソリン 1 L で 14 km 走る。燃料タンクに 45 L 入れて出発し、378 km 走った。残りのガソリンは何 L か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "①使ったガソリンは走ったきょりに比例：378 ÷ 14 ＝ 27 L　②45 − 27 ＝ 18　③答え 18L",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-2",
+   "type": "input",
+   "prompt": "歯の数が 30 の歯車Aが1分間に 20 回転している。Aとかみ合う歯車Bの歯の数を x、Bの1分間の回転数を y とすると、y は x に反比例する。Bの歯の数が 40 のとき、Bは1分間に何回転するか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "①かみ合う歯の数は等しい：xy ＝ 30 × 20 ＝ 600　②x ＝ 40 で y ＝ 600 ÷ 40　③y ＝ 15。答え 15回転",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-3",
+   "type": "input",
+   "prompt": "コピー機Aは1分間に 40 枚、コピー機Bは1分間に 60 枚印刷できる。1500 枚を、AとBを同時に使って印刷すると何分かかるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①2台で1分間に 100 枚（印刷した枚数は時間に比例）　②1500 ÷ 100 ＝ 15　③答え 15分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-4",
+   "type": "input",
+   "prompt": "ある水そうを満水にするのに、毎分 12 L ずつ入れると 25 分かかる。毎分 20 L ずつ入れると何分かかるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①1分間の量 x L と時間 y 分は反比例：xy ＝ 12 × 25 ＝ 300　②x ＝ 20 で y ＝ 15　③答え 15分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-5",
+   "type": "input",
+   "prompt": "A市からB市まで、時速 60 km で走ると 2.5 時間かかる。時速 75 km で走ると何分かかるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①道のり 60 × 2.5 ＝ 150 km（時間は速さに反比例）　②150 ÷ 75 ＝ 2 時間　③120 分。答え 120分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-6",
+   "type": "input",
+   "prompt": "ばねにおもりをつるすと、ばねののびはおもりの重さに比例する。おもりをつるさないときの長さは 12 cm で、20 g のおもりをつるすと全体の長さは 15 cm になった。全体の長さが 21 cm になるのは、何 g のおもりをつるしたときか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "①20 g で のび 3 cm、1 g あたり 0.15 cm　②21 cm のとき、のびは 9 cm　③9 ÷ 0.15 ＝ 60。答え 60g",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-7",
+   "type": "input",
+   "prompt": "長さ 3 m の針金の重さは 45 g である。同じ針金の重さが 1.2 kg のとき、長さは何 m か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "80",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①1 m あたり 15 g（重さは長さに比例）　②1.2 kg ＝ 1200 g　③1200 ÷ 15 ＝ 80。答え 80m",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-8",
+   "type": "input",
+   "prompt": "兄と弟が同時に家を出て、1.2 km 先の公園に向かう。兄は分速 80 m、弟は分速 60 m で歩く。兄が公園に着いたとき、弟は公園まであと何 m のところにいるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "300",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①兄が着くのは 1200 ÷ 80 ＝ 15 分後　②弟は 15 分で 60 × 15 ＝ 900 m 進んでいる　③1200 − 900 ＝ 300。答え 300m",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-9",
+   "type": "input",
+   "prompt": "兄と弟が同時に家を出て、1500 m 先の公園に向かった。兄は分速 100 m で歩いて公園に着き、3 分休んでから同じ速さで家にもどりはじめた。弟は分速 50 m で公園に向かっている。2人が出会うのは家から何 m のところか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1100",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①兄は 15 分で公園に着き、18 分後にもどりはじめる。そのとき弟は 50 × 18 ＝ 900 m の地点　②兄が出発して t 分後に出会う：1500 − 100t ＝ 900 + 50t、t ＝ 4　③家から 1500 − 400 ＝ 1100 m。答え 1100m",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-10",
+   "type": "input",
+   "prompt": "ある作業を 6 人ですると 8 時間かかる。同じ作業を 4 人ですると何時間かかるか答えよう（1人がする仕事の速さは同じ）。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "①人数と時間は反比例：6 × 8 ＝ 48　②48 ÷ 4 ＝ 12　③答え 12時間",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-11",
+   "type": "input",
+   "prompt": "深さ 60 cm の水そうに、はじめ 10 cm の深さまで水が入っている。毎分 2.5 cm ずつ水面が上がるように水を入れるとき、満水になるまでの時間を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①あと 60 − 10 ＝ 50 cm 上がればよい　②50 ÷ 2.5 ＝ 20　③答え 20分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-12",
+   "type": "input",
+   "prompt": "面積が 36 cm² の三角形の底辺を x cm、高さを y cm とすると、y は x に反比例する。底辺が 9 cm のときの高さを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①x × y ÷ 2 ＝ 36 より xy ＝ 72　②y ＝ 72 ÷ 9　③8。答え 8cm",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-13",
+   "type": "input",
+   "prompt": "底面積 50 cm² の円柱形の容器に水を入れる。水の体積が 1.2 L のとき、水の深さは何 cm か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①深さは体積に比例：深さ ＝ 体積 ÷ 50　②1.2 L ＝ 1200 cm³　③1200 ÷ 50 ＝ 24。答え 24cm",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-14",
+   "type": "input",
+   "prompt": "ある量の水を、底面積 60 cm² の容器に入れると深さが 15 cm になった。同じ量の水を、底面積 40 cm² の容器に入れると、深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "22.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の量は 60 × 15 ＝ 900 cm³ で一定（深さは底面積に反比例）　②900 ÷ 40 ＝ 22.5　③答え 22.5cm",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-15",
+   "type": "input",
+   "prompt": "1時間に 0.6 kWh の電気を使うストーブを、1日 5 時間、30 日間使った。電気代が 1 kWh あたり 31 円のとき、電気代は何円か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2790",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①使った電気の量 0.6 × 5 × 30 ＝ 90 kWh（時間に比例）　②90 × 31 ＝ 2790　③答え 2790円",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-16",
+   "type": "input",
+   "prompt": "長さ 6 m のロープを x 等分すると、1本の長さは y m になる。1本の長さを 75 cm にするには、何等分すればよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "等分"
+    ]
+   },
+   "explanation": "①xy ＝ 6（反比例）　②75 cm ＝ 0.75 m で x ＝ 6 ÷ 0.75　③8。答え 8等分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-17",
+   "type": "input",
+   "prompt": "階段の1段の高さは 18 cm である。高さ 3.6 m の階を上るには、何段の階段が必要か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "段"
+    ]
+   },
+   "explanation": "①高さは段数に比例　②3.6 m ＝ 360 cm、360 ÷ 18　③20。答え 20段",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-18",
+   "type": "input",
+   "prompt": "180 km の道のりを時速 60 km で進んでいたが、速さを 1.2 倍にした。かかる時間は何分短くなるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①時速 60 km では 3 時間、時速 72 km では 180 ÷ 72 ＝ 2.5 時間（時間は速さに反比例）　②3 − 2.5 ＝ 0.5 時間　③30 分。答え 30分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-19",
+   "type": "input",
+   "prompt": "面積が 24 cm² の長方形の縦を x cm、横を y cm とする（y は x に反比例）。周の長さが 20 cm で、縦が横より短いとき、縦の長さを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①縦 + 横 ＝ 10、縦 × 横 ＝ 24　②かけて 24、たして 10 になる2つの数は 4 と 6　③縦は短いほうで 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-20",
+   "type": "input",
+   "prompt": "ある自動車は 120 km 走るのにガソリンを 8 L 使う。残りのガソリンが 10 L のとき、あと何 km 走れるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①1 L あたり 15 km（道のりはガソリンの量に比例）　②15 × 10　③150。答え 150km",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-21",
+   "type": "input",
+   "prompt": "同じジュースが 24 本入った1ケースは 2640 円である。1本の値段が同じとき、50 本の代金を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5500",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①1本 2640 ÷ 24 ＝ 110 円（代金は本数に比例）　②110 × 50　③5500。答え 5500円",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-22",
+   "type": "input",
+   "prompt": "240 ページの本を1日に x ページずつ読むと、y 日で読み終わる。1日に 15 ページずつ読むと何日で読み終わるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "日"
+    ]
+   },
+   "explanation": "①xy ＝ 240（反比例）　②240 ÷ 15　③16。答え 16日",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-23",
+   "type": "input",
+   "prompt": "ある水そうを、同じ給水管 3 本で満水にすると 40 分かかる。同じ給水管 5 本では何分かかるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①本数と時間は反比例：3 × 40 ＝ 120　②120 ÷ 5　③24。答え 24分",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-24",
+   "type": "input",
+   "prompt": "Aさんの歩はばは 0.65 m である。1.3 km 歩くと何歩になるか答えよう（歩いた道のりは歩数に比例）。",
+   "answer": {
+    "kind": "number",
+    "value": "2000",
+    "units": [
+     "歩"
+    ]
+   },
+   "explanation": "①1.3 km ＝ 1300 m　②1300 ÷ 0.65　③2000。答え 2000歩",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-25",
+   "type": "input",
+   "prompt": "面積が 600 m² の長方形の土地がある。縦は 20 m である。面積を変えずに横の長さを 1.25 倍にすると、縦は何 m 短くなるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①横は 30 m、1.25 倍で 37.5 m（縦と横は反比例）　②縦 600 ÷ 37.5 ＝ 16 m　③20 − 16 ＝ 4。答え 4m",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  },
+  {
+   "id": "tokkun-math-1-funcuse-26",
+   "type": "input",
+   "prompt": "コピー代は1枚 8 円である。1000 円以内で、最大何枚コピーできるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "125",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "①代金は枚数に比例：8 × 枚数 ≦ 1000　②1000 ÷ 8 ＝ 125　③答え 125枚",
+   "source": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p139〜143（比例・反比例の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466002_0.jpg",
+    "sha256": "1450e87fce2e68e5bf2a9528ce5f91bae86ad0bc29a93a64f928e4263d593b67",
+    "page": 140
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。教科書 p139〜143 の比例・反比例の利用を、燃費・歯車・ばね・水そう・道のりのグラフなど、教科書とちがう場面で使う一段難しい問題。答えは check.py で、比例定数・比例の関係をもとにした計算と総当たりで検算。【保留】教科書問題（はかり売り・画用紙・電子レンジなど）や比例式の利用の特訓と場面がかぶらない問題は 26 問まで。70問にしていない。"
+}

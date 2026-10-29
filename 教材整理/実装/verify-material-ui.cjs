@@ -40,7 +40,7 @@ async function create(status,load,withTests=false,extra={}){
 
  test=await create('draft',async()=>({kokugo:{done:['q1']}}));
  assert.ok(screen(test.host).includes('第二問'));
- assert.ok(!screen(test.host).includes('第一問'));
+ {const sc=screen(test.host);assert.ok(sc.indexOf('第二問')<sc.indexOf('第一問'));}   // 2026-10-21：全部並べて表示。正解ずみの問題は後ろに回る
  find(test.host,'textarea').value='回答';
  find(test.host,'form').handlers.submit({preventDefault(){}});
  await tick();

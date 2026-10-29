@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script src="動画エンジン/c67vp.js"></script><script>
+// M1-C7-REVIEW-V01 7章をふりかえる（Claude）。紙飛行機と紙コップの例で、問題解決の流れをたどる
+const ST=['決める','集める','整理する','読み取る','確率'];
+function flow(i){ST.forEach((s,k)=>{const x=80+k*228,on=k===i-1,done=k<i-1;rbox(x,92,200,48,14,on?C.orange:done?'#cfe0f3':'#eef3f9');text(`${k+1} ${s}`,x+100,125,24,on?'#fff':C.ink,'center',800);if(k<4)text('→',x+214,125,24,C.dim,'center',800)})}
+window.SCENE={draw({i,p,t}){
+ header('7章をふりかえる');if(i>=1&&i<=5)flow(i);
+ if(i===0){g.globalAlpha=seg(p,.1,.3);rbox(240,200,800,220,26,'#fffdf8',C.ink,3);text('データで 問題を解決する',640,290,52,C.ink,'center',800);text('5つのステップ',640,370,44,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===1){g.globalAlpha=seg(p,.1,.3);rbox(270,200,740,190,24,'#fffdf8',C.orange,4);text('紙飛行機 A と B、',640,270,44,C.ink,'center',800);text('どちらがよく飛ぶ？',640,340,48,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===2){const D=[7.4,10.2,5.8,8.6,9.0,6.5,12.6,8.1,7.0,9.7,4.2,8.9,10.8,6.1,8.5,7.8,11.5,9.4,7.3,8.2];D.forEach((v,k)=>{g.globalAlpha=seg(p,k*.035,.1+k*.035);rbox(150+(k%10)*99-42,200+Math.floor(k/10)*70,84,50,8,'#fff',C.blue,2.5);text(v.toFixed(1),150+(k%10)*99,235+Math.floor(k/10)*70,26,C.ink,'center',800);g.globalAlpha=1});
+  g.globalAlpha=seg(p,.75,.9);text('同じ条件で 何回も記録する',640,420,38,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===3){const k=seg(p,.1,.6);miniHist([2,6,8,3,1].map(c=>c*k),200,500,120,40);[4,6,8,10,12,14].forEach((v,j)=>text(String(v),200+j*120,535,24,C.ink,'center',700));g.globalAlpha=seg(p,.6,.8);text('度数分布表・ヒストグラム',920,250,32,C.blue,'center',800);g.globalAlpha=1;return}
+ if(i===4){g.globalAlpha=seg(p,.05,.25);rbox(180,190,920,250,24,'#fffdf8',C.orange,4);text('A　平均 8.38m　8m以上の割合 0.60',640,280,38,C.blue,'center',800);text('B　平均 9.72m　8m以上の割合 0.80',640,350,38,C.orange,'center',800);
+  g.globalAlpha=seg(p,.55,.75);text('→ B の方が よく飛ぶ',640,420,40,C.red,'center',800);g.globalAlpha=1;return}
+ if(i===5){[0,1,2].forEach(k=>{g.globalAlpha=seg(p,.05+k*.08,.2+k*.08);cupIcon(330+k*170,320,1.2,k);g.globalAlpha=1});g.globalAlpha=seg(p,.35,.55);rbox(800,240,380,140,22,'#fffdf8',C.orange,4);text('上向きの確率',990,295,32,C.ink,'center',800);text('≒ 0.21',990,350,44,C.orange,'center',800);g.globalAlpha=1;return}
+ g.globalAlpha=seg(p,0,.2);rbox(160,180,960,260,28,'#fffdf8',C.orange,5);text('感覚ではなく データを根拠に',640,280,46,C.ink,'center',800);text('理由を2つ以上 言えるようにしよう',640,370,40,C.orange,'center',800);g.globalAlpha=1}};
+</script>

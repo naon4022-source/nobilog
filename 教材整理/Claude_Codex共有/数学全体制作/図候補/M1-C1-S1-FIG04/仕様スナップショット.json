@@ -1,0 +1,46 @@
+{
+  "slotId": "M1-C1-S1-FIG04",
+  "unitId": "M1-C1-S1",
+  "purpose": "絶対値は0からのきょり",
+  "sourceReferences": [
+    "教科書p19",
+    "ワークp4 ポイント1-4"
+  ],
+  "confirmedConcept": "−3と3はどちらも0からきょり3",
+  "labels": [
+    "−4〜4の整数",
+    "きょり 3（2か所）"
+  ],
+  "coordinates": [
+    "数直線 −4〜4、1目盛り=1",
+    "点 −3 と 3"
+  ],
+  "numericConditions": [
+    "|−3|=|3|=3"
+  ],
+  "units": [],
+  "arrows": [
+    "0から−3、0から3への両向き矢印"
+  ],
+  "mustRemainIdenticalAcrossCandidates": [
+    "点の位置 −3 と 3",
+    "矢印は0から始まる",
+    "2つのきょりが同じ長さ"
+  ],
+  "candidateLayouts": {
+    "A": "余白を広く、数直線を中央に1本",
+    "B": "細い線で数直線を大きく、注目点だけ太く",
+    "C": "数直線の上に注目点の説明カードを重ねる（数値は同じ）",
+    "D": "数直線を少し立体的な帯にする（目盛り位置は同じ）"
+  },
+  "mobileMinimumLabelSize": 16,
+  "print": "白黒。正負は線種（実線/点線）・塗り（灰/斜線）・記号で区別",
+  "altText": "−3と3は、どちらも0から3目盛りはなれている。だから絶対値はどちらも3。",
+  "existingSvg": "既存SVG（同じ数学条件で作成済み）：教材整理/Claude_Codex共有/中1_数学_正負の数/図/fig4_絶対値.svg",
+  "verification": {
+    "calculation": "検算.py で点の座標→数値の逆算が一致（試作で47件成功）",
+    "sourceComparison": "教科書p14〜22・ワークp2〜5の印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "試作時にMac表示で目視（ラベルの重なり2件を修正済み）"
+  },
+  "status": "数学条件確定・追加の配置を提案（ページ構成提案.md）"
+}

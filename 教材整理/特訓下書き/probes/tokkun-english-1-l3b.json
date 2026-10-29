@@ -1,0 +1,54 @@
+{
+ "unit": "tokkun-english-1-l3b.json",
+ "cases": [
+  {
+   "n": 46,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I didn't play the piano yesterday.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 46,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I did not play the piano yesterday.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 46,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I didn't played the piano yesterday.",
+   "expect": false,
+   "why": "過去形の誤用"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "We didn't watch TV last night.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "we didn't watch TV last night",
+   "expect": true,
+   "why": "【採点仕様】小文字始まり・ピリオドなしも正解（大文字小文字は区別しない設定）"
+  },
+  {
+   "n": 52,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I didn't visit my grandmother last week.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 52,
+   "head": "日本語に合うように、（　）内の語句を並べ",
+   "input": "I didn't visited my grandmother last week.",
+   "expect": false,
+   "why": "過去形の誤用"
+  }
+ ]
+}

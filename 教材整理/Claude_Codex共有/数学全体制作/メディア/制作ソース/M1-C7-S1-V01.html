@@ -1,0 +1,29 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C7-S1-V01 数の山がグラフになる（Claude）。紙飛行機 A の20回の記録（本文 P294 と同じ架空データ）
+const DATA=[7.4,10.2,5.8,8.6,9.0,6.5,12.6,8.1,7.0,9.7,4.2,8.9,10.8,6.1,8.5,7.8,11.5,9.4,7.3,8.2];
+const BX=b=>320+160*b,BASEY=525,CW=150,CH=30;
+const box=DATA.map(v=>Math.floor((v-4)/2)),slot=DATA.map((v,k)=>box.slice(0,k).filter(b=>b===box[k]).length),COUNT=[0,1,2,3,4].map(b=>box.filter(x=>x===b).length);
+const gridPos=k=>[150+(k%10)*109,150+Math.floor(k/10)*64];
+function card(x,y,w,h,v,col='#ffffff',stroke=C.blue,fs=26){rbox(x-w/2,y-h/2,w,h,8,col,stroke,2.5);text(v.toFixed(1),x,y+fs*0.36,fs,C.ink,'center',800)}
+function boxes(a,label=true){g.globalAlpha=a;for(let b=0;b<5;b++){g.strokeStyle=C.dim;g.lineWidth=3;g.beginPath();g.moveTo(BX(b)-78,BASEY-255);g.lineTo(BX(b)-78,BASEY);g.lineTo(BX(b)+78,BASEY);g.lineTo(BX(b)+78,BASEY-255);g.stroke();
+ if(label)text(`${4+2*b}〜${6+2*b}m`,BX(b),BASEY+44,30,C.ink,'center',800)}g.globalAlpha=1}
+function axes(a){g.globalAlpha=a;g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(230,BASEY);g.lineTo(1060,BASEY);g.moveTo(240,BASEY);g.lineTo(240,BASEY-290);g.stroke();
+ for(let k=0;k<=5;k++){text(String(4+2*k),240+160*k,BASEY+40,28,C.ink,'center',800)}text('(m)',1090,BASEY+40,26,C.ink,'center',700);for(let c=2;c<=8;c+=2){text(String(c),222,BASEY-c*32+9,24,C.ink,'right',700);g.strokeStyle=hexA('#1d2b3a',.12);g.lineWidth=1;g.beginPath();g.moveTo(240,BASEY-c*32);g.lineTo(1040,BASEY-c*32);g.stroke()}text('(回)',232,BASEY-300,24,C.ink,'center',700);g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('数の山がグラフになる');
+ if(i===0){DATA.forEach((v,k)=>{const [x,y]=gridPos(k);g.globalAlpha=seg(p,k*.02,.1+k*.02);card(x,y,96,48,v);g.globalAlpha=1});g.globalAlpha=seg(p,.55,.75);text('？？？',640,400,80,C.dim,'center',800);g.globalAlpha=1;return}
+ if(i===1){DATA.forEach((v,k)=>{const [x,y]=gridPos(k);card(x,y,96,48,v)});boxes(seg(p,.1,.4));g.globalAlpha=seg(p,.45,.65);rbox(400,330,480,64,18,'#fff7ec',C.orange,3);text('2mごとの区間 ＝ 階級',640,374,38,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===2){boxes(1);DATA.forEach((v,k)=>{const st=.06+k*.042,u=seg(p,st,st+.1);const [x0,y0]=gridPos(k),x1=BX(box[k]),y1=BASEY-CH/2-2-slot[k]*(CH+2);const x=x0+(x1-x0)*u,y=y0+(y1-y0)*u-Math.sin(Math.PI*u)*120,w=96+(CW-96)*u,h=48+(CH-48)*u;
+   const now=u>0&&u<1;card(x,y,w,h,v,now?'#fff3e2':'#ffffff',now?C.orange:C.blue,now?28:22+4*(1-u))});return}
+ const stack=(alpha)=>DATA.forEach((v,k)=>{g.globalAlpha=alpha;card(BX(box[k]),BASEY-CH/2-2-slot[k]*(CH+2),CW,CH,v,'#ffffff',C.blue,22);g.globalAlpha=1});
+ if(i===3){boxes(1);stack(1);COUNT.forEach((c,b)=>{g.globalAlpha=seg(p,.2+b*.1,.35+b*.1);rbox(BX(b)-34,BASEY-c*(CH+2)-62,68,46,14,C.orange);text(String(c),BX(b),BASEY-c*(CH+2)-28,32,'#fff','center',800);g.globalAlpha=1});
+  g.globalAlpha=seg(p,.75,.9);text('度数',1150,240,44,C.orange,'center',800);g.globalAlpha=1;return}
+ // ヒストグラム：カードの山が、そのまま柱に変わる
+ const m=i===4?seg(p,.15,.7):1;boxes(1-m,false);axes(m);if(m<1)stack(1-m);
+ COUNT.forEach((c,b)=>{const hgt=c*32*m+c*(CH+2)*(1-m),w=160*m+CW*(1-m);g.globalAlpha=m;const hot=i===5&&b===2;g.fillStyle=hot?C.orange:'#8ec1ec';g.strokeStyle=C.ink;g.lineWidth=2.5;g.fillRect(BX(b)-w/2,BASEY-hgt,w,hgt);g.strokeRect(BX(b)-w/2,BASEY-hgt,w,hgt);g.globalAlpha=1});
+ if(i===4){g.globalAlpha=seg(p,.7,.9);text('ヒストグラム',820,180,48,C.blue,'center',800);g.globalAlpha=1}
+ if(i===5){g.globalAlpha=seg(p,.2,.4);text('8m以上10m未満が いちばん多い',820,170,38,C.orange,'center',800);arrow(720,190,BX(2)+10,BASEY-8*32-10,C.orange,5);g.globalAlpha=1}
+ if(i===6){const k=seg(p,.2,.5);for(let b=1;b<5;b++){g.globalAlpha=k;g.strokeStyle=C.red;g.lineWidth=5;g.beginPath();g.arc(240+160*b,BASEY-14,16,0,7);g.stroke()}g.globalAlpha=seg(p,.35,.55);text('柱と柱の間は あけない',820,170,40,C.red,'center',800);g.globalAlpha=1}
+}};
+</script>

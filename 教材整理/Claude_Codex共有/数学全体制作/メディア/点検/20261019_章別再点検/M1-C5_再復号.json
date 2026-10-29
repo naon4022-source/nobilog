@@ -1,0 +1,426 @@
+{
+  "date": "2026-10-19T23:05:53.082336+09:00",
+  "status": "passed",
+  "scope": "Technical re-decode; existing visual review retained. No new listening review, source generation or book playback in this command.",
+  "voiceSettings": {
+    "engine": "say",
+    "voice": "Kyoko",
+    "rate": 175,
+    "head": 1.0,
+    "tail": 2.0,
+    "gap": 0.35,
+    "filter": "highpass=f=70,equalizer=f=350:t=q:w=0.8:g=-2,equalizer=f=2600:t=q:w=0.8:g=1.8,acompressor=threshold=0.1:ratio=1.5:attack=15:release=150:makeup=1,loudnorm=I=-18:TP=-2:LRA=7",
+    "voiceDecision": "ユーザーがKyokoを選択",
+    "filterDecision": "ユーザーが「めちゃいい」と承認したKyoko・clear補正を採用",
+    "sharedEngineChanged": false,
+    "revision": 2,
+    "profile": "clear",
+    "pronunciationStatus": "文脈ごとに別点検。全発音確認済みとはしない"
+  },
+  "results": [
+    {
+      "id": "M1-C5-REVIEW-V01",
+      "sha256": "479e2b29906b82c38818e99e0639df92eab922294221daf4744c236befde05ba",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1356,
+      "fps": 30,
+      "seconds": 45.204,
+      "audioSeconds": 45.226667,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 31,
+      "allReviewedFramesMatchVideo": {
+        "frames": 31,
+        "maxChannelRMS": 4.12674205639267,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-REVIEW-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-REVIEW-V01_69本_再開20261011/全場面_1.jpg",
+          "sha256": "8ab1683ce13f0ec71e14023f73a2d1219c2a537f8e8705cd84ba6555b0ea41bd"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-REVIEW-V01_69本_再開20261011/全場面_2.jpg",
+          "sha256": "f733c1fc27d270b213157d6f3a978dfe2d317c3e648cd4c811ac605b20257e3a"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全31場面を一覧で表示",
+        "notes": "全場面で記号、3種類の移動、3種類の作図、反射による最短路、円とおうぎ形の公式を確認。字幕一致、重なり・はみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S1-V01",
+      "sha256": "13f5a20db9a275f102b1847f52b2ab084177794ddba5c225d7a8532116358ea1",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 851,
+      "fps": 30,
+      "seconds": 28.372,
+      "audioSeconds": 28.373333,
+      "meanDB": -18.9,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 19,
+      "allReviewedFramesMatchVideo": {
+        "frames": 19,
+        "maxChannelRMS": 2.8301943396169813,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S1-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S1-V01_69本_再開20261011/全場面_1.jpg",
+          "sha256": "42b85dd1471d7f480b20dcb3092d5862df78a1cf76b7dba8966d25f24ff15916"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全19場面を一覧で表示",
+        "notes": "線分の両端、両側へ伸びる直線、Aを端としてBの向きへ伸びる半直線、端の個数のまとめを全場面で確認。字幕一致、重なり・はみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S1-VP",
+      "sha256": "d6100524d38c73b247b7d67ab3097d0f3cefec01dbb63eb806d41d97a813c6ab",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1083,
+      "fps": 30,
+      "seconds": 36.105,
+      "audioSeconds": 36.138667,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 25,
+      "allReviewedFramesMatchVideo": {
+        "frames": 25,
+        "maxChannelRMS": 3.1622776601683795,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S1-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S1-VP_69本_再開20261011/全場面_1.jpg",
+          "sha256": "028ea17e1baf110c4b045147fb6402d02cff7e9330354c543b556a3ae9c3ca82"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S1-VP_69本_再開20261011/全場面_2.jpg",
+          "sha256": "a7858fcac34a43c23c10d2ed54796c2188333c75d1887c200c717fbeda5b2ec5"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全25場面を一覧で表示",
+        "notes": "3種類の線、∠AOBの頂点O、垂直・平行の印、垂直に測る距離を全場面で確認。字幕一致、重なり・はみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S2-V01",
+      "sha256": "a94b593cad92334f281bf5847852c5d77a9488dfa5dae052eaf105ce4ccae561",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1156,
+      "fps": 30,
+      "seconds": 38.527,
+      "audioSeconds": 38.528,
+      "meanDB": -18.6,
+      "peakDB": -2.1,
+      "captions": "all steps equal script",
+      "sampleFrames": 26,
+      "allReviewedFramesMatchVideo": {
+        "frames": 26,
+        "maxChannelRMS": 4.172529209005013,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S2-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-V01_69本_再開20261011/全場面_1.jpg",
+          "sha256": "6fd4e346f618298237c4148933397c56ac9f856cd3c6c684f43923b1ce204fd1"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-V01_69本_再開20261011/全場面_2.jpg",
+          "sha256": "f3859437c7734baa69e61ab2672042adb4ff3551ae00adbca1d2f4383db26904"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全26場面を一覧で表示",
+        "notes": "同じ三角形の平行移動・Oを中心に90度回転・軸ℓでの折り返し、対応点と距離・等長マークを全場面で確認。終点の形・大きさ、字幕、はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C5-S2-V02",
+      "sha256": "dec9fa773762fdb183967838e066d62937a386e88f2220de41c758fc37a81d4e",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1072,
+      "fps": 30,
+      "seconds": 35.746,
+      "audioSeconds": 35.754667,
+      "meanDB": -18.7,
+      "peakDB": -2.2,
+      "captions": "all steps equal script",
+      "sampleFrames": 24,
+      "allReviewedFramesMatchVideo": {
+        "frames": 24,
+        "maxChannelRMS": 3.7735924528226414,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S2-V02.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-V02_69本_再開20261011/全場面_1.jpg",
+          "sha256": "83f2298ad98708113f720782336e0e98e53ca97d78a48f48d2cd353d7740171d"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全24場面を一覧で表示",
+        "notes": "AとBから等半径の弧→交点P・Q→垂直二等分線→4辺が等しいひし形を全場面で確認。数値条件と字幕一致、文字の重なり・はみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S2-V03",
+      "sha256": "3886ae340807fd76dc888ec5bf91e4000e1b54738eca1213cc6c9de63f587109",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1053,
+      "fps": 30,
+      "seconds": 35.092,
+      "audioSeconds": 35.114667,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 24,
+      "allReviewedFramesMatchVideo": {
+        "frames": 24,
+        "maxChannelRMS": 3.5874782229304194,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S2-V03.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-V03_69本_再開20261011/全場面_1.jpg",
+          "sha256": "8aea60e66aa3d8f165475fe48bc7886c59bbe04475d4d584448e80eb5fd1fee4"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全24場面を一覧で表示",
+        "notes": "直線外のPから弧を引きA・Bを定め、両点から半径PAの弧、下交点Q、PQと直角印・ひし形を全場面で確認。字幕一致、重なり・はみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S2-VP",
+      "sha256": "1d7d679d54951fc88b2651f63fcf46303c5223db42686323c05f43c3e913618e",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1151,
+      "fps": 30,
+      "seconds": 38.373,
+      "audioSeconds": 38.4,
+      "meanDB": -18.8,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 26,
+      "allReviewedFramesMatchVideo": {
+        "frames": 26,
+        "maxChannelRMS": 3.7986839826445156,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S2-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-VP_69本_再開20261011/全場面_1.jpg",
+          "sha256": "430091d44be0ad719c930bcf9b77523aa47f5388579b3cd32fa093a984f67af3"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S2-VP_69本_再開20261011/全場面_2.jpg",
+          "sha256": "7e5bc6b5fa2fbfced5d3810f201b38a5b43e779d22efb26760fec15be94e2944"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全26場面を一覧で表示",
+        "notes": "3種の移動を順に示し、垂直二等分線・角の二等分線・直線外の垂線とひし形の対応を確認。全場面の字幕・等長マーク・はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C5-S3-V01",
+      "sha256": "2c6fc090f85eb4578fb18ecb374961afd08e0cc8a87dd2d94cf78ce4dd9281b9",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1187,
+      "fps": 30,
+      "seconds": 39.573,
+      "audioSeconds": 39.594667,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 27,
+      "allReviewedFramesMatchVideo": {
+        "frames": 27,
+        "maxChannelRMS": 3.6304269721342695,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S3-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S3-V01_69本_再開20261011/全場面_1.jpg",
+          "sha256": "a99f71a4de5a6918b1af975c35581f69ca3f916c9c4e66b40ad9b92d40fc9182"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S3-V01_69本_再開20261011/全場面_2.jpg",
+          "sha256": "dfef5e17ef167b00a651045f502db05f362c846854386e401139e6effeb5ef51"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全27場面を一覧で表示",
+        "notes": "Bを岸の反対側に折り返す、A・P・B′の直線、PB＝PB′、線分を重ねる動きと最短路のまとめを全場面で確認。字幕・数式・はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C5-S3-VP",
+      "sha256": "15287ccbc19f1be03e0a9e5c7baa9d1f3e65339e97c15e09c0bc1a7db1acb2fb",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1169,
+      "fps": 30,
+      "seconds": 38.954,
+      "audioSeconds": 38.954667,
+      "meanDB": -18.5,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 26,
+      "allReviewedFramesMatchVideo": {
+        "frames": 26,
+        "maxChannelRMS": 3.6441734316577197,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S3-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S3-VP_69本_再開20261011/全場面_1.jpg",
+          "sha256": "345ac5d55becd6892b0a2fa7cee0f711c4fffc68eb263905ab329f869e575a30"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S3-VP_69本_再開20261011/全場面_2.jpg",
+          "sha256": "abcf7a02f5dd907f06f25d2d8f80fdcdb302037178af68f0b018a46886e31d91"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おき全26場面を一覧で表示",
+        "notes": "導入の池・岸・じょうろ・花壇がA/B/ℓと対応。後続の対称移動、最短路、条件の読み換えが字幕と一致。ラベル重なりを直し、全場面にはみ出しなし。"
+      }
+    },
+    {
+      "id": "M1-C5-S4-V01",
+      "sha256": "21e68b874b0ea5d2df7a518a45ee37a11afc62d6f1529a2d85e0713f4ef46e22",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1027,
+      "fps": 30,
+      "seconds": 34.235,
+      "audioSeconds": 34.261333,
+      "meanDB": -18.7,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 23,
+      "allReviewedFramesMatchVideo": {
+        "frames": 23,
+        "maxChannelRMS": 3.3286633954186478,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S4-V01.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S4-V01_69本_再開20261011/全場面_1.jpg",
+          "sha256": "18b639557d110c02c06859a87ddb7b7e84262d61cd76ca521c12f4e545994c59"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おきの全23場面を一覧で表示",
+        "notes": "円を横切る直線の下降で交点2つが接点1つへ集まり、半径と接線の直角を示す全場面を確認。字幕・点・重なり・はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C5-S4-V02",
+      "sha256": "9e5fdf5294dc465eddf16f67cd5088cb6dfdecde0af71eb7ac2ac50c4b39cf11",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1084,
+      "fps": 30,
+      "seconds": 36.137,
+      "audioSeconds": 36.138667,
+      "meanDB": -18.5,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 25,
+      "allReviewedFramesMatchVideo": {
+        "frames": 25,
+        "maxChannelRMS": 4.451965857910413,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S4-V02.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S4-V02_69本_再開20261011/全場面_1.jpg",
+          "sha256": "fb9cdbe0766b03a6f38696b55d25bf1852d67a6db91a70429e79105f502f9a86"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S4-V02_69本_再開20261011/全場面_2.jpg",
+          "sha256": "ba810dd61407b5c41a7e014a2274ebe1ef65355f1a4520869d7352cece318552"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おき全25場面を一覧で表示",
+        "notes": "8・16・32等分と並べ替え、縦r・横πr、面積式を確認。式のステップで完成した図を保ち、円に戻したり式と図を重ねたりしないことを全場面で確認。字幕・はみ出しに問題なし。"
+      }
+    },
+    {
+      "id": "M1-C5-S4-VP",
+      "sha256": "5ba476dcd5770046a97b11e7b28888665add85ebc64b1149f51982ae31cf3111",
+      "decode": "all video/audio decoded with -xerror",
+      "frames": 1128,
+      "fps": 30,
+      "seconds": 37.601,
+      "audioSeconds": 37.632,
+      "meanDB": -18.6,
+      "peakDB": -2.0,
+      "captions": "all steps equal script",
+      "sampleFrames": 26,
+      "allReviewedFramesMatchVideo": {
+        "frames": 26,
+        "maxChannelRMS": 3.395585369269929,
+        "stats": "/var/folders/58/y7snsh9j455fy0_ny88jzjpr0000gn/T/nobi-math-ch5-frames-20261019-mb3p03lc/M1-C5-S4-VP.psnr"
+      },
+      "contactSheets": [
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S4-VP_69本_再開20261011/全場面_1.jpg",
+          "sha256": "456ed940e999c042bc19462ae1bfdc95e4f20f8e914e56374084cce3d1650101"
+        },
+        {
+          "path": "教材整理/Claude_Codex共有/数学全体制作/メディア/点検/M1-C5-S4-VP_69本_再開20261011/全場面_2.jpg",
+          "sha256": "de20e57a0d34822fa00c854b7aa65924d8cb4dcaa6e7e2c4becbbf5d394ed9ce"
+        }
+      ],
+      "bookCopyAndReference": "SHA matched",
+      "previousVisualReview": {
+        "date": "2026-10-11",
+        "result": "全場面を目視確認済み",
+        "method": "1.5秒おき全26場面を一覧で表示",
+        "notes": "6等分ピザ、弧・弦・中心角・接線、円周/面積の公式、a/360と1/2ℓrを全場面で確認。補足図は字幕の内容と対応、答えの数値を出さず、重なりやはみ出しなし。"
+      }
+    }
+  ]
+}

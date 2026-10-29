@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const g=document.querySelector('canvas').getContext('2d'),ink='#203348',blue='#1f5fa8';function text(s,x,y,size=32,col=ink,align='center'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}function box(x,y,w,h,col,stroke=false){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,20);g.fill();if(stroke){g.strokeStyle=blue;g.lineWidth=3;g.stroke()}}
+const cards=[{s:'−7',v:-7},{s:'0.4',v:.4},{s:'0',v:0},{s:'+3',v:3},{s:'−1/2',v:-.5},{s:'+6/3',v:2}];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(24,raw)),final=t>=24, intro=raw<1;
+const z=t<13?(t-1)/2.4:5+(t-13)/11, i=Math.min(5,Math.floor(z)),phase=z-i,card=cards[i],gate=Math.min(2,Math.floor(phase*4)),arrived=phase>=.75&&!final&&!intro;
+g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,90,'#e8f0fa');text('数を3つの箱に分ける',640,86,42,blue);
+['符号は？','整数？','0？'].forEach((s,j)=>{box(170+j*330,170,280,95,j===gate&&!intro?'#d7e8fa':'white',true);text(s,310+j*330,232,36)});
+['正の数','0','負の数'].forEach((s,j)=>{const cx=250+j*390;box(cx-150,420,300,115,'white',true);text(s,cx,467,34)});
+['整数','自然数'].forEach((s,j)=>{const cx=450+j*390;box(cx-160,557,320,100,'#eaf0f7',true);text(s,cx,598,34)});
+if(intro){cards.forEach((a,j)=>text(a.s,160+j*192,352,38,blue));text('符号と値を、順番に調べよう',640,702,32);return {intro:true};}
+if(final){g.strokeStyle=blue;g.lineWidth=7;g.strokeRect(495,162,290,112);text('分数も、まず値を調べる',640,702,32);return {final:true};}
+const shown=card.s==='+6/3'&&phase>=.35?'2':card.s;
+if(!arrived){box(210+gate*330,294,200,96,'#eef4fb',true);text(shown,310+gate*330,355,48,blue)}else{const cx=card.v>0?250:card.v<0?1030:640;text(shown,cx,513,40,blue);if(Number.isInteger(card.v))text(shown,450,645,38,blue);if(Number.isInteger(card.v)&&card.v>0)text(shown,840,645,38,blue)}
+text(gate===0?'0より大きい？ 小さい？':gate===1?'分数も、値が整数か確かめる':'0は、正でも負でもない',640,702,32);return {i,gate,arrived,value:card.v};};renderAt(0);</script>

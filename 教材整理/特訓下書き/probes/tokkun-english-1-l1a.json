@@ -1,0 +1,82 @@
+{
+ "unit": "tokkun-english-1-l1a.json",
+ "cases": [
+  {
+   "n": 48,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I am a soccer fan.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 48,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I am a soccer fan",
+   "expect": true,
+   "why": "ピリオドなし"
+  },
+  {
+   "n": 48,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I'm a soccer fan.",
+   "expect": false,
+   "why": "与えた語を短縮"
+  },
+  {
+   "n": 48,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I do a soccer fan.",
+   "expect": false,
+   "why": "使わない語を使用"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I don't play the piano.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I don’t play the piano.",
+   "expect": true,
+   "why": "’の表記"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I do not play the piano.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 50,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I am don't play the piano.",
+   "expect": false,
+   "why": "余分な語"
+  },
+  {
+   "n": 52,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I'm not hungry.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 52,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I am not hungry.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 52,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I don't hungry.",
+   "expect": false,
+   "why": "誤文"
+  }
+ ]
+}

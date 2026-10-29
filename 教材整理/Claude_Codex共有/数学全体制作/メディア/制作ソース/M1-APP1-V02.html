@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script>
+// 分数カード全体を一つの主役として回す。商の数値は示さず、逆数の理由まで。
+function card(n,d,x,y){rbox(x-90,y-95,180,200,20,'#fff',C.blue,3);frac(n,d,x,y,62,C.ink)}
+window.SCENE={draw({i,p}){
+ header('わり算は逆数をかける',i===5?'まとめ':'');
+ if(i===3){frac('2','5',360,290,72);text('×',560,325,76,C.ink,'center',800);frac('5','2',750,290,72);text('＝ 1',1020,325,76,C.orange,'center',800);ring(1020,300,120,55);text('逆数をかけると 1',640,475,46,C.ink,'center',800);return}
+ frac('3','4',350,280,80);text((i<2||(i===2&&seg(p,.12,.7)<.5))?'÷':'×',590,320,80,C.ink,'center',800);
+ if(i===2){const a=Math.PI*seg(p,.12,.7);g.save();g.translate(870,295);g.scale(Math.max(.001,Math.abs(Math.cos(a))),1);card(a<Math.PI/2?'2':'5',a<Math.PI/2?'5':'2',0,-15);g.restore();text('わる数だけを逆数にする',640,475,44,C.ink,'center',800);return}
+ if(i<2){card('2','5',870,280);if(i===1)ring(870,300,115,125);else text('わり算をかけ算へ',640,475,44,C.orange,'center',800);return}
+ card('5','2',870,280);
+ if(i===4){ring(590,295,75,58);text('逆数をかける',640,475,48,C.ink,'center',800)}
+ else{text('わる数の逆数をかける',640,475,48,C.orange,'center',800)}
+}};
+</script>

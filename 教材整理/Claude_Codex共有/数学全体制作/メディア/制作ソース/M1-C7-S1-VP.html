@@ -1,0 +1,18 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script src="動画エンジン/c67vp.js"></script><script>
+// M1-C7-S1-VP 1分でわかる 7章1節（Claude）。紙飛行機 A の記録（本文と同じ架空データ）
+const HA=[2,6,8,3,1],HB=[1,4,8,9,3];
+function info(lines,a,x=760,y=170){g.globalAlpha=a;rbox(x,y,450,60+lines.length*58,22,'#fffdf8',C.orange,4);lines.forEach((l,k)=>text(l[0],x+225,y+58+k*58,l[1]||34,l[2]||C.ink,'center',800));g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('1分でわかる　7章1節 ヒストグラムと相対度数');
+ if(i===0){const D=[7.4,10.2,5.8,8.6,9.0,6.5,12.6,8.1,7.0,9.7,4.2,8.9,10.8,6.1,8.5,7.8,11.5,9.4,7.3,8.2];D.forEach((v,k)=>{g.globalAlpha=seg(p,k*.03,.1+k*.03);rbox(150+(k%10)*99-42,170+Math.floor(k/10)*70,84,50,8,'#fff',C.blue,2.5);text(v.toFixed(1),150+(k%10)*99,205+Math.floor(k/10)*70,26,C.ink,'center',800);g.globalAlpha=1});
+  g.globalAlpha=seg(p,.7,.9);text('20個の記録 → 整理して読む',640,410,40,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===1){const k=seg(p,.1,.6);miniHist(HA.map(c=>c*k),150,480,110,40);[4,6,8,10,12,14].forEach((v,j)=>text(String(v),150+j*110,515,24,C.ink,'center',700));info([['度数分布表'],['ヒストグラム',40,C.blue],['柱は すきまなく',30]],seg(p,.4,.6));return}
+ if(i===2){miniHist(HA,150,480,110,40);const m=seg(p,.1,.3);g.globalAlpha=m;g.strokeStyle=C.red;g.lineWidth=4;g.setLineDash([10,7]);const x=150+(8.38-4)/2*110;g.beginPath();g.moveTo(x,490);g.lineTo(x,150);g.stroke();g.setLineDash([]);g.globalAlpha=1;
+  info([['代表値'],['平均値 8.38m',36,C.red],['中央値 8.35m',36,C.green],['最頻値 9m',36,C.orange]],seg(p,.2,.45));return}
+ if(i===3){miniHist(HA.map(c=>c/20*10),90,470,64,36,'#8ec1ec',seg(p,.05,.2));miniHist(HB.map(c=>c/25*10),440,470,64,36,C.orange,seg(p,.2,.35));
+  g.globalAlpha=seg(p,.05,.2);text('A 20回',250,190,32,C.blue,'center',800);g.globalAlpha=seg(p,.2,.35);text('B 25回',600,190,32,C.orange,'center',800);g.globalAlpha=1;info([['相対度数'],['度数 ÷ 合計',40,C.blue],['回数がちがっても くらべられる',26]],seg(p,.5,.7),800,250);return}
+ if(i===4){miniHist([0,0,0,0,1,4,10,4,1,0,0],110,470,40,20,'#8ec1ec');miniHist([0,0,4,3,3,0,0,0,2,5,3],600,470,40,20,C.orange);[[110,'1組'],[600,'2組']].forEach(([x,s])=>text(s,x+220,220,34,C.ink,'center',800));
+  g.globalAlpha=seg(p,.3,.5);[[110],[600]].forEach(([x])=>{g.strokeStyle=C.red;g.lineWidth=4;g.setLineDash([10,7]);g.beginPath();g.moveTo(x+6.5*40,480);g.lineTo(x+6.5*40,250);g.stroke();g.setLineDash([])});text('平均は同じ 6点',640,160,36,C.red,'center',800);g.globalAlpha=1;return}
+ g.globalAlpha=seg(p,0,.2);rbox(160,180,960,260,28,'#fffdf8',C.orange,5);text('グラフ・代表値・範囲・相対度数',640,280,42,C.ink,'center',800);text('いくつかの見方を組み合わせて判断',640,370,40,C.orange,'center',800);g.globalAlpha=1}};
+</script>

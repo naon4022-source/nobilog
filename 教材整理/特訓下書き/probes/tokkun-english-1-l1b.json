@@ -1,0 +1,47 @@
+{
+ "unit": "tokkun-english-1-l1b.json",
+ "cases": [
+  {
+   "n": 42,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I can't play the guitar.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 42,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I cannot play the guitar.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 42,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "I don't play the guitar.",
+   "expect": false,
+   "why": "使わない語を使用"
+  },
+  {
+   "n": 44,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "My favorite sport is baseball. It's fun.",
+   "expect": true,
+   "why": "与えた語どおり"
+  },
+  {
+   "n": 44,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "My favorite sport is baseball. It is fun.",
+   "expect": false,
+   "why": "与えた語を変更"
+  },
+  {
+   "n": 44,
+   "head": "日本語に合うように、（　）内の語を並べか",
+   "input": "My favorite sport is baseball, it's fun.",
+   "expect": false,
+   "why": "文の区切りちがい"
+  }
+ ]
+}

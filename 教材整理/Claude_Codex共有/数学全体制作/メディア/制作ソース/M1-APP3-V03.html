@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script src="動画エンジン/engine.js"></script><script>
+function block(n,x,y,common){rbox(x,y,70,65,10,common?'#e8f0fa':'#fff',common?C.blue:C.dim,3);text(n,x+35,y+46,44,C.ink,'center');if(common)ring(x+35,y+33,33,33,C.orange,3)}
+window.SCENE={draw({i,p}){header('素因数で考える',i===8?'まとめ':'');const u=seg(p,.1,.7);
+ if(i===8){text('最大公約数：共通する素因数をかける',640,240,48,C.blue,'center');text('最小公倍数：残る素因数もかける',640,355,44,C.ink,'center');text('共通する分は、1回だけ使う',640,475,36,C.orange,'center');return}
+ text('48',240,225,56,C.ink,'center');text('72',240,365,56,C.ink,'center');const a=[2,2,2,3,2],b=[2,2,2,3,3];
+ for(let k=0;k<5;k++){if(i>=1){g.save();g.globalAlpha=i===1?u:1;block(a[k],390+100*k,180,i>=3&&k<4);g.restore()}if(i>=2){g.save();g.globalAlpha=i===2?u:1;block(b[k],390+100*k,320,i>=3&&k<4);g.restore()}}
+ if(i===0)text('素数のかけ算へ分ける',640,500,44,C.orange,'center');
+ if(i===1||i===2)text('2と3のブロックに分ける',640,505,42,C.ink,'center');
+ if(i===3)text('共通：2 × 2 × 2 × 3',640,505,48,C.ink,'center');
+ if(i===4){text('最大公約数：24',640,505,54,C.blue,'center');ring(640,485,260,45)}
+ if(i===5){ring(825,213,42,40);text('残る分：2 と 3',640,505,48,C.ink,'center')}
+ if(i===6){text('24 × 2 × 3',640,505,54,C.ink,'center');ring(580+200*u,485,38,44)}
+ if(i===7)text('最小公倍数：24 × 2 × 3 ＝ 144',640,505,48,C.ink,'center');
+}};
+</script>

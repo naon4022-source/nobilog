@@ -1,0 +1,6 @@
+# -*- coding: utf-8 -*-
+from pathlib import Path
+r=Path(__file__).resolve().parent
+base=(r/'M1-C1-S2-V10.html').read_text().split('const titles=')[0]
+js="""window.renderAt=function(raw){const t=Math.max(1,Math.min(24,raw));g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('割引のしくみ｜2割5分引き',65,88,42,blue);box(45,147,1190,465,'white');box(490,180,300,88);text('値札：x 円',640,239,38,ink,'center');const p=Math.max(0,Math.min(1,(t-4)/5));g.globalAlpha=p;box(820,180,340,88,'#e9f2eb');text('2割5分引き',990,239,36,'#397052','center');g.globalAlpha=1;const move=Math.max(0,Math.min(1,(t-11)/6)),x=210,y=340,w=840;g.fillStyle='#bdd6ef';g.fillRect(x,y,w*.75,110);g.fillStyle='#e6c29a';g.fillRect(x+w*.75+move*90,y+move*140,w*.25,110);g.strokeStyle=ink;g.lineWidth=3;g.strokeRect(x,y,w*.75,110);g.strokeRect(x+w*.75+move*90,y+move*140,w*.25,110);if(t<11){text('もとの代金 x 円',640,520,40,ink,'center')}else{text('残る：0.75x',525,408,38,ink,'center');text('0.25x',945+move*90,408+move*140,35,ink,'center')}if(t>=18)text('1−0.25＝0.75',450,550,38,blue,'center');text(t<11?'2割5分＝25％＝0.25':'値引きする部分を引く。払うのは残った部分。',640,665,34,ink,'center');return {time:t,remainingRatio:.75,discountRatio:.25};};renderAt(0);</script>"""
+(r/'M1-C2-S1-V02.html').write_text(base+js)

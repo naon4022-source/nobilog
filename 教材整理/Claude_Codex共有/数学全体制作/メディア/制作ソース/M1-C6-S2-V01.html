@@ -1,0 +1,46 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script>
+// M1-C6-S2-V01 円錐3杯で円柱いっぱい（Claude・ナレーション版）。台本は M1-C6-S2-V01.json
+const H=200,RX=100,RY=24,BASE=535,TOP=BASE-H,CONEX=360,CYLX=850,PIV={x:845,y:105},TILT=100*Math.PI/180;
+function ell(x,y,a0=0,a1=Math.PI*2){g.beginPath();g.ellipse(x,y,RX,RY,0,a0,a1)}
+function cylinder(f,alpha=1){const x=CYLX;g.globalAlpha=alpha;
+ if(f>0){const s=BASE-H*f;g.fillStyle=C.sky;g.beginPath();g.moveTo(x-RX,s);g.lineTo(x-RX,BASE);g.ellipse(x,BASE,RX,RY,0,Math.PI,0,true);g.lineTo(x+RX,s);g.closePath();g.fill();ell(x,s);g.fillStyle=C.skyTop;g.fill()}
+ g.strokeStyle=C.ink;g.lineWidth=5;ell(x,TOP);g.stroke();g.beginPath();g.moveTo(x-RX,TOP);g.lineTo(x-RX,BASE);g.moveTo(x+RX,TOP);g.lineTo(x+RX,BASE);g.stroke();
+ ell(x,BASE,0,Math.PI);g.stroke();g.setLineDash([10,9]);g.lineWidth=3;ell(x,BASE,Math.PI,Math.PI*2);g.stroke();g.setLineDash([]);g.globalAlpha=1}
+const tri=()=>{g.beginPath();g.moveTo(0,H);g.lineTo(-RX,0);g.lineTo(RX,0);g.closePath()},rim=()=>{g.beginPath();g.ellipse(0,0,RX,RY,0,0,Math.PI*2)};
+function cone(p,L,alpha=1){g.globalAlpha=alpha;if(L<720)for(const sh of [tri,rim]){g.save();g.translate(p.x,p.y);g.rotate(p.a);sh();g.clip();g.setTransform(1,0,0,1,0,0);g.fillStyle=C.sky;g.fillRect(0,L,W,HT-L);g.strokeStyle=C.skyTop;g.lineWidth=4;g.beginPath();g.moveTo(0,L);g.lineTo(W,L);g.stroke();g.restore()}
+ g.save();g.translate(p.x,p.y);g.rotate(p.a);g.strokeStyle=C.ink;g.lineWidth=5;g.beginPath();g.moveTo(-RX,0);g.lineTo(0,H);g.lineTo(RX,0);g.stroke();rim();g.stroke();g.restore();g.globalAlpha=1}
+const lip=p=>({x:p.x+RX*Math.cos(p.a),y:p.y+RX*Math.sin(p.a)});
+function marks(n){const x=CYLX+RX+24;for(let k=1;k<=n;k++){const y=BASE-H*k/3;g.strokeStyle=C.blue;g.lineWidth=3;g.setLineDash([9,8]);g.beginPath();g.moveTo(CYLX-RX,y);g.lineTo(CYLX+RX,y);g.stroke();g.setLineDash([]);g.beginPath();g.moveTo(x-12,y);g.lineTo(x+4,y);g.stroke();if(k<3)frac(String(k),'3',x+32,y+4,24,C.blue);else text('いっぱい',x+14,y+12,34,C.blue,'left',800)}}
+function bracket(x,side){g.strokeStyle=C.orange;g.lineWidth=5;g.beginPath();g.moveTo(x+side*16,TOP);g.lineTo(x,TOP);g.lineTo(x,BASE);g.lineTo(x+side*16,BASE);g.stroke();text('高さ h',x-side*18,(TOP+BASE)/2+14,36,C.orange,side<0?'left':'right',800)}
+// 1回分の注ぐ動き（p：0〜1）。f0→f1 まで円柱の水が増える
+function pour(p,f0,f1){const fill=seg(p,0,.14),up=seg(p,.14,.24)*(1-seg(p,.86,.95)),side=seg(p,.22,.34)*(1-seg(p,.78,.88)),tilt=seg(p,.36,.66)*(1-seg(p,.7,.78));
+ const c={x:CONEX+(PIV.x-CONEX)*side,y:TOP+(PIV.y-TOP)*up,a:TILT*tilt};let L=720,f=f0;
+ if(p<.14)L=BASE-H*fill;else if(p<.36)L=c.y;else if(p<.7){L=lip(c).y;f=f0+(f1-f0)*clamp((tilt-.45)/.55,0,1)}else{f=f1}
+ cylinder(f);if(tilt>.45&&p<.67){const lp=lip(c);g.strokeStyle=C.sky;g.lineWidth=13;g.lineCap='round';g.beginPath();g.moveTo(lp.x,lp.y);g.quadraticCurveTo(lp.x-8,(lp.y+BASE-H*f)/2,lp.x-5,BASE-H*f);g.stroke();g.lineCap='butt'}
+ cone(c,L);return f}
+function miniCone(x,y,s){g.strokeStyle=C.ink;g.lineWidth=4;g.fillStyle=C.sky;g.beginPath();g.moveTo(x-40*s,y);g.lineTo(x,y+90*s);g.lineTo(x+40*s,y);g.closePath();g.fill();g.stroke();g.beginPath();g.ellipse(x,y,40*s,10*s,0,0,Math.PI*2);g.fillStyle=C.skyTop;g.fill();g.stroke()}
+function miniCyl(x,y,s){g.fillStyle=C.sky;g.fillRect(x-40*s,y,80*s,90*s);g.strokeStyle=C.ink;g.lineWidth=4;g.strokeRect(x-40*s,y,80*s,90*s);g.beginPath();g.ellipse(x,y,40*s,10*s,0,0,Math.PI*2);g.fillStyle=C.skyTop;g.fill();g.stroke();g.beginPath();g.ellipse(x,y+90*s,40*s,10*s,0,0,Math.PI);g.stroke()}
+window.SCENE={draw({i,p,t}){
+ const chip=i>=5&&i<=10?`${Math.floor((i-5)/2)+1}杯目`:'';header('円錐3杯で円柱いっぱい',chip);
+ if(i<=4){const a=i===0?seg(p,0,.4):1;cylinder(0,a);cone({x:CONEX,y:TOP,a:0},720,a);
+  if(i>=1){text('円錐',CONEX,TOP-48,40,C.ink,'center',800);text('円柱',CYLX,TOP-48,40,C.ink,'center',800)}
+  if(i===2){g.globalAlpha=seg(p,0,.25);ring(CONEX,TOP,RX+10,RY+8);ring(CYLX,TOP,RX+10,RY+8);text('同じ大きさ',(CONEX+CYLX)/2,TOP+96,40,C.orange,'center',800);arrow(530,TOP+70,CONEX+RX-4,TOP+22,C.orange,5);arrow(680,TOP+70,CYLX-RX+4,TOP+22,C.orange,5);g.globalAlpha=1}
+  if(i===3){g.globalAlpha=seg(p,0,.3);bracket(CONEX-RX-40,1);bracket(CYLX+RX+40,-1);g.globalAlpha=1}
+  if(i===4){g.globalAlpha=seg(p,.3,.6);text('？',CYLX,TOP+150,120,C.blue,'center',800);g.globalAlpha=1}
+  return}
+ if(i>=5&&i<=10){const k=Math.floor((i-5)/2);
+  if((i-5)%2===0){marks(k);pour(p,k/3,(k+1)/3);return}
+  // 入った高さを、印で示す
+  cylinder((k+1)/3);cone({x:CONEX,y:TOP,a:0},720);marks(k+1);g.globalAlpha=seg(p,0,.3);ring(CYLX,BASE-H*(k+1)/3,RX+12,RY+8);g.globalAlpha=1;return}
+ // まとめ：円錐3杯＝円柱1杯 → 式
+ cylinder(1,.18);cone({x:CONEX,y:TOP,a:0},720,.18);
+ const a=seg(p,0,.2);g.globalAlpha=a;rbox(150,100,980,i===11?380:430,28,'#fffdf8',C.orange,5);
+ if(i===11){[0,1,2].forEach(k=>{g.globalAlpha=a*seg(p,.08+k*.08,.2+k*.08);miniCone(300+k*150,170,1);if(k<2)text('＋',375+k*150,230,48,C.ink,'center',800)});
+  g.globalAlpha=a*seg(p,.35,.45);text('＝',730,230,56,C.ink,'center',800);miniCyl(860,175,1.05);
+  g.globalAlpha=a*seg(p,.5,.65);text('円錐の体積 ＝ 円柱の体積 ×',575,410,46,C.ink,'center',800);frac('1','3',900,394,50,C.orange);g.globalAlpha=1}
+ else{g.globalAlpha=a;text('V',420,300,96,C.ink,'center',800);text('＝',510,300,96,C.ink,'center',800);frac('1','3',610,265,70,C.orange);text('S',700,300,96,C.blue,'center',800);text('h',840,300,96,C.orange,'center',800);
+  g.globalAlpha=a*seg(p,.35,.55);text('底面積',680,410,40,C.blue,'center',800);text('高さ',860,410,40,C.orange,'center',800);arrow(690,368,698,318,C.blue,5);arrow(852,368,844,318,C.orange,5);
+  g.globalAlpha=a*seg(p,.6,.75);rbox(300,452,680,64,18,C.orange);text('円柱 Sh の 3分の1',640,497,36,'#fff','center',800);g.globalAlpha=1}
+}};
+</script>

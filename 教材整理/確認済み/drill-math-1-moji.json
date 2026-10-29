@@ -1,0 +1,2711 @@
+{
+ "id": "drill-math-1-moji",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "文字と式",
+ "majorTitle": "文字式",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-moji-1",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nb×a×b×(−9)",
+   "answer": {
+    "kind": "expr",
+    "value": "-9ab^2",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −9ab²",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-2",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n(−8)÷a",
+   "answer": {
+    "kind": "expr",
+    "value": "-8/a"
+   },
+   "explanation": "文字でわるときも分数の形にする。答え −8/a",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-3",
+   "type": "input",
+   "prompt": "次の式を、×、÷の記号を使わないで表そう。\n2−x÷4×y",
+   "answer": {
+    "kind": "expr",
+    "value": "2-xy/4"
+   },
+   "explanation": "＋、−は省けない。x÷4×y＝xy/4。答え 2−xy/4",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p19 3（四則混合の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "(2-x)y/4"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-4",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1個4円のパンをx個買ったときの代金",
+   "answer": {
+    "kind": "expr",
+    "value": "4x",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "代金＝単価×個数＝4x（円）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p20 1(1)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-5",
+   "type": "input",
+   "prompt": "次の式で、yの係数を答えよう。\n−y/8",
+   "answer": {
+    "kind": "number",
+    "value": "-1/8"
+   },
+   "explanation": "y/8＝(1/8)yなので係数は−1/8",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p24 1(4)（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-8"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-6",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n3/4a ＋ 2/3a",
+   "answer": {
+    "kind": "expr",
+    "value": "17/12a"
+   },
+   "explanation": "係数をまとめる。3/4＋（2/3）＝17/12。答え 17/12a",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-7",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(y − 1)−(3y ＋ 2)",
+   "answer": {
+    "kind": "expr",
+    "value": "-2y-3"
+   },
+   "explanation": "−( ) は各項の符号を変えてはずす。答え −2y − 3",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-2y+1"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-8",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−2)(3y ＋ 4)",
+   "answer": {
+    "kind": "expr",
+    "value": "-6y-8"
+   },
+   "explanation": "分配法則で、かっこの中の各項に−2をかける。答え −6y − 8",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-6y+4"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-9",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n2(2x − 4)−3(−3x − 4)",
+   "answer": {
+    "kind": "expr",
+    "value": "13x+4"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え 13x ＋ 4",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "13x-20"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-10",
+   "type": "input",
+   "prompt": "x＝3のとき、次の式の値を求めよう。\n4x − 5",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "xに(3)を代入する。4×(3)＋(−5)＝7",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p28 1（式の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-17"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-11",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\na円のメロンを3個と70円のりんごを3個買ったところ、代金は1900円になった。",
+   "answer": {
+    "kind": "relation",
+    "value": "3a+210=1900"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え 3a+210=1900",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p29 3(2)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-12",
+   "type": "input",
+   "prompt": "十の位がa、一の位がbである2けたの正の整数を、a、bを使って表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "10a+b"
+   },
+   "explanation": "十の位の数は10倍する。10a＋b",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p20 1(3)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "ab",
+    "a+b"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-13",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n4×(−4x ＋ 1)/2",
+   "answer": {
+    "kind": "expr",
+    "value": "-8x+2"
+   },
+   "explanation": "先に分母と4を約分してから分配法則を使う。答え −8x ＋ 2",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p26 3（分数の形の式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-14",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(4x ＋ 4)/3 ＋ (x − 5)/2",
+   "answer": {
+    "kind": "expr",
+    "value": "(11x-7)/6",
+    "form": "any"
+   },
+   "explanation": "分母を6にそろえて分子を計算する。答え (11x − 7)/6",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-15",
+   "type": "input",
+   "prompt": "長さ10 cmのリボンを、のりしろ2 cmでつなげていく（1本ふえるごとに8 cmずつ長くなる）。\n5本つないだとき、全体の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "42",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "10＋8×(5−1)＝42",
+   "source": {
+    "id": "source-0119",
+    "file": "ドリル/数学/S__15589403_0.jpg",
+    "sha256": "7786468cc47199ea5d518b4db2fb1be2fb7a490e1d25459e1f41af919dbe5cc6",
+    "page": 33,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p33 7（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-16",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n−3ab",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "−3×a×b",
+     "(−3)×a×b",
+     "−3*a*b",
+     "a×b×−3",
+     "a×b×(−3)",
+     "-3×a×b",
+     "(-3)×a×b",
+     "-3*a*b",
+     "a×b×-3",
+     "a×b×(-3)"
+    ],
+    "compact": true
+   },
+   "explanation": "−3ab＝-3×a×b（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-17",
+   "type": "input",
+   "prompt": "a分を、（秒）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "60a",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "1分＝60秒なので 60a（秒）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-18",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\n1×y×x",
+   "answer": {
+    "kind": "expr",
+    "value": "xy",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え xy",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-19",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1個6円のパンをx個買ったときの代金",
+   "answer": {
+    "kind": "expr",
+    "value": "6x",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "代金＝単価×個数＝6x（円）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(1)"
+   },
+   "ref": "参考：数学ドリル p20 1(1)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-20",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n−2a − 5 − 5a − 2",
+   "answer": {
+    "kind": "expr",
+    "value": "-7a-7"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。−2＋（−5）＝−7、−5＋（−2）＝−7。答え −7a − 7",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3a-7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-21",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nx×(−2)",
+   "answer": {
+    "kind": "expr",
+    "value": "-2x",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −2x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-22",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n4b÷5",
+   "answer": {
+    "kind": "expr",
+    "value": "4b/5"
+   },
+   "explanation": "わる数を分母にして分数の形で表す。答え 4b/5",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-23",
+   "type": "input",
+   "prompt": "次の式を、×、÷の記号を使わないで表そう。\n6−x÷4×y",
+   "answer": {
+    "kind": "expr",
+    "value": "6-xy/4"
+   },
+   "explanation": "＋、−は省けない。x÷4×y＝xy/4。答え 6−xy/4",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p19 3（四則混合の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "(6-x)y/4"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-24",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1辺がa cmの正5角形の周の長さ",
+   "answer": {
+    "kind": "expr",
+    "value": "5a",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "5×a＝5a（cm）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p20 2(1)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-25",
+   "type": "input",
+   "prompt": "1次式 x − 2 で、xの係数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "文字の項 x の数の部分が係数。答え 1",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p24 1（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-2"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-26",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n2x ＋ 3 − 9x ＋ 6",
+   "answer": {
+    "kind": "expr",
+    "value": "-7x+9"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。2＋（−9）＝−7、3＋（6）＝9。答え −7x ＋ 9",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "11x+9"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-27",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−4y ＋ 2)＋(3y ＋ 8)",
+   "answer": {
+    "kind": "expr",
+    "value": "-y+10"
+   },
+   "explanation": "かっこをそのままはずす。答え −y ＋ 10",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-28",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−15y − 5)÷(−5)",
+   "answer": {
+    "kind": "expr",
+    "value": "3y+1"
+   },
+   "explanation": "各項を−5でわる。答え 3y ＋ 1",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の除法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3y-5"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-29",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n−(4y − 6)＋3(4y ＋ 3)",
+   "answer": {
+    "kind": "expr",
+    "value": "8y+15"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え 8y ＋ 15",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "8y-3"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-30",
+   "type": "input",
+   "prompt": "x＝−1のとき、次の式の値を求めよう。\nx²",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "(−1)²＝1",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "1(7)"
+   },
+   "ref": "参考：数学ドリル p28 1(7)（式の値（累乗））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-1"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-31",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\nある数xを4倍して4を加えると、22より大きい。",
+   "answer": {
+    "kind": "relation",
+    "value": "4x+4>22"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え 4x+4>22",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p29 4(1)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-32",
+   "type": "input",
+   "prompt": "3回のテストの得点がそれぞれa点、b点、c点のとき、3回の平均点を表す式を書こう。",
+   "answer": {
+    "kind": "expr",
+    "value": "(a+b+c)/3",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "平均＝合計÷回数＝(a＋b＋c)/3",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p20 1(4)（平均の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a+b+c/3"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-33",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−8)×(4x ＋ 1)/4",
+   "answer": {
+    "kind": "expr",
+    "value": "-8x-2"
+   },
+   "explanation": "先に分母と−8を約分してから分配法則を使う。答え −8x − 2",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p26 3（分数の形の式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-34",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−5x ＋ 4)/4 − (2x − 3)/6",
+   "answer": {
+    "kind": "expr",
+    "value": "(-19x+18)/12",
+    "form": "any"
+   },
+   "explanation": "分母を12にそろえて分子を計算する。答え (−19x ＋ 18)/12",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-35",
+   "type": "input",
+   "prompt": "マッチ棒を並べて、正三角形を左から順につないでいく（1個目は3本、1個増えるごとに2本ずつ増える）。\nn個つくったとき、マッチ棒は何本になるか。nを使った式で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "2n+1"
+   },
+   "explanation": "3＋2(n−1)＝2n ＋ 1",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p29 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-36",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n6ay",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "6×a×y",
+     "(6)×a×y",
+     "6*a*y",
+     "a×y×6",
+     "a×y×(6)"
+    ],
+    "compact": true
+   },
+   "explanation": "6ay＝6×a×y（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-37",
+   "type": "input",
+   "prompt": "b分を、（時間）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "b/60",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "1時間＝60分なので b/60（時間）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-38",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\na×(−8)×a",
+   "answer": {
+    "kind": "expr",
+    "value": "-8a^2",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −8a²",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-39",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na mの道のりを分速b mで4分進んだときの残りの道のり",
+   "answer": {
+    "kind": "expr",
+    "value": "a-4b",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "残り＝a−b×4＝a−4b（m）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p21 3(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-40",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n−1/2x ＋ 1/4x",
+   "answer": {
+    "kind": "expr",
+    "value": "-1/4x"
+   },
+   "explanation": "係数をまとめる。−1/2＋（1/4）＝−1/4。答え −1/4x",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-41",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\na×(−5)",
+   "answer": {
+    "kind": "expr",
+    "value": "-5a",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −5a",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-42",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n5y÷9",
+   "answer": {
+    "kind": "expr",
+    "value": "5y/9"
+   },
+   "explanation": "わる数を分母にして分数の形で表す。答え 5y/9",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-43",
+   "type": "input",
+   "prompt": "次の式を、×、÷の記号を使わないで表そう。\n2−x÷7×y",
+   "answer": {
+    "kind": "expr",
+    "value": "2-xy/7"
+   },
+   "explanation": "＋、−は省けない。x÷7×y＝xy/7。答え 2−xy/7",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p19 3（四則混合の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "(2-x)y/7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-44",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n8人が同じ金額ずつ出し合ってx円の品物を買ったときの、1人あたりの金額",
+   "answer": {
+    "kind": "expr",
+    "value": "x/8",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "x÷8＝x/8（円）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p20 1(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-45",
+   "type": "input",
+   "prompt": "1次式 −9a − 5 で、aの係数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-9"
+   },
+   "explanation": "文字の項 −9a の数の部分が係数。答え −9",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p24 1（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-5"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-46",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n3x − 5 − 8x − 2",
+   "answer": {
+    "kind": "expr",
+    "value": "-5x-7"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。3＋（−8）＝−5、−5＋（−2）＝−7。答え −5x − 7",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "11x-7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-47",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−6y − 7)−(3y ＋ 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "-9y-13"
+   },
+   "explanation": "−( ) は各項の符号を変えてはずす。答え −9y − 13",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-9y-1"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-48",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(16a − 8)÷(−4)",
+   "answer": {
+    "kind": "expr",
+    "value": "-4a+2"
+   },
+   "explanation": "各項を−4でわる。答え −4a ＋ 2",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の除法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-4a-8"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-49",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n−4(−5x ＋ 1)＋2(6x ＋ 3)",
+   "answer": {
+    "kind": "expr",
+    "value": "32x+2"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え 32x ＋ 2",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "32x-10"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-50",
+   "type": "input",
+   "prompt": "x＝3のとき、次の式の値を求めよう。\nx²",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "(3)²＝9",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "1(7)"
+   },
+   "ref": "参考：数学ドリル p28 1(7)（式の値（累乗））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-9"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-51",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\nある数xを4倍して5を加えると、16より大きい。",
+   "answer": {
+    "kind": "relation",
+    "value": "4x+5>16"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え 4x+5>16",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p29 4(1)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-52",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n9×(−x − 2)/3",
+   "answer": {
+    "kind": "expr",
+    "value": "-3x-6"
+   },
+   "explanation": "先に分母と9を約分してから分配法則を使う。答え −3x − 6",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p26 3（分数の形の式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-53",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(5x − 2)/2 ＋ (−3x − 5)/3",
+   "answer": {
+    "kind": "expr",
+    "value": "(9x-16)/6",
+    "form": "any"
+   },
+   "explanation": "分母を6にそろえて分子を計算する。答え (9x − 16)/6",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-54",
+   "type": "input",
+   "prompt": "長さ10 cmのリボンを、のりしろ2 cmでつなげていく（1本ふえるごとに8 cmずつ長くなる）。\nn本つないだとき、全体の長さは何cmになるか。nを使った式で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "8n+2"
+   },
+   "explanation": "10＋8(n−1)＝8n ＋ 2",
+   "source": {
+    "id": "source-0119",
+    "file": "ドリル/数学/S__15589403_0.jpg",
+    "sha256": "7786468cc47199ea5d518b4db2fb1be2fb7a490e1d25459e1f41af919dbe5cc6",
+    "page": 33,
+    "number": "7"
+   },
+   "ref": "参考：数学ドリル p33 7（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-55",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n5xy",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "5×x×y",
+     "(5)×x×y",
+     "5*x*y",
+     "x×y×5",
+     "x×y×(5)"
+    ],
+    "compact": true
+   },
+   "explanation": "5xy＝5×x×y（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-56",
+   "type": "input",
+   "prompt": "x gを、（kg）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "x/1000",
+    "units": [
+     "kg"
+    ]
+   },
+   "explanation": "1kg＝1000gなので x/1000（kg）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-57",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nx×x×(−6)×b×b",
+   "answer": {
+    "kind": "expr",
+    "value": "-6b^2x^2",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −6b²x²",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-58",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n濃度5％の食塩水x gにふくまれる食塩の重さ",
+   "answer": {
+    "kind": "expr",
+    "value": "5x/100",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "食塩の重さ＝食塩水の重さ×濃度/100＝5x/100（g）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "4(3)"
+   },
+   "ref": "参考：数学ドリル p21 4(3)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-59",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n1/5b ＋ 1/3b",
+   "answer": {
+    "kind": "expr",
+    "value": "8/15b"
+   },
+   "explanation": "係数をまとめる。1/5＋（1/3）＝8/15。答え 8/15b",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-60",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\n(−6)×y",
+   "answer": {
+    "kind": "expr",
+    "value": "-6y",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −6y",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-61",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n(−2)÷x",
+   "answer": {
+    "kind": "expr",
+    "value": "-2/x"
+   },
+   "explanation": "文字でわるときも分数の形にする。答え −2/x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-62",
+   "type": "input",
+   "prompt": "次の式を、×、÷の記号を使わないで表そう。\na÷7×(−b)",
+   "answer": {
+    "kind": "expr",
+    "value": "-ab/7"
+   },
+   "explanation": "a÷7×b＝a×(1/7)×b。答え −ab/7",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p19 3（四則混合の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-63",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na mの道のりを分速b mで8分進んだときの残りの道のり",
+   "answer": {
+    "kind": "expr",
+    "value": "a-8b",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "残り＝a−b×8＝a−8b（m）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p21 3(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-64",
+   "type": "input",
+   "prompt": "次の式で、aの係数を答えよう。\n−a/3",
+   "answer": {
+    "kind": "number",
+    "value": "-1/3"
+   },
+   "explanation": "a/3＝(1/3)aなので係数は−1/3",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p24 1(4)（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-3"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-65",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n7a − 5 ＋ 7a ＋ 1",
+   "answer": {
+    "kind": "expr",
+    "value": "14a-4"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。7＋（7）＝14、−5＋（1）＝−4。答え 14a − 4",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-4"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-66",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−7y − 9)−(−2y ＋ 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "-5y-15"
+   },
+   "explanation": "−( ) は各項の符号を変えてはずす。答え −5y − 15",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-5y-3"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-67",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n1(5x − 5)",
+   "answer": {
+    "kind": "expr",
+    "value": "5x-5"
+   },
+   "explanation": "分配法則で、かっこの中の各項に1をかける。答え 5x − 5",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-68",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(5y ＋ 1)＋(−4y − 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "y-5"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え y − 5",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y+7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-69",
+   "type": "input",
+   "prompt": "x＝2のとき、次の式の値を求めよう。\n4x²−2x³",
+   "answer": {
+    "kind": "number",
+    "value": "0"
+   },
+   "explanation": "4×(2)²−2×(2)³＝0",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "2(6)"
+   },
+   "ref": "参考：数学ドリル p28 2(6)（式の値（累乗））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-70",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\n重さx kgの箱に、1個4 kgの品物をy個つめても、全体の重さは29 kg以下である。",
+   "answer": {
+    "kind": "relation",
+    "value": "x+4y<=29"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え x+4y≦29",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "4(3)"
+   },
+   "ref": "参考：数学ドリル p29 4(3)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-71",
+   "type": "input",
+   "prompt": "aでわったとき、商がbで余りが3になる数を表す式を書こう。",
+   "answer": {
+    "kind": "expr",
+    "value": "ab+3"
+   },
+   "explanation": "わられる数＝わる数×商＋余り＝ab＋3",
+   "source": {
+    "id": "source-0114",
+    "file": "ドリル/数学/S__15589398_0.jpg",
+    "sha256": "c6182bc41c69dc6f5a6b921f9ceb8861bc05a339be0100d0f6da2263142f9a3d",
+    "page": 22,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p22 1(3)（わり算の関係）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a/b+3"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-72",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(5x ＋ 4)/4 ＋ (x − 1)/6",
+   "answer": {
+    "kind": "expr",
+    "value": "(17x+10)/12",
+    "form": "any"
+   },
+   "explanation": "分母を12にそろえて分子を計算する。答え (17x ＋ 10)/12",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-73",
+   "type": "input",
+   "prompt": "マッチ棒を並べて、正方形を右方向につないでいく（1個目は4本、1個増えるごとに3本ずつ増える）。\nn個つくったとき、マッチ棒は何本になるか。nを使った式で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "3n+1"
+   },
+   "explanation": "4＋3(n−1)＝3n ＋ 1",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-74",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n3xy",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3×x×y",
+     "(3)×x×y",
+     "3*x*y",
+     "x×y×3",
+     "x×y×(3)"
+    ],
+    "compact": true
+   },
+   "explanation": "3xy＝3×x×y（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-75",
+   "type": "input",
+   "prompt": "y Lを、（mL）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "1000y",
+    "units": [
+     "mL"
+    ]
+   },
+   "explanation": "1L＝1000mLなので 1000y（mL）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-76",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\n9×b×a×b",
+   "answer": {
+    "kind": "expr",
+    "value": "9ab^2",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え 9ab²",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-77",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx円の5％",
+   "answer": {
+    "kind": "expr",
+    "value": "5x/100",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "1％＝1/100。x×5/100＝5x/100（円）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p21 4(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-78",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n−3b − 1 ＋ b ＋ 9",
+   "answer": {
+    "kind": "expr",
+    "value": "-2b+8"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。−3＋（1）＝−2、−1＋（9）＝8。答え −2b ＋ 8",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-4b+8"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-79",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nb×5×x×b",
+   "answer": {
+    "kind": "expr",
+    "value": "5b^2x",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え 5b²x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-80",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n7÷x",
+   "answer": {
+    "kind": "expr",
+    "value": "7/x"
+   },
+   "explanation": "文字でわるときも分数の形にする。答え 7/x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-81",
+   "type": "input",
+   "prompt": "次の式で、aの係数を答えよう。\n−a/2",
+   "answer": {
+    "kind": "number",
+    "value": "-1/2"
+   },
+   "explanation": "a/2＝(1/2)aなので係数は−1/2",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p24 1(4)（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-2"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-82",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n4/3y ＋ 1/2y",
+   "answer": {
+    "kind": "expr",
+    "value": "11/6y"
+   },
+   "explanation": "係数をまとめる。4/3＋（1/2）＝11/6。答え 11/6y",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-83",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−7y ＋ 6)−(7y ＋ 8)",
+   "answer": {
+    "kind": "expr",
+    "value": "-14y-2"
+   },
+   "explanation": "−( ) は各項の符号を変えてはずす。答え −14y − 2",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-14y+14"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-84",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−9y − 12)÷(−3)",
+   "answer": {
+    "kind": "expr",
+    "value": "3y+4"
+   },
+   "explanation": "各項を−3でわる。答え 3y ＋ 4",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の除法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3y-12"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-85",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n5(2y ＋ 1)−2(4y − 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "2y+17"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え 2y ＋ 17",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2y-7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-86",
+   "type": "input",
+   "prompt": "x＝−5のとき、次の式の値を求めよう。\n−4x ＋ 8",
+   "answer": {
+    "kind": "number",
+    "value": "28"
+   },
+   "explanation": "xに(−5)を代入する。−4×(−5)＋(8)＝28",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p28 1（式の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-12"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-87",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\n110枚ある色紙を、a人の子どもに1人6枚ずつ配ろうとすると、足りない。",
+   "answer": {
+    "kind": "relation",
+    "value": "110<6a"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え 110<6a",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p29 4(2)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-88",
+   "type": "input",
+   "prompt": "x kgの荷物4個とy kgの荷物3個があるとき、これら7個の平均の重さを表す式を書こう。",
+   "answer": {
+    "kind": "expr",
+    "value": "(4x+3y)/7",
+    "units": [
+     "kg"
+    ]
+   },
+   "explanation": "合計は4x＋3y（kg）。平均は(4x＋3y)/7（kg）",
+   "source": {
+    "id": "source-0114",
+    "file": "ドリル/数学/S__15589398_0.jpg",
+    "sha256": "c6182bc41c69dc6f5a6b921f9ceb8861bc05a339be0100d0f6da2263142f9a3d",
+    "page": 22,
+    "number": "1(6)"
+   },
+   "ref": "参考：数学ドリル p22 1(6)（平均の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "(x+y)/7"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-89",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n2×(−6x − 3)/2",
+   "answer": {
+    "kind": "expr",
+    "value": "-6x-3"
+   },
+   "explanation": "先に分母と2を約分してから分配法則を使う。答え −6x − 3",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p26 3（分数の形の式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-90",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−4x ＋ 5)/2 ＋ (4x ＋ 3)/5",
+   "answer": {
+    "kind": "expr",
+    "value": "(-12x+31)/10",
+    "form": "any"
+   },
+   "explanation": "分母を10にそろえて分子を計算する。答え (−12x ＋ 31)/10",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-91",
+   "type": "input",
+   "prompt": "マッチ棒を並べて、正方形を右方向につないでいく（1個目は4本、1個増えるごとに3本ずつ増える）。\n5個つくったとき、マッチ棒は何本か。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "4＋3×(5−1)＝16",
+   "source": {
+    "id": "source-0125",
+    "file": "ドリル/数学/S__15589410_0.jpg",
+    "sha256": "c4c9f51fd3ada6a98df6df37e9734ef0026234fa05147377bb4ac76600be6456",
+    "page": 44,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p44 5（規則性）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-92",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n−ax",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "−1×a×x",
+     "(−1)×a×x",
+     "−1*a*x",
+     "a×x×−1",
+     "a×x×(−1)",
+     "-1×a×x",
+     "(-1)×a×x",
+     "-1*a*x",
+     "a×x×-1",
+     "a×x×(-1)"
+    ],
+    "compact": true
+   },
+   "explanation": "−ax＝-1×a×x（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-93",
+   "type": "input",
+   "prompt": "p cmを、（m）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "p/100",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1m＝100cmなので p/100（m）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-94",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nx×5",
+   "answer": {
+    "kind": "expr",
+    "value": "5x",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え 5x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-95",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n1/5a − 2/3a",
+   "answer": {
+    "kind": "expr",
+    "value": "-7/15a"
+   },
+   "explanation": "係数をまとめる。1/5＋（−2/3）＝−7/15。答え −7/15a",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-96",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nx×6",
+   "answer": {
+    "kind": "expr",
+    "value": "6x",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え 6x",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-97",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n(b＋y)÷2",
+   "answer": {
+    "kind": "expr",
+    "value": "(b+y)/2"
+   },
+   "explanation": "かっこの式全体を分子にする。答え (b＋y)/2",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "b+y/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-98",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na mの道のりを分速b mで3分進んだときの残りの道のり",
+   "answer": {
+    "kind": "expr",
+    "value": "a-3b",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "残り＝a−b×3＝a−3b（m）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p21 3(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-99",
+   "type": "input",
+   "prompt": "次の式で、xの係数を答えよう。\n−x/8",
+   "answer": {
+    "kind": "number",
+    "value": "-1/8"
+   },
+   "explanation": "x/8＝(1/8)xなので係数は−1/8",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p24 1(4)（項と係数）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-8"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-100",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n−7x − 3 ＋ 8x − 7",
+   "answer": {
+    "kind": "expr",
+    "value": "x-10"
+   },
+   "explanation": "文字の項どうし、数の項どうしをまとめる。−7＋（8）＝1、−3＋（−7）＝−10。答え x − 10",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p25 3（式を簡単にする）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-15x-10"
+   ]
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-moji-test-1",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−9y − 4)＋(−2y ＋ 6)",
+   "answer": {
+    "kind": "expr",
+    "value": "-11y+2"
+   },
+   "explanation": "かっこをそのままはずす。答え −11y ＋ 2",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p25 4（1次式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-2",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(3y ＋ 12)÷3",
+   "answer": {
+    "kind": "expr",
+    "value": "y+4"
+   },
+   "explanation": "各項を3でわる。答え y ＋ 4",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 25,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p25 6（1次式と数の除法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y+12"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-test-3",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n4(4a − 4)−3(−3a − 2)",
+   "answer": {
+    "kind": "expr",
+    "value": "25a-10"
+   },
+   "explanation": "それぞれ分配法則でかっこをはずし、同類項をまとめる。答え 25a − 10",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p26 2（いろいろな計算）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "25a-22"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-test-4",
+   "type": "input",
+   "prompt": "x＝−3のとき、次の式の値を求めよう。\n3x²−x³",
+   "answer": {
+    "kind": "number",
+    "value": "54"
+   },
+   "explanation": "3×(−3)²−(−3)³＝54",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 28,
+    "number": "2(6)"
+   },
+   "ref": "参考：数学ドリル p28 2(6)（式の値（累乗））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-5",
+   "type": "input",
+   "prompt": "次の数量の関係を、等式または不等式で表そう。\n280枚ある色紙を、a人の子どもに1人6枚ずつ配ろうとすると、足りない。",
+   "answer": {
+    "kind": "relation",
+    "value": "280<6a"
+   },
+   "explanation": "左辺と右辺の数量を式に表し、等号（＝）や不等号（＜、≦など）でつなぐ。答え 280<6a",
+   "source": {
+    "id": "source-0117",
+    "file": "ドリル/数学/S__15589401_0.jpg",
+    "sha256": "b4a593a2abe958ebe6cfd17be1ec57ed66c8fa3bede6d0b052afca483232ba00",
+    "page": 29,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p29 4(2)（等式・不等式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-6",
+   "type": "input",
+   "prompt": "5回のテストの得点がそれぞれa点、b点、c点、d点のとき、5回の平均点を表す式を書こう。",
+   "answer": {
+    "kind": "expr",
+    "value": "(a+b+c+d)/5",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "平均＝合計÷回数＝(a＋b＋c＋d)/5",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 20,
+    "number": "1(4)"
+   },
+   "ref": "参考：数学ドリル p20 1(4)（平均の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "a+b+c+d/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-moji-test-7",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n4×(−2x ＋ 5)/2",
+   "answer": {
+    "kind": "expr",
+    "value": "-4x+10"
+   },
+   "explanation": "先に分母と4を約分してから分配法則を使う。答え −4x ＋ 10",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 26,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p26 3（分数の形の式と数の乗法）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-8",
+   "type": "input",
+   "prompt": "次の計算をしよう。\n(−2x − 4)/3 − (4x − 2)/2",
+   "answer": {
+    "kind": "expr",
+    "value": "(-16x-2)/6",
+    "form": "any"
+   },
+   "explanation": "分母を6にそろえて分子を計算する。答え (−16x − 2)/6",
+   "source": {
+    "id": "source-0116",
+    "file": "ドリル/数学/S__15589400_0.jpg",
+    "sha256": "3ce752e8881551b13bf6f2d29e519ccb86e2c6ce018ad24f5335518f143de1de",
+    "page": 27,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p27 6（分数の形の式の加減）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-9",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使って表そう。\n−6xy",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "−6×x×y",
+     "(−6)×x×y",
+     "−6*x*y",
+     "x×y×−6",
+     "x×y×(−6)",
+     "-6×x×y",
+     "(-6)×x×y",
+     "-6*x*y",
+     "x×y×-6",
+     "x×y×(-6)"
+    ],
+    "compact": true
+   },
+   "explanation": "−6xy＝-6×x×y（数と文字、文字と文字の間に×を入れる）",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 19,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p19 4（×を使った表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-10",
+   "type": "input",
+   "prompt": "q kmを、（m）の単位で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "1000q",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1km＝1000mなので 1000q（m）",
+   "source": {
+    "id": "source-0113",
+    "file": "ドリル/数学/S__15589396_0.jpg",
+    "sha256": "e9af26bf86fed31e22156f50b875d512d963e88a91dd89ac1b2328550af35beb",
+    "page": 21,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p21 5（式と単位）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-11",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\n(−7)×a×b",
+   "answer": {
+    "kind": "expr",
+    "value": "-7ab",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え −7ab",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-12",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価a円の品物を3％引きで買ったときの代金",
+   "answer": {
+    "kind": "expr",
+    "value": "97a/100",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "a×(1−3/100)＝97a/100（円）",
+   "source": {
+    "id": "source-0114",
+    "file": "ドリル/数学/S__15589398_0.jpg",
+    "sha256": "c6182bc41c69dc6f5a6b921f9ceb8861bc05a339be0100d0f6da2263142f9a3d",
+    "page": 23,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p23 4(2)（数量を表す式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-13",
+   "type": "input",
+   "prompt": "次の式を簡単にしよう。\n−2/3a − 4/5a",
+   "answer": {
+    "kind": "expr",
+    "value": "-22/15a"
+   },
+   "explanation": "係数をまとめる。−2/3＋（−4/5）＝−22/15。答え −22/15a",
+   "source": {
+    "id": "source-0115",
+    "file": "ドリル/数学/S__15589399_0.jpg",
+    "sha256": "e5a689a2b8a06a4f8458a024a6be312bc9f2b77d888ce1e39647b21d97f0336f",
+    "page": 24,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p24 2（文字の部分が同じ項）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-14",
+   "type": "input",
+   "prompt": "次の式を、×の記号を使わないで表そう。\nb×x×x×3",
+   "answer": {
+    "kind": "expr",
+    "value": "3bx^2",
+    "order": true
+   },
+   "explanation": "数は文字の前に書き、文字はアルファベット順、同じ文字の積は累乗で表す。答え 3bx²",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p18 1（積の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-moji-test-15",
+   "type": "input",
+   "prompt": "次の式を、÷の記号を使わないで表そう。\n−x÷6",
+   "answer": {
+    "kind": "expr",
+    "value": "-x/6"
+   },
+   "explanation": "わる数を分母にして分数の形で表す。答え −x/6",
+   "source": {
+    "id": "source-0112",
+    "file": "ドリル/数学/S__15589395_0.jpg",
+    "sha256": "105b6812ebd5aa8154c49cd7ee635abc030dfd9e71ee7868463cda9bca5ebf64",
+    "page": 18,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p18 2（商の表し方）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp18〜33（6 文字式の表し方・7 数量を表す式・8 1次式の計算・9 文字式の利用、標準問題・実力問題①②）を写真で目視し、数や場面を変えた類題を作った。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "×と÷の記号をはぶく",
+   "body": "数は文字の前、文字はアルファベット順、同じ文字の積は累乗で書く。1と−1は書かずに x、−x とする。わり算は分数の形にする。例：x÷(−7)＝−x/7、a×b×(−3)＝−3ab"
+  },
+  {
+   "title": "数量を式に表す",
+   "body": "代金＝単価×個数、時間＝道のり÷速さ、比べる量＝もとにする量×割合。1割＝1/10、1％＝1/100。単位をそろえることも忘れない（1時間＝60分、1kg＝1000g）。"
+  },
+  {
+   "title": "同類項をまとめる",
+   "body": "文字の部分が同じ項（同類項）は係数をまとめる。5x＋3x＝8x。数の項どうしもまとめる。−( ) をはずすときは、かっこの中のすべての項の符号を変える。"
+  },
+  {
+   "title": "分配法則と分数の形の式",
+   "body": "a(b＋c)＝ab＋ac。分数の形の式に数をかけるときは、先に分母と約分する。分数の形の式どうしの加減は、分母の最小公倍数で通分して分子を計算する。"
+  },
+  {
+   "title": "等式・不等式と規則性",
+   "body": "「〜になる」は＝、「〜より大きい」は＞、「〜以上」は≧、「〜以下」は≦。規則的に増えるものは、はじめの数＋増える数×(n−1)で表せる。"
+  }
+ ]
+}

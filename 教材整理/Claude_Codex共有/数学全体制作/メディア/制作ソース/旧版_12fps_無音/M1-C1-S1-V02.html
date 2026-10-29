@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(29,raw)),phase=t<7?0:t<12?1:t<18?2:t<23?3:4;g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('目盛りを読む3ステップ',65,88,42,blue);box(45,147,1190,425,'white');text(['① となりの数字を見つける','① 0と1の間を拡大する','② 5等分＝1目盛りは0.2','③ 0から左へ3目盛り','③ 着いた点の数を読む'][phase],640,224,34,blue,'center');const x=n=>640+n*440,y=430;line(170,y,1110,y);for(let n=-5;n<=5;n++){line(x(n/5),y-12,x(n/5),y+12,ink,n===0?5:2)}text('0',x(0),492,34,ink,'center');text('1',x(1),492,34,ink,'center');
+if(phase===1){g.strokeStyle=blue;g.lineWidth=5;g.beginPath();g.arc(866,374,149,0,Math.PI*2);g.stroke();line(965,485,1050,555,blue,15);text('0と1の間に注目',640,635,34,ink,'center')}
+if(phase===2){for(let n=0;n<5;n++){line(x(n/5),322,x((n+1)/5),322,blue,4);dot((x(n/5)+x((n+1)/5))/2,322,blue,5)}text('1÷5＝0.2',640,635,40,ink,'center')}
+if(phase>=3){const u=Math.min(3,Math.max(0,(t-18)*3/5)),n=Math.floor(u),f=u-n,pos=-.2*u;for(let j=0;j<n;j++){g.strokeStyle=blue;g.lineWidth=5;g.beginPath();g.arc(x(-.2*j)-44,430,44,Math.PI,2*Math.PI);g.stroke();text(String(j+1),x(-.2*j)-44,345,34,blue,'center')}
+dot(x(pos),y-44*Math.sin(Math.PI*f),blue,14);text(phase===4?'−0.6':'左へ '+Math.min(3,n+1)+' 目盛り',640,635,phase===4?48:36,ink,'center')}
+return {phase,time:t};};renderAt(0);</script>

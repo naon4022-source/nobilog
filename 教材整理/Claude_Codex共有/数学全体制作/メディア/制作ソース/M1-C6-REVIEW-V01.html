@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script src="動画エンジン/c67vp.js"></script><script>
+// M1-C6-REVIEW-V01 6章をふりかえる（Claude）
+function stepBar(i){const L=['仲間分け','展開図・投影図','ねじれの位置','体積','表面積','最短線'];L.forEach((s,k)=>{const x=60+k*196,on=k===i-1;rbox(x,92,184,44,14,on?C.orange:'#e8f0fa');text(s,x+92,123,22,on?'#fff':C.ink,'center',800)})}
+function sector(cx,cy,R,deg,chord){const th=deg*Math.PI/180;g.fillStyle='#d8e6f5';g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();g.moveTo(cx,cy);g.arc(cx,cy,R,Math.PI/2-th/2,Math.PI/2+th/2);g.closePath();g.fill();g.stroke();
+ const A=[cx+R*Math.cos(Math.PI/2+th/2),cy+R*Math.sin(Math.PI/2+th/2)],B=[cx+R*Math.cos(Math.PI/2-th/2),cy+R*Math.sin(Math.PI/2-th/2)];g.strokeStyle=C.orange;g.lineWidth=8;g.beginPath();g.moveTo(A[0],A[1]);g.lineTo(A[0]+(B[0]-A[0])*chord,A[1]+(B[1]-A[1])*chord);g.stroke()}
+window.SCENE={draw({i,p,t}){
+ header('6章をふりかえる');if(i>=1&&i<=6)stepBar(i);
+ if(i===0){['cube','tetra','icosa'].forEach((n,k)=>{g.globalAlpha=seg(p,.1+k*.1,.3+k*.1);poly(SOLIDS[n],{cx:300+k*340,cy:330,s:110,M:view(t*.5+k,-0.35),color:SOLIDCOL[n]});g.globalAlpha=1});return}
+ if(i===1){[['柱','#8ec1ec',miniCyl],['錐','#c9a7e8',miniCone],['球','#9bd3a8',miniBall]].forEach(([n,c,f],k)=>{const a=seg(p,.1+k*.2,.3+k*.2);if(a<=0)return;g.globalAlpha=a;f(270+k*370,330,95,a);text(n,270+k*370,520,44,C.ink,'center',800);g.globalAlpha=1});return}
+ if(i===2){netCone(330,170,190,63,seg(p,.05,.3));g.globalAlpha=seg(p,.4,.6);rbox(720,160,420,380,20,'#fff',C.ink,3);text('立面図（正面）',930,200,28,C.ink,'center',800);g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(870,330);g.lineTo(930,220);g.lineTo(990,330);g.closePath();g.stroke();
+  g.setLineDash([8,6]);g.beginPath();g.moveTo(740,350);g.lineTo(1120,350);g.stroke();g.setLineDash([]);text('平面図（真上）',930,385,28,C.ink,'center',800);g.beginPath();g.arc(930,455,60,0,7);g.stroke();g.fillStyle=C.ink;g.beginPath();g.arc(930,455,5,0,7);g.fill();g.globalAlpha=1;return}
+ if(i===3){const k=p<.25?0:p<.45?1:p<.65?2:3;miniBox(520,350,150,.55+t*.1,k);g.globalAlpha=seg(p,.65,.85);rbox(870,250,320,80,20,C.orange);text('ねじれの位置',1030,303,38,'#fff','center',800);g.globalAlpha=1;return}
+ if(i===4){[0,1,2].forEach(k=>{g.globalAlpha=seg(p,.05+k*.12,.2+k*.12);miniCone(160+k*130,340,58);g.globalAlpha=1});g.globalAlpha=seg(p,.45,.55);text('＝',550,355,56,C.ink,'center',800);g.globalAlpha=1;if(p>.45)miniCyl(650,340,58);
+  g.globalAlpha=seg(p,.6,.8);rbox(820,250,380,180,22,'#fffdf8',C.blue,4);text('柱 V＝Sh',1010,315,40,C.blue,'center',800);text('錐 V＝⅓Sh',1010,375,40,C.blue,'center',800);g.globalAlpha=1;return}
+ if(i===5){netCyl(330,350,45,seg(p,.05,.3));g.globalAlpha=seg(p,.35,.6);rbox(720,240,480,200,22,'#fffdf8',C.orange,4);text('表面積 ＝ 展開図の面の合計',960,300,32,C.ink,'center',800);text('円錐の側面積 πℓr',960,360,36,C.orange,'center',800);text('球の表面積 4πr²',960,410,36,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===6){sector(450,150,330,60,seg(p,.1,.6));g.globalAlpha=seg(p,.6,.8);text('いちばん短い ＝ 線分',920,330,40,C.orange,'center',800);g.globalAlpha=1;return}
+ g.globalAlpha=seg(p,0,.2);rbox(160,170,960,280,28,'#fffdf8',C.orange,5);text('立体を 平面に表して考える',640,280,48,C.ink,'center',800);text('公式は「柱」が もとになる',640,370,44,C.orange,'center',800);g.globalAlpha=1}};
+</script>

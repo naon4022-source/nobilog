@@ -1,0 +1,174 @@
+{
+ "unitId": "M1-C6-S2",
+ "note": "Codexの記入様式に合わせた。4候補は見せ方だけ変え、mustRemainIdenticalAcrossCandidates は変えない。",
+ "figures": [
+  {
+   "slotId": "M1-C6-S2-FIG01",
+   "unitId": "M1-C6-S2",
+   "purpose": "円錐の体積が円柱の 1/3 であることを、水を注ぐ3段階で見せる",
+   "sourceReferences": [
+    "教科書p205"
+   ],
+   "confirmedConcept": "底面と高さが同じ円柱と円錐。円錐3杯で円柱がいっぱい",
+   "labels": [
+    "1杯目",
+    "2杯目",
+    "3杯目"
+   ],
+   "coordinates": [
+    "3つの円柱を横に並べ、水位が 1/3・2/3・満水"
+   ],
+   "numericConditions": [
+    "水位の線を3等分の位置に"
+   ],
+   "units": [],
+   "arrows": [
+    "注ぐ矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "3杯でいっぱい"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "円錐の容器で水を3回注ぐと、底面と高さが同じ円柱の容器がいっぱいになるようす。",
+   "verification": {
+    "calculation": "検算.py 例5標準",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S2-FIG02",
+   "unitId": "M1-C6-S2",
+   "purpose": "柱の側面が1枚の長方形になり、横の長さが底面のまわりであることを見せる",
+   "sourceReferences": [
+    "教科書p208〜209"
+   ],
+   "confirmedConcept": "直方体と円柱の展開図。側面の横＝底面のまわり（円柱は 2πr）",
+   "labels": [
+    "高さ",
+    "底面のまわり",
+    "2πr"
+   ],
+   "coordinates": [
+    "左に直方体、右に円柱"
+   ],
+   "numericConditions": [
+    "側面の横と底面のまわりに同じ記号"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "側面の横＝底面のまわり"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "直方体と円柱の展開図。側面は1枚の長方形で、その横の長さは底面のまわりの長さと同じ。",
+   "verification": {
+    "calculation": "検算.py 例6基本・例6標準",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S2-FIG03",
+   "unitId": "M1-C6-S2",
+   "purpose": "円錐の側面のおうぎ形の弧が、底面の円周と等しいことを見せる",
+   "sourceReferences": [
+    "教科書p210"
+   ],
+   "confirmedConcept": "半径＝母線 ℓ のおうぎ形と、半径 r の底面の円。弧＝2πr",
+   "labels": [
+    "ℓ（母線）",
+    "r",
+    "弧",
+    "円周"
+   ],
+   "coordinates": [
+    "おうぎ形の下に底面の円"
+   ],
+   "numericConditions": [
+    "弧と円周に同じ印"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "弧＝円周"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "円錐の展開図。側面のおうぎ形の弧と、底面の円のまわりの長さが等しいことを同じ印で示す。",
+   "verification": {
+    "calculation": "検算.py 例7基本",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-C6-S2-FIG04",
+   "unitId": "M1-C6-S2",
+   "purpose": "円錐のコップの水を円柱のコップに移したときの水面を見せる",
+   "sourceReferences": [
+    "教科書p205（考え方）"
+   ],
+   "confirmedConcept": "円錐（r6、h9）→円柱（r6）。水面 3cm",
+   "labels": [
+    "6cm",
+    "9cm",
+    "？"
+   ],
+   "coordinates": [
+    "左に円錐のコップ、右に円柱のコップ",
+    "注ぐ矢印"
+   ],
+   "numericConditions": [
+    "円柱の水面の高さは「？」"
+   ],
+   "units": [
+    "cm"
+   ],
+   "arrows": [
+    "注ぐ矢印"
+   ],
+   "mustRemainIdenticalAcrossCandidates": [
+    "水面の数値を書かない"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "円錐のコップの水を、同じ半径の円柱のコップに移す図。円柱の水面の高さは「？」。",
+   "verification": {
+    "calculation": "検算.py 円錐から円柱",
+    "sourceComparison": "原本の該当ページの印刷内容と照合。原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}

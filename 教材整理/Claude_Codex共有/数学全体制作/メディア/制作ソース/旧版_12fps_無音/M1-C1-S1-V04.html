@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script>
+const c=document.querySelector('canvas'),g=c.getContext('2d'),blue='#1f5fa8',ink='#203348';
+function text(s,x,y,size=32,col=ink,align='left'){g.fillStyle=col;g.font=`600 ${size}px "Hiragino Sans",sans-serif`;g.textAlign=align;g.fillText(s,x,y)}
+function line(x,y,a,b,col=ink,w=3,dash=[]){g.strokeStyle=col;g.lineWidth=w;g.setLineDash(dash);g.beginPath();g.moveTo(x,y);g.lineTo(a,b);g.stroke();g.setLineDash([])}
+function dot(x,y,col=blue,r=10){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
+function box(x,y,w,h,col='#eef4fb'){g.fillStyle=col;g.beginPath();g.roundRect(x,y,w,h,22);g.fill()}
+function arrow(x,y,a,b,col=blue,dash=[]){line(x,y,a,b,col,7,dash);const t=Math.atan2(b-y,a-x);line(a,b,a-16*Math.cos(t-.5),b-16*Math.sin(t-.5),col,7);line(a,b,a-16*Math.cos(t+.5),b-16*Math.sin(t+.5),col,7)}
+function axis(lo,hi,y,start=120,span=1040){const x=n=>start+(n-lo)*span/(hi-lo);line(start-20,y,start+span+20,y);for(let n=lo;n<=hi;n++){line(x(n),y-8,x(n),y+8,n===0?blue:ink,n===0?5:2);if(hi-lo<=16||n%2===0)text(String(n).replace('-','−'),x(n),y+47,26,ink,'center')}return x}
+const titles=['温度計から、数直線へ','大小｜右にある数ほど大きい','移動｜大きい → 右へ','計算｜ひく数の符号を変えてたす','平均｜基準とのちがいをならす'];
+window.renderAt=function(raw){const t=Math.max(1,Math.min(19,raw)),u=Math.min(1,(t-1)/9);g.fillStyle='#f6f8fc';g.fillRect(0,0,1280,720);box(35,25,1210,98,'#e8f0fa');text('0から同じきょりの2つの点',65,88,42,blue);box(45,147,1190,425,'white');const x=n=>640+n*98,y=435;line(x(-5),y,x(5),y);for(let n=-5;n<=5;n++){line(x(n),y-12,x(n),y+12,ink,n===0?6:3);text(String(n).replace('-','−'),x(n),y+55,34,ink,'center')}
+dot(x(0),y,ink,12);line(x(0),y-50,x(0),y-20,ink,5);text('0にピン',640,285,34,ink,'center');line(x(0),355,x(-4*u),355,blue,10,[12,7]);line(x(0),355,x(4*u),355,blue,10);dot(x(-4*u),355,blue,12);dot(x(4*u),355,blue,12);if(t>=10){text('4',x(-2),318,42,blue,'center');text('4',x(2),318,42,blue,'center');text('−4',x(-4),540,42,blue,'center');text('+4',x(4),540,42,blue,'center')}text(t>=10?'符号がちがっても、0からのきょりは同じ':'0から、左右へ同じ長さのひもをのばす',640,642,34,ink,'center');return {u,time:t};};renderAt(0);</script>

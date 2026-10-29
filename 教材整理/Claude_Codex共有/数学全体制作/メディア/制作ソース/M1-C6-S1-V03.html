@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S1-V03 ねじれの位置を見つける（Claude）。直方体 ABCD-EFGH（上の面 ABCD、A の真下が E）
+const N='ABCDEFGH',X=1.3,Y=0.75,Z=0.85;
+const BOX={verts:[[-X,Y,Z],[X,Y,Z],[X,Y,-Z],[-X,Y,-Z],[-X,-Y,Z],[X,-Y,Z],[X,-Y,-Z],[-X,-Y,-Z]],faces:[[0,1,2,3],[4,7,6,5],[0,4,5,1],[1,5,6,2],[2,6,7,3],[3,7,4,0]]};
+const E=['AB','BC','CD','DA','EF','FG','GH','HE','AE','BF','CG','DH'];
+const MEET=['DA','AE','BC','BF'],PAR=['CD','EF','GH'],SKEW=['CG','DH','HE','FG'];
+const I=c=>N.indexOf(c);
+const O={cx:560,cy:320,s:150};
+function edgeHidden(e,M){const a=I(e[0]),b=I(e[1]);const fs=BOX.faces.filter(f=>f.includes(a)&&f.includes(b));return fs.every(f=>{const q=f.map(k=>R3.mul(M,BOX.verts[k]));let n=R3.cross(R3.sub(q[1],q[0]),R3.sub(q[2],q[0]));const c=q.reduce((s,v)=>R3.add(s,v),[0,0,0]);if(R3.dot(n,c)<0)n=R3.sc(n,-1);return n[2]<=0})}
+function hl(e,col,M,w=10,alpha=1){const a=BOX.verts[I(e[0])],b=BOX.verts[I(e[1])];g.globalAlpha=alpha;line3(a,b,{...O,M},col,w,edgeHidden(e,M)?[14,10]:[]);g.globalAlpha=1}
+function labels(M){BOX.verts.forEach((v,k)=>{const p=pt3(v,{...O,M}),c=pt3([0,0,0],{...O,M});const d=Math.hypot(p[0]-c[0],p[1]-c[1])||1;text(N[k],p[0]+(p[0]-c[0])/d*30,p[1]+(p[1]-c[1])/d*30+12,32,C.ink,'center',800)})}
+function tally(shown){const rows=[['交わる',4,C.red],['平行',3,C.blue],['ねじれ',4,C.orange]];rows.forEach(([t,n,c],k)=>{if(shown[k]<=0)return;g.globalAlpha=shown[k];rbox(960,150+k*90,260,70,18,'#fff',c,4);text(`${t}  ${n}本`,1090,197+k*90,34,c,'center',800);g.globalAlpha=1})}
+window.SCENE={draw({i,p,t}){
+ header('ねじれの位置を見つける');const M=view(0.55+Math.sin(t*0.25)*0.25,-0.38);
+ const dim=i>=5&&i<=6?0.35:1;poly(BOX,{...O,M,color:'#dfe9f5',faceAlpha:.35,alpha:dim,edge:3});labels(M);
+ hl('AB',C.ink,M,12);
+ const show=(list,col,a0,a1)=>list.forEach((e,k)=>{const a=seg(p,a0+k*(a1-a0)/list.length,a0+(k+1)*(a1-a0)/list.length);if(a>0)hl(e,col,M,9,a)});
+ if(i===0){const pulse=.5+.5*Math.sin(t*6);g.globalAlpha=seg(p,.2,.4);text('辺 AB',O.cx+380,150,44,C.ink,'center',800);g.globalAlpha=1;hl('AB',C.orange,M,14,seg(p,.3,.5)*pulse)}
+ if(i===1){show(MEET,C.red,.2,.85);tally([seg(p,.85,1),0,0])}
+ if(i>=2&&i<=4){MEET.forEach(e=>hl(e,C.red,M,7,i===4?.35:1))}
+ if(i===2){show(PAR,C.blue,.2,.85);tally([1,seg(p,.85,1),0])}
+ if(i>=3&&i<=4){PAR.forEach(e=>hl(e,C.blue,M,7,i===4?.35:1))}
+ if(i===3){const blink=.55+.45*Math.sin(t*7);show(SKEW,C.orange,.15,.75);if(p>.75)SKEW.forEach(e=>hl(e,C.orange,M,11,blink));tally([1,1,seg(p,.8,1)])}
+ if(i===4){const blink=.55+.45*Math.sin(t*7);SKEW.forEach(e=>hl(e,C.orange,M,11,blink));tally([1,1,1]);g.globalAlpha=seg(p,.1,.35);rbox(330,96,460,74,20,C.orange);text('ねじれの位置',560,147,44,'#fff','center',800);g.globalAlpha=1}
+ if(i===5){const a=BOX.verts[I('A')],b=BOX.verts[I('B')],c=BOX.verts[I('C')],d=BOX.verts[I('G')];const ex=seg(p,.15,.6);
+  const L=(u,v,k)=>R3.add(u,R3.sc(R3.sub(v,u),k));line3(L(a,b,-1.2*ex),L(a,b,1+1.2*ex),{...O,M},C.ink,5,[12,10]);line3(L(c,d,-1.4*ex),L(c,d,1+1.4*ex),{...O,M},C.orange,5,[12,10]);hl('CG',C.orange,M,11);
+  g.globalAlpha=seg(p,.6,.8);text('どこまでのばしても 出会わない',560,610-40,34,C.red,'center',800);g.globalAlpha=1}
+ if(i===6){const pl=[[-2.3,Y,1.6],[2.3,Y,1.6],[2.3,Y,-1.7],[-2.3,Y,-1.7]].map(v=>pt3(v,{...O,M}));g.globalAlpha=seg(p,.05,.3)*.85;g.fillStyle=hexA(C.blue,.18);g.strokeStyle=C.blue;g.lineWidth=3;g.beginPath();pl.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.closePath();g.fill();g.stroke();g.globalAlpha=1;
+  hl('CG',C.orange,M,11);const cP=pt3(BOX.verts[I('C')],{...O,M});g.globalAlpha=seg(p,.4,.6);g.fillStyle=C.red;g.beginPath();g.arc(cP[0],cP[1],13,0,7);g.fill();text('平面を つきぬける',cP[0]+150,cP[1]-30,32,C.red,'center',800);text('辺 AB をふくむ平面',260,160,32,C.blue,'center',800);g.globalAlpha=1}
+ if(i===7){MEET.forEach(e=>hl(e,C.red,M,7,.35));PAR.forEach(e=>hl(e,C.blue,M,7,.35));SKEW.forEach(e=>hl(e,C.orange,M,11));tally([1,1,1]);g.globalAlpha=seg(p,.3,.5);rbox(930,430,320,64,18,C.ink);text('合計 11本',1090,473,34,'#fff','center',800);g.globalAlpha=1}
+}};
+</script>

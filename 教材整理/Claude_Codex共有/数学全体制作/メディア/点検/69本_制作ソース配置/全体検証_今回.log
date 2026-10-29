@@ -1,0 +1,120 @@
+verify3.js   追加チェック こみ　✅ 67　❌ 0（ぜんぶで 67件）
+verify6.js   チェック 76件　✅ 76　❌ 0
+verify8.js   チェック 59件　✅ 59　❌ 0
+verify9.js   チェック 43件　✅ 43　❌ 0
+verify12.js  チェック 154件　✅ 154　❌ 0
+verify15.js  チェック 95件　✅ 95　❌ 0
+verify16.js  チェック 39099件　✅ 39099　❌ 0
+verify17.js  チェック 27件　✅ 27　❌ 0
+verify18.js  チェック 25件　✅ 25　❌ 0
+verify19.js  チェック 70件　✅ 70　❌ 0
+verify20.js  チェック 517件　✅ 517　❌ 0
+verify21.js  チェック 115件　✅ 115　❌ 0
+verify-ui280.js チェック 21件　✅ 21　❌ 0
+verify-client-sync.js チェック 18件　✅ 18　❌ 0
+verify-unit-guides.js チェック 197件　✅ 197　❌ 0
+verify-session-security.js チェック 63件　✅ 63　❌ 0
+verify-migration-security.js ✅ 85 / ❌ 0 — migration and backup security
+verify-september.js チェック 474件　✅ 474　❌ 0
+verify-september-ui.js チェック 15件　✅ 15　❌ 0
+verify-september-flow.js チェック 28件　✅ 28　❌ 0
+verify-review-pdf.js チェック 12件　✅ 12　❌ 0
+verify-notice-history.js チェック 21件　✅ 21　❌ 0
+verify-login-days.js チェック 8件　✅ 8　❌ 0
+verify-server-storage.js チェック 16件　✅ 16　❌ 0
+verify-record-archive.js チェック 12件　✅ 12　❌ 0
+verify-notice-kinds.js チェック 47件　✅ 47　❌ 0
+verify-school-calendar.js チェック 256件　✅ 256　❌ 0
+verify-september-archive.js チェック 20件　✅ 20　❌ 0
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.203s
+
+OK
+変更なし: 606件を確認。台帳は書き換えていません。
+未登録の教材: 0件（画像・台帳は無変更）
+教材台帳OK: 606件 / SHA-256照合 606件 / OCR元画像照合 292件
+分類: drill/国語 52、drill/数学 52、drill/理科 52、drill/英語 66、workbook/保健体育 45、workbook/国語 70、workbook/数学 72、workbook/理科 60、workbook/社会 77、workbook/英語 60
+人手確認済み: 5件（OCRだけで確認済みにしない）
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK
+参考資料台帳OK: 323枚 / 人手確認済み 0枚
+55 checks passed
+material-ui: textbook gate, independent test progress, resume, save and load failure passed
+material-tts: 8 checks passed
+problem-share: 問題本文・選択肢・分数・表を維持し、回答・採点・個人情報を除外しました
+problem-pdf: grayscale pages, exact image bytes, PDF offsets, limits, privacy and immutable input passed
+problem-pages: safe whitespace breaks, intact questions, exact row recovery, independent pixels and bounded memory passed
+problem-share-api: server-generated PDF, bounded inflation, ownership, rate limit, public link, expiry and immediate revocation passed
+achievements: validation, owner-only requests, pending isolation, nao-only approval, rejection, immutable review and limits passed
+achievement-ui: pending vs approved, escaped titles, owner controls, notices and logout isolation passed
+Preview built: production sync, fixed personal results, grants and resets removed
+preview: isolated account, private assets, origin checks, attempt limits, save/reload, ownership and logout passed
+Gemini registration: 14 synthetic checks, AQ.-format accepted, preview-only, no key arguments/files/output, non-TTY refusal, pre-input connection/name guards, no overwrite and sanitized failure passed
+Gemini window: 7 GUI-to-registration checks passed; fake input only, no network
+Gemini context: verified source, fresh deterministic grade, minimized input, privacy exclusions, bounded request and strict non-grading output passed; no API calls
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: over-limit requests refused
+    at ok (file:///Users/shimizunaotomoo/Desktop/my-app/.claude/verify/verify-gemini-tutor.mjs:15:55)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/.claude/verify/verify-gemini-tutor.mjs:70:53 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.18.0
+Gemini more: 39 checks — exact rational checker, generated problems kept only when answer=expression=prompt and new, practice-only recording without rewards, similar questions (AI ids filtered to the unit, fallback without AI, cache, account isolation), descriptive judging decided by the server from every required element; no network
+Gemini UI: 59 checks — hidden when unavailable, ordered hints without answers, explanation after a wrong answer and from the notebook, failure/budget messages without blocking study, drafts kept, no progress change, 390/820/1180/1440px; fake Gemini only
+Auto notebook: 79 checks — wrong and dont-know answers recorded from immutable attempts, one row per question, grouped by subject/grade/major/minor, hidden answers, text-only display, failed load keeps records, no overlap with bookmarks, account isolation at 390/820/1180/1440px passed
+⚠️ 教科書データが原稿より古い：python3 教材整理/実装/build-textbook-book.py を実行してください
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: page 293 overflows only with a single unsplittable block
+    at ok (file:///Users/shimizunaotomoo/Desktop/my-app/.claude/verify/verify-textbook-book-browser.mjs:15:31)
+    at file:///Users/shimizunaotomoo/Desktop/my-app/.claude/verify/verify-textbook-book-browser.mjs:74:368 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.18.0
+チェック 68件　✅ 68　❌ 0
+push integration: authentication, family scope and unavailable config passed
+device push: explicit permission, registration, categories and logout cleanup passed
+service-worker push: payload, same-origin target and click verified
+service-worker push: payload, same-origin target and click verified
+162 independent/source and invalid-answer checks passed
+Material connection: verified bank, asset consistency, input-only entry, server acknowledgement, preserved records, failures and identity isolation passed
+Workbook banks:100 signed-number inputs +15 tests,100 addition inputs +15 tests,3 workbook image hashes, independent answers and boundary checks, no textbook, both workbooks match published bank passed (690 grading checks)
+Subtraction bank:100 inputs +15 tests,345 independent grading checks,source hash,handwriting rejection,strict bounds,covered sign excluded,ready validation and delivery match passed
+Workbook records: real SQLite, server grading and idempotent study/test answers, separate drill/workbook progress and stats, owner isolation passed
+Material records: real isolated SQLite, authoritative grading, immutable/idempotent attempts, atomic index, revoked-session guard, account isolation and 113 records through pagination passed
+Diary: real isolated SQLite, owner/lease guards, JST midnight, bounded input, unknown units, revision conflicts/retry, concurrent writes, revocation during write,112 days pagination and no answer/reward changes passed
+Material speed: real isolated SQLite, exact question/study/test/owner separation, positive correct-only fastest target, zero/wrong history, stable117-record pagination, no answers or writes, strict query/method guards and mid-read lease revocation passed
+Material speed bridge: copied inputs/results, exact question/mode, bounded valid times/counts, unique chronological rows, cursor continuity, malformed responses, offline/readiness and late-account rejection passed
+Diary bridge: immutable reads, trimmed saves, validated server day/records, malformed input, offline/readiness failures, old-account replies rejected and no app snapshot replacement passed
+Learning days: duplicate dates, wrong-answer day inclusion, yesterday grace, gaps, longest streak, month/year/leap boundaries, future exclusion, invalid dates and immutable input passed
+Monthly CSV: exact saved counts/time, deterministic dates, Japanese BOM/CRLF, quoting/formula neutralization, data minimization, no mutation, empty month and invalid/leap date guards passed
+Textbook 12-question self-check: independently specified correct/wrong answers, equivalent fractions/decimals, units, sets/order, missing zero, wrong signs, reversed inequalities, long-vowel guidance and invalid input passed
+Material review: real isolated SQLite, exact 3/7-day boundaries, before/after, reset after a new mistake, account isolation, revoked session and 60-question pagination passed
+Material daily: isolated SQLite, correct-only unique questions, retry/review deduplication, JST boundaries, valid bank filtering, method/query rejection and account/lease isolation passed
+Material rewards: isolated SQLite, wrong/correct grading,105 repeats/retries/later review, lifetime unique credit, independent practice tests, first-success timestamps, retirement retention, read-only methods and account/lease isolation passed
+Eiken practice: 800 questions, 40 sets, grammar/order consistency, 180 new reading witnesses, 8 PDFs and 80 matching page links passed
+Study goal: 22 synthetic account, progress, validation and isolation checks passed
+Appearance: 50 scenes, 12 seasonal themes, text/button contrast, validated preferences, other settings preservation and account isolation passed
+Input tools: five subjects, safe metadata, text/numeric modes, integration, IME guard and no answer/storage/network access passed
+❌ 落ちたスイートがある

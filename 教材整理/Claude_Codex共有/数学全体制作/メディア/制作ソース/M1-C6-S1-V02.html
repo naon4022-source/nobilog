@@ -1,0 +1,41 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S1-V02 円錐を切り開く（Claude）。底面の半径 r＝4、母線 ℓ＝12 → 中心角 120°
+const r=4,l=12,TH=2*Math.PI*r/l;
+// f：側面が軸のまわりを何周分おおっているか（1＝円錐、r/ℓ＝平らなおうぎ形）
+function coneMesh(f){const R=r/f,h=Math.sqrt(Math.max(0,l*l-R*R)),NR=8,NP=60,verts=[],faces=[];
+ for(let i=0;i<=NR;i++){const q=i/NR;for(let k=0;k<=NP;k++){const ps=2*Math.PI*f*k/NP-Math.PI*f+Math.PI;/* 切り口を手前にする */verts.push([q*R*Math.sin(ps),h/2-q*h,q*R*Math.cos(ps)])}}
+ for(let i=0;i<NR;i++)for(let k=0;k<NP;k++){const a=i*(NP+1)+k;faces.push([a,a+1,a+NP+2,a+NP+1])}return {verts,faces,R,h,NP,NR}}
+const O3={cx:440,cy:300,s:30};
+function cone3D(f,yaw,cut,alpha=1){const P=coneMesh(f),M=view(yaw,-0.42),o={...O3,M,alpha};surf(P,{...o,color:'#8ec1ec'});
+ const rim=[];for(let k=0;k<=P.NP;k++)rim.push(pt3(P.verts[P.NR*(P.NP+1)+k],o));g.globalAlpha=alpha;g.strokeStyle=C.ink;g.lineWidth=3.5;g.beginPath();rim.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();
+ const ap=pt3(P.verts[0],o),e0=pt3(P.verts[P.NR*(P.NP+1)],o),e1=pt3(P.verts[P.NR*(P.NP+1)+P.NP],o);
+ g.strokeStyle=cut?C.red:C.ink;g.lineWidth=cut?6:3.5;g.beginPath();g.moveTo(ap[0],ap[1]);g.lineTo(e0[0],e0[1]);g.stroke();if(f<0.999){g.beginPath();g.moveTo(ap[0],ap[1]);g.lineTo(e1[0],e1[1]);g.stroke()}g.globalAlpha=1;return {P,o,ap,e0}}
+function baseDisc(yaw,alpha=1){const P=lathe([[0,-l*0.47],[r,-l*0.47]],48);return surf({verts:P.verts.map(v=>[v[0],-Math.sqrt(l*l-r*r)/2,v[2]]),faces:P.faces},{...O3,M:view(yaw,-0.42),color:'#f2c48d',alpha})}
+// 2D：おうぎ形（頂点 A、中心角 120°、下向き）と、弧にくっついた底面の円
+const A={x:600,y:205},S2=15,RS=l*S2,RC=r*S2,CC={x:A.x,y:A.y+RS+RC};
+function net2D(alpha,o={}){g.globalAlpha=alpha;const a0=Math.PI/2-TH/2,a1=Math.PI/2+TH/2;
+ if(o.full){g.setLineDash([12,10]);g.strokeStyle=C.blue;g.lineWidth=3;g.beginPath();g.arc(A.x,A.y,RS,0,Math.PI*2);g.stroke();g.setLineDash([]);g.fillStyle=hexA(C.blue,.08);g.beginPath();g.arc(A.x,A.y,RS,0,Math.PI*2);g.fill()}
+ g.fillStyle='#8ec1ec';g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.moveTo(A.x,A.y);g.arc(A.x,A.y,RS,a0,a1);g.closePath();g.fill();g.stroke();
+ g.fillStyle='#f2c48d';g.beginPath();g.arc(CC.x,CC.y,RC,0,Math.PI*2);g.fill();g.stroke();
+ if(o.trace>0){g.strokeStyle=C.orange;g.lineWidth=10;g.lineCap='round';g.beginPath();g.arc(A.x,A.y,RS,a0,a0+(a1-a0)*o.trace);g.stroke();g.beginPath();g.arc(CC.x,CC.y,RC,-Math.PI/2,-Math.PI/2+Math.PI*2*o.trace);g.stroke();g.lineCap='butt'}
+ if(o.labels){text('母線 12cm',A.x-RS*0.62-14,A.y+RS*0.36,32,C.ink,'right',800);g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();g.moveTo(CC.x,CC.y);g.lineTo(CC.x+RC,CC.y);g.stroke();text('4cm',CC.x+RC/2,CC.y-10,28,C.ink,'center',800)}
+ if(o.angle){g.strokeStyle=C.orange;g.lineWidth=5;g.beginPath();g.arc(A.x,A.y,46,a0,a1);g.stroke();text('120°',A.x,A.y+92,36,C.orange,'center',800)}
+ g.globalAlpha=1}
+window.SCENE={draw({i,p,t}){
+ header('円錐を切り開く');const yaw=0.6+t*0.35;
+ if(i<=1){baseDisc(yaw);const c=cone3D(1,yaw,false);
+  if(i===1){const a=seg(p,0,.25);g.globalAlpha=a;const o={...O3,M:view(yaw,-0.42)},hb=-Math.sqrt(l*l-r*r)/2,c0=pt3([0,hb,0],o),c1=pt3([r,hb,0],o);g.strokeStyle=C.ink;g.lineWidth=4;g.beginPath();g.moveTo(c0[0],c0[1]);g.lineTo(c1[0],c1[1]);g.stroke();
+   text('半径 4cm',820,470,38,C.ink,'left',800);arrow(812,458,(c0[0]+c1[0])/2+8,(c0[1]+c1[1])/2,C.ink,4);
+   g.globalAlpha=seg(p,.45,.65);g.strokeStyle=C.orange;g.lineWidth=8;g.beginPath();g.moveTo(c.ap[0],c.ap[1]);g.lineTo(c.e0[0],c.e0[1]);g.stroke();text('母線 12cm',820,230,38,C.orange,'left',800);arrow(812,240,(c.ap[0]+c.e0[0])/2+10,(c.ap[1]+c.e0[1])/2,C.orange,4);g.globalAlpha=1}
+  return}
+ if(i===2){const cut=p>.1,f=1-(1-r/l)*seg(p,.3,.95),fy=yaw*(1-seg(p,.3,.95))+0*seg(p,.3,.95);baseDisc(fy,1-seg(p,.3,.6));cone3D(f,fy,cut);
+  if(p<.3){g.globalAlpha=seg(p,.1,.2);text('ここで切る',820,240,40,C.red,'left',800);g.globalAlpha=1}return}
+ if(i===3){const a=seg(p,0,.35);if(a<1)cone3D(r/l,0,true,1-a);net2D(a,{labels:p>.4});return}
+ if(i===4){net2D(1,{labels:true,trace:seg(p,.15,.85)});g.globalAlpha=seg(p,.6,.85);text('ぴったり くっつく',1000,470,36,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===5){net2D(1,{labels:true,trace:1});g.globalAlpha=seg(p,.15,.4);rbox(860,300,380,150,22,'#fff7ec',C.orange,4);text('弧の長さ',1050,350,32,C.ink,'center',800);text('＝ 円周 2π×4',1050,392,32,C.ink,'center',800);text('＝ 8π cm',1050,434,36,C.orange,'center',800);g.globalAlpha=1;return}
+ if(i===6){net2D(1,{trace:1,full:seg(p,0,.2)>0,angle:p>.55});g.globalAlpha=seg(p,.15,.35);text('半径12の円の まわり 24π',1040,150,30,C.blue,'center',800);g.globalAlpha=seg(p,.35,.55);text('8π は 24π の',1060,330,32,C.ink,'center',800);frac('1','3',1060,372,38,C.orange);g.globalAlpha=1;return}
+ // まとめ：中心角の式
+ net2D(.25,{trace:1,angle:true});const a=seg(p,0,.2);g.globalAlpha=a;rbox(170,170,940,300,28,'#fffdf8',C.orange,5);text('中心角 ＝ 360° ×',450,270,46,C.ink,'center',800);frac('半径','母線',710,254,36,C.blue);
+ g.globalAlpha=a*seg(p,.35,.55);text('＝ 360° ×',450,400,46,C.ink,'center',800);frac('4','12',640,384,44,C.blue);text('＝ 120°',820,400,52,C.orange,'center',800);g.globalAlpha=1}};
+</script>

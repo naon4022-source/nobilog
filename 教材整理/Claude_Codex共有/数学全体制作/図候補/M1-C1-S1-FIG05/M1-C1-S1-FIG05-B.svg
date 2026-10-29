@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" role="img" aria-label="「〜より○大きい数」を数直線の移動で求める"><rect width="1000" height="450.0" fill="white" /><svg viewBox="0 0 640 260" width="960" height="390.0" role="img" aria-labelledby="t d" x="20" y="30" data-source-sha256="122bca96a97293fe4a06991252ff5909e823219a7d9bf0c0721671d417da0325">
+<title id="t">数直線を使って大きい数・小さい数を求める</title>
+<desc id="d">上の数直線：1より3大きい数は、1から右へ3目盛り進んで4。下の数直線：1より−3大きい数は、1より3小さい数と同じなので、1から左へ3目盛り進んで−2。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#222" /></marker><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff" /><line x1="0" y1="0" x2="0" y2="6" stroke="#222" stroke-width="2" /></pattern></defs>
+<rect width="640" height="260" fill="#fff" />
+
+<line x1="25" y1="80" x2="615" y2="80" stroke="#222" stroke-width="2" marker-end="url(#ah)" />
+<line x1="40.00" y1="74" x2="40.00" y2="86" stroke="#222" stroke-width="1.4" data-v="-5" />
+<line x1="96.00" y1="74" x2="96.00" y2="86" stroke="#222" stroke-width="1.4" data-v="-4" />
+<line x1="152.00" y1="74" x2="152.00" y2="86" stroke="#222" stroke-width="1.4" data-v="-3" />
+<line x1="208.00" y1="74" x2="208.00" y2="86" stroke="#222" stroke-width="1.4" data-v="-2" />
+<line x1="264.00" y1="74" x2="264.00" y2="86" stroke="#222" stroke-width="1.4" data-v="-1" />
+<line x1="320.00" y1="74" x2="320.00" y2="86" stroke="#222" stroke-width="2.4" data-v="0" />
+<line x1="376.00" y1="74" x2="376.00" y2="86" stroke="#222" stroke-width="1.4" data-v="1" />
+<line x1="432.00" y1="74" x2="432.00" y2="86" stroke="#222" stroke-width="1.4" data-v="2" />
+<line x1="488.00" y1="74" x2="488.00" y2="86" stroke="#222" stroke-width="1.4" data-v="3" />
+<line x1="544.00" y1="74" x2="544.00" y2="86" stroke="#222" stroke-width="1.4" data-v="4" />
+<line x1="600.00" y1="74" x2="600.00" y2="86" stroke="#222" stroke-width="1.4" data-v="5" />
+<text x="40.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-5">−5</text>
+<text x="96.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-4">−4</text>
+<text x="152.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-3">−3</text>
+<text x="208.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-2">−2</text>
+<text x="264.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-1">−1</text>
+<text x="320.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="0">0</text>
+<text x="376.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="1">1</text>
+<text x="432.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="2">2</text>
+<text x="488.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="3">3</text>
+<text x="544.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="4">4</text>
+<text x="600.00" y="110" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="5">5</text>
+<path d="M376.00,66 Q460.00,25 544.00,66" fill="none" stroke="#222" stroke-width="2" marker-end="url(#ah)" />
+<text x="460.00" y="30" font-size="15" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222">右へ3（3大きい）</text>
+<circle cx="376.00" cy="80" r="5.5" fill="#222" data-point="" data-v="1" />
+<text x="376.00" y="58" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" />
+<circle cx="544.00" cy="80" r="5.5" fill="#222" data-point="" data-v="4" />
+<text x="544.00" y="58" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" />
+<line x1="25" y1="200" x2="615" y2="200" stroke="#222" stroke-width="2" marker-end="url(#ah)" />
+<line x1="40.00" y1="194" x2="40.00" y2="206" stroke="#222" stroke-width="1.4" data-v="-5" />
+<line x1="96.00" y1="194" x2="96.00" y2="206" stroke="#222" stroke-width="1.4" data-v="-4" />
+<line x1="152.00" y1="194" x2="152.00" y2="206" stroke="#222" stroke-width="1.4" data-v="-3" />
+<line x1="208.00" y1="194" x2="208.00" y2="206" stroke="#222" stroke-width="1.4" data-v="-2" />
+<line x1="264.00" y1="194" x2="264.00" y2="206" stroke="#222" stroke-width="1.4" data-v="-1" />
+<line x1="320.00" y1="194" x2="320.00" y2="206" stroke="#222" stroke-width="2.4" data-v="0" />
+<line x1="376.00" y1="194" x2="376.00" y2="206" stroke="#222" stroke-width="1.4" data-v="1" />
+<line x1="432.00" y1="194" x2="432.00" y2="206" stroke="#222" stroke-width="1.4" data-v="2" />
+<line x1="488.00" y1="194" x2="488.00" y2="206" stroke="#222" stroke-width="1.4" data-v="3" />
+<line x1="544.00" y1="194" x2="544.00" y2="206" stroke="#222" stroke-width="1.4" data-v="4" />
+<line x1="600.00" y1="194" x2="600.00" y2="206" stroke="#222" stroke-width="1.4" data-v="5" />
+<text x="40.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-5">−5</text>
+<text x="96.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-4">−4</text>
+<text x="152.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-3">−3</text>
+<text x="208.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-2">−2</text>
+<text x="264.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="-1">−1</text>
+<text x="320.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="0">0</text>
+<text x="376.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="1">1</text>
+<text x="432.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="2">2</text>
+<text x="488.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="3">3</text>
+<text x="544.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="4">4</text>
+<text x="600.00" y="230" font-size="17" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" data-v="5">5</text>
+<path d="M376.00,186 Q292.00,145 208.00,186" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)" />
+<text x="292.00" y="150" font-size="15" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222">左へ3（−3大きい＝3小さい）</text>
+<circle cx="376.00" cy="200" r="5.5" fill="#222" data-point="" data-v="1" />
+<text x="376.00" y="178" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" />
+<circle cx="208.00" cy="200" r="5.5" fill="#222" data-point="" data-v="-2" />
+<text x="208.00" y="178" font-size="18" font-weight="bold" text-anchor="middle" font-family="'Hiragino Sans','Yu Gothic','Noto Sans JP',sans-serif" fill="#222" />
+</svg></svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+<title id="title">減法は「符号を変えた数の加法」と同じ動きになることを示す</title>
+<desc id="desc">上の数直線は3から5小さい数で−2。下の数直線は3に−5をたして−2。同じ動きになる。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#111"/></marker><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="white"/><path d="M-2 2 L2 -2 M0 9 L9 0 M7 11 L11 7" stroke="#111" stroke-width="1.5"/></pattern></defs><rect width="1000" height="760" fill="white"/><g font-family="system-ui,sans-serif" fill="#111">
+<text x="35" y="48" font-size="30" text-anchor="start">● 出発　○ 到着　　上下とも同じ動き</text>
+<g data-row="0">
+<text x="45" y="150" font-size="36" text-anchor="start">(+3)−(+5)＝−2</text>
+<text x="530" y="150" font-size="30" text-anchor="start">5小さい</text>
+<line data-tick="-6" x1="80" x2="80" y1="243" y2="257" stroke="#111"/>
+<text x="80" y="295" font-size="28" text-anchor="middle">−6</text>
+<line data-tick="-5" x1="150" x2="150" y1="243" y2="257" stroke="#111"/>
+<text x="150" y="295" font-size="28" text-anchor="middle">−5</text>
+<line data-tick="-4" x1="220" x2="220" y1="243" y2="257" stroke="#111"/>
+<text x="220" y="295" font-size="28" text-anchor="middle">−4</text>
+<line data-tick="-3" x1="290" x2="290" y1="243" y2="257" stroke="#111"/>
+<text x="290" y="295" font-size="28" text-anchor="middle">−3</text>
+<line data-tick="-2" x1="360" x2="360" y1="243" y2="257" stroke="#111"/>
+<text x="360" y="295" font-size="28" text-anchor="middle">−2</text>
+<line data-tick="-1" x1="430" x2="430" y1="243" y2="257" stroke="#111"/>
+<text x="430" y="295" font-size="28" text-anchor="middle">−1</text>
+<line data-tick="0" x1="500" x2="500" y1="243" y2="257" stroke="#111"/>
+<text x="500" y="295" font-size="28" text-anchor="middle">0</text>
+<line data-tick="1" x1="570" x2="570" y1="243" y2="257" stroke="#111"/>
+<text x="570" y="295" font-size="28" text-anchor="middle">1</text>
+<line data-tick="2" x1="640" x2="640" y1="243" y2="257" stroke="#111"/>
+<text x="640" y="295" font-size="28" text-anchor="middle">2</text>
+<line data-tick="3" x1="710" x2="710" y1="243" y2="257" stroke="#111"/>
+<text x="710" y="295" font-size="28" text-anchor="middle">3</text>
+<line data-tick="4" x1="780" x2="780" y1="243" y2="257" stroke="#111"/>
+<text x="780" y="295" font-size="28" text-anchor="middle">4</text>
+<line data-tick="5" x1="850" x2="850" y1="243" y2="257" stroke="#111"/>
+<text x="850" y="295" font-size="28" text-anchor="middle">5</text>
+<line data-tick="6" x1="920" x2="920" y1="243" y2="257" stroke="#111"/>
+<text x="920" y="295" font-size="28" text-anchor="middle">6</text>
+<line x1="80" x2="920" y1="250" y2="250" stroke="#111" stroke-width="1.5"/>
+<line data-motion="true" stroke-dasharray="9 7" x1="710" x2="360" y1="215" y2="215" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/>
+<circle data-point="start" cx="710" cy="250" r="7" fill="#111" stroke="#111" stroke-width="2.5"/>
+<circle data-point="end" cx="360" cy="250" r="7" fill="white" stroke="#111" stroke-width="2.5"/>
+</g>
+<g data-row="1">
+<text x="45" y="425" font-size="36" text-anchor="start">(+3)+(−5)＝−2</text>
+<text x="530" y="425" font-size="30" text-anchor="start">−5をたす</text>
+<line data-tick="-6" x1="80" x2="80" y1="518" y2="532" stroke="#111"/>
+<text x="80" y="570" font-size="28" text-anchor="middle">−6</text>
+<line data-tick="-5" x1="150" x2="150" y1="518" y2="532" stroke="#111"/>
+<text x="150" y="570" font-size="28" text-anchor="middle">−5</text>
+<line data-tick="-4" x1="220" x2="220" y1="518" y2="532" stroke="#111"/>
+<text x="220" y="570" font-size="28" text-anchor="middle">−4</text>
+<line data-tick="-3" x1="290" x2="290" y1="518" y2="532" stroke="#111"/>
+<text x="290" y="570" font-size="28" text-anchor="middle">−3</text>
+<line data-tick="-2" x1="360" x2="360" y1="518" y2="532" stroke="#111"/>
+<text x="360" y="570" font-size="28" text-anchor="middle">−2</text>
+<line data-tick="-1" x1="430" x2="430" y1="518" y2="532" stroke="#111"/>
+<text x="430" y="570" font-size="28" text-anchor="middle">−1</text>
+<line data-tick="0" x1="500" x2="500" y1="518" y2="532" stroke="#111"/>
+<text x="500" y="570" font-size="28" text-anchor="middle">0</text>
+<line data-tick="1" x1="570" x2="570" y1="518" y2="532" stroke="#111"/>
+<text x="570" y="570" font-size="28" text-anchor="middle">1</text>
+<line data-tick="2" x1="640" x2="640" y1="518" y2="532" stroke="#111"/>
+<text x="640" y="570" font-size="28" text-anchor="middle">2</text>
+<line data-tick="3" x1="710" x2="710" y1="518" y2="532" stroke="#111"/>
+<text x="710" y="570" font-size="28" text-anchor="middle">3</text>
+<line data-tick="4" x1="780" x2="780" y1="518" y2="532" stroke="#111"/>
+<text x="780" y="570" font-size="28" text-anchor="middle">4</text>
+<line data-tick="5" x1="850" x2="850" y1="518" y2="532" stroke="#111"/>
+<text x="850" y="570" font-size="28" text-anchor="middle">5</text>
+<line data-tick="6" x1="920" x2="920" y1="518" y2="532" stroke="#111"/>
+<text x="920" y="570" font-size="28" text-anchor="middle">6</text>
+<line x1="80" x2="920" y1="525" y2="525" stroke="#111" stroke-width="1.5"/>
+<line data-motion="true" stroke-dasharray="9 7" x1="710" x2="360" y1="490" y2="490" stroke="#111" stroke-width="3" marker-end="url(#arrow)"/>
+<circle data-point="start" cx="710" cy="525" r="7" fill="#111" stroke="#111" stroke-width="2.5"/>
+<circle data-point="end" cx="360" cy="525" r="7" fill="white" stroke="#111" stroke-width="2.5"/>
+</g>
+</g></svg>

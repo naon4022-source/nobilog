@@ -1,0 +1,371 @@
+{
+ "unitId": "M1-C1-S2",
+ "choices": [
+  {
+   "slotId": "M1-C1-S2-FIG02",
+   "candidateId": "M1-C1-S2-FIG02-C",
+   "decision": "採用（小さな修正を依頼）",
+   "reason": "4候補とも、2本の数直線（−6〜6）の目盛り位置がそろい、どちらも出発+3・到着−2・左へ5目盛りで、上に「5小さい」、下に「−5をたす」と書かれていることを、SVGを画像にして確認した（2026-10-03）。本文P031の説明と対応している。Cは各数直線の下に「出発 +3 → 到着 −2」と書かれ、上下で同じ点に着くことが文字でも確かめられる。採用済みのFIG01-Cと見た目もそろう。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true,
+   "improvement": "【修正依頼】左向きの矢印を点線にしてほしい。採用したFIG01-Cでは「右へ＝実線、左へ＝点線」と決めていて、本文もその約束で読む。FIG02は2本とも左向きなのに実線で、約束とずれる。数学の条件（位置・長さ・ラベル）は変えない。",
+   "displayNote": "文字は viewBox 1000 幅で約28〜32。11インチタブレット縦以上で読める。"
+  },
+  {
+   "slotId": "M1-C1-S2-FIG02",
+   "candidateId": "M1-C1-S2-FIG02-A",
+   "decision": "不採用",
+   "reason": "4候補とも、2本の数直線（−6〜6）の目盛り位置がそろい、どちらも出発+3・到着−2・左へ5目盛りで、上に「5小さい」、下に「−5をたす」と書かれていることを、SVGを画像にして確認した（2026-10-03）。本文P031の説明と対応している。正確だが、出発と到着の数を文字で確かめる手がかりがCより少ない。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG02",
+   "candidateId": "M1-C1-S2-FIG02-B",
+   "decision": "不採用",
+   "reason": "4候補とも、2本の数直線（−6〜6）の目盛り位置がそろい、どちらも出発+3・到着−2・左へ5目盛りで、上に「5小さい」、下に「−5をたす」と書かれていることを、SVGを画像にして確認した（2026-10-03）。本文P031の説明と対応している。枠がなく、2本の数直線と2つの式の組み合わせが、ほかより読み取りにくい。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG02",
+   "candidateId": "M1-C1-S2-FIG02-D",
+   "decision": "不採用",
+   "reason": "4候補とも、2本の数直線（−6〜6）の目盛り位置がそろい、どちらも出発+3・到着−2・左へ5目盛りで、上に「5小さい」、下に「−5をたす」と書かれていることを、SVGを画像にして確認した（2026-10-03）。本文P031の説明と対応している。Aとほぼ同じで、影付きの枠は白黒印刷で効果が出にくい。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG01",
+   "candidateId": "M1-C1-S2-FIG01-C",
+   "decision": "採用",
+   "reason": "4候補とも式・目盛り（−6〜6）・出発点・到着点・矢印の向きと長さ（3目盛り）・実線/点線の対応が仕様どおりであることを、SVGを画像にして目で確認した（2026-10-03）。Cは各式に「3目盛り 右へ／左へ」が書かれていて、移動の量（＝たす数の絶対値）と向きが文字でも読める。本文P027の「同じ向きは遠くへ・反対の向きはもどる」の説明と直接つながる。白黒でも、実線/点線と文字の両方で向きが分かる。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true,
+   "improvement": "任意：「3目盛り 右へ／左へ」のラベルを、矢印の真上（矢印の中央付近）に移すと、2本目・3本目でラベルと矢印が離れて見えるのを防げる。数学の条件は変えないこと。",
+   "displayNote": "文字は viewBox 1000 幅で 28〜32。11インチタブレット縦（約820px幅）以上ではそのまま読める。スマホ幅（320〜390px）では文字が小さくなるため、スマホでは1本ずつ縦に分けるか拡大表示が必要（Codex判断）。"
+  },
+  {
+   "slotId": "M1-C1-S2-FIG01",
+   "candidateId": "M1-C1-S2-FIG01-A",
+   "decision": "不採用",
+   "reason": "4候補とも式・目盛り（−6〜6）・出発点・到着点・矢印の向きと長さ（3目盛り）・実線/点線の対応が仕様どおりであることを、SVGを画像にして目で確認した（2026-10-03）。正確で見やすいが、移動の量が矢印の長さだけで示され、Cより説明とのつながりが弱い。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG01",
+   "candidateId": "M1-C1-S2-FIG01-B",
+   "decision": "不採用",
+   "reason": "4候補とも式・目盛り（−6〜6）・出発点・到着点・矢印の向きと長さ（3目盛り）・実線/点線の対応が仕様どおりであることを、SVGを画像にして目で確認した（2026-10-03）。枠がなく4本の区切りが弱い。上下の式と数直線の対応が、AやCより取りちがえやすい。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG01",
+   "candidateId": "M1-C1-S2-FIG01-D",
+   "decision": "不採用",
+   "reason": "4候補とも式・目盛り（−6〜6）・出発点・到着点・矢印の向きと長さ（3目盛り）・実線/点線の対応が仕様どおりであることを、SVGを画像にして目で確認した（2026-10-03）。Aとほぼ同じ内容で、影付きの枠は印刷で効果が出にくい。Cより移動量の表示が弱い。",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-INTRO",
+   "candidateId": "M1-C1-S2-INTRO-A",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-INTRO",
+   "candidateId": "M1-C1-S2-INTRO-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-INTRO",
+   "candidateId": "M1-C1-S2-INTRO-C",
+   "decision": "採用",
+   "reason": "色がはっきりし、2人の進む向き（右・左の矢印）が一目で分かる。一本道のマスも見える",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-INTRO",
+   "candidateId": "M1-C1-S2-INTRO-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-APPLY",
+   "candidateId": "M1-C1-S2-APPLY-A",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-APPLY",
+   "candidateId": "M1-C1-S2-APPLY-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-APPLY",
+   "candidateId": "M1-C1-S2-APPLY-C",
+   "decision": "採用",
+   "reason": "昼と夕方の水位の目盛りが見やすく、基準の線がはっきりしている",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-APPLY",
+   "candidateId": "M1-C1-S2-APPLY-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG03",
+   "candidateId": "M1-C1-S2-FIG03-A",
+   "decision": "採用",
+   "reason": "余白が十分で、項が正の箱・負の箱へ分かれる流れが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG03",
+   "candidateId": "M1-C1-S2-FIG03-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG03",
+   "candidateId": "M1-C1-S2-FIG03-C",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG03",
+   "candidateId": "M1-C1-S2-FIG03-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG04",
+   "candidateId": "M1-C1-S2-FIG04-A",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG04",
+   "candidateId": "M1-C1-S2-FIG04-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG04",
+   "candidateId": "M1-C1-S2-FIG04-C",
+   "decision": "採用",
+   "reason": "(−3)×0 の行を点線で目立たせていて、0をまたいで符号が変わる境目が分かる",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG04",
+   "candidateId": "M1-C1-S2-FIG04-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG05",
+   "candidateId": "M1-C1-S2-FIG05-A",
+   "decision": "採用",
+   "reason": "2組の式の対応が枠で区切られ、読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG05",
+   "candidateId": "M1-C1-S2-FIG05-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG05",
+   "candidateId": "M1-C1-S2-FIG05-C",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG05",
+   "candidateId": "M1-C1-S2-FIG05-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG06",
+   "candidateId": "M1-C1-S2-FIG06-A",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG06",
+   "candidateId": "M1-C1-S2-FIG06-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG06",
+   "candidateId": "M1-C1-S2-FIG06-C",
+   "decision": "採用",
+   "reason": "積の符号を実線・点線の枠で区別していて、偶数個・奇数個の規則が白黒でも分かる",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG06",
+   "candidateId": "M1-C1-S2-FIG06-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG07",
+   "candidateId": "M1-C1-S2-FIG07-A",
+   "decision": "採用",
+   "reason": "3つの集合の入れ子が実線・点線で区別され、例の数の位置も正しい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG07",
+   "candidateId": "M1-C1-S2-FIG07-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG07",
+   "candidateId": "M1-C1-S2-FIG07-C",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG07",
+   "candidateId": "M1-C1-S2-FIG07-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG08",
+   "candidateId": "M1-C1-S2-FIG08-A",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG08",
+   "candidateId": "M1-C1-S2-FIG08-B",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  },
+  {
+   "slotId": "M1-C1-S2-FIG08",
+   "candidateId": "M1-C1-S2-FIG08-C",
+   "decision": "採用",
+   "reason": "A・Dは枠の端で丸い数字が切れている。Cは木が2つ並んで、同じ素数になることが比べやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": true
+  },
+  {
+   "slotId": "M1-C1-S2-FIG08",
+   "candidateId": "M1-C1-S2-FIG08-D",
+   "decision": "不採用",
+   "reason": "同じ内容で、採用案のほうが読みやすい",
+   "sourceContentChecked": true,
+   "mobileLegibilityChecked": true,
+   "grayscaleChecked": false
+  }
+ ],
+ "updatedBy": "Claude",
+ "status": "2026-10-04 Claudeが生成済み候補を選定（本の画面で各見開きに画像を入れるため）"
+}

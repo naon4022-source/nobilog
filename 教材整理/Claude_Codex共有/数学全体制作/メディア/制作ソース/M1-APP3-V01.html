@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas><script src="動画エンジン/engine.js"></script><script>
+const cities=[['バンコク',-2],['ニューデリー',-3.5],['カイロ',-7],['ホノルル',-19]];
+function flag(x,y,s,col){g.strokeStyle=col;g.lineWidth=4;g.beginPath();g.moveTo(x,y);g.lineTo(x,y-90);g.stroke();rbox(x,y-90,74,45,0,'#fff',col,3);text(s,s==='日本'?1040:Math.min(990,Math.max(260,x)),s==='日本'?310:y-120,36,col,'center')}
+window.SCENE={draw({i,p}){header('時刻の数直線',i===7?'まとめ':'夏時間は考えない');
+ if(i===7){rbox(180,155,920,330,22,'#fff',C.orange,4);text('日本の時刻 ＋ 時差',640,285,60,C.ink,'center');text('時差が負 → 日本より前の時刻',640,390,44,C.blue,'center');return}
+ arrow(235,390,1150,390,C.ink,4);for(let n=-20;n<=0;n++){const x=1100+n*42;g.fillStyle=C.ink;g.fillRect(x,380,2,20);if(n%5===0)text(n<0?'−'+(-n):'0',x,440,36,C.ink,'center')}
+ flag(1100,355,'日本',C.blue);
+ if(i>=2&&i<=5){const [name,d]=cities[i-2],u=seg(p,.1,.7),x=1100+d*42*u;flag(x,270,name,C.orange);text(`時差 ${d<0?'−'+(-d):d}時間`,640,520,44,C.ink,'center');}
+ if(i===0||i===1)text('右：先の時刻　左：前の時刻',640,520,42,C.ink,'center');
+ if(i===6){text('日付も確認する',640,240,52,C.orange,'center');text('今日 → 前の日',640-80*seg(p,.15,.70),520,44,C.ink,'center')}
+}};
+</script>

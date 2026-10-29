@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0}canvas{display:block}</style><canvas width="1280" height="720"></canvas>
+<script src="動画エンジン/engine.js"></script><script src="動画エンジン/engine3d.js"></script><script src="動画エンジン/c67.js"></script><script>
+// M1-C6-S1-V04 回してできる立体（Claude）。軸は y 軸、図形は x≧0 の平面 z＝0 にある
+const PROF={rect:[[0,1],[1,1],[1,-1],[0,-1]],tri:[[0,1.25],[1.05,-1],[0,-1]],semi:[...Array(25)].map((_,k)=>{const a=Math.PI*k/24;return [1.12*Math.sin(a),1.12*Math.cos(a)]})};
+const COL={rect:'#8ec1ec',tri:'#c9a7e8',semi:'#9bd3a8'},NAME={rect:'円柱',tri:'円錐',semi:'球'},SEC={rect:'長方形',tri:'二等辺三角形',semi:'円'};
+function sweep(k,th,o,alpha=1){const n=Math.max(2,Math.round(48*th/(2*Math.PI)));if(th>0.02)surf(lathe(PROF[k],n,th),{...o,color:COL[k],alpha:alpha*.92})}
+function shape(k,th,o,col=C.orange,alpha=1,mirror=false){const M=o.M,pts=PROF[k].map(([x,y])=>pt3([x*Math.cos(th),y,x*Math.sin(th)],o));g.globalAlpha=alpha;g.fillStyle=hexA(col,.55);g.strokeStyle=col;g.lineWidth=4;g.beginPath();pts.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));
+ if(mirror){[...PROF[k]].reverse().forEach(([x,y])=>{const q=pt3([-x*Math.cos(th),y,-x*Math.sin(th)],o);g.lineTo(q[0],q[1])})}g.closePath();g.fill();g.stroke();g.globalAlpha=1}
+function axis(o,alpha=1){g.globalAlpha=alpha;line3([0,-1.75,0],[0,1.75,0],o,C.ink,3,[12,8]);const q=pt3([0,1.75,0],o);text('ℓ',q[0]+18,q[1]+10,36,C.ink,'left',800);g.globalAlpha=1}
+function outline(k,o){const P=PROF[k],top=P[0],bot=P[P.length-1];const ring=y=>{const r=k==='rect'?1:k==='tri'?(y<0?1.05:0):0;return r};
+ if(k==='rect'||k==='tri'){const pts=[];for(let j=0;j<=48;j++){const a=2*Math.PI*j/48;pts.push(pt3([1.0*(k==='rect'?1:1.05)*Math.cos(a),-1,(k==='rect'?1:1.05)*Math.sin(a)],o))}g.strokeStyle=C.ink;g.lineWidth=3;g.beginPath();pts.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke()}}
+function solidAt(k,cx,cy,s,yaw,o2={}){const o={cx,cy,s,M:view(yaw,-0.35)};sweep(k,2*Math.PI,o,o2.alpha??1);outline(k,o);return o}
+window.SCENE={draw({i,p,t}){
+ header('回してできる立体');const yaw=0.5+t*0.2;
+ const one=(k,stepSweep,stepDone)=>{const o={cx:540,cy:320,s:150,M:view(i===stepSweep?0.35:yaw,-0.35)};axis(o);
+  if(i===stepSweep){const th=2*Math.PI*seg(p,.15,.92);sweep(k,th,o);shape(k,th,o);
+   g.globalAlpha=seg(p,0,.15);text(k==='rect'?'長方形':k==='tri'?'直角三角形':'半円',900,200,40,C.orange,'center',800);g.globalAlpha=1}
+  else{sweep(k,2*Math.PI,o);outline(k,o);axis(o,.6);shape(k,0,o,C.orange,.9);g.globalAlpha=seg(p,0,.25);rbox(800,170,300,80,20,COL[k]);text(NAME[k],950,226,48,'#fff','center',800);g.globalAlpha=1;
+   // ラベルは図の外に置き、矢印で指す
+   const lab=(s,tx,ty,P3)=>{const q=pt3(P3,o);text(s,tx,ty,32,C.blue,'left',800);arrow(tx-10,ty-11,q[0],q[1],C.blue,4)};
+   if(k!=='semi'){const yb=k==='rect'?1:-1,rr=k==='rect'?1:1.05;g.globalAlpha=seg(p,.3,.5);lab('底面の半径',880,k==='rect'?360:520,[rr/2,yb,0]);g.globalAlpha=seg(p,.5,.7);lab('高さ',880,k==='rect'?470:380,[k==='rect'?1:0.02,0,0]);g.globalAlpha=1}
+   else{g.globalAlpha=seg(p,.3,.55);lab('半径',880,420,[0.56,0,0]);g.globalAlpha=1}}};
+ if(i===0){const o={cx:540,cy:320,s:150,M:view(0.25,-0.3)};axis(o);shape('rect',0,o,C.blue,1);g.globalAlpha=seg(p,.4,.6);const arc=[];for(let j=0;j<=30;j++){const a=-0.4+2.6*j/30;arc.push(pt3([1.45*Math.cos(a),1.35,1.45*Math.sin(a)],o))}
+   g.strokeStyle=C.orange;g.lineWidth=6;g.beginPath();arc.forEach((q,j)=>j?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();const e=arc[30],f=arc[28];arrow(f[0],f[1],e[0],e[1],C.orange,6);text('回転の軸',300,200,38,C.ink,'center',800);g.globalAlpha=1;return}
+ if(i<=2)return one('rect',1,2);if(i<=4)return one('tri',3,4);if(i<=6)return one('semi',5,6);
+ const ks=['rect','tri','semi'];ks.forEach((k,j)=>{const cx=230+j*410,o=solidAt(k,cx,350,100,yaw,{alpha:i===7?.45:.8});axis(o,.5);
+  if(i===7){const a=seg(p,.1+j*.12,.3+j*.12);if(a>0)shape(k,yaw,{...o},C.orange,a,true);/* 切り口を正面に向ける */g.globalAlpha=a;text(SEC[k],cx,530,34,C.orange,'center',800);g.globalAlpha=1}
+  if(i===8){const a=seg(p,.1+j*.12,.3+j*.12),y=k==='tri'?-0.2:0.15,r=k==='rect'?1:k==='tri'?1.05*(1.25-y)/2.25:Math.sqrt(1.12*1.12-y*y);const pts=[];for(let q=0;q<=48;q++){const ang=2*Math.PI*q/48;pts.push(pt3([r*Math.cos(ang),y,r*Math.sin(ang)],o))}
+   g.globalAlpha=a;g.fillStyle=hexA(C.orange,.55);g.strokeStyle=C.orange;g.lineWidth=4;g.beginPath();pts.forEach((q,m)=>m?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.closePath();g.fill();g.stroke();text('円',cx,530,34,C.orange,'center',800);g.globalAlpha=1}});
+ g.globalAlpha=seg(p,0,.2);text(i===7?'軸をふくむ平面で切る':'軸に垂直な平面で切る',640,120,38,C.ink,'center',800);g.globalAlpha=1}};
+</script>

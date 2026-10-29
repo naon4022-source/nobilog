@@ -1,0 +1,146 @@
+{
+ "unitId": "M1-APP1",
+ "note": "巻末。Codexの記入様式に合わせた。",
+ "figures": [
+  {
+   "slotId": "M1-APP1-FIG01",
+   "unitId": "M1-APP1",
+   "purpose": "「み・は・じ」ではなく、「道のり＝速さ×時間」の式から、速さ・時間を求める2つの式を矢印で導いた図",
+   "sourceReferences": [
+    "教科書 巻末（構成のみ参考）"
+   ],
+   "confirmedConcept": "道のり＝速さ×時間 から、速さ＝道のり÷時間、時間＝道のり÷速さ",
+   "labels": [],
+   "coordinates": [],
+   "numericConditions": [
+    "数値は入れない（式だけ）"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "確定した数学の条件",
+    "図に書かないもの"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "「み・は・じ」ではなく、「道のり＝速さ×時間」の式から、速さ・時間を求める2つの式を矢印で導いた図",
+   "verification": {
+    "calculation": "検算.py 例1・例2",
+    "sourceComparison": "原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-APP1-FIG02",
+   "unitId": "M1-APP1",
+   "purpose": "もとにする量を1とした数直線と、くらべる量の数直線を上下に並べ、「×割合」の矢印でつないだ図",
+   "sourceReferences": [
+    "教科書 巻末（構成のみ参考）"
+   ],
+   "confirmedConcept": "もとにする量 40 を 1、くらべる量 52 を 1.3 とした2本の数直線（例題3）",
+   "labels": [],
+   "coordinates": [],
+   "numericConditions": [
+    "—"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "確定した数学の条件",
+    "図に書かないもの"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "もとにする量を1とした数直線と、くらべる量の数直線を上下に並べ、「×割合」の矢印でつないだ図",
+   "verification": {
+    "calculation": "検算.py 例3",
+    "sourceComparison": "原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-APP1-FIG03",
+   "unitId": "M1-APP1",
+   "purpose": "小数のわり算で、わる数とわられる数の小数点を同じけただけ右へ移すようすと、分数のわり算で「わる数の逆数をかける」ようすを並べた図",
+   "sourceReferences": [
+    "教科書 巻末（構成のみ参考）"
+   ],
+   "confirmedConcept": "4.68÷1.2 → 46.8÷12＝3.9／(b/a)÷(d/c)＝(b/a)×(c/d)",
+   "labels": [],
+   "coordinates": [],
+   "numericConditions": [
+    "—"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "確定した数学の条件",
+    "図に書かないもの"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "小数のわり算で、わる数とわられる数の小数点を同じけただけ右へ移すようすと、分数のわり算で「わる数の逆数をかける」ようすを並べた図",
+   "verification": {
+    "calculation": "検算.py 4.68÷1.2",
+    "sourceComparison": "原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  },
+  {
+   "slotId": "M1-APP1-FIG04",
+   "unitId": "M1-APP1",
+   "purpose": "8人の記録を小さい順に並べたカードと、平均値（ならした高さ）・中央値（まん中の旗）・最頻値（いちばん多い値）の印を示した図",
+   "sourceReferences": [
+    "教科書 巻末（構成のみ参考）"
+   ],
+   "confirmedConcept": "8人の読書時間 2、3、4、5、5、6、7、8。平均値・中央値・最頻値はいずれも 5",
+   "labels": [],
+   "coordinates": [],
+   "numericConditions": [
+    "代表値の値（5）は書かない"
+   ],
+   "units": [],
+   "arrows": [],
+   "mustRemainIdenticalAcrossCandidates": [
+    "確定した数学の条件",
+    "図に書かないもの"
+   ],
+   "candidateLayouts": {
+    "A": "余白を広く、図を中央に1つ",
+    "B": "細い線で図を大きく、注目点だけ太く",
+    "C": "図の横に短い説明カードを重ねる（数値・条件は同じ）",
+    "D": "図を少し立体的な板や帯で見せる（位置・数値は同じ）"
+   },
+   "mobileMinimumLabelSize": 16,
+   "print": "白黒。色以外（線種・模様・記号・ラベル）でも区別",
+   "altText": "8人の記録を小さい順に並べたカードと、平均値（ならした高さ）・中央値（まん中の旗）・最頻値（いちばん多い値）の印を示した図",
+   "verification": {
+    "calculation": "検算.py 例6",
+    "sourceComparison": "原本の図・数値は写していない",
+    "renderInspection": "候補ができたらClaudeが目視"
+   },
+   "status": "数学条件確定・Claude記入済み・候補未生成"
+  }
+ ]
+}
