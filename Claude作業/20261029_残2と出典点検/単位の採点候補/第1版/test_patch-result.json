@@ -1,0 +1,5094 @@
+{
+ "total": 742,
+ "mismatch": 0,
+ "rows": [
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "(12π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "input": "12π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "(2π+12)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2+12 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "input": "2π+12 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "(108π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "input": "108π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "(16π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "input": "16π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "(100−25π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "input": "100−25π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "(18π−36)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18−36 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "input": "18π−36 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60πm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60π m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "(200+60π)+1 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "input": "200+60π m",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "(8π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "input": "8π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "(36π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "input": "36π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "(40+6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "input": "40+6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "(16−4π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "input": "16−4π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "(16π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "input": "16π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "(81π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "input": "81π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "(5π+10)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5+10 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "input": "5π+10 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "(16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "input": "16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "(16π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "input": "16π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "(64−16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "input": "64−16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "(25π−50)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25−50 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "input": "25π−50 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27π m²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27πm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27π m2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27π m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "(27π)+1 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "input": "27π m²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110π m²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110πm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110π m2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110π m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "(110π)+1 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "input": "110π m²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "(50π/3+30)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50/3+30 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "input": "50π/3+30 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "(100π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "input": "100π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "(π/10)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "/10 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "input": "π/10 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "(600π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "input": "600π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "(18+2π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "input": "18+2π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "(5π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "input": "5π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "(32π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "input": "32π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "(4π+32)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4+32 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "input": "4π+32 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "(2π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "input": "2π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "(2π−6)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2−6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "input": "2π−6 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "(19π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "input": "19π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "(48+8π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "input": "48+8π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "(18+6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "input": "18+6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "(50π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "input": "50π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "(16+4π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "input": "16+4π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "(125π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "input": "125π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "(52π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "input": "52π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2πm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2π m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "(2π)+1 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "input": "2π m",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "(48π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "input": "48π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "(18π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "input": "18π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "(80+16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "input": "80+16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "(100−25π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "input": "100−25π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "(16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "input": "16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "(9π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "input": "9π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "(9π−18)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9−18 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "input": "9π−18 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "(2π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "input": "2π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "(12π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "input": "12π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "(20+2π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "input": "20+2π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "(48−12π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "input": "48−12π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "(12π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "input": "12π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "(6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "input": "6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "(160π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "input": "160π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16π m²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16πm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16π m2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16π m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "(16π)+1 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "input": "16π m²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29π m²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29πm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29π m2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29π m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "(29π)+1 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "input": "29π m²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "(180π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "input": "180π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "(18π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "input": "18π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2πm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2π m",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2π m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "(2π)+1 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2 m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "input": "2π m",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "(6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "input": "6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "(2π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "input": "2π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "(4π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "input": "4π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "(4π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "input": "4π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "(7π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "input": "7π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "(4π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "input": "4π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "(8π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "input": "8π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "(7π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "input": "7π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "(4π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "input": "4π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "(3π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "input": "3π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14 cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "(7π−14)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7−14 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "input": "7π−14 cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "(20+6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "input": "20+6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "(12+4π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "input": "12+4π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53π m²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53πm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53π m2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53π m",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "(53π)+1 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53 m²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "input": "53π m²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "(25π−50)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25−50 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "input": "25π−50 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "(10π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "input": "10π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "(16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "input": "16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "(8π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "input": "8π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "(18π−36)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18−36 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "input": "18π−36 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "(11π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "input": "11π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "(6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "input": "6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "(8π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "input": "8π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16 cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16 cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "(8π−16)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8−16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "input": "8π−16 cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "(12π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "input": "12π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "(16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "input": "16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "(16π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "input": "16π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "(32π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "input": "32π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "(24π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "input": "24π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "(12π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "input": "12π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6πcm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6π cm",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "(6π)+1 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6 cm",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-1",
+   "input": "6π cm",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "(24π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidmake-4",
+   "input": "24π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "(24π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "input": "24π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16π cm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16πcm²",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16π cm2",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16π cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "(16π)+1 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-surface1-5",
+   "input": "16π cm²",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "(36π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-9",
+   "input": "36π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "(102π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-21",
+   "input": "102π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3 cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3 cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "(104π/3)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104/3 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-22",
+   "input": "104π/3 cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "(1000−40π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-23",
+   "input": "1000−40π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "(18π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-33",
+   "input": "18π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "(360π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-38",
+   "input": "360π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "(90π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-39",
+   "input": "90π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "(50π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-41",
+   "input": "50π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "(35π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-50",
+   "input": "35π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "(48π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-56",
+   "input": "48π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "(44π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-57",
+   "input": "44π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "(160π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-58",
+   "input": "160π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "(40π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-66",
+   "input": "40π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "(288π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-67",
+   "input": "288π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18π",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18π cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18πcm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18π cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18π cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "(18π)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-68",
+   "input": "18π cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5 cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5cm³",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5 cm3",
+   "expect": true,
+   "got": true
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5 cm²",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "(48π/5)+1 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48/5 cm³",
+   "expect": false,
+   "got": false
+  },
+  {
+   "id": "tokkun-math-1-volume-69",
+   "input": "48π/5 cm³",
+   "expect": "元のデータでは×（再現）",
+   "got": false
+  }
+ ]
+}

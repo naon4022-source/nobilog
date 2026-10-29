@@ -1,0 +1,2032 @@
+{
+ "id": "tokkun-social-1-hist-nobunaga",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "信長・秀吉の統一事業と桃山文化（特訓）",
+ "majorTitle": "近世の日本",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-social-1-hist-nobunaga-1",
+   "type": "input",
+   "prompt": "信長が京都に上るときに擁して、室町幕府の第15代将軍にした人物はだれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "足利義昭",
+     "あしかがよしあき"
+    ]
+   },
+   "explanation": "信長は足利義昭を擁して京都に上り、義昭を室町幕府の第15代将軍にし、政治の実権をにぎった。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-2",
+   "type": "input",
+   "prompt": "信長が1573年に足利義昭を京都から追放したのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "協力した",
+      "仲が良"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "対立",
+       "争",
+       "仲が悪"
+      ]
+     }
+    ]
+   },
+   "explanation": "二人は間もなく対立するようになったため。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-3",
+   "type": "input",
+   "prompt": "信長が、敵対すれば武力で従わせた仏教勢力として、教科書にあげられているものを2つ書こう。（「、」で区切って書こう）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "比叡山延暦寺",
+      "比叡山",
+      "延暦寺"
+     ],
+     [
+      "一向一揆",
+      "一向"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "信長は、戦国大名だけでなく、比叡山延暦寺（滋賀県）や一向一揆などの仏教勢力も、敵対すれば武力で従わせた。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-4",
+   "type": "input",
+   "prompt": "長篠の戦いの絵で、織田・徳川連合軍の戦い方の特徴として、教科書の本文から読み取れることを選ぼう。\nア　鉄砲を有効に使った\nイ　弓だけを使った\nウ　騎馬だけで突撃した",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "長篠の戦い（愛知県）では鉄砲を有効に使って、甲斐（山梨県）の戦国大名武田勝頼を破った。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-5",
+   "type": "input",
+   "prompt": "楽市令（1577年・部分要約）で、街道を行き来する商人に命じたことは何か。次から選ぼう。\nア　この町を通るときは、税を2倍納めること\nイ　この町には入らず、ほかの宿場で泊まること\nウ　中山道を素通りせず、この町に宿を取ること",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "「街道を行き来する商人は中山道を素通りせず、この町に宿を取ること」と命じている。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-6",
+   "type": "input",
+   "prompt": "楽市令で、商人にこの町（安土）に宿を取るよう命じたのはなぜか。考えて書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "人",
+       "商人"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "集め",
+       "集まる"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "城下町",
+       "町",
+       "経済"
+      ]
+     }
+    ]
+   },
+   "explanation": "城下町に人や物を集めて、城下町や領地の経済的発展を図るため。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-7",
+   "type": "input",
+   "prompt": "最初の楽市令が出されたのは、何年のどこか。次から選ぼう。\nア　1577年の京都（足利氏の御所の周辺）\nイ　1590年の大阪（豊臣氏の城下町）\nウ　1567年の加納（現在の岐阜市）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "信長の最初の楽市令は、1567年に加納（現在の岐阜市）で出されました。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-8",
+   "type": "input",
+   "prompt": "信長が関所を廃止したのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "通行料"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "流通"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "さまたげ",
+       "妨げ"
+      ]
+     }
+    ]
+   },
+   "explanation": "通行料を取り流通のさまたげとなっていたから。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-9",
+   "type": "input",
+   "prompt": "信長についての評価の見直しとして、教科書の人物紹介に書かれていることを選ぼう。\nア　これまでずっと、古い権威を守る保守的な人物と考えられてきた\nイ　革新的な人物と考えられてきたが、その人物像が見直されている\nウ　評価は昔から一度も変わらず、今も同じ見方をされている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "これまで、革新的で、古い権威を否定した人物と考えられてきましたが、最近では、そうした人物像が見直されている。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-10",
+   "type": "input",
+   "prompt": "全国統一の過程の順として正しいものを選ぼう。\nア　本能寺の変 → 秀吉が関白になる → 島津氏が降伏 → 北条氏を滅ぼす\nイ　北条氏を滅ぼす → 本能寺の変 → 秀吉が関白になる → 島津氏が降伏\nウ　秀吉が関白になる → 本能寺の変 → 島津氏が降伏 → 北条氏を滅ぼす",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "1582年本能寺の変、秀吉は関白に任命され、1587年に九州の島津氏を降伏させ、1590年に関東の北条氏を滅ぼした。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-11",
+   "type": "input",
+   "prompt": "秀吉は、約何万石の領地を持っていたか。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "万石"
+    ]
+   },
+   "explanation": "秀吉は、約200万石の領地のほか、大阪・京都・堺などの経済的に重要な都市を直接支配した。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-12",
+   "type": "input",
+   "prompt": "秀吉が経済的に大きな力を持つことができた理由を、直接支配したものから説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "都市",
+       "大阪",
+       "京都",
+       "堺"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "金山",
+       "銀山",
+       "鉱山"
+      ]
+     }
+    ]
+   },
+   "explanation": "約200万石の領地のほか、大阪・京都・堺などの経済的に重要な都市や、各地の金山・銀山を直接支配し、統一的な金貨を発行したから。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-13",
+   "type": "input",
+   "prompt": "「安土桃山時代」の「桃山」とは何か。次から選ぼう。\nア　京都市南部の地名で、秀吉が晩年に住んだ伏見城があった\nイ　信長が築いた城の名前で、安土城の別の呼び名\nウ　秀吉の生まれた村の名前で、尾張にある地名",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "「桃山」は現在の京都市南部の地名で、秀吉が後に住まいとした伏見城があった。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-14",
+   "type": "input",
+   "prompt": "バテレン追放令（部分要約）で、日本はどのような国だとしているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "神国",
+     "しんこく"
+    ]
+   },
+   "explanation": "日本は神国であるから、キリスト教国が邪教（キリスト教）を伝え広めるのは、けしからぬことである、としている。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-15",
+   "type": "input",
+   "prompt": "バテレン追放令（部分要約）で、宣教師に命じられた期限は何日以内か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "20日以内",
+     "20日",
+     "二十日以内",
+     "20"
+    ]
+   },
+   "explanation": "今日から20日以内に準備して帰国するように、とされている。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-16",
+   "type": "input",
+   "prompt": "秀吉が宣教師を国外に追放したのはなぜか。教科書の本文から書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "布教"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "軍事力",
+       "スペイン",
+       "ポルトガル"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "結び付",
+       "危険"
+      ]
+     }
+    ]
+   },
+   "explanation": "キリスト教の布教と、スペインやポルトガルの軍事力とが結び付いていることを危険視したため。（長崎がイエズス会に寄進されていることを知ったのがきっかけ）",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-17",
+   "type": "input",
+   "prompt": "バテレン追放令の政策が不徹底に終わったのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "宣教師"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "とどま",
+       "残"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "南蛮貿易"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "禁止",
+       "続"
+      ]
+     }
+    ]
+   },
+   "explanation": "一部の宣教師は日本にとどまり、キリスト教と強く結び付いていた南蛮貿易も禁止されなかったため。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-18",
+   "type": "input",
+   "prompt": "京ますは1升分がちょうど入り、100升分で1石にあたる。米1石の重さを約150kgとすると、1升分の米は約何kgか。",
+   "answer": {
+    "kind": "number",
+    "value": "1.5",
+    "units": [
+     "kg",
+     "キログラム"
+    ]
+   },
+   "explanation": "1石は100升なので、150÷100＝1.5kg。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-19",
+   "type": "input",
+   "prompt": "検地尺は、×印の間がちょうど1尺（約30.3cm）である。10尺はおよそ何mか。小数第2位まで答えよう（小数第3位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "3.03",
+    "units": [
+     "m",
+     "メートル"
+    ]
+   },
+   "explanation": "30.3cm×10＝303cm＝3.03m。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-20",
+   "type": "input",
+   "prompt": "太閤検地で、秀吉が地域によって異なるものさしやますを統一したのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "石高"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "統一",
+       "同じ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "基準",
+       "表"
+      ]
+     }
+    ]
+   },
+   "explanation": "田畑の面積や土地のよしあしを調べ、予想される収穫量を米の体積である石高で表し、全国の土地を石高という統一的な基準で表すため。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-21",
+   "type": "input",
+   "prompt": "太閤検地によって、公家や寺社などの荘園領主はどうなったか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "土地"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "権利"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "失"
+      ]
+     }
+    ]
+   },
+   "explanation": "公家や寺社などの荘園領主は、それまで持っていた土地に対する権利を失った。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-22",
+   "type": "input",
+   "prompt": "刀狩令（1588年・部分要約）で、百姓が武器を持つことを禁止した理由としてあげられていないものを選ぼう。\nア　百姓が農業に専念するため\nイ　武器を外国に売るため\nウ　年貢を納めず、一揆をくわだてる者がいれば処罰するが、田畑が耕作されず無駄になる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "刀狩令では、年貢を納めずに一揆をくわだてると処罰することになり、そうなると田畑が耕作されず無駄になるので武器を取り上げる、としている。外国に売るためではない。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-23",
+   "type": "input",
+   "prompt": "兵農分離によって、どのような社会の仕組みが固まったか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "身分"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "職業"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "生活"
+      ]
+     }
+    ]
+   },
+   "explanation": "武士・百姓・町人などの身分に対応した職業で生活するという、近世の社会の仕組みが固まった。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-24",
+   "type": "input",
+   "prompt": "秀吉が、商人が東南アジアへ渡航することをすすめる一方で、倭寇などの海賊を取りしまる命令を出したのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "貿易"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "安全"
+      ]
+     }
+    ]
+   },
+   "explanation": "海外との貿易には強い関心を持っていたので、貿易船の安全を図るため。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-25",
+   "type": "input",
+   "prompt": "文禄の役で、秀吉が朝鮮に派遣した大軍は約何万人か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "万人"
+    ]
+   },
+   "explanation": "約15万人の大軍を朝鮮に派遣した。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-26",
+   "type": "input",
+   "prompt": "文禄の役で、日本の軍勢が苦戦した理由として教科書にあげられているものを2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "明",
+       "援軍"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "民衆",
+       "抵抗",
+       "海戦"
+      ]
+     }
+    ]
+   },
+   "explanation": "明の援軍におしもどされ、各地で朝鮮の民衆による抵抗運動が起こり、海戦でも苦戦した。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-27",
+   "type": "input",
+   "prompt": "7年にわたる戦い（文禄の役・慶長の役）は、朝鮮と日本にそれぞれどのような影響をあたえたか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "朝鮮"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "荒廃",
+       "連行"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "日本"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "負担",
+       "没落"
+      ]
+     }
+    ]
+   },
+   "explanation": "戦場となった朝鮮は荒廃し、日本に連行される人もいました。日本の武士や農民も重い負担に苦しみ、豊臣氏が没落する原因となった。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-28",
+   "type": "input",
+   "prompt": "朝鮮人陶工によって技術が伝えられ、日本を代表する焼き物になり、ヨーロッパにも輸出されたものとして、教科書の「もっと知りたい！」で特にあげられているものはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "有田焼",
+     "ありたやき"
+    ]
+   },
+   "explanation": "有田焼（佐賀県）や薩摩焼（鹿児島県）、萩焼（山口県）など各地で新しい陶器や磁器が作られ、特に有田焼はヨーロッパにも輸出されて日本を代表する焼き物になった。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-29",
+   "type": "input",
+   "prompt": "朝鮮の水軍の亀甲船の特徴として、教科書の図版の説明にあげられているものを選ぼう。\nア　甲板が鉄板でおおわれていた\nイ　木の葉で船体をおおい、軽く作られていた\nウ　帆がなく、人がこぐ力だけで進む船だった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "朝鮮の水軍の船は、甲板が鉄板でおおわれていた。李舜臣が率いて日本の水軍を苦しめた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-30",
+   "type": "input",
+   "prompt": "桃山文化の城が、支配者の強大な権力と富を示しているのはなぜか。城のつくりから説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "天守"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "石垣"
+      ]
+     }
+    ]
+   },
+   "explanation": "これらの城には、高くそびえる天守と巨大な石垣が築かれ、支配者の強大な権力と富が示されています。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-31",
+   "type": "input",
+   "prompt": "姫路城の大天守の高さは約何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "46.4",
+    "units": [
+     "m",
+     "メートル"
+    ]
+   },
+   "explanation": "姫路城（大天守の高さ46.4m）。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-32",
+   "type": "input",
+   "prompt": "茶の湯で、中国から渡来した茶道具で評価の高いものは、どれくらいの価値を持ったか。次から選ぼう。\nア　米1升ほどの、ふだん使いの道具と同じ価値\nイ　大名の領地と同じくらいの価値\nウ　ほとんど値打ちがなく、だれでも手に入った",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "中国から渡来した茶道具で評価の高いものは、大名の領地と同じくらいの価値を持ちました。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-33",
+   "type": "input",
+   "prompt": "千利休が造った茶室「妙喜庵待庵」の特徴として、教科書の図版の説明にあげられているものを選ぼう。\nア　部屋全体が金箔ではりつめられている\nイ　大勢が集まれる、広い大広間がある\nウ　小さな入り口「にじり口」がある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "千利休が造った茶室で、写真の右手前には「にじり口」という小さな入り口がある。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-34",
+   "type": "input",
+   "prompt": "千利休は、だれの怒りを買って自害を命じられたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "豊臣秀吉",
+     "秀吉",
+     "とよとみひでよし"
+    ]
+   },
+   "explanation": "特に秀吉からは重く用いられましたが、秀吉の怒りを買って自害を命じられました。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-35",
+   "type": "input",
+   "prompt": "異様な服装をしたり行動したりすることを何といったか。教科書の注から書こう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かぶき",
+     "カブキ"
+    ]
+   },
+   "explanation": "異様な服装をしたり行動したりすることを「かぶき」といいました。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-36",
+   "type": "input",
+   "prompt": "琉球の三線と三味線が似ているのはなぜか。教科書の問いで関連付けているページの内容から選ぼう。\nア　日本から琉球に三味線が伝わり、三線になったから\nイ　たまたま形が似ているだけで、関係はないから\nウ　琉球が中国の影響を受け、それが日本に伝わったから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "中国の三弦が琉球の三線になり、琉球との交流を通じて日本の三味線になった。琉球の中継貿易の特色と関連している。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-37",
+   "type": "input",
+   "prompt": "安土桃山時代に、庶民の衣料として麻にかわって広がり始めたものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "木綿",
+     "もめん"
+    ]
+   },
+   "explanation": "衣服では、色あざやかな小袖が日常的に着られるようになり、麻にかわって木綿が庶民の衣料として広がり始めた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-38",
+   "type": "input",
+   "prompt": "ヨーロッパ人によってもたらされたものとして、教科書の本文にあげられているものを、次からすべて選ぼう。\nア　パン\nイ　カステラ\nウ　カルタ\nエ　時計\nオ　三味線（記号を「、」で区切って書こう）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "パン・カステラ・カルタ・時計などもヨーロッパ人によってもたらされた。三味線は琉球から伝わった楽器を基にしたもの。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-39",
+   "type": "input",
+   "prompt": "「平家物語」などの日本の書物がローマ字で印刷されたのは、何が伝えられたからか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "活版印刷"
+      ]
+     }
+    ]
+   },
+   "explanation": "活版印刷術も伝えられ、「平家物語」などの日本の書物が、ローマ字で印刷された。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-40",
+   "type": "input",
+   "prompt": "ローマ字で書かれた「平家物語」は、だれが日本語を学習するために作られたか。次から選ぼう。\nア　中国の商人\nイ　外国人宣教師\nウ　日本の武士",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "16世紀末に天草（熊本県）で、外国人宣教師の日本語学習のために作られた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-41",
+   "type": "input",
+   "prompt": "織田信長は、もともとどこの戦国大名だったか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "尾張",
+     "おわり",
+     "尾張（愛知県）"
+    ]
+   },
+   "explanation": "信長は尾張（愛知県）の小さな戦国大名だった。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-42",
+   "type": "input",
+   "prompt": "信長が、駿河の戦国大名今川義元を破った戦いを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "桶狭間の戦い",
+     "おけはざまのたたかい"
+    ]
+   },
+   "explanation": "桶狭間の戦い（愛知県）で今川義元を破って勢力を広げた。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-43",
+   "type": "input",
+   "prompt": "信長が比叡山延暦寺のほかに、武力で従わせた仏教勢力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "一向一揆",
+     "いっこういっき"
+    ]
+   },
+   "explanation": "信長は比叡山延暦寺（滋賀県）や一向一揆などの仏教勢力も、敵対すれば武力で従わせた。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-44",
+   "type": "input",
+   "prompt": "信長が巨大な天守を持つ城を築いた場所はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "安土",
+     "あづち"
+    ]
+   },
+   "explanation": "巨大な天守を持つ安土城（滋賀県）を築いた。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-45",
+   "type": "input",
+   "prompt": "信長が、城下町や領地の経済的発展を図るために、市での税を免除し、特権的な座を廃止した政策を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "楽市・楽座",
+     "楽市楽座",
+     "らくいちらくざ"
+    ]
+   },
+   "explanation": "楽市・楽座。商工業者に自由な活動を行わせようとした。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-46",
+   "type": "input",
+   "prompt": "信長が自害した事件を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "本能寺の変",
+     "ほんのうじのへん"
+    ]
+   },
+   "explanation": "1582年、家臣の明智光秀に背かれて本能寺（京都府）で自害した。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 106,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-47",
+   "type": "input",
+   "prompt": "信長の後継者争いに勝利した豊臣秀吉が、本拠地として築いた城はどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大阪城",
+     "大坂城",
+     "おおさかじょう"
+    ]
+   },
+   "explanation": "秀吉は大阪城を築いて本拠地にした。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-48",
+   "type": "input",
+   "prompt": "秀吉が天皇から任命された官職として、教科書にあげられているものを選ぼう。\nア　執権\nイ　征夷大将軍\nウ　関白",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "秀吉は天皇から関白に任命された。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-49",
+   "type": "input",
+   "prompt": "1587年に秀吉に降伏した、九州の大名はだれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "島津氏",
+     "島津"
+    ]
+   },
+   "explanation": "停戦の命令に従わない九州の島津氏を降伏させた。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-50",
+   "type": "input",
+   "prompt": "秀吉が1590年にほろぼした、関東の戦国大名はどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "北条氏",
+     "北条"
+    ]
+   },
+   "explanation": "1590年に関東の北条氏を滅ぼすと、東北の戦国大名たちも秀吉に従い、全国統一が完成した。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-51",
+   "type": "input",
+   "prompt": "秀吉が直接支配した、経済的に重要な都市として教科書にあげられているものをすべて選ぼう（読点で区切る）。\nア　大阪\nイ　京都\nウ　堺\nエ　江戸",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "大阪・京都・堺など、経済的に重要な都市を直接支配した。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-52",
+   "type": "input",
+   "prompt": "秀吉が発行した、統一的な金貨として図5に示されているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "天正大判",
+     "てんしょうおおばん"
+    ]
+   },
+   "explanation": "天正大判。秀吉は金山・銀山を直接支配し、統一的な金貨を発行した。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-53",
+   "type": "input",
+   "prompt": "豊臣秀吉が「戦国一の出世頭」とされるのはなぜか。次から選ぼう。\nア　平民から天下人になったから\nイ　将軍の子だったから\nウ　天皇の家に生まれたから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "秀吉は平民から天下人になった。",
+   "source": {
+    "id": "source-0862",
+    "file": "歴史きょうかしょ/S__16474160_0.jpg",
+    "sha256": "42a4740ab5e164901eb6b4e6381686ac802486334fc9364ac5a88f1f7997da24",
+    "page": 107,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-54",
+   "type": "input",
+   "prompt": "太閤検地で、田畑の予想される収穫量を表した、米の体積の単位を使った基準を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "石高",
+     "こくだか"
+    ]
+   },
+   "explanation": "石高。全国の土地が石高という統一的な基準で表されるようになった。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-55",
+   "type": "input",
+   "prompt": "太閤検地で、百姓は何を保障され、何を納めることが義務付けられたか。次から選ぼう。\nア　武器を持つ権利を保障され、税を免除された\nイ　土地を耕す権利を保障され、石高に基づく年貢を納める\nウ　何も変わらない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "百姓は土地を耕す権利を保障され、石高に基づく年貢を納めることが義務付けられた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-56",
+   "type": "input",
+   "prompt": "太閤検地で、武士は何に応じた軍事的奉公（軍役）を務めたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "石高",
+     "こくだか"
+    ]
+   },
+   "explanation": "武士は石高で示された領地をあたえられ、石高に応じた軍役を務めた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 108,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p108（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-57",
+   "type": "input",
+   "prompt": "秀吉が服属を求めた地域として、教科書の本文にあげられているものをすべて選ぼう（読点で区切る）。\nア　イギリス\nイ　朝鮮\nウ　高山国（台湾）\nエ　ルソン（フィリピン）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "朝鮮・高山国（台湾）・ルソン（フィリピン）などに服属を求めた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-58",
+   "type": "input",
+   "prompt": "1592年に秀吉が朝鮮に大軍を派遣した戦いを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "文禄の役",
+     "ぶんろくのえき"
+    ]
+   },
+   "explanation": "明の征服を目指し、1592（文禄元）年に朝鮮に大軍を派遣した（文禄の役）。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-59",
+   "type": "input",
+   "prompt": "1597年に再び始まった朝鮮での戦いを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "慶長の役",
+     "けいちょうのえき"
+    ]
+   },
+   "explanation": "講和は成立せず、1597（慶長2）年に再び戦いが始まった（慶長の役）。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-60",
+   "type": "input",
+   "prompt": "文禄の役で、日本の軍勢が占領した朝鮮の首都はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "漢城",
+     "かんじょう",
+     "ソウル",
+     "漢城（ソウル）"
+    ]
+   },
+   "explanation": "日本の軍勢は首都漢城（ソウル）を占領して朝鮮北部まで進んだ。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-61",
+   "type": "input",
+   "prompt": "日本の軍勢が朝鮮から引きあげるきっかけになったできごとは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "秀吉の病死",
+     "秀吉が病死した",
+     "秀吉の死"
+    ]
+   },
+   "explanation": "1598年に秀吉が病死したのをきっかけに、軍勢を引きあげた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-62",
+   "type": "input",
+   "prompt": "朝鮮の水軍を率いて日本の水軍を苦しめた将軍はだれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "李舜臣",
+     "りしゅんしん",
+     "イスンシン"
+    ]
+   },
+   "explanation": "亀甲船などを率いた李舜臣が日本の水軍を苦しめた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-63",
+   "type": "input",
+   "prompt": "朝鮮出兵（文禄・慶長の役）が日本の国内にあたえた影響として、教科書の本文にあるものを選ぼう。\nア　国内の武士や農民には、ほとんど影響がなかった\nイ　朝鮮を支配したことで、豊臣氏の力がいっそう強くなった\nウ　武士や農民が重い負担に苦しみ、豊臣氏の没落の原因となった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "日本の武士や農民も重い負担に苦しみ、豊臣氏が没落する原因となった。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-64",
+   "type": "input",
+   "prompt": "朝鮮人陶工の技術で始まった焼き物として、有田焼のほかに教科書にあげられているものを2つ選ぼう（読点で区切る）。\nア　薩摩焼\nイ　萩焼\nウ　九谷焼\nエ　瀬戸焼",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "有田焼（佐賀県）や薩摩焼（鹿児島県）、萩焼（山口県）など。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-65",
+   "type": "input",
+   "prompt": "図8の名護屋城は、何のために築かれたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "文禄・慶長の役の拠点",
+     "朝鮮出兵の拠点",
+     "拠点"
+    ]
+   },
+   "explanation": "名護屋城（佐賀県）は、秀吉が文禄・慶長の役の拠点として築いた。",
+   "source": {
+    "id": "source-0863",
+    "file": "歴史きょうかしょ/S__16474161_0.jpg",
+    "sha256": "ae5b4704265f7b81869bccf40dea73e89383911d00cb5f72139e299197aee2c9",
+    "page": 109,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p109（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-66",
+   "type": "input",
+   "prompt": "桃山文化の城の建物の内部で、ふすまや屏風に金銀やあざやかな色を使った絵をえがいた画家として教科書にあげられているのはだれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "狩野永徳",
+     "かのうえいとく"
+    ]
+   },
+   "explanation": "狩野永徳などの画家によって、きらびやかな絵がえがかれた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-67",
+   "type": "input",
+   "prompt": "大名や豪商の間で交際の手段として流行したものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "茶の湯",
+     "ちゃのゆ"
+    ]
+   },
+   "explanation": "茶の湯が流行し、中国から渡来した茶道具で評価の高いものは大名の領地と同じくらいの価値を持った。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-68",
+   "type": "input",
+   "prompt": "質素な風情を工夫して楽しむ、わび茶と呼ばれる芸能を完成させたのはだれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "千利休",
+     "せんのりきゅう"
+    ]
+   },
+   "explanation": "信長・秀吉に仕えた千利休が、わび茶を完成させた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-69",
+   "type": "input",
+   "prompt": "17世紀初め、出雲の阿国という女性が始めたおどりは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "かぶきおどり",
+     "歌舞伎踊り",
+     "かぶき踊り"
+    ]
+   },
+   "explanation": "出雲の阿国が始めたかぶきおどりも、京都で人気を集めた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 110,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p110（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-hist-nobunaga-70",
+   "type": "input",
+   "prompt": "ヨーロッパ人によって伝えられた新しい学問として、教科書にあげられているものをすべて選ぼう（読点で区切る）。\nア　天文学\nイ　医学\nウ　航海術\nエ　儒学",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "天文学・医学・航海術など、新しい学問や技術も伝えられた。",
+   "source": {
+    "id": "source-0864",
+    "file": "歴史きょうかしょ/S__16474162_0.jpg",
+    "sha256": "39431482e1b0b86945cab8c94a6842310988902df2f6970df61c602eb514d269",
+    "page": 111,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：歴史きょうかしょ p111（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-14 Claude作成（特訓・下書き）。歴史ワーク p56〜57・64 と、歴史教科書 p106〜111（台帳登録案。写真を原寸で開き本文・史料・図版の説明まで確認）をもとに作ったオリジナル問題。数値は教科書に書かれたものだけを使い、計算はプログラムで確認した。"
+}

@@ -1,0 +1,243 @@
+[
+ {
+  "unit": "georeview",
+  "number": 4,
+  "file": "tokkun-fig-georeview-4.svg",
+  "sha256": "a0052e78d977b5569d432e96e87968396f865dc1999ff438a321c06c20b262f6",
+  "image": "/tokkun-fig-georeview-4.svg",
+  "imageAlt": "1辺10cmの正方形ABCDと、4辺に内側で接する円。正方形のうち円の外側にかげがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "10 cm",
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "100−25π",
+   "form": "nosign"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 5,
+  "file": "tokkun-fig-georeview-5.svg",
+  "sha256": "beba9e1200a75af40c5ecd8a730b808f52be81f93da4144c5aa5f8368554739e",
+  "image": "/tokkun-fig-georeview-5.svg",
+  "imageAlt": "中心Oが同じ半径5cmと半径3cmの2つの円。2つの円の間にかげがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "5 cm",
+   "3 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "16π"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 6,
+  "file": "tokkun-fig-georeview-6.svg",
+  "sha256": "8e6145f80438a9391f990368c4755e64feb086f58c7573d01bb57d01df3384d0",
+  "image": "/tokkun-fig-georeview-6.svg",
+  "imageAlt": "中心O、中心角120°の、半径6cmと半径3cmのおうぎ形にはさまれた部分にかげがある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "X",
+     "O",
+     "Y"
+    ],
+    "value": 120,
+    "shown": "120°"
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "120°",
+   "3 cm",
+   "3 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "9π"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 7,
+  "file": "tokkun-fig-georeview-7.svg",
+  "sha256": "1f18b5b569834cc1837203c233e223c9aed149823ed7be8fcf003bc94b7f74f1",
+  "image": "/tokkun-fig-georeview-7.svg",
+  "imageAlt": "半径6cm、中心角90°のおうぎ形OABと弦AB。弧ABと弦ABの間にかげがある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "O",
+     "B"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "A",
+   "B",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "9π−18",
+   "form": "nosign"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 8,
+  "file": "tokkun-fig-georeview-8.svg",
+  "sha256": "082562e127b5633a5f009fd98321072a1b3b1f85c32f4bc07f42a8ab1d46593e",
+  "image": "/tokkun-fig-georeview-8.svg",
+  "imageAlt": "1辺6cmの正三角形ABCと、各頂点を中心とする半径2cmのおうぎ形3つ（かげ）。",
+  "claims": [
+   {
+    "kind": "eq",
+    "at": [
+     "A",
+     "B",
+     "B",
+     "C"
+    ],
+    "value": 0,
+    "shown": ""
+   },
+   {
+    "kind": "eq",
+    "at": [
+     "B",
+     "C",
+     "C",
+     "A"
+    ],
+    "value": 0,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "2π"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 9,
+  "file": "tokkun-fig-georeview-9.svg",
+  "sha256": "9b7b3dee37f3df8ef60680e949d96c28e8b601ffd239d72b77273a2292f766cc",
+  "image": "/tokkun-fig-georeview-9.svg",
+  "imageAlt": "半径6cm、中心角60°のおうぎ形OABと、Oを中心に60°回転したおうぎ形OBB'。通った部分にかげがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "A",
+   "B",
+   "B'",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "12π"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 10,
+  "file": "tokkun-fig-georeview-10.svg",
+  "sha256": "b5663e2ffd0af006cbfbc7708d080de20f06cfc33584a5c76ecf3dc4f5ce432c",
+  "image": "/tokkun-fig-georeview-10.svg",
+  "imageAlt": "たて4cm、横6cmの長方形のまわりをころがる半径1cmの円と、その中心Pが動いたあと（点線、角では1/4の円の弧）。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "P",
+   "6 cm",
+   "4 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "20+2π",
+   "form": "nosign"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 11,
+  "file": "tokkun-fig-georeview-11.svg",
+  "sha256": "d5bab491b20d91bab6298b07f56265080b89c1ff8ea6585ad5888e17b8e54b80",
+  "image": "/tokkun-fig-georeview-11.svg",
+  "imageAlt": "たて4cm、横12cmの長方形の中にならぶ、たがいに接する同じ大きさの3つの円。円の外側にかげがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "12 cm",
+   "4 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "48−12π",
+   "form": "nosign"
+  }
+ },
+ {
+  "unit": "georeview",
+  "number": 12,
+  "file": "tokkun-fig-georeview-12.svg",
+  "sha256": "555c68aeed6cbe959348d3f3baf95bb0cbcae2949fc86b61f170f78b6a610459",
+  "image": "/tokkun-fig-georeview-12.svg",
+  "imageAlt": "正六角形ABCDEFと対角線AC。",
+  "claims": [],
+  "answerClaim": [
+   "angle",
+   [
+    "F",
+    "A",
+    "C"
+   ],
+   90
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ }
+]

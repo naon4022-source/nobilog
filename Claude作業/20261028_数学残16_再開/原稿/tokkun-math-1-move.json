@@ -1,0 +1,2155 @@
+{
+ "id": "tokkun-math-1-move",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "図形の移動（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-move-1",
+   "type": "input",
+   "prompt": "ある平行移動で、点 (2, 5) が点 (−1, 3) に移る。同じ平行移動で、点 (4, −2) はどこに移るか答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-4)",
+     "(1、-4)",
+     "1,-4",
+     "1、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "①この平行移動は「左へ 3、下へ 2」　②(4 − 3, −2 − 2)　③(1, −4)。答え (1, −4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-2",
+   "type": "input",
+   "prompt": "点 (3, 1) を、原点を中心として反時計回りに 90° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,3)",
+     "(-1、3)",
+     "-1,3",
+     "-1、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①反時計回りに 90° 回すと、(x, y) は (−y, x) に移る　②(−1, 3)　③答え (−1, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-3",
+   "type": "input",
+   "prompt": "点 (−2, 5) を、原点を中心として 180° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,-5)",
+     "(2、-5)",
+     "2,-5",
+     "2、-5"
+    ],
+    "compact": true
+   },
+   "explanation": "①180° 回転は点対称移動：x も y も符号が変わる　②(2, −5)　③答え (2, −5)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-4",
+   "type": "input",
+   "prompt": "図形を x 軸について対称移動し、さらに y 軸について対称移動した。この2回の移動は、1回のどんな移動と同じか。次のア〜ウから選び、記号で答えよう。\nア 原点を中心とする 180° の回転移動\nイ 直線 y ＝ x についての対称移動\nウ 平行移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①(x, y) → (x, −y) → (−x, −y)　②(−x, −y) は原点を中心に 180° 回転した点　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-5",
+   "type": "input",
+   "prompt": "点 (2, 7) を、直線 y ＝ x について対称移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,2)",
+     "(7、2)",
+     "7,2",
+     "7、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①直線 y ＝ x について対称な点は、x 座標と y 座標が入れかわる　②(7, 2)　③答え (7, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-6",
+   "type": "input",
+   "prompt": "ある図形を、点Oを中心に時計回りに 70° 回転する移動を、3回続けて行った。これは、反時計回りに何度回転したのと同じか答えよう（0° より大きく 360° より小さい角で）。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①時計回りに 70° を3回で 210°　②時計回り 210° は反時計回り 360 − 210 ＝ 150°　③答え 150度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-7",
+   "type": "input",
+   "prompt": "正六角形を、その中心のまわりに回転させて、もとの正六角形にぴったり重ねたい。0° より大きい回転の角のうち、もっとも小さいものは何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①正六角形は中心から見て 6 等分されている　②360 ÷ 6 ＝ 60　③答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-8",
+   "type": "input",
+   "prompt": "正三角形、正方形、正六角形の、それぞれの対称の軸の本数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "①正 n 角形の対称の軸は n 本　②3 + 4 + 6 ＝ 13　③答え 13",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-9",
+   "type": "input",
+   "prompt": "点 A(1, 2) を、点 P(3, 3) を中心として 180° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,4)",
+     "(5、4)",
+     "5,4",
+     "5、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①P は A と移った点のまん中になる　②x：3 × 2 − 1 ＝ 5、y：3 × 2 − 2 ＝ 4　③答え (5, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-10",
+   "type": "input",
+   "prompt": "点 A(1, 4) をある直線 ℓ について対称移動したら、点 (1, −2) に移った。ℓ は x 軸に平行な直線である。ℓ 上の点の y 座標を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①対称の軸は、対応する2点を結ぶ線分の垂直二等分線　②まん中の点の y 座標 (4 + (−2)) ÷ 2 ＝ 1　③答え 1",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-11",
+   "type": "input",
+   "prompt": "正五角形を、その中心のまわりに回転させてぴったり重ねるとき、0° より大きい回転の角のうち、2番目に小さいものは何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "144",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①最小の角は 360 ÷ 5 ＝ 72°　②2番目は 72 × 2 ＝ 144°　③答え 144度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-12",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm である。三角形 ABC を平行移動すると、三角形 A'B'C' に重なった。線分 AA' の長さは 5 cm である。線分 BB' と CC' の長さの和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①平行移動では、対応する点を結ぶ線分はすべて平行で長さが等しい　②BB' ＝ CC' ＝ AA' ＝ 5 cm　③5 + 5 ＝ 10。答え 10 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-12.svg",
+   "imageAlt": "方眼の上の三角形ABCと、平行移動した三角形A'B'C'。AとA'が点線で結んである。"
+  },
+  {
+   "id": "tokkun-math-1-move-13",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm である。三角形 ABC を直線 ℓ について対称移動すると、三角形 A'B'C' になった。線分 AA' の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①対称移動では、対応する点を結ぶ線分は、対称の軸 ℓ に垂直に2等分される　②A と ℓ の距離は 4 cm　③AA' ＝ 4 × 2 ＝ 8。答え 8 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-13.svg",
+   "imageAlt": "方眼の上のたての直線ℓと、三角形ABC、ℓについて対称移動した三角形A'B'C'。AとA'が点線で結んである。"
+  },
+  {
+   "id": "tokkun-math-1-move-14",
+   "type": "input",
+   "prompt": "図の三角形 ABC を、原点 O を中心として反時計回りに 90° 回転移動する。点 C が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-3,4)",
+     "(-3、4)",
+     "-3,4",
+     "-3、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①C(4, 3) を反時計回りに 90° 回すと、x 座標と y 座標が入れかわり、新しい x 座標の符号が変わる　②(−3, 4)　③確かめ：O からの距離は 5 のまま。答え (−3, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-14.svg",
+   "imageAlt": "座標平面上の三角形ABC。A(1,1)、B(4,1)、C(4,3)。"
+  },
+  {
+   "id": "tokkun-math-1-move-15",
+   "type": "input",
+   "prompt": "図の三角形 A'B'C' は、三角形 ABC をある点を中心として 180° 回転移動したものである。回転の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,2)",
+     "(1、2)",
+     "1,2",
+     "1、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①180° の回転移動では、回転の中心は対応する2点を結ぶ線分のまん中の点　②A(−3, 1) と A'(5, 3) のまん中は ((−3 + 5) ÷ 2, (1 + 3) ÷ 2)　③(1, 2)。答え (1, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-15.svg",
+   "imageAlt": "座標平面上の三角形ABCと三角形A'B'C'。A(−3,1)とA'(5,3)、B(−1,1)とB'(3,3)、C(−3,4)とC'(5,0)が対応する。"
+  },
+  {
+   "id": "tokkun-math-1-move-16",
+   "type": "input",
+   "prompt": "図の三角形 A'B'C' は、三角形 ABC を y 軸に平行な直線 x ＝ k について対称移動したものである。k の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①対称の軸は、対応する2点を結ぶ線分の垂直二等分線　②A(−4, 1) と A'(6, 1) のまん中の x 座標は (−4 + 6) ÷ 2 ＝ 1　③k ＝ 1。答え 1",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-16.svg",
+   "imageAlt": "座標平面上の三角形ABCと三角形A'B'C'。A(−4,1)とA'(6,1)、B(−2,1)とB'(4,1)、C(−4,4)とC'(6,4)が対応する。"
+  },
+  {
+   "id": "tokkun-math-1-move-17",
+   "type": "input",
+   "prompt": "図は、合同な直角二等辺三角形ア〜クをしきつめたものである。アを平行移動だけで重ねることができる三角形を、すべて選び記号で答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ウ"
+     ],
+     [
+      "オ"
+     ],
+     [
+      "キ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①平行移動では、向きを変えずにずらすだけ　②アと同じ向き（直角が右下）の三角形をさがす　③ウ、オ、キ。答え ウ、オ、キ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-17.svg",
+   "imageAlt": "正方形を4つ集め、それぞれを対角線で2つの直角二等辺三角形に分けた図。三角形にア〜クの名前がついている。"
+  },
+  {
+   "id": "tokkun-math-1-move-18",
+   "type": "input",
+   "prompt": "図は、合同な直角二等辺三角形ア〜クをしきつめたものである。アを点 O を中心として 180° 回転移動すると、どの三角形に重なるか。記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ク"
+    ]
+   },
+   "explanation": "①180° 回転すると、O をはさんで反対側に移る　②アの頂点 (0, 0)、(2, 0)、(2, 2) は、(4, 4)、(2, 4)、(2, 2) に移る　③それはク。答え ク",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-18.svg",
+   "imageAlt": "正方形を4つ集め、それぞれを対角線で2つの直角二等辺三角形に分けた図。三角形にア〜クの名前、まん中の点にOがついている。"
+  },
+  {
+   "id": "tokkun-math-1-move-19",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm で、たての直線 ℓ と m は平行で、間の距離は 3 cm である。三角形 ABC を ℓ について対称移動し、さらに m について対称移動すると、三角形 A\"B\"C\" になった。線分 AA\" の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①A と ℓ の距離を a とすると、1回目で A' は ℓ の反対側 a の所　②2回目で A\" は m の反対側に移り、全体で平行移動になる　③動いた距離は ℓ と m の距離の 2 倍で 3 × 2 ＝ 6。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-19.svg",
+   "imageAlt": "方眼の上の平行なたての直線ℓとm（間は3cm）。三角形ABC、ℓで対称移動した三角形、さらにmで対称移動した三角形A\"B\"C\"。"
+  },
+  {
+   "id": "tokkun-math-1-move-20",
+   "type": "input",
+   "prompt": "図で、三角形 ABC を x 軸について対称移動し、さらに y 軸について対称移動すると、三角形 A\"B\"C\" になった。この2回の移動は、原点 O を中心とする何度の回転移動と同じか答えよう（0° より大きく 360° 以下で）。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①x 軸で対称移動すると (x, y) は (x, −y)　②さらに y 軸で対称移動すると (−x, −y)　③これは原点を中心とする 180° の回転移動。答え 180度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-20.svg",
+   "imageAlt": "座標平面上の三角形ABC、x軸で対称移動した三角形、さらにy軸で対称移動した三角形A\"B\"C\"。"
+  },
+  {
+   "id": "tokkun-math-1-move-21",
+   "type": "input",
+   "prompt": "図の点 P を矢印のように点 Q へ移す平行移動で、点 A を移す。A が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,4)",
+     "(2、4)",
+     "2,4",
+     "2、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①P(−3, −1) から Q(1, 2) へは、右へ 4、上へ 3 の移動　②A(−2, 1) も右へ 4、上へ 3 動かす　③(2, 4)。答え (2, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   },
+   "image": "/tokkun-fig-move-21.svg",
+   "imageAlt": "座標平面上の点PからQへの矢印と点A。P(−3,−1)、Q(1,2)、A(−2,1)。"
+  },
+  {
+   "id": "tokkun-math-1-move-22",
+   "type": "input",
+   "prompt": "点 (1, 1) を、右へ 3・下へ 2 だけ平行移動し、さらに左へ 5・上へ 4 だけ平行移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,3)",
+     "(-1、3)",
+     "-1,3",
+     "-1、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①2回の移動を合わせると、右へ 3 − 5 ＝ −2（左へ 2）、上へ −2 + 4 ＝ 2　②(1 − 2, 1 + 2)　③(−1, 3)。答え (−1, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-23",
+   "type": "input",
+   "prompt": "ある点を、右へ 3・上へ 5 だけ平行移動したら、点 (4, −1) に移った。もとの点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-6)",
+     "(1、-6)",
+     "1,-6",
+     "1、-6"
+    ],
+    "compact": true
+   },
+   "explanation": "①逆に、左へ 3・下へ 5 もどせばよい　②(4 − 3, −1 − 5)　③(1, −6)。答え (1, −6)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-24",
+   "type": "input",
+   "prompt": "点 (2, 3) を x 軸について対称移動し、さらに上へ 4 だけ平行移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,1)",
+     "(2、1)",
+     "2,1",
+     "2、1"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸で対称移動すると (2, −3)　②上へ 4 動かすと y 座標は −3 + 4　③(2, 1)。答え (2, 1)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-25",
+   "type": "input",
+   "prompt": "点 A(−1, 4) を、ある点を中心として 180° 回転移動したら、点 (5, 0) に移った。回転の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,2)",
+     "(2、2)",
+     "2,2",
+     "2、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①180° の回転移動の中心は、もとの点と移った点のまん中　②((−1 + 5) ÷ 2, (4 + 0) ÷ 2)　③(2, 2)。答え (2, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-26",
+   "type": "input",
+   "prompt": "点 (−2, 3) を、y 軸に平行な直線 x ＝ k について対称移動したら、点 (6, 3) に移った。k の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①対称の軸は、対応する2点のまん中を通る　②(−2 + 6) ÷ 2　③k ＝ 2。答え 2",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-27",
+   "type": "input",
+   "prompt": "正八角形を、その中心のまわりに回転させてもとの図形にぴったり重ねる。0° より大きく 360° より小さい回転の角は、何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①45° ずつ回すたびに重なる　②45、90、135、180、225、270、315 の 7 通り（360° はふくめない）　③答え 7通り",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-28",
+   "type": "input",
+   "prompt": "180° 回転移動すると、もとの図形にぴったり重なる図形を、次のア〜オからすべて選び、記号で答えよう。\nア 正三角形\nイ 正方形\nウ 平行四辺形\nエ 正五角形\nオ 円",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ],
+     [
+      "オ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①中心のまわりに 180° 回して重なる図形を考える　②正方形・平行四辺形・円は重なる　③正三角形・正五角形は、頂点の数が奇数なので 180° では重ならない。答え イ、ウ、オ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-29",
+   "type": "input",
+   "prompt": "1本の直線を折り目にして折ると、両側がぴったり重なる図形を、次のア〜エからすべて選び、記号で答えよう。\nア 平行四辺形（長方形やひし形ではないもの）\nイ ひし形\nウ 2つの底角が等しい台形\nエ 長方形",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①ひし形は対角線、長方形は向かい合う辺のまん中を結ぶ直線で折ると重なる　②底角が等しい台形は、平行な2辺のまん中を結ぶ直線で重なる　③ふつうの平行四辺形は、どこで折っても重ならない。答え イ、ウ、エ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-30",
+   "type": "input",
+   "prompt": "三角形 ABC を平行移動して三角形 A'B'C' をつくった。正しいものを次のア〜ウから選び、記号で答えよう。\nア AA' ∥ BB' で、AA' ＝ BB'\nイ AA' ⊥ BB'\nウ AA' と BB' の長さはいつもちがう",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①平行移動では、すべての点が同じ向きに同じ距離だけ動く　②対応する点を結ぶ線分は平行で、長さが等しい　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-31",
+   "type": "input",
+   "prompt": "三角形 ABC を直線 ℓ について対称移動して三角形 A'B'C' をつくった。直線 ℓ と線分 AA' の関係として正しいものを、次のア〜ウから選び、記号で答えよう。\nア ℓ は AA' の垂直二等分線\nイ ℓ と AA' は平行\nウ ℓ は AA' の端の点 A を通る",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①対称移動では、A と A' は ℓ について反対側に同じ距離　②AA' は ℓ に垂直で、ℓ との交点は AA' のまん中　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-32",
+   "type": "input",
+   "prompt": "点 O を中心として三角形 ABC を回転移動し、三角形 A'B'C' をつくった。正しいものを次のア〜ウから選び、記号で答えよう。\nア OA ＝ OA' で、∠AOA' は回転の角と等しい\nイ AA' ∥ BB'\nウ OA ⊥ OA' になる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①回転移動では、中心からの距離は変わらない（OA ＝ OA'）　②どの点も同じ角だけ回る　③答え ア（イ、ウは回転の角によってはなりたたない）",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-33",
+   "type": "input",
+   "prompt": "平行な2直線 ℓ、m の距離は 4 cm である。ある図形を ℓ について対称移動し、さらに m について対称移動した。図形全体は、何 cm 平行移動したことになるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①2回の対称移動で、どの点も ℓ、m に垂直な向きに動く　②動く距離は ℓ と m の距離の 2 倍　③4 × 2 ＝ 8。答え 8 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-34",
+   "type": "input",
+   "prompt": "時計の長針は、25 分間で何度回転移動するか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①長針は 60 分で 360° 回る　②1 分で 6°　③6 × 25 ＝ 150。答え 150度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-35",
+   "type": "input",
+   "prompt": "ある図形を、点 O を中心として反時計回りに 150° 回転移動する。この移動を少なくとも何回続けると、はじめてもとの位置にもどるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "回"
+    ]
+   },
+   "explanation": "①回った角の合計が 360° の倍数になればもどる　②150 × n が 360 の倍数になる最小の n をさがす　③150 × 12 ＝ 1800 ＝ 360 × 5 で n ＝ 12。答え 12回",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-36",
+   "type": "input",
+   "prompt": "たて 4 cm、横 6 cm の長方形を、右へ 2 cm、上へ 1 cm だけ平行移動した。もとの長方形と移った長方形が重なっている部分の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①重なる部分の横は 6 − 2 ＝ 4 cm　②たては 4 − 1 ＝ 3 cm　③4 × 3 ＝ 12。答え 12 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-37",
+   "type": "input",
+   "prompt": "長さ 5 cm の線分を、その線分に垂直な向きに 3 cm だけ平行移動した。線分が通ったあとにできる部分の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①線分が通ったあとは、たて 3 cm、横 5 cm の長方形　②5 × 3　③15。答え 15 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-38",
+   "type": "input",
+   "prompt": "1辺 4 cm の正方形を、右へ 3 cm だけ平行移動した。もとの正方形と移った正方形の、少なくとも一方にふくまれる部分の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "28",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①重なる部分は横 4 − 3 ＝ 1 cm、たて 4 cm で 4 cm²　②2つの正方形の面積の和 16 + 16 ＝ 32 から、重なりを1回ひく　③32 − 4 ＝ 28。答え 28 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-39",
+   "type": "input",
+   "prompt": "三角形 ABC の頂点は A(1, 1)、B(4, 1)、C(1, 3) である。三角形 ABC を y 軸について対称移動したとき、頂点 B が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-4,1)",
+     "(-4、1)",
+     "-4,1",
+     "-4、1"
+    ],
+    "compact": true
+   },
+   "explanation": "①y 軸で対称移動すると、x 座標の符号だけが変わる　②B(4, 1) は (−4, 1) へ　③答え (−4, 1)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-40",
+   "type": "input",
+   "prompt": "ある点を x 軸について対称移動したら、点 (3, −5) に移った。もとの点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,5)",
+     "(3、5)",
+     "3,5",
+     "3、5"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸で対称移動すると、y 座標の符号だけが変わる　②もどすにも同じ移動をすればよい　③(3, 5)。答え (3, 5)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-41",
+   "type": "input",
+   "prompt": "点 (2, 1) を、原点を中心として反時計回りに 90° 回転移動し、さらに x 軸について対称移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,-2)",
+     "(-1、-2)",
+     "-1,-2",
+     "-1、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "①反時計回りに 90° で (2, 1) は (−1, 2)　②x 軸で対称移動して (−1, −2)　③答え (−1, −2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-42",
+   "type": "input",
+   "prompt": "原点を中心とする回転移動で、点 (0, 5) が点 (5, 0) に移った。反時計回りに何度回転したか答えよう（0° より大きく 360° より小さい角で）。",
+   "answer": {
+    "kind": "number",
+    "value": "270",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①(0, 5) は y 軸の正の向き、(5, 0) は x 軸の正の向き　②時計回りなら 90°　③反時計回りでは 360 − 90 ＝ 270。答え 270度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-43",
+   "type": "input",
+   "prompt": "点 A(−2, 1) が、ある平行移動で点 (3, −2) に移った。この平行移動は、右へいくつ、下へいくつ動かす移動か。「右へ」「下へ」の順に2つの数で答えよう。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "5",
+     "3"
+    ],
+    "ordered": true
+   },
+   "explanation": "①x 座標は −2 から 3 へ、3 − (−2) ＝ 5 ふえる（右へ 5）　②y 座標は 1 から −2 へ、3 へる（下へ 3）　③答え 5、3",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-44",
+   "type": "input",
+   "prompt": "点 (2, 3) を y 軸について対称移動し、さらに原点を中心として 180° 回転移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,-3)",
+     "(2、-3)",
+     "2,-3",
+     "2、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "①y 軸で対称移動して (−2, 3)　②180° 回転で x、y の符号がどちらも変わり (2, −3)　③（x 軸で1回対称移動したのと同じ）。答え (2, −3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-45",
+   "type": "input",
+   "prompt": "三角形の頂点 (1, 1)、(3, 1)、(1, 2) が、それぞれ (−1, −1)、(−3, −1)、(−1, −2) に移った。この移動を、次のア〜ウから選び、記号で答えよう。\nア 平行移動\nイ 原点を中心とする 180° の回転移動\nウ y 軸についての対称移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①どの頂点も x 座標と y 座標の符号がどちらも変わっている　②これは原点を中心とする 180° の回転移動　③y 軸についての対称移動なら y 座標は変わらない。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-46",
+   "type": "input",
+   "prompt": "点 (−1, 2) と点 (3, 2) を結ぶ線分を、ある1回の移動で動かしたら、点 (1, 2) と点 (−3, 2) を結ぶ線分になった。点 (−1, 2) は点 (1, 2) に移った。この移動を、次のア〜ウから選び、記号で答えよう。\nア 右へ 2 の平行移動\nイ y 軸についての対称移動\nウ 原点を中心とする 180° の回転移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①(−1, 2) → (1, 2)、(3, 2) → (−3, 2) で、x 座標の符号だけが変わり、y 座標はそのまま　②これは y 軸についての対称移動　③アだと (3, 2) は (5, 2) に、ウだと (−1, 2) は (1, −2) に移ってしまう。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-47",
+   "type": "input",
+   "prompt": "点 (−1, 3) を右へ 4 だけ平行移動し、さらに x 軸について対称移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,-3)",
+     "(3、-3)",
+     "3,-3",
+     "3、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "①右へ 4 動かして (3, 3)　②x 軸で対称移動して (3, −3)　③答え (3, −3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-48",
+   "type": "input",
+   "prompt": "対称移動で、もとの位置から動かない点はどれか。次のア〜ウから選び、記号で答えよう。\nア 対称の軸の上にある点\nイ 対称の軸からいちばん遠い点\nウ 動かない点はない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①対称移動では、点は軸について反対側の同じ距離の所へ移る　②軸の上の点は距離が 0 なので、その場所のまま　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-49",
+   "type": "input",
+   "prompt": "回転移動で、もとの位置から動かない点はどれか。次のア〜ウから選び、記号で答えよう（回転の角は 0° より大きく 360° より小さい）。\nア 回転の中心だけ\nイ 図形の頂点\nウ 動かない点はない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①回転移動では、どの点も中心のまわりを同じ角だけ回る　②中心は中心からの距離が 0 なので動かない　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-50",
+   "type": "input",
+   "prompt": "点 (4, 3) を直線 x ＝ 1 について対称移動し、さらに直線 y ＝ 1 について対称移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,-1)",
+     "(-2、-1)",
+     "-2,-1",
+     "-2、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "①x ＝ 1 で対称移動して (−2, 3)　②y ＝ 1 で対称移動して (−2, −1)　③（点 (1, 1) を中心とする 180° の回転移動と同じ）。答え (−2, −1)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-51",
+   "type": "input",
+   "prompt": "ある移動で、点 (1, 0) は点 (0, 1) に、点 (0, 1) は点 (−1, 0) に移った。この移動を、次のア〜ウから選び、記号で答えよう。\nア 原点を中心とする反時計回りの 90° の回転移動\nイ 直線 y ＝ x についての対称移動\nウ 左へ 1・上へ 1 の平行移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①イなら (0, 1) は (1, 0) に移る　②ウなら (0, 1) は (−1, 2) に移る　③どちらの点も原点のまわりを反時計回りに 90° 回っている。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-52",
+   "type": "input",
+   "prompt": "ある直線について対称移動すると、点 A(1, 2) が点 (5, 2) に移る。同じ対称移動で、点 B(0, −1) が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(6,-1)",
+     "(6、-1)",
+     "6,-1",
+     "6、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "①軸は A と移った点のまん中を通るたての直線 x ＝ 3　②B(0, −1) は x ＝ 3 から左へ 3　③右へ 3 の所 (6, −1)。答え (6, −1)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-53",
+   "type": "input",
+   "prompt": "ある点を中心とする 180° の回転移動で、点 A(0, 0) が点 (4, −2) に移る。同じ回転移動で、点 B(3, 1) が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-3)",
+     "(1、-3)",
+     "1,-3",
+     "1、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "①回転の中心は (0, 0) と (4, −2) のまん中で (2, −1)　②B(3, 1) は中心から右へ 1・上へ 2　③反対側の左へ 1・下へ 2 で (1, −3)。答え (1, −3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-54",
+   "type": "input",
+   "prompt": "正六角形 ABCDEF を、その中心のまわりに 180° 回転移動すると、頂点 A はどの頂点の位置に移るか。記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "D",
+     "点D",
+     "頂点D"
+    ]
+   },
+   "explanation": "①正六角形の頂点は、中心のまわりに 60° ずつならんでいる　②180° は 60° の 3 つ分　③A から 3 つ先の D。答え D",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-55",
+   "type": "input",
+   "prompt": "正六角形 ABCDEF を、直線 AD について対称移動すると、頂点 B はどの頂点の位置に移るか。記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "F",
+     "点F",
+     "頂点F"
+    ]
+   },
+   "explanation": "①直線 AD は正六角形の対称の軸　②B と F は AD について反対側の同じ位置にある　③答え F",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-56",
+   "type": "input",
+   "prompt": "正五角形 ABCDE（頂点は反時計回りに A、B、C、D、E の順）を、その中心のまわりに反時計回りに 144° 回転移動すると、頂点 A はどの頂点の位置に移るか。記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "C",
+     "点C",
+     "頂点C"
+    ]
+   },
+   "explanation": "①正五角形の頂点は中心のまわりに 72° ずつならぶ　②144° は 72° の 2 つ分　③A から反時計回りに 2 つ先の C。答え C",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-57",
+   "type": "input",
+   "prompt": "原点を中心とする回転移動で、点 (2, 0) が点 (0, 2) に、点 (4, 0) が点 (0, 4) に移った。同じ回転移動で、点 (3, 1) が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,3)",
+     "(-1、3)",
+     "-1,3",
+     "-1、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①(2, 0) → (0, 2) は、反時計回りに 90° の回転　②(x, y) は (−y, x) に移る　③(3, 1) は (−1, 3)。答え (−1, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-58",
+   "type": "input",
+   "prompt": "平行移動・回転移動・対称移動のうち、図形を裏返す（左右の向きが入れかわる）のはどれか。次のア〜ウから選び、記号で答えよう。\nア 平行移動\nイ 回転移動\nウ 対称移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①平行移動と回転移動は、図形を紙の上ですべらせたり回したりするだけ　②対称移動は軸で折り返すので、裏返しになる　③答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-59",
+   "type": "input",
+   "prompt": "三角形 ABC を、点 A が点 B の位置に重なるように平行移動した。AB ＝ 6 cm のとき、点 C が動いた距離を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①平行移動では、どの点も同じ向きに同じ距離だけ動く　②A は AB の 6 cm 動いた　③C も 6 cm。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-60",
+   "type": "input",
+   "prompt": "線分 AB の両端 A(3, 6)、B(3, −2) は、ある横の直線 y ＝ k について対称移動すると、たがいの位置に入れかわる。k の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①対称の軸は、A と B を結ぶ線分の垂直二等分線　②AB はたての線分なので、軸は AB のまん中を通る横の直線　③k ＝ (6 + (−2)) ÷ 2 ＝ 2。答え 2",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-61",
+   "type": "input",
+   "prompt": "点 A(3, 4) を、原点を中心として回転移動し、x 軸の正の部分の上にある点に移した。移った点の座標を答えよう（原点と A の距離は 5 である）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,0)",
+     "(5、0)",
+     "5,0",
+     "5、0"
+    ],
+    "compact": true
+   },
+   "explanation": "①回転移動では、中心からの距離は変わらない　②移った点も原点から 5 の距離で、x 軸の正の部分の上　③(5, 0)。答え (5, 0)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-62",
+   "type": "input",
+   "prompt": "正方形 ABCD の頂点は A(0, 0)、B(4, 0)、C(4, 4)、D(0, 4) である。この正方形を、頂点 A を中心として反時計回りに 90° 回転移動すると、頂点 C はどこに移るか。座標で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-4,4)",
+     "(-4、4)",
+     "-4,4",
+     "-4、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①C(4, 4) は A から見て右へ 4・上へ 4　②反時計回りに 90° 回すと、左へ 4・上へ 4 の所　③(−4, 4)。答え (−4, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-63",
+   "type": "input",
+   "prompt": "2点 P(3, −2)、Q(5, 1) を、点 P が原点に重なるように平行移動する。このとき点 Q が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,3)",
+     "(2、3)",
+     "2,3",
+     "2、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①P(3, −2) を原点へ移すのは、左へ 3・上へ 2 の平行移動　②Q(5, 1) も同じだけ動かす　③(5 − 3, 1 + 2) ＝ (2, 3)。答え (2, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-64",
+   "type": "input",
+   "prompt": "点 (1, 2) を、原点を中心として反時計回りに 90° ずつ回転移動していくと、4 つの点 (1, 2)、(−2, 1)、(−1, −2)、(2, −1) を通る。この4点を順に結んでできる正方形の面積を求めよう（1目もりを 1 cm とする）。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①4点をかこむ、辺が軸に平行な1辺 4 の正方形の面積は 16　②そのすみにできる4つの直角三角形は、どれも 1 × 3 ÷ 2 ＝ 1.5　③16 − 1.5 × 4 ＝ 10。答え 10 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-65",
+   "type": "input",
+   "prompt": "ある図形を、同じ直線について2回続けて対称移動した。図形はどうなるか。次のア〜ウから選び、記号で答えよう。\nア もとの位置にもどる\nイ 2倍の距離だけ平行移動する\nウ 180° 回転する",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①1回目で軸の反対側の同じ距離へ移る　②2回目でまた反対側（もとの側）の同じ距離へもどる　③もとの位置にもどる。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-66",
+   "type": "input",
+   "prompt": "ある図形を、点 O を中心として時計回りに 100° 回転移動し、続けて同じ点 O を中心として反時計回りに 40° 回転移動した。2回の移動は、時計回りに何度の回転移動1回と同じか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①時計回りを正として考えると、100 + (−40)　②60　③時計回りに 60° の回転と同じ。答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-67",
+   "type": "input",
+   "prompt": "線分 AB の両端は A(1, 1)、B(5, 3) である。点 A が点 (−2, 3) に移るように線分 AB を平行移動したとき、移った線分のまん中の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(0,4)",
+     "(0、4)",
+     "0,4",
+     "0、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①A(1, 1) → (−2, 3) は、左へ 3・上へ 2 の移動　②B(5, 3) は (2, 5) に移る　③(−2, 3) と (2, 5) のまん中は (0, 4)。答え (0, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-68",
+   "type": "input",
+   "prompt": "点 P と直線 ℓ の距離は 3.5 cm である。P を ℓ について対称移動した点を P' とするとき、線分 PP' の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①P' は ℓ について P と反対側の、同じ距離 3.5 cm の所　②PP' は ℓ に垂直　③3.5 × 2 ＝ 7。答え 7 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-69",
+   "type": "input",
+   "prompt": "線分 AB を、AB のまん中の点を中心として 180° 回転移動した。どうなるか。次のア〜ウから選び、記号で答えよう。\nア A と B が入れかわって、もとの線分にぴったり重なる\nイ AB に垂直な線分になる\nウ もとの線分とまったく重ならない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①まん中の点から A と B までの距離は等しい　②180° 回すと、A は B の位置に、B は A の位置に移る　③もとの線分に重なる。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-70",
+   "type": "input",
+   "prompt": "右へ 2・上へ 1 だけ動かす平行移動を、5 回くり返した。点 (−3, 0) が移る点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,5)",
+     "(7、5)",
+     "7,5",
+     "7、5"
+    ],
+    "compact": true
+   },
+   "explanation": "①5 回で、右へ 2 × 5 ＝ 10、上へ 1 × 5 ＝ 5　②(−3 + 10, 0 + 5)　③(7, 5)。答え (7, 5)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。図形の移動を座標や角度で表し、数や記号で答える一段難しい問題。答えは check.py で座標の計算をし直して検算。2026-10-28 Claude：平行移動・回転移動・対称移動の座標、移動の組み合わせ、重なる部分の面積、方眼の図での移動の見分けなど59問を追加して70問にした（元の11問はそのまま）。図が必要な問題には、座標から作った正確な図（SVG）をつけた。"
+}

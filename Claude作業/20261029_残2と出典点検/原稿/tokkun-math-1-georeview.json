@@ -1,0 +1,1969 @@
+{
+ "id": "tokkun-math-1-georeview",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ふりかえりドリル（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-georeview-1",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 90° のおうぎ形を、その中心のまわりに 90° 回転移動させた。おうぎ形が通過した部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18π"
+   },
+   "explanation": "①回転すると、中心角 90 + 90 ＝ 180° のおうぎ形（半円）の部分を通る　②π × 36 × (180/360) ＝ 18π　③答え 18π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-2",
+   "type": "input",
+   "prompt": "1辺 10 cm の正三角形の1つの角の二等分線をひいた。二等分線と、その角をはさむ辺がつくる角は何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①正三角形の1つの角は 60°　②二等分して 30°　③答え 30度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-3",
+   "type": "input",
+   "prompt": "半径 4 cm の円を、その中心が直線上を 10 cm 動くように平行移動させた。円が通過した部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "80+16π",
+    "form": "nosign"
+   },
+   "explanation": "①両はしの半円 2 つで円1つ分：16π　②まん中は、縦 8 cm（直径）、横 10 cm の長方形：80　③80 + 16π。答え 80+16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-4",
+   "type": "input",
+   "prompt": "図のように、1辺 10 cm の正方形 ABCD の4つの辺に、円が内側で接している。かげをつけた部分（正方形のうち円の外側）の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "100−25π",
+    "form": "nosign"
+   },
+   "explanation": "①円の直径は正方形の1辺と同じ 10 cm で、半径 5 cm　②円の面積 π × 5 × 5 ＝ 25π　③100 − 25π。答え 100−25π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-4.svg",
+   "imageAlt": "1辺10cmの正方形ABCDと、4辺に内側で接する円。正方形のうち円の外側にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-5",
+   "type": "input",
+   "prompt": "図のように、中心 O が同じ半径 5 cm の円と半径 3 cm の円がある。2つの円の間（かげの部分）の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①大きい円の面積 25π　②小さい円の面積 9π　③25π − 9π ＝ 16π。答え 16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-5.svg",
+   "imageAlt": "中心Oが同じ半径5cmと半径3cmの2つの円。2つの円の間にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-6",
+   "type": "input",
+   "prompt": "図のかげの部分は、中心 O、中心角 120° の、半径 6 cm のおうぎ形から半径 3 cm のおうぎ形をとりのぞいた形である。かげの部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "9π"
+   },
+   "explanation": "①半径 6 cm のおうぎ形 π × 36 × (120 ÷ 360) ＝ 12π　②半径 3 cm のおうぎ形 π × 9 × (120 ÷ 360) ＝ 3π　③12π − 3π ＝ 9π。答え 9π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-6.svg",
+   "imageAlt": "中心O、中心角120°の、半径6cmと半径3cmのおうぎ形にはさまれた部分にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-7",
+   "type": "input",
+   "prompt": "図は、半径 6 cm、中心角 90° のおうぎ形 OAB に、弦 AB をひいたものである。かげの部分（弧 AB と弦 AB の間）の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "9π−18",
+    "form": "nosign"
+   },
+   "explanation": "①おうぎ形の面積 π × 36 ÷ 4 ＝ 9π　②三角形 OAB の面積 6 × 6 ÷ 2 ＝ 18　③9π − 18。答え 9π−18 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-7.svg",
+   "imageAlt": "半径6cm、中心角90°のおうぎ形OABと弦AB。弧ABと弦ABの間にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-8",
+   "type": "input",
+   "prompt": "図は、1辺 6 cm の正三角形 ABC の3つの頂点を中心として、半径 2 cm のおうぎ形を三角形の内側にかいたものである。3つのおうぎ形（かげの部分）の面積の和を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π"
+   },
+   "explanation": "①正三角形の角はどれも 60° で、3つの中心角の和は 180°　②半径 2 cm の円の半分の面積と同じ　③π × 4 ÷ 2 ＝ 2π。答え 2π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-8.svg",
+   "imageAlt": "1辺6cmの正三角形ABCと、各頂点を中心とする半径2cmのおうぎ形3つ（かげ）。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-9",
+   "type": "input",
+   "prompt": "図のように、半径 6 cm、中心角 60° のおうぎ形 OAB を、点 O を中心として反時計回りに 60° 回転移動した（OA が OB に重なる）。おうぎ形が通った部分（かげの部分）の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π"
+   },
+   "explanation": "①通った部分は、はじめのおうぎ形と移ったおうぎ形を合わせた、中心角 60 + 60 ＝ 120° のおうぎ形　②π × 36 × (120 ÷ 360)　③12π。答え 12π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-9.svg",
+   "imageAlt": "半径6cm、中心角60°のおうぎ形OABと、Oを中心に60°回転したおうぎ形OBB'。通った部分にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-10",
+   "type": "input",
+   "prompt": "図のように、たて 4 cm、横 6 cm の長方形のまわりを、半径 1 cm の円が長方形からはなれずに1周ころがる。円の中心 P が動いたあと（点線）の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "20+2π",
+    "form": "nosign"
+   },
+   "explanation": "①辺にそって動く部分は、長方形の辺と同じ長さで 6 + 4 + 6 + 4 ＝ 20 cm　②4つの角では、半径 1 cm、中心角 90° の弧を動き、4つ合わせて円1つ分 2π cm　③20 + 2π。答え 20+2π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-10.svg",
+   "imageAlt": "たて4cm、横6cmの長方形のまわりをころがる半径1cmの円と、その中心Pが動いたあと（点線、角では1/4の円の弧）。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-11",
+   "type": "input",
+   "prompt": "図のように、たて 4 cm、横 12 cm の長方形の中に、同じ大きさの3つの円が、たがいに接し、長方形の辺にも接するように入っている。かげの部分（長方形のうち円の外側）の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "48−12π",
+    "form": "nosign"
+   },
+   "explanation": "①円の直径はたての長さ 4 cm で、半径 2 cm　②3つの円の面積 π × 4 × 3 ＝ 12π　③4 × 12 − 12π ＝ 48 − 12π。答え 48−12π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-11.svg",
+   "imageAlt": "たて4cm、横12cmの長方形の中にならぶ、たがいに接する同じ大きさの3つの円。円の外側にかげがある。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-12",
+   "type": "input",
+   "prompt": "図の正六角形 ABCDEF で、対角線 AC をひいた。∠FAC の大きさを求めよう（正六角形の1つの角は 120° である）。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①三角形 ABC は BA ＝ BC の二等辺三角形で、∠ABC ＝ 120°　②∠BAC ＝ (180 − 120) ÷ 2 ＝ 30°　③∠FAC ＝ 120 − 30 ＝ 90。答え 90度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-georeview-12.svg",
+   "imageAlt": "正六角形ABCDEFと対角線AC。"
+  },
+  {
+   "id": "tokkun-math-1-georeview-13",
+   "type": "input",
+   "prompt": "半径 6 cm で、弧の長さが 4π cm のおうぎ形の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π"
+   },
+   "explanation": "①円周は 12π なので、弧は円周の 4π ÷ 12π ＝ 1/3　②面積も円の 1/3 で 36π ÷ 3　③12π。答え 12π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-14",
+   "type": "input",
+   "prompt": "中心が同じで半径 7 cm と 4 cm の2つの円がある。2つの円周の長さの差を、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π"
+   },
+   "explanation": "①円周は 14π と 8π　②差は 14π − 8π　③6π（2 × π × (7 − 4) と考えてもよい）。答え 6π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-15",
+   "type": "input",
+   "prompt": "せんすを広げると、半径 20 cm、中心角 144° のおうぎ形になった。このおうぎ形の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "160π"
+   },
+   "explanation": "①円の面積 400π　②144 ÷ 360 ＝ 0.4　③400π × 0.4 ＝ 160π。答え 160π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-16",
+   "type": "input",
+   "prompt": "水が 8 m 先までとどくスプリンクラーが、首を 90° ふって水をまく。水がかかる部分の面積を、π を使って答えよう（m²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①半径 8 m、中心角 90° のおうぎ形　②64π ÷ 4　③16π。答え 16π m²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-17",
+   "type": "input",
+   "prompt": "1辺 4 m の正方形の小屋の1つの角に、長さ 6 m のひもで犬がつながれている。犬は小屋の中には入れない。犬が動ける部分の面積を、π を使って答えよう（m²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "29π"
+   },
+   "explanation": "①小屋の外側で、半径 6 m、中心角 270° のおうぎ形：36π × 3 ÷ 4 ＝ 27π　②小屋の角を回りこむと、のこりのひもは 2 m で、半径 2 m、中心角 90° のおうぎ形が2つ：π × 4 ÷ 4 × 2 ＝ 2π　③27π + 2π ＝ 29π。答え 29π m²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-18",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 60° のおうぎ形と、弧の長さが等しい半径 4 cm のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①半径 6 cm、60° の弧は 12π × 60 ÷ 360 ＝ 2π　②半径 4 cm の円周は 8π で、2π はその (1 ÷ 4)　③360 ÷ 4 ＝ 90。答え 90度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-19",
+   "type": "input",
+   "prompt": "直線 AT は点 A で円 O に接し、弦 AB と AT がつくる角 ∠BAT は 70° である。中心角 ∠AOB の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "140",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①接線は半径に垂直なので ∠OAT ＝ 90°、∠OAB ＝ 90 − 70 ＝ 20°　②OA ＝ OB の二等辺三角形で ∠OBA ＝ 20°　③∠AOB ＝ 180 − 20 − 20 ＝ 140。答え 140度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-20",
+   "type": "input",
+   "prompt": "線分 OA を、点 O を中心として 50° 回転移動して線分 OA' をつくった。∠OAA' の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "65",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①回転移動では OA ＝ OA' なので、三角形 OAA' は二等辺三角形　②頂角 ∠AOA' ＝ 50°　③∠OAA' ＝ (180 − 50) ÷ 2 ＝ 65。答え 65度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-21",
+   "type": "input",
+   "prompt": "点 A を直線 ℓ について対称移動した点を A' とし、ℓ 上に点 P をとると ∠APA' ＝ 100° になった。PA と直線 ℓ がつくる角（小さいほう）の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①ℓ は AA' の垂直二等分線で、図は ℓ について対称　②∠APA' は ℓ に垂直な直線で2等分され、ℓ の両側に同じ角をつくる　③PA と ℓ の角は (180 − 100) ÷ 2 ＝ 40。答え 40度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-22",
+   "type": "input",
+   "prompt": "∠C ＝ 90° の直角三角形の斜辺が 13 cm である。3つの頂点を通る円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①3つの頂点を通る円の中心は、3辺の垂直二等分線の交点　②直角三角形では、その点は斜辺のまん中の点　③半径は斜辺の半分で 13 ÷ 2 ＝ 6.5。答え 6.5 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-23",
+   "type": "input",
+   "prompt": "三角形 ABC の ∠B と ∠C の二等分線の交点を I とする。∠A ＝ 64° のとき、∠BIC の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "122",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①∠B + ∠C ＝ 180 − 64 ＝ 116°　②半分ずつで ∠IBC + ∠ICB ＝ 58°　③∠BIC ＝ 180 − 58 ＝ 122。答え 122度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-24",
+   "type": "input",
+   "prompt": "点 (2, −3) を x 軸について対称移動し、さらに原点を中心として反時計回りに 90° 回転移動した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-3,2)",
+     "(-3、2)",
+     "-3,2",
+     "-3、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸で対称移動して (2, 3)　②反時計回りに 90° で (x, y) は (−y, x)　③(−3, 2)。答え (−3, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-25",
+   "type": "input",
+   "prompt": "AB ＝ 4 cm の線分の垂直二等分線の上にあり、A からの距離が 3 cm の点は、いくつあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "個",
+     "つ"
+    ]
+   },
+   "explanation": "①A からの距離が 3 cm の点は、A を中心とする半径 3 cm の円の上　②AB のまん中までは 2 cm で、3 cm より短いので、円は垂直二等分線と2点で交わる　③2 個。答え 2個",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-26",
+   "type": "input",
+   "prompt": "x 軸と y 軸の両方に接し、中心が x 座標も y 座標も正の部分にある、半径 3 の円の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,3)",
+     "(3、3)",
+     "3,3",
+     "3、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸に接するので、中心と x 軸の距離は半径 3　②y 軸に接するので、中心と y 軸の距離も 3　③(3, 3)。答え (3, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-27",
+   "type": "input",
+   "prompt": "半径 30 cm の車輪が3回転すると、車輪の上の1点は何 cm 進むか。π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "180π"
+   },
+   "explanation": "①1回転で円周の長さ 2 × π × 30 ＝ 60π 進む　②3回転で 60π × 3　③180π。答え 180π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-28",
+   "type": "input",
+   "prompt": "半径 20 cm の車輪がすべらずにころがって、600π cm 進んだ。車輪は何回転したか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "回",
+     "回転"
+    ]
+   },
+   "explanation": "①1回転で 2 × π × 20 ＝ 40π cm 進む　②600π ÷ 40π　③15 回転。答え 15回",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-29",
+   "type": "input",
+   "prompt": "半径 12 cm の円形のピザを、中心から 8 等分に切った。1切れの面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18π"
+   },
+   "explanation": "①ピザ全体は 144π　②8 等分して 144π ÷ 8　③18π。答え 18π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-30",
+   "type": "input",
+   "prompt": "円形のトラックで、内側のレーンの半径は 30 m、そのすぐ外側のレーンの半径は 31 m である。それぞれのレーンを1周すると、外側のほうが何 m 長いか。π を使って答えよう（m）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π"
+   },
+   "explanation": "①1周の長さは 2 × π × 30 ＝ 60π と 2 × π × 31 ＝ 62π　②差は 2π　③半径が 1 m ちがえば、どんな大きさでも差は 2π。答え 2π m",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-31",
+   "type": "input",
+   "prompt": "1辺 6 cm の正方形 ABCD の中に、頂点 A を中心とする半径 6 cm の 1/4 円の弧と、頂点 C を中心とする半径 6 cm の 1/4 円の弧をかいた。2つの弧でかこまれた葉のような形のまわりの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π"
+   },
+   "explanation": "①1/4 円の弧の長さは 2 × π × 6 ÷ 4 ＝ 3π　②葉の形のまわりは、その弧2つ　③3π × 2 ＝ 6π。答え 6π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-32",
+   "type": "input",
+   "prompt": "半径 6 cm の円の周上に、正六角形の頂点がある。となりあう2つの頂点の間の弧（短いほう）の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π"
+   },
+   "explanation": "①となりあう頂点の中心角は 360 ÷ 6 ＝ 60°　②円周は 12π　③12π × 60 ÷ 360 ＝ 2π。答え 2π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-33",
+   "type": "input",
+   "prompt": "半径 10 cm のおうぎ形を、中心のまわりに 72° 回転させた。弧のはしの点が動いた道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π"
+   },
+   "explanation": "①はしの点は、中心のまわりに半径 10 cm、中心角 72° の弧をえがく　②20π × 72 ÷ 360　③4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-34",
+   "type": "input",
+   "prompt": "1辺 6 cm の正三角形 ABC を、頂点 A を中心として 120° 回転させた。頂点 B が動いた道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π"
+   },
+   "explanation": "①B は A を中心とする半径 AB ＝ 6 cm の弧をえがく　②中心角は 120°　③12π × 120 ÷ 360 ＝ 4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-35",
+   "type": "input",
+   "prompt": "点 O から 2 cm の点 A と 5 cm の点 B が、O を通る同じ半直線上にある。線分 AB を、O を中心として 120° 回転させた。線分 AB が通った部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "7π"
+   },
+   "explanation": "①半径 5 cm のおうぎ形から半径 2 cm のおうぎ形をとった形（中心角 120°）　②25π × 1 ÷ 3 − 4π × 1 ÷ 3 ＝ 21π ÷ 3　③7π。答え 7π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-36",
+   "type": "input",
+   "prompt": "正十角形の1つの頂点の角（内角）の大きさを、円の中心角を使って求めよう（正十角形の頂点は円周上にある）。",
+   "answer": {
+    "kind": "number",
+    "value": "144",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①中心と1辺の両端でできる二等辺三角形の頂角は 360 ÷ 10 ＝ 36°、底角は (180 − 36) ÷ 2 ＝ 72°　②1つの頂点には、となりあう2つの三角形の底角が集まる　③72 × 2 ＝ 144。答え 144度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-37",
+   "type": "input",
+   "prompt": "1辺が 7 cm で、1つの角が 60° のひし形の、短いほうの対角線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①短いほうの対角線で、ひし形は2つの三角形に分かれる　②それぞれ2辺が 7 cm で、間の角が 60° なので正三角形　③対角線 ＝ 7。答え 7 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-38",
+   "type": "input",
+   "prompt": "円 O の点 A、B での接線が垂直に交わっている。円の半径が 8 cm のとき、短いほうの弧 AB の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π"
+   },
+   "explanation": "①接線と半径は垂直なので、四角形の角は 90°、90°、90° で ∠AOB ＝ 90°　②弧 AB は円周の (1 ÷ 4)　③16π ÷ 4 ＝ 4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-39",
+   "type": "input",
+   "prompt": "半径 9 cm の円で、長さ 3π cm の弧に対する中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①円周は 18π　②3π は 18π の (1 ÷ 6)　③360 ÷ 6 ＝ 60。答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-40",
+   "type": "input",
+   "prompt": "中心角 60° のおうぎ形の面積が 24π cm² である。半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①60° は円の 1/6 なので、円の面積は 24π × 6 ＝ 144π　②π × 半径 × 半径 ＝ 144π　③半径 12。答え 12 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-41",
+   "type": "input",
+   "prompt": "中心が同じ2つの円の間の部分の面積が 40π cm² で、内側の円の半径は 3 cm である。外側の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①外側の円の面積は 40π + 9π ＝ 49π　②半径 × 半径 ＝ 49　③半径 7。答え 7 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-42",
+   "type": "input",
+   "prompt": "半径 8 cm、中心角 90° のおうぎ形から、一方の半径を直径とする半円をとりのぞいた。残りの部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π"
+   },
+   "explanation": "①おうぎ形の面積 64π ÷ 4 ＝ 16π　②半円は直径 8 cm、半径 4 cm で 16π ÷ 2 ＝ 8π　③16π − 8π ＝ 8π。答え 8π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-43",
+   "type": "input",
+   "prompt": "半径 18 cm、中心角 140° のおうぎ形を、中心角の二等分線で2つに分けた。分けた1つのおうぎ形の弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "7π"
+   },
+   "explanation": "①分けた1つの中心角は 70°　②円周 36π の (70 ÷ 360)　③7π。答え 7π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-44",
+   "type": "input",
+   "prompt": "時計の短針の長さは 6 cm である。3時から7時までの間に、短針の先が動いた道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π"
+   },
+   "explanation": "①短針は1時間に 30° 動き、4時間で 120°　②半径 6 cm、中心角 120° の弧　③12π × 120 ÷ 360 ＝ 4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-45",
+   "type": "input",
+   "prompt": "∠AOB ＝ 150° の二等分線 OC をひき、さらに ∠AOB の内側に OA ⊥ OD となる半直線 OD をひいた。∠COD の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①∠AOC ＝ 150 ÷ 2 ＝ 75°　②∠AOD ＝ 90°　③∠COD ＝ 90 − 75 ＝ 15。答え 15度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-46",
+   "type": "input",
+   "prompt": "半径 6 cm の円を、中心を通る2本の直線で4つの合同なおうぎ形に分けた。1つのおうぎ形の弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "3π"
+   },
+   "explanation": "①4つの合同なおうぎ形なので、中心角は 360 ÷ 4 ＝ 90°　②円周 12π の (1 ÷ 4)　③3π。答え 3π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-47",
+   "type": "input",
+   "prompt": "たて 6 cm、横 8 cm の長方形の内側で、半径 1 cm の円が長方形の辺からはなれずに1周ころがる。円の中心が動いたあとの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①中心は、長方形の辺から 1 cm 内側を動く　②その道すじは、たて 6 − 2 ＝ 4 cm、横 8 − 2 ＝ 6 cm の長方形のまわり　③(4 + 6) × 2 ＝ 20（内側の角では曲がらない）。答え 20 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-48",
+   "type": "input",
+   "prompt": "半径 3 cm の円と面積が等しい、半径 6 cm のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①半径 3 cm の円の面積は 9π　②半径 6 cm の円は 36π で、9π はその (1 ÷ 4)　③360 ÷ 4 ＝ 90。答え 90度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-49",
+   "type": "input",
+   "prompt": "直径 14 cm の半円で、弧の長さと直径の長さの差を、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "7π−14",
+    "form": "nosign"
+   },
+   "explanation": "①弧の長さは π × 14 ÷ 2 ＝ 7π　②直径は 14 cm　③7π − 14（π は 3 より大きいので弧のほうが長い）。答え 7π−14 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-50",
+   "type": "input",
+   "prompt": "中心 (3, 2)、半径 2 の円を、y 軸について対称移動した。移った円の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-3,2)",
+     "(-3、2)",
+     "-3,2",
+     "-3、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①対称移動で円の形と大きさは変わらない　②中心が y 軸で対称移動して x 座標の符号が変わる　③(−3, 2)。答え (−3, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-51",
+   "type": "input",
+   "prompt": "中心 (4, 1)、半径 1 の円を、原点を中心として反時計回りに 90° 回転移動した。移った円の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,4)",
+     "(-1、4)",
+     "-1,4",
+     "-1、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①回転移動しても円の形と大きさは変わらない　②中心 (4, 1) を反時計回りに 90° 回すと (−y, x)　③(−1, 4)。答え (−1, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-52",
+   "type": "input",
+   "prompt": "円の中に、3つの頂点が円周上にある正三角形をかいた。この図形全体（円と正三角形）の対称の軸は何本あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①円は中心を通るどの直線でも対称　②正三角形の対称の軸は、頂点と向かい合う辺のまん中を結ぶ 3 本で、どれも円の中心を通る　③両方に共通な軸は 3 本。答え 3本",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-53",
+   "type": "input",
+   "prompt": "直径 10 cm の円で、長さ 5 cm の弦 AB をひいた。弦 AB に対する中心角 ∠AOB の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①OA ＝ OB ＝ 5 cm（半径）　②AB も 5 cm で、三角形 OAB は正三角形　③∠AOB ＝ 60。答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-54",
+   "type": "input",
+   "prompt": "半径 3 cm の2つの円の中心が 10 cm はなれている。2つの円にぴんとはったベルトをかける（ベルトは2つの円の外側を1周する）。ベルトの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "20+6π",
+    "form": "nosign"
+   },
+   "explanation": "①まっすぐな部分は2本で、どちらも中心の間と同じ 10 cm　②円にかかる部分は、それぞれ半円の弧で、2つ合わせて円1つ分の 6π　③20 + 6π。答え 20+6π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-55",
+   "type": "input",
+   "prompt": "半径 2 cm の3つの円が、たがいに外側で接している。3つの円をひもでまとめて1周させる（ひもはぴんとはる）。ひもの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12+4π",
+    "form": "nosign"
+   },
+   "explanation": "①まっすぐな部分は3本で、それぞれ中心どうしの距離 2 + 2 ＝ 4 cm と同じ　②円にかかる3つの弧の中心角の和は 360°（円1つ分）で 4π　③12 + 4π。答え 12+4π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-56",
+   "type": "input",
+   "prompt": "たて 4 m、横 6 m の長方形の小屋の1つの角に、長さ 8 m のひもでヤギがつながれている。ヤギは小屋の中には入れない。ヤギが動ける部分の面積を、π を使って答えよう（m²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "53π"
+   },
+   "explanation": "①小屋の外側で、半径 8 m、中心角 270° のおうぎ形：64π × 3 ÷ 4 ＝ 48π　②4 m の辺のはしを回ると残り 4 m で 1/4 円：4π、6 m の辺のはしを回ると残り 2 m で 1/4 円：π　③48π + 4π + π ＝ 53π。答え 53π m²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-57",
+   "type": "input",
+   "prompt": "半径 5 cm の円の周上に、正方形の4つの頂点がある。円の内側で正方形の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "25π−50",
+    "form": "nosign"
+   },
+   "explanation": "①正方形の対角線は円の直径で 10 cm、正方形の面積は 10 × 10 ÷ 2 ＝ 50　②円の面積 25π　③25π − 50。答え 25π−50 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-58",
+   "type": "input",
+   "prompt": "半径 12 cm の時計の文字盤で、3 と 8 の数字の位置を結ぶ短いほうの弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "10π"
+   },
+   "explanation": "①となりの数字どうしの中心角は 360 ÷ 12 ＝ 30°　②3 から 8 までは 5 つ分で 150°　③24π × 150 ÷ 360 ＝ 10π。答え 10π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-59",
+   "type": "input",
+   "prompt": "長さ 8 cm の線分を、そのまん中の点を中心として 180° 回転させた。線分が通った部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①線分の両はしは、まん中の点から 4 cm で、180° 回ると半円ずつをえがく　②両側の半円を合わせると、半径 4 cm の円1つ分　③16π。答え 16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-60",
+   "type": "input",
+   "prompt": "半径 4 cm の円の内部を、半径 2 cm の半円の弧を2つつないだ S 字の線で、合同な2つの部分に分けた。分けた1つの部分のまわりの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π"
+   },
+   "explanation": "①1つの部分のまわりは、大きい円の円周の半分と、S 字の線1本でできている　②大きい円の円周の半分は 8π ÷ 2 ＝ 4π、S 字の線は半径 2 cm の半円の弧 2 つで 2π + 2π ＝ 4π　③4π + 4π ＝ 8π。答え 8π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-61",
+   "type": "input",
+   "prompt": "直径 12 cm の半円に、直径を底辺とし、残りの頂点が弧の上にある直角二等辺三角形をかいた。半円のうち三角形の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18π−36",
+    "form": "nosign"
+   },
+   "explanation": "①半円の面積 π × 36 ÷ 2 ＝ 18π　②三角形は底辺 12 cm、高さは半径の 6 cm で 36 cm²　③18π − 36。答え 18π−36 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-62",
+   "type": "input",
+   "prompt": "半径 3 cm の円と半径 5 cm の円で、同じ中心角のおうぎ形をつくる。半径 5 cm のおうぎ形の弧の長さは、半径 3 cm のおうぎ形の弧の長さの何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5/3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①中心角が同じなら、弧の長さは半径に比例する　②5 ÷ 3　③5/3 倍。答え 5/3倍",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-63",
+   "type": "input",
+   "prompt": "円 O の弦 AB について ∠OAB ＝ 35° である。円の半径が 18 cm のとき、短いほうの弧 AB の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "11π"
+   },
+   "explanation": "①OA ＝ OB の二等辺三角形で ∠AOB ＝ 180 − 35 × 2 ＝ 110°　②円周は 36π　③36π × 110 ÷ 360 ＝ 11π。答え 11π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-64",
+   "type": "input",
+   "prompt": "おうぎ形の半径を半分にし、中心角を 2 倍にした。面積はもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.5",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①半径を半分にすると、面積は 0.5 × 0.5 ＝ 0.25 倍　②中心角を 2 倍にすると、面積は 2 倍　③0.25 × 2 ＝ 0.5 倍。答え 0.5倍",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-65",
+   "type": "input",
+   "prompt": "半径 9 cm の円 O の外の点 P から2本の接線 PA、PB をひくと、∠APB ＝ 60° だった。短いほうの弧 AB の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π"
+   },
+   "explanation": "①∠OAP ＝ ∠OBP ＝ 90° なので ∠AOB ＝ 360 − 90 − 90 − 60 ＝ 120°　②円周は 18π　③18π × 120 ÷ 360 ＝ 6π。答え 6π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-66",
+   "type": "input",
+   "prompt": "1辺 6 cm の正三角形 ABC が、辺 BC を直線上に置いてある。この三角形を直線上ですべらないように右へ転がす（まず頂点 C を中心に回し、次に頂点 A を中心に回す）。頂点 B がふたたび直線上にくるまでに動いた道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π"
+   },
+   "explanation": "①1回の転がりで、三角形は直線上の頂点を中心に 180 − 60 ＝ 120° 回る　②B は2回とも半径 6 cm、中心角 120° の弧をえがく（1回目は C、2回目は A が中心）　③12π × 120 ÷ 360 × 2 ＝ 8π。答え 8π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-67",
+   "type": "input",
+   "prompt": "1辺 4 cm の正方形の中に、4つの辺をそれぞれ直径とする半円を内側にかいた。4つの半円が重なってできる花びらの形（4枚）の面積の合計を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π−16",
+    "form": "nosign"
+   },
+   "explanation": "①4つの半円の面積の和は π × 4 ÷ 2 × 4 ＝ 8π　②この和は、正方形の面積に、花びらの部分をもう1回足したもの　③花びら ＝ 8π − 16。答え 8π−16 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-68",
+   "type": "input",
+   "prompt": "直径 AB ＝ 12 cm の半円を、点 A を中心として 30° 回転させた。半円が通った部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π"
+   },
+   "explanation": "①通った部分は「はじめの半円 + 半径 12 cm・中心角 30° のおうぎ形 − 移ったあとの半円」と考えられる　②はじめと移ったあとの半円は同じ面積なので、残るのはおうぎ形　③144π × 30 ÷ 360 ＝ 12π。答え 12π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-69",
+   "type": "input",
+   "prompt": "半径 1 cm の円の中心が、半径 4 cm の円の周の上を1周した。半径 1 cm の円が通った部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①通った部分は、中心が同じ半径 4 + 1 ＝ 5 cm と 4 − 1 ＝ 3 cm の2つの円の間　②25π − 9π　③16π。答え 16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-georeview-70",
+   "type": "input",
+   "prompt": "半径 2 cm の円が、半径 6 cm の円の外側にそって、はなれずに1周ころがる。小さい円の中心が動いた道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①小さい円の中心は、大きい円の中心からいつも 6 + 2 ＝ 8 cm の所にある　②中心は半径 8 cm の円をえがく　③2 × π × 8 ＝ 16π。答え 16π cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p150〜176（5章 平面図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。移動とおうぎ形を組み合わせる問題。答えは check.py で計算し直して検算。2026-10-28 Claude：おうぎ形の弧の長さ・面積（π）、組み合わせた図形のかげの部分、回転して通る部分・道すじ、円がころがるときの中心の道すじ、移動・作図・円の性質を組み合わせた問題など67問を追加して70問にした（元の3問はそのまま）。図が必要な問題には、座標から作った正確な図（SVG）をつけた。"
+}

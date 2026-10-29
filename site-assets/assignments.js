@@ -4,7 +4,7 @@
 // ・使い方：NobiAssignments.mount(入れ物, {uid:()=>文字, get:()=>Promise<json>, post:(body)=>Promise<json>})
 // ・データの文字は textContent でしか入れない（innerHTML は使わない）。時刻はサーバーの時計で数える。
 (function(root){'use strict';
-const NAMES={u1:'なお',u2:'りらん'};
+const NAMES={u1:'なお',u2:'りらん',p_free:'f1 · Free',p_mini:'m1 · Mini',p_standard:'s1 · Standard',p_pro:'p1 · Pro',p_unlimit:'u1 · UNLIMIT'};
 const MAX={title:60,note:1000,prompt:1000,model:1000,questions:50,answer:4000,answersTotal:20000,comment:1000,overall:2000,minutes:300,points:100};
 const ERR={admin_only:'この操作は なお だけができます。',closed:'締め切りを過ぎたので、もう出せません。',already_submitted:'もう提出ずみです。',not_started:'先に「始める」を押してください。',
  rate_limited:'保存が多すぎます。少し待ってから、もう一度入力してください。',not_found:'見つかりませんでした。画面を開き直してください。',not_submitted:'まだ提出されていません。',
@@ -14,7 +14,7 @@ const ERR={admin_only:'この操作は なお だけができます。',closed:'
  invalid_points:'点数は0〜100の整数にしてください。',too_long:'文字が多すぎます。',too_many:'配布物がいっぱいです。',invalid_score:'点数は0から満点までの整数にしてください。',
  invalid_answers:'答えの形が正しくありません。',invalid_comments:'コメントは1問1000文字までです。',invalid_overall:'全体へのコメントは2000文字までです。',
  unauthorized:'ログインし直してください。',network:'つながりませんでした。接続を確認してください。',origin_rejected:'この画面からは送れません。',family_only:'このアカウントでは使えません。'};
-const S={host:null,api:null,uid:'',gen:0,data:null,skew:0,loadError:false,tab:'mine',view:{name:'list'},msg:null,tick:null,
+const S={options:{},reviewDirty:false,formDirty:false,host:null,api:null,uid:'',gen:0,data:null,skew:0,loadError:false,tab:'mine',view:{name:'list'},msg:null,tick:null,
  save:{timer:null,dirty:false,seq:0,state:'',kind:''},answers:{},openId:'',busy:false,form:null,review:null};
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=String(text);return e;}
 function btn(label,cls,fn,aria){const b=el('button',cls,label);b.type='button';if(aria)b.setAttribute('aria-label',aria);b.addEventListener('click',fn);return b;}
@@ -59,12 +59,13 @@ async function load(){
  catch(_){if(g!==S.gen)return;S.loadError=true;}
  render();
 }
-function mount(host,api){
+function mount(host,api,options={}){
  stopTimers();S.gen++;
- Object.assign(S,{host,api,uid:String(api&&api.uid&&api.uid()||''),data:null,loadError:false,tab:'mine',view:{name:'list'},msg:null,answers:{},openId:'',busy:false,form:null,review:null});
+ Object.assign(S,{host,api,uid:String(api&&api.uid&&api.uid()||''),data:null,loadError:false,tab:'mine',view:{name:'list'},msg:null,answers:{},openId:'',busy:false,form:null,review:null,reviewDirty:false,formDirty:false});
+ S.options=options;S.tab=options.tab||'mine';if(options.form){const f=options.form;S.form={...blankForm(),title:f.title||'',note:f.note||'',minutes:f.minutes||'',targets:{[f.target||'u2']:true},questions:f.questions||[]};}
  S.save={timer:null,dirty:false,seq:0,state:'',kind:''};
  host.classList.add('as-root');render();load();startTick();
- return {refresh:load};
+ const gen=S.gen;return {host,refresh:load,dirty:()=>!!S.reviewDirty||!!S.formDirty,busy:()=>S.busy,destroy(){if(gen!==S.gen)return;stopTimers();S.gen++;S.host=null;S.data=null;}};
 }
 // ---- 画面全体 ----
 function render(){
@@ -156,7 +157,7 @@ function renderOpen(box,it){
    sec.append(field('問'+(i+1)+'の答え',ta),cnt);
   }else{
    const a=el('div','as-answer');a.append(el('p','as-label','わたしの答え'),el('p','as-pre',answers[q.id]||'（空らん）'));sec.append(a);
-   if(it.review){const c=el('div','as-comment');c.append(el('p','as-label','なおのコメント'),el('p','as-pre',it.review.comments[q.id]||'コメントはありません。'));sec.append(c);}
+   if(it.review){const c=el('div','as-comment');c.append(el('p','as-label','なおのコメント'),el('p','as-pre',it.review.comments[q.id]||'コメントはありません。'));sec.append(c);if(it.review.explanations?.[q.id])sec.append(el('p','as-label','なおの解説'),el('p','as-pre',it.review.explanations[q.id]));}
   }
   card.append(sec);
  });
@@ -202,12 +203,12 @@ async function submit(it,button){
 function blankForm(){return {title:'',note:'',targets:{u1:false,u2:true},now:true,openAt:'',dueAt:'',minutes:'',questions:[{prompt:'',points:'10',answer:''}]};}
 function renderNew(box){
  const f=S.form||(S.form=blankForm());
- const form=el('form','as-form');form.noValidate=true;form.addEventListener('submit',e=>{e.preventDefault();createAssignment(form);});box.append(form);
+ const form=el('form','as-form');form.addEventListener('input',()=>{S.formDirty=true;});form.noValidate=true;form.addEventListener('submit',e=>{e.preventDefault();createAssignment(form);});box.append(form);
  const input=(type,key,attrs={})=>{const i=el(type==='textarea'?'textarea':'input',type==='textarea'?'as-text':'as-input');if(type!=='textarea')i.type=type;i.id='as-new-'+key;Object.assign(i,attrs);i.value=f[key];i.addEventListener('input',()=>{f[key]=i.value;});return i;};
  form.append(field('題名（60文字まで）',input('text','title',{maxLength:MAX.title,required:true})));
  form.append(field('説明（なくてもよい・1000文字まで）',input('textarea','note',{maxLength:MAX.note,rows:2})));
  const who=el('fieldset','as-fieldset');who.append(el('legend','as-label','配る相手'));
- for(const t of ['u2','u1']){const lab=el('label','as-check');const c=el('input');c.type='checkbox';c.id='as-new-target-'+t;c.checked=!!f.targets[t];c.addEventListener('change',()=>{f.targets[t]=c.checked;});lab.append(c,document.createTextNode(' '+NAMES[t]+(t==='u1'?'（自分でためす）':'')));who.append(lab);}
+ for(const t of [...(S.data.admin.people||[{uid:'u2'},{uid:'u1'}])].map(p=>p.uid)){const lab=el('label','as-check');const c=el('input');c.type='checkbox';c.id='as-new-target-'+t;c.checked=!!f.targets[t];c.addEventListener('change',()=>{f.targets[t]=c.checked;});lab.append(c,document.createTextNode(' '+NAMES[t]+(t==='u1'?'（自分でためす）':'')));who.append(lab);}
  form.append(who);
  const when1=el('fieldset','as-fieldset');when1.append(el('legend','as-label','配る日時と締め切り（日本時間）'));
  const nowLab=el('label','as-check');const nowBox=el('input');nowBox.type='checkbox';nowBox.id='as-new-now';nowBox.checked=f.now;nowLab.append(nowBox,document.createTextNode(' 今すぐ配る'));when1.append(nowLab);
@@ -242,7 +243,7 @@ function renderNew(box){
 function formPayload(){
  const f=S.form,errs=[],now=nowS();
  const title=f.title.trim();if(!title||title.length>MAX.title||/\n/.test(title))errs.push(ERR.invalid_title);
- const targets=['u1','u2'].filter(t=>f.targets[t]);if(!targets.length)errs.push(ERR.invalid_targets);
+ const targets=(S.data.admin.people||[{uid:'u1'},{uid:'u2'}]).map(p=>p.uid).filter(t=>f.targets[t]);if(!targets.length)errs.push(ERR.invalid_targets);
  let openAt=f.now?now:fromLocal(f.openAt);const dueAt=fromLocal(f.dueAt);
  if(!f.now&&!Number.isFinite(openAt))errs.push('配る日時を入れてください。');
  else if(!f.now&&openAt<now-60000)errs.push(ERR.open_in_past);
@@ -264,12 +265,12 @@ async function createAssignment(form){
  if(!root.confirm('「'+assignment.title+'」を '+names+' に配ります（全'+assignment.questions.length+'問・締め切り '+when(assignment.dueAt)+'）。\n配ったあとは直せません。よろしいですか？'))return;
  S.busy=true;const b=form.querySelector('button[type="submit"]');if(b)b.disabled=true;
  const res=await send({action:'create',assignment});S.busy=false;if(!res)return;
- if(res.ok){S.form=null;S.tab='box';S.view={name:'list'};setMsg('配りました。','ok');await load();}
+ if(res.ok){S.formDirty=false;S.form=null;S.tab='box';S.view={name:'list'};setMsg('配りました。','ok');await load();}
  else{if(b)b.disabled=false;setMsg('配れませんでした：'+errText(res),'ng');render();}
 }
 // ---- なお：提出箱 ----
 function renderBox(box){
- const list=S.data.admin.assignments;
+ const list=S.data.admin.assignments.filter(a=>!S.options?.filterUid||a.targets.includes(S.options.filterUid));
  if(!list.length){box.append(el('p','as-empty','まだ何も配っていません。「配る」から作れます。'));return;}
  const grid=el('div','as-grid');
  for(const a of list){
@@ -277,7 +278,7 @@ function renderBox(box){
   const chips=el('div','as-chips');if(a.openAt>nowS())chips.append(chip('配る前','time'));if(a.minutes)chips.append(chip('⏱ '+a.minutes+'分','time'));c.append(chips);
   c.append(el('p','as-meta',(a.openAt>nowS()?'配る日時：':'配った日時：')+when(a.openAt)),el('p','as-meta','締め切り：'+when(a.dueAt)+'　全'+a.questions.length+'問・満点'+a.totalPoints+'点'));
   const subs=S.data.admin.submissions[a.id]||{};
-  for(const t of a.targets){
+  for(const t of a.targets.filter(t=>!S.options?.filterUid||t===S.options.filterUid)){
    const w=subs[t]||{status:'未提出'};const line=el('div','as-who');
    line.append(el('span','as-who-name',NAMES[t]+'：'),chip(w.status,w.status==='返却済み'?'done':w.status==='提出済み'?'sent':'todo'));
    if(w.review&&!w.review.returnedAt)line.append(chip('コメント下書きあり','time'));
@@ -308,8 +309,8 @@ function renderSub(box){
   sec.append(el('p','as-prompt',q.prompt));
   if(q.answer){const m=el('div','as-model');m.append(el('p','as-label','見本の答え'),el('p','as-pre',q.answer));sec.append(m);}
   const s=el('div','as-answer');s.append(el('p','as-label',NAMES[uid]+'の答え'),el('p','as-pre',w.submission.answers[q.id]||'（空らん）'));sec.append(s);
-  if(returned){const c=el('div','as-comment');c.append(el('p','as-label','コメント'),el('p','as-pre',rv.comments[q.id]||'コメントなし'));sec.append(c);}
-  else{const ta=el('textarea','as-text');ta.id='as-cm-'+q.id;ta.maxLength=MAX.comment;ta.rows=2;ta.value=rv.comments[q.id]||'';ta.addEventListener('input',()=>{rv.comments[q.id]=ta.value;});sec.append(field('問'+(i+1)+'へのコメント',ta));}
+  if(returned){const c=el('div','as-comment');c.append(el('p','as-label','コメント'),el('p','as-pre',rv.comments[q.id]||'コメントなし'));sec.append(c);if(rv.explanations[q.id])sec.append(el('p','as-label','解説'),el('p','as-pre',rv.explanations[q.id]));}
+  else{const ta=el('textarea','as-text');ta.id='as-cm-'+q.id;ta.maxLength=MAX.comment;ta.rows=2;ta.value=rv.comments[q.id]||'';ta.addEventListener('input',()=>{rv.comments[q.id]=ta.value;S.reviewDirty=true;});sec.append(field('問'+(i+1)+'へのコメント',ta));const ex=el('textarea','as-text');ex.id='as-ex-'+q.id;ex.maxLength=MAX.comment;ex.rows=3;ex.value=rv.explanations[q.id]||'';ex.addEventListener('input',()=>{rv.explanations[q.id]=ex.value;S.reviewDirty=true;});sec.append(field('問'+(i+1)+'への解説',ex));}
   card.append(sec);
  });
  const r=el('section','as-review');
@@ -318,9 +319,9 @@ function renderSub(box){
   r.append(el('p','as-label','全体へのコメント'),el('p','as-pre',w.review.overall||'コメントなし'));
   r.append(el('p','as-ok-note','返却ずみです。返却したあとは直せません。'));
  }else{
-  const ov=el('textarea','as-text');ov.id='as-cm-overall';ov.maxLength=MAX.overall;ov.rows=3;ov.value=rv.overall;ov.addEventListener('input',()=>{rv.overall=ov.value;});
+  const ov=el('textarea','as-text');ov.id='as-cm-overall';ov.maxLength=MAX.overall;ov.rows=3;ov.value=rv.overall;ov.addEventListener('input',()=>{rv.overall=ov.value;S.reviewDirty=true;});
   r.append(field('全体へのコメント',ov));
-  const sc=el('input','as-input as-num');sc.type='number';sc.id='as-cm-score';sc.min=0;sc.max=a.totalPoints;sc.step=1;sc.inputMode='numeric';sc.value=rv.score;sc.addEventListener('input',()=>{rv.score=sc.value;});
+  const sc=el('input','as-input as-num');sc.type='number';sc.id='as-cm-score';sc.min=0;sc.max=a.totalPoints;sc.step=1;sc.inputMode='numeric';sc.value=rv.score;sc.addEventListener('input',()=>{rv.score=sc.value;S.reviewDirty=true;});
   r.append(field('点数（0〜'+a.totalPoints+'・つけないなら空らん）',sc));
   const row=el('div','as-row');
   row.append(btn('下書き保存','as-btn',e=>sendReview(a,uid,false,e.target)),btn('返却する','as-btn as-main',e=>sendReview(a,uid,true,e.target)));
@@ -328,16 +329,18 @@ function renderSub(box){
  }
  card.append(r);
 }
-function openSubState(w,id,uid){const r=w.review||{comments:{},overall:'',score:null};S.review={key:id+':'+uid,comments:Object.assign({},r.comments),overall:r.overall||'',score:r.score===null||r.score===undefined?'':String(r.score)};}
+function openSubState(w,id,uid){const r=w.review||{comments:{},overall:'',score:null};S.review={key:id+':'+uid,comments:Object.assign({},r.comments),explanations:Object.assign({},r.explanations),overall:r.overall||'',score:r.score===null||r.score===undefined?'':String(r.score)};}
 async function sendReview(a,uid,final,button){
  if(S.busy)return;const rv=S.review;
+ const explanations={};for(const q of a.questions){const v=(rv.explanations[q.id]||'').trim();if(v)explanations[q.id]=v;}
  const comments={};for(const q of a.questions){const v=(rv.comments[q.id]||'').trim();if(v)comments[q.id]=v;}
  let score=null;if(String(rv.score).trim()!==''){score=Number(rv.score);if(!Number.isInteger(score)||score<0||score>a.totalPoints){setMsg(ERR.invalid_score,'ng');render();return;}}
+ if(final&&S.options?.strictReview&&a.questions.some(q=>!comments[q.id]||!explanations[q.id])){setMsg('すべての問題にコメントと解説を書いてから返却してください。','ng');render();return;}
  if(final&&!root.confirm('「'+a.title+'」を '+NAMES[uid]+' に返却します。返却すると、コメントは直せません。よろしいですか？'))return;
  S.busy=true;button.disabled=true;
- const body={action:'return',id:a.id,uid,comments,overall:rv.overall.trim(),score};if(final)body.final=true;
+ const body={action:'return',id:a.id,uid,comments,explanations,...(S.options?.strictReview?{complete:true}:{}),overall:rv.overall.trim(),score};if(final)body.final=true;
  const res=await send(body);S.busy=false;if(!res)return;
- if(res.ok){setMsg(final?'返却しました。':'下書きを保存しました（'+NAMES[uid]+'にはまだ見えません）。','ok');await load();}
+ if(res.ok){S.reviewDirty=false;setMsg(final?'返却しました。':'下書きを保存しました（'+NAMES[uid]+'にはまだ見えません）。','ok');await load();}
  else{button.disabled=false;setMsg((final?'返却できませんでした：':'保存できませんでした：')+errText(res),'ng');render();}
 }
 root.NobiAssignments={mount};

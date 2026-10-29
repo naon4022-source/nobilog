@@ -1,0 +1,354 @@
+[
+ {
+  "unit": "surface1",
+  "number": 8,
+  "file": "tokkun-fig-surface1-8.svg",
+  "sha256": "41ccf026e909f8b804b2261c14c0bf9b40c71c9d1b10100c95171fb8ed32cec1",
+  "image": "/tokkun-fig-surface1-8.svg",
+  "imageAlt": "直角三角形を底面とする三角柱の見取図。底面の辺は5cm、12cm、13cm、高さ4cm。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "5 cm",
+   "4 cm",
+   "12 cm",
+   "13 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "180",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 9,
+  "file": "tokkun-fig-surface1-9.svg",
+  "sha256": "c088d5f30b08732dc179ccb5d3704a7320c9760f02ec3fe39b58ecc1222a17d7",
+  "image": "/tokkun-fig-surface1-9.svg",
+  "imageAlt": "正四角錐の見取図。底面の1辺8cm、側面の二等辺三角形の高さ（点線）5cm。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "8 cm",
+   "5 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "144",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 10,
+  "file": "tokkun-fig-surface1-10.svg",
+  "sha256": "da4eb663debb9624b7cb8629a783d13ba57f827ee2d962a1b7f854053e7127fe",
+  "image": "/tokkun-fig-surface1-10.svg",
+  "imageAlt": "底面の半径3cm、高さ10cmの円柱の見取図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "3 cm",
+   "10 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "10/13"
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 11,
+  "file": "tokkun-fig-surface1-11.svg",
+  "sha256": "01a286e2b787b856886f56ba5d9af7d3bfba892f41f466c9cac33bc7efc52c5c",
+  "image": "/tokkun-fig-surface1-11.svg",
+  "imageAlt": "底面の半径4cm、母線9cmの円錐の見取図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "4 cm",
+   "9 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "52π",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 12,
+  "file": "tokkun-fig-surface1-12.svg",
+  "sha256": "5fb2dff5346c3ef587a0bca4691e6691542d3b9548e95c8d96b2f521948a1c05",
+  "image": "/tokkun-fig-surface1-12.svg",
+  "imageAlt": "三角柱の展開図。たて7cm、横3cm・4cm・5cmに分かれた長方形と、上下の直角三角形。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "a",
+     "b"
+    ],
+    "value": 3,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "b",
+     "c"
+    ],
+    "value": 4,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "c",
+     "d"
+    ],
+    "value": 5,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "d",
+     "e"
+    ],
+    "value": 7,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "q",
+     "r"
+    ],
+    "value": 5,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "q",
+     "p",
+     "r"
+    ],
+    "value": 90,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "3 cm",
+   "4 cm",
+   "5 cm",
+   "7 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "96",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 13,
+  "file": "tokkun-fig-surface1-13.svg",
+  "sha256": "26bef4e3d2f62c1dc4329daf5f0a19fd507951d2f248e7b9eaf7dec13853ec32",
+  "image": "/tokkun-fig-surface1-13.svg",
+  "imageAlt": "円錐の展開図。側面は半径10cm、中心角288°のおうぎ形で、その上に底面の円が接している。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "X",
+     "O",
+     "Y"
+    ],
+    "value": 72,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "T",
+     "Z"
+    ],
+    "value": 4,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "10 cm",
+   "288°"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "80π",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 14,
+  "file": "tokkun-fig-surface1-14.svg",
+  "sha256": "718d77a36a248e32b9ba1085a4a9573ad2b60779e7de7c4a5de6b32894e8b3e4",
+  "image": "/tokkun-fig-surface1-14.svg",
+  "imageAlt": "底面の半径6cm、高さ5cmの円柱の展開図。長方形と、その上下に接する2つの円。",
+  "claims": [
+   {
+    "kind": "ratio",
+    "at": [
+     "L",
+     "R",
+     "L",
+     "U"
+    ],
+    "value": 7.5398223686155035,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "5 cm",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "132π",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 15,
+  "file": "tokkun-fig-surface1-15.svg",
+  "sha256": "b1f4279c85bb8d3166530ae803abdbf98e4c7b8aa391843a8079ca0499d24611",
+  "image": "/tokkun-fig-surface1-15.svg",
+  "imageAlt": "正四角錐の展開図。1辺6cmの正方形の4辺に二等辺三角形がつき、三角形の高さ（点線）は7cm。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "m",
+     "t"
+    ],
+    "value": 7,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "a",
+     "b"
+    ],
+    "value": 6,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "7 cm",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "120",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 16,
+  "file": "tokkun-fig-surface1-16.svg",
+  "sha256": "86c5d94277dfda07b04eb3176c388c986944ef4fb382fd4de7d25375e627e416",
+  "image": "/tokkun-fig-surface1-16.svg",
+  "imageAlt": "外の半径5cm、内の半径3cm、高さ10cmの、穴のあいた円柱（パイプ）の見取図。上の面に、中心から外の円と内の円までの半径が点線でかいてある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "5 cm",
+   "3 cm",
+   "10 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "192π",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 17,
+  "file": "tokkun-fig-surface1-17.svg",
+  "sha256": "8a46055d66f0c4c555033e6f377eaef01d1ae1908e518b745039e1bc95a662fd",
+  "image": "/tokkun-fig-surface1-17.svg",
+  "imageAlt": "直径8cm、高さ10cmの円柱を縦に半分に切った立体の見取図。手前に切り口の長方形、うしろに曲がった側面。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "8 cm",
+   "10 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "56π+80",
+   "form": "nosign",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "surface1",
+  "number": 18,
+  "file": "tokkun-fig-surface1-18.svg",
+  "sha256": "eb0398277a8bcc15c39cfe7a93bbb988292c3c9eef9f44e664f91a2d98456ba4",
+  "image": "/tokkun-fig-surface1-18.svg",
+  "imageAlt": "底面の半径3cm、高さ8cmの円柱の上に、母線5cmの円錐をのせた立体の見取図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "3 cm",
+   "8 cm",
+   "5 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "72π",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ }
+]

@@ -1,0 +1,181 @@
+{
+ "id": "tokkun-math-1-solid2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "いろいろな立体②（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-solid2-1",
+   "type": "input",
+   "prompt": "縦 3 cm、横 5 cm の長方形を、縦の辺を軸として1回転させてできる円柱の、底面の半径を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①軸にした縦の辺が円柱の高さ（3 cm）になる　②軸から反対側の辺までのきょり（横 5 cm）が底面の半径　③答え 5cm",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "type": "input",
+   "prompt": "縦 4 cm、横 2 cm の長方形を、縦の辺と平行で、その長方形から 1 cm はなれた直線を軸として1回転させた。できた立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "32π"
+   },
+   "explanation": "①外側の半径 1 + 2 ＝ 3 cm、内側（穴）の半径 1 cm、高さ 4 cm　②円柱 π × 9 × 4 から π × 1 × 4 をひく　③36π − 4π ＝ 32π。答え 32π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "type": "input",
+   "prompt": "ある円柱を真正面から見た図（立面図）は、縦 6 cm、横 4 cm の長方形で、真上から見た図（平面図）は円である。この円柱の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "24π"
+   },
+   "explanation": "①立面図の横 4 cm が底面の直径、縦 6 cm が高さ　②半径 2 cm、底面積 4π　③4π × 6 ＝ 24π。答え 24π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "type": "input",
+   "prompt": "ある立体の立面図は底辺 6 cm、高さ 4 cm の二等辺三角形で、平面図は直径 6 cm の円である。この立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π"
+   },
+   "explanation": "①この立体は円錐（底面の半径 3 cm、高さ 4 cm）　②π × 9 × 4 ÷ 3　③12π。答え 12π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-5",
+   "type": "input",
+   "prompt": "立面図も平面図も1辺 3 cm の正方形で、側面から見た図も同じ正方形になる立体の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①3方向から見て同じ正方形なので立方体　②1つの面 9 cm² が 6 面　③54。答え 54cm²",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-6",
+   "type": "input",
+   "prompt": "直角三角形を、直角をはさむ1つの辺を軸として1回転させてできる立体の名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円錐",
+     "円すい"
+    ]
+   },
+   "explanation": "①軸にした辺が高さ、もう1つの直角をはさむ辺が底面の半径になる　②斜辺が側面をつくり、先がとがった立体ができる　③答え 円錐",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。回転体と投影図を文章で表し、数や名前で答える一段難しい問題。答えは check.py で計算し直して検算。【保留】図なしで伝えられ、教科書問題と似ない問題は 6 問まで。70問にしていない。"
+}

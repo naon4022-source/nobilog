@@ -1,0 +1,1952 @@
+{
+ "id": "tokkun-math-1-muldiv2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "乗法、除法②（特訓）",
+ "majorTitle": "正負の数",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-muldiv2-1",
+   "type": "input",
+   "prompt": "次のア〜エの計算のうち、答えを1つの数に決められない（計算できない）ものをすべて選び、記号で答えよう。\nア 0 ÷ (−3)\nイ (−3) ÷ 0\nウ 0 × (−3)\nエ 0 ÷ 0",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①0 をある数でわると 0（ア ＝ 0）　②0 にかけても 0（ウ ＝ 0）　③0 でわる除法は考えない：イ は「0 にかけて −3 になる数」がない、エ は「0 にかけて 0 になる数」がどれでもよく1つに決まらない　④答え イ、エ",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-2",
+   "type": "input",
+   "prompt": "東を正の方向とする。ある人が 5時間で −32km 移動した（西へ 32km）。同じ速さで進んだとすると、1時間あたりの移動は何kmか。東を正、西を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6.4",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①1時間あたり ＝ 移動 ÷ 時間　②(−32) ÷ 5 ＝ −6.4　③西へ時速 6.4km。答え −6.4km",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-3",
+   "type": "input",
+   "prompt": "ある物の温度が、6時間で 9.6℃ 下がった。温度が同じ割合で変わったとすると、1時間あたりの温度の変化は何℃か。上がるときを正、下がるときを負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1.6",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①6時間の変化は −9.6℃　②(−9.6) ÷ 6 ＝ −1.6　③答え −1.6℃",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-4",
+   "type": "input",
+   "prompt": "□ ÷ (−6) の商が整数で、−3 より大きく 2 より小さい。□ として考えられる数のうち、0 でないものをすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "12",
+     "6",
+     "-6"
+    ]
+   },
+   "explanation": "①商は −2、−1、0、1 のどれか　②□ ＝ 商 × (−6) なので、12、6、0、−6　③0 でないものは 12、6、−6。答え 12、6、−6",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-5",
+   "type": "input",
+   "prompt": "ある数を −4 でわってから 1.5 をたすと −2 になった。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "①1.5 をたす前は −2 − 1.5 ＝ −3.5　②ある数 ÷ (−4) ＝ −3.5 なので、ある数 ＝ (−3.5) × (−4) ＝ 14。答え 14",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-6",
+   "type": "input",
+   "prompt": "(−2.4)×□ の答えが整数になるような正の整数 □ のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①2.4 ＝ 12/5 なので、(−2.4)×□ は (−12) × □ を 5 でわった数　②整数になるには □ が 5 の倍数　③もっとも小さい正の整数は 5（(−2.4) × 5 ＝ −12）。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-7",
+   "type": "input",
+   "prompt": "毎分 0.8m ずつ水位が下がっている池がある（変化は毎分 −0.8m）。2.5分前の水位は、今の水位と比べて何m 高いか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①2.5分前は −2.5 分　②変化：(−0.8) × (−2.5) ＝ 2　③今より 2m 高い。答え 2m",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-8",
+   "type": "input",
+   "prompt": "ある5日間の気温の変化（前の日との差）の合計が −7.5℃ だった。1日あたりの平均の変化は何℃か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1.5",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①平均の変化 ＝ 変化の合計 ÷ 日数　②(−7.5) ÷ 5 ＝ −1.5。答え −1.5℃",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-9",
+   "type": "input",
+   "prompt": "2つの数 □、△ があり、□ ÷ △ ＝ −3、□ + △ ＝ 8 である。□、△ の順に答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "12",
+     "-4"
+    ],
+    "ordered": true
+   },
+   "explanation": "①□ ÷ △ ＝ −3 なので、□ は △ の −3 倍　②□ + △ は △ の −2 倍で、それが 8 なので △ ＝ −4　③□ ＝ (−4) × (−3) ＝ 12。確かめ：12 ÷ (−4) ＝ −3、12 + (−4) ＝ 8。答え 12、−4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-10",
+   "type": "input",
+   "prompt": "2つの数の積が −0.48 で、一方の数は 1.2 である。もう一方の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-0.4"
+   },
+   "explanation": "①もう一方 ＝ 積 ÷ 1.2　②(−0.48) ÷ 1.2 ＝ −0.4。答え −0.4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-11",
+   "type": "input",
+   "prompt": "○ と △ は 0 でない数で、○ ÷ △ は負の数、○ の絶対値は △ の絶対値より大きい。○ + △ の符号について正しいものを、次のア〜ウから選び、記号で答えよう。\nア かならず正の数（○ の絶対値のほうが大きいから）\nイ かならず負の数（○ ÷ △ が負の数だから）\nウ 正の数になることも、負の数になることもある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①商が負なので、○ と △ は符号がちがう　②和の符号は、絶対値の大きい ○ の符号と同じになる　③○ ＝ 5、△ ＝ −2 なら和は 3（正）、○ ＝ −5、△ ＝ 2 なら和は −3（負）　④どちらもあるので ウ。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-12",
+   "type": "input",
+   "prompt": "ある品物を 8個 売ったら、全体で 92円 の損だった。1個あたりの利益を、もうけを正、損を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-11.5",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①全体の利益は −92円　②1個あたり：(−92) ÷ 8 ＝ −11.5。答え −11.5円",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-13",
+   "type": "input",
+   "prompt": "ある貯金の残高が、6か月で 13500円 から 4800円 になった。毎月同じだけ変わったとすると、1か月あたりの変化は何円か。ふえるときは正、へるときは負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1450",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①6か月の変化：4800 − 13500 ＝ −8700円　②(−8700) ÷ 6 ＝ −1450。答え −1450円",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-14",
+   "type": "input",
+   "prompt": "−12.6℃ の物を、毎分 0.7℃ ずつ温める。0℃ になるのは何分後か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "分後",
+     "分"
+    ]
+   },
+   "explanation": "①0 − (−12.6) ＝ 12.6℃ 上がればよい　②12.6 ÷ 0.7 ＝ 18　③答え 18分後",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-15",
+   "type": "input",
+   "prompt": "Aさんは 0.9 ÷ (−0.03) を計算して 3 と答えた。正しい答えは、Aさんの答えの何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-10",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①正しい答え：0.9 ÷ (−0.03) ＝ −30（90 ÷ (−3) と同じ）　②Aさんは小数点の位置と符号をまちがえた　③(−30) ÷ 3 ＝ −10 倍。答え −10倍",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-16",
+   "type": "input",
+   "prompt": "2つの数 ○、△ があり、○ ÷ △ ＝ −4、○ × △ ＝ −36 である。○ が正の数のとき、○ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "①○ は △ の −4 倍　②○ × △ ＝ (△ の −4 倍) × △ ＝ −36 なので、△ × △ ＝ 9、△ ＝ 3 か −3　③○ が正なので △ ＝ −3、○ ＝ 12。確かめ：12 ÷ (−3) ＝ −4、12 × (−3) ＝ −36。答え 12",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-17",
+   "type": "input",
+   "prompt": "西へ時速 2.4km（−2.4km/時）で歩いている人がいる。東を正とするとき、3.5時間前の位置は今の位置から何kmの地点か。東を正、西を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8.4",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①3.5時間前は −3.5 時間　②(−2.4) × (−3.5) ＝ 8.4　③今より東へ 8.4km。答え 8.4km",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-18",
+   "type": "input",
+   "prompt": "□ × (−0.25) は、□ をある数でわったものと同じになる。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "①0.25 ＝ 1/4 なので、× 0.25 は ÷ 4 と同じ　②符号もふくめると、× (−0.25) は ÷ (−4) と同じ　③確かめ：8 × (−0.25) ＝ −2、8 ÷ (−4) ＝ −2。答え −4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-19",
+   "type": "input",
+   "prompt": "□ は 0 でない数とする。□ ÷ 0.4 の答えが □ より大きくなるのは、□ がどんな数のときか。次のア〜ウから選び、記号で答えよう。\nア □ が負の数のとき\nイ □ が正の数のとき\nウ □ がどんな数のときも",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①0.4 でわることは、2.5 をかけることと同じ　②□ が正なら 2.5 倍は □ より大きい（例：4 ÷ 0.4 ＝ 10）　③□ が負なら 2.5 倍は □ より小さい（例：(−4) ÷ 0.4 ＝ −10）　④答え イ",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-20",
+   "type": "input",
+   "prompt": "ある数を 2.5 でわると、もとの数より 9 小さくなった。もとの数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①2.5 でわることは 0.4 をかけることと同じ　②もとの数から、その 0.4 倍をひいた差（もとの数の 0.6 倍）が 9　③もとの数 ＝ 9 ÷ 0.6 ＝ 15。確かめ：15 ÷ 2.5 ＝ 6、15 − 6 ＝ 9。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-21",
+   "type": "input",
+   "prompt": "水位が毎分 1.25cm ずつ下がる水そうがある（変化は毎分 −1.25cm）。水位が今より 22.5cm 低くなるのは何分後か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "分後",
+     "分"
+    ]
+   },
+   "explanation": "①(−1.25) × □ ＝ −22.5　②□ ＝ (−22.5) ÷ (−1.25) ＝ 18　③答え 18分後",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-22",
+   "type": "input",
+   "prompt": "同じ数を2回かけると 0.36 になる。その数のうち、負の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-0.6"
+   },
+   "explanation": "①0.6 × 0.6 ＝ 0.36　②(−0.6) × (−0.6) ＝ 0.36 も成り立つ　③負の数は −0.6。答え −0.6",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-23",
+   "type": "input",
+   "prompt": "□ ÷ (−3) ＝ △、△ ÷ (−3) ＝ 2 のとき、□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18"
+   },
+   "explanation": "①△ ＝ 2 × (−3) ＝ −6　②□ ＝ △ × (−3) ＝ (−6) × (−3) ＝ 18。答え 18",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-24",
+   "type": "input",
+   "prompt": "−4.8 は、−0.6 の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①何倍か ＝ くらべる数 ÷ もとにする数　②(−4.8) ÷ (−0.6) ＝ 8（負÷負は正）。答え 8倍",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-25",
+   "type": "input",
+   "prompt": "ある日、地点Aの気温は 6℃ 下がり、地点Bの気温は 1.5℃ 上がった。Aの気温の変化は、Bの気温の変化の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①変化を符号で表すと、A は −6℃、B は +1.5℃　②(−6) ÷ 1.5 ＝ −4。答え −4倍",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-26",
+   "type": "input",
+   "prompt": "□ ÷ (−8) から □ ÷ 8 をひくと 5 になる。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-20"
+   },
+   "explanation": "①□ ÷ (−8) と □ ÷ 8 は符号が反対で絶対値が等しい　②□ ÷ (−8) − □ ÷ 8 は、□ ÷ (−8) の2倍、つまり □ ÷ (−4)　③□ ÷ (−4) ＝ 5 より □ ＝ −20。確かめ：(−20) ÷ (−8) ＝ 2.5、(−20) ÷ 8 ＝ −2.5、2.5 − (−2.5) ＝ 5。答え −20",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-27",
+   "type": "input",
+   "prompt": "6 ÷ (□ − 2) が計算できない（0 でわることになる）ときの、□ の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①0 でわる除法は考えない　②わる数 □ − 2 が 0 になるのは □ ＝ 2 のとき。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-28",
+   "type": "input",
+   "prompt": "2つの数 −0.75 と 1.2 の積から、商（−0.75 ÷ 1.2）をひいた差を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-0.275"
+   },
+   "explanation": "①積：(−0.75) × 1.2 ＝ −0.9　②商：(−0.75) ÷ 1.2 ＝ −0.625　③(−0.9) − (−0.625) ＝ −0.275。答え −0.275",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-29",
+   "type": "input",
+   "prompt": "1km 走るごとに燃料が 0.08L へる自動車がある（1km あたりの変化は −0.08L）。37.5km 走ったときの燃料の変化は何Lか、へるときは負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "①(−0.08) × 37.5 ＝ −3　②答え −3L",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-30",
+   "type": "input",
+   "prompt": "高さが 100m 上がるごとに気温が 0.6℃ 下がるとする。ふもと（高さ 300m）の気温が 22℃ のとき、高さ 1800m の山頂の気温は何℃か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①高さの差：1800 − 300 ＝ 1500m で、100m の 15 個分　②気温の変化：(−0.6) × 15 ＝ −9℃　③22 + (−9) ＝ 13。答え 13℃",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-31",
+   "type": "input",
+   "prompt": "−18 を、ある数でわると 4.5 になる。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "①わる数 ＝ わられる数 ÷ 商　②(−18) ÷ 4.5 ＝ −4　③確かめ：(−18) ÷ (−4) ＝ 4.5。答え −4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-32",
+   "type": "input",
+   "prompt": "(−3/4)×□ の答えが整数になるような □ のうち、−10 より大きい負の整数をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "-4",
+     "-8"
+    ]
+   },
+   "explanation": "①(−3/4)×□ が整数になるのは、□ が 4 の倍数のとき（3 と 4 は約分できない）　②−10 より大きい負の 4 の倍数は −4、−8　③(−3/4) × (−4) ＝ 3、(−3/4) × (−8) ＝ 6。答え −4、−8",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-33",
+   "type": "input",
+   "prompt": "ある数を −0.3 倍した数と、同じ数を 0.2 倍した数をたすと −4 になった。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "40"
+   },
+   "explanation": "①−0.3 倍と 0.2 倍をたすと、−0.1 倍になる　②(−0.1) × ある数 ＝ −4 なので、ある数 ＝ (−4) ÷ (−0.1) ＝ 40。答え 40",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-34",
+   "type": "input",
+   "prompt": "東を正の方向とする。西へ時速 45km（−45km/時）で走っている車が、今地点Oを通った。20分前、この車はOから何kmの地点にいたか。東を正、西を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①20分 ＝ 1/3 時間なので、20分前は −1/3 時間　②(−45) × (−1/3) ＝ 15　③Oから東へ 15km。答え 15km",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-35",
+   "type": "input",
+   "prompt": "ある液体の温度は、毎時 3.6℃ の割合で下がっている。40分後の温度の変化は何℃か。下がるときは負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-2.4",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①40分 ＝ 40/60 ＝ 2/3 時間　②(−3.6) × (2/3) ＝ −2.4　③答え −2.4℃",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-36",
+   "type": "input",
+   "prompt": "次の □ にあてはまる数を答えよう。\n(□ − 3) ÷ (−0.5) ＝ 4",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①□ − 3 ＝ 4 × (−0.5) ＝ −2　②□ ＝ −2 + 3 ＝ 1。答え 1",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-37",
+   "type": "input",
+   "prompt": "−6、−0.2、1.5、4 の4つの数から異なる2つを選んで、（わられる数）÷（わる数）の商をつくる。商としてもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30"
+   },
+   "explanation": "①商が正で大きいのは、同じ符号で、わる数の絶対値が小さいとき　②(−6) ÷ (−0.2) ＝ 30、4 ÷ 1.5 ≒ 2.7 など　③もっとも大きいのは 30。答え 30",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-38",
+   "type": "input",
+   "prompt": "□ にどんな数を入れても成り立つ式を、次のア〜エからすべて選び、記号で答えよう。\nア □ × (−0.5) ＝ □ ÷ (−2)\nイ □ ÷ 0.1 ＝ □ × 10\nウ □ × (−0.2) ＝ □ ÷ 5\nエ □ ÷ (−0.25) ＝ □ × (−4)",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①−0.5 ＝ −1/2 なので、× (−0.5) は ÷ (−2) と同じ（ア ○）　②÷ 0.1 は × 10 と同じ（イ ○）　③× (−0.2) は ÷ (−5) と同じで、÷ 5 ではない（ウ ×、□ ＝ 5 で −1 と 1）　④÷ (−0.25) は × (−4) と同じ（エ ○）　⑤答え ア、イ、エ",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-39",
+   "type": "input",
+   "prompt": "ある日の午前0時の気温は −4.2℃、午前6時の気温は −7.8℃ だった。この6時間で気温が同じ割合で変わったとすると、1時間あたりの変化は何℃か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-0.6",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①6時間の変化：−7.8 − (−4.2) ＝ −3.6℃　②(−3.6) ÷ 6 ＝ −0.6　③答え −0.6℃",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-40",
+   "type": "input",
+   "prompt": "ある数を 0.4 でわった商は、同じ数に 0.4 をかけた積より 8.4 大きい。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①0.4 でわることは 2.5 をかけることと同じ　②商と積の差は、ある数の 2.5 − 0.4 ＝ 2.1 倍　③2.1 × ある数 ＝ 8.4 より、ある数 ＝ 4。確かめ：4 ÷ 0.4 ＝ 10、4 × 0.4 ＝ 1.6、10 − 1.6 ＝ 8.4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-41",
+   "type": "input",
+   "prompt": "(−5/6)×(9/10) の答えと、(−2/3)×(−3/8) の答えの和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1/2"
+   },
+   "explanation": "①(−5/6) × (9/10) ＝ −45/60 ＝ −3/4　②(−2/3) × (−3/8) ＝ 6/24 ＝ 1/4　③−3/4 + 1/4 ＝ −2/4 ＝ −1/2。答え −1/2",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-42",
+   "type": "input",
+   "prompt": "ある数を (−4/5) 倍すると −12 になる。ある数を答えよう（分数でわる計算は使わずに考えよう）。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①−4/5 倍とは、5 でわって −4 倍すること　②−4 倍して −12 になる数は 3　③5 でわって 3 になる数は 15。確かめ：15 × (−4/5) ＝ −12。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-43",
+   "type": "input",
+   "prompt": "分数 −7/12 に、ある正の整数をかけたら整数になった。かけた整数のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "①(−7/12) × □ が整数になるのは、□ が 12 の倍数のとき（7 と 12 は約分できない）　②もっとも小さい正の整数は 12（答えは −7）。答え 12",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-44",
+   "type": "input",
+   "prompt": "ある店では、毎月の売り上げの変化（前の月との差）を記録している。4か月間の変化が −120万円、+45万円、−37.5万円、+16.5万円 だった。1か月あたりの平均の変化は何万円か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-24",
+    "units": [
+     "万円"
+    ]
+   },
+   "explanation": "①変化の合計：−120 + 45 − 37.5 + 16.5 ＝ −96　②(−96) ÷ 4 ＝ −24　③答え −24万円",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-45",
+   "type": "input",
+   "prompt": "2つの数の商（前の数 ÷ 後の数）が −0.25 で、前の数は 3 である。後の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-12"
+   },
+   "explanation": "①後の数 ＝ 前の数 ÷ 商　②3 ÷ (−0.25) ＝ −12　③確かめ：3 ÷ (−12) ＝ −0.25。答え −12",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-46",
+   "type": "input",
+   "prompt": "ある数を −1.2 でわった商は、もとの数より 11 大きい。もとの数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "①もとの数 ＝ −6 のとき、(−6) ÷ (−1.2) ＝ 5、5 − (−6) ＝ 11 で合う　②÷ (−1.2) は × (−5/6) と同じなので、商ともとの数の差は もとの数の (−5/6 − 1) 倍 ＝ −11/6 倍　③(−11/6) × ○ ＝ 11 より ○ ＝ −6。答え −6",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-47",
+   "type": "input",
+   "prompt": "ロープの長さを、5m を基準にした差で表す。差が −0.35m のロープが 8本と、差が +0.6m のロープが 3本ある。ロープ11本の長さの合計は何mか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①基準どおりなら 5 × 11 ＝ 55m　②差の合計：(−0.35) × 8 + 0.6 × 3 ＝ −2.8 + 1.8 ＝ −1　③55 + (−1) ＝ 54。答え 54m",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-48",
+   "type": "input",
+   "prompt": "Aさんのテストの点数は、平均点との差で表すと −4.5 点、Bさんは +13.5 点だった。Bさんの差は、Aさんの差の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①13.5 ÷ (−4.5) ＝ −3　②答え −3倍（向きが反対で、大きさは3倍）",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-49",
+   "type": "input",
+   "prompt": "ある数 □ を −0.8 でわった商が、4 より大きく 6 より小さい整数になった。□ として考えられる数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-4"
+   },
+   "explanation": "①商は 5 しかない（4 より大きく 6 より小さい整数）　②□ ＝ 5 × (−0.8) ＝ −4　③□ は −4 だけなので、和も −4。答え −4",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-50",
+   "type": "input",
+   "prompt": "次の □ には同じ数が入る。□ にあてはまる数を答えよう。\n□ × 0.25 ＝ □ − 12",
+   "answer": {
+    "kind": "number",
+    "value": "16"
+   },
+   "explanation": "①□ から、□ の 0.25 倍をひいた差（□ の 0.75 倍）が 12　②□ ＝ 12 ÷ 0.75 ＝ 16。確かめ：16 × 0.25 ＝ 4、16 − 12 ＝ 4。答え 16",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-51",
+   "type": "input",
+   "prompt": "水そうに水を入れる管と、水をぬく管がある。入れる管だけでは 1分あたり +2.4L、ぬく管だけでは 1分あたり −3.9L 変化する。両方を同時に開けると、何分で水の量が 9L へるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①両方開けたときの1分あたりの変化：2.4 + (−3.9) ＝ −1.5L　②(−1.5) × □ ＝ −9 より □ ＝ 6　③答え 6分",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-52",
+   "type": "input",
+   "prompt": "時速 −30km（西へ時速 30km）で進む船が、今港Oにいる（東を正）。45分後の位置と、1時間20分前の位置の距離は何kmか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "62.5",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①45分 ＝ 3/4 時間：(−30) × (3/4) ＝ −22.5km　②1時間20分 ＝ 4/3 時間なので −4/3 時間：(−30) × (−4/3) ＝ 40km　③距離 ＝ 40 − (−22.5) ＝ 62.5。答え 62.5km",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-53",
+   "type": "input",
+   "prompt": "ある数 □ を (−0.5) 倍してから 1 をたすと、□ と等しくなる。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2/3"
+   },
+   "explanation": "①(−0.5) × □ + 1 ＝ □ より、1 ＝ □ と □ の (−0.5) 倍の差 ＝ □ の 1.5 倍　②□ ＝ 1 ÷ 1.5 ＝ 2/3　③確かめ：(2/3) × (−0.5) ＝ −1/3、−1/3 + 1 ＝ 2/3。答え 2/3",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-54",
+   "type": "input",
+   "prompt": "負の数どうしの商 □ ÷ △ が 2.5 で、□ と △ の差（△ − □）が 4.5 である。□ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7.5"
+   },
+   "explanation": "①商が 2.5 なので □ は △ の 2.5 倍　②△ − □ は △ の (1 − 2.5) 倍 ＝ −1.5 倍で、それが 4.5 なので △ ＝ −3　③□ ＝ (−3) × 2.5 ＝ −7.5。答え −7.5",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-55",
+   "type": "input",
+   "prompt": "3つの数 −2.5、0.4、−0.8 から2つを選んでかける。積がもっとも小さくなるときの積を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1"
+   },
+   "explanation": "①積は (−2.5)×0.4 ＝ −1、(−2.5)×(−0.8) ＝ 2、0.4×(−0.8) ＝ −0.32　②もっとも小さいのは −1。答え −1",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-56",
+   "type": "input",
+   "prompt": "(−0.15)×□ が整数になる正の整数 □ のうち、2番目に小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "40"
+   },
+   "explanation": "①0.15 ＝ 3/20 なので、□ が 20 の倍数のとき整数になる　②小さい順に 20、40、…　③2番目は 40（(−0.15) × 40 ＝ −6）。答え 40",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-57",
+   "type": "input",
+   "prompt": "ある数を −3 でわるところを、まちがえて −3 をひいたら 1.5 になった。正しい答えを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0.5"
+   },
+   "explanation": "①まちがえた計算：ある数 − (−3) ＝ 1.5 なので、ある数 ＝ −1.5　②正しい計算：(−1.5) ÷ (−3) ＝ 0.5。答え 0.5",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-58",
+   "type": "input",
+   "prompt": "ある数を 0.4 でわるところを、まちがえて 0.4 をかけたら −1.6 になった。正しい答えは、まちがえた答えの何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6.25",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①まちがえた計算：ある数 × 0.4 ＝ −1.6 より、ある数 ＝ −4　②正しい答え：(−4) ÷ 0.4 ＝ −10　③(−10) ÷ (−1.6) ＝ 6.25 倍。答え 6.25倍",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-59",
+   "type": "input",
+   "prompt": "1個 120g の品物を基準にして、重さを基準との差で表す。差が −2.5g の品物を 12個 集めたときの重さの合計は何gか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1410",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "①1個の重さ：120 + (−2.5) ＝ 117.5g　②117.5 × 12 ＝ 1410　③別の考え：差の合計 (−2.5) × 12 ＝ −30、120 × 12 − 30 ＝ 1410。答え 1410g",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-60",
+   "type": "input",
+   "prompt": "ある数を (−3/8) 倍したら 0.75 になった。ある数を答えよう（分数でわる計算は使わずに考えよう）。",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "①−3/8 倍とは、8 でわって −3 倍すること　②−3 倍して 0.75 になる数は −0.25　③8 でわって −0.25 になる数は −2。確かめ：(−2) × (−3/8) ＝ 6/8 ＝ 0.75。答え −2",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-61",
+   "type": "input",
+   "prompt": "数直線上で、0 と −7.2 の間を、等しい間かくの 9 つの部分に分けた。0 から数えて 4 つ目の目もりが表す数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3.2"
+   },
+   "explanation": "①1つ分の長さ（向きをふくむ）：(−7.2) ÷ 9 ＝ −0.8　②4つ目は (−0.8) × 4 ＝ −3.2。答え −3.2",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-62",
+   "type": "input",
+   "prompt": "□ × (−1.5) の答えと、□ ÷ (−1.5) の答えの差（前 − 後）が 10 になる。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-12"
+   },
+   "explanation": "①× (−1.5) は × (−3/2)、÷ (−1.5) は × (−2/3) と同じ　②差は □ の (−3/2 + 2/3) 倍 ＝ −5/6 倍　③(−5/6) × □ ＝ 10 より □ ＝ −12。確かめ：(−12) × (−1.5) ＝ 18、(−12) ÷ (−1.5) ＝ 8、18 − 8 ＝ 10。答え −12",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-63",
+   "type": "input",
+   "prompt": "ある品物の値段の、去年からの変化を「円」で表すと −360円 だった。月ごとに同じだけ変わったとすると、1か月あたりの変化を表す数と、1年間（12か月）での変化を表す数の積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10800"
+   },
+   "explanation": "①1か月あたり：(−360) ÷ 12 ＝ −30円　②1年間：−360円　③(−30) × (−360) ＝ 10800。答え 10800",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-64",
+   "type": "input",
+   "prompt": "次の □ には同じ数が入る。□ にあてはまる負の数を答えよう。\n□ ÷ 3 × □ ＝ 12",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "①□ ÷ 3 × □ は、□ × □ を 3 でわったもの　②□ × □ ＝ 36 なので □ ＝ 6 か −6　③負の数は −6。確かめ：(−6) ÷ 3 ＝ −2、(−2) × (−6) ＝ 12。答え −6",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-65",
+   "type": "input",
+   "prompt": "ある数の 3/4 が −0.6 である。ある数の 5/4 を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1"
+   },
+   "explanation": "①3/4 が −0.6 なので、1/4 は (−0.6) ÷ 3 ＝ −0.2　②5/4 は (−0.2) × 5 ＝ −1　③答え −1",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-66",
+   "type": "input",
+   "prompt": "ある液体の温度は、1時間に 1.8℃ の割合で下がる（変化は毎時 −1.8℃）。温度が 4.5℃ 下がるのにかかる時間は何分か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①(−1.8) × □ ＝ −4.5 より □ ＝ 4.5 ÷ 1.8 ＝ 2.5 時間　②2.5時間 ＝ 150分　③答え 150分",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-67",
+   "type": "input",
+   "prompt": "東を正の方向とし、速さも向きをふくめて表す。時速 −54km は、秒速 何m か。西向きは負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-15",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①1時間 ＝ 3600秒、54km ＝ 54000m　②(−54000) ÷ 3600 ＝ −15　③秒速 −15m（西へ秒速 15m）。答え −15",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-68",
+   "type": "input",
+   "prompt": "□ と △ は □ ＜ △ を満たす数である。□ ÷ (−2) と △ ÷ (−2) の大小について正しいものを、次のア〜ウから選び、記号で答えよう。\nア △ ÷ (−2) のほうが大きい\nイ どちらが大きいかは決まらない\nウ □ ÷ (−2) のほうが大きい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①負の数でわると、符号が変わるので大小が逆になる　②例：□ ＝ 2、△ ＝ 6 なら −1 と −3 で、□ ÷ (−2) のほうが大きい　③□ ＝ −4、△ ＝ 2 でも 2 と −1 で同じ　④答え ウ",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-69",
+   "type": "input",
+   "prompt": "□ を −2.5 倍した数は、□ を 4 でわった数より 5.5 小さい。□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①□ ＝ 2 のとき：2 × (−2.5) ＝ −5、2 ÷ 4 ＝ 0.5、0.5 − 5.5 ＝ −5 で合う　②しくみ：÷ 4 は × 0.25 なので、2つの差は □ の 0.25 − (−2.5) ＝ 2.75 倍　③2.75 × □ ＝ 5.5 より □ ＝ 2。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv2-70",
+   "type": "input",
+   "prompt": "ある数を 3 倍して、それを −0.5 でわると 9.6 になった。ある数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1.6"
+   },
+   "explanation": "①−0.5 でわる前の数：9.6 × (−0.5) ＝ −4.8　②3 倍する前の数：(−4.8) ÷ 3 ＝ −1.6。答え −1.6",
+   "source": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p36〜37（正の数・負の数の除法、小数・分数の乗除）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465936_0.jpg",
+    "sha256": "3160a01e454b94500e32bcab943f152b77117eea5e4128b806ef935d998bb7cf",
+    "page": 36
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成（特訓・下書き）。教科書 p36〜37 の除法の符号のきまり・0 をふくむ除法・小数や分数の乗法と、それまでの内容で解ける一段難しい問題。逆数を使う分数÷分数・3つ以上の数の乗除（次の回）は使わない。答えは check.py で総当たり・別の式により検算。"
+}

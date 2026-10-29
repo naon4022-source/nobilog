@@ -1,0 +1,103 @@
+{
+ "id": "tokkun-math-1-spaceuse",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "空間図形の利用（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-spaceuse-1",
+   "type": "input",
+   "prompt": "底面の半径 5 cm の円柱の容器に、深さ 8 cm まで水が入っている。この水を全部、底面の半径 10 cm の円柱の容器に移すと、深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の体積 π × 25 × 8 ＝ 200π　②π × 100 × h ＝ 200π　③h ＝ 2。答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-2",
+   "type": "input",
+   "prompt": "高さ 12 cm の円錐の形のコップ（頂点が下）に、頂点から高さ 6 cm のところまで水を入れた。水の体積は、コップ全体の容積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/8",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①水の部分も円錐で、高さも底面の半径もコップの 1/2　②体積は (1/2) × (1/2) × (1/2) ＝ 1/8 倍　③答え 1/8倍",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-3",
+   "type": "input",
+   "prompt": "1辺 1 cm の立方体を 27 個積んで 3 × 3 × 3 の立方体をつくり、外側の面全部にペンキをぬった。ちょうど2つの面がぬられた小さな立方体は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2面がぬられるのは、大きい立方体の辺の上でかど以外のもの　②各辺に 1 個、辺は 12 本　③12 個。答え 12個",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。容器の水・積み木など、立体の考え方を使う一段難しい問題。答えは check.py で計算・数え上げで検算。【保留】図なしで伝えられ、教科書問題と似ない問題は 3 問まで。70問にしていない。"
+}

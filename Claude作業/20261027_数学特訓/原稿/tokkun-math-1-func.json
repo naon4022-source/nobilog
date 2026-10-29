@@ -1,0 +1,1956 @@
+{
+ "id": "tokkun-math-1-func",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "関数（特訓）",
+ "majorTitle": "変化と対応",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-func-1",
+   "type": "input",
+   "prompt": "次のア〜エのうち、y が x の関数であるもの（x の値を決めると y の値がただ1つに決まるもの）をすべて選び、記号で答えよう。\nア 自然数 x の 2 倍の数 y\nイ 自然数 x の倍数 y\nウ 周の長さが x cm の正方形の1辺の長さ y cm\nエ 絶対値が x の数 y",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①ア：x ＝ 3 なら y ＝ 6 だけ（○）　②イ：x ＝ 3 なら y は 3、6、9、… と1つに決まらない　③ウ：y ＝ x/4 で1つに決まる（○）　④エ：x ＝ 3 なら 3 と −3 の2つ　⑤答え ア、ウ",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-2",
+   "type": "input",
+   "prompt": "関数 y ＝ 2x + 1 で、x の変域が −1 ≦ x ≦ 3 のとき、y のもっとも大きい値ともっとも小さい値の差を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "①x ＝ −1 で y ＝ −1、x ＝ 3 で y ＝ 7　②x が大きいほど y も大きいので、最大 7、最小 −1　③7 − (−1) ＝ 8。答え 8",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-3",
+   "type": "input",
+   "prompt": "関数 y ＝ −3x で、x の変域が −2 ≦ x ≦ 4 のとき、y のもっとも大きい値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "①y ＝ −3x は x が大きいほど y が小さい　②もっとも大きいのは x ＝ −2 のときで y ＝ 6　③答え 6",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-4",
+   "type": "input",
+   "prompt": "1辺 x cm の正方形の周の長さを y cm とする。y が 20 以上 40 以下のとき、x のとりうる値のうち、もっとも大きい値ともっとも小さい値の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①y ＝ 4x　②20 ≦ 4x ≦ 40 より 5 ≦ x ≦ 10　③5 + 10 ＝ 15。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-5",
+   "type": "input",
+   "prompt": "x と y の値が、x ＝ 1、2、3、4 のとき y ＝ 5、8、11、14 と対応している。この規則がつづくとき、x ＝ 10 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "32"
+   },
+   "explanation": "①x が 1 ふえると y は 3 ふえる　②y ＝ 3x + 2（x ＝ 1 で 5）　③x ＝ 10 で 32。答え 32",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-6",
+   "type": "input",
+   "prompt": "空の水そうではなく、はじめに 30 L 入った水そうに毎分 5 L ずつ水を入れる。x 分後の水の量を y L とすると y ＝ 5x + 30 である。y の変域が 30 ≦ y ≦ 130 のとき、x のとりうるもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20"
+   },
+   "explanation": "①5x + 30 ＝ 130 より x ＝ 20　②x は 0 から 20 まで　③答え 20",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-7",
+   "type": "input",
+   "prompt": "x が 1 ふえると y が 3 へる関数がある。x ＝ 2 のとき y ＝ 5 である。x ＝ −4 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "23"
+   },
+   "explanation": "①x ＝ 2 から x ＝ −4 まで、x は 6 へる　②y は 3 × 6 ＝ 18 ふえる　③5 + 18 ＝ 23。答え 23",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-8",
+   "type": "input",
+   "prompt": "長さ 30 cm のろうそくが、火をつけると毎分 1.5 cm ずつ短くなる。火をつけてから x 分後の長さを y cm とするとき、x の変域のもっとも大きい値（燃えつきるとき）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20"
+   },
+   "explanation": "①y ＝ 30 − 1.5x　②y ＝ 0 になるのは 1.5x ＝ 30、x ＝ 20　③x の変域は 0 ≦ x ≦ 20。答え 20",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-9",
+   "type": "input",
+   "prompt": "120 km の道のりを時速 x km で進むと y 時間かかる。x が自然数のとき、y も自然数になるような x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①y ＝ 120/x が自然数になるのは、x が 120 の約数のとき　②120 ＝ 2³ × 3 × 5 の約数は (3 + 1)(1 + 1)(1 + 1) ＝ 16 個　③答え 16個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-10",
+   "type": "input",
+   "prompt": "自然数 x に対して、x の約数の個数を y とする。y は x の関数である。x ＝ 36 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "①36 の約数：1、2、3、4、6、9、12、18、36　②9 個　③答え 9",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-11",
+   "type": "input",
+   "prompt": "自然数 x に対して、x の約数の個数を y とする。1 ≦ x ≦ 30 のうち、y ＝ 2 になる x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①約数がちょうど2個 ＝ 素数　②30 以下の素数：2、3、5、7、11、13、17、19、23、29　③10 個。答え 10個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-12",
+   "type": "input",
+   "prompt": "自然数 x を 3 でわったあまりを y とする。x ＝ 2026 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①2026 ＝ 3 × 675 + 1　②あまり 1　③答え 1（y は 0、1、2 のどれかになる）",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-13",
+   "type": "input",
+   "prompt": "関数 y ＝ 2x − 1 で、y の変域が −3 ＜ y ≦ 7 のとき、x のとりうる整数の値は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2x − 1 ＞ −3 より x ＞ −1、2x − 1 ≦ 7 より x ≦ 4　②−1 ＜ x ≦ 4 の整数：0、1、2、3、4　③5 個。答え 5個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-14",
+   "type": "input",
+   "prompt": "ある宅配便の料金は、荷物の重さ x kg が 2 kg 以下なら 800 円、2 kg をこえて 5 kg 以下なら 1000 円、5 kg をこえて 10 kg 以下なら 1300 円である。料金 y 円は x の関数である。x ＝ 2 のときと x ＝ 5.5 のときの料金の差を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "500",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①x ＝ 2 は「2 kg 以下」で 800 円　②x ＝ 5.5 は「5 kg をこえて 10 kg 以下」で 1300 円　③1300 − 800 ＝ 500。答え 500円",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-15",
+   "type": "input",
+   "prompt": "前の問題の宅配便の料金で、「重さ x は、料金 y の関数である」といえるか。次のア・イから選び、記号で答えよう。\nア いえる\nイ いえない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①y ＝ 1000 のとき、x は 3 kg でも 4.5 kg でもよい　②y を決めても x がただ1つに決まらないので、x は y の関数ではない　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-16",
+   "type": "input",
+   "prompt": "駐車料金は、はじめの 30 分までが 200 円で、そのあとは 20 分ごとに 100 円ずつ加わる（20 分未満も 20 分として数える）。1 時間 45 分とめたときの料金を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "600",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①1 時間 45 分 ＝ 105 分、はじめの 30 分をのぞくと 75 分　②75 分は 20 分の 4 つ分にあたる（3 つ分 60 分をこえるので 4 つ）　③200 + 100 × 4 ＝ 600。答え 600円",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-17",
+   "type": "input",
+   "prompt": "1辺が x cm の正方形から、1辺が 2 cm の正方形を切りとった残りの面積を y cm² とする。x のとりうる値のうち、もっとも小さい整数を答えよう（切りとったあとも残りがあるとする）。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①切りとれるのは、もとの正方形の1辺が 2 cm より大きいとき　②x ＞ 2　③もっとも小さい整数は 3。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-18",
+   "type": "input",
+   "prompt": "周の長さが 30 cm の長方形の縦の長さを x cm、面積を y cm² とする。x の変域を 0 ＜ x ＜ □ と表すとき、□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①縦 + 横 ＝ 15　②横が 0 より大きいので x ＜ 15　③答え 15",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-19",
+   "type": "input",
+   "prompt": "関数 y ＝ 6 − 2x で、y が正の数になるような整数 x のうち、もっとも大きいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①6 − 2x ＞ 0 より x ＜ 3　②もっとも大きい整数は 2（x ＝ 3 では y ＝ 0）　③答え 2",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-20",
+   "type": "input",
+   "prompt": "2つの関数 y ＝ 3x − 2 と y ＝ −x + 6 の y の値が等しくなる x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①3x − 2 ＝ −x + 6　②4x ＝ 8　③x ＝ 2（y ＝ 4）。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-21",
+   "type": "input",
+   "prompt": "x 円で 3 個買えるりんご1個の値段を y 円とすると、y は x の関数である。x が 60 ふえると、y はいくつふえるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①y ＝ x/3　②x が 60 ふえると y は 60/3 ＝ 20 ふえる　③答え 20",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-22",
+   "type": "input",
+   "prompt": "x と y の値が、x ＝ −2、−1、0、1、2 のとき y ＝ 7、4、1、−2、−5 と対応している。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−3x+1"
+   },
+   "explanation": "①x が 1 ふえると y は 3 へる　②x ＝ 0 のとき y ＝ 1　③y ＝ −3x + 1。答え y=−3x+1",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-23",
+   "type": "input",
+   "prompt": "家から 2.1 km はなれた駅まで分速 70 m で歩く。家を出てから x 分後の、家からの道のりを y m とする。x の変域のもっとも大きい値（駅に着くとき）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30"
+   },
+   "explanation": "①y ＝ 70x　②70x ＝ 2100 より x ＝ 30　③答え 30",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-24",
+   "type": "input",
+   "prompt": "関数 y ＝ 2x で、x の変域が −3 ≦ x ≦ a のとき、y のもっとも大きい値が 10 になる。a の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①y ＝ 2x は x が大きいほど大きい　②もっとも大きいのは x ＝ a のときで 2a ＝ 10　③a ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-25",
+   "type": "input",
+   "prompt": "関数 y ＝ −x/2 で、x の変域が a ≦ x ≦ 4 のとき、y の変域は −2 ≦ y ≦ 3 になる。a の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "①y ＝ −x/2 は x が小さいほど y が大きい　②y の最大 3 は x ＝ a のとき：−a/2 ＝ 3　③a ＝ −6（x ＝ 4 で y ＝ −2 も合う）。答え −6",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-26",
+   "type": "input",
+   "prompt": "時計の長針が 12 の位置から回った角度 y 度は、0 分からの時間 x 分の関数で y ＝ 6x（0 ≦ x ＜ 60）である。y ＝ 270 のときの x の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "①6x ＝ 270　②x ＝ 45　③答え 45（長針は 9 をさしている）",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-27",
+   "type": "input",
+   "prompt": "摂氏の温度 x ℃と華氏の温度 y 度には y ＝ 9x/5 + 32 の関係がある。x の変域が 0 ≦ x ≦ 100 のとき、y の変域のはば（最大 − 最小）を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180"
+   },
+   "explanation": "①x ＝ 0 で y ＝ 32、x ＝ 100 で y ＝ 212　②212 − 32 ＝ 180　③答え 180",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-28",
+   "type": "input",
+   "prompt": "関数 y ＝ 4x で、x の変域が 0 ＜ x ≦ 5 のとき、y の変域を □ ＜ y ≦ △ と表す。□ と △ にあてはまる数の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20"
+   },
+   "explanation": "①x ＝ 0（ふくまない）で y ＝ 0、x ＝ 5 で y ＝ 20　②0 ＜ y ≦ 20　③0 + 20 ＝ 20。答え 20",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-29",
+   "type": "input",
+   "prompt": "次のア〜エのうち、y が x の関数であるものをすべて選び、記号で答えよう。\nア 1個 50 円の品物を x 個買ったときの代金 y 円\nイ 自然数 x の約数 y\nウ 体積が x cm³ の立方体の1辺の長さ y cm\nエ 2乗すると x になる数 y（x は正の数）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①ア：y ＝ 50x で1つに決まる（○）　②イ：x ＝ 6 なら 1、2、3、6 と決まらない　③ウ：体積が決まれば1辺は1つ（○）　④エ：x ＝ 4 なら 2 と −2 の2つ　⑤答え ア、ウ",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-30",
+   "type": "input",
+   "prompt": "関数 y ＝ 3x − 2 で、x の変域が −1 ≦ x ≦ 4 のとき、y がとる整数の値は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①x ＝ −1 で y ＝ −5、x ＝ 4 で y ＝ 10　②y の変域は −5 ≦ y ≦ 10　③整数は −5 から 10 までの 16 個。答え 16個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-31",
+   "type": "input",
+   "prompt": "関数 y ＝ −2x + 5 で、y の変域が −3 ≦ y ≦ 7 のとき、x の変域のもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①y ＝ −3 のとき x ＝ 4、y ＝ 7 のとき x ＝ −1　②x の変域は −1 ≦ x ≦ 4　③もっとも大きい値は 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-32",
+   "type": "input",
+   "prompt": "マッチ棒で正方形を横に1列につなげてつくる。正方形を x 個つくるのに使うマッチ棒を y 本とする。正方形を 20 個つくるには、マッチ棒は何本いるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "61",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①1個目は 4 本、2個目からは 3 本ずつふえる：y ＝ 3x + 1　②x ＝ 20 を入れる　③3 × 20 + 1 ＝ 61。答え 61本",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-33",
+   "type": "input",
+   "prompt": "マッチ棒で正方形を横に1列につなげてつくる（正方形 x 個にマッチ棒 3x + 1 本）。マッチ棒が 100 本あるとき、正方形はいくつまでつくれるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "33",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①3x + 1 ≦ 100　②3x ≦ 99、x ≦ 33　③33 個（34 個には 103 本いる）。答え 33個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-34",
+   "type": "input",
+   "prompt": "碁石を、1辺に x 個ずつならぶように正方形の形にならべる（中はあけて、まわりだけにならべる）。使った碁石が 48 個のとき、x の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "①4 辺で 4x 個だが、4 つの角を2回数えているので y ＝ 4x − 4　②4x − 4 ＝ 48　③x ＝ 13。答え 13",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-35",
+   "type": "input",
+   "prompt": "1 から x までの自然数の和を y とすると、y は x の関数である。x ＝ 10 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "55"
+   },
+   "explanation": "①1 + 2 + … + 10　②(1 + 10) が 5 組　③11 × 5 ＝ 55。答え 55",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-36",
+   "type": "input",
+   "prompt": "正 x 角形の対角線の本数を y 本とすると、y は x の関数である。x ＝ 8 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①1 つの頂点から引ける対角線は 8 − 3 ＝ 5 本　②8 頂点で 5 × 8 ＝ 40 本だが、1 本を2回数えている　③40 ÷ 2 ＝ 20。答え 20本",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-37",
+   "type": "input",
+   "prompt": "x 番目の奇数を y とすると、y ＝ 2x − 1 である。99 は何番目の奇数か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "番目"
+    ]
+   },
+   "explanation": "①2x − 1 ＝ 99　②2x ＝ 100　③x ＝ 50。答え 50番目",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-38",
+   "type": "input",
+   "prompt": "数の列 3、8、13、18、… の x 番目の数を y とすると y ＝ 5x − 2 である。y が 2026 以下になる x のうち、もっとも大きいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "405"
+   },
+   "explanation": "①5x − 2 ≦ 2026　②5x ≦ 2028、x ≦ 405.6　③もっとも大きい整数は 405（y ＝ 2023）。答え 405",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-39",
+   "type": "input",
+   "prompt": "x の変域が 2 ＜ x ≦ 7 のとき、x がとる整数の値をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "25"
+   },
+   "explanation": "①2 はふくまず、7 はふくむ　②整数は 3、4、5、6、7　③和は 25。答え 25",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-40",
+   "type": "input",
+   "prompt": "時速 x km で 3 時間進んだ道のりを y km とする。y の変域が 60 ≦ y ≦ 90 のとき、x がとる整数の値は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①y ＝ 3x　②60 ≦ 3x ≦ 90 より 20 ≦ x ≦ 30　③整数は 20 から 30 までの 11 個。答え 11個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-41",
+   "type": "input",
+   "prompt": "1個 120 円のパンを x 個買う。10 個以上買うと、代金全体が 1 割引きになる。代金が 1200 円をこえないように買うとき、もっとも多くて何個買えるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①9 個までは 120x 円、10 個以上は 120x × 0.9 ＝ 108x 円　②9 個 1080 円、10 個 1080 円、11 個 1188 円、12 個 1296 円　③1200 円をこえないのは 11 個まで。答え 11個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-42",
+   "type": "input",
+   "prompt": "ふもとの気温が 20℃ で、高さ x m の地点の気温を y ℃とすると、y ＝ 20 − 0.006x である。y の変域が 2 ≦ y ≦ 20 のとき、x の変域のもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3000",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①y ＝ 2 のとき 20 − 0.006x ＝ 2　②0.006x ＝ 18　③x ＝ 3000。答え 3000",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-43",
+   "type": "input",
+   "prompt": "ばねに x g のおもりをつるしたときの長さを y cm とすると、y ＝ 12 + 0.4x である。このばねは 30 cm までしかのばせない。つるせるおもりは何 g までか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "①12 + 0.4x ≦ 30　②0.4x ≦ 18　③x ≦ 45。答え 45g",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-44",
+   "type": "input",
+   "prompt": "スマートフォンの電池の残りは、100％ から 1 時間に 8％ ずつへる。電池の残りがはじめて 20％ 以下になるのは何時間後か答えよう（1 時間ごとに調べる）。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "時間後",
+     "時間"
+    ]
+   },
+   "explanation": "①x 時間後の残り y ＝ 100 − 8x　②100 − 8x ≦ 20 より x ≧ 10　③10 時間後（残り 20％）。答え 10時間後",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-45",
+   "type": "input",
+   "prompt": "1 から 100 までの整数 x を 9 でわったあまりを y とする。y ＝ 0 になる x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①y ＝ 0 は 9 でわり切れるとき　②9、18、…、99　③9 × 11 ＝ 99 なので 11 個。答え 11個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-46",
+   "type": "input",
+   "prompt": "エレベーターに、120 kg の荷物と、1 人 60 kg として x 人が乗ると、重さの合計 y kg は y ＝ 60x + 120 になる。重さの合計が 600 kg 以下でなければならないとき、乗れるのはもっとも多くて何人か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "①60x + 120 ≦ 600　②60x ≦ 480、x ≦ 8　③8 人（600 kg ちょうど）。答え 8人",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-47",
+   "type": "input",
+   "prompt": "x と y の値が、x ＝ 1、2、3、4 のとき y ＝ 2、6、12、20 と対応している（y は x と、x より 1 大きい数の積）。x ＝ 9 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90"
+   },
+   "explanation": "①y ＝ x × (x + 1) になっている（1×2、2×3、3×4、4×5）　②x ＝ 9 で 9 × 10　③＝ 90。答え 90",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-48",
+   "type": "input",
+   "prompt": "兄の年齢を x 歳、弟の年齢を y 歳とすると、y ＝ x − 3 である。兄の年齢が弟の年齢のちょうど 2 倍になるときの x の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "①x ＝ 2y ＝ 2(x − 3)　②x ＝ 2x − 6　③x ＝ 6（弟は 3 歳）。答え 6",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-49",
+   "type": "input",
+   "prompt": "時計の短針は 1 分間に 0.5 度回る。12 時ちょうどから x 分後に短針が回った角度を y 度とする。短針が 100 度回るのは何分後か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "分後",
+     "分"
+    ]
+   },
+   "explanation": "①y ＝ 0.5x　②0.5x ＝ 100　③x ＝ 200（3 時間 20 分後）。答え 200分後",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-50",
+   "type": "input",
+   "prompt": "たまごは 6 個入りのパックでしか買えない。x 個のたまごが必要なときに買うパックの数を y とする（足りないことがないように、もっとも少なく買う）。x ＝ 40 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①6 × 6 ＝ 36 個では 4 個足りない　②6 × 7 ＝ 42 個で足りる　③7 パック。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-51",
+   "type": "input",
+   "prompt": "自然数 x を 7 でわった商（あまりは考えない）を y とする。x の変域が 1 ≦ x ≦ 50 のとき、y ＝ 3 になる x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①7 でわった商が 3 になるのは 21 ≦ x ≦ 27　②21、22、…、27　③7 個。答え 7個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-52",
+   "type": "input",
+   "prompt": "240 L の水が入った水そうから、毎分 12 L ずつ水をぬく。水の量がはじめて 100 L 以下になるのは、ぬきはじめてから何秒後か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "700",
+    "units": [
+     "秒後",
+     "秒"
+    ]
+   },
+   "explanation": "①x 分後の水の量 y ＝ 240 − 12x　②240 − 12x ＝ 100 より x ＝ 35/3 分　③35/3 分 ＝ 11 分 40 秒 ＝ 700 秒。答え 700秒後",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-53",
+   "type": "input",
+   "prompt": "縦 x cm、横 (x + 3) cm の長方形の周の長さを y cm とする。y の変域が 18 ≦ y ≦ 46 のとき、x がとる整数の値は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①y ＝ 2x + 2(x + 3) ＝ 4x + 6　②18 ≦ 4x + 6 ≦ 46 より 3 ≦ x ≦ 10　③整数は 3〜10 の 8 個。答え 8個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-54",
+   "type": "input",
+   "prompt": "2けたの自然数 x の、十の位の数と一の位の数の和を y とする。y ＝ 10 になる x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①十の位 a と一の位 b で a + b ＝ 10（a は 1〜9）　②19、28、37、46、55、64、73、82、91　③9 個。答え 9個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-55",
+   "type": "input",
+   "prompt": "自然数 x の約数をすべてたした和を y とする。x ＝ 12 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "28"
+   },
+   "explanation": "①12 の約数は 1、2、3、4、6、12　②すべてたす　③＝ 28。答え 28",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-56",
+   "type": "input",
+   "prompt": "関数 y ＝ 5x で、y の変域が −10 ≦ y ≦ 15 のとき、x がとる整数の値をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①x の変域は −2 ≦ x ≦ 3　②整数は −2、−1、0、1、2、3　③和は 3。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-57",
+   "type": "input",
+   "prompt": "数の列 1、4、7、10、… の x 番目の数を y とする。y がはじめて 100 をこえるのは何番目か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "35",
+    "units": [
+     "番目"
+    ]
+   },
+   "explanation": "①y ＝ 3x − 2　②3x − 2 ＞ 100 より x ＞ 34　③35 番目（103）。答え 35番目",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-58",
+   "type": "input",
+   "prompt": "通話料金は 30 秒ごとに 20 円で、30 秒に満たない分も 30 秒として数える。3 分 10 秒話したときの料金を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "140",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①3 分 10 秒 ＝ 190 秒　②30 秒の区切りは 6 つで 180 秒、残り 10 秒も 1 区切りとして 7 区切り　③20 × 7 ＝ 140。答え 140円",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-59",
+   "type": "input",
+   "prompt": "紙を半分に折ることを x 回くり返したときの紙の重なりの枚数を y 枚とする。x ＝ 6 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "64",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "①1 回折るごとに重なりは 2 倍になる　②2、4、8、16、32、64　③64 枚。答え 64枚",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-60",
+   "type": "input",
+   "prompt": "底辺が 6 cm、高さが x cm の三角形の面積を y cm² とする。y の変域が 9 ≦ y ≦ 30 のとき、x の変域のもっとも大きい値ともっとも小さい値の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "①y ＝ 6x ÷ 2 ＝ 3x　②9 ≦ 3x ≦ 30 より 3 ≦ x ≦ 10　③3 + 10 ＝ 13。答え 13",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-61",
+   "type": "input",
+   "prompt": "1 周 3 km のジョギングコースを分速 150 m で走る。走りはじめてから x 分後の残りの道のりを y m とする。y ＝ 1200 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "①y ＝ 3000 − 150x　②3000 − 150x ＝ 1200　③150x ＝ 1800、x ＝ 12。答え 12",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-62",
+   "type": "input",
+   "prompt": "y ＝ x² の関係で、x を −2 以上 3 以下の範囲で動かす。y がいちばん小さくなるときの y の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0"
+   },
+   "explanation": "①x ＝ −2 で 4、x ＝ 3 で 9 だが、とちゅうの x ＝ 0 で 0 になる　②2 乗した数は 0 より小さくならない　③いちばん小さい値は 0。答え 0",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-63",
+   "type": "input",
+   "prompt": "あるゲームで、レベル x に上がるのに必要な経験値の合計を y とすると、y ＝ 50x + 100 である。経験値の合計が 1000 のとき、レベルはいくつまで上がっているか答えよう（x は自然数）。",
+   "answer": {
+    "kind": "number",
+    "value": "18"
+   },
+   "explanation": "①50x + 100 ≦ 1000　②50x ≦ 900、x ≦ 18　③レベル 18。答え 18",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-64",
+   "type": "input",
+   "prompt": "240 ページの本を、1 日に x ページずつ読む。読み終わるまでにかかる日数を y 日とする（最後の日は x ページより少なくてもよい）。x ＝ 35 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "日"
+    ]
+   },
+   "explanation": "①35 × 6 ＝ 210 ページでは 30 ページ残る　②7 日目に残りを読む　③7 日。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-65",
+   "type": "input",
+   "prompt": "2つの関数 y ＝ 2x + 3 と y ＝ −x + 9 がある。x の変域が 0 ≦ x ≦ 5 のとき、1つ目の関数の y の値のほうが大きくなる整数 x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2x + 3 ＞ −x + 9 より 3x ＞ 6、x ＞ 2　②0〜5 の整数で 2 より大きいのは 3、4、5　③3 個。答え 3個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-66",
+   "type": "input",
+   "prompt": "関数 y ＝ 10 − 3x で、x と y がどちらも自然数になるような x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①x ＝ 1 で 7、x ＝ 2 で 4、x ＝ 3 で 1　②x ＝ 4 では −2 で自然数でない　③3 個。答え 3個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-67",
+   "type": "input",
+   "prompt": "x の変域「1 ≦ x ＜ 6」と「3 ＜ x ≦ 9」の両方にあてはまる整数 x は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①両方にあてはまるのは 3 ＜ x ＜ 6　②整数は 4、5　③2 個。答え 2個",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-68",
+   "type": "input",
+   "prompt": "家を 8 時ちょうどに出発し、時速 12 km の自転車で 9 km はなれた駅へ向かう。駅に着くのは 8 時何分か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "①かかる時間 y 時間は y ＝ 9 ÷ 12 ＝ 0.75　②0.75 時間 ＝ 45 分　③8 時 45 分。答え 45",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-69",
+   "type": "input",
+   "prompt": "水道料金は、基本料金 800 円に、使った水 20 m³ までは 1 m³ あたり 150 円、20 m³ をこえた分は 1 m³ あたり 200 円を加える。25 m³ 使ったときの料金を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4800",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①20 m³ までの分 150 × 20 ＝ 3000　②こえた 5 m³ の分 200 × 5 ＝ 1000　③800 + 3000 + 1000 ＝ 4800。答え 4800円",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  },
+  {
+   "id": "tokkun-math-1-func-70",
+   "type": "input",
+   "prompt": "長方形のテーブルを x 台、横に1列につなげると、まわりに y ＝ 4x + 2 人すわれる。30 人がすわるには、テーブルは少なくとも何台いるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "台"
+    ]
+   },
+   "explanation": "①4x + 2 ≧ 30　②4x ≧ 28、x ≧ 7　③7 台（30 人）。答え 7台",
+   "source": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p116〜118（関数と変域）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465989_0.jpg",
+    "sha256": "ce5f56fac39c62a3bcde23bb2a4227f81211735448d6e534e0767cf9ea6e97a2",
+    "page": 116
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。教科書 p116〜118 の「ともなって変わる2つの量」「関数」「変域」を、階段状に変わる料金・あまり・約数の個数・変域から式を逆にたどる問題などに広げた一段難しい問題。答えは check.py で、x の値を1つずつ入れて調べる総当たりで検算。2026-10-27 Claude：規則性（マッチ棒・碁石・数の列）、階段状の料金、変域から逆にたどる問題、2つの関数の比べ方など42問を追加して70問にした。"
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-12",
+  "scope": "まとめノート保存の再送と100冊上限",
+  "realAIEnabled": false,
+  "published": false,
+  "checks": {
+    "notesAPI": 23,
+    "chatAPI": 9,
+    "messages": 110,
+    "UI": 13
+  },
+  "UI": {
+    "session": 74556,
+    "exit": 0
+  },
+  "previousWholeSuite": {
+    "session": 88112,
+    "exit": 0,
+    "result": "✅ ぜんぶ通過",
+    "scope": "ノート修正前・教科書下書き変更後"
+  },
+  "wholeSuite": {
+    "session": 20473,
+    "status": "実行中",
+    "log": "/tmp/nobi-post-subscription-notes-20261012.log"
+  },
+  "dryRun": {
+    "session": 43001,
+    "exit": 0,
+    "scope": "空env・実バインディングなし、公開なし"
+  },
+  "files": [
+    {
+      "path": "cf-worker/src/learning-assistant.mjs",
+      "sha256": "58128898272bb660357a16f3fc630901acf75c4775c4e582d05f9055e350c3a9"
+    },
+    {
+      "path": "index.html",
+      "sha256": "0faec840fb0c3967a9c3442b75938de7a0b6c83843e4e504ff52060c7f926884"
+    },
+    {
+      "path": ".claude/verify/verify-learning-notes.mjs",
+      "sha256": "bf39bf8a486acbec913286ed1c02f6d2ea1c99ce8b57f26c8c0e8c615590a17f"
+    },
+    {
+      "path": ".claude/verify/verify-learning-ui.mjs",
+      "sha256": "c2707eb1ada4d4ef69a7342e656ef2c4a38283464f9cc70df4ccf5658819f8fa"
+    }
+  ],
+  "remaining": [
+    "ノートAI分析と練習問題連携",
+    "チャット強制停止時の利用回数整合",
+    "実AI契約確認・無効のまま",
+    "実契約条件/税込/保存期間の未決定事項"
+  ]
+}

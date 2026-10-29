@@ -1,0 +1,194 @@
+{
+ "total": 28,
+ "mismatch": 0,
+ "results": [
+  {
+   "k": "hist1-36",
+   "a": "36",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-36",
+   "a": "36%",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-36",
+   "a": "36％",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-36",
+   "a": "0.36",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist1-36",
+   "a": "9",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist1-35",
+   "a": "25",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-35",
+   "a": "25分",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-35",
+   "a": "7",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist1-35",
+   "a": "20",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist1-57",
+   "a": "9",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-57",
+   "a": "9人",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist1-57",
+   "a": "21",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-33",
+   "a": "0.35",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-33",
+   "a": "7/20",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-33",
+   "a": ".35",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-33",
+   "a": "35",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-33",
+   "a": "0.7",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-61",
+   "a": "65",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-61",
+   "a": "65%",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-61",
+   "a": "0.65",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-61",
+   "a": "13",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-26",
+   "a": "イ",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-26",
+   "a": "ア",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-26",
+   "a": "B組",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-67",
+   "a": "5",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-67",
+   "a": "5分",
+   "expect": "○",
+   "got": true
+  },
+  {
+   "k": "hist2-67",
+   "a": "0",
+   "expect": "×",
+   "got": false
+  },
+  {
+   "k": "hist2-67",
+   "a": "10",
+   "expect": "×",
+   "got": false
+  }
+ ],
+ "notes": [
+  {
+   "k": "hist2-33",
+   "a": "35%",
+   "got": false,
+   "why": "相対度数を百分率で答えると×（問題は相対度数を求めている）"
+  },
+  {
+   "k": "hist1-36",
+   "a": "0.36",
+   "got": false,
+   "why": "割合を小数で答えると×（問題は百分率をたずねている）"
+  },
+  {
+   "k": "hist2-61",
+   "a": "0.65",
+   "got": false,
+   "why": "百分率をたずねている問題に小数で答えると×"
+  }
+ ]
+}

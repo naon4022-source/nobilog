@@ -1,0 +1,1795 @@
+{
+ "id": "tokkun-science-1-chisou",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "地層のでき方と広がり（特訓）",
+ "majorTitle": "語る大地",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-chisou-1",
+   "type": "input",
+   "prompt": "地点Aは標高100 mで、凝灰岩の層の上面が地表から深さ10 mにある。地点Aの真東200 mの地点Bは標高110 mで、同じ凝灰岩の層の上面が深さ25 mにある。この地域の地層は、東に向かって一定の割合で低くなっている。地点Aの真東400 mにある地点C（標高95 m）では、凝灰岩の層の上面は地表から深さ何mにあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "上面の標高はA：100−10＝90 m、B：110−25＝85 m。200 mで5 m低くなるので、400 mのCでは90−10＝80 m。Cの深さは95−80＝15 m。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 39,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-2",
+   "type": "input",
+   "prompt": "ある露頭で、下から順に泥岩→砂岩→れき岩→砂岩→泥岩の層が重なっていた。この地域の海の深さは、どのように変化したと考えられるか。\nア 深くなり続けた　イ 浅くなり続けた　ウ 浅くなってから深くなった　エ 深くなってから浅くなった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "粒が大きいほど浅い（河口に近い）ところで積もる。泥→砂→れきで浅くなり、れき→砂→泥で深くなった。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 40,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p40（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-3",
+   "type": "input",
+   "prompt": "ある露頭で、凝灰岩の層が、間に泥岩の層をはさんで2枚見られた。この地層が堆積する間に、火山の噴火は少なくとも何回あったと考えられるか。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "回"
+    ]
+   },
+   "explanation": "凝灰岩は火山灰などが積もってできる。間に泥岩をはさんで2枚あるので、時間をおいて少なくとも2回噴火した。",
+   "source": {
+    "id": "source-0517",
+    "file": "理科ワーク/S__16252949_0.jpg",
+    "sha256": "8877e42e9d67bd3529a4d85d07147e243d117e8a937001b43ca7f7cb7e818b1d",
+    "page": 34,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p34（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-4",
+   "type": "input",
+   "prompt": "図43で、扇状地・三角州・V字谷を、川の上流から順に並べよう（読点で区切る）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "V字谷扇状地三角州",
+     "V字谷、扇状地、三角州",
+     "V字谷,扇状地,三角州",
+     "V字谷・扇状地・三角州",
+     "V字谷→扇状地→三角州",
+     "V字谷 扇状地 三角州",
+     "V字谷　扇状地　三角州"
+    ]
+   },
+   "explanation": "山地の川が谷底を侵食してV字谷ができ、平地に出たところで扇状地、河口で三角州ができる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-5",
+   "type": "input",
+   "prompt": "陸から遠く離れた深い海の底で、砕せつ物ではなく、おもに海の生物の遺骸などが堆積するのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "砕せつ物",
+       "れき",
+       "砂",
+       "泥"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "運ばれてこな",
+       "運ばれな",
+       "はこばれてこな",
+       "届かな",
+       "とどかな",
+       "来な",
+       "こな",
+       "少な",
+       "すくな"
+      ]
+     }
+    ],
+    "allowNegation": true
+   },
+   "explanation": "陸から遠く離れていると、砕せつ物などがほとんど運ばれてこないから。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-6",
+   "type": "input",
+   "prompt": "図48で、約7300年前の薩摩硫黄島付近の噴火による火山灰の厚さの線（20cm・30cm）から読み取れることを選ぼう。\nア 噴火したところに近いほど、積もった火山灰が厚い　イ 噴火したところから遠いほど厚い　ウ どこでも同じ厚さ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "噴火したところに近いほど火山灰は厚く積もり、遠くなるほどうすくなる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-7",
+   "type": "input",
+   "prompt": "図49の広島市の三角州の地層がどのようにしてできたかを、「花こう岩」「川」「火山」の語を用いて説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "花こう岩"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "川"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "火山"
+      ]
+     }
+    ],
+    "minChars": 20
+   },
+   "explanation": "花こう岩が風化してできた砂などが川によって運ばれて堆積し、その間に火山の噴火（鬼界カルデラ）による火山灰も堆積して、三角州の地層ができた。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-8",
+   "type": "input",
+   "prompt": "山道の岩石の表面がぼろぼろになっていて、指でこするとくずれた。岩石に何が進んでいると考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "風化",
+     "ふうか"
+    ]
+   },
+   "explanation": "太陽の熱や水のはたらきで、岩石が表面からくずれていく風化が進んでいる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-9",
+   "type": "input",
+   "prompt": "花こう岩が風化すると、どうなるか。教科書の写真の説明にあてはまるものを選ぼう。\nア もろくなってばらばらになり、真砂土になる　イ かたくなって大きな岩になる　ウ とけて溶岩になる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "花こう岩は風化するともろくなり、ばらばらになって真砂土になる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-10",
+   "type": "input",
+   "prompt": "流れる水のはたらきを、起こる順に並べよう（読点で区切る）。\nア 堆積　イ 侵食　ウ 運搬",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ、ウ、ア",
+     "イ,ウ,ア",
+     "イウア",
+     "イ・ウ・ア",
+     "イ ウ ア",
+     "イ　ウ　ア"
+    ]
+   },
+   "explanation": "けずりとる（侵食）→下流へ運ぶ（運搬）→流れがゆるやかなところで積もる（堆積）。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-11",
+   "type": "input",
+   "prompt": "大雨のあと、川岸の土がけずられて形が変わっていた。このときの流れる水のはたらきを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "侵食",
+     "しんしょく"
+    ]
+   },
+   "explanation": "流水が土や岩石をけずりとるはたらきは侵食。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-12",
+   "type": "input",
+   "prompt": "流水で運ばれた砕せつ物が積もるのは、流れがどうなるところか。「ゆるやかになる」「急になる」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ゆるやかになる"
+    ]
+   },
+   "explanation": "流れがゆるやかになると、運ぶ力が弱くなって砕せつ物が積もる（堆積）。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-13",
+   "type": "input",
+   "prompt": "V字谷・扇状地・三角州のうち、川の侵食によってできる地形はどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "V字谷",
+     "V字の谷",
+     "ブイ字谷"
+    ]
+   },
+   "explanation": "V字谷は、山地で川が谷底を深くけずってできる。扇状地や三角州は堆積でできる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-14",
+   "type": "input",
+   "prompt": "川が山地から平地に出たところに、砕せつ物が扇形に堆積してできる地形を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "扇状地",
+     "せんじょうち"
+    ]
+   },
+   "explanation": "扇状地。流れが急にゆるやかになるので、れきや砂が積もる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-15",
+   "type": "input",
+   "prompt": "次の地形のうち、流れる水の堆積のはたらきでできるものをすべて選ぼう（読点で区切る）。\nア V字谷　イ 扇状地　ウ 三角州",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "扇状地と三角州は堆積でできる。V字谷は侵食でできる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-16",
+   "type": "input",
+   "prompt": "河口から海に運ばれた れき・砂・泥 のうち、もっとも遠くまで運ばれやすいのはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "泥",
+     "どろ"
+    ]
+   },
+   "explanation": "細かい粒ほど沈みにくく、河口から遠くへ運ばれる。れきは河口近くに堆積する。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-17",
+   "type": "input",
+   "prompt": "海底に堆積した層を、河口に近い方から順に並べるとどうなるか（読点で区切る）。\nア 泥　イ れき　ウ 砂",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ、ウ、ア",
+     "イ,ウ,ア",
+     "イウア",
+     "イ・ウ・ア",
+     "イ ウ ア",
+     "イ　ウ　ア"
+    ]
+   },
+   "explanation": "粒の大きいものほど早く沈むので、河口に近い方から れき→砂→泥 の順に堆積しやすい。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-18",
+   "type": "input",
+   "prompt": "一度に堆積してできた1つの地層の中で、下ほど粒がどうなっているか。「大きい」「小さい」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きい"
+    ]
+   },
+   "explanation": "粒の大きいものほど速く沈むので、1つの地層の中では下ほど粒が大きくなる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-19",
+   "type": "input",
+   "prompt": "1つの地層の中で、粒の大きさが上から細かい→あらいの順に変わっていた（上が細かい）。この層は、上下がもとのままか、ひっくり返っているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "もとのまま"
+    ]
+   },
+   "explanation": "一度に堆積した層は下ほど粒が大きい。上が細かく下があらいので、上下はもとのまま。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-20",
+   "type": "input",
+   "prompt": "1つの地層の中で、上の方ほど粒があらく、下の方ほど細かかった。このことから考えられることを選ぼう。\nア 地層の上下が逆になっている可能性がある　イ ふつうの重なり方　ウ 火山灰の層である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ふつうは下ほど粒が大きい。上ほど大きいなら、大地の変動で上下が逆になった可能性がある。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-21",
+   "type": "input",
+   "prompt": "ふつう、重なった地層では、上と下のどちらの地層が古いか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "下",
+     "下の地層"
+    ]
+   },
+   "explanation": "地層は下から順に積み重なるので、ふつうは下の地層ほど古い。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-22",
+   "type": "input",
+   "prompt": "地表に見られる地層の多くは、過去にどこでできたものか。次から選ぼう。\nア 水底　イ 空中　ウ 地下深くのマグマの中",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "地表の地層の多くは、過去に水底でできたものが大地の隆起などで陸に現れたもの。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-23",
+   "type": "input",
+   "prompt": "水底でできた地層が陸に現れたのは、大地のどのような動きによるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "隆起",
+     "りゅうき"
+    ]
+   },
+   "explanation": "大地が持ち上がる隆起によって、水底の地層が陸に現れる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-24",
+   "type": "input",
+   "prompt": "陸に現れた地層が、大地のどのような動きで再び水中に沈むと、その上に新しい地層ができるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "沈降",
+     "ちんこう"
+    ]
+   },
+   "explanation": "沈降して再び水中に沈むと、その上に砕せつ物が堆積して新たな地層ができる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-25",
+   "type": "input",
+   "prompt": "地層が傾いていることがあるのはなぜか。次から選ぼう。\nア 大地の隆起や沈降の過程で傾くことがあるから　イ はじめから斜めに積もるから　ウ 雨で流されたから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "地層は水平に堆積するが、隆起や沈降の過程で傾くことがある。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-26",
+   "type": "input",
+   "prompt": "柱状図で、それぞれの地層の厚さは、何で表されているか。次から選ぼう。\nア 柱の縦の長さ　イ 色の濃さ　ウ 柱の横のはば",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "柱状図では、層の厚さを柱の縦の長さで表す。岩石の種類は模様で表す。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-27",
+   "type": "input",
+   "prompt": "柱状図からわかることとして正しくないものを選ぼう。\nア 地層の色の明るさの数値　イ 岩石や堆積物の種類　ウ 地層の厚さ　エ 上下関係",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "柱状図では、岩石や堆積物の種類、厚さ、上下関係が表される。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-28",
+   "type": "input",
+   "prompt": "流れる水のモデル実験（図44）で、細長いといに砕せつ物を入れて上から水を流した。水を入れたバットの中で、大きな粒はどこに積もったか。次から選ぼう。\nア といの出口の近く　イ バットのいちばん遠く　ウ 全体に同じように",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "大きな粒は沈みやすいので出口の近くに、小さな粒は遠くまで運ばれて積もる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-29",
+   "type": "input",
+   "prompt": "観察2で地層を観察するとき、安全のために身につけるとよいものを選ぼう。\nア 保護眼鏡と長そで・長ズボン　イ サンダル　ウ 半そで",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "崖からの落石やハンマーで割ったかけらから身を守るため、保護眼鏡・長そで・長ズボンなどを身につける。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-30",
+   "type": "input",
+   "prompt": "観察2で、観察場所の位置を確かめ、地形図と実際の地形を比べるときに使うとよいものを選ぼう。\nア 方位磁針と地形図　イ 温度計　ウ ばねばかり",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "方位磁針と地形図を使って観察場所の位置を確かめ、地形の特徴をつかむ。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-31",
+   "type": "input",
+   "prompt": "地層全体や各層のようすを写真に記録するとき、大きさがわかるようにどうするとよいか。次から選ぼう。\nア 人やものさしなどといっしょに撮影する　イ できるだけ遠くから撮る　ウ 暗くして撮る",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "人やものさしなどを写しこむと、層の厚さや大きさがわかる。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-32",
+   "type": "input",
+   "prompt": "観察2で、各層を手でさわってようすを調べるのはなぜか。次から選ぼう。\nア ざらざら・ねばねばなどから、粒の大きさがわかるから　イ 層の温度をはかるため　ウ 層をくずして採取するため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "さわったようすから粒の大きさがわかる。砂の層はざらざら、泥の層はなめらかでねばりがある。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-33",
+   "type": "input",
+   "prompt": "固まっていない地層の一部を採取する方法として、教科書で紹介されているものを選ぼう。\nア 地層の表面に接着剤をぬって布を押しつけ、固まってから布ごとはぎとる　イ ハンマーで強くたたいてくだく　ウ 水で全部流す",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ホットメルト接着剤などを地層の表面にぬって布を押しつけて固め、布といっしょにはぎとる。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-34",
+   "type": "input",
+   "prompt": "図47の崖で、泥の層をけずって、れきの層が入りこんでいた。このことから、泥の層ができたあとの水の流れについて考えられることを選ぼう。\nア 流れが強くなり、泥の層をけずった　イ 流れが止まった　ウ 水がなくなった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "れきを運べるほど流れが強くなり、下の泥の層をけずりこんでれきが堆積した。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 103,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p103（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-35",
+   "type": "input",
+   "prompt": "わたしのレポートで、れきの層に「丸い形のれき」が多かった。このことから、この地層はどのようなところでできたと考えられるか。次から選ぼう。\nア 川や湖のような、水の流れのあるところ　イ 火口のすぐ近く　ウ 砂漠",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "れきが丸いのは、流れる水で運ばれる間に角がけずられたから。川や湖のようなところでできたと考えられる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-36",
+   "type": "input",
+   "prompt": "地層を観察するとき、観察場所を「むやみにこわさない」「次の人のためにきれいに片づける」のは何のためか。次から選ぼう。\nア 地層を守り、ほかの人も観察できるようにするため　イ 早く帰るため　ウ 化石をとるため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "貴重な露頭を守り、次に観察する人のためにもきれいにしておく。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-37",
+   "type": "input",
+   "prompt": "鍵層として利用しやすい層はどれか。次から選ぼう。\nア 広い範囲にほぼ同じ時期に積もった火山灰の層　イ 場所によってでき方がばらばらの砂岩の層　ウ 地表の土",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "広い範囲にほぼ同時に堆積した火山灰の層は、離れた地層を比べる目印（鍵層）になる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-38",
+   "type": "input",
+   "prompt": "火山灰の層が鍵層として役立つ理由として正しいものを選ぼう。\nア 広い範囲にほぼ同じ時期に堆積し、火山や噴火の時期で特徴がちがうから　イ どこでも同じ厚さだから　ウ 必ず地層のいちばん上にあるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "火山灰は広範囲にほぼ同時に積もり、火山や噴火の時期によって特徴がちがうので、同じ時期の層を見分けられる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-39",
+   "type": "input",
+   "prompt": "火山灰の層の特徴は、何によってちがうか。教科書に書かれているものを2つ選ぼう（読点で区切る）。\nア 火山　イ 同じ火山でも噴火の時期　ウ 季節　エ 地層を見た人",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "火山灰の特徴は火山によってちがい、同じ火山でも噴火の時期によってちがう。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-40",
+   "type": "input",
+   "prompt": "図48で、約7300年前の噴火があったのは、どこの付近か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "薩摩硫黄島",
+     "さつまいおうじま"
+    ]
+   },
+   "explanation": "約7300年前、薩摩硫黄島付近（鬼界カルデラ）で大規模な噴火があった。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-41",
+   "type": "input",
+   "prompt": "図48の噴火で降り積もった火山灰の厚さは、噴火したところから遠ざかるほどどうなっているか。「厚くなる」「うすくなる」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "うすくなる"
+    ]
+   },
+   "explanation": "噴火したところに近いほど火山灰は厚く積もり、遠いほどうすくなる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-42",
+   "type": "input",
+   "prompt": "図49の三角州の地層をつくっている砂や泥は、おもに何によって運ばれてきたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "川",
+     "川の水",
+     "流れる水",
+     "河川"
+    ]
+   },
+   "explanation": "三角州は、川が運んできた砂や泥が河口付近に堆積してできる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-43",
+   "type": "input",
+   "prompt": "図49の三角州の地層にふくまれる火山灰の層は、どこの噴火で堆積したものか。次から選ぼう。\nア 図48の鬼界カルデラ（薩摩硫黄島付近）の噴火　イ 広島市の近くの火山　ウ 富士山",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "図の説明に、火山灰の層は図48の噴火のときに堆積したものとある。遠く離れた場所にも積もった。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-44",
+   "type": "input",
+   "prompt": "鬼界カルデラを形成した噴火の火山灰は、福井県の水月湖の年縞にも堆積している。この噴火は、1995年から数えて何年前と明らかにされたか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "7325",
+     "7325年前",
+     "7325年"
+    ]
+   },
+   "explanation": "水月湖の年縞を数えることで、1995年から数えて7325年前に堆積したことが明らかにされた。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-45",
+   "type": "input",
+   "prompt": "湖の底などに、1年ごとにしま模様として積み重なった堆積物を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "年縞",
+     "ねんこう"
+    ]
+   },
+   "explanation": "年縞。福井県の水月湖には約7万年分の年縞がある。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-46",
+   "type": "input",
+   "prompt": "水月湖の年縞は、1年間に約0.7 mmずつ積み重なる。100年分の年縞の厚さは約何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "0.7×100＝70 mm＝7 cm。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-47",
+   "type": "input",
+   "prompt": "水月湖の年縞が1年に0.7 mmずつ積み重なるとすると、厚さ14 cmの年縞は約何年分か。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "年"
+    ]
+   },
+   "explanation": "14 cm＝140 mm。140÷0.7＝200年分。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-48",
+   "type": "input",
+   "prompt": "水月湖で、年縞が乱されずに残ってきた理由として教科書にあげられていないものを選ぼう。\nア 毎年大きな川が大量の土砂を運びこむから　イ 水深が深いから　ウ 直接流れこむ大きな河川がないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "水深が深く、直接流れこむ大きな河川がない。湖底が沈降しているので浅くならない。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-49",
+   "type": "input",
+   "prompt": "水月湖の年縞では、春から秋にかけて積もるものと、冬に積もるものがちがう。春から秋に積もるものはおもに何か。次から選ぼう。\nア 水中の小さな生物の遺骸　イ 雪　ウ 火山灰",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "春から秋は水中の小さな生物の遺骸、冬は鉱物をふくむ細かい粒などが積もる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-50",
+   "type": "input",
+   "prompt": "水月湖の年縞の中に、規則正しいしま模様とはちがう層が不規則に見られる。これは何によってできた層か。教科書にあげられているものを選ぼう。\nア 火山の噴火や洪水　イ 毎年の雪　ウ 生物の呼吸",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "火山の噴火や洪水などでできた層が、規則正しい年縞の中に不規則に見られる。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-51",
+   "type": "input",
+   "prompt": "水月湖の年縞は、どのようなことに利用されているか。次から選ぼう。\nア 過去の気候などの推測や、ほかの場所の地層の年代を決める基準　イ 湖の水の量をはかること　ウ 魚の数を数えること",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "層の中の花粉や砂などから過去の気候を推測したり、年代を決める世界的な基準として利用されたりしている。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 105,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-52",
+   "type": "input",
+   "prompt": "ペットボトルに、れき・砂・泥と水を入れてよく振り、しばらく置いた。いちばん下に積もるのはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "れき"
+    ]
+   },
+   "explanation": "粒の大きいれきがいちばん速く沈むので、下に積もる。その上に砂、いちばん上に泥が積もる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-53",
+   "type": "input",
+   "prompt": "ペットボトルに、れき・砂・泥と水を入れてよく振って置いたとき、水がいつまでもにごっているのはなぜか。次から選ぼう。\nア 泥の粒が細かく、なかなか沈まないから　イ れきがとけたから　ウ 砂が浮いてくるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "泥は粒が細かいので沈むのに時間がかかり、水がにごったままになる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 101,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p101（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-54",
+   "type": "input",
+   "prompt": "地点Aでは、火山灰の層の上面が地表から5 mの深さにある。地点Aの標高は60 mである。火山灰の層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "55",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "60−5＝55 m。標高をそろえて比べると、離れた地点の地層の傾きがわかる。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 38,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p38（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-55",
+   "type": "input",
+   "prompt": "標高50 mの地点Aでは、鍵層の上面が地表から深さ10 m、標高60 mの地点Bでは深さ20 mにあった。鍵層の上面の標高を比べるとどうなるか。次から選ぼう。\nア A・Bとも40 mで同じ　イ Aの方が高い　ウ Bの方が高い",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "A：50−10＝40 m、B：60−20＝40 m。同じ標高なので、A・B間では地層は水平と考えられる。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 38,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p38（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-56",
+   "type": "input",
+   "prompt": "南北にならぶ地点P（北）とQ（南）で、同じ火山灰の層の標高が、Pでは80 m、Qでは70 mだった。この地層は、南北のどちらに向かって低くなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "南",
+     "南に向かって"
+    ]
+   },
+   "explanation": "北のPより南のQの方が低いので、地層は南に向かって低く（傾いて）いる。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 38,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p38（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-57",
+   "type": "input",
+   "prompt": "東西にならぶ地点X（西）とY（東）は200 m離れている。同じ鍵層の上面の標高がXでは40 m、Yでは36 mだった。地層が一定の割合で傾いているとすると、Yのさらに東100 mの地点Zでは、この鍵層の上面の標高は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "34",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "200 mで4 m下がる→100 mで2 m下がる。36−2＝34 m。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 39,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-58",
+   "type": "input",
+   "prompt": "ある地域で、地点A・B・Cの柱状図を比べたところ、どの地点にも同じ特徴の火山灰の層があった。このことからいえることを選ぼう。\nア 3地点の火山灰の層は、ほぼ同じ時期に堆積した　イ 3地点の層はすべて同じ厚さである　ウ 3地点の地層は水平である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "同じ火山灰の層（鍵層）は、ほぼ同じ時期に堆積したと考えられる。厚さや傾きはそれだけではわからない。",
+   "source": {
+    "id": "source-0519",
+    "file": "理科ワーク/S__16252951_0.jpg",
+    "sha256": "ba346b6f84005265653f0055c7c73ccd5cd3466a5f12afc084e84e23acdb2f2d",
+    "page": 39,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-59",
+   "type": "input",
+   "prompt": "海底に堆積した地層の中から、サンゴの化石を含む石灰岩の層が見つかった。その真上に泥岩の層がある。泥岩の層ができたころ、この場所の海の深さはどう変わったと考えられるか。「深くなった」「浅くなった」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "深くなった"
+    ]
+   },
+   "explanation": "サンゴはあたたかく浅い海にすむ。その上に泥（細かい粒）が積もったので、海が深くなった（河口から遠くなった）と考えられる。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 40,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p40（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-60",
+   "type": "input",
+   "prompt": "同じ場所の地層で、上の方の層ほど粒が大きくなっていた。この間に、この場所と陸地（河口）との距離はどう変わったと考えられるか。「近くなった」「遠くなった」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "近くなった"
+    ]
+   },
+   "explanation": "粒の大きいれきや砂は河口の近くに積もる。上ほど粒が大きいので、河口に近くなったと考えられる。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 40,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p40（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-61",
+   "type": "input",
+   "prompt": "地層の観察で、ある層から木の葉の化石と、炭化した木片が見つかった。この層ができた場所として考えられるものを選ぼう。\nア 陸に近い湖や河口付近　イ 陸から遠く離れた深い海の底　ウ 火口の中",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "陸の植物が運ばれてきて埋もれているので、陸に近い場所で堆積したと考えられる。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 41,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-62",
+   "type": "input",
+   "prompt": "火山灰の層が2枚、間に砂岩の層をはさんで重なっていた。2枚の火山灰の層のうち、新しい噴火で積もったのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "上の層",
+     "上",
+     "上の火山灰の層"
+    ]
+   },
+   "explanation": "地層の上下が入れかわっていなければ、上の層ほど新しい。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 41,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-63",
+   "type": "input",
+   "prompt": "川の上流と下流の石を比べると、下流の石の方が丸く小さいことが多い。その理由として正しいものを選ぼう。\nア 運ばれる間にぶつかり合ったりけずられたりしたから　イ 下流で新しくできたから　ウ 下流の方が寒いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "流水で運ばれる間に、ぶつかり合ったり川底でけずられたりして角がとれ、丸く小さくなる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-64",
+   "type": "input",
+   "prompt": "地層の観察で、崖の地層に化石が見られた場合、何を記録するとよいか。次から選ぼう。\nア 地層の中のどのように化石がふくまれているか　イ 化石の値段　ウ 化石を見つけた人の名前だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "化石がどの層に、どのようにふくまれているかを記録しておくと、堆積した当時のようすの推測に役立つ。",
+   "source": {
+    "id": "source-0674",
+    "file": "理科の教科書/S__16629821_0.jpg",
+    "sha256": "b7d8ba857927f57588e2fec6a033be9a20867682a53f4cbe58ec751c5791a359",
+    "page": 104,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-65",
+   "type": "input",
+   "prompt": "観察2で、地層全体をスケッチするとき、断層やしゅう曲が見られる場合はどうするか。次から選ぼう。\nア ずれや曲がったようすなどを記録しておく　イ 描かないでおく　ウ まっすぐに直して描く",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "断層やしゅう曲などが見られる場合は、ずれや曲がったようすを記録しておく。",
+   "source": {
+    "id": "source-0673",
+    "file": "理科の教科書/S__16629820_0.jpg",
+    "sha256": "fe2c920f6b3f365d630781656f132dc483990e8ed35d0236014f85d34b56f058",
+    "page": 102,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p102（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-66",
+   "type": "input",
+   "prompt": "流れる水のはたらきで、川の流れが急に遅くなるところで起こりやすいのは、侵食・運搬・堆積のどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "堆積",
+     "たいせき"
+    ]
+   },
+   "explanation": "流れが遅くなると運ぶ力が弱くなり、砕せつ物が積もる（堆積）。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-67",
+   "type": "input",
+   "prompt": "流れる水のはたらきで、流れが速い山地の川で起こりやすいのは、侵食と堆積のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "侵食",
+     "しんしょく"
+    ]
+   },
+   "explanation": "流れが速いと川底や川岸をけずるはたらき（侵食）が大きく、V字谷ができる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-68",
+   "type": "input",
+   "prompt": "扇状地ができやすいのはどこか。次から選ぼう。\nア 川が山地から平地に出るところ　イ 河口　ウ 山頂",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "山地から平地に出ると流れが急にゆるやかになり、れきや砂が扇形に積もる。",
+   "source": {
+    "id": "source-0672",
+    "file": "理科の教科書/S__16629818_0.jpg",
+    "sha256": "91a32e093d5f189e7133cd41648906865bdfa8183857f531125f9c69af0284df",
+    "page": 100,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p100（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-69",
+   "type": "input",
+   "prompt": "ある泥岩の層は厚さが3 mあった。この層が1000年で1 cmの割合で一定に積もったとすると、この層ができるのに何年かかったか。",
+   "answer": {
+    "kind": "number",
+    "value": "300000",
+    "units": [
+     "年"
+    ]
+   },
+   "explanation": "3 m＝300 cm。1 cmに1000年かかるので、300×1000＝300000年（30万年）。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 40,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p40（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chisou-70",
+   "type": "input",
+   "prompt": "ある地層に火山灰の層があった。この火山灰の層が堆積したころ、近くで何が起こったと考えられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "火山の噴火",
+     "噴火",
+     "火山が噴火した"
+    ]
+   },
+   "explanation": "火山灰の層は、火山の噴火で降り積もってできる。",
+   "source": {
+    "id": "source-0520",
+    "file": "理科ワーク/S__16252952_0.jpg",
+    "sha256": "28e520f8f5d1e250ac8abbb32baf1c08e348a435291552009abf3399ccb67b5e",
+    "page": 41,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）、2026-10-14 理科の教科書 p100〜105（台帳登録案・本文まで確認）の内容で問題を追加。理科ワークp34（教科書チェック：地層のでき方・観察2）、p38〜39（要点ドリル：地層の広がり）、p40〜41（基本問題・力だめし）を写真で確認して作った。ワーク版70問が用語・柱状図の標高計算（数を変えて約20問）・堆積の順の読み取り・教科書の例をほぼ出しきっているので、一定の傾きから別の地点を予想する問題・2回の変化の読み取り（傾きの向きを答える問題はワーク版と数だけちがう形になるので外した）・噴火の回数の推理だけを作った。"
+}

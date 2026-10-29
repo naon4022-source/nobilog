@@ -1,0 +1,346 @@
+{
+ "id": "tokkun-math-1-move",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "図形の移動（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-move-1",
+   "type": "input",
+   "prompt": "ある平行移動で、点 (2, 5) が点 (−1, 3) に移る。同じ平行移動で、点 (4, −2) はどこに移るか答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-4)",
+     "(1、-4)",
+     "1,-4",
+     "1、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "①この平行移動は「左へ 3、下へ 2」　②(4 − 3, −2 − 2)　③(1, −4)。答え (1, −4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-2",
+   "type": "input",
+   "prompt": "点 (3, 1) を、原点を中心として反時計回りに 90° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,3)",
+     "(-1、3)",
+     "-1,3",
+     "-1、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①反時計回りに 90° 回すと、(x, y) は (−y, x) に移る　②(−1, 3)　③答え (−1, 3)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-3",
+   "type": "input",
+   "prompt": "点 (−2, 5) を、原点を中心として 180° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,-5)",
+     "(2、-5)",
+     "2,-5",
+     "2、-5"
+    ],
+    "compact": true
+   },
+   "explanation": "①180° 回転は点対称移動：x も y も符号が変わる　②(2, −5)　③答え (2, −5)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-4",
+   "type": "input",
+   "prompt": "図形を x 軸について対称移動し、さらに y 軸について対称移動した。この2回の移動は、1回のどんな移動と同じか。次のア〜ウから選び、記号で答えよう。\nア 原点を中心とする 180° の回転移動\nイ 直線 y ＝ x についての対称移動\nウ 平行移動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①(x, y) → (x, −y) → (−x, −y)　②(−x, −y) は原点を中心に 180° 回転した点　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-5",
+   "type": "input",
+   "prompt": "点 (2, 7) を、直線 y ＝ x について対称移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,2)",
+     "(7、2)",
+     "7,2",
+     "7、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①直線 y ＝ x について対称な点は、x 座標と y 座標が入れかわる　②(7, 2)　③答え (7, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-6",
+   "type": "input",
+   "prompt": "ある図形を、点Oを中心に時計回りに 70° 回転する移動を、3回続けて行った。これは、反時計回りに何度回転したのと同じか答えよう（0° より大きく 360° より小さい角で）。",
+   "answer": {
+    "kind": "number",
+    "value": "150",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①時計回りに 70° を3回で 210°　②時計回り 210° は反時計回り 360 − 210 ＝ 150°　③答え 150度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-7",
+   "type": "input",
+   "prompt": "正六角形を、その中心のまわりに回転させて、もとの正六角形にぴったり重ねたい。0° より大きい回転の角のうち、もっとも小さいものは何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①正六角形は中心から見て 6 等分されている　②360 ÷ 6 ＝ 60　③答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-8",
+   "type": "input",
+   "prompt": "正三角形、正方形、正六角形の、それぞれの対称の軸の本数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13"
+   },
+   "explanation": "①正 n 角形の対称の軸は n 本　②3 + 4 + 6 ＝ 13　③答え 13",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-9",
+   "type": "input",
+   "prompt": "点 A(1, 2) を、点 P(3, 3) を中心として 180° 回転移動した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,4)",
+     "(5、4)",
+     "5,4",
+     "5、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①P は A と移った点のまん中になる　②x：3 × 2 − 1 ＝ 5、y：3 × 2 − 2 ＝ 4　③答え (5, 4)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-10",
+   "type": "input",
+   "prompt": "点 A(1, 4) をある直線 ℓ について対称移動したら、点 (1, −2) に移った。ℓ は x 軸に平行な直線である。ℓ 上の点の y 座標を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①対称の軸は、対応する2点を結ぶ線分の垂直二等分線　②まん中の点の y 座標 (4 + (−2)) ÷ 2 ＝ 1　③答え 1",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-move-11",
+   "type": "input",
+   "prompt": "正五角形を、その中心のまわりに回転させてぴったり重ねるとき、0° より大きい回転の角のうち、2番目に小さいものは何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "144",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①最小の角は 360 ÷ 5 ＝ 72°　②2番目は 72 × 2 ＝ 144°　③答え 144度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p156〜161（平行移動・回転移動・対称移動）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。図形の移動を座標や角度で表し、数や記号で答える一段難しい問題。答えは check.py で座標の計算をし直して検算。【保留】図なしで伝えられ、教科書問題と似ない問題は 11 問まで。70問にしていない。"
+}

@@ -1,0 +1,104 @@
+{
+ "id": "tokkun-math-1-surface2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "立体の表面積②（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-surface2-1",
+   "type": "input",
+   "prompt": "半径 6 cm の球を、中心を通る平面で2つに切った。2つの半球の表面積の和は、もとの球の表面積より何 cm² ふえるか、π を使って答えよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "72π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①切り口の円（半径 6 cm）が2つふえる　②π × 36 × 2　③72π。答え 72π cm²",
+   "source": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p211（球の表面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211
+   }
+  },
+  {
+   "id": "tokkun-math-1-surface2-2",
+   "type": "input",
+   "prompt": "球の半径を 3 倍にすると、表面積はもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①表面積は 半径 × 半径 に比例　②3 × 3 ＝ 9　③答え 9倍",
+   "source": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p211（球の表面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211
+   }
+  },
+  {
+   "id": "tokkun-math-1-surface2-3",
+   "type": "input",
+   "prompt": "半径 r cm の球の表面積は、底面の半径が r cm、高さが 2r cm の円柱の側面積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①球 4πr²　②円柱の側面 2πr × 2r ＝ 4πr²　③等しいので 1 倍。答え 1倍",
+   "source": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p211（球の表面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466040_0.jpg",
+    "sha256": "f5258f3a580eab2b7117729acad5ccbf7383bdb428960a10382ddf27009f2664",
+    "page": 211
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。球の表面積を逆に求める・くらべる問題。答えは check.py で計算し直して検算。【保留】教科書問題（半球・球の一部の表面積）と似ない問題は 3 問まで。70問にしていない。"
+}

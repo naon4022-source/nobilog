@@ -1,0 +1,2155 @@
+{
+ "id": "tokkun-social-1-geo-asia",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "アジア州（特訓）",
+ "majorTitle": "世界の諸地域",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-social-1-geo-asia-1",
+   "type": "input",
+   "prompt": "アジア州（ロシアをふくまない）の面積は3103万km²である。日本の面積を38万km²とすると、アジア州の面積は日本の約何倍か。整数で答えよう（小数第1位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "82",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "3103÷38＝81.6…で約82倍。教科書の資料でも「日本の約82倍」とされている。",
+   "source": {
+    "id": "source-0707",
+    "file": "地理教科書/S__16482329_0.jpg",
+    "sha256": "8658196a214f1c795613913edf009ec4eaa2b6c40bee79de28043bf5ec9eef84",
+    "page": 61,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p61（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-2",
+   "type": "input",
+   "prompt": "アジア州（ロシアをふくまない）は、世界全体に対して面積が23.9％、人口が59.2％をしめる。このことから言えることを選ぼう。\nア アジア州の人口密度は、世界全体の平均より高い　イ アジア州の人口密度は、世界全体の平均より低い　ウ 面積と人口の割合からは何も言えない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "面積の割合よりも人口の割合のほうがずっと大きいので、1km²あたりの人口（人口密度）は世界の平均より高い。",
+   "source": {
+    "id": "source-0707",
+    "file": "地理教科書/S__16482329_0.jpg",
+    "sha256": "8658196a214f1c795613913edf009ec4eaa2b6c40bee79de28043bf5ec9eef84",
+    "page": 61,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p61（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-3",
+   "type": "input",
+   "prompt": "アジアの多くの都市で、20世紀の後半以降に急速に人口が増えたのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "農村"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "工業化",
+       "都市",
+       "仕事"
+      ]
+     }
+    ]
+   },
+   "explanation": "農村から工業化の進んだ都市へ、多くの人々が移り住んだから。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 63,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p63（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-4",
+   "type": "input",
+   "prompt": "アジア州で多くの外国企業が進出するようになった理由を、2つの面から説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "労働力",
+       "賃金"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "市場",
+       "売る",
+       "収入",
+       "購入"
+      ]
+     }
+    ]
+   },
+   "explanation": "豊富で賃金の安い労働力を求めて進出したことに加え、人々の収入が増えて多様な商品を購入できるようになり、商品を売る市場としての魅力も高まったから。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 63,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p63（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-5",
+   "type": "input",
+   "prompt": "人口が集まるアジアの都市で起きている都市問題を3つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "人口が減"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "住宅"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "渋滞"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大気"
+      ]
+     }
+    ]
+   },
+   "explanation": "住宅の不足や交通渋滞、大気汚染など都市問題も発生している。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 63,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p63（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-6",
+   "type": "input",
+   "prompt": "アジアの多くの地域で、多くの人口を支える食料の生産が可能になっている理由を2つ入れて説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "地形",
+       "気候",
+       "平野"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "品種改良",
+       "農業技術",
+       "技術"
+      ]
+     }
+    ]
+   },
+   "explanation": "農作物の栽培に適した地形や気候の地域が広く、品種改良や農業技術の改革も進められたから。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 62,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p62（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-7",
+   "type": "input",
+   "prompt": "アジアの内陸部が乾燥帯になっているのはなぜか。正しいものを選ぼう。\nア 季節風の影響を受けないから　イ 赤道の真上にあるから　ウ 一年中インド洋から湿った風が吹くから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "季節風の影響を受けない内陸は乾燥帯に属する。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 62,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p62（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-8",
+   "type": "input",
+   "prompt": "アジアの降水量の地図と人口密度の地図を比べたときに分かる関係として、最も適切なものを選ぼう。\nア 降水量が多い地域に、人口密度が高い地域が多い　イ 降水量が少ない地域ほど人口密度が高い　ウ 降水量と人口には何の関係もない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "降水量が多い地域では稲作などの農業が盛んで、多くの人口を支えているため、人口密度も高い地域が多い。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-9",
+   "type": "input",
+   "prompt": "東アジアでは、季節風の影響ではっきりとした四季がある。南部や南東部で、季節風によって雨季と乾季が生まれるしくみを説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "インド洋",
+       "海"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "しめった",
+       "湿った",
+       "雨季"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "大陸",
+       "乾燥した",
+       "乾いた",
+       "乾季"
+      ]
+     }
+    ]
+   },
+   "explanation": "インド洋からしめった風が吹きこむ時期が雨季、大陸から乾燥した風が吹きこむ時期が乾季になる。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 62,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p62（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-10",
+   "type": "input",
+   "prompt": "教科書のアジア各地の雨温図で、年降水量がいちばん少ない都市はどこか。次から選ぼう。\nア シンガポール（2123mm）　イ リヤド（127mm）　ウ シャンハイ（1212mm）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "サウジアラビアのリヤドは乾燥帯で、年降水量が127mmしかない。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 62,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p62（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-11",
+   "type": "input",
+   "prompt": "教科書の雨温図で、シンガポールの年降水量は2123mm、シャンハイは1212mmである。シンガポールはシャンハイより何mm多いか。",
+   "answer": {
+    "kind": "number",
+    "value": "911",
+    "units": [
+     "mm"
+    ]
+   },
+   "explanation": "2123−1212＝911mm。",
+   "source": {
+    "id": "source-0708",
+    "file": "地理教科書/S__16482330_0.jpg",
+    "sha256": "b73e5c49df44b4a173d3a94ddd2c9def80e7cfd39bd2d6e36d1cf547742445f9",
+    "page": 62,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p62（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-12",
+   "type": "input",
+   "prompt": "中国の農業の地域による違いとして正しい組み合わせを選ぼう。\nア 長江流域の華中や華南＝稲作や茶、黄河流域の華北や東北地方＝小麦や大豆などの畑作、西部＝牧畜　イ 華北＝稲作、華南＝牧畜、西部＝小麦　ウ どの地域も稲作だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "長江流域の華中やチュー川流域の華南では稲作や茶の栽培、黄河流域の華北や東北地方では小麦や大豆などの畑作、農作物が育ちにくい西部では牧畜が中心。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 64,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p64（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-13",
+   "type": "input",
+   "prompt": "中国が1980年ごろから改革を進めた理由を、それまでの経済のしくみとその問題点から説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "政府",
+       "計画"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "発展",
+       "つながら",
+       "しなかった"
+      ]
+     }
+    ]
+   },
+   "explanation": "1970年代末まで農業や工業は政府の計画に沿って行われていたが、国の経済的な発展につながらなかったから。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 64,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p64（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-14",
+   "type": "input",
+   "prompt": "経済特区で外国企業をよびこむために行われた工夫として、教科書にあげられているものを選ぼう。\nア 税金を安くした　イ 外国企業の工場を禁止した　ウ 輸入を禁止した",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "経済特区は外国から資本や技術を積極的によびこむために、税金を安くするなどして多くの外国企業が進出した。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 64,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p64（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-15",
+   "type": "input",
+   "prompt": "2015年の世界の電子機器の生産台数にしめる中国の割合で、最も割合が高いものを選ぼう。\nア パソコン（98.2％）　イ スマートフォン（80.5％）　ウ デジタルカメラ（53.2％）　エ 薄型テレビ（46.3％）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "パソコンは98.2％で、世界のパソコンのほとんどが中国で生産されていた。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-16",
+   "type": "input",
+   "prompt": "中国の地域別の一人あたり総生産額の地図で、一人あたり総生産額が高い地域が集まっているのはどこか。次から選ぼう。\nア 沿岸部　イ 西部の内陸部　ウ 北部の草原地帯",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "一人あたり総生産額が高い地域は、経済特区などがある沿岸部に集まっている。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-17",
+   "type": "input",
+   "prompt": "中国の都市で深刻な環境問題が起きたのはなぜか。「都市化」という語を使って説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "追いついた",
+      "追いついて",
+      "人口が減"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "都市化",
+       "人口"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "環境対策",
+       "対策",
+       "追いつか"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "排煙",
+       "排ガス",
+       "排水",
+       "汚染"
+      ]
+     }
+    ]
+   },
+   "explanation": "急速な都市化に環境対策が追いつかず、工場や自動車、家庭からの排煙や排ガス、排水によって大気や河川などが汚染されたから。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-18",
+   "type": "input",
+   "prompt": "中国政府が環境問題の対策として力を入れていることを2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "規制"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "再生可能"
+      ]
+     }
+    ]
+   },
+   "explanation": "工場への規制を強めたり、再生可能エネルギーを積極的に導入したりしている。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-19",
+   "type": "input",
+   "prompt": "中国で、内陸部の農村の人々の多くが都市に出かせぎに行くのはなぜか。正しいものを選ぼう。\nア 工業化が遅れている内陸部の農村には、仕事と収入が少ないから　イ 都市の人口が減っているから　ウ 内陸部の農業が盛んすぎて人手が余らないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "工業化が遅れている内陸部の農村から、仕事と収入を求めて都市に出かせぎに行く人が多い。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-20",
+   "type": "input",
+   "prompt": "経済格差をなくすために、中国政府が2000年ごろから内陸部で進めている開発の内容を2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "鉄道",
+       "道路",
+       "交通"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "工場",
+       "産業"
+      ]
+     }
+    ]
+   },
+   "explanation": "鉄道や道路などの交通網を整備し、自動車工場などを建設して多くの人に仕事を生み出す産業の育成に力を入れている。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-21",
+   "type": "input",
+   "prompt": "中国で「一人っ子政策」が見直され、全ての夫婦が3人までの子どもを持つことが認められるようになった理由として正しいものを選ぼう。\nア 少子高齢化が急速に進んだため　イ 人口が急に増えすぎたため　ウ 都市の住宅が余ったため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "一人っ子政策の影響で人口増加はおさえられたが、少子高齢化が急速に進んだため。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-22",
+   "type": "input",
+   "prompt": "中国の都市人口と農村人口の移り変わりのグラフ（1970年・1990年・2020年）から読み取れることを選ぼう。\nア 都市人口の割合が大きく増えた　イ 農村人口の割合が増え続けた　ウ 都市人口は減り続けた",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "1970年には農村人口が大部分だったが、2020年には都市人口が半分以上になっている。",
+   "source": {
+    "id": "source-0709",
+    "file": "地理教科書/S__16482331_0.jpg",
+    "sha256": "62f1772589846c8e61f31cf13ecde26bbc4389c74324ef0b46806c1e5fe68dd0",
+    "page": 65,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p65（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-23",
+   "type": "input",
+   "prompt": "韓国の輸出品の中心の移り変わりとして正しいものを選ぼう。\nア 1960年代はせんい製品などの軽工業 → 1970年代は鉄鋼や造船などの重化学工業 → 1990年代以降は半導体などのハイテク産業　イ ハイテク → 軽工業 → 重化学工業　ウ 重化学工業 → ハイテク → 軽工業",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "1960年代はせんい製品やはき物などの軽工業、1970年代は鉄鋼・石油化学・造船・自動車などの重化学工業、1990年代以降は半導体などのハイテク産業が成長した。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 66,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p66（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-24",
+   "type": "input",
+   "prompt": "韓国の輸出総額は、1960年には0.3億ドル、2020年には5127億ドルだった。2020年は1960年のおよそ何倍か。次から選ぼう。\nア 約170倍　イ 約1万7千倍　ウ 約170万倍",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "5127÷0.3＝17090で、約1万7千倍。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 66,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p66（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-25",
+   "type": "input",
+   "prompt": "韓国の輸出先で、1960年の日本の割合は63.4％、2020年の日本の割合は4.9％だった。何ポイント下がったか。小数第1位まで答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "58.5",
+    "units": [
+     "ポイント"
+    ]
+   },
+   "explanation": "63.4−4.9＝58.5ポイント下がった。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 66,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p66（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-26",
+   "type": "input",
+   "prompt": "韓国の文化が、アジアの国々を中心に世界に広く知られるようになった理由を説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "政府"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "ドラマ",
+       "音楽",
+       "ゲーム",
+       "産業"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "売りこ",
+       "輸出",
+       "外国"
+      ]
+     }
+    ]
+   },
+   "explanation": "政府が力を入れて、ドラマや音楽、ゲームといった産業を外国に売りこんだから。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 67,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p67（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-27",
+   "type": "input",
+   "prompt": "総人口にしめる首都圏の人口の割合は、韓国が50.4％、日本（東京圏）が29.0％である（2021年）。その差は何ポイントか。小数第1位まで答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "21.4",
+    "units": [
+     "ポイント"
+    ]
+   },
+   "explanation": "50.4−29.0＝21.4ポイント。韓国のほうが首都への人口の集中が大きい。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 67,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p67（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-28",
+   "type": "input",
+   "prompt": "ソウルの住宅価格の高騰を解消するために行われてきたことを2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ニュータウン"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "鉄道"
+      ]
+     }
+    ]
+   },
+   "explanation": "郊外でのニュータウンの開発や、郊外と中心部を結ぶ鉄道の整備が進められた。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 67,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p67（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-29",
+   "type": "input",
+   "prompt": "韓国の第二の都市プサンでも人口減少が深刻になっているのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "若者",
+       "若い"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "ソウル",
+       "首都"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "進学",
+       "就職",
+       "移住",
+       "移"
+      ]
+     }
+    ]
+   },
+   "explanation": "若者の多くが、進学や就職の機会を求めてソウルへ移住しているから。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 67,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p67（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-30",
+   "type": "input",
+   "prompt": "朝鮮半島について正しいものを選ぼう。\nア 第二次世界大戦後、1948年に南北に分かれて独立し、1950年から朝鮮戦争が起きた　イ 現在は一つの国に統一されている　ウ 朝鮮戦争は2000年に始まった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "1948年に大韓民国と朝鮮民主主義人民共和国の南北に分かれて独立し、1950年からの朝鮮戦争で激しく対立した。2000年に両国の代表による会談が開かれたが、統一への道すじは見えない状況が続いている。",
+   "source": {
+    "id": "source-0710",
+    "file": "地理教科書/S__16482332_0.jpg",
+    "sha256": "01f61673b940b93375d977a9a563508ecf72aa2265bd59885f2ca63bfee94edd",
+    "page": 67,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p67（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-31",
+   "type": "input",
+   "prompt": "東南アジアで米の生産量が大幅に増えた理由を説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "機械化",
+       "機械"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "かんがい",
+       "灌漑"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "品種改良",
+       "品種"
+      ]
+     }
+    ]
+   },
+   "explanation": "作業の機械化やかんがい施設の整備、品種の改良によって、米の生産量は大幅に増加した。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 68,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p68（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-32",
+   "type": "input",
+   "prompt": "マレーシアの主な輸出品の移り変わりのグラフで、1980年と2023年を比べて読み取れることを選ぼう。\nア 石油・天然ゴムなどが中心だったが、機械類が最大になった　イ 機械類が中心だったが、石油が最大になった　ウ ほとんど変わっていない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "1980年は石油（23.8％）や天然ゴムが中心だったが、2023年は機械類（44.3％）が最大になった。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 68,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p68（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-33",
+   "type": "input",
+   "prompt": "東南アジアで商品作物の栽培が広がったことで起きている環境問題を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "森林"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "減",
+       "失"
+      ]
+     }
+    ]
+   },
+   "explanation": "商品作物はほとんどが輸出用で、栽培する農地の開発で森林が減少する問題が起こっている。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 68,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p68（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-34",
+   "type": "input",
+   "prompt": "ASEANに加盟している国どうしで工業製品の貿易が活発になるのはなぜか。関税という語を使って説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "なくさない",
+      "なくしていない",
+      "下げない",
+      "減らさない",
+      "高く",
+      "上げ",
+      "かかる"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "関税"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "なく",
+       "減",
+       "下げ",
+       "かからない",
+       "安く",
+       "低く"
+      ]
+     }
+    ]
+   },
+   "explanation": "ASEANは加盟国間の貿易の関税をなくすなどして、結び付きを強めているから。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 69,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p69（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-35",
+   "type": "input",
+   "prompt": "近年、ベトナムなどのASEAN諸国に、日本や韓国、欧米、中国の企業が進出している理由として正しいものを選ぼう。\nア 中国より賃金が安いから　イ 中国より人口が多いから　ウ 中国より寒いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "近年では、中国より賃金の安いベトナムなどのASEAN諸国に進出する企業も増えている。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 69,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p69（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-36",
+   "type": "input",
+   "prompt": "アジアの主な都市の製造業の賃金のグラフで、賃金が最も高い都市を選ぼう。\nア ソウル　イ ヤンゴン　ウ ダッカ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "グラフでは、ソウル（韓国）が最も高く、ヤンゴン（ミャンマー）やダッカ（バングラデシュ）は低い。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 69,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p69（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-37",
+   "type": "input",
+   "prompt": "東南アジアの都市でスラムができたのはなぜか。農村での変化から順に説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "機械",
+       "労働力が余"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "農村"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "都市"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "急",
+       "人口"
+      ]
+     }
+    ]
+   },
+   "explanation": "農作業を機械が行うようになって労働力が余り、仕事や高い収入を求めて人々が農村から都市へ出ていき、都市の人口が急に増えたから。",
+   "source": {
+    "id": "source-0711",
+    "file": "地理教科書/S__16482333_0.jpg",
+    "sha256": "70f464a255a9843204482dbc7e8c560db567fde64feae589e5a12c162ea57240",
+    "page": 69,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p69（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-38",
+   "type": "input",
+   "prompt": "南アジアの国と、多く信仰されている宗教の組み合わせとして正しいものを選ぼう。\nア インド＝ヒンドゥー教、パキスタン＝イスラーム、スリランカ＝仏教　イ インド＝仏教、パキスタン＝ヒンドゥー教、スリランカ＝イスラーム　ウ どの国もキリスト教",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "インドではヒンドゥー教徒が約80％。パキスタンやバングラデシュではムスリム、スリランカでは仏教徒が多い。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-39",
+   "type": "input",
+   "prompt": "インドで、共通語の役割をしている言語は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "英語",
+     "えいご"
+    ]
+   },
+   "explanation": "地域によって異なる多くの言語が使われているが、共通語になっているのは英語。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-40",
+   "type": "input",
+   "prompt": "ガンジス川の上流部やインダス川の流域で栽培が盛んな作物は何か。次から選ぼう。\nア 小麦　イ 米　ウ 茶",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "降水量が多い下流部では稲作、降水量が少ない上流部やインダス川の流域では小麦の栽培が行われている。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-41",
+   "type": "input",
+   "prompt": "南アジアで人口の急増が続いているのはなぜか。「出生率」「死亡率」という語を使って説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "出生率が低",
+      "出生率は低",
+      "死亡率が高",
+      "死亡率は高",
+      "死亡率が上が",
+      "出生率が下が"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "出生率"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "高"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "死亡率"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "下が",
+       "低"
+      ]
+     }
+    ]
+   },
+   "explanation": "出生率が高く、医療の発達などで死亡率が大きく下がったから。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-42",
+   "type": "input",
+   "prompt": "「総人口あたりの1年間の出生数の割合」を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "出生率",
+     "しゅっしょうりつ"
+    ]
+   },
+   "explanation": "総人口あたりの1年間の出生数の割合を出生率という。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-43",
+   "type": "input",
+   "prompt": "人口の急増で食料の確保が難しくなることに対して、南アジアの国々が穀物の生産量を増やすために進めていることを2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "品種"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "肥料",
+       "農薬"
+      ]
+     }
+    ]
+   },
+   "explanation": "新しい品種の導入や、化学肥料や農薬の使用で穀物の生産量を増やしている。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 70,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p70（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-44",
+   "type": "input",
+   "prompt": "インドのICT産業が急速に成長した理由を2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "英語",
+       "数学",
+       "教育"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "技術者",
+       "援助",
+       "アメリカ",
+       "帰国",
+       "欧米"
+      ]
+     }
+    ]
+   },
+   "explanation": "英語や数学の教育水準が高く技術者を育てるための国や州の援助があること、アメリカなどで働いた後に帰国した人々が活躍していることなど。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 71,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p71（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-45",
+   "type": "input",
+   "prompt": "アメリカの企業が、夜の時間帯の電話をインドのコールセンターにつなぐと24時間対応できるのはなぜか。正しいものを選ぼう。\nア アメリカとインドは昼と夜が反対だから　イ アメリカとインドは時差がないから　ウ インドは一日中夜だから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "アメリカとインドは昼と夜が反対なので、アメリカの夜の時間帯にインドは昼になる。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 71,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p71（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-46",
+   "type": "input",
+   "prompt": "インドのICT関連輸出額の輸出先（2023年度）で、最も割合が大きい国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アメリカ",
+     "アメリカ合衆国",
+     "米国"
+    ]
+   },
+   "explanation": "アメリカが54.7％で最も大きい。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 71,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p71（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-47",
+   "type": "input",
+   "prompt": "南アジアで、豊富な労働力を生かして発達してきた工業は何か。次から選ぼう。\nア 綿花を原料とするせんい工業　イ 石油化学工業　ウ 造船業",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "広く行われている綿花の栽培や、賃金が安く豊富な労働力を生かしたせんい工業が発達してきた。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 71,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p71（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-48",
+   "type": "input",
+   "prompt": "経済成長が続くインドで、教育の格差が深刻な問題になっている例を、教科書から1つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "男子",
+      "男の子"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "女子",
+       "女の子",
+       "女性"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "読み書き",
+       "読み",
+       "書き"
+      ]
+     }
+    ]
+   },
+   "explanation": "特に読み書きができない女子の割合が高い地域があり、等しく教育を受けられるような取り組みが行われている。",
+   "source": {
+    "id": "source-0712",
+    "file": "地理教科書/S__16482334_0.jpg",
+    "sha256": "adb136c2e80f8466e59ee88e0cb4a54f4228e540038e93f51454b959514683ed",
+    "page": 71,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p71（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-49",
+   "type": "input",
+   "prompt": "ムスリムの義務とされることとして、教科書にあげられていないものを選ぼう。\nア イスラーム暦の9月に行われる断食　イ 聖地メッカへの巡礼　ウ 毎週日曜日に教会へ行くこと",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "イスラーム暦の9月の断食や、聖地メッカへの巡礼などはムスリムの義務とされている。教会へ行くのはキリスト教徒。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 72,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p72（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-50",
+   "type": "input",
+   "prompt": "西アジアの産油国が、石油の輸出で得た資金を使って進めてきたことを2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "石油化学"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "かんがい",
+       "道路"
+      ]
+     }
+    ]
+   },
+   "explanation": "石油化学工業を発展させ、かんがい施設や道路の整備を進めてきた。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 72,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p72（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-51",
+   "type": "input",
+   "prompt": "降水量が少ない西アジアで、街路樹や農作物を育てたり飲料用の水を販売したりできるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "海水"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "淡水",
+       "真水"
+      ]
+     }
+    ]
+   },
+   "explanation": "海水を淡水に変える工場を造り、その水を使っているから。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 72,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p72（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-52",
+   "type": "input",
+   "prompt": "中央アジアの国々の多くが独立するきっかけになった、1991年のできごとは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ソ連の解体",
+     "ソビエト社会主義共和国連邦の解体",
+     "ソ連解体",
+     "ソ連の崩壊"
+    ]
+   },
+   "explanation": "1991年のソビエト社会主義共和国連邦（ソ連）の解体で独立した。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-53",
+   "type": "input",
+   "prompt": "中央アジアで、多くの観光客が訪れる遺跡の都市が栄えた理由として正しいものを選ぼう。\nア かつてヨーロッパとアジアを結ぶシルクロード（絹の道）の交易で栄えたから　イ 石油の輸出で栄えたから　ウ 近年の工業化で栄えたから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "この地域には、かつてヨーロッパとアジアを結ぶシルクロード（絹の道）の交易で栄えた都市の遺跡がある。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-54",
+   "type": "input",
+   "prompt": "現在、中央アジアの多くの国々と経済的な結び付きが強まっている、国境を接する国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中国",
+     "中華人民共和国"
+    ]
+   },
+   "explanation": "中央アジアの多くの国々と国境を接している中国との経済的な結び付きが強まり、道路やパイプライン、送電網の整備が進められている。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-55",
+   "type": "input",
+   "prompt": "2019年のドバイの労働者人口は238万人で、そのうち外国籍の人が96.2％をしめる。外国籍の労働者は約何万人か。整数で答えよう（小数第1位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "229",
+    "units": [
+     "万人"
+    ]
+   },
+   "explanation": "238×0.962＝228.9…で約229万人。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-56",
+   "type": "input",
+   "prompt": "ドバイなどの都市が、再生可能エネルギーや人工知能（AI）などの先端技術を活用しているのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "限りがない",
+      "限りはない",
+      "なくならない",
+      "無限"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "鉱産資源",
+       "石油",
+       "資源"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "限り",
+       "なくな",
+       "頼らない",
+       "たよらない",
+       "持続",
+       "減"
+      ]
+     }
+    ]
+   },
+   "explanation": "鉱産資源には限りがあるため、石油にたよらない持続可能な都市づくりを目指しているから。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-57",
+   "type": "input",
+   "prompt": "西アジア・中央アジアの国々の主な輸出品のグラフで、カザフスタン・アゼルバイジャン・カタールに共通する輸出品の特徴を選ぼう。\nア 石油や天然ガスなどの鉱産資源の割合が大きい　イ 機械類が中心である　ウ 農産物が中心である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "どの国も石油や天然ガスなどの鉱産資源の割合が大きい。",
+   "source": {
+    "id": "source-0713",
+    "file": "地理教科書/S__16482335_0.jpg",
+    "sha256": "646abfd1193d86848534bf5254e19d9b9cfd56b1e318ca1a0c344545c4260b99",
+    "page": 73,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p73（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-58",
+   "type": "input",
+   "prompt": "ラマダンの期間に、ムスリムが日の出から日没まで一切の飲食をしない断食をするのは、どのような思いからか。教科書の説明から1つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "貧しい",
+       "困って",
+       "神に近づ",
+       "神"
+      ]
+     }
+    ]
+   },
+   "explanation": "人々は断食を「貧しい人や困っている人の気持ちが分かる」「神に近づける」ととらえている。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-59",
+   "type": "input",
+   "prompt": "クルアーンでは、断食をしなくてよいとされている人がいる。その人として教科書にあげられていないものを選ぼう。\nア 子ども　イ 老人　ウ 病人　エ 観光客",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "クルアーンでは、子どもや老人、病人などは断食をしなくてよいとされている。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-60",
+   "type": "input",
+   "prompt": "ムスリムの女性の服装について、教科書の説明として正しいものを選ぼう。\nア クルアーンの解釈が地域によってちがうため、服装は地域によってさまざまである　イ 世界中のムスリムの女性は同じ黒いベールを着けている　ウ ムスリムの女性には服装の決まりはない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "地域によってクルアーンの解釈がちがうため、目の部分以外を黒いベールでかくす地域や、欧米風の服装をしている地域などさまざま。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-61",
+   "type": "input",
+   "prompt": "世界のムスリムの人口と割合の地図で、ムスリムの人口が最も多い国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "インドネシア"
+    ]
+   },
+   "explanation": "東南アジアのインドネシアが最も多い。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-62",
+   "type": "input",
+   "prompt": "アジア州のまとめの表で、地域・国と「経済が成長した理由」の組み合わせとして正しいものを選ぼう。\nア 中国－経済特区で外国企業を受け入れた　イ 韓国－植民地時代からのプランテーションで商品作物を輸出した　ウ 東南アジア－高い技術を必要とするハイテク産業を発展させた",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "中国は経済特区で外国企業を受け入れ、韓国はハイテク産業を発展させ、東南アジアはプランテーションの商品作物を輸出して経済が成長した。",
+   "source": {
+    "id": "source-0714",
+    "file": "地理教科書/S__16482336_0.jpg",
+    "sha256": "c57b822ae60852d9826bd23ff4eb8ebb259ca5628261f3115d14a9edd7b67cfb",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-63",
+   "type": "input",
+   "prompt": "タイのバンコクで、激しい交通渋滞という課題に対して行われてきた取り組みとして、教科書の写真にあるものを選ぼう。\nア 高架鉄道を整備した　イ 自動車の生産をすべて止めた　ウ 都市の人口を農村へ強制的に移した",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "交通渋滞が発生していたバンコクでは、高架鉄道が整備されている（2019年）。",
+   "source": {
+    "id": "source-0714",
+    "file": "地理教科書/S__16482336_0.jpg",
+    "sha256": "c57b822ae60852d9826bd23ff4eb8ebb259ca5628261f3115d14a9edd7b67cfb",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-64",
+   "type": "input",
+   "prompt": "旧正月などに、シャンハイの駅が帰省する人々で混雑する理由として、中国の地域別の一人あたり総生産額の地図と結び付けて最も適切なものを選ぼう。\nア 所得の低い内陸部から、所得の高い沿岸部の都市へ働きに来ている人が多いから　イ シャンハイが内陸部にあり、沿岸部の人が観光に来るから　ウ シャンハイの一人あたり総生産額が中国で最も低いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "一人あたり総生産額の高い地域は沿岸部に集まっている。内陸部の農村から沿岸部の都市へ出かせぎに来ている人々が、休みに一斉に帰省するため混雑する。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-65",
+   "type": "input",
+   "prompt": "イスラームの教典「クルアーン」には、イスラームを始めただれが神から受けた教えがまとめられているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ムハンマド"
+    ]
+   },
+   "explanation": "クルアーンには、ムハンマドが神から受けた教えがまとめられている。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-66",
+   "type": "input",
+   "prompt": "ラマダンは、イスラーム暦の何月か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "9",
+     "9月",
+     "九月"
+    ]
+   },
+   "explanation": "ラマダンとよばれるイスラーム暦の9月には、日の出から日没まで飲食をしない断食をする。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-67",
+   "type": "input",
+   "prompt": "断食期間中のインドネシアの飲食店が、店をカーテンでおおっている理由として、教科書の写真の説明に合うものを選ぼう。\nア 日中に観光客などが食事する姿が見えないようにするため　イ 強い日差しから店の料理を守るため　ウ 断食期間中は店を完全に閉めているため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "日中に観光客などが食事をする姿が見えないように、カーテンでおおっている。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-68",
+   "type": "input",
+   "prompt": "イスラームと飲酒について、教科書の説明に合うものを選ぼう。\nア 一般的に禁止されているが、ムスリムもふくめて飲酒ができる地域もある　イ どの地域でも、ムスリムには飲酒が認められている　ウ ムスリム以外の人の飲酒も、世界中で禁止されている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "イスラームでは一般的に飲酒が禁止されているが、ムスリム以外にも禁止している地域もあれば、ムスリムもふくめて飲酒ができる地域もある。生活は地域によって異なる。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-69",
+   "type": "input",
+   "prompt": "イスラームについての誤ったイメージに対して、教科書が「クルアーン」の内容として示していることを選ぼう。\nア ほかの宗教を信仰する人たちを認めている　イ ほかの宗教の人とは関わらないよう教えている　ウ 一部の人々が行うテロリズムを認めている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "クルアーンでは、ほかの宗教を信仰する人たちを認めている。イスラームに対する正しい理解が求められている。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-asia-70",
+   "type": "input",
+   "prompt": "ラマダンの断食期間中、日没後のムスリムの過ごし方として、教科書の説明に合うものを選ぼう。\nア 飲食が許されるため、親戚や近所の人たちと食事を楽しむ　イ 日没後も次の日の朝まで、水も飲まずに過ごす　ウ 日没後は外出が禁じられ、一人で静かに過ごす",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "日没後は飲食が許されるため、親戚や近所の人たちと食事を楽しむ姿も見られる。",
+   "source": {
+    "id": "source-0715",
+    "file": "地理教科書/S__16482337_0.jpg",
+    "sha256": "445a0fd25c5294b0293ca9f1a8912e7b75d4d747bb6fa1eed2fa417989d894c4",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-14 Claude作成（特訓・下書き）。地理ワーク p30〜37・50〜52・77 と、地理教科書 p60〜77（台帳登録案。写真を原寸で開き本文・グラフ・地図の説明まで確認）をもとに作ったオリジナル問題。数値は教科書の本文・資料に書かれたものだけを使い、計算はプログラムで確認した。"
+}

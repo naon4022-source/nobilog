@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
-let controller=null,diaryController=null,speedController=null,epoch=0,kind=null;
-function stop(){epoch++;controller?.destroy();diaryController?.destroy();speedController?.destroy();controller=null;diaryController=null;speedController=null;kind=null;}
+let controller=null,diaryController=null,speedController=null,skillController=null,epoch=0,kind=null;
+function stop(){epoch++;controller?.destroy();diaryController?.destroy();speedController?.destroy();skillController?.destroy();controller=null;diaryController=null;speedController=null;skillController=null;kind=null;}
 async function flush(who,run){
  const deadline=Date.now()+15000;
  while(cloudState.busy){
@@ -42,11 +42,13 @@ async function start(){
     }
     if(/^\/material-(explain|hint|judge|similar|generate)/.test(path)){
      const error=await response.json().catch(()=>({}));
-     throw Error({ai_budget:'今月のAI利用の目安額に達したため、AIを止めています。問題の解説は使えます。',ai_rate:'少し時間をあけてから、もう一度押してください。',ai_daily:'今日のAIの利用回数の上限に達しました。明日また使えます。',ai_unsupported:'この問題・この回答ではAIを使えません。問題の解説で確認してください。',generated_full:'作った問題がこの単元の上限（60問）に達しました。作った問題を解いてみよう。',hint_order:'ヒントは1段目から順に開いてください。'}[error.error]||'AIは今は使えません。勉強はそのまま続けられます。');
+     if(run!==epoch||!cloudSame(who))throw Error('ログインが変更されました。');
+     root.NobiAITrialNotice?.show(error.trial);
+     throw Error({billing_not_ready:error.retrySafe===true?'OpenAIの残高または利用上限を確認し、入金や設定の反映後にもう一度押してください。自動では再送しません。':'OpenAIの残高または利用上限と、前の処理の確認が必要です。なおに確認してください。',ai_trial_daily:'AIの試験利用は1日10回までです。追加利用にはなおの許可が必要です。',ai_busy:'別のAI通信を処理しています。終わるまで待ってください。',ai_stopped:'異常が続いたためAIを停止しています。なおが原因を確認するまで再開しません。',ai_control_unavailable:'安全管理の保存を確認できないためAIを停止しました。',ai_plan:'今のプランでは、AIの回数が残っていません（確認版の仮ルール）。問題の解説は使えます。',ai_budget:'今月のAI利用の目安額に達したため、AIを止めています。問題の解説は使えます。',ai_rate:'少し時間をあけてから、もう一度押してください。',ai_daily:'今日のAIの利用回数の上限に達しました。明日また使えます。',ai_unsupported:'この問題・この回答ではAIを使えません。問題の解説で確認してください。',generated_full:'作った問題がこの単元の上限（60問）に達しました。作った問題を解いてみよう。',hint_order:'ヒントは1段目から順に開いてください。'}[error.error]||'AIは今は使えません。勉強はそのまま続けられます。');
     }
     throw Error('回答記録を確認できませんでした。');
    }
-   const value=await response.json();if(run!==epoch||!cloudSame(who))throw Error('ログインが変更されました。');return value;
+   const value=await response.json();if(run!==epoch||!cloudSame(who))throw Error('ログインが変更されました。');root.NobiAITrialNotice?.show(value.trial);return value;
   }
   const bridge=root.NobiMaterialBridge.create({
    ...rewardStore(who),
@@ -54,9 +56,13 @@ async function start(){
    ready:()=>serverBootReady&&!isTrial()&&!authLeaseBlocked,
    read:()=>{const raw=recordStorage.getItem(who.uid+':appData');return raw===null?{totalScores:{},history:[]}:JSON.parse(raw);},
    write:next=>{recordStorage.setItem(who.uid+':appData',JSON.stringify(next));userData=next;cloudSetDirty(true);},
+   draftsRead:()=>{try{const value=JSON.parse(recordStorage.getItem(who.uid+':materialDrafts')||'{}');return value&&typeof value==='object'&&!Array.isArray(value)?value:{};}catch(_){return {};}},
+   draftsWrite:next=>{const key=who.uid+':materialDrafts',text=JSON.stringify(next);if(recordStorage.getItem(key)===(Object.keys(next).length?text:null))return;if(Object.keys(next).length)recordStorage.setItem(key,text);else recordStorage.removeItem(key);cloudSetDirty(true);},
    flush:()=>flush(who,run),
    progress:async()=>(await records('/material-progress')).progress,
    record:async attempt=>(await records('/material-records',attempt)).record,
+   testSessionCreate:request=>records('/material-test-session',request),
+   testSessionStatus:id=>records('/material-test-session?id='+encodeURIComponent(id)),
    history:cursor=>records('/material-records'+(cursor?'?cursor='+encodeURIComponent(cursor):'')),
    speed:options=>records('/material-speed?'+new URLSearchParams(options).toString()),
    marks:unitId=>records('/material-marks?unitId='+encodeURIComponent(unitId)),
@@ -72,7 +78,8 @@ async function start(){
    similar:attemptId=>records('/material-similar',{attemptId}),
    generate:request=>records('/material-generate',request),
    generated:unitId=>records('/material-generated?unitId='+encodeURIComponent(unitId)),
-   hint:request=>records('/material-hint',request)
+   hint:request=>records('/material-hint',request),
+   paused:async()=>(await records('/material-flags')).items
   });
   root.studyGoalMaterialUpdate?.(who.uid,null);
   kind='study';controller=root.NobiMaterialUI.mount(host,bank.units,bridge,bank.sources);
@@ -121,8 +128,25 @@ async function startStats(){
  const host=document.getElementById('material-statistics');if(!host)return;
  stop();const run=epoch,who=cloudIdentity();
  if(!who.uid||isTrial()||!serverBootReady||!root.NobiMaterialStats){host.textContent='ログインして保存済みの学習記録を確認できます。';return;}
+ let bankPending=null,progressPending=null;
+ const own=()=>run===epoch&&cloudSame(who)&&!authLeaseBlocked;
+ function catalog(){
+  if(!own())return Promise.reject(Error('identity changed'));
+  if(!bankPending)bankPending=(async()=>{const response=await fetch('/material-bank.json',{cache:'no-store'});if(!response.ok)throw Error('bank unavailable');const bank=await response.json();if(!own()||!Array.isArray(bank.units))throw Error('bank unavailable');return bank;})().catch(error=>{bankPending=null;throw error;});
+  return bankPending;
+ }
+ function progress(){
+  if(!own())return Promise.reject(Error('identity changed'));
+  if(!progressPending)progressPending=(async()=>{const response=await cloudTry(cloudUrl('/material-progress'),{cache:'no-store'},15000);if(!response.ok)throw Error('records unavailable');const value=await response.json();if(!own()||!value.progress||typeof value.progress!=='object'||Array.isArray(value.progress))throw Error('records unavailable');return value.progress;})().finally(()=>{progressPending=null;});
+  return progressPending;
+ }
  kind='stats';controller=root.NobiMaterialStats.mount(host,{
   identity:()=>run===epoch&&cloudSame(who)?who.uid:null,
+  // 単元の達成度（台帳21・2026-10-08）：問題の一覧と、本人の記録（サーバー保存）の進み具合だけを使う
+  async achievement(){
+   const [bank,saved]=await Promise.all([catalog(),progress()]);if(!own())throw Error('identity changed');
+   return bank.units.filter(u=>u&&u.status==='ready').map(u=>{const ids=new Set((Array.isArray(u.questions)?u.questions:[]).map(q=>q?.id).filter(id=>typeof id==='string'));return {id:u.id,subject:u.subject,grade:u.grade,title:u.title,kind:u.bank==='tokkun'?'特訓':u.mode==='drill'?'ドリル':'教科書',marks:u.schedule==='marks',total:ids.size,done:new Set((Array.isArray(saved[u.id]?.done)?saved[u.id].done:[]).filter(id=>ids.has(id))).size};});
+  },
   async load(month){
    if(run!==epoch||!cloudSame(who)||authLeaseBlocked)throw Error('記録へ接続できません。');
    const response=await cloudTry(cloudUrl('/material-stats',month?'month='+encodeURIComponent(month):''),{cache:'no-store'},15000);
@@ -130,11 +154,19 @@ async function startStats(){
    const value=await response.json();if(run!==epoch||!cloudSame(who))throw Error('ログインが変更されました。');return value;
   }
  });
+ const skillHost=document.getElementById('learning-skill-tree');
+ if(skillHost&&root.NobiSkillTree){skillController=root.NobiSkillTree.mount(skillHost,{
+  same:()=>run===epoch&&cloudSame(who)&&!authLeaseBlocked,
+  async load(){
+   const [bank,saved]=await Promise.all([catalog(),progress()]);if(!own())throw Error('identity changed');return {bank,progress:saved};
+  },
+  open(unitId){focus({unitId});root.switchView?.('study');}
+ });}
  const speedHost=document.getElementById('material-speed-statistics');
  if(speedHost&&root.NobiMaterialSpeed){
   speedHost.textContent='問題ごとの速度比較を準備しています。';
   try{
-   const response=await fetch('/material-bank.json',{cache:'no-store'});if(!response.ok)throw Error('bank unavailable');const bank=await response.json();
+   const bank=await catalog();
    if(run!==epoch||!cloudSame(who)||authLeaseBlocked)return;
    const bridge=root.NobiMaterialBridge.create({
     identity:()=>run===epoch&&cloudSame(who)?who.uid:null,ready:()=>serverBootReady&&!isTrial()&&!authLeaseBlocked,
@@ -151,5 +183,5 @@ async function startStats(){
 // 教科書の「問題を解く」から呼ばれる：問題タブを開いたあと、その大単元を選ぶ（読み込み中なら終わってから）
 let pendingFocus=null;
 function focus(o){pendingFocus=o||null;if(controller&&kind==='study'&&controller.focus){controller.focus(pendingFocus);pendingFocus=null;}}
-root.NobiMaterialEntry=Object.freeze({focus,start,stop,startStats,startCalendar,refreshDaily,refreshDiarySettings:()=>diaryController?.settingsChanged()});
+root.NobiMaterialEntry=Object.freeze({focus,start,stop,startStats,startCalendar,activity:()=>kind==='study'?controller?.activity?.()||null:null,refreshDaily,refreshDiarySettings:()=>diaryController?.settingsChanged()});
 })(globalThis);

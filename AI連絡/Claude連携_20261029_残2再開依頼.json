@@ -1,0 +1,50 @@
+{
+  "status": "sent once and execution confirmed in existing Claude chat",
+  "observedAtUTC": "2026-10-29T08:36:13.156818+00:00",
+  "chat": "のびログ非admin機能実装・検証",
+  "message": 32,
+  "sendCount": 1,
+  "inputCleared": true,
+  "runningObserved": true,
+  "proofObserved": [
+    "Claudeが応答中です",
+    "実行中",
+    "停止ボタン",
+    "依頼ファイル読み取り",
+    "2 commands executed and source photo loading"
+  ],
+  "quotaBeforeSend": {
+    "sessionUsedPercent": 0,
+    "weeklyUsedPercent": 57
+  },
+  "request": "tools/claude-handoff/20261029-resume-final2-and-audit.md",
+  "requestSha256": "db4534e951a90d648689472d9a947514f6f91dd62c25ca71432e0ea04e0959cb",
+  "newFolder": "Claude作業/20261029_残2と出典点検/",
+  "tasks": [
+    "spaceuse70",
+    "solidreview70",
+    "source photos and per-question page mapping",
+    "hist1/hist2 graph-reading candidates",
+    "unit-input grading constraints candidates"
+  ],
+  "surface2": "pending explicit scope/count decision; independent tasks continue",
+  "automation": {
+    "id": "claude-3",
+    "status": "ACTIVE",
+    "hoursJST": [
+      1,
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22
+    ],
+    "minute": 30,
+    "weekly100": "pause this automation and notify; no automatic restart after reset; explicit user resume only",
+    "previousWeekly20Reserve": "superseded by latest user instruction"
+  },
+  "mainIntegrated": false,
+  "published": false
+}

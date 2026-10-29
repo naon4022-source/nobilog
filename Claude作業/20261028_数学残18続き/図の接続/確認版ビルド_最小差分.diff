@@ -1,0 +1,11 @@
+--- 図の接続/preview-build.copy.py	2026-10-28 19:23:57
++++ 図の接続/preview-build.candidate.py	2026-10-28 19:24:32
+@@ -58,6 +58,8 @@
+     (assets / 'index.html').write_text(page)
+     for source in (ROOT / 'site-assets').iterdir():
+         if source.is_file() and source.name not in {'sw.js','_headers'}: shutil.copyfile(source, assets / source.name)
++    # 候補（Claude 2026-10-28）：特訓の問題の図を置くフォルダだけ、確認版にもフォルダごと写す
++    if (ROOT / 'site-assets/tokkun-figures').is_dir(): shutil.copytree(ROOT / 'site-assets/tokkun-figures', assets / 'tokkun-figures', dirs_exist_ok=True)
+     # 章ごとの確認版配信：今回の制作対象動画は、章全体の検証後にだけ表示する。
+     release_file = ROOT / 'preview' / 'math-video-release.json'
+     if release_file.exists():

@@ -1,0 +1,97 @@
+{
+ "id": "tokkun-math-1-hist3",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ヒストグラムと相対度数③（特訓）",
+ "majorTitle": "データの活用",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-hist3-1",
+   "type": "input",
+   "prompt": "度数分布表で、0 以上 10 未満が 2 人、10 以上 20 未満が 5 人、20 以上 30 未満が 3 人である。階級値を使って平均値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16"
+   },
+   "explanation": "①階級値は 5、15、25　②5 × 2 + 15 × 5 + 25 × 3 ＝ 10 + 75 + 75 ＝ 160　③160 ÷ 10 ＝ 16。答え 16",
+   "source": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p234〜237（度数分布表と代表値）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "tokkun-math-1-hist3-2",
+   "type": "input",
+   "prompt": "度数分布表で、0 以上 10 未満が 2 人、10 以上 20 未満が x 人、20 以上 30 未満が 4 人である。階級値を使って求めた平均値が 17 のとき、x の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①階級値 5、15、25 を使うと (10 + 15x + 100) ÷ (6 + x) ＝ 17　②110 + 15x ＝ 102 + 17x　③2x ＝ 8 より x ＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p234〜237（度数分布表と代表値）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  },
+  {
+   "id": "tokkun-math-1-hist3-3",
+   "type": "input",
+   "prompt": "23 人のデータの度数分布表で、度数が小さい階級から順に 3、6、8、4、2 人である。中央値がふくまれるのは、小さいほうから何番目の階級か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "番目"
+    ]
+   },
+   "explanation": "①23 人の中央値は小さいほうから 12 番目　②累積度数 3、9、17、… なので 12 番目は3番目の階級　③答え 3番目",
+   "source": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p234〜237（度数分布表と代表値）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466055_0.jpg",
+    "sha256": "13f6a462f0d316a531294bf561f9a91edd155ed12e4a47c8469ae0b9b997da82",
+    "page": 236
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。度数分布表から平均値や中央値の階級を求める考え方を、逆にたどる問題に広げた一段難しい問題。答えは check.py で計算し直して検算。【保留】教科書問題と似ない考え方の問題は 3 問まで。70問にしていない。"
+}

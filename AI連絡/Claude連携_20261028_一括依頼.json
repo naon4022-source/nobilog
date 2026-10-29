@@ -1,0 +1,50 @@
+{
+  "status": "sent once;existing Claude chat visibly running",
+  "chat": "のびログ非admin機能実装・検証",
+  "observedMessage": 24,
+  "promptFile": "AI連絡/Claudeへ_類題残10_20261028.md",
+  "promptSha256": "9a731e4cc0ab73ccb212e4f5604ab2d17a95ab6c9eb6504cf2bfdf1529e1a9fa",
+  "observedUsage": {
+    "fiveHourUsedPercent": 0,
+    "weeklyAllModelsUsedPercent": 29,
+    "remainingReserveMinimumPercent": 20
+  },
+  "previousCandidate": {
+    "folder": "Claude作業/20261028_類題拡大",
+    "matchedManifestFiles": 12,
+    "matchedMainBaselineFiles": 4,
+    "manifestSha256": "da2be43dd3131da3db1331fec93d3b2b5e5c635db7853fcf7337f43d8943561c",
+    "counts": {
+      "patterns": 22,
+      "questions": 66,
+      "references": 87
+    },
+    "status": "candidate only;independent full content check/main integration pending"
+  },
+  "batchOrder": [
+    {
+      "work": "残10単元の類題、到達と元21/参照29の差の照合",
+      "folder": "Claude作業/20261028_類題拡大_残10/"
+    },
+    {
+      "work": "現在も70問未満の数学特訓を1単元ずつ制作/点検",
+      "folder": "Claude作業/20261028_数学特訓_残単元/"
+    }
+  ],
+  "automation": {
+    "id": "claude-3",
+    "status": "ACTIVE",
+    "requestedTimezone": "Asia/Tokyo",
+    "dailyTimes": [
+      "07:30",
+      "11:30",
+      "15:30"
+    ],
+    "maxScheduledChecksPerDay": 3,
+    "intervalHours": 4,
+    "removedTime": "09:30",
+    "oldWeeklyAndAutoRestartUnchanged": true
+  },
+  "safety": "No new chats/agents;own candidate folders only;no main/confirmed bank/HANDOFF/global suite/publication/commit/delete/admin/realAI/secrets/user records.",
+  "guiDelivery": "One click;initial AX state unchanged. Re-observation showed delivered message24,cleared input,Claude responding/running/stop button. No resend."
+}

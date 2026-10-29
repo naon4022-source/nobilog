@@ -1,0 +1,2093 @@
+{
+ "id": "tokkun-math-1-drawuse",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "図形の移動と基本の作図の利用（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-drawuse-1",
+   "type": "input",
+   "prompt": "2点 A(0, 3)、B(4, 1) と、x 軸上を動く点Pがある。AP + PB がもっとも短くなるときの、Pの x 座標を求めよう（B を x 軸について対称移動した点を使うとよい）。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①B を x 軸について対称移動すると B′(4, −1)　②AP + PB ＝ AP + PB′ がもっとも短いのは、P が線分 AB′ 上にあるとき　③A から B′ へ、右へ 4 で下へ 4、y が 3 から 0 になるのは右へ 3 のところ。答え 3",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-2",
+   "type": "input",
+   "prompt": "2点 A(1, 4)、B(5, 4) から等しいきょりにあり、x 軸上にある点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①A、B から等しいきょりの点は、AB の垂直二等分線上にある　②垂直二等分線は x ＝ 3 の直線　③x 軸との交点 (3, 0)。答え 3",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-3",
+   "type": "input",
+   "prompt": "∠A ＝ 90° の直角三角形 ABC で、3つの頂点を通る円の中心は辺 BC のまん中の点になる。BC ＝ 10 cm のとき、この円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①3辺の垂直二等分線の交点が円の中心で、直角三角形では斜辺 BC のまん中の点　②半径 ＝ BC ÷ 2　③5 cm。答え 5cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-4",
+   "type": "input",
+   "prompt": "時計の短針は、3時から3時30分までの間に何度回転するか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①短針は1時間に 30° 回る　②30 分ではその半分　③15 度。答え 15度",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-5",
+   "type": "input",
+   "prompt": "図の方眼で、A の家から川（横の直線）まで行って水をくみ、B の家へ行く。道のりがいちばん短くなるのは、川のどの点に寄るときか。図のア〜エから選び、記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①B を川について対称移動した点を B'(7, −1) とすると、川の上の点 P で PB ＝ PB'　②AP + PB ＝ AP + PB' がいちばん短いのは、A、P、B' が一直線にならぶとき　③A(1, 3) から B'(7, −1) へは右へ 6・下へ 4 で、川（y ＝ 0）を横切るのは A から右へ 4.5 の所、ウ (5.5, 0)。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "image": "/tokkun-fig-drawuse-5.svg",
+   "imageAlt": "方眼の上の川（横の直線）と、川の同じ側の家A、B。川の上に点ア、イ、ウ、エがある。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-6",
+   "type": "input",
+   "prompt": "図の方眼で、道路（横の直線）の上に、A 地点と B 地点から等しい距離になるようにバス停をつくりたい。どこにつくればよいか。図のア〜エから選び、記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①A、B から等しい距離の点は、線分 AB の垂直二等分線の上　②道路上の点で、A までと B までの距離が等しい点をさがす　③ア (3, 0) は A まで右へ 2・上へ 4、B まで右へ 4・上へ 2 で、どちらも同じ形の直角三角形の斜めの辺になり等しい。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   },
+   "image": "/tokkun-fig-drawuse-6.svg",
+   "imageAlt": "方眼の上の道路（横の直線）とA地点、B地点。道路の上に点ア、イ、ウ、エがある。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-7",
+   "type": "input",
+   "prompt": "図の線分 A'B' は、線分 AB をある点を中心として反時計回りに 90° 回転移動したものである。回転の中心の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,2)",
+     "(3、2)",
+     "3,2",
+     "3、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①回転の中心は、A と A' から等しい距離にあり、B と B' からも等しい距離にある　②AA' の垂直二等分線と BB' の垂直二等分線の交点が中心　③方眼で調べると (3, 2) は A(6, 1)・A'(4, 5) のどちらからも、B(6, 3)・B'(2, 5) のどちらからも等しい距離。答え (3, 2)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-drawuse-7.svg",
+   "imageAlt": "座標平面上の線分AB（A(6,1)、B(6,3)）と、回転移動した線分A'B'（A'(4,5)、B'(2,5)）。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-8",
+   "type": "input",
+   "prompt": "図の方眼で、原点 O を中心とし点 A(3, 4) を通る円がある。点 A でこの円に接する直線の上にある点を、P、Q、R、S からすべて選び、記号で答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "P"
+     ],
+     [
+      "R"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①接線は、接点 A を通り半径 OA に垂直な直線　②OA は右へ 3・上へ 4 の向きなので、垂直な向きは右へ 4・下へ 3（または左へ 4・上へ 3）　③A(3, 4) からその向きに進むと P(7, 1)、R(−1, 7) を通る。答え P、R",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   },
+   "image": "/tokkun-fig-drawuse-8.svg",
+   "imageAlt": "座標平面上の、原点Oを中心とする円と円周上の点A(3,4)、半径OA、点P、Q、R、S。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-9",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm で、長方形の紙の左下の頂点 A が点 P(4, 2) に重なるように折る。折り目は、紙の下の辺と、A から何 cm の所で交わるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①A が P に重なる折り目は、線分 AP の垂直二等分線　②下の辺上の点 X(x, 0) で XA ＝ XP となる所をさがす　③XA ＝ x、XP は横 4 − x・たて 2 で、x × x ＝ (4 − x) × (4 − x) + 4 より 8x ＝ 20、x ＝ 2.5。答え 2.5 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   },
+   "image": "/tokkun-fig-drawuse-9.svg",
+   "imageAlt": "方眼の上の長方形の紙と、左下の頂点A、点P(4,2)。AとPが点線で結んである。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-10",
+   "type": "input",
+   "prompt": "図の直角三角形 OBC は O(0, 0)、B(4, 0)、C(0, 3) で、BC ＝ 5 である。3つの辺に接する円の中心 I の座標を答えよう（3辺から等しい距離にある点）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,1)",
+     "(1、1)",
+     "1,1",
+     "1、1"
+    ],
+    "compact": true
+   },
+   "explanation": "①I から3辺までの距離を r とすると、三角形 OBC は I を頂点とする3つの三角形に分けられる　②面積 4 × 3 ÷ 2 ＝ 6 ＝ (4 + 3 + 5) × r ÷ 2 より r ＝ 1　③I は x 軸と y 軸から 1 の距離なので (1, 1)。答え (1, 1)",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   },
+   "image": "/tokkun-fig-drawuse-10.svg",
+   "imageAlt": "座標平面上の直角三角形OBC（O(0,0)、B(4,0)、C(0,3)）と、3辺に接する円とその中心I。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-11",
+   "type": "input",
+   "prompt": "図のように、A から出た光が鏡の点 P で反射して B へ進んだ。光が反射するとき、鏡と入ってくる光がつくる角と、鏡と出ていく光がつくる角は等しい。∠LPA（鏡と入ってくる光の角）が 35° のとき、∠APB の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "110",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①鏡と出ていく光の角も 35°　②鏡の直線の角は 180°　③∠APB ＝ 180 − 35 − 35 ＝ 110。答え 110度",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   },
+   "image": "/tokkun-fig-drawuse-11.svg",
+   "imageAlt": "鏡（横の直線）の点Pで反射する光。AからPへ入り、Bへ出ていく。鏡と入ってくる光の角に35°と書いてある。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-12",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm である。三角形 ABC を、辺 AB のまん中の点 M を中心として 180° 回転移動すると三角形 BAD になり、2つを合わせて四角形 ADBC ができた。四角形 ADBC の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①180° 回転移動しても形も大きさも変わらないので、三角形 BAD の面積は三角形 ABC と同じ　②三角形 ABC は底辺 5 cm、高さ 4 cm で 10 cm²　③10 × 2 ＝ 20（四角形は平行四辺形になる）。答え 20 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   },
+   "image": "/tokkun-fig-drawuse-12.svg",
+   "imageAlt": "方眼の上の三角形ABCと、辺ABのまん中の点Mを中心に180°回転移動した三角形BAD。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-13",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm で、三角形 ABC は AB ＝ AC の二等辺三角形である。この三角形を辺 BC について対称移動して三角形 DBC をつくった。四角形 ABDC の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①対称移動しても大きさは変わらない　②三角形 ABC は底辺 6 cm、高さ 4 cm で 12 cm²　③12 × 2 ＝ 24（四角形 ABDC はひし形になる）。答え 24 cm²",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   },
+   "image": "/tokkun-fig-drawuse-13.svg",
+   "imageAlt": "方眼の上の二等辺三角形ABCと、辺BCについて対称移動した三角形DBC。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-14",
+   "type": "input",
+   "prompt": "図の方眼の1目もりは 1 cm である。線分 AC を対角線とする正方形を作図するために、AC の垂直二等分線をひき、その上に AC と同じ長さになるように B、D をとった。正方形 ABCD の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①正方形の対角線は、長さが等しく、たがいの垂直二等分線になっている　②2本の対角線はどちらも 6 cm　③面積は対角線 × 対角線 ÷ 2 ＝ 6 × 6 ÷ 2 ＝ 18。答え 18 cm²",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   },
+   "image": "/tokkun-fig-drawuse-14.svg",
+   "imageAlt": "方眼の上の対角線ACと、その垂直二等分線（点線）上の点B、D、正方形ABCD。"
+  },
+  {
+   "id": "tokkun-math-1-drawuse-15",
+   "type": "input",
+   "prompt": "座標平面で、x 軸を川と考える。川をはさんで反対側に A(1, 4) と B(7, −2) がある。川をわたる地点 P を通って A から B へ行く道のりを最も短くするとき、P の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①A と B が川の反対側にあるので、まっすぐ結べばよい　②A から B へは右へ 6・下へ 6 で、1 進むと 1 下がる　③y が 4 から 0 になるのは右へ 4 進んだ所で、x ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-16",
+   "type": "input",
+   "prompt": "2点 A(2, 1)、B(4, 5) と、y 軸上を動く点 P がある。AP + PB が最も短くなるときの P の y 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7/3"
+   },
+   "explanation": "①A を y 軸について対称移動した点 A'(−2, 1) をとると PA ＝ PA'　②A'、P、B が一直線のとき最短　③A' から B へは右へ 6・上へ 4。x ＝ 0 までは右へ 2 なので上へ 4 × 2 ÷ 6 ＝ 4/3、y ＝ 1 + 4/3 ＝ 7/3。答え 7/3",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-17",
+   "type": "input",
+   "prompt": "2点 A(−3, 2)、B(5, 2) から等しい距離にあり、直線 y ＝ −1 の上にある点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-1)",
+     "(1、-1)",
+     "1,-1",
+     "1、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "①A、B から等しい距離の点は、AB の垂直二等分線 x ＝ (−3 + 5) ÷ 2 ＝ 1 の上　②y ＝ −1 の上でもある　③(1, −1)。答え (1, −1)",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-18",
+   "type": "input",
+   "prompt": "2点 A(2, 0)、B(0, 2) から等しい距離にあり、x 軸上にある点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(0,0)",
+     "(0、0)",
+     "0,0",
+     "0、0"
+    ],
+    "compact": true
+   },
+   "explanation": "①A、B から等しい距離の点は、AB の垂直二等分線の上で、これは原点を通る直線 y ＝ x　②x 軸との交点は原点　③(0, 0)。答え (0, 0)",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-19",
+   "type": "input",
+   "prompt": "2点 A(4, 1)、B(5, 3) と、直線 y ＝ x 上を動く点 P がある（A、B は y ＝ x の同じ側）。AP + PB が最も短くなるときの P の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3.4,3.4)",
+     "(3.4、3.4)",
+     "3.4,3.4",
+     "3.4、3.4"
+    ],
+    "compact": true
+   },
+   "explanation": "①A を y ＝ x について対称移動すると A'(1, 4)（x と y が入れかわる）　②A'、P、B が一直線のとき最短　③A'(1, 4) から B(5, 3) へ右へ 4・下へ 1。y ＝ x と交わるのは右へ 2.4 進んだ所で (3.4, 3.4)。答え (3.4, 3.4)",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-20",
+   "type": "input",
+   "prompt": "線分 AC ＝ 8 cm を対角線とする正方形を作図した。正方形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①正方形の2本の対角線は、長さが等しく垂直に交わる　②もう1本の対角線も 8 cm　③8 × 8 ÷ 2 ＝ 32。答え 32 cm²",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-21",
+   "type": "input",
+   "prompt": "半径 4 cm の円の周上に、コンパスを半径の長さに開いて、となりの点までの距離が半径と同じになるように点を順にとっていくと、6 つ目でもとの点にもどった。6つの点を順に結んでできる正六角形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①となりの点どうしの距離は半径と同じ 4 cm　②正六角形の辺は 6 本　③4 × 6 ＝ 24。答え 24 cm",
+   "source": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-22",
+   "type": "input",
+   "prompt": "長さ 10 cm と 6 cm の2本の線分が、たがいのまん中の点で垂直に交わるように作図し、4つの端を順に結んでひし形をつくった。ひし形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①2本の線分がひし形の対角線　②対角線が垂直なので、面積は対角線 × 対角線 ÷ 2　③10 × 6 ÷ 2 ＝ 30。答え 30 cm²",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-23",
+   "type": "input",
+   "prompt": "円周上の点 A でこの円に接する直線を作図したい。どうすればよいか。次のア〜ウから選び、記号で答えよう。\nア 点 A を通り半径 OA に平行な直線をひく\nイ 中心 O を通る直線をひく\nウ 半径 OA をひき、点 A を通る OA の垂線をひく",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①円の接線は、接点を通る半径に垂直　②A を通る OA の垂線が接線になる　③答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-24",
+   "type": "input",
+   "prompt": "直線 ℓ 上の点 A で ℓ に接する、半径 3 cm の円を作図したい。円の中心として考えられる点は、いくつあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "個",
+     "つ"
+    ]
+   },
+   "explanation": "①中心は A を通る ℓ の垂線の上にある　②A から 3 cm の所は、ℓ の両側に1つずつ　③2 個。答え 2個",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-25",
+   "type": "input",
+   "prompt": "AB ＝ 6 cm の2点 A、B を通る、半径 5 cm の円をかきたい。円の中心として考えられる点は、いくつあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "個",
+     "つ"
+    ]
+   },
+   "explanation": "①中心は AB の垂直二等分線上にあり、A までの距離が 5 cm　②AB のまん中 M までは 3 cm で、5 cm より短い　③垂直二等分線上で A から 5 cm の点は、M の両側に1つずつで 2 個。答え 2個",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-26",
+   "type": "input",
+   "prompt": "鏡にあたった光が反射するとき、鏡と入ってくる光の角と、鏡と出ていく光の角は等しい。入ってくる光と出ていく光がつくる角が 76° のとき、鏡と入ってくる光がつくる角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "52",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①鏡と光がつくる2つの角は等しい（x とする）　②x + 76 + x ＝ 180　③x ＝ 52。答え 52度",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-27",
+   "type": "input",
+   "prompt": "三角形の3つの辺から等しい距離にある点は、三角形の内部にいくつあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "個",
+     "つ"
+    ]
+   },
+   "explanation": "①2つの辺から等しい距離の点は、その2辺がつくる角の二等分線上　②2本の角の二等分線は三角形の内部の1点で交わる　③その1点だけ。答え 1個",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-28",
+   "type": "input",
+   "prompt": "平面上で交わる2本の直線から等しい距離にある点を集めると、何本の直線になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①2本の直線は4つの角をつくる　②向かい合う角の二等分線どうしは1本の直線になる　③となりあう角の二等分線で 2 本。答え 2本",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-29",
+   "type": "input",
+   "prompt": "2本の直線が交わってできる、となりあう2つの角のそれぞれの二等分線がつくる角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①となりあう2つの角の和は 180°　②それぞれの半分を合わせると 180 ÷ 2　③90。答え 90度",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-30",
+   "type": "input",
+   "prompt": "1辺 4 cm の正方形を、右へ 5 cm 平行移動した。正方形が通ったあとにできる図形全体の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①通ったあとは、たて 4 cm、横 4 + 5 ＝ 9 cm の長方形　②4 × 9　③36。答え 36 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 156
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-31",
+   "type": "input",
+   "prompt": "面積が 12 cm² の三角形 ABC を、辺 BC のまん中の点を中心として 180° 回転移動した。もとの三角形と移った三角形を合わせてできる四角形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①回転移動しても面積は変わらない　②2つの三角形は辺 BC を共有して重ならない　③12 × 2 ＝ 24（平行四辺形になる）。答え 24 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-32",
+   "type": "input",
+   "prompt": "面積が 5 cm² の正三角形を、1つの頂点を中心として 60° ずつ回転移動していくと、6 個の正三角形がすき間なく集まって正六角形ができた。正六角形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①正三角形の1つの角は 60° なので、6 個で中心のまわりの 360° がうまる　②どれも合同で面積 5 cm²　③5 × 6 ＝ 30。答え 30 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-33",
+   "type": "input",
+   "prompt": "AB ＝ AC ＝ 6 cm の二等辺三角形 ABC を、辺 BC について対称移動した。もとの三角形と合わせてできる四角形のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①対称移動で AB、AC と同じ長さの辺が反対側にできる　②四角形の4つの辺はすべて 6 cm（ひし形）　③6 × 4 ＝ 24。答え 24 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-34",
+   "type": "input",
+   "prompt": "直角をはさむ2辺が 3 cm と 4 cm の直角三角形を、4 cm の辺について対称移動した。もとの三角形と合わせてできる三角形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①できる三角形は、底辺 3 × 2 ＝ 6 cm、高さ 4 cm　②6 × 4 ÷ 2　③12。答え 12 cm²",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-35",
+   "type": "input",
+   "prompt": "川 ℓ の同じ側に2つの家 A、B がある。ℓ 上の点 P に寄って A から B へ行く道のりが最も短くなる P の見つけ方として正しいものを、次のア〜ウから選び、記号で答えよう。\nア B を ℓ について対称移動した点 B' と A を結び、ℓ との交点を P とする\nイ A と B を結んだ線分のまん中の点から ℓ に垂線をひき、その足を P とする\nウ A から ℓ に垂線をひき、その足を P とする",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①ℓ 上の点 P では PB ＝ PB'　②AP + PB ＝ AP + PB' で、A と B' を結ぶ線分がいちばん短い　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-36",
+   "type": "input",
+   "prompt": "線分 AB と、それを回転移動した線分 A'B' がある。回転の中心の見つけ方として正しいものを、次のア〜ウから選び、記号で答えよう。\nア AB と A'B' のまん中の点を結んだ線分のまん中の点\nイ AA' の垂直二等分線と BB' の垂直二等分線の交点\nウ A と B' を結ぶ線分のまん中の点",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①回転の中心は、A と A' から等しい距離にあり、B と B' からも等しい距離にある　②それは AA' と BB' の垂直二等分線の交点　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-37",
+   "type": "input",
+   "prompt": "紙に ∠AOB ＝ 100° をかき、さらに点 O を通り OA に垂直な直線をひいた。この垂直な直線のうち ∠AOB の内側にある半直線と、辺 OB がつくる角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①OA に垂直な半直線は OA と 90° の角をつくる　②∠AOB ＝ 100° なので、その半直線は ∠AOB の内側にある　③100 − 90 ＝ 10。答え 10度",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-38",
+   "type": "input",
+   "prompt": "正三角形の作図でできる 60° の角と、垂線の作図でできる 90° の角を、となりあわせて作図した。2つを合わせた角を二等分すると、1つの角は何度になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①合わせた角は 60 + 90 ＝ 150°　②二等分して 150 ÷ 2　③75。答え 75度",
+   "source": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-39",
+   "type": "input",
+   "prompt": "垂線の作図で 90° の角をつくり、その角の二等分線をひいて、さらにできた角を二等分した。最初の 90° の角のうち、最後の二等分線より外側（はじめの辺から遠い側）の角は何度か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "67.5",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①1回目の二等分で 45° と 45°　②2回目にはじめの辺側の 45° を二等分して 22.5° と 22.5°　③外側は 90 − 22.5 ＝ 67.5。答え 67.5度",
+   "source": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-40",
+   "type": "input",
+   "prompt": "時計の長針が 12 から 4 まで動いた。長針の先がはじめにあった点とあとの点を結ぶ線分の垂直二等分線は、文字盤のどの数字を通るか。12 より小さいほうの数字を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①時計の中心から2点までの距離は等しいので、垂直二等分線は時計の中心を通る　②2点の間の角をちょうど二等分する向き　③12 と 4 のまん中の 2（反対側は 8）。答え 2",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-41",
+   "type": "input",
+   "prompt": "円の中心を見つけるために、弦 AB と弦 CD をかき、それぞれの垂直二等分線をひいた。2本の垂直二等分線の交点と点 A の距離が 6 cm のとき、交点と点 D の距離を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①2本の垂直二等分線の交点は円の中心　②中心から円周上の点までの距離は、どれも半径　③6 cm。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-42",
+   "type": "input",
+   "prompt": "点 A(0, 4) を、ある直線について対称移動したら点 B(4, 0) に移った。対称の軸の上にあり、x 座標が 7 の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,7)",
+     "(7、7)",
+     "7,7",
+     "7、7"
+    ],
+    "compact": true
+   },
+   "explanation": "①対称の軸は線分 AB の垂直二等分線　②A と B から等しい距離にある点の集まりで、直線 y ＝ x になる　③x ＝ 7 のとき y ＝ 7。答え (7, 7)",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-43",
+   "type": "input",
+   "prompt": "座標平面上で、点 P(3, 2) を直線 x ＝ 5 について対称移動した点を Q とする。直線 x ＝ 5 上の点 R について、PR ＝ 6 のとき QR の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "①対称の軸の上の点は、対応する2点から等しい距離にある　②R は x ＝ 5 の上なので RP ＝ RQ　③QR ＝ 6。答え 6",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-44",
+   "type": "input",
+   "prompt": "点 A と直線 ℓ の距離は 4 cm、点 B と ℓ の距離は 2 cm で、A、B は ℓ の同じ側にある。A、B から ℓ への垂線の足の間は 8 cm である。ℓ 上の点 P を通って A から B へ行く道のりの最小値は、A を ℓ について対称移動した点 A' と B の距離に等しい。A' と ℓ の距離を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①対称移動では、軸からの距離は変わらない　②A と ℓ の距離が 4 cm なので、A' も ℓ から 4 cm　③答え 4 cm",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-45",
+   "type": "input",
+   "prompt": "正方形 ABCD の紙を、対角線 AC を折り目にして折ると、頂点 B は頂点 D に重なる。∠BAC の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①対角線 AC で折ると B が D に重なるので、∠BAC ＝ ∠DAC　②∠BAD ＝ 90°　③90 ÷ 2 ＝ 45。答え 45度",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-46",
+   "type": "input",
+   "prompt": "直線 ℓ 上に2点 A、B があり AB ＝ 8 cm である。ℓ 上にない点 P で PA ＝ PB、∠APB ＝ 90° のとき、P と ℓ の距離を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①P は AB の垂直二等分線上にあり、AB のまん中 M で PM ⊥ ℓ　②三角形 PAB は直角二等辺三角形で ∠PAM ＝ 45°、三角形 PAM も直角二等辺三角形　③PM ＝ AM ＝ 4。答え 4 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-47",
+   "type": "input",
+   "prompt": "ℓ に平行で ℓ から 3 cm の直線と、点 A を中心とする半径 3 cm の円がちょうど1点で接している。A と ℓ の距離として考えられるもののうち、0 でない値を答えよう（A は ℓ 上にない）。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①ℓ から 3 cm の直線は ℓ の両側に2本　②A を中心とする半径 3 cm の円がその1本に接するとき、A とその直線の距離は 3 cm　③A は ℓ から 3 + 3 ＝ 6 cm、または 0 cm（ℓ 上）。0 でないのは 6。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-48",
+   "type": "input",
+   "prompt": "∠AOB ＝ 90° の内部に、辺 OA から 2 cm、辺 OB から 2 cm の点 P がある。P を中心として OA、OB の両方に接する円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①P は OA、OB から等しい距離 2 cm で、∠AOB の二等分線上にある　②円が OA に接するとき、半径は P と OA の距離　③2 cm。答え 2 cm",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-49",
+   "type": "input",
+   "prompt": "長さ 6 cm の線分 AB を、点 A を中心として 60° 回転移動して線分 AB' をつくった。線分 BB' の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①AB' ＝ AB ＝ 6 cm、∠BAB' ＝ 60°　②三角形 ABB' は頂角 60° の二等辺三角形で、底角も 60°　③正三角形なので BB' ＝ 6。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-50",
+   "type": "input",
+   "prompt": "点 A(2, 0) を、原点を中心として反時計回りに 90° 回転移動した点を B とする。∠AOB の二等分線の上にあり、x 座標が 5 の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,5)",
+     "(5、5)",
+     "5,5",
+     "5、5"
+    ],
+    "compact": true
+   },
+   "explanation": "①B(0, 2) なので ∠AOB は x 軸と y 軸がつくる直角　②その二等分線は直線 y ＝ x　③x ＝ 5 のとき (5, 5)。答え (5, 5)",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-51",
+   "type": "input",
+   "prompt": "道路 ℓ と、ℓ 上にない公園 P がある。P から ℓ へ最も短い道をつくるには、どうすればよいか。次のア〜ウから選び、記号で答えよう。\nア P を通る ℓ の平行線をひく\nイ P を通る ℓ の垂線をひき、その足までの道をつくる\nウ ℓ 上の好きな点と P を結ぶ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①点と直線を結ぶ線分のうち最も短いのは垂線　②垂線の作図で道を決める　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16466009_0.jpg",
+    "sha256": "87084998fd8ef530c0b06fda91d4340610bd3225dbcdc83e06c55498d72b5c94",
+    "page": 152,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466009_0.jpg",
+    "sha256": "87084998fd8ef530c0b06fda91d4340610bd3225dbcdc83e06c55498d72b5c94",
+    "page": 152
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-52",
+   "type": "input",
+   "prompt": "座標平面上の3点 A(−2, 0)、B(4, 0)、C(−2, 4) から等しい距離にある点の x 座標と y 座標の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①A、B から等しい点は x ＝ (−2 + 4) ÷ 2 ＝ 1 の上　②A、C から等しい点は y ＝ (0 + 4) ÷ 2 ＝ 2 の上　③点は (1, 2) で、1 + 2 ＝ 3。答え 3",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-53",
+   "type": "input",
+   "prompt": "三角形 ABC の3辺の垂直二等分線の交点を O とすると、O を中心として3つの頂点を通る円がかける。OA ＝ 7 cm のとき、この円の直径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①O は3つの頂点から等しい距離　②円の半径は OA ＝ 7 cm　③直径 7 × 2 ＝ 14。答え 14 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-54",
+   "type": "input",
+   "prompt": "三角形 ABC の3辺の長さの和は 24 cm、3辺に接する円の半径は 3 cm である。三角形 ABC の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①円の中心 I と3つの頂点を結ぶと、3つの三角形に分かれる　②それぞれの高さは半径 3 cm なので、面積の和は (3辺の和) × 3 ÷ 2　③24 × 3 ÷ 2 ＝ 36。答え 36 cm²",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-55",
+   "type": "input",
+   "prompt": "∠ABC ＝ 90° の三角形 ABC で、AB ＝ 6 cm、BC ＝ 8 cm、CA ＝ 10 cm である。3辺に接する円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①面積は 6 × 8 ÷ 2 ＝ 24 cm²　②面積 ＝ (6 + 8 + 10) × 半径 ÷ 2 ＝ 12 × 半径　③半径 ＝ 2。答え 2 cm",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-56",
+   "type": "input",
+   "prompt": "平行な2直線 ℓ、m の間の距離は 10 cm である。ℓ、m の両方に接する円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円が ℓ と m の両方に接するとき、直径が ℓ と m の距離になる　②10 ÷ 2　③5。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-57",
+   "type": "input",
+   "prompt": "1辺 12 cm の正方形のすべての辺に接する円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①向かい合う2辺は平行で、その距離は 12 cm　②円は向かい合う2辺に接するので、直径が 12 cm　③半径 6。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 171
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-58",
+   "type": "input",
+   "prompt": "ボールを壁にあてた。壁と入ってくるボールの向きがつくる角は 28° だった。はね返ったボールの向きと、入ってきたボールの向きがつくる角の大きさを求めよう（入る角とはね返る角は壁に対して等しいとする）。",
+   "answer": {
+    "kind": "number",
+    "value": "124",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①はね返る向きも壁と 28° の角をつくる　②壁の直線の角は 180°　③180 − 28 − 28 ＝ 124。答え 124度",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-59",
+   "type": "input",
+   "prompt": "2枚の鏡が直角に置いてある。1枚目の鏡に 30° の角で入った光は、反射して2枚目の鏡に入る。2枚目の鏡と、2枚目の鏡に入る光がつくる角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①1枚目の鏡から出る光も、1枚目の鏡と 30° の角　②2枚の鏡と光で直角三角形ができる　③2枚目の鏡との角は 180 − 90 − 30 ＝ 60。答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466016_0.jpg",
+    "sha256": "3a80be97556acf7b0d09e56b3601c1e924eb3f337e52f39ce1443f2cfe6ff40d",
+    "page": 167
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-60",
+   "type": "input",
+   "prompt": "ある図形を、平行な2直線 ℓ、m について順に対称移動したら、図形は 14 cm 平行移動した。ℓ と m の距離を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①平行な2直線について続けて対称移動すると、2直線の距離の 2 倍だけ平行移動する　②2 × 距離 ＝ 14　③距離 ＝ 7。答え 7 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-61",
+   "type": "input",
+   "prompt": "ある図形を、点 O で垂直に交わる2直線について順に対称移動した。これは点 O を中心とする何度の回転移動と同じか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①1回目でどの点も1本目の直線について反対側へ　②2回目で2本目の直線について反対側へ　③点 O について反対側の同じ距離の所に移り、180° の回転移動と同じ。答え 180度",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 158
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-62",
+   "type": "input",
+   "prompt": "長さ 8 cm の線分 AB の垂直二等分線上に点 P をとり、∠PAB ＝ 60° となるようにした。三角形 PAB のまわりの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①P は垂直二等分線上なので PA ＝ PB で、∠PBA ＝ 60°　②∠APB ＝ 60° となり、三角形 PAB は正三角形　③8 × 3 ＝ 24。答え 24 cm",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-63",
+   "type": "input",
+   "prompt": "円の半径と同じ長さにコンパスを開いて円周に6つの点をとり、1つおきに3つの点を結んで正三角形をつくった。正三角形の1辺の両端と円の中心を結んでできる角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①6つの点は円周を 6 等分し、となりの点の中心角は 60°　②1つおきの点どうしは 60° の 2 つ分　③120。答え 120度",
+   "source": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-64",
+   "type": "input",
+   "prompt": "座標平面上の点 B(4, 1) を、点 A(1, 1) を中心として反時計回りに 90° 回転移動した点を C とする。三角形 ABC の面積を求めよう（1目もりを 1 cm とする）。",
+   "answer": {
+    "kind": "number",
+    "value": "4.5",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①C は A から真上に 3 の所で (1, 4)　②三角形 ABC は直角をはさむ2辺が 3 cm の直角三角形　③3 × 3 ÷ 2 ＝ 4.5。答え 4.5 cm²",
+   "source": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466011_0.jpg",
+    "sha256": "b1cff64eaa96391931597076b1dfcd764bd594d648813a72a3604bec9382c3f8",
+    "page": 157
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-65",
+   "type": "input",
+   "prompt": "円の半径と同じ長さで円周を区切って正六角形を作図した。となりあう2つの頂点と円の中心を結んでできる三角形は、どんな三角形か。次のア〜ウから選び、記号で答えよう。\nア 直角三角形\nイ 直角二等辺三角形\nウ 正三角形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①中心から頂点までの2辺は半径　②となりの頂点どうしの距離も半径と同じ　③3辺がすべて等しいので正三角形。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466017_0.jpg",
+    "sha256": "7f12a59e38e6b49acedda804d95ce7d56e9a9c004eae8032550bc4fc5fe6b23a",
+    "page": 168
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-66",
+   "type": "input",
+   "prompt": "直径 10 cm の円に、たがいに垂直な2本の直径をひき、4つの端を順に結んで正方形をつくった。正方形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①正方形の対角線は2本の直径で、どちらも 10 cm　②対角線が垂直なので、面積は対角線 × 対角線 ÷ 2　③10 × 10 ÷ 2 ＝ 50。答え 50 cm²",
+   "source": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 170,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466018_0.jpg",
+    "sha256": "c14cec618950f8e421d3579ba189492e2bd422cd1518cc0905f1ab5c8cb6813d",
+    "page": 170
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-67",
+   "type": "input",
+   "prompt": "2点 A、B を通り、中心が直線 ℓ の上にある円をかきたい。中心の見つけ方として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 線分 AB の垂直二等分線と ℓ の交点を中心にする\nイ A から ℓ にひいた垂線の足を中心にする\nウ AB のまん中の点を中心にする",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①中心は A、B から等しい距離なので、AB の垂直二等分線の上　②中心は ℓ の上でもある　③2つの交点。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-68",
+   "type": "input",
+   "prompt": "線分 AB の両端 A、B をそれぞれ中心として、半径 AB の円をかき、交点の1つを C とした。∠CAB の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①AC ＝ AB（A を中心とする円の半径）、BC ＝ BA（B を中心とする円の半径）　②AB ＝ BC ＝ CA で、三角形 ABC は正三角形　③∠CAB ＝ 60。答え 60度",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-69",
+   "type": "input",
+   "prompt": "線分 AB の垂直二等分線上に点 P があり、∠APB ＝ 120° である。∠PAB の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①P は垂直二等分線上なので PA ＝ PB　②三角形 PAB は二等辺三角形で ∠PAB ＝ ∠PBA　③(180 − 120) ÷ 2 ＝ 30。答え 30度",
+   "source": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466012_0.jpg",
+    "sha256": "0e3d06dc13e88aaf4d821efaecbc98f22ad6097debb4969eb3dc494cbaf04870",
+    "page": 159
+   }
+  },
+  {
+   "id": "tokkun-math-1-drawuse-70",
+   "type": "input",
+   "prompt": "∠AOB ＝ 80° の二等分線 OC をひき、OC 上の点 P から辺 OA に垂線 PH をひいた。∠OPH の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①∠AOC ＝ 80 ÷ 2 ＝ 40°　②三角形 OPH で ∠OHP ＝ 90°　③∠OPH ＝ 180 − 90 − 40 ＝ 50。答え 50度",
+   "source": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p166〜168（作図の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466014_0.jpg",
+    "sha256": "9ed832166ff458c81d0ceaacb2805b37dd7797535204c3733af409652d14e2fe",
+    "page": 163
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。最短きょり・等しいきょりの点など、作図の考え方を座標で使う一段難しい問題。答えは check.py で計算・総当たりで検算。2026-10-28 Claude：最短の道すじ（対称移動の利用）、等しい距離にある点、回転の中心の見つけ方、折り目と垂直二等分線、光の反射、図形を移動してできる図形、作図を使った図形の性質などの問題を66問追加して70問にした（元の4問はそのまま）。図が必要な問題には、座標から作った正確な図（SVG）をつけた。"
+}

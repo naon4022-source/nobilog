@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" font-family="sans-serif" role="img" aria-label="ばねに何もつるしていないときと、20gのおもりをつるしたとき。20gで3cmのびた。">
+  <title>ばねののび（20gで3cmのびる）</title>
+  <!-- 1cm = 20px。ばねの自然の長さ 5cm = 100px。20g で 3cm = 60px のびる -->
+  <rect x="20" y="30" width="480" height="10" fill="#555"/>
+  <g stroke="#222" stroke-width="2" fill="none">
+    <!-- 左：何もつるしていない（上端 y=40、下端 y=140） -->
+    <polyline points="130,40 130,50 115,58 145,66 115,74 145,82 115,90 145,98 115,106 145,114 115,122 145,130 130,134 130,140"/>
+    <!-- 右：20g（上端 y=40、下端 y=200） -->
+    <polyline points="370,40 370,50 352,61 388,72 352,83 388,94 352,105 388,116 352,127 388,138 352,149 388,160 352,171 388,182 370,190 370,200"/>
+    <line x1="370" y1="200" x2="370" y2="212"/>
+  </g>
+  <rect x="345" y="212" width="50" height="44" rx="4" fill="#bbb" stroke="#222" stroke-width="2"/>
+  <text x="370" y="240" text-anchor="middle" font-size="18">20 g</text>
+  <!-- のびる前の位置の線（下端 y=140） -->
+  <line x1="90" y1="140" x2="440" y2="140" stroke="#c00" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="96" y="160" font-size="15" fill="#c00">のびる前の位置</text>
+  <!-- のび 3cm（y=140〜200） -->
+  <g stroke="#06c" stroke-width="2"><line x1="430" y1="140" x2="430" y2="200"/><line x1="422" y1="140" x2="438" y2="140"/><line x1="422" y1="200" x2="438" y2="200"/></g>
+  <text x="442" y="176" font-size="18" fill="#06c">3 cm</text>
+  <text x="130" y="300" text-anchor="middle" font-size="17">何もつるしていない</text>
+  <text x="370" y="300" text-anchor="middle" font-size="17">20 g のおもり</text>
+</svg>

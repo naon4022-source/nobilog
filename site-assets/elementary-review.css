@@ -1,0 +1,12 @@
+.elr-note{color:#777;line-height:1.8}
+.elr-grades{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.elr-units{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:10px}
+.elr-unit{display:flex;flex-direction:column;gap:6px;text-align:left;padding:12px;border:1px solid #ddd;border-radius:14px;background:var(--card-bg,#fff);color:inherit;cursor:pointer;font:inherit}
+.elr-bar{height:8px;border-radius:8px;background:#eee;overflow:hidden;margin:6px 0}.elr-bar span{display:block;height:100%;background:#2ecc71}
+.elr-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.elr-phase{font-weight:bold;margin:8px 0 2px}.elr-topic{color:#888;font-size:.9em}
+.elr-prompt{white-space:pre-wrap;line-height:1.9;font-size:1.1em;margin:8px 0;overflow-wrap:anywhere}
+.elr-input{width:100%;box-sizing:border-box;font-size:18px;padding:10px;border:1px solid #ccc;border-radius:10px}
+textarea.elr-input{min-height:90px}
+.elr-actions{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.elr-ans{font-weight:bold;margin:6px 0}.elr-expl{line-height:1.8;color:#555;white-space:pre-wrap}

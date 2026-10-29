@@ -1,0 +1,20 @@
+.tb-ann-button{white-space:nowrap}
+.tb-ann-button[hidden]{display:none}
+[data-annotation-color="yellow"]{background-color:#fff2a7}
+[data-annotation-color="blue"]{background-color:#d4edff}
+[data-annotation-color="pink"]{background-color:#ffe0ed}
+.tb-ann-noted{box-shadow:inset 0 -2px 0 #76531f}
+.tb-ann-picking [data-annotation-anchor]{cursor:pointer;outline:2px dashed #316a94;outline-offset:2px}
+.tb-ann-picking [data-annotation-anchor]:focus,.tb-ann-locate{outline:3px solid #316a94;outline-offset:2px}
+.tb-ann-back{position:absolute;inset:0;z-index:250;background:#17253699;display:flex;align-items:center;justify-content:center;padding:16px;box-sizing:border-box}
+.tb-ann-card{width:min(560px,100%);max-height:calc(100% - 16px);overflow-y:auto;background:#fff;color:#25313d;border-radius:20px;padding:22px;box-sizing:border-box;font:16px/1.7 system-ui;overflow-wrap:anywhere}
+.tb-ann-card h3{margin:0 0 12px;font-size:22px}
+.tb-ann-card label{display:block;margin:14px 0}
+.tb-ann-card select,.tb-ann-card textarea{display:block;width:100%;max-width:100%;box-sizing:border-box;border:1px solid #657888;border-radius:10px;font:inherit;padding:10px;margin-top:6px}
+.tb-ann-card button{min-height:44px;margin:5px 6px 5px 0;max-width:100%;white-space:normal}
+.tb-ann-card blockquote{margin:12px 0;padding:12px;background:#f1f5f8;border-left:4px solid #316a94;max-height:150px;overflow-y:auto;white-space:pre-wrap}
+.tb-ann-card textarea{resize:vertical;min-height:130px}
+.tb-ann-status{min-height:1.7em}
+.tb-ann-record{border-top:1px solid #c7d1da;padding:12px 0}
+@media(prefers-reduced-motion:reduce){.tb-ann-locate{transition:none}}
+@media print{.tb-ann-back,.tb-ann-button{display:none}}

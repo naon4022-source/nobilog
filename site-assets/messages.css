@@ -1,0 +1,33 @@
+/* ✉️ メッセージ（2026-10-10）：なおから・AI相談・なおへの解説依頼。色は着せ替えの変数にしたがう */
+.msg{max-width:760px;margin:0 auto;overflow-wrap:anywhere}.msg h2{margin:0 0 6px}
+.msg-plan{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:8px 12px;border-radius:12px;border:1px solid var(--border-color,#d5dde3);background:var(--box-bg,#fff);font-size:14px}
+.msg-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:10px 0}
+.msg-btn{padding:10px 14px;border-radius:12px;border:1px solid var(--border-color,#8a949c);background:var(--box-bg,#fff);color:var(--text-color,#263238);cursor:pointer;font:inherit;min-height:44px}
+.msg-btn:disabled{opacity:.55;cursor:not-allowed}.msg-tab{font-weight:700;font-size:14px;padding:8px 6px}
+.msg-tab[aria-pressed="true"],.msg-main{background:var(--main-color,#2e7d32);color:#fff;border-color:transparent}
+.msg-main{width:100%;margin-top:6px;font-weight:700}.msg-sub{margin-top:10px}
+.msg-pane{display:block}.msg-note{font-size:13px;opacity:.85;line-height:1.7;margin:6px 0}
+.msg-mock{padding:10px 12px;border-radius:12px;background:#fff6dc;color:#5c4400;border:1px solid #e9cf7a;font-size:14px;line-height:1.7}
+.msg-err,.msg-warn{color:#b3261e;font-weight:700}.msg-status{min-height:1.4em;font-size:14px;margin:6px 0}.msg-empty{opacity:.75}
+.msg-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.msg-item{border:1px solid var(--border-color,#d5dde3);border-radius:12px;padding:10px 12px;background:var(--box-bg,#fff)}
+.msg-item summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;list-style:none}.msg-item summary::-webkit-details-marker{display:none}
+.msg-unread{border-left:6px solid var(--main-color,#2e7d32)}.msg-unread .msg-title::after{content:' ●';color:var(--main-color,#2e7d32)}
+.msg-head{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline}.msg-title{flex:1 1 12em}.msg-when{font-size:12px;opacity:.8}
+.msg-chip{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:700;background:#e3ecf5;color:#1d3b57}
+.msg-chip-cheer{background:#fde3ea;color:#7a1435}.msg-chip-return{background:#e0f2e4;color:#14532d}
+.msg-status-received{background:#e3ecf5;color:#1d3b57}.msg-status-reviewing{background:#fdf1c7;color:#5c4400}.msg-status-answered{background:#d8f0dc;color:#14532d}
+.msg-body{white-space:pre-wrap;line-height:1.7;margin:6px 0}
+.msg-chat{display:flex;flex-direction:column;gap:8px;margin:10px 0;max-height:52vh;overflow:auto;padding:4px}
+.msg-bubble{max-width:85%;padding:8px 12px;border-radius:14px;line-height:1.6}.msg-bubble p{margin:2px 0;white-space:pre-wrap}.msg-bubble small{font-size:11px;opacity:.85}
+.msg-me{align-self:flex-end;background:var(--main-color,#2e7d32);color:#fff}.msg-ai{align-self:flex-start;background:#eef1f4;color:#263238;border:1px dashed #9aa6af}
+.msg-pending{opacity:.7}
+.msg-label{display:block;margin:8px 0 4px;font-size:14px;font-weight:700}
+.msg textarea,.msg select{box-sizing:border-box;width:100%;max-width:100%;font:inherit;padding:8px;border-radius:10px;border:1px solid var(--border-color,#8a949c);background:var(--box-bg,#fff);color:var(--text-color,#263238);margin-top:4px}
+.msg-locked{padding:14px;border-radius:12px;border:1px dashed var(--border-color,#8a949c);background:var(--box-bg,#fff);margin-top:8px}
+.msg-reply{margin-top:8px;padding:8px 12px;border-radius:12px;background:#eefaf1;color:#14532d;border:1px solid #9fd8ae}.msg-reply p{white-space:pre-wrap;margin:4px 0}
+#plan-switching{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;background:rgba(20,28,34,.55)}
+#plan-switching>div{background:var(--box-bg,#fff);color:var(--text-color,#263238);padding:22px 26px;border-radius:18px;font-weight:700;font-size:18px;max-width:min(420px,88vw);text-align:center;box-shadow:0 10px 30px #0004}
+.adm-inbox{border:1px solid var(--border-color,#d5dde3);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--box-bg,#fff);overflow-wrap:anywhere}.adm-inbox textarea,.adm-form textarea,.adm-form input,.adm-form select{box-sizing:border-box;width:100%;font:inherit;padding:6px;margin:4px 0}
+@media (max-width:420px){.msg-tab{font-size:12px;padding:8px 2px}.msg-bubble{max-width:92%}}
+@media print{.msg-tabs,.msg-btn,#plan-switching{display:none}}

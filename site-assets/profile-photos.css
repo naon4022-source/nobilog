@@ -1,0 +1,52 @@
+/* 🖼 アイコン・カメラ・保存した写真（2026-10-12 Claude）。色は着せ替えの変数にしたがう */
+.cam-back{position:fixed;inset:0;z-index:6000;display:grid;place-items:center;background:rgba(10,16,22,.82);padding:12px;box-sizing:border-box}
+.cam-box{box-sizing:border-box;width:min(720px,100%);max-height:100%;overflow:auto;background:var(--box-bg,#fff);color:var(--text-color,#263238);border-radius:22px;padding:14px;text-align:center}
+.cam-title{font-size:18px;margin:2px 0 8px}
+.cam-stage{position:relative;background:#111;border-radius:16px;overflow:hidden;aspect-ratio:4/3;max-height:62vh;display:grid;place-items:center}
+.cam-stage video,.cam-stage canvas{width:100%;height:100%;object-fit:contain;display:block}
+.cam-msg{min-height:1.5em;margin:8px 0;line-height:1.6}
+.cam-tools{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.cam-btn,.pp-btn{min-height:44px;padding:10px 16px;border-radius:999px;border:1px solid var(--border-color,#8a949c);background:var(--box-bg,#fff);color:var(--text-color,#263238);font:inherit;font-weight:700;cursor:pointer}
+.cam-shutter,.pp-main{background:var(--main-color,#2e7d32);color:#fff;border-color:transparent}
+.cam-btn:disabled,.pp-btn:disabled{opacity:.5;cursor:not-allowed}
+.pp{max-width:720px;margin:0 auto;text-align:left;overflow-wrap:anywhere}.pp h2{margin:0 0 10px;text-align:center}
+.pp-sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:8px;margin-bottom:12px}
+.pp-crop-area{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:center}
+.pp-crop{width:min(280px,78vw);height:auto;aspect-ratio:1;border-radius:20px;touch-action:none;cursor:grab;background:#eef2f5}
+.pp-side{display:grid;gap:8px;justify-items:center;min-width:160px}
+.pp-round{width:96px;height:96px;border-radius:50%;box-shadow:0 0 0 3px var(--box-bg,#fff),0 0 0 5px var(--main-color,#2e7d32);background:#eef2f5}
+.pp-label{font-size:13px;font-weight:700;display:grid;gap:4px;justify-items:center}.pp-label input{width:150px}
+.pp-msg{min-height:1.5em;line-height:1.7;margin:10px 0}.pp-note{font-size:13px;opacity:.85;line-height:1.7}
+.pp-gen{margin-top:12px;padding:12px;border:1px dashed var(--border-color,#8a949c);border-radius:18px}.pp-gen summary{cursor:pointer;font-weight:700}
+.pp-gen textarea{box-sizing:border-box;width:100%;font:inherit;padding:10px;border-radius:14px;border:1px solid var(--border-color,#8a949c);background:var(--box-bg,#fff);color:var(--text-color,#263238);margin:6px 0}
+.pp-cands{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}.pp-cands figure{margin:0;display:grid;gap:6px;justify-items:center}.pp-cands img{width:96px;height:96px;border-radius:50%;object-fit:cover}
+.pp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(46%,150px),1fr));gap:10px}
+.pp-thumb{display:grid;gap:4px;padding:6px;border-radius:16px;border:1px solid var(--border-color,#d5dde3);background:var(--box-bg,#fff);color:inherit;cursor:zoom-in}
+.pp-thumb img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;background:#eef2f5}.pp-thumb small{font-size:12px;opacity:.8}
+.pp-big{position:fixed;inset:0;z-index:5000;background:rgba(10,16,22,.88);display:grid;place-items:center;gap:10px;padding:16px;box-sizing:border-box;align-content:center}
+.pp-big img{max-width:100%;max-height:78vh;border-radius:16px;object-fit:contain;background:#fff}
+.pp-camera-fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:4600;width:56px;height:56px;border-radius:50%;border:0;background:var(--main-color,#2e7d32);color:#fff;font-size:26px;box-shadow:0 6px 16px rgba(0,0,0,.25);cursor:pointer}
+/* hidden をつけたものは必ず隠す（display の指定が hidden に勝って、見えない膜が画面を覆うのを防ぐ） */
+.pp-camera-fab[hidden],.pp-sheet[hidden],.pp-big[hidden],.cam-stage [hidden],.li-photo-pick[hidden],.li-sources[hidden]{display:none!important}
+/* カメラボタンがあるときは、全画面の画面の下に余白をとって、いちばん下のボタンがかくれないようにする。オフラインの帯が出ているときは帯の上へ */
+body.has-camera-fab .g-modal{padding-bottom:96px}
+body:has(#offline-bar:not([style*="display:none"]):not([style*="display: none"])) .pp-camera-fab{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+.pp-sheet{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:4700;max-width:520px;margin:0 auto;padding:14px;border-radius:20px;background:var(--box-bg,#fff);color:var(--text-color,#263238);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.pp-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+header #user-chip.has-avatar{background-size:cover!important;background-position:center!important}
+.profile-avatar{position:relative}.profile-avatar img.is-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover}
+.profile-avatar-cam{position:absolute;right:-4px;bottom:-4px;width:32px;height:32px;border-radius:50%;border:2px solid var(--box-bg,#fff);background:var(--main-color,#2e7d32);color:#fff;font-size:15px;display:grid;place-items:center;cursor:pointer;padding:0}
+/* 画像の選び方（ノート・AI相談）4つ */
+.li-sources{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.li-sources .pp-btn{min-height:40px;padding:8px 12px;font-size:14px}
+.li-photo-pick{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:6px;margin:6px 0;padding:8px;border-radius:14px;border:1px solid var(--border-color,#d5dde3)}
+.li-photo-pick button{padding:0;border:2px solid transparent;border-radius:12px;background:none;cursor:pointer}.li-photo-pick img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;display:block}
+@media print{.pp-camera-fab,.pp-sheet,.cam-back{display:none!important}}
+
+/* ⭕ 全体の丸み（2026-10-12）：ボタン・カード・メニュー・入力枠をそろえる。着せ替えの角の丸さより小さくはしない。教科書（.tb-app）には当てない。
+   アプリ本体・着せ替えのCSSがあとから読まれるので、先頭に html:root body をつけて優先させる（ヘッダーの丸いアイコンは除く） */
+:root{--nobi-round-card:max(var(--theme-radius,18px),18px);--nobi-round-ctl:max(var(--theme-radius-sm,12px),12px)}
+html:root body .btn:not(.header-icon):not(.tb-app *){border-radius:var(--nobi-round-ctl)}
+html:root body .section:not(.tb-app *){border-radius:var(--nobi-round-card)}
+html:root body :is(.m-card,.uh-box,.notice-list-item,.msg-item,.adm-person,.adm-heat,.adm-inbox):not(.tb-app *){border-radius:var(--nobi-round-card)}
+html:root body .nav-item{border-radius:var(--nobi-round-ctl)}
+html:root body :is(input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),select,textarea,.q-input):not(.tb-app *){border-radius:var(--nobi-round-ctl)}

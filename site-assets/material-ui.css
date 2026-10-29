@@ -35,3 +35,29 @@
 .material-login-review-item p{margin:4px 0 6px;overflow-wrap:anywhere}
 .material-hint-wait{font-size:14px;opacity:.8}
 .material-stars{font-size:15px;margin:4px 0 8px}
+
+/* 公式カードと電卓（2026-10-08） */
+.material-formula{margin:10px 0;padding:8px 12px;border:1px solid var(--material-line,#d6dde3);border-radius:10px;background:var(--material-soft,#f7fafc)}
+.material-formula summary{cursor:pointer;font-weight:700}
+.material-formula dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;margin:8px 0}
+.material-formula dt{font-weight:700}.material-formula dd{margin:0;overflow-wrap:anywhere}
+.material-calc{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:6px}
+.material-calc input{min-width:0;flex:1 1 12em;font-size:16px;padding:6px 8px}
+.material-calc output{font-weight:700}
+@media (max-width:420px){.material-formula dl{grid-template-columns:1fr}}
+@media print{.material-formula{display:none}}
+/* 問題の並べ方（2026-10-21）：【計算問題】は3列、【文章問題】は1列。計算と文章の割合はバーの点をスワイプ */
+.materials .material-batch-head{border-bottom:2px solid #3498db;padding:4px 2px 6px;margin:22px 0 12px;font-size:19px}
+.materials .material-batch-grid{display:grid;gap:14px}
+.materials .material-batch-calc{grid-template-columns:repeat(3,minmax(0,1fr))}
+.materials .material-batch-word{grid-template-columns:1fr}
+@media(max-width:900px){.materials .material-batch-calc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.materials .material-batch-calc{grid-template-columns:1fr}}
+.materials .material-batch-grid .material-batch-question{margin:0;min-width:0}
+.materials .material-batch-grid .material-batch-question>h3{margin:0 0 4px;font-size:16px;color:#3498db}
+.materials .material-batch-calc textarea{min-height:44px;height:48px}
+.material-ratio{margin:14px 0}.material-ratio h3{margin:0 0 6px}.material-ratio-label{font-weight:700;margin:4px 0 8px}
+.materials .material-ratio input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:12px;min-height:0;padding:0;border:0;box-shadow:none;border-radius:999px;background:linear-gradient(90deg,#3498db 0,#3498db var(--calc,50%),#f39c12 var(--calc,50%),#f39c12 100%);touch-action:pan-y;margin:6px 0}
+.material-ratio input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;border-radius:50%;background:#fff;border:3px solid #2c3e50;box-shadow:0 1px 4px #0004;cursor:grab}
+.material-ratio input[type=range]::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#fff;border:3px solid #2c3e50;cursor:grab}
+.material-ratio-ends{display:flex;justify-content:space-between;font-size:14px;color:#555}

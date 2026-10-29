@@ -1,0 +1,2079 @@
+{
+ "id": "tokkun-math-1-spaceuse",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "空間図形の利用（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-spaceuse-1",
+   "type": "input",
+   "prompt": "底面の半径 5 cm の円柱の容器に、深さ 8 cm まで水が入っている。この水を全部、底面の半径 10 cm の円柱の容器に移すと、深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の体積 π × 25 × 8 ＝ 200π　②π × 100 × h ＝ 200π　③h ＝ 2。答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-2",
+   "type": "input",
+   "prompt": "高さ 12 cm の円錐の形のコップ（頂点が下）に、頂点から高さ 6 cm のところまで水を入れた。水の体積は、コップ全体の容積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/8",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①水の部分も円錐で、高さも底面の半径もコップの 1/2　②体積は (1/2) × (1/2) × (1/2) ＝ 1/8 倍　③答え 1/8倍",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-3",
+   "type": "input",
+   "prompt": "1辺 1 cm の立方体を 27 個積んで 3 × 3 × 3 の立方体をつくり、外側の面全部にペンキをぬった。ちょうど2つの面がぬられた小さな立方体は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2面がぬられるのは、大きい立方体の辺の上でかど以外のもの　②各辺に 1 個、辺は 12 本　③12 個。答え 12個",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-4",
+   "type": "input",
+   "prompt": "底面の半径 1 cm、母線の長さが 1 cm の 12 倍の円錐がある。底面の円周上の点 A から、側面を 2 周して A にもどるようにひもを巻く。ひもの長さがもっとも短くなるとき、その長さは母線の長さの何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①側面の展開図のおうぎ形の中心角は 360° × 1 ÷ 12 ＝ 30°　②2 周分は、おうぎ形を 2 枚ならべた中心角 60° の図形で考え、ひもは両はしを結ぶ線分になる　③2 本の母線とひもで正三角形ができるので、ひもの長さは母線と等しい。答え 1倍",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-5",
+   "type": "input",
+   "prompt": "母線の長さ 18 cm の円錐に、底面の円周上の点 A から側面を 3 周して A にもどるように、ひもをもっとも短くなるように巻いたところ、ひもの長さは 18 cm になった。この円錐の底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①ひもの長さが母線と等しいので、3 周分の展開図（おうぎ形 3 枚）で、2 本の母線とひもは正三角形をつくり、3 枚分の中心角は 60°　②1 枚の中心角は 20°　③360° × r ÷ 18 ＝ 20° から r ＝ 1。答え 1cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-6",
+   "type": "input",
+   "prompt": "底面の半径 2 cm、母線の長さ 6 cm の円錐がある。底面の円の直径の両はしを A、B とする。A から側面だけを通って B まで、もっとも短くなるようにひもをかけた。ひもの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①展開図のおうぎ形の中心角は 360° × 2 ÷ 6 ＝ 120°　②B は底面の円周のちょうど半分の位置なので、展開図では A から中心角 60° 分はなれた弧の上にある　③O、A、B は正三角形になるので AB ＝ 6。答え 6cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-7",
+   "type": "input",
+   "prompt": "底面の半径 2 cm、母線の長さ 6 cm の円錐で、底面の円の直径の両はしを A、B とする。A から B へ行く道として、次の2つを比べる。\n・側面だけを通る、もっとも短い道\n・底面の上を、直径にそってまっすぐ通る道\n正しいものを、次のア〜ウから選び、記号で答えよう。\nア 側面だけを通る道のほうが短い\nイ 底面の直径を通る道のほうが短い\nウ 2つの道の長さは等しい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①側面だけを通る最短の道は、展開図（中心角 120° のおうぎ形）の半分 60° 分の正三角形の辺で 6 cm　②底面の直径は 2 × 2 ＝ 4 cm　③4 cm のほうが短い。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-8",
+   "type": "input",
+   "prompt": "底面の半径 1 cm、母線の長さ 5 cm の円錐の底面の円周上の点 A から、側面を 1 周して A にもどるように、ひもをもっとも短くなるように巻いた。図は側面の展開図で、ひもは線分 AA′ になる。ひもと母線 OA のつくる角 ∠OAA′ の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①おうぎ形の中心角は 360° × 1 ÷ 5 ＝ 72°　②OA ＝ OA′ なので、三角形 OAA′ は二等辺三角形　③(180° − 72°) ÷ 2 ＝ 54°。答え 54°",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   },
+   "image": "/tokkun-fig-spaceuse-8.svg",
+   "imageAlt": "円錐の側面の展開図。中心O、半径OAとOA′、弧AA′、ひもを表す線分AA′。角の大きさは書いていない。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-9",
+   "type": "input",
+   "prompt": "母線の長さ 12 cm の円錐に、底面の円周上の点 A から側面を 1 周して A にもどるように、ひもをもっとも短くなるように巻いた。展開図で、ひもと母線 OA のつくる角が 30° になった。この円錐の底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①展開図の三角形 OAA′ は二等辺三角形で、底角が 30°　②中心角は 180° − 30° × 2 ＝ 120°　③360° × r ÷ 12 ＝ 120° から r ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-10",
+   "type": "input",
+   "prompt": "底面の半径 1 cm、母線の長さ 8 cm の円錐に、底面の円周上の点 A から側面を 2 周して A にもどるように、ひもをもっとも短くなるように巻いた。図は側面の展開図を 2 枚ならべたもので、ひもは線分 AA′ になる。∠OAA′ の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①1 枚のおうぎ形の中心角は 360° × 1 ÷ 8 ＝ 45°、2 枚で 90°　②OA ＝ OA′ の二等辺三角形で、頂角が 90°　③(180° − 90°) ÷ 2 ＝ 45°。答え 45°",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   },
+   "image": "/tokkun-fig-spaceuse-10.svg",
+   "imageAlt": "円錐の側面の展開図を2枚ならべた図。中心O、両はしの半径OAとOA′、2枚の境めの半径（点線）、ひもを表す線分AA′。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-11",
+   "type": "input",
+   "prompt": "円錐の底面の円周上の点 A から、側面を 1 周して A にもどるようにひもを巻く。ひもがもっとも短くなるとき、そのひもは、側面の展開図の上ではどんな線になるか。次のア〜ウから選び、記号で答えよう。\nア おうぎ形の両はしを結ぶ線分\nイ おうぎ形の弧\nウ 中心 O を通る折れ線",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①展開図を組み立てると、おうぎ形の両はしの半径が重なり、どちらも点 A を通る　②平面の上で 2 点を結ぶ線のうち、もっとも短いのは線分　③おうぎ形の両はしを結ぶ線分になる。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-12",
+   "type": "input",
+   "prompt": "円錐にひもを巻く問題で、展開図にかいた線分がもっとも短いひもの通り道になる。その理由として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 展開図にすると、円錐の高さが母線と同じ長さとして表されるので、ひもの長さを高さではかれるから\nイ 側面を切り開いて平面にしても、側面の上の長さは変わらず、平面上の 2 点を結ぶ線では線分がもっとも短いから\nウ 側面を切り開いて平面にすると、側面の面積がもとの円錐より小さくなり、その上にかいた線も短くなるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①側面は、のばしたりちぢめたりせずに切り開けるので、ひもの長さは展開図の上でも同じ　②平面の上で 2 点を結ぶ線のうち、もっとも短いのは線分　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-13",
+   "type": "input",
+   "prompt": "ある円錐で、底面の円周上の点 A から側面を 1 周して A にもどるように、ひもをもっとも短くなるように巻いたところ、ひもの長さが母線の長さとちょうど等しくなった。母線の長さが 9 cm のとき、底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3/2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①ひもの長さが母線と等しいので、展開図の三角形 OAA′ は正三角形で、中心角は 60°　②360° × r ÷ 9 ＝ 60°　③r ＝ 3/2。答え 3/2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 214
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-14",
+   "type": "input",
+   "prompt": "底面の半径 3 cm、母線の長さ 12 cm の円錐を、平らな床に横にたおして置き、頂点を中心にすべらないように転がした。円錐が床の上を1周して、はじめの位置にもどるまでに、円錐は何回転するか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "①転がると、底面の円周上の点は床の上に、頂点を中心とする半径 12 cm の円をえがく　②その円周 2π × 12 ＝ 24π を、底面の円周 2π × 3 ＝ 6π で割る　③24π ÷ 6π ＝ 4。答え 4回転",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 213,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 213
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-15",
+   "type": "input",
+   "prompt": "ある円錐を、平らな床に横にたおして置き、頂点を中心にすべらないように転がすと、ちょうど 3 回転してはじめの位置にもどった。この円錐の側面の展開図のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①床にえがく円の半径は母線 R、その円周 2πR は、底面の円周 2πr の 3 倍　②R ＝ 3r　③中心角は 360° × r ÷ R ＝ 360° ÷ 3 ＝ 120°。答え 120°",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 213,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 213
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-16",
+   "type": "input",
+   "prompt": "図は、円柱の上に、底面が同じ円の円錐をのせた立体の投影図である（方眼の1目もりは 1 cm）。この立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①平面図の円の半径は 2 cm、立面図から円柱の高さは 3 cm、円錐の高さは 3 cm　②円柱 π × 4 × 3 ＝ 12π、円錐 π × 4 × 3 ÷ 3 ＝ 4π　③12π ＋ 4π ＝ 16π。答え 16π cm³",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-16.svg",
+   "imageAlt": "方眼の上の投影図。上の立面図は、横4目もり・たて3目もりの長方形の上に、高さ3目もりの二等辺三角形。下の平面図は、半径2目もりの円とその中心。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-17",
+   "type": "input",
+   "prompt": "図は、底面が直角三角形の三角柱を、底面を下にして置いたときの投影図である（方眼の1目もりは 1 cm）。この三角柱の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①平面図の直角三角形の、直角をはさむ辺は 3 cm と 4 cm で、底面積は 3 × 4 ÷ 2 ＝ 6 cm²　②立面図のたてから、高さは 5 cm　③6 × 5 ＝ 30。答え 30cm³",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-17.svg",
+   "imageAlt": "方眼の上の投影図。上の立面図は、横3目もり・たて5目もりの長方形。下の平面図は、直角をはさむ辺が横3目もり・たて4目もりの直角三角形。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-18",
+   "type": "input",
+   "prompt": "図は、ある立体の投影図である（方眼の1目もりは 1 cm）。この立体の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①立面図が二等辺三角形、平面図が対角線をひいた正方形なので、底面が正方形の正四角錐　②底面は 1 辺 4 cm の正方形、高さは立面図から 3 cm　③4 × 4 × 3 ÷ 3 ＝ 16。答え 16cm³",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-18.svg",
+   "imageAlt": "方眼の上の投影図。上の立面図は、底辺4目もり・高さ3目もりの二等辺三角形。下の平面図は、1辺4目もりの正方形と、その2本の対角線。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-19",
+   "type": "input",
+   "prompt": "円錐を、底面を下にして置き、真正面から見た立面図をかくと二等辺三角形になる。この立面図で、実際の長さと同じ長さで表されているものを、次のア〜ウから選び、記号で答えよう。\nア 二等辺三角形の高さだけで、母線と底辺は実際より短く表される\nイ 底辺だけで、等しい2辺（母線）と高さは実際より短く表される\nウ 二等辺三角形の等しい2辺（母線）と高さ、底辺（底面の直径）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①真正面から見るとき、円錐の中心を通り正面に平行な切り口の三角形が、そのままの形で見える　②その三角形の2辺は母線、高さは円錐の高さ、底辺は底面の直径　③どれも実際の長さで表される。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-20",
+   "type": "input",
+   "prompt": "円錐の高さを知りたいが、直接はかれない。母線の長さと底面の半径はわかっている。教科書 p215 の考え方で高さを求める方法として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 底面の半径と母線の長さで、立面図の二等辺三角形を正しい大きさでかき、その高さをはかる\nイ 平面図の円をかき、その直径をはかって、その長さを高さとする\nウ 展開図のおうぎ形をかき、その弧の長さをはかって、その長さを高さとする",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①立面図の二等辺三角形は、底辺が直径、等しい2辺が母線で、実際の大きさでかける　②その高さは、円錐の高さと同じ長さで表される　③立面図をかいて高さをはかればよい。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-21",
+   "type": "input",
+   "prompt": "1辺 1 cm の立方体を何個か積んで立体をつくった。図はその立面図と平面図である（平面図の正方形にはどれも1個以上積んである）。使った立方体の個数として考えられるもっとも多い数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①平面図から、真上から見て 6 か所に積んである　②立面図から、左の列は 2 段、まん中は 1 段、右は 3 段が最高　③もっとも多いのは、どの場所も列の最高の段まで積んだときで、2 × 2 ＋ 1 × 2 ＋ 3 × 2 ＝ 12。答え 12個",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-21.svg",
+   "imageAlt": "積み木の投影図。上の立面図は、左から2段・1段・3段の正方形の列。下の平面図は、横3列・たて2列の6つの正方形。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-22",
+   "type": "input",
+   "prompt": "1辺 1 cm の立方体を何個か積んで立体をつくった。立面図と平面図が図のようになった（平面図の正方形の場所には、どこも1個以上ある）。この形の見え方のまま、立方体をできるだけ少なくすると、何個ですむか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①平面図から 6 か所すべてに 1 個以上ある　②立面図の最高の段（2、1、3 段）は、それぞれの列のどちらか1か所だけで実現すればよく、もう1か所は 1 個でよい　③(2 ＋ 1) ＋ (1 ＋ 1) ＋ (3 ＋ 1) ＝ 9。答え 9個",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-22.svg",
+   "imageAlt": "積み木の投影図。上の立面図は、左から2段・1段・3段の正方形の列。下の平面図は、横3列・たて2列の6つの正方形。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-23",
+   "type": "input",
+   "prompt": "図の立方体 ABCD−EFGH の1辺は 6 cm である。頂点 A から辺 BC 上の点 P を通って頂点 G まで、表面にそってひもをかける。ひもの長さがもっとも短くなるとき、BP の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①面 ABCD と面 BFGC を、辺 BC で切り開いて平面にならべる　②ひもがもっとも短いのは線分 AG のときで、ならべた図形は 6 cm × 12 cm の長方形、AG はその対角線　③長方形の対角線は中心を通るので、P は BC のまん中で BP ＝ 3。答え 3cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-23.svg",
+   "imageAlt": "立方体ABCD−EFGHの見取図。上の面ABCD、下の面EFGHで、Aの真下がE、Bの真下がF、Cの真下がG、Dの真下がH。見えない辺は点線。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-24",
+   "type": "input",
+   "prompt": "直方体 ABCD−EFGH で、AB ＝ 4 cm、BC ＝ 3 cm、BF ＝ 2 cm である。頂点 A から辺 BC 上の点 P を通って頂点 G まで、表面にそってひもをかける。図は面 ABCD と面 BFGC の展開図である（方眼の1目もりは 1 cm）。ひもの長さがもっとも短くなるとき、BP の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①ひもがもっとも短いのは、展開図で A と G を結ぶ線分のとき　②A から右へ 6 目もり、上へ 3 目もり進む線分なので、右へ 2 目もり進むごとに上へ 1 目もり進む　③BC は A から右へ 4 目もりの線で、そこまでに上へ 2 目もり進むので BP ＝ 2。答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-24.svg",
+   "imageAlt": "方眼の上の展開図。左に長方形ABCD（ABが横4目もり、BCがたて3目もり）、右に辺BCでつながった長方形BFGC（BFが横2目もり）。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-25",
+   "type": "input",
+   "prompt": "立方体 ABCD−EFGH（上の面 ABCD、下の面 EFGH、A の真下が E）で、頂点 A から、いちばん遠い頂点 G まで、表面にそって行くもっとも短い道は何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①もっとも短い道は、2 つの面をつなげた展開図で A と G を結ぶ線分で、2 つの面の境めの辺を 1 本だけ通る　②通る辺は、A にも G にもふくまれない辺で、どれを選んでも同じ長さ　③そのような辺は 12 − 3 − 3 ＝ 6 本。答え 6通り",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-26",
+   "type": "input",
+   "prompt": "1辺 1 cm の立方体を 2 個つなげて、図のような直方体をつくった。この立体の辺（つなぎめの線もふくむ）だけを通って、頂点 A から頂点 G まで、もっとも短い道すじで行く。道すじは全部で何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①もっとも短い道すじは、横に 2 回、奥に 1 回、上に 1 回、合わせて 4 回進む　②4 回のうち、奥と上に進む回をそれぞれ選ぶ：4 × 3 ＝ 12 通り（残り 2 回が横）　③答え 12通り",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-26.svg",
+   "imageAlt": "1辺1cmの立方体を2個、横につなげた直方体の見取図。つなぎめの正方形の線もかいてある。左手前の下の頂点がA、右奥の上の頂点がG。見えない線は点線。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-27",
+   "type": "input",
+   "prompt": "内側の横 10 cm、奥行き 4 cm、深さ 6 cm の、ふたのない直方体の容器に水を入れ、図のようにかたむけたところ、水面が一方のかべの上のはしと、もう一方のかべの下のはしを通った（図は真横から見たもの）。この容器を水平にもどすと、水の深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①真横から見た水の形は、直角をはさむ辺が 10 cm と 6 cm の直角三角形で、面積は 10 × 6 ÷ 2 ＝ 30 cm²　②水の体積は 30 × 4 ＝ 120 cm³　③水平にもどすと 120 ÷ (10 × 4) ＝ 3。答え 3cm",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-27.svg",
+   "imageAlt": "かたむけた直方体の容器を真横から見た図。底の辺10cm、かべの高さ6cm。かげの部分が水で、水面（点線）は水平で、左のかべの上のはしと右のかべの下のはしを通る。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-28",
+   "type": "input",
+   "prompt": "内側の横 8 cm、奥行き 5 cm、深さ 6 cm の、ふたのない直方体の容器に水を入れ、図のようにかたむけた。水面は、左のかべの上のはしと、右のかべの底から 2 cm のところを通っている（図は真横から見たもの）。この容器を水平にもどすと、水の深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①真横から見た水の形は、平行な辺が 6 cm と 2 cm、高さ 8 cm の台形で、面積は (6 ＋ 2) × 8 ÷ 2 ＝ 32 cm²　②水の体積は 32 × 5 ＝ 160 cm³　③水平にもどすと 160 ÷ (8 × 5) ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-28.svg",
+   "imageAlt": "かたむけた直方体の容器を真横から見た図。底の辺8cm、かべの高さ6cm。かげの部分が水で、水面（点線）は水平で、左のかべの上のはしと、右のかべの底から2cmのところを通る。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-29",
+   "type": "input",
+   "prompt": "底面の半径 6 cm の円柱の容器に水が入っている。半径 3 cm の鉄の球を入れると、球は全部水にしずんだ。水面は何 cm 上がるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①球の体積は π × 27 × 4 ÷ 3 ＝ 36π cm³　②上がった水の体積も 36π で、容器の底面積は 36π cm²　③36π ÷ 36π ＝ 1。答え 1cm",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-30",
+   "type": "input",
+   "prompt": "底面の半径 3 cm、高さ 10 cm の円錐の容器にいっぱいに入れた水を、底面の半径 3 cm の円柱の容器に全部移した。水の深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10/3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①底面が同じなので、円錐の体積は、高さが同じ円柱の 1/3　②円柱に移すと、深さは円錐の高さの 1/3 になる　③10 ÷ 3 ＝ 10/3。答え 10/3cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-31",
+   "type": "input",
+   "prompt": "底面の半径 6 cm の円錐の容器にいっぱいに入れた水を、底面の半径 3 cm の円柱の容器に全部移したところ、水の深さは 8 cm になった。円錐の容器の高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の体積は π × 9 × 8 ＝ 72π cm³　②円錐の容器の高さを h cm とすると π × 36 × h ÷ 3 ＝ 72π　③12πh ＝ 72π から h ＝ 6。答え 6cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-32",
+   "type": "input",
+   "prompt": "半径 6 cm の半球の形をしたおわんに、水がいっぱいに入っている。この水を、底面の半径 6 cm の円柱の容器に全部移すと、水の深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①半球の体積は π × 216 × 4 ÷ 3 ÷ 2 ＝ 144π cm³　②円柱の容器の底面積は 36π cm²　③144π ÷ 36π ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-33",
+   "type": "input",
+   "prompt": "内側の底面が 16 cm × 8 cm の長方形の水そうに水が入っている。1 辺 4 cm の立方体のおもりを入れると、おもりは全部水にしずんだ。水面は何 cm 上がるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おもりの体積は 4 × 4 × 4 ＝ 64 cm³　②上がった水の体積も 64 cm³、水そうの底面積は 16 × 8 ＝ 128 cm²　③64 ÷ 128 ＝ 1/2。答え 1/2cm",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-34",
+   "type": "input",
+   "prompt": "底面の半径 3 cm、高さ 8 cm の円錐の形のカップがある。このカップで水をくんで、底面の半径 6 cm、高さ 8 cm の円柱の容器をいっぱいにする。カップに何杯分の水が必要か答えよう（カップにはいつもいっぱいに水を入れる）。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "杯"
+    ]
+   },
+   "explanation": "①カップの容積は π × 9 × 8 ÷ 3 ＝ 24π cm³　②容器の容積は π × 36 × 8 ＝ 288π cm³　③288π ÷ 24π ＝ 12。答え 12杯",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-35",
+   "type": "input",
+   "prompt": "内側が横 60 cm、奥行き 40 cm、深さ 25 cm の空の水そうに、毎分 2 L の割合で水を入れる。水そうがいっぱいになるのは何分後か答えよう（1 L ＝ 1000 cm³）。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "分",
+     "分後"
+    ]
+   },
+   "explanation": "①水そうの容積は 60 × 40 × 25 ＝ 60000 cm³ ＝ 60 L　②毎分 2 L ずつ入る　③60 ÷ 2 ＝ 30。答え 30分後",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-36",
+   "type": "input",
+   "prompt": "半径 3 cm の球が、底面の半径 3 cm、高さ 6 cm の円柱の容器にちょうど入っている。容器のすき間に水をいっぱいに入れたとき、水の体積は、容器の容積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①容器の容積は π × 9 × 6 ＝ 54π、球の体積は π × 27 × 4 ÷ 3 ＝ 36π（円柱の 2/3）　②水の体積は 54π − 36π ＝ 18π　③18π ÷ 54π ＝ 1/3。答え 1/3倍",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-37",
+   "type": "input",
+   "prompt": "1 辺 20 cm の正方形の厚紙の4つのすみから、1 辺 4 cm の正方形を切りとり、残りを折り曲げて、ふたのない直方体の箱をつくった。この箱の容積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "576",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①箱の底は 1 辺 20 − 4 × 2 ＝ 12 cm の正方形　②高さは切りとった正方形の 1 辺で 4 cm　③12 × 12 × 4 ＝ 576。答え 576cm³",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-38",
+   "type": "input",
+   "prompt": "たて 20 cm、横 15 cm、高さ 10 cm の直方体の箱に、ひもをかける。ひもは、上の面と下の面でそれぞれ十字になり、たてと横に1周ずつまわしてある（ひもは面にそってたるまない。結び目は考えない）。ひもの長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "110",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①たての方向に1周：上の面と下の面でたて 20 cm ずつ、前後の面で高さ 10 cm ずつ、20 × 2 ＋ 10 × 2 ＝ 60 cm　②横の方向に1周：15 × 2 ＋ 10 × 2 ＝ 50 cm　③60 ＋ 50 ＝ 110。答え 110cm",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-39",
+   "type": "input",
+   "prompt": "2 つの円柱の容器 A、B がある。A は底面の半径 3 cm で水が深さ 10 cm まで入っており、B は底面の半径 6 cm で空である。A の水の一部を B に移して、A と B の水の深さを同じにした。そのときの深さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の体積は π × 9 × 10 ＝ 90π cm³ で、移しても変わらない　②深さを h cm とすると、9πh ＋ 36πh ＝ 90π　③45h ＝ 90 から h ＝ 2。答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-40",
+   "type": "input",
+   "prompt": "内側の底面が 1 辺 10 cm の正方形の水そうに、水が深さ 6 cm まで入っている。底面が 20 cm² で、水の深さより十分高い四角柱の棒を、底につくようにまっすぐ立てた。水の深さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15/2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①水の体積は 10 × 10 × 6 ＝ 600 cm³ で変わらない　②棒を立てると、水が入る部分の底面積は 100 − 20 ＝ 80 cm²　③600 ÷ 80 ＝ 15/2。答え 15/2cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-41",
+   "type": "input",
+   "prompt": "半径 3 cm の鉛の球をとかして、底面の半径 3 cm の円柱をつくり直した（体積は変わらないものとする）。円柱の高さは何 cm になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①球の体積は π × 27 × 4 ÷ 3 ＝ 36π cm³　②円柱の底面積は π × 9 ＝ 9π cm²　③36π ÷ 9π ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-42",
+   "type": "input",
+   "prompt": "底面の半径 6 cm、高さ 10 cm の円柱の形をした粘土を、底面の半径 3 cm、高さ 5 cm の円錐の形にすべて作り直す。円錐はいくつできるか答えよう（粘土の体積は変わらないものとする）。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①円柱の体積は π × 36 × 10 ＝ 360π cm³　②円錐 1 個は π × 9 × 5 ÷ 3 ＝ 15π cm³　③360π ÷ 15π ＝ 24。答え 24個",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-43",
+   "type": "input",
+   "prompt": "1 辺 6 cm の立方体の容器に、半径 3 cm の球がちょうど入っている。容器のすき間に水をいっぱいに入れたとき、水の体積を π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "216−36π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①立方体の容積は 6 × 6 × 6 ＝ 216 cm³　②球の体積は π × 27 × 4 ÷ 3 ＝ 36π cm³　③水は 216 − 36π。答え 216 − 36π cm³",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-44",
+   "type": "input",
+   "prompt": "底面の半径 4 cm、高さ 9 cm の円柱の中に、底面が同じで高さも同じ円錐がちょうど入っている。円柱から円錐をとりのぞいた残りの体積は、円柱の体積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2/3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①円錐の体積は、底面と高さが同じ円柱の 1/3　②残りは 1 − 1/3 ＝ 2/3　③数で確かめると、円柱 144π、円錐 48π、残り 96π で 96π ÷ 144π ＝ 2/3。答え 2/3倍",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-45",
+   "type": "input",
+   "prompt": "アイスクリームのコーンを、底面の半径 3 cm、高さ 8 cm の円錐とみる。その上に、半径 3 cm の半球のアイスクリームをのせた。コーンの中もアイスクリームでいっぱいのとき、アイスクリーム全体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "42π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①コーンの中は π × 9 × 8 ÷ 3 ＝ 24π cm³　②半球は π × 27 × 4 ÷ 3 ÷ 2 ＝ 18π cm³　③24π ＋ 18π ＝ 42π。答え 42π cm³",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-46",
+   "type": "input",
+   "prompt": "テントを三角柱とみる。三角形の面（入口とおく）は、底辺 6 m、ほかの 2 辺が 5 m、高さ 4 m の二等辺三角形で、テントの奥行きは 10 m である。床をのぞいた、屋根の 2 面と前後の三角形の面の布の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "124",
+    "units": [
+     "m²",
+     "m2"
+    ]
+   },
+   "explanation": "①屋根は 5 m × 10 m の長方形が 2 面で 100 m²　②前後の三角形は 6 × 4 ÷ 2 ＝ 12 m² が 2 面で 24 m²　③100 ＋ 24 ＝ 124。答え 124m²",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-47",
+   "type": "input",
+   "prompt": "長さ 25 m、はば 10 m のプールがある。プールの深さは、一方のはしで 1 m、もう一方のはしで 2 m で、その間は一定の割合で深くなっている（横から見た断面は台形）。プールの容積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "375",
+    "units": [
+     "m³",
+     "m3"
+    ]
+   },
+   "explanation": "①横から見た断面は、平行な辺が 1 m と 2 m、高さ 25 m の台形で、面積は (1 ＋ 2) × 25 ÷ 2 ＝ 37.5 m²　②その断面がはば 10 m の四角柱とみる　③37.5 × 10 ＝ 375。答え 375m³",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-48",
+   "type": "input",
+   "prompt": "底面の半径 3 cm の円柱を、底面に平行でない平面で切った。図は、残った立体を真横から見た図で、いちばん高いところが 10 cm、いちばん低いところが 4 cm である。この立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "63π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①同じ立体をもう1つ、上下を逆にして切り口どうしを合わせると、高さ 10 ＋ 4 ＝ 14 cm の円柱になる　②その円柱の体積は π × 9 × 14 ＝ 126π　③半分で 63π。答え 63π cm³",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-48.svg",
+   "imageAlt": "円柱をななめに切った立体を真横から見た図。底辺（底面の直径）6cm、左の高さ10cm、右の高さ4cm。上の辺はななめの線。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-49",
+   "type": "input",
+   "prompt": "大きな立方体の表面全体に色をぬってから、1 辺 1 cm の小さな立方体に切り分けた。1 つの面も色がぬられていない小さな立方体は 27 個あった。大きな立方体の 1 辺の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①色がぬられていないのは、内側の立方体の部分　②27 ＝ 3 × 3 × 3 なので、内側は 1 辺 3 cm の立方体　③外側の 1 cm ずつを両側に加えて 3 ＋ 2 ＝ 5。答え 5cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-50",
+   "type": "input",
+   "prompt": "たて 3 cm、横 4 cm、高さ 5 cm の直方体の表面全体に色をぬってから、1 辺 1 cm の立方体に切り分けた。どの面にも色がついていない立方体は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①色がついていないのは、表面から 1 cm ずつ内側に入った部分　②その部分は、たて 3 − 2 ＝ 1、横 4 − 2 ＝ 2、高さ 5 − 2 ＝ 3 の直方体　③1 × 2 × 3 ＝ 6。答え 6個",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-51",
+   "type": "input",
+   "prompt": "底面の半径 10 cm の円柱の水そうに水が入っている。底面の半径 3 cm、高さ 10 cm の円錐の形のおもりを、底面を下にして入れると、おもりは全部水にしずんだ。水面は何 cm 上がるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3/10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おもりの体積は π × 9 × 10 ÷ 3 ＝ 30π cm³　②水そうの底面積は π × 100 ＝ 100π cm²　③30π ÷ 100π ＝ 3/10。答え 3/10cm",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-52",
+   "type": "input",
+   "prompt": "図の立方体 ABCD−EFGH の1辺は 6 cm である。辺 CB、CD、CG のまん中の点をそれぞれ P、Q、R とし、3 点 P、Q、R を通る平面で、頂点 C をふくむ三角錐を切り落とした。切り落とした三角錐の体積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9/2",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①切り落とした三角錐は、底面を三角形 CPQ（直角をはさむ辺が 3 cm と 3 cm）、高さを CR ＝ 3 cm とみられる　②底面積は 3 × 3 ÷ 2 ＝ 9/2 cm²　③3 × 3 ÷ 2 × 3 ÷ 3 ＝ 9/2。答え 9/2cm³",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   },
+   "image": "/tokkun-fig-spaceuse-52.svg",
+   "imageAlt": "立方体ABCD−EFGHの見取図（上の面ABCD、Aの真下がE）。辺CB、CD、CGのまん中の点P、Q、Rを結んだ三角形がかいてある。見えない線は点線。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-53",
+   "type": "input",
+   "prompt": "立方体 ABCD−EFGH（上の面 ABCD、下の面 EFGH、A の真下が E）を、3 つの頂点 B、D、E を通る平面で切った。切り口の図形として正しいものを、次のア〜エから選び、記号で答えよう。\nア 正三角形\nイ 直角二等辺三角形\nウ 正方形\nエ 長方形（正方形ではない）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①切り口の辺は BD、DE、EB の 3 本　②BD は上の面の対角線、DE は左の面の対角線、EB は前の面の対角線で、どれも合同な正方形の対角線なので長さが等しい　③3 辺が等しいので正三角形。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-54",
+   "type": "input",
+   "prompt": "立方体 ABCD−EFGH（上の面 ABCD、下の面 EFGH、A の真下が E）を、4 つの頂点 A、C、G、E を通る平面で切った。切り口の図形として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 正方形\nイ 長方形（正方形ではない）\nウ ひし形（正方形ではない）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①切り口は四角形 ACGE で、AE と CG は立方体の辺、AC と EG は面の対角線　②AE ⊥ AC で、4 つの角はすべて直角　③面の対角線 AC は辺 AE より長いので、正方形ではない長方形。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-55",
+   "type": "input",
+   "prompt": "立方体の展開図をつくるには、立方体の 12 本の辺のうち、何本の辺を切り開けばよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①展開図では、6 つの面が、切り開かずに残した辺でつながって 1 つの図形になる　②6 つの面を 1 つにつなぐには、残す辺は 6 − 1 ＝ 5 本　③切り開く辺は 12 − 5 ＝ 7。答え 7本",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-56",
+   "type": "input",
+   "prompt": "図は、さいころの展開図で、いくつかの面に目の数を書いてある。さいころの向かい合う面の目の数の和は 7 である。「?」の面の目の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①3 の面を底にして組み立てると、3 の上にある空白の面が奥のかべ、その左の 2 の面が左のかべ、3 の右の「?」の面が右のかべ、1 の面が手前のかべ、残りの空白の面がふたになる　②2 の面と「?」の面は、左右で向かい合う　③7 − 2 ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-56.svg",
+   "imageAlt": "6つの正方形が階段のようにつながったさいころの展開図。左上から、2、空白、3、?、1、空白の順。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-57",
+   "type": "input",
+   "prompt": "図の展開図を組み立てて立方体をつくる。面「あ」と向かい合う（平行になる）面を、「い」〜「か」から選んで答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "お"
+    ]
+   },
+   "explanation": "①「い」「う」「え」「か」はたてに一列で、組み立てると立方体のまわりを1周する　②「あ」と「お」はその列の左右のふたになるが、「あ」は「い」の左、「お」は「え」の右につくので、反対側のふたどうし　③向かい合うのは「お」。答え お",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-57.svg",
+   "imageAlt": "立方体の展開図。たてに4つ（下から い、う、え、か）が並び、いちばん下の「い」の左に「あ」、下から3つめの「え」の右に「お」がつく。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-58",
+   "type": "input",
+   "prompt": "図のア〜エのうち、組み立てても立方体にならないものを1つ選び、記号で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①組み立てて、どの面とどの面が重なるかを調べる　②ウは、4 つ並んだ正方形のまん中の2つの上に正方形が2つあり、2 × 2 の正方形のかたまりができている　③この形は組み立てると面が重なり、ふたができない。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   },
+   "image": "/tokkun-fig-spaceuse-58.svg",
+   "imageAlt": "4つの図形ア〜エ。どれも6つの正方形をつないだ形。アは4つ横に並んだ上下に1つずつ、イは3つと3つが段ちがい、ウは4つ横に並んだまん中の2つの上に2つ、エは2つずつ3段の階段の形。"
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-59",
+   "type": "input",
+   "prompt": "向かい合う面の目の数の和が 7 のさいころを、上の面が 1、手前の面が 2、右の面が 3 になるように置いた。このさいころを、すべらないように向こう側へ 1 回転がし、続けて右へ 1 回転がした。上の面の目の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①向こうへ転がすと、手前の面 2 が上にくる。このとき左右の面は変わらず、右は 3、左は 7 − 3 ＝ 4　②右へ転がすと、左の面が上にくる　③上の面は 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-60",
+   "type": "input",
+   "prompt": "向かい合う面の目の数の和が 7 のさいころを 3 個、まっすぐ上に積んで机に置いた。いちばん上の面の目は 5 である。重なって見えない面（さいころどうしがふれ合う面と、机にふれている面）の目の数の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16"
+   },
+   "explanation": "①下と中のさいころは、それぞれ上の面と下の面が見えない。どちらも向かい合う面なので和は 7 ずつで 14　②いちばん上のさいころは、下の面だけが見えず、7 − 5 ＝ 2　③14 ＋ 2 ＝ 16。答え 16",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-61",
+   "type": "input",
+   "prompt": "1 辺 1 cm の立方体 6 個を、左から 3 段、2 段、1 段の高さに積み、すき間なく横一列にくっつけて階段の形をつくった（奥行きは 1 列）。床にふれている面もふくめて、この立体の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①上下から見ると、どちらも 3 cm²　②前後から見ると、どちらも 3 ＋ 2 ＋ 1 ＝ 6 cm²　③左右から見ると、どちらも 3 cm²。合わせて 2 × (3 ＋ 6 ＋ 3) ＝ 24。答え 24cm²",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-62",
+   "type": "input",
+   "prompt": "1 辺 1 cm の立方体を、1 段目は 3 × 3 ＝ 9 個、2 段目は 2 × 2 ＝ 4 個、3 段目は 1 個、どの段も同じかどにそろえて積んだ。床にふれている面もふくめて、この立体の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "42",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①上下から見ると、どちらも 9 cm²（上から見える面は、段ごとに分かれていても合わせて 9）　②前後から見ると、どちらも 3 ＋ 2 ＋ 1 ＝ 6 cm²　③左右も 6 cm²。合わせて 2 × (9 ＋ 6 ＋ 6) ＝ 42。答え 42cm²",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-63",
+   "type": "input",
+   "prompt": "1 辺 1 cm の立方体を、1 段目は 5 × 5 個、2 段目は 4 × 4 個、…、いちばん上の 5 段目は 1 個のように、1 段上がるごとにたても横も 1 個ずつ少なくして積む。全部で何個の立方体が必要か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "55",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①各段の個数は 25、16、9、4、1　②たし合わせる　③25 ＋ 16 ＋ 9 ＋ 4 ＋ 1 ＝ 55。答え 55個",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-64",
+   "type": "input",
+   "prompt": "1 辺の長さを 3 倍にした立方体の表面積と体積は、それぞれもとの立方体の何倍になるか。表面積、体積の順に答えよう。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "9",
+     "27"
+    ],
+    "ordered": true
+   },
+   "explanation": "①1 つの面の正方形は、たても横も 3 倍で、面積は 3 × 3 ＝ 9 倍。面は 6 つなので表面積も 9 倍　②体積は、たて・横・高さがどれも 3 倍で 3 × 3 × 3 ＝ 27 倍　③表面積は 9 倍、体積は 27 倍。答え 9、27",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-65",
+   "type": "input",
+   "prompt": "1 辺 1 cm の立方体 64 個で、1 辺 4 cm の立方体をつくった。この立方体を、3 つの面が同時に見える向きから見たとき、見える小さな立方体は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "37",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①見えないのは、見えている 3 つの面からはなれた部分で、1 辺 3 個の立方体の形　②その個数は 3 × 3 × 3 ＝ 27　③64 − 27 ＝ 37。答え 37個",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-66",
+   "type": "input",
+   "prompt": "たて 2 cm、横 3 cm、高さ 4 cm の直方体のブロックを、向きをそろえてすき間なく積んで、1 辺 12 cm の立方体をつくる。ブロックは何個必要か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "72",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①12 は 2 でも 3 でも 4 でも割りきれるので、すき間なくならべられる　②たてに 12 ÷ 2 ＝ 6 個、横に 12 ÷ 3 ＝ 4 個、高さに 12 ÷ 4 ＝ 3 個　③6 × 4 × 3 ＝ 72。答え 72個",
+   "source": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466044_0.jpg",
+    "sha256": "da7f1fd0bea4992498c6829920189681e3efb182faa359e79368b2b9b54ff99b",
+    "page": 216
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-67",
+   "type": "input",
+   "prompt": "半径 5 cm、長さ 20 cm の円柱の形をしたローラーにペンキをつけ、かべの上をまっすぐ 3 回転させた。ペンキがぬられた部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "600π",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①1 回転でぬれるのは、ローラーの側面の面積と同じで、2π × 5 × 20 ＝ 200π cm²　②3 回転で 3 倍　③200π × 3 ＝ 600π。答え 600π cm²",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-68",
+   "type": "input",
+   "prompt": "円柱の側面に、底面の円周上の点 A から、側面をちょうど 2 周して、A の真上にある上の底面の円周上の点 B まで、ひもを一定の割合でらせんのように巻いた。側面の展開図（長方形）の上で、このひもはどう表されるか。次のア〜ウから選び、記号で答えよう。\nア 1 本の曲線\nイ 長方形の対角線 1 本\nウ 平行な 2 本の線分",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①側面の展開図は長方形で、1 周分の側面が 1 枚の長方形になる　②2 周巻くと、ひもは長方形を 2 回横切り、それぞれの部分は高さの半分ずつ上がる線分になる　③同じかたむきの線分が 2 本で、平行。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-69",
+   "type": "input",
+   "prompt": "容器の水を、形のちがう別の容器に全部移すとき、移す前と後で必ず変わらないものはどれか。次のア〜ウから選び、記号で答えよう。\nア 水の深さ\nイ 水面の面積\nウ 水の体積",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①水は増えたり減ったりしないので、体積は変わらない　②深さや水面の面積は、容器の底面の形や大きさで変わる　③変わらないのは体積。だから「体積 ＝ 底面積 × 深さ」の式を立てて深さを求められる。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466043_0.jpg",
+    "sha256": "f90118c2126d786ed033f6379b082b6cbb64ee10502a360b88a75e2e41dc6ac4",
+    "page": 215
+   }
+  },
+  {
+   "id": "tokkun-math-1-spaceuse-70",
+   "type": "input",
+   "prompt": "半径 3 cm の球の表面積は、その球がちょうど入る円柱（底面の半径 3 cm、高さ 6 cm）の表面積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2/3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①球の表面積は 4π × 9 ＝ 36π cm²　②円柱の表面積は、側面 6π × 6 ＝ 36π と底面 2 つ 18π で 54π cm²　③36π ÷ 54π ＝ 2/3。答え 2/3倍（教科書 p212 のアルキメデスの発見と同じ）",
+   "source": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p214〜215（空間図形の利用）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466042_0.jpg",
+    "sha256": "8df59eaf60887f9152ab9076401a1b167226419f671e2bb7af456615161beaf2",
+    "page": 212
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。容器の水・積み木など、立体の考え方を使う一段難しい問題。答えは check.py で計算・数え上げで検算。2026-10-29 Claude：教科書 p212〜216 の写真を開いて照合し、67問を追加して70問にした（元の3問はそのまま）。円錐にひもを巻く最短の長さ（2周・半周・角度・逆算）、投影図から寸法を読みとる問題、直方体・立方体の表面や辺を通る最短の道、容器をかたむけた水・水の移しかえ・水位の上がり方、さいころと展開図、積み木の表面積、切り口・切り落としなどを、図が必要なものには座標から正確にかいた図をつけてまとめた。答えは別の計算（展開図の座標・折りたたみの模型・総当たり）で検算。"
+}

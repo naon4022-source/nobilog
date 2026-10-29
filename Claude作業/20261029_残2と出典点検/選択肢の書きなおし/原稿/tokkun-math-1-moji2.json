@@ -1,0 +1,1868 @@
+{
+ "id": "tokkun-math-1-moji2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "文字式の表し方②（特訓）",
+ "majorTitle": "文字式",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-moji2-1",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n家から a km はなれた駅まで、はじめに時速 4 km で x 時間歩き、残りを時速 12 km の自転車で走った。自転車で走った時間（時間）",
+   "answer": {
+    "kind": "expr",
+    "value": "(a−4x)/12",
+    "form": "nosign"
+   },
+   "explanation": "①歩いた道のりは 4x km、残りは a − 4x km　②時間 ＝ 道のり ÷ 速さ ＝ (a − 4x) ÷ 12　③答え (a−4x)/12（時間）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-2",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nA町とB町の間は x km ある。行きは時速 30 km、帰りは時速 20 km で往復したときの、往復にかかった時間（時間）",
+   "answer": {
+    "kind": "expr",
+    "value": "x/30+x/20",
+    "form": "nosign"
+   },
+   "explanation": "①行き：x ÷ 30 ＝ x/30、帰り：x ÷ 20 ＝ x/20　②往復は x/30 + x/20（まとめると x/12）　③答え x/30+x/20（時間）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-3",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n分速 a m で 15 分歩き、残りの b m を分速 60 m で歩いた。全体でかかった時間（分）",
+   "answer": {
+    "kind": "expr",
+    "value": "15+b/60",
+    "form": "nosign"
+   },
+   "explanation": "①前半は 15 分　②後半：b ÷ 60 ＝ b/60 分　③答え 15+b/60（分）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-4",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n秒速 x m を、時速何 km かで表した数",
+   "answer": {
+    "kind": "expr",
+    "value": "18x/5"
+   },
+   "explanation": "①1時間 ＝ 3600 秒なので、1時間に 3600x m 進む　②km にすると 3600x ÷ 1000 ＝ 18x/5　③答え 18x/5（時速 km）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-5",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n時速 a km を、分速何 m かで表した数",
+   "answer": {
+    "kind": "expr",
+    "value": "50a/3"
+   },
+   "explanation": "①1時間に a km ＝ 1000a m　②1分では 1000a ÷ 60 ＝ 50a/3　③答え 50a/3（分速 m）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-6",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx km の道のりを y 分で歩いたときの速さを、時速何 km かで表した数",
+   "answer": {
+    "kind": "expr",
+    "value": "60x/y"
+   },
+   "explanation": "①y 分 ＝ y/60 時間　②速さ ＝ x ÷ (y/60) ＝ 60x/y　③答え 60x/y（時速 km）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-7",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1周 a m の池のまわりを、兄は分速 80 m、弟は分速 60 m で、同じ地点から反対向きに同時に歩きはじめた。2人がはじめて出会うまでの時間（分）",
+   "answer": {
+    "kind": "expr",
+    "value": "a/140"
+   },
+   "explanation": "①反対向きなので、2人の間は1分に 80 + 60 ＝ 140 m ずつちぢまる　②池1周分の a m で出会う　③a ÷ 140 ＝ a/140。答え a/140（分）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-8",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1周 a m の池のまわりを、兄は分速 80 m、弟は分速 60 m で、同じ地点から同じ向きに同時に歩きはじめた。兄が弟にはじめて追いつく（1周差をつける）までの時間（分）",
+   "answer": {
+    "kind": "expr",
+    "value": "a/20"
+   },
+   "explanation": "①同じ向きなので、2人の差は1分に 80 − 60 ＝ 20 m ずつ開く　②差が a m（1周）になったとき追いつく　③a ÷ 20 ＝ a/20。答え a/20（分）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-9",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n長さ a m の列車が秒速 20 m で、長さ b m の鉄橋をわたりはじめてから、わたり終わるまでの時間（秒）",
+   "answer": {
+    "kind": "expr",
+    "value": "(a+b)/20",
+    "form": "nosign"
+   },
+   "explanation": "①列車の先頭が鉄橋に入ってから、最後尾が鉄橋を出るまでに進む道のりは b + a m　②(a + b) ÷ 20　③答え (a+b)/20（秒）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-10",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n静水での速さが時速 x km の船が、流れの速さ時速 2 km の川を下るとき、3 時間で進む道のり（km）",
+   "answer": {
+    "kind": "expr",
+    "value": "3(x+2)",
+    "form": "nosign"
+   },
+   "explanation": "①下りの速さ ＝ 静水での速さ + 流れの速さ ＝ x + 2　②3 時間で 3 × (x + 2)　③答え 3(x+2)（3x+6 でもよい）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-11",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n時速 x km で y 時間走り、そのあと時速 2x km で 3 時間走ったときの、全体の道のり（km）",
+   "answer": {
+    "kind": "expr",
+    "value": "xy+6x",
+    "form": "nosign"
+   },
+   "explanation": "①前半：x × y ＝ xy　②後半：2x × 3 ＝ 6x　③答え xy+6x（km）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-12",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n家から学校まで 1.2 km ある。分速 x m で y 分歩いたときの、残りの道のり（m）",
+   "answer": {
+    "kind": "expr",
+    "value": "1200−xy"
+   },
+   "explanation": "①1.2 km ＝ 1200 m に単位をそろえる　②歩いた道のり xy m　③答え 1200−xy（m）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-13",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n長さ a cm のろうそくに火をつけると、1分に b mm ずつ短くなる。火をつけて x 分後のろうそくの長さ（cm）",
+   "answer": {
+    "kind": "expr",
+    "value": "a−bx/10"
+   },
+   "explanation": "①x 分で bx mm 短くなる　②mm を cm にすると bx/10 cm　③答え a−bx/10（cm）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-14",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nAさんは分速 70 m で家を出た。その 3 分後に、Bさんが同じ道を分速 x m で追いかけた。Bさんが出発してから t 分後の、AさんとBさんの間の道のり（m）（まだ追いついていないとする）",
+   "answer": {
+    "kind": "expr",
+    "value": "70(t+3)−xt",
+    "form": "nosign"
+   },
+   "explanation": "①Aさんは t + 3 分歩いたので 70(t + 3) m 進んでいる　②Bさんは xt m 進んでいる　③差は 70(t+3) − xt（210+70t−xt でもよい）。答え 70(t+3)−xt",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-15",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na km の道のりを時速 b km で進み、とちゅうで 20 分休んだ。かかった時間の合計（分）",
+   "answer": {
+    "kind": "expr",
+    "value": "60a/b+20",
+    "form": "nosign"
+   },
+   "explanation": "①進んだ時間は a/b 時間 ＝ 60a/b 分　②休んだ 20 分を加える　③答え 60a/b+20（分）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-16",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx km の道のりを、時速 4 km で歩くと、時速 12 km の自転車で行くより何時間多くかかるか",
+   "answer": {
+    "kind": "expr",
+    "value": "x/4−x/12",
+    "form": "nosign"
+   },
+   "explanation": "①歩く：x/4 時間、自転車：x/12 時間　②差は x/4 − x/12（まとめると x/6）　③答え x/4−x/12（時間）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-17",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n時速 x km と分速 y m（x km/時 のほうが速い）の速さの差を、分速何 m かで表した数",
+   "answer": {
+    "kind": "expr",
+    "value": "50x/3−y"
+   },
+   "explanation": "①時速 x km を分速にすると 1000x ÷ 60 ＝ 50x/3 m　②差は 50x/3 − y　③答え 50x/3−y（分速 m）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-18",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1周を x 秒で回る観覧車が、1分間に回る角度（度）",
+   "answer": {
+    "kind": "expr",
+    "value": "21600/x"
+   },
+   "explanation": "①1秒に 360/x 度回る　②1分（60秒）では 360 × 60 ÷ x ＝ 21600/x　③答え 21600/x（度）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-19",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n半径 r cm の円の周上を、秒速 v cm で動く点が、1周するのにかかる時間（秒）（円周率は π）",
+   "answer": {
+    "kind": "expr",
+    "value": "2πr/v"
+   },
+   "explanation": "①1周の道のりは 2πr cm　②時間 ＝ 道のり ÷ 速さ ＝ 2πr ÷ v　③答え 2πr/v（秒）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-20",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価 a 円の品物を 15% 引きで 2 個買い、1000 円を出したときのおつり（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "1000−17a/10"
+   },
+   "explanation": "①15% 引きの値段は a × 0.85 ＝ 17a/20　②2 個で 17a/10　③おつり 1000 − 17a/10。答え 1000−17a/10（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-21",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n原価 x 円の品物に 3 割の利益を見こんで定価をつけ、定価の 1 割引きで売ったときの売り値（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "117x/100"
+   },
+   "explanation": "①定価：x × 1.3　②売り値：x × 1.3 × 0.9 ＝ 1.17x ＝ 117x/100　③答え 117x/100（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-22",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n税ぬきの値段 a 円に、8% の消費税を加えた値段（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "27a/25"
+   },
+   "explanation": "①a × (1 + 0.08) ＝ 1.08a　②1.08 ＝ 108/100 ＝ 27/25　③答え 27a/25（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-23",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n10% の消費税をふくめた値段が b 円のときの、税ぬきの値段（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "10b/11"
+   },
+   "explanation": "①税ぬき × 1.1 ＝ b なので、税ぬき ＝ b ÷ 1.1　②b ÷ (11/10) ＝ 10b/11　③答え 10b/11（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-24",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n濃さ x% の食塩水 200 g にふくまれる食塩の重さ（g）",
+   "answer": {
+    "kind": "expr",
+    "value": "2x"
+   },
+   "explanation": "①食塩の重さ ＝ 食塩水の重さ × 濃さ　②200 × (x/100) ＝ 2x　③答え 2x（g）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-25",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n濃さ a% の食塩水 b g に、水を c g 加えた。できた食塩水にふくまれる食塩の重さ（g）",
+   "answer": {
+    "kind": "expr",
+    "value": "ab/100"
+   },
+   "explanation": "①水を加えても、食塩の量は変わらない　②もとの食塩：b × (a/100) ＝ ab/100　③答え ab/100（g）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-26",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n去年の生徒数は x 人だった。今年は去年より 5% ふえ、来年は今年より 5% へる予定である。来年の生徒数（人）",
+   "answer": {
+    "kind": "expr",
+    "value": "399x/400"
+   },
+   "explanation": "①今年：x × 1.05　②来年：x × 1.05 × 0.95 ＝ 0.9975x ＝ 399x/400　③5% ふえて 5% へっても、もとにはもどらない。答え 399x/400（人）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-27",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na 円の 2 割と、b 円の 3 割の合計（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "a/5+3b/10"
+   },
+   "explanation": "①a × 0.2 ＝ a/5　②b × 0.3 ＝ 3b/10　③答え a/5+3b/10（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-28",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価 600 円の品物を x 割引きで買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "600−60x",
+    "form": "nosign"
+   },
+   "explanation": "①x 割 ＝ x/10　②値引き額：600 × (x/10) ＝ 60x　③代金 600 − 60x。答え 600−60x（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-29",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n原価 800 円の品物に、原価の y% の利益を見こんでつけた定価（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "800+8y",
+    "form": "nosign"
+   },
+   "explanation": "①利益：800 × (y/100) ＝ 8y　②定価 ＝ 原価 + 利益 ＝ 800 + 8y　③答え 800+8y（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-30",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1冊 x 円の本を、定価の 2 割引きで 3 冊、定価の 3 割引きで 2 冊 買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "19x/5",
+    "form": "nosign"
+   },
+   "explanation": "①2 割引き：0.8x 円 が 3 冊で 2.4x　②3 割引き：0.7x 円 が 2 冊で 1.4x　③合計 3.8x ＝ 19x/5（12x/5+7x/5 でもよい）。答え 19x/5（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-31",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nある数 x の 35% は、もとの数 x より いくつ小さいか",
+   "answer": {
+    "kind": "expr",
+    "value": "13x/20"
+   },
+   "explanation": "①x の 35% は 0.35x　②x − 0.35x ＝ 0.65x ＝ 13x/20　③答え 13x/20",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-32",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na km は、b m より何 m 長いか",
+   "answer": {
+    "kind": "expr",
+    "value": "1000a−b"
+   },
+   "explanation": "①a km ＝ 1000a m に単位をそろえる　②1000a − b　③答え 1000a−b（m）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-33",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx 円で y 個買える品物を、z 個買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "xz/y"
+   },
+   "explanation": "①1個の値段は x ÷ y ＝ x/y 円　②z 個で (x/y) × z ＝ xz/y　③答え xz/y（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-34",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1 m あたり a 円のリボンを 25 cm 買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "a/4"
+   },
+   "explanation": "①25 cm ＝ 1/4 m　②a × (1/4) ＝ a/4　③答え a/4（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-35",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na g で b 円の肉を、300 g 買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "300b/a"
+   },
+   "explanation": "①1 g の値段は b/a 円　②300 g で 300 × b/a ＝ 300b/a　③答え 300b/a（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-36",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na 円を、1年間で 2% の利子がつく預金に預けたときの、1年後の利子（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "a/50"
+   },
+   "explanation": "①2% ＝ 0.02 ＝ 1/50　②a × (1/50) ＝ a/50　③答え a/50（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-37",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1個 x 円の品物は、10 個をこえた分が 2 割引きになる。15 個買ったときの代金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "14x"
+   },
+   "explanation": "①10 個までは定価：10x　②こえた 5 個は 0.8x 円ずつ：4x　③合計 14x。答え 14x（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-38",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n電気料金は、基本料金 a 円に、使った量 1 kWh あたり b 円を加えた金額である。x kWh 使ったときの料金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "a+bx"
+   },
+   "explanation": "①使った分：b × x ＝ bx　②基本料金を加えて a + bx　③答え a+bx（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-39",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nタクシーの料金は、1.2 km までが a 円で、そのあと 0.3 km ごとに b 円加わる。ちょうど 3 km 乗ったときの料金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "a+6b"
+   },
+   "explanation": "①1.2 km をこえた道のり：3 − 1.2 ＝ 1.8 km　②1.8 ÷ 0.3 ＝ 6 なので、6 回 b 円加わる　③答え a+6b（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-40",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n携帯電話の料金は、毎月 x 円の基本料金に、通話 1 分あたり y 円が加わる。毎月 30 分ずつ通話したときの、1年間の料金（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "12x+360y",
+    "form": "nosign"
+   },
+   "explanation": "①1か月：x + 30y　②1年（12か月）：12 × (x + 30y) ＝ 12x + 360y　③答え 12x+360y（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-41",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nある数の 30% が a であるときの、ある数",
+   "answer": {
+    "kind": "expr",
+    "value": "10a/3"
+   },
+   "explanation": "①ある数 × 0.3 ＝ a　②ある数 ＝ a ÷ 0.3 ＝ a × (10/3) ＝ 10a/3　③答え 10a/3",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-42",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価 2000 円の品物を x% 引きにし、さらに y 円値引きしたときの値段（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "2000−20x−y",
+    "form": "nosign"
+   },
+   "explanation": "①x% 引き：2000 × (x/100) ＝ 20x 円 引く　②さらに y 円 引く　③答え 2000−20x−y（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-43",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価 x 円の品物を 2 割引きで買い、その代金に 8% の消費税を加えたときの支払い額（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "108x/125"
+   },
+   "explanation": "①2 割引き：0.8x　②消費税：0.8x × 1.08 ＝ 0.864x　③0.864 ＝ 864/1000 ＝ 108/125。答え 108x/125（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-44",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nAさん1人では x 日、Bさん1人では y 日で終わる仕事がある。2人で1日いっしょに働いたときにできる仕事の量（仕事全体を 1 とする）",
+   "answer": {
+    "kind": "expr",
+    "value": "1/x+1/y"
+   },
+   "explanation": "①Aさんは1日に全体の 1/x、Bさんは 1/y　②2人で 1/x + 1/y　③答え 1/x+1/y",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-45",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1時間に a 個作る機械 3 台と、1時間に b 個作る機械 2 台を、同時に 8 時間動かしたときに作れる個数",
+   "answer": {
+    "kind": "expr",
+    "value": "24a+16b",
+    "form": "nosign"
+   },
+   "explanation": "①1時間に 3a + 2b 個　②8 時間で 8 × (3a + 2b) ＝ 24a + 16b　③答え 24a+16b（個）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-46",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n水そうに、毎分 x L の水を入れながら、同時に毎分 y L の水をぬく（x ＞ y）。20 分後にふえた水の量（L）",
+   "answer": {
+    "kind": "expr",
+    "value": "20x−20y",
+    "form": "nosign"
+   },
+   "explanation": "①1分に x − y L ずつふえる　②20 分で 20(x − y) ＝ 20x − 20y　③答え 20x−20y（20(x−y) でもよい）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-47",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n容積 V L の水そうに、はじめ b L の水が入っている。毎分 a L ずつ水を入れるとき、満水になるまでの時間（分）",
+   "answer": {
+    "kind": "expr",
+    "value": "(V−b)/a",
+    "form": "nosign"
+   },
+   "explanation": "①あと V − b L 入れればよい　②時間 ＝ (V − b) ÷ a　③答え (V−b)/a（分）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-48",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1冊 a 円のノートが、5 冊まとめて買うと b 円になる。まとめて買うと、1冊あたり何円安くなるか",
+   "answer": {
+    "kind": "expr",
+    "value": "a−b/5"
+   },
+   "explanation": "①まとめ買いの1冊分：b ÷ 5 ＝ b/5 円　②a − b/5　③答え a−b/5（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-49",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na 円の品物の値段が、1年後に 3% 上がり、2年後にさらにその 3% 上がった。2年後の値段（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "10609a/10000",
+    "form": "nosign"
+   },
+   "explanation": "①1年後：a × 1.03　②2年後：a × 1.03 × 1.03 ＝ 1.0609a　③1.0609 ＝ 10609/10000。答え 10609a/10000（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-50",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\na 円は、b 円の何% にあたるか",
+   "answer": {
+    "kind": "expr",
+    "value": "100a/b"
+   },
+   "explanation": "①何倍か ＝ a ÷ b ＝ a/b　②% にするには 100 倍　③答え 100a/b（%）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-51",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n男子 x 人、女子 y 人のクラスで、男子の 40% と女子の 60% が運動部に入っている。運動部に入っている人数",
+   "answer": {
+    "kind": "expr",
+    "value": "2x/5+3y/5",
+    "form": "nosign"
+   },
+   "explanation": "①男子：x × 0.4 ＝ 2x/5　②女子：y × 0.6 ＝ 3y/5　③答え 2x/5+3y/5（人）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-52",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1本 a 円のジュースを、8% の消費税をふくめて x 本買い、1000 円を出したときのおつり（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "1000−27ax/25",
+    "form": "nosign"
+   },
+   "explanation": "①1本の税こみの値段：1.08a ＝ 27a/25　②x 本で 27ax/25　③おつり 1000 − 27ax/25。答え 1000−27ax/25（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-53",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1辺 a cm の正方形の1辺を 20% 長くした正方形の面積（cm²）",
+   "answer": {
+    "kind": "expr",
+    "value": "36a²/25"
+   },
+   "explanation": "①新しい1辺：a × 1.2 ＝ 6a/5　②面積：(6a/5) × (6a/5) ＝ 36a²/25　③面積は 1.44 倍になる。答え 36a²/25（cm²）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-54",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n体重 x kg の人の体のうち、60% が水分で、その水分の 2/3 が細胞の中にある。細胞の中の水分の重さ（kg）",
+   "answer": {
+    "kind": "expr",
+    "value": "2x/5"
+   },
+   "explanation": "①水分：x × 0.6 ＝ 3x/5　②その 2/3：(3x/5) × (2/3) ＝ 2x/5　③答え 2x/5（kg）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-55",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n仕入れ値 x 円の品物を 40 個仕入れ、1個 1.5x 円で 30 個売り、残りを 1個 0.8x 円で売った。全体の利益（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "13x"
+   },
+   "explanation": "①売り上げ：1.5x × 30 + 0.8x × 10 ＝ 45x + 8x ＝ 53x　②仕入れ：40x　③利益 53x − 40x ＝ 13x。答え 13x（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-56",
+   "type": "input",
+   "prompt": "時速 a km の自転車で b 分走ったときの道のり（km）を表す式を、次のア〜エから選び、記号で答えよう。\nア ab\nイ 60ab\nウ 60a/b\nエ ab/60",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "①b 分 ＝ b/60 時間　②道のり ＝ 速さ × 時間 ＝ a × (b/60) ＝ ab/60　③答え エ",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-57",
+   "type": "input",
+   "prompt": "定価 x 円の品物について、式 x − 3x/10 が表しているものを、次のア〜エから選び、記号で答えよう。\nア 定価の 3 割引きの値段\nイ 定価の 3 割\nウ 定価の 3% 引きの値段\nエ 定価に 3 割の利益を加えた値段",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①3x/10 は x の 3/10、つまり 3 割　②x から 3 割をひいた値段なので、3 割引きの値段　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-58",
+   "type": "input",
+   "prompt": "家から公園まで x m ある。行きは分速 60 m、帰りは分速 40 m で歩いた。式 x/60+x/40 が表しているものを、次のア〜エから選び、記号で答えよう。\nア 往復の道のり（m）\nイ 往復にかかった時間（分）\nウ 往復の平均の速さ（分速 m）\nエ 行きと帰りの時間の差（分）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①x/60 は行きの時間、x/40 は帰りの時間（道のり ÷ 速さ）　②その和は往復にかかった時間　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-59",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n水そうに、はじめ毎分 a L で b 分間水を入れ、そのあと毎分 2a L に変えて c 分間入れた。入れた水の量の合計（L）",
+   "answer": {
+    "kind": "expr",
+    "value": "ab+2ac",
+    "form": "nosign"
+   },
+   "explanation": "①前半：a × b ＝ ab　②後半：2a × c ＝ 2ac　③答え ab+2ac（L）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-60",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n定価 a 円の品物を、1個目は定価で、2個目は定価の半額で買ったときの、1個あたりの平均の値段（円）",
+   "answer": {
+    "kind": "expr",
+    "value": "3a/4"
+   },
+   "explanation": "①2個の代金：a + a/2 ＝ 3a/2　②2 でわって 3a/4　③答え 3a/4（円）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-61",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n長さ x m の道に、はしからはしまで a m おきに木を植える（両はしにも植える）。植える木の本数",
+   "answer": {
+    "kind": "expr",
+    "value": "x/a+1",
+    "form": "nosign"
+   },
+   "explanation": "①間の数は x ÷ a ＝ x/a　②両はしにも植えるので、木の本数は間の数より 1 多い　③答え x/a+1（本）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-62",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n円形の池のまわり x m に、a m おきに木を植える。植える木の本数",
+   "answer": {
+    "kind": "expr",
+    "value": "x/a"
+   },
+   "explanation": "①まわりが一周つながっているので、木の本数と間の数は同じ　②x ÷ a ＝ x/a　③答え x/a（本）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-63",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n時計が 3時 x 分 をさしている（長針が短針に追いつく前）。長針と短針がつくる角のうち小さいほうの角度（度）",
+   "answer": {
+    "kind": "expr",
+    "value": "90−11x/2",
+    "form": "nosign"
+   },
+   "explanation": "①3時ちょうどの角は 90 度　②x 分で、長針は 6x 度、短針は x/2 度 進む　③角は 90 + x/2 − 6x ＝ 90 − 11x/2。答え 90−11x/2（度）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-64",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n人口が a 万人で、面積が b km² の市の、1 km² あたりの人口（人）",
+   "answer": {
+    "kind": "expr",
+    "value": "10000a/b"
+   },
+   "explanation": "①a 万人 ＝ 10000a 人　②1 km² あたり ＝ 10000a ÷ b　③答え 10000a/b（人）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-65",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx 人で働くと y 日かかる工事を、2 人だけで行ったときにかかる日数（どの人も1日にする仕事の量は同じ）",
+   "answer": {
+    "kind": "expr",
+    "value": "xy/2"
+   },
+   "explanation": "①工事全体は「1人が1日にする仕事」の xy 日分　②2人なら xy ÷ 2 日　③答え xy/2（日）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-66",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n1 cm³ あたり 7.9 g の鉄が a cm³ あるときの重さを、kg で表したもの",
+   "answer": {
+    "kind": "expr",
+    "value": "79a/10000"
+   },
+   "explanation": "①重さは 7.9a g　②kg にすると 7.9a ÷ 1000 ＝ 0.0079a　③0.0079 ＝ 79/10000。答え 79a/10000（kg）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-67",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n円の直径を a 倍にしたとき、面積がもとの何倍になるか",
+   "answer": {
+    "kind": "expr",
+    "value": "a²"
+   },
+   "explanation": "①直径が a 倍なら半径も a 倍　②面積は 半径 × 半径 × π なので a × a ＝ a² 倍　③答え a²（倍）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-68",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\n家から駅まで、歩くと x 分、走ると y 分かかる。歩く速さは、走る速さの何倍か",
+   "answer": {
+    "kind": "expr",
+    "value": "y/x"
+   },
+   "explanation": "①家から駅までの道のりを 1 とすると、歩く速さは 1/x、走る速さは 1/y　②(1/x) ÷ (1/y) ＝ y/x　③答え y/x（倍）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-69",
+   "type": "input",
+   "prompt": "次の数量を表す式を書こう。\nx 時間 y 分 z 秒 を、秒の単位で表したもの",
+   "answer": {
+    "kind": "expr",
+    "value": "3600x+60y+z"
+   },
+   "explanation": "①1時間 ＝ 3600 秒、1分 ＝ 60 秒　②3600x + 60y + z　③答え 3600x+60y+z（秒）",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  },
+  {
+   "id": "tokkun-math-1-moji2-70",
+   "type": "input",
+   "prompt": "A は B の 3/4 倍、B は C の 2/5 倍である。A は C の何倍か答えよう（数で答えよう）。",
+   "answer": {
+    "kind": "number",
+    "value": "3/10",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①A ＝ B × (3/4)、B ＝ C × (2/5)　②A ＝ C × (2/5) × (3/4) ＝ C × (3/10)　③答え 3/10倍",
+   "source": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p64〜65（いろいろな数量の表し方）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465958_0.jpg",
+    "sha256": "7a5de65f64f3f613d1538ec9106818957522094c77bc01bfe43f0cfb94dd8769",
+    "page": 64
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成（特訓・下書き）。教科書 p64〜65 の代金・速さ・割合の数量を、単位の変換・2段階の割合・往復や出会いなどと組み合わせて表す一段難しい問題。同じ数量を何通りにも書ける問題は form \"nosign\"。答えは check.py で場面どおりの計算と、答えの式に数を入れた値をくらべて検算。"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "integrated-awaiting-full-verification",
+  "unitChecks": 47,
+  "integrationChecks": 27,
+  "outboundRealCalls": 0,
+  "productionOrPreviewDeployed": false,
+  "sourceSHA256": "ed775da3f11c326b72858833b706a570a243e799491314f36d407a05c10b0faa",
+  "candidateSHA256": {
+    "ai-trial-control.mjs": "dcb870b049af10bd014a3482bc882786749a18866dddb86613ab86bbd23c50cc",
+    "gemini-tutor.mjs": "4f8ce3757ae0a63d7415b13af71b2f017db5affa8c8ba54bef7e2fcd6477a58f"
+  },
+  "preVerification": {
+    "firstSession": 79970,
+    "firstExitCode": 1,
+    "reason": "synthetic DOM missing createTextNode; fixed; achievement-ui passed separately",
+    "rerunSession": 63616,
+    "rerunLog": "/tmp/nobi-pre-ai-control-fixed-20261012.log",
+    "rerunStatus": "failed",
+    "rerunExitCode": 2,
+    "nextSession": 44301,
+    "nextLog": "/tmp/nobi-pre-ai-control-snapshot-20261012.log",
+    "nextStatus": "passed",
+    "nextExitCode": 0
+  },
+  "repairedImageBrowserChecks": 84,
+  "privatePhotoCacheChecks": 17,
+  "pushRegression": "passed",
+  "noticeChecks": 48,
+  "tutorRegressionChecks": 69,
+  "moreRegressionChecks": 39,
+  "mockRegressionChecks": 20,
+  "actualUIBoundaryChecks": 62,
+  "postVerification": {
+    "session": 10705,
+    "log": "/tmp/nobi-post-ai-control-20261012.log",
+    "status": "running"
+  },
+  "dryRun": {
+    "exitCode": 0,
+    "log": "/tmp/nobi-ai-control-dry-run-final-20261012.log",
+    "noBindings": true,
+    "needsRecheckAfterBudgetClassificationFix": false
+  },
+  "runtimeSHA256": {
+    "cf-worker/src/ai-trial-control.mjs": "15962f973386dba600b9fdfbe1dd68ef4e5dad20a2b08b6e71a282bcb3139e1e",
+    "cf-worker/src/gemini-tutor.mjs": "4f8ce3757ae0a63d7415b13af71b2f017db5affa8c8ba54bef7e2fcd6477a58f",
+    "site-assets/ai-trial-notice.js": "1fe4563e7c3c19a53c1fb8033d07330c9776ae4f8c9bba1bd86e7e57369a3681",
+    "site-assets/ai-trial-notice.css": "d8efae6acf5f924550049b73860a99510aa3e792cfe402020b37bfa455829d3d",
+    "site-assets/material-entry.js": "872d8124ad1aad54f95c8eebe967787a3871a7ac53ab226c246a92529bf3839b"
+  },
+  "realAIEnabled": false
+}

@@ -1,0 +1,62 @@
+{
+  "status": "previous evidence matched; new correction task sent once and executing visibly",
+  "previousManifestSha256": "8b924cc437d4b7dc816f41ccd7fc161937307441c794f6feef4e46c743d6eb8f",
+  "previousEvidenceFiles": 34,
+  "units": [
+    {
+      "id": "kentei-kanken-4",
+      "questions": 120,
+      "candidateSha256": "fdbcff438d9e3718200fda501dcd3c4cfdb40ebdf8b9a36a2850d132f13359f4",
+      "originalSha256": "c40425b82e4f431214af856047a617c3fe58043e87ec7407a60b53a326f415f7",
+      "promptExplanationSourcePreserved": true
+    },
+    {
+      "id": "kentei-rika-5",
+      "questions": 20,
+      "candidateSha256": "5a5412b328f651f3bfbf559a52ef4f7196bfad7a037fc716591ae244c2208b61",
+      "originalSha256": "1c8886a701b25782847c0a991baba222e1d52f8835eda5aec6da929671823cbb",
+      "promptExplanationSourcePreserved": true
+    },
+    {
+      "id": "kentei-suken-3",
+      "questions": 50,
+      "candidateSha256": "ae787ae0e8037dafcabb3c0c7afc38b80c535e9cd55947a9bb326c91cbc5becb",
+      "originalSha256": "c6d9807e82f23b47b50770d919fe15b104c608046241cff2d60c6cba00305844",
+      "promptExplanationSourcePreserved": true
+    },
+    {
+      "id": "kentei-suken-4",
+      "questions": 50,
+      "candidateSha256": "02f345580bc44e4f13aa170fe198705a895bc7f4849513b776132cb3e231793e",
+      "originalSha256": "b54a64ac3e3eef514fb841d03c206de579fcdb4e550493f27b360612b14db5bb",
+      "promptExplanationSourcePreserved": true
+    },
+    {
+      "id": "kentei-suken-5",
+      "questions": 50,
+      "candidateSha256": "d42a12fcfa6563d4ac0905cff83022bcf8be3bee0ca6589f1df2c5da7cc07b8c",
+      "originalSha256": "db23f9cfe9cb530cf06c9a91d9996f7059511e41169ed52b4f6953a1f88bc6e1",
+      "promptExplanationSourcePreserved": true
+    }
+  ],
+  "questions": 290,
+  "semanticReview": "Claude report only; not independently marked complete",
+  "knownFixes": "16 of18 reported input-acceptance failures fixed in candidate;2 remain; no current-bank integration",
+  "evidenceGap": {
+    "savedBaselineCases": 166,
+    "candidateLogCases": 179,
+    "action": "next task instructed to regenerate matching JSON/log/code-SHA for both original and candidate"
+  },
+  "nextTask": {
+    "chat": "のびログ非admin機能実装・検証",
+    "message": 20,
+    "prompt": "AI連絡/Claudeへ_検定形式と残る採点修正_20261027.md",
+    "promptSha256": "dc631730bda6cf9e966bec1afb45e4654b6c24a53c6ccd9e9e954e896dec98d9",
+    "folder": "Claude作業/20261027_検定形式修正/",
+    "scope": "ratio4, kanken25 formats, rika20 format mapping/needed figures, calculator/time notes; candidate only",
+    "observed": "sent user message20 and executing/stop button",
+    "periodicMonitoring": false
+  },
+  "globalCompletionPercent": null,
+  "reason": "Full requirement inventory is not yet evidence-closed; candidate stage and main integration are separate."
+}

@@ -1,0 +1,1811 @@
+{
+ "id": "tokkun-science-1-jishin",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "地震の発生とゆれの伝わり方（特訓）",
+ "majorTitle": "ゆれる大地",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-jishin-1",
+   "type": "input",
+   "prompt": "この地震で、震源距離144 kmの地点Cで主要動がはじまった時刻は何時何分何秒か。（ある地震の観測結果。地点A：震源距離48 km、初期微動のはじまり10時15分8秒、主要動のはじまり10時15分14秒。地点B：震源距離96 km、初期微動のはじまり10時15分14秒、主要動のはじまり10時15分26秒。P波・S波の速さは一定とする。）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "10時15分38秒",
+     "10:15:38"
+    ]
+   },
+   "explanation": "S波の速さ＝(96−48)÷(26−14)＝4 km/s。発生時刻＝10時15分14秒−48÷4秒＝10時15分2秒。144÷4＝36秒後なので10時15分38秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-2",
+   "type": "input",
+   "prompt": "この地震で、地点Dでは初期微動が10時15分17秒にはじまった。地点Dの震源距離は何kmか。（ある地震の観測結果。地点A：震源距離48 km、初期微動のはじまり10時15分8秒、主要動のはじまり10時15分14秒。地点B：震源距離96 km、初期微動のはじまり10時15分14秒、主要動のはじまり10時15分26秒。P波・S波の速さは一定とする。）",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "P波の速さ＝(96−48)÷(14−8)＝8 km/s。発生時刻は10時15分8秒−48÷8秒＝10時15分2秒。Dまで15秒かかったので8×15＝120 km。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-3",
+   "type": "input",
+   "prompt": "この地震で、地点Eの初期微動継続時間は9秒だった。地点Eの震源距離は何kmか。（ある地震の観測結果。地点A：震源距離48 km、初期微動のはじまり10時15分8秒、主要動のはじまり10時15分14秒。地点B：震源距離96 km、初期微動のはじまり10時15分14秒、主要動のはじまり10時15分26秒。P波・S波の速さは一定とする。）",
+   "answer": {
+    "kind": "number",
+    "value": "72",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "初期微動継続時間は震源距離に比例する。Aは48 kmで14−8＝6秒。9秒なら48×9÷6＝72 km。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p29（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-4",
+   "type": "input",
+   "prompt": "この地震が発生した時刻は何時何分何秒か。日付の変わり目に注意しよう。（ある地震の観測結果。地点A：震源距離30 km、初期微動のはじまり23時59分55秒、主要動のはじまり0時0分0秒。地点B：震源距離90 km、初期微動のはじまり0時0分5秒、主要動のはじまり0時0分20秒。P波・S波の速さは一定とする。）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "23時59分50秒",
+     "23:59:50"
+    ]
+   },
+   "explanation": "P波の速さ＝(90−30)÷10秒＝6 km/s（23時59分55秒から0時0分5秒までは10秒）。Aまで30÷6＝5秒かかるので、23時59分55秒の5秒前＝23時59分50秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-5",
+   "type": "input",
+   "prompt": "この地震で、P波の速さはS波の速さの何倍か。（ある地震の観測結果。地点A：震源距離30 km、初期微動のはじまり23時59分55秒、主要動のはじまり0時0分0秒。地点B：震源距離90 km、初期微動のはじまり0時0分5秒、主要動のはじまり0時0分20秒。P波・S波の速さは一定とする。）",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "P波は60 kmを10秒で6 km/s、S波は60 kmを20秒（23時59分60秒＝0時0分0秒から0時0分20秒）で3 km/s。6÷3＝2倍。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-6",
+   "type": "input",
+   "prompt": "ある地震で、P波の速さは8 km/s、S波の速さは4 km/sだった。ある地点では主要動が14時30分40秒にはじまり、初期微動継続時間は10秒だった。地震が発生した時刻は何時何分何秒か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14時30分20秒",
+     "14:30:20"
+    ]
+   },
+   "explanation": "震源距離をx kmとすると x÷4−x÷8＝10 より x＝80 km。S波が80 km進むのに20秒なので、14時30分40秒の20秒前＝14時30分20秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-7",
+   "type": "input",
+   "prompt": "ある地震で、震源距離40 kmの地点Aの初期微動継続時間は5秒だった。地点BではP波がAより10秒おそく届いた。P波の速さを8 km/sとすると、地点Bの初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "秒",
+     "s"
+    ]
+   },
+   "explanation": "BはAより8×10＝80 km遠いので、震源距離120 km。初期微動継続時間は震源距離に比例するので、5×120÷40＝15秒。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p29（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-8",
+   "type": "input",
+   "prompt": "ある地震で、P波の速さは6 km/s、S波の速さは4 km/sだった。地震の発生から30秒後に主要動がはじまった地点では、初期微動は地震の発生から何秒後にはじまったか。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "秒後",
+     "秒"
+    ]
+   },
+   "explanation": "S波が30秒で届いたので震源距離は4×30＝120 km。P波は120÷6＝20秒後に届いた。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-9",
+   "type": "input",
+   "prompt": "ある地震で、P波の速さは6 km/s、S波の速さは4 km/sだった。初期微動が12秒続いた地点では、初期微動は地震の発生から何秒後にはじまったか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "秒後",
+     "秒"
+    ]
+   },
+   "explanation": "震源距離をx kmとすると x÷4−x÷6＝12 より x÷12＝12、x＝144 km。P波は144÷6＝24秒後に届いた。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-10",
+   "type": "input",
+   "prompt": "ある地震で、P波の速さは5 km/s、S波の速さは3 km/sだった。震源距離100 kmの地点は、地震の発生から25秒後にどのような状態か。次から選ぼう。\nア まだゆれていない　イ 初期微動が続いている　ウ 主要動がはじまっている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "P波は100÷5＝20秒後、S波は100÷3＝33.3…秒後に届く。25秒後はP波は届いたがS波はまだなので、初期微動が続いている。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-11",
+   "type": "input",
+   "prompt": "震央にある地震計で、初期微動継続時間が2秒だった。P波の速さを6 km/s、S波の速さを3 km/sとすると、震源の深さは何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "震央は震源の真上なので、震源距離＝震源の深さ。x÷3−x÷6＝2 より x÷6＝2、x＝12 km。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p29（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-12",
+   "type": "input",
+   "prompt": "震央（震源の真上）にある地震計でも、初期微動継続時間は0秒にならない。その理由を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "震源",
+       "しんげん"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "地下",
+       "深さ",
+       "ふかさ",
+       "深い",
+       "はなれ",
+       "離れ",
+       "距離"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "同時に届く"
+     ]
+    ]
+   },
+   "explanation": "震源は地下にあるので、震央でも震源からの距離（震源の深さ）がある。P波とS波が届くまでの時間に差が出るから。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p29（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-13",
+   "type": "input",
+   "prompt": "ある地点では、初期微動をほとんど感じないまま、いきなり大きなゆれがきた。この地点はどのような場所と考えられるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "震源",
+       "震央",
+       "しんげん"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "近い",
+       "ちかい",
+       "すぐ",
+       "近か",
+       "ちかか",
+       "近く",
+       "ちかく"
+      ]
+     }
+    ]
+   },
+   "explanation": "震源に非常に近いと、P波とS波がほぼ同時に届き、初期微動継続時間がとても短くなる。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p28（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-14",
+   "type": "input",
+   "prompt": "震源距離（縦軸）とP波・S波が届くまでの時間（横軸）のグラフで、P波の線とS波の線を震源距離0 kmまでのばすと、1つの点で交わる。この点が表しているのは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "地震の発生時刻",
+     "地震が発生した時刻",
+     "発生時刻",
+     "地震発生時刻"
+    ]
+   },
+   "explanation": "P波とS波は震源で同時に発生するので、震源距離0 kmで2本の線が交わる点が地震の発生時刻。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-15",
+   "type": "input",
+   "prompt": "同じグラフで、ある震源距離のところでのP波の線とS波の線の間の横のはば（時間の差）は何を表しているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "初期微動継続時間",
+     "しょきびどうけいぞくじかん"
+    ]
+   },
+   "explanation": "P波が届いてからS波が届くまでの時間なので、初期微動継続時間。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-16",
+   "type": "input",
+   "prompt": "同じグラフで、P波の線のかたむき（縦軸の震源距離÷横軸の時間）は何を表しているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "P波の速さ",
+     "P波の伝わる速さ",
+     "p波の速さ"
+    ]
+   },
+   "explanation": "距離÷時間＝速さ。P波の線のかたむきはP波の速さ（S波の線より急）。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-17",
+   "type": "input",
+   "prompt": "同じグラフで、P波・S波の記録がそれぞれ原点を通る直線になるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "一定",
+       "いってい",
+       "同じ速さ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "速さ",
+       "はやさ"
+      ]
+     }
+    ]
+   },
+   "explanation": "P波もS波も、それぞれ一定の速さで伝わるので、震源距離と届くまでの時間が比例し、直線になる。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-18",
+   "type": "input",
+   "prompt": "震源から60 kmの地点では、緊急地震速報が届いてから主要動がはじまるまで何秒あるか。（P波の速さ5 km/s、S波の速さ3 km/s。震源から20 kmの地震計がP波を観測し、その4秒後に緊急地震速報が発表された。速報は発表と同時に各地に届くものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒",
+     "s"
+    ]
+   },
+   "explanation": "速報は発生から20÷5＋4＝8秒後。60 kmの地点の主要動は60÷3＝20秒後。20−8＝12秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-19",
+   "type": "input",
+   "prompt": "震源から何km以内の地点では、緊急地震速報が届くのと同時か、それより前に主要動がはじまってしまうか。（P波の速さ5 km/s、S波の速さ3 km/s。震源から20 kmの地震計がP波を観測し、その4秒後に緊急地震速報が発表された。速報は発表と同時に各地に届くものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "速報は発生から8秒後。S波が8秒で進むのは3×8＝24 km。24 km以内では速報が間に合わない。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-20",
+   "type": "input",
+   "prompt": "震源から何kmより遠い地点では、初期微動がはじまるより前に緊急地震速報が届くか。（P波の速さ5 km/s、S波の速さ3 km/s。震源から20 kmの地震計がP波を観測し、その4秒後に緊急地震速報が発表された。速報は発表と同時に各地に届くものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "速報は発生から8秒後。P波が8秒で進むのは5×8＝40 km。40 kmより遠い地点では、P波より先に速報が届く。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-21",
+   "type": "input",
+   "prompt": "緊急地震速報を受けてから主要動がはじまるまでの時間が長いのは、震源から近い地点と遠い地点のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "遠い地点",
+     "遠い",
+     "とおい"
+    ]
+   },
+   "explanation": "S波は遠い地点ほどおそく届くので、速報から主要動までの時間が長くなる。近い地点では間に合わないこともある。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-22",
+   "type": "input",
+   "prompt": "岩石が左右から引きのばされる力を受け、断層の上側部分が下がってできる断層を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正断層",
+     "せいだんそう"
+    ]
+   },
+   "explanation": "図10：引きのばされて断層の上側部分が下がるのは正断層。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-23",
+   "type": "input",
+   "prompt": "岩石が左右から押し縮められる力を受け、断層の上側部分が上がってできる断層を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "逆断層",
+     "ぎゃくだんそう"
+    ]
+   },
+   "explanation": "図10：縮められて断層の上側部分が上がるのは逆断層。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-24",
+   "type": "input",
+   "prompt": "断層をはさんだ両側の岩石が、上下ではなく水平方向にずれ動いてできる断層を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "横ずれ断層",
+     "よこずれだんそう"
+    ]
+   },
+   "explanation": "図10：水平方向にずれるのは横ずれ断層。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-25",
+   "type": "input",
+   "prompt": "正断層ができたとき、断層をはさんだ地点Aと地点Bの間の距離はどうなるか。次から選ぼう。\nア 遠ざかる　イ 近づく　ウ 変わらない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "正断層は引きのばされてできるので、AとBは遠ざかる。逆断層では近づく。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-26",
+   "type": "input",
+   "prompt": "コンクリートを用いた岩石破壊のモデル実験から分かることを選ぼう。\nア 岩石に力をはたらかせ続けると、やがて破壊されてずれる　イ 岩石はどんなに力を加えても破壊されない　ウ 岩石は力を加えるとすぐにとける",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "岩石に力をはたらかせ続けると、やがて破壊されて割れる。地震はひずんでいた地下の岩石の破壊が一気に進み、断層がずれる現象。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-27",
+   "type": "input",
+   "prompt": "地下でできた断層は、地表に現れることもあるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ある",
+     "あります",
+     "現れることもある"
+    ]
+   },
+   "explanation": "地下でできた断層は、地表に現れることもある。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-28",
+   "type": "input",
+   "prompt": "実習1の兵庫県南部地震は5時46分52秒に発生した。地図に「20」と書かれた観測点で、ゆれがはじまったのは5時47分何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒"
+    ]
+   },
+   "explanation": "52秒＋20秒＝72秒＝1分12秒なので、5時47分12秒。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-29",
+   "type": "input",
+   "prompt": "実習1の地図で観測点に書かれた数字（例：大阪8）は何を表しているか。次から選ぼう。\nア 地震発生からゆれはじめるまでにかかった時間（秒）　イ 震度　ウ 震源からの距離（km）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "各地の数字は、地震発生からゆれはじめるまでにかかった時間（秒）を示している。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-30",
+   "type": "input",
+   "prompt": "実習1の色分けで、ゆれはじめるまでに45秒かかった観測点は何色にぬるか。（赤：1〜20秒、黄：21〜40秒、青：41〜60秒、灰：61〜80秒）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "青",
+     "青色",
+     "あお"
+    ]
+   },
+   "explanation": "45秒は41〜60秒の範囲なので青。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-31",
+   "type": "input",
+   "prompt": "実習1で色の境目に線を引くと、どのような形になるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "同心円",
+     "震央を中心とした同心円",
+     "円",
+     "同心円状"
+    ]
+   },
+   "explanation": "ゆれがはじまるまでの時間が同じ地点は、震央を中心に同心円状に広がっていた。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-32",
+   "type": "input",
+   "prompt": "P波とS波のちがいを調べる「ばね」のモデルで、P波はばねの一端をどのようにゆらしたときにできる波と同じか。次から選ぼう。\nア 波が伝わる向きと同じ向きにゆらしたとき　イ 波が伝わる向きに垂直にゆらしたとき　ウ ゆらさずにそのままにしたとき",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "P波は波が伝わる向きに振動が起こる波で、のばしたばねの一端を波が伝わる向きと同じ向きにゆらしたときにできる波と同じ。S波は垂直にゆらしたとき。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-33",
+   "type": "input",
+   "prompt": "緊急地震速報で、気象庁に伝えられる情報の速さ（約30万km/s）は、P波の速さ（5〜7km/s）と比べてどうか。次から選ぼう。\nア ずっと速い　イ 同じくらい　ウ ずっとおそい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "情報を伝える電気信号は約30万km/sで、P波（5〜7km/s）やS波（3〜4km/s）よりはるかに速い。だから大きなゆれが届く前に知らせることができる。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-34",
+   "type": "input",
+   "prompt": "地図で、地震の「震央」を×印で示すとき、×はどこにかくか。次から選ぼう。\nア 震源の真上の地表の位置　イ 震源そのもの（地下）　ウ ゆれがいちばん大きかった観測点",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "震央は、震源の真上にある地表の位置。地図には震央をかく。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-35",
+   "type": "input",
+   "prompt": "ある観測点で、震源距離と震央距離が同じになるのは、震源の深さがいくつのときか。",
+   "answer": {
+    "kind": "number",
+    "value": "0",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "震源が地表にあれば（深さ0）、震源と震央が同じ点になり、2つの距離は等しくなる。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-36",
+   "type": "input",
+   "prompt": "震源の深さが10 kmの地震で、震央にある観測点の震源距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "震央は震源の真上なので、震央の観測点から震源までの距離は、震源の深さと同じ10 km。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-37",
+   "type": "input",
+   "prompt": "同じ観測点について、震源距離と震央距離をくらべると、長いのはどちらか（震源が地下にある場合）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "震源距離"
+    ]
+   },
+   "explanation": "震源は地下にあるので、観測点までの距離は、地表の震央から測るより震源から測る方が長くなる。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-38",
+   "type": "input",
+   "prompt": "地震が起こる原因として正しいものを選ぼう。\nア 大きな力がはたらいてひずんだ地下の岩石の破壊が一気に進み、断層がずれる　イ 地下の水が急にふえる　ウ 月の引力で地面がゆれる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "地震は、ひずんだ岩石の破壊が一気に進み、断層がずれる現象。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-39",
+   "type": "input",
+   "prompt": "最初にカタカタと小さくゆれたあと、ユサユサと大きくゆれた。あとのユサユサという大きなゆれを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "主要動",
+     "しゅようどう"
+    ]
+   },
+   "explanation": "最初の小さなゆれは初期微動、続いて起こる大きなゆれは主要動。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-40",
+   "type": "input",
+   "prompt": "岩石が左右から押されてずれ、断層をはさんだ地点Aと地点Bが近づいた。このとき、断層の上側の部分は上がったか、下がったか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "上がった"
+    ]
+   },
+   "explanation": "押し縮められてできる逆断層では、断層の上側部分が上がり、AとBは近づく。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-41",
+   "type": "input",
+   "prompt": "コンクリートの円柱に力を加え続けると、やがて破壊されて割れた。このモデル実験で、コンクリートは自然の何にあたるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "岩石",
+     "地下の岩石"
+    ]
+   },
+   "explanation": "岩石に力をはたらかせ続けると、やがて破壊されてずれる。地震のしくみのモデル。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 74,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p74（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-42",
+   "type": "input",
+   "prompt": "実習1で、地図上の各観測点の数字が小さいほど、その観測点についてどのようなことがいえるか。次から選ぼう。\nア ゆれはじめるのが早かった（震央に近い）　イ 震度が小さかった　ウ 震源が深かった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "数字は、地震発生からゆれはじめるまでの時間（秒）。小さいほど早くゆれはじめ、震央に近い。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-43",
+   "type": "input",
+   "prompt": "実習1の結果、色の境目の線が同心円状になったことから、ゆれの伝わる速さについて何がいえるか。次から選ぼう。\nア どの方向にもほぼ同じ速さで伝わる　イ 北にだけ速く伝わる　ウ 遠いほど速く伝わる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "同心円状に広がるのは、ゆれが震源からどの方向にもほぼ一定の速さで伝わるから。",
+   "source": {
+    "id": "source-0659",
+    "file": "理科の教科書/S__16629804_0.jpg",
+    "sha256": "4208aa0fec3db0916a1311de2f92b0a0235d46ae42705d07e7cace3854f8138d",
+    "page": 75,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p75（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-44",
+   "type": "input",
+   "prompt": "P波とS波の名前の「P」は、英語で「最初の」を意味する何という語の頭文字か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "Primary",
+     "primary",
+     "プライマリー",
+     "プライマリ"
+    ]
+   },
+   "explanation": "P波はPrimary wave（最初の波）、S波はSecondary wave（2番目の波）の略。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-45",
+   "type": "input",
+   "prompt": "P波が届くとはじまるゆれと、S波が届くとはじまるゆれの組み合わせとして正しいものを選ぼう。\nア P波→初期微動、S波→主要動　イ P波→主要動、S波→初期微動　ウ どちらも主要動",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "P波が届くと初期微動、S波が届くと主要動がはじまる。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-46",
+   "type": "input",
+   "prompt": "初期微動継続時間は、何から何を引くと求められるか。次から選ぼう。\nア S波が届くまでの時間からP波が届くまでの時間を引く　イ P波が届くまでの時間からS波が届くまでの時間を引く　ウ 主要動の長さから初期微動の長さを引く",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "初期微動継続時間＝（S波が届くまでの時間）−（P波が届くまでの時間）。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-47",
+   "type": "input",
+   "prompt": "ある地点で、P波が10時5分8秒に、S波が10時5分20秒に届いた。この地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "秒",
+     "s"
+    ]
+   },
+   "explanation": "20秒−8秒＝12秒。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-48",
+   "type": "input",
+   "prompt": "P波が6 km/s、S波が4 km/sの地震で、初期微動継続時間が20秒の地点Aと、10秒の地点Bがある。AとBの震源距離の差は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "初期微動継続時間は1 kmあたり 1/4−1/6＝1/12秒ずつ長くなる。10秒の差は 10÷(1/12)＝120 kmの差。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-49",
+   "type": "input",
+   "prompt": "ある地震で、初期微動継続時間が15秒の地点Aと5秒の地点Bがある。Aの震源距離はBの何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "震源距離は初期微動継続時間に比例する。15÷5＝3倍。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-50",
+   "type": "input",
+   "prompt": "震源距離が長いほど、初期微動継続時間が長くなる理由として正しいものを選ぼう。\nア P波とS波は同時に出るが、速さがちがうので、遠いほど届く時間の差が大きくなるから　イ 遠いほど地震が大きくなるから　ウ S波が途中で止まるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "P波とS波は震源から同時に伝わりはじめるが、P波の方が速いので、遠いほど差が開く。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 76,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p76（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-51",
+   "type": "input",
+   "prompt": "地点A（震源距離48 km）と地点B（震源距離120 km）で、P波が届いた時刻の差は12秒だった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "距離の差 72 kmを12秒で進んだ。72÷12＝6 km/s。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-52",
+   "type": "input",
+   "prompt": "地点A（震源距離48 km）では主要動が10時0分12秒に、地点B（震源距離96 km）では10時0分24秒にはじまった。S波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "48 kmを12秒で進んだ。48÷12＝4 km/s。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-53",
+   "type": "input",
+   "prompt": "P波の速さが7 km/s、S波の速さが3.5 km/sの地震で、震源距離70 kmの地点の初期微動継続時間は何秒か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "秒",
+     "s"
+    ]
+   },
+   "explanation": "P波は 70÷7＝10秒、S波は 70÷3.5＝20秒で届く。差は10秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-54",
+   "type": "input",
+   "prompt": "P波の速さ6 km/sの地震で、震源距離54 kmの地点の初期微動が9時30分20秒にはじまった。地震が発生した時刻は何時何分何秒か。「9時30分11秒」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "9時30分11秒"
+    ]
+   },
+   "explanation": "P波は 54÷6＝9秒で届くので、発生は20秒の9秒前の9時30分11秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-55",
+   "type": "input",
+   "prompt": "ある地震で、P波は6 km/s、S波は4 km/sで伝わる。震源から24 kmの地震計がP波をとらえ、その4秒後に緊急地震速報が出された。震源から100 kmの地点で、速報を受けてから主要動がはじまるまで何秒あるか。地震計のP波検知は地震発生の4秒後とする。",
+   "answer": {
+    "kind": "number",
+    "value": "17",
+    "units": [
+     "秒",
+     "s"
+    ]
+   },
+   "explanation": "速報は発生から 4＋4＝8秒後。100 kmの地点の主要動は 100÷4＝25秒後。25−8＝17秒。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-56",
+   "type": "input",
+   "prompt": "緊急地震速報が出ても、震源に近い地点では速報より先に大きくゆれることがある。その理由として正しいものを選ぼう。\nア P波を検知して速報を出すまでに時間がかかり、その間に近くの地点にはS波が届くから　イ 震源に近いと速報を受信できないから　ウ 近いところはP波が届かないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "速報は、震源近くでP波をとらえて分析してから出すので、震源に近い地点ではS波の方が先に届くことがある。",
+   "source": {
+    "id": "source-0513",
+    "file": "理科ワーク/S__16252945_0.jpg",
+    "sha256": "17b16c4e6787c88f0ca771572f126171e1d5497d92fe14a1fea5f40e3fe79ebf",
+    "page": 27,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p27（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-57",
+   "type": "input",
+   "prompt": "地震発生から同じ時間がたったとき、P波が届いている範囲とS波が届いている範囲を比べると、広いのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "P波",
+     "P波の範囲"
+    ]
+   },
+   "explanation": "P波の方が速いので、同じ時間でより遠くまで届いている。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-58",
+   "type": "input",
+   "prompt": "P波のように、ばねの一端を、波が伝わる向きと同じ向きにゆらしたときにできる波は、振動の向きと波の伝わる向きがどうなっているか。「同じ」「垂直」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "同じ"
+    ]
+   },
+   "explanation": "P波は波が伝わる向きに振動が起こる波。S波は伝わる向きに垂直に振動が起こる波。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-59",
+   "type": "input",
+   "prompt": "S波は、波の伝わる向きに対して、どの向きに振動が起こる波か。「同じ向き」「垂直な向き」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直な向き",
+     "垂直"
+    ]
+   },
+   "explanation": "S波は伝わる向きに垂直に振動する。ばねの一端を横にゆらしたときの波と同じ。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-60",
+   "type": "input",
+   "prompt": "教科書で、P波の速さとS波の速さとして書かれている値の組み合わせとして正しいものを選ぼう。\nア P波 5〜7 km/s、S波 3〜4 km/s　イ P波 3〜4 km/s、S波 5〜7 km/s　ウ どちらも340 m/s",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "P波は秒速5〜7 km、S波は秒速3〜4 km。P波の方が速い。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-61",
+   "type": "input",
+   "prompt": "緊急地震速報に利用されている、P波とS波のちがいは何か。次から選ぼう。\nア 伝わる速さのちがい　イ 伝わる向きのちがい　ウ 色のちがい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "速いP波をとらえて、おそいS波（大きなゆれ）が届く前に知らせる。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-62",
+   "type": "input",
+   "prompt": "緊急地震速報は、列車の運行や工場の機械制御にも役立てられている。どのように役立つか。次から選ぼう。\nア 大きなゆれが来る前に止めたり安全な状態にしたりする　イ 地震を止める　ウ 震度を小さくする",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "大きなゆれが届く前に列車を減速させたり、機械を止めたりして被害を減らす。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-63",
+   "type": "input",
+   "prompt": "水面に石を落とすと、波紋が同心円状に広がる。これは地震のゆれのどのような伝わり方に似ているか。次から選ぼう。\nア 震央を中心に、どの方向にも同じように広がる　イ 一方向にだけ伝わる　ウ 遠くほど速く伝わる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ゆれは震源から波としてどの方向にも一定の速さで伝わるので、同心円状に広がる。",
+   "source": {
+    "id": "source-0660",
+    "file": "理科の教科書/S__16629805_0.jpg",
+    "sha256": "6e29d4f721c8792277bdd2d94e301123675bdc17c27b0d79f8968cca25471848",
+    "page": 77,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科の教科書 p77（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-64",
+   "type": "input",
+   "prompt": "初期微動のゆれと主要動のゆれの大きさをくらべると、大きいのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "主要動"
+    ]
+   },
+   "explanation": "初期微動は小さなゆれ、主要動は大きなゆれ。",
+   "source": {
+    "id": "source-0511",
+    "file": "理科ワーク/S__16252943_0.jpg",
+    "sha256": "582fc5fa221c1e468a728fc7d09bb409c7fa7e32a43335721d9c3b61c2e8a211",
+    "page": 23,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-65",
+   "type": "input",
+   "prompt": "初期微動や主要動がはじまる時刻は、観測した場所によってどうなるか。「同じ」「ちがう」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ちがう"
+    ]
+   },
+   "explanation": "ゆれは震源から伝わるので、震源から遠い場所ほどおそくはじまる。",
+   "source": {
+    "id": "source-0511",
+    "file": "理科ワーク/S__16252943_0.jpg",
+    "sha256": "582fc5fa221c1e468a728fc7d09bb409c7fa7e32a43335721d9c3b61c2e8a211",
+    "page": 23,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p23（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-66",
+   "type": "input",
+   "prompt": "P波が届くまでの時間をグラフにしたら、震源距離90 kmのところで15秒だった。P波の速さは何km/sか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "km/s"
+    ]
+   },
+   "explanation": "速さ＝距離÷時間＝90÷15＝6 km/s。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-67",
+   "type": "input",
+   "prompt": "S波の速さが4 km/sの地震で、地震発生から25秒後に主要動がはじまった地点の震源距離は何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "4×25＝100 km。",
+   "source": {
+    "id": "source-0512",
+    "file": "理科ワーク/S__16252944_0.jpg",
+    "sha256": "1e131d872bcf11e80330548268009a903cb3a6be5ddd4d84c4f5563e21d55f36",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-68",
+   "type": "input",
+   "prompt": "ある地震で、地点Xは地点Yより初期微動継続時間が長かった。震源からの距離が遠いのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "X",
+     "地点X"
+    ]
+   },
+   "explanation": "初期微動継続時間が長いほど、震源からの距離は遠い。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p28（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-69",
+   "type": "input",
+   "prompt": "同じ地震で、ゆれはじめた時刻がもっとも早い観測点は、震央からの距離がどうだと考えられるか。「もっとも近い」「もっとも遠い」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "もっとも近い"
+    ]
+   },
+   "explanation": "ゆれは震源から伝わるので、震央（震源）に近いほど早くゆれはじめる。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 28,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p28（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-jishin-70",
+   "type": "input",
+   "prompt": "ある地点で、初期微動がはじまってから主要動がはじまるまでの間に、テレビから緊急地震速報が流れた。この地点について考えられることを選ぼう。\nア 主要動の前に速報を受けとれた　イ 主要動の後に速報を受けとった　ウ P波が届いていない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "初期微動中に速報が届けば、主要動の前に身を守る行動がとれる。",
+   "source": {
+    "id": "source-0514",
+    "file": "理科ワーク/S__16252946_0.jpg",
+    "sha256": "8b56d3f569a9b4d65cc4d8b9e314b11a54cb92788941a5b9e4f4c9ecb13eda80",
+    "page": 29,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p29（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）、2026-10-14 理科の教科書 p74〜77（台帳登録案・本文まで確認）の内容で問題を追加。理科ワークp23〜24（教科書チェック：震源・震央、地震計の記録、実習1、P波・S波のグラフ）、p26〜27（計算：地震のゆれの伝わり方、緊急地震速報）、p28〜29（基本問題・力だめし）を写真で確認して作った。ワーク版70問とドリルが用語と「1地点の速さ・時刻・初期微動継続時間」の計算を数を変えてくり返し出しているので、その数変えは作らず、2地点のデータから第3の地点を求める・日付をまたぐ時刻・震央での初期微動から震源の深さ・緊急地震速報が間に合う範囲・グラフの読み方、にしぼった。三平方の定理は使っていない。"
+}

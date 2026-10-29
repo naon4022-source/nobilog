@@ -9,11 +9,15 @@
         古い成績や古いDMが出てしまうため、キャッシュも横取りもしない。
    ========================================================= */
 
-const CACHE = 'nobilog-app-v1';
+const CACHE = 'nobilog-app-v2.51.0';
 
 // アプリを開くのに最低限いるもの
 const CORE = [
   '/',
+  '/workbook-questions.js',
+  '/progressive-questions.js',
+  '/unit-guides.js',
+  '/september-test.js',
   '/manifest.webmanifest',
   '/icon-192.png',
   '/icon-512.png',
@@ -67,6 +71,8 @@ self.addEventListener('fetch', (e) => {
 
   let url;
   try { url = new URL(req.url); } catch (err) { return; }
+  // 本人の添付画像は、独自ドメインや同一オリジンでも端末キャッシュに入れない。
+  if (/(?:^|\/)(?:material-test-(?:session|review)|textbook-(?:annotations|ink|ai-context|ai-chat|ai-vision(?:-context)?|ai)|learning-(?:images?|review|notes|note-analysis(?:-job)?|chat|plan|time(?:-start)?)|plan|photos|avatar(?:-image|-generations|-generate)?)(?:\/|$)/.test(url.pathname)) return;
 
   // ★同期サーバーには一切さわらない（古い記録・古いDMを出さないため）
   if (url.hostname.endsWith('workers.dev')) return;
@@ -87,4 +93,32 @@ self.addEventListener('fetch', (e) => {
   if (url.hostname === 'cdn.jsdelivr.net') {
     e.respondWith(assetCacheFirst(req));
   }
+});
+
+// 端末通知はサーバーで署名・暗号化された Web Push だけを表示する。
+self.addEventListener('push', (e) => {
+  let notice;
+  try { notice = e.data && e.data.json(); } catch (_) { return; }
+  if (!notice || typeof notice !== 'object' || typeof notice.id !== 'string' || !/^[A-Za-z0-9:._-]{1,180}$/.test(notice.id)
+      || typeof notice.title !== 'string' || !notice.title || typeof notice.body !== 'string') return;
+  const title = notice.title.slice(0, 100), body = notice.body.slice(0, 450);
+  const url = new URL('/', self.location.origin);
+  url.searchParams.set('notice', notice.id);
+  e.waitUntil(self.registration.showNotification(title, {
+    body, icon:'/icon-192.png', badge:'/favicon-64.png', tag:'nobilog-'+notice.id,
+    data:{url:url.href}
+  }));
+});
+
+self.addEventListener('notificationclick', (e) => {
+  e.notification.close();
+  e.waitUntil((async () => {
+    let target;
+    try { target = new URL(e.notification.data?.url || '/', self.location.origin); } catch (_) { return; }
+    if (target.origin !== self.location.origin || target.pathname !== '/') return;
+    const windows = await self.clients.matchAll({type:'window',includeUncontrolled:true});
+    const open = windows.find(client => new URL(client.url).origin === target.origin);
+    if (open) { await open.focus();open.navigate(target.href);return; }
+    await self.clients.openWindow(target.href);
+  })());
 });

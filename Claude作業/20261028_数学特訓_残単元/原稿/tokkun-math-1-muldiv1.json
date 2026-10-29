@@ -1,0 +1,1978 @@
+{
+ "id": "tokkun-math-1-muldiv1",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "乗法、除法①（特訓）",
+ "majorTitle": "正負の数",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-muldiv1-1",
+   "type": "input",
+   "prompt": "積が −36 になる2つの整数のうち、和の絶対値がもっとも小さくなる組を答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "6",
+     "-6"
+    ]
+   },
+   "explanation": "①積が負なので、一方は正の数、もう一方は負の数　②積が −36 になる組は (1, −36)、(2, −18)、(3, −12)、(4, −9)、(6, −6) とその符号を入れかえたもの　③和はそれぞれ −35、−16、−9、−5、0 などで、絶対値がもっとも小さいのは (6, −6) の和 0。答え 6、−6",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-2",
+   "type": "input",
+   "prompt": "2つの整数がある。どちらも負の数で、積は 24、大きいほうから小さいほうをひいた差は 10 である。2つの整数を答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "-2",
+     "-12"
+    ]
+   },
+   "explanation": "①積が正で、どちらも負の数　②積が 24 になる負の数の組は (−1, −24)、(−2, −12)、(−3, −8)、(−4, −6)　③差を調べると −2 − (−12) ＝ 10。答え −2、−12",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-3",
+   "type": "input",
+   "prompt": "積が 36 になる2つの整数の組（(2, 18) と (18, 2) は同じ組と考える）のうち、2つの数の和が負になる組は何組あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①積が正なので、2つの数は同じ符号　②和が負になるのは、どちらも負の数のとき　③(−1, −36)、(−2, −18)、(−3, −12)、(−4, −9)、(−6, −6) の5組。答え 5組",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-4",
+   "type": "input",
+   "prompt": "積が −12 になる2つの整数を考える。2つの数の和としてもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11"
+   },
+   "explanation": "①積が −12 になる組は (1, −12)、(−1, 12)、(2, −6)、(−2, 6)、(3, −4)、(−3, 4)　②和は −11、11、−4、4、−1、1　③もっとも大きいのは 11。答え 11",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-5",
+   "type": "input",
+   "prompt": "2つの整数があり、積は −10、大きいほうから小さいほうをひいた差は 7、和は正の数である。2つの整数を答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "5",
+     "-2"
+    ]
+   },
+   "explanation": "①積が −10 で差が 7 になるのは (5, −2) と (2, −5)　②和は 3 と −3　③和が正なのは 5 と −2。答え 5、−2",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-6",
+   "type": "input",
+   "prompt": "□ と △ は整数で、□×△ ＝ −15、□ ＞ △ である。□ + △ として考えられる値をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "14",
+     "2",
+     "-2",
+     "-14"
+    ]
+   },
+   "explanation": "①□ ＞ △ で積が負なので、□ が正、△ が負　②(□, △) ＝ (15, −1)、(5, −3)、(3, −5)、(1, −15)　③和は 14、2、−2、−14。答え 14、2、−2、−14",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-7",
+   "type": "input",
+   "prompt": "連続する2つの整数の積が 132 で、2つとも負の数である。2つの整数を答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "-11",
+     "-12"
+    ]
+   },
+   "explanation": "①132 ＝ 11 × 12 なので、正の数なら 11 と 12　②負の数×負の数も正になるので、−12 と −11 でも積は 132　③答え −12、−11",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-8",
+   "type": "input",
+   "prompt": "絶対値が等しく、符号が反対の2つの整数の積が −49 である。2つの整数を答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "7",
+     "-7"
+    ]
+   },
+   "explanation": "①絶対値が等しく符号が反対なので、○ と −○ と表せる　②積は −(○×○) ＝ −49 なので ○×○ ＝ 49、○ ＝ 7　③答え 7、−7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-9",
+   "type": "input",
+   "prompt": "同じ整数を2つかけると 49 になる。その整数として考えられる数をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "7",
+     "-7"
+    ]
+   },
+   "explanation": "①7 × 7 ＝ 49　②(−7) × (−7) も 49（負の数×負の数は正）　③答え 7、−7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-10",
+   "type": "input",
+   "prompt": "次の5つの数から異なる2つを選んで積をつくる。積のもっとも大きい値から、もっとも小さい値をひいた差を求めよう。\n−7、−4、−1、2、5",
+   "answer": {
+    "kind": "number",
+    "value": "63"
+   },
+   "explanation": "①積が大きいのは同じ符号どうし：(−7)×(−4) ＝ 28、2 × 5 ＝ 10 なので最大は 28　②積が小さいのは符号がちがい、絶対値が大きい組：(−7) × 5 ＝ −35 が最小　③28 − (−35) ＝ 63。答え 63",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-11",
+   "type": "input",
+   "prompt": "−1 から −9 までの9つの整数から、異なる2つを選んでかける。積が 40 以上になる選び方は何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①負の数どうしの積は正で、絶対値の積と同じ　②1〜9 から2つ選んで積が 40 以上：5×8、5×9、6×7、6×8、6×9、7×8、7×9、8×9　③8通り。答え 8通り",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-12",
+   "type": "input",
+   "prompt": "カードが4枚あり、−3、−2、4、5 と書いてある。このうち2枚を同時に引き、2つの数の積を得点とする。得点が正の数になる引き方は何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①積が正になるのは、2枚の符号が同じとき　②負どうし (−3, −2)、正どうし (4, 5) の2通り　③ほかの4通りは符号がちがうので負。答え 2通り",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-13",
+   "type": "input",
+   "prompt": "□ と △ は、どちらも −5 以上 5 以下の整数である。□×△ ＝ −6 となる (□, △) の組は何組あるか答えよう。ただし、(2, −3) と (−3, 2) は別の組と考える。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①−6 ＝ 1 × (−6) などのうち、どちらも −5〜5 に入るのは 2 と 3 の組だけ　②(2, −3)、(−2, 3)、(3, −2)、(−3, 2) の4組　③(1, −6) などは 6 が範囲外。答え 4組",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-14",
+   "type": "input",
+   "prompt": "(−6)×□ の答えが、20 より大きく 40 より小さくなる整数 □ をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "-4",
+     "-5",
+     "-6"
+    ]
+   },
+   "explanation": "①答えが正なので □ は負の数　②(−6)×(−4) ＝ 24、(−6)×(−5) ＝ 30、(−6)×(−6) ＝ 36、(−6)×(−3) ＝ 18、(−6)×(−7) ＝ 42　③20〜40 の間に入るのは −4、−5、−6。答え −4、−5、−6",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-15",
+   "type": "input",
+   "prompt": "□×(−7) の答えが、−50 より大きく 50 より小さくなる整数 □ は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①答えの絶対値は □ の絶対値の 7 倍　②7 倍して 50 より小さいのは、絶対値が 0〜7 の整数　③−7 から 7 までで 15 個。答え 15個",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-16",
+   "type": "input",
+   "prompt": "(−9)×□ の答えが2けたの正の整数になる整数 □ は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①答えが正なので □ は負　②9 × 2 ＝ 18 から 9 × 11 ＝ 99 までが2けた　③□ ＝ −2、−3、…、−11 の 10 個。答え 10個",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-17",
+   "type": "input",
+   "prompt": "(−3)×□ が 12 より大きくなる整数 □ のうち、もっとも大きいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "①(−3)×(−4) ＝ 12 は「12 より大きい」に入らない　②(−3)×(−5) ＝ 15 は 12 より大きい　③□ が −4 以上だと 12 以下になるので、もっとも大きい □ は −5。答え −5",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   },
+   "near": [
+    "-4"
+   ],
+   "nearHint": "「12 より大きい」に 12 は入りません。"
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-18",
+   "type": "input",
+   "prompt": "−3 以上 3 以下の整数 □ のうち、(−5)×□ が □ より大きくなるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①□ が正のとき、(−5)×□ は負なので □ より小さい　②□ ＝ 0 のときは両方 0 で等しい　③□ が負のとき、(−5)×□ は正なので □ より大きい：−3、−2、−1　④3個。答え 3個",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-19",
+   "type": "input",
+   "prompt": "次のア〜エの計算のうち、結果がもっとも大きいものを記号で答えよう。\nア (−6)×(−7)\nイ (−5)×(−9)\nウ 8×(−6)\nエ (−4)×(−11)",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①ア 42、イ 45、ウ −48、エ 44　②もっとも大きいのはイ。答え イ",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-20",
+   "type": "input",
+   "prompt": "○ と △ は 0 でない数で、○×△ は正の数、○ + △ は負の数である。○ と △ の符号について、正しいものを次のア〜ウから選び、記号で答えよう。\nア どちらも正の数\nイ どちらも負の数\nウ 一方が正の数で、もう一方が負の数",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①積が正なので、○ と △ は同じ符号（アかイ）　②どちらも正なら和も正になるので、和が負になるのはどちらも負のとき　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-21",
+   "type": "input",
+   "prompt": "○ と △ は 0 でない数で、○×△ は負の数、○ − △ は正の数である。○ について正しいものを、次のア・イから選び、記号で答えよう。\nア 正の数\nイ 負の数",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①積が負なので、○ と △ は符号がちがう　②○ − △ が正なので ○ のほうが大きい　③符号がちがう2数で大きいほうは正の数。答え ア",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-22",
+   "type": "input",
+   "prompt": "2つの数の積が負の数で、和が正の数である。2つの数のうち、絶対値が大きいほうはどちらか。次のア・イから選び、記号で答えよう。\nア 正の数のほう\nイ 負の数のほう",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①積が負なので、一方が正の数、もう一方が負の数　②和が正になるのは、正の数のほうが絶対値が大きいとき（例：5 + (−2) ＝ 3）　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-23",
+   "type": "input",
+   "prompt": "2つの整数の積が 0 になった。次のア〜エのうち、かならず正しいものをすべて選び、記号で答えよう。\nア 2つの数のうち、少なくとも一方は 0\nイ 2つの数はどちらも 0\nウ 2つの数の和は 0\nエ 2つの数の積の符号を変えた数も 0",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①0 以外の数どうしの積は 0 にならないので、少なくとも一方は 0（ア は正しい）　②3 × 0 ＝ 0 なので、どちらも 0 とはかぎらない（イ はちがう）　③3 + 0 ＝ 3 なので ウ はちがう　④0 の符号を変えても 0 なので エ は正しい　⑤答え ア、エ",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-24",
+   "type": "input",
+   "prompt": "(−13)×□ ＝ 13×△ が成り立つとき、□ + △ の値を答えよう（□、△ は数）。",
+   "answer": {
+    "kind": "number",
+    "value": "0"
+   },
+   "explanation": "①(−13)×□ は 13×(□ の符号を変えた数) と同じ　②13×(□ の符号を変えた数) ＝ 13×△ なので、△ は □ の符号を変えた数　③□ + △ ＝ 0。答え 0",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-25",
+   "type": "input",
+   "prompt": "ある数に −1 をかけると、もとの数より 14 大きくなる。もとの数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7"
+   },
+   "explanation": "①−1 をかけると、符号を変えた数になる　②符号を変えた数がもとの数より 14 大きいので、もとの数は負　③−7 の符号を変えると 7 で、7 − (−7) ＝ 14。答え −7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-26",
+   "type": "input",
+   "prompt": "ある整数 □ にかけた (−4)×□ の値は、□ より 35 小さい。□ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①□ が正なら (−4)×□ は負で □ より小さい　②□ ＝ 7 のとき (−4)×7 ＝ −28、7 − 35 ＝ −28 で一致する　③□ と (−4)×□ の差は □ の 5 つ分なので、□ の 5 つ分 ＝ 35、□ ＝ 7。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-27",
+   "type": "input",
+   "prompt": "ある整数 □ について、□×5 から □×(−4) をひくと 63 になる。□ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①□×5 − □×(−4) は、□ の5つ分に □ の4つ分をたしたもの　②つまり □ の 9 つ分が 63　③□ ＝ 7。確かめ：35 − (−28) ＝ 63。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-28",
+   "type": "input",
+   "prompt": "ある整数に −6 をかけるところを、まちがえて −6 をたしたので、答えが 9 になった。正しい答えを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-90"
+   },
+   "explanation": "①まちがえた計算：ある数 + (−6) ＝ 9 なので、ある数 ＝ 15　②正しい計算：15 × (−6) ＝ −90。答え −90",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   },
+   "near": [
+    "90"
+   ]
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-29",
+   "type": "input",
+   "prompt": "Fさんは、ある整数を −4 倍するつもりが、うっかり 6 倍してしまい、−42 という結果を得た。本当に求めたかった数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "28"
+   },
+   "explanation": "①まちがえた計算：ある数 × 6 ＝ −42 なので、ある数 ＝ −7　②正しい計算：(−7) × (−4) ＝ 28。答え 28",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-30",
+   "type": "input",
+   "prompt": "Dさんは (−12)×(−5) を、まちがえて 12×(−5) として計算した。正しい答えから、Dさんの答えをひいた差を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120"
+   },
+   "explanation": "①正しい答え：(−12)×(−5) ＝ 60　②Dさんの答え：12×(−5) ＝ −60　③60 − (−60) ＝ 120。答え 120",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-31",
+   "type": "input",
+   "prompt": "ある整数に −3 をかけてから 4 をたすと −20 になった。ある整数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "①4 をたす前は −20 − 4 ＝ −24　②□×(−3) ＝ −24 なので、□ は正の数で 3 × 8 ＝ 24 より □ ＝ 8　③確かめ：8 × (−3) + 4 ＝ −20。答え 8",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-32",
+   "type": "input",
+   "prompt": "ある整数を −5 倍した数と、その整数に 12 をたした数が等しい。ある整数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "①□ ＝ −2 のとき、(−2)×(−5) ＝ 10、−2 + 12 ＝ 10 で等しい　②□ が正だと −5 倍は負なのに □ + 12 は正なので等しくならない　③□ と −5 倍の差は □ の 6 つ分で、それが −12 なので □ ＝ −2。答え −2",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-33",
+   "type": "input",
+   "prompt": "東を正の方向、今を 0 時間とする。地点Oを今通過した自動車が、毎時 −48km（西へ時速 48km）で走っている。3時間前、この自動車はOから東西どちらへ何kmの地点にいたか。東を正、西を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "144",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①位置 ＝ 速さ × 時間　②3時間前は −3 時間なので、(−48) × (−3) ＝ 144　③Oから東へ 144km の地点。答え 144km（東）",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-34",
+   "type": "input",
+   "prompt": "東を正の方向とする。Aさんは毎分 +60m、Bさんは毎分 −45m で歩いていて、2人とも今ちょうど地点Oにいる。5分前の2人の間の距離は何mか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "525",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "①5分前は −5 分　②Aさんの位置 60 × (−5) ＝ −300、Bさんの位置 (−45) × (−5) ＝ 225　③距離 ＝ 225 − (−300) ＝ 525。答え 525m",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-35",
+   "type": "input",
+   "prompt": "東を正の方向、今を 0 時間とする。Pさんは地点Oを、毎時 −4km（西へ）で今通過した。3時間後の位置と、2時間前の位置の距離は何kmか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①3時間後：(−4) × 3 ＝ −12　②2時間前：(−4) × (−2) ＝ 8　③距離 ＝ 8 − (−12) ＝ 20。答え 20km",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-36",
+   "type": "input",
+   "prompt": "ある冷凍庫の温度は、毎時 3℃ ずつ下がっている（変化は毎時 −3℃）。今の温度は −2℃ である。5時間前の温度は何℃か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①5時間前は −5 時間　②変化 ＝ (−3) × (−5) ＝ +15（5時間前は今より 15℃ 高い）　③−2 + 15 ＝ 13。答え 13℃",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-37",
+   "type": "input",
+   "prompt": "ある冷凍庫の温度は、毎分 2℃ ずつ下がる（変化は毎分 −2℃）。今の温度が −8℃ のとき、何分後に −30℃ になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "分後",
+     "分"
+    ]
+   },
+   "explanation": "①−8℃ から −30℃ までの変化は −30 − (−8) ＝ −22℃　②(−2) × □ ＝ −22 となる □ は 11　③答え 11分後",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-38",
+   "type": "input",
+   "prompt": "水そうの水位は、毎分 2cm ずつ下がっている（変化は毎分 −2cm）。今の水位は 60cm である。水位が 76cm だったのは何分前か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "分前",
+     "分"
+    ]
+   },
+   "explanation": "①今より 76 − 60 ＝ 16cm 高い　②□分前とすると、(−2) × (−□) ＝ +16 なので □ ＝ 8　③答え 8分前",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-39",
+   "type": "input",
+   "prompt": "東を正の方向、正午を 0 時とする。自転車が毎時 +12km で東へ走っていて、正午にちょうど地点Oを通った。午前10時のとき、自転車はOから何kmの地点にいたか。東を正、西を負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-24",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①午前10時は正午の 2 時間前なので −2 時間　②12 × (−2) ＝ −24　③Oから西へ 24km。答え −24km",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-40",
+   "type": "input",
+   "prompt": "1日に使うお金を −350円 と表す。毎日同じだけ使っていて、今日の残高は 2800 円である。6日前の残高は何円だったか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4900",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①6日前は −6 日　②(−350) × (−6) ＝ +2100（6日前は今より 2100 円多い）　③2800 + 2100 ＝ 4900。答え 4900円",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-41",
+   "type": "input",
+   "prompt": "クイズで、正解は +5点、不正解は −3点、無回答は 0点とする。10問のうち 6問正解、3問不正解、1問無回答だった。得点を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "21",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "①正解：5 × 6 ＝ 30　②不正解：(−3) × 3 ＝ −9　③無回答：0　④30 + (−9) ＝ 21。答え 21点",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-42",
+   "type": "input",
+   "prompt": "AとBがじゃんけんを 12回した。あいこはなかった。Aは、勝つと +3、負けると −2 だけ数直線上を動く。0 から始めて、12回のあとAは +11 の位置にいた。Aが勝った回数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "回"
+    ]
+   },
+   "explanation": "①全部負けると (−2) × 12 ＝ −24　②1回を負けから勝ちにかえると、3 − (−2) ＝ 5 ずつふえる　③−24 から +11 まで 35 ふえたので、35 は 5 の 7 つ分。勝ちは 7 回。確かめ：3 × 7 + (−2) × 5 ＝ 11。答え 7回",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-43",
+   "type": "input",
+   "prompt": "1個売るごとの利益は、商品Aが +80円、商品Bが −30円（赤字）である。Aを 12個、Bを 20個売ったときの利益の合計を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "360",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "①A：80 × 12 ＝ 960　②B：(−30) × 20 ＝ −600　③960 + (−600) ＝ 360。答え 360円",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-44",
+   "type": "input",
+   "prompt": "1個売るごとの利益は、商品Aが +40円、商品Bが −60円（赤字）である。AとBを合わせて 25個売ったら、利益の合計がちょうど 0円だった。Aを何個売ったか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①Aを 15 個、Bを 10 個とすると、40 × 15 + (−60) × 10 ＝ 600 − 600 ＝ 0　②Aを1個ふやして Bを1個へらすと、利益は 40 + 60 ＝ 100 ふえるので、0 になる組は1つだけ　③答え 15個",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-45",
+   "type": "input",
+   "prompt": "パー72のゴルフコースで、パーより1打少ないバーディーを −1、1打多いボギーを +1、2打多いダブルボギーを +2 と表す。Aさんはバーディー 5回、ボギー 3回、ダブルボギー 2回で、ほかはすべてパーだった。Aさんの合計打数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "74",
+    "units": [
+     "打"
+    ]
+   },
+   "explanation": "①パーとの差の合計：(−1) × 5 + 1 × 3 + 2 × 2 ＝ −5 + 3 + 4 ＝ 2　②72 + 2 ＝ 74。答え 74打",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-46",
+   "type": "input",
+   "prompt": "縦に −3、2 の2つの数、横に −4、5、2 の3つの数がある。縦の数と横の数をかけた積をすべて（6つ）つくり、その和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3"
+   },
+   "explanation": "①−3 との積：12、−15、−6 で和は −9　②2 との積：−8、10、4 で和は 6　③−9 + 6 ＝ −3。答え −3",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-47",
+   "type": "input",
+   "prompt": "ある規則で数が並んでいる。1番目は −1 で、そのあとは、前の数に −2 をかけた数が並ぶ。7番目の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-64"
+   },
+   "explanation": "①−1、2、−4、8、−16、32、−64 と続く（−2 をかけるたびに符号が入れかわり、絶対値は2倍）　②7番目は −64。答え −64",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-48",
+   "type": "input",
+   "prompt": "(−5)×(−3) を「西へ時速 5km で進む人の、3時間前の位置」と考える（東を正）。今いる地点を 0 とすると、3時間前の位置を表す数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "①西へ時速 5km は −5km/時、3時間前は −3 時間　②3時間前は、今より東にいた　③(−5) × (−3) ＝ 15 で、東へ 15km の地点。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-49",
+   "type": "input",
+   "prompt": "「(−4)×3 ＝ −12」を表している場面として正しいものを、次のア〜ウから選び、記号で答えよう（東を正、未来を正とする）。\nア 東へ時速 4km で進む人の、3時間前の位置\nイ 西へ時速 4km で進む人の、3時間後の位置\nウ 西へ時速 4km で進む人の、3時間前の位置",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①西へ時速 4km は −4、3時間後は +3　②(−4) × (+3) ＝ −12（西へ 12km）　③アは 4 × (−3)、ウは (−4) × (−3) ＝ 12。答え イ",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-50",
+   "type": "input",
+   "prompt": "かけ算 (−6)×□ の □ を 1 ずつ大きくしていくと、積は一定の数ずつ変わる。その数（ふえる量。へるときは負の数）を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "①(−6)×1 ＝ −6、(−6)×2 ＝ −12、(−6)×3 ＝ −18 …　②□ が 1 大きくなるたびに、積は −6 ずつ変わる（6 ずつ小さくなる）　③答え −6",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-51",
+   "type": "input",
+   "prompt": "(−8)×(−9) の答えと、(−7)×9 の答えをたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "①(−8)×(−9) ＝ 72（同じ符号なので正）　②(−7)×9 ＝ −63（ちがう符号なので負）　③72 + (−63) ＝ 9。答え 9",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-52",
+   "type": "input",
+   "prompt": "次の □ には同じ整数が入る。□ にあてはまる正の整数を答えよう。\n(−□)×(−□) ＝ 81",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "①負の数×負の数は正なので、(−□)×(−□) は □×□ と同じ　②□×□ ＝ 81 となる正の整数は 9。答え 9",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-53",
+   "type": "input",
+   "prompt": "(−7)×□ と 7×□ の差（大きいほうから小さいほうをひく）が 98 になった。□ が負の整数のとき、□ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7"
+   },
+   "explanation": "①(−7)×□ と 7×□ は符号が反対で絶対値が等しい　②差は 7×□ の絶対値の2倍なので、7×□ の絶対値は 49、□ の絶対値は 7　③□ は負なので −7。答え −7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-54",
+   "type": "input",
+   "prompt": "2つの整数 □、△ の積が −20 で、□ は △ より 9 大きく、□ + △ は正の数である。□ を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①積が負なので、□ が正、△ が負（□ のほうが大きい）　②積 −20 の組 (1, −20)、(2, −10)、(4, −5)、(5, −4)、(10, −2)、(20, −1) で、差が 9 なのは (4, −5) と (5, −4)　③和が正なのは (5, −4) なので □ ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-55",
+   "type": "input",
+   "prompt": "ある整数を2回かけると 64 になり、その整数に 3 をたすと負の数になる。その整数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "①2回かけて 64 になるのは 8 と −8　②3 をたすと 11 と −5 なので、負になるのは −8　③答え −8",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-56",
+   "type": "input",
+   "prompt": "1日の気温の変化を、正午を 0 時間として「(1時間あたりの変化) × (時間)」で考える。ある日の午後は、毎時 −2℃ ずつ変化していて、15時の気温は 4℃ だった。この変化が続いたとすると、何時に −6℃ になるか、24時間制で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "時"
+    ]
+   },
+   "explanation": "①4℃ から −6℃ までの変化は −6 − 4 ＝ −10℃　②(−2) × □ ＝ −10 より □ ＝ 5 時間後　③15 + 5 ＝ 20 時。答え 20時",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-57",
+   "type": "input",
+   "prompt": "ある水そうでは、給水口から毎分 +5L 入り、排水口から毎分 −8L 出ていく。両方を同時に開けると、水の量は毎分何L 変化するか。その変化が 7 分続いたときの変化の量を、ふえるときは正、へるときは負の数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-21",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "①1分あたりの変化：5 + (−8) ＝ −3L　②7分では (−3) × 7 ＝ −21L。答え −21L",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-58",
+   "type": "input",
+   "prompt": "毎分 −3L ずつ水が減る水そうがあり、今は 45L 入っている。今から 4分後の水の量と、6分前の水の量の差は何Lか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "①4分後：45 + (−3) × 4 ＝ 33L　②6分前：45 + (−3) × (−6) ＝ 63L　③63 − 33 ＝ 30。答え 30L",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-59",
+   "type": "input",
+   "prompt": "ある店の1日の売り上げを、目標との差で記録した。目標より多い日は +40個、少ない日は −25個 の日しかなかった。14日間で、目標との差の合計がちょうど +105個 だった。目標より多い日は何日あったか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "日"
+    ]
+   },
+   "explanation": "①全部「少ない日」なら (−25) × 14 ＝ −350　②1日を「多い日」にかえると 40 − (−25) ＝ 65 ふえる　③−350 から +105 まで 455 ふえたので、455 は 65 の 7 つ分。多い日は 7 日。確かめ：40 × 7 + (−25) × 7 ＝ 280 − 175 ＝ 105。答え 7日",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-60",
+   "type": "input",
+   "prompt": "(−15)×□ の値が、(−15)×4 の値より 75 大きくなるとき、□ にあてはまる数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-1"
+   },
+   "explanation": "①(−15)×4 ＝ −60 なので、(−15)×□ ＝ −60 + 75 ＝ 15　②(−15) × (−1) ＝ 15　③答え −1",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-61",
+   "type": "input",
+   "prompt": "2つの整数 □ と △ について、□×△ ＝ −18、□ + △ ＝ 3 である。□ が △ より大きいとき、□ − △ を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "①積が −18 で和が 3 になる組は 6 と −3　②□ ＝ 6、△ ＝ −3　③6 − (−3) ＝ 9。答え 9",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-62",
+   "type": "input",
+   "prompt": "次の2つの式の □ には、同じ整数が入る。□ にあてはまる整数を答えよう。\n(−4)×□ ＝ ○、○ + □ ＝ 21",
+   "answer": {
+    "kind": "number",
+    "value": "-7"
+   },
+   "explanation": "①○ は □ の −4 倍なので、○ + □ は □ の −3 倍　②□ の −3 倍が 21 なので □ ＝ −7　③確かめ：○ ＝ (−4)×(−7) ＝ 28、28 + (−7) ＝ 21。答え −7",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-63",
+   "type": "input",
+   "prompt": "正の整数 □ と負の整数 △ があり、□×△ ＝ −24、□ と △ の絶対値の差は 5 である。□ + △ として考えられる数のうち、正の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①絶対値の積が 24、差が 5 になる組は 3 と 8　②(□, △) ＝ (8, −3) または (3, −8)　③和は 5 と −5 なので、正は 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-64",
+   "type": "input",
+   "prompt": "ある整数に (−6) をかけた数は、その整数に 8 をかけた数より 56 小さい。その整数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①8 をかけた数と (−6) をかけた数の差は、その整数の 14 つ分　②14 つ分が 56 なので、整数は 4　③確かめ：4 × 8 ＝ 32、4 × (−6) ＝ −24、32 − (−24) ＝ 56。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-65",
+   "type": "input",
+   "prompt": "1、−2、3、−4、5、−6 の6つの数から異なる2つを選んで積をつくる。積が負の数になる選び方は何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①積が負になるのは、正の数1つと負の数1つを選ぶとき　②正の数は 1、3、5 の3つ、負の数は −2、−4、−6 の3つ　③3 × 3 ＝ 9通り。答え 9通り",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-66",
+   "type": "input",
+   "prompt": "−5、−2、3、6 の4つの数から異なる2つを選んでかけると、積は6つできる。その6つの積をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-35"
+   },
+   "explanation": "①6つの積：(−5)×(−2) ＝ 10、(−5)×3 ＝ −15、(−5)×6 ＝ −30、(−2)×3 ＝ −6、(−2)×6 ＝ −12、3×6 ＝ 18　②正の積の和 28、負の積の和 −63　③28 − 63 ＝ −35。答え −35",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-67",
+   "type": "input",
+   "prompt": "高さが 100m 上がるごとに、気温が 1℃ ずつ下がる（100m ごとの変化は −1℃）とする。地上（0m）の気温が 18℃ のとき、高さ 2500m の地点の気温は何℃か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7",
+    "units": [
+     "℃"
+    ]
+   },
+   "explanation": "①2500m は 100m の 25 個分　②気温の変化：(−1) × 25 ＝ −25℃　③18 + (−25) ＝ −7。答え −7℃",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-68",
+   "type": "input",
+   "prompt": "海面を 0、上を正とする。潜水艇が海面から毎分 −14m で 12分間もぐり、そのあと毎分 +6m で浮かび上がった。浮かび始めてから何分後に −30m の深さに着くか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "23",
+    "units": [
+     "分後",
+     "分"
+    ]
+   },
+   "explanation": "①12分もぐった位置：(−14) × 12 ＝ −168m　②−168 から −30 までは −30 − (−168) ＝ 138m 上がる　③6 × □ ＝ 138 より □ ＝ 23。答え 23分後",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-69",
+   "type": "input",
+   "prompt": "ある整数の (−3) 倍が、その整数の 5 倍と等しい。その整数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "0"
+   },
+   "explanation": "①0 でない整数なら、(−3) 倍と 5 倍は符号がちがうか、絶対値がちがうので等しくならない　②0 は何倍しても 0 なので等しい　③答え 0",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  },
+  {
+   "id": "tokkun-math-1-muldiv1-70",
+   "type": "input",
+   "prompt": "−3 以上 3 以下の7つの整数を縦と横に並べて、かけ算の表（7 × 7 ＝ 49 マス）をつくる。積が負の数になるマスは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①積が負になるのは、縦と横の一方が正（1、2、3）で、もう一方が負（−1、−2、−3）のとき　②縦が正で横が負：3 × 3 ＝ 9 マス、縦が負で横が正：9 マス　③9 + 9 ＝ 18。答え 18個",
+   "source": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p33〜35（正の数・負の数の乗法）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465934_0.jpg",
+    "sha256": "db94e10f4f767afb32881d3f0705e91391cbc049a3a7b837dd8390219d958ee5",
+    "page": 33
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成（特訓・下書き）。教科書 p33〜35 の2つの整数の積（符号のきまり・速さと時間の場面）と、それまでの加法・減法・絶対値だけで解ける、一段難しい問題。負の数の除法・小数や分数の乗除・3つ以上の数の積（次の回以降）は使わない。答えは check.py で総当たり・別の式により検算。"
+}

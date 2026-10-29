@@ -1,0 +1,35 @@
+--- Claude作業/20261022_残件仕上げ/機能/ベルのメール×/index.before.html	2026-10-22 18:27:36
++++ Claude作業/20261022_残件仕上げ/機能/ベルのメール×/index.candidate.html	2026-10-22 18:27:36
+@@ -708,6 +708,7 @@
+         .notice-dismiss{position:absolute;right:7px;top:7px;background:none;border:0;width:27px;height:27px;border-radius:50%;cursor:pointer;color:#667385}
+         .notice-list-item{width:100%;text-align:left;display:flex;gap:12px;color:inherit;border:1px solid #dde2e9;background:var(--box-bg);border-radius:18px;padding:16px;margin:10px 0;cursor:pointer}
+         .notice-list-item p{margin:6px 0;line-height:1.6}.notice-list-item small{color:#657185}
++        .notice-list-row{position:relative}.notice-list-row .notice-list-item{padding-right:48px}.notice-hide{position:absolute;top:8px;right:8px;width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:inherit;opacity:.35;font-size:18px;line-height:1;cursor:pointer}.notice-hide:hover,.notice-hide:focus-visible{opacity:.9;background:rgba(127,127,127,.15)}   /* ベルの一覧の角のうすい×（2026-10-22） */
+         .settings-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid #e4e8ee}.settings-row:last-child{border:0}.settings-row b{display:block}.settings-row small{display:block;margin-top:5px;color:#657185;line-height:1.5}.settings-row input{width:22px;height:22px;flex-shrink:0;accent-color:#327959}
+         .profile-avatar{display:grid;place-items:center;margin:0 auto 12px;width:64px;height:64px;border-radius:50%;background:#edf2f7;font-size:32px}.profile-actions{display:grid;gap:8px}.profile-actions .btn{text-align:left;margin:0;padding:14px;border:1px solid #dce2e8;background:var(--box-bg);color:var(--text-color)}
+         .release-row{padding:15px 0;border-bottom:1px solid #e4e8ee}.release-row h3{border:0;padding:0;margin:0 0 8px}.release-row p{line-height:1.8;margin:0}
+@@ -2472,7 +2473,7 @@
+     }
+     function noticeRefresh(state) {
+         const el=document.getElementById('notice-count');if(!el)return;
+-        const read=Number(recordStorage.getItem(ukey('noticeRead')))||0,items=noticeItems(state);
++        const read=Number(recordStorage.getItem(ukey('noticeRead')))||0,hidden=noticeHiddenSet(),items=noticeItems(state).filter(n=>!hidden.has(String(n.id)));
+         el.textContent=items.filter(n=>n.at>read).length||'';
+         if(!currentUserId)return;
+         if(noticeToastUser!==currentUserId){noticeToastsClear();noticeToastUser=currentUserId;noticeToastReady=false;noticeObserved.clear();}
+@@ -2482,10 +2483,13 @@
+         }
+     }
+     let noticePanelItems=[];
++    // ベルの一覧の×（2026-10-22 ユーザー指示「角にばつボタンで薄く」）：本人の一覧から外すだけ。元のお知らせ・通知・成績は消さない
++    function noticeHiddenSet(){try{const v=JSON.parse(recordStorage.getItem(ukey('noticeHidden'))||'[]');return new Set(Array.isArray(v)?v.filter(x=>typeof x==='string'):[]);}catch(e){return new Set();}}
++    function noticeHide(index){const item=noticePanelItems[index];if(!item||!currentUserId)return;const set=noticeHiddenSet();set.add(String(item.id));recordStorage.setItem(ukey('noticeHidden'),JSON.stringify([...set].slice(-500)));noticeOpen();}
+     function noticePanelOpen(index) { const item=noticePanelItems[index];if(item)noticeDetail(item); }
+     function noticeOpen() {
+-        noticePanelItems=noticeItems();
+-        gOpenModal(`<h2>🔔 お知らせ</h2>${noticePanelItems.length?noticePanelItems.map((n,i)=>{const src=n.release?{icon:'🌱',name:'アップデート'}:noticeSource(n.title,n);return `<button class="notice-list-item" onclick="noticePanelOpen(${i})"><span class="notice-icon" aria-hidden="true">${src.icon}</span><span><small>${esc(src.name)}・${esc(new Date(n.at).toLocaleDateString('ja-JP'))}</small><b style="display:block;font-size:19px;letter-spacing:.04em">${esc(n.title)}</b>${n.id==='release:'+APP_RELEASE.version?'<small>現在のバージョン</small>':''}<p>${esc(n.body)}</p></span></button>`;}).join(''):'<p>新しいお知らせはありません。</p>'}`);
++        const hidden=noticeHiddenSet();noticePanelItems=noticeItems().filter(n=>!hidden.has(String(n.id)));
++        gOpenModal(`<h2>🔔 お知らせ</h2>${noticePanelItems.length?noticePanelItems.map((n,i)=>{const src=n.release?{icon:'🌱',name:'アップデート'}:noticeSource(n.title,n);return `<div class="notice-list-row"><button class="notice-list-item" onclick="noticePanelOpen(${i})"><span class="notice-icon" aria-hidden="true">${src.icon}</span><span><small>${esc(src.name)}・${esc(new Date(n.at).toLocaleDateString('ja-JP'))}</small><b style="display:block;font-size:19px;letter-spacing:.04em">${esc(n.title)}</b>${n.id==='release:'+APP_RELEASE.version?'<small>現在のバージョン</small>':''}<p>${esc(n.body)}</p></span></button><button class="notice-hide" onclick="noticeHide(${i})" aria-label="このお知らせを一覧から外す" title="一覧から外す">×</button></div>`;}).join(''):'<p>新しいお知らせはありません。</p>'}`);
+         if(noticePanelItems.length)recordStorage.setItem(ukey('noticeRead'),String(Math.max(Date.now(),noticePanelItems[0].at)));
+         noticeRefresh();
+     }

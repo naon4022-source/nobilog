@@ -1,0 +1,225 @@
+{
+  "status": "sent once and running observed in existing Claude chat",
+  "chat": "のびログ非admin機能実装・検証",
+  "message": 20,
+  "observedSessionUsedPercent": 42,
+  "preserveRemainingPercent": 20,
+  "prompt": {
+    "file": "AI連絡/Claudeへ_数学特訓続き_20261027.md",
+    "sha256": "b9ae0083055ded0eae443e8ce1612d8f80288fea0aa7ee2cfb97b5cdd1d851e2"
+  },
+  "output": "Claude作業/20261027_数学特訓続き/",
+  "tasks": [
+    "Finish solve2 candidate70 after fixing2 recorded failures, preserving original27.",
+    "Then finish volume current10 to70 with source/diagram/independent grading proof."
+  ],
+  "priorQualificationArtifacts": [
+    {
+      "file": "Claude作業/20261027_検定形式修正/README.md",
+      "sha256": "2bb44c1a53e40f3c1e4217f562ac929f3f43ecd32aeac77139145c35f7ec11fb"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/engine/engine.diff",
+      "sha256": "fd9a904a9d4f6811ecdeb6f01ffc85309ec15ebb7a856fab7a78787a7a15760d"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/engine/material-engine.candidate.js",
+      "sha256": "c8b616ee77169015eaed86551176c3ecbb62258b1800724415688c133cbe3521"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/engine/material-engine.orig.js",
+      "sha256": "d73351afbcc3cca84ca1c03db2dbcfefd5198fd98d472bd09384711f0646a243"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/候補/kentei-kanken-4.json",
+      "sha256": "3b938903b7f36dbbc2e90c74ad42fc4edee55b43d90c541992a3dbf54993d4a0"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/候補/kentei-rika-5.json",
+      "sha256": "38de96cefbe6ba5e25573c1fc201f41252c7facbfb2a4f5a3c3e64e1f82d8697"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/候補/kentei-suken-3.json",
+      "sha256": "682489ec9b55b5fa7ab86549cea19c109ada8c66c31f7264cc39ae4014645b9e"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/候補/kentei-suken-4.json",
+      "sha256": "2cc5aec9a2652a8e5e0f38a957ffdccfa66082aa8db20c8f0c25a3e6953fdc16"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/候補/kentei-suken-5.json",
+      "sha256": "948ac064ff38a8adb634f5ec20f1c79282fe84104755c0d0ceaa13cc88ad4b37"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/元IDと候補IDの対応.tsv",
+      "sha256": "2409e01681057c5a50a435dbdf7f9a7d869be80bd900b14b66c68e2efd2223ee"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/前回候補/kentei-kanken-4.json",
+      "sha256": "fdbcff438d9e3718200fda501dcd3c4cfdb40ebdf8b9a36a2850d132f13359f4"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/前回候補/kentei-rika-5.json",
+      "sha256": "5a5412b328f651f3bfbf559a52ef4f7196bfad7a037fc716591ae244c2208b61"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/前回候補/kentei-suken-3.json",
+      "sha256": "ae787ae0e8037dafcabb3c0c7afc38b80c535e9cd55947a9bb326c91cbc5becb"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/前回候補/kentei-suken-4.json",
+      "sha256": "02f345580bc44e4f13aa170fe198705a895bc7f4849513b776132cb3e231793e"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/前回候補/kentei-suken-5.json",
+      "sha256": "d42a12fcfa6563d4ac0905cff83022bcf8be3bee0ca6589f1df2c5da7cc07b8c"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/原本写し/kentei-kanken-4.json",
+      "sha256": "c40425b82e4f431214af856047a617c3fe58043e87ec7407a60b53a326f415f7"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/原本写し/kentei-rika-5.json",
+      "sha256": "1c8886a701b25782847c0a991baba222e1d52f8835eda5aec6da929671823cbb"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/原本写し/kentei-suken-3.json",
+      "sha256": "c6d9807e82f23b47b50770d919fe15b104c608046241cff2d60c6cba00305844"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/原本写し/kentei-suken-4.json",
+      "sha256": "b54a64ac3e3eef514fb841d03c206de579fcdb4e550493f27b360612b14db5bb"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/原本写し/kentei-suken-5.json",
+      "sha256": "db23f9cfe9cb530cf06c9a91d9996f7059511e41169ed52b4f6953a1f88bc6e1"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/図/kentei-rika-5-fig-bane.svg",
+      "sha256": "b27e7525c3189b43af8e4f01262c651a1055d8222966769c2ea3a8b1450425b4"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/図/kentei-rika-5-fig-lens.svg",
+      "sha256": "146224bfce29887acd98035fdc63209daef659d8b9a4039647098ced60ab93b5"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/build_candidates.py",
+      "sha256": "b251c6d187bea73d07ee534a06bff207633a7789ed8268c605100781fa6bb942"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-候補.json",
+      "sha256": "92ecbf8e8447f056becdf7925ad3d57374ac9add8b64e86c0e78f6a26a52ddc2"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-候補_候補エンジン.json",
+      "sha256": "f8cad642dfddb523463b9e3d4691166725aedb19a6aa96da6db9fc9b2d081eec"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-候補_原本エンジン.json",
+      "sha256": "ca0dd532ec000cf7359273a8e0011534862ca7db1099ed9bc35b8b45200a778a"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-前回候補.json",
+      "sha256": "87d02916bbe61796c5be948b1f6cf7065d1d5bba8abe67f9f5380be3bd1f0ab9"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-前回候補_原本エンジン.json",
+      "sha256": "a37ad89d7285baa48fbe939137aeff1da7f40b90a4ba19a51dc095bff45bbd16"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-原本_原本エンジン.json",
+      "sha256": "6025e1d29b6880e501674c8a9c486beeff24882ee1052d4073e4f5b305ece4db"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe-result-原本写し.json",
+      "sha256": "df7d973ce57b5ca211a59c2dbd7596415f290a7d3b6d9547eb408aacd21c496b"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証/probe.cjs",
+      "sha256": "1e33dad4d22eecab93b79f77e342eed66693371fa4c9e8dc88e2cc8ce79fefcb"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/build.log",
+      "sha256": "36a699a35a59105b0a9f216709fd05e4bb6416362bdcf2dbf3eec85424dfff0b"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/check_kentei_候補_kanken-4.log",
+      "sha256": "2ffee41b42d932bc791b4404e888b78225bf337da000768dd89d9e957f912696"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/check_kentei_候補_rika-5.log",
+      "sha256": "44120e90794728fd13e776aa248f6fe75847bdce462d18d1127d857a321647a3"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/check_kentei_候補_suken-3.log",
+      "sha256": "9b7e4d7f9c02c200c0fbdb990d3a0e30a099b175d984fdd143a52799b949f055"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/check_kentei_候補_suken-4.log",
+      "sha256": "9c10a2f15931ac4df36d4ef6ef808b5dd9d0c93240e5d74a14c7064447e88dfd"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/check_kentei_候補_suken-5.log",
+      "sha256": "35aeb9ce45f55d7953a6f3b00e2ade0df9df992a3501fc44cb3ade5f0b6f8115"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/probe_候補_候補エンジン.log",
+      "sha256": "e6fa730447f1f5d0fdb0d134959499f4bfe6889d3d80c51cadea2409b9bc1b4d"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/probe_候補_原本エンジン.log",
+      "sha256": "d5b6ceda9369fa57615a71996ace419055646dd77a13ca3791b9ee1531718d91"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/probe_前回候補.log",
+      "sha256": "3927d68c33b43a141e35455c77cc98a805a7f8d5e1d5c3ed0d96d1e522bf06a8"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/probe_原本_原本エンジン.log",
+      "sha256": "a6090f6e3c3a93cb1d6b9ceceba23069c6fa72a7428050aac51d9b8d9c322b80"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/suken_independent_候補.log",
+      "sha256": "8003ee58fcc6ce2c31cb220372e98129e95fbf5d2781c661577baa448444c9c8"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/validateUnit_候補.log",
+      "sha256": "ac42aaf4e5f22d71e1ecfb11de1f9fcdcc74604833ca737345dc1a3a685b936f"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/validateUnit_最終.log",
+      "sha256": "98cec64782e9b3e3d06535c5c92fddc6b2391d5e7d89c06a49ae8dbf5db60601"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/まとめ.log",
+      "sha256": "2bb9b58e35ccc2f2357b06cfac4678061cbc9e0df6e75c4423a3f2fd1df46cec"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/検証ログ/保全と漢字範囲.log",
+      "sha256": "22f55bc6a05e3783ecfa7cdeb9c47a56444ced27c7baead61f4673e98997d429"
+    },
+    {
+      "file": "Claude作業/20261027_検定形式修正/理科20問の形式対応.tsv",
+      "sha256": "9c0bea65ef7c76b4e977fabf5c8656fc9fbed9f64980e1df636f2fc691cf8c67"
+    }
+  ],
+  "priorQualificationManifestMatches": 47,
+  "priorReportScope": "213 candidate+candidate inputs0 mismatches reported by Claude; not independently rerun while full5 active; original bank/engine integration pending.",
+  "baseline": [
+    {
+      "file": "Claude作業/20261027_数学特訓/進み具合.md",
+      "sha256": "6cab4be77608dfe11ed18e166023e5902fa4254605d5a754c74b98af25a3d72e"
+    },
+    {
+      "file": "Claude作業/20261027_数学特訓/原稿/tokkun-math-1-solve2.json",
+      "sha256": "9c1f860565dd2a440cc788733e1a359fb02e88e7bb3e1457b93be3154bebe465"
+    },
+    {
+      "file": "Claude作業/20261027_数学特訓/原稿/tokkun-math-1-volume.json",
+      "sha256": "a67962cf8c4e1884c2232e1ecf9a0d7cc75532d1ad7316706ec2bf000e0c886d"
+    }
+  ],
+  "sendObservation": "First click followed by UI timeout; one startup failure. Reset observation connection only, reconnected and saw delivered message20 plus response copying source and checking solve2. No resend.",
+  "periodicMonitoring": false,
+  "mainEditsAllowed": false
+}

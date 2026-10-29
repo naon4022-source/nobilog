@@ -1,0 +1,2880 @@
+{
+ "id": "drill-math-1-proportion",
+ "mode": "drill",
+ "subject": "数学",
+ "grade": 1,
+ "title": "比例と反比例",
+ "majorTitle": "変化と対応",
+ "status": "ready",
+ "questions": [
+  {
+   "id": "drill-math-1-proportion-1",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝7 のとき y＝−7 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−x"
+   },
+   "explanation": "比例定数を a とすると y＝ax。−7＝a×7 より a＝−1。したがって y=−x",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p49 4(1)（比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-2",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−9 のとき y＝−9 である。x＝9 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "y＝1x（y=x）。x＝9 を代入して y＝9",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-3",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝7 のとき y＝4 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=28/x"
+   },
+   "explanation": "比例定数を a とすると y＝a/x。a＝xy＝7×4＝28。したがって y=28/x",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p49 6（反比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−28/x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-4",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−6 のとき y＝−6 である。y＝−12 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3"
+   },
+   "explanation": "a＝xy＝36。xy＝36 に y＝−12 を代入して x＝−3",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "6(3)"
+   },
+   "ref": "参考：数学ドリル p49 6(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-5",
+   "type": "input",
+   "prompt": "次の x と y の関係を、y を x の式で表そう。\n1本60円の鉛筆を x 本買ったときの代金 y 円",
+   "answer": {
+    "kind": "relation",
+    "value": "y=60x"
+   },
+   "explanation": "比例の関係で、y=60x",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p62 1（関係を式に表す）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-6",
+   "type": "input",
+   "prompt": "点 (7, −4) と原点について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-7,4)",
+     "(-7、4)",
+     "-7,4",
+     "-7、4"
+    ],
+    "compact": true
+   },
+   "explanation": "原点について対称な点は、x座標・y座標の両方の符号が変わる。答え (−7, 4)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7,4",
+    "(7,4)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-7",
+   "type": "input",
+   "prompt": "比例のグラフが点 (4, −20) を通る。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−5x"
+   },
+   "explanation": "y＝ax に代入して −20＝a×4、a＝−5。y=−5x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p53 3(1)（グラフが通る点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−x/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-8",
+   "type": "input",
+   "prompt": "点 (5, □) は y＝−3x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-15"
+   },
+   "explanation": "x＝5 を代入して y＝−15",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p61 3（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-9",
+   "type": "input",
+   "prompt": "y＝−1x で、x の変域が −4≦x≦3 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "-3≦y≦4",
+     "-3≦y≤4",
+     "-3≦y<=4",
+     "-3≤y≦4",
+     "-3≤y≤4",
+     "-3≤y<=4",
+     "-3<=y≦4",
+     "-3<=y≤4",
+     "-3<=y<=4"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝−4 のとき y＝4、x＝3 のとき y＝−3。比例定数が負なので大小が入れかわる。y の変域は −3≦y≦4",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(1)"
+   },
+   "ref": "参考：数学ドリル p55 7(1)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-10",
+   "type": "input",
+   "prompt": "y＝6/x のグラフ上にあって、x座標・y座標がともに負の整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝6 となる整数の組を数える。6 の正の約数は 4 個（1、2、3、6）で、それぞれ両方を負にした組が条件に合う。答え 4 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p62 2(2)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-11",
+   "type": "input",
+   "prompt": "3mの重さが45gの針金がある。この針金20mの重さは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "300",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1mの重さは 15g。15×20＝300g",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p56 2(1)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-12",
+   "type": "input",
+   "prompt": "歯数が35で毎分16回転している歯車Aに、歯数が10の歯車Bがかみ合って回転している。歯車Bは毎分何回転するか。",
+   "answer": {
+    "kind": "number",
+    "value": "56",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "かみ合う歯の数は等しいので（歯数）×（回転数）が一定。35×16＝560、560÷10＝56",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p58 2(1)（反比例の利用（歯車））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-13",
+   "type": "input",
+   "prompt": "座標平面上に3点 A(2, 3)、B(−2, −3)、C(3, −2) がある。座標の1目盛りを1cmとするとき、三角形ABCの面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "三角形をかこむ長方形の面積から、まわりの直角三角形の面積をひいて求める（または公式 1/2|(xB−xA)(yC−yA)−(xC−xA)(yB−yA)|）。答え 13cm²",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p59 5（座標と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-14",
+   "type": "input",
+   "prompt": "長方形ABCDで AB＝5cm、BC＝8cm である。点Pは辺BC上をBからCまで動く。BP＝x cm のときの三角形ABPの面積を y cm² とする。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=5x/2"
+   },
+   "explanation": "三角形ABP＝(1/2)×BP×AB＝(1/2)×x×5。y=5x/2",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p59 4(1)（動点と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-15",
+   "type": "input",
+   "prompt": "深さ24cmの空の容器に水を入れていく。水面の高さが毎分3cmの割合で高くなるとき、水を入れ始めてから x 分後の水面の高さを y cm とする。x の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0≦x≦8",
+     "0≦x≤8",
+     "0≦x<=8",
+     "0≤x≦8",
+     "0≤x≤8",
+     "0≤x<=8",
+     "0<=x≦8",
+     "0<=x≤8",
+     "0<=x<=8"
+    ],
+    "compact": true
+   },
+   "explanation": "y＝3x。いっぱいになるのは 24÷3＝8 分後なので 0≦x≦8",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p58 1(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-16",
+   "type": "input",
+   "prompt": "y が x に反比例し、表で x＝1 の欄が y＝36 になっている。同じ表の x＝3 の欄にあてはまる y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "xy＝1×36＝36。x＝3 のとき y＝36÷3＝12",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の表）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-17",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−8 のとき y＝−40 である。y＝45 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "y=5x に y＝45 を代入して x＝9",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p55 5(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-18",
+   "type": "input",
+   "prompt": "次の x と y の関係を、y を x の式で表そう。\n1辺 x cm の正方形の周の長さ y cm",
+   "answer": {
+    "kind": "relation",
+    "value": "y=4x"
+   },
+   "explanation": "比例の関係で、y=4x",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p62 1（関係を式に表す）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-19",
+   "type": "input",
+   "prompt": "点 (−3, 9) の x座標・y座標の符号を、それぞれ「正」か「負」で答えよう（例：正、負）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "負、正",
+     "負,正",
+     "負正",
+     "負 正"
+    ]
+   },
+   "explanation": "x座標 −3 は負、y座標 9 は正。点は座標平面の左上の部分にある。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p52 Guide（座標の符号）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-20",
+   "type": "input",
+   "prompt": "1辺1cmの正方形を階段のように並べて図形をつくる（1番目は正方形1個、n番目は1段目から n 段目まで並べた階段の形）。4番目の図形の周の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "階段の形の周は、縦の長さ x cm と横の長さ x cm の長方形の周と同じ長さ。4×4＝16cm",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p61 6（規則と比例）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-21",
+   "type": "input",
+   "prompt": "2つの変数 x、y があって、x の値を決めると y の値がただ1つに決まるとき、y は x の何であるというか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "関数",
+     "かんすう"
+    ]
+   },
+   "explanation": "y は x の関数であるという。",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 48,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p48 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-22",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝9 のとき y＝−18 である。x＝−3 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "y＝−2x（y=−2x）。x＝−3 を代入して y＝6",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-23",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝5 のとき y＝−8 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−40/x"
+   },
+   "explanation": "比例定数を a とすると y＝a/x。a＝xy＝5×(−8)＝−40。したがって y=−40/x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p51 5(1)（反比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=40/x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-24",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−3 のとき y＝−12 である。x＝2 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18"
+   },
+   "explanation": "a＝xy＝(−3)×(−12)＝36。y＝36/x に x＝2 を代入して y＝18",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "5(3)"
+   },
+   "ref": "参考：数学ドリル p51 5(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "72"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-25",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n毎分3Lずつ水を入れるとき、x 分間に入る水の量 y L",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "比例",
+     "ひれい"
+    ]
+   },
+   "explanation": "y＝3x と表せるので比例。",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p50 1（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "反比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-26",
+   "type": "input",
+   "prompt": "点 (−5, 4) とx軸について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-5,-4)",
+     "(-5、-4)",
+     "-5,-4",
+     "-5、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "x軸について対称な点は、y座標の符号だけが変わる。答え (−5, −4)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "5,4",
+    "(5,4)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-27",
+   "type": "input",
+   "prompt": "y は x に比例し、x の値が5増加すると y の値は5増加する。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=x"
+   },
+   "explanation": "比例定数＝y の増加量 ÷ x の増加量 ＝ 5 ÷ 5 ＝ 1。y=x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p53 3(3)（増加量から比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-28",
+   "type": "input",
+   "prompt": "点 (−3, □) は y＝−2x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "x＝−3 を代入して y＝6",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p61 3（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-29",
+   "type": "input",
+   "prompt": "y＝24/x で、x の変域が 3≦x≦6 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "4≦y≦8",
+     "4≦y≤8",
+     "4≦y<=8",
+     "4≤y≦8",
+     "4≤y≤8",
+     "4≤y<=8",
+     "4<=y≦8",
+     "4<=y≤8",
+     "4<=y<=8"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝3 のとき y＝8、x＝6 のとき y＝4。x が増えると y は減るので 4≦y≦8",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(2)"
+   },
+   "ref": "参考：数学ドリル p55 7(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-30",
+   "type": "input",
+   "prompt": "y＝18/x のグラフ上にあって、x座標・y座標がともに整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝18 となる整数の組を数える。18 の正の約数は 6 個（1、2、3、6、9、18）で、両方が負の組も同じ数だけある。答え 12 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p62 2(3)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-31",
+   "type": "input",
+   "prompt": "4mの重さが36gの針金がある。この針金20mの重さは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1mの重さは 9g。9×20＝180g",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p56 2(1)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-32",
+   "type": "input",
+   "prompt": "120Lはいる水そうに毎分 x L の割合で水を入れると、y 分でいっぱいになる。毎分24Lの割合で入れると、何分でいっぱいになるか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "xy＝120（y＝120/x）。x＝24 を代入して y＝5",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 57,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p57 4(2)（反比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2880"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-33",
+   "type": "input",
+   "prompt": "y＝3/2x のグラフと y＝a/x のグラフが点Pで交わっている。点Pの x座標が2のとき、a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "点Pは y＝3/2x 上にあるので y＝(3/2)×2＝3。P(2, 3) を y＝a/x に代入して a＝2×3＝6",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p58 3(1)（比例と反比例の交点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-34",
+   "type": "input",
+   "prompt": "座標平面上に3点 A(−1, 3)、B(−4, −5)、C(−3, 3) がある。座標の1目盛りを1cmとするとき、三角形ABCの面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "三角形をかこむ長方形の面積から、まわりの直角三角形の面積をひいて求める（または公式 1/2|(xB−xA)(yC−yA)−(xC−xA)(yB−yA)|）。答え 8cm²",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p59 5（座標と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-35",
+   "type": "input",
+   "prompt": "長方形ABCDで AB＝4cm、BC＝8cm である。点Pは辺BC上をBからCまで動く。三角形ABPの面積が4cm²になるときの BP の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "y＝2x に y＝4 を代入して x＝2",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "4(3)"
+   },
+   "ref": "参考：数学ドリル p59 4(3)（動点と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-36",
+   "type": "input",
+   "prompt": "深さ12cmの空の容器に水を入れていく。水面の高さが毎分2cmの割合で高くなるとき、水を入れ始めてから x 分後の水面の高さを y cm とする。x の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0≦x≦6",
+     "0≦x≤6",
+     "0≦x<=6",
+     "0≤x≦6",
+     "0≤x≤6",
+     "0≤x<=6",
+     "0<=x≦6",
+     "0<=x≤6",
+     "0<=x<=6"
+    ],
+    "compact": true
+   },
+   "explanation": "y＝2x。いっぱいになるのは 12÷2＝6 分後なので 0≦x≦6",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p58 1(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-37",
+   "type": "input",
+   "prompt": "y が x に反比例し、表で x＝−2 の欄が y＝−18 になっている。同じ表の x＝2 の欄にあてはまる y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18"
+   },
+   "explanation": "xy＝(−2)×(−18)＝36。x＝2 のとき y＝36÷2＝18",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の表）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-38",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝1 のとき y＝2 である。y＝−14 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7"
+   },
+   "explanation": "y=2x に y＝−14 を代入して x＝−7",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p55 5(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-39",
+   "type": "input",
+   "prompt": "次の x と y の関係を、y を x の式で表そう。\n毎分8Lずつ水を入れるとき、x 分間に入る水の量 y L",
+   "answer": {
+    "kind": "relation",
+    "value": "y=8x"
+   },
+   "explanation": "比例の関係で、y=8x",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p49 1（関係を式に表す）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-40",
+   "type": "input",
+   "prompt": "点 (−5, −3) の x座標・y座標の符号を、それぞれ「正」か「負」で答えよう（例：正、負）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "負、負",
+     "負,負",
+     "負負",
+     "負 負"
+    ]
+   },
+   "explanation": "x座標 −5 は負、y座標 −3 は負。点は座標平面の左下の部分にある。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p52 Guide（座標の符号）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-41",
+   "type": "input",
+   "prompt": "1辺1cmの正方形を階段のように並べて図形をつくる（1番目は正方形1個、n番目は1段目から n 段目まで並べた階段の形）。14番目の図形の周の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "56",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "階段の形の周は、縦の長さ x cm と横の長さ x cm の長方形の周と同じ長さ。4×14＝56cm",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p61 6（規則と比例）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-42",
+   "type": "input",
+   "prompt": "y＝ax（a は定数）で表される関係で、定数 a を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "比例定数",
+     "ひれいていすう"
+    ]
+   },
+   "explanation": "a を比例定数という。反比例 y＝a/x の a も比例定数という。",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 48,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p48 要点2（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "定数"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-43",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−1 のとき y＝3 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−3x"
+   },
+   "explanation": "比例定数を a とすると y＝ax。3＝a×(−1) より a＝−3。したがって y=−3x",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p49 4(1)（比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=3x",
+    "y=−x/3"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-44",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝2 のとき y＝−8 である。x＝−6 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24"
+   },
+   "explanation": "y＝−4x（y=−4x）。x＝−6 を代入して y＝24",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "3/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-45",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝5 のとき y＝3 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=15/x"
+   },
+   "explanation": "比例定数を a とすると y＝a/x。a＝xy＝5×3＝15。したがって y=15/x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "5(1)"
+   },
+   "ref": "参考：数学ドリル p51 5(1)（反比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−15/x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-46",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−1 のとき y＝36 である。x＝−4 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "a＝xy＝(−1)×36＝−36。y＝−36/x に x＝−4 を代入して y＝9",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "5(3)"
+   },
+   "ref": "参考：数学ドリル p51 5(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "144"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-47",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n周の長さが30cmの長方形の縦の長さ x cm と横の長さ y cm",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "どちらでもない",
+     "どちらでもない。",
+     "ない"
+    ]
+   },
+   "explanation": "y＝ax の形にも y＝a/x の形にもならないので、どちらでもない。",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p51 4（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-48",
+   "type": "input",
+   "prompt": "点 (6, −7) とy軸について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-6,-7)",
+     "(-6、-7)",
+     "-6,-7",
+     "-6、-7"
+    ],
+    "compact": true
+   },
+   "explanation": "y軸について対称な点は、x座標の符号だけが変わる。答え (−6, −7)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "6,7",
+    "(6,7)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-49",
+   "type": "input",
+   "prompt": "y は x に比例し、x の値が3増加すると y の値は18減少する。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−6x"
+   },
+   "explanation": "比例定数＝y の増加量 ÷ x の増加量 ＝ (−18) ÷ 3 ＝ −6。y=−6x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p53 3(3)（増加量から比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=6x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-50",
+   "type": "input",
+   "prompt": "点 (□, −6) は y＝−24/x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "xy＝−24 より x＝(−24)÷(−6)＝4",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p61 4（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-51",
+   "type": "input",
+   "prompt": "y＝24/x で、x の変域が 2≦x≦4 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "6≦y≦12",
+     "6≦y≤12",
+     "6≦y<=12",
+     "6≤y≦12",
+     "6≤y≤12",
+     "6≤y<=12",
+     "6<=y≦12",
+     "6<=y≤12",
+     "6<=y<=12"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝2 のとき y＝12、x＝4 のとき y＝6。x が増えると y は減るので 6≦y≦12",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(2)"
+   },
+   "ref": "参考：数学ドリル p55 7(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-52",
+   "type": "input",
+   "prompt": "y＝20/x のグラフ上にあって、x座標・y座標がともに整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝20 となる整数の組を数える。20 の正の約数は 6 個（1、2、4、5、10、20）で、両方が負の組も同じ数だけある。答え 12 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p62 2(3)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-53",
+   "type": "input",
+   "prompt": "同じ種類のくぎがたくさんある。くぎの重さは本数に比例し、20本の重さは50gだった。くぎ150本の重さは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "375",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1本の重さは 50÷20＝2.5g。y＝2.5x に x＝150 を代入して 375g",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p56 1（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-54",
+   "type": "input",
+   "prompt": "歯数が40で毎分18回転している歯車Aに、歯数が15の歯車Bがかみ合って回転している。歯車Bは毎分何回転するか。",
+   "answer": {
+    "kind": "number",
+    "value": "48",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "かみ合う歯の数は等しいので（歯数）×（回転数）が一定。40×18＝720、720÷15＝48",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p58 2(1)（反比例の利用（歯車））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-55",
+   "type": "input",
+   "prompt": "座標平面上に3点 A(−2, 2)、B(0, −3)、C(5, 0) がある。座標の1目盛りを1cmとするとき、三角形ABCの面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "31/2",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "三角形をかこむ長方形の面積から、まわりの直角三角形の面積をひいて求める（または公式 1/2|(xB−xA)(yC−yA)−(xC−xA)(yB−yA)|）。答え 31/2cm²",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p59 5（座標と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-56",
+   "type": "input",
+   "prompt": "長方形ABCDで AB＝6cm、BC＝10cm である。点Pは辺BC上をBからCまで動く。BP＝x cm のときの三角形ABPの面積を y cm² とする。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=3x"
+   },
+   "explanation": "三角形ABP＝(1/2)×BP×AB＝(1/2)×x×6。y=3x",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p59 4(1)（動点と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-57",
+   "type": "input",
+   "prompt": "深さ40cmの空の容器に水を入れていく。水面の高さが毎分5cmの割合で高くなるとき、水を入れ始めてから x 分後の水面の高さを y cm とする。x の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0≦x≦8",
+     "0≦x≤8",
+     "0≦x<=8",
+     "0≤x≦8",
+     "0≤x≤8",
+     "0≤x<=8",
+     "0<=x≦8",
+     "0<=x≤8",
+     "0<=x<=8"
+    ],
+    "compact": true
+   },
+   "explanation": "y＝5x。いっぱいになるのは 40÷5＝8 分後なので 0≦x≦8",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "1(2)"
+   },
+   "ref": "参考：数学ドリル p58 1(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-58",
+   "type": "input",
+   "prompt": "y が x に反比例し、表で x＝1 の欄が y＝−12 になっている。同じ表の x＝6 の欄にあてはまる y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "xy＝1×(−12)＝−12。x＝6 のとき y＝(−12)÷6＝−2",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の表）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-59",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−3 のとき y＝15 である。y＝−25 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "y=−5x に y＝−25 を代入して x＝5",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p55 5(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-60",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n120cmのひもから x cm を切り取ったときの残りの長さ y cm",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "どちらでもない",
+     "どちらでもない。",
+     "ない"
+    ]
+   },
+   "explanation": "y＝ax の形にも y＝a/x の形にもならないので、どちらでもない。",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p51 4（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-61",
+   "type": "input",
+   "prompt": "点 (−6, 6) の x座標・y座標の符号を、それぞれ「正」か「負」で答えよう（例：正、負）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "負、正",
+     "負,正",
+     "負正",
+     "負 正"
+    ]
+   },
+   "explanation": "x座標 −6 は負、y座標 6 は正。点は座標平面の左上の部分にある。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p52 Guide（座標の符号）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-62",
+   "type": "input",
+   "prompt": "1辺1cmの正方形を階段のように並べて図形をつくる（1番目は正方形1個、n番目は1段目から n 段目まで並べた階段の形）。13番目の図形の周の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "52",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "階段の形の周は、縦の長さ x cm と横の長さ x cm の長方形の周と同じ長さ。4×13＝52cm",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p61 6（規則と比例）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-63",
+   "type": "input",
+   "prompt": "変数のとりうる値の範囲を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "変域",
+     "へんいき"
+    ]
+   },
+   "explanation": "変域。不等号を使って −1＜x≦5 のように表す。",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 48,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p48 Guide（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-64",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−6 のとき y＝−4 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=2x/3"
+   },
+   "explanation": "比例定数を a とすると y＝ax。−4＝a×(−6) より a＝2/3。したがって y=2x/3",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2"
+   },
+   "ref": "参考：数学ドリル p50 2（比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−2x/3",
+    "y=3x/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-65",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−9 のとき y＝−18 である。x＝−10 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-20"
+   },
+   "explanation": "y＝2x（y=2x）。x＝−10 を代入して y＝−20",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-5"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-66",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−10 のとき y＝1 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−10/x"
+   },
+   "explanation": "比例定数を a とすると y＝a/x。a＝xy＝(−10)×1＝−10。したがって y=−10/x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=10/x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-67",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−4 のとき y＝−6 である。y＝24 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "a＝xy＝24。xy＝24 に y＝24 を代入して x＝1",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "6(3)"
+   },
+   "ref": "参考：数学ドリル p49 6(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-68",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n80Lはいる水そうに毎分 x L ずつ水を入れるとき、いっぱいになるまでの時間 y 分",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "反比例",
+     "はんぴれい"
+    ]
+   },
+   "explanation": "xy＝80（y＝80/x）と表せるので反比例。",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p62 4（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-69",
+   "type": "input",
+   "prompt": "点 (−3, −6) と原点について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,6)",
+     "(3、6)",
+     "3,6",
+     "3、6"
+    ],
+    "compact": true
+   },
+   "explanation": "原点について対称な点は、x座標・y座標の両方の符号が変わる。答え (3, 6)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-3,6",
+    "(-3,6)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-70",
+   "type": "input",
+   "prompt": "y は x に比例し、x の値が3増加すると y の値は18増加する。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=6x"
+   },
+   "explanation": "比例定数＝y の増加量 ÷ x の増加量 ＝ 18 ÷ 3 ＝ 6。y=6x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(3)"
+   },
+   "ref": "参考：数学ドリル p53 3(3)（増加量から比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−6x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-71",
+   "type": "input",
+   "prompt": "点 (−3, □) は y＝−24/x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "y＝(−24)÷(−3)＝8",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p61 4（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-72",
+   "type": "input",
+   "prompt": "y＝6/x で、x の変域が 2≦x≦3 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2≦y≦3",
+     "2≦y≤3",
+     "2≦y<=3",
+     "2≤y≦3",
+     "2≤y≤3",
+     "2≤y<=3",
+     "2<=y≦3",
+     "2<=y≤3",
+     "2<=y<=3"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝2 のとき y＝3、x＝3 のとき y＝2。x が増えると y は減るので 2≦y≦3",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(2)"
+   },
+   "ref": "参考：数学ドリル p55 7(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-73",
+   "type": "input",
+   "prompt": "y＝30/x のグラフ上にあって、x座標・y座標がともに整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝30 となる整数の組を数える。30 の正の約数は 8 個（1、2、3、5、6、10、15、30）で、両方が負の組も同じ数だけある。答え 16 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p62 2(3)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-74",
+   "type": "input",
+   "prompt": "4mの重さが36gの針金がある。この針金15mの重さは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1mの重さは 9g。9×15＝135g",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p56 2(1)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-75",
+   "type": "input",
+   "prompt": "A市からB市まで、時速60kmで行くと3時間かかる。時速36kmで行くと何時間かかるか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "時間"
+    ]
+   },
+   "explanation": "道のりは 60×3＝180km で一定なので、時間は速さに反比例する。180÷36＝5時間",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 60,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p60 1(3)（反比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-76",
+   "type": "input",
+   "prompt": "座標平面上に3点 A(−4, 1)、B(−4, 4)、C(4, 5) がある。座標の1目盛りを1cmとするとき、三角形ABCの面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "三角形をかこむ長方形の面積から、まわりの直角三角形の面積をひいて求める（または公式 1/2|(xB−xA)(yC−yA)−(xC−xA)(yB−yA)|）。答え 12cm²",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p59 5（座標と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-77",
+   "type": "input",
+   "prompt": "深さ30cmの空の容器に水を入れていく。水面の高さが毎分5cmの割合で高くなるとき、水面の高さが20cmになるのは入れ始めてから何分後か。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "y＝5x に y＝20 を代入して x＝4",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p58 1(3)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-78",
+   "type": "input",
+   "prompt": "y が x に反比例し、表で x＝−1 の欄が y＝−24 になっている。同じ表の x＝6 の欄にあてはまる y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "xy＝(−1)×(−24)＝24。x＝6 のとき y＝24÷6＝4",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の表）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-79",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝8 のとき y＝16 である。y＝−10 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-5"
+   },
+   "explanation": "y=2x に y＝−10 を代入して x＝−5",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p55 5(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-80",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n350mLのジュースのうち x mL を飲んだときの残りの量 y mL",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "どちらでもない",
+     "どちらでもない。",
+     "ない"
+    ]
+   },
+   "explanation": "y＝ax の形にも y＝a/x の形にもならないので、どちらでもない。",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p62 4（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-81",
+   "type": "input",
+   "prompt": "点 (−1, −8) の x座標・y座標の符号を、それぞれ「正」か「負」で答えよう（例：正、負）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "負、負",
+     "負,負",
+     "負負",
+     "負 負"
+    ]
+   },
+   "explanation": "x座標 −1 は負、y座標 −8 は負。点は座標平面の左下の部分にある。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p52 Guide（座標の符号）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-82",
+   "type": "input",
+   "prompt": "1辺1cmの正方形を階段のように並べて図形をつくる（1番目は正方形1個、n番目は1段目から n 段目まで並べた階段の形）。8番目の図形の周の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "32",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "階段の形の周は、縦の長さ x cm と横の長さ x cm の長方形の周と同じ長さ。4×8＝32cm",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p61 6（規則と比例）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-83",
+   "type": "input",
+   "prompt": "座標平面で、横の数直線（x軸）と縦の数直線（y軸）を合わせて何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "座標軸",
+     "ざひょうじく"
+    ]
+   },
+   "explanation": "x軸と y軸を合わせて座標軸、その交点Oを原点という。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "要点1"
+   },
+   "ref": "参考：数学ドリル p52 要点1（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-84",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−8 のとき y＝−16 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=2x"
+   },
+   "explanation": "比例定数を a とすると y＝ax。−16＝a×(−8) より a＝2。したがって y=2x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p50 4(1)（比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−2x",
+    "y=x/2"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-85",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−5 のとき y＝−25 である。x＝12 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60"
+   },
+   "explanation": "y＝5x（y=5x）。x＝12 を代入して y＝60",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "12/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-86",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝4 のとき y＝−5 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−20/x"
+   },
+   "explanation": "比例定数を a とすると y＝a/x。a＝xy＝4×(−5)＝−20。したがって y=−20/x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=20/x"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-87",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝1 のとき y＝24 である。y＝4 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "a＝xy＝24。xy＝24 に y＝4 を代入して x＝6",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "6(3)"
+   },
+   "ref": "参考：数学ドリル p49 6(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-88",
+   "type": "input",
+   "prompt": "次の x と y の関係を、y を x の式で表そう。\n120Lはいる水そうに毎分 x L ずつ水を入れるとき、いっぱいになるまでの時間 y 分",
+   "answer": {
+    "kind": "relation",
+    "value": "y=120/x"
+   },
+   "explanation": "反比例の関係で、y=120/x",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p49 3（関係を式に表す）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-89",
+   "type": "input",
+   "prompt": "点 (−7, −4) とx軸について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-7,4)",
+     "(-7、4)",
+     "-7,4",
+     "-7、4"
+    ],
+    "compact": true
+   },
+   "explanation": "x軸について対称な点は、y座標の符号だけが変わる。答え (−7, 4)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "7,-4",
+    "(7,-4)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-90",
+   "type": "input",
+   "prompt": "比例のグラフが点 (−2, 10) を通る。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−5x"
+   },
+   "explanation": "y＝ax に代入して 10＝a×(−2)、a＝−5。y=−5x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p53 3(1)（グラフが通る点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−x/5"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-91",
+   "type": "input",
+   "prompt": "点 (−6, □) は y＝12/x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "y＝12÷(−6)＝−2",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p61 4（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-92",
+   "type": "input",
+   "prompt": "y＝18/x で、x の変域が 3≦x≦9 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2≦y≦6",
+     "2≦y≤6",
+     "2≦y<=6",
+     "2≤y≦6",
+     "2≤y≤6",
+     "2≤y<=6",
+     "2<=y≦6",
+     "2<=y≤6",
+     "2<=y<=6"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝3 のとき y＝6、x＝9 のとき y＝2。x が増えると y は減るので 2≦y≦6",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(2)"
+   },
+   "ref": "参考：数学ドリル p55 7(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-93",
+   "type": "input",
+   "prompt": "y＝6/x のグラフ上にあって、x座標・y座標がともに整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝6 となる整数の組を数える。6 の正の約数は 4 個（1、2、3、6）で、両方が負の組も同じ数だけある。答え 8 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(3)"
+   },
+   "ref": "参考：数学ドリル p62 2(3)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-94",
+   "type": "input",
+   "prompt": "4mの重さが36gの針金がある。この針金7mの重さは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "63",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1mの重さは 9g。9×7＝63g",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p56 2(1)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-95",
+   "type": "input",
+   "prompt": "歯数が40で毎分18回転している歯車Aに、歯数が24の歯車Bがかみ合って回転している。歯車Bは毎分何回転するか。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "かみ合う歯の数は等しいので（歯数）×（回転数）が一定。40×18＝720、720÷24＝30",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "2(1)"
+   },
+   "ref": "参考：数学ドリル p58 2(1)（反比例の利用（歯車））",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-96",
+   "type": "input",
+   "prompt": "y＝2x のグラフと y＝a/x のグラフが2点P、Qで交わっている。点Pの座標が (2, 4) のとき、もう1つの交点Qの座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,-4)",
+     "(-2、-4)",
+     "-2,-4",
+     "-2、-4"
+    ],
+    "compact": true
+   },
+   "explanation": "どちらのグラフも原点について対称なので、Qは Pと原点について対称な点 (−2, −4)",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "3(2)"
+   },
+   "ref": "参考：数学ドリル p58 3(2)（比例と反比例の交点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-97",
+   "type": "input",
+   "prompt": "座標平面上に3点 A(−2, 1)、B(4, −5)、C(2, −4) がある。座標の1目盛りを1cmとするとき、三角形ABCの面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "三角形をかこむ長方形の面積から、まわりの直角三角形の面積をひいて求める（または公式 1/2|(xB−xA)(yC−yA)−(xC−xA)(yB−yA)|）。答え 3cm²",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "5"
+   },
+   "ref": "参考：数学ドリル p59 5（座標と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-98",
+   "type": "input",
+   "prompt": "長方形ABCDで AB＝6cm、BC＝9cm である。点Pは辺BC上をBからCまで動く。三角形ABPの面積が3cm²になるときの BP の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "y＝3x に y＝3 を代入して x＝1",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 59,
+    "number": "4(3)"
+   },
+   "ref": "参考：数学ドリル p59 4(3)（動点と面積）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-99",
+   "type": "input",
+   "prompt": "深さ16cmの空の容器に水を入れていく。水面の高さが毎分2cmの割合で高くなるとき、水面の高さが12cmになるのは入れ始めてから何分後か。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "y＝2x に y＝12 を代入して x＝6",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "1(3)"
+   },
+   "ref": "参考：数学ドリル p58 1(3)（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-100",
+   "type": "input",
+   "prompt": "y が x に反比例し、表で x＝−1 の欄が y＝24 になっている。同じ表の x＝−3 の欄にあてはまる y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "xy＝(−1)×24＝−24。x＝−3 のとき y＝(−24)÷(−3)＝8",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 51,
+    "number": "6"
+   },
+   "ref": "参考：数学ドリル p51 6（反比例の表）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "tests": [
+  {
+   "id": "drill-math-1-proportion-test-1",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−8 のとき y＝16 である。y＝24 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-12"
+   },
+   "explanation": "y=−2x に y＝24 を代入して x＝−12",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "5(2)"
+   },
+   "ref": "参考：数学ドリル p55 5(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-2",
+   "type": "input",
+   "prompt": "点 (4, 6) の x座標・y座標の符号を、それぞれ「正」か「負」で答えよう（例：正、負）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正、正",
+     "正,正",
+     "正正",
+     "正 正"
+    ]
+   },
+   "explanation": "x座標 4 は正、y座標 6 は正。点は座標平面の右上の部分にある。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "Guide"
+   },
+   "ref": "参考：数学ドリル p52 Guide（座標の符号）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-3",
+   "type": "input",
+   "prompt": "反比例のグラフのような、2つのなめらかな曲線を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "双曲線",
+     "そうきょくせん"
+    ]
+   },
+   "explanation": "反比例 y＝a/x のグラフは双曲線になる。",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 52,
+    "number": "要点2"
+   },
+   "ref": "参考：数学ドリル p52 要点2（用語）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "放物線"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-4",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−3 のとき y＝9 である。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−3x"
+   },
+   "explanation": "比例定数を a とすると y＝ax。9＝a×(−3) より a＝−3。したがって y=−3x",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "4(1)"
+   },
+   "ref": "参考：数学ドリル p50 4(1)（比例の式）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=3x",
+    "y=−x/3"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-5",
+   "type": "input",
+   "prompt": "y は x に比例し、x＝−7 のとき y＝35 である。x＝−10 のときの y の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50"
+   },
+   "explanation": "y＝−5x（y=−5x）。x＝−10 を代入して y＝50",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p50 2(2)（比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "2"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-6",
+   "type": "input",
+   "prompt": "y は x に反比例し、x＝−4 のとき y＝6 である。y＝3 のときの x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-8"
+   },
+   "explanation": "a＝xy＝−24。xy＝−24 に y＝3 を代入して x＝−8",
+   "source": {
+    "id": "source-0127",
+    "file": "ドリル/数学/S__15589412_0.jpg",
+    "sha256": "e0929f80ffafe2cff3195fd4793fdb0c1fe1cfa678e75029f8202bc607aea91e",
+    "page": 49,
+    "number": "6(3)"
+   },
+   "ref": "参考：数学ドリル p49 6(3)（反比例の値）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-7",
+   "type": "input",
+   "prompt": "次の x と y の関係で、y が x に比例するなら「比例」、反比例するなら「反比例」、どちらでもないなら「どちらでもない」と答えよう。\n24kmの道のりを時速 x km で進むときにかかる時間 y 時間",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "反比例",
+     "はんぴれい"
+    ]
+   },
+   "explanation": "xy＝24（y＝24/x）と表せるので反比例。",
+   "source": {
+    "id": "source-0128",
+    "file": "ドリル/数学/S__15589413_0.jpg",
+    "sha256": "d1db6abdcfaddf2d4ed99d2a71da9c07c99979ca843cac4f32d8fde94a8bdce2",
+    "page": 50,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p50 1（比例・反比例の判定）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "比例"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-8",
+   "type": "input",
+   "prompt": "点 (4, 7) とx軸について対称な点の座標を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,-7)",
+     "(4、-7)",
+     "4,-7",
+     "4、-7"
+    ],
+    "compact": true
+   },
+   "explanation": "x軸について対称な点は、y座標の符号だけが変わる。答え (4, −7)",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 54,
+    "number": "1"
+   },
+   "ref": "参考：数学ドリル p54 1（対称な点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "-4,7",
+    "(-4,7)"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-9",
+   "type": "input",
+   "prompt": "比例のグラフが点 (3, −12) を通る。y を x の式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=−4x"
+   },
+   "explanation": "y＝ax に代入して −12＝a×3、a＝−4。y=−4x",
+   "source": {
+    "id": "source-0129",
+    "file": "ドリル/数学/S__15589414_0.jpg",
+    "sha256": "4e7f91dc361eb417f2e4e2921280aa250efd27775cc3aac2923c69e04db96329",
+    "page": 53,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p53 3(1)（グラフが通る点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "y=−x/4"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-10",
+   "type": "input",
+   "prompt": "点 (−3, □) は y＝18/x のグラフ上にある。□にあてはまる数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-6"
+   },
+   "explanation": "y＝18÷(−3)＝−6",
+   "source": {
+    "id": "source-0133",
+    "file": "ドリル/数学/S__15589418_0.jpg",
+    "sha256": "5e0d16b18dd28af539ac49b2a6735544d3f91f0f3de2a55665ed11a798c14a96",
+    "page": 61,
+    "number": "4"
+   },
+   "ref": "参考：数学ドリル p61 4（グラフ上の点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-11",
+   "type": "input",
+   "prompt": "y＝36/x で、x の変域が 3≦x≦6 のとき、y の変域を求めよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "6≦y≦12",
+     "6≦y≤12",
+     "6≦y<=12",
+     "6≤y≦12",
+     "6≤y≤12",
+     "6≤y<=12",
+     "6<=y≦12",
+     "6<=y≤12",
+     "6<=y<=12"
+    ],
+    "compact": true
+   },
+   "explanation": "x＝3 のとき y＝12、x＝6 のとき y＝6。x が増えると y は減るので 6≦y≦12",
+   "source": {
+    "id": "source-0130",
+    "file": "ドリル/数学/S__15589415_0.jpg",
+    "sha256": "1cf5c69f8a653e8c4d5d489d595fe8d1f94741cf1d0a5e1ea77c93d4079211c5",
+    "page": 55,
+    "number": "7(2)"
+   },
+   "ref": "参考：数学ドリル p55 7(2)（変域）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-12",
+   "type": "input",
+   "prompt": "y＝18/x のグラフ上にあって、x座標・y座標がともに負の整数である点は何個あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "xy＝18 となる整数の組を数える。18 の正の約数は 6 個（1、2、3、6、9、18）で、それぞれ両方を負にした組が条件に合う。答え 6 個",
+   "source": {
+    "id": "source-0134",
+    "file": "ドリル/数学/S__15589420_0.jpg",
+    "sha256": "e1688fe57e2a7e578c1b588505aa848a82bf1ea7320af9f26729299674a58942",
+    "page": 62,
+    "number": "2(2)"
+   },
+   "ref": "参考：数学ドリル p62 2(2)（整数の座標）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-13",
+   "type": "input",
+   "prompt": "コピー用紙20枚の重さをはかったら90gあった。同じ紙の重さが270gのとき、紙は何枚あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "紙の枚数は重さに比例する。270÷90＝3倍なので、20×3＝60枚",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 56,
+    "number": "3"
+   },
+   "ref": "参考：数学ドリル p56 3（比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  },
+  {
+   "id": "drill-math-1-proportion-test-14",
+   "type": "input",
+   "prompt": "60Lはいる水そうに毎分 x L の割合で水を入れると、y 分でいっぱいになる。毎分20Lの割合で入れると、何分でいっぱいになるか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "xy＝60（y＝60/x）。x＝20 を代入して y＝3",
+   "source": {
+    "id": "source-0131",
+    "file": "ドリル/数学/S__15589416_0.jpg",
+    "sha256": "2c9de915e332354185accfee982cb913fa06c84aa394e71fc484eb783dc2ef4e",
+    "page": 57,
+    "number": "4(2)"
+   },
+   "ref": "参考：数学ドリル p57 4(2)（反比例の利用）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard",
+   "near": [
+    "1200"
+   ]
+  },
+  {
+   "id": "drill-math-1-proportion-test-15",
+   "type": "input",
+   "prompt": "y＝3x のグラフと y＝a/x のグラフが点Pで交わっている。点Pの x座標が3のとき、a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "27"
+   },
+   "explanation": "点Pは y＝3x 上にあるので y＝3×3＝9。P(3, 9) を y＝a/x に代入して a＝3×9＝27",
+   "source": {
+    "id": "source-0132",
+    "file": "ドリル/数学/S__15589417_0.jpg",
+    "sha256": "871b73cec3457079bd02e241711608c1d4f132a7aa28d026e978a824795c2acd",
+    "page": 58,
+    "number": "3(1)"
+   },
+   "ref": "参考：数学ドリル p58 3(1)（比例と反比例の交点）",
+   "origin": "adapted",
+   "reviewed": true,
+   "difficulty": "hard"
+  }
+ ],
+ "reviewNote": "2026-10-08 Claude作成。数学ドリルp48〜63（13 比例と反比例・14 座標とグラフ・15 比例と反比例の利用、標準問題・実力問題①②）を写真で目視し、数・場面を変えた類題を作った。グラフをかく問題は、式・座標・値を答える形にした。手書きの答えは使っていない。",
+ "guide": [
+  {
+   "title": "比例 y＝ax",
+   "body": "x が2倍、3倍になると y も2倍、3倍になる。y÷x（商）が一定で、比例定数 a に等しい。1組の x、y から a を求めて式をつくる。例：x＝3 のとき y＝−12 → a＝−4、y＝−4x"
+  },
+  {
+   "title": "反比例 y＝a/x",
+   "body": "x が2倍、3倍になると y は1/2倍、1/3倍になる。xy（積）が一定で、比例定数 a に等しい。例：x＝2 のとき y＝−6 → a＝−12、y＝−12/x"
+  },
+  {
+   "title": "座標と対称な点",
+   "body": "点(a, b) と x軸について対称な点は (a, −b)、y軸について対称な点は (−a, b)、原点について対称な点は (−a, −b)。"
+  },
+  {
+   "title": "グラフと変域",
+   "body": "比例のグラフは原点を通る直線（a＞0 なら右上がり）。反比例のグラフは双曲線。変域は、x の端の値を代入して y の値を求め、小さい方から並べる。"
+  },
+  {
+   "title": "利用問題",
+   "body": "ともなって変わる2つの数量が「比例（商が一定）」か「反比例（積が一定）」かを見きわめる。くぎの本数と重さ→比例、歯車の歯数と回転数→反比例、同じ道のりの速さと時間→反比例。"
+  }
+ ]
+}

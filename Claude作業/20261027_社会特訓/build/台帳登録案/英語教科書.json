@@ -1,0 +1,74 @@
+{
+ "title": "英語教科書 台帳登録案（Claude・2026-10-14）",
+ "summary": "95ファイルのうち、画像として読めるのは IMG_0257〜0259 の3枚だけ。ほかの92ファイル（HEIF画像-4D45-BB34-9A-*.heic）は135バイトの小さなファイル（bplist形式の参照情報）で、画像の中身が入っていない（iCloudなどから本体がダウンロードされていない可能性）。中身のある写真を入れ直してもらうまで、英語教科書の本文は使えない。verified はCodexが台帳に入れるときに決める（ここでは false のまま）。",
+ "entries": [
+  {
+   "id": null,
+   "file": "英語教科書/IMG_0257.heic",
+   "sha256": "d497798156a606c7a3b1bdbb004d30c3d16c0e4288fedc0000e35868feac490c",
+   "pages": [
+    1
+   ],
+   "verified": false,
+   "proposedBy": "Claude 2026-10-14",
+   "subject": "英語",
+   "mode": "textbook",
+   "grade": 1,
+   "visualTitle": "この教科書で英語を学ぶみなさんへ（教科書の構成）",
+   "checkLevel": "見出し",
+   "note": "写真下の印刷ページ番号（one 1・four 4・five 5・six 6・seven 7）で確認。IMG_0257の左ページは丸数字③の案内ページ。",
+   "reviewNote": "2026-10-14 Claude：写真を開いて確認。見出しまで確認。"
+  },
+  {
+   "id": null,
+   "file": "英語教科書/IMG_0258.heic",
+   "sha256": "9d2b8120ca5de8fca916f43d306b68a7adfa6a9d559c1b6ff9bdb859c591484a",
+   "pages": [
+    4,
+    5
+   ],
+   "verified": false,
+   "proposedBy": "Claude 2026-10-14",
+   "subject": "英語",
+   "mode": "textbook",
+   "grade": 1,
+   "visualTitle": "Classroom English（先生が使う表現・役に立つ表現）",
+   "checkLevel": "本文",
+   "note": "写真下の印刷ページ番号（one 1・four 4・five 5・six 6・seven 7）で確認。IMG_0257の左ページは丸数字③の案内ページ。",
+   "reviewNote": "2026-10-14 Claude：写真を開いて確認。本文（表現と場面の絵）まで読んだ。",
+   "bodyCheckedFor": [
+    "tokkun-english-1-review"
+   ]
+  },
+  {
+   "id": null,
+   "file": "英語教科書/IMG_0259.heic",
+   "sha256": "513c1cf15496b4da0beea6ee314aeff1b2ebfa8aff588eb502e1f71ea6ec66cb",
+   "pages": [
+    6,
+    7
+   ],
+   "verified": false,
+   "proposedBy": "Claude 2026-10-14",
+   "subject": "英語",
+   "mode": "textbook",
+   "grade": 1,
+   "visualTitle": "Springboard 1 Nice to Meet You!（登場人物の紹介）",
+   "checkLevel": "見出し",
+   "note": "写真下の印刷ページ番号（one 1・four 4・five 5・six 6・seven 7）で確認。IMG_0257の左ページは丸数字③の案内ページ。",
+   "reviewNote": "2026-10-14 Claude：写真を開いて確認。見出しまで確認。"
+  }
+ ],
+ "emptyFiles": {
+  "count": 92,
+  "size": 135,
+  "note": "画像の中身がないファイル。台帳に登録しないこと。",
+  "examples": [
+   "HEIF画像-4D45-BB34-9A-10.heic",
+   "HEIF画像-4D45-BB34-9A-11.heic",
+   "HEIF画像-4D45-BB34-9A-12.heic",
+   "HEIF画像-4D45-BB34-9A-13.heic",
+   "HEIF画像-4D45-BB34-9A-14.heic"
+  ]
+ }
+}

@@ -1,0 +1,1818 @@
+{
+ "id": "tokkun-science-1-musekitsui",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "背骨のない動物と動物の分類（特訓）",
+ "majorTitle": "動物の特徴と分類",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-musekitsui-1",
+   "type": "input",
+   "prompt": "クモは節足動物だが、昆虫類には分類されない。クモの体は頭胸部と腹部の2つに分かれ、あしは4対ある。昆虫類の特徴と比べて、昆虫類に分類されない理由を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "2つ",
+       "頭胸部",
+       "3つ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "4対",
+       "あし"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "required": [
+     [
+      "2つ",
+      "２つ",
+      "頭胸部"
+     ],
+     [
+      "4対",
+      "４対"
+     ]
+    ],
+    "reject": [
+     [
+      "クモは体が3つ",
+      "クモの体は3つ",
+      "クモのあしは3対",
+      "クモはあしが3対",
+      "クモは昆虫類である"
+     ]
+    ]
+   },
+   "explanation": "昆虫類は体が頭部・胸部・腹部の3つに分かれ、あしが3対。クモは体が2つでありあしが4対なので、昆虫類ではない。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-2",
+   "type": "input",
+   "prompt": "ある動物は背骨がなく、外骨格も外とう膜もない。この動物は、節足動物・軟体動物・その他の無脊椎動物のどれに分類されるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "その他の無脊椎動物",
+     "その他"
+    ]
+   },
+   "explanation": "外骨格がないので節足動物ではなく、外とう膜がないので軟体動物でもない。その他の無脊椎動物（ミミズ・クラゲなど）。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-3",
+   "type": "input",
+   "prompt": "次のうち、無脊椎動物をすべて選ぼう（読点で区切る）。\nア タコ　イ イルカ　ウ ミミズ　エ ペンギン",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "タコとミミズは背骨がない。イルカ（哺乳類）とペンギン（鳥類）は脊椎動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-4",
+   "type": "input",
+   "prompt": "次のうち、節足動物をすべて選ぼう（読点で区切る）。\nア クワガタ　イ イカ　ウ ムカデ　エ ヒトデ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "クワガタ（昆虫類）とムカデは節足動物。イカは軟体動物、ヒトデはその他の無脊椎動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-5",
+   "type": "input",
+   "prompt": "次のうち、昆虫類をすべて選ぼう（読点で区切る）。\nア チョウ　イ クモ　ウ ハチ　エ ダンゴムシ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "チョウとハチは昆虫類。クモは節足動物だが昆虫類ではない。ダンゴムシは甲殻類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-6",
+   "type": "input",
+   "prompt": "次のうち、甲殻類をすべて選ぼう（読点で区切る）。\nア カニ　イ エビ　ウ バッタ　エ アサリ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "カニとエビは甲殻類。バッタは昆虫類、アサリは軟体動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-7",
+   "type": "input",
+   "prompt": "次のうち、軟体動物をすべて選ぼう（読点で区切る）。\nア アサリ　イ マイマイ　ウ ミミズ　エ カニ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "アサリ・マイマイは外とう膜をもつ軟体動物。ミミズはその他の無脊椎動物、カニは甲殻類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-8",
+   "type": "input",
+   "prompt": "昆虫類の成虫の胸部には、あしが3対ある。あしは全部で何本か。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "1対は2本。3対で6本。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-9",
+   "type": "input",
+   "prompt": "あしが3対ではない（ここでは4対とする）節足動物のクモは、昆虫類に入るか。「入る」「入らない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "入らない"
+    ]
+   },
+   "explanation": "昆虫類は胸部に3対のあしがある。あしの数がちがうクモは、節足動物だが昆虫類ではない。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-10",
+   "type": "input",
+   "prompt": "昆虫類の体は、いくつの部分に分かれているか。部分の名前を順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "頭部、胸部、腹部",
+     "頭部,胸部,腹部",
+     "頭部胸部腹部"
+    ]
+   },
+   "explanation": "昆虫類の体は頭部・胸部・腹部の3つに分かれ、胸部に3対のあしがある。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-11",
+   "type": "input",
+   "prompt": "バッタのあしを数えると6本あった。あしは何対あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "対"
+    ]
+   },
+   "explanation": "2本で1対。6÷2＝3対。昆虫類は胸部に3対のあしがある。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-12",
+   "type": "input",
+   "prompt": "節足動物の体の外側をおおう骨格には、どのようなはたらきがあるか。次から選ぼう。\nア 体を支え、内部を守る　イ 光合成をする　ウ 呼吸をする",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "外骨格はかたい殻のような骨格で、体を支えたり、内部を守ったりする。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-13",
+   "type": "input",
+   "prompt": "カブトムシの体は外骨格でおおわれている。外骨格は、背骨と同じように体の何としてはたらいているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "骨格",
+     "こっかく"
+    ]
+   },
+   "explanation": "外骨格は体の外側にある骨格。脊椎動物は体の内部に骨格（背骨など）をもつ。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-14",
+   "type": "input",
+   "prompt": "節足動物の「節足」とは、どのような特徴を表した名前か。次から選ぼう。\nア あしなどに多くの節がある　イ あしがない　ウ あしが1本しかない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "節足動物は、体やあしに多くの節がある。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-15",
+   "type": "input",
+   "prompt": "イカやタコの体には、節があるか。「ある」「ない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ない"
+    ]
+   },
+   "explanation": "軟体動物の体には節がなく、外骨格もない。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-16",
+   "type": "input",
+   "prompt": "ワークの図のアサリで、水が入っていくところ（入水管）と出ていくところ（出水管）がある。アサリはこの水の流れを使って、おもに何をしていると考えられるか。次から選ぼう。\nア えらで呼吸したり、えさをとり入れたりする　イ 光合成をする　ウ 外骨格をつくる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "入水管から水をとり入れ、えらで呼吸し、水中の小さなえさもとり入れる。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-17",
+   "type": "input",
+   "prompt": "アサリの体で、呼吸をするつくりは何か。ワークの図の名前で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "えら"
+    ]
+   },
+   "explanation": "アサリは水中でえらを使って呼吸する。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-18",
+   "type": "input",
+   "prompt": "アサリの2枚の貝がらを閉じるはたらきをする部分は何か。ワークの図の名前で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "貝柱",
+     "かいばしら"
+    ]
+   },
+   "explanation": "貝柱は、貝がらを閉じるときにはたらく筋肉。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-19",
+   "type": "input",
+   "prompt": "マイマイ（カタツムリ）は陸上で生活するが、何動物のなかまか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "軟体動物",
+     "なんたいどうぶつ"
+    ]
+   },
+   "explanation": "マイマイは外とう膜をもつ軟体動物。陸上で生活していても、イカやアサリと同じなかま。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-20",
+   "type": "input",
+   "prompt": "ダンゴムシは陸上で生活するが、エビやカニと同じなかまである。そのなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "甲殻類",
+     "こうかくるい"
+    ]
+   },
+   "explanation": "ダンゴムシは甲殻類。生活場所ではなく体のつくりで分類する。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-21",
+   "type": "input",
+   "prompt": "ミミズには背骨がなく、外骨格も外とう膜もない。ミミズは、無脊椎動物のうちどのなかまに入るか。次から選ぼう。\nア その他の無脊椎動物　イ 節足動物　ウ 軟体動物",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "外骨格も外とう膜もないので、節足動物でも軟体動物でもない、その他の無脊椎動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-22",
+   "type": "input",
+   "prompt": "クラゲやイソギンチャクには背骨がなく、外骨格や外とう膜もない。これらはどのなかまか。次から選ぼう。\nア その他の無脊椎動物　イ 甲殻類　ウ 魚類",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "背骨がなく、節足動物にも軟体動物にもあてはまらないので、その他の無脊椎動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-23",
+   "type": "input",
+   "prompt": "タコとイカを、節足動物と軟体動物のどちらかに分けると、どちらになるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "軟体動物",
+     "なんたいどうぶつ"
+    ]
+   },
+   "explanation": "タコとイカは体に節がなく、外とう膜があるので軟体動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-24",
+   "type": "input",
+   "prompt": "バッタとエビは、どちらも節足動物である。2つを昆虫類と甲殻類に分けるとき、バッタはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "昆虫類",
+     "こんちゅうるい"
+    ]
+   },
+   "explanation": "バッタは昆虫類、エビは甲殻類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-25",
+   "type": "input",
+   "prompt": "動物を大きく2つに分けるとき、もっとも初めに注目する特徴は何か。次から選ぼう。\nア 背骨をもつかどうか　イ 体の大きさ　ウ 色",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "背骨をもつかどうかで、脊椎動物と無脊椎動物に分ける。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-26",
+   "type": "input",
+   "prompt": "無脊椎動物を、節足動物・軟体動物・その他に分けるとき、注目する特徴として正しい組み合わせを選ぼう。\nア 外骨格があるか・外とう膜があるか　イ 羽毛があるか・毛があるか　ウ 卵生か胎生か",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "外骨格と体の節があれば節足動物、外とう膜があれば軟体動物、どちらでもなければその他。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-27",
+   "type": "input",
+   "prompt": "ワークの分類図で、イモリとカエルが入るなかまはどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "両生類",
+     "りょうせいるい"
+    ]
+   },
+   "explanation": "イモリとカエルは両生類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-28",
+   "type": "input",
+   "prompt": "タツノオトシゴは、メダカと同じなかまに入る。そのなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "魚類",
+     "ぎょるい"
+    ]
+   },
+   "explanation": "タツノオトシゴは見た目がめずらしいが、えらで呼吸し、ひれをもつ魚類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-29",
+   "type": "input",
+   "prompt": "ハトとスズメが入るなかまと、イヌとイルカが入るなかまの名前を、順に書こう（読点で区切る）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鳥類、哺乳類",
+     "鳥類,哺乳類",
+     "鳥類、ほ乳類",
+     "鳥類、ほにゅう類"
+    ]
+   },
+   "explanation": "ハト・スズメは鳥類、イヌ・イルカは哺乳類。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-30",
+   "type": "input",
+   "prompt": "ワークの分類図で「その他」に入る節足動物の例として、ムカデとならんでいる動物は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "クモ"
+    ]
+   },
+   "explanation": "ムカデとクモは、昆虫類でも甲殻類でもない節足動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-31",
+   "type": "input",
+   "prompt": "「イカの体には節があり、外骨格におおわれている」という文はまちがっている。正しく直したものを選ぼう。\nア イカの体には節がなく、内臓が外とう膜でおおわれている　イ イカの体には背骨がある　ウ イカは昆虫類である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "イカは軟体動物。節や外骨格はなく、内臓が外とう膜でおおわれている。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-32",
+   "type": "input",
+   "prompt": "「クモは昆虫類である」という考えに対して、反論の理由として正しいものを選ぼう（クモの体は2つに分かれ、あしは4対とする）。\nア 体の分かれ方やあしの数が昆虫類とちがう　イ クモは背骨がある　ウ クモは軟体動物である",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "昆虫類は体が頭部・胸部・腹部の3つで、あしは3対。クモは2つに分かれ、あしが4対なのでちがう。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-33",
+   "type": "input",
+   "prompt": "「ダンゴムシは陸にいるから昆虫類」という考えはまちがっている。ダンゴムシの正しいなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "甲殻類",
+     "こうかくるい"
+    ]
+   },
+   "explanation": "生活場所では分類しない。ダンゴムシはエビやカニと同じ甲殻類。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-34",
+   "type": "input",
+   "prompt": "次の動物を「外骨格をもつ」「外とう膜をもつ」「どちらもない」に分けたとき、外とう膜をもつものを選ぼう。\nア タコ　イ チョウ　ウ ヒトデ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "タコは軟体動物で外とう膜をもつ。チョウは外骨格、ヒトデはどちらもない。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-35",
+   "type": "input",
+   "prompt": "次の動物のうち、外骨格をもつものを選ぼう。\nア カブトムシ　イ アサリ　ウ クラゲ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "カブトムシは節足動物で、体が外骨格におおわれている。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-36",
+   "type": "input",
+   "prompt": "ワークの基本問題のA〜Fの無脊椎動物（カブトムシ・アサリ・ヒトデ・タコ・ミミズ・エビ）のうち、軟体動物の数はいくつか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2",
+     "2つ"
+    ]
+   },
+   "explanation": "アサリとタコの2つが軟体動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-37",
+   "type": "input",
+   "prompt": "カブトムシ・アサリ・ヒトデ・タコ・ミミズ・エビのうち、節足動物でも軟体動物でもないものをすべて選ぼう（読点で区切る）。\nア ヒトデ　イ ミミズ　ウ タコ　エ エビ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "ヒトデとミミズは、その他の無脊椎動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-38",
+   "type": "input",
+   "prompt": "力だめしの分類図のように、「背骨をもっているか」→「はい」→「卵生か」→「いいえ」と進むと、どのなかまになるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "哺乳類",
+     "ほにゅう類",
+     "ほにゅうるい"
+    ]
+   },
+   "explanation": "背骨があり、卵生でない（胎生）のは哺乳類。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-39",
+   "type": "input",
+   "prompt": "「背骨をもっているか」→「いいえ」→「外骨格があるか」→「はい」と進むと、どのなかまになるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "節足動物",
+     "せっそくどうぶつ"
+    ]
+   },
+   "explanation": "背骨がなく外骨格がある＝節足動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-40",
+   "type": "input",
+   "prompt": "「背骨をもっているか」→「いいえ」→「外骨格があるか」→「いいえ」と進んだ動物を、さらに分けるときに使える質問として適切なものを選ぼう。\nア 外とう膜があるか　イ 羽毛があるか　ウ 胎生か",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "外骨格がない無脊椎動物は、外とう膜があれば軟体動物、なければその他の無脊椎動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-41",
+   "type": "input",
+   "prompt": "分類図で、マイマイ（カタツムリ）は「背骨をもっているか」「外骨格があるか」の質問に、それぞれどう答えるか。「いいえ、いいえ」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "いいえ、いいえ",
+     "いいえ,いいえ",
+     "いいえいいえ"
+    ]
+   },
+   "explanation": "マイマイは背骨も外骨格もない。外とう膜をもつ軟体動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-42",
+   "type": "input",
+   "prompt": "分類図で、イモリは「背骨をもっているか」「卵生か」「一生水中で生活するか」に、それぞれどう答えるか。「はい、はい、いいえ」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "はい、はい、いいえ",
+     "はい,はい,いいえ",
+     "はいはいいいえ"
+    ]
+   },
+   "explanation": "イモリは脊椎動物で卵生。子は水中、親は陸上でも生活するので「一生水中」ではない。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-43",
+   "type": "input",
+   "prompt": "「一生水中で生活するか」という質問で、魚類と両生類を分けられるのはなぜか。次から選ぼう。\nア 魚類は一生水中、両生類は親になると陸上でも生活するから　イ どちらも陸上で生活するから　ウ どちらも胎生だから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "魚類は一生水中で生活し、両生類は子は水中、親は陸上でも生活する。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-44",
+   "type": "input",
+   "prompt": "「体表が羽毛でおおわれているか」という質問で分けられるのは、どのなかまとどのなかまか。次から選ぼう。\nア 鳥類とは虫類　イ 魚類と両生類　ウ 哺乳類と鳥類だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "分類図では、卵生で陸上に卵を産むなかまを、羽毛があるか（鳥類）ないか（は虫類）で分ける。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-45",
+   "type": "input",
+   "prompt": "脊椎動物と無脊椎動物を比べたとき、骨格の位置について正しいものを選ぼう。\nア 脊椎動物は体の内部に骨格、節足動物は体の外側に骨格（外骨格）がある　イ どちらも骨格はない　ウ 節足動物は背骨をもつ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "脊椎動物は背骨などの骨格が体の内部にあり、節足動物は外骨格が体の外側にある。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-46",
+   "type": "input",
+   "prompt": "ある動物は背骨がなく、体とあしに多くの節があり、体は頭部・胸部・腹部に分かれていて、胸部に3対のあしがあった。この動物のなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "昆虫類",
+     "こんちゅうるい"
+    ]
+   },
+   "explanation": "節がある→節足動物、頭部・胸部・腹部で胸部に3対のあし→昆虫類。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-47",
+   "type": "input",
+   "prompt": "ある動物は背骨がなく、体に節がなく、内臓が膜でおおわれていた。この動物のなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "軟体動物",
+     "なんたいどうぶつ"
+    ]
+   },
+   "explanation": "内臓をおおう膜（外とう膜）がある→軟体動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-48",
+   "type": "input",
+   "prompt": "ある動物は背骨がなく、外骨格におおわれ、水中にすみ、えらで呼吸していた。昆虫類ではなかった。この動物のなかまとして考えられるものを選ぼう。\nア 甲殻類　イ 軟体動物　ウ 魚類",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "背骨がなく外骨格がある節足動物で、昆虫類でない水中の動物→エビやカニのなかまの甲殻類が考えられる。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-49",
+   "type": "input",
+   "prompt": "無脊椎動物について正しいものを選ぼう。\nア 背骨をもたない動物をまとめたもので、いろいろな体のつくりのものがいる　イ すべて外骨格をもつ　ウ すべて陸上で生活する",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "無脊椎動物には、外骨格をもつ節足動物、外とう膜をもつ軟体動物、そのどちらでもないものなどがいる。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-50",
+   "type": "input",
+   "prompt": "次のうち、水中で生活する無脊椎動物をすべて選ぼう（読点で区切る）。\nア タコ　イ ヒトデ　ウ カブトムシ　エ クラゲ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "タコ・ヒトデ・クラゲは海で生活する。カブトムシは陸上の昆虫類。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-51",
+   "type": "input",
+   "prompt": "次のうち、陸上で生活する軟体動物を選ぼう。\nア マイマイ　イ アサリ　ウ イカ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "マイマイ（カタツムリ）は陸上で生活する軟体動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-52",
+   "type": "input",
+   "prompt": "「エビは水中にすむから魚類」という考えはまちがっている。エビが魚類でない理由として正しいものを選ぼう。\nア 背骨がなく、外骨格をもつ節足動物だから　イ 水中にすまないから　ウ 胎生だから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "魚類は背骨のある脊椎動物。エビは背骨がなく外骨格をもつ甲殻類（節足動物）。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-53",
+   "type": "input",
+   "prompt": "カニとクモは、どちらも節足動物である。2つのちがいとして、ワークの分類にあてはまるものを選ぼう。\nア カニは甲殻類、クモは昆虫類でも甲殻類でもない節足動物　イ どちらも昆虫類　ウ カニは軟体動物",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "カニは甲殻類、クモは「その他」の節足動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-54",
+   "type": "input",
+   "prompt": "ハチとクワガタに共通するなかまの名前を、いちばん小さいまとまりで答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "昆虫類",
+     "こんちゅうるい"
+    ]
+   },
+   "explanation": "ハチもクワガタも昆虫類（節足動物の中のなかま）。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-55",
+   "type": "input",
+   "prompt": "イカとアサリに共通するなかまの名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "軟体動物",
+     "なんたいどうぶつ"
+    ]
+   },
+   "explanation": "イカもアサリも外とう膜をもつ軟体動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-56",
+   "type": "input",
+   "prompt": "外とう膜は、軟体動物の体の何をおおっている膜か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "内臓",
+     "ないぞう"
+    ]
+   },
+   "explanation": "外とう膜は内臓をおおっている膜。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-57",
+   "type": "input",
+   "prompt": "外骨格は、節足動物の体のどこにある骨格か。次から選ぼう。\nア 体の外側　イ 体の中心　ウ あしの中だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "外骨格は、体の外側をおおうかたい骨格。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-58",
+   "type": "input",
+   "prompt": "脊椎動物の5つのグループと無脊椎動物のなかまのうち、「卵を産む」という特徴だけでは区別できない組み合わせを選ぼう。\nア 鳥類とは虫類　イ 哺乳類と鳥類　ウ 哺乳類と魚類",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "鳥類もは虫類も卵生。哺乳類だけが胎生なので、イやウは卵生かどうかで区別できる。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-59",
+   "type": "input",
+   "prompt": "チョウの幼虫（いも虫）とさなぎと成虫は、すべて同じ動物である。昆虫類のあしの特徴（胸部に3対）を確かめるには、どの時期を観察するとよいか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "成虫",
+     "せいちゅう"
+    ]
+   },
+   "explanation": "昆虫類の体のつくり（頭部・胸部・腹部、胸部に3対のあし）は成虫で確かめる。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-60",
+   "type": "input",
+   "prompt": "次の動物を、背骨のある動物とない動物に分けたとき、背骨のない動物をすべて選ぼう（読点で区切る）。\nア タツノオトシゴ　イ イソギンチャク　ウ イモリ　エ マイマイ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "イソギンチャクとマイマイは無脊椎動物。タツノオトシゴ（魚類）とイモリ（両生類）は脊椎動物。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-61",
+   "type": "input",
+   "prompt": "ワークの分類図のように、たくさんの動物をなかまに分けるとき、まず大きなグループに分け、そのあとに小さなグループに分けていく。この方法のよい点として正しいものを選ぼう。\nア 共通点とちがいが整理され、なかまの関係がわかりやすくなる　イ 動物の数がへる　ウ 名前を覚えなくてよくなる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "大きな共通点から順に分けると、なかまどうしの関係が整理されてわかりやすくなる。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-62",
+   "type": "input",
+   "prompt": "次のうち、外骨格も外とう膜ももたない無脊椎動物を選ぼう。\nア クラゲ　イ ハチ　ウ イカ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "クラゲはその他の無脊椎動物。ハチは外骨格（節足動物）、イカは外とう膜（軟体動物）をもつ。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-63",
+   "type": "input",
+   "prompt": "ムカデは背骨がなく、体とあしに多くの節があり、体は外骨格におおわれている。ムカデは節足動物と軟体動物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "節足動物",
+     "せっそくどうぶつ"
+    ]
+   },
+   "explanation": "節と外骨格がある→節足動物。昆虫類や甲殻類ではない「その他」の節足動物。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-64",
+   "type": "input",
+   "prompt": "動物を「生活場所（水中か陸上か）」だけで分けると、どのような問題が起こるか。次から選ぼう。\nア イルカとメダカのように、体のつくりが大きくちがう動物が同じグループに入る　イ 動物の数がふえる　ウ 問題は起こらない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "イルカ（哺乳類）とメダカ（魚類）は同じ水中でも体のつくりがちがう。体のつくりや呼吸、子の生まれ方などで分ける。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-65",
+   "type": "input",
+   "prompt": "昆虫類と甲殻類に共通する特徴として正しいものを選ぼう。\nア 体が外骨格におおわれ、体やあしに節がある　イ 外とう膜がある　ウ 背骨がある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "どちらも節足動物で、外骨格と節がある。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-66",
+   "type": "input",
+   "prompt": "軟体動物と節足動物に共通する特徴として正しいものを選ぼう。\nア 背骨がない　イ 外骨格がある　ウ 外とう膜がある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "どちらも無脊椎動物で背骨がない。外骨格は節足動物、外とう膜は軟体動物だけの特徴。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-67",
+   "type": "input",
+   "prompt": "昆虫の成虫で、はねがあるとき、はねは頭部・胸部・腹部のどこについているか（小学校で学習）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "胸部",
+     "胸",
+     "むね"
+    ]
+   },
+   "explanation": "昆虫の成虫は胸に6本のあしとはねがある（はねがないものもいる）。",
+   "source": {
+    "id": "source-0505",
+    "file": "理科ワーク/S__16252936_0.jpg",
+    "sha256": "26b51403be6d68d9ed901b434435cb5cd9d77fdbf6e2e696c03541f5950a133a",
+    "page": 11,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p11（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-68",
+   "type": "input",
+   "prompt": "分類図で、いちばん下の同じ小さなグループに入った2つの動物について、いえることを選ぼう。\nア 分類に使ったすべての特徴が共通している　イ 生活場所が必ず同じ　ウ 体の大きさが同じ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "同じグループに入るのは、分けるときに使った特徴がすべて共通しているから。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-69",
+   "type": "input",
+   "prompt": "ヒトは、脊椎動物と無脊椎動物のどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "脊椎動物",
+     "せきついどうぶつ"
+    ]
+   },
+   "explanation": "ヒトは背骨をもつ脊椎動物（哺乳類）。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 13,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p13（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-musekitsui-70",
+   "type": "input",
+   "prompt": "エビの体の外側をおおっているかたい殻は、何とよばれる骨格か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "外骨格",
+     "がいこっかく"
+    ]
+   },
+   "explanation": "節足動物の体の外側をおおうかたい殻のような骨格を外骨格という。",
+   "source": {
+    "id": "source-0506",
+    "file": "理科ワーク/S__16252937_0.jpg",
+    "sha256": "c92eba13b9853d125b5c97806ac05f403229ed5a154d2de1993845ee87e328a8",
+    "page": 12,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p12（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）。理科ワークp11（教科書チェック：節足動物・軟体動物・動物の分類）、p12〜13（基本問題・力だめし）を写真で確認して作った。ワーク版70問が用語・各動物の分類・分類図をほぼ出しきっていて、新しく作れたのは2問だけだった。"
+}

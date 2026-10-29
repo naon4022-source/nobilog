@@ -1,0 +1,695 @@
+<title>のびログ 保護者ページ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* 冒頭だけ濃紺、本文は温かい白。色は役割ごと（料金＝白カード、補助金＝薄い暖色、共有範囲＝薄い青）。必ず見出しやラベルも付ける */
+:root{
+  --bg:#fbfaf7; --card:#ffffff; --band:#f2f4f8; --ink:#1b2340; --sub:#555e78; --line:#e2e5ec;
+  --navy:#1b2340; --on-navy:#f4f6fb; --on-navy-sub:#b4bcd6;
+  --accent:#2c4bc7; --accent-soft:#e9eefc;
+  --share:#eaf2fd; --share-line:#bcd3f3;
+  --warm:#fff4e3; --warm-line:#f1c983; --warm-ink:#7a4b06;
+  --ok:#1d7f58; --ok-soft:#e3f3ec; --zero:#e79a86; --pay:#e0193c;
+  --display:"M PLUS 1p","Hiragino Sans",sans-serif;
+  --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --nav-h:52px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14182b; --card:#1b2038; --band:#181d33; --ink:#eef1fa; --sub:#a9b1cb; --line:#2c3355;
+  --navy:#0f1324; --on-navy:#f4f6fb; --on-navy-sub:#a9b1cb;
+  --accent:#8fa6ff; --accent-soft:#252e57;
+  --share:#1c2a45; --share-line:#35507c;
+  --warm:#33281a; --warm-line:#7a5a26; --warm-ink:#f3cf8f;
+  --ok:#6fd3a3; --ok-soft:#183a2d; --zero:#c77a66; --pay:#ff5c78; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14182b; --card:#1b2038; --band:#181d33; --ink:#eef1fa; --sub:#a9b1cb; --line:#2c3355;
+  --navy:#0f1324; --on-navy:#f4f6fb; --on-navy-sub:#a9b1cb;
+  --accent:#8fa6ff; --accent-soft:#252e57;
+  --share:#1c2a45; --share-line:#35507c;
+  --warm:#33281a; --warm-line:#7a5a26; --warm-ink:#f3cf8f;
+  --ok:#6fd3a3; --ok-soft:#183a2d; --zero:#c77a66; --pay:#ff5c78; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-padding-top:calc(var(--nav-h) + 12px)}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.85;margin:0;overflow-x:clip}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-wrap:balance;line-height:1.4;margin:0}
+h2{font-size:clamp(1.5rem,4.6vw,2.1rem)}
+h3{font-size:1.05rem}
+p{margin:0}
+p,li,summary,dd{word-break:auto-phrase;text-wrap:pretty}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.in{max-width:1000px;margin:0 auto;display:grid;gap:24px}
+section{padding-inline:20px;padding-block:80px}
+section.band{background:var(--band)}
+.kicker{font-family:var(--display);font-weight:700;font-size:.85rem;color:var(--accent);letter-spacing:.06em}
+.lead{color:var(--sub);max-width:36em}
+.small{font-size:.86rem;color:var(--sub);line-height:1.75}
+.label{display:inline-block;justify-self:start;font-size:.75rem;font-weight:700;border-radius:6px;padding:1px 8px;background:var(--accent-soft);color:var(--accent)}
+.label.plan{background:var(--band);color:var(--sub);border:1px solid var(--line)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;gap:6px;align-content:start}
+.q h3{font-size:1rem}
+.q p,.q li{font-size:.95rem;color:var(--sub)}
+.q ul{margin:0;padding-left:1.2em;display:grid;gap:2px}
+
+nav.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-inline:20px}
+nav.top .in{display:flex;gap:18px;align-items:center;min-height:var(--nav-h);white-space:nowrap}
+nav.top b{font-family:var(--display);margin-right:auto}
+nav.top a{color:var(--sub);text-decoration:none;font-size:.9rem;padding-block:10px}
+nav.top a:hover{color:var(--accent)}
+@media (max-width:760px){nav.top .pc{display:none}}
+
+.hero{background:var(--navy);color:var(--on-navy);padding-block:72px 64px}
+.hero .in{gap:22px}
+.in>*{min-width:0}
+.two>*,.seeno>*,.calc>*,.share>*,.warmbox>*,.cards>*{min-width:0}
+h2,h3{overflow-wrap:anywhere}
+select{max-width:100%;width:100%}
+.q li,.q p{overflow-wrap:anywhere}
+.hero .tag{white-space:normal}
+.hero .tag{justify-self:start;border:1.5px solid var(--on-navy-sub);border-radius:99px;padding:1px 14px;font-size:.85rem;font-weight:700;color:var(--on-navy-sub)}
+.hero h1{font-size:clamp(1.8rem,5.4vw,3rem);word-break:auto-phrase;overflow-wrap:anywhere}
+.hero .lead{color:var(--on-navy-sub);font-size:1.05rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(6.5em,1fr));gap:14px;max-width:720px}
+.facts div{border-top:3px solid #ffd84d;padding-top:10px;display:grid;gap:2px}
+.facts b{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,4vw,1.8rem);line-height:1.25}
+.facts span{font-size:.85rem;color:var(--on-navy-sub);line-height:1.55}
+.hero .small{color:var(--on-navy-sub)}
+
+ol.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;counter-reset:f}
+ol.flow li{counter-increment:f}
+ol.flow a{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-decoration:none;color:var(--ink);font-size:.95rem;min-height:48px}
+ol.flow a::before{content:counter(f);width:2rem;height:2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+ol.flow a:hover{border-color:var(--accent)}
+
+.feat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.feat .q b{font-family:var(--display);font-size:1.05rem}
+
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.role{border-radius:16px;padding:18px 20px;border:1px solid var(--line);background:var(--card);display:grid;gap:4px}
+.role b{font-family:var(--display)}
+.role span{font-size:.92rem;color:var(--sub)}
+.helps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.help{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.help b{font-size:.98rem}
+.help span{font-size:.88rem;color:var(--sub);line-height:1.65}
+.help em{font-style:normal;font-size:.82rem;color:var(--accent);background:var(--accent-soft);border-radius:8px;padding:6px 10px;line-height:1.6}
+
+.share{background:var(--share);border:1px solid var(--share-line);border-radius:18px;padding:20px;display:grid;gap:12px}
+.share h3 .label{margin-left:8px;vertical-align:2px}
+.phone{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;width:100%;max-width:400px;justify-self:center;font-size:15px;line-height:1.6;display:grid;gap:12px;box-shadow:0 20px 44px -30px rgba(27,35,64,.55)}
+.phone .top{display:flex;justify-content:space-between;align-items:baseline}
+.phone .top b{font-family:var(--display);font-size:1.05rem}
+.signal{background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:10px 12px}
+.signal b{display:block}
+.chart{display:grid;gap:4px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:84px}
+.bars div{flex:1;border-radius:4px 4px 0 0;background:var(--accent);transform-origin:bottom}
+.bars .z{background:var(--zero)}
+.days{display:flex;gap:8px;font-size:.85rem;color:var(--sub)}.days span{flex:1;text-align:center}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row2 div{border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.row2 span{display:block;font-size:.8rem;color:var(--sub)}
+.row2 b{font-family:var(--display);font-size:1.25rem;font-variant-numeric:tabular-nums}
+.row2 small{display:block;font-size:.78rem;color:var(--ok);font-weight:700}
+.seeno{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.seeno .q{border-width:2px}
+.seeno .yes{border-color:var(--share-line)}
+.seeno .nope{background:var(--band)}
+
+.quiz{background:var(--card);border:2px solid var(--ink);border-radius:20px;padding:20px;display:grid;gap:12px}
+.sample{justify-self:start;font-size:.78rem;font-weight:700;border-radius:6px;padding:1px 8px;background:var(--warm);color:var(--warm-ink);border:1px solid var(--warm-line)}
+.qhead{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--sub)}
+.qdots{display:flex;gap:6px}.qdots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.qdots i.ok{background:var(--ok)}.qdots i.now{background:var(--accent)}
+.qq{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,4vw,1.45rem)}
+.opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.opts[hidden]{display:none}
+.opt{border:1.5px solid var(--line);background:var(--band);border-radius:12px;padding:12px 6px;font-weight:700;font-size:1.05rem;cursor:pointer;min-height:48px}
+.opt:hover{border-color:var(--accent)}
+.opt.bad{border-color:var(--zero);background:var(--warm)}
+.opt.good{border-color:var(--ok);background:var(--ok-soft)}
+.opt:disabled{cursor:default}
+.hint{display:grid;gap:2px;background:var(--accent-soft);border-radius:12px;padding:10px 14px;font-size:.95rem}
+.hint small{font-size:.75rem;color:var(--sub);font-weight:700}
+.qbtns{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.btn{border:1.5px solid var(--ink);background:var(--card);border-radius:99px;padding:8px 18px;font-weight:700;cursor:pointer;min-height:44px}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.chat{display:grid;gap:10px;background:var(--band);border:1px solid var(--line);border-radius:20px;padding:18px;align-content:start}
+.bubble{border-radius:14px;padding:9px 13px;max-width:88%;font-size:.95rem;line-height:1.65}
+.bubble.me{background:var(--accent);color:#fff;justify-self:end}
+.bubble.ai{background:var(--card);border:1px solid var(--line)}
+.bubble small{display:block;font-size:.72rem;color:var(--sub);font-weight:700}
+
+.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;background:var(--band);border:1px solid var(--line);border-radius:14px;padding:6px}
+.tab{border:0;background:transparent;border-radius:10px;padding:10px 4px;font-weight:700;font-size:.92rem;cursor:pointer;min-height:44px;color:var(--sub)}
+.tab[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 0 0 1.5px var(--accent)}
+.planbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px}
+.pname{font-family:var(--display);font-weight:800;font-size:1.5rem}
+.pyen{font-family:var(--display);font-weight:800;font-size:clamp(2rem,6vw,2.6rem);font-variant-numeric:tabular-nums;line-height:1.1}
+.pyen small{font-size:.9rem;color:var(--sub);font-weight:500}
+.fit{font-size:.92rem;color:var(--sub)}
+dl.spec{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 14px;font-size:.95rem}
+dl.spec dt{color:var(--sub);font-size:.85rem;padding-top:2px;white-space:nowrap}
+dl.spec dd{margin:0}
+dl.spec ul{margin:0;padding-left:1.1em}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+caption{text-align:left;padding:12px 14px 0;font-weight:700;font-size:.9rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.82rem;color:var(--sub);font-weight:500}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:700}
+
+.warmbox{background:var(--warm);border:1.5px solid var(--warm-line);border-radius:18px;padding:20px;display:grid;gap:14px}
+.warmbox h3{color:var(--warm-ink)}
+.cond{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.cond div{background:var(--card);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.cond b{font-family:var(--display);font-size:1.15rem}
+.cond span{font-size:.9rem;color:var(--sub)}
+.calc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.calc label{display:grid;gap:4px;font-size:.85rem;color:var(--sub);font-weight:700}
+.calc select{font:inherit;font-size:1rem;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;min-height:44px}
+.result{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.result div{border-radius:14px;padding:14px 16px;background:var(--card);display:grid;gap:2px}
+.result span{font-size:.88rem;color:var(--sub);font-weight:700}
+.result b{font-family:var(--display);font-size:clamp(1.4rem,5vw,1.9rem);font-variant-numeric:tabular-nums}
+.result .back{border:2px solid var(--pay)}
+.result .back b{color:var(--pay)}
+.must{font-weight:700;font-size:1.05rem}
+
+.paycard{background:var(--card);border:2px solid var(--pay);border-radius:18px;padding:20px;display:grid;gap:10px;align-content:start}
+.paycard .label{background:var(--pay);color:#fff}
+.paycard ul{margin:0;padding-left:1.2em;display:grid;gap:4px}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:10px;align-items:start}
+ol.steps li::before{content:counter(s);width:2.2rem;height:2.2rem;border-radius:50%;background:var(--ink);color:var(--bg);font-family:var(--display);font-weight:800;display:grid;place-items:center}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:28px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";color:var(--accent);flex:none}
+details[open] summary::after{content:"−"}
+details p{margin-top:6px;color:var(--sub);font-size:.95rem}
+.faq{display:grid;gap:8px}
+
+.end{background:var(--navy);color:var(--on-navy);text-align:center}
+.end .in{justify-items:center}
+.end .lead{color:var(--on-navy-sub);margin-inline:auto}
+.mail{display:grid;justify-items:center;gap:8px;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px 22px;background:rgba(255,255,255,.05)}
+.mail code{font-family:var(--body);font-size:1.15rem;font-weight:700;user-select:all;word-break:break-all}
+.mail .btn{background:transparent;color:var(--on-navy);border-color:var(--on-navy)}
+.mail .small,.end .small{color:var(--on-navy-sub)}
+footer{padding:24px 20px;text-align:center;font-size:.82rem;color:var(--sub)}
+
+@media (max-width:760px){
+  section{padding-block:56px}
+  .two,.planbox,.roles,.seeno,.feat,.cond,.calc{grid-template-columns:minmax(0,1fr)}
+  .tabs{gap:2px;padding:4px}
+  .tab{font-size:.78rem;padding:10px 0}
+  .facts{gap:8px}
+}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@keyframes grow{from{transform:scaleY(0)}}
+@keyframes fadein{from{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .hero h1,.hero .lead,.facts{animation:rise .6s ease-out both}
+  .hero .lead{animation-delay:.1s}.facts{animation-delay:.2s}
+  .go{animation:rise .55s ease-out both}
+  .go .bars div{animation:grow .6s ease-out both}
+  .go .bars div:nth-child(2){animation-delay:.05s}.go .bars div:nth-child(3){animation-delay:.1s}.go .bars div:nth-child(4){animation-delay:.15s}.go .bars div:nth-child(5){animation-delay:.2s}.go .bars div:nth-child(6){animation-delay:.25s}.go .bars div:nth-child(7){animation-delay:.3s}
+  .switch{animation:fadein .25s ease-out}
+  .hint{animation:rise .3s ease-out both}
+}
+.herogrid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:32px}
+.herotext{display:grid;gap:22px}
+.illo{margin:0}
+.illo svg{width:100%;height:auto;max-width:440px;display:block;margin-inline:auto}
+.illo .body{fill:#2a3560}.illo .scr{fill:#f4f6fb}
+.illo .t{font:700 12px var(--body);fill:#1b2340}.illo .t.s{font-size:11px}.illo .t.g{fill:#1d7f58}.illo .t.b{fill:#1b2340;font-size:12px}
+.illo .line{fill:#d9deeb}
+.illo .ans rect{fill:#e3f3ec}.illo .ck{fill:none;stroke:#1d7f58;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.illo .hintb{fill:#e9eefc}
+.illo .bars2 rect{fill:#2c4bc7}.illo .bars2 .z{fill:#e79a86}
+.illo .okb{fill:#e3f3ec}
+.illo .link{fill:none;stroke:#ffd84d;stroke-width:3;stroke-dasharray:6 6}
+.illo .badge circle{fill:#ffd84d}
+.illo .cap{font:700 13px var(--body);fill:#b4bcd6}
+ol.steps4{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:st;position:relative}
+ol.steps4 li{counter-increment:st;position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 14px 12px;display:grid;gap:2px}
+ol.steps4 li::before{content:counter(st);font-family:var(--display);font-weight:800;color:var(--accent);font-size:.9rem}
+ol.steps4 li:not(:last-child)::after{content:"";position:absolute;right:-10px;top:50%;width:10px;height:2px;background:var(--accent)}
+ol.steps4 b{font-family:var(--display)}
+ol.steps4 span{font-size:.85rem;color:var(--sub);line-height:1.6}
+.donutrow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center}
+.donut{width:96px;height:96px;transform:rotate(-90deg)}
+.donut circle{fill:none;stroke-width:6}
+.donut .track{stroke:var(--line)}
+.donut .s1{stroke:#2c4bc7}.donut .s2{stroke:#1d7f58}.donut .s3{stroke:#e2a23b}.donut .s4{stroke:#8a7be0}
+.legend2{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 10px;font-size:.85rem}
+.legend2 i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:0}
+.legend2 .c1{background:#2c4bc7}.legend2 .c2{background:#1d7f58}.legend2 .c3{background:#e2a23b}.legend2 .c4{background:#8a7be0}
+.aichart{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;gap:10px}
+.aichart figcaption{display:grid;gap:2px}
+.ab{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:10px;align-items:center;font-size:.9rem}
+.ab>span{font-weight:700}
+.bar{position:relative;height:28px;background:var(--band);border-radius:8px;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--accent);border-radius:8px;transform-origin:left}
+.bar b{position:relative;z-index:1;display:block;line-height:28px;padding-left:10px;font-size:.85rem;color:#fff}
+.bar0{font-size:.85rem;color:var(--sub)}
+.tl{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center}
+.tl .node{background:var(--card);border:2px solid var(--warm-line);border-radius:12px;padding:8px 12px;text-align:center;font-size:.85rem;line-height:1.5}
+.tl .span{position:relative;text-align:center;font-size:.85rem;color:var(--warm-ink);font-weight:700;padding-bottom:12px}
+.tl .span i{position:absolute;left:0;right:0;bottom:0;height:6px;border-radius:3px;background:var(--warm-line);transform-origin:left}
+.tl .ends{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tl .res{border-radius:12px;padding:10px 12px;background:var(--card);font-size:.9rem;display:grid}
+.tl .res.ok{border:2px solid var(--ok)}
+.tl .res.ng{border:2px solid var(--pay)}
+.tl .res.ng b{color:var(--pay)}
+.tbl{max-width:100%}
+@media (max-width:760px){th,td{padding:8px 8px;font-size:.85rem}}
+@media (max-width:760px){
+  .herogrid{grid-template-columns:minmax(0,1fr)}
+  .illo svg{max-width:340px}
+  ol.steps4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  ol.steps4 li::after{display:none}
+  .tl{grid-template-columns:minmax(0,1fr)}
+  .tl .ends{grid-template-columns:minmax(0,1fr)}
+  .ab{grid-template-columns:4.6rem minmax(0,1fr)}
+}
+@keyframes draw{from{stroke-dashoffset:120}to{stroke-dashoffset:0}}
+@keyframes flow{to{stroke-dashoffset:-24}}
+@keyframes popin{0%{opacity:0;transform:scale(.6)}70%{transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes growx{from{transform:scaleX(0)}}
+@keyframes segin{from{stroke-dasharray:0 100}}
+@keyframes stepin{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:no-preference){
+  .illo .ph{animation:rise .7s ease-out both}.illo .par{animation-delay:.25s}
+  .illo .ck{stroke-dasharray:30;animation:draw .5s ease-out both;animation-delay:.9s}.illo .a2 .ck{animation-delay:1.2s}
+  .illo .link{animation:flow 1.2s linear 3}
+  .illo .badge{transform-box:fill-box;transform-origin:center;animation:popin .5s ease-out both;animation-delay:.7s}
+  .illo .bars2 rect{transform-box:fill-box;transform-origin:bottom;animation:grow .6s ease-out both;animation-delay:1s}
+  .go.steps4 li{animation:stepin .45s ease-out both}
+  .go.steps4 li:nth-child(2){animation-delay:.15s}.go.steps4 li:nth-child(3){animation-delay:.3s}.go.steps4 li:nth-child(4){animation-delay:.45s}
+  .go .donut .seg{animation:segin .9s ease-out both}
+  .go .bar i{animation:growx .8s cubic-bezier(.2,.8,.2,1) both}
+  .go .ab:nth-of-type(3) .bar i{animation-delay:.1s}.go .ab:nth-of-type(4) .bar i{animation-delay:.2s}.go .ab:nth-of-type(5) .bar i{animation-delay:.3s}
+  .go .tl .span i{animation:growx 1s ease-out both}
+  .go .tl .res{animation:stepin .45s ease-out both;animation-delay:.8s}.go .tl .res.ng{animation-delay:1s}
+}
+</style>
+
+<nav class="top" aria-label="ページ内の移動"><div class="in">
+  <b>のびログ</b>
+  <a class="pc" href="#app">アプリ</a><a class="pc" href="#see">親が見られるもの</a><a href="#price">料金</a><a href="#support">補助金</a><a href="#faq">質問</a>
+</div></nav>
+
+<section class="hero"><div class="in herogrid"><div class="herotext">
+  <span class="tag">次のアップデートのお知らせ（準備中）</span>
+  <h1>「勉強したの？」を、<br>もう聞かなくていい。</h1>
+  <p class="lead">家でどれくらい勉強したかが、ひと目でわかるようにします。<br>のびログを作っている、なおからのお知らせです。</p>
+  <div class="facts">
+    <div><b>ひと目で</b><span>今週のようすが<br>わかる画面</span></div>
+    <div><b>0円</b><span>勉強の基本は<br>ずっと無料</span></div>
+    <div><b>同意制</b><span>子どもがOKして<br>はじめてつながる</span></div>
+  </div>
+  <p class="small">親子連動とAIは、まだ準備中です。このページの内容は予定で、公開までに変わることがあります。</p>
+  </div>
+  <figure class="illo" aria-label="子どものスマホと保護者のスマホが、子どもの同意でつながるイラスト">
+    <svg viewBox="0 0 420 300" role="img" aria-hidden="true">
+      <g class="ph kid">
+        <rect class="body" x="20" y="30" width="140" height="240" rx="22"/>
+        <rect class="scr" x="32" y="52" width="116" height="196" rx="10"/>
+        <text class="t" x="44" y="78">数学 第3問</text>
+        <rect class="line" x="44" y="90" width="92" height="8" rx="4"/>
+        <rect class="line" x="44" y="106" width="70" height="8" rx="4"/>
+        <g class="ans"><rect x="44" y="128" width="92" height="28" rx="8"/><path class="ck" d="M54 142 l7 7 l13 -14"/></g>
+        <g class="ans a2"><rect x="44" y="164" width="92" height="28" rx="8"/><path class="ck" d="M54 178 l7 7 l13 -14"/></g>
+        <rect class="hintb" x="44" y="202" width="92" height="30" rx="8"/>
+        <text class="t s" x="52" y="221">ヒント</text>
+      </g>
+      <path class="link" d="M160 150 C 200 110, 220 190, 260 150"/>
+      <g class="badge"><circle cx="210" cy="150" r="22"/><text class="t b" x="210" y="155" text-anchor="middle">OK</text></g>
+      <g class="ph par">
+        <rect class="body" x="260" y="30" width="140" height="240" rx="22"/>
+        <rect class="scr" x="272" y="52" width="116" height="196" rx="10"/>
+        <text class="t" x="284" y="78">今週のようす</text>
+        <g class="bars2">
+          <rect x="286" y="182" width="12" height="36" rx="3"/><rect x="302" y="170" width="12" height="48" rx="3"/><rect class="z" x="318" y="214" width="12" height="4" rx="2"/>
+          <rect x="334" y="162" width="12" height="56" rx="3"/><rect x="350" y="174" width="12" height="44" rx="3"/><rect x="366" y="146" width="12" height="72" rx="3"/>
+        </g>
+        <rect class="okb" x="284" y="92" width="92" height="40" rx="8"/>
+        <text class="t s g" x="292" y="116">目標どおり</text>
+        <rect class="line" x="284" y="228" width="92" height="6" rx="3"/>
+      </g>
+      <text class="cap" x="90" y="292" text-anchor="middle">子ども</text>
+      <text class="cap" x="330" y="292" text-anchor="middle">保護者</text>
+    </svg>
+  </figure>
+</div></section>
+
+<section><div class="in">
+  <h2>このページの流れ</h2>
+  <ol class="flow">
+    <li><a href="#app">どんなアプリか</a></li>
+    <li><a href="#good">子どもに何が良いのか</a></li>
+    <li><a href="#see">親が見られるもの・見られないもの</a></li>
+    <li><a href="#try">短い体験例</a></li>
+    <li><a href="#price">料金とプランの違い</a></li>
+    <li><a href="#support">補助金の条件</a></li>
+    <li><a href="#pay">支払いと変更</a></li>
+    <li><a href="#faq">記録の扱い・質問</a></li>
+  </ol>
+</div></section>
+
+<section class="band" id="app"><div class="in">
+  <span class="kicker">1　どんなアプリか</span>
+  <h2>中学生が、家で勉強を続けるためのアプリ</h2>
+  <p class="lead">スマホでもパソコンでも開けます。いま使える機能は次のとおりです。</p>
+  <div class="feat">
+    <div class="q rv"><b>すぐ丸つけ</b><p>5教科の問題を解くと、その場で正解がわかります。</p></div>
+    <div class="q rv"><b>できるまで復習</b><p>まちがえた問題は苦手ノートに入り、あとでまた出ます。</p></div>
+    <div class="q rv"><b>学校のテストに合わせる</b><p>9月の定期テスト用に、学校のワークに合わせた問題を900問用意しました（9月の実績）。</p></div>
+  </div>
+</div></section>
+
+<section id="good"><div class="in">
+  <span class="kicker">2　子どもに何が良いのか</span>
+  <h2>手が止まったとき、<br>答えではなく「次の一歩」を</h2>
+  <p class="lead">学習を助けるAIの導入を検討しています。ChatGPTで使われるOpenAIのAIやClaudeが候補です。説明のわかりやすさ、費用、安全性を確認してから決めます。</p>
+  <ol class="steps4 rv" aria-label="のびログでの解き方の流れ">
+    <li><b>手が止まる</b><span>どこから始めるかわからない</span></li>
+    <li><b>ヒント</b><span>最初の一歩だけ教わる</span></li>
+    <li><b>自分で解く</b><span>答えは自分で出す</span></li>
+    <li><b>理由を言う</b><span>「なぜ」を確かめて次へ</span></li>
+  </ol>
+  <div class="helps">
+    <div class="help rv"><b>練習問題で、最初の一歩を教える</b><span>いきなり答えは言いません。</span><em>例：「まず＋3を消すには、両方から何を引けばいい？」</em></div>
+    <div class="help rv"><b>自分の説明を見て、理解を確かめる</b><span>子どもが書いた説明の、足りない所を伝えます。</span><em>例：「両方から3を引く理由が書けていないよ」</em></div>
+    <div class="help rv"><b>ワークの写真から、解き方を説明</b><span>写真で問題を確かめてから説明します。ページ番号だけで問題を作り話しません。</span><em>例：「ワーク34ページ 大問1(1)の最初の一歩は？」</em></div>
+    <div class="help rv"><b>解いたあとに「なぜそうなるか」</b><span>答え合わせのあと、短い手順で理由を説明します。</span><em>例：①何を求める？ ②使う決まり ③計算</em></div>
+    <div class="help rv"><b>確認テストではヒントなし</b><span>丸つけはAIではなく、教材の答えで行います。</span><em>テストは自分の力だけで</em></div>
+  </div>
+  <div class="roles">
+    <div class="role rv"><span class="label">役割 1</span><b>短いヒントや、ふだんの質問を担当するAI</b><span>Mini・Student、Proのふだんの相談で使う予定です。</span></div>
+    <div class="role rv"><span class="label">役割 2</span><b>複雑な問題やノート全体を、丁寧に考えるAI</b><span>Proのくわしい分析と、UNLIMITの相談すべてで使う予定です。</span></div>
+  </div>
+  <p class="small">どの会社のAIになっても、プランの利用枠と「自分で解けるようにする」目的は変えません。AIは、子どもが使ってよい条件と費用の管理を確かめてからつなぎます。動画の声は、AIとは関係なく今のままです。</p>
+</div></section>
+
+<section class="band" id="see"><div class="in">
+  <span class="kicker">3　親が見られるもの・見られないもの（準備中）</span>
+  <h2>見えるのは、まとめた数字だけ</h2>
+  <div class="two">
+    <div style="display:grid;gap:14px">
+      <div class="seeno">
+        <div class="q yes rv"><h3>見られるもの</h3><ul><li>勉強した日と時間</li><li>正答率</li><li>できるようになった問題の数</li><li>AIを使った回数</li></ul></div>
+        <div class="q nope rv"><h3>見られないもの</h3><ul><li>1問ずつの答え</li><li>日記</li><li>AIとの会話の中身</li><li>きょうだいとの比較</li></ul></div>
+      </div>
+      <div class="q rv"><h3>具体的には</h3><p>「火曜　のびログで25分・数学・正答率80%」は見えます。<br>「問3に何と書いたか」は見えません。</p></div>
+      <div class="q rv"><h3>時間は2つに分けて表示</h3><ul><li><b>のびログ内で測った時間</b>：アプリが記録</li><li><b>学校・塾の時間</b>：本人が登録した予定</li></ul><p>アプリの外での勉強は、自動では測れません。</p></div>
+      <div class="q rv"><h3>つなぎ方</h3><p>子どもがOKしたときだけつながります。誰とつながり、何が見えるかは、子どもにも保護者にも表示します。解除はどちらからでもできます。</p></div>
+    </div>
+    <div class="share rv">
+      <h3>保護者の画面の例<span class="label">架空のデータ</span></h3>
+      <div class="phone" aria-label="保護者の画面の例。数字は架空です">
+        <div class="top"><b>今週のようす</b><span class="small">架空の例</span></div>
+        <div class="signal"><b>今週は目標どおり</b>家で6日勉強。数学が増えて、英語が少なめ。</div>
+        <div class="chart">
+          <span class="small">のびログ内で測った時間</span>
+          <div class="bars" aria-hidden="true"><div style="height:32px"></div><div style="height:42px"></div><div class="z" style="height:5px"></div><div style="height:50px"></div><div style="height:39px"></div><div style="height:63px"></div><div style="height:84px"></div></div>
+          <div class="days" aria-hidden="true"><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span><span>日</span></div>
+          <span class="small">水曜は0分。1週間の合計 7時間20分</span>
+          <span class="small" style="margin-top:6px">教科のわりあい</span>
+        </div>
+        <div class="donutrow">
+          <svg class="donut" viewBox="0 0 42 42" aria-hidden="true">
+            <circle class="track" cx="21" cy="21" r="15.9"/>
+            <circle class="seg s1" cx="21" cy="21" r="15.9" stroke-dasharray="35 65" stroke-dashoffset="25"/>
+            <circle class="seg s2" cx="21" cy="21" r="15.9" stroke-dasharray="25 75" stroke-dashoffset="-10"/>
+            <circle class="seg s3" cx="21" cy="21" r="15.9" stroke-dasharray="20 80" stroke-dashoffset="-35"/>
+            <circle class="seg s4" cx="21" cy="21" r="15.9" stroke-dasharray="20 80" stroke-dashoffset="-55"/>
+          </svg>
+          <ul class="legend2"><li><i class="c1"></i>数学 35%</li><li><i class="c2"></i>理科 25%</li><li><i class="c3"></i>国語 20%</li><li><i class="c4"></i>英語 20%</li></ul>
+        </div>
+        <div class="row2">
+          <div><span>正答率</span><b>78%</b><small>先週より＋6ポイント</small></div>
+          <div><span>できるようになった</span><b>14問</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="try"><div class="in">
+  <span class="kicker">4　短い体験例</span>
+  <h2>中1の問題を、1問ずつ</h2>
+  <div class="two">
+    <div style="display:grid;gap:12px">
+      <p class="lead">まちがえると、ヒントが出ます。予定しているヒントの出し方を、見本にしたものです。</p>
+      <div class="quiz rv" id="qz" aria-live="polite">
+        <span class="sample">説明用の見本（AIは動いていません）</span>
+        <div class="qhead"><span id="qcount"></span><span class="qdots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="small" id="qsub"></div>
+        <div class="qq" id="qq"></div>
+        <div class="opts" id="opts"></div>
+        <div id="qfb" style="display:grid;gap:10px"></div>
+      </div>
+    </div>
+    <div style="display:grid;gap:12px">
+      <p class="lead">AIとのやりとりは、こんな形を考えています。</p>
+      <div class="chat rv" aria-label="AIとのやりとりの見本">
+        <span class="sample">説明用の見本</span>
+        <div class="bubble me">2x＋3＝11 の答えおしえて</div>
+        <div class="bubble ai"><small>AI</small>答えの前に、まず「＋3」を消そう。両方からいくつ引けばいい？</div>
+        <div class="bubble me">3を引く</div>
+        <div class="bubble ai"><small>AI</small>そう。じゃあ 2x はいくつになる？</div>
+        <div class="bubble me">8。だから x＝4</div>
+        <div class="bubble ai"><small>AI</small>正解。なぜ両方から引いたか、ひとことで言える？</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="band" id="price"><div class="in">
+  <span class="kicker">5　料金とプランの違い（予定）</span>
+  <h2>基本は0円。<br>必要な分だけ足せます。</h2>
+  <p class="lead">教科書・問題・丸つけ・苦手ノート・記録は、Freeで使えます。有料プランには、AIの枠・便利な機能・なおのサポートがつきます。</p>
+  <div class="tabs" role="tablist" aria-label="プランを選ぶ">
+    <button class="tab" type="button" role="tab" id="t0" aria-controls="pbox" aria-selected="true">Free</button>
+    <button class="tab" type="button" role="tab" id="t1" aria-controls="pbox" aria-selected="false" tabindex="-1">Mini</button>
+    <button class="tab" type="button" role="tab" id="t2" aria-controls="pbox" aria-selected="false" tabindex="-1">Student</button>
+    <button class="tab" type="button" role="tab" id="t3" aria-controls="pbox" aria-selected="false" tabindex="-1">Pro</button>
+    <button class="tab" type="button" role="tab" id="t4" aria-controls="pbox" aria-selected="false" tabindex="-1">UNLIMIT</button>
+  </div>
+  <div class="planbox" id="pbox" role="tabpanel" aria-labelledby="t0" tabindex="0">
+    <div style="display:grid;gap:6px;align-content:start">
+      <span class="label plan">選んだプラン</span>
+      <div class="pname" id="pn">Free</div>
+      <div class="pyen"><span id="py">0</span><small>円/月</small></div>
+      <p class="fit" id="pfit"></p>
+    </div>
+    <dl class="spec">
+      <dt>毎日のAI枠</dt><dd id="pai"></dd>
+      <dt>使えるお助け</dt><dd id="pfeat"></dd>
+      <dt>1つ下との違い</dt><dd id="pdiff"></dd>
+      <dt>活動履歴の表示</dt><dd id="phist"></dd>
+    </dl>
+  </div>
+  <figure class="aichart rv">
+    <figcaption><b>毎日のAI枠のちがい</b><span class="small">棒は桁ごとに伸ばしています（20→100→500→5,000）</span></figcaption>
+    <div class="ab"><span>Free</span><div class="bar0">なし</div></div>
+    <div class="ab"><span>Mini</span><div class="bar"><i style="--w:35%"></i><b>20回分</b></div></div>
+    <div class="ab"><span>Student</span><div class="bar"><i style="--w:52%"></i><b>100回分</b></div></div>
+    <div class="ab"><span>Pro</span><div class="bar"><i style="--w:70%"></i><b>500回分</b></div></div>
+    <div class="ab"><span>UNLIMIT</span><div class="bar"><i style="--w:95%"></i><b>5,000回分</b></div></div>
+  </figure>
+  <div class="cards">
+    <div class="q rv"><h3>「回分」の数え方</h3><p>軽いヒントは0.5回分、ふつうの相談は1回分、写真やノートの分析は3回分。使う前に何回分かを表示し、毎日0時（日本時間）に戻ります。UNLIMITも毎日5,000回分が上限です。</p></div>
+    <div class="q rv"><h3>枠が残っていても止まることがあります</h3><p>連打の防止、費用の上限、不具合のときの停止があるためです。</p></div>
+    <div class="q rv"><h3>履歴の表示と、保存は別</h3><p>表示期間は、画面で振り返れる範囲です。答案・成績・ノートは、プランを下げても消えません。保存期間の決まりは未定です。</p></div>
+  </div>
+  <div class="tbl rv"><table>
+    <caption>5プランの一覧</caption>
+    <thead><tr><th>プラン</th><th>月額</th><th>AI（毎日）</th><th>履歴の表示</th></tr></thead>
+    <tbody>
+      <tr><td>Free</td><td class="num">0円</td><td>なし</td><td>未定</td></tr>
+      <tr><td>Mini</td><td class="num">500円</td><td>20回分</td><td>1週間</td></tr>
+      <tr><td>Student</td><td class="num">1,000円</td><td>100回分</td><td>3週間</td></tr>
+      <tr><td>Pro</td><td class="num">1,500円</td><td>500回分</td><td>1か月</td></tr>
+      <tr><td>UNLIMIT</td><td class="num">2,000円</td><td>5,000回分</td><td>3年</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small">金額・回数は公開前の予定です。税込かどうか、始まる日、更新や終わりの扱いはまだ決まっていません。<a href="https://nobilog-plans-oct2026.naon4022.chatgpt.site">プラン紹介ページ</a>もあります。</p>
+</div></section>
+
+<section id="support"><div class="in">
+  <span class="kicker">6　補助金の条件</span>
+  <h2>テストの目標で、料金を先に割り引く制度</h2>
+  <div class="warmbox rv">
+    <h3>条件（国語・数学・英語・理科・社会のすべて）</h3>
+    <div class="cond">
+      <div><b>月500円引き</b><span>5教科すべて85点以上</span></div>
+      <div><b>月1,000円引き</b><span>5教科すべて95点以上</span></div>
+      <div><b>月の料金を全額</b><span>5教科すべて99点以上</span></div>
+    </div>
+    <p class="must">届かなかったら、その期間に割り引いた分を全額返します。</p>
+    <ul style="margin:0;padding-left:1.2em;display:grid;gap:4px">
+      <li>平均点ではなく、1教科ずつで判断します。1つでも届かなければ未達です。</li>
+      <li>99点以上を目指していても、本人の希望で500円引きを選べます。</li>
+      <li>対象のテスト・始まる月・終わる月・金額は、本人・保護者・なおの3人で先に決めます。</li>
+    </ul>
+  </div>
+  <div class="warmbox rv">
+    <h3>流れ（例：月500円引き・3か月）</h3>
+    <div class="tl" aria-label="補助金の流れの図">
+      <div class="node">3人で<br><b>目標を決める</b></div>
+      <div class="span"><span>9月・10月・11月<br>毎月500円引き</span><i></i></div>
+      <div class="node">次の<br><b>定期テスト</b></div>
+      <div class="ends">
+        <div class="res ok"><b>5教科すべて85点以上</b>返すお金はなし</div>
+        <div class="res ng"><b>1教科でも届かない</b>500円×3＝1,500円を返す</div>
+      </div>
+    </div>
+    <p class="small">月の数え方や期日は例です。実際は3人で決めます。</p>
+  </div>
+  <div class="warmbox rv">
+    <h3>計算してみる（申し込みにはなりません）</h3>
+    <div class="calc">
+      <label for="cp">プラン<select id="cp"><option value="500">Mini（500円）</option><option value="1000" selected>Student（1,000円）</option><option value="1500">Pro（1,500円）</option><option value="2000">UNLIMIT（2,000円）</option></select></label>
+      <label for="ck">選ぶ補助<select id="ck"><option value="500" selected>月500円引き</option><option value="1000">月1,000円引き</option><option value="full">月の料金を全額</option></select></label>
+      <label for="cm">期間<select id="cm"><option value="1">1か月</option><option value="2">2か月</option><option value="3" selected>3か月</option><option value="4">4か月</option><option value="5">5か月</option><option value="6">6か月</option></select></label>
+    </div>
+    <div class="result" aria-live="polite">
+      <div><span>毎月安くなる額</span><b id="rm">500円</b></div>
+      <div class="back"><span>届かなかったら返す合計</span><b id="rb">1,500円</b></div>
+    </div>
+    <p id="rx" class="must"></p>
+  </div>
+  <p class="small">返す期日、途中でプランを変えたとき、テストを欠席したときの扱いは、まだ決まっていません。始める前に、なおと決めます。<a href="https://nobilog-plans-oct2026.naon4022.chatgpt.site/#support-conditions">条件のページ</a>もあります。</p>
+</div></section>
+
+<section class="band" id="pay"><div class="in">
+  <span class="kicker">7　支払いと変更</span>
+  <h2>お支払いは、なおへ直接</h2>
+  <div class="two">
+    <div class="paycard rv">
+      <span class="label">できればこちら</span>
+      <h3>PayPay</h3>
+      <ul><li>いつ、いくら払ったかが画面に残ります</li><li>500円でも2,000円でも、ぴったり送れます</li><li>子どもに現金を持たせなくてすみます</li></ul>
+      <p class="small">PayPayを使っていない場合は、なおに相談してください。現金は受け取っていません（記録が残らないため）。</p>
+    </div>
+    <div style="display:grid;gap:14px">
+      <ol class="steps">
+        <li class="rv"><span><b>プランを決めて、なおに伝える</b><br><span class="small">このページで比べるだけでは、申し込みになりません</span></span></li>
+        <li class="rv"><span><b>なおのPayPayへ送る</b><br><span class="small">送り先のQRは、なおが見せます</span></span></li>
+        <li class="rv"><span><b>なおが確認してから切りかえ</b><br><span class="small">自動の引き落としはありません</span></span></li>
+      </ol>
+      <div class="q rv"><h3>プランを変える・下げるとき</h3><p>アップデート後、自分のアイコン →「サブスク」で今のプランを見られます。変えたいときはなおに相談してください。下げても答案・成績・ノートは消えません。UNLIMITのなおの解説は、下げると見えなくなり、戻すとまた見えます。</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="in">
+  <span class="kicker">8　記録の扱い・質問</span>
+  <h2>記録の扱い</h2>
+  <div class="cards">
+    <div class="q rv"><h3>保存するもの</h3><p>ログイン情報、勉強の記録、使った機能で作ったもの（ノート、写真、AIへの相談など）。</p></div>
+    <div class="q rv"><h3>AIの会社へ送るもの</h3><p>AIを使ったときの、その問題・答え・選んだ写真。例：ワークの写真と「最初の一歩を教えて」。くわしい仕組みは、AIを決めてから説明します。</p></div>
+    <div class="q rv"><h3>見られる人</h3><p>本人と、運営に必要な範囲でなお。つながった保護者は、まとめた数字だけ。広告の会社には売りません。</p></div>
+  </div>
+  <p class="small">くわしくは<a href="https://nobilog.pages.dev/privacy.html">プライバシーポリシー</a>へ。使っているサービスの関係で、日本の外で処理されることがあります。</p>
+  <h2 style="margin-top:16px">よくある質問</h2>
+  <div class="faq">
+    <details><summary>いつから使えますか？</summary><p>次のアップデートの予定です。日にちが決まったら連絡します。</p></details>
+    <details><summary>子どもに内緒で見られますか？</summary><p>見られません。子どもの同意が必要で、子どもの画面にも「つながっている」と表示します。</p></details>
+    <details><summary>保護者とつながるのにお金はかかりますか？</summary><p>どのプランで使えるか、料金がかかるかは、まだ決めていません。</p></details>
+    <details><summary>無料のままだと不利になりますか？</summary><p>問題・教科書・丸つけ・復習は無料で使えます。有料プランは、AIの助けや便利な機能を足すものです。</p></details>
+    <details><summary>AIの答えを写しませんか？</summary><p>練習中は答えを先に出さない作りにします。解いたあとは理由の解説が見られます。確認テストではヒントを出しません。</p></details>
+    <details><summary>どのAIを使いますか？</summary><p>まだ決めていません。OpenAIのAIやClaudeが候補で、わかりやすさ・費用・安全性を確かめてから決めます。</p></details>
+    <details><summary>毎月勝手に引き落とされますか？</summary><p>されません。続けるときは、そのつどなおへ払います。</p></details>
+    <details><summary>成績は上がりますか？</summary><p>約束はできません。続けやすくする仕組みを用意しています。</p></details>
+  </div>
+  <div class="q rv"><h3>まだ決まっていないこと</h3><ul><li>使うAIの会社</li><li>保護者連動を使えるプランと料金</li><li>Freeの活動履歴の表示期間</li><li>税込かどうか、始まる日、更新と終わりの扱い</li><li>補助金の返す期日、途中のプラン変更、欠席の扱い</li></ul></div>
+</div></section>
+
+<section class="end"><div class="in">
+  <h2>聞く代わりに、見る。<br>見たら、ほめる。</h2>
+  <p class="lead">わからないことは、メールでどうぞ。</p>
+  <div class="mail">
+    <span class="small">のびログ　なお</span>
+    <code id="addr">naon4022@gmail.com</code>
+    <button type="button" class="btn" id="copy">アドレスをコピー</button>
+    <span class="small" id="copied" aria-live="polite"></span>
+  </div>
+  <p class="small">件名に「のびログ 保護者」と入れてもらえると、見落としません。</p>
+</div></section>
+
+<footer>のびログ　次のアップデートのお知らせ（準備中・内容は変わることがあります）</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id){return document.getElementById(id)}
+  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.textContent=h;return e}
+
+  if('IntersectionObserver' in window&&!reduce){
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('go');ro.unobserve(e.target)}})},{threshold:.15});
+    document.querySelectorAll('.rv').forEach(function(x){ro.observe(x)});
+  }
+
+  var Q=[
+    {s:'数学',q:'（−3）＋（−5）＝ ？',o:['−8','8','−2'],a:0,h:'同じ「−」どうしのたし算です。数の大きさだけをたして、符号はそのまま使ってみよう。',w:'同じ符号のたし算は、大きさをたして符号をそのままにします。3＋5＝8 なので −8。'},
+    {s:'英語',q:'I（　）a student.',o:['is','am','are'],a:1,h:'主語が「I（わたし）」のときに使う be動詞は、1つだけ決まっています。',w:'I のあとの be動詞は am。He や She なら is、You や複数なら are です。'},
+    {s:'理科',q:'体積100cm³、質量270gの物質の密度は？',o:['0.37 g/cm³','27 g/cm³','2.7 g/cm³'],a:2,h:'密度は「1cm³あたりの質量」です。質量を体積でわってみよう。',w:'270 ÷ 100 ＝ 2.7。1cm³あたり2.7gです。'}
+  ];
+  var qi=0,score=0,miss=false,qz=$('qz'),opts=$('opts'),fb=$('qfb');
+  function dots(){qz.querySelectorAll('.qdots i').forEach(function(x,i){x.className=i<qi?'ok':i===qi?'now':''})}
+  function hint(title,text){var d=el('div','hint');d.appendChild(el('small',null,title));d.appendChild(el('span',null,text));return d}
+  function show(){var c=Q[qi];miss=false;$('qcount').textContent='第'+(qi+1)+'問 / 3';$('qsub').textContent=c.s;$('qq').textContent=c.q;fb.innerHTML='';opts.innerHTML='';opts.hidden=false;dots();
+    c.o.forEach(function(t,i){var b=el('button','opt',t);b.type='button';b.addEventListener('click',function(){pick(i,b)});opts.appendChild(b)})}
+  function pick(i,b){var c=Q[qi];
+    if(i===c.a){b.classList.add('good');if(!miss)score++;opts.querySelectorAll('button').forEach(function(x){x.disabled=true});
+      fb.innerHTML='';fb.appendChild(hint(miss?'正解（ヒントのあと）':'正解',c.w));
+      var row=el('div','qbtns'),n=el('button','btn solid',qi<2?'次の問題へ':'結果を見る');n.type='button';n.id='qnext';
+      n.addEventListener('click',function(){qi++;if(qi<3){show();opts.querySelector('button').focus()}else done()});row.appendChild(n);fb.appendChild(row);n.focus()}
+    else{miss=true;b.classList.add('bad');b.disabled=true;fb.innerHTML='';fb.appendChild(hint('ヒント',c.h))}}
+  function done(){qi=3;dots();$('qcount').textContent='結果';$('qsub').textContent='';$('qq').textContent='3問中 '+score+'問、1回目で正解でした';opts.innerHTML='';opts.hidden=true;fb.innerHTML='';
+    fb.appendChild(hint('見本の終わり','のびログでは、こうしてヒントをもらいながら、自分の力で解いていきます。'));
+    var row=el('div','qbtns'),r=el('button','btn','もう一度やる');r.type='button';r.id='qagain';
+    r.addEventListener('click',function(){qi=0;score=0;show();opts.querySelector('button').focus()});row.appendChild(r);fb.appendChild(row);r.focus()}
+  show();
+
+  var P=[
+    {n:'Free',y:0,ai:'なし',fit:'自分で解いて、まちがいを自分で見直したい人に。',f:['教科書・問題・丸つけ','自分で見る苦手ノート','写真のアイコン、着せ替え'],d:'―（いちばん基本のプラン）',h:'基本の学習記録（期間は未定）'},
+    {n:'Mini',y:500,ai:'20回分',fit:'ふだんは自分で解いて、止まった問題だけ助けがほしい人に。',f:['Freeのすべて','練習問題のヒント・短い解説'],d:'Freeとの違い：AIのヒントが使える（毎日20回分）。会話での相談はPro以上。',h:'1週間'},
+    {n:'Student',y:1000,ai:'100回分',fit:'毎日続けたい人、予定がずれやすい人に。',f:['Miniのすべて','学習予定の遅れを調整','カメラ・保存した写真'],d:'Miniとの違い：AI枠が100回分。予定の調整と写真が使える。',h:'3週間'},
+    {n:'Pro',y:1500,ai:'500回分',fit:'わからない所を、やりとりしながら進めたい人に。',f:['Studentのすべて','AIと会話で相談','ワークのお助け','まとめノートのAI振り返り','教科書のマーカー・メモ'],d:'Studentとの違い：AI枠が500回分。会話での相談、ワーク、ノート、マーカーが使える。',h:'1か月'},
+    {n:'UNLIMIT',y:2000,ai:'5,000回分',fit:'1問ずつ、理由まで深く知りたい人に。',f:['Proのすべて','くわしいAIでの相談・解説','なおへの解説依頼と保存（返信に1日ほどかかることがあります）','自己紹介からAIアイコンづくり（準備が必要）'],d:'Proとの違い：AI枠が5,000回分。くわしいAIと、なおへの解説依頼が使える。',h:'3年'}
+  ];
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),box=$('pbox');
+  function setPlan(i,focus){var p=P[i];tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i?'true':'false');t.tabIndex=j===i?0:-1});box.setAttribute('aria-labelledby','t'+i);
+    $('pn').textContent=p.n;$('py').textContent=p.y.toLocaleString('ja-JP');$('pfit').textContent=p.fit;$('pai').textContent=p.ai;$('pdiff').textContent=p.d;$('phist').textContent=p.h;
+    var ul=el('ul');p.f.forEach(function(x){ul.appendChild(el('li',null,x))});var ff=$('pfeat');ff.innerHTML='';ff.appendChild(ul);
+    if(!reduce){box.classList.remove('switch');void box.offsetWidth;box.classList.add('switch')}
+    if(focus)tabs[i].focus()}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){setPlan(i)});
+    t.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowRight')n=(i+1)%5;else if(k==='ArrowLeft')n=(i+4)%5;else if(k==='Home')n=0;else if(k==='End')n=4;if(n!==null){e.preventDefault();setPlan(n,true)}})});
+  setPlan(0);
+
+  function yen(n){return n.toLocaleString('ja-JP')+'円'}
+  function calc(){var plan=+$('cp').value,k=$('ck').value,m=+$('cm').value;var per=k==='full'?plan:Math.min(plan,+k);
+    $('rm').textContent=yen(per);$('rb').textContent=yen(per*m);
+    $('rx').textContent=yen(per)+' × '+m+'か月 ＝ '+yen(per*m)+'。目標に届かなかったら、この合計を返します。'+(k!=='full'&&+k>plan?'（プランの料金より多くは割り引けません）':'')}
+  ['cp','ck','cm'].forEach(function(id){$(id).addEventListener('change',calc)});calc();
+
+  $('copy').addEventListener('click',function(){var t=$('addr'),m=$('copied');
+    function sel(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent='選択しました。長押しでコピーしてください'}
+    try{navigator.clipboard.writeText(t.textContent).then(function(){m.textContent='コピーしました'},sel)}catch(e){sel()}});
+})();
+</script>

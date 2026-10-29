@@ -1,0 +1,1861 @@
+{
+ "id": "tokkun-social-1-geo-kikou",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "世界の気候帯と雨温図（特訓）",
+ "majorTitle": "世界の人々の生活と環境",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-social-1-geo-kikou-1",
+   "type": "input",
+   "prompt": "寒帯では、一年のほとんどの期間で寒さが厳しい。その理由を、太陽の位置に注目して説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "緯度が低",
+      "低緯度",
+      "低くない"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "緯度が高",
+       "高緯度",
+       "北極",
+       "南極"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "太陽"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "低"
+      ]
+     }
+    ]
+   },
+   "explanation": "寒帯は緯度が高いため、太陽が朝や夕方のような低い位置までしかのぼらないから。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-2",
+   "type": "input",
+   "prompt": "世界の気候帯の並び方について正しいものを選ぼう。\nア 赤道付近が熱帯で、緯度に沿って温帯、亜寒帯と変わり、北極や南極に近い所は寒帯になる　イ 赤道付近が寒帯で、高緯度ほど暑くなる　ウ 経度に沿って気候帯が変わる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "赤道に近い所は気温が高い熱帯。緯度に沿って温帯、亜寒帯（冷帯）へと変わり、北極や南極に近い所は寒帯になる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-3",
+   "type": "input",
+   "prompt": "南北の緯度が20度から30度のあたりに多く見られる、降水量がとても少ない気候帯は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "乾燥帯",
+     "かんそうたい"
+    ]
+   },
+   "explanation": "南北の緯度が20度から30度のあたりには、降水量がとても少ない乾燥帯がある。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-4",
+   "type": "input",
+   "prompt": "気温が低すぎたり、雨が少なすぎたりして樹木が育たず、森林が見られない気候帯を2つ書こう。（「、」で区切って書こう）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "寒帯"
+     ],
+     [
+      "乾燥帯"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "森林は、寒さが厳しい寒帯や、雨が少ない乾燥帯には見られない。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-5",
+   "type": "input",
+   "prompt": "同じ乾燥帯でも、オアシス以外では植物がほとんど育たない気候と、わずかに雨が降って草原が広がる気候がある。草原が広がるほうを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ステップ気候",
+     "すてっぷきこう",
+     "ステップ"
+    ]
+   },
+   "explanation": "乾燥帯は、砂や岩の砂漠が広がる砂漠気候と、わずかに雨が降り草原が広がるステップ気候に分かれる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-6",
+   "type": "input",
+   "prompt": "海面と同じ高さの地点の気温が25℃のとき、標高4000mの地点の気温は約何℃か。（標高が100m上がるごとに、気温は約0.6℃下がるものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "4000mは100mの40倍なので、0.6×40＝24℃下がる。25−24＝1℃。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-7",
+   "type": "input",
+   "prompt": "ある山のふもと（標高500m）の気温が18℃のとき、標高2000mの山小屋の気温は約何℃か。小数第1位まで答えよう。（標高が100m上がるごとに、気温は約0.6℃下がるものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "9.0",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "標高差は1500m（100mの15倍）。0.6×15＝9℃下がるので、18−9＝9.0℃。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-8",
+   "type": "input",
+   "prompt": "登山をしていると、出発地点より気温が3℃下がった。出発地点から約何m登ったと考えられるか。（標高が100m上がるごとに、気温は約0.6℃下がるものとする。）",
+   "answer": {
+    "kind": "number",
+    "value": "500",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "3÷0.6＝5で、100mの5倍。約500m。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-9",
+   "type": "input",
+   "prompt": "ペルーのアンデス高地は赤道の近くにあるのに、森林が見られない。その理由を説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "標高が低",
+      "標高の低",
+      "気温が高",
+      "気温は高",
+      "暖か",
+      "暑"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "標高が高",
+       "高地",
+       "標高4000",
+       "高い所",
+       "高い土地",
+       "標高の高"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "気温が低",
+       "寒",
+       "気温は低",
+       "低温",
+       "気温の低"
+      ]
+     }
+    ]
+   },
+   "explanation": "標高4000mをこえるような高地では、赤道に近くても一年中気温が低いため、森林は見られない。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-10",
+   "type": "input",
+   "prompt": "アンデス山脈の赤道付近の高地の気温の特徴として正しいものを選ぼう。\nア 昼は20℃くらいまで上がるが、夜は0℃以下になる日もあり、一日の中の気温差が大きい　イ 一日中30℃以上で変化が小さい　ウ 一年中0℃以下",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "昼は暖かいが、昼と夜の気温差は大きく、夜は気温が0℃以下になる日もある。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-11",
+   "type": "input",
+   "prompt": "教科書の雨温図では、東京の年降水量は1598mm、カナダのイカルイトは404mmである。東京の年降水量はイカルイトの約何倍か。小数第1位まで答えよう（小数第2位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "4.0",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "1598÷404＝3.95…で約4.0倍。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-12",
+   "type": "input",
+   "prompt": "教科書の雨温図では、東京の年平均気温は15.8℃、イカルイトは−9.3℃である。その差は何℃か。",
+   "answer": {
+    "kind": "number",
+    "value": "25.1",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "15.8−（−9.3）＝25.1℃。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-13",
+   "type": "input",
+   "prompt": "雨温図の「年平均気温」とは何か。正しいものを選ぼう。\nア 1年間の気温を平均した数値　イ 1年で最も暑い月の気温　ウ 最も暑い月と寒い月の気温の差",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "年平均気温は1年間の気温を平均した数値。最も暑い月と寒い月の差は年較差。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-14",
+   "type": "input",
+   "prompt": "いくつかの都市の雨温図を比べるとき、気温のグラフと降水量のグラフの数値を読む前に、グラフの左右にあるものを必ず確認する。それは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "目盛り",
+     "めもり",
+     "目もり",
+     "グラフの目盛り",
+     "左右の目盛り"
+    ]
+   },
+   "explanation": "気温と降水量の目盛りはグラフの左右にある。都市によって目盛りのとり方がちがうこともあり、いちばん下が0でない場合もあるので注意する。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-15",
+   "type": "input",
+   "prompt": "寒帯でも、短い夏に平均気温が0℃以上になる地域で見られることを選ぼう。\nア 雪や氷がなくなって地面が現れ、草やこけが生える　イ 針葉樹の大きな森林ができる　ウ 一年中雨が降り熱帯雨林が広がる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "短い夏に平均気温が0℃以上になる地域では、雪や氷がなくなって地面が現れ、草やこけが生え、カリブーなどの大型動物も見られる。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-16",
+   "type": "input",
+   "prompt": "亜寒帯（冷帯）では、冬は寒さが厳しいのに樹木が育つ。その理由として正しいものを選ぼう。\nア 夏は平均気温が10℃をこえて暖かいから　イ 一年中雨が多いから　ウ 冬も0℃以下にならないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "亜寒帯は夏と冬の気温差が大きく、夏は平均気温が10℃をこえて暖かいため、樹木が育つ。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-17",
+   "type": "input",
+   "prompt": "亜寒帯（冷帯）が広がっている地域を選ぼう。\nア ユーラシア大陸や北アメリカ大陸の、寒帯の南　イ アフリカ大陸の赤道付近　ウ 南アメリカ大陸の南端の島々だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ユーラシア大陸や北アメリカ大陸の寒帯の南に広がっている。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-18",
+   "type": "input",
+   "prompt": "日本の都道府県のうち、亜寒帯（冷帯）にふくまれるとされているのはどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "北海道",
+     "ほっかいどう"
+    ]
+   },
+   "explanation": "日本の北海道も亜寒帯にふくまれる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-19",
+   "type": "input",
+   "prompt": "温帯の分布として正しいものを選ぼう。\nア 南極を除いた大陸の沿岸部を中心に広がる　イ 大陸の内陸部だけに広がる　ウ 南極大陸に広がる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "温帯は、南極を除いた大陸の沿岸部を中心に、年間を通して温暖で適度に雨が降る地域に広がる。",
+   "source": {
+    "id": "source-0697",
+    "file": "地理教科書/S__16482318_0.jpg",
+    "sha256": "f9158ca6f9e2856b6e228eba13492d72789c7be04441c4be06c9d22ae39c34e4",
+    "page": 41,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-20",
+   "type": "input",
+   "prompt": "同じ温帯でも、日本の広い範囲と地中海沿岸では、雨の多い季節が逆になっている。地中海沿岸で雨が多いのはどの季節か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "冬",
+     "ふゆ"
+    ]
+   },
+   "explanation": "日本の広い範囲では夏に雨が多いのに対し、地中海沿岸では冬に雨が多く、夏は雨が少なく乾燥する。",
+   "source": {
+    "id": "source-0697",
+    "file": "地理教科書/S__16482318_0.jpg",
+    "sha256": "f9158ca6f9e2856b6e228eba13492d72789c7be04441c4be06c9d22ae39c34e4",
+    "page": 41,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-21",
+   "type": "input",
+   "prompt": "ヨーロッパの大西洋沿岸に多い西岸海洋性気候の特徴を選ぼう。\nア 高緯度のわりに寒くなく、一年を通して雨が降る　イ 夏に乾燥し、冬に雨が降る　ウ 雨季と乾季がはっきりしている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ヨーロッパの大西洋沿岸などは、緯度が高いわりに寒くなく、一年を通して雨が降る西岸海洋性気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-22",
+   "type": "input",
+   "prompt": "サハラ砂漠の南に広がるサヘルについて正しいものを選ぼう。\nア 砂漠と同じ乾燥帯だが、少量の雨が降って樹木や草が少し育つ　イ 熱帯雨林におおわれている　ウ 一年中雪と氷におおわれている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "サヘルは砂漠と同じ乾燥帯だが、少量の雨が降るため樹木や草が少しだけ育つ。",
+   "source": {
+    "id": "source-0698",
+    "file": "地理教科書/S__16482319_0.jpg",
+    "sha256": "bbacf01b8c0e0ccad46fbea3a45a7feabe7a84638854930ad90670b26e4df5e2",
+    "page": 43,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p43（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-23",
+   "type": "input",
+   "prompt": "乾燥帯が広がる地域として、教科書にあげられていないものを選ぼう。\nア アフリカ北部　イ アラビア半島　ウ ユーラシア大陸の内陸部　エ 南アメリカ大陸の赤道付近",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "乾燥帯は、アフリカ北部やアラビア半島、ユーラシア大陸の内陸部などに広がる。南アメリカ大陸の赤道付近は熱帯。",
+   "source": {
+    "id": "source-0698",
+    "file": "地理教科書/S__16482319_0.jpg",
+    "sha256": "bbacf01b8c0e0ccad46fbea3a45a7feabe7a84638854930ad90670b26e4df5e2",
+    "page": 43,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p43（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-24",
+   "type": "input",
+   "prompt": "熱帯の赤道付近の天気の特徴として正しいものを選ぼう。\nア 朝は晴れていても、午後には強い風をともなった激しい雨が降る日が多い　イ 夏だけ雨が降る　ウ 雨はほとんど降らない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "赤道付近では毎日のように雨が降り、朝は晴れていても午後には強い風をともなった激しい雨が降る日が多い。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-25",
+   "type": "input",
+   "prompt": "赤道付近の熱帯雨林では、樹木の高さは何mにもなるか。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "樹木の高さが50mにもなる熱帯雨林が広がる。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-26",
+   "type": "input",
+   "prompt": "マングローブについて正しいものを選ぼう。\nア 特定の植物の種類の名前ではなく、満潮時に海水におおわれる場所に育つさまざまな木の総称　イ 砂漠のオアシスに生える1種類のやしの木　ウ 高山に生える草",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "マングローブは、熱帯の河口などで満潮時に海水におおわれる場所に育つさまざまな木の総称で、特定の植物の名前ではない。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-27",
+   "type": "input",
+   "prompt": "マングローブの林が果たしている役割を2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "津波",
+       "高潮",
+       "災害",
+       "海岸"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "魚",
+       "生物",
+       "生き物"
+      ]
+     }
+    ]
+   },
+   "explanation": "津波や高潮などの災害から海岸を守るほか、魚類など多くの生物の活動の場になっている。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-28",
+   "type": "input",
+   "prompt": "熱帯の2つの気候のうち、雨の少ない季節（乾季）と雨が降る季節（雨季）がはっきりしていて、まばらな樹木と草原が広がる気候を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "サバナ気候",
+     "さばなきこう",
+     "サバナ"
+    ]
+   },
+   "explanation": "熱帯には、一年中雨が降る熱帯雨林気候と、乾季と雨季がはっきりしたサバナ気候がある。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-29",
+   "type": "input",
+   "prompt": "教科書の気候区の雨温図で、「昭和基地」の気候区は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "氷雪気候",
+     "ひょうせつきこう"
+    ]
+   },
+   "explanation": "南極の昭和基地は、一年中雪や氷におおわれる氷雪気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-30",
+   "type": "input",
+   "prompt": "教科書の雨温図で、ロンドン（イギリス）がふくまれる気候区は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "西岸海洋性気候",
+     "せいがんかいようせいきこう"
+    ]
+   },
+   "explanation": "ロンドンは西岸海洋性気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-31",
+   "type": "input",
+   "prompt": "教科書の雨温図で、サウジアラビアのリヤドがふくまれる気候区は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "砂漠気候",
+     "さばくきこう"
+    ]
+   },
+   "explanation": "リヤドは乾燥帯の砂漠気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-32",
+   "type": "input",
+   "prompt": "教科書の雨温図で、ブラジルのマナオスがふくまれる気候区は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "熱帯雨林気候",
+     "ねったいうりんきこう"
+    ]
+   },
+   "explanation": "マナオスは熱帯雨林気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-33",
+   "type": "input",
+   "prompt": "次の条件にすべてあてはまる気候区を書こう。「温帯にふくまれる」「夏に乾燥する」「冬に雨が降る」",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "地中海性気候",
+     "ちちゅうかいせいきこう"
+    ]
+   },
+   "explanation": "温帯で、夏に乾燥し冬に雨が降るのは地中海性気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-34",
+   "type": "input",
+   "prompt": "次の条件にすべてあてはまる気候区を書こう。「寒帯にふくまれる」「短い夏に雪や氷がとける」「わずかに草やこけが生える」",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ツンドラ気候",
+     "つんどらきこう"
+    ]
+   },
+   "explanation": "寒帯のうち、短い夏に雪や氷がとけて草やこけが生えるのはツンドラ気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-35",
+   "type": "input",
+   "prompt": "次の条件にすべてあてはまる気候帯を書こう。「冬の寒さが厳しい」「夏は気温が上がる」「針葉樹の森林が広がる」",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "亜寒帯",
+     "冷帯",
+     "亜寒帯（冷帯）",
+     "あかんたい"
+    ]
+   },
+   "explanation": "冬の寒さが厳しく、夏には気温が上がって針葉樹の森林が広がるのは亜寒帯（冷帯）。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-36",
+   "type": "input",
+   "prompt": "「草原で羊を放牧している（ニュージーランド）」写真と「オリーブ畑が広がる丘（スペイン）」写真は、どちらも温帯の写真である。オリーブ畑の写真があらわす気候区はどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "地中海性気候",
+     "ちちゅうかいせいきこう"
+    ]
+   },
+   "explanation": "スペインのオリーブ畑は、夏に乾燥する地中海性気候の風景。ニュージーランドの牧草地は西岸海洋性気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-37",
+   "type": "input",
+   "prompt": "「森林で暮らすマウンテンゴリラ（ウガンダ）」と「国立公園にいるしまうま（タンザニア）」の写真のうち、サバナ気候の風景はどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しまうま",
+     "国立公園にいるしまうま",
+     "しまうまの写真",
+     "タンザニア"
+    ]
+   },
+   "explanation": "まばらな樹木と草原が広がるのがサバナ気候で、しまうまの写真がそれにあたる。ゴリラの森林は熱帯雨林気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 49,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p49（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-38",
+   "type": "input",
+   "prompt": "「モンゴルの草原で暮らす人々」の写真があらわす気候区はどれか。次から選ぼう。\nア ステップ気候　イ 砂漠気候　ウ ツンドラ気候",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "わずかに雨が降り草原が広がるのはステップ気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-39",
+   "type": "input",
+   "prompt": "亜寒帯のシベリアで、夏に樹木が育っているのに、冬に地面の下が一年中こおっている所がある。この、一年中こおったままの土がとけると起こる問題を1つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "しず",
+       "沈",
+       "ゆが",
+       "傾",
+       "かたむ",
+       "湖",
+       "建物"
+      ]
+     }
+    ]
+   },
+   "explanation": "永久凍土がとけると、地面がしずんで大きな湖ができたり、建物がゆがんだりする。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-40",
+   "type": "input",
+   "prompt": "永久凍土がとける原因として、教科書にあげられているものを選ぼう。\nア 地球温暖化や森林の伐採で、太陽光が地面に直接当たるようになったこと　イ 火山の噴火が増えたこと　ウ 雨がまったく降らなくなったこと",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "地球温暖化などや、森林の伐採が進んで太陽光が地面に直接当たるようになったことが原因の一つ。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-41",
+   "type": "input",
+   "prompt": "赤道をはさんで北と南に、ほぼ同じ順番で気候帯が並ぶのはなぜか。最も適切なものを選ぼう。\nア 気候帯は、おもに赤道からの距離（緯度）によって決まるから　イ 気候帯は経度で決まるから　ウ 北半球と南半球で季節が同じだから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "気温はおもに緯度によって決まるので、赤道を中心に南北にほぼ同じ順で気候帯が並ぶ。",
+   "source": {
+    "id": "source-0375",
+    "file": "地理ワーク/S__15982609_0.jpg",
+    "sha256": "55357b6a63c0805f15c2e8eb3a8e4b057da0f7a788ef9ebdda89e07f926a977e",
+    "page": 24,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理ワーク p24（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-42",
+   "type": "input",
+   "prompt": "南半球にある温帯の都市の雨温図で、7月の気温が最も低かった。この都市で最も暑くなるのはおよそ何月か。次から選ぼう。\nア 1月ごろ　イ 7月ごろ　ウ 4月ごろ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "南半球は北半球と季節が逆なので、7月が冬、1月ごろが夏になる。",
+   "source": {
+    "id": "source-0376",
+    "file": "地理ワーク/S__15982610_0.jpg",
+    "sha256": "2bba9f7fc92f3c09a2f36f8f338851ceb286db398f9ee0c3566bd3b13d093e23",
+    "page": 26,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理ワーク p26（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-43",
+   "type": "input",
+   "prompt": "世界の気候は、気温と降水量によっていくつの気候帯に分けられるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "5",
+     "5つ",
+     "五つ"
+    ]
+   },
+   "explanation": "熱帯・乾燥帯・温帯・亜寒帯（冷帯）・寒帯の5つの気候帯に分けられる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-44",
+   "type": "input",
+   "prompt": "5つの気候帯のうち、樹木が育つ気候帯をすべて選ぼう（読点で区切る）。\nア 熱帯　イ 温帯　ウ 亜寒帯（冷帯）　エ 乾燥帯　オ 寒帯",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "寒帯や乾燥帯には森林は見られない。熱帯・温帯・亜寒帯では樹木が育つ。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-45",
+   "type": "input",
+   "prompt": "寒帯は、何という2つの気候に分けられるか（読点で区切る）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ツンドラ気候、氷雪気候",
+     "氷雪気候、ツンドラ気候",
+     "ツンドラ気候,氷雪気候",
+     "氷雪気候,ツンドラ気候"
+    ]
+   },
+   "explanation": "短い夏に雪や氷がとけて草やこけが生えるツンドラ気候と、一年中雪や氷でおおわれている氷雪気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-46",
+   "type": "input",
+   "prompt": "温帯の3つの気候のうち、日本の広い範囲がふくまれる気候は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "温暖湿潤気候",
+     "おんだんしつじゅんきこう"
+    ]
+   },
+   "explanation": "温帯は温暖湿潤気候・地中海性気候・西岸海洋性気候に分けられる。日本の広い範囲は温暖湿潤気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-47",
+   "type": "input",
+   "prompt": "熱帯の2つの気候のうち、一年中雨が降り、うっそうとした森林が広がる気候は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "熱帯雨林気候",
+     "ねったいうりんきこう"
+    ]
+   },
+   "explanation": "熱帯雨林気候。雨季と乾季がはっきりしているのはサバナ気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-48",
+   "type": "input",
+   "prompt": "標高が高い地域で、周辺の標高が低い場所よりも気温が低くなる気候を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "高山気候",
+     "こうざんきこう"
+    ]
+   },
+   "explanation": "高山気候。標高が100m上がるごとに気温は約0.6℃ずつ下がる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-49",
+   "type": "input",
+   "prompt": "図4の、カナダの針葉樹の森林地帯は、どの気候帯にあたるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "亜寒帯",
+     "冷帯",
+     "亜寒帯（冷帯）"
+    ]
+   },
+   "explanation": "針葉樹の森林地帯は亜寒帯（冷帯）の気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-50",
+   "type": "input",
+   "prompt": "図8のモンゴルの草原は、乾燥帯のうちどの気候にあたるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ステップ気候",
+     "すてっぷきこう"
+    ]
+   },
+   "explanation": "わずかに雨が降り、草原が広がるステップ気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-51",
+   "type": "input",
+   "prompt": "図10の、野生のしまうまがいる国立公園（タンザニア）は、熱帯のうちどの気候にあたるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "サバナ気候",
+     "さばなきこう"
+    ]
+   },
+   "explanation": "まばらな樹木と草原が広がるサバナ気候。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-52",
+   "type": "input",
+   "prompt": "寒帯で、短い夏に地面が現れると見られるようになる大型動物として、教科書にあげられているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "カリブー",
+     "トナカイ",
+     "カリブー（トナカイ）"
+    ]
+   },
+   "explanation": "こおっていた土がとけて草やこけが生える場所もあり、カリブー（トナカイ）などの大型動物も見られる。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-53",
+   "type": "input",
+   "prompt": "雨温図で、気温は何グラフで表すか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "折れ線グラフ",
+     "おれせんグラフ"
+    ]
+   },
+   "explanation": "雨温図では気温（℃）を折れ線グラフ、降水量（mm）を棒グラフで表す。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-54",
+   "type": "input",
+   "prompt": "雨温図の気温の目盛りを読むときに注意することとして、教科書のスキル・アップにあげられているものを選ぼう。\nア 目盛りのいちばん下が0℃ではない　イ 目盛りのいちばん上がいつも100℃である　ウ 降水量と同じ目盛りを使っている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "気温のグラフの目盛りは、いちばん下が0℃ではない点に特徴がある。左右の目盛りがそれぞれ何を表すかを確かめて読む。",
+   "source": {
+    "id": "source-0695",
+    "file": "地理教科書/S__16482315_0.jpg",
+    "sha256": "8ddcc4f3a1220f0b4928c69024cf9ecce6bfeafe1d2b460f635e44b462d8234f",
+    "page": 37,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p37（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-55",
+   "type": "input",
+   "prompt": "シベリアの冬の寒さについて、教科書の本文に合うものを選ぼう。\nア 人が生活する場所の中で、世界で最も寒くなる　イ 日本の冬より暖かく、川や湖はこおらない　ウ 雪はほとんど降らず、夏との気温差は小さい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "シベリアの冬は、人が生活する場所では世界の中で最も寒くなる。川や湖は厚い氷でおおわれる。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-56",
+   "type": "input",
+   "prompt": "図7の雨温図で、イルクーツク（ロシア）と東京を比べた。イルクーツクの特徴として正しいものを選ぼう。\nア 夏と冬の気温差が大きく、冬は−10℃を下回る　イ 一年中気温が高く、季節による差が小さい　ウ 降水量が東京より多く、冬に雨が多い",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "イルクーツクは冬の気温が−10℃を下回る一方、夏は暖かく、気温差が大きい。年降水量は東京より少ない。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-57",
+   "type": "input",
+   "prompt": "シベリアの永久凍土がとけると起こる問題として、教科書にあげられているものを選ぼう。\nア 地面がしずみ、建物がゆがむ　イ 森林が急に増え、町がうもれる　ウ 川がすべて干上がる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "凍土がとけると地面がしずんで大きな水たまりができたり、建物がゆがんだりするなどの問題が起こっている。",
+   "source": {
+    "id": "source-0696",
+    "file": "地理教科書/S__16482316_0.jpg",
+    "sha256": "a42e6d8af31424c8acbdb22943467c5d043d61728a5a6210299a1e96e302f83c",
+    "page": 39,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p39（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-58",
+   "type": "input",
+   "prompt": "温帯の特徴として、教科書の本文にあげられているものを選ぼう。\nア 四季があり、気温や雨の降り方が季節で変わる　イ 一年中雨が降り、季節による変化がない　ウ 一年中雪や氷におおわれ、夏がない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "温帯には四季があり、気温や雨の降り方が季節によって変化する。",
+   "source": {
+    "id": "source-0697",
+    "file": "地理教科書/S__16482318_0.jpg",
+    "sha256": "f9158ca6f9e2856b6e228eba13492d72789c7be04441c4be06c9d22ae39c34e4",
+    "page": 41,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p41（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-59",
+   "type": "input",
+   "prompt": "サヘルで雨が降る時期として、教科書の本文に合うものを選ぼう。\nア 6月から9月　イ 12月から2月　ウ 一年中ほぼ同じ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "サヘルでは6月から9月の雨が降る時期に、ひえやもろこしなどの穀物を育てている。",
+   "source": {
+    "id": "source-0698",
+    "file": "地理教科書/S__16482319_0.jpg",
+    "sha256": "bbacf01b8c0e0ccad46fbea3a45a7feabe7a84638854930ad90670b26e4df5e2",
+    "page": 43,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p43（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-60",
+   "type": "input",
+   "prompt": "サモアの位置として、教科書の本文に合うものを選ぼう。\nア 南太平洋の熱帯にある島国　イ 北極に近い北大西洋の島国　ウ 地中海にある温帯の島国",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "サモアは南太平洋の熱帯にある島国。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-61",
+   "type": "input",
+   "prompt": "図7の雨温図で、アピア（サモア）の年平均気温は約何℃か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "26.6",
+     "26.6℃",
+     "約26.6℃"
+    ]
+   },
+   "explanation": "アピアの年平均気温は26.6℃、年降水量は2712mm。一年中気温が高い。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-62",
+   "type": "input",
+   "prompt": "アンデス山脈の赤道付近で、多くの人々が暮らしている高地の標高はおよそ何mか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "4000",
+     "4000m"
+    ]
+   },
+   "explanation": "アンデス山脈の赤道付近には、標高が4000mほどの高地があり、多くの人々が暮らしている。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-63",
+   "type": "input",
+   "prompt": "図5で、標高4000m以上の土地で行われていることとして正しいものを選ぼう。\nア リャマやアルパカの放牧　イ かんきつ類や熱帯作物の栽培　ウ とうもろこしの栽培",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "標高が高い場所では農作物が育たないため、リャマやアルパカを放牧している。かんきつ類・熱帯作物は低い土地で栽培される。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-64",
+   "type": "input",
+   "prompt": "図7の雨温図で、クスコ（ペルー）の年平均気温を東京と比べるとどうか。理由とともに正しいものを選ぼう。\nア 低い。赤道に近いが、標高が高いから　イ 高い。赤道に近く、一年中暑いから　ウ 同じ。どちらも温帯にあるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "クスコは赤道に近いが、標高が高いため年平均気温は東京より低い（高山気候）。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-65",
+   "type": "input",
+   "prompt": "標高が100m上がるごとに気温が約0.6℃下がるとすると、標高1500mの地点の気温が12℃のとき、同じ地域の海面と同じ高さの地点の気温は約何℃か。",
+   "answer": {
+    "kind": "number",
+    "value": "21",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "1500÷100＝15、15×0.6＝9℃。12＋9＝21℃。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-66",
+   "type": "input",
+   "prompt": "標高が100m上がるごとに気温が約0.6℃下がるとすると、標高500mの地点と標高2500mの地点の気温の差は約何℃か。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "標高差は2000m。2000÷100＝20、20×0.6＝12℃。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-67",
+   "type": "input",
+   "prompt": "標高が100m上がるごとに気温が約0.6℃下がるとすると、気温30℃の海岸から標高2500mの高地へ行くと、気温は約何℃になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "℃",
+     "°C",
+     "度"
+    ]
+   },
+   "explanation": "2500÷100＝25、25×0.6＝15℃下がる。30−15＝15℃。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-68",
+   "type": "input",
+   "prompt": "教科書の雨温図では、アピア（サモア）の年降水量は2712mm、東京は1598mmである。アピアは東京より何mm多いか。",
+   "answer": {
+    "kind": "number",
+    "value": "1114",
+    "units": [
+     "mm"
+    ]
+   },
+   "explanation": "2712−1598＝1114mm。",
+   "source": {
+    "id": "source-0699",
+    "file": "地理教科書/S__16482320_0.jpg",
+    "sha256": "720e6fb13c184d53770f03cbb18a8fd91230719d4cc13d4dea23e57317533163",
+    "page": 45,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p45（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-69",
+   "type": "input",
+   "prompt": "図5で、アンデス山脈の標高が低い土地で行われていることとして正しいものを選ぼう。\nア かんきつ類や熱帯作物の栽培　イ リャマやアルパカの放牧　ウ 一年中雪や氷におおわれていて何もできない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "標高の低い暖かい土地では、かんきつ類や熱帯作物が栽培されている。リャマやアルパカの放牧は標高4000m以上の土地。",
+   "source": {
+    "id": "source-0700",
+    "file": "地理教科書/S__16482321_0.jpg",
+    "sha256": "f63a5a02659df95795022a528b677418e46f0646e331943947c52366df2d64de",
+    "page": 47,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p47（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-kikou-70",
+   "type": "input",
+   "prompt": "熱帯雨林気候とサバナ気候のちがいとして正しいものを選ぼう。\nア 熱帯雨林気候は一年中雨が多く、サバナ気候は雨季と乾季がある　イ 熱帯雨林気候は雨季と乾季があり、サバナ気候は一年中雨が多い　ウ どちらも一年中雨がほとんど降らない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "熱帯雨林気候は一年中雨が降り森林が広がる。サバナ気候は雨季と乾季があり、まばらな樹木と草原が広がる。",
+   "source": {
+    "id": "source-0701",
+    "file": "地理教科書/S__16482322_0.jpg",
+    "sha256": "0b77887c333834891187c1270857c5e7589f04d0f4482567abd4b692f1a7ce9b",
+    "page": 48,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p48（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-14 Claude作成（特訓・下書き）。地理ワーク p18〜20・24〜27・72・76 と、地理教科書 p36〜49（台帳登録案。写真を原寸で開き本文・雨温図・図表まで確認）をもとに作ったオリジナル問題。数値は教科書の本文・雨温図に書かれたものと、教科書の「100mで約0.6℃」のきまりだけを使い、計算はプログラムで確認した。"
+}

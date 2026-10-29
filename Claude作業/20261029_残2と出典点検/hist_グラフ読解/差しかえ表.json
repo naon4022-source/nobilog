@@ -1,0 +1,438 @@
+[
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-19",
+  "oldPrompt": "階級の幅が 5 cm、度数が 7 人の階級を、ヒストグラムの長方形で表す。横の目もりを cm、縦の目もりを人とするとき、この長方形の面積を求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "35"
+  },
+  "newPrompt": "図は、ある組の通学時間（分）をヒストグラムに表したものである。20 分以上 30 分未満の人は何人か答えよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "7",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-19.svg",
+  "page": 225,
+  "reason": "ヒストグラムの長方形の面積を文字だけで問う問題。図から度数を読む問題がない"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-20",
+  "oldPrompt": "同じ幅の階級のヒストグラムで、ある長方形の高さは 4 人、別の長方形の高さは 10 人である。高いほうの長方形の面積は、低いほうの何倍か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "5/2",
+   "units": [
+    "倍"
+   ]
+  },
+  "newPrompt": "図は、ある組の通学時間（分）をヒストグラムに表したものである。この組の人数は全部で何人か答えよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "23",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-20.svg",
+  "page": 225,
+  "reason": "長方形の高さの比を文字だけで問う問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-21",
+  "oldPrompt": "度数折れ線（度数分布多角形）をかくとき、20 分以上 25 分未満の階級の度数を表す点は、横の目もりのどこにとるか求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "22.5",
+   "units": [
+    "分"
+   ]
+  },
+  "newPrompt": "通学時間が 30 分未満の人数を知りたい。図のヒストグラム（23 人の通学時間を 10 分ごとの階級に分けたもの）の長方形の高さから求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "13",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-21.svg",
+  "page": 225,
+  "reason": "度数折れ線の点の位置を文字で問う問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-22",
+  "oldPrompt": "階級が 6 つある度数分布表から度数折れ線をかく。両はしに度数 0 の階級を1つずつ考えて点をとるとき、とる点は全部でいくつか求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "8",
+   "units": [
+    "個"
+   ]
+  },
+  "newPrompt": "図は、ある組の身長（cm）を度数分布多角形（度数折れ線）に表したものである。150 cm 以上 155 cm 未満の階級の度数を答えよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "9",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-22.svg",
+  "page": 226,
+  "reason": "度数折れ線の点の数を文字で問う問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-35",
+  "oldPrompt": "あるヒストグラムで、長方形の面積の合計は 240 で、度数の合計は 40 人である。どの階級の幅も同じとき、階級の幅を求めよう（横の目もりは記録の単位、縦の目もりは人）。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "6"
+  },
+  "newPrompt": "図は、ある組の通学時間（分）をヒストグラムに表したものである。このヒストグラムから最頻値を求めよう（度数がもっとも多い階級の階級値）。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "25",
+   "units": [
+    "分"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-35.svg",
+  "page": 228,
+  "reason": "面積の合計から階級の幅を求める文字だけの問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-36",
+  "oldPrompt": "階級の幅 10 のヒストグラムに、度数折れ線（両はしの度数 0 の点もふくむ）をかいた。度数の合計が 25 のとき、度数折れ線と横軸で囲まれた部分の面積を求めよう（ヒストグラムの面積と等しい）。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "250"
+  },
+  "newPrompt": "図は、25 人の1日の家庭学習の時間（分）をヒストグラムに表したものである。学習時間が 20 分未満の人は、全体の何 % か答えよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "36",
+   "units": [
+    "%",
+    "％"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-36.svg",
+  "page": 225,
+  "reason": "度数折れ線を文字だけで扱う問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-38",
+  "oldPrompt": "ヒストグラムで、それぞれの長方形の高さが表しているものを、次のア〜ウから選び、記号で答えよう。\nア 階級の幅\nイ 度数\nウ 階級値",
+  "oldAnswer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  },
+  "newPrompt": "図は、A組とB組の 1 週間の読書時間（時間）を、同じ階級の度数分布多角形に表したものである（実線が A組、点線が B組）。読書時間が 20 時間以上の人は、A組のほうが B組より何人多いか答えよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "7",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-38.svg",
+  "page": 227,
+  "reason": "ヒストグラムの高さが何を表すかの用語の問題（図がない）"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-39",
+  "oldPrompt": "度数折れ線で、それぞれの点の横の位置は何を表しているか。次のア〜ウから選び、記号で答えよう。\nア 階級値\nイ 度数\nウ 階級の下のはしの値",
+  "oldAnswer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  },
+  "newPrompt": "図は、ある組の身長（cm）を度数分布多角形（両はしは度数 0 の点）に表したものである。この組の人数を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "24",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-39.svg",
+  "page": 226,
+  "reason": "度数折れ線の点の横の位置の用語の問題（図がない）"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-57",
+  "oldPrompt": "20 人の通学時間をヒストグラムに表した。階級は 0 分以上 10 分未満から 10 分ずつ 6 つあり、長方形の高さ（人）は左から順に 1、4、8、5、2、0 である。通学時間が 40 分以上の人は何人か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "2",
+   "units": [
+    "人"
+   ]
+  },
+  "newPrompt": "図は、30 人のハンドボール投げの記録（m）をヒストグラムに表そうとしたものだが、20 m 以上 30 m 未満の長方形がまだかかれていない。この階級の度数を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "9",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-57.svg",
+  "page": 224,
+  "reason": "ヒストグラムの高さを文字で与えた問題"
+ },
+ {
+  "unit": "hist1",
+  "id": "tokkun-math-1-hist1-68",
+  "oldPrompt": "身長のヒストグラムをかく。横の目もりは 140 cm から 170 cm までで、階級の幅は 5 cm である。長方形（度数が 0 のものもふくむ）はいくつかけるか求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "6",
+   "units": [
+    "個"
+   ]
+  },
+  "newPrompt": "図は、21 人の通学時間（分）をヒストグラムに表したものである。中央値（短いほうから 11 番目の人の時間）がふくまれる階級の階級値を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "35",
+   "units": [
+    "分"
+   ]
+  },
+  "image": "/tokkun-fig-hist1-68.svg",
+  "page": 224,
+  "reason": "ヒストグラムの横の目もりを文字で問う問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-26",
+  "oldPrompt": "人数のちがう2つの組の、ある階級にはいる人の割合をくらべたい。このときに使うとよいものを、次のア〜ウから選び、記号で答えよう。\nア 度数\nイ 相対度数\nウ 階級値",
+  "oldAnswer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  },
+  "newPrompt": "図は、A組（20 人）と B組（40 人）の通学時間（分）を、相対度数の度数分布多角形に表したものである（実線が A組、点線が B組）。通学時間が 30 分以上の人の割合が大きいのはどちらの組か。次のア・イから選び、記号で答えよう。\nア A組\nイ B組",
+  "newAnswer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-26.svg",
+  "page": 232,
+  "reason": "割合でくらべることを文字だけで問う選択問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-30",
+  "oldPrompt": "ある度数分布表の相対度数は、小さい階級から順に 0.05、0.15、0.30、0.28、0.22 である。小さいほうから 3 番目の階級の累積相対度数を求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "0.5"
+  },
+  "newPrompt": "図は、A組（20 人）と B組（40 人）の通学時間（分）を、相対度数の度数分布多角形に表したものである（実線が A組、点線が B組）。A組で、相対度数がもっとも大きい階級の度数（人数）を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "8",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-30.svg",
+  "page": 232,
+  "reason": "相対度数の列を文字で与えた問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-31",
+  "oldPrompt": "ある度数分布表の相対度数は、小さい階級から順に 0.04、0.16、0.28、0.32、0.20 である。累積相対度数がはじめて 0.5 以上になるのは、小さいほうから何番目の階級か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "4",
+   "units": [
+    "番目"
+   ]
+  },
+  "newPrompt": "図は、A組（20 人）と B組（40 人）の通学時間（分）を、相対度数の度数分布多角形に表したものである（実線が A組、点線が B組）。B組で、通学時間が 20 分未満の人は何人か求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "16",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-31.svg",
+  "page": 232,
+  "reason": "相対度数の列を文字で与えた問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-33",
+  "oldPrompt": "ある階級の累積相対度数は 0.65、そのひとつ前の階級の累積相対度数は 0.4 である。この階級の相対度数を求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "0.25"
+  },
+  "newPrompt": "図は、40 人の待ち時間（分）の累積相対度数を、各階級の右はしの値に点をとって折れ線で表したものである。20 分以上 30 分未満の階級の相対度数を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "0.35"
+  },
+  "image": "/tokkun-fig-hist2-33.svg",
+  "page": 231,
+  "reason": "累積相対度数を文字で与えた問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-35",
+  "oldPrompt": "すべての階級の相対度数をたすと、いくつになるか求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "1"
+  },
+  "newPrompt": "図は、40 人の1週間の運動時間（時間）を、相対度数のヒストグラムに表したものである。度数がもっとも多い階級の度数（人数）を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "14",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-35.svg",
+  "page": 232,
+  "reason": "相対度数の合計が1になることの問題（図がない）"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-52",
+  "oldPrompt": "ある度数分布表の累積相対度数は、小さい階級から順に 0.1、0.35、0.7、0.9、1 である。相対度数がもっとも大きい階級は、小さいほうから何番目か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "3",
+   "units": [
+    "番目"
+   ]
+  },
+  "newPrompt": "図は、40 人の待ち時間（分）の累積相対度数を、各階級の右はしの値に点をとって折れ線で表したものである。累積相対度数がはじめて 0.5 以上になる階級の階級値を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "25",
+   "units": [
+    "分"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-52.svg",
+  "page": 231,
+  "reason": "累積相対度数の列を文字で与えた問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-54",
+  "oldPrompt": "次のア〜ウのうち、累積相対度数について正しいものを選び、記号で答えよう。\nア 階級が大きくなるにつれて、へることがある\nイ 階級が大きくなるにつれて、へることはない\nウ どの階級でも 0.5 になる",
+  "oldAnswer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  },
+  "newPrompt": "図は、40 人の待ち時間（分）の累積相対度数を、各階級の右はしの値に点をとって折れ線で表したものである。待ち時間が 40 分以上の人は何人か求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "4",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-54.svg",
+  "page": 231,
+  "reason": "累積相対度数の性質の選択問題（図がない）"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-59",
+  "oldPrompt": "同じ度数分布表で、相対度数が 0.4 の階級の度数は、相対度数が 0.1 の階級の度数の何倍か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "4",
+   "units": [
+    "倍"
+   ]
+  },
+  "newPrompt": "図は、40 人の1週間の運動時間（時間）を、相対度数のヒストグラムに表したものである。運動時間が 20 時間以上の人は何人か求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "22",
+   "units": [
+    "人"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-59.svg",
+  "page": 232,
+  "reason": "相対度数の比の文字だけの問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-61",
+  "oldPrompt": "20 人のデータで、10 以上 20 未満の階級の相対度数が 0.3、20 以上 30 未満の階級の相対度数が 0.45 である。10 以上 30 未満にはいる人は何人か求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "15",
+   "units": [
+    "人"
+   ]
+  },
+  "newPrompt": "A組の 20 人のうち、通学時間が 20 分以上の人の割合を百分率で答えよう。図の相対度数の度数分布多角形（実線が A組、点線が 40 人の B組）を使う。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "65",
+   "units": [
+    "%",
+    "％"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-61.svg",
+  "page": 232,
+  "reason": "2つの階級の相対度数を文字で与えた問題"
+ },
+ {
+  "unit": "hist2",
+  "id": "tokkun-math-1-hist2-67",
+  "oldPrompt": "ある階級の相対度数が、A組では 0.3、B組では 0.25 だった。この階級の度数はどちらも 6 人である。A組とB組の人数の差を求めよう。",
+  "oldAnswer": {
+   "kind": "number",
+   "value": "4",
+   "units": [
+    "人"
+   ]
+  },
+  "newPrompt": "図は、A組（20 人）と B組（40 人）の通学時間（分）を、相対度数の度数分布多角形に表したものである（実線が A組、点線が B組）。2つの組の相対度数が等しい階級は1つだけある。その階級の階級値を求めよう。",
+  "newAnswer": {
+   "kind": "number",
+   "value": "5",
+   "units": [
+    "分"
+   ]
+  },
+  "image": "/tokkun-fig-hist2-67.svg",
+  "page": 232,
+  "reason": "2つの組の相対度数を文字で与えた問題"
+ }
+]

@@ -1,0 +1,12 @@
+--- material-engine.before.js	2026-10-22 18:57:40
++++ material-engine.candidate.js	2026-10-22 18:57:59
+@@ -202,6 +202,9 @@
+   const actual=number(value),expected=number(a.value);
+   if(actual===null||expected===null)return result(false,0,'数値と指定の単位を確認してください。');
+   const same=Math.abs(actual-expected)<=Math.max(1,Math.abs(expected))*1e-10;
++  // 答えが分数の問題で、約分していない分数（9/30 など）は○にしない（2026-10-22 候補）
++  const fm=String(value).replace(/ /g,'').match(/^[+-]?(\d+)\/(\d+)$/);
++  if(same&&fm){let x=+fm[1],y=+fm[2];const den=y;while(y){[x,y]=[y,x%y];}if(x>1||den===1)return result(false,0.5,'約分しよう。');}
+   return result(same,same?1:0,same?'正解です。':'数値をもう一度確認してください。');
+  }
+  if(a.kind==='numbers'){

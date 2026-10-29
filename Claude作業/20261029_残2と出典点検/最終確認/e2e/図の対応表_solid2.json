@@ -1,0 +1,557 @@
+[
+ {
+  "unit": "solid2",
+  "number": 7,
+  "file": "tokkun-fig-solid2-7.svg",
+  "sha256": "fbb1337128f260e26f36f3631c5704ebd9dc093c5b6069dc9e1fedc7e3c13772",
+  "image": "/tokkun-fig-solid2-7.svg",
+  "imageAlt": "投影図。立面図は長方形（中にたての線が1本）、平面図は正六角形。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 8,
+  "file": "tokkun-fig-solid2-8.svg",
+  "sha256": "fe3bd98439bdda20d7385f6584fdcb98ec4d76ad547cc276a4eb1aec0ed32a0f",
+  "image": "/tokkun-fig-solid2-8.svg",
+  "imageAlt": "投影図。立面図は三角形（中に点線のたての線）、平面図は正三角形で、中心から3つの頂点へ線がひいてある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 9,
+  "file": "tokkun-fig-solid2-9.svg",
+  "sha256": "76bfd4a330bbeb316addd28183640b1302ae03671e7c0efb945cb61281da8eb8",
+  "image": "/tokkun-fig-solid2-9.svg",
+  "imageAlt": "投影図。立面図も平面図も同じ大きさの円。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ウ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 10,
+  "file": "tokkun-fig-solid2-10.svg",
+  "sha256": "a8f91bde1ddc7b7fb1bd31bef73dda4282ca7a3762dba61ee73c5fd6b4c94882",
+  "image": "/tokkun-fig-solid2-10.svg",
+  "imageAlt": "投影図。立面図は上の辺が短い台形、平面図は中心が同じ大小2つの円。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 11,
+  "file": "tokkun-fig-solid2-11.svg",
+  "sha256": "598c292839cad90cf2118cd2902fbda61fa372abd263dd36b5c91dd5bf6be8d0",
+  "image": "/tokkun-fig-solid2-11.svg",
+  "imageAlt": "投影図。立面図と平面図は同じ長方形、側面図は円。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図",
+   "側面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ウ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 12,
+  "file": "tokkun-fig-solid2-12.svg",
+  "sha256": "df791e44b8ca3433a9afc23086a1b5ff96d9565143bc76cf41f4fd78e8fb6d33",
+  "image": "/tokkun-fig-solid2-12.svg",
+  "imageAlt": "円錐の展開図。側面は半径9cm、中心角120°のおうぎ形で、その下に底面の円がある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "X",
+     "O",
+     "Y"
+    ],
+    "value": 120,
+    "shown": "120°"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "O",
+     "X"
+    ],
+    "value": 9,
+    "shown": "9 cm"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "T",
+     "Z"
+    ],
+    "value": 3,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "120°",
+   "9 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "3",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 13,
+  "file": "tokkun-fig-solid2-13.svg",
+  "sha256": "879e17e27552183c20d7aeee10b6850d3adaa4db9c4391b496a10953de3d0dd6",
+  "image": "/tokkun-fig-solid2-13.svg",
+  "imageAlt": "円柱の展開図。たて5cmの長方形と、その上下につながる2つの円。",
+  "claims": [
+   {
+    "kind": "ratio",
+    "at": [
+     "L",
+     "R",
+     "L",
+     "U"
+    ],
+    "value": 5.026548245743669,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "5 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "8π",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 14,
+  "file": "tokkun-fig-solid2-14.svg",
+  "sha256": "202a6e708208ee96e7c0a7d48c58177230ae895f8afdfb3de24621f1f011ae15",
+  "image": "/tokkun-fig-solid2-14.svg",
+  "imageAlt": "正四角錐の展開図。まん中の正方形ABCDの4辺に、二等辺三角形PAB、QBC、RCD、SDAがついている。",
+  "claims": [
+   {
+    "kind": "eq",
+    "at": [
+     "P",
+     "B",
+     "Q",
+     "B"
+    ],
+    "value": 0,
+    "shown": ""
+   },
+   {
+    "kind": "eq",
+    "at": [
+     "P",
+     "A",
+     "P",
+     "B"
+    ],
+    "value": 0,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "QB",
+    "BQ",
+    "辺QB",
+    "辺BQ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 15,
+  "file": "tokkun-fig-solid2-15.svg",
+  "sha256": "a018da594ee328f51e989e9114c5ed848118144d64e8307aea0167395af79e28",
+  "image": "/tokkun-fig-solid2-15.svg",
+  "imageAlt": "立方体ABCD−EFGHの見取図。上の面の対角線BDと、手前の面の対角線BFがかいてある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ウ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 16,
+  "file": "tokkun-fig-solid2-16.svg",
+  "sha256": "a550599b46ed5a98e7aa4c7064d8daec0ad76d8c7e35f1a72083fad673b69ffc",
+  "image": "/tokkun-fig-solid2-16.svg",
+  "imageAlt": "円錐の投影図。立面図は底辺6cmの二等辺三角形、平面図は円で中心に点がある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図",
+   "",
+   "6 cm"
+  ],
+  "answer": {
+   "kind": "expr",
+   "value": "6π",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 17,
+  "file": "tokkun-fig-solid2-17.svg",
+  "sha256": "51cad893a9fa9721bdb70ecd5bd2bc4f84bac085dac082102afa8718553807c4",
+  "image": "/tokkun-fig-solid2-17.svg",
+  "imageAlt": "投影図。立面図は長方形の上に二等辺三角形がのった形、平面図は中心に点のある円。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図",
+   ""
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 18,
+  "file": "tokkun-fig-solid2-18.svg",
+  "sha256": "df4b6c2ecabf7dbe4e51468d4e966f9369016fd6a119c56206334e9cb4896de2",
+  "image": "/tokkun-fig-solid2-18.svg",
+  "imageAlt": "投影図。立面図は下が平らな半円、平面図は円。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "イ"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 19,
+  "file": "tokkun-fig-solid2-19.svg",
+  "sha256": "a38a2be073ba691bc6e92d6b482d62e09de637058d5ab532c7ecdf15ecb32c7a",
+  "image": "/tokkun-fig-solid2-19.svg",
+  "imageAlt": "直方体の投影図。立面図は横4cm・たて3cmの長方形、平面図は横4cm・たて5cmの長方形、側面図の場所は「？」。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "a",
+     "b"
+    ],
+    "value": 4,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "b",
+     "c"
+    ],
+    "value": 3,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "d",
+     "e"
+    ],
+    "value": 5,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図",
+   "側面図",
+   "?",
+   "4 cm",
+   "3 cm",
+   "5 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "15",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 20,
+  "file": "tokkun-fig-solid2-20.svg",
+  "sha256": "ea717b3cf05b4fd2b47dc0bb7177b35626838c814a9f1445069ce303730b23de",
+  "image": "/tokkun-fig-solid2-20.svg",
+  "imageAlt": "円錐の展開図。側面は中心角240°のおうぎ形、その上に半径4cmの底面の円が接している。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "Y",
+     "O",
+     "X"
+    ],
+    "value": 120,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "T",
+     "Z"
+    ],
+    "value": 4,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "Z",
+     "W"
+    ],
+    "value": 4,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "240°",
+   "4 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "6",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 21,
+  "file": "tokkun-fig-solid2-21.svg",
+  "sha256": "b7b64432cfcc4c226c4040c1fe9de6543b83f3895506a5be6a1453bab6548034",
+  "image": "/tokkun-fig-solid2-21.svg",
+  "imageAlt": "円柱の展開図。横が10πcmの長方形と、その上下に接する2つの円。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "L",
+     "R"
+    ],
+    "value": 31.41592653589793,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "10π cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "5",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 22,
+  "file": "tokkun-fig-solid2-22.svg",
+  "sha256": "20a7fcfdec36264085b42506670789c84224cbbd425c17bdebcbc371cfa29d04",
+  "image": "/tokkun-fig-solid2-22.svg",
+  "imageAlt": "大きな正三角形XYZを、各辺のまん中の点A、B、Cで4つの正三角形に分けた展開図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "X",
+   "Y",
+   "Z",
+   "A",
+   "B",
+   "C"
+  ],
+  "answer": {
+   "kind": "set",
+   "items": [
+    [
+     "Y"
+    ],
+    [
+     "Z"
+    ]
+   ],
+   "letters": true
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 23,
+  "file": "tokkun-fig-solid2-23.svg",
+  "sha256": "7a5b0772d44b066c1162e8e9c7e0027b8a6baecd1e77a6ab71a597c5f6d9d9c1",
+  "image": "/tokkun-fig-solid2-23.svg",
+  "imageAlt": "円錐の展開図。側面は半径12cmのおうぎ形で、弧のまん中に底面の円が接している。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "O",
+     "X"
+    ],
+    "value": 12,
+    "shown": ""
+   },
+   {
+    "kind": "len",
+    "at": [
+     "T",
+     "Z"
+    ],
+    "value": 3,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "12 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "3",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "solid2",
+  "number": 24,
+  "file": "tokkun-fig-solid2-24.svg",
+  "sha256": "8bba51f258b9988e09e24df5415c6a11082ee47c001bb11b59d5ab372fba4c54",
+  "image": "/tokkun-fig-solid2-24.svg",
+  "imageAlt": "投影図。立面図も平面図も同じ大きさの正方形。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "立面図",
+   "平面図"
+  ],
+  "answer": {
+   "kind": "set",
+   "items": [
+    [
+     "ア"
+    ],
+    [
+     "イ"
+    ]
+   ],
+   "letters": true
+  }
+ }
+]

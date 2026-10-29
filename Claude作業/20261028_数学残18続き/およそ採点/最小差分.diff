@@ -1,0 +1,18 @@
+--- material-engine.original.js	2026-10-28 19:21:02
++++ material-engine.candidate.js	2026-10-28 19:21:15
+@@ -34,6 +34,7 @@
+  const same=(x,y)=>x!==null&&y!==null&&Math.abs(x-y)<=Math.max(1,Math.abs(y))*1e-10;
+  if(a.kind==='number'){
+   let value=raw.replace(/^[a-zA-Z]\s*=\s*/,'').replace(/[。.]+$/,'').trim(); // 「x=5」と書いても読む。最後の「。」もはずす
++  if(a.approx===true)value=value.replace(/^(?:およそ|約|やく)\s*/,''); // 候補：「およそ何回」とたずねる問題（answer.approx が true）だけ、頭の「およそ・約」を1回だけ読みとばす（2026-10-28 Claude）
+   const units=[...(a.units||[])].map(normalize).sort((x,y)=>y.length-x.length),unit=units.find(u=>value.endsWith(u));if(unit)value=value.slice(0,-unit.length).trim();value=thousands(value);
+   const actual=number(value),expected=number(a.value);
+   if(actual===null||expected===null)return base;
+@@ -195,6 +196,7 @@
+  if(raw.length>4000)return result(false,0,'回答が長すぎます。');
+  if(a.kind==='number'){
+   let value=raw.replace(/^[a-zA-Z]\s*=\s*/,'').replace(/[。.]+$/,'').trim(); // 方程式の答えを「x=5」と書いても読む。最後の「。」もはずす（2026-10-22）
++  if(a.approx===true)value=value.replace(/^(?:およそ|約|やく)\s*/,''); // 候補：「およそ何回」とたずねる問題（answer.approx が true）だけ、頭の「およそ・約」を1回だけ読みとばす（2026-10-28 Claude）
+   const units=[...(a.units||[])].map(normalize).sort((x,y)=>y.length-x.length); // ℃ などは入力と同じく正規化して比べる
+   const unit=units.find(u=>value.endsWith(u));if(unit)value=value.slice(0,-unit.length).trim();
+   value=thousands(value); // 「1,500」のような3けたごとのカンマも読む（2026-10-22）

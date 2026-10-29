@@ -1,0 +1,120 @@
+{
+ "id": "tokkun-math-1-hist1",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ヒストグラムと相対度数①（特訓）",
+ "majorTitle": "データの活用",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-hist1-1",
+   "type": "input",
+   "prompt": "7つのデータ 12、15、7、20、18、9、14 に、20 より大きい値 x を1つ加えたら、範囲が 15 になった。x の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "22"
+   },
+   "explanation": "①範囲 ＝ 最大値 − 最小値　②最小値は 7 のままなので、最大値 x − 7 ＝ 15　③x ＝ 22。答え 22",
+   "source": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p224〜227（範囲・度数分布表・ヒストグラム）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224
+   }
+  },
+  {
+   "id": "tokkun-math-1-hist1-2",
+   "type": "input",
+   "prompt": "ある度数分布表の累積度数が、小さい階級から順に 3、8、15、18、20 である。3番目の階級の度数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①累積度数は、その階級までの度数の合計　②3番目の度数 ＝ 15 − 8　③7。答え 7",
+   "source": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p224〜227（範囲・度数分布表・ヒストグラム）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224
+   }
+  },
+  {
+   "id": "tokkun-math-1-hist1-3",
+   "type": "input",
+   "prompt": "階級の幅が 5 cm のヒストグラムで、度数の合計は 30 人である。ヒストグラムの長方形の面積をすべてたすと、いくつになるか答えよう（横は cm、縦は人の目もりで考える）。",
+   "answer": {
+    "kind": "number",
+    "value": "150"
+   },
+   "explanation": "①長方形1つの面積 ＝ 階級の幅 × 度数　②合計 ＝ 5 × (度数の合計) ＝ 5 × 30　③150。答え 150",
+   "source": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p224〜227（範囲・度数分布表・ヒストグラム）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224
+   }
+  },
+  {
+   "id": "tokkun-math-1-hist1-4",
+   "type": "input",
+   "prompt": "20 人のデータの最小値は 10、最大値は 37 である。8 以上 12 未満から始めて、階級の幅 4 で度数分布表をつくると、階級はいくつ必要か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "①階級：8〜12、12〜16、…と 4 ずつ　②37 がはいるのは 36 以上 40 未満　③8〜12 から 36〜40 まで (40 − 8) ÷ 4 ＝ 8 個。答え 8",
+   "source": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p224〜227（範囲・度数分布表・ヒストグラム）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466048_0.jpg",
+    "sha256": "b81b0187f499fe84303144e65b4454907edf4e1c9eb246ad88f95094f80dc6b0",
+    "page": 224
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。度数分布表とヒストグラムを、逆にたどる・条件から値を決める問題に広げた一段難しい問題。答えは check.py で数え直して検算。【保留】教科書問題と似ない考え方の問題は 4 問まで。70問にしていない。"
+}

@@ -1,0 +1,1841 @@
+{
+ "id": "tokkun-science-1-chikara",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "理科",
+ "grade": 1,
+ "title": "力のはたらきと力の大きさ（特訓）",
+ "majorTitle": "力による現象",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-science-1-chikara-1",
+   "type": "input",
+   "prompt": "0.5 Nの力で引くと2 cmのびるばねがある。このばねに質量250 gのおもりをつるすと、何cmのびるか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "250 gの重力は2.5 N。2.5÷0.5＝5倍なので、のびは 2×5＝10 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-2",
+   "type": "input",
+   "prompt": "あるばねに60 gのおもりをつるすと全体の長さが14 cm、100 gのおもりをつるすと全体の長さが18 cmになった。おもりをつるしていないときのばねの長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "40 gふやすと4 cmのびる → 10 gで1 cm。60 gでは6 cmのびているので、もとの長さは 14−6＝8 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-3",
+   "type": "input",
+   "prompt": "あるばねに60 gのおもりをつるすと全体の長さが14 cm、100 gのおもりをつるすと全体の長さが18 cmになった。このばねに150 gのおもりをつるすと、全体の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "23",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "もとの長さ8 cm、10 gで1 cmのびる。150 gでは15 cmのびて、8＋15＝23 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-4",
+   "type": "input",
+   "prompt": "ばねAは1 Nで4 cm、ばねBは1 Nで2.5 cmのびる。同じおもりをつるすと、ばねAののびが10 cmになった。ばねBののびは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "6.25",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "力は 10÷4＝2.5 N。ばねBののびは 2.5×2.5＝6.25 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-5",
+   "type": "input",
+   "prompt": "ばねAは1 Nで4 cm、ばねBは1 Nで2.5 cmのびる。2つのばねを同じ長さ（10 cm）だけのばすとき、ばねBを引く力はばねAを引く力の何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "1.6",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "ばねAは2.5 N、ばねBは4 N必要。4÷2.5＝1.6倍。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-6",
+   "type": "input",
+   "prompt": "0.2 Nで1.5 cmのびるばねがある。ばねを9 cmのばすには、何gのおもりをつるせばよいか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "9÷1.5＝6倍なので、力は 0.2×6＝1.2 N。1.2 Nは120 gのおもり。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-7",
+   "type": "input",
+   "prompt": "ばねに加えた力とのびの表は、0 N→0 cm、0.4 N→3 cm、0.8 N→6 cm、1.2 N→9 cmだった。このばねを1 Nの力で引くと何cmのびるか。小数第2位を四捨五入して小数第1位まで求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "0.4 Nで3 cm → 1 Nあたり 3÷0.4＝7.5 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-8",
+   "type": "input",
+   "prompt": "自然の長さが12 cmのばねに、ある物体をつるすと全体の長さが20 cmになった。このばねは1 Nで4 cmのびる。物体の質量は何gか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "200",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "のびは 20−12＝8 cm。力は 8÷4＝2 N。2 Nは質量200 g。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-9",
+   "type": "input",
+   "prompt": "1 Nで5 cmのびるばねに、質量40 gのおもりを3個つるした。ばねののびは何cmか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "おもり3個は120 gで1.2 N。のびは 1.2×5＝6 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-10",
+   "type": "input",
+   "prompt": "あるばねに80 gのおもりをつるすと4 cmのびた。このばねを手で引いて10 cmのばした。手が加えた力は何Nか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "80 gは0.8 N。0.8 Nで4 cm → 1 cmあたり0.2 N。10 cmでは2 N。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-11",
+   "type": "input",
+   "prompt": "ばねにつるしたおもりの重さを2倍にすると、ばねの全体の長さも2倍になるとは限らない。自然の長さ10 cm、1 Nで2 cmのびるばねに1 Nをつるしたときと2 Nをつるしたときの全体の長さの比は、12：何か。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "1 Nで12 cm、2 Nで 10＋4＝14 cm。比例するのは「のび」で、「全体の長さ」ではない。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-12",
+   "type": "input",
+   "prompt": "月面でばねばかりにつるすと2 Nを示した物体の質量は何gか。地球上で100 gの物体にはたらく重力を1 N、月面の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "1200",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "月面で2 Nなら地球上では12 N。12 Nは質量1200 g。質量は場所によって変わらない。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-13",
+   "type": "input",
+   "prompt": "地球上で1 Nで3 cmのびるばねに質量300 gのおもりをつるした。月面で同じおもりを同じばねにつるすと、のびは何cmか。月面の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "1.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "地球上で3 N → 9 cm。月面では重さが6分の1の0.5 Nになり、のびは 0.5×3＝1.5 cm。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-14",
+   "type": "input",
+   "prompt": "物体を月面に持っていったとき、変わるものはどれか。「質量」「重さ」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重さ",
+     "おもさ"
+    ]
+   },
+   "explanation": "重さ（物体にはたらく重力の大きさ）は月面では6分の1になる。質量（物体そのものの量）は変わらない。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-15",
+   "type": "input",
+   "prompt": "上皿てんびんではかる量と、ばねばかりではかる量のうち、場所によって値が変わらないのはどちらか。「上皿てんびん」「ばねばかり」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "上皿てんびん",
+     "うわざらてんびん",
+     "てんびん"
+    ]
+   },
+   "explanation": "上皿てんびんは質量をはかる（分銅とつり合わせる）ので場所で変わらない。ばねばかりは重さをはかるので変わる。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-16",
+   "type": "input",
+   "prompt": "月面で、上皿てんびんの片方に質量300 gの物体をのせた。もう片方に何gの分銅をのせるとつり合うか。",
+   "answer": {
+    "kind": "number",
+    "value": "300",
+    "units": [
+     "g",
+     "ｇ",
+     "グラム"
+    ]
+   },
+   "explanation": "月面では物体も分銅も同じように重さが6分の1になるので、地球と同じ300 gの分銅でつり合う。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-17",
+   "type": "input",
+   "prompt": "「重さ」の単位として正しいものを選ぼう。\nア g　イ N　ウ cm",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "重さは力の大きさなので単位はN（ニュートン）。gは質量の単位。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-18",
+   "type": "input",
+   "prompt": "無重力に近い宇宙ステーションの中で、物体の質量はどうなるか。「なくなる」「変わらない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "変わらない",
+     "かわらない"
+    ]
+   },
+   "explanation": "質量は物体そのものの量なので、どこへ行っても変わらない。重さ（重力の大きさ）が小さくなるだけ。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-19",
+   "type": "input",
+   "prompt": "次のうち、「物体の形を変える」はたらきの例をすべて選ぼう。\nア 粘土を手でにぎってへこませる　イ 転がってきたボールを足で止める　ウ 机の上の本が机に支えられている　エ ばねを引いてのばす",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "アとエは形を変えている。イは運動のようすを変える、ウは支えるはたらき。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-20",
+   "type": "input",
+   "prompt": "次のうち、「物体の運動のようすを変える」はたらきの例をすべて選ぼう。\nア 自転車のブレーキをかけて止まる　イ 投げたボールの向きがバットで変わる　ウ スポンジを指でおす　エ 手で荷物を持ち上げたまま静止させる",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "速さや向きが変わるアとイ。ウは形を変える、エは支える。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-21",
+   "type": "input",
+   "prompt": "天井からつるした電灯が落ちないのは、ひもが電灯にどのような力のはたらきをしているからか。「形を変える」「運動のようすを変える」「支える」から選ぼう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "支える",
+     "ささえる"
+    ]
+   },
+   "explanation": "ひもが電灯を引いて支えている。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-22",
+   "type": "input",
+   "prompt": "テニスラケットでボールを打つと、ボールは一瞬つぶれてから、向きを変えて飛んでいく。このとき見られる力のはたらきを2つ選ぼう。\nア 形を変える　イ 運動のようすを変える　ウ 支える",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アとイ",
+     "イとア",
+     "ア、イ",
+     "イ、ア",
+     "ア,イ",
+     "イ,ア",
+     "アイ",
+     "イア",
+     "ア・イ",
+     "ア イ",
+     "ア　イ",
+     "イ・ア",
+     "イ ア",
+     "イ　ア"
+    ]
+   },
+   "explanation": "ボールがつぶれる（形を変える）、向きや速さが変わる（運動のようすを変える）。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-23",
+   "type": "input",
+   "prompt": "セーターでこすった下じきに、小さな紙片が引きつけられた。このときはたらいている力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "電気力",
+     "でんきりょく",
+     "電気の力"
+    ]
+   },
+   "explanation": "こすって電気を帯びた下じきが紙片を引きつける力は電気力。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-24",
+   "type": "input",
+   "prompt": "空中に投げ上げたボールが、やがて地面に落ちてくるのは、何という力がはたらいているからか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重力",
+     "じゅうりょく"
+    ]
+   },
+   "explanation": "地球がボールを地球の中心に向かって引く重力がはたらいている。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-25",
+   "type": "input",
+   "prompt": "引きのばしたゴムを手からはなすと、ゴムはもとにもどろうとする。このとき生じている力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "弾性力",
+     "だんせいりょく",
+     "弾性の力"
+    ]
+   },
+   "explanation": "変形した物体がもとにもどろうとして生じる力は弾性力。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-26",
+   "type": "input",
+   "prompt": "床の上を転がるボールが、だんだんおそくなって止まった。ボールの運動をさまたげている、床とボールのふれ合う面ではたらく力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "摩擦力",
+     "まさつりょく",
+     "摩擦の力"
+    ]
+   },
+   "explanation": "ふれ合う面で運動をさまたげる向きにはたらく力は摩擦力。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-27",
+   "type": "input",
+   "prompt": "2つの磁石の同じ極どうしを近づけると、どうなるか。「引き合う」「しりぞけ合う」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "しりぞけ合う",
+     "退け合う",
+     "しりぞけあう",
+     "反発し合う"
+    ]
+   },
+   "explanation": "同じ極どうしはしりぞけ合い、ちがう極どうしは引き合う。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-28",
+   "type": "input",
+   "prompt": "磁力・電気力・重力のうち、引き合うことはあっても、しりぞけ合うことはない力はどれか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重力",
+     "じゅうりょく"
+    ]
+   },
+   "explanation": "重力はいつも地球の中心に向かって引く力。磁力・電気力は引き合うこともしりぞけ合うこともある。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-29",
+   "type": "input",
+   "prompt": "地球上のどこにいても、重力は物体をどの向きに引くか。次から選ぼう。\nア 地球の中心に向かう向き　イ 北の向き　ウ 太陽に向かう向き",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "重力は、地球の中心に向かって物体を引く力。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-30",
+   "type": "input",
+   "prompt": "物体に力がはたらいているかどうかは、どのようなことから判断できるか。力の3つのはたらきのうち1つ以上を書こう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "形",
+       "変形",
+       "運動",
+       "速さ",
+       "向き",
+       "支え",
+       "ささえ"
+      ]
+     }
+    ]
+   },
+   "explanation": "物体の形が変わる、運動のようす（速さや向き）が変わる、物体が支えられている、のどれかがあれば力がはたらいている。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-31",
+   "type": "input",
+   "prompt": "重さが0.35 Nの物体の質量は何gか。100 gの物体にはたらく重力を1 Nとする（地球上）。",
+   "answer": {
+    "kind": "number",
+    "value": "35",
+    "units": [
+     "g",
+     "ｇ"
+    ]
+   },
+   "explanation": "1 Nで100 g。0.35 Nは35 g。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-32",
+   "type": "input",
+   "prompt": "ばねに加えた力とばねの「全体の長さ」は比例するか。「比例する」「比例しない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "比例しない",
+     "ひれいしない"
+    ]
+   },
+   "explanation": "比例するのは「のび」。全体の長さ＝もとの長さ＋のび なので、比例しない（グラフが原点を通らない）。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-33",
+   "type": "input",
+   "prompt": "ばねに加えた力を横軸、ばねの全体の長さを縦軸にしたグラフは、どのような形になるか。次から選ぼう。\nア 原点を通る直線　イ 原点を通らない直線　ウ 曲線",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "全体の長さ＝もとの長さ＋のび。力が0でももとの長さがあるので、原点を通らない直線。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-34",
+   "type": "input",
+   "prompt": "測定値をグラフにするとき、点を折れ線で結ばずに、点が線の上下に同じくらい散らばるように直線を引くのはなぜか。次から選ぼう。\nア 測定値には誤差があるから　イ 直線のほうが美しいから　ウ 点の数が少ないから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "測定値には誤差があるので、全体の傾向を表すように直線を引く。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-35",
+   "type": "input",
+   "prompt": "1 Nで2 cmのびるばねAと、1 Nで5 cmのびるばねBでは、のびにくい（かたい）ばねはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "A",
+     "Ａ",
+     "ばねA",
+     "ばねＡ"
+    ]
+   },
+   "explanation": "同じ力でのびが小さいほうがかたいばね。ばねA。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-36",
+   "type": "input",
+   "prompt": "同じ力で引いたとき、のびの大きいばねのグラフ（横軸：力、縦軸：のび）のかたむきは、のびの小さいばねとくらべてどうなるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "急",
+     "急になる",
+     "大きい",
+     "大きくなる",
+     "きゅう"
+    ]
+   },
+   "explanation": "同じ力でのびが大きいので、グラフのかたむきは急（大きい）になる。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-37",
+   "type": "input",
+   "prompt": "手でばねを引いてのばし、同じばねにおもりをつるして同じだけのばした。このとき、手がばねを引いた力について、何がいえるか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "おもり"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "同じ",
+       "おなじ",
+       "等し",
+       "変わらない",
+       "かわらない"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "重さ",
+       "重力",
+       "力"
+      ]
+     }
+    ],
+    "allowNegation": true,
+    "reject": [
+     [
+      "より大き",
+      "より小さ",
+      "2倍",
+      "倍の力"
+     ]
+    ]
+   },
+   "explanation": "同じばねが同じだけのびたので、手の力はおもりにはたらく重力（重さ）と同じ大きさ。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-38",
+   "type": "input",
+   "prompt": "ばねばかりではかっているのは、物体の何か。「質量」「重さ」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "重さ",
+     "おもさ"
+    ]
+   },
+   "explanation": "ばねばかりは、ばねののびで力（物体にはたらく重力＝重さ）をはかる。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-39",
+   "type": "input",
+   "prompt": "ばねばかりにある物体をつるすと1.8 Nを示した。同じ物体を、1 Nで3 cmのびるばねにつるすと、何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "5.4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "物体の重さは1.8 N。のびは 1.8×3＝5.4 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-40",
+   "type": "input",
+   "prompt": "自然の長さが10 cmのばねに、同じおもりを1個つるすごとに2 cmずつのびる。全体の長さを20 cmにするには、おもりを何個つるせばよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "個",
+     "こ"
+    ]
+   },
+   "explanation": "のびを 20−10＝10 cm にする。10÷2＝5個。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-41",
+   "type": "input",
+   "prompt": "あるばねを0.9 Nの力で引くと6 cmのびた。のびを4 cmにしたい。引く力を何N小さくすればよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.3",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "1 cmあたり 0.9÷6＝0.15 N。4 cmなら0.6 N。0.9−0.6＝0.3 N 小さくする。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-42",
+   "type": "input",
+   "prompt": "ばねにつるしたおもりを、手で下から少しだけ持ち上げた（おもりはばねからはずれていない）。ばねののびはどうなるか。「大きくなる」「小さくなる」「変わらない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "小さくなる",
+     "ちいさくなる"
+    ]
+   },
+   "explanation": "手がおもりを支える分だけ、ばねがおもりを支える力が小さくなり、のびは小さくなる。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-43",
+   "type": "input",
+   "prompt": "0.2 Nで1 cmのびるばねAと、0.5 Nで1 cmのびるばねBに、同じおもりをつるした。のびが大きいのはどちらか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "A",
+     "Ａ",
+     "ばねA",
+     "ばねＡ"
+    ]
+   },
+   "explanation": "同じ力なら、1 cmのばすのに小さい力ですむばねA（やわらかいばね）のほうがよくのびる。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-44",
+   "type": "input",
+   "prompt": "ばねAは1 Nで2 cm、ばねBは1 Nで6 cmのびる。2本に同じおもりをつるしたら、のびの差が8 cmになった。おもりの重さは何Nか。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "1 Nあたりののびの差は 6−2＝4 cm。差が8 cmなので 8÷4＝2 N。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-45",
+   "type": "input",
+   "prompt": "自然の長さ15 cmのばねAと、自然の長さ10 cmのばねBがある。1 NあたりのびはAが1 cm、Bが2 cm。同じ力で引いて全体の長さを同じにするには、何Nで引けばよいか。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "Aは15＋1×x、Bは10＋2×x。等しくなるのは 15＋x＝10＋2x より x＝5 N（どちらも20 cm）。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-46",
+   "type": "input",
+   "prompt": "自然の長さ15 cmのばねAと、自然の長さ10 cmのばねBがある。1 NあたりのびはAが1 cm、Bが2 cm。同じ力で引いて全体の長さが同じになったとき、その長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "5 Nで引いたとき、A＝15＋5＝20 cm、B＝10＋10＝20 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-47",
+   "type": "input",
+   "prompt": "ばねに質量20 gのおもりを1個ずつふやしてつるしていくと、5個のとき全体の長さが17 cm、8個のとき21.5 cmになった。おもり1個あたり何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "1.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "3個ふやすと 21.5−17＝4.5 cm のびがふえる。4.5÷3＝1.5 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-48",
+   "type": "input",
+   "prompt": "ばねに質量20 gのおもりを1個ずつふやしてつるしていくと、5個のとき全体の長さが17 cm、8個のとき21.5 cmになった。このばねの自然の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "9.5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "1個で1.5 cmのびるので、5個で7.5 cm。17−7.5＝9.5 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-49",
+   "type": "input",
+   "prompt": "1 Nで4 cmのびるばねの下に、質量150 gのおもりをつるし、その下にさらに質量50 gのおもりをつるした。ばねののびは何cmか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ばねにかかるのは2個合わせた重さ 2 N。2×4＝8 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-50",
+   "type": "input",
+   "prompt": "月面で、1 Nで5 cmのびるばねに質量600 gのおもりをつるすと、のびは何cmか。地球上で100 gの物体にはたらく重力を1 N、月面の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "地球では6 N、月面ではその1/6の1 N。1×5＝5 cm。",
+   "source": {
+    "id": "source-0559",
+    "file": "理科ワーク/S__16252995_0.jpg",
+    "sha256": "d2d90dc95b195304976234bf83eae23605fad8688cbb35ece40ea662006513f1",
+    "page": 118,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p118（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-51",
+   "type": "input",
+   "prompt": "地球上でばねばかりが4.2 Nを示す物体を月面ではかると、ばねばかりは何Nを示すか。月面の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "0.7",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "重さは6分の1になる。4.2÷6＝0.7 N。質量は変わらない。",
+   "source": {
+    "id": "source-0559",
+    "file": "理科ワーク/S__16252995_0.jpg",
+    "sha256": "d2d90dc95b195304976234bf83eae23605fad8688cbb35ece40ea662006513f1",
+    "page": 118,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p118（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-52",
+   "type": "input",
+   "prompt": "ばねばかりと上皿てんびんを月面へ持っていき、同じ物体をはかった。地球上とくらべて、示す値が小さくなるのはどちらか。「ばねばかり」「上皿てんびん」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ばねばかり"
+    ]
+   },
+   "explanation": "ばねばかりは重力の大きさ（重さ）をはかるので小さくなる。上皿てんびんは分銅と比べるので、両方の重力が同じ割合で小さくなり、値は変わらない。",
+   "source": {
+    "id": "source-0559",
+    "file": "理科ワーク/S__16252995_0.jpg",
+    "sha256": "d2d90dc95b195304976234bf83eae23605fad8688cbb35ece40ea662006513f1",
+    "page": 119,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p119（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-53",
+   "type": "input",
+   "prompt": "地球上で1 Nで2 cmのびるばねに物体をつるすと6 cmのびた。月面で同じばねに同じ物体をつるしたとき、のびは何cmか。月面の重力を地球の6分の1とする。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "地球では3 N、月面では0.5 N。0.5×2＝1 cm。",
+   "source": {
+    "id": "source-0559",
+    "file": "理科ワーク/S__16252995_0.jpg",
+    "sha256": "d2d90dc95b195304976234bf83eae23605fad8688cbb35ece40ea662006513f1",
+    "page": 118,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p118（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-54",
+   "type": "input",
+   "prompt": "ばねAは0.1 Nで1 cmのびる。ばねBはばねAの2倍のびにくい（同じ力でのびが半分）。ばねBを6 cmのばすには何Nの力が必要か。",
+   "answer": {
+    "kind": "number",
+    "value": "1.2",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "ばねBは0.1 Nで0.5 cm。6 cmのばすには 6÷0.5＝12倍の力で 1.2 N。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 117,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p117（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-55",
+   "type": "input",
+   "prompt": "ばねに加えた力とのびのグラフで、かたむきが急なばねほど、どのようなばねといえるか。次から選ぼう。\nア のびやすい　イ のびにくい　ウ 自然の長さが長い",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "横軸が力、縦軸がのびなら、かたむきが急なほど同じ力で大きくのびる＝のびやすい。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 116,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p116（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-56",
+   "type": "input",
+   "prompt": "ばねに加えた力とのびの関係を調べる実験で、おもりの数をふやすたびに、のびを測る前に何を待つとよいか。次から選ぼう。\nア ばねとおもりの動きが止まるのを待つ　イ おもりを手で下に引くのを待つ　ウ ばねが自然の長さにもどるのを待つ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "おもりがゆれているとのびが正しく読めない。止まってから目盛りを読む。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 116,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p116（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-57",
+   "type": "input",
+   "prompt": "「ばねののびは加えた力に比例する」ことを確かめたい。グラフがどうなっていれば比例といえるか。次から選ぼう。\nア 原点を通る直線　イ 原点を通らない直線　ウ 曲線",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "比例のグラフは原点を通る直線。全体の長さのグラフは原点を通らない直線になる。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 116,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p116（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-58",
+   "type": "input",
+   "prompt": "机の上にあったペンを、指で押して机の外へ落とした。ペンが机からはなれて落ちている間も、ペンにはたらき続けている力はどれか。\nア 重力　イ 机がペンを支える力　ウ 指がペンを押す力",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "机が支える力と指が押す力は、ふれ合っている間だけはたらく。重力は離れていてもはたらき続ける。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-59",
+   "type": "input",
+   "prompt": "水平な机の上の消しゴムを指で押したが、消しゴムは動かなかった。動かないのは、指の力と反対向きに何という力がはたらいたからか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "摩擦力",
+     "まさつ力",
+     "まさつりょく",
+     "摩擦"
+    ]
+   },
+   "explanation": "机と消しゴムのふれ合う面で、動きをさまたげる摩擦力がはたらいた。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-60",
+   "type": "input",
+   "prompt": "次の場面で見られる力のはたらきを、「形を変える」「運動のようすを変える」「支える」から1つ選ぼう。\nサッカーボールを足でけって、止まっていたボールを転がした。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "運動のようすを変える"
+    ]
+   },
+   "explanation": "止まっていたボールが動き出した＝運動のようす（速さ・向き）が変わった。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-61",
+   "type": "input",
+   "prompt": "次の場面で見られる力のはたらきを、「形を変える」「運動のようすを変える」「支える」から1つ選ぼう。\n本だなの板が、のせた本をささえている。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "支える"
+    ]
+   },
+   "explanation": "本が落ちないように板が下から力を加えている＝支えるはたらき。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-62",
+   "type": "input",
+   "prompt": "次の場面で見られる力のはたらきを、「形を変える」「運動のようすを変える」「支える」から1つ選ぼう。\nアルミ缶を手でにぎってつぶした。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "形を変える"
+    ]
+   },
+   "explanation": "缶の形が変わった＝形を変えるはたらき。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 104,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p104（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-63",
+   "type": "input",
+   "prompt": "まっすぐ転がっていた鉄球の横に磁石を近づけると、鉄球の進む向きが曲がった。このとき鉄球にはたらいた力は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "磁力",
+     "磁石の力",
+     "じりょく"
+    ]
+   },
+   "explanation": "磁石が離れたところから鉄球を引いた＝磁力。運動の向きが変わった。",
+   "source": {
+    "id": "source-0552",
+    "file": "理科ワーク/S__16252988_0.jpg",
+    "sha256": "ebd7b87da03888ee3d268f3e7399af97e0eefe3f195d9aae983a88887ee4fb0b",
+    "page": 105,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p105（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-64",
+   "type": "input",
+   "prompt": "質量1.5 kgのランドセルを手で持って、動かさずに支えている。手がランドセルを上向きに支える力は何Nか。100 gの物体にはたらく重力を1 Nとする。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "N",
+     "ニュートン"
+    ]
+   },
+   "explanation": "支える力は、ランドセルにはたらく重力と同じ大きさ。1.5 kg＝1500 g なので 15 N。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-65",
+   "type": "input",
+   "prompt": "重さ0.8 Nのりんごと、重さ2.4 Nのメロンがある。メロンの質量はりんごの質量の何倍か（地球上）。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "同じ場所では、重さは質量に比例する。2.4÷0.8＝3倍。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 106,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p106（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-66",
+   "type": "input",
+   "prompt": "地球上で質量1 kgの物体を、重力が地球の約2.5倍の惑星に持っていった。このとき物体の質量はどうなるか。「大きくなる」「小さくなる」「変わらない」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "変わらない"
+    ]
+   },
+   "explanation": "質量は物体そのものの量なので、場所が変わっても変わらない。変わるのは重さ。",
+   "source": {
+    "id": "source-0559",
+    "file": "理科ワーク/S__16252995_0.jpg",
+    "sha256": "d2d90dc95b195304976234bf83eae23605fad8688cbb35ece40ea662006513f1",
+    "page": 119,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p119（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-67",
+   "type": "input",
+   "prompt": "ばねばかりを使う前に、何もつるさないで目盛りを0に合わせるのはなぜか。次から選ぼう。\nア ばねばかり自身のずれで、正しい力が読めなくなるのを防ぐため　イ ばねを強くするため　ウ 質量をはかるため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "0点がずれていると、すべての測定値が同じだけずれてしまう。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 117,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p117（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-68",
+   "type": "input",
+   "prompt": "ばねばかりで物体を横向きに引くとき、ばねばかりをどのように持つとよいか。次から選ぼう。\nア 引く向きとばねばかりの向きをそろえる　イ ばねばかりを引く向きと直角にする　ウ どの向きでもよい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ばねの向きと引く向きがずれると、ばねがななめに引かれて正しく読めない。",
+   "source": {
+    "id": "source-0558",
+    "file": "理科ワーク/S__16252994_0.jpg",
+    "sha256": "da61999a006900825260c9e7737b44d1ee69489b5a8d6f28a11f018cba5117e7",
+    "page": 117,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p117（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-69",
+   "type": "input",
+   "prompt": "ばねを1.5 Nで引くと全体の長さが16 cm、2.5 Nで引くと20 cmになった。このばねは1 Nあたり何cmのびるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "1 Nふやすと4 cm長くなった。だから1 Nあたり4 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-science-1-chikara-70",
+   "type": "input",
+   "prompt": "ばねを1.5 Nで引くと全体の長さが16 cm、2.5 Nで引くと20 cmになった。このばねの自然の長さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "1.5 Nでは 1.5×4＝6 cm のびている。16−6＝10 cm。",
+   "source": {
+    "id": "source-0553",
+    "file": "理科ワーク/S__16252989_0.jpg",
+    "sha256": "e95e7eb5833038049d49a9afa356e27b68d9606d1f4d37195ad38ab21777bf5a",
+    "page": 107,
+    "number": "特訓（ワークの考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：理科ワーク p107（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-13 Claude作成（特訓・下書き）。理科ワーク p104〜107（教科書チェック・要点 力の大きさとばねののび）と p112〜120（基本問題・力だめし・入試・まとめ）を写真で確認し、その範囲で一段難しいオリジナル問題を作った。ばねの直列・並列つなぎ、弾性の限界、2力のつり合い（別単元）は使っていない。ドリルのばね・月面の問題と数字だけちがう問題は作らず、2つの条件から自然の長さを出す・2本のばねを比べる・月面でのばねののびなど、組み立てを変えた。"
+}

@@ -1,0 +1,595 @@
+{
+ "version": 1,
+ "status": "candidate only (Claude 2026-10-26); no main library/endpoint/UI connection",
+ "authorship": "Claude original diagnostic options; canonical questions are references only, not rewritten",
+ "displayPolicy": {
+  "availableOnlyFromOwnedCompletedReview": true,
+  "sendAnswerBeforeSubmit": false,
+  "explanationInitiallyHidden": true,
+  "countTowardExistingStudyRecords": false,
+  "consumeAdditionalAICredits": false,
+  "realUserDataUsed": false
+ },
+ "patterns": [
+  {
+   "id": "math-expression-notation",
+   "subject": "数学",
+   "grade": 1,
+   "causeToCheck": "×・÷を省くときの約束（数を前、同じ文字は累乗、÷は分数、1は書かない）を使えたかを確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "文字式の書き方の約束の確認",
+   "commentExample": "数は文字の前、同じ文字は指数、÷は分数。約束を一つずつ当てはめて確かめよう。",
+   "sources": [
+    {
+     "unitId": "drill-math-1-moji",
+     "questionId": "drill-math-1-moji-test-9"
+    },
+    {
+     "unitId": "drill-math-1-moji",
+     "questionId": "drill-math-1-moji-test-11"
+    },
+    {
+     "unitId": "drill-math-1-moji",
+     "questionId": "drill-math-1-moji-test-14"
+    },
+    {
+     "unitId": "drill-math-1-moji",
+     "questionId": "drill-math-1-moji-test-15"
+    }
+   ],
+   "practiceIds": [
+    "review-math-notation-01",
+    "review-math-notation-02",
+    "review-math-notation-03"
+   ]
+  },
+  {
+   "id": "math-equation-transposition",
+   "subject": "数学",
+   "grade": 1,
+   "causeToCheck": "移項するときに符号を変えたか、すべての項に同じ操作をしたかを確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "移項と等式の性質の確認",
+   "commentExample": "項を反対の辺へ動かすときは符号が変わるよ。両辺に同じ操作をしたか、代入でも確かめよう。",
+   "sources": [
+    {
+     "unitId": "drill-math-1-equation",
+     "questionId": "drill-math-1-equation-test-3"
+    },
+    {
+     "unitId": "drill-math-1-equation",
+     "questionId": "drill-math-1-equation-test-9"
+    },
+    {
+     "unitId": "drill-math-1-equation",
+     "questionId": "drill-math-1-equation-test-5"
+    }
+   ],
+   "practiceIds": [
+    "review-math-transpose-01",
+    "review-math-transpose-02",
+    "review-math-transpose-03"
+   ]
+  },
+  {
+   "id": "math-proportion-inverse",
+   "subject": "数学",
+   "grade": 1,
+   "causeToCheck": "比例ではy/x、反比例ではxyが一定という、関係の見分けと定数の求め方を確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "比例と反比例の見分けの確認",
+   "commentExample": "比例ならy÷x、反比例ならx×yが一定だよ。どちらの関係かを先に決めてから式にしよう。",
+   "sources": [
+    {
+     "unitId": "drill-math-1-proportion",
+     "questionId": "drill-math-1-proportion-test-6"
+    },
+    {
+     "unitId": "drill-math-1-proportion",
+     "questionId": "drill-math-1-proportion-test-7"
+    },
+    {
+     "unitId": "drill-math-1-proportion",
+     "questionId": "drill-math-1-proportion-test-10"
+    },
+    {
+     "unitId": "drill-math-1-proportion",
+     "questionId": "drill-math-1-proportion-test-1"
+    }
+   ],
+   "practiceIds": [
+    "review-math-prop-01",
+    "review-math-prop-02",
+    "review-math-prop-03"
+   ]
+  },
+  {
+   "id": "science-reflection-angle",
+   "subject": "理科",
+   "grade": 1,
+   "causeToCheck": "入射角・反射角を、鏡の面ではなく鏡に垂直な線（法線）からの角として読めたかを確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "反射角の測り方の確認",
+   "commentExample": "入射角と反射角は、鏡に垂直な線からの角だよ。図に垂直な線を引いて、どの角か確かめよう。",
+   "sources": [
+    {
+     "unitId": "drill-science-1-phenomena",
+     "questionId": "drill-science-1-phenomena-test-9"
+    }
+   ],
+   "practiceIds": [
+    "review-sci-reflect-01",
+    "review-sci-reflect-02",
+    "review-sci-reflect-03"
+   ]
+  },
+  {
+   "id": "science-quake-distance",
+   "subject": "理科",
+   "grade": 1,
+   "causeToCheck": "初期微動継続時間が震源からの距離に比例することと、P波・S波の時間差から距離を出す考え方を確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "初期微動継続時間と距離の確認",
+   "commentExample": "P波とS波が届く時刻の差が、距離とともにどう変わるかを考えよう。1kmあたりの差も使えるよ。",
+   "sources": [
+    {
+     "unitId": "drill-science-1-earth",
+     "questionId": "drill-science-1-earth-test-3"
+    },
+    {
+     "unitId": "drill-science-1-earth",
+     "questionId": "drill-science-1-earth-test-9"
+    },
+    {
+     "unitId": "drill-science-1-earth",
+     "questionId": "drill-science-1-earth-test-12"
+    }
+   ],
+   "practiceIds": [
+    "review-sci-quake-01",
+    "review-sci-quake-02",
+    "review-sci-quake-03"
+   ]
+  },
+  {
+   "id": "science-spring-extension",
+   "subject": "理科",
+   "grade": 1,
+   "causeToCheck": "ばねの「のび」が力に比例することと、全体の長さとのびの区別ができたかを確かめる。誤答理由を本人へ断定しない。",
+   "purpose": "ばねののびと全体の長さの確認",
+   "commentExample": "比例するのは「のび」だよ。全体の長さから元の長さを引いてから、おもりの重さを考えよう。",
+   "sources": [
+    {
+     "unitId": "drill-science-1-phenomena",
+     "questionId": "drill-science-1-phenomena-test-8"
+    },
+    {
+     "unitId": "drill-science-1-phenomena",
+     "questionId": "drill-science-1-phenomena-test-14"
+    },
+    {
+     "unitId": "drill-science-1-phenomena",
+     "questionId": "drill-science-1-phenomena-test-4"
+    }
+   ],
+   "practiceIds": [
+    "review-sci-spring-01",
+    "review-sci-spring-02",
+    "review-sci-spring-03"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "review-math-notation-01",
+   "patternId": "math-expression-notation",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "b×x×x×3 を、×を使わない式に直す。正しい式と理由はどれか。\nア・イ・ウの1字で答えよう。\nア　b3x²。かけ算の順番どおりに、出てきた順に並べる。\nイ　3bx²。数を文字の前に書き、同じ文字xの積は指数で表す。\nウ　3b2x。同じ文字が2つあるので、2をかけた形にする。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。数3を前に、文字はb、xの順に並べ、x×xはx²と書きます。2xはx＋xの意味なので、x×xとは別の式です。",
+   "whyThisChecksCause": "答えの式だけでなく、数の位置と同じ文字の積の表し方という2つの約束を区別できるかを問う。",
+   "appliesToSourceIds": [
+    "drill-math-1-moji-test-9",
+    "drill-math-1-moji-test-11",
+    "drill-math-1-moji-test-14",
+    "drill-math-1-moji-test-15"
+   ]
+  },
+  {
+   "id": "review-math-notation-02",
+   "patternId": "math-expression-notation",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "−x÷6 を、÷を使わない式に直す。正しい式と理由はどれか。\nア・イ・ウの1字で答えよう。\nア　−x/6（6分の−x）。÷6は「6でわる」ので、6を分母にした分数で表す。\nイ　−6/x（x分の−6）。÷の後ろの数を分子にして、わられる数を分母にする。\nウ　−6x。÷も×と同じように記号を省いて、数を前に書く。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。a÷b＝a/bなので、−x÷6＝−x/6です。分子と分母を逆にすると別の式になり、÷を×のように省くこともできません。",
+   "whyThisChecksCause": "わる数を分母にするという、÷の約束を×の約束と混同していないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-moji-test-9",
+    "drill-math-1-moji-test-11",
+    "drill-math-1-moji-test-14",
+    "drill-math-1-moji-test-15"
+   ]
+  },
+  {
+   "id": "review-math-notation-03",
+   "patternId": "math-expression-notation",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "(−1)×x×y を、×を使わない式に直す。正しい式と理由はどれか。\nア・イ・ウの1字で答えよう。\nア　−1xy。かけた数はそのまま残し、文字の前に書く。\nイ　xy(−1)。負の数は、かっこを付けて文字の後ろに書く。\nウ　−xy。数は前に書き、−1をかける場合は1を書かずに−だけを書く。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。1×aはa、(−1)×aは−aと書きます。−1xyは値は同じでも、文字式の書き方の約束に合いません。数は文字の前に書きます。",
+   "whyThisChecksCause": "係数が1や−1のときの省き方という、見落としやすい約束を確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-moji-test-9",
+    "drill-math-1-moji-test-11",
+    "drill-math-1-moji-test-14",
+    "drill-math-1-moji-test-15"
+   ]
+  },
+  {
+   "id": "review-math-transpose-01",
+   "patternId": "math-equation-transposition",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "9x−10＝7x−22 を解く。移項した式と解が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　9x−7x＝−22−10 なので x＝−16。左辺の−10は、符号を変えずに右辺へ移す。\nイ　9x−7x＝−22＋10 なので x＝−6。−10は右辺へ移すと＋10、7xは左辺へ移すと−7xになる。\nウ　9x＋7x＝−22＋10 なので x＝−3/4。文字の項は、移しても符号を変えない。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。2x＝−12、x＝−6。代入すると左辺9×(−6)−10＝−64、右辺7×(−6)−22＝−64で等しくなります。",
+   "whyThisChecksCause": "数の項と文字の項の両方で、移項するときに符号を変えられるかを分けて確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-equation-test-3",
+    "drill-math-1-equation-test-9",
+    "drill-math-1-equation-test-5"
+   ],
+   "numericCheck": {
+    "expression": "(-22+10)/(9-7)",
+    "expected": "-6"
+   }
+  },
+  {
+   "id": "review-math-transpose-02",
+   "patternId": "math-equation-transposition",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "3x−15＝5x−5 を解く。途中の式と解が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　3x−5x＝−5＋15 として −2x＝10、x＝5。わるときは数の大きさだけを見ればよい。\nイ　3x−5x＝−5−15 として −2x＝−20、x＝10。−15は符号を変えずに右辺へ移す。\nウ　3x−5x＝−5＋15 として −2x＝10、x＝−5。両辺を−2でわるので、符号も考える。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。−2x＝10の両辺を−2でわると、x＝−5。代入すると3×(−5)−15＝−30、5×(−5)−5＝−30で等しくなります。",
+   "whyThisChecksCause": "移項の符号と、負の係数でわるときの符号という、2か所のどちらで崩れたかを分けて確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-equation-test-3",
+    "drill-math-1-equation-test-9",
+    "drill-math-1-equation-test-5"
+   ],
+   "numericCheck": {
+    "expression": "(-5+15)/(3-5)",
+    "expected": "-5"
+   }
+  },
+  {
+   "id": "review-math-transpose-03",
+   "patternId": "math-equation-transposition",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "−1.7x−1.8＝−0.6x＋0.4 を、両辺を10倍してから解く。10倍した式と解が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　−17x−18＝−6x＋4 なので、x＝−2。両辺のすべての項を10倍する。\nイ　−17x−18＝−0.6x＋0.4 なので、xは小数になる。小数のある左辺だけを10倍する。\nウ　−17x−18＝−6x＋0.4 なので、x＝−18.4÷11。文字の項だけを10倍すればよい。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。等式の性質では、両辺の全部の項に同じ数をかけます。−11x＝22、x＝−2。代入すると左右とも1.6になります。",
+   "whyThisChecksCause": "小数の方程式で、10倍を一部の項にだけかけていないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-equation-test-3",
+    "drill-math-1-equation-test-9",
+    "drill-math-1-equation-test-5"
+   ],
+   "numericCheck": {
+    "expression": "(4+18)/(-17+6)",
+    "expected": "-2"
+   }
+  },
+  {
+   "id": "review-math-prop-01",
+   "patternId": "math-proportion-inverse",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "yはxに反比例し、x＝−4のときy＝6である。y＝3のときのxの値と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　x＝−2。yが半分になったので、xも半分になる。\nイ　x＝−2。y÷xが一定なので、6÷(−4)と同じになるxを探す。\nウ　x＝−8。x×yが−24で一定なので、x＝−24÷3になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。反比例ではxyが一定で、(−4)×6＝−24。−24÷3＝−8。yが半分になればxは2倍になります。−8×3＝−24で確かめられます。",
+   "whyThisChecksCause": "反比例を比例と同じ「同じ割合で増減する」関係として扱っていないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-proportion-test-6",
+    "drill-math-1-proportion-test-7",
+    "drill-math-1-proportion-test-10",
+    "drill-math-1-proportion-test-1"
+   ],
+   "numericCheck": {
+    "expression": "(-4*6)/3",
+    "expected": "-8"
+   }
+  },
+  {
+   "id": "review-math-prop-02",
+   "patternId": "math-proportion-inverse",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "24kmの道のりを時速xkmで進むとき、かかる時間をy時間とする。xとyの関係と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　反比例。x×y＝24で、道のりが一定だから。\nイ　比例。xが大きくなると、yも決まった割合で変わるから。\nウ　どちらでもない。xが大きくなるとyが小さくなるので、式に表せないから。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。速さ×時間＝道のりなので、xy＝24。xが2倍になればyは半分です。式y＝24/xで表せます。",
+   "whyThisChecksCause": "「片方が増えると片方が減る」という印象だけでなく、積が一定かどうかで判断できるかを問う。",
+   "appliesToSourceIds": [
+    "drill-math-1-proportion-test-6",
+    "drill-math-1-proportion-test-7",
+    "drill-math-1-proportion-test-10",
+    "drill-math-1-proportion-test-1"
+   ]
+  },
+  {
+   "id": "review-math-prop-03",
+   "patternId": "math-proportion-inverse",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "点(−3, □)が y＝18/x のグラフ上にある。□の求め方と値が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　18×(−3)＝−54。比例と同じように、xに18をかける。\nイ　18÷(−3)＝−6。y＝18/xにx＝−3を代入する。\nウ　18÷3＝6。座標の値は、符号を外して計算する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。y＝18/(−3)＝−6。(−3)×(−6)＝18でxyが一定になることも確かめられます。",
+   "whyThisChecksCause": "反比例の式への代入で、比例の式と混同したり、負の符号を落としたりしていないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-math-1-proportion-test-6",
+    "drill-math-1-proportion-test-7",
+    "drill-math-1-proportion-test-10",
+    "drill-math-1-proportion-test-1"
+   ],
+   "numericCheck": {
+    "expression": "18/(-3)",
+    "expected": "-6"
+   }
+  },
+  {
+   "id": "review-sci-reflect-01",
+   "patternId": "science-reflection-angle",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "鏡の面と入ってくる光のなす角が30°だった。反射角と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　60°。反射角は鏡に垂直な線（法線）からの角なので、90°−30°になる。\nイ　30°。鏡の面と光がつくる角が、そのまま反射角になる。\nウ　60°。入ってくる光の角を2倍すると、反射角になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。入射角も反射角も、鏡に垂直な線からはかります。90−30＝60で入射角60°、反射の法則で反射角も60°です。ウは答えの数だけが同じで、理由が正しくありません。",
+   "whyThisChecksCause": "数値が合っても理由が違う選択肢を置き、法線からはかる理由まで確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-9"
+   ],
+   "numericCheck": {
+    "expression": "90-30",
+    "expected": "60"
+   }
+  },
+  {
+   "id": "review-sci-reflect-02",
+   "patternId": "science-reflection-angle",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "入射角が40°のとき、鏡に入ってくる光と反射した光のなす角と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　40°。入射角と反射角は等しいので、2本の光のなす角も40°になる。\nイ　100°。180°から入射角と反射角をひく。\nウ　80°。2本の光は法線の両側にあり、入射角40°と反射角40°を合わせた角になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。法線をはさんで入射角40°と反射角40°があるので、2本の光のなす角は80°です。図に法線をかくと分かります。",
+   "whyThisChecksCause": "入射角と、光どうしのなす角を区別できるかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-9"
+   ],
+   "numericCheck": {
+    "expression": "40+40",
+    "expected": "80"
+   }
+  },
+  {
+   "id": "review-sci-reflect-03",
+   "patternId": "science-reflection-angle",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "光が鏡の面に垂直に当たった。入射角と、反射した光の進み方が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　入射角は90°。光は鏡の面に沿って進む。\nイ　入射角は0°。光は来た道をそのまま逆向きにもどる。\nウ　入射角は45°。光はななめに反射する。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。鏡に垂直な光は法線と重なるので、入射角は0°、反射角も0°で、同じ道をもどります。鏡の面との角90°と混同しないようにします。",
+   "whyThisChecksCause": "鏡の面との角と入射角の取りちがいを、極端な場合で確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-9"
+   ]
+  },
+  {
+   "id": "review-sci-quake-01",
+   "patternId": "science-quake-distance",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "震源からの距離が40kmの地点で、初期微動継続時間が8秒だった。同じ地震で、震源からの距離が120kmの地点の初期微動継続時間と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　8秒。同じ地震なら、初期微動継続時間はどの地点でも同じだから。\nイ　24秒。初期微動継続時間は震源からの距離に比例し、距離が3倍だから。\nウ　3秒。震源から遠いほど、ゆれが弱くなって短くなるから。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。P波とS波は同時に出て、遠いほど届く時刻の差が開きます。120÷40＝3倍なので、8×3＝24秒です。",
+   "whyThisChecksCause": "「同じ地震だから同じ」「遠いほど弱いから短い」という考えと、距離に比例する考えを区別できるかを問う。",
+   "appliesToSourceIds": [
+    "drill-science-1-earth-test-3",
+    "drill-science-1-earth-test-9",
+    "drill-science-1-earth-test-12"
+   ],
+   "numericCheck": {
+    "expression": "8*120/40",
+    "expected": "24"
+   }
+  },
+  {
+   "id": "review-sci-quake-02",
+   "patternId": "science-quake-distance",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "P波の速さが6km/s、S波の速さが4km/sの地震で、ある地点の初期微動継続時間は2秒だった。震源からの距離の求め方と値が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　6×2＝12km。P波の速さに初期微動継続時間をかける。\nイ　(6−4)×2＝4km。速さの差に時間をかける。\nウ　24km。1kmあたりでS波はP波より1/4−1/6＝1/12秒おそいので、2÷(1/12)で求める。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。距離xkmのとき、x/4−x/6＝2なので、x/12＝2、x＝24。確かめ：24÷6＝4秒、24÷4＝6秒で、差は2秒です。",
+   "whyThisChecksCause": "初期微動継続時間を、片方の波の速さだけや速さの差だけで扱っていないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-earth-test-3",
+    "drill-science-1-earth-test-9",
+    "drill-science-1-earth-test-12"
+   ],
+   "numericCheck": {
+    "expression": "2*4*6/(6-4)",
+    "expected": "24"
+   }
+  },
+  {
+   "id": "review-sci-quake-03",
+   "patternId": "science-quake-distance",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "P波の速さが8km/sの地震で、震源から96km離れた地点にP波が届くのは、地震発生の何秒後か。求め方と値が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　96÷8＝12秒後。かかった時間は、距離を速さでわって求める。\nイ　8×96＝768秒後。速さと距離をかけると時間になる。\nウ　96÷8÷2＝6秒後。音の反射と同じように、往復なので2でわる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。時間＝距離÷速さ＝96÷8＝12秒。P波は震源から地点へ片道で届くので、2でわりません。",
+   "whyThisChecksCause": "速さ・時間・距離の関係と、片道か往復かを、音の問題と混同していないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-earth-test-3",
+    "drill-science-1-earth-test-9",
+    "drill-science-1-earth-test-12"
+   ],
+   "numericCheck": {
+    "expression": "96/8",
+    "expected": "12"
+   }
+  },
+  {
+   "id": "review-sci-spring-01",
+   "patternId": "science-spring-extension",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "あるばねは、10gのおもりをつるすと2cmのびる。このばねが6cmのびたとき、つるしたおもりの質量と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　12g。のびの6cmに、最初のおもりの2倍をかける。\nイ　16g。のびが4cm増えたので、10gに6gを足す。\nウ　30g。のびはおもりの重さに比例し、のびが3倍なので、おもりも3倍になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "ウ。6÷2＝3倍のびたので、おもりも10×3＝30gです。1cmのびるのに5g必要、と考えても6×5＝30gになります。",
+   "whyThisChecksCause": "のびと力の比例を、足し算や別の数のかけ算で処理していないかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-8",
+    "drill-science-1-phenomena-test-14",
+    "drill-science-1-phenomena-test-4"
+   ],
+   "numericCheck": {
+    "expression": "10*6/2",
+    "expected": "30"
+   }
+  },
+  {
+   "id": "review-sci-spring-02",
+   "patternId": "science-spring-extension",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "何もつるさないときの長さが10cmのばねがあり、10gのおもりで2cmのびる。ばね全体の長さが16cmになったとき、つるしたおもりの質量と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　80g。全体の長さ16cmが、おもりによるのびだから。\nイ　30g。のびは16−10＝6cmで、2cmあたり10gなので3倍になる。\nウ　16g。全体の長さが10cmの1.6倍なので、おもりも1.6倍になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "イ。力に比例するのは「のび」です。16−10＝6cm、6÷2＝3倍で、10×3＝30g。全体の長さは、おもりがなくても10cmあります。",
+   "whyThisChecksCause": "全体の長さとのびを区別して、比例を当てはめられるかを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-8",
+    "drill-science-1-phenomena-test-14",
+    "drill-science-1-phenomena-test-4"
+   ],
+   "numericCheck": {
+    "expression": "10*(16-10)/2",
+    "expected": "30"
+   }
+  },
+  {
+   "id": "review-sci-spring-03",
+   "patternId": "science-spring-extension",
+   "type": "input",
+   "difficulty": "hard",
+   "prompt": "ばねAは10gのおもりで2cm、ばねBは10gのおもりで5cmのびる。それぞれに20gのおもりをつるしたとき、のびの差と理由が両方正しいものはどれか。\nア・イ・ウの1字で答えよう。\nア　6cm。Aは2倍で4cm、Bは2倍で10cmのびるので、10−4になる。\nイ　3cm。のびの差は、おもりの重さに関係なく5−2のままになる。\nウ　14cm。2本ののびを合わせた長さが差になる。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ア。それぞれのばねで比例を使い、Aは4cm、Bは10cmです。差は6cm。おもりが2倍なら、のびの差も3cmの2倍になります。",
+   "whyThisChecksCause": "2本のばねの比例を別々に当てはめ、差も比例して変わることを確かめる。",
+   "appliesToSourceIds": [
+    "drill-science-1-phenomena-test-8",
+    "drill-science-1-phenomena-test-14",
+    "drill-science-1-phenomena-test-4"
+   ],
+   "numericCheck": {
+    "expression": "(5-2)*20/10",
+    "expected": "6"
+   }
+  }
+ ],
+ "coverageLimits": [
+  "18 questions / 6 additional patterns; complements Codex 30 questions; no claim of full coverage",
+  "Only explicitly mapped source IDs may open these practice IDs"
+ ]
+}

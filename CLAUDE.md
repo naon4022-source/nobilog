@@ -5,6 +5,8 @@
 
 @.claude/HANDOFF.md
 
+認証・秘密値・Cloudflare公開を扱う場合は、必ず `SECURITY.md` も最初に全文読むこと。
+
 ---
 
 ## ★このトークで最初にやること

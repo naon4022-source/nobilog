@@ -1,0 +1,10 @@
+原本+原本エンジン exit=0 試した入力 211 / 期待とちがう 30 / この版にない問題 kanken-4-121 kanken-4-124 kanken-4-130 kanken-4-136 kanken-4-141 rika-5-21 rika-5-26
+前回候補+原本エンジン exit=0 試した入力 211 / 期待とちがう 14 / この版にない問題 kanken-4-121 kanken-4-124 kanken-4-130 kanken-4-136 kanken-4-141 rika-5-21 rika-5-26
+候補+原本エンジン exit=0 試した入力 213 / 期待とちがう 12 / この版にない問題 rika-5-13 rika-5-14 rika-5-18 rika-5-12 kanken-4-71 kanken-4-31
+候補+候補エンジン exit=0 試した入力 213 / 期待とちがう 0 / この版にない問題 rika-5-13 rika-5-14 rika-5-18 rika-5-12 kanken-4-71 kanken-4-31
+check_kentei kanken-4 exit=0 kentei-kanken-4.json 問題 120 ✅ 問題なし
+check_kentei suken-3 exit=0 kentei-suken-3.json 問題 50 ✅ 問題なし
+check_kentei suken-4 exit=0 kentei-suken-4.json 問題 50 ✅ 問題なし
+check_kentei suken-5 exit=0 kentei-suken-5.json 問題 50 ✅ 問題なし
+check_kentei rika-5 exit=0 kentei-rika-5.json 問題 20 ✅ 問題なし
+suken独立検算 exit=0 一致 26 不一致 0 対象外（計算以外の問題） 124 代入による確認：一致 22 不一致 0 

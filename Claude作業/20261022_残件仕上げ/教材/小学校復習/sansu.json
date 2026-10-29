@@ -1,0 +1,2215 @@
+{
+ "3": [
+  {
+   "topic": "3けたのたし算・ひき算",
+   "prompt": "次の計算をしよう。\n684 − 259 + 198",
+   "answer": {
+    "kind": "number",
+    "value": "623"
+   },
+   "explanation": "左から順に計算する。684−259＝425、425＋198＝623。"
+  },
+  {
+   "topic": "3けたのたし算・ひき算",
+   "prompt": "次の計算をしよう。\n907 − 348 + 299",
+   "answer": {
+    "kind": "number",
+    "value": "858"
+   },
+   "explanation": "左から順に計算する。907−348＝559、559＋299＝858。"
+  },
+  {
+   "topic": "3けたのたし算・ひき算",
+   "prompt": "次の計算をしよう。\n1000 − 463 + 97",
+   "answer": {
+    "kind": "number",
+    "value": "634"
+   },
+   "explanation": "左から順に計算する。1000−463＝537、537＋97＝634。"
+  },
+  {
+   "topic": "3けたのたし算・ひき算",
+   "prompt": "次の計算をしよう。\n735 − 186 + 410",
+   "answer": {
+    "kind": "number",
+    "value": "959"
+   },
+   "explanation": "左から順に計算する。735−186＝549、549＋410＝959。"
+  },
+  {
+   "topic": "かけ算",
+   "prompt": "次の計算をしよう。\n68 × 7",
+   "answer": {
+    "kind": "number",
+    "value": "476"
+   },
+   "explanation": "68×7＝476。くり上がりに気をつける。"
+  },
+  {
+   "topic": "かけ算",
+   "prompt": "次の計算をしよう。\n94 × 6",
+   "answer": {
+    "kind": "number",
+    "value": "564"
+   },
+   "explanation": "94×6＝564。くり上がりに気をつける。"
+  },
+  {
+   "topic": "かけ算",
+   "prompt": "次の計算をしよう。\n305 × 8",
+   "answer": {
+    "kind": "number",
+    "value": "2440"
+   },
+   "explanation": "305×8＝2440。くり上がりに気をつける。"
+  },
+  {
+   "topic": "かけ算",
+   "prompt": "次の計算をしよう。\n47 × 9",
+   "answer": {
+    "kind": "number",
+    "value": "423"
+   },
+   "explanation": "47×9＝423。くり上がりに気をつける。"
+  },
+  {
+   "topic": "あまりのあるわり算",
+   "prompt": "次のわり算をしよう。「〇あまり〇」の形で答えよう。\n58 ÷ 7",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "8あまり2",
+     "8 あまり 2",
+     "8余り2",
+     "8...2",
+     "8…2"
+    ]
+   },
+   "explanation": "7×8＝56、58−56＝2。あまりは7より小さい。"
+  },
+  {
+   "topic": "あまりのあるわり算",
+   "prompt": "次のわり算をしよう。「〇あまり〇」の形で答えよう。\n73 ÷ 9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "8あまり1",
+     "8 あまり 1",
+     "8余り1",
+     "8...1",
+     "8…1"
+    ]
+   },
+   "explanation": "9×8＝72、73−72＝1。あまりは9より小さい。"
+  },
+  {
+   "topic": "あまりのあるわり算",
+   "prompt": "次のわり算をしよう。「〇あまり〇」の形で答えよう。\n45 ÷ 6",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "7あまり3",
+     "7 あまり 3",
+     "7余り3",
+     "7...3",
+     "7…3"
+    ]
+   },
+   "explanation": "6×7＝42、45−42＝3。あまりは6より小さい。"
+  },
+  {
+   "topic": "あまりのあるわり算",
+   "prompt": "次のわり算をしよう。「〇あまり〇」の形で答えよう。\n89 ÷ 8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "11あまり1",
+     "11 あまり 1",
+     "11余り1",
+     "11...1",
+     "11…1"
+    ]
+   },
+   "explanation": "8×11＝88、89−88＝1。あまりは8より小さい。"
+  },
+  {
+   "topic": "長さの単位",
+   "prompt": "2km350m は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "2350",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1km＝1000m。2000＋350＝2350m。"
+  },
+  {
+   "topic": "長さの単位",
+   "prompt": "1km80m は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "1080",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1km＝1000m。1000＋80＝1080m。"
+  },
+  {
+   "topic": "長さの単位",
+   "prompt": "3km5m は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "3005",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1km＝1000m。3000＋5＝3005m。"
+  },
+  {
+   "topic": "時こくと時間",
+   "prompt": "8時45分から35分たった時こくは何時何分か。「〇時〇分」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "9時20分"
+    ]
+   },
+   "explanation": "45＋35＝80分。60分で1時間くり上がる。"
+  },
+  {
+   "topic": "時こくと時間",
+   "prompt": "10時20分から55分たった時こくは何時何分か。「〇時〇分」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "11時15分"
+    ]
+   },
+   "explanation": "20＋55＝75分。60分で1時間くり上がる。"
+  },
+  {
+   "topic": "時こくと時間",
+   "prompt": "13時50分から25分たった時こくは何時何分か。「〇時〇分」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "14時15分"
+    ]
+   },
+   "explanation": "50＋25＝75分。60分で1時間くり上がる。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n2/7 + 3/7",
+   "answer": {
+    "kind": "number",
+    "value": "5/7"
+   },
+   "explanation": "分母が同じなので分子をたす。2＋3＝5。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n4/9 + 1/9",
+   "answer": {
+    "kind": "number",
+    "value": "5/9"
+   },
+   "explanation": "分母が同じなので分子をたす。4＋1＝5。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n5/8 + 3/8",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "分母が同じなので分子をたす。5＋3＝8。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n2.6 + 1.8",
+   "answer": {
+    "kind": "number",
+    "value": "4.4"
+   },
+   "explanation": "小数点をそろえて計算する。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n4.3 + 2.7",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "小数点をそろえて計算する。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n0.9 + 3.4",
+   "answer": {
+    "kind": "number",
+    "value": "4.3"
+   },
+   "explanation": "小数点をそろえて計算する。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n5.2 − 3.7",
+   "answer": {
+    "kind": "number",
+    "value": "1.5"
+   },
+   "explanation": "小数点をそろえて計算する。7は7.0と考える。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n7 − 2.4",
+   "answer": {
+    "kind": "number",
+    "value": "4.6"
+   },
+   "explanation": "小数点をそろえて計算する。7は7.0と考える。"
+  },
+  {
+   "topic": "□を使った式",
+   "prompt": "ある数から37をひくと58になった。ある数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "95"
+   },
+   "explanation": "□−37＝58 → □＝58＋37＝95。"
+  },
+  {
+   "topic": "□を使った式",
+   "prompt": "8人に同じ数ずつ配ると、1人6こになり、4こあまった。はじめに何こあったか。",
+   "answer": {
+    "kind": "number",
+    "value": "52",
+    "units": [
+     "こ",
+     "個"
+    ]
+   },
+   "explanation": "8×6＋4＝52。"
+  },
+  {
+   "topic": "円と球",
+   "prompt": "半径3cmのボールが、たて・横・高さがちょうど入る箱にぴったり入っている。箱の1辺は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "ボールの直径＝3×2＝6cm。"
+  },
+  {
+   "topic": "表とグラフ",
+   "prompt": "1めもりが5人の棒グラフで、7めもり分の棒は何人を表すか。",
+   "answer": {
+    "kind": "number",
+    "value": "35",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "5×7＝35。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "1こ85円のパンを4こと、120円の牛乳を1本買った。代金は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "460",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "85×4＝340、340＋120＝460。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "色紙が96まいある。1人に8まいずつ配ると、何人に配れるか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "96÷8＝12。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "おり紙が63まいある。5まいずつたばにすると、何たばできて何まいあまるか。「〇たばできて〇まいあまる」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "12たばできて3まいあまる",
+     "12たば、3まいあまる",
+     "12たばで3まいあまる"
+    ]
+   },
+   "explanation": "63÷5＝12あまり3。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "学校から図書館までは1km200m、図書館から公園までは850mある。学校から図書館を通って公園まで何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "2050",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "1200＋850＝2050m。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "長さ2mのリボンから、35cmのリボンを4本切り取った。のこりは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "2m＝200cm。35×4＝140。200−140＝60。"
+  },
+  {
+   "topic": "かけ算のきまり",
+   "prompt": "□にあてはまる数を答えよう。\n6 × 8 = 6 × 7 + □",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "かける数が1ふえると、答えはかけられる数（6）だけふえる。"
+  },
+  {
+   "topic": "かけ算のきまり",
+   "prompt": "□にあてはまる数を答えよう。\n9 × 12 = 9 × 10 + 9 × □",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "12を10と2に分けて計算する（分配のきまり）。"
+  },
+  {
+   "topic": "大きな数",
+   "prompt": "1000を7こ、100を12こ、1を5こ合わせた数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "8205"
+   },
+   "explanation": "7000＋1200＋5＝8205。"
+  },
+  {
+   "topic": "重さ",
+   "prompt": "1kg250gは何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "1250",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "1kg＝1000g。"
+  },
+  {
+   "topic": "重さ",
+   "prompt": "重さ300gのかごに、1こ150gのりんごを6こ入れた。全体の重さは何kg何gか。「〇kg〇g」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "1kg200g",
+     "1kg 200g"
+    ]
+   },
+   "explanation": "150×6＝900、900＋300＝1200g＝1kg200g。"
+  },
+  {
+   "topic": "時こくと時間",
+   "prompt": "午前10時40分から午後1時15分までは何時間何分か。「〇時間〇分」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2時間35分"
+    ]
+   },
+   "explanation": "10時40分→12時40分で2時間、12時40分→1時15分で35分。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "1mを8等分した3こ分の長さは何mか。分数で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3/8",
+     "3/8m"
+    ]
+   },
+   "explanation": "1/8mの3こ分。"
+  },
+  {
+   "topic": "三角形",
+   "prompt": "3つの辺の長さが5cm、5cm、5cmの三角形を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "正三角形",
+     "せいさんかくけい"
+    ]
+   },
+   "explanation": "3つの辺の長さがみな等しい三角形。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "1こ48円のあめを9こ買うと、何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "432",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "48×9＝432。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "ある数に7をかけるところを、まちがえて7でわったら、答えが6になった。正しい答えはいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "294"
+   },
+   "explanation": "ある数＝6×7＝42。正しくは42×7＝294。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "おかしが1ふくろに15こ入っている。6ふくろ買って、23こ食べた。のこりは何こか。",
+   "answer": {
+    "kind": "number",
+    "value": "67",
+    "units": [
+     "こ",
+     "個"
+    ]
+   },
+   "explanation": "15×6＝90、90−23＝67。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "テープを同じ長さに7本に切ったら、1本が9cmで、2cmあまった。はじめのテープは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "65",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "9×7＋2＝65。"
+  },
+  {
+   "topic": "たし算・ひき算",
+   "prompt": "次の計算をしよう。\n5003 − 1876",
+   "answer": {
+    "kind": "number",
+    "value": "3127"
+   },
+   "explanation": "くり下がりが続くので、1つずつ確かめる。"
+  },
+  {
+   "topic": "たし算・ひき算",
+   "prompt": "次の計算をしよう。\n2895 + 4387",
+   "answer": {
+    "kind": "number",
+    "value": "7282"
+   },
+   "explanation": "答えは「7282」。"
+  },
+  {
+   "topic": "長さの単位",
+   "prompt": "3400mは何km何mか。「〇km〇m」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3km400m",
+     "3km 400m"
+    ]
+   },
+   "explanation": "3400m＝3000m＋400m。"
+  }
+ ],
+ "4": [
+  {
+   "topic": "2けたでわるわり算",
+   "prompt": "次のわり算をしよう。わりきれないときは「〇あまり〇」で答えよう。\n756 ÷ 18",
+   "answer": {
+    "kind": "number",
+    "value": "42"
+   },
+   "explanation": "18×42＝756。"
+  },
+  {
+   "topic": "2けたでわるわり算",
+   "prompt": "次のわり算をしよう。わりきれないときは「〇あまり〇」で答えよう。\n912 ÷ 24",
+   "answer": {
+    "kind": "number",
+    "value": "38"
+   },
+   "explanation": "24×38＝912。"
+  },
+  {
+   "topic": "2けたでわるわり算",
+   "prompt": "次のわり算をしよう。わりきれないときは「〇あまり〇」で答えよう。\n645 ÷ 15",
+   "answer": {
+    "kind": "number",
+    "value": "43"
+   },
+   "explanation": "15×43＝645。"
+  },
+  {
+   "topic": "2けたでわるわり算",
+   "prompt": "次のわり算をしよう。わりきれないときは「〇あまり〇」で答えよう。\n986 ÷ 29",
+   "answer": {
+    "kind": "number",
+    "value": "34"
+   },
+   "explanation": "29×34＝986。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n3.6 × 4",
+   "answer": {
+    "kind": "number",
+    "value": "14.4"
+   },
+   "explanation": "整数と同じように計算し、小数点をうつ。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n2.75 × 8",
+   "answer": {
+    "kind": "number",
+    "value": "22"
+   },
+   "explanation": "整数と同じように計算し、小数点をうつ。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n0.48 × 6",
+   "answer": {
+    "kind": "number",
+    "value": "2.88"
+   },
+   "explanation": "整数と同じように計算し、小数点をうつ。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n9.6 ÷ 4",
+   "answer": {
+    "kind": "number",
+    "value": "2.4"
+   },
+   "explanation": "商の小数点は、わられる数の小数点にそろえる。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n7.2 ÷ 8",
+   "answer": {
+    "kind": "number",
+    "value": "0.9"
+   },
+   "explanation": "商の小数点は、わられる数の小数点にそろえる。"
+  },
+  {
+   "topic": "小数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n0.84 ÷ 12",
+   "answer": {
+    "kind": "number",
+    "value": "0.07"
+   },
+   "explanation": "商の小数点は、わられる数の小数点にそろえる。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の帯分数を仮分数になおそう。\n2と3/5（2 3/5）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "13/5"
+    ]
+   },
+   "explanation": "2＝10/5。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の帯分数を仮分数になおそう。\n1と4/7（1 4/7）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "11/7"
+    ]
+   },
+   "explanation": "1＝7/7。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の帯分数を仮分数になおそう。\n3と1/4（3 1/4）",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "13/4"
+    ]
+   },
+   "explanation": "3＝12/4。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n2と3/8 − 1と7/8",
+   "answer": {
+    "kind": "number",
+    "value": "1/2"
+   },
+   "explanation": "整数部分からくり下げて計算する。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n4と1/5 − 2と4/5",
+   "answer": {
+    "kind": "number",
+    "value": "7/5"
+   },
+   "explanation": "整数部分からくり下げて計算する。"
+  },
+  {
+   "topic": "がい数",
+   "prompt": "48736を四捨五入して百の位までのがい数にしよう。",
+   "answer": {
+    "kind": "number",
+    "value": "48700"
+   },
+   "explanation": "すぐ下の位を見て、5以上なら上げ、4以下なら切り捨てる。"
+  },
+  {
+   "topic": "がい数",
+   "prompt": "3651428を四捨五入して一万の位までのがい数にしよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3650000"
+   },
+   "explanation": "すぐ下の位を見て、5以上なら上げ、4以下なら切り捨てる。"
+  },
+  {
+   "topic": "がい数",
+   "prompt": "2049を四捨五入して上から2けたのがい数にしよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2000"
+   },
+   "explanation": "すぐ下の位を見て、5以上なら上げ、4以下なら切り捨てる。"
+  },
+  {
+   "topic": "大きな数",
+   "prompt": "3兆5000億は、1億を何こ集めた数か。",
+   "answer": {
+    "kind": "number",
+    "value": "35000",
+    "units": [
+     "こ",
+     "個"
+    ]
+   },
+   "explanation": "1兆＝1億×10000。3兆5000億＝35000億。"
+  },
+  {
+   "topic": "大きな数",
+   "prompt": "次の計算をしよう。\n48億 + 52億",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "100億"
+    ]
+   },
+   "explanation": "答えは「100億」。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "たて8cm、横13cmの長方形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "104",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "8×13＝104。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "1辺が25mの正方形の土地の面積は何aか。",
+   "answer": {
+    "kind": "number",
+    "value": "6.25",
+    "units": [
+     "a"
+    ]
+   },
+   "explanation": "25×25＝625m²。100m²＝1a。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "面積が96cm²、たてが8cmの長方形の横は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "96÷8＝12。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "たて6m、横9mの長方形の花だんの中に、はば1mの通路が十字に通っている。花をうえられる部分の面積は何m²か。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "m²",
+     "m2"
+    ]
+   },
+   "explanation": "通路をはしに寄せて考える。(6−1)×(9−1)＝40。"
+  },
+  {
+   "topic": "角",
+   "prompt": "三角じょうぎの30°と45°の角を合わせると何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "75",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "30＋45＝75。"
+  },
+  {
+   "topic": "角",
+   "prompt": "一直線の角から、125°をひいた角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "55",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "一直線は180°。180−125＝55。"
+  },
+  {
+   "topic": "角",
+   "prompt": "時計の長いはりが20分間に回る角度は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "60分で360°なので、1分で6°。6×20＝120。"
+  },
+  {
+   "topic": "垂直・平行",
+   "prompt": "長方形の向かい合う辺どうしの関係を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "平行",
+     "へいこう"
+    ]
+   },
+   "explanation": "答えは「平行」。"
+  },
+  {
+   "topic": "四角形",
+   "prompt": "4つの辺の長さがすべて等しい四角形で、角が直角とは限らないものを何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ひし形",
+     "ひしがた"
+    ]
+   },
+   "explanation": "正方形もひし形の一種だが、直角とは限らないものがひし形。"
+  },
+  {
+   "topic": "四角形",
+   "prompt": "平行四辺形で、となり合う角の大きさの和は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "答えは「180」。"
+  },
+  {
+   "topic": "計算のきまり",
+   "prompt": "次の計算をしよう。\n36 + 64 × 5 − 120 ÷ 4",
+   "answer": {
+    "kind": "number",
+    "value": "326"
+   },
+   "explanation": "かけ算・わり算を先に。64×5＝320、120÷4＝30。36＋320−30＝326。"
+  },
+  {
+   "topic": "計算のきまり",
+   "prompt": "次の計算をしよう。\n(48 − 18) × (7 + 5)",
+   "answer": {
+    "kind": "number",
+    "value": "360"
+   },
+   "explanation": "かっこの中を先に。30×12＝360。"
+  },
+  {
+   "topic": "計算のきまり",
+   "prompt": "くふうして計算しよう。\n25 × 36",
+   "answer": {
+    "kind": "number",
+    "value": "900"
+   },
+   "explanation": "25×4×9＝100×9＝900。"
+  },
+  {
+   "topic": "計算のきまり",
+   "prompt": "くふうして計算しよう。\n99 × 47",
+   "answer": {
+    "kind": "number",
+    "value": "4653"
+   },
+   "explanation": "(100−1)×47＝4700−47＝4653。"
+  },
+  {
+   "topic": "折れ線グラフ",
+   "prompt": "折れ線グラフで、線のかたむきが急なほど、変わり方はどうなっているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "大きい",
+     "変わり方が大きい",
+     "大きく変わっている"
+    ]
+   },
+   "explanation": "答えは「大きい」。"
+  },
+  {
+   "topic": "変わり方",
+   "prompt": "1辺がx cmの正方形のまわりの長さをy cmとする。xが7のとき、yはいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "28"
+   },
+   "explanation": "y＝4×x＝28。"
+  },
+  {
+   "topic": "変わり方",
+   "prompt": "マッチぼうで正方形を横に1列につなげてつくる。正方形を10こつくるのに、ぼうは何本いるか。",
+   "answer": {
+    "kind": "number",
+    "value": "31",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "1こ目に4本、あとは1こふえるごとに3本。4＋3×9＝31。"
+  },
+  {
+   "topic": "直方体と立方体",
+   "prompt": "立方体の面の数・辺の数・頂点の数を合わせるといくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "26"
+   },
+   "explanation": "6＋12＋8＝26。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "1こ265円のケーキを18こ買うと、代金は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "4770",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "265×18＝4770。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "846ページの本を、1日に18ページずつ読むと、何日で読み終わるか。",
+   "answer": {
+    "kind": "number",
+    "value": "47",
+    "units": [
+     "日"
+    ]
+   },
+   "explanation": "846÷18＝47。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "500まいの紙を、1人に23まいずつ配ると、何人に配れて何まいあまるか。「〇人に配れて〇まいあまる」の形で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "21人に配れて17まいあまる",
+     "21人に配れて、17まいあまる",
+     "21人、17まいあまる"
+    ]
+   },
+   "explanation": "500÷23＝21あまり17。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "長さ5.4mのロープを6等分すると、1本は何mか。",
+   "answer": {
+    "kind": "number",
+    "value": "0.9",
+    "units": [
+     "m"
+    ]
+   },
+   "explanation": "5.4÷6＝0.9。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "1本0.75Lのジュースを12本買った。全部で何Lか。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "0.75×12＝9。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "赤いリボンは72cm、青いリボンは18cmある。赤は青の何倍か。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "72÷18＝4。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "ある数を24でわると、商が15であまりが7になった。ある数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "367"
+   },
+   "explanation": "24×15＋7＝367。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "3/4と同じ大きさの分数で、分母が20のものを答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "15/20"
+    ]
+   },
+   "explanation": "分母も分子も5倍する。"
+  },
+  {
+   "topic": "分数",
+   "prompt": "次の計算をしよう。\n7/9 + 5/9",
+   "answer": {
+    "kind": "number",
+    "value": "4/3"
+   },
+   "explanation": "12/9＝4/3（1と1/3）。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "0.01を356こ集めた数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "3.56"
+   },
+   "explanation": "答えは「3.56」。"
+  },
+  {
+   "topic": "小数",
+   "prompt": "次の計算をしよう。\n4.07 − 2.8",
+   "answer": {
+    "kind": "number",
+    "value": "1.27"
+   },
+   "explanation": "4.07−2.80と考える。"
+  },
+  {
+   "topic": "がい数",
+   "prompt": "ある数を四捨五入して十の位までのがい数にすると350になった。ある数のうち、いちばん小さい整数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "345"
+   },
+   "explanation": "345〜354が350になる。"
+  }
+ ],
+ "5": [
+  {
+   "topic": "小数のかけ算",
+   "prompt": "次の計算をしよう。\n2.4 × 1.5",
+   "answer": {
+    "kind": "number",
+    "value": "3.6"
+   },
+   "explanation": "小数点以下のけた数をたして、積に小数点をうつ。"
+  },
+  {
+   "topic": "小数のかけ算",
+   "prompt": "次の計算をしよう。\n0.36 × 2.5",
+   "answer": {
+    "kind": "number",
+    "value": "0.9"
+   },
+   "explanation": "小数点以下のけた数をたして、積に小数点をうつ。"
+  },
+  {
+   "topic": "小数のかけ算",
+   "prompt": "次の計算をしよう。\n3.75 × 0.8",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "小数点以下のけた数をたして、積に小数点をうつ。"
+  },
+  {
+   "topic": "小数のわり算",
+   "prompt": "次の計算をしよう。\n9.12 ÷ 2.4",
+   "answer": {
+    "kind": "number",
+    "value": "3.8"
+   },
+   "explanation": "わる数を整数にするよう、両方の小数点を同じだけ右へうつす。"
+  },
+  {
+   "topic": "小数のわり算",
+   "prompt": "次の計算をしよう。\n5.4 ÷ 0.36",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "わる数を整数にするよう、両方の小数点を同じだけ右へうつす。"
+  },
+  {
+   "topic": "小数のわり算",
+   "prompt": "次の計算をしよう。\n0.42 ÷ 1.4",
+   "answer": {
+    "kind": "number",
+    "value": "0.3"
+   },
+   "explanation": "わる数を整数にするよう、両方の小数点を同じだけ右へうつす。"
+  },
+  {
+   "topic": "分数のたし算・ひき算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n3/4 + 5/6",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "19/12",
+     "1と7/12",
+     "1 7/12"
+    ]
+   },
+   "explanation": "通分してから計算し、最後に約分する。"
+  },
+  {
+   "topic": "分数のたし算・ひき算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n7/8 − 5/12",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "11/24"
+    ]
+   },
+   "explanation": "通分してから計算し、最後に約分する。"
+  },
+  {
+   "topic": "分数のたし算・ひき算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n2と1/3 + 1と3/4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "49/12",
+     "4と1/12",
+     "4 1/12"
+    ]
+   },
+   "explanation": "通分してから計算し、最後に約分する。"
+  },
+  {
+   "topic": "分数のたし算・ひき算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n5/6 − 3/10",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "8/15"
+    ]
+   },
+   "explanation": "通分してから計算し、最後に約分する。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "18と24の最大公約数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "両方を割り切る数のうち、いちばん大きいもの。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "36と54の最大公約数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18"
+   },
+   "explanation": "両方を割り切る数のうち、いちばん大きいもの。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "42と70の最大公約数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "両方を割り切る数のうち、いちばん大きいもの。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "12と18の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "36"
+   },
+   "explanation": "答えは「36」。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "8と14の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "56"
+   },
+   "explanation": "答えは「56」。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "15と20の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60"
+   },
+   "explanation": "答えは「60」。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "たて12cm、横18cmの長方形の紙を、すきまなく同じ向きにならべて、できるだけ小さい正方形をつくる。正方形の1辺は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "12と18の最小公倍数。"
+  },
+  {
+   "topic": "割合",
+   "prompt": "定員40人のバスに52人乗っている。乗車率は何％か。",
+   "answer": {
+    "kind": "number",
+    "value": "130",
+    "units": [
+     "%",
+     "％"
+    ]
+   },
+   "explanation": "52÷40＝1.3＝130％。"
+  },
+  {
+   "topic": "割合",
+   "prompt": "2400円の品物を、25％引きで買った。代金は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1800",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "2400×(1−0.25)＝1800。"
+  },
+  {
+   "topic": "割合",
+   "prompt": "ある学校の5年生は120人で、そのうち45％がバス通学だ。バス通学は何人か。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "120×0.45＝54。"
+  },
+  {
+   "topic": "割合",
+   "prompt": "仕入れ値に3割の利益を見こんで定価をつけたら、定価は1560円になった。仕入れ値は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "1200",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "仕入れ値×1.3＝1560。1560÷1.3＝1200。"
+  },
+  {
+   "topic": "割合",
+   "prompt": "20％を歩合で表すと何割か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "2割",
+     "２割"
+    ]
+   },
+   "explanation": "0.2＝2割。"
+  },
+  {
+   "topic": "平均",
+   "prompt": "5回のテストの点数が78、85、92、69、81点のとき、平均は何点か。",
+   "answer": {
+    "kind": "number",
+    "value": "81",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "(78＋85＋92＋69＋81)÷5＝405÷5＝81。"
+  },
+  {
+   "topic": "平均",
+   "prompt": "4人の平均の身長は143cm。もう1人入ると5人の平均は144cmになった。入った人の身長は何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "148",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "144×5−143×4＝720−572＝148。"
+  },
+  {
+   "topic": "単位量あたり",
+   "prompt": "面積が120m²の部屋に30人、面積が80m²の部屋に24人いる。こんでいるのはどちらの部屋か。「120m²の部屋」「80m²の部屋」で答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "80m²の部屋",
+     "80m2の部屋",
+     "80㎡の部屋"
+    ]
+   },
+   "explanation": "1m²あたり 30÷120＝0.25人、24÷80＝0.3人。"
+  },
+  {
+   "topic": "単位量あたり",
+   "prompt": "8Lで152km走る車は、1Lあたり何km走るか。",
+   "answer": {
+    "kind": "number",
+    "value": "19",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "152÷8＝19。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "時速48kmで2時間30分走ると、何km進むか。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "2時間30分＝2.5時間。48×2.5＝120。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "分速75mで歩くと、1.8kmを何分で歩けるか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "1800÷75＝24。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "秒速15mは時速何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "15×3600＝54000m＝54km。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "底辺12cm、高さ7cmの三角形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "42",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "12×7÷2＝42。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "底辺9cm、高さ6cmの平行四辺形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "答えは「54」。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "上底5cm、下底11cm、高さ8cmの台形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "64",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "(5＋11)×8÷2＝64。"
+  },
+  {
+   "topic": "面積",
+   "prompt": "対角線の長さが10cmと14cmのひし形の面積は何cm²か。",
+   "answer": {
+    "kind": "number",
+    "value": "70",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "10×14÷2＝70。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "たて6cm、横8cm、高さ5cmの直方体の体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "240",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "答えは「240」。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "1辺が4cmの立方体を、たて・横・高さに3こずつ積んだ立方体の体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "1728",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "1辺12cmの立方体。12×12×12＝1728。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "内のりがたて20cm、横25cm、深さ30cmの水そうに、深さ18cmまで水を入れた。水は何Lか。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "L"
+    ]
+   },
+   "explanation": "20×25×18＝9000cm³＝9L。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "1m³は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "1000000",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "100×100×100。"
+  },
+  {
+   "topic": "図形の角",
+   "prompt": "三角形の2つの角が48°と67°のとき、のこりの角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "65",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "180−48−67＝65。"
+  },
+  {
+   "topic": "図形の角",
+   "prompt": "五角形の5つの角の大きさの和は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "540",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "三角形3つ分。180×3＝540。"
+  },
+  {
+   "topic": "図形の角",
+   "prompt": "正六角形の1つの角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "六角形の角の和720°÷6。"
+  },
+  {
+   "topic": "円周",
+   "prompt": "直径8cmの円の円周は何cmか。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "25.12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "8×3.14＝25.12。"
+  },
+  {
+   "topic": "円周",
+   "prompt": "円周が31.4cmの円の半径は何cmか。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "直径＝31.4÷3.14＝10cm。"
+  },
+  {
+   "topic": "合同",
+   "prompt": "合同な図形で、重なり合う辺を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "対応する辺",
+     "たいおうする辺"
+    ]
+   },
+   "explanation": "答えは「対応する辺」。"
+  },
+  {
+   "topic": "偶数・奇数",
+   "prompt": "1から50までの整数のうち、奇数はいくつあるか。",
+   "answer": {
+    "kind": "number",
+    "value": "25"
+   },
+   "explanation": "答えは「25」。"
+  },
+  {
+   "topic": "比例",
+   "prompt": "高さが1cmふえると体積が12cm³ふえる直方体がある。高さ7cmのときの体積は何cm³か。（高さ0cmのとき体積0cm³）",
+   "answer": {
+    "kind": "number",
+    "value": "84",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "体積は高さに比例。12×7＝84。"
+  },
+  {
+   "topic": "帯グラフ",
+   "prompt": "帯グラフで全体の35％を表す部分は、全体の長さ20cmのうち何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "20×0.35＝7。"
+  },
+  {
+   "topic": "分数と小数",
+   "prompt": "3/8を小数で表そう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0.375"
+    ]
+   },
+   "explanation": "3÷8＝0.375。"
+  },
+  {
+   "topic": "分数と小数",
+   "prompt": "1.25を分数で表そう（約分して）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "5/4",
+     "1と1/4",
+     "1 1/4"
+    ]
+   },
+   "explanation": "125/100＝5/4。"
+  },
+  {
+   "topic": "約数・倍数",
+   "prompt": "6、8、10の最小公倍数を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120"
+   },
+   "explanation": "2×2×2×3×5＝120。"
+  },
+  {
+   "topic": "単位量あたり",
+   "prompt": "0.8Lで2.4kgの油がある。この油1Lの重さは何kgか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "kg"
+    ]
+   },
+   "explanation": "2.4÷0.8＝3。"
+  }
+ ],
+ "6": [
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n4/9 × 3/8",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "1/6"
+    ]
+   },
+   "explanation": "わり算はわる数の逆数をかける。とちゅうで約分する。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n5/6 ÷ 10/9",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "3/4"
+    ]
+   },
+   "explanation": "わり算はわる数の逆数をかける。とちゅうで約分する。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n2と1/4 × 8/15",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "6/5",
+     "1と1/5",
+     "1 1/5"
+    ]
+   },
+   "explanation": "わり算はわる数の逆数をかける。とちゅうで約分する。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。答えは約分しよう。\n7/12 ÷ 1と3/4",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "1/3"
+    ]
+   },
+   "explanation": "わり算はわる数の逆数をかける。とちゅうで約分する。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n0.6 × 5/9 ÷ 2/3",
+   "answer": {
+    "kind": "number",
+    "value": "1/2"
+   },
+   "explanation": "0.6＝3/5。3/5×5/9×3/2＝1/2。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n(3/4 − 2/3) × 24",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "1/12×24＝2。"
+  },
+  {
+   "topic": "比",
+   "prompt": "次の比を、もっとも簡単な整数の比にしよう（読点で区切る）。\n18 : 24",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "3",
+     "4"
+    ],
+    "ordered": true
+   },
+   "explanation": "両方に同じ数をかけたりわったりして、いちばん簡単な整数にする。"
+  },
+  {
+   "topic": "比",
+   "prompt": "次の比を、もっとも簡単な整数の比にしよう（読点で区切る）。\n2.4 : 3.6",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "2",
+     "3"
+    ],
+    "ordered": true
+   },
+   "explanation": "両方に同じ数をかけたりわったりして、いちばん簡単な整数にする。"
+  },
+  {
+   "topic": "比",
+   "prompt": "次の比を、もっとも簡単な整数の比にしよう（読点で区切る）。\n3/4 : 5/6",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "9",
+     "10"
+    ],
+    "ordered": true
+   },
+   "explanation": "両方に同じ数をかけたりわったりして、いちばん簡単な整数にする。"
+  },
+  {
+   "topic": "比",
+   "prompt": "3 : 5 = x : 40 のとき、xの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24"
+   },
+   "explanation": "40は5の8倍なので、3×8＝24。"
+  },
+  {
+   "topic": "比",
+   "prompt": "720円を、兄と弟で5 : 3に分けると、兄は何円か。",
+   "answer": {
+    "kind": "number",
+    "value": "450",
+    "units": [
+     "円"
+    ]
+   },
+   "explanation": "720×5/8＝450。"
+  },
+  {
+   "topic": "比",
+   "prompt": "砂糖と小麦粉を2 : 7の割合でまぜる。小麦粉を350g使うとき、砂糖は何gか。",
+   "answer": {
+    "kind": "number",
+    "value": "100",
+    "units": [
+     "g"
+    ]
+   },
+   "explanation": "350÷7×2＝100。"
+  },
+  {
+   "topic": "比例・反比例",
+   "prompt": "yはxに比例し、x＝6のときy＝15である。x＝14のときのyの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "35"
+   },
+   "explanation": "y＝2.5×x。"
+  },
+  {
+   "topic": "比例・反比例",
+   "prompt": "yはxに反比例し、x＝4のときy＝18である。x＝6のときのyの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "x×y＝72。72÷6＝12。"
+  },
+  {
+   "topic": "比例・反比例",
+   "prompt": "時速60kmで走るとき、走った時間x時間と道のりy kmの関係を式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=60x"
+   },
+   "explanation": "道のり＝速さ×時間。"
+  },
+  {
+   "topic": "比例・反比例",
+   "prompt": "面積が36cm²の長方形で、たてx cmと横y cmの関係を式で表そう。",
+   "answer": {
+    "kind": "relation",
+    "value": "y=36/x"
+   },
+   "explanation": "たて×横＝36。"
+  },
+  {
+   "topic": "円の面積",
+   "prompt": "半径6cmの円の面積は何cm²か。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "113.04",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "6×6×3.14＝113.04。"
+  },
+  {
+   "topic": "円の面積",
+   "prompt": "直径10cmの半円の面積は何cm²か。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "39.25",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "5×5×3.14÷2＝39.25。"
+  },
+  {
+   "topic": "円の面積",
+   "prompt": "1辺10cmの正方形の中に、ぴったり入る円をかいた。正方形のうち、円の外側の部分の面積は何cm²か。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "21.5",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "100−5×5×3.14＝100−78.5＝21.5。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "底面が半径3cmの円、高さ10cmの円柱の体積は何cm³か。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "282.6",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "3×3×3.14×10＝282.6。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "底面積が24cm²、高さ7cmの三角柱の体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "168",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積×高さ。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "底面が直角をはさむ2辺6cmと8cmの直角三角形で、高さ12cmの三角柱の体積は何cm³か。",
+   "answer": {
+    "kind": "number",
+    "value": "288",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "底面積6×8÷2＝24。24×12＝288。"
+  },
+  {
+   "topic": "文字と式",
+   "prompt": "1本x円のえんぴつを6本と、120円のノートを1さつ買ったときの代金を、xを使った式で表そう。",
+   "answer": {
+    "kind": "expr",
+    "value": "6x+120"
+   },
+   "explanation": "答えは「6x+120」。"
+  },
+  {
+   "topic": "文字と式",
+   "prompt": "x × 8 + 15 = 79 のとき、xの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "x×8＝64。"
+  },
+  {
+   "topic": "文字と式",
+   "prompt": "(x − 4) ÷ 3 = 9 のとき、xの値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "31"
+   },
+   "explanation": "x−4＝27。"
+  },
+  {
+   "topic": "場合の数",
+   "prompt": "A、B、C、Dの4人が1列にならぶとき、ならび方は全部で何通りか。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "4×3×2×1＝24。"
+  },
+  {
+   "topic": "場合の数",
+   "prompt": "0、1、2、3の4まいのカードから3まいを選んで3けたの整数をつくる。全部で何通りできるか。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "百の位は0以外の3通り、十の位3通り、一の位2通り。3×3×2＝18。"
+  },
+  {
+   "topic": "場合の数",
+   "prompt": "5チームが、どのチームとも1回ずつ試合をする。試合は全部で何試合か。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "試合"
+    ]
+   },
+   "explanation": "5×4÷2＝10。"
+  },
+  {
+   "topic": "場合の数",
+   "prompt": "10円玉、50円玉、100円玉が1まいずつある。2まいを選ぶとき、できる金額は何通りか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "60円・110円・150円。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "家から駅まで、分速80mで歩くと15分かかる。同じ道を分速200mの自転車で行くと何分かかるか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "道のり1200m。1200÷200＝6。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "兄は分速90m、弟は分速60mで、同じ場所から反対向きに歩く。何分後に2人は1500mはなれるか。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "分"
+    ]
+   },
+   "explanation": "1分で150mずつはなれる。1500÷150＝10。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "時速4.5kmで歩く人が、40分で進む道のりは何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "4.5×40/60＝3。"
+  },
+  {
+   "topic": "拡大図・縮図",
+   "prompt": "縮尺1/25000の地図で4cmの長さは、実際には何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "1",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "4×25000＝100000cm＝1km。"
+  },
+  {
+   "topic": "拡大図・縮図",
+   "prompt": "三角形を2倍に拡大すると、面積は何倍になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "たても横も2倍なので2×2。"
+  },
+  {
+   "topic": "対称",
+   "prompt": "線対称な図形で、対応する2つの点を結ぶ直線と対称の軸はどのように交わるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "垂直に交わる",
+     "垂直",
+     "すいちょくに交わる"
+    ]
+   },
+   "explanation": "答えは「垂直に交わる」。"
+  },
+  {
+   "topic": "対称",
+   "prompt": "正方形には、対称の軸が何本あるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "たて・横・2本の対角線。"
+  },
+  {
+   "topic": "データの調べ方",
+   "prompt": "次のデータの中央値を求めよう。\n12, 18, 7, 25, 15, 9",
+   "answer": {
+    "kind": "number",
+    "value": "13.5"
+   },
+   "explanation": "小さい順 7,9,12,15,18,25。真ん中2つ (12＋15)÷2。"
+  },
+  {
+   "topic": "データの調べ方",
+   "prompt": "次のデータの最頻値を求めよう。\n3, 5, 5, 6, 7, 5, 8, 6",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "5がいちばん多い（3回）。"
+  },
+  {
+   "topic": "データの調べ方",
+   "prompt": "10人の記録の平均が42点だった。1人の点数を52点から32点に直すと、平均は何点になるか。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "点"
+    ]
+   },
+   "explanation": "合計が20点へるので、平均は2点下がる。"
+  },
+  {
+   "topic": "およその面積",
+   "prompt": "たて約18m、横約32mの長方形とみなせる公園の面積は、およそ何m²か。",
+   "answer": {
+    "kind": "number",
+    "value": "576",
+    "units": [
+     "m²",
+     "m2"
+    ]
+   },
+   "explanation": "18×32＝576。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "ある本の3/8を読んだら、のこりは150ページだった。この本は何ページか。",
+   "answer": {
+    "kind": "number",
+    "value": "240",
+    "units": [
+     "ページ"
+    ]
+   },
+   "explanation": "のこりは5/8。150÷5/8＝240。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "2/3 Lのジュースを、1人に1/6 Lずつ分けると、何人に分けられるか。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "人"
+    ]
+   },
+   "explanation": "2/3÷1/6＝4。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "1m²あたり3/4 dLのペンキでぬれるかべがある。4 1/2 m²ぬるには何dLいるか。",
+   "answer": {
+    "kind": "number",
+    "value": "27/8",
+    "units": [
+     "dL"
+    ]
+   },
+   "explanation": "3/4×9/2＝27/8（3と3/8）dL。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "ある数の1.6倍は、ある数より2.4大きい。ある数はいくつか。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "0.6倍が2.4にあたる。2.4÷0.6＝4。"
+  },
+  {
+   "topic": "文章題",
+   "prompt": "時計の長いはりと短いはりが、3時ちょうどにつくる小さいほうの角は何度か。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "1時間あたり30°。30×3＝90。"
+  },
+  {
+   "topic": "分数のかけ算・わり算",
+   "prompt": "次の計算をしよう。\n3/5 ÷ 0.4 × 2/3",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "0.4＝2/5。3/5÷2/5＝3/2、3/2×2/3＝1。"
+  },
+  {
+   "topic": "比",
+   "prompt": "4 : 7 の比の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4/7"
+   },
+   "explanation": "前の数÷後の数。"
+  },
+  {
+   "topic": "円の面積",
+   "prompt": "半径4cm、中心角90°のおうぎ形の面積は何cm²か。円周率は3.14とする。",
+   "answer": {
+    "kind": "number",
+    "value": "12.56",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "円の1/4。4×4×3.14÷4＝12.56。"
+  },
+  {
+   "topic": "体積",
+   "prompt": "体積が150cm³、底面積が25cm²の四角柱の高さは何cmか。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "150÷25＝6。"
+  },
+  {
+   "topic": "速さ",
+   "prompt": "A町とB町は120kmはなれている。行きは時速40km、帰りは時速60kmで往復した。往復の平均の速さは時速何kmか。",
+   "answer": {
+    "kind": "number",
+    "value": "48",
+    "units": [
+     "km"
+    ]
+   },
+   "explanation": "時間は3時間と2時間で合計5時間。240÷5＝48（50ではない）。"
+  }
+ ]
+}

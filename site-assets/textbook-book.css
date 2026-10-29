@@ -17,12 +17,13 @@
 /* 全画面 */
 .tb-app:fullscreen,.tb-app.tb-fallback{display:flex;flex-direction:column;width:100%;height:100%;background:radial-gradient(circle at 50% 30%,#3a414c,var(--tb-desk) 70%);color:#fff;overflow:hidden}
 .tb-app:-webkit-full-screen{display:flex;flex-direction:column;width:100%;height:100%;background:radial-gradient(circle at 50% 30%,#3a414c,var(--tb-desk) 70%);color:#fff;overflow:hidden}
-.tb-app.tb-fallback{position:fixed;inset:0;z-index:6000}
+.tb-app.tb-fallback{position:fixed;inset:0;z-index:6000;width:100vw;height:100vh;height:100dvh}
 html.tb-lock,html.tb-lock body{overflow:hidden}
 .tb-bar{flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:8px 14px;background:rgba(0,0,0,.28);backdrop-filter:blur(6px)}
 .tb-bar-title{font-family:var(--tb-font-head);font-weight:800;font-size:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tb-bar-actions{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .tb-bar .tb-btn{min-height:38px;padding:6px 14px;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);color:#fff}
+@media(max-width:700px){.tb-bar{flex-wrap:wrap;padding:8px;gap:6px}.tb-bar-title{width:100%;min-width:0}.tb-bar-actions{width:100%;min-width:0;margin-left:0;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.tb-bar-actions>*{flex-shrink:0}.tb-stage{min-height:120px}}
 .tb-btn-home{background:rgba(255,255,255,.94)!important;color:#1d2a36!important}
 .tb-page-info{font-family:var(--tb-font-num);font-size:14px;opacity:.9;white-space:nowrap}
 /* 本棚 */
@@ -48,6 +49,7 @@ html.tb-lock,html.tb-lock body{overflow:hidden}
 .tb-cover-art{position:absolute;right:30px;bottom:110px;width:360px;height:312px;fill:none;stroke:rgba(255,255,255,.72);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
 .tb-cover-brand{position:absolute;left:56px;bottom:46px;font-size:28px;font-weight:800}
 .tb-cover-ribbon{position:absolute;top:44px;right:-62px;width:260px;padding:10px 0;transform:rotate(35deg);background:#fff;color:#444;text-align:center;font-weight:800;font-size:26px}
+.tb-cover-illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.tb-cover-illustrated::after{display:none}.tb-cover-illustrated::before{z-index:1}.tb-cover-illustrated .tb-cover-grade,.tb-cover-illustrated .tb-cover-title{position:relative;z-index:2;text-shadow:0 2px 12px #0009}.tb-cover-illustrated .tb-cover-brand{z-index:2;background:#162c45cc;border-radius:999px;padding:8px 18px}.tb-cover-illustrated .tb-cover-ribbon{z-index:3}
 .tb-cover-small{width:600px;height:848px;transform:scale(.25);transform-origin:top left;margin:0 -450px -636px 0;box-shadow:0 10px 26px rgba(0,0,0,.5)}
 /* 見開き */
 .tb-stage{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
@@ -61,6 +63,7 @@ html.tb-lock,html.tb-lock body{overflow:hidden}
 .tb-page.tb-blank{background:transparent;box-shadow:none}.tb-page.tb-blank::before{display:none}
 .tb-kind-cover{background:transparent;box-shadow:none}.tb-kind-cover::before{display:none}
 .tb-body{position:absolute;left:50px;right:50px;top:82px;bottom:60px;font-size:15px;line-height:1.78;overflow:hidden;overflow-wrap:anywhere}
+.tb-large .tb-body{font-size:18px}
 .tb-kind-toc .tb-body,.tb-kind-guide .tb-body,.tb-kind-end .tb-body,.tb-kind-chapter-open .tb-body,.tb-kind-preparing .tb-body{top:48px}
 /* ページの種類の色 */
 .tb-page[data-tag="はじめに"]{--tb-page-color:#e67e22}.tb-page[data-tag="しくみ"]{--tb-page-color:#2f6db5}.tb-page[data-tag="解き方"]{--tb-page-color:#2c9a6a}
@@ -237,3 +240,11 @@ img.tb-zoomable{cursor:zoom-in}
 .tb-talk .tb-talk-right .tb-hook-bubble::before{left:auto;right:-9px;border:8px solid transparent;border-left-color:#8ab4ef;border-right:0}
 .tb-talk .tb-who-mio .tb-hook-bubble::before{border-left-color:#f0a3b8}
 .tb-talk .tb-talk-right .tb-hook-bubble::after{display:none}
+/* 図の拡大（2026-10-10 Claude）：スマホでも図の中の文字が読める大きさにする。幅が足りないときは図の中で横にずらして見る（ページ全体は横にはみ出さない） */
+.tb-sheet-wide .tb-sheet-body{overflow-x:auto;-webkit-overflow-scrolling:touch}.tb-sheet-wide .tb-zoom-img{min-width:640px}
+.tb-zoom-controls{position:sticky;top:0;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:6px 0;background:#fffefb}
+.tb-zoom-controls output{font-variant-numeric:tabular-nums;min-width:3.7em;text-align:center;color:#203348}
+.tb-zoom-hint{flex-basis:100%;font-size:.8rem;line-height:1.5;color:#52657b}
+.tb-sheet.tb-sheet-wide{display:flex;flex-direction:column;overflow:hidden}
+.tb-sheet-wide .tb-sheet-body{min-height:0;overflow:auto;overscroll-behavior:contain}
+.tb-sheet-wide .tb-sheet-title,.tb-sheet-wide .tb-zoom-controls,.tb-sheet-wide .tb-sheet-close{flex-shrink:0}

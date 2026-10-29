@@ -1,0 +1,1953 @@
+{
+ "id": "tokkun-math-1-numworld",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "数の世界のひろがり（特訓）",
+ "majorTitle": "正負の数",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-numworld-1",
+   "type": "input",
+   "prompt": "1 から 50 までの素数を、すべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "328"
+   },
+   "explanation": "①1〜50 の素数：2、3、5、7、11、13、17、19、23、29、31、37、41、43、47（15個）　②順にたすと 2 + 3 + 5 + 7 ＝ 17、+ 11 + 13 + 17 + 19 ＝ 77、+ 23 + 29 ＝ 129、+ 31 + 37 ＝ 197、+ 41 + 43 + 47 ＝ 328。答え 328",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-2",
+   "type": "input",
+   "prompt": "和が 30 になる2つの素数の組は何組あるか答えよう（(7, 23) と (23, 7) は同じ組と考える）。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①30 は偶数。素数 2 を使うと残りは 28 で素数でないので、2つとも奇数の素数　②(7, 23)、(11, 19)、(13, 17) の3組　③答え 3組",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-3",
+   "type": "input",
+   "prompt": "差が 2 で、積が 323 になる2つの素数がある。大きいほうの素数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "19"
+   },
+   "explanation": "①323 を素数で順にわってみると 323 ＝ 17 × 19　②17 と 19 はどちらも素数で、差は 2　③大きいほうは 19。答え 19",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-4",
+   "type": "input",
+   "prompt": "連続する3つの奇数が、3つとも素数になる組は1組しかない。その3つの数の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①連続する3つの奇数のうち、1つはかならず 3 の倍数になる　②3 の倍数で素数なのは 3 だけなので、3、5、7 の組だけ　③3 + 5 + 7 ＝ 15。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-5",
+   "type": "input",
+   "prompt": "「2つの素数の和は、いつも偶数になる」は正しくない。正しくない例（反例）となる2つの素数の和のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①素数の 2 は偶数で、ほかの素数はすべて奇数　②偶数 + 奇数 は奇数になるので、2 と奇数の素数の和は奇数　③もっとも小さいのは 2 + 3 ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-6",
+   "type": "input",
+   "prompt": "異なる2つの素数 p、q について、p × q + 1 が素数にならない組を考える。このような組のうち、p × q がもっとも小さいときの p × q の値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "①小さい順に調べる：2 × 3 + 1 ＝ 7（素数）、2 × 5 + 1 ＝ 11（素数）、2 × 7 + 1 ＝ 15（3 × 5 で素数でない）　②3 × 5 ＝ 15 も 16 で素数でないが、14 のほうが小さい　③答え 14",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-7",
+   "type": "input",
+   "prompt": "p は素数で、p + 10 と p + 20 も素数である。p を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①3 でわった余りで考える。p、p + 10、p + 20 の3つは、3 でわった余りがすべてちがう　②だから、3つのうち1つはかならず 3 の倍数で、素数なら 3 しかない　③p ＝ 3 なら 13、23 も素数。p + 10 や p + 20 が 3 になることはない。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-8",
+   "type": "input",
+   "prompt": "素数を小さい順に並べたとき、20 番目の素数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "71"
+   },
+   "explanation": "①2、3、5、7、11、13、17、19、23、29（10番目）　②31、37、41、43、47、53、59、61、67、71（20番目）　③答え 71",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-9",
+   "type": "input",
+   "prompt": "3つの異なる素数の和が 20 である。この3つの素数の積としてもっとも大きい値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "154"
+   },
+   "explanation": "①奇数の素数3つの和は奇数なので、20 にするには 2 をふくむ　②残り2つの和が 18：(5, 13)、(7, 11)　③積は 2 × 5 × 13 ＝ 130、2 × 7 × 11 ＝ 154。答え 154",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-10",
+   "type": "input",
+   "prompt": "1 から 100 までの自然数のうち、一の位が 3 の素数は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①一の位が 3 の数：3、13、23、33、43、53、63、73、83、93　②33 ＝ 3 × 11、63 ＝ 3 × 21、93 ＝ 3 × 31 は素数でない　③残りの7個。答え 7個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-11",
+   "type": "input",
+   "prompt": "2つの素数 p、q（p ＞ q）があり、p² − q² ＝ 24 である。p + q を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "①小さい素数で調べる：5² − 3² ＝ 16、7² − 5² ＝ 49 − 25 ＝ 24　②p ＝ 7、q ＝ 5　③p + q ＝ 12。答え 12",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-12",
+   "type": "input",
+   "prompt": "2 以上の自然数 n について、1 + 2 + … + n が素数になるのは、n がいくつのときだけか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①n ＝ 2 なら 1 + 2 ＝ 3 で素数　②n ＝ 3 なら 6、n ＝ 4 なら 10、n ＝ 5 なら 15 …　③1 + 2 + … + n は n × (n + 1) ÷ 2 で、n が 3 以上なら2つの 2 以上の数の積に分けられるので素数にならない。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-13",
+   "type": "input",
+   "prompt": "n ＝ 0、1、2、… を順に入れて n² + n + 41 を計算すると、しばらく素数が続く。はじめて素数でなくなる n を答えよう（n² + n + 41 ＝ n × (n + 1) + 41 と見て、41 でわり切れるのはどんなときか考えるとよい）。",
+   "answer": {
+    "kind": "number",
+    "value": "40"
+   },
+   "explanation": "①n × (n + 1) が 41 でわり切れれば、全体も 41 でわり切れる。いちばん小さいのは n ＋ 1 ＝ 41、つまり n ＝ 40 で 40 × 41 + 41 ＝ 41 × 41　②n ＝ 0〜39 では、n × (n + 1) + 41 はすべて素数になる（41、43、47、53、…）　③答え 40",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-14",
+   "type": "input",
+   "prompt": "30 から 40 までの自然数のうち、約数の和が「その数 + 1」になる数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "68"
+   },
+   "explanation": "①約数の和が その数 + 1 になるのは、約数が 1 と自分だけのとき、つまり素数のとき　②30〜40 の素数は 31 と 37　③31 + 37 ＝ 68。答え 68",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-15",
+   "type": "input",
+   "prompt": "2けたの素数のうち、十の位と一の位の数字を入れかえても素数になるものは何個あるか答えよう（11 のように入れかえても同じ数もふくむ）。",
+   "answer": {
+    "kind": "number",
+    "value": "9",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①一の位も十の位も 1、3、7、9 のどれかでないと、入れかえたとき2の倍数か5の倍数になる　②調べると 11、13、17、31、37、71、73、79、97 の9個　③答え 9個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-16",
+   "type": "input",
+   "prompt": "2けたの自然数 n のうち、n² の約数がちょうど 3 個になるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "21",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①n が素数なら、n² の約数は 1、n、n² の3個　②n が素数でないと、n² の約数は 4 個以上になる（例：6² ＝ 36 の約数は 9 個）　③2けたの素数は 11 から 97 までの 21 個。答え 21個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-17",
+   "type": "input",
+   "prompt": "積が 2けたの数で、和が 16 になる2つの素数の組がある。その積をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "39",
+     "55"
+    ]
+   },
+   "explanation": "①和が 16 の素数の組：(3, 13)、(5, 11)　②積は 39 と 55（どちらも2けた）　③答え 39、55",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-18",
+   "type": "input",
+   "prompt": "2 と 3 だけを素因数にもち（両方をふくむ）、約数がちょうど 12 個ある 100 より小さい自然数をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "72",
+     "96"
+    ]
+   },
+   "explanation": "①2ᵃ × 3ᵇ の約数の個数は (a + 1) × (b + 1)　②(a + 1)(b + 1) ＝ 12 となるのは (a, b) ＝ (1, 5)、(2, 3)、(3, 2)、(5, 1) など　③2 × 3⁵ ＝ 486、2² × 3³ ＝ 108 は 100 以上、2³ × 3² ＝ 72、2⁵ × 3 ＝ 96 は 100 未満　④答え 72、96",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-19",
+   "type": "input",
+   "prompt": "72 にできるだけ小さい自然数をかけて、ある自然数の3乗（同じ数を3回かけた数）にしたい。どんな数をかければよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①72 を素因数分解すると 2³ × 3²　②3乗にするには、それぞれの素因数の個数を3の倍数にする　③3 をあと1つかけて 2³ × 3³ ＝ 216 ＝ 6³。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-20",
+   "type": "input",
+   "prompt": "1 から 30 までの自然数をすべてかけた数は、2 で何回わり切れるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "26",
+    "units": [
+     "回"
+    ]
+   },
+   "explanation": "①2 の倍数が 15 個、4 の倍数が 7 個、8 の倍数が 3 個、16 の倍数が 1 個　②4 の倍数は 2 を2つふくむ…と考えて、15 + 7 + 3 + 1 ＝ 26　③答え 26回",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-21",
+   "type": "input",
+   "prompt": "1 から 20 までの自然数をすべてかけた数は、一の位から 0 がいくつ続くか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①0 が1つできるのは 10 ＝ 2 × 5 が1組できるとき　②5 の素因数は 5、10、15、20 に1つずつで 4 個、2 はそれより多い　③0 は 4 個続く。答え 4個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-22",
+   "type": "input",
+   "prompt": "素因数が 2 と 3 だけ（両方ふくむ）の3けたの自然数は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2ᵃ × 3ᵇ（a、b は1以上）で 100 以上 999 以下を数える　②3 が1つ：192、384、768　3 が2つ：144、288、576　3 が3つ：108、216、432、864　3 が4つ：162、324、648　3 が5つ：486、972　③3 + 3 + 4 + 3 + 2 ＝ 15。答え 15個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-23",
+   "type": "input",
+   "prompt": "120 の約数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "360"
+   },
+   "explanation": "①120 ＝ 2³ × 3 × 5　②約数は 1、2、3、4、5、6、8、10、12、15、20、24、30、40、60、120 の16個　③和は 360（(1 + 2 + 4 + 8) × (1 + 3) × (1 + 5) ＝ 15 × 4 × 6 でも求められる）。答え 360",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-24",
+   "type": "input",
+   "prompt": "自分自身をのぞく約数をすべてたすと、ちょうど自分自身になる2けたの自然数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "28"
+   },
+   "explanation": "①28 の約数は 1、2、4、7、14、28　②28 をのぞいて 1 + 2 + 4 + 7 + 14 ＝ 28 になる　③2けたではこれだけ（このような数を完全数という）。答え 28",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-25",
+   "type": "input",
+   "prompt": "3つの続いた自然数をかけ合わせたら 2730 になった。3つのうちもっとも大きい数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①2730 を素因数分解すると 2 × 3 × 5 × 7 × 13　②13 をふくむ連続する数を考えると 13 × 14 × 15 ＝ 13 × (2 × 7) × (3 × 5)　③答え 15",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-26",
+   "type": "input",
+   "prompt": "84 を 4 × 21 と書いたAさんの素因数分解はまちがっている。正しく素因数分解したとき、素因数を（同じものもふくめて）すべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14"
+   },
+   "explanation": "①4 も 21 も素数ではない　②84 ＝ 2 × 2 × 3 × 7 ＝ 2² × 3 × 7　③2 + 2 + 3 + 7 ＝ 14。答え 14",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-27",
+   "type": "input",
+   "prompt": "123123 を素因数分解したとき、もっとも大きい素因数を答えよう（123123 ＝ 123 × 1001 を使うとよい）。",
+   "answer": {
+    "kind": "number",
+    "value": "41"
+   },
+   "explanation": "①1001 ＝ 7 × 11 × 13　②123 ＝ 3 × 41　③123123 ＝ 3 × 7 × 11 × 13 × 41 で、もっとも大きい素因数は 41。答え 41",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-28",
+   "type": "input",
+   "prompt": "約数の個数が 4 個の奇数のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15"
+   },
+   "explanation": "①約数が4個の数は「異なる2つの素数の積」か「素数の3乗」　②奇数で小さいものは 3 × 5 ＝ 15、3³ ＝ 27、3 × 7 ＝ 21 など　③もっとも小さいのは 15。答え 15",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-29",
+   "type": "input",
+   "prompt": "ある自然数の約数を小さい順に並べると 1、3、5、9、15、… となり、約数は全部で 6 個ある。その自然数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "45"
+   },
+   "explanation": "①3、5、9 が約数なので、3² × 5 ＝ 45 の倍数　②45 の約数は 1、3、5、9、15、45 でちょうど 6 個　③45 の倍数で 45 より大きいもの（90 など）は約数が 6 個より多い。答え 45",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-30",
+   "type": "input",
+   "prompt": "50 以下の自然数のうち、約数の個数がもっとも多いものをすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "48"
+    ]
+   },
+   "explanation": "①約数が多いのは、小さい素数をたくさんふくむ数　②48 ＝ 2⁴ × 3 は約数が 5 × 2 ＝ 10 個、36 ＝ 2² × 3² は 9 個、24、30、40、42 は 8 個　③10 個は 48 だけ。答え 48",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-31",
+   "type": "input",
+   "prompt": "ちょうど4種類の素因数をもつ自然数のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "210"
+   },
+   "explanation": "①もっとも小さい4つの素数 2、3、5、7 を1つずつかける　②2 × 3 × 5 × 7 ＝ 210　③答え 210",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-32",
+   "type": "input",
+   "prompt": "1 から 10 までの自然数をすべてかけた数の約数のうち、奇数の約数は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "30",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①1 × 2 × … × 10 ＝ 2⁸ × 3⁴ × 5² × 7　②奇数の約数は 2 をふくまないもの：3⁴ × 5² × 7 の約数　③(4 + 1) × (2 + 1) × (1 + 1) ＝ 30 個。答え 30個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-33",
+   "type": "input",
+   "prompt": "ある自然数を3回かけると 1728 になる。その自然数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12"
+   },
+   "explanation": "①1728 を素因数分解すると 2⁶ × 3³　②3つの同じ数に分けると (2² × 3) × (2² × 3) × (2² × 3)　③2² × 3 ＝ 12。答え 12",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-34",
+   "type": "input",
+   "prompt": "7 × 6 × 5 × 4 × 3 × 2 × 1 ＝ 5040 を、連続する4つの自然数の積で表したい。4つのうちもっとも小さい数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①5040 ＝ 2⁴ × 3² × 5 × 7　②7 × 8 × 9 × 10 ＝ 7 × 2³ × 3² × (2 × 5) ＝ 5040　③答え 7",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-35",
+   "type": "input",
+   "prompt": "864 を 2ᵃ × 3ᵇ の形で表したとき、a + b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "①864 を 2 でわり続ける：864 → 432 → 216 → 108 → 54 → 27 で 5 回　②27 ＝ 3³　③864 ＝ 2⁵ × 3³ なので a + b ＝ 8。答え 8",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-36",
+   "type": "input",
+   "prompt": "1 から 200 までの自然数のうち、素因数分解したとき出てくる素数が1種類だけのもの（素数や、4 ＝ 2² のような素数の累乗。1 はふくまない）は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①素数：1〜200 に 46 個　②素数の累乗（2回以上）：2² 〜 2⁷ の 6 個（4、8、16、32、64、128）、3² 〜 3⁴ の 3 個（9、27、81）、5²、5³ の 2 個、7²、11²、13² の 3 個　③46 + 6 + 3 + 2 + 3 ＝ 60。答え 60個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-37",
+   "type": "input",
+   "prompt": "1 から 99 までの奇数をすべてかけた積の、一の位の数字を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①かける数の中に 5 がある　②奇数 × 5 の一の位は 5 になり、そこに奇数をかけても一の位は 5 のまま　③答え 5",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-38",
+   "type": "input",
+   "prompt": "n ＝ 1、2、3、…、20 のうち、2ⁿ の一の位が 6 になるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①2ⁿ の一の位は 2、4、8、6、2、4、8、6、… と4つごとにくり返す　②6 になるのは n が 4 の倍数のとき：4、8、12、16、20　③答え 5個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-39",
+   "type": "input",
+   "prompt": "積が 360 で、最大公約数が 6 になる2つの自然数の組を考える。2つの数の和がもっとも小さくなるときの和を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "42"
+   },
+   "explanation": "①2つの数を 6 × ○、6 × △（○ と △ の最大公約数は 1）とすると、36 × ○ × △ ＝ 360 で ○ × △ ＝ 10　②(○, △) ＝ (1, 10)、(2, 5) で、2つの数は (6, 60)、(12, 30)　③和は 66 と 42 で、小さいのは 42。答え 42",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-40",
+   "type": "input",
+   "prompt": "1 から 100 までの自然数のうち、約数がちょうど3個のものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①約数が3個になるのは、素数の2乗（約数は 1、p、p²）　②100 以下では 2² ＝ 4、3² ＝ 9、5² ＝ 25、7² ＝ 49　③答え 4個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-41",
+   "type": "input",
+   "prompt": "1 から 50 までの自然数のうち、約数の個数が奇数になるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①約数は「a × b ＝ n」の a と b の組で2つずつ見つかる　②組が同じ数になる（a × a ＝ n）ときだけ、約数の個数が奇数になる　③つまり平方数：1、4、9、16、25、36、49 の7個。答え 7個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-42",
+   "type": "input",
+   "prompt": "2つの自然数の最大公約数が 12、最小公倍数が 180 で、一方の数は 36 である。もう一方の数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60"
+   },
+   "explanation": "①2つの数の積 ＝ 最大公約数 × 最小公倍数 ＝ 12 × 180 ＝ 2160　②もう一方 ＝ 2160 ÷ 36 ＝ 60　③確かめ：36 と 60 の最大公約数 12、最小公倍数 180。答え 60",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-43",
+   "type": "input",
+   "prompt": "200 以下の自然数のうち、6 でも 8 でもわり切れるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①6 でも 8 でもわり切れる数は、6 と 8 の最小公倍数 24 の倍数　②200 ÷ 24 ＝ 8 あまり 8　③答え 8個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-44",
+   "type": "input",
+   "prompt": "200 以下の自然数のうち、6 か 8 の少なくとも一方でわり切れるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①6 の倍数：200 ÷ 6 ＝ 33 あまり 2 で 33 個　②8 の倍数：25 個　③両方（24 の倍数）8 個は2回数えているので、33 + 25 − 8 ＝ 50。答え 50個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-45",
+   "type": "input",
+   "prompt": "100 から 200 までの自然数のうち、素因数分解したときに 7 が出てくるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "14",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①7 が素因数に出てくる ＝ 7 の倍数　②100〜200 の 7 の倍数は 7 × 15 ＝ 105 から 7 × 28 ＝ 196 まで　③15 から 28 までの整数は 28 − 15 + 1 ＝ 14 個。答え 14個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-46",
+   "type": "input",
+   "prompt": "1 から 60 までの自然数のうち、60 との最大公約数が 1 になるものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "16",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①60 ＝ 2² × 3 × 5 なので、2・3・5 のどれでもわり切れない数を数える　②2 の倍数 30 個、3 の倍数 20 個、5 の倍数 12 個、6 の倍数 10 個、10 の倍数 6 個、15 の倍数 4 個、30 の倍数 2 個　③2・3・5 のどれかでわり切れる数は 30 + 20 + 12 − 10 − 6 − 4 + 2 ＝ 44 個で、60 − 44 ＝ 16。答え 16個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-47",
+   "type": "input",
+   "prompt": "自然数 n について、3 × n と 5 × n の最大公約数が 12 になった。3 × n と 5 × n の最小公倍数を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180"
+   },
+   "explanation": "①3 × n と 5 × n の最大公約数は n そのもの（3 と 5 に共通な約数は 1 だけ）なので n ＝ 12　②2つの数は 36 と 60　③最小公倍数は 3 × 5 × 12 ＝ 180。答え 180",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-48",
+   "type": "input",
+   "prompt": "どんな自然数 n についても、n と n + 1 の最大公約数は同じ値になる。その値を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①n と n + 1 の両方をわり切る数は、その差 1 もわり切る　②1 をわり切る自然数は 1 だけ　③答え 1",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-49",
+   "type": "input",
+   "prompt": "4□2 の □ に 0〜9 の数字を1つ入れて、3けたの数 4□2 を 3 の倍数にしたい。□ に入る数字をすべて答えよう（読点で区切る）。",
+   "answer": {
+    "kind": "numbers",
+    "values": [
+     "0",
+     "3",
+     "6",
+     "9"
+    ]
+   },
+   "explanation": "①3 の倍数は、各位の数字の和が 3 の倍数　②4 + □ + 2 ＝ 6 + □ が 3 の倍数になるのは □ ＝ 0、3、6、9　③答え 0、3、6、9",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-50",
+   "type": "input",
+   "prompt": "縦 84cm、横 60cm の長方形の紙を、すき間なく同じ大きさの正方形に切り分ける。正方形をできるだけ大きくするとき、正方形は何枚できるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "35",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "①正方形の1辺は 84 と 60 の最大公約数 12cm　②縦に 84 ÷ 12 ＝ 7 枚、横に 60 ÷ 12 ＝ 5 枚　③7 × 5 ＝ 35。答え 35枚",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-51",
+   "type": "input",
+   "prompt": "縦 6cm、横 8cm の長方形のカードを同じ向きにすき間なく並べて、できるだけ小さい正方形をつくる。カードは何枚いるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "枚"
+    ]
+   },
+   "explanation": "①正方形の1辺は 6 と 8 の最小公倍数 24cm　②縦に 24 ÷ 6 ＝ 4 枚、横に 24 ÷ 8 ＝ 3 枚　③4 × 3 ＝ 12。答え 12枚",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-52",
+   "type": "input",
+   "prompt": "バスAは 12 分ごと、バスBは 18 分ごとに発車する。8時ちょうどに同時に発車した。8時から12時までに（8時と12時もふくめて）、2台が同時に発車するのは何回か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "回"
+    ]
+   },
+   "explanation": "①同時に発車するのは、12 と 18 の最小公倍数 36 分ごと　②8時から12時までは 240 分で、0、36、72、…、216 分　③240 ÷ 36 ＝ 6 あまり 24 なので、0 分もふくめて 7 回。答え 7回",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-53",
+   "type": "input",
+   "prompt": "負の数もふくめて考えると、18 の約数（18 をわり切る整数）は全部で何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①正の約数：1、2、3、6、9、18 の 6 個　②それぞれの符号を変えた −1、−2、…、−18 も 18 をわり切る　③6 × 2 ＝ 12。答え 12個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-54",
+   "type": "input",
+   "prompt": "2つの自然数 a、b（a ＜ b）があり、a + b ＝ 48、a と b の最大公約数は 12 である。a × b を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "432"
+   },
+   "explanation": "①a ＝ 12 × ○、b ＝ 12 × △（○ と △ の最大公約数は 1）とすると、○ + △ ＝ 4　②○ ＜ △ で最大公約数 1 なのは (1, 3)　③a ＝ 12、b ＝ 36 で、a × b ＝ 432。答え 432",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-55",
+   "type": "input",
+   "prompt": "6 でわると 4 あまり、8 でわると 6 あまる自然数のうち、100 以下でもっとも大きいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "94"
+   },
+   "explanation": "①どちらも「あと 2 で わり切れる」数　②その数 + 2 は 6 と 8 の公倍数、つまり 24 の倍数　③100 以下では 24 × 4 − 2 ＝ 94。確かめ：94 ＝ 6 × 15 + 4 ＝ 8 × 11 + 6。答え 94",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-56",
+   "type": "input",
+   "prompt": "1 から 9 までのどの自然数でもわり切れる自然数のうち、もっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2520"
+   },
+   "explanation": "①1〜9 の最小公倍数を求める　②必要な素因数：2³（8 のため）、3²（9 のため）、5、7　③2³ × 3² × 5 × 7 ＝ 8 × 9 × 35 ＝ 2520。答え 2520",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-57",
+   "type": "input",
+   "prompt": "100 の約数のうち、5 の倍数でないものをすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7"
+   },
+   "explanation": "①100 ＝ 2² × 5²　②5 の倍数でない約数は、5 をふくまない約数：1、2、4　③1 + 2 + 4 ＝ 7。答え 7",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-58",
+   "type": "input",
+   "prompt": "最大公約数が 9 で、和が 99 になる2けたの自然数の組は何組あるか答えよう（(18, 81) と (81, 18) は同じ組と考える）。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①2つの数を 9 × ○、9 × △（○ と △ の最大公約数は 1）とすると、○ + △ ＝ 11　②2けたにするには ○、△ が 2 以上 11 以下：(2, 9)、(3, 8)、(4, 7)、(5, 6)　③どれも最大公約数 1 なので 4 組。答え 4組",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-59",
+   "type": "input",
+   "prompt": "最小公倍数が 60 で、最大公約数が 2 になる2つの自然数の組は何組あるか答えよう（(4, 30) と (30, 4) は同じ組と考える）。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①2つの数を 2 × ○、2 × △（○ と △ の最大公約数は 1）とすると、最小公倍数は 2 × ○ × △ ＝ 60 で ○ × △ ＝ 30　②最大公約数 1 の組：(1, 30)、(2, 15)、(3, 10)、(5, 6)　③2つの数は (2, 60)、(4, 30)、(6, 20)、(10, 12) の 4 組。答え 4組",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-60",
+   "type": "input",
+   "prompt": "8、9、10、12、15 の5つの数から2つを選ぶとき、最大公約数が 1 になる選び方は何通りあるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "通り"
+    ]
+   },
+   "explanation": "①素因数：8 ＝ 2³、9 ＝ 3²、10 ＝ 2 × 5、12 ＝ 2² × 3、15 ＝ 3 × 5　②共通な素因数がない組：(8, 9)、(8, 15)、(9, 10)　③答え 3通り",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-61",
+   "type": "input",
+   "prompt": "1 から 100 までの自然数のうち、6 の倍数でも 9 の倍数でもないものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "78",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①6 の倍数 16 個、9 の倍数 11 個、両方（18 の倍数）5 個　②6 か 9 の倍数は 16 + 11 − 5 ＝ 22 個　③100 − 22 ＝ 78。答え 78個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-62",
+   "type": "input",
+   "prompt": "1 から 1000 までの自然数のうち、2 でも 3 でも 5 でもわり切れないものは何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "266",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①30 個の数ごとに、2・3・5 のどれでもわり切れない数は 1、7、11、13、17、19、23、29 の 8 個ずつある　②1000 ＝ 30 × 33 + 10 なので 8 × 33 ＝ 264 個、残りの 991〜1000 に 991、997 の 2 個　③264 + 2 ＝ 266。答え 266個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-63",
+   "type": "input",
+   "prompt": "2つの自然数 a、b（a ＜ b）の積が 2⁴ × 3² で、a と b の最大公約数が 1 である。a + b がもっとも小さくなるときの a + b を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "25"
+   },
+   "explanation": "①最大公約数が 1 なので、2⁴ ＝ 16 と 3² ＝ 9 はそれぞれ片方にまとめて入る　②組は (1, 144) と (9, 16)　③和は 145 と 25 で、小さいのは 25。答え 25",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-64",
+   "type": "input",
+   "prompt": "1 から 100 までの自然数のうち、3 の倍数をすべてたした和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1683"
+   },
+   "explanation": "①3 の倍数は 3、6、…、99 の 33 個　②3 × (1 + 2 + … + 33) ＝ 3 × (33 × 34 ÷ 2) ＝ 3 × 561 ＝ 1683　③答え 1683",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-65",
+   "type": "input",
+   "prompt": "15 の倍数である3けたの自然数のうち、各位の数字の和が 15 になるもっとも小さいものを答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "195"
+   },
+   "explanation": "①15 の倍数を小さい順に調べる：105（和6）、120（3）、135（9）、150（6）、165（12）、180（9）、195（15）　②答え 195",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-66",
+   "type": "input",
+   "prompt": "1 から 50 までの自然数を、1、素数、それ以外（素数でない 2 以上の数）の3つに分ける。「それ以外」は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "34",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①1〜50 の素数は 15 個　②1 は素数でも「それ以外」でもない　③50 − 15 − 1 ＝ 34。答え 34個",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-67",
+   "type": "input",
+   "prompt": "負の整数の集合（−1、−2、−3、…）で、次のア〜エの計算のうち、どの2つの数で計算しても答えがいつもその集合に入るものをすべて選び、記号で答えよう（わり算はわる数が 0 でないとする）。\nア 加法\nイ 減法\nウ 乗法\nエ 除法",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①加法：負 + 負 はいつも負の整数（○）　②減法：(−1) − (−3) ＝ 2 で正になる（×）　③乗法：負 × 負 は正（×）　④除法：(−2) ÷ (−1) ＝ 2 で正（×）　⑤答え ア",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-68",
+   "type": "input",
+   "prompt": "0 や負の数もふくめた偶数どうしの計算を考える。答えがかならず偶数になる計算を、次のア〜エからすべて選び、記号で答えよう（わる数は 0 でないとする）。\nア 加法\nイ 減法\nウ 乗法\nエ 除法",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①偶数 ± 偶数 は偶数、偶数 × 偶数 も偶数（ア・イ・ウ ○）　②2 ÷ 2 ＝ 1 は奇数（エ ×）　③答え ア、イ、ウ",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-69",
+   "type": "input",
+   "prompt": "奇数と奇数で計算したとき、答えがいつも奇数になるのは、加法・減法・乗法・除法のうちどれか。次のア〜エから1つ選び、記号で答えよう。\nア 乗法\nイ 加法\nウ 減法\nエ 除法",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①1 + 1 ＝ 2、3 − 1 ＝ 2 は偶数（ア・イ ×）　②奇数 × 奇数 はいつも奇数（ア ○）　③1 ÷ 3 は整数でない（エ ×）　④答え ア",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  },
+  {
+   "id": "tokkun-math-1-numworld-70",
+   "type": "input",
+   "prompt": "−1、0、1 の3つの数だけの集合で、次のア〜エの計算のうち、どの2つの数（同じ数を2回使ってもよい）で計算しても答えがこの集合に入るものをすべて選び、記号で答えよう（わり算はわる数が 0 でないとする）。\nア 加法\nイ 減法\nウ 乗法\nエ 除法",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ウ"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①加法：1 + 1 ＝ 2 は入らない（×）　②減法：1 − (−1) ＝ 2 は入らない（×）　③乗法：積はいつも −1、0、1 のどれか（○）　④除法：0 ÷ 1 ＝ 0、1 ÷ (−1) ＝ −1 など、いつも入る（○）　⑤答え ウ、エ",
+   "source": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p46〜50（数の集合と四則・素数と素因数分解）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465941_0.jpg",
+    "sha256": "3a5dfb5ba35ae1ae6e24d215b7b42446cdcd3884e968a63ae5be1484c0628590",
+    "page": 47
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-07 Claude作成（特訓・下書き）。教科書 p46〜50 の数の集合と四則・素数・素因数分解（約数・倍数をふくむ）を使う一段難しい問題。答えは check.py で総当たり（素数の判定・約数の数え上げ）により検算。"
+}

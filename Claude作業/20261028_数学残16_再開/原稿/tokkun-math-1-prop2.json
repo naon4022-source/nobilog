@@ -1,0 +1,2087 @@
+{
+ "id": "tokkun-math-1-prop2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "比例の式②／座標（特訓）",
+ "majorTitle": "変化と対応",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-prop2-1",
+   "type": "input",
+   "prompt": "点A(2, −3) を、x 軸を折り目として対称に移した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,3)",
+     "(2、3)",
+     "2,3",
+     "2、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸について対称：x 座標はそのまま、y 座標の符号が変わる　②(2, 3)　③答え (2, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-2",
+   "type": "input",
+   "prompt": "点A(2, −3) と、原点について対称な点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,3)",
+     "(-2、3)",
+     "-2,3",
+     "-2、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①原点について対称：x 座標も y 座標も符号が変わる　②(−2, 3)　③答え (−2, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-3",
+   "type": "input",
+   "prompt": "3点 A(−3, 2)、B(5, 2)、C(5, −4) を頂点とする三角形の面積を求めよう（1目もり 1 cm とする）。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①AB は x 軸に平行で長さ 5 − (−3) ＝ 8　②BC は y 軸に平行で長さ 2 − (−4) ＝ 6　③直角三角形なので 8 × 6 ÷ 2 ＝ 24。答え 24cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-4",
+   "type": "input",
+   "prompt": "4点 A(−3, 4)、B(−3, −2)、C(5, −2)、D(5, 4) を順に結んだ四角形の周の長さを求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "28",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①AB ＝ 4 − (−2) ＝ 6、BC ＝ 5 − (−3) ＝ 8　②長方形なので周は (6 + 8) × 2　③28。答え 28cm",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-5",
+   "type": "input",
+   "prompt": "2点 A(−3, 5)、B(5, −1) を結ぶ線分のまん中の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,2)",
+     "(1、2)",
+     "1,2",
+     "1、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 座標：(−3 + 5) ÷ 2 ＝ 1　②y 座標：(5 + (−1)) ÷ 2 ＝ 2　③答え (1, 2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-6",
+   "type": "input",
+   "prompt": "点P(a, 3) と点Q(4, b) が原点について対称である。a + b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-7"
+   },
+   "explanation": "①原点について対称なら、座標の符号が両方とも変わる　②a ＝ −4、b ＝ −3　③a + b ＝ −7。答え −7",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-7",
+   "type": "input",
+   "prompt": "点 (2a − 1, a + 3) が y 軸上にある。この点の y 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7/2"
+   },
+   "explanation": "①y 軸上の点は x 座標が 0　②2a − 1 ＝ 0 より a ＝ 1/2　③y 座標 1/2 + 3 ＝ 7/2。答え 7/2",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-8",
+   "type": "input",
+   "prompt": "点 (a + 2, 3a − 6) が x 軸上にある。この点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①x 軸上の点は y 座標が 0　②3a − 6 ＝ 0 より a ＝ 2　③x 座標 2 + 2 ＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-9",
+   "type": "input",
+   "prompt": "点 (3, −5) から x 軸までのきょりと、y 軸までのきょりの和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8"
+   },
+   "explanation": "①x 軸までのきょりは y 座標の絶対値 5　②y 軸までのきょりは x 座標の絶対値 3　③5 + 3 ＝ 8。答え 8",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-10",
+   "type": "input",
+   "prompt": "平行四辺形 ABCD で、A(0, 0)、B(5, 0)、C(7, 3) である。点Dの座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,3)",
+     "(2、3)",
+     "2,3",
+     "2、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①AB と DC は平行で長さも等しい：A から B へ「右へ 5」なので、D から C へも「右へ 5」　②D ＝ (7 − 5, 3) ＝ (2, 3)　③答え (2, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-11",
+   "type": "input",
+   "prompt": "2点 A(−2, 3)、B(4, 3) を結ぶ線分を1辺とする正方形 ABCD を、辺 AB の下側につくる。点Cの座標を答えよう（C は B のとなり）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(4,-3)",
+     "(4、-3)",
+     "4,-3",
+     "4、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "①1辺の長さ AB ＝ 4 − (−2) ＝ 6　②C は B から下へ 6：(4, 3 − 6)　③答え (4, −3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-12",
+   "type": "input",
+   "prompt": "比例のグラフが点 (−4, 6) を通る。このグラフは点 (6, b) も通る。b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-9"
+   },
+   "explanation": "①比例定数 6 ÷ (−4) ＝ −3/2　②b ＝ (−3/2) × 6　③b ＝ −9。答え −9",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-13",
+   "type": "input",
+   "prompt": "原点と点A(4, 6) を通る直線上で、x 座標が −2 の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,-3)",
+     "(-2、-3)",
+     "-2,-3",
+     "-2、-3"
+    ],
+    "compact": true
+   },
+   "explanation": "①この直線は比例のグラフ y ＝ (6/4)x ＝ 3x/2　②x ＝ −2 で y ＝ −3　③答え (−2, −3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-14",
+   "type": "input",
+   "prompt": "点 (3, 2) を右へ 4、下へ 6 移した点と、原点について対称な点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-7,4)",
+     "(-7、4)",
+     "-7,4",
+     "-7、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①移した点：(3 + 4, 2 − 6) ＝ (7, −4)　②原点について対称：(−7, 4)　③答え (−7, 4)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-15",
+   "type": "input",
+   "prompt": "3点 A(1, 3)、B(5, 3)、C(a, 7) を頂点とする三角形がある。a がどんな数でも、この三角形の面積は同じになる。その面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①底辺 AB ＝ 4（x 軸に平行）　②高さは C の y 座標 7 と 3 の差で 4、a に関係しない　③4 × 4 ÷ 2 ＝ 8。答え 8cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-16",
+   "type": "input",
+   "prompt": "2点 A(−1, 2)、B(3, −2) を結ぶ線分が x 軸と交わる点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1"
+   },
+   "explanation": "①A から B へ、右へ 4 進む間に下へ 4 進む　②y 座標が 2 から 0 になるのは、右へ 2 進んだところ　③x ＝ −1 + 2 ＝ 1。答え 1",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-17",
+   "type": "input",
+   "prompt": "原点O、点A(4, 2)、点B(2, 6) を頂点とする三角形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①O、A、B をかこむ長方形（横 4、縦 6）の面積 24 から、まわりの直角三角形をひく　②まわりの三角形：4 × 2 ÷ 2 ＝ 4、2 × 6 ÷ 2 ＝ 6、2 × 4 ÷ 2 ＝ 4　③24 − 14 ＝ 10。答え 10cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-18",
+   "type": "input",
+   "prompt": "点A(−4, 1) と点B(2, 5) について、点Aと点Bが点Mについて対称になっている（M が AB のまん中）。Mの座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,3)",
+     "(-1、3)",
+     "-1,3",
+     "-1、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 座標：(−4 + 2) ÷ 2 ＝ −1　②y 座標：(1 + 5) ÷ 2 ＝ 3　③答え (−1, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-19",
+   "type": "input",
+   "prompt": "点P(a, b) を y 軸について対称に移した点が (3, −2) である。点Pを原点について対称に移した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,2)",
+     "(3、2)",
+     "3,2",
+     "3、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①y 軸について対称：P ＝ (−3, −2)　②原点について対称：(3, 2)　③答え (3, 2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-20",
+   "type": "input",
+   "prompt": "点A(a, 2a − 3) は、比例のグラフ y ＝ x の上にある。a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3"
+   },
+   "explanation": "①y ＝ x 上の点は x 座標と y 座標が等しい　②a ＝ 2a − 3　③a ＝ 3（点 (3, 3)）。答え 3",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-21",
+   "type": "input",
+   "prompt": "点A(6, 0)、点B(6, 4) と原点Oがある。原点を通る直線 y ＝ ax が辺 AB と交わる点をPとすると、三角形 OAP の面積が三角形 OAB の面積の半分になった。a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/3"
+   },
+   "explanation": "①三角形 OAB の面積 6 × 4 ÷ 2 ＝ 12、OAP は 6　②P(6, p) とすると 6 × p ÷ 2 ＝ 6、p ＝ 2　③y ＝ ax が (6, 2) を通るので a ＝ 1/3。答え 1/3",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-22",
+   "type": "input",
+   "prompt": "点 (−6, 4) を通る比例のグラフ上にあり、x 座標と y 座標の和が 2 になる点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6"
+   },
+   "explanation": "①比例定数 4 ÷ (−6) ＝ −2/3、y ＝ −2x/3　②x + (−2x/3) ＝ x/3 ＝ 2　③x ＝ 6（点 (6, −4)）。答え 6",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-23",
+   "type": "input",
+   "prompt": "次のア〜エの点のうち、x 座標が負の数で、y 座標が正の数である点をすべて選び、記号で答えよう。\nア (−3, 5)\nイ (4, −2)\nウ (−1, 7)\nエ (−6, −6)",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①ア：x ＝ −3（負）、y ＝ 5（正）で○　②イ：x が正　③ウ：x ＝ −1、y ＝ 7 で○　④エ：y が負　⑤答え ア、ウ",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-24",
+   "type": "input",
+   "prompt": "次のア〜エの点のうち、x 軸上にある点をすべて選び、記号で答えよう。\nア (0, 4)\nイ (−5, 0)\nウ (3, 0)\nエ (2, 2)",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①x 軸上の点は y 座標が 0　②イ (−5, 0)、ウ (3, 0)　③ア (0, 4) は y 軸上。答え イ、ウ",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-25",
+   "type": "input",
+   "prompt": "点 (−2, 5) を、左へ 3、上へ 2 だけ移した点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-5,7)",
+     "(-5、7)",
+     "-5,7",
+     "-5、7"
+    ],
+    "compact": true
+   },
+   "explanation": "①左へ 3：x 座標から 3 ひく　②上へ 2：y 座標に 2 たす　③(−5, 7)。答え (−5, 7)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-26",
+   "type": "input",
+   "prompt": "点 P を右へ 5、下へ 2 だけ移すと、点 (1, −4) になった。点 P の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-4,-2)",
+     "(-4、-2)",
+     "-4,-2",
+     "-4、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "①逆にたどる：左へ 5、上へ 2　②(1 − 5, −4 + 2)　③(−4, −2)。答え (−4, −2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-27",
+   "type": "input",
+   "prompt": "点 (−7, 3) と、y 軸について対称な点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,3)",
+     "(7、3)",
+     "7,3",
+     "7、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①y 軸について対称：x 座標の符号が変わり、y 座標はそのまま　②(7, 3)　③答え (7, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-28",
+   "type": "input",
+   "prompt": "点 (5, −1) を、x 軸を折り目にして折り返し、さらに y 軸を折り目にして折り返した。移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-5,1)",
+     "(-5、1)",
+     "-5,1",
+     "-5、1"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸で折り返すと (5, 1)　②y 軸で折り返すと (−5, 1)　③原点について対称な点と同じ。答え (−5, 1)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-29",
+   "type": "input",
+   "prompt": "2点 A(−4, 2)、B(7, 2) を結ぶ線分 AB の長さを求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "11",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①y 座標が同じなので、x 座標の差が長さ　②7 − (−4)　③＝ 11。答え 11cm",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-30",
+   "type": "input",
+   "prompt": "y 軸に平行な線分の両はしが (3, −5) と (3, 4) である。この線分のまん中の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,-1/2)",
+     "(3、-1/2)",
+     "3,-1/2",
+     "3、-1/2"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 座標は 3 のまま　②y 座標は (−5 + 4)/2　③＝ −1/2。答え (3, −1/2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-31",
+   "type": "input",
+   "prompt": "長方形の3つの頂点が (−2, −1)、(4, −1)、(4, 3) である。残りの1つの頂点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,3)",
+     "(-2、3)",
+     "-2,3",
+     "-2、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①D は A と x 座標が同じ　②C と y 座標が同じ　③(−2, 3)。答え (−2, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-32",
+   "type": "input",
+   "prompt": "上の辺と下の辺が x 軸に平行な台形がある。下の辺は (0, 0) から (6, 0) まで、上の辺は (1, 3) から (4, 3) までである。台形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "27/2",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①下の底 6、上の底 4 − 1 ＝ 3、高さ 3　②(6 + 3) × 3 ÷ 2　③＝ 27/2（13.5）。答え 27/2cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-33",
+   "type": "input",
+   "prompt": "平行四辺形 ABCD の頂点は A(0, 0)、B(5, 0)、C(7, 3)、D(2, 3) である。辺 AB を底辺として、面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①底辺 5、高さ 3　②5 × 3　③＝ 15。答え 15cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-34",
+   "type": "input",
+   "prompt": "4つの頂点がすべて x 軸か y 軸の上にある正方形で、頂点は (0, 3)、(3, 0)、(0, −3)、(−3, 0) である。この正方形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①対角線の長さはどちらも 6　②正方形（ひし形）の面積 ＝ 対角線 × 対角線 ÷ 2　③6 × 6 ÷ 2 ＝ 18。答え 18cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-35",
+   "type": "input",
+   "prompt": "線分 AB のまん中の点が M(3, −1) で、A(1, 4) である。点 B の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,-6)",
+     "(5、-6)",
+     "5,-6",
+     "5、-6"
+    ],
+    "compact": true
+   },
+   "explanation": "①A から M へ x は +2、y は −5 進む　②M から同じだけ進むと B　③(3 + 2, −1 − 5) ＝ (5, −6)。答え (5, −6)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-36",
+   "type": "input",
+   "prompt": "点 (2a, 5) と点 (8, b) が、x 軸について対称である。a × b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-20"
+   },
+   "explanation": "①x 軸について対称：x 座標は同じ、y 座標は符号が反対　②2a ＝ 8 より a ＝ 4、b ＝ −5　③4 × (−5) ＝ −20。答え −20",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-37",
+   "type": "input",
+   "prompt": "4点 (0, 0)、(4, 0)、(4, 3)、(0, 3) を頂点とする長方形の内部（辺の上はふくまない）にある、x 座標も y 座標も整数の点は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①x は 1、2、3 の 3 通り　②y は 1、2 の 2 通り　③3 × 2 ＝ 6。答え 6個",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-38",
+   "type": "input",
+   "prompt": "2点 (0, 0) と (6, 4) を結ぶ線分の上（両はしをふくむ）にある、x 座標も y 座標も整数の点は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①線分上の点は y ＝ (2/3)x を満たす　②x が 0、3、6 のとき y が整数（0、2、4）　③3 個。答え 3個",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-39",
+   "type": "input",
+   "prompt": "点 (3, 1) を、原点を中心として反時計回りに 90 度回転させた。移った点の x 座標と y 座標の和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2"
+   },
+   "explanation": "①反時計回りに 90 度で (x, y) は (−y, x) に移る　②(3, 1) → (−1, 3)　③−1 + 3 ＝ 2。答え 2",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-40",
+   "type": "input",
+   "prompt": "x 軸上の点 P(p, 0)（p ＞ 0）と、点 A(0, 6)、原点 O を結んだ三角形の面積が 12 になる。p の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①底辺 OP ＝ p、高さ OA ＝ 6　②p × 6 ÷ 2 ＝ 12　③p ＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-41",
+   "type": "input",
+   "prompt": "比例 y ＝ −2x のグラフ上の点で、y 座標が x 座標より 9 大きい点の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-3"
+   },
+   "explanation": "①y ＝ −2x と y ＝ x + 9 を同時に満たす　②−2x ＝ x + 9　③x ＝ −3（点 (−3, 6)）。答え −3",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-42",
+   "type": "input",
+   "prompt": "正方形 ABCD で、A(1, 1)、B(4, 1) で、C と D は辺 AB の上側にある（C は B のとなり）。点 D の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,4)",
+     "(1、4)",
+     "1,4",
+     "1、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①1辺の長さは 4 − 1 ＝ 3　②D は A から上へ 3　③(1, 4)。答え (1, 4)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-43",
+   "type": "input",
+   "prompt": "4点 (−2, −1)、(6, −1)、(6, 5)、(−2, 5) を頂点とする長方形の、2本の対角線が交わる点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(2,2)",
+     "(2、2)",
+     "2,2",
+     "2、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①対角線の交点は、向かい合う頂点のまん中　②((−2 + 6)/2, (−1 + 5)/2)　③(2, 2)。答え (2, 2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-44",
+   "type": "input",
+   "prompt": "3点 (0, 0)、(2, 3)、(6, b) が一直線上にある。b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9"
+   },
+   "explanation": "①原点と (2, 3) を通る直線は y ＝ (3/2)x　②x ＝ 6 で y ＝ 9　③b ＝ 9。答え 9",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-45",
+   "type": "input",
+   "prompt": "6点 (0, 0)、(6, 0)、(6, 2)、(2, 2)、(2, 5)、(0, 5) を順に結んだ L 字の形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①下の長方形 6 × 2 ＝ 12　②上の長方形 2 × 3 ＝ 6　③12 + 6 ＝ 18。答え 18cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-46",
+   "type": "input",
+   "prompt": "どの辺も座標軸に平行でない三角形 ABC がある。A(1, 1)、B(5, 2)、C(2, 6) のとき、まわりを長方形で囲む考え方で、三角形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "19/2",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①3点を囲む長方形（x は 1〜5、y は 1〜6）の面積 4 × 5 ＝ 20　②まわりの3つの直角三角形 2、6、5/2 をひく　③20 − 2 − 6 − 5/2 ＝ 19/2（9.5）。答え 19/2cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-47",
+   "type": "input",
+   "prompt": "x 軸と y 軸が2本の対角線になっている四角形がある。頂点は x 軸上の (−2, 0)、(4, 0) と、y 軸上の (0, −3)、(0, 2) である。面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①x 軸上の対角線の長さ 6、y 軸上の対角線の長さ 5　②2本の対角線が垂直なので 6 × 5 ÷ 2　③＝ 15。答え 15cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-48",
+   "type": "input",
+   "prompt": "x 軸上の点 P から、点 A(2, 3) と点 B(6, 3) までのきょりが等しい。点 P の x 座標を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①A と B は y 座標が同じなので、まん中の真下の点が等しいきょりになる　②x ＝ (2 + 6)/2　③＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-49",
+   "type": "input",
+   "prompt": "原点 O、A(6, 0)、B(0, 4) を頂点とする三角形の内部（辺の上はふくまない）にある、x 座標も y 座標も整数の点は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①辺 AB の上の点は 2x + 3y ＝ 12 を満たす　②内部は x ＞ 0、y ＞ 0、2x + 3y ＜ 12　③(1,1)(1,2)(1,3)(2,1)(2,2)(3,1)(4,1) の 7 個。答え 7個",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-50",
+   "type": "input",
+   "prompt": "点 (1, 1) を、x 軸について対称に移し、次に右へ 3 移し、さらに y 軸について対称に移した。最後の点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-4,-1)",
+     "(-4、-1)",
+     "-4,-1",
+     "-4、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "①x 軸について対称：(1, −1)　②右へ 3：(4, −1)　③y 軸について対称：(−4, −1)。答え (−4, −1)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-51",
+   "type": "input",
+   "prompt": "原点 O、A(4, 0) と、比例 y ＝ x のグラフ上の点 B を結んだ三角形の面積が 10 になる。B の x 座標を求めよう（x ＞ 0）。",
+   "answer": {
+    "kind": "number",
+    "value": "5"
+   },
+   "explanation": "①B(b, b) とすると、底辺 OA ＝ 4、高さ b　②4 × b ÷ 2 ＝ 10　③b ＝ 5。答え 5",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-52",
+   "type": "input",
+   "prompt": "A(0, 0)、B(9, 6) を結ぶ線分を、A から 1：2 に分ける点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(3,2)",
+     "(3、2)",
+     "3,2",
+     "3、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①A から B へは x が 9、y が 6 進む　②その 1/3 だけ進む　③(3, 2)。答え (3, 2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-53",
+   "type": "input",
+   "prompt": "三角形 ABC は A(1, 2)、B(4, 2)、C(1, 5) である。この三角形を、形と向きを変えずに、A が (−3, 0) に来るように移した。C が移った点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-3,3)",
+     "(-3、3)",
+     "-3,3",
+     "-3、3"
+    ],
+    "compact": true
+   },
+   "explanation": "①A は左へ 4、下へ 2 動いた　②C も同じだけ動く：(1 − 4, 5 − 2)　③(−3, 3)。答え (−3, 3)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-54",
+   "type": "input",
+   "prompt": "原点から (4, 0)、(4, −3)、(−1, −3) の順に、線分で結んで進んだ。進んだ道のりの合計を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "12",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①原点から (4, 0) まで 4　②(4, −3) まで 3　③(−1, −3) まで 5。合計 12。答え 12cm",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-55",
+   "type": "input",
+   "prompt": "x 座標と y 座標がどちらも整数で、|x| + |y| ＝ 2 となる点は何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①(±2, 0)、(0, ±2) の 4 個　②(±1, ±1) の 4 個　③合計 8 個。答え 8個",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-56",
+   "type": "input",
+   "prompt": "次のア〜エの点のうち、x 座標と y 座標の積が負の数になる点をすべて選び、記号で答えよう。\nア (2, −3)\nイ (−1, −4)\nウ (−5, 2)\nエ (3, 0)",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①積が負になるのは、x と y の符号がちがうとき　②ア −6、イ 4、ウ −10、エ 0　③答え ア、ウ",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-57",
+   "type": "input",
+   "prompt": "4点 (−a, 0)、(a, 0)、(a, 3)、(−a, 3) を頂点とする長方形の面積が 24 である。a の値を求めよう（a ＞ 0）。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①横の長さ 2a、縦の長さ 3　②2a × 3 ＝ 24　③a ＝ 4。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-58",
+   "type": "input",
+   "prompt": "4点 (0, 0)、(8, 0)、(8, 6)、(0, 6) を頂点とする長方形の面積を、原点を通る直線 y ＝ ax で2等分したい。a の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3/4"
+   },
+   "explanation": "①長方形を2等分する直線は、対角線の交点 (4, 3) を通る　②3 ＝ 4a　③a ＝ 3/4。答え 3/4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-59",
+   "type": "input",
+   "prompt": "直線 x ＝ 5 を対称の軸とする線対称な図形で、点 (3, 2) に対応する点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(7,2)",
+     "(7、2)",
+     "7,2",
+     "7、2"
+    ],
+    "compact": true
+   },
+   "explanation": "①直線 x ＝ 5 までのきょりは 2　②反対側へ同じきょり進む　③(7, 2)。答え (7, 2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-60",
+   "type": "input",
+   "prompt": "点 (−1, 4) と点 (−1, b) が、直線 y ＝ 1 について対称である。b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-2"
+   },
+   "explanation": "①直線 y ＝ 1 から点 (−1, 4) までは 3　②反対側へ 3 進んだ点　③b ＝ 1 − 3 ＝ −2。答え −2",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-61",
+   "type": "input",
+   "prompt": "点 (2, 5) を、原点を中心として時計回りに 90 度回転させた点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(5,-2)",
+     "(5、-2)",
+     "5,-2",
+     "5、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "①時計回りに 90 度回すと (x, y) は (y, −x) に移る　②(2, 5) → (5, −2)　③答え (5, −2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-62",
+   "type": "input",
+   "prompt": "正方形の中心が (1, 1) で、1つの頂点が (4, 1) である。この頂点と向かい合う頂点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-2,1)",
+     "(-2、1)",
+     "-2,1",
+     "-2、1"
+    ],
+    "compact": true
+   },
+   "explanation": "①向かい合う頂点は、中心について対称　②(1 − 3, 1)　③(−2, 1)。答え (−2, 1)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-63",
+   "type": "input",
+   "prompt": "x 軸上の2点 (−3, 0)、(5, 0) と、y 軸上の点 (0, 6) を結んだ三角形の面積を求めよう（1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "24",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①底辺は x 軸上で 5 − (−3) ＝ 8　②高さ 6　③8 × 6 ÷ 2 ＝ 24。答え 24cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-64",
+   "type": "input",
+   "prompt": "x 軸からのきょりが 3、y 軸からのきょりが 2 である点は、全部で何個あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "個"
+    ]
+   },
+   "explanation": "①y 座標は 3 か −3、x 座標は 2 か −2　②組み合わせは 2 × 2　③4 個。答え 4個",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-65",
+   "type": "input",
+   "prompt": "2つの線分、(−3, 4) と (5, 4) を結ぶ線分と、(1, −2) と (1, 7) を結ぶ線分が交わる点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,4)",
+     "(1、4)",
+     "1,4",
+     "1、4"
+    ],
+    "compact": true
+   },
+   "explanation": "①1本目は y ＝ 4 の上、2本目は x ＝ 1 の上　②交わる点は (1, 4)　③x ＝ 1 は −3〜5 の間、y ＝ 4 は −2〜7 の間にある。答え (1, 4)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-66",
+   "type": "input",
+   "prompt": "比例 y ＝ 2x と y ＝ −x/2 のグラフ上で、x 座標が 4 の点をそれぞれ P、Q とする。三角形 OPQ の面積を求めよう（O は原点、1目もり 1 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "20",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①P(4, 8)、Q(4, −2)　②底辺 PQ ＝ 8 − (−2) ＝ 10、高さは原点から x ＝ 4 までの 4　③10 × 4 ÷ 2 ＝ 20。答え 20cm²",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-67",
+   "type": "input",
+   "prompt": "2点 (−1, 0)、(3, 0) を結ぶ線分を1辺とする正方形を、x 軸の下側につくる。この正方形の対角線が交わる点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(1,-2)",
+     "(1、-2)",
+     "1,-2",
+     "1、-2"
+    ],
+    "compact": true
+   },
+   "explanation": "①1辺の長さは 4、残りの頂点は (−1, −4)、(3, −4)　②対角線の交点は (−1, 0) と (3, −4) のまん中　③(1, −2)。答え (1, −2)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-68",
+   "type": "input",
+   "prompt": "点 A(a, 4) と点 B(6, b) を結ぶ線分のまん中の点が (1, −1) である。a + b の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "-10"
+   },
+   "explanation": "①(a + 6)/2 ＝ 1 より a ＝ −4　②(4 + b)/2 ＝ −1 より b ＝ −6　③a + b ＝ −10。答え −10",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-69",
+   "type": "input",
+   "prompt": "4点 (1, 1)、(7, 1)、(7, 5)、(1, 5) を頂点とする長方形を、原点について対称に移した。移った長方形のいちばん右上の頂点の座標を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "(-1,-1)",
+     "(-1、-1)",
+     "-1,-1",
+     "-1、-1"
+    ],
+    "compact": true
+   },
+   "explanation": "①各頂点の x、y の符号を変える：(−1, −1)、(−7, −1)、(−7, −5)、(−1, −5)　②いちばん右上は x も y も大きい点　③(−1, −1)。答え (−1, −1)",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  },
+  {
+   "id": "tokkun-math-1-prop2-70",
+   "type": "input",
+   "prompt": "点 (−4, 3) を右へ移して y 軸の上にのせたい。右へいくつ移せばよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4"
+   },
+   "explanation": "①y 軸上の点は x 座標が 0　②−4 から 0 まで　③4 だけ右へ移す。答え 4",
+   "source": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p122〜125（比例の式を求める・座標）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16465992_0.jpg",
+    "sha256": "ebaf43af7c88f3d8d10cbee846e989eb44245de098251dc8a5d8446fcaa60fff",
+    "page": 122
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。教科書 p122〜125 の座標を、対称な点・図形の面積・中点・軸上の点の条件などに広げた一段難しい問題。答えは check.py で、座標を使った計算と総当たりで検算。2026-10-27 Claude：移動・対称・回転・線分の長さ・図形の面積（台形・L字・斜めの三角形）・格子点・条件から点を決めるなど48問を追加して70問にした。"
+}

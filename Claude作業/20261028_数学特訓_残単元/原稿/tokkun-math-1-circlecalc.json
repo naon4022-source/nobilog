@@ -1,0 +1,1938 @@
+{
+ "id": "tokkun-math-1-circlecalc",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "円とおうぎ形の計量（特訓）",
+ "majorTitle": "平面図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-circlecalc-1",
+   "type": "input",
+   "prompt": "弧の長さが 6π cm、面積が 24π cm² のおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おうぎ形の面積 ＝ 弧の長さ × 半径 ÷ 2（三角形のように考えられる）　②6π × r ÷ 2 ＝ 24π　③3r ＝ 24、r ＝ 8。答え 8cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-2",
+   "type": "input",
+   "prompt": "面積が 36π cm² の円の周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π"
+   },
+   "explanation": "①πr² ＝ 36π より r ＝ 6　②円周 ＝ 2πr ＝ 12π　③答え 12π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-3",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 60° のおうぎ形の周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π+12",
+    "form": "nosign"
+   },
+   "explanation": "①弧の長さ 2π × 6 × (60/360) ＝ 2π　②周 ＝ 弧 + 半径 2 本 ＝ 2π + 12　③答え 2π+12 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-4",
+   "type": "input",
+   "prompt": "半径 12 cm の円から、中心角 90° のおうぎ形を切りとった残りの図形の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "108π"
+   },
+   "explanation": "①円の面積 144π　②残りは中心角 270° のおうぎ形：144π × (270/360)　③108π。答え 108π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-5",
+   "type": "input",
+   "prompt": "直径 16 cm の半円から、その直径上に並べた直径 8 cm の半円 2 つ（同じ側）を取りのぞいた図形の、周の長さを π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①大きい半円の弧 ＝ 16π ÷ 2 ＝ 8π　②小さい半円の弧 ＝ 8π ÷ 2 ＝ 4π が 2 つ　③8π + 4π + 4π ＝ 16π（直線部分はない）。答え 16π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-6",
+   "type": "input",
+   "prompt": "1辺 10 cm の正方形 ABCD の中に、頂点Aを中心とする半径 10 cm のおうぎ形（中心角 90°）をかいた。正方形のうち、おうぎ形の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "100−25π",
+    "form": "nosign"
+   },
+   "explanation": "①正方形 100　②おうぎ形 π × 10² × (90/360) ＝ 25π　③100 − 25π。答え 100−25π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-7",
+   "type": "input",
+   "prompt": "1辺 6 cm の正方形 ABCD の中に、頂点Aを中心とする半径 6 cm の 1/4 円と、頂点Cを中心とする半径 6 cm の 1/4 円をかいた。2つの 1/4 円が重なる部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18π−36",
+    "form": "nosign"
+   },
+   "explanation": "①1/4 円の面積 π × 36 ÷ 4 ＝ 9π　②2つの 1/4 円の和 18π は、正方形 36 に重なりの分を1回多く足したもの　③重なり ＝ 18π − 36。答え 18π−36 cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-8",
+   "type": "input",
+   "prompt": "円の周の長さを 2 倍にすると、面積はもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①周が 2 倍 → 半径が 2 倍　②面積は 半径 × 半径 に比例するので 2 × 2 ＝ 4 倍　③答え 4倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-9",
+   "type": "input",
+   "prompt": "おうぎ形の中心角を 2 倍にし、半径を半分にすると、面積はもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/2",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①中心角 2 倍で面積 2 倍　②半径半分で面積 1/4 倍　③2 × (1/4) ＝ 1/2 倍。答え 1/2倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-10",
+   "type": "input",
+   "prompt": "陸上競技のトラックは、長さ 100 m の直線 2 本と、半径 30 m の半円 2 つでできている。トラック1周の長さを、π を使って答えよう（m）。",
+   "answer": {
+    "kind": "expr",
+    "value": "200+60π",
+    "form": "nosign"
+   },
+   "explanation": "①直線 100 × 2 ＝ 200　②半円 2 つで円1つ分：2π × 30 ＝ 60π　③200 + 60π。答え 200+60π m",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-11",
+   "type": "input",
+   "prompt": "円の面積（cm²）と円周の長さ（cm）が、同じ数になる円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①πr² ＝ 2πr　②r ＝ 2（r は 0 でない）　③答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-12",
+   "type": "input",
+   "prompt": "時計の長針の長さは 12 cm である。長針の先が 20 分間に動く道のりを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π"
+   },
+   "explanation": "①20 分で長針は 360 × (20/60) ＝ 120 度回る　②2π × 12 × (120/360) ＝ 8π　③答え 8π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-13",
+   "type": "input",
+   "prompt": "直径の比が 2：3 の2つの円がある。小さいほうの円の面積が 16π cm² のとき、大きいほうの円の面積を π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "36π"
+   },
+   "explanation": "①小さい円の半径 4、大きい円の半径 6　②π × 6² ＝ 36π　③答え 36π cm²（面積の比は 4：9）",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-14",
+   "type": "input",
+   "prompt": "半径 3 cm の円が、1辺 10 cm の正方形の外側を、辺からはなれずにころがって1周する。円の中心が動いた長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "40+6π",
+    "form": "nosign"
+   },
+   "explanation": "①辺にそって動く部分：10 × 4 ＝ 40　②かどでは中心が半径 3 cm、中心角 90° の弧をえがき、4 つ合わせて円1周分 2π × 3 ＝ 6π　③40 + 6π。答え 40+6π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-15",
+   "type": "input",
+   "prompt": "1辺 4 cm の正方形の4つの頂点を中心として、半径 2 cm の 1/4 円を正方形の内側に4つかいた。正方形のうち、4つの 1/4 円の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16−4π",
+    "form": "nosign"
+   },
+   "explanation": "①1/4 円 4 つで円1つ分：π × 2² ＝ 4π　②正方形 16　③16 − 4π。答え 16−4π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-16",
+   "type": "input",
+   "prompt": "おうぎ形の面積が、同じ半径の円の面積の 3/8 である。このおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "135",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①中心角 ＝ 360 × (3/8)　②135 度　③答え 135度",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-17",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、半径 5 cm の円の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "78.5",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①面積 ＝ 半径 × 半径 × 円周率　②5 × 5 × 3.14 ＝ 78.5　③答え 78.5cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-18",
+   "type": "input",
+   "prompt": "半径 6 cm で中心角 80° のおうぎ形と、半径 4 cm で中心角 x° のおうぎ形の面積が等しい。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180"
+   },
+   "explanation": "①π × 36 × (80/360) ＝ π × 16 × x/360　②36 × 80 ＝ 16x　③x ＝ 180。答え 180",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-19",
+   "type": "input",
+   "prompt": "弧の長さが半径の長さと等しいおうぎ形がある。このおうぎ形の面積は、半径を1辺とする正方形の面積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "1/2",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①おうぎ形の面積 ＝ 弧 × 半径 ÷ 2 ＝ r × r ÷ 2　②正方形の面積 r × r　③1/2 倍。答え 1/2倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-20",
+   "type": "input",
+   "prompt": "半径 10 cm、中心角 72° のおうぎ形の面積から、弧の長さ（cm）の数の 5 倍をひいた値を、π を使って答えよう。",
+   "answer": {
+    "kind": "expr",
+    "value": "0",
+    "form": "nosign"
+   },
+   "explanation": "①面積 π × 100 × (72/360) ＝ 20π　②弧 2π × 10 × (72/360) ＝ 4π、5 倍で 20π　③20π − 20π ＝ 0。答え 0",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-21",
+   "type": "input",
+   "prompt": "おうぎ形の半径を 2 倍にし、中心角も 2 倍にすると、弧の長さはもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①弧の長さは 半径 × 中心角 に比例　②2 × 2　③＝ 4。答え 4倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-22",
+   "type": "input",
+   "prompt": "中心角 45°、面積 8π cm² のおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①π × r² × (45/360) ＝ 8π　②r²/8 ＝ 8、r² ＝ 64　③r ＝ 8。答え 8cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-23",
+   "type": "input",
+   "prompt": "半径 6 cm の円板のふちにそって、半径 2 cm のコインを外側からぐるりと1周させる。コインの中心がえがく円の周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①動く円の中心は、大きい円の中心から 6 + 2 ＝ 8 cm のところを回る　②半径 8 の円周　③2π × 8 ＝ 16π。答え 16π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-24",
+   "type": "input",
+   "prompt": "弧の長さが 5π cm、中心角が 150° のおうぎ形の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①2πr × (150/360) ＝ 5π　②(5/6)r ＝ 5　③r ＝ 6。答え 6cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-25",
+   "type": "input",
+   "prompt": "円周の長さが 18π cm の円の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "81π"
+   },
+   "explanation": "①2πr ＝ 18π より r ＝ 9　②πr² ＝ 81π　③答え 81π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-26",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、直径 14 cm の円の周の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "43.96",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円周 ＝ 直径 × 円周率　②14 × 3.14　③＝ 43.96。答え 43.96cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-27",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、面積が 50.24 cm² の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①3.14 × r × r ＝ 50.24　②r × r ＝ 16　③r ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-28",
+   "type": "input",
+   "prompt": "半径 5 cm の半円の周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "5π+10",
+    "form": "nosign"
+   },
+   "explanation": "①弧は円周の半分：10π ÷ 2 ＝ 5π　②直径 10 を加える　③5π + 10。答え 5π+10 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-29",
+   "type": "input",
+   "prompt": "円Aの半径は 3 cm で、その周の長さは円Bの周の長さの 3/4 である。円Bの半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円 A の周 6π　②円 B の周 ＝ 6π ÷ (3/4) ＝ 8π　③2πr ＝ 8π、r ＝ 4。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-30",
+   "type": "input",
+   "prompt": "中心が同じで、半径 5 cm と 3 cm の2つの円にはさまれた、ドーナツの形の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①大きい円 25π　②小さい円 9π　③25π − 9π ＝ 16π。答え 16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-31",
+   "type": "input",
+   "prompt": "中心が同じで、半径 5 cm と 3 cm の2つの円にはさまれたドーナツの形の部分の、周の長さ（外側と内側の合計）を、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16π"
+   },
+   "explanation": "①外側 2π × 5 ＝ 10π　②内側 2π × 3 ＝ 6π　③10π + 6π ＝ 16π。答え 16π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-32",
+   "type": "input",
+   "prompt": "1辺 8 cm の正方形に、4つの辺にちょうどふれる円をかいた。正方形のうち、円の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "64−16π",
+    "form": "nosign"
+   },
+   "explanation": "①円の直径は 8、半径 4　②正方形 64 − 円 16π　③64 − 16π。答え 64−16π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-33",
+   "type": "input",
+   "prompt": "半径 5 cm の円の中に、4つの頂点が円周上にある正方形をかいた。円のうち、正方形の外側の部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "25π−50",
+    "form": "nosign"
+   },
+   "explanation": "①正方形の対角線は直径 10　②正方形の面積 10 × 10 ÷ 2 ＝ 50　③25π − 50。答え 25π−50 cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-34",
+   "type": "input",
+   "prompt": "1辺 10 m の正方形の小屋のかどに、長さ 6 m のロープで羊をつないだ。羊は小屋の中には入れない。羊が動ける範囲の面積を、π を使って答えよう（m²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "27π"
+   },
+   "explanation": "①小屋の外側に、半径 6 m、中心角 270° のおうぎ形ができる　②π × 36 × (270/360)　③＝ 27π。答え 27π m²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-35",
+   "type": "input",
+   "prompt": "羊を長さ 12 m のロープで、1辺 10 m の正方形の小屋のかどにつないだ。小屋の辺にそってとなりのかどを回りこむと、ロープはまだ 2 m 残る（どちらのかどでも同じ）。小屋の外で羊が動ける範囲の面積を、π を使って答えよう（m²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "110π"
+   },
+   "explanation": "①半径 12 m、中心角 270° のおうぎ形：108π　②小屋の2つのかどを回りこんだ、半径 2 m、中心角 90° のおうぎ形が 2 つ：π × 4 × (1/4) × 2 ＝ 2π　③108π + 2π ＝ 110π。答え 110π m²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-36",
+   "type": "input",
+   "prompt": "扇子（せんす）を開くと、外側の半径 20 cm、内側の半径 5 cm、中心角 120° になった。紙がはられた部分（2つのおうぎ形にはさまれた部分）のまわりの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "50π/3+30",
+    "form": "nosign"
+   },
+   "explanation": "①外側の弧 2π × 20 × (1/3) ＝ 40π/3、内側の弧 2π × 5 × (1/3) ＝ 10π/3　②まっすぐな部分 (20 − 5) × 2 ＝ 30　③50π/3 + 30。答え 50π/3+30 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-37",
+   "type": "input",
+   "prompt": "時計の長針の長さは 10 cm である。長針が 1 時間に通りすぎる部分の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "100π"
+   },
+   "explanation": "①長針は 1 時間で 1 周（360°）　②半径 10 の円の面積　③100π。答え 100π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-38",
+   "type": "input",
+   "prompt": "半径 18 cm の円で、中心角 1° あたりの弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "π/10"
+   },
+   "explanation": "①円周 36π が 360° 分　②1° あたり 36π ÷ 360　③＝ π/10。答え π/10 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-39",
+   "type": "input",
+   "prompt": "直径 60 cm の車輪が 10 回転すると、何 cm 進むか。π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "600π"
+   },
+   "explanation": "①1 回転で円周 60π cm 進む　②10 回転で 60π × 10　③600π。答え 600π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-40",
+   "type": "input",
+   "prompt": "1辺 6 cm の正三角形の外側を、半径 1 cm の円が辺からはなれずにころがって1周する。円の中心が動いた長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18+2π",
+    "form": "nosign"
+   },
+   "explanation": "①辺にそって動く部分：6 × 3 ＝ 18　②3つのかどでは、おうぎ形の弧（中心角の合計 360°）：2π × 1 ＝ 2π　③18 + 2π。答え 18+2π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-41",
+   "type": "input",
+   "prompt": "半径が同じで、中心角の比が 2：3 の2つのおうぎ形がある。小さいほうの面積は、大きいほうの面積の何倍か。分数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2/3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①半径が同じなら、面積は中心角に比例する　②2：3　③2/3 倍。答え 2/3倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-42",
+   "type": "input",
+   "prompt": "おうぎ形の半径を 3 倍にし、中心角を 1/3 にすると、面積はもとの何倍になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①面積は (半径)² × 中心角 に比例　②3² × (1/3)　③＝ 3。答え 3倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-43",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、半径 1.5 cm のペットボトルのふたを、まっすぐ 1 回転ころがすと、何 cm 進むか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "9.42",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①1 回転で円周の長さだけ進む　②2 × 3.14 × 1.5　③＝ 9.42。答え 9.42cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-44",
+   "type": "input",
+   "prompt": "半径 8 cm、面積 20π cm² のおうぎ形の弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "5π"
+   },
+   "explanation": "①面積 ＝ 弧 × 半径 ÷ 2　②弧 × 8 ÷ 2 ＝ 20π　③弧 ＝ 5π。答え 5π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-45",
+   "type": "input",
+   "prompt": "中心角 90° のおうぎ形の周の長さが (2π + 8) cm である。半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①周 ＝ 弧 + 半径 2 本：2πr × (90/360) + 2r　②(π/2)r + 2r ＝ 2π + 8　③r ＝ 4 で両方が合う。答え 4cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-46",
+   "type": "input",
+   "prompt": "円の面積が 4 倍になるように半径をのばした。円周の長さは何倍になったか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①面積が 4 倍 → 半径は 2 倍（2 × 2 ＝ 4）　②円周は半径に比例　③2 倍。答え 2倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-47",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、直径 10 cm の円の、円周の長さと直径の差を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "21.4",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円周 10 × 3.14 ＝ 31.4　②31.4 − 10　③＝ 21.4。答え 21.4cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-48",
+   "type": "input",
+   "prompt": "円グラフで、全体の 15％ を表すおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①360 × 0.15　②＝ 54　③答え 54度",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-49",
+   "type": "input",
+   "prompt": "半径が同じ2つのおうぎ形を合わせると、ちょうど円になる。2つの中心角は x° と (2x + 30)° である。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "110"
+   },
+   "explanation": "①x + 2x + 30 ＝ 360　②3x ＝ 330　③x ＝ 110。答え 110",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-50",
+   "type": "input",
+   "prompt": "直径 32 cm のピザを、中心から 8 等分した。1 切れの面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "32π"
+   },
+   "explanation": "①半径 16、円の面積 256π　②256π ÷ 8　③＝ 32π。答え 32π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-51",
+   "type": "input",
+   "prompt": "直径 32 cm のピザを、中心から 8 等分した。1 切れのまわりの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π+32",
+    "form": "nosign"
+   },
+   "explanation": "①弧：32π ÷ 8 ＝ 4π　②半径 2 本：16 × 2 ＝ 32　③4π + 32。答え 4π+32 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-52",
+   "type": "input",
+   "prompt": "半径 3 cm の円Aと半径 6 cm の円Bがある。円Bの面積は円Aの面積の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①A 9π、B 36π　②36π ÷ 9π　③＝ 4。答え 4倍",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-53",
+   "type": "input",
+   "prompt": "直径 8 cm の円の周の長さと、周の長さが等しい正方形がある。正方形の1辺の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π"
+   },
+   "explanation": "①円周 8π　②正方形の周 4 × (1辺) ＝ 8π　③1辺 ＝ 2π。答え 2π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-54",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 60° のおうぎ形の弧の長さは、弧の両はしを結ぶ線分の長さ（6 cm）より何 cm 長いか。π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π−6",
+    "form": "nosign"
+   },
+   "explanation": "①弧 2π × 6 × (60/360) ＝ 2π　②両はしと中心で正三角形ができるので、線分は 6　③2π − 6。答え 2π−6 cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-55",
+   "type": "input",
+   "prompt": "時計の長針は 10 cm、短針は 6 cm である。1 時間に長針の先が動く道のりは、短針の先が動く道のりより何 cm 長いか。π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "19π"
+   },
+   "explanation": "①長針の先 2π × 10 ＝ 20π　②短針の先 2π × 6 × (30/360) ＝ π　③20π − π ＝ 19π。答え 19π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-56",
+   "type": "input",
+   "prompt": "半径 30 cm の車輪で、30π m 進むには何回転すればよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "50",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "①1 回転で 60π cm 進む　②30π m ＝ 3000π cm　③3000π ÷ 60π ＝ 50。答え 50回転",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-57",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 90° のおうぎ形の弧と、半径 9 cm、中心角 x° のおうぎ形の弧の長さが等しい。x の値を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "60"
+   },
+   "explanation": "①2π × 6 × (90/360) ＝ 3π　②2π × 9 × (x/360) ＝ 3π　③18π × x/360 ＝ 3π より x ＝ 60。答え 60",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-58",
+   "type": "input",
+   "prompt": "円の半径を 1 cm 長くしたら、面積が 7π cm² ふえた。もとの円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①π(r + 1)² − πr² ＝ π(2r + 1)　②2r + 1 ＝ 7　③r ＝ 3（9π → 16π）。答え 3cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-59",
+   "type": "input",
+   "prompt": "円の周の長さが 4π cm ふえるように、半径をのばした。半径は何 cm のびたか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円周 ＝ 2π × 半径　②2π × (のび) ＝ 4π　③のびは 2 cm（もとの半径によらない）。答え 2cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-60",
+   "type": "input",
+   "prompt": "半径 6 cm、中心角 90° のおうぎ形と、面積が等しい円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おうぎ形 36π × (1/4) ＝ 9π　②πr² ＝ 9π　③r ＝ 3。答え 3cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-61",
+   "type": "input",
+   "prompt": "半径 4 cm の4つの円を、となりどうしがふれ合うように横1列にならべ、まわりをぴんとはったひもで囲んだ。ひもの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "48+8π",
+    "form": "nosign"
+   },
+   "explanation": "①まっすぐな部分：はしの円の中心どうしのきょり 8 × 3 ＝ 24 が上下で 48　②両はしの曲がった部分は半円 2 つで円1周分：8π　③48 + 8π。答え 48+8π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-62",
+   "type": "input",
+   "prompt": "半径 3 cm の3つの円を、どれもほかの2つにふれ合うようにならべ、まわりをぴんとはったひもで囲んだ。ひもの長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "18+6π",
+    "form": "nosign"
+   },
+   "explanation": "①まっすぐな部分は、中心どうしのきょり 6 が 3 つで 18　②曲がった部分の中心角の合計は 360° で、円1周分 6π　③18 + 6π。答え 18+6π cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-63",
+   "type": "input",
+   "prompt": "周の長さが (10π + 20) cm の半円の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "50π"
+   },
+   "explanation": "①半径 r の半円の周は πr + 2r　②r ＝ 10 で 10π + 20　③面積 100π ÷ 2 ＝ 50π。答え 50π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-64",
+   "type": "input",
+   "prompt": "1辺 4 cm の正方形の1つの辺に、半径 4 cm、中心角 90° のおうぎ形を、正方形と重ならないようにつけた図形の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "16+4π",
+    "form": "nosign"
+   },
+   "explanation": "①正方形 16　②おうぎ形 16π × (1/4) ＝ 4π　③16 + 4π。答え 16+4π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-65",
+   "type": "input",
+   "prompt": "扇子（せんす）を開くと、外側の半径 20 cm、内側の半径 5 cm、中心角 120° になった。紙がはられているのは、2つのおうぎ形にはさまれた部分である。その面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "125π"
+   },
+   "explanation": "①外側のおうぎ形 400π × (120/360)　②内側のおうぎ形 25π × (120/360)　③(400π − 25π) × (1/3) ＝ 125π。答え 125π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-66",
+   "type": "input",
+   "prompt": "2つの円A、Bの半径の比は 2：3 で、半径の和は 10 cm である。2つの円の面積の和を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "52π"
+   },
+   "explanation": "①半径 4 cm と 6 cm　②16π + 36π　③＝ 52π。答え 52π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-67",
+   "type": "input",
+   "prompt": "時計の長針は、40 分間に何度回るか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "240",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①60 分で 360°　②40 分で 360 × (40/60)　③＝ 240。答え 240度",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-68",
+   "type": "input",
+   "prompt": "地球の赤道に、ぴったりロープを1周まきつけた。このロープを、赤道からどこでも 1 m うき上がるようにするには、ロープを何 m 長くすればよいか。π を使って答えよう（m）。",
+   "answer": {
+    "kind": "expr",
+    "value": "2π"
+   },
+   "explanation": "①地球の半径を r m とすると、はじめのロープは 2πr　②半径 r + 1 の円周は 2π(r + 1) ＝ 2πr + 2π　③2π m 長くすればよい（地球の大きさによらない）。答え 2π m",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-69",
+   "type": "input",
+   "prompt": "円周率を 3.14 として、半径 10 cm、中心角 36° のおうぎ形の弧の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6.28",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①2 × 3.14 × 10 × (36/360)　②＝ 62.8 × 0.1　③＝ 6.28。答え 6.28cm",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  },
+  {
+   "id": "tokkun-math-1-circlecalc-70",
+   "type": "input",
+   "prompt": "半径 12 cm のおうぎ形の弧の長さが、同じ半径の円の周の 1/3 である。このおうぎ形の面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "48π"
+   },
+   "explanation": "①弧が円周の 1/3 → 面積も円の 1/3　②144π × (1/3)　③＝ 48π。答え 48π cm²",
+   "source": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p173〜176（おうぎ形の弧の長さと面積）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466020_0.jpg",
+    "sha256": "77cd4f12e3588fb003536bc391d6af6261e3fd093b9bdbad6d1f5979e59863af",
+    "page": 173
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。教科書 p173〜176 の円とおうぎ形の計量を、逆に求める・図形を組み合わせる・転がる円・時計の針などに広げた一段難しい問題。図はことばで説明している。答えは check.py で、π を文字として計算し直す方法と総当たりで検算。2026-10-27 Claude：中心角・半径を逆に求める・ドーナツ形・内接と外接・羊のロープ・時計・車輪・ひもで囲む・赤道のロープなど、文章で正確に伝えられる問題50問を追加して70問にした。"
+}

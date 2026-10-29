@@ -1,0 +1,184 @@
+{
+ "engine": "../engine/material-engine.js",
+ "data": "../原本写し",
+ "tried": 66,
+ "mismatch": 22,
+ "items": [
+  {
+   "id": "chisou-5",
+   "kind": "模範（解説）",
+   "input": "陸から遠く離れていると、砕せつ物などがほとんど運ばれてこないから。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "chisou-5",
+   "kind": "自然な正答",
+   "input": "深い海の底には陸からの砂や泥がほとんど届かないから",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "chisou-5",
+   "kind": "誤答",
+   "input": "川から砂や泥がたくさん運ばれてくるから",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "chisou-7",
+   "kind": "誤答",
+   "input": "花こう岩・川・火山",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "futten-4",
+   "kind": "模範（解説）",
+   "input": "沸点・融点は物質の種類によって決まり、量（質量や体積）によって変わらないから。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "futten-4",
+   "kind": "自然な正答",
+   "input": "融点や沸点は物質ごとに決まっていて、体積が変わっても変わらないから",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "futten-10",
+   "kind": "模範（解説）",
+   "input": "湯の温度（90℃）が水の沸点（100℃）より低く、試験管の水は100℃まで上がらないから。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "futten-10",
+   "kind": "自然な正答",
+   "input": "90℃の湯では、水の沸点の100℃に達しないから",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "futten-19",
+   "kind": "自然な正答",
+   "input": "ウはほとんど水で、エタノールが少ししかないから",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "joutai-7",
+   "kind": "誤答",
+   "input": "氷になると水の体積がへるから",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "joutai-33",
+   "kind": "誤答",
+   "input": "液体を冷やして気体にかえるため",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "lens-41",
+   "kind": "模範（解説）",
+   "input": "レンズを通った光が1点に集まらない（広がる）から。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "lens-50",
+   "kind": "模範（解説）",
+   "input": "文字が焦点の外側になると虚像ではなく実像が見え、上下・左右が逆向きになる。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "lens-52",
+   "kind": "誤答",
+   "input": "物体を遠ざけて、スクリーンを近づける",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "musekitsui-1",
+   "kind": "模範（解説）",
+   "input": "昆虫類は体が頭部・胸部・腹部の3つに分かれ、あしが3対。クモは体が2つでありあしが4対なので、昆虫類ではない。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "musekitsui-1",
+   "kind": "自然な正答",
+   "input": "クモの体は2つに分かれていてあしが4対あり、昆虫の特徴と合わないから",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  },
+  {
+   "id": "musekitsui-1",
+   "kind": "誤答",
+   "input": "クモは体が3つであしが3対だから",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "oto-34",
+   "kind": "誤答",
+   "input": "音は光より速いから",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "oto-64",
+   "kind": "誤答",
+   "input": "光は音より遅いから",
+   "expected": false,
+   "got": true,
+   "reason": "必要な内容をすべて満たしています。"
+  },
+  {
+   "id": "yure-2",
+   "kind": "模範（解説）",
+   "input": "震度は地震の規模だけでなく、震源からの距離や震源の深さでも変わる。地震Bの震源のほうがその地点に近かった（浅かった）と考えられる。",
+   "expected": true,
+   "got": false,
+   "reason": "惜しい！必要な内容の半分以上が書けています。足りない所を補おう。"
+  },
+  {
+   "id": "yure-2",
+   "kind": "自然な正答",
+   "input": "地震Bの震源がその地点の近くだったから",
+   "expected": true,
+   "got": false,
+   "reason": "惜しい！必要な内容の半分以上が書けています。足りない所を補おう。"
+  },
+  {
+   "id": "yure-8",
+   "kind": "模範（解説）",
+   "input": "海洋プレートが沈みこみ続けるので、大陸プレートのひずみがまたたまり、たえきれなくなるとまた地震が起こるから。",
+   "expected": true,
+   "got": false,
+   "reason": "否定の表現があるため、正解の条件と照合できません。"
+  }
+ ]
+}

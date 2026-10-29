@@ -1,0 +1,71 @@
+{
+ "note": "Claude 2026-10-27 検定最終点検の作業フォルダ。原本は変えていないので、原本写し＝確認済みの原本と同じSHA。",
+ "原本と候補": {
+  "kentei-kanken-4": {
+   "確認済み原本": "c40425b82e4f431214af856047a617c3fe58043e87ec7407a60b53a326f415f7",
+   "原本写し": "c40425b82e4f431214af856047a617c3fe58043e87ec7407a60b53a326f415f7",
+   "候補": "fdbcff438d9e3718200fda501dcd3c4cfdb40ebdf8b9a36a2850d132f13359f4",
+   "原本と写しが同じ": true
+  },
+  "kentei-suken-3": {
+   "確認済み原本": "c6d9807e82f23b47b50770d919fe15b104c608046241cff2d60c6cba00305844",
+   "原本写し": "c6d9807e82f23b47b50770d919fe15b104c608046241cff2d60c6cba00305844",
+   "候補": "ae787ae0e8037dafcabb3c0c7afc38b80c535e9cd55947a9bb326c91cbc5becb",
+   "原本と写しが同じ": true
+  },
+  "kentei-suken-4": {
+   "確認済み原本": "b54a64ac3e3eef514fb841d03c206de579fcdb4e550493f27b360612b14db5bb",
+   "原本写し": "b54a64ac3e3eef514fb841d03c206de579fcdb4e550493f27b360612b14db5bb",
+   "候補": "02f345580bc44e4f13aa170fe198705a895bc7f4849513b776132cb3e231793e",
+   "原本と写しが同じ": true
+  },
+  "kentei-suken-5": {
+   "確認済み原本": "db23f9cfe9cb530cf06c9a91d9996f7059511e41169ed52b4f6953a1f88bc6e1",
+   "原本写し": "db23f9cfe9cb530cf06c9a91d9996f7059511e41169ed52b4f6953a1f88bc6e1",
+   "候補": "d42a12fcfa6563d4ac0905cff83022bcf8be3bee0ca6589f1df2c5da7cc07b8c",
+   "原本と写しが同じ": true
+  },
+  "kentei-rika-5": {
+   "確認済み原本": "1c8886a701b25782847c0a991baba222e1d52f8835eda5aec6da929671823cbb",
+   "原本写し": "1c8886a701b25782847c0a991baba222e1d52f8835eda5aec6da929671823cbb",
+   "候補": "5a5412b328f651f3bfbf559a52ef4f7196bfad7a037fc716591ae244c2208b61",
+   "原本と写しが同じ": true
+  }
+ },
+ "files": {
+  "README.md": "df3c727450ca192fe503265c971ec46862a26d45b6a692384d18e5174ea8e364",
+  "候補/kentei-kanken-4.json": "fdbcff438d9e3718200fda501dcd3c4cfdb40ebdf8b9a36a2850d132f13359f4",
+  "候補/kentei-rika-5.json": "5a5412b328f651f3bfbf559a52ef4f7196bfad7a037fc716591ae244c2208b61",
+  "候補/kentei-suken-3.json": "ae787ae0e8037dafcabb3c0c7afc38b80c535e9cd55947a9bb326c91cbc5becb",
+  "候補/kentei-suken-4.json": "02f345580bc44e4f13aa170fe198705a895bc7f4849513b776132cb3e231793e",
+  "候補/kentei-suken-5.json": "d42a12fcfa6563d4ac0905cff83022bcf8be3bee0ca6589f1df2c5da7cc07b8c",
+  "公式資料との照合.json": "9ea147bc7385b536929bf08bcc49f544108d9d214122f085a65c3c137013f55f",
+  "原本写し/kentei-kanken-4.json": "c40425b82e4f431214af856047a617c3fe58043e87ec7407a60b53a326f415f7",
+  "原本写し/kentei-rika-5.json": "1c8886a701b25782847c0a991baba222e1d52f8835eda5aec6da929671823cbb",
+  "原本写し/kentei-suken-3.json": "c6d9807e82f23b47b50770d919fe15b104c608046241cff2d60c6cba00305844",
+  "原本写し/kentei-suken-4.json": "b54a64ac3e3eef514fb841d03c206de579fcdb4e550493f27b360612b14db5bb",
+  "原本写し/kentei-suken-5.json": "db23f9cfe9cb530cf06c9a91d9996f7059511e41169ed52b4f6953a1f88bc6e1",
+  "対象一覧.tsv": "3f8d263d09a5f0c40e3122a6ea681da495e7ae0b1ba7e0974723cf2227f26c71",
+  "指摘と修正候補.tsv": "0f85ac35396a0e0a5c118b43f90c650695e5c4df1bd6fe0f33189e31629cd200",
+  "検証/fixes.py": "2ae04453bf5bc1d7e47aef3cec0e9911bc3ae7c85e7d31ac586af894677e501b",
+  "検証/probe-result-候補.json": "8dd3986f4414238821a2728a9c34995348eaa0f182b2bd77caeec09b60b10675",
+  "検証/probe-result-原本写し.json": "444cc7f2c8eb83bb4237df9c5c7a1fee4b3b0bbaa960f181c35bd2b1406b62fc",
+  "検証/probe-result.json": "c8ff9d883383049f9e62d26ea6e2828b7988e845f884991f041be3565c4c93aa",
+  "検証/probe.cjs": "5edc19eca4b69a18f70be74ec424eac4ebb551765cd7c188873a389fa9801e56",
+  "検証ログ/check_kentei_kanken-4.log": "2ffee41b42d932bc791b4404e888b78225bf337da000768dd89d9e957f912696",
+  "検証ログ/check_kentei_rika-5.log": "44120e90794728fd13e776aa248f6fe75847bdce462d18d1127d857a321647a3",
+  "検証ログ/check_kentei_suken-3.log": "9b7e4d7f9c02c200c0fbdb990d3a0e30a099b175d984fdd143a52799b949f055",
+  "検証ログ/check_kentei_suken-4.log": "9c10a2f15931ac4df36d4ef6ef808b5dd9d0c93240e5d74a14c7064447e88dfd",
+  "検証ログ/check_kentei_suken-5.log": "35aeb9ce45f55d7953a6f3b00e2ade0df9df992a3501fc44cb3ade5f0b6f8115",
+  "検証ログ/check_kentei_候補_kanken-4.log": "2ffee41b42d932bc791b4404e888b78225bf337da000768dd89d9e957f912696",
+  "検証ログ/check_kentei_候補_rika-5.log": "44120e90794728fd13e776aa248f6fe75847bdce462d18d1127d857a321647a3",
+  "検証ログ/check_kentei_候補_suken-3.log": "9b7e4d7f9c02c200c0fbdb990d3a0e30a099b175d984fdd143a52799b949f055",
+  "検証ログ/check_kentei_候補_suken-4.log": "9c10a2f15931ac4df36d4ef6ef808b5dd9d0c93240e5d74a14c7064447e88dfd",
+  "検証ログ/check_kentei_候補_suken-5.log": "35aeb9ce45f55d7953a6f3b00e2ade0df9df992a3501fc44cb3ade5f0b6f8115",
+  "検証ログ/probe_候補.log": "a49663d4cfc50c13ca95bda37eadabab05b1ad41ad5d5f036b245fbc698df74f",
+  "検証ログ/probe_原本.log": "6414d05e1ae1c1532f98a2a979fd7625447190b74a9d0e25d68d0e1e1dd7cbeb",
+  "検証ログ/suken_independent_既存.log": "8003ee58fcc6ce2c31cb220372e98129e95fbf5d2781c661577baa448444c9c8",
+  "検証ログ/validateUnit.log": "46349656669ef1fa812ecb460de630d422a021ae2af0e47ea98e4ceab18cff60",
+  "社会manifest修正.tsv": "cd7cd7a6134c32b3dc0ade4de5f99d376dc8d59ba602a37b9fb8486bb4607c35"
+ }
+}

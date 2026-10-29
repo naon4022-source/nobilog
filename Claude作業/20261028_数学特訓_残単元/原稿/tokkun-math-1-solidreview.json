@@ -1,0 +1,97 @@
+{
+ "id": "tokkun-math-1-solidreview",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "ふりかえりドリル（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-solidreview-1",
+   "type": "input",
+   "prompt": "底面の半径 3 cm、母線 5 cm、高さ 4 cm の円錐の表面積を、π を使って答えよう（cm²）。",
+   "answer": {
+    "kind": "expr",
+    "value": "24π"
+   },
+   "explanation": "①側面のおうぎ形：弧 6π、半径 5 で、面積 6π × 5 ÷ 2 ＝ 15π　②底面 9π　③24π。答え 24π cm²",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p184〜215（6章 空間図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solidreview-2",
+   "type": "input",
+   "prompt": "正四面体の辺の数と面の数の積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "24"
+   },
+   "explanation": "①正四面体は正三角形 4 つの面　②辺は 4 × 3 ÷ 2 ＝ 6　③6 × 4 ＝ 24。答え 24",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p184〜215（6章 空間図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solidreview-3",
+   "type": "input",
+   "prompt": "底面の半径 3 cm、高さ 4 cm の円錐の体積は、同じ底面で同じ体積の円柱の高さを何 cm にすればよいか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4/3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①円錐の体積 π × 9 × 4 ÷ 3 ＝ 12π　②円柱 π × 9 × h ＝ 12π　③h ＝ 4/3。答え 4/3cm",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p184〜215（6章 空間図形 全体）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。円錐の展開図と体積・多面体を組み合わせる問題。答えは check.py で計算し直して検算。【保留】6章のほかの特訓と重ならない総合問題は 3 問まで。70問にしていない。"
+}

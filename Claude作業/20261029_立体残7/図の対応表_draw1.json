@@ -1,0 +1,529 @@
+[
+ {
+  "unit": "draw1",
+  "number": 7,
+  "file": "tokkun-fig-draw1-7.svg",
+  "sha256": "f4b0af07a27652d81130bb62e792824c5f45d1069c4afbfea09e1427307a3101",
+  "image": "/tokkun-fig-draw1-7.svg",
+  "imageAlt": "線分ABと、A、Bを中心とする同じ半径の円の一部、その交点P、Qを通る直線PQの図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "P",
+   "Q"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 8,
+  "file": "tokkun-fig-draw1-8.svg",
+  "sha256": "72d68a0f38ffb83c0506640e9c4a1362346e1e0d487393a90e6b2a7d7d0ebca2",
+  "image": "/tokkun-fig-draw1-8.svg",
+  "imageAlt": "∠AOBと、Oを中心とする円の一部、C、Dを中心とする円の一部、その交点E、半直線OEの作図の図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 9,
+  "file": "tokkun-fig-draw1-9.svg",
+  "sha256": "10e1fc2101c4d8807e82307aee1893d3f733fc5bea8f645d8f6a0fd0b8dca881",
+  "image": "/tokkun-fig-draw1-9.svg",
+  "imageAlt": "線分ABの垂直二等分線ℓ（ABとの交点Mに直角の印）と、ℓ上の点P。三角形PABがかいてあり、∠PABに52°と書いてある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "M",
+     "P"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "A",
+     "P"
+    ],
+    "value": 52,
+    "shown": "52°"
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "P",
+    "B"
+   ],
+   76
+  ],
+  "texts": [
+   "ℓ",
+   "A",
+   "B",
+   "P",
+   "M",
+   "52°"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "76",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 10,
+  "file": "tokkun-fig-draw1-10.svg",
+  "sha256": "8c762769178906f5523ba4dff8b91c53e5669fa455778dc3db5a0cca33ad48d3",
+  "image": "/tokkun-fig-draw1-10.svg",
+  "imageAlt": "∠AOBとその二等分線上の点P、PからOAへの垂線PH（4cm）、OB上の点B（OB 9cm）と三角形OPB。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "O",
+     "H",
+     "P"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "P",
+     "H"
+    ],
+    "value": 4,
+    "shown": "4 cm"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "O",
+     "B"
+    ],
+    "value": 9,
+    "shown": "9 cm"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "O",
+     "P"
+    ],
+    "value": 30,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "P",
+     "O",
+     "B"
+    ],
+    "value": 30,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "A",
+   "P",
+   "H",
+   "B",
+   "4 cm",
+   "9 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "18",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 11,
+  "file": "tokkun-fig-draw1-11.svg",
+  "sha256": "aba3791ab2c680e6eff1f4a6b8cadf9165503c7f80ac708b8c5ab6e11b91156f",
+  "image": "/tokkun-fig-draw1-11.svg",
+  "imageAlt": "三角形ABCと、∠Bの二等分線、∠Cの二等分線、その交点I。∠BACに70°と書いてある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "A",
+     "C"
+    ],
+    "value": 70,
+    "shown": "70°"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "B",
+     "I"
+    ],
+    "value": 25,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "I",
+     "B",
+     "C"
+    ],
+    "value": 25,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "C",
+     "I"
+    ],
+    "value": 30,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "I",
+     "C",
+     "B"
+    ],
+    "value": 30,
+    "shown": ""
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "B",
+    "I",
+    "C"
+   ],
+   125
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "I",
+   "70°"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "125",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 12,
+  "file": "tokkun-fig-draw1-12.svg",
+  "sha256": "be62a135f5248f754f2251c3524945684425f43c8c410881838340744a8cb59f",
+  "image": "/tokkun-fig-draw1-12.svg",
+  "imageAlt": "方眼の上の線分ABと、点P、Q、R、S、T。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "P",
+   "Q",
+   "R",
+   "S",
+   "T"
+  ],
+  "answer": {
+   "kind": "set",
+   "items": [
+    [
+     "P"
+    ],
+    [
+     "Q"
+    ],
+    [
+     "S"
+    ]
+   ],
+   "letters": true
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 13,
+  "file": "tokkun-fig-draw1-13.svg",
+  "sha256": "ebc66c85de1071b10738ff31aa3658cfe3753978c922f696815ae1da57f6ea24",
+  "image": "/tokkun-fig-draw1-13.svg",
+  "imageAlt": "方眼の上の直角∠XOYと、点P、Q、R、S。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "O",
+   "X",
+   "Y",
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "answer": {
+   "kind": "set",
+   "items": [
+    [
+     "P"
+    ],
+    [
+     "R"
+    ]
+   ],
+   "letters": true
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 14,
+  "file": "tokkun-fig-draw1-14.svg",
+  "sha256": "224a497b586bffc4677917c121f542102587109f01d2017d57b7c42ab46af47f",
+  "image": "/tokkun-fig-draw1-14.svg",
+  "imageAlt": "AB＝AD、CB＝CDの四角形ABCDと、対角線AC、BD（点線）。∠BADに角の印がある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "A",
+     "D"
+    ],
+    "value": 74,
+    "shown": ""
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "B",
+    "A",
+    "C"
+   ],
+   37
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "37",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 15,
+  "file": "tokkun-fig-draw1-15.svg",
+  "sha256": "dfd1105c60497de6322c974443fc09ef134a8e182702f8eb7b4b913907e02830",
+  "image": "/tokkun-fig-draw1-15.svg",
+  "imageAlt": "座標平面上の3点O、B(6,0)、C(0,4)を結んだ三角形。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "B",
+   "C"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "(3,2)",
+    "(3、2)",
+    "3,2",
+    "3、2"
+   ],
+   "compact": true
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 16,
+  "file": "tokkun-fig-draw1-16.svg",
+  "sha256": "d02c46faaf94b1c8ec2036d60ee83fc35839569954f7af7abce7ec5690f9c586",
+  "image": "/tokkun-fig-draw1-16.svg",
+  "imageAlt": "正三角形ABCと、頂点Aから辺BCにひいた∠BACの二等分線AD。",
+  "claims": [
+   {
+    "kind": "eq",
+    "at": [
+     "A",
+     "B",
+     "B",
+     "C"
+    ],
+    "value": 0,
+    "shown": ""
+   },
+   {
+    "kind": "eq",
+    "at": [
+     "B",
+     "C",
+     "C",
+     "A"
+    ],
+    "value": 0,
+    "shown": ""
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "B",
+    "A",
+    "D"
+   ],
+   30
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "30",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 17,
+  "file": "tokkun-fig-draw1-17.svg",
+  "sha256": "b18f5918f02d45fe5b93469963f1f496125ff93581cf7ec516f56b8e8f205cfa",
+  "image": "/tokkun-fig-draw1-17.svg",
+  "imageAlt": "直線AB上の点Oを中心とする円の一部と、そこからかいた円の一部、Oから上にひいた半直線OC。",
+  "claims": [],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "O",
+    "C"
+   ],
+   90
+  ],
+  "texts": [
+   "A",
+   "B",
+   "O",
+   "C"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw1",
+  "number": 18,
+  "file": "tokkun-fig-draw1-18.svg",
+  "sha256": "8783452a1dd9d08ddba79fe53a3ca471d2e13899049e65defd74f25466645ccb",
+  "image": "/tokkun-fig-draw1-18.svg",
+  "imageAlt": "平行四辺形ABCDと、∠Aの二等分線、∠Bの二等分線、その交点P。∠DABに角の印がある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "A",
+     "D"
+    ],
+    "value": 70,
+    "shown": ""
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "P",
+    "B"
+   ],
+   90
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "P"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ }
+]

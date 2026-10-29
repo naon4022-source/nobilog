@@ -1,0 +1,8 @@
+47c47
+<   const tokens=raw.replace(/[。.]+$/,'').replace(/\s*=\s*/g,'=').replace(/[、，]/g,',').split(/[,\s]+/).filter(Boolean).map(t=>t.replace(/^[a-zA-Z]=/,'')).filter(Boolean),values=tokens.map(number),expected=(a.values||[]).map(number);
+---
+>   const tokens=raw.replace(/[。.]+$/,'').replace(/\s*=\s*/g,'=').replace(/[、，]/g,',').replace(a.ratio===true?/\s*:\s*/g:/(?!)/g,',').split(/[,\s]+/).filter(Boolean).map(t=>t.replace(/^[a-zA-Z]=/,'')).filter(Boolean),values=tokens.map(number),expected=(a.values||[]).map(number);
+211c211
+<   const tokens=raw.replace(/[。.]+$/,'').replace(/\s*=\s*/g,'=').replace(/[、，]/g,',').split(/[,\s]+/).filter(Boolean).map(t=>t.replace(/^[a-zA-Z]=/,'')).filter(Boolean),values=tokens.map(number),expected=a.values.map(number);
+---
+>   const tokens=raw.replace(/[。.]+$/,'').replace(/\s*=\s*/g,'=').replace(/[、，]/g,',').replace(a.ratio===true?/\s*:\s*/g:/(?!)/g,',').split(/[,\s]+/).filter(Boolean).map(t=>t.replace(/^[a-zA-Z]=/,'')).filter(Boolean),values=tokens.map(number),expected=a.values.map(number);

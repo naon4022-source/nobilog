@@ -1,0 +1,12 @@
+--- engine-元の写し.js	2026-10-29 19:07:44
++++ engine-候補.js	2026-10-29 19:08:27
+@@ -196,7 +196,9 @@
+  if(a.kind==='number'){
+   let value=raw.replace(/^[a-zA-Z]\s*=\s*/,'').replace(/[。.]+$/,'').trim(); // 方程式の答えを「x=5」と書いても読む。最後の「。」もはずす（2026-10-22）
+   const units=[...(a.units||[])].map(normalize).sort((x,y)=>y.length-x.length); // ℃ などは入力と同じく正規化して比べる
++  {const tail=value.match(/\s*(以上|未満)$/);if(tail&&new RegExp('何\\s*\\S*\\s*'+tail[1]).test(String(question.prompt||'')))value=value.slice(0,-tail[0].length).trim();} // 「何 cm 以上の階級か」に「145 cm 以上」と答えても読む（2026-10-29 候補）
+   const unit=units.find(u=>value.endsWith(u));if(unit)value=value.slice(0,-unit.length).trim();
++  {const rate=value.match(/^(分速|秒速|時速|毎分|毎秒|毎時)\s*/);if(rate&&unit&&String(question.prompt||'').includes(rate[1]))value=value.slice(rate[0].length).trim();} // 「分速175m」：問題文にある「分速」などの前置きは、単位をつけたときだけ読む（2026-10-29 候補）
+   value=thousands(value); // 「1,500」のような3けたごとのカンマも読む（2026-10-22）
+   if(a.unitRequired&&!unit)return result(false,0,'単位も入力してください。');
+   const actual=number(value),expected=number(a.value);

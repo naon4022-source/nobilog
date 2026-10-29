@@ -1,0 +1,1991 @@
+{
+ "id": "tokkun-social-1-geo-oceania",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "社会",
+ "grade": 1,
+ "title": "オセアニア州（特訓）",
+ "majorTitle": "世界の諸地域",
+ "status": "ready",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-social-1-geo-oceania-1",
+   "type": "input",
+   "prompt": "世界全体に対する割合で、オセアニア州は面積6.5％・人口0.6％である。6つの州の中でオセアニア州について言えることを選ぼう。\nア　面積も人口も最も小さい\nイ　面積は最も大きいが人口は最も少ない\nウ　人口は最も多い",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "オセアニア州は面積も人口も6つの州の中で最も小さい。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 131,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p131（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-2",
+   "type": "input",
+   "prompt": "オセアニア州の面積は849万km²である。日本の面積を38万km²とすると、オセアニア州の面積は日本の約何倍か。整数で答えよう（小数第1位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "22",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "849÷38＝22.3…で約22倍。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 131,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p131（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-3",
+   "type": "input",
+   "prompt": "オーストラリアで、急病人を救急車ではなく飛行機で運び、緊急時には道路が滑走路になる場所があるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "人口が多",
+      "病院が近"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "広",
+       "距離",
+       "はなれ",
+       "遠"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "人口",
+       "病院",
+       "町"
+      ]
+     }
+    ]
+   },
+   "explanation": "国土が広く、人口の少ない内陸部では町や病院どうしが遠くはなれているから。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 131,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p131（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-4",
+   "type": "input",
+   "prompt": "オーストラリアの学校で学ぶ外国語として、教科書の中学生の話にあげられていることを選ぼう。\nア　外国語は学ばない\nイ　アジアの言語が多い\nウ　ヨーロッパの言語だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "学校で習う外国語はアジアの言語が多く、日本語の授業がある学校もある。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 130,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p130（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-5",
+   "type": "input",
+   "prompt": "オーストラリア大陸とニュージーランドの地形のちがいとして正しいものを選ぼう。\nア　どちらも日本と同じく火山や地震が多く、たびたび大きな噴火がある\nイ　オーストラリア大陸は安定した土地、ニュージーランドは火山や地震が多い\nウ　オーストラリア大陸だけ火山が多く、ニュージーランドは安定している",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "オーストラリア大陸は火山や大きな地震がない安定した土地だが、ニュージーランドやパプアニューギニアは日本と同じく火山や地震が多い地域。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-6",
+   "type": "input",
+   "prompt": "オーストラリア大陸のうち、年間の降水量が500mm以下で草原や砂漠が広がっている部分はどのくらいか。次から選ぼう。\nア　約3分の2\nイ　ほぼ全部\nウ　約3分の1",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "オーストラリア大陸の3分の2は、年間の降水量が500mm以下で草原や砂漠が広がる「乾燥大陸」とよばれる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-7",
+   "type": "input",
+   "prompt": "オーストラリア大陸の中で、温帯で農業が盛んなのはどこか。次から選ぼう。\nア　大陸の東部や南西部\nイ　大陸の北部の熱帯地域\nウ　大陸の内陸部の砂漠周辺",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "大陸の東部や南西部、ニュージーランドは温帯で農業が盛ん。大陸の北部やパプアニューギニアの大部分は熱帯。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-8",
+   "type": "input",
+   "prompt": "教科書の雨温図で、アリススプリングス・シドニー・フナフティのうち、年降水量が最も多い都市はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "フナフティ",
+     "ふなふてぃ"
+    ]
+   },
+   "explanation": "ツバルのフナフティは年降水量3562mm。シドニーは973mm、アリススプリングスは267mm。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-9",
+   "type": "input",
+   "prompt": "教科書の雨温図で、フナフティの年降水量は3562mm、アリススプリングスは267mmである。フナフティはアリススプリングスの約何倍か。整数で答えよう（小数第1位を四捨五入）。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "3562÷267＝13.3…で約13倍。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-10",
+   "type": "input",
+   "prompt": "アリススプリングスの雨温図で、1月ごろの気温が高く7月ごろが低い。その理由として正しいものを選ぼう。\nア　雨が多いから\nイ　標高が高いから\nウ　南半球にあるから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "オーストラリアは南半球にあるので、1月ごろが夏、7月ごろが冬になる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-11",
+   "type": "input",
+   "prompt": "タヒチ島やハワイ諸島などで植物がよく育つのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "土地",
+       "土"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "肥え",
+       "こえ",
+       "豊か"
+      ]
+     }
+    ]
+   },
+   "explanation": "火山の噴火でできた島で、土地が肥えているから。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-12",
+   "type": "input",
+   "prompt": "さんご礁の島が、交通や貿易に不便な面があるのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "深い",
+      "港が造りやすい"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "海",
+       "沿岸"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "浅"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "船",
+       "港"
+      ]
+     }
+    ]
+   },
+   "explanation": "沿岸の海が浅いため、大きな船が入れる港が造りにくいから。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-13",
+   "type": "input",
+   "prompt": "オセアニアの先住民の祖先は、どこからやってきたと考えられているか。次から選ぼう。\nア　南アメリカ大陸から、船で太平洋をわたってきた\nイ　南極大陸から、氷の上を歩いてわたってきた\nウ　ユーラシア大陸から島をわたってきた",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "先住民の祖先はユーラシア大陸から島をわたってきたと考えられており、ミクロネシアでは楽器にも東南アジア諸国と似たものが見られる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 133,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p133（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-14",
+   "type": "input",
+   "prompt": "先住民の社会でキリスト教徒が多くなったのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "ヨーロッパ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "影響",
+       "進出"
+      ]
+     }
+    ]
+   },
+   "explanation": "18世紀から進出してきたヨーロッパの人々の影響を強く受けて変化したから。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 133,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p133（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-15",
+   "type": "input",
+   "prompt": "オーストラリアやニュージーランドの最大の貿易相手国の変化として正しいものを選ぼう。\nア　かつてはイギリス、現在は中国\nイ　かつても今もアメリカ合衆国\nウ　かつては中国、現在はイギリス",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "かつてはイギリスが最大の貿易相手国だったが、太平洋を囲む国々との貿易が増え、現在では中国が最大の貿易相手国になっている。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 133,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p133（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-16",
+   "type": "input",
+   "prompt": "イギリスがEUを離脱したあと、オーストラリアとイギリスの関係はどう変わったか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "結び付き",
+       "関係",
+       "つながり"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "強",
+       "再び"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "自由貿易協定",
+       "協定"
+      ]
+     }
+    ]
+   },
+   "explanation": "オーストラリアはイギリスとの結び付きを再び強め、自由貿易協定を結んだ。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 133,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p133（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-17",
+   "type": "input",
+   "prompt": "羊毛の輸出額の国別割合（2020年）で、オーストラリアに次いで2位の国はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "中国",
+     "中華人民共和国"
+    ]
+   },
+   "explanation": "オーストラリア38.4％、中国14.7％、南アフリカ共和国7.7％、ニュージーランド6.1％の順。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-18",
+   "type": "input",
+   "prompt": "オーストラリアの東部や南西部で行われている、年によって牧畜と農作物の栽培を入れかえる農業の目的として正しいものを選ぼう。\nア　観光客を集め、牧場を見せるため\nイ　土地を有効に利用するため\nウ　雨の量を増やし、乾燥を防ぐため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "牧畜と小麦などの栽培とを組み合わせた農業が行われ、年によって入れかえて土地を有効に利用している。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-19",
+   "type": "input",
+   "prompt": "オーストラリアの内陸部で農業がほとんど行われていない理由を選ぼう。\nア　乾燥しているから\nイ　寒すぎるから\nウ　火山が多いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "内陸部は乾燥しており、農業はほとんど行われていない。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-20",
+   "type": "input",
+   "prompt": "オーストラリアの内陸部の鉱山の近くに、住宅や学校・病院のある新しい町が造られたのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "人口が多"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "人口",
+       "人が少な",
+       "人のいない"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "働く",
+       "鉱山",
+       "家族"
+      ]
+     }
+    ]
+   },
+   "explanation": "鉱山の多くは内陸の人口が少ない地域にあるため、鉱山で働く人や家族のための住宅や学校、病院などを建設して新しい町が造られた。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-21",
+   "type": "input",
+   "prompt": "地球温暖化を食い止めるための脱炭素社会への転換が進む中で、オーストラリアに経済の変化が求められているのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "石炭の輸出が増え"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "石炭"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "輸出"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "たよ",
+       "頼",
+       "依存",
+       "かたよ"
+      ]
+     }
+    ]
+   },
+   "explanation": "石炭の輸出にたよった経済になっていて、脱炭素社会では石炭の需要が減ると考えられるから。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-22",
+   "type": "input",
+   "prompt": "オーストラリアが、1970年代からアジア諸国との関係を重視するようになったのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "イギリス"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "ヨーロッパ"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "距離",
+       "近"
+      ]
+     }
+    ]
+   },
+   "explanation": "イギリスがヨーロッパとの関係を強めたため、距離の近いアジア諸国との関係を重視するようになった。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-23",
+   "type": "input",
+   "prompt": "1989年に結成されたAPEC（アジア太平洋経済協力）について、オーストラリアの役割として正しいものを選ぼう。\nア　結成に反対した\nイ　参加していない\nウ　結成を主導した",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "1989年のAPECの結成を主導するなど、アジア諸国との経済協力を進めている。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-24",
+   "type": "input",
+   "prompt": "日本企業がオーストラリアで鉱山を直接開発するのはなぜか。正しいものを選ぼう。\nア　オーストラリアの観光地を増やすため\nイ　日本の鉱山を閉じたため\nウ　鉱産資源を安定して輸入するため",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "オーストラリアから鉱産資源を安定して輸入するため、直接オーストラリアで開発する日本企業もある。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-25",
+   "type": "input",
+   "prompt": "オーストラリアやニュージーランドで、世界各地から観光客が集まる場所として教科書にあげられているものを2つ書こう。（「、」で区切って書こう）",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ゴールドコースト"
+     ],
+     [
+      "サザンアルプス"
+     ]
+    ],
+    "plain": true
+   },
+   "explanation": "オーストラリア東部のゴールドコーストや、ニュージーランドのサザンアルプスは世界各地の人々に人気の観光地。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-26",
+   "type": "input",
+   "prompt": "現在もフランスの支配下にありながら、外交や国防をのぞく多くの権限が認められている、1980年代に独立を求める動きが強まった島はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ニューカレドニア"
+    ]
+   },
+   "explanation": "ニューカレドニアでは1980年代に先住民を中心にフランスからの独立を求める動きが強まり、現在ではフランスの支配下におかれながらも多くの権限が認められている。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-27",
+   "type": "input",
+   "prompt": "19世紀後半に白豪主義とよばれる政策がとられるようになったきっかけを説明しよう。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "金"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "中国"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "対立"
+      ]
+     }
+    ]
+   },
+   "explanation": "金の鉱山が発見されると中国系の移民が増加し、イギリス系の移民との対立が起こったため、アジアからの移民を制限する白豪主義の政策がとられた。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-28",
+   "type": "input",
+   "prompt": "第二次世界大戦後、オーストラリアがイギリス以外からも移民を受け入れるようになったのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "国づくり",
+       "労働者",
+       "働く人"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "必要",
+       "多く",
+       "足り"
+      ]
+     }
+    ]
+   },
+   "explanation": "国づくりには多くの移民労働者が必要だったため、イタリアなどからの移民を受け入れ、1970年代からはアジアを中心にヨーロッパ以外からの移民を積極的に受け入れた。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-29",
+   "type": "input",
+   "prompt": "オーストラリアに暮らす移民の出身州別割合の移り変わりのグラフで、2023年に最も割合が高い州はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アジア州",
+     "アジア"
+    ]
+   },
+   "explanation": "2023年はアジア州が51.5％で最も高く、ヨーロッパ州は26.8％。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-30",
+   "type": "input",
+   "prompt": "近年、アボリジニの人々に対する政策が見直されて認められたこととして正しいものを選ぼう。\nア　先住民としての権利が尊重され、先祖の土地の所有権も認められた\nイ　英語の使用が禁止され、先住民の言葉だけが使われるようになった\nウ　都市に住むことが義務になり、伝統的な土地を離れることになった",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "アボリジニの人々に対する政策も見直され、先住民としての権利が尊重され、先祖が住んでいた土地の所有権も認められた。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-31",
+   "type": "input",
+   "prompt": "アボリジニの人々にとって聖地であり、世界遺産としても有名な場所はどこか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウルル",
+     "エアーズロック"
+    ]
+   },
+   "explanation": "世界遺産で有名なウルルはアボリジニの聖地。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-32",
+   "type": "input",
+   "prompt": "オーストラリアの社会について、教科書で課題としてあげられていることを選ぼう。\nア　先住民の文化は完全に失われ、残っていない\nイ　移民はほとんどおらず、受け入れたことがない\nウ　アジアからの移民の急増に反発する動きもある",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "さまざまな文化を持つ人々によって成り立っている一方で、アジアからの移民の急増に反発する動きもある。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-33",
+   "type": "input",
+   "prompt": "ツバルの国土の特徴として正しいものを選ぼう。\nア　国土の大部分が標高1〜2mほどの低い土地\nイ　標高2000mほどの、高原が広がる土地\nウ　大陸とつながった、広い平野の一部",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "ツバルの島々は、さんご礁の上にさんごの破片などが積み重なってできていて、国土の大部分が標高1〜2mほどの低い土地。",
+   "source": {
+    "id": "source-0747",
+    "file": "地理教科書/S__16482373_0.jpg",
+    "sha256": "4b7a4af61ae0c9af5da0adcd8949631a08759fa2a201a5152759e58f5258333f",
+    "page": 141,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p141（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-34",
+   "type": "input",
+   "prompt": "ツバルの首都のある島では、2015年までの過去40年間で、海面がおよそ何cm高くなったか。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm",
+     "センチ",
+     "センチメートル"
+    ]
+   },
+   "explanation": "およそ15cmも海面が高くなった。",
+   "source": {
+    "id": "source-0747",
+    "file": "地理教科書/S__16482373_0.jpg",
+    "sha256": "4b7a4af61ae0c9af5da0adcd8949631a08759fa2a201a5152759e58f5258333f",
+    "page": 141,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p141（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-35",
+   "type": "input",
+   "prompt": "ツバルの浸水の被害について、地球温暖化による海面上昇のほかに指摘されている、人々の生活が原因の例を2つ書こう。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "高台",
+      "高い土地に"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "低湿地",
+       "低い土地",
+       "住宅"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "埋め立て",
+       "うめ立て",
+       "海岸",
+       "砂"
+      ]
+     }
+    ]
+   },
+   "explanation": "人口の増加で低湿地に住宅を建てたことで浸水したり、海岸のうめ立てで海からの砂が運ばれなくなって波による海岸侵食が進んだりした。",
+   "source": {
+    "id": "source-0747",
+    "file": "地理教科書/S__16482373_0.jpg",
+    "sha256": "4b7a4af61ae0c9af5da0adcd8949631a08759fa2a201a5152759e58f5258333f",
+    "page": 141,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p141（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-36",
+   "type": "input",
+   "prompt": "ツバルの環境問題が、ツバル一国だけでは解決できないのはなぜか。",
+   "answer": {
+    "kind": "rubric",
+    "allowNegation": true,
+    "reject": [
+     [
+      "ツバルだけが原因",
+      "ツバルだけの問題"
+     ]
+    ],
+    "criteria": [
+     {
+      "weight": 1,
+      "any": [
+       "地球温暖化",
+       "温暖化",
+       "海面上昇"
+      ]
+     },
+     {
+      "weight": 1,
+      "any": [
+       "世界",
+       "地球全体",
+       "国際",
+       "ほかの国",
+       "他の国"
+      ]
+     }
+    ]
+   },
+   "explanation": "原因の一つの地球温暖化は、地球全体の問題で、国際的な協力の下で解決を考える必要があるから。",
+   "source": {
+    "id": "source-0747",
+    "file": "地理教科書/S__16482373_0.jpg",
+    "sha256": "4b7a4af61ae0c9af5da0adcd8949631a08759fa2a201a5152759e58f5258333f",
+    "page": 141,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p141（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-37",
+   "type": "input",
+   "prompt": "干潮時と満潮時の写真を比べて分かることとして正しいものを選ぼう。\nア　干潮時のほうが、陸地が水につかっている\nイ　満潮時には、陸地だった所が海水につかっている\nウ　2つの写真で、水につかる範囲に変化はない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "同じ日の干潮時と満潮時を比べると、満潮時には陸地だった所が海水につかっている。",
+   "source": {
+    "id": "source-0747",
+    "file": "地理教科書/S__16482373_0.jpg",
+    "sha256": "4b7a4af61ae0c9af5da0adcd8949631a08759fa2a201a5152759e58f5258333f",
+    "page": 141,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p141（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-38",
+   "type": "input",
+   "prompt": "この章で学んだ地球的課題の表で、アフリカ州の地球的課題とされているものを選ぼう。\nア　多文化社会の形成の問題\nイ　食料生産や経済発展での支援\nウ　国家間の統合の問題",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "アフリカ州は「食料生産や経済発展での支援の問題」。多文化社会はオセアニア州、国家間の統合はヨーロッパ州。",
+   "source": {
+    "id": "source-0748",
+    "file": "地理教科書/S__16482374_0.jpg",
+    "sha256": "ce549359427467d02b47de19ff53b3ca724597d80df88473283ea89f92817a22",
+    "page": 143,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p143（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-39",
+   "type": "input",
+   "prompt": "この章で学んだ地球的課題の表で、南アメリカ州の地球的課題を選ぼう。\nア　人口・居住・都市の問題\nイ　環境保全と開発の問題\nウ　地域格差の問題",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "南アメリカ州は「環境保全と開発の問題」。地域格差は北アメリカ州、人口・居住・都市はアジア州。",
+   "source": {
+    "id": "source-0748",
+    "file": "地理教科書/S__16482374_0.jpg",
+    "sha256": "ce549359427467d02b47de19ff53b3ca724597d80df88473283ea89f92817a22",
+    "page": 143,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p143（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-40",
+   "type": "input",
+   "prompt": "アジア州の「人口・居住・都市の問題」と関連するSDGsのゴールとして、教科書の例にあげられていないものを選ぼう。\nア　14 海の豊かさを守ろう\nイ　6 安全な水とトイレを世界中に\nウ　11 住み続けられるまちづくりを\nエ　1 貧困をなくそう",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "教科書の例では、ゴール1・6・11と関連づけている。",
+   "source": {
+    "id": "source-0748",
+    "file": "地理教科書/S__16482374_0.jpg",
+    "sha256": "ce549359427467d02b47de19ff53b3ca724597d80df88473283ea89f92817a22",
+    "page": 143,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p143（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-41",
+   "type": "input",
+   "prompt": "オセアニア州の人口は約何億人か（2022年）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "0.5",
+     "0.5億人",
+     "約0.5億人"
+    ]
+   },
+   "explanation": "オセアニア州の人口は0.5億人（世界全体の0.6％、日本の約0.4倍）。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 130,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p130（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-42",
+   "type": "input",
+   "prompt": "ニュージーランドで「こんにちは」を表す、マオリ語のあいさつとして教科書にあげられているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "Kia ora",
+     "キア・オラ",
+     "キアオラ",
+     "kia ora"
+    ]
+   },
+   "explanation": "ニュージーランドでは英語の「Hello」とマオリ語の「Kia ora」があげられている。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 130,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p130（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-43",
+   "type": "input",
+   "prompt": "図3の、オーストラリアの海に広がるさんご礁を何というか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "グレートバリアリーフ"
+    ]
+   },
+   "explanation": "グレートバリアリーフに広がるさんご礁（オーストラリア）。",
+   "source": {
+    "id": "source-0742",
+    "file": "地理教科書/S__16482367_0.jpg",
+    "sha256": "064c376fadba14e343a1713fab1cf307fc734cfddc3df8d346a755689f456ade",
+    "page": 130,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p130（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-44",
+   "type": "input",
+   "prompt": "オーストラリア大陸が、火山や大きな地震がない安定した土地なのに対して、日本と同じく火山や地震が多い国として教科書にあげられているものを2つ選ぼう（読点で区切る）。\nア　パプアニューギニア\nイ　オーストラリア\nウ　ツバル\nエ　ニュージーランド",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "エ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "ニュージーランドやパプアニューギニアは、日本と同じく火山や地震が多い。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-45",
+   "type": "input",
+   "prompt": "オーストラリア大陸の約3分の2が、年間の降水量500mm以下の乾燥した地域であることから、何とよばれるか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "乾燥大陸",
+     "かんそうたいりく"
+    ]
+   },
+   "explanation": "草原や砂漠が広がる人口の少ない地域で、「乾燥大陸」とよばれる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-46",
+   "type": "input",
+   "prompt": "オーストラリア大陸の北部やパプアニューギニアの大部分は、何帯か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "熱帯",
+     "ねったい"
+    ]
+   },
+   "explanation": "大陸の北部やパプアニューギニアの大部分は熱帯で、高温で雨が多く熱帯雨林が広がる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-47",
+   "type": "input",
+   "prompt": "オセアニアの島々は、大きく3つに分けられる。ポリネシア、ミクロネシアともう1つは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "メラネシア"
+    ]
+   },
+   "explanation": "ポリネシア・ミクロネシア・メラネシアに分けられる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-48",
+   "type": "input",
+   "prompt": "オセアニアの島々の多くは、火山の噴火でできた火山島と、何でできた島か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "さんご礁",
+     "サンゴ礁",
+     "さんごしょう"
+    ]
+   },
+   "explanation": "多くの島々は火山島やさんご礁の島。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-49",
+   "type": "input",
+   "prompt": "図4の雨温図で、年平均気温が最も高いのはどこか。次から選ぼう。\nア　シドニー\nイ　フナフティ\nウ　アリススプリングス",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "フナフティ（ツバル）は年平均気温が28℃以上で一年中暑い。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-50",
+   "type": "input",
+   "prompt": "ミクロネシアで、東南アジアの国々と似たものが見られると教科書に書かれているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "楽器",
+     "がっき"
+    ]
+   },
+   "explanation": "ミクロネシアでは、楽器にも東南アジア諸国と似たものが見られる。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-51",
+   "type": "input",
+   "prompt": "現在、アボリジニやマオリの何が尊重されているか。教科書にあげられているものを選ぼう。\nア　伝統的な武器や戦い方\nイ　昔の王による政治の制度\nウ　芸術や踊りなどの文化",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "現在では、アボリジニやマオリの芸術や踊りなどの文化が尊重されている。",
+   "source": {
+    "id": "source-0743",
+    "file": "地理教科書/S__16482368_0.jpg",
+    "sha256": "dbf1fecb6d9d9aab217dfc8014677556c93c8232288279fa10e73984f3a8a096",
+    "page": 132,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p132（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-52",
+   "type": "input",
+   "prompt": "オーストラリア産の牛肉は、何とよばれて日本などに輸出されているか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "オージービーフ"
+    ]
+   },
+   "explanation": "オーストラリア産の牛肉は「オージービーフ」とよばれ、日本をはじめ多くの国々に輸出されている。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-53",
+   "type": "input",
+   "prompt": "オーストラリアの北東部で、地下水を利用して飼育されている家畜は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "牛",
+     "うし"
+    ]
+   },
+   "explanation": "北東部では地下水を利用した牛の飼育も行われている。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-54",
+   "type": "input",
+   "prompt": "1960年のオーストラリアの輸出品で、最も割合が高かったものは何か（図4）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "羊毛",
+     "ようもう"
+    ]
+   },
+   "explanation": "1960年には輸出品の約40％を羊毛がしめていた。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-55",
+   "type": "input",
+   "prompt": "2023年のオーストラリアの輸出品で、最も割合が高いものは何か（図4）。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉄鉱石",
+     "てっこうせき"
+    ]
+   },
+   "explanation": "2023年は鉄鉱石24.5％、石炭18.3％など、鉱産資源の割合が高い。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-56",
+   "type": "input",
+   "prompt": "オーストラリアの北西部に多い鉱山は何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉄鉱山",
+     "鉄鉱石"
+    ]
+   },
+   "explanation": "北西部には鉄鉱山が多くある。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-57",
+   "type": "input",
+   "prompt": "オーストラリアの各地に分布している鉱産資源として、教科書の本文にあげられているものをすべて選ぼう（読点で区切る）。\nア　金や銅\nイ　ボーキサイト\nウ　ウラン\nエ　石油だけ",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ],
+     [
+      "ウ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "金や銅、ボーキサイト、ウランなどの鉱山も各地に分布している。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 134,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p134（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-58",
+   "type": "input",
+   "prompt": "オーストラリアの鉱山と沿岸の港を結ぶために建設されたものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "鉄道",
+     "長距離の貨物専用の鉄道",
+     "貨物専用の鉄道"
+    ]
+   },
+   "explanation": "沿岸にある港との間に、長距離の貨物専用の鉄道が建設されている。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-59",
+   "type": "input",
+   "prompt": "オーストラリアのアジアとの経済的な結び付きが強まったきっかけとして、教科書の本文に合うものを選ぼう。\nア　アメリカ合衆国から、独立を果たした\nイ　1970年代に、イギリスとの戦争が起こった\nウ　1970年代からイギリスがヨーロッパとの関係を強めた",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "1970年代から、イギリスがヨーロッパとの関係を強めると、オーストラリアは距離の近いアジア諸国との関係を重視するようになった。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-60",
+   "type": "input",
+   "prompt": "ニュージーランドの南島にある、世界各地の人々に人気の観光地として教科書にあげられているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "サザンアルプス"
+    ]
+   },
+   "explanation": "オーストラリア東部のゴールドコーストや、ニュージーランドのサザンアルプスは人気の観光地。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-61",
+   "type": "input",
+   "prompt": "オーストラリア東部にある、世界各地の人々に人気の観光地として教科書にあげられているものは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ゴールドコースト"
+    ]
+   },
+   "explanation": "オーストラリア東部のゴールドコースト。",
+   "source": {
+    "id": "source-0744",
+    "file": "地理教科書/S__16482369_0.jpg",
+    "sha256": "882a5fe6be3b49675a3b78cd907e40368f11937aec9200bf9df37f6b7908353f",
+    "page": 135,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p135（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-62",
+   "type": "input",
+   "prompt": "18世紀から20世紀にかけて、オセアニアの多くの地域は何になったか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "植民地",
+     "欧米諸国の植民地",
+     "しょくみんち"
+    ]
+   },
+   "explanation": "オセアニアは、イギリスやフランス、ドイツなどの欧米諸国の植民地になった。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-63",
+   "type": "input",
+   "prompt": "イギリスから独立した国々の中で、国旗にイギリスのユニオンジャックが入っている国の例として、教科書にあげられているものを選ぼう。\nア　フランス（ヨーロッパ）\nイ　中国（東アジア）\nウ　オーストラリア",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "オーストラリアやニュージーランドなどは、国旗にイギリスのユニオンジャックが入っている。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-64",
+   "type": "input",
+   "prompt": "オーストラリアで、19世紀後半ごろに中国系の移民が増加したきっかけは何か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "金の鉱山が発見された",
+     "金鉱山の発見",
+     "金の鉱山の発見"
+    ]
+   },
+   "explanation": "19世紀後半ごろに金の鉱山が発見されると、中国系の移民が増加した。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-65",
+   "type": "input",
+   "prompt": "オーストラリアが、1970年代から積極的に受け入れた移民は、どこを中心とする人々か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "アジア",
+     "アジアを中心"
+    ]
+   },
+   "explanation": "1970年代からは、アジアを中心に、ヨーロッパ以外からの移民を積極的に受け入れた。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-66",
+   "type": "input",
+   "prompt": "オーストラリアの大都市に多く暮らす、中国にルーツを持つ人々を何とよぶか。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "華人",
+     "かじん"
+    ]
+   },
+   "explanation": "華人とよばれる中国にルーツを持つ人々。シドニーやメルボルンにはチャイナタウンがある。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-67",
+   "type": "input",
+   "prompt": "図3で、1901年のオーストラリアの移民の総数は約何万人か。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "87万人",
+     "87",
+     "87万"
+    ]
+   },
+   "explanation": "1901年は87万人、1961年は178万人、1981年は313万人、2023年は818万人。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-68",
+   "type": "input",
+   "prompt": "図3で、2023年のオーストラリアの移民の総数は818万人で、そのうちアジア州出身は51.5％である。アジア州出身の移民は約何万人か。小数第1位を四捨五入して整数で答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "421",
+    "units": [
+     "万人"
+    ]
+   },
+   "explanation": "818×0.515＝421.27…で、約421万人。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 136,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p136（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-69",
+   "type": "input",
+   "prompt": "「ディジュリドゥ」とは何か。教科書の大学生の話から選ぼう。\nア　マオリの料理\nイ　オーストラリアの都市\nウ　アボリジニの管楽器",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "「ディジュリドゥ」というアボリジニの管楽器も有名。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  },
+  {
+   "id": "tokkun-social-1-geo-oceania-70",
+   "type": "input",
+   "prompt": "アボリジニの絵がえがかれた飛行機の写真（図6）から分かることを選ぼう。\nア　アボリジニの絵が高く評価され、デザインに取り入れられている\nイ　飛行機の機体は、アボリジニの人々が作ったものである\nウ　アボリジニの絵は、国の外では使うことが禁止されている",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "アボリジニの絵は高く評価されており、さまざまなデザインに取り入れられている。",
+   "source": {
+    "id": "source-0745",
+    "file": "地理教科書/S__16482370_0.jpg",
+    "sha256": "1ebfe0754b75df80a9154c1bf14c35dfe7c536a28394ceafb26578f9b4953637",
+    "page": 137,
+    "number": "特訓（教科書の内容をもとにしたオリジナル）"
+   },
+   "ref": "参考：地理教科書 p137（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": true,
+   "difficulty": "hard",
+   "bank": "tokkun"
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-14 Claude作成（特訓・下書き）。地理ワーク p64〜68・70〜71・80 と、地理教科書 p130〜137・140〜143（台帳登録案。写真を原寸で開き本文・グラフ・地図の説明まで確認。p132〜135は横向きの写真を回転して確認）をもとに作ったオリジナル問題。数値は教科書の本文・資料に書かれたものだけを使い、計算はプログラムで確認した。"
+}

@@ -1,0 +1,323 @@
+[
+ {
+  "unit": "drawuse",
+  "number": 5,
+  "file": "tokkun-fig-drawuse-5.svg",
+  "sha256": "0d5465908e7594bce7feb5c8549cf6dfc7d1babe92fbc4a12dc2bf922a0f4131",
+  "image": "/tokkun-fig-drawuse-5.svg",
+  "imageAlt": "方眼の上の川（横の直線）と、川の同じ側の家A、B。川の上に点ア、イ、ウ、エがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "川",
+   "A",
+   "B",
+   "ア",
+   "イ",
+   "ウ",
+   "エ"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ウ"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 6,
+  "file": "tokkun-fig-drawuse-6.svg",
+  "sha256": "d2104ce2c9ad4823cca5699966bc457c8b3c02b36de714016bb4e10f22fae673",
+  "image": "/tokkun-fig-drawuse-6.svg",
+  "imageAlt": "方眼の上の道路（横の直線）とA地点、B地点。道路の上に点ア、イ、ウ、エがある。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "道路",
+   "A",
+   "B",
+   "ア",
+   "イ",
+   "ウ",
+   "エ"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 7,
+  "file": "tokkun-fig-drawuse-7.svg",
+  "sha256": "a7a2461fd18033454d0861668a8b26dde3e38821950b373fb43856cdde90ae3a",
+  "image": "/tokkun-fig-drawuse-7.svg",
+  "imageAlt": "座標平面上の線分AB（A(6,1)、B(6,3)）と、回転移動した線分A'B'（A'(4,5)、B'(2,5)）。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "A",
+   "B",
+   "A'",
+   "B'"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "(3,2)",
+    "(3、2)",
+    "3,2",
+    "3、2"
+   ],
+   "compact": true
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 8,
+  "file": "tokkun-fig-drawuse-8.svg",
+  "sha256": "9f9626c0cce430ae0c6569d86094b52f6cc165962b2423e5eb355e412127282e",
+  "image": "/tokkun-fig-drawuse-8.svg",
+  "imageAlt": "座標平面上の、原点Oを中心とする円と円周上の点A(3,4)、半径OA、点P、Q、R、S。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "A",
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "answer": {
+   "kind": "set",
+   "items": [
+    [
+     "P"
+    ],
+    [
+     "R"
+    ]
+   ],
+   "letters": true
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 9,
+  "file": "tokkun-fig-drawuse-9.svg",
+  "sha256": "59a56b1a71085c6534e409e3b55dbd3dba32b900af6337b551a2ddcc49365fa9",
+  "image": "/tokkun-fig-drawuse-9.svg",
+  "imageAlt": "方眼の上の長方形の紙と、左下の頂点A、点P(4,2)。AとPが点線で結んである。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "P"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "2.5",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 10,
+  "file": "tokkun-fig-drawuse-10.svg",
+  "sha256": "c1a970478143a8b002f208a8b468f76e632f236bfed6536dc34d3b94e31ecbbb",
+  "image": "/tokkun-fig-drawuse-10.svg",
+  "imageAlt": "座標平面上の直角三角形OBC（O(0,0)、B(4,0)、C(0,3)）と、3辺に接する円とその中心I。",
+  "claims": [
+   {
+    "kind": "len",
+    "at": [
+     "B",
+     "C"
+    ],
+    "value": 5,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "B",
+   "C",
+   "I"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "(1,1)",
+    "(1、1)",
+    "1,1",
+    "1、1"
+   ],
+   "compact": true
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 11,
+  "file": "tokkun-fig-drawuse-11.svg",
+  "sha256": "54a9e76ff239c00d5b9b871fdb5ef5be5498529926d2dc82523e6d51ceda4578",
+  "image": "/tokkun-fig-drawuse-11.svg",
+  "imageAlt": "鏡（横の直線）の点Pで反射する光。AからPへ入り、Bへ出ていく。鏡と入ってくる光の角に35°と書いてある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "L",
+     "P",
+     "A"
+    ],
+    "value": 35,
+    "shown": "35°"
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "P",
+    "B"
+   ],
+   110
+  ],
+  "texts": [
+   "鏡",
+   "P",
+   "A",
+   "B",
+   "35°"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "110",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 12,
+  "file": "tokkun-fig-drawuse-12.svg",
+  "sha256": "2e58a0f75da3c0c96bb6c34488eeff2fc14b11e289587138eba6b9202b46a9a3",
+  "image": "/tokkun-fig-drawuse-12.svg",
+  "imageAlt": "方眼の上の三角形ABCと、辺ABのまん中の点Mを中心に180°回転移動した三角形BAD。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "M"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "20",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 13,
+  "file": "tokkun-fig-drawuse-13.svg",
+  "sha256": "e8fd9c043c5c34fad1807f72d91288528c451346927b930f8a1e9d30a74be21c",
+  "image": "/tokkun-fig-drawuse-13.svg",
+  "imageAlt": "方眼の上の二等辺三角形ABCと、辺BCについて対称移動した三角形DBC。",
+  "claims": [
+   {
+    "kind": "eq",
+    "at": [
+     "A",
+     "B",
+     "A",
+     "C"
+    ],
+    "value": 0,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "24",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "drawuse",
+  "number": 14,
+  "file": "tokkun-fig-drawuse-14.svg",
+  "sha256": "bcc34da2b4cb82ffee803dd668d0412ff564ee1f8056adfa3029c1aaef9a344d",
+  "image": "/tokkun-fig-drawuse-14.svg",
+  "imageAlt": "方眼の上の対角線ACと、その垂直二等分線（点線）上の点B、D、正方形ABCD。",
+  "claims": [
+   {
+    "kind": "eq",
+    "at": [
+     "A",
+     "B",
+     "B",
+     "C"
+    ],
+    "value": 0,
+    "shown": ""
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "B",
+     "C"
+    ],
+    "value": 90,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "18",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ }
+]

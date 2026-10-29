@@ -1,0 +1,224 @@
+{
+ "at": "2026-10-22T18:59:01.336833+09:00",
+ "note": "候補の一覧と確認結果。秘密値・実ユーザーデータは含まない。",
+ "sharedFileSha": {
+  "index.html": "52eb3411e628d4373b1139d35efc53b768499c4438dd4878b065ff9f1b6b525e",
+  "教材整理/実装/material-engine.js": "5179bb9b77a11905f49a0f945fb932f79dc46b5e10b75e62ed14f244b908bf84",
+  "site-assets/material-bank.json": "ed799dbc5569ce5c51fcde6c194744cc1b241cac5a61219e5e6236cc9acac7c4",
+  "cf-worker/src/index.js": "b0e681d4e15fea4b7b3c0e24c8d64245972dae35804dff0b69a8a4854e0bd5fb"
+ },
+ "tests": [
+  {
+   "dir": "機能/星3基準",
+   "command": "node verify-stars.cjs",
+   "exit": 0,
+   "last": "チェック 11件　✅ 11　❌ 0"
+  },
+  {
+   "dir": "機能/ベルのメール×",
+   "command": "node verify-bell-hide.mjs",
+   "exit": 0,
+   "last": "チェック 28件　✅ 28　❌ 0"
+  },
+  {
+   "dir": "機能/パスワード変更",
+   "command": "node verify-password-change.mjs",
+   "exit": 0,
+   "last": "チェック 28件　✅ 28　❌ 0"
+  },
+  {
+   "dir": "機能/R2バックアップ",
+   "command": "node verify-backup-r2.mjs",
+   "exit": 0,
+   "last": "チェック 14件　✅ 14　❌ 0"
+  },
+  {
+   "dir": "機能/AI合計10回と記録",
+   "command": "node verify-ai-calls.mjs",
+   "exit": 0,
+   "last": "チェック 28件　✅ 28　❌ 0"
+  },
+  {
+   "dir": "機能/約分の採点",
+   "command": "node verify-reduce.cjs",
+   "exit": 0,
+   "last": "チェック 20473件　✅ 20473　❌ 0（分数の答え 434問で約分前が×に）"
+  },
+  {
+   "dir": "教材/小学校復習",
+   "command": "node verify-elementary-review.cjs",
+   "exit": 0,
+   "last": "チェック 3011件　✅ 3011　❌ 0（教材1000問）"
+  }
+ ],
+ "files": [
+  {
+   "path": "保留一覧.md",
+   "sha256": "82eb2ae594a2763dc0a736eaf3dc60e05dd220b53a670c9ae967fdf599f7564c"
+  },
+  {
+   "path": "完了と未完了.md",
+   "sha256": "49ffdeef432b548cda8b7d2c885d97c368019c5020bb29a9a1fceb52d333026b"
+  },
+  {
+   "path": "引き継ぎ/取り込み手順.md",
+   "sha256": "75164be0c6b26071c6aced7b8d8ab74ef6df765eb2d657b04eb596f477b91020"
+  },
+  {
+   "path": "引き継ぎ/直接変更の記録.tsv",
+   "sha256": "b6fa4cc8d4416c797da73231d13df809f7b7f9e7254cf557fb2912a9171ad74d"
+  },
+  {
+   "path": "教材/小学校復習/README.md",
+   "sha256": "e1fded70fead5193f52840a2204e164940b5fc00345bca510248963d379f04fa"
+  },
+  {
+   "path": "教材/小学校復習/build_eigo.py",
+   "sha256": "bf1f2883676364a60c0dda641456a146cfc9ea2223365113b148f7926ad26614"
+  },
+  {
+   "path": "教材/小学校復習/build_kokugo.py",
+   "sha256": "5aff4fb0af76154e6145c05cbd2c991ac72a749d5b26c24ed5e2fa013a87aa9b"
+  },
+  {
+   "path": "教材/小学校復習/build_rika.py",
+   "sha256": "e1b6279c05bf61c5348bcd5139403a59e575d752027ea718ac519f8d89aa3e1a"
+  },
+  {
+   "path": "教材/小学校復習/build_sansu.py",
+   "sha256": "a3bc9bf832254424686320dc05157ead8bf110347f1e12825997986ee522a2eb"
+  },
+  {
+   "path": "教材/小学校復習/build_shakai.py",
+   "sha256": "1d84a447069a9dbf23aa47dfa2dc82589ed9f41eb3876016bd840d166a0ecfd1"
+  },
+  {
+   "path": "教材/小学校復習/eigo.json",
+   "sha256": "80316a7d6d1dcc8326c0c4fbdaf7589dcb3a94bfe3a5fa72bb8620f4b46b0d88"
+  },
+  {
+   "path": "教材/小学校復習/elementary-review-bank.json",
+   "sha256": "7ef87f73fd88059050412a5b0f7edf97be27fb288f3d5dbad7285195ed949d46"
+  },
+  {
+   "path": "教材/小学校復習/elementary-review-model.js",
+   "sha256": "a497d1ede4800c96f8e28e60209201f6e00668cfc59276bb3a76ddde004456ed"
+  },
+  {
+   "path": "教材/小学校復習/kokugo.json",
+   "sha256": "9541f41e5163bacd3d4bb885048cccf636af0b5f8a7799867c61db2bcc2f615e"
+  },
+  {
+   "path": "教材/小学校復習/rika.json",
+   "sha256": "15c6cf1ea030e95931f76d823637f500d81351663ea05856a84e1d3550612a98"
+  },
+  {
+   "path": "教材/小学校復習/sansu.json",
+   "sha256": "d631d82809db4647a40720b26319ede389a0d9804f3e6f4f1da349aa3caf12ef"
+  },
+  {
+   "path": "教材/小学校復習/shakai.json",
+   "sha256": "9d446041b64d9fd89f588ecaa8f8accee294f96dc3f4ff97c31ac3eb7b3aa349"
+  },
+  {
+   "path": "教材/小学校復習/verify-elementary-review.cjs",
+   "sha256": "fcfcfe37abc8743292050cada044a27924bf44c52ed9b17e7ec1a1c7758b01f6"
+  },
+  {
+   "path": "機能/AI合計10回と記録/README.md",
+   "sha256": "2f1bb2b4a604568aa81154de7096d1fc3ea95633ae86ccf83b6cf9dc4787541a"
+  },
+  {
+   "path": "機能/AI合計10回と記録/ai-call-log.mjs",
+   "sha256": "7f78ccd847c96126108f9ff6a28d8fc0a507bd1f56b73cb782f36c4edc6ff2ec"
+  },
+  {
+   "path": "機能/AI合計10回と記録/anthropic-transport.mjs",
+   "sha256": "6560193b03c78077fc491e5ac4abc5cc7370231e70dddb9ae1b9d43008c2d6ff"
+  },
+  {
+   "path": "機能/AI合計10回と記録/verify-ai-calls.mjs",
+   "sha256": "c15dda844b84bdee640df106f9c39778feaf2f33d4bf66e29e08871ebde5e96f"
+  },
+  {
+   "path": "機能/R2バックアップ/README.md",
+   "sha256": "6fe57413e332d0b02e86d8029bed82d622b5a19809a36abb47e99013e9e93104"
+  },
+  {
+   "path": "機能/R2バックアップ/backup-r2.mjs",
+   "sha256": "f07a683fbaa4d8313931f348eeb6852aa9fdf558880b95abbfd4ef1aba9b552f"
+  },
+  {
+   "path": "機能/R2バックアップ/verify-backup-r2.mjs",
+   "sha256": "659186fc346bbf13f075107c0cb680c16d4d4052d2f48a60637fa34c5a5c84ad"
+  },
+  {
+   "path": "機能/パスワード変更/README.md",
+   "sha256": "3f6b914576dc12cc4c924c225f8c4dca0bdc5fe14d361350efb9333871ded480"
+  },
+  {
+   "path": "機能/パスワード変更/password-change.mjs",
+   "sha256": "68ac9624216f0119f53b23a4a785ed6a2b4982e5a7004beb5754c97473a5bce2"
+  },
+  {
+   "path": "機能/パスワード変更/verify-password-change.mjs",
+   "sha256": "90d5ace3e6c7650d5ed622603f976653dde26f3f9996a717fe4c7da472d3bf02"
+  },
+  {
+   "path": "機能/ベルのメール×/README.md",
+   "sha256": "8cb307f7728ff135997fb382e1e2d90ac1b6462bb2f64664654f6f0c2359de08"
+  },
+  {
+   "path": "機能/ベルのメール×/index.before.html",
+   "sha256": "52eb3411e628d4373b1139d35efc53b768499c4438dd4878b065ff9f1b6b525e"
+  },
+  {
+   "path": "機能/ベルのメール×/index.candidate.html",
+   "sha256": "ca9239fb39eed1a972531b61c7bb62d83be87d1d77c6f185007b517a9c070b47"
+  },
+  {
+   "path": "機能/ベルのメール×/index.diff",
+   "sha256": "455d1a99505a2f0bbbda9b501c63a3cb806f66dda34b673a6a2edf47b2101ddd"
+  },
+  {
+   "path": "機能/ベルのメール×/verify-bell-hide.mjs",
+   "sha256": "86907511d0558c26e63866bd98ef11cc1ab29ca2175fb6870811436dda8f0421"
+  },
+  {
+   "path": "機能/星3基準/README.md",
+   "sha256": "b215e175126ae84a891e6380880256b3b288eb640ef13390f799f0699111584d"
+  },
+  {
+   "path": "機能/星3基準/stars-model.js",
+   "sha256": "86dfafbbb540ebbccb9868788ca7501bc7a34e8aa4a00f611def11d829341b24"
+  },
+  {
+   "path": "機能/星3基準/verify-stars.cjs",
+   "sha256": "2f30f0ac01b4540cdb6473c9ae191708b51f2dfe37378c86e9f66c8f1abd7a97"
+  },
+  {
+   "path": "機能/約分の採点/README.md",
+   "sha256": "fdcb80bbaa9b0aaf51f7f50b4f0b0f2b176d589181ef06a3ca2e84cef46c35b4"
+  },
+  {
+   "path": "機能/約分の採点/material-engine.before.js",
+   "sha256": "5179bb9b77a11905f49a0f945fb932f79dc46b5e10b75e62ed14f244b908bf84"
+  },
+  {
+   "path": "機能/約分の採点/material-engine.candidate.js",
+   "sha256": "d73351afbcc3cca84ca1c03db2dbcfefd5198fd98d472bd09384711f0646a243"
+  },
+  {
+   "path": "機能/約分の採点/material-engine.diff",
+   "sha256": "e20e8dd5e8e9438ae44ef0b0e26f068bc09f2a3b221213d69ef494d581b238c7"
+  },
+  {
+   "path": "機能/約分の採点/verify-reduce.cjs",
+   "sha256": "456173e782a26a3cc7ce5807232c49e7986186bdfe0151cea14be0cbbddeade5"
+  },
+  {
+   "path": "状態分類_最初.md",
+   "sha256": "ea803302b4e924850b56d37b426071d81df3e158d43bae38a79914ce3ae378df"
+  }
+ ]
+}

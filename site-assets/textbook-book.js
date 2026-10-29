@@ -6,7 +6,7 @@
    - 本の中身は textbook-books.json（本棚）と textbook-book-*.json（原稿のページ）から読む。文字はすべて textContent で表示する。 */
 (function(root){
 'use strict';
-const W=600,H=848,LAYOUT_VERSION='2026-10-07.1';// 組み方を変えたら番号を上げる（覚えておいた組み結果を使わない）
+const W=600,H=848,LAYOUT_VERSION='2026-10-22.1';// 組み方を変えたら番号を上げる（覚えておいた組み結果を使わない）
 const state={app:null,view:'gate',shelf:null,book:null,spread:0,fallback:false,epoch:0,message:'',sheet:null};
 const ratio=new Map();// 画像の縦÷横（先に読みこんで測る）
 let measuring=false;// ページを組むために測っている間は、絵を読みこまない（高さは縦横比で決まっているので組み方は変わらない）
@@ -29,7 +29,7 @@ function inline(parent,text){
  for(const part of pageRef(text).split(/(\*\*[^*]+\*\*|`[^`]+`)/)){
   if(!part)continue;
   if(part.length>4&&part.startsWith('**')&&part.endsWith('**'))parent.append(el('strong',null,part.slice(2,-2)));
-  else if(part.length>2&&part.startsWith('`')&&part.endsWith('`'))parent.append(el('code',null,part.slice(1,-1)));
+  else if(part.length>2&&part.startsWith('`')&&part.endsWith('`'))parent.append(fracText(el('code'),part.slice(1,-1)));
   else rubyText(parent,part);
  }
  return parent;
@@ -37,9 +37,11 @@ function inline(parent,text){
 // ふりがな：「漢字《よみ》」または「｜文字《よみ》」（青空文庫と同じ書き方）を <ruby> にする（Claude・2026-10-06）
 function rubyText(parent,text){
  const re=/(?:｜([^｜《》]+)|([\u3400-\u9fff々〆ヵヶ]+))《([^》]+)》/g;let last=0,m;
- while((m=re.exec(text))){if(m.index>last)parent.append(document.createTextNode(text.slice(last,m.index)));const r=el('ruby',null,m[1]||m[2]);r.append(el('rt',null,m[3]));parent.append(r);last=re.lastIndex;}
- if(last<text.length)parent.append(document.createTextNode(text.slice(last)));
+ while((m=re.exec(text))){if(m.index>last)fracText(parent,text.slice(last,m.index));const r=el('ruby',null,m[1]||m[2]);r.append(el('rt',null,m[3]));parent.append(r);last=re.lastIndex;}
+ if(last<text.length)fracText(parent,text.slice(last));
 }
+// 分数は縦に表示する（2026-10-21 ユーザー指示。組む前に入れるので、ページの高さにふくまれる）
+function fracText(parent,text){if(window.NobiFractions)window.NobiFractions.append(parent,text,{math:state.book?.meta?.subject==='数学'});else parent.append(document.createTextNode(text));return parent;}
 function tint(hex,amount){
  const m=/^#([0-9a-f]{6})$/i.exec(hex||'');if(!m)return '#eef3f9';
  const n=parseInt(m[1],16),mix=c=>Math.round(c+(255-c)*amount);
@@ -64,9 +66,11 @@ function coverArt(subject){
 }
 function cover(book,small){
  const box=el('div','tb-cover'+(small?' tb-cover-small':''));box.style.setProperty('--tb-color',book.color||'#1f5fa8');
+ const imageId={math1:'math',kokugo1:'kokugo',english1:'english',science1:'science',geography:'geography',history:'history',health:'health'}[book.id];
+ if(imageId){const image=el('img','tb-cover-illustration');image.src='/textbook-cover-'+imageId+'-20261013.webp';image.alt='';image.decoding='async';image.loading=small?'lazy':'eager';image.width=600;image.height=848;image.addEventListener('error',()=>{image.remove();box.classList.remove('tb-cover-illustrated');box.append(coverArt(book.subject));});box.classList.add('tb-cover-illustrated');box.append(image);}
  box.append(el('div','tb-cover-grade',book.grade||''));
  const title=el('div','tb-cover-title');title.append(el('span','tb-cover-subject',book.subject||''));const extra=(book.title||'').replace(book.subject||'','').trim();if(extra)title.append(el('span','tb-cover-num',extra));
- box.append(title,coverArt(book.subject),el('div','tb-cover-brand','🌱 のびログ'));
+ box.append(title,...(imageId?[]:[coverArt(book.subject)]),el('div','tb-cover-brand','🌱 のびログ'));
  if(book.status!=='ready')box.append(el('div','tb-cover-ribbon','準備中'));
  return box;
 }
@@ -74,7 +78,9 @@ function cover(book,small){
 // ---- ブロック（1つずつページに置いて、入りきるかを測る） ----
 const NOBI_POSE=['normal','wave','point','think','surprise','joy','read'];
 function face(f){const pose=f==='🌱'?'normal':(/^nobi-([a-z]+)$/.exec(f||'')||[])[1];const nobi=NOBI_POSE.includes(pose);const s=el('span','tb-hook-face'+(nobi?' tb-hook-nobi':''));if(nobi){const i=document.createElement('img');i.src='/nobi-'+pose+'.svg';i.alt='のびー';i.decoding='async';s.append(i);}else s.textContent=f||'🙂';return s;}// のびーは絵文字ではなく動画・図解と同じ絵（2026-10-06）
-function block(b){
+// 表・箇条書きなどの中の分数も、組む前に縦にする（2026-10-21）
+function block(b){const n=blockRaw(b);if(n&&window.NobiFractions)window.NobiFractions.apply(n,null,{math:state.book?.meta?.subject==='数学'});return n;}
+function blockRaw(b){
  if(!b||typeof b!=='object')return null;
  if(b.t==='h3'){const x=String(b.x||'');const kind=/^例題/.test(x)?' tb-h3-ex':/つまずき/.test(x)?' tb-h3-warn':/確認|振り返りの問題|まとめの問題|30秒チェック/.test(x)?' tb-h3-check':/^なぜ|なぜ.*[？?]|（なぜ）/.test(x)?' tb-h3-why':/かんたんにやる方法|コツ/.test(x)?' tb-h3-tip':'';const h=el('h3','tb-h3'+kind);if(/^例題/.test(x)){h.append(el('span','tb-code',b.code||'000-A'));if(b.code)h.dataset.code=b.code;}inline(h,b.x);const lv=/（(基本|標準|応用)）/.exec(x);if(lv)h.dataset.level=lv[1];return h;}
  if(b.t==='h4')return inline(el('h4','tb-h4'),b.x);
@@ -89,11 +95,11 @@ function block(b){
   const video=b.kind==='video',fig=el('figure','tb-media tb-media-'+(video?'video':b.kind==='scene'?'scene':'diagram'));
   const scr=n=>{if(b.maxh)n.style.height=b.maxh+'px';return n;};
   if(typeof b.src==='string'&&video&&/^\/textbook-book-[a-z0-9-]+\.(?:mp4|webm)$/.test(b.src)){const v=el('video','tb-media-screen');v.src=b.src;v.controls=true;v.playsInline=true;v.preload='metadata';v.setAttribute('aria-label',b.title||'動画');fig.append(scr(v));}
-  else if(typeof b.src==='string'&&!video&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg)$/.test(b.src)){const img=el('img','tb-media-screen');img.src=b.src;img.alt=b.title||'図';if(b.zoom){img.classList.add('tb-zoomable');img.title='押すと大きく見られます';img.addEventListener('click',()=>openSheet({summary:b.title||'図解',wide:true,body:[{t:'zoomimg',src:b.src,alt:b.title||'図'}]}));}fig.append(scr(img));}
+  else if(typeof b.src==='string'&&!video&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg|png)$/.test(b.src)){const img=el('img','tb-media-screen');img.src=b.src;img.alt=b.title||'図';if(b.zoom!==false){img.classList.add('tb-zoomable');img.title='押すと大きく見られます';img.addEventListener('click',()=>openSheet({summary:b.title||'図解',wide:true,body:[{t:'zoomimg',src:b.src,alt:b.title||'図'}]}));}fig.append(scr(img));}
   else{const scene=b.kind==='scene',screen=scr(el('div','tb-media-screen tb-media-wait'));screen.append(el('span','tb-media-icon',video?'▶':scene?'✿':'✎'),el('span','tb-media-label',video?(typeof b.ext==='string'&&b.ext?b.ext+'で見る（下のボタンから）':'動画（準備中）'):scene?'絵（準備中）':'図解（準備中）'));fig.append(screen);}
   fig.append(el('figcaption',null,(video?'動画：':b.kind==='scene'?'':'図解：')+(b.title||'')));const tools=frameTools(b);if(tools)fig.append(tools);return fig;
  }
- if(b.t==='zoomimg'&&typeof b.src==='string'&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg)$/.test(b.src)){const img=el('img','tb-zoom-img');img.src=b.src;img.alt=b.alt||'図';return img;}
+ if(b.t==='zoomimg'&&typeof b.src==='string'&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg|png)$/.test(b.src)){const img=el('img','tb-zoom-img');img.src=b.src;img.alt=b.alt||'図';return img;}
  if(b.t==='note')return inline(el('p','tb-note'),b.x);
  if(b.t==='topic'){const h=el('h2','tb-topic',b.x);if(b.cont)h.append(el('span','tb-cont','（つづき）'));return h;}
  if(b.t==='ul'||b.t==='ol'){const list=el(b.t,'tb-list');if(b.t==='ol'&&b.start>1)list.start=b.start;(b.items||[]).forEach((item,k)=>{const li=inline(el('li'),item.x);if(item.level)li.classList.add('tb-sub'+Math.min(2,item.level));if(b.rids&&b.rids[k])li.dataset.rid=b.rids[k];list.append(li);});return list;}
@@ -101,7 +107,10 @@ function block(b){
  if(b.t==='details'){const btn=button('','tb-answer-btn',()=>openSheet(b),b.summary||'答え');inline(btn,b.summary||'答え');return btn;}
  if(b.t==='fig'){
   const fig=el('figure','tb-fig tb-fig-'+(b.kind==='scene'?'scene':'diagram'));
-  if(typeof b.src==='string'&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg)$/.test(b.src)){const img=el('img');if(!measuring)img.src=b.src;img.alt=b.caption||'図';img.decoding='async';const r=ratio.get(b.src);let hgt=r?Math.round(Math.min(b.kind==='scene'?210:220,480*r)):(b.kind==='scene'?210:220);if(b.maxh)hgt=Math.min(hgt,b.maxh);img.style.height=hgt+'px';fig.append(img);}
+  if(typeof b.src==='string'&&/^\/textbook-book-[a-z0-9-]+\.(?:svg|jpg|png)$/.test(b.src)){const img=el('img');if(!measuring)img.src=b.src;img.alt=b.caption||'図';img.decoding='async';const r=ratio.get(b.src);let hgt=r?Math.round(Math.min(b.kind==='scene'?210:220,480*r)):(b.kind==='scene'?210:220);if(b.maxh)hgt=Math.min(hgt,b.maxh);img.style.height=hgt+'px';
+   // 図の中の文字は小さくなるので、押す（Enter）と大きく見られるようにする（2026-10-10 Claude・ページの組み方は変えない）
+   if(!measuring){img.classList.add('tb-zoomable');img.title='押すと大きく見られます';img.tabIndex=0;img.setAttribute('role','button');const zoom=()=>openSheet({summary:b.caption||(b.kind==='scene'?'絵':'図'),wide:true,body:[{t:'zoomimg',src:b.src,alt:b.caption||'図'}]});img.addEventListener('click',zoom);img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();zoom();}});}
+   fig.append(img);}
   else{fig.classList.add('tb-fig-empty');fig.append(el('div','tb-fig-box',b.kind==='scene'?'絵（準備中）':'図（準備中）'));}
   if(b.caption)fig.append(el('figcaption',null,b.caption));const tools=frameTools(b);if(tools)fig.append(tools);return fig;
  }
@@ -239,23 +248,43 @@ function renderPage(desc,side){
  if(!desc){const page=el('article','tb-page tb-'+side+' tb-blank');return page;}
  if(desc.kind==='cover'){const page=el('article','tb-page tb-'+side+' tb-kind-cover');page.dataset.page='1';page.append(cover(state.book.meta,false));return page;}
  const s=shell(desc,side);s.page.dataset.page=String(desc.n);
- let i=0;for(const b of desc.blocks){const node=block(b);if(node){node.style.setProperty('--i',String(Math.min(i++,10)));s.body.append(node);}}
+ let i=0;for(const b of desc.blocks){const node=block(b);if(node){node.style.setProperty('--i',String(Math.min(i++,10)));if(b.annotationAnchor){node.dataset.annotationAnchor=b.annotationAnchor;node.dataset.annotationQuote=b.annotationQuote;}s.body.append(node);}}
  return s.page;
 }
 
 // ---- 答えの札 ----
+function stopEmbeddedMedia(node){for(const media of node?.querySelectorAll?.('video,audio')||[]){try{media.pause();}catch(_){}}}
 function openSheet(b){state.sheet=b;renderSheet();}
 function closeSheet(){state.sheet=null;renderSheet();}
+function imageZoomControls(img,body){
+ const row=el('div','tb-zoom-controls');row.setAttribute('role','group');row.setAttribute('aria-label','図の拡大率');
+ const status=el('output','','100%');status.setAttribute('aria-live','polite');status.setAttribute('aria-label','拡大率');
+ let scale=1,baseWidth=0;
+ function resize(next){
+  if(!img.isConnected)return;
+  const oldWidth=img.clientWidth,oldHeight=img.clientHeight;
+  if(!baseWidth)baseWidth=Math.max(640,oldWidth);
+  const centerX=(body.scrollLeft+body.clientWidth/2)/Math.max(1,oldWidth),centerY=(body.scrollTop+body.clientHeight/2)/Math.max(1,oldHeight);
+  scale=Math.max(1,Math.min(3,next));img.style.width=baseWidth*scale+'px';img.style.maxWidth='none';
+  body.scrollLeft=Math.max(0,img.clientWidth*centerX-body.clientWidth/2);body.scrollTop=Math.max(0,img.clientHeight*centerY-body.clientHeight/2);
+  status.textContent=Math.round(scale*100)+'%';smaller.disabled=scale===1;larger.disabled=scale===3;
+ }
+ const smaller=button('−','tb-btn',()=>resize(scale-.5),'図を小さくする');smaller.disabled=true;
+ const larger=button('＋','tb-btn',()=>resize(scale+.5),'図を大きくする');
+ row.append(smaller,status,larger,button('元の大きさ','tb-btn',()=>resize(1),'図を元の大きさに戻す'),el('span','tb-zoom-hint','図の中を上下左右に動かして見られます'));
+ return row;
+}
 function renderSheet(){
- const app=state.app;if(!app)return;app.querySelector('.tb-sheet-back')?.remove();
+ const app=state.app;if(!app)return;stopEmbeddedMedia(app.querySelector('.tb-sheet-back'));app.querySelector('.tb-sheet-back')?.remove();
  if(!state.sheet)return;
  const back=el('div','tb-sheet-back'),card=el('div',state.sheet.wide?'tb-sheet tb-sheet-wide':'tb-sheet');card.setAttribute('role','dialog');card.setAttribute('aria-modal','true');
  const title=el('h3','tb-sheet-title');inline(title,state.sheet.summary||'答え');card.setAttribute('aria-label',title.textContent);
- const body=el('div','tb-sheet-body');for(const x of state.sheet.body||[]){const node=block(x);if(node)body.append(node);}
+ const body=el('div','tb-sheet-body');for(const x of state.sheet.body||[]){const node=block(x);if(node){if(x.annotationAnchor){node.dataset.annotationAnchor=x.annotationAnchor;node.dataset.annotationQuote=x.annotationQuote;}body.append(node);}}
  const close=button('閉じる','tb-btn tb-sheet-close',closeSheet,'閉じる');
- card.append(title,body,close);back.append(card);back.addEventListener('click',e=>{if(e.target===back)closeSheet();});
+ card.append(title);const zoom=body.querySelector('.tb-zoom-img');if(zoom)card.append(imageZoomControls(zoom,body));
+ card.append(body,close);back.append(card);back.addEventListener('click',e=>{if(e.target===back)closeSheet();});
  back.style.setProperty('--tb-color',state.book?.meta.color||'#1f5fa8');back.style.setProperty('--tb-tint',tint(state.book?.meta.color,0.88));
- app.append(back);close.focus();
+ app.append(back);root.NobiTextbookAnnotations?.refresh?.();close.focus();
 }
 
 // ---- 見開き ----
@@ -267,7 +296,7 @@ function views(){const count=state.book?state.book.phys.length:0;if(!state.singl
 let links=[];
 async function loadLinks(){try{const d=await loadJson('/textbook-links.json');if(d&&d.v===1&&Array.isArray(d.links))links=d.links.filter(l=>l&&typeof l.book==='string'&&typeof l.major==='string'&&Array.isArray(l.targets)&&l.targets.length);}catch(_){links=[];}}
 function linkFor(subject,grade,major){return links.find(l=>l.subject===subject&&l.grade===grade&&l.major===major)||null;}
-function tocPage(book,target){for(const c of book.toc||[]){if(c.title===target)return c.page;for(const sec of c.sections||[])if(sec.title===target)return sec.page;}return 0;}
+function tocPage(book,target){if(Number.isInteger(target)&&target>=1&&target<=book.pages.length)return target;for(const c of book.toc||[]){if(c.title===target)return c.page;for(const sec of c.sections||[])if(sec.title===target)return sec.page;}return 0;}
 // いま見ているページが入っている章と節（本の中のページ番号で比べる）
 function placeOf(n){const b=state.book;if(!b)return null;let at=null;for(const c of b.toc||[]){const cp=b.map[c.page]||c.page;if(cp<=n)at={chapter:c.title,section:null};for(const sec of c.sections||[]){const sp=b.map[sec.page]||sec.page;if(sp<=n)at={chapter:c.title,section:sec.title};}}return at;}
 function problemLink(n){const at=placeOf(n);if(!at||!state.book)return null;return links.find(l=>l.book===state.book.meta.id&&(l.targets.includes(at.section)||l.targets.includes(at.chapter)))||null;}
@@ -299,6 +328,8 @@ function homeButton(){return button('のびログに戻る','tb-btn tb-btn-home'
 function exitButton(){return button('全画面を終わる','tb-btn',()=>leave(),'全画面を終わる');}
 function render(){
  const app=state.app;if(!app)return;
+ root.NobiTextbookAnnotations?.unmount();
+ stopEmbeddedMedia(app);
  app.replaceChildren();app.classList.toggle('tb-open',state.view!=='gate');
  if(state.view==='gate'){
   const gate=el('div','tb-gate');gate.append(el('p','tb-gate-icon','📚'),el('h3',null,'教科書は全画面で読みます'),el('p',null,'2ページの見開きで、本のようにめくって読めます。'));
@@ -338,6 +369,10 @@ function render(){
  stage.addEventListener('pointerdown',e=>{start={x:e.clientX,y:e.clientY};});stage.addEventListener('pointercancel',()=>{start=null;});stage.addEventListener('dragstart',e=>e.preventDefault());
  stage.addEventListener('pointerup',e=>{if(!start)return;const dx=e.clientX-start.x,dy=e.clientY-start.y;start=null;if(Math.abs(dx)>60&&Math.abs(dy)<50)turn(dx<0?1:-1);});
  yRender(stage,spread);
+ root.NobiTextbookAnnotations?.mount(app,book.meta.id,{annotationSignature:book.annotationSignature,locate(anchor){
+  function find(blocks,sheet=null){for(const b of blocks||[]){if(b.annotationAnchor===anchor)return {sheet};if(b.t==='details'){const nested=find(b.body,b);if(nested)return nested;}}return null;}
+  for(let at=0;at<book.phys.length;at++){const target=find(book.phys[at].blocks);if(!target)continue;goPage(at+1);if(target.sheet)openSheet(target.sheet);const node=app.querySelector('[data-annotation-anchor="'+anchor+'"]');if(node){node.tabIndex=-1;node.focus({preventScroll:true});}return true;}return false;
+ }});
  fitSpread();renderSheet();
  if(state.highlight){const q=spread.querySelector('[data-code="'+state.highlight+'"]');if(q)q.classList.add('tb-highlight');state.highlight=null;}
 }
@@ -461,13 +496,17 @@ async function openBook(meta){
  const run=++state.epoch;state.message='「'+meta.title+'」を読み込んでいます。';render();
  try{
   if(typeof meta.data!=='string'||!/^\/textbook-book-[a-z0-9-]+\.json$/.test(meta.data))throw Error('path');
-  const data=await loadJson(meta.data);if(run!==state.epoch||state.view!=='shelf')return;
+  let data=await loadJson(meta.data);if(run!==state.epoch||state.view!=='shelf')return;
   if(!data||!Array.isArray(data.pages)||!data.pages.length||data.pages.some((p,i)=>!p||p.n!==i+1))throw Error('book');
+  let annotationSig='';
+  if(root.NobiTextbookAnnotationModel&&root.nobiTextbookAnnotationAPI){const prepared=await root.NobiTextbookAnnotationModel.prepare(data,meta.id);if(run!==state.epoch||state.view!=='shelf')return;data=prepared.data;annotationSig=':'+prepared.signature;}
   await preload(data.pages);if(run!==state.epoch||state.view!=='shelf')return;
   const measure=state.app.querySelector('.tb-measure');measure.style.setProperty('--tb-color',meta.color);
-  state.book={meta,pages:data.pages,toc:data.toc||[],fillers:data.fillers||{},map:{},yomi:(data.yomi&&typeof data.yomi==='object')?data.yomi:{}};
+  // 設定の「大きい文字」は、組む前に本文の字を大きくしてから組む（組んだあとに拡大するとページからはみ出す）
+  const big=!!document.body?.classList.contains('large-text');state.app.classList.toggle('tb-large',big);
+  state.book={meta,annotationSignature:annotationSig.slice(1),pages:data.pages,toc:data.toc||[],fillers:data.fillers||{},map:{},yomi:(data.yomi&&typeof data.yomi==='object')?data.yomi:{}};
   // 一度組んだ結果は端末に覚えておき、中身が同じなら2回目からすぐ開く（覚えられない端末では毎回組む）
-  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length,cacheKey='nobi-textbook-layout:'+meta.id;
+  const sig=LAYOUT_VERSION+':'+meta.id+':'+data.pages.length+':'+JSON.stringify(data).length+annotationSig+(meta.subject==='数学'?':fraction-variables-v1':'')+(big?':large':''),cacheKey='nobi-textbook-layout:'+meta.id;
   let laid=null;
   try{const c=JSON.parse(root.localStorage.getItem(cacheKey)||'null');if(c&&c.sig===sig&&Array.isArray(c.pages)&&c.pages.length)laid={pages:c.pages,map:c.map||{}};}catch(_){laid=null;}
   if(!laid){
@@ -483,31 +522,63 @@ async function openBook(meta){
  }catch(_){if(run===state.epoch){state.book=null;state.message='教科書を読み込めませんでした。もう一度押してください。';render();}}
 }
 async function enter(){
- const app=state.app;if(!app)return;
+ const app=state.app;if(!app)return;const run=state.epoch;state.enterIntent=true;
  if(isFull()){if(state.view==='gate')void showShelf();return;}
  state.message='';
  const request=app.requestFullscreen||app.webkitRequestFullscreen;
- if(!request){state.fallback=true;app.classList.add('tb-fallback');document.documentElement.classList.add('tb-lock');void showShelf();return;}
- try{await request.call(app);}catch(_){state.message='全画面にできませんでした。もう一度「全画面で教科書を開く」を押してください。';state.view='gate';render();return;}
+ const enabled=app.requestFullscreen?document.fullscreenEnabled:document.webkitFullscreenEnabled;
+ if(!request||enabled===false){enterFallback();return;}
+ try{const attempt=request.call(app);if(mobileScreen()&&attempt?.then){let timeout;try{await Promise.race([attempt,new Promise((_,reject)=>{timeout=setTimeout(()=>reject(Error('fullscreen timeout')),2000);})]);}finally{clearTimeout(timeout);}}else await attempt;}catch(_){if(run!==state.epoch)return;if(mobileScreen()){enterFallback();return;}state.message='全画面にできませんでした。もう一度「全画面で教科書を開く」を押してください。';state.view='gate';render();return;}
+ if(run!==state.epoch)return;
  if(isFull()&&state.view==='gate')void showShelf();
+ else if(mobileScreen())setTimeout(()=>{if(run===state.epoch&&state.app===app&&state.view==='gate'&&!isFull())enterFallback();},700);
 }
-function close(){yStop();state.epoch++;state.pending=null;state.view='gate';state.book=null;state.spread=0;state.sheet=null;render();}
+function mobileScreen(){return !!(root.navigator?.maxTouchPoints||root.matchMedia?.('(pointer: coarse)').matches)&&Math.min(root.innerWidth,root.innerHeight)<=900;}
+function enterFallback(){
+ const app=state.app;if(!app)return;
+ // 祖先の画面遷移アニメーションやtransformを、固定表示の基準にしない。
+ if(!state.portal){const marker=document.createComment('textbook-position');app.before(marker);state.portal=marker;document.body.append(app);}
+ state.fallback=true;app.classList.add('tb-fallback');document.documentElement.classList.add('tb-lock');void showShelf();
+}
+function close(){yStop();state.epoch++;state.enterIntent=false;state.pending=null;state.view='gate';state.book=null;state.spread=0;state.sheet=null;render();}
 function leave(){
- if(state.fallback){state.fallback=false;state.app?.classList.remove('tb-fallback');document.documentElement.classList.remove('tb-lock');close();return;}
+ state.enterIntent=false;state.epoch++;state.pending=null;
+ if(state.fallback){
+  const f=document.fullscreenElement||document.webkitFullscreenElement;if(f===state.app){try{(document.exitFullscreen||document.webkitExitFullscreen)?.call(document)?.catch?.(()=>{});}catch(_){}}
+  state.fallback=false;state.app?.classList.remove('tb-fallback');document.documentElement.classList.remove('tb-lock');if(state.portal?.parentNode){state.portal.replaceWith(state.app);}state.portal=null;close();return;
+ }
  const f=document.fullscreenElement||document.webkitFullscreenElement;
  if(state.app&&f===state.app){try{const r=(document.exitFullscreen||document.webkitExitFullscreen).call(document);r?.catch?.(()=>{});}catch(_){}}
  if(state.view!=='gate')close();
 }
-function onFullChange(){if(!state.app)return;if(isFull()){if(state.view==='gate')void showShelf();}else if(state.view!=='gate')close();}
+function onFullChange(){if(!state.app)return;if(isFull()){if(state.view==='gate'&&state.enterIntent)void showShelf();}else if(state.view!=='gate')close();}
 function mount(app){
  if(!app||state.app===app)return;
  state.app=app;render();void loadLinks();
  document.addEventListener('fullscreenchange',onFullChange);document.addEventListener('webkitfullscreenchange',onFullChange);
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)stopEmbeddedMedia(state.app);});
+ root.addEventListener('pagehide',()=>stopEmbeddedMedia(state.app));
  document.addEventListener('keydown',e=>{if(!isFull())return;if(state.sheet&&e.key==='Escape'){e.preventDefault();closeSheet();return;}if(state.view!=='book'||state.sheet)return;if(e.key==='ArrowLeft'){e.preventDefault();turn(-1);}else if(e.key==='ArrowRight'){e.preventDefault();turn(1);}});
+ // MacBook のトラックパッド（2026-10-21）：2本指で左右にスワイプするとページをめくる。図の上で2本指を広げる（ピンチ）と拡大、拡大中につまむと閉じる
+ let swipe=0,swipeUntil=0;
+ app.addEventListener('wheel',e=>{
+  if(!isFull())return;
+  if(e.target.closest?.('.tb-bar-actions'))return;
+  if(e.ctrlKey){e.preventDefault();if(state.sheet){if(e.deltaY>4)closeSheet();return;}if(e.deltaY<-4){const fig=e.target.closest?.('.tb-zoomable');if(fig)fig.click();}return;}
+  if(state.view!=='book'||state.sheet||Math.abs(e.deltaX)<=Math.abs(e.deltaY))return;
+  e.preventDefault();const now=Date.now();if(now<swipeUntil){swipe=0;swipeUntil=Math.max(swipeUntil,now+300);return;}   // 指を離したあとの慣性で2ページめくらない（2026-10-22）
+  swipe+=e.deltaX;if(Math.abs(swipe)>=60){turn(swipe>0?1:-1);swipe=0;swipeUntil=now+700;}
+ },{passive:false});
  // 向きが変わったら、いま見ているページを保ったまま1ページ⇄見開きを組みかえる（読み上げ中なら続ける）
  root.addEventListener('resize',()=>{if(state.view!=='book')return;if(relayout()){Y.auto=true;try{render();}finally{Y.auto=false;}if(Y.on)Y.spread=state.spread;}else fitSpread();});
+ root.visualViewport?.addEventListener('resize',()=>{if(state.view==='book')fitSpread();});
 }
-root.NobiTextbook=Object.freeze({mount,enter,leave,openAt,linkFor,_state:state,_yomi:()=>({on:Y.on,spread:Y.spread,audio:Y.audio,data:Y.data})});
+function activity(){
+ const meta=state.book?.meta;
+ if(state.view!=='book'||meta?.status!=='ready'||!['数学','英語','国語','理科','社会'].includes(meta.subject))return null;
+ return {id:'textbook:'+meta.id,kind:'textbook',subject:meta.subject};
+}
+root.NobiTextbook=Object.freeze({mount,enter,leave,openAt,linkFor,activity,_state:state,_yomi:()=>({on:Y.on,spread:Y.spread,audio:Y.audio,data:Y.data})});
 function auto(){const app=document.getElementById('textbook-app');if(app)mount(app);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',auto);else auto();
 })(globalThis);

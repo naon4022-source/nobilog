@@ -1,0 +1,499 @@
+[
+ {
+  "unit": "draw2",
+  "number": 5,
+  "file": "tokkun-fig-draw2-5.svg",
+  "sha256": "d4a9aea27900b7d33ec3f67c3fc0bdabcdf7e346f204b5626248a3e5173b60a4",
+  "image": "/tokkun-fig-draw2-5.svg",
+  "imageAlt": "直線ℓと、ℓ上にない点P。Pを中心とする円の一部とℓの交点A、B、A・Bを中心とする円の一部の交点Q、直線PQの作図の図。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "ℓ",
+   "P",
+   "A",
+   "B",
+   "Q"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "ア"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 6,
+  "file": "tokkun-fig-draw2-6.svg",
+  "sha256": "f1a7a518f9b6c8da07fec2f32161bed6cbfbe217b4aab4aa8a964eaea17ec8b6",
+  "image": "/tokkun-fig-draw2-6.svg",
+  "imageAlt": "直線上の点Pを中心とする円の一部と直線の交点A、B、A・Bを中心とする円の一部の交点C、直線PCの作図の図。",
+  "claims": [],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "P",
+    "C"
+   ],
+   90
+  ],
+  "texts": [
+   "A",
+   "B",
+   "P",
+   "C"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "90",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 7,
+  "file": "tokkun-fig-draw2-7.svg",
+  "sha256": "739ea36acb41b6873c163c25a9a753ba358fa111ca77ecb778acb552e09b7f87",
+  "image": "/tokkun-fig-draw2-7.svg",
+  "imageAlt": "方眼の上の、∠Bが鈍角の三角形ABC。AからBCをのばした直線へ垂線AHが点線でひいてある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "H",
+     "B"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "H"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "10",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 8,
+  "file": "tokkun-fig-draw2-8.svg",
+  "sha256": "758946d0a770d98af3ab87b86c0ba16a046efc6a135f59c3998f2d6f28f7c47a",
+  "image": "/tokkun-fig-draw2-8.svg",
+  "imageAlt": "∠Bが鈍角の三角形ABCと、3本の垂線AH、CK、BJ。H、Kは辺をのばした直線上にある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "H",
+     "B"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "C",
+     "K",
+     "A"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "J",
+     "C"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "H",
+   "K",
+   "J"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "AH",
+    "HA",
+    "線分AH",
+    "線分HA"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 9,
+  "file": "tokkun-fig-draw2-9.svg",
+  "sha256": "b60b96752b09cace1c445cad41e0235e05b3b60dbcfa9f0588c2d30858e59f96",
+  "image": "/tokkun-fig-draw2-9.svg",
+  "imageAlt": "長方形ABCD（AB 9cm、BC 12cm）と対角線BD（15cm）、AからBDへの垂線AH。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "H",
+     "D"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "A",
+     "B"
+    ],
+    "value": 9,
+    "shown": "9 cm"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "B",
+     "C"
+    ],
+    "value": 12,
+    "shown": "12 cm"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "B",
+     "D"
+    ],
+    "value": 15,
+    "shown": "15 cm"
+   }
+  ],
+  "answerClaim": [
+   "len",
+   [
+    "A",
+    "H"
+   ],
+   7.2
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "H",
+   "9 cm",
+   "12 cm",
+   "15 cm"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "7.2",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 10,
+  "file": "tokkun-fig-draw2-10.svg",
+  "sha256": "99fce22062ee84932b09bafb807e2dec23cd5a694dba508e2edc645b218248eb",
+  "image": "/tokkun-fig-draw2-10.svg",
+  "imageAlt": "座標平面上の直線y＝xと点P(5,1)。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "y ＝ x",
+   "P"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "(3,3)",
+    "(3、3)",
+    "3,3",
+    "3、3"
+   ],
+   "compact": true
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 11,
+  "file": "tokkun-fig-draw2-11.svg",
+  "sha256": "f1ac273b2f66a7730b6b0f50de83f531ba1390af8b0d3a17feb735f9ab5280f1",
+  "image": "/tokkun-fig-draw2-11.svg",
+  "imageAlt": "方眼の上の平行四辺形ABCD（AD 5cm）と、BからADへの垂線BK（点線）。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "K",
+     "A"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "len",
+    "at": [
+     "A",
+     "D"
+    ],
+    "value": 5,
+    "shown": ""
+   }
+  ],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "K"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "3.6",
+   "units": [
+    "cm"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 12,
+  "file": "tokkun-fig-draw2-12.svg",
+  "sha256": "e79384e2374e0b687bab04e38a7b2e860b4dd8329fb5d138f46088546d3ae348",
+  "image": "/tokkun-fig-draw2-12.svg",
+  "imageAlt": "座標平面上の三角形ABC（A(0,0)、B(8,0)、C(2,6)）と、CからAB、AからBCへの垂線（点線）。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "x",
+   "y",
+   "O",
+   "B",
+   "C",
+   "A"
+  ],
+  "answer": {
+   "kind": "exact",
+   "accepted": [
+    "(2,2)",
+    "(2、2)",
+    "2,2",
+    "2、2"
+   ],
+   "compact": true
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 13,
+  "file": "tokkun-fig-draw2-13.svg",
+  "sha256": "5ffa1f26ce403740bd82a52b23c0636b6881a57d1b22f3c889d72d2a4b0900d0",
+  "image": "/tokkun-fig-draw2-13.svg",
+  "imageAlt": "方眼の上のひし形ABCDと、2本の対角線（点線）。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "24",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 14,
+  "file": "tokkun-fig-draw2-14.svg",
+  "sha256": "60e1d1059d398932e25cab203feac102bc03c77c2f3589718ec0c931fa043aaa",
+  "image": "/tokkun-fig-draw2-14.svg",
+  "imageAlt": "∠ACBが直角の三角形ABCと、CからABへの垂線CH。∠BACに32°と書いてある。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "C",
+     "B"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "C",
+     "H",
+     "B"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "B",
+     "A",
+     "C"
+    ],
+    "value": 32,
+    "shown": "32°"
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "A",
+    "C",
+    "H"
+   ],
+   58
+  ],
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "H",
+   "32°"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "58",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 15,
+  "file": "tokkun-fig-draw2-15.svg",
+  "sha256": "8391496bc400af0099850038f26f5cce8a952221d49d87f780f1cae5592a110c",
+  "image": "/tokkun-fig-draw2-15.svg",
+  "imageAlt": "∠AOB（70°）の内部の点Pから、辺OA、OBへひいた垂線PH、PK。H、Kに直角の印。",
+  "claims": [
+   {
+    "kind": "angle",
+    "at": [
+     "O",
+     "H",
+     "P"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "O",
+     "K",
+     "P"
+    ],
+    "value": 90,
+    "shown": "直角の印"
+   },
+   {
+    "kind": "angle",
+    "at": [
+     "A",
+     "O",
+     "B"
+    ],
+    "value": 70,
+    "shown": "70°"
+   }
+  ],
+  "answerClaim": [
+   "angle",
+   [
+    "H",
+    "P",
+    "K"
+   ],
+   110
+  ],
+  "texts": [
+   "O",
+   "A",
+   "B",
+   "P",
+   "H",
+   "K",
+   "70°"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "110",
+   "units": [
+    "度",
+    "°"
+   ]
+  }
+ },
+ {
+  "unit": "draw2",
+  "number": 16,
+  "file": "tokkun-fig-draw2-16.svg",
+  "sha256": "1b46231174f3f29d86ead1866b502f56be435624f249c02f5c2b6ac5d9985321",
+  "image": "/tokkun-fig-draw2-16.svg",
+  "imageAlt": "方眼の上の四角形ABCDと対角線AC、B・DからACへの垂線（点線）。",
+  "claims": [],
+  "answerClaim": null,
+  "texts": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": {
+   "kind": "number",
+   "value": "24",
+   "units": [
+    "cm²",
+    "cm2"
+   ]
+  }
+ }
+]

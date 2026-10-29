@@ -1,0 +1,44 @@
+{
+  "status": "manifest/source-baseline check only; content/main integration not approved",
+  "items": [
+    {
+      "folder": "20261028_類題拡大_残10",
+      "manifestFiles": 20,
+      "bad": [],
+      "rootBaselines": {
+        "cf-worker/src/ai-review-practice-data.mjs": true,
+        "cf-worker/src/ai-review-practice-library.mjs": true,
+        "cf-worker/src/material-engine.cjs": true,
+        "cf-worker/src/material-bank.mjs": true,
+        "site-assets/material-bank.json": true
+      },
+      "mathCounts": {},
+      "declaredExit": {
+        "build": 0,
+        "verify": 0,
+        "regress": 0
+      }
+    },
+    {
+      "folder": "20261028_数学特訓_残単元",
+      "manifestFiles": 155,
+      "bad": [],
+      "rootBaselines": {
+        "教材整理/実装/material-engine.js": true,
+        "site-assets/material-bank.json": true
+      },
+      "mathCounts": {
+        "tokkun-math-1-inv1": 70,
+        "tokkun-math-1-invgraph": 70,
+        "tokkun-math-1-prob": 70,
+        "tokkun-math-1-prop1": 70,
+        "tokkun-math-1-propgraph": 70
+      },
+      "declaredExit": {
+        "最終チェック_5単元.log": "350問・不合格0・exit 0",
+        "probe.log": "112通り・期待とちがう0・exit 0",
+        "preserve.log": "元の問題そのまま・ほかの単元同じ・exit 0"
+      }
+    }
+  ]
+}

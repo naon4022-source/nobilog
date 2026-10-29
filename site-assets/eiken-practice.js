@@ -6,7 +6,9 @@
 (function(root){'use strict';
 const BANK_URLS=['/eiken-practice-bank.json'].concat(/^(localhost|127\.0\.0\.1)$/.test(root.location&&root.location.hostname||'')?['/site-assets/eiken-practice-bank.json']:[]);
 const CHOICE=/\(([^()]*\/[^()]*)\)/g;
-const S={host:null,io:null,uid:'',bank:null,loading:null,grade:'5',run:null,msg:''};
+const sending=new Map(),pendingMemory=new Map();
+const submitId=()=>{if(root.crypto?.randomUUID)return root.crypto.randomUUID();if(!root.crypto?.getRandomValues)return '';const b=root.crypto.getRandomValues(new Uint8Array(16));b[6]=(b[6]&15)|64;b[8]=(b[8]&63)|128;const h=Array.from(b,x=>x.toString(16).padStart(2,'0')).join('');return h.slice(0,8)+'-'+h.slice(8,12)+'-'+h.slice(12,16)+'-'+h.slice(16,20)+'-'+h.slice(20);};
+const S={submitState:'',host:null,io:null,uid:'',bank:null,loading:null,grade:'5',run:null,msg:''};
 function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=String(text);return e;}
 function btn(label,cls,fn,aria){const b=el('button',cls,label);b.type='button';if(aria)b.setAttribute('aria-label',aria);b.addEventListener('click',fn);return b;}
 // ---- 判定 ----
@@ -151,7 +153,8 @@ function renderResult(h){
   const prev=(S2.last&&S2.last.marks)||{},all=Object.assign({},prev,marks);
   const full=R.set.questions.map(q=>q.id),fullScore=full.filter(id=>all[id]==='o').length;
   S2.last={score:fullScore,at:Date.now(),marks:all,mode:d.mode};
-  S2.best=Math.max(S2.best||0,fullScore);S2.attempts=(S2.attempts||0)+1;delete S2.draft;save(r);R.recorded={fullScore};
+  if(typeof S.io.submit==='function'&&root.crypto?.getRandomValues){const id=d.submissionId||(d.submissionId=submitId());R.submissionId=id;r.pendingSubmissions=Array.isArray(r.pendingSubmissions)?r.pendingSubmissions:[];if(!r.pendingSubmissions.some(x=>x.id===id))r.pendingSubmissions.push({id,grade:R.g,set:R.n,questionIds:d.order.slice(),answers:Object.fromEntries(d.order.map(id=>[id,String(d.answers[id]?.a||'')]))});pendingMemory.set(S.uid,r.pendingSubmissions.slice());}
+  S2.best=Math.max(S2.best||0,fullScore);S2.attempts=(S2.attempts||0)+1;delete S2.draft;save(r);R.recorded={fullScore};if(typeof S.io.submit==='function')queueMicrotask(()=>void flushSubmissions());
  }
  const box=el('section','ep-card ep-result');
  box.append(el('h4',null,G.label+' 練習'+String(R.n).padStart(2,'0')+' の結果'));
@@ -159,15 +162,30 @@ function renderResult(h){
  const ol=el('ol','ep-list');
  for(const id of d.order){const q=qById(id),a=d.answers[id]||{};const li=el('li',a.ok?'o':'x');li.append(el('span','ep-m',a.ok?'⭕':(a.near?'🔺':'❌')),el('span',null,parts(q).text.slice(0,70)));ol.append(li);}
  box.append(ol);
+ if(typeof S.io.submit==='function'){const p=el('p','ep-note',S.submitState||'なおの提出箱へ送信しています…');p.setAttribute('role','status');box.append(p,btn('提出の送信を確認・再試行','ep-btn',()=>void flushSubmissions()));}
  const row=el('div','ep-row');
  const r=rec(),L=r.sets[R.k]&&r.sets[R.k].last,wrong=L?Object.values(L.marks).filter(m=>m!=='o').length:0;
  if(wrong)row.append(btn('まちがいだけ解き直す（'+wrong+'問）','ep-btn ep-main',()=>start(R.g,R.n,'wrong')));
  row.append(btn('セットの一覧へ','ep-btn',()=>{S.run=null;render();}));box.append(row);h.append(box);
 }
+async function flushSubmissions(){
+ const uid=S.uid,io=S.io;if(typeof io?.submit!=='function'||sending.has(uid))return;
+ const task=(async()=>{let r=rec();const pending=[...new Map([...(Array.isArray(r.pendingSubmissions)?r.pendingSubmissions:[]),...(pendingMemory.get(uid)||[])].map(x=>[x.id,x])).values()];
+  if(!pending.length){S.submitState='送信待ちの答案はありません。';if(S.uid===uid&&S.io===io&&S.run)render();return;}
+  for(const body of pending){
+   if(S.uid!==uid||S.io!==io)return;
+   S.submitState='なおの提出箱へ送っています…';
+   try{const d=await io.submit(body);if(!d?.ok)throw Error();if(S.uid!==uid||S.io!==io)return;
+    pendingMemory.set(uid,(pendingMemory.get(uid)||[]).filter(x=>x.id!==body.id));r=rec();r.pendingSubmissions=(r.pendingSubmissions||[]).filter(x=>x.id!==body.id);if(!save(r))throw Error();S.submitState='なおの提出箱に届きました。コメントと解説の返却を待とう。';
+   }catch(_){if(S.uid===uid&&S.io===io)S.submitState='答案の送信待ちです。通信が戻ったら再試行してください。同じ答案が二重に作られることはありません。';break;}
+  }
+  if(S.uid===uid&&S.io===io&&S.run)render();
+ })();sending.set(uid,task);try{await task;}finally{sending.delete(uid);}
+}
 function mount(host,io){
  if(!host||!io)return;const uid=String(io.uid&&io.uid()||'');
  if(S.host!==host||S.uid!==uid){S.run=null;S.msg='';}
- S.host=host;S.io=io;S.uid=uid;render();
+ S.host=host;S.io=io;S.uid=uid;S.submitState='';render();if(typeof io.submit==='function')void flushSubmissions();
 }
 root.NobiEiken=Object.freeze({mount,_judge:judge,_parts:parts,_norm:norm});
 })(globalThis);

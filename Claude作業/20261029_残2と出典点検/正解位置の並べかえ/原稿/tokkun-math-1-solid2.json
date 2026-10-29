@@ -1,0 +1,2079 @@
+{
+ "id": "tokkun-math-1-solid2",
+ "bank": "tokkun",
+ "mode": "workbook",
+ "subject": "数学",
+ "grade": 1,
+ "title": "いろいろな立体②（特訓）",
+ "majorTitle": "空間図形",
+ "status": "preparing",
+ "size": 70,
+ "schedule": "marks",
+ "questions": [
+  {
+   "id": "tokkun-math-1-solid2-1",
+   "type": "input",
+   "prompt": "縦 3 cm、横 5 cm の長方形を、縦の辺を軸として1回転させてできる円柱の、底面の半径を答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①軸にした縦の辺が円柱の高さ（3 cm）になる　②軸から反対側の辺までのきょり（横 5 cm）が底面の半径　③答え 5cm",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-2",
+   "type": "input",
+   "prompt": "縦 4 cm、横 2 cm の長方形を、縦の辺と平行で、その長方形から 1 cm はなれた直線を軸として1回転させた。できた立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "32π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①外側の半径 1 + 2 ＝ 3 cm、内側（穴）の半径 1 cm、高さ 4 cm　②円柱 π × 9 × 4 から π × 1 × 4 をひく　③36π − 4π ＝ 32π。答え 32π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-3",
+   "type": "input",
+   "prompt": "ある円柱を真正面から見た図（立面図）は、縦 6 cm、横 4 cm の長方形で、真上から見た図（平面図）は円である。この円柱の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "24π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①立面図の横 4 cm が底面の直径、縦 6 cm が高さ　②半径 2 cm、底面積 4π　③4π × 6 ＝ 24π。答え 24π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-4",
+   "type": "input",
+   "prompt": "ある立体の立面図は底辺 6 cm、高さ 4 cm の二等辺三角形で、平面図は直径 6 cm の円である。この立体の体積を、π を使って答えよう（cm³）。",
+   "answer": {
+    "kind": "expr",
+    "value": "12π",
+    "units": [
+     "cm³",
+     "cm3"
+    ]
+   },
+   "explanation": "①この立体は円錐（底面の半径 3 cm、高さ 4 cm）　②π × 9 × 4 ÷ 3　③12π。答え 12π cm³",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-5",
+   "type": "input",
+   "prompt": "立面図も平面図も1辺 3 cm の正方形で、側面から見た図も同じ正方形になる立体の表面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "54",
+    "units": [
+     "cm²"
+    ]
+   },
+   "explanation": "①3方向から見て同じ正方形なので立方体　②1つの面 9 cm² が 6 面　③54。答え 54cm²",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-6",
+   "type": "input",
+   "prompt": "直角三角形を、直角をはさむ1つの辺を軸として1回転させてできる立体の名前を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "円錐",
+     "円すい"
+    ]
+   },
+   "explanation": "①軸にした辺が高さ、もう1つの直角をはさむ辺が底面の半径になる　②斜辺が側面をつくり、先がとがった立体ができる　③答え 円錐",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-7",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 三角柱\nイ 六角錐\nウ 円柱\nエ 六角柱",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "①平面図（真上から見た図）が正六角形なので、底面は六角形　②立面図（真正面から見た図）が長方形なので、柱の形（とがっていない）　③六角柱。答え エ",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   },
+   "image": "/tokkun-fig-solid2-7.svg",
+   "imageAlt": "投影図。立面図は長方形（中にたての線が1本）、平面図は正六角形。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-8",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 三角錐\nイ 三角柱\nウ 円錐\nエ 四角錐",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①平面図が三角形で、中の1点から3つの頂点へ線がのびている　②その1点がとがった頂点で、立面図も三角形　③底面が三角形の角錐で、三角錐。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   },
+   "image": "/tokkun-fig-solid2-8.svg",
+   "imageAlt": "投影図。立面図は三角形（中に点線のたての線）、平面図は正三角形で、中心から3つの頂点へ線がひいてある。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-9",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 円柱\nイ 円錐\nウ 球\nエ 半球",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①真正面から見ても、真上から見ても同じ大きさの円　②円柱や円錐は、どちらかの向きから見ると円ではない　③球。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-9.svg",
+   "imageAlt": "投影図。立面図も平面図も同じ大きさの円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-10",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 円柱\nイ 円錐を、底面に平行な平面で切って頂点のほうをとりのぞいた立体\nウ 四角錐\nエ 球を平面で切った立体",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①平面図の2つの円は、上の小さい面と下の大きい面　②立面図は上がせまく下が広い台形　③円錐の上の部分を、底面に平行に切りとった立体。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-10.svg",
+   "imageAlt": "投影図。立面図は上の辺が短い台形、平面図は中心が同じ大小2つの円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-11",
+   "type": "input",
+   "prompt": "図は、ある立体の立面図・平面図・側面図（真横から見た図）である。この立体を、次のア〜エから選び、記号で答えよう。\nア 直方体\nイ 底面を下にして置いた円柱\nウ 横にたおして置いた円柱\nエ 三角柱",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①立面図と平面図はどちらも長方形で、これだけでは直方体の場合もある　②側面図が円なので、横から見ると円になる立体　③円柱を横にたおして置いたもの。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   },
+   "image": "/tokkun-fig-solid2-11.svg",
+   "imageAlt": "投影図。立面図と平面図は同じ長方形、側面図は円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-12",
+   "type": "input",
+   "prompt": "図は円錐の展開図で、側面は半径 9 cm、中心角 120° のおうぎ形である。底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おうぎ形の弧の長さは 2 × π × 9 × 120 ÷ 360 ＝ 6π cm　②これは底面の円周と同じ　③2 × π × 半径 ＝ 6π より 半径 3。答え 3 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-12.svg",
+   "imageAlt": "円錐の展開図。側面は半径9cm、中心角120°のおうぎ形で、その下に底面の円がある。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-13",
+   "type": "input",
+   "prompt": "図は、底面の半径が 4 cm、高さが 5 cm の円柱の展開図である。側面の長方形の横の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "8π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①側面の長方形の横は、底面の円周と重なる　②底面の円周は 2 × π × 4　③8π。答え 8π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   },
+   "image": "/tokkun-fig-solid2-13.svg",
+   "imageAlt": "円柱の展開図。たて5cmの長方形と、その上下につながる2つの円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-14",
+   "type": "input",
+   "prompt": "図は、正四角錐の展開図である。組み立てたとき、辺 PB と重なる辺を答えよう。",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "QB",
+     "BQ",
+     "辺QB",
+     "辺BQ"
+    ]
+   },
+   "explanation": "①辺 PB は、点 B に集まる2つの側面のうち、上の三角形の辺　②点 B に集まるもう1つの側面は、右の三角形 BQC　③その辺 QB が PB と重なる。答え QB",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186
+   },
+   "image": "/tokkun-fig-solid2-14.svg",
+   "imageAlt": "正四角錐の展開図。まん中の正方形ABCDの4辺に、二等辺三角形PAB、QBC、RCD、SDAがついている。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-15",
+   "type": "input",
+   "prompt": "図は立方体 ABCD−EFGH の見取図で、線分 BD と BF がかいてある。見取図では、BD と BF の長さがちがって見える。実際の長さについて正しいものを、次のア〜ウから選び、記号で答えよう。\nア BD のほうが長い\nイ BF のほうが長い\nウ BD と BF は等しい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①BD は上の面（正方形）の対角線、BF は手前の面（正方形）の対角線　②立方体の面はどれも合同な正方形なので、対角線の長さも等しい　③見取図では奥行きをちぢめてかくので、長さがちがって見えるだけ。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   },
+   "image": "/tokkun-fig-solid2-15.svg",
+   "imageAlt": "立方体ABCD−EFGHの見取図。上の面の対角線BDと、手前の面の対角線BFがかいてある。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-16",
+   "type": "input",
+   "prompt": "図は円錐の投影図で、立面図の二等辺三角形の底辺は 6 cm である。この円錐の展開図で、側面のおうぎ形の弧の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①立面図の底辺は、底面の円の直径（平面図の円の直径）と同じ 6 cm　②おうぎ形の弧の長さは底面の円周と等しい　③π × 6 ＝ 6π。答え 6π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-16.svg",
+   "imageAlt": "円錐の投影図。立面図は底辺6cmの二等辺三角形、平面図は円で中心に点がある。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-17",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 四角柱の上に四角錐をのせた立体\nイ 円錐\nウ 球\nエ 円柱の上に、底面が同じ大きさの円錐をのせた立体",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "①平面図が円で中心に点がある：真上から見ると円で、とがった頂点がまん中にある　②立面図は長方形の上に三角形　③円柱の上に円錐をのせた立体。答え エ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-17.svg",
+   "imageAlt": "投影図。立面図は長方形の上に二等辺三角形がのった形、平面図は中心に点のある円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-18",
+   "type": "input",
+   "prompt": "図の投影図で表される立体を、次のア〜エから選び、記号で答えよう。\nア 球を、中心を通る平面で半分に切った立体（半球）\nイ 球\nウ 円錐\nエ 円柱",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①平面図が円なので、真上から見ると円　②立面図は半円で、下が平ら　③球を半分に切った半球。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-18.svg",
+   "imageAlt": "投影図。立面図は下が平らな半円、平面図は円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-19",
+   "type": "input",
+   "prompt": "図は直方体の立面図（横 4 cm、たて 3 cm の長方形）と平面図（横 4 cm、たて 5 cm の長方形）である。側面図（真横から見た図）の長方形の面積を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "15",
+    "units": [
+     "cm²",
+     "cm2"
+    ]
+   },
+   "explanation": "①立面図のたて 3 cm は直方体の高さ、平面図のたて 5 cm は奥行き　②真横から見ると、横が奥行き 5 cm、たてが高さ 3 cm の長方形　③5 × 3 ＝ 15。答え 15 cm²",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   },
+   "image": "/tokkun-fig-solid2-19.svg",
+   "imageAlt": "直方体の投影図。立面図は横4cm・たて3cmの長方形、平面図は横4cm・たて5cmの長方形、側面図の場所は「？」。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-20",
+   "type": "input",
+   "prompt": "図は円錐の展開図で、側面のおうぎ形の中心角は 240°、底面の円の半径は 4 cm である。母線の長さ（おうぎ形の半径）を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①底面の円周は 2 × π × 4 ＝ 8π で、これがおうぎ形の弧の長さ　②母線を x とすると 2 × π × x × 240 ÷ 360 ＝ 8π　③x × 4 ÷ 3 ＝ 8 より x ＝ 6。答え 6 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-20.svg",
+   "imageAlt": "円錐の展開図。側面は中心角240°のおうぎ形、その上に半径4cmの底面の円が接している。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-21",
+   "type": "input",
+   "prompt": "図は円柱の展開図で、側面の長方形の横の長さは 10π cm である。底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①側面の長方形の横は、底面の円周と同じ 10π cm　②2 × π × 半径 ＝ 10π　③半径 ＝ 5。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   },
+   "image": "/tokkun-fig-solid2-21.svg",
+   "imageAlt": "円柱の展開図。横が10πcmの長方形と、その上下に接する2つの円。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-22",
+   "type": "input",
+   "prompt": "図は、正三角形を4つの合同な正三角形に分けた正三角錐（正四面体）の展開図である。組み立てたとき、点 X と重なる点をすべて選び、記号で答えよう。",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "Y"
+     ],
+     [
+      "Z"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①まん中の三角形 ABC を底面にすると、まわりの3つの三角形が側面になる　②側面の三角形を起こすと、外側の頂点 X、Y、Z が上で1点に集まる　③X と重なるのは Y と Z。答え Y、Z",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186
+   },
+   "image": "/tokkun-fig-solid2-22.svg",
+   "imageAlt": "大きな正三角形XYZを、各辺のまん中の点A、B、Cで4つの正三角形に分けた展開図。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-23",
+   "type": "input",
+   "prompt": "図は円錐の展開図で、側面のおうぎ形の半径は 12 cm、弧の長さは 6π cm である。底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①おうぎ形の弧の長さ 6π は、底面の円周と同じ　②2 × π × 半径 ＝ 6π　③半径 3。答え 3 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-23.svg",
+   "imageAlt": "円錐の展開図。側面は半径12cmのおうぎ形で、弧のまん中に底面の円が接している。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-24",
+   "type": "input",
+   "prompt": "図は、立面図と平面図がどちらも同じ大きさの正方形になる投影図である。この投影図で表される立体として考えられるものを、次のア〜エからすべて選び、記号で答えよう。\nア 立方体\nイ 底面の直径と高さが等しい円柱を、横にたおして置いたもの\nウ 球\nエ 円錐",
+   "answer": {
+    "kind": "set",
+    "items": [
+     [
+      "ア"
+     ],
+     [
+      "イ"
+     ]
+    ],
+    "letters": true
+   },
+   "explanation": "①立方体は、どの向きから見ても正方形　②横にたおした円柱は、真正面からも真上からも、たて ＝ 直径・横 ＝ 長さの長方形で、直径と長さが等しければ正方形　③球は円、円錐は三角形や円に見える。答え ア、イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   },
+   "image": "/tokkun-fig-solid2-24.svg",
+   "imageAlt": "投影図。立面図も平面図も同じ大きさの正方形。"
+  },
+  {
+   "id": "tokkun-math-1-solid2-25",
+   "type": "input",
+   "prompt": "母線の長さが底面の半径の 4 倍である円錐がある。展開図の側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "90",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①底面の半径を r とすると、母線は 4r　②おうぎ形の弧の長さ 2πr は、半径 4r の円周 8πr の 1/4　③360 ÷ 4 ＝ 90。答え 90度",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-26",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面がちょうど半円になった。母線の長さと底面の半径の関係として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 母線と底面の半径は等しい\nイ 母線は底面の半径の 2 倍\nウ 母線は底面の半径の半分",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①半円の弧の長さは、半径 l の円周の半分で πl　②これが底面の円周 2πr と等しいので πl ＝ 2πr　③l ＝ 2r。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-27",
+   "type": "input",
+   "prompt": "展開図の側面のおうぎ形の中心角が 90°、母線の長さが 12 cm の円錐がある。底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①弧の長さは 2 × π × 12 × 90 ÷ 360 ＝ 6π　②これが底面の円周 2 × π × 半径　③半径 ＝ 3。答え 3 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-28",
+   "type": "input",
+   "prompt": "底面の半径が 6 cm で、展開図の側面のおうぎ形の中心角が 216° の円錐がある。母線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①中心角 ＝ 360 × 半径 ÷ 母線 なので 216 ＝ 360 × 6 ÷ 母線　②母線 ＝ 2160 ÷ 216　③10。答え 10 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-29",
+   "type": "input",
+   "prompt": "展開図の側面のおうぎ形の弧の長さが 10π cm の円錐がある。底面の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①弧の長さは底面の円周と等しい　②2 × π × 半径 ＝ 10π　③半径 ＝ 5。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-30",
+   "type": "input",
+   "prompt": "展開図の側面が、半径 15 cm、中心角 120° のおうぎ形である円錐がある。底面の円周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "10π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①底面の円周は、おうぎ形の弧の長さと等しい　②2 × π × 15 × 120 ÷ 360　③10π。答え 10π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-31",
+   "type": "input",
+   "prompt": "円柱の展開図で、側面の長方形はたて 12 cm、横 10π cm だった。円柱の底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①側面の長方形の横は、底面の円周と同じ　②2 × π × 半径 ＝ 10π　③半径 ＝ 5（たて 12 cm は円柱の高さ）。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-32",
+   "type": "input",
+   "prompt": "底面の半径が 2 cm の円柱の展開図で、側面の長方形がちょうど正方形になった。円柱の高さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①正方形なので、たて（高さ）と横（底面の円周）が等しい　②底面の円周は 2 × π × 2 ＝ 4π　③高さ 4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-33",
+   "type": "input",
+   "prompt": "高さ 7 cm、底面の半径 3 cm の円柱の側面を、母線にそって切りひらいた。できた長方形の4つの辺の長さの合計を、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "14+12π",
+    "form": "nosign",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①長方形の横は底面の円周 6π、たては高さ 7　②まわりは (6π + 7) × 2　③14 + 12π。答え 14+12π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-34",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の弧と、組み立てたときに重なるのはどこか。次のア〜ウから選び、記号で答えよう。\nア 母線\nイ 円錐の高さ\nウ 底面の円の周",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①側面を丸めると、おうぎ形の弧が円錐の下のふちになる　②そこには底面の円がつく　③弧と底面の円周が重なる。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-35",
+   "type": "input",
+   "prompt": "円柱の展開図で、側面の長方形の横の長さと等しいのはどれか。次のア〜ウから選び、記号で答えよう。\nア 底面の円周\nイ 底面の円の直径\nウ 円柱の高さ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①側面を丸めると、長方形の横の辺が底面の円のまわりにそう　②だから横の長さは底面の円周と等しい　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-36",
+   "type": "input",
+   "prompt": "円柱を横にたおして、側面が下になるように置いた。真上から見た平面図はどんな図形になるか。次のア〜ウから選び、記号で答えよう。\nア 円\nイ 長方形\nウ 三角形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①横にたおすと、真上からは側面が見える　②見える形は、横が円柱の長さ、たてが底面の直径の長方形　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-37",
+   "type": "input",
+   "prompt": "円錐を、頂点を下にして（底面を上にして）置いた。真上から見た平面図として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 三角形\nイ 円（底面が見える）\nウ 長方形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①真上からは底面の円が見える　②頂点は真下にかくれていて、底面の中心の真下にある　③円。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-38",
+   "type": "input",
+   "prompt": "どの方向から見ても、投影図が同じ大きさの円になる立体はどれか。次のア〜エから選び、記号で答えよう。\nア 円柱\nイ 円錐\nウ 立方体\nエ 球",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "エ"
+    ]
+   },
+   "explanation": "①円柱は横から見ると長方形、円錐は横から見ると三角形　②立方体は正方形などに見える　③球はどこから見ても同じ円。答え エ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-39",
+   "type": "input",
+   "prompt": "正四角錐とはどんな角錐か。正しいものを次のア〜ウから選び、記号で答えよう。\nア 底面が正方形で、側面がすべて合同な二等辺三角形である角錐\nイ 側面が4つある角錐\nウ すべての辺の長さが等しい角錐だけ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①正角錐は、底面が正多角形で、側面がすべて合同な二等辺三角形の角錐　②底面が正方形なら正四角錐　③ウは正四角錐の特別な場合で、それだけではない。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-40",
+   "type": "input",
+   "prompt": "正三角錐について正しいものを、次のア〜ウから選び、記号で答えよう。\nア 正三角錐はいつも正四面体である\nイ 正三角錐の底面は二等辺三角形である\nウ 底面は正三角形だが、側面の二等辺三角形が正三角形とはかぎらないので、正四面体とはかぎらない",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①正三角錐は、底面が正三角形で、側面が合同な二等辺三角形　②側面が正三角形になるのは、すべての辺が等しいとき（正四面体）だけ　③答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-41",
+   "type": "input",
+   "prompt": "正六角錐の展開図は、いくつの多角形でできているか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "7",
+    "units": [
+     "つ",
+     "個"
+    ]
+   },
+   "explanation": "①底面の正六角形が 1 つ　②側面の二等辺三角形が 6 つ　③1 + 6 ＝ 7。答え 7",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-42",
+   "type": "input",
+   "prompt": "円柱の展開図で、側面の長方形のまわりの長さが (20 + 8π) cm である。この円柱の高さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "10",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①長方形のまわり ＝ (底面の円周 + 高さ) × 2　②底面の円周 2πr の 2 倍が 8π なので r ＝ 2、高さの 2 倍が 20　③高さ 10。答え 10 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-43",
+   "type": "input",
+   "prompt": "底面の半径が 4 cm の円錐の展開図で、側面のおうぎ形が半円になった。母線の長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①半円の弧の長さは π × 母線　②底面の円周 8π と等しい　③母線 8。答え 8 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-44",
+   "type": "input",
+   "prompt": "円錐の展開図の側面のおうぎ形の中心角は、必ず 360° より小さくなる。その理由として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 円錐の高さは、いつも底面の半径より短いから\nイ 母線の長さは、いつも底面の半径より長いから\nウ 底面の円周は、いつもおうぎ形の弧より長いから",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①中心角 ＝ 360 × 底面の半径 ÷ 母線　②母線は、頂点から底面の円周までの長さで、底面の半径より長い　③だから 360° より小さい。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-45",
+   "type": "input",
+   "prompt": "母線の長さが 10 cm の円錐で、底面の半径を 1 cm 大きくした（母線の長さは同じ）。展開図の側面のおうぎ形の中心角は何度大きくなるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "36",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①中心角 ＝ 360 × 半径 ÷ 10 ＝ 36 × 半径　②半径が 1 ふえると中心角は 36 ふえる　③36。答え 36度",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-46",
+   "type": "input",
+   "prompt": "円柱の展開図で、側面の長方形の面積が 60π cm²、円柱の高さが 6 cm だった。底面の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①側面の長方形は、横が底面の円周 2 × π × 半径、たてが高さ 6 cm　②2 × π × 半径 × 6 ＝ 60π　③12 × 半径 ＝ 60 より 半径 5。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-47",
+   "type": "input",
+   "prompt": "三角柱を、長方形の側面の1つを下にして横にたおして置いた。真正面（三角形の底面が見える向き）から見た立面図はどんな図形か。次のア〜ウから選び、記号で答えよう。\nア 長方形\nイ 円\nウ 三角形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①真正面から三角形の底面が見える向き　②立面図にはその三角形がそのまま表れる　③答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-48",
+   "type": "input",
+   "prompt": "直方体の投影図で、立面図の面積は 12 cm²、平面図の面積は 24 cm²、側面図の面積は 18 cm² だった（どれも長方形）。直方体の、たて・横・高さの3つの長さの和を求めよう（どれも整数 cm）。",
+   "answer": {
+    "kind": "number",
+    "value": "13",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①横を a、奥行きを b、高さを c とすると a × c ＝ 12、a × b ＝ 24、b × c ＝ 18　②3つをかけると (a × b × c) × (a × b × c) ＝ 12 × 24 × 18 ＝ 5184 ＝ 72 × 72 で、a × b × c ＝ 72。a ＝ 72 ÷ 18 ＝ 4、b ＝ 72 ÷ 12 ＝ 6、c ＝ 72 ÷ 24 ＝ 3　③4 + 6 + 3 ＝ 13。答え 13 cm",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-49",
+   "type": "input",
+   "prompt": "円錐の投影図で、立面図の二等辺三角形の底辺が 10 cm だった。平面図の円の半径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "5",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①立面図の底辺は、底面の円の直径　②平面図は底面の円そのもの　③半径は 10 ÷ 2 ＝ 5。答え 5 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-50",
+   "type": "input",
+   "prompt": "正四角錐の展開図で、側面の4つの二等辺三角形には、底面と重ならない辺が全部で 8 本ある。組み立てると、これらは何本の辺になるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "4",
+    "units": [
+     "本"
+    ]
+   },
+   "explanation": "①となりあう側面の辺が2本ずつ重なって、1本の辺になる　②8 ÷ 2　③4 本（頂点から底面の頂点へ向かう辺）。答え 4本",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-51",
+   "type": "input",
+   "prompt": "正六角錐の展開図（側面の三角形がすべて底面の辺につながっている）を組み立てるとき、側面の三角形どうしで重なる辺の組は何組あるか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "6",
+    "units": [
+     "組"
+    ]
+   },
+   "explanation": "①側面の三角形は 6 つで、となりあう2つの三角形の辺が1組ずつ重なる　②となりあう組は、底面のまわりにそって 6 組　③6 組。答え 6組",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 186
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-52",
+   "type": "input",
+   "prompt": "真正面から見た立面図が正三角形になる円錐がある。展開図の側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "180",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①立面図の正三角形の辺は、母線と底面の直径　②正三角形なので母線 ＝ 直径 ＝ 半径の 2 倍　③中心角 ＝ 360 × 半径 ÷ 母線 ＝ 180。答え 180度",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-53",
+   "type": "input",
+   "prompt": "ごみ取り用ローラーのシート（円柱の側面）を、母線に平行ではなく、ななめにまっすぐ切って1周分ひらいた。ひらいた形はどんな図形になるか。次のア〜ウから選び、記号で答えよう。\nア 平行四辺形\nイ 円\nウ 三角形",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①母線にそって切ると長方形になる　②ななめに切ると、上と下の辺は円周と同じ長さで平行なまま、横の辺がかたむく　③平行四辺形。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-54",
+   "type": "input",
+   "prompt": "立面図と平面図だけでは、どんな立体かが1つに決まらないことがある。そのときに加えるとよい図はどれか。次のア〜ウから選び、記号で答えよう。\nア 側面図（真横から見た図）\nイ 展開図をもう1つ\nウ 立体の名前の一覧",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①立面図・平面図が同じでも、真横から見た形がちがう立体がある　②側面図を加えると、立体の特徴がより正確にわかる　③答え ア",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-55",
+   "type": "input",
+   "prompt": "円錐の展開図で、側面のおうぎ形の半径は、円錐の何にあたるか。次のア〜ウから選び、記号で答えよう。\nア 高さ\nイ 母線\nウ 底面の半径",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①おうぎ形の半径は、円錐の頂点から底面の円周までの長さ　②これを母線という　③高さは頂点から底面への垂線の長さで、母線より短い。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-56",
+   "type": "input",
+   "prompt": "円柱の展開図で、側面の長方形のたての長さは、円柱の何にあたるか。次のア〜ウから選び、記号で答えよう。\nア 底面の直径\nイ 底面の円周\nウ 高さ",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①長方形のたては、上と下の底面の間の長さ　②それは円柱の高さ（母線の長さ）　③答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-57",
+   "type": "input",
+   "prompt": "底面の円周が 14π cm、母線の長さが 21 cm の円錐がある。展開図の側面のおうぎ形の中心角を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①底面の半径は 7 cm　②中心角 ＝ 360 × 7 ÷ 21　③120。答え 120度",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-58",
+   "type": "input",
+   "prompt": "母線の長さが 8 cm で、展開図の側面のおうぎ形の中心角が 135° の円錐がある。底面の円周の長さを、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "6π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①底面の円周はおうぎ形の弧の長さと等しい　②2 × π × 8 × 135 ÷ 360　③6π。答え 6π cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-59",
+   "type": "input",
+   "prompt": "ある円錐の投影図で、立面図は正三角形、平面図は円だった。この円錐の母線の長さと、底面の円の直径の関係として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 母線のほうが長い\nイ 直径のほうが長い\nウ 等しい",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①立面図の正三角形の2辺は母線、底辺は底面の直径　②正三角形の3辺は等しい　③母線と直径は等しい。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-60",
+   "type": "input",
+   "prompt": "正四角錐を、底面を下にして置いた。平面図の正方形の、2本の対角線の交点は、正四角錐の何を表しているか。次のア〜ウから選び、記号で答えよう。\nア 頂点（とがったところ）\nイ 底面の辺のまん中\nウ 側面の三角形の重心",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ア"
+    ]
+   },
+   "explanation": "①真上から見ると、頂点は底面の中心の真上にある　②平面図では、頂点から底面の4つの頂点へ線がのび、正方形の対角線のように見える　③交点は頂点。答え ア",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-61",
+   "type": "input",
+   "prompt": "見取図のかき方として正しいものを、次のア〜ウから選び、記号で答えよう。\nア 見えない辺はかかない\nイ 実際に平行な辺は、見取図でも平行にかく\nウ すべての辺を実際の長さでかく",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①見取図では、平行な辺は平行にかく　②見えない辺は点線でかく　③奥行きの辺は長さをちぢめることがある。答え イ",
+   "source": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466031_0.jpg",
+    "sha256": "211acc67dc2d2cd3031a0efd0b3be2ac7702669f5887a0d7c6533e91ac9a3acf",
+    "page": 192
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-62",
+   "type": "input",
+   "prompt": "側面の二等辺三角形がすべて正三角形である正四角錐がある。1辺の長さが 5 cm のとき、すべての辺の長さの和を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "40",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①底面の正方形の辺 4 本と、側面の辺 4 本で、辺は全部で 8 本　②側面が正三角形なので、すべての辺が 5 cm　③5 × 8 ＝ 40。答え 40 cm",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-63",
+   "type": "input",
+   "prompt": "円柱の展開図で、2つの底面の円は、側面の長方形のどこにつながっているか。次のア〜ウから選び、記号で答えよう。\nア 長方形の、高さの辺\nイ 長方形の、底面の円周と重なる辺（向かい合う2辺）\nウ 長方形のかど",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "イ"
+    ]
+   },
+   "explanation": "①底面の円周と重なるのは、長方形の横の辺（向かい合う2辺）　②円は、それぞれその辺にふれるようにつながる　③答え イ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-64",
+   "type": "input",
+   "prompt": "母線の長さが同じ円錐で、展開図の側面のおうぎ形の中心角を大きくすると、底面の半径はどうなるか。次のア〜ウから選び、記号で答えよう。\nア 小さくなる\nイ 変わらない\nウ 大きくなる",
+   "answer": {
+    "kind": "exact",
+    "accepted": [
+     "ウ"
+    ]
+   },
+   "explanation": "①底面の半径 ＝ 母線 × 中心角 ÷ 360　②母線が同じなら、中心角に比例する　③大きくなる。答え ウ",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-65",
+   "type": "input",
+   "prompt": "母線の長さが等しい2つの円錐 A、B があり、A の底面の半径は B の底面の半径の 2 倍である。A の展開図の側面のおうぎ形の中心角は、B の何倍か答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "2",
+    "units": [
+     "倍"
+    ]
+   },
+   "explanation": "①中心角 ＝ 360 × 半径 ÷ 母線　②母線が同じなら中心角は半径に比例する　③2 倍。答え 2倍",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-66",
+   "type": "input",
+   "prompt": "トイレットペーパーの芯（円柱の側面）を、母線にそって切りひらくと長方形になった。芯の直径が 4 cm のとき、長方形の横の長さ（もとの円周にあたる辺）を、π を使って答えよう（cm）。",
+   "answer": {
+    "kind": "expr",
+    "value": "4π",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①長方形の横は、芯の円周と等しい　②円周 ＝ π × 直径　③4π。答え 4π cm",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-67",
+   "type": "input",
+   "prompt": "円錐の形のパーティー帽子（側面だけ）を、母線にそって切りひらくと、半径 20 cm、中心角 162° のおうぎ形になった。帽子の口（底面の円）の直径を求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "18",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①口の円周は、おうぎ形の弧の長さ 2 × π × 20 × 162 ÷ 360 ＝ 18π　②π × 直径 ＝ 18π　③直径 18。答え 18 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-68",
+   "type": "input",
+   "prompt": "正六角柱を、底面を下にして置いた。平面図の正六角形の1つの角の大きさを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "120",
+    "units": [
+     "度",
+     "°"
+    ]
+   },
+   "explanation": "①正六角形は、中心と頂点を結ぶと 6 つの正三角形に分かれる　②1つの角には、正三角形の角 60° が 2 つ集まる　③120。答え 120度",
+   "source": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466028_0.jpg",
+    "sha256": "94b5cc1d99399dbaee67d348b5368690e0bccd9ea9cd54539327ba7334d6ff21",
+    "page": 189
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-69",
+   "type": "input",
+   "prompt": "円柱を、底面を下にして置いた。真正面から見た立面図は、横 6 cm、たて 8 cm の長方形だった。この円柱の展開図で、側面の長方形のたての長さを求めよう。",
+   "answer": {
+    "kind": "number",
+    "value": "8",
+    "units": [
+     "cm"
+    ]
+   },
+   "explanation": "①立面図の横 6 cm は底面の直径、たて 8 cm は円柱の高さ　②展開図の側面の長方形のたては、円柱の高さ　③8 cm（横は円周 6π cm）。答え 8 cm",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 190
+   }
+  },
+  {
+   "id": "tokkun-math-1-solid2-70",
+   "type": "input",
+   "prompt": "底面の半径が 5 cm、母線の長さが 15 cm の円錐を、頂点を中心にして平らな床の上をすべらないように転がした。円錐がはじめの位置にもどるまでに、円錐は何回転するか答えよう。",
+   "answer": {
+    "kind": "number",
+    "value": "3",
+    "units": [
+     "回転",
+     "回"
+    ]
+   },
+   "explanation": "①転がるとき、底面の円周は、頂点を中心とする半径 15 cm（母線）の円をえがく　②その円周は 30π cm、底面の円周は 10π cm　③30π ÷ 10π ＝ 3 回転。答え 3回転",
+   "source": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191,
+    "number": "特訓（教科書の考え方をもとにしたオリジナル）"
+   },
+   "ref": "参考：教科書 p189〜191（回転体・投影図）（特訓・オリジナル問題）",
+   "origin": "original",
+   "reviewed": false,
+   "difficulty": "hard",
+   "bank": "tokkun",
+   "textbook": {
+    "file": "数学教科書/S__16466029_0.jpg",
+    "sha256": "9ad1c45dfcb70fb7ad557a2034267ba8abf0dc793f2affaf600ffc2dbb0e444a",
+    "page": 191
+   }
+  }
+ ],
+ "tests": [],
+ "reviewNote": "2026-10-08 Claude作成（特訓・下書き）。回転体と投影図を文章で表し、数や名前で答える一段難しい問題。答えは check.py で計算し直して検算。2026-10-29 Claude：円柱・円錐・角錐の展開図の読みとり（重なる辺・点、弧の長さ・中心角・半径の関係）、投影図（立面図・平面図・側面図）から立体を考える問題、見取図で長さが正しく見えないことなどを64問追加して70問にした（元の6問はそのまま）。図が必要な問題には正確な図（SVG）をつけ、出典は写真を開いて問題ごとにページを合わせた。"
+}

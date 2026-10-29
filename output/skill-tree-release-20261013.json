@@ -1,0 +1,20 @@
+{
+  "version": "bee61ffd-a882-4a88-9cd0-8f4e6272ece6",
+  "entryChecks": [
+    {
+      "path": "/",
+      "status": 200,
+      "form": true
+    },
+    {
+      "path": "/api/material-progress",
+      "status": 401
+    },
+    {
+      "path": "/learning-skill-tree.js",
+      "status": 401
+    }
+  ],
+  "realDeviceChecked": false,
+  "authenticatedOnlineChecked": false
+}

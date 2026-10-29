@@ -1,0 +1,23 @@
+.tb-ink-button{white-space:nowrap}
+.tb-ink-picking [data-annotation-anchor]{outline:2px dashed #2b6b89;outline-offset:2px;cursor:crosshair}
+.tb-ink-back{position:absolute;inset:0;z-index:270;background:#17253699;display:flex;align-items:center;justify-content:center;padding:12px;box-sizing:border-box}
+.tb-ink-card{width:min(920px,100%);max-height:calc(100% - 8px);overflow:auto;overscroll-behavior:contain;background:var(--box-bg,#fff);color:var(--text-color,#172b3a);border-radius:16px;padding:16px;box-sizing:border-box;font:16px/1.6 system-ui;overflow-wrap:anywhere}
+.tb-ink-top{position:sticky;top:-16px;z-index:4;display:flex;align-items:center;justify-content:space-between;background:var(--box-bg,#fff);padding:8px 0;gap:12px}
+.tb-ink-top h3{font-size:22px;margin:0}
+.tb-ink-card button,.tb-ink-card select{font:inherit;min-height:44px;max-width:100%;padding:8px 10px;margin:4px;border:1px solid #718997;border-radius:9px;background:var(--box-bg,#fff);color:var(--text-color,#172b3a);white-space:normal;transition:transform .15s ease}
+.tb-ink-card button[aria-pressed=true]{background:#d8eff8;color:#172b3a;border-color:#1765aa}
+.tb-ink-card :disabled{opacity:.55}
+.tb-ink-card blockquote{margin:12px 0;padding:10px;border-left:4px solid #1765aa;background:var(--box-bg,#eef5f8);max-height:110px;overflow:auto;white-space:pre-wrap}
+.tb-ink-status{min-height:1.6em}
+.tb-ink-controls{display:flex;flex-wrap:wrap;align-items:center}
+.tb-ink-save-row{position:sticky;bottom:-16px;z-index:3;padding:8px 0;background:var(--box-bg,#fff)}
+.tb-ink-viewport{width:100%;overflow:auto;overscroll-behavior:contain;max-height:60vh;border:1px solid #718997;background:#e9eef0}
+.tb-ink-paper{position:relative;min-width:100%;background-color:#fff;background-image:linear-gradient(#dce6ed 1px,transparent 1px),linear-gradient(90deg,#dce6ed 1px,transparent 1px);background-size:25px 25px}
+.tb-ink-paper>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;background:#fff}
+.tb-ink-paper>canvas{position:absolute;inset:0;display:block;width:100%;height:100%;touch-action:none;outline-offset:-3px}
+.tb-ink-record{border-top:1px solid #b7c9d3;padding:10px 0}
+.tb-ink-comparison{border:2px solid #1765aa;padding:10px;margin-top:12px;background:var(--box-bg,#f5f9fc)}
+.tb-ink-comparison canvas{display:block;width:100%;height:auto;background:#fff;border:1px solid #718997}
+.large-text .tb-ink-card{font-size:18px}
+@media(prefers-reduced-motion:reduce){.tb-ink-card button{transition:none;transform:none}}
+@media print{.tb-ink-back,.tb-ink-button{display:none}}

@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-12",
+  "scope": "個人の教科書マーカー・メモ（段落/図単位）",
+  "published": false,
+  "adminChanged": false,
+  "realAIEnabled": false,
+  "checks": {
+    "API": 49,
+    "原稿印と保存状態": 24,
+    "操作画面": 37,
+    "6冊実画面": 125
+  },
+  "APIWholeSuiteBeforeUI": "29412終了0・✅ぜんぶ通過",
+  "wholeSuiteAfterUI": {
+    "session": 24285,
+    "status": "24285終了0・✅ぜんぶ通過（容量エラー表示の最終修正前）",
+    "log": "/tmp/nobi-post-annotations-ui-20261012.log"
+  },
+  "bookCheckLog": "/tmp/nobi-annotations-books-final-20261012.log",
+  "previousFixtureFailures": [
+    "58055:JS/CSSをAPIに誤配送。経路修正。",
+    "18015:スマホで非表示のコード入力を使用。メモ一覧の実操作へ修正。"
+  ],
+  "dryRun": {
+    "session": 6029,
+    "status": "終了0・--dry-run: exiting now.",
+    "config": "秘密値/本番バインディングなしの一時設定。公開・実データ操作なし。",
+    "log": "/tmp/nobi-annotation-dry-run/build.log"
+  },
+  "visualReview": "390pxの数学のメモとPCの理科の図メモを原本表示で目視。ラベル調整後は全体検証中。",
+  "limits": [
+    "Pro/UNLIMITは追加・変更。下位プランでも本人の保存済み記録は閲覧可。",
+    "メモ/引用は各2000字、本ごと2048印。",
+    "未送信下書きは同じログイン中のメモリ保持。ブラウザ再起動に耐えるオフライン下書きは未実装。"
+  ],
+  "secretPatternScan": {
+    "cf-worker/src/textbook-annotations.mjs": false,
+    "site-assets/textbook-annotation-model.js": false,
+    "site-assets/textbook-annotations.js": false,
+    "site-assets/textbook-annotations.css": false,
+    "site-assets/textbook-book.js": false
+  },
+  "files": [
+    {
+      "path": "cf-worker/src/textbook-annotations.mjs",
+      "sha256": "7cd11a0ca961df84d2eb2faeba07e1cefddfdeb33835aef5954797829a10e379"
+    },
+    {
+      "path": "site-assets/textbook-annotation-model.js",
+      "sha256": "ef4bee9ac88de39b68c652f44692beae685bcb0452dbe315acea98d8a0721e91"
+    },
+    {
+      "path": "site-assets/textbook-annotations.js",
+      "sha256": "a50baaf18c816ca8f3ba01dea4e468fc6da04651ca30158f047e8f0822a77317"
+    },
+    {
+      "path": "site-assets/textbook-annotations.css",
+      "sha256": "8e01e6a48dfd7ccc35a8dcd11946e3d4b2adc52de09d5818d2903b508b2ef649"
+    },
+    {
+      "path": "site-assets/textbook-book.js",
+      "sha256": "04b8bf9a12a1209ec221c26d4d15dc4cee0b271049545a1b543e0e55820e7fa1"
+    }
+  ],
+  "lastChange": "教科書の未送信下書きを本人・本別にIndexedDBへ保存。端末保存とオンライン保存の表示を分離。古い更新番号を保持し、勝手な上書きを防ぐ。ブラウザ49件とモデル24件成功、変更後全体検証88112実行中。",
+  "wholeSuiteAfterCapacityFix": {
+    "status": "最終✅ぜんぶ通過、対象検証プロセス終了を確認（元のPTY終了コードは未回収）",
+    "log": "/tmp/nobi-post-annotations-limit-20261012.log"
+  },
+  "durableDraft": {
+    "browserChecks": 49,
+    "browserSession": 14159,
+    "browserExit": 0,
+    "modelChecks": 24,
+    "wholeSuiteSession": 88112,
+    "wholeSuiteStatus": "88112終了0・✅ぜんぶ通過",
+    "log": "/tmp/nobi-post-annotations-durable-20261012.log",
+    "scope": [
+      "架空データの一時プロファイルでブラウザプロセス終了・再起動",
+      "IndexedDB本人/本/原稿印別保存",
+      "GET失敗中に復元・編集・接続復帰後保存",
+      "保存完了後の一致する下書きだけ片付ける",
+      "更新番号保持・別アカウント非表示",
+      "保存値に認証情報なし",
+      "端末ストレージ拒否のエラーと入力保持"
+    ],
+    "limits": [
+      "端末保存完了表示前の終了、ストレージ削除、端末故障では下書きの復元を保証しない",
+      "未送信下書きは端末内だけ。他端末への共有はオンライン保存後",
+      "全体検証/6冊実画面は最新変更で実行中"
+    ],
+    "diffCheck": "92824終了0"
+  }
+}
